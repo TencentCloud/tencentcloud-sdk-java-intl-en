@@ -37,7 +37,7 @@ public class SetInstancesProtectionRequest extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-    * Whether the instance needs to be protected from scale-in.
+    * Whether to enable scale-in protection for this instance
     */
     @SerializedName("ProtectedFromScaleIn")
     @Expose
@@ -76,16 +76,16 @@ public class SetInstancesProtectionRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether the instance needs to be protected from scale-in. 
-     * @return ProtectedFromScaleIn Whether the instance needs to be protected from scale-in.
+     * Get Whether to enable scale-in protection for this instance 
+     * @return ProtectedFromScaleIn Whether to enable scale-in protection for this instance
      */
     public Boolean getProtectedFromScaleIn() {
         return this.ProtectedFromScaleIn;
     }
 
     /**
-     * Set Whether the instance needs to be protected from scale-in.
-     * @param ProtectedFromScaleIn Whether the instance needs to be protected from scale-in.
+     * Set Whether to enable scale-in protection for this instance
+     * @param ProtectedFromScaleIn Whether to enable scale-in protection for this instance
      */
     public void setProtectedFromScaleIn(Boolean ProtectedFromScaleIn) {
         this.ProtectedFromScaleIn = ProtectedFromScaleIn;

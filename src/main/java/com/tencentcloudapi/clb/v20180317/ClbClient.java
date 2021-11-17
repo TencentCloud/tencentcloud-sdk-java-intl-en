@@ -671,6 +671,26 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
+     *This API is used to query CLB instances bound to the CVM or ENI.
+     * @param req DescribeLBListenersRequest
+     * @return DescribeLBListenersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLBListenersResponse DescribeLBListeners(DescribeLBListenersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLBListenersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLBListenersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLBListeners");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the list of listeners by CLB ID, listener protocol, or listener port. If no filter is specified, all listeners for the CLB instance will be returned.
      * @param req DescribeListenersRequest
      * @return DescribeListenersResponse

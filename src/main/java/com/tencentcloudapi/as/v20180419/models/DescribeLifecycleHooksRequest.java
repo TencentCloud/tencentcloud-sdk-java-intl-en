@@ -30,15 +30,11 @@ public class DescribeLifecycleHooksRequest extends AbstractModel{
     private String [] LifecycleHookIds;
 
     /**
-    * Filter.
-<li> lifecycle-hook-id - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
-<li> lifecycle-hook-name - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-Filter.
-<li> lifecycle-hook-id - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
-<li> lifecycle-hook-name - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `LifecycleHookIds` and `Filters` at the same time.
+    * Filters.
+<li> `lifecycle-hook-id` - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
+<li> `lifecycle-hook-name` - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
+<li> `auto-scaling-group-id` - String - Required: No - (Filter) Filter by scaling group ID.</li>
+Up to 10 filters can be included in a request and up to 5 values for each filter. It cannot be specified with `LifecycleHookIds` at the same time.
     */
     @SerializedName("Filters")
     @Expose
@@ -75,48 +71,32 @@ The maximum number of `Filters` per request is 10. The upper limit for `Filter.V
     }
 
     /**
-     * Get Filter.
-<li> lifecycle-hook-id - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
-<li> lifecycle-hook-name - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-Filter.
-<li> lifecycle-hook-id - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
-<li> lifecycle-hook-name - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `LifecycleHookIds` and `Filters` at the same time. 
-     * @return Filters Filter.
-<li> lifecycle-hook-id - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
-<li> lifecycle-hook-name - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-Filter.
-<li> lifecycle-hook-id - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
-<li> lifecycle-hook-name - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `LifecycleHookIds` and `Filters` at the same time.
+     * Get Filters.
+<li> `lifecycle-hook-id` - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
+<li> `lifecycle-hook-name` - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
+<li> `auto-scaling-group-id` - String - Required: No - (Filter) Filter by scaling group ID.</li>
+Up to 10 filters can be included in a request and up to 5 values for each filter. It cannot be specified with `LifecycleHookIds` at the same time. 
+     * @return Filters Filters.
+<li> `lifecycle-hook-id` - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
+<li> `lifecycle-hook-name` - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
+<li> `auto-scaling-group-id` - String - Required: No - (Filter) Filter by scaling group ID.</li>
+Up to 10 filters can be included in a request and up to 5 values for each filter. It cannot be specified with `LifecycleHookIds` at the same time.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter.
-<li> lifecycle-hook-id - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
-<li> lifecycle-hook-name - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-Filter.
-<li> lifecycle-hook-id - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
-<li> lifecycle-hook-name - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `LifecycleHookIds` and `Filters` at the same time.
-     * @param Filters Filter.
-<li> lifecycle-hook-id - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
-<li> lifecycle-hook-name - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-Filter.
-<li> lifecycle-hook-id - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
-<li> lifecycle-hook-name - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `LifecycleHookIds` and `Filters` at the same time.
+     * Set Filters.
+<li> `lifecycle-hook-id` - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
+<li> `lifecycle-hook-name` - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
+<li> `auto-scaling-group-id` - String - Required: No - (Filter) Filter by scaling group ID.</li>
+Up to 10 filters can be included in a request and up to 5 values for each filter. It cannot be specified with `LifecycleHookIds` at the same time.
+     * @param Filters Filters.
+<li> `lifecycle-hook-id` - String - Required: No - (Filter) Filter by lifecycle hook ID.</li>
+<li> `lifecycle-hook-name` - String - Required: No - (Filter) Filter by lifecycle hook name.</li>
+<li> `auto-scaling-group-id` - String - Required: No - (Filter) Filter by scaling group ID.</li>
+Up to 10 filters can be included in a request and up to 5 values for each filter. It cannot be specified with `LifecycleHookIds` at the same time.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

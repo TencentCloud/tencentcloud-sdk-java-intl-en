@@ -37,6 +37,13 @@ public class CreateLoadBalancerSnatIpsRequest extends AbstractModel{
     private SnatIp [] SnatIps;
 
     /**
+    * Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available.
+    */
+    @SerializedName("Number")
+    @Expose
+    private Long Number;
+
+    /**
      * Get Unique ID of a CLB instance, e.g., lb-12345678. 
      * @return LoadBalancerId Unique ID of a CLB instance, e.g., lb-12345678.
      */
@@ -68,6 +75,22 @@ public class CreateLoadBalancerSnatIpsRequest extends AbstractModel{
         this.SnatIps = SnatIps;
     }
 
+    /**
+     * Get Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available. 
+     * @return Number Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available.
+     */
+    public Long getNumber() {
+        return this.Number;
+    }
+
+    /**
+     * Set Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available.
+     * @param Number Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available.
+     */
+    public void setNumber(Long Number) {
+        this.Number = Number;
+    }
+
     public CreateLoadBalancerSnatIpsRequest() {
     }
 
@@ -85,6 +108,9 @@ public class CreateLoadBalancerSnatIpsRequest extends AbstractModel{
                 this.SnatIps[i] = new SnatIp(source.SnatIps[i]);
             }
         }
+        if (source.Number != null) {
+            this.Number = new Long(source.Number);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class CreateLoadBalancerSnatIpsRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
         this.setParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);
+        this.setParamSimple(map, prefix + "Number", this.Number);
 
     }
 }

@@ -319,6 +319,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get the list of modifiable parameters of an instance.
+     * @param req DescribeDBInstanceParametersRequest
+     * @return DescribeDBInstanceParametersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstanceParametersResponse DescribeDBInstanceParameters(DescribeDBInstanceParametersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBInstanceParametersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBInstanceParametersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBInstanceParameters");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the details of one or more instances.
      * @param req DescribeDBInstancesRequest
      * @return DescribeDBInstancesResponse
@@ -339,7 +359,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get slow query logs.
+     *This API was used to get slow query logs. Since it was deprecated on September 1, 2021, it has no longer returned data. Please use the [DescribeSlowQueryList](https://intl.cloud.tencent.com/document/product/409/60540?from_cn_redirect=1) API instead to get slow query logs.
      * @param req DescribeDBSlowlogsRequest
      * @return DescribeDBSlowlogsResponse
      * @throws TencentCloudSDKException
@@ -411,6 +431,26 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeOrdersResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeOrders");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the details of parameter modification events.
+     * @param req DescribeParamsEventRequest
+     * @return DescribeParamsEventResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeParamsEventResponse DescribeParamsEvent(DescribeParamsEventRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeParamsEventResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeParamsEventResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeParamsEvent");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -499,7 +539,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *This API is used to analyze slow query statements with abstract parameter values and return aggregated statistical analysis results.
+     *This API is used to count and analyze slow query statements during the specified period of time and return aggregated statistical analysis results which are classified by statement with abstract parameter values.
      * @param req DescribeSlowQueryAnalysisRequest
      * @return DescribeSlowQueryAnalysisResponse
      * @throws TencentCloudSDKException
@@ -519,7 +559,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the slow query list.
+     *This API is used to get the slow queries during the specified period of time.
      * @param req DescribeSlowQueryListRequest
      * @return DescribeSlowQueryListResponse
      * @throws TencentCloudSDKException
@@ -731,6 +771,26 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceNameResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyDBInstanceName");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify parameters in batches.
+     * @param req ModifyDBInstanceParametersRequest
+     * @return ModifyDBInstanceParametersResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceParametersResponse ModifyDBInstanceParameters(ModifyDBInstanceParametersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBInstanceParametersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceParametersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDBInstanceParameters");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -143,6 +143,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String HttpVersion;
 
     /**
+    * Specifies the source IP for health check. `0`: use the CLB VIP as the source IP; `1`: IP range starting with 100.64 serving as the source IP. Default: `0`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SourceIpType")
+    @Expose
+    private Long SourceIpType;
+
+    /**
      * Get Whether to enable health check. 1: enable; 0: disable. 
      * @return HealthSwitch Whether to enable health check. 1: enable; 0: disable.
      */
@@ -442,6 +450,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.HttpVersion = HttpVersion;
     }
 
+    /**
+     * Get Specifies the source IP for health check. `0`: use the CLB VIP as the source IP; `1`: IP range starting with 100.64 serving as the source IP. Default: `0`.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return SourceIpType Specifies the source IP for health check. `0`: use the CLB VIP as the source IP; `1`: IP range starting with 100.64 serving as the source IP. Default: `0`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getSourceIpType() {
+        return this.SourceIpType;
+    }
+
+    /**
+     * Set Specifies the source IP for health check. `0`: use the CLB VIP as the source IP; `1`: IP range starting with 100.64 serving as the source IP. Default: `0`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param SourceIpType Specifies the source IP for health check. `0`: use the CLB VIP as the source IP; `1`: IP range starting with 100.64 serving as the source IP. Default: `0`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setSourceIpType(Long SourceIpType) {
+        this.SourceIpType = SourceIpType;
+    }
+
     public HealthCheck() {
     }
 
@@ -495,6 +523,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.HttpVersion != null) {
             this.HttpVersion = new String(source.HttpVersion);
         }
+        if (source.SourceIpType != null) {
+            this.SourceIpType = new Long(source.SourceIpType);
+        }
     }
 
 
@@ -517,6 +548,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "RecvContext", this.RecvContext);
         this.setParamSimple(map, prefix + "CheckType", this.CheckType);
         this.setParamSimple(map, prefix + "HttpVersion", this.HttpVersion);
+        this.setParamSimple(map, prefix + "SourceIpType", this.SourceIpType);
 
     }
 }

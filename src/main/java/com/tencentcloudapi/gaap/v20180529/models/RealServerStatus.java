@@ -44,6 +44,14 @@ public class RealServerStatus extends AbstractModel{
     private String ProxyId;
 
     /**
+    * ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
      * Get Origin server ID. 
      * @return RealServerId Origin server ID.
      */
@@ -91,6 +99,26 @@ public class RealServerStatus extends AbstractModel{
         this.ProxyId = ProxyId;
     }
 
+    /**
+     * Get ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return GroupId ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param GroupId ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
     public RealServerStatus() {
     }
 
@@ -108,6 +136,9 @@ public class RealServerStatus extends AbstractModel{
         if (source.ProxyId != null) {
             this.ProxyId = new String(source.ProxyId);
         }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
     }
 
 
@@ -118,6 +149,7 @@ public class RealServerStatus extends AbstractModel{
         this.setParamSimple(map, prefix + "RealServerId", this.RealServerId);
         this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
         this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

@@ -32,16 +32,15 @@ public class ProxyStatus extends AbstractModel{
     /**
     * Connection status.
 Valid values:
-RUNNING: running;
-CREATING: creating;
-DESTROYING: terminating;
-OPENING: enabling;
-CLOSING: disabling;
-CLOSED: disabled;
-ADJUSTING: adjusting configuration;
-ISOLATING: isolating;
-ISOLATED: isolated;
-UNKNOWN: unknown status.
+`RUNNING`: running
+`CREATING`: creating
+`DESTROYING`: terminating
+`OPENING`: enabling
+`CLOSING`: disabling
+`CLOSED`: disabled
+`ADJUSTING`: adjusting configuration
+`ISOLATING`: isolating
+`ISOLATED`: isolated
     */
     @SerializedName("Status")
     @Expose
@@ -66,28 +65,26 @@ UNKNOWN: unknown status.
     /**
      * Get Connection status.
 Valid values:
-RUNNING: running;
-CREATING: creating;
-DESTROYING: terminating;
-OPENING: enabling;
-CLOSING: disabling;
-CLOSED: disabled;
-ADJUSTING: adjusting configuration;
-ISOLATING: isolating;
-ISOLATED: isolated;
-UNKNOWN: unknown status. 
+`RUNNING`: running
+`CREATING`: creating
+`DESTROYING`: terminating
+`OPENING`: enabling
+`CLOSING`: disabling
+`CLOSED`: disabled
+`ADJUSTING`: adjusting configuration
+`ISOLATING`: isolating
+`ISOLATED`: isolated 
      * @return Status Connection status.
 Valid values:
-RUNNING: running;
-CREATING: creating;
-DESTROYING: terminating;
-OPENING: enabling;
-CLOSING: disabling;
-CLOSED: disabled;
-ADJUSTING: adjusting configuration;
-ISOLATING: isolating;
-ISOLATED: isolated;
-UNKNOWN: unknown status.
+`RUNNING`: running
+`CREATING`: creating
+`DESTROYING`: terminating
+`OPENING`: enabling
+`CLOSING`: disabling
+`CLOSED`: disabled
+`ADJUSTING`: adjusting configuration
+`ISOLATING`: isolating
+`ISOLATED`: isolated
      */
     public String getStatus() {
         return this.Status;
@@ -96,28 +93,26 @@ UNKNOWN: unknown status.
     /**
      * Set Connection status.
 Valid values:
-RUNNING: running;
-CREATING: creating;
-DESTROYING: terminating;
-OPENING: enabling;
-CLOSING: disabling;
-CLOSED: disabled;
-ADJUSTING: adjusting configuration;
-ISOLATING: isolating;
-ISOLATED: isolated;
-UNKNOWN: unknown status.
+`RUNNING`: running
+`CREATING`: creating
+`DESTROYING`: terminating
+`OPENING`: enabling
+`CLOSING`: disabling
+`CLOSED`: disabled
+`ADJUSTING`: adjusting configuration
+`ISOLATING`: isolating
+`ISOLATED`: isolated
      * @param Status Connection status.
 Valid values:
-RUNNING: running;
-CREATING: creating;
-DESTROYING: terminating;
-OPENING: enabling;
-CLOSING: disabling;
-CLOSED: disabled;
-ADJUSTING: adjusting configuration;
-ISOLATING: isolating;
-ISOLATED: isolated;
-UNKNOWN: unknown status.
+`RUNNING`: running
+`CREATING`: creating
+`DESTROYING`: terminating
+`OPENING`: enabling
+`CLOSING`: disabling
+`CLOSED`: disabled
+`ADJUSTING`: adjusting configuration
+`ISOLATING`: isolating
+`ISOLATED`: isolated
      */
     public void setStatus(String Status) {
         this.Status = Status;

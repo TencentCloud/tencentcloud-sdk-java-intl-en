@@ -94,6 +94,13 @@ They represent weighted round robin and least connections, respectively. Default
     private Boolean DeregisterTargetRst;
 
     /**
+    * Session persistence type. `NORMAL`: default session persistence type (L4/L7 session persistence); `QUIC_CID`: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners.
+    */
+    @SerializedName("SessionType")
+    @Expose
+    private String SessionType;
+
+    /**
      * Get CLB instance ID 
      * @return LoadBalancerId CLB instance ID
      */
@@ -257,6 +264,22 @@ They represent weighted round robin and least connections, respectively. Default
         this.DeregisterTargetRst = DeregisterTargetRst;
     }
 
+    /**
+     * Get Session persistence type. `NORMAL`: default session persistence type (L4/L7 session persistence); `QUIC_CID`: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners. 
+     * @return SessionType Session persistence type. `NORMAL`: default session persistence type (L4/L7 session persistence); `QUIC_CID`: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners.
+     */
+    public String getSessionType() {
+        return this.SessionType;
+    }
+
+    /**
+     * Set Session persistence type. `NORMAL`: default session persistence type (L4/L7 session persistence); `QUIC_CID`: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners.
+     * @param SessionType Session persistence type. `NORMAL`: default session persistence type (L4/L7 session persistence); `QUIC_CID`: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners.
+     */
+    public void setSessionType(String SessionType) {
+        this.SessionType = SessionType;
+    }
+
     public ModifyListenerRequest() {
     }
 
@@ -295,6 +318,9 @@ They represent weighted round robin and least connections, respectively. Default
         if (source.DeregisterTargetRst != null) {
             this.DeregisterTargetRst = new Boolean(source.DeregisterTargetRst);
         }
+        if (source.SessionType != null) {
+            this.SessionType = new String(source.SessionType);
+        }
     }
 
 
@@ -312,6 +338,7 @@ They represent weighted round robin and least connections, respectively. Default
         this.setParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
         this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
         this.setParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
+        this.setParamSimple(map, prefix + "SessionType", this.SessionType);
 
     }
 }

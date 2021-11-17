@@ -37,7 +37,8 @@ public class CreateLaunchConfigurationRequest extends AbstractModel{
     private String ImageId;
 
     /**
-    * ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
+    * Project ID of the launch configuration. The default project is used if it’s left blank.
+Note that this project ID is not the same as the project ID of the scaling group. 
     */
     @SerializedName("ProjectId")
     @Expose
@@ -214,16 +215,20 @@ If this field is configured in a launch configuration, the `InstanceName` of a C
     }
 
     /**
-     * Get ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used. 
-     * @return ProjectId ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
+     * Get Project ID of the launch configuration. The default project is used if it’s left blank.
+Note that this project ID is not the same as the project ID of the scaling group.  
+     * @return ProjectId Project ID of the launch configuration. The default project is used if it’s left blank.
+Note that this project ID is not the same as the project ID of the scaling group. 
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
-     * @param ProjectId ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
+     * Set Project ID of the launch configuration. The default project is used if it’s left blank.
+Note that this project ID is not the same as the project ID of the scaling group. 
+     * @param ProjectId Project ID of the launch configuration. The default project is used if it’s left blank.
+Note that this project ID is not the same as the project ID of the scaling group. 
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

@@ -80,17 +80,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Concurrent;
 
     /**
-    * Connection status:
-RUNNING: running;
-CREATING: creating;
-DESTROYING: terminating;
-OPENING: enabling;
-CLOSING: disabling;
-CLOSED: disabled;
-ADJUSTING: adjusting configuration
-ISOLATING: isolating (it's triggered when the account is in arrears);
-ISOLATED: isolated (it's triggered when the account is in arrears);
-UNKNOWN: unknown status.
+    * Connection status. Valid values:
+`RUNNING`: running
+`CREATING`: creating
+`DESTROYING`: terminating
+`OPENING`: enabling
+`CLOSING`: disabling
+`CLOSED`: disabled
+`ADJUSTING`: adjusting configuration
+`ISOLATING`: isolating
+`ISOLATED`: isolated
+`CLONING`: copying
     */
     @SerializedName("Status")
     @Expose
@@ -243,7 +243,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String IPAddressVersion;
 
     /**
-    * Network type. Valid values: `normal`, `cn2`
+    * Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
 Note: this field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("NetworkType")
@@ -265,6 +265,13 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     @SerializedName("BanStatus")
     @Expose
     private String BanStatus;
+
+    /**
+    * 
+    */
+    @SerializedName("IPList")
+    @Expose
+    private IPDetail [] IPList;
 
     /**
      * Get Connection instance ID; It's an old parameter, please switch to ProxyId.
@@ -399,56 +406,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Connection status:
-RUNNING: running;
-CREATING: creating;
-DESTROYING: terminating;
-OPENING: enabling;
-CLOSING: disabling;
-CLOSED: disabled;
-ADJUSTING: adjusting configuration
-ISOLATING: isolating (it's triggered when the account is in arrears);
-ISOLATED: isolated (it's triggered when the account is in arrears);
-UNKNOWN: unknown status. 
-     * @return Status Connection status:
-RUNNING: running;
-CREATING: creating;
-DESTROYING: terminating;
-OPENING: enabling;
-CLOSING: disabling;
-CLOSED: disabled;
-ADJUSTING: adjusting configuration
-ISOLATING: isolating (it's triggered when the account is in arrears);
-ISOLATED: isolated (it's triggered when the account is in arrears);
-UNKNOWN: unknown status.
+     * Get Connection status. Valid values:
+`RUNNING`: running
+`CREATING`: creating
+`DESTROYING`: terminating
+`OPENING`: enabling
+`CLOSING`: disabling
+`CLOSED`: disabled
+`ADJUSTING`: adjusting configuration
+`ISOLATING`: isolating
+`ISOLATED`: isolated
+`CLONING`: copying 
+     * @return Status Connection status. Valid values:
+`RUNNING`: running
+`CREATING`: creating
+`DESTROYING`: terminating
+`OPENING`: enabling
+`CLOSING`: disabling
+`CLOSED`: disabled
+`ADJUSTING`: adjusting configuration
+`ISOLATING`: isolating
+`ISOLATED`: isolated
+`CLONING`: copying
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Connection status:
-RUNNING: running;
-CREATING: creating;
-DESTROYING: terminating;
-OPENING: enabling;
-CLOSING: disabling;
-CLOSED: disabled;
-ADJUSTING: adjusting configuration
-ISOLATING: isolating (it's triggered when the account is in arrears);
-ISOLATED: isolated (it's triggered when the account is in arrears);
-UNKNOWN: unknown status.
-     * @param Status Connection status:
-RUNNING: running;
-CREATING: creating;
-DESTROYING: terminating;
-OPENING: enabling;
-CLOSING: disabling;
-CLOSED: disabled;
-ADJUSTING: adjusting configuration
-ISOLATING: isolating (it's triggered when the account is in arrears);
-ISOLATED: isolated (it's triggered when the account is in arrears);
-UNKNOWN: unknown status.
+     * Set Connection status. Valid values:
+`RUNNING`: running
+`CREATING`: creating
+`DESTROYING`: terminating
+`OPENING`: enabling
+`CLOSING`: disabling
+`CLOSED`: disabled
+`ADJUSTING`: adjusting configuration
+`ISOLATING`: isolating
+`ISOLATED`: isolated
+`CLONING`: copying
+     * @param Status Connection status. Valid values:
+`RUNNING`: running
+`CREATING`: creating
+`DESTROYING`: terminating
+`OPENING`: enabling
+`CLOSING`: disabling
+`CLOSED`: disabled
+`ADJUSTING`: adjusting configuration
+`ISOLATING`: isolating
+`ISOLATED`: isolated
+`CLONING`: copying
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -811,9 +818,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Network type. Valid values: `normal`, `cn2`
+     * Get Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
 Note: this field may return `null`, indicating that no valid value can be obtained. 
-     * @return NetworkType Network type. Valid values: `normal`, `cn2`
+     * @return NetworkType Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
 Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public String getNetworkType() {
@@ -821,9 +828,9 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Set Network type. Valid values: `normal`, `cn2`
+     * Set Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
 Note: this field may return `null`, indicating that no valid value can be obtained.
-     * @param NetworkType Network type. Valid values: `normal`, `cn2`
+     * @param NetworkType Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
 Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public void setNetworkType(String NetworkType) {
@@ -868,6 +875,22 @@ Note: this field may return `null`, indicating that no valid value can be obtain
      */
     public void setBanStatus(String BanStatus) {
         this.BanStatus = BanStatus;
+    }
+
+    /**
+     * Get  
+     * @return IPList 
+     */
+    public IPDetail [] getIPList() {
+        return this.IPList;
+    }
+
+    /**
+     * Set 
+     * @param IPList 
+     */
+    public void setIPList(IPDetail [] IPList) {
+        this.IPList = IPList;
     }
 
     public ProxyInfo() {
@@ -983,6 +1006,12 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         if (source.BanStatus != null) {
             this.BanStatus = new String(source.BanStatus);
         }
+        if (source.IPList != null) {
+            this.IPList = new IPDetail[source.IPList.length];
+            for (int i = 0; i < source.IPList.length; i++) {
+                this.IPList[i] = new IPDetail(source.IPList[i]);
+            }
+        }
     }
 
 
@@ -1021,6 +1050,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
         this.setParamSimple(map, prefix + "PackageType", this.PackageType);
         this.setParamSimple(map, prefix + "BanStatus", this.BanStatus);
+        this.setParamArrayObj(map, prefix + "IPList.", this.IPList);
 
     }
 }

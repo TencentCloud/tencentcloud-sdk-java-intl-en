@@ -107,7 +107,7 @@ If a model in InstanceTypes does not exist or has been deactivated, a verificati
     private LoginSettings LoginSettings;
 
     /**
-    * Project ID of the instance. This parameter can be obtained from the `projectId` field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
+    * Project ID of the instance. Leave it blank as the default.
     */
     @SerializedName("ProjectId")
     @Expose
@@ -383,16 +383,16 @@ If a model in InstanceTypes does not exist or has been deactivated, a verificati
     }
 
     /**
-     * Get Project ID of the instance. This parameter can be obtained from the `projectId` field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used. 
-     * @return ProjectId Project ID of the instance. This parameter can be obtained from the `projectId` field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
+     * Get Project ID of the instance. Leave it blank as the default. 
+     * @return ProjectId Project ID of the instance. Leave it blank as the default.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID of the instance. This parameter can be obtained from the `projectId` field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
-     * @param ProjectId Project ID of the instance. This parameter can be obtained from the `projectId` field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
+     * Set Project ID of the instance. Leave it blank as the default.
+     * @param ProjectId Project ID of the instance. Leave it blank as the default.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

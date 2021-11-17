@@ -37,6 +37,27 @@ public class RegionDetail extends AbstractModel{
     private String RegionName;
 
     /**
+    * Region where the data center locates
+    */
+    @SerializedName("RegionArea")
+    @Expose
+    private String RegionArea;
+
+    /**
+    * Name of the region where the data center locates
+    */
+    @SerializedName("RegionAreaName")
+    @Expose
+    private String RegionAreaName;
+
+    /**
+    * Data center type. `dc`: data center; `ec`: edge server.
+    */
+    @SerializedName("IDCType")
+    @Expose
+    private String IDCType;
+
+    /**
      * Get Region ID 
      * @return RegionId Region ID
      */
@@ -68,6 +89,54 @@ public class RegionDetail extends AbstractModel{
         this.RegionName = RegionName;
     }
 
+    /**
+     * Get Region where the data center locates 
+     * @return RegionArea Region where the data center locates
+     */
+    public String getRegionArea() {
+        return this.RegionArea;
+    }
+
+    /**
+     * Set Region where the data center locates
+     * @param RegionArea Region where the data center locates
+     */
+    public void setRegionArea(String RegionArea) {
+        this.RegionArea = RegionArea;
+    }
+
+    /**
+     * Get Name of the region where the data center locates 
+     * @return RegionAreaName Name of the region where the data center locates
+     */
+    public String getRegionAreaName() {
+        return this.RegionAreaName;
+    }
+
+    /**
+     * Set Name of the region where the data center locates
+     * @param RegionAreaName Name of the region where the data center locates
+     */
+    public void setRegionAreaName(String RegionAreaName) {
+        this.RegionAreaName = RegionAreaName;
+    }
+
+    /**
+     * Get Data center type. `dc`: data center; `ec`: edge server. 
+     * @return IDCType Data center type. `dc`: data center; `ec`: edge server.
+     */
+    public String getIDCType() {
+        return this.IDCType;
+    }
+
+    /**
+     * Set Data center type. `dc`: data center; `ec`: edge server.
+     * @param IDCType Data center type. `dc`: data center; `ec`: edge server.
+     */
+    public void setIDCType(String IDCType) {
+        this.IDCType = IDCType;
+    }
+
     public RegionDetail() {
     }
 
@@ -82,6 +151,15 @@ public class RegionDetail extends AbstractModel{
         if (source.RegionName != null) {
             this.RegionName = new String(source.RegionName);
         }
+        if (source.RegionArea != null) {
+            this.RegionArea = new String(source.RegionArea);
+        }
+        if (source.RegionAreaName != null) {
+            this.RegionAreaName = new String(source.RegionAreaName);
+        }
+        if (source.IDCType != null) {
+            this.IDCType = new String(source.IDCType);
+        }
     }
 
 
@@ -91,6 +169,9 @@ public class RegionDetail extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
         this.setParamSimple(map, prefix + "RegionName", this.RegionName);
+        this.setParamSimple(map, prefix + "RegionArea", this.RegionArea);
+        this.setParamSimple(map, prefix + "RegionAreaName", this.RegionAreaName);
+        this.setParamSimple(map, prefix + "IDCType", this.IDCType);
 
     }
 }

@@ -79,14 +79,14 @@ public class CreateAutoScalingGroupRequest extends AbstractModel{
     private String [] LoadBalancerIds;
 
     /**
-    * Project ID
+    * Project ID of an instance in a scaling group. The default project is used if it’s left blank.
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * List of CLBs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time.
+    * List of application CLBs. Up to 50 CLBs are allowed. You cannot specify `loadBalancerIds` and `ForwardLoadBalancers` at the same time.
     */
     @SerializedName("ForwardLoadBalancers")
     @Expose
@@ -344,32 +344,32 @@ Default value: `False`.
     }
 
     /**
-     * Get Project ID 
-     * @return ProjectId Project ID
+     * Get Project ID of an instance in a scaling group. The default project is used if it’s left blank. 
+     * @return ProjectId Project ID of an instance in a scaling group. The default project is used if it’s left blank.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID
-     * @param ProjectId Project ID
+     * Set Project ID of an instance in a scaling group. The default project is used if it’s left blank.
+     * @param ProjectId Project ID of an instance in a scaling group. The default project is used if it’s left blank.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get List of CLBs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time. 
-     * @return ForwardLoadBalancers List of CLBs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time.
+     * Get List of application CLBs. Up to 50 CLBs are allowed. You cannot specify `loadBalancerIds` and `ForwardLoadBalancers` at the same time. 
+     * @return ForwardLoadBalancers List of application CLBs. Up to 50 CLBs are allowed. You cannot specify `loadBalancerIds` and `ForwardLoadBalancers` at the same time.
      */
     public ForwardLoadBalancer [] getForwardLoadBalancers() {
         return this.ForwardLoadBalancers;
     }
 
     /**
-     * Set List of CLBs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time.
-     * @param ForwardLoadBalancers List of CLBs. Currently, the maximum length is 20. You cannot specify LoadBalancerIds and ForwardLoadBalancers at the same time.
+     * Set List of application CLBs. Up to 50 CLBs are allowed. You cannot specify `loadBalancerIds` and `ForwardLoadBalancers` at the same time.
+     * @param ForwardLoadBalancers List of application CLBs. Up to 50 CLBs are allowed. You cannot specify `loadBalancerIds` and `ForwardLoadBalancers` at the same time.
      */
     public void setForwardLoadBalancers(ForwardLoadBalancer [] ForwardLoadBalancers) {
         this.ForwardLoadBalancers = ForwardLoadBalancers;

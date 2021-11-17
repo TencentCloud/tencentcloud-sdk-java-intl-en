@@ -159,6 +159,13 @@ This field requires passing in the `InstanceName` field. Other fields that are n
     private InstanceNameSettings InstanceNameSettings;
 
     /**
+    * Specifies whether to enable additional services, such as security services and monitoring service.
+    */
+    @SerializedName("EnhancedService")
+    @Expose
+    private EnhancedService EnhancedService;
+
+    /**
      * Get Launch configuration ID 
      * @return LaunchConfigurationId Launch configuration ID
      */
@@ -510,6 +517,22 @@ This field requires passing in the `InstanceName` field. Other fields that are n
         this.InstanceNameSettings = InstanceNameSettings;
     }
 
+    /**
+     * Get Specifies whether to enable additional services, such as security services and monitoring service. 
+     * @return EnhancedService Specifies whether to enable additional services, such as security services and monitoring service.
+     */
+    public EnhancedService getEnhancedService() {
+        return this.EnhancedService;
+    }
+
+    /**
+     * Set Specifies whether to enable additional services, such as security services and monitoring service.
+     * @param EnhancedService Specifies whether to enable additional services, such as security services and monitoring service.
+     */
+    public void setEnhancedService(EnhancedService EnhancedService) {
+        this.EnhancedService = EnhancedService;
+    }
+
     public ModifyLaunchConfigurationAttributesRequest() {
     }
 
@@ -575,6 +598,9 @@ This field requires passing in the `InstanceName` field. Other fields that are n
         if (source.InstanceNameSettings != null) {
             this.InstanceNameSettings = new InstanceNameSettings(source.InstanceNameSettings);
         }
+        if (source.EnhancedService != null) {
+            this.EnhancedService = new EnhancedService(source.EnhancedService);
+        }
     }
 
 
@@ -598,6 +624,7 @@ This field requires passing in the `InstanceName` field. Other fields that are n
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         this.setParamObj(map, prefix + "HostNameSettings.", this.HostNameSettings);
         this.setParamObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
+        this.setParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
 
     }
 }

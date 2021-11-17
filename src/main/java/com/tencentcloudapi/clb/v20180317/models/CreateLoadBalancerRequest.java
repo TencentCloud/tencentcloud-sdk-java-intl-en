@@ -141,7 +141,9 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     private ExclusiveCluster ExclusiveCluster;
 
     /**
-    * 
+    * Creates an LCU-supported CLB instance
+<ul><li>To create an LCU-supported CLB, this field is required and the value is `SLA`. LCU-supports CLBs adopt the pay-as-you-go model and their performance is guaranteed.</li>
+<li>It’s not required for a shared CLB instance.</li></ul>
     */
     @SerializedName("SlaType")
     @Expose
@@ -189,6 +191,13 @@ Note: A secondary AZ will load traffic if the primary AZ has failures. The API `
     @SerializedName("EipAddressId")
     @Expose
     private String EipAddressId;
+
+    /**
+    * Whether to allow CLB traffic to the target group. `true`: allows CLB traffic to the target group and verifies security groups only on CLB; `false`: denies CLB traffic to the target group and verifies security groups on both CLB and backend instances.
+    */
+    @SerializedName("LoadBalancerPassToTarget")
+    @Expose
+    private Boolean LoadBalancerPassToTarget;
 
     /**
      * Get CLB instance network type:
@@ -471,16 +480,24 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     }
 
     /**
-     * Get  
-     * @return SlaType 
+     * Get Creates an LCU-supported CLB instance
+<ul><li>To create an LCU-supported CLB, this field is required and the value is `SLA`. LCU-supports CLBs adopt the pay-as-you-go model and their performance is guaranteed.</li>
+<li>It’s not required for a shared CLB instance.</li></ul> 
+     * @return SlaType Creates an LCU-supported CLB instance
+<ul><li>To create an LCU-supported CLB, this field is required and the value is `SLA`. LCU-supports CLBs adopt the pay-as-you-go model and their performance is guaranteed.</li>
+<li>It’s not required for a shared CLB instance.</li></ul>
      */
     public String getSlaType() {
         return this.SlaType;
     }
 
     /**
-     * Set 
-     * @param SlaType 
+     * Set Creates an LCU-supported CLB instance
+<ul><li>To create an LCU-supported CLB, this field is required and the value is `SLA`. LCU-supports CLBs adopt the pay-as-you-go model and their performance is guaranteed.</li>
+<li>It’s not required for a shared CLB instance.</li></ul>
+     * @param SlaType Creates an LCU-supported CLB instance
+<ul><li>To create an LCU-supported CLB, this field is required and the value is `SLA`. LCU-supports CLBs adopt the pay-as-you-go model and their performance is guaranteed.</li>
+<li>It’s not required for a shared CLB instance.</li></ul>
      */
     public void setSlaType(String SlaType) {
         this.SlaType = SlaType;
@@ -586,6 +603,22 @@ Note: A secondary AZ will load traffic if the primary AZ has failures. The API `
         this.EipAddressId = EipAddressId;
     }
 
+    /**
+     * Get Whether to allow CLB traffic to the target group. `true`: allows CLB traffic to the target group and verifies security groups only on CLB; `false`: denies CLB traffic to the target group and verifies security groups on both CLB and backend instances. 
+     * @return LoadBalancerPassToTarget Whether to allow CLB traffic to the target group. `true`: allows CLB traffic to the target group and verifies security groups only on CLB; `false`: denies CLB traffic to the target group and verifies security groups on both CLB and backend instances.
+     */
+    public Boolean getLoadBalancerPassToTarget() {
+        return this.LoadBalancerPassToTarget;
+    }
+
+    /**
+     * Set Whether to allow CLB traffic to the target group. `true`: allows CLB traffic to the target group and verifies security groups only on CLB; `false`: denies CLB traffic to the target group and verifies security groups on both CLB and backend instances.
+     * @param LoadBalancerPassToTarget Whether to allow CLB traffic to the target group. `true`: allows CLB traffic to the target group and verifies security groups only on CLB; `false`: denies CLB traffic to the target group and verifies security groups on both CLB and backend instances.
+     */
+    public void setLoadBalancerPassToTarget(Boolean LoadBalancerPassToTarget) {
+        this.LoadBalancerPassToTarget = LoadBalancerPassToTarget;
+    }
+
     public CreateLoadBalancerRequest() {
     }
 
@@ -669,6 +702,9 @@ Note: A secondary AZ will load traffic if the primary AZ has failures. The API `
         if (source.EipAddressId != null) {
             this.EipAddressId = new String(source.EipAddressId);
         }
+        if (source.LoadBalancerPassToTarget != null) {
+            this.LoadBalancerPassToTarget = new Boolean(source.LoadBalancerPassToTarget);
+        }
     }
 
 
@@ -699,6 +735,7 @@ Note: A secondary AZ will load traffic if the primary AZ has failures. The API `
         this.setParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
         this.setParamSimple(map, prefix + "SlaveZoneId", this.SlaveZoneId);
         this.setParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
+        this.setParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
 
     }
 }

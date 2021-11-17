@@ -81,6 +81,28 @@ When this field does not exist, all connections are pulled, including both not-g
     private Long Independent;
 
     /**
+    * Specifies how connections are listed. Valid values:
+`asc`: ascending order
+`desc`: descending order
+Default: `desc`
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
+
+    /**
+    * Sorting field. Valid values:
+`create_time`: sort by the creation time
+`proxy_id`: sort by the connection ID
+`bandwidth`:sort by the bandwidth limit
+`concurrent_connections`: sort by the number of concurrent connections
+Default: `create_time`
+    */
+    @SerializedName("OrderField")
+    @Expose
+    private String OrderField;
+
+    /**
      * Get Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's an old parameter, please switch to ProxyIds. 
      * @return InstanceIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's an old parameter, please switch to ProxyIds.
      */
@@ -228,6 +250,70 @@ When this field does not exist, all connections are pulled, including both not-g
         this.Independent = Independent;
     }
 
+    /**
+     * Get Specifies how connections are listed. Valid values:
+`asc`: ascending order
+`desc`: descending order
+Default: `desc` 
+     * @return Order Specifies how connections are listed. Valid values:
+`asc`: ascending order
+`desc`: descending order
+Default: `desc`
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set Specifies how connections are listed. Valid values:
+`asc`: ascending order
+`desc`: descending order
+Default: `desc`
+     * @param Order Specifies how connections are listed. Valid values:
+`asc`: ascending order
+`desc`: descending order
+Default: `desc`
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
+    /**
+     * Get Sorting field. Valid values:
+`create_time`: sort by the creation time
+`proxy_id`: sort by the connection ID
+`bandwidth`:sort by the bandwidth limit
+`concurrent_connections`: sort by the number of concurrent connections
+Default: `create_time` 
+     * @return OrderField Sorting field. Valid values:
+`create_time`: sort by the creation time
+`proxy_id`: sort by the connection ID
+`bandwidth`:sort by the bandwidth limit
+`concurrent_connections`: sort by the number of concurrent connections
+Default: `create_time`
+     */
+    public String getOrderField() {
+        return this.OrderField;
+    }
+
+    /**
+     * Set Sorting field. Valid values:
+`create_time`: sort by the creation time
+`proxy_id`: sort by the connection ID
+`bandwidth`:sort by the bandwidth limit
+`concurrent_connections`: sort by the number of concurrent connections
+Default: `create_time`
+     * @param OrderField Sorting field. Valid values:
+`create_time`: sort by the creation time
+`proxy_id`: sort by the connection ID
+`bandwidth`:sort by the bandwidth limit
+`concurrent_connections`: sort by the number of concurrent connections
+Default: `create_time`
+     */
+    public void setOrderField(String OrderField) {
+        this.OrderField = OrderField;
+    }
+
     public DescribeProxiesRequest() {
     }
 
@@ -269,6 +355,12 @@ When this field does not exist, all connections are pulled, including both not-g
         if (source.Independent != null) {
             this.Independent = new Long(source.Independent);
         }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+        if (source.OrderField != null) {
+            this.OrderField = new String(source.OrderField);
+        }
     }
 
 
@@ -283,6 +375,8 @@ When this field does not exist, all connections are pulled, including both not-g
         this.setParamArraySimple(map, prefix + "ProxyIds.", this.ProxyIds);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "Independent", this.Independent);
+        this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "OrderField", this.OrderField);
 
     }
 }

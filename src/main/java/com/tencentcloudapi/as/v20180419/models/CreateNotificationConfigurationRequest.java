@@ -50,6 +50,27 @@ public class CreateNotificationConfigurationRequest extends AbstractModel{
     private String [] NotificationUserGroupIds;
 
     /**
+    * Notification receiver type. Values: `USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`. Default: `USER_GROUP`.
+    */
+    @SerializedName("TargetType")
+    @Expose
+    private String TargetType;
+
+    /**
+    * CMQ queue name. This field is required when `TargetType` is `CMQ_QUEUE`.
+    */
+    @SerializedName("QueueName")
+    @Expose
+    private String QueueName;
+
+    /**
+    * CMQ topic name. This field is required when `TargetType` is `CMQ_TOPIC`.
+    */
+    @SerializedName("TopicName")
+    @Expose
+    private String TopicName;
+
+    /**
      * Get Auto scaling group ID. 
      * @return AutoScalingGroupId Auto scaling group ID.
      */
@@ -121,6 +142,54 @@ public class CreateNotificationConfigurationRequest extends AbstractModel{
         this.NotificationUserGroupIds = NotificationUserGroupIds;
     }
 
+    /**
+     * Get Notification receiver type. Values: `USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`. Default: `USER_GROUP`. 
+     * @return TargetType Notification receiver type. Values: `USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`. Default: `USER_GROUP`.
+     */
+    public String getTargetType() {
+        return this.TargetType;
+    }
+
+    /**
+     * Set Notification receiver type. Values: `USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`. Default: `USER_GROUP`.
+     * @param TargetType Notification receiver type. Values: `USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`. Default: `USER_GROUP`.
+     */
+    public void setTargetType(String TargetType) {
+        this.TargetType = TargetType;
+    }
+
+    /**
+     * Get CMQ queue name. This field is required when `TargetType` is `CMQ_QUEUE`. 
+     * @return QueueName CMQ queue name. This field is required when `TargetType` is `CMQ_QUEUE`.
+     */
+    public String getQueueName() {
+        return this.QueueName;
+    }
+
+    /**
+     * Set CMQ queue name. This field is required when `TargetType` is `CMQ_QUEUE`.
+     * @param QueueName CMQ queue name. This field is required when `TargetType` is `CMQ_QUEUE`.
+     */
+    public void setQueueName(String QueueName) {
+        this.QueueName = QueueName;
+    }
+
+    /**
+     * Get CMQ topic name. This field is required when `TargetType` is `CMQ_TOPIC`. 
+     * @return TopicName CMQ topic name. This field is required when `TargetType` is `CMQ_TOPIC`.
+     */
+    public String getTopicName() {
+        return this.TopicName;
+    }
+
+    /**
+     * Set CMQ topic name. This field is required when `TargetType` is `CMQ_TOPIC`.
+     * @param TopicName CMQ topic name. This field is required when `TargetType` is `CMQ_TOPIC`.
+     */
+    public void setTopicName(String TopicName) {
+        this.TopicName = TopicName;
+    }
+
     public CreateNotificationConfigurationRequest() {
     }
 
@@ -144,6 +213,15 @@ public class CreateNotificationConfigurationRequest extends AbstractModel{
                 this.NotificationUserGroupIds[i] = new String(source.NotificationUserGroupIds[i]);
             }
         }
+        if (source.TargetType != null) {
+            this.TargetType = new String(source.TargetType);
+        }
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
+        }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
     }
 
 
@@ -154,6 +232,9 @@ public class CreateNotificationConfigurationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
         this.setParamArraySimple(map, prefix + "NotificationTypes.", this.NotificationTypes);
         this.setParamArraySimple(map, prefix + "NotificationUserGroupIds.", this.NotificationUserGroupIds);
+        this.setParamSimple(map, prefix + "TargetType", this.TargetType);
+        this.setParamSimple(map, prefix + "QueueName", this.QueueName);
+        this.setParamSimple(map, prefix + "TopicName", this.TopicName);
 
     }
 }
