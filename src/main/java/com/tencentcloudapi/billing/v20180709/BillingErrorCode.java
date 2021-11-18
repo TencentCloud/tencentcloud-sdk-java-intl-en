@@ -1,6 +1,6 @@
 package com.tencentcloudapi.billing.v20180709;
 public enum BillingErrorCode {
-    // 
+    // No permission.
      AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnauthorizedOperation"),
      
     // Summary is being built. Please try again later.

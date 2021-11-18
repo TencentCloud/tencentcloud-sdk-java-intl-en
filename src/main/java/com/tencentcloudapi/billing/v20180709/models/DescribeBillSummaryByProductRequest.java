@@ -44,6 +44,18 @@ public class DescribeBillSummaryByProductRequest extends AbstractModel{
     private String PayerUin;
 
     /**
+    * A bill type, which corresponds to a subtotal type of L0 bills.
+This parameter has become valid since v3.0 bills took effect in May 2021.
+Valid values:
+`consume`: consumption
+`refund`: refund
+`adjustment`: bill adjustment
+    */
+    @SerializedName("PayType")
+    @Expose
+    private String PayType;
+
+    /**
      * Get The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018. 
      * @return BeginTime The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
      */
@@ -91,6 +103,42 @@ public class DescribeBillSummaryByProductRequest extends AbstractModel{
         this.PayerUin = PayerUin;
     }
 
+    /**
+     * Get A bill type, which corresponds to a subtotal type of L0 bills.
+This parameter has become valid since v3.0 bills took effect in May 2021.
+Valid values:
+`consume`: consumption
+`refund`: refund
+`adjustment`: bill adjustment 
+     * @return PayType A bill type, which corresponds to a subtotal type of L0 bills.
+This parameter has become valid since v3.0 bills took effect in May 2021.
+Valid values:
+`consume`: consumption
+`refund`: refund
+`adjustment`: bill adjustment
+     */
+    public String getPayType() {
+        return this.PayType;
+    }
+
+    /**
+     * Set A bill type, which corresponds to a subtotal type of L0 bills.
+This parameter has become valid since v3.0 bills took effect in May 2021.
+Valid values:
+`consume`: consumption
+`refund`: refund
+`adjustment`: bill adjustment
+     * @param PayType A bill type, which corresponds to a subtotal type of L0 bills.
+This parameter has become valid since v3.0 bills took effect in May 2021.
+Valid values:
+`consume`: consumption
+`refund`: refund
+`adjustment`: bill adjustment
+     */
+    public void setPayType(String PayType) {
+        this.PayType = PayType;
+    }
+
     public DescribeBillSummaryByProductRequest() {
     }
 
@@ -108,6 +156,9 @@ public class DescribeBillSummaryByProductRequest extends AbstractModel{
         if (source.PayerUin != null) {
             this.PayerUin = new String(source.PayerUin);
         }
+        if (source.PayType != null) {
+            this.PayType = new String(source.PayType);
+        }
     }
 
 
@@ -118,6 +169,7 @@ public class DescribeBillSummaryByProductRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
+        this.setParamSimple(map, prefix + "PayType", this.PayType);
 
     }
 }
