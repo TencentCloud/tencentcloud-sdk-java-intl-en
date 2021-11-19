@@ -30,21 +30,21 @@ public class ModifyParamTemplateRequest extends AbstractModel{
     private String TemplateId;
 
     /**
-    * New name of the parameter template.
+    * New name after the parameter template is modified.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * New description of the parameter template.
+    * New description after the parameter template is modified.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * List of new parameters.
+    * New parameter list after the parameter template is modified.
     */
     @SerializedName("ParamList")
     @Expose
@@ -67,48 +67,48 @@ public class ModifyParamTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get New name of the parameter template. 
-     * @return Name New name of the parameter template.
+     * Get New name after the parameter template is modified. 
+     * @return Name New name after the parameter template is modified.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set New name of the parameter template.
-     * @param Name New name of the parameter template.
+     * Set New name after the parameter template is modified.
+     * @param Name New name after the parameter template is modified.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get New description of the parameter template. 
-     * @return Description New description of the parameter template.
+     * Get New description after the parameter template is modified. 
+     * @return Description New description after the parameter template is modified.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set New description of the parameter template.
-     * @param Description New description of the parameter template.
+     * Set New description after the parameter template is modified.
+     * @param Description New description after the parameter template is modified.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get List of new parameters. 
-     * @return ParamList List of new parameters.
+     * Get New parameter list after the parameter template is modified. 
+     * @return ParamList New parameter list after the parameter template is modified.
      */
     public InstanceParam [] getParamList() {
         return this.ParamList;
     }
 
     /**
-     * Set List of new parameters.
-     * @param ParamList List of new parameters.
+     * Set New parameter list after the parameter template is modified.
+     * @param ParamList New parameter list after the parameter template is modified.
      */
     public void setParamList(InstanceParam [] ParamList) {
         this.ParamList = ParamList;

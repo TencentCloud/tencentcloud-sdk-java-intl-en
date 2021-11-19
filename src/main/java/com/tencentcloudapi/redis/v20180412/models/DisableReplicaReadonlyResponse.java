@@ -23,11 +23,12 @@ import java.util.HashMap;
 public class DisableReplicaReadonlyResponse extends AbstractModel{
 
     /**
-    * ERROR: failure; OK: success
+    * Task ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
-    @SerializedName("Status")
+    @SerializedName("TaskId")
     @Expose
-    private String Status;
+    private Long TaskId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +38,23 @@ public class DisableReplicaReadonlyResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get ERROR: failure; OK: success 
-     * @return Status ERROR: failure; OK: success
+     * Get Task ID
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return TaskId Task ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
-    public String getStatus() {
-        return this.Status;
+    public Long getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set ERROR: failure; OK: success
-     * @param Status ERROR: failure; OK: success
+     * Set Task ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param TaskId Task ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
-    public void setStatus(String Status) {
-        this.Status = Status;
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -76,8 +81,8 @@ public class DisableReplicaReadonlyResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DisableReplicaReadonlyResponse(DisableReplicaReadonlyResponse source) {
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +94,7 @@ public class DisableReplicaReadonlyResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

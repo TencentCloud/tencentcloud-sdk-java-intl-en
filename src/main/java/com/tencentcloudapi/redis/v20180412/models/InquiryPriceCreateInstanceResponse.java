@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InquiryPriceCreateInstanceResponse extends AbstractModel{
 
     /**
-    * Price. Unit: USD
+    * Price in USD
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Price")
@@ -38,9 +38,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get Price. Unit: USD
+     * Get Price in USD
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Price Price. Unit: USD
+     * @return Price Price in USD
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Float getPrice() {
@@ -48,9 +48,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Price. Unit: USD
+     * Set Price in USD
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Price Price. Unit: USD
+     * @param Price Price in USD
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setPrice(Float Price) {

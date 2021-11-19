@@ -30,7 +30,7 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+    * Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. However, this parameter is now invalid.
     */
     @SerializedName("WeekDays")
     @Expose
@@ -67,16 +67,16 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday 
-     * @return WeekDays Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+     * Get Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. However, this parameter is now invalid. 
+     * @return WeekDays Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. However, this parameter is now invalid.
      */
     public String [] getWeekDays() {
         return this.WeekDays;
     }
 
     /**
-     * Set Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
-     * @param WeekDays Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+     * Set Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. However, this parameter is now invalid.
+     * @param WeekDays Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. However, this parameter is now invalid.
      */
     public void setWeekDays(String [] WeekDays) {
         this.WeekDays = WeekDays;

@@ -23,11 +23,20 @@ import java.util.HashMap;
 public class EnableReplicaReadonlyResponse extends AbstractModel{
 
     /**
-    * ERROR: erroneous; OK: correct.
+    * Valid values: `ERROR`, `OK`. This field has been deprecated.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
+
+    /**
+    * Task ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private Long TaskId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +46,43 @@ public class EnableReplicaReadonlyResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get ERROR: erroneous; OK: correct. 
-     * @return Status ERROR: erroneous; OK: correct.
+     * Get Valid values: `ERROR`, `OK`. This field has been deprecated.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Status Valid values: `ERROR`, `OK`. This field has been deprecated.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set ERROR: erroneous; OK: correct.
-     * @param Status ERROR: erroneous; OK: correct.
+     * Set Valid values: `ERROR`, `OK`. This field has been deprecated.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Status Valid values: `ERROR`, `OK`. This field has been deprecated.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get Task ID
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return TaskId Task ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set Task ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param TaskId Task ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -79,6 +112,9 @@ public class EnableReplicaReadonlyResponse extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +126,7 @@ public class EnableReplicaReadonlyResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class DescribeBackupUrlResponse extends AbstractModel{
 
     /**
-    * Download address on the public network (valid for 6 hours)
+    * Public network download address (valid for six hours). This field will be deprecated soon.
     */
     @SerializedName("DownloadUrl")
     @Expose
     private String [] DownloadUrl;
 
     /**
-    * Download address on the private network (valid for 6 hours)
+    * Private network download address (valid for six hours). This field will be deprecated soon.
     */
     @SerializedName("InnerDownloadUrl")
     @Expose
     private String [] InnerDownloadUrl;
 
     /**
-    * File name (only valid for TencentDB for Tendis instances)
+    * Filename. This field will be deprecated soon.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Filenames")
@@ -60,41 +60,41 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get Download address on the public network (valid for 6 hours) 
-     * @return DownloadUrl Download address on the public network (valid for 6 hours)
+     * Get Public network download address (valid for six hours). This field will be deprecated soon. 
+     * @return DownloadUrl Public network download address (valid for six hours). This field will be deprecated soon.
      */
     public String [] getDownloadUrl() {
         return this.DownloadUrl;
     }
 
     /**
-     * Set Download address on the public network (valid for 6 hours)
-     * @param DownloadUrl Download address on the public network (valid for 6 hours)
+     * Set Public network download address (valid for six hours). This field will be deprecated soon.
+     * @param DownloadUrl Public network download address (valid for six hours). This field will be deprecated soon.
      */
     public void setDownloadUrl(String [] DownloadUrl) {
         this.DownloadUrl = DownloadUrl;
     }
 
     /**
-     * Get Download address on the private network (valid for 6 hours) 
-     * @return InnerDownloadUrl Download address on the private network (valid for 6 hours)
+     * Get Private network download address (valid for six hours). This field will be deprecated soon. 
+     * @return InnerDownloadUrl Private network download address (valid for six hours). This field will be deprecated soon.
      */
     public String [] getInnerDownloadUrl() {
         return this.InnerDownloadUrl;
     }
 
     /**
-     * Set Download address on the private network (valid for 6 hours)
-     * @param InnerDownloadUrl Download address on the private network (valid for 6 hours)
+     * Set Private network download address (valid for six hours). This field will be deprecated soon.
+     * @param InnerDownloadUrl Private network download address (valid for six hours). This field will be deprecated soon.
      */
     public void setInnerDownloadUrl(String [] InnerDownloadUrl) {
         this.InnerDownloadUrl = InnerDownloadUrl;
     }
 
     /**
-     * Get File name (only valid for TencentDB for Tendis instances)
+     * Get Filename. This field will be deprecated soon.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Filenames File name (only valid for TencentDB for Tendis instances)
+     * @return Filenames Filename. This field will be deprecated soon.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String [] getFilenames() {
@@ -102,9 +102,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set File name (only valid for TencentDB for Tendis instances)
+     * Set Filename. This field will be deprecated soon.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Filenames File name (only valid for TencentDB for Tendis instances)
+     * @param Filenames Filename. This field will be deprecated soon.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setFilenames(String [] Filenames) {
