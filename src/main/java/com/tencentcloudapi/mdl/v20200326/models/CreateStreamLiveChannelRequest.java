@@ -65,6 +65,13 @@ public class CreateStreamLiveChannelRequest extends AbstractModel{
     private AVTemplate [] AVTemplates;
 
     /**
+    * Event settings
+    */
+    @SerializedName("PlanSettings")
+    @Expose
+    private PlanSettings PlanSettings;
+
+    /**
      * Get Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level 
      * @return Name Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
      */
@@ -160,6 +167,22 @@ public class CreateStreamLiveChannelRequest extends AbstractModel{
         this.AVTemplates = AVTemplates;
     }
 
+    /**
+     * Get Event settings 
+     * @return PlanSettings Event settings
+     */
+    public PlanSettings getPlanSettings() {
+        return this.PlanSettings;
+    }
+
+    /**
+     * Set Event settings
+     * @param PlanSettings Event settings
+     */
+    public void setPlanSettings(PlanSettings PlanSettings) {
+        this.PlanSettings = PlanSettings;
+    }
+
     public CreateStreamLiveChannelRequest() {
     }
 
@@ -201,6 +224,9 @@ public class CreateStreamLiveChannelRequest extends AbstractModel{
                 this.AVTemplates[i] = new AVTemplate(source.AVTemplates[i]);
             }
         }
+        if (source.PlanSettings != null) {
+            this.PlanSettings = new PlanSettings(source.PlanSettings);
+        }
     }
 
 
@@ -214,6 +240,7 @@ public class CreateStreamLiveChannelRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "AudioTemplates.", this.AudioTemplates);
         this.setParamArrayObj(map, prefix + "VideoTemplates.", this.VideoTemplates);
         this.setParamArrayObj(map, prefix + "AVTemplates.", this.AVTemplates);
+        this.setParamObj(map, prefix + "PlanSettings.", this.PlanSettings);
 
     }
 }

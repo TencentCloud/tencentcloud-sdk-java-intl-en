@@ -37,9 +37,9 @@ public class HKIDCardOCRRequest extends AbstractModel{
     private Boolean ReturnHeadImage;
 
     /**
-    * Base64-encoded value of image.
-Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+    * Base64 string of the image
+Supported image formats: PNG, JPG, JPEG. GIF is not supported yet.
+Supported image size: The downloaded image cannot exceed 7 MB after being Base64-encoded, and it cannot take longer than 3 seconds to download the image.
     */
     @SerializedName("ImageBase64")
     @Expose
@@ -89,24 +89,24 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
     }
 
     /**
-     * Get Base64-encoded value of image.
-Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds. 
-     * @return ImageBase64 Base64-encoded value of image.
-Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+     * Get Base64 string of the image
+Supported image formats: PNG, JPG, JPEG. GIF is not supported yet.
+Supported image size: The downloaded image cannot exceed 7 MB after being Base64-encoded, and it cannot take longer than 3 seconds to download the image. 
+     * @return ImageBase64 Base64 string of the image
+Supported image formats: PNG, JPG, JPEG. GIF is not supported yet.
+Supported image size: The downloaded image cannot exceed 7 MB after being Base64-encoded, and it cannot take longer than 3 seconds to download the image.
      */
     public String getImageBase64() {
         return this.ImageBase64;
     }
 
     /**
-     * Set Base64-encoded value of image.
-Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-     * @param ImageBase64 Base64-encoded value of image.
-Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+     * Set Base64 string of the image
+Supported image formats: PNG, JPG, JPEG. GIF is not supported yet.
+Supported image size: The downloaded image cannot exceed 7 MB after being Base64-encoded, and it cannot take longer than 3 seconds to download the image.
+     * @param ImageBase64 Base64 string of the image
+Supported image formats: PNG, JPG, JPEG. GIF is not supported yet.
+Supported image size: The downloaded image cannot exceed 7 MB after being Base64-encoded, and it cannot take longer than 3 seconds to download the image.
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;

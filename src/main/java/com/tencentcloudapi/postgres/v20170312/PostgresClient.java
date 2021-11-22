@@ -819,6 +819,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify instance specifications including memory and disk size.
+     * @param req ModifyDBInstanceSpecRequest
+     * @return ModifyDBInstanceSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceSpecResponse ModifyDBInstanceSpec(ModifyDBInstanceSpecRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBInstanceSpecResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceSpecResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDBInstanceSpec");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to transfer an instance to another project.
      * @param req ModifyDBInstancesProjectRequest
      * @return ModifyDBInstancesProjectResponse

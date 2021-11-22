@@ -82,6 +82,14 @@ Note: this field may return `null`, indicating that no valid value was found.
     private AVTemplate [] AVTemplates;
 
     /**
+    * Event settings
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("PlanSettings")
+    @Expose
+    private PlanSettings PlanSettings;
+
+    /**
      * Get Channel ID 
      * @return Id Channel ID
      */
@@ -221,6 +229,26 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.AVTemplates = AVTemplates;
     }
 
+    /**
+     * Get Event settings
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return PlanSettings Event settings
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public PlanSettings getPlanSettings() {
+        return this.PlanSettings;
+    }
+
+    /**
+     * Set Event settings
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param PlanSettings Event settings
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setPlanSettings(PlanSettings PlanSettings) {
+        this.PlanSettings = PlanSettings;
+    }
+
     public StreamLiveChannelInfo() {
     }
 
@@ -268,6 +296,9 @@ Note: this field may return `null`, indicating that no valid value was found.
                 this.AVTemplates[i] = new AVTemplate(source.AVTemplates[i]);
             }
         }
+        if (source.PlanSettings != null) {
+            this.PlanSettings = new PlanSettings(source.PlanSettings);
+        }
     }
 
 
@@ -283,6 +314,7 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.setParamArrayObj(map, prefix + "AudioTemplates.", this.AudioTemplates);
         this.setParamArrayObj(map, prefix + "VideoTemplates.", this.VideoTemplates);
         this.setParamArrayObj(map, prefix + "AVTemplates.", this.AVTemplates);
+        this.setParamObj(map, prefix + "PlanSettings.", this.PlanSettings);
 
     }
 }

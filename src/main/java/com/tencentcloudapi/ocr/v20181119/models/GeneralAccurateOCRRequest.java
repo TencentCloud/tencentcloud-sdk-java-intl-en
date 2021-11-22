@@ -55,6 +55,20 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
     private Boolean EnableDetectSplit;
 
     /**
+    * Whether to enable PDF recognition. Default value: `false`. If you enable this feature, both images and PDF files can be recognized.
+    */
+    @SerializedName("IsPdf")
+    @Expose
+    private Boolean IsPdf;
+
+    /**
+    * Number of a PDF page that needs to be recognized. Currently, only one single page can be recognized. This parameter takes effect only if a PDF file is uploaded and `IsPdf` is set to `true`. Default value: `1`
+    */
+    @SerializedName("PdfPageNumber")
+    @Expose
+    private Long PdfPageNumber;
+
+    /**
      * Get Base64-encoded value of image.
 The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
 Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used. 
@@ -134,6 +148,38 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
         this.EnableDetectSplit = EnableDetectSplit;
     }
 
+    /**
+     * Get Whether to enable PDF recognition. Default value: `false`. If you enable this feature, both images and PDF files can be recognized. 
+     * @return IsPdf Whether to enable PDF recognition. Default value: `false`. If you enable this feature, both images and PDF files can be recognized.
+     */
+    public Boolean getIsPdf() {
+        return this.IsPdf;
+    }
+
+    /**
+     * Set Whether to enable PDF recognition. Default value: `false`. If you enable this feature, both images and PDF files can be recognized.
+     * @param IsPdf Whether to enable PDF recognition. Default value: `false`. If you enable this feature, both images and PDF files can be recognized.
+     */
+    public void setIsPdf(Boolean IsPdf) {
+        this.IsPdf = IsPdf;
+    }
+
+    /**
+     * Get Number of a PDF page that needs to be recognized. Currently, only one single page can be recognized. This parameter takes effect only if a PDF file is uploaded and `IsPdf` is set to `true`. Default value: `1` 
+     * @return PdfPageNumber Number of a PDF page that needs to be recognized. Currently, only one single page can be recognized. This parameter takes effect only if a PDF file is uploaded and `IsPdf` is set to `true`. Default value: `1`
+     */
+    public Long getPdfPageNumber() {
+        return this.PdfPageNumber;
+    }
+
+    /**
+     * Set Number of a PDF page that needs to be recognized. Currently, only one single page can be recognized. This parameter takes effect only if a PDF file is uploaded and `IsPdf` is set to `true`. Default value: `1`
+     * @param PdfPageNumber Number of a PDF page that needs to be recognized. Currently, only one single page can be recognized. This parameter takes effect only if a PDF file is uploaded and `IsPdf` is set to `true`. Default value: `1`
+     */
+    public void setPdfPageNumber(Long PdfPageNumber) {
+        this.PdfPageNumber = PdfPageNumber;
+    }
+
     public GeneralAccurateOCRRequest() {
     }
 
@@ -154,6 +200,12 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
         if (source.EnableDetectSplit != null) {
             this.EnableDetectSplit = new Boolean(source.EnableDetectSplit);
         }
+        if (source.IsPdf != null) {
+            this.IsPdf = new Boolean(source.IsPdf);
+        }
+        if (source.PdfPageNumber != null) {
+            this.PdfPageNumber = new Long(source.PdfPageNumber);
+        }
     }
 
 
@@ -165,6 +217,8 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "IsWords", this.IsWords);
         this.setParamSimple(map, prefix + "EnableDetectSplit", this.EnableDetectSplit);
+        this.setParamSimple(map, prefix + "IsPdf", this.IsPdf);
+        this.setParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
 
     }
 }

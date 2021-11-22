@@ -72,6 +72,13 @@ public class ModifyStreamLiveChannelRequest extends AbstractModel{
     private AVTemplate [] AVTemplates;
 
     /**
+    * Event settings
+    */
+    @SerializedName("PlanSettings")
+    @Expose
+    private PlanSettings PlanSettings;
+
+    /**
      * Get Channel ID 
      * @return Id Channel ID
      */
@@ -183,6 +190,22 @@ public class ModifyStreamLiveChannelRequest extends AbstractModel{
         this.AVTemplates = AVTemplates;
     }
 
+    /**
+     * Get Event settings 
+     * @return PlanSettings Event settings
+     */
+    public PlanSettings getPlanSettings() {
+        return this.PlanSettings;
+    }
+
+    /**
+     * Set Event settings
+     * @param PlanSettings Event settings
+     */
+    public void setPlanSettings(PlanSettings PlanSettings) {
+        this.PlanSettings = PlanSettings;
+    }
+
     public ModifyStreamLiveChannelRequest() {
     }
 
@@ -227,6 +250,9 @@ public class ModifyStreamLiveChannelRequest extends AbstractModel{
                 this.AVTemplates[i] = new AVTemplate(source.AVTemplates[i]);
             }
         }
+        if (source.PlanSettings != null) {
+            this.PlanSettings = new PlanSettings(source.PlanSettings);
+        }
     }
 
 
@@ -241,6 +267,7 @@ public class ModifyStreamLiveChannelRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "AudioTemplates.", this.AudioTemplates);
         this.setParamArrayObj(map, prefix + "VideoTemplates.", this.VideoTemplates);
         this.setParamArrayObj(map, prefix + "AVTemplates.", this.AVTemplates);
+        this.setParamObj(map, prefix + "PlanSettings.", this.PlanSettings);
 
     }
 }
