@@ -23,14 +23,6 @@ import java.util.HashMap;
 public class DescribeSmsTemplateListRequest extends AbstractModel{
 
     /**
-    * Template ID array.
-<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
-    */
-    @SerializedName("TemplateIdSet")
-    @Expose
-    private Long [] TemplateIdSet;
-
-    /**
     * Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
@@ -40,24 +32,28 @@ public class DescribeSmsTemplateListRequest extends AbstractModel{
     private Long International;
 
     /**
-     * Get Template ID array.
-<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert> 
-     * @return TemplateIdSet Template ID array.
-<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
-     */
-    public Long [] getTemplateIdSet() {
-        return this.TemplateIdSet;
-    }
+    * Array of template IDs. If the array is empty, the template list information will be queried by default (only allowed for root accounts). You need to use the `Limit` and `Offset` fields to set the query range.
+<dx-alert infotype="notice" title="Note">The default array length can be up to 100</dx-alert>
+    */
+    @SerializedName("TemplateIdSet")
+    @Expose
+    private Long [] TemplateIdSet;
 
     /**
-     * Set Template ID array.
-<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
-     * @param TemplateIdSet Template ID array.
-<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
-     */
-    public void setTemplateIdSet(Long [] TemplateIdSet) {
-        this.TemplateIdSet = TemplateIdSet;
-    }
+    * Upper limit. Maximum value: 100.
+Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * Offset.
+Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
      * Get Whether it is Global SMS:
@@ -83,6 +79,66 @@ public class DescribeSmsTemplateListRequest extends AbstractModel{
         this.International = International;
     }
 
+    /**
+     * Get Array of template IDs. If the array is empty, the template list information will be queried by default (only allowed for root accounts). You need to use the `Limit` and `Offset` fields to set the query range.
+<dx-alert infotype="notice" title="Note">The default array length can be up to 100</dx-alert> 
+     * @return TemplateIdSet Array of template IDs. If the array is empty, the template list information will be queried by default (only allowed for root accounts). You need to use the `Limit` and `Offset` fields to set the query range.
+<dx-alert infotype="notice" title="Note">The default array length can be up to 100</dx-alert>
+     */
+    public Long [] getTemplateIdSet() {
+        return this.TemplateIdSet;
+    }
+
+    /**
+     * Set Array of template IDs. If the array is empty, the template list information will be queried by default (only allowed for root accounts). You need to use the `Limit` and `Offset` fields to set the query range.
+<dx-alert infotype="notice" title="Note">The default array length can be up to 100</dx-alert>
+     * @param TemplateIdSet Array of template IDs. If the array is empty, the template list information will be queried by default (only allowed for root accounts). You need to use the `Limit` and `Offset` fields to set the query range.
+<dx-alert infotype="notice" title="Note">The default array length can be up to 100</dx-alert>
+     */
+    public void setTemplateIdSet(Long [] TemplateIdSet) {
+        this.TemplateIdSet = TemplateIdSet;
+    }
+
+    /**
+     * Get Upper limit. Maximum value: 100.
+Note: it is 0 by default and is enabled when `TemplateIdSet` is empty. 
+     * @return Limit Upper limit. Maximum value: 100.
+Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set Upper limit. Maximum value: 100.
+Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
+     * @param Limit Upper limit. Maximum value: 100.
+Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get Offset.
+Note: it is 0 by default and is enabled when `TemplateIdSet` is empty. 
+     * @return Offset Offset.
+Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set Offset.
+Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
+     * @param Offset Offset.
+Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
     public DescribeSmsTemplateListRequest() {
     }
 
@@ -91,14 +147,20 @@ public class DescribeSmsTemplateListRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeSmsTemplateListRequest(DescribeSmsTemplateListRequest source) {
+        if (source.International != null) {
+            this.International = new Long(source.International);
+        }
         if (source.TemplateIdSet != null) {
             this.TemplateIdSet = new Long[source.TemplateIdSet.length];
             for (int i = 0; i < source.TemplateIdSet.length; i++) {
                 this.TemplateIdSet[i] = new Long(source.TemplateIdSet[i]);
             }
         }
-        if (source.International != null) {
-            this.International = new Long(source.International);
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
         }
     }
 
@@ -107,8 +169,10 @@ public class DescribeSmsTemplateListRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "TemplateIdSet.", this.TemplateIdSet);
         this.setParamSimple(map, prefix + "International", this.International);
+        this.setParamArraySimple(map, prefix + "TemplateIdSet.", this.TemplateIdSet);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

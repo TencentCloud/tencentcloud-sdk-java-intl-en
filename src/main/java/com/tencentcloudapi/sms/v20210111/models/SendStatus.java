@@ -37,7 +37,7 @@ public class SendStatus extends AbstractModel{
     private String PhoneNumber;
 
     /**
-    * Number of billable SMS messages. For billing rules, please see [Billing Policy](https://intl.cloud.tencent.com/document/product/382/36135?from_cn_redirect=1).
+    * Number of billable SMS messages. For billing rules, see Billing Policy.
     */
     @SerializedName("Fee")
     @Expose
@@ -51,7 +51,7 @@ public class SendStatus extends AbstractModel{
     private String SessionContext;
 
     /**
-    * SMS request error code. For details, see [Error Codes](https://intl.cloud.tencent.com/document/api/382/55981?from_cn_redirect=1#6.-.E9.94.99.E8.AF.AF.E7.A0.81). `Ok` will be returned if the request is successful.
+    * SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
     */
     @SerializedName("Code")
     @Expose
@@ -104,16 +104,16 @@ public class SendStatus extends AbstractModel{
     }
 
     /**
-     * Get Number of billable SMS messages. For billing rules, please see [Billing Policy](https://intl.cloud.tencent.com/document/product/382/36135?from_cn_redirect=1). 
-     * @return Fee Number of billable SMS messages. For billing rules, please see [Billing Policy](https://intl.cloud.tencent.com/document/product/382/36135?from_cn_redirect=1).
+     * Get Number of billable SMS messages. For billing rules, see Billing Policy. 
+     * @return Fee Number of billable SMS messages. For billing rules, see Billing Policy.
      */
     public Long getFee() {
         return this.Fee;
     }
 
     /**
-     * Set Number of billable SMS messages. For billing rules, please see [Billing Policy](https://intl.cloud.tencent.com/document/product/382/36135?from_cn_redirect=1).
-     * @param Fee Number of billable SMS messages. For billing rules, please see [Billing Policy](https://intl.cloud.tencent.com/document/product/382/36135?from_cn_redirect=1).
+     * Set Number of billable SMS messages. For billing rules, see Billing Policy.
+     * @param Fee Number of billable SMS messages. For billing rules, see Billing Policy.
      */
     public void setFee(Long Fee) {
         this.Fee = Fee;
@@ -136,16 +136,16 @@ public class SendStatus extends AbstractModel{
     }
 
     /**
-     * Get SMS request error code. For details, see [Error Codes](https://intl.cloud.tencent.com/document/api/382/55981?from_cn_redirect=1#6.-.E9.94.99.E8.AF.AF.E7.A0.81). `Ok` will be returned if the request is successful. 
-     * @return Code SMS request error code. For details, see [Error Codes](https://intl.cloud.tencent.com/document/api/382/55981?from_cn_redirect=1#6.-.E9.94.99.E8.AF.AF.E7.A0.81). `Ok` will be returned if the request is successful.
+     * Get SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery. 
+     * @return Code SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
      */
     public String getCode() {
         return this.Code;
     }
 
     /**
-     * Set SMS request error code. For details, see [Error Codes](https://intl.cloud.tencent.com/document/api/382/55981?from_cn_redirect=1#6.-.E9.94.99.E8.AF.AF.E7.A0.81). `Ok` will be returned if the request is successful.
-     * @param Code SMS request error code. For details, see [Error Codes](https://intl.cloud.tencent.com/document/api/382/55981?from_cn_redirect=1#6.-.E9.94.99.E8.AF.AF.E7.A0.81). `Ok` will be returned if the request is successful.
+     * Set SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
+     * @param Code SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
      */
     public void setCode(String Code) {
         this.Code = Code;

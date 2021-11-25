@@ -45,6 +45,14 @@ Note: `null` may be returned for this field, indicating that no valid values can
     private Event [] Events;
 
     /**
+    * Total number of events.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -104,6 +112,26 @@ Note: `null` may be returned for this field, indicating that no valid values can
     }
 
     /**
+     * Get Total number of events.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return TotalCount Total number of events.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set Total number of events.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param TotalCount Total number of events.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -139,6 +167,9 @@ Note: `null` may be returned for this field, indicating that no valid values can
                 this.Events[i] = new Event(source.Events[i]);
             }
         }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -152,6 +183,7 @@ Note: `null` may be returned for this field, indicating that no valid values can
         this.setParamSimple(map, prefix + "ListOver", this.ListOver);
         this.setParamSimple(map, prefix + "NextToken", this.NextToken);
         this.setParamArrayObj(map, prefix + "Events.", this.Events);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

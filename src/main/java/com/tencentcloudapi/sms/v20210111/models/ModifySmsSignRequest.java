@@ -38,12 +38,13 @@ public class ModifySmsSignRequest extends AbstractModel{
 
     /**
     * Signature type. Each of these types is followed by their `DocumentType` (identity certificate type) option:
-0: company. Valid values of `DocumentType` include 0, 1, 2, and 3.
+0: company. Valid values of `DocumentType` include 0 and 1.
 1: app. Valid values of `DocumentType` include 0, 1, 2, 3, and 4.
 2: website. Valid values of `DocumentType` include 0, 1, 2, 3, and 5.
-3: WeChat Official Account or WeChat Mini Program. Valid values of `DocumentType` include 0, 1, 2, 3, and 6.
+3: WeChat Official Account. Valid values of `DocumentType` include 0, 1, 2, 3, and 8.
 4: trademark. Valid values of `DocumentType` include 7.
 5: government/public institution/other. Valid values of `DocumentType` include 2 and 3.
+6: WeChat Mini Program. Valid values of `DocumentType` include 0, 1, 2, 3, and 6.
 Note: the identity certificate type must be selected according to the correspondence; otherwise, the review will fail.
     */
     @SerializedName("SignType")
@@ -60,7 +61,7 @@ Note: the identity certificate type must be selected according to the correspond
 5: screenshot of website ICP filing backend (for personal website).
 6: screenshot of WeChat Mini Program settings page (for personal WeChat Mini Program).
 7: trademark registration certificate.
-Note: the corresponding `DocumentType` must be selected according to `SignType`.
+8: screenshot of WeChat Official Account settings page (for personal WeChat Official Account).
     */
     @SerializedName("DocumentType")
     @Expose
@@ -142,20 +143,22 @@ Note: this field will take effect only when `SignPurpose` is 1 (for user by othe
 
     /**
      * Get Signature type. Each of these types is followed by their `DocumentType` (identity certificate type) option:
-0: company. Valid values of `DocumentType` include 0, 1, 2, and 3.
+0: company. Valid values of `DocumentType` include 0 and 1.
 1: app. Valid values of `DocumentType` include 0, 1, 2, 3, and 4.
 2: website. Valid values of `DocumentType` include 0, 1, 2, 3, and 5.
-3: WeChat Official Account or WeChat Mini Program. Valid values of `DocumentType` include 0, 1, 2, 3, and 6.
+3: WeChat Official Account. Valid values of `DocumentType` include 0, 1, 2, 3, and 8.
 4: trademark. Valid values of `DocumentType` include 7.
 5: government/public institution/other. Valid values of `DocumentType` include 2 and 3.
+6: WeChat Mini Program. Valid values of `DocumentType` include 0, 1, 2, 3, and 6.
 Note: the identity certificate type must be selected according to the correspondence; otherwise, the review will fail. 
      * @return SignType Signature type. Each of these types is followed by their `DocumentType` (identity certificate type) option:
-0: company. Valid values of `DocumentType` include 0, 1, 2, and 3.
+0: company. Valid values of `DocumentType` include 0 and 1.
 1: app. Valid values of `DocumentType` include 0, 1, 2, 3, and 4.
 2: website. Valid values of `DocumentType` include 0, 1, 2, 3, and 5.
-3: WeChat Official Account or WeChat Mini Program. Valid values of `DocumentType` include 0, 1, 2, 3, and 6.
+3: WeChat Official Account. Valid values of `DocumentType` include 0, 1, 2, 3, and 8.
 4: trademark. Valid values of `DocumentType` include 7.
 5: government/public institution/other. Valid values of `DocumentType` include 2 and 3.
+6: WeChat Mini Program. Valid values of `DocumentType` include 0, 1, 2, 3, and 6.
 Note: the identity certificate type must be selected according to the correspondence; otherwise, the review will fail.
      */
     public Long getSignType() {
@@ -164,20 +167,22 @@ Note: the identity certificate type must be selected according to the correspond
 
     /**
      * Set Signature type. Each of these types is followed by their `DocumentType` (identity certificate type) option:
-0: company. Valid values of `DocumentType` include 0, 1, 2, and 3.
+0: company. Valid values of `DocumentType` include 0 and 1.
 1: app. Valid values of `DocumentType` include 0, 1, 2, 3, and 4.
 2: website. Valid values of `DocumentType` include 0, 1, 2, 3, and 5.
-3: WeChat Official Account or WeChat Mini Program. Valid values of `DocumentType` include 0, 1, 2, 3, and 6.
+3: WeChat Official Account. Valid values of `DocumentType` include 0, 1, 2, 3, and 8.
 4: trademark. Valid values of `DocumentType` include 7.
 5: government/public institution/other. Valid values of `DocumentType` include 2 and 3.
+6: WeChat Mini Program. Valid values of `DocumentType` include 0, 1, 2, 3, and 6.
 Note: the identity certificate type must be selected according to the correspondence; otherwise, the review will fail.
      * @param SignType Signature type. Each of these types is followed by their `DocumentType` (identity certificate type) option:
-0: company. Valid values of `DocumentType` include 0, 1, 2, and 3.
+0: company. Valid values of `DocumentType` include 0 and 1.
 1: app. Valid values of `DocumentType` include 0, 1, 2, 3, and 4.
 2: website. Valid values of `DocumentType` include 0, 1, 2, 3, and 5.
-3: WeChat Official Account or WeChat Mini Program. Valid values of `DocumentType` include 0, 1, 2, 3, and 6.
+3: WeChat Official Account. Valid values of `DocumentType` include 0, 1, 2, 3, and 8.
 4: trademark. Valid values of `DocumentType` include 7.
 5: government/public institution/other. Valid values of `DocumentType` include 2 and 3.
+6: WeChat Mini Program. Valid values of `DocumentType` include 0, 1, 2, 3, and 6.
 Note: the identity certificate type must be selected according to the correspondence; otherwise, the review will fail.
      */
     public void setSignType(Long SignType) {
@@ -194,7 +199,7 @@ Note: the identity certificate type must be selected according to the correspond
 5: screenshot of website ICP filing backend (for personal website).
 6: screenshot of WeChat Mini Program settings page (for personal WeChat Mini Program).
 7: trademark registration certificate.
-Note: the corresponding `DocumentType` must be selected according to `SignType`. 
+8: screenshot of WeChat Official Account settings page (for personal WeChat Official Account). 
      * @return DocumentType Identity certificate type:
 0: three-in-one.
 1: business license.
@@ -204,7 +209,7 @@ Note: the corresponding `DocumentType` must be selected according to `SignType`.
 5: screenshot of website ICP filing backend (for personal website).
 6: screenshot of WeChat Mini Program settings page (for personal WeChat Mini Program).
 7: trademark registration certificate.
-Note: the corresponding `DocumentType` must be selected according to `SignType`.
+8: screenshot of WeChat Official Account settings page (for personal WeChat Official Account).
      */
     public Long getDocumentType() {
         return this.DocumentType;
@@ -220,7 +225,7 @@ Note: the corresponding `DocumentType` must be selected according to `SignType`.
 5: screenshot of website ICP filing backend (for personal website).
 6: screenshot of WeChat Mini Program settings page (for personal WeChat Mini Program).
 7: trademark registration certificate.
-Note: the corresponding `DocumentType` must be selected according to `SignType`.
+8: screenshot of WeChat Official Account settings page (for personal WeChat Official Account).
      * @param DocumentType Identity certificate type:
 0: three-in-one.
 1: business license.
@@ -230,7 +235,7 @@ Note: the corresponding `DocumentType` must be selected according to `SignType`.
 5: screenshot of website ICP filing backend (for personal website).
 6: screenshot of WeChat Mini Program settings page (for personal WeChat Mini Program).
 7: trademark registration certificate.
-Note: the corresponding `DocumentType` must be selected according to `SignType`.
+8: screenshot of WeChat Official Account settings page (for personal WeChat Official Account).
      */
     public void setDocumentType(Long DocumentType) {
         this.DocumentType = DocumentType;
