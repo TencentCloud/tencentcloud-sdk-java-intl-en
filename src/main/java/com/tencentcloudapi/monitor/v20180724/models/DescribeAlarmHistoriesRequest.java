@@ -87,7 +87,6 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel{
 
     /**
     * Filter by project ID. Valid values: `-1` (no project), `0` (default project)
-You can query [Project Management](https://console.cloud.tencent.com/project) on this page.
     */
     @SerializedName("ProjectIds")
     @Expose
@@ -102,7 +101,6 @@ You can query [Project Management](https://console.cloud.tencent.com/project) on
 
     /**
     * Filter by policy type. Monitoring type and policy type are first-level and second-level filters respectively and both need to be passed in. For example, `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]`
-This parameter can be queried with the API [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1).
     */
     @SerializedName("Namespaces")
     @Expose
@@ -130,14 +128,14 @@ This parameter can be queried with the API [DescribeAllNamespaces](https://intl.
     private String Content;
 
     /**
-    * Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here.
+    * Search by recipient
     */
     @SerializedName("ReceiverUids")
     @Expose
     private Long [] ReceiverUids;
 
     /**
-    * Search by recipient group. You can get the user group list with the API [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) in “Cloud Access Management” or query the user group list where a sub-user is in with the API [ListGroupsForUser](https://intl.cloud.tencent.com/document/product/598/34588?from_cn_redirect=1). The `GroupId` field in the returned result should be entered here.
+    * Search by recipient group
     */
     @SerializedName("ReceiverGroups")
     @Expose
@@ -295,10 +293,8 @@ This parameter can be queried with the API [DescribeAllNamespaces](https://intl.
     }
 
     /**
-     * Get Filter by project ID. Valid values: `-1` (no project), `0` (default project)
-You can query [Project Management](https://console.cloud.tencent.com/project) on this page. 
+     * Get Filter by project ID. Valid values: `-1` (no project), `0` (default project) 
      * @return ProjectIds Filter by project ID. Valid values: `-1` (no project), `0` (default project)
-You can query [Project Management](https://console.cloud.tencent.com/project) on this page.
      */
     public Long [] getProjectIds() {
         return this.ProjectIds;
@@ -306,9 +302,7 @@ You can query [Project Management](https://console.cloud.tencent.com/project) on
 
     /**
      * Set Filter by project ID. Valid values: `-1` (no project), `0` (default project)
-You can query [Project Management](https://console.cloud.tencent.com/project) on this page.
      * @param ProjectIds Filter by project ID. Valid values: `-1` (no project), `0` (default project)
-You can query [Project Management](https://console.cloud.tencent.com/project) on this page.
      */
     public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;
@@ -331,10 +325,8 @@ You can query [Project Management](https://console.cloud.tencent.com/project) on
     }
 
     /**
-     * Get Filter by policy type. Monitoring type and policy type are first-level and second-level filters respectively and both need to be passed in. For example, `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]`
-This parameter can be queried with the API [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1). 
+     * Get Filter by policy type. Monitoring type and policy type are first-level and second-level filters respectively and both need to be passed in. For example, `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]` 
      * @return Namespaces Filter by policy type. Monitoring type and policy type are first-level and second-level filters respectively and both need to be passed in. For example, `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]`
-This parameter can be queried with the API [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1).
      */
     public MonitorTypeNamespace [] getNamespaces() {
         return this.Namespaces;
@@ -342,9 +334,7 @@ This parameter can be queried with the API [DescribeAllNamespaces](https://intl.
 
     /**
      * Set Filter by policy type. Monitoring type and policy type are first-level and second-level filters respectively and both need to be passed in. For example, `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]`
-This parameter can be queried with the API [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1).
      * @param Namespaces Filter by policy type. Monitoring type and policy type are first-level and second-level filters respectively and both need to be passed in. For example, `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]`
-This parameter can be queried with the API [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1).
      */
     public void setNamespaces(MonitorTypeNamespace [] Namespaces) {
         this.Namespaces = Namespaces;
@@ -399,32 +389,32 @@ This parameter can be queried with the API [DescribeAllNamespaces](https://intl.
     }
 
     /**
-     * Get Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here. 
-     * @return ReceiverUids Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here.
+     * Get Search by recipient 
+     * @return ReceiverUids Search by recipient
      */
     public Long [] getReceiverUids() {
         return this.ReceiverUids;
     }
 
     /**
-     * Set Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here.
-     * @param ReceiverUids Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here.
+     * Set Search by recipient
+     * @param ReceiverUids Search by recipient
      */
     public void setReceiverUids(Long [] ReceiverUids) {
         this.ReceiverUids = ReceiverUids;
     }
 
     /**
-     * Get Search by recipient group. You can get the user group list with the API [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) in “Cloud Access Management” or query the user group list where a sub-user is in with the API [ListGroupsForUser](https://intl.cloud.tencent.com/document/product/598/34588?from_cn_redirect=1). The `GroupId` field in the returned result should be entered here. 
-     * @return ReceiverGroups Search by recipient group. You can get the user group list with the API [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) in “Cloud Access Management” or query the user group list where a sub-user is in with the API [ListGroupsForUser](https://intl.cloud.tencent.com/document/product/598/34588?from_cn_redirect=1). The `GroupId` field in the returned result should be entered here.
+     * Get Search by recipient group 
+     * @return ReceiverGroups Search by recipient group
      */
     public Long [] getReceiverGroups() {
         return this.ReceiverGroups;
     }
 
     /**
-     * Set Search by recipient group. You can get the user group list with the API [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) in “Cloud Access Management” or query the user group list where a sub-user is in with the API [ListGroupsForUser](https://intl.cloud.tencent.com/document/product/598/34588?from_cn_redirect=1). The `GroupId` field in the returned result should be entered here.
-     * @param ReceiverGroups Search by recipient group. You can get the user group list with the API [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) in “Cloud Access Management” or query the user group list where a sub-user is in with the API [ListGroupsForUser](https://intl.cloud.tencent.com/document/product/598/34588?from_cn_redirect=1). The `GroupId` field in the returned result should be entered here.
+     * Set Search by recipient group
+     * @param ReceiverGroups Search by recipient group
      */
     public void setReceiverGroups(Long [] ReceiverGroups) {
         this.ReceiverGroups = ReceiverGroups;

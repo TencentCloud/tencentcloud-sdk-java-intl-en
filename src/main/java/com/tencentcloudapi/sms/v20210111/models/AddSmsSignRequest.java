@@ -47,7 +47,7 @@ Note: the identity certificate type must be selected according to the correspond
 
     /**
     * Identity certificate type:
-0: three-in-one.
+0: three-in-one licence.
 1: business license.
 2: organization code certificate.
 3: social credit code certificate.
@@ -172,7 +172,7 @@ Note: the identity certificate type must be selected according to the correspond
 
     /**
      * Get Identity certificate type:
-0: three-in-one.
+0: three-in-one licence.
 1: business license.
 2: organization code certificate.
 3: social credit code certificate.
@@ -182,7 +182,7 @@ Note: the identity certificate type must be selected according to the correspond
 7: trademark registration certificate.
 8: screenshot of WeChat Official Account settings page (for personal WeChat Official Account). 
      * @return DocumentType Identity certificate type:
-0: three-in-one.
+0: three-in-one licence.
 1: business license.
 2: organization code certificate.
 3: social credit code certificate.
@@ -198,7 +198,7 @@ Note: the identity certificate type must be selected according to the correspond
 
     /**
      * Set Identity certificate type:
-0: three-in-one.
+0: three-in-one licence.
 1: business license.
 2: organization code certificate.
 3: social credit code certificate.
@@ -208,7 +208,7 @@ Note: the identity certificate type must be selected according to the correspond
 7: trademark registration certificate.
 8: screenshot of WeChat Official Account settings page (for personal WeChat Official Account).
      * @param DocumentType Identity certificate type:
-0: three-in-one.
+0: three-in-one licence.
 1: business license.
 2: organization code certificate.
 3: social credit code certificate.
