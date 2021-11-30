@@ -234,6 +234,13 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
     private WebNodeTypeInfo WebNodeTypeInfo;
 
     /**
+    * Valid values: `https`, `http` (default)
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
      * Get Availability Zone 
      * @return Zone Availability Zone
      */
@@ -729,6 +736,22 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
         this.WebNodeTypeInfo = WebNodeTypeInfo;
     }
 
+    /**
+     * Get Valid values: `https`, `http` (default) 
+     * @return Protocol Valid values: `https`, `http` (default)
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set Valid values: `https`, `http` (default)
+     * @param Protocol Valid values: `https`, `http` (default)
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -836,6 +859,9 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
         if (source.WebNodeTypeInfo != null) {
             this.WebNodeTypeInfo = new WebNodeTypeInfo(source.WebNodeTypeInfo);
         }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
     }
 
 
@@ -872,6 +898,7 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
         this.setParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);
         this.setParamObj(map, prefix + "WebNodeTypeInfo.", this.WebNodeTypeInfo);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
 
     }
 }

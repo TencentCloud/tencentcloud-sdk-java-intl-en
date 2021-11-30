@@ -204,6 +204,34 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     private WebNodeTypeInfo WebNodeTypeInfo;
 
     /**
+    * Whether to switch to the new network architecture
+    */
+    @SerializedName("SwitchPrivateLink")
+    @Expose
+    private String SwitchPrivateLink;
+
+    /**
+    * Whether to enable Cerebro
+    */
+    @SerializedName("EnableCerebro")
+    @Expose
+    private Boolean EnableCerebro;
+
+    /**
+    * Cerebro public network access status
+    */
+    @SerializedName("CerebroPublicAccess")
+    @Expose
+    private String CerebroPublicAccess;
+
+    /**
+    * Cerebro private network access status
+    */
+    @SerializedName("CerebroPrivateAccess")
+    @Expose
+    private String CerebroPrivateAccess;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -627,6 +655,70 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
         this.WebNodeTypeInfo = WebNodeTypeInfo;
     }
 
+    /**
+     * Get Whether to switch to the new network architecture 
+     * @return SwitchPrivateLink Whether to switch to the new network architecture
+     */
+    public String getSwitchPrivateLink() {
+        return this.SwitchPrivateLink;
+    }
+
+    /**
+     * Set Whether to switch to the new network architecture
+     * @param SwitchPrivateLink Whether to switch to the new network architecture
+     */
+    public void setSwitchPrivateLink(String SwitchPrivateLink) {
+        this.SwitchPrivateLink = SwitchPrivateLink;
+    }
+
+    /**
+     * Get Whether to enable Cerebro 
+     * @return EnableCerebro Whether to enable Cerebro
+     */
+    public Boolean getEnableCerebro() {
+        return this.EnableCerebro;
+    }
+
+    /**
+     * Set Whether to enable Cerebro
+     * @param EnableCerebro Whether to enable Cerebro
+     */
+    public void setEnableCerebro(Boolean EnableCerebro) {
+        this.EnableCerebro = EnableCerebro;
+    }
+
+    /**
+     * Get Cerebro public network access status 
+     * @return CerebroPublicAccess Cerebro public network access status
+     */
+    public String getCerebroPublicAccess() {
+        return this.CerebroPublicAccess;
+    }
+
+    /**
+     * Set Cerebro public network access status
+     * @param CerebroPublicAccess Cerebro public network access status
+     */
+    public void setCerebroPublicAccess(String CerebroPublicAccess) {
+        this.CerebroPublicAccess = CerebroPublicAccess;
+    }
+
+    /**
+     * Get Cerebro private network access status 
+     * @return CerebroPrivateAccess Cerebro private network access status
+     */
+    public String getCerebroPrivateAccess() {
+        return this.CerebroPrivateAccess;
+    }
+
+    /**
+     * Set Cerebro private network access status
+     * @param CerebroPrivateAccess Cerebro private network access status
+     */
+    public void setCerebroPrivateAccess(String CerebroPrivateAccess) {
+        this.CerebroPrivateAccess = CerebroPrivateAccess;
+    }
+
     public UpdateInstanceRequest() {
     }
 
@@ -716,6 +808,18 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
         if (source.WebNodeTypeInfo != null) {
             this.WebNodeTypeInfo = new WebNodeTypeInfo(source.WebNodeTypeInfo);
         }
+        if (source.SwitchPrivateLink != null) {
+            this.SwitchPrivateLink = new String(source.SwitchPrivateLink);
+        }
+        if (source.EnableCerebro != null) {
+            this.EnableCerebro = new Boolean(source.EnableCerebro);
+        }
+        if (source.CerebroPublicAccess != null) {
+            this.CerebroPublicAccess = new String(source.CerebroPublicAccess);
+        }
+        if (source.CerebroPrivateAccess != null) {
+            this.CerebroPrivateAccess = new String(source.CerebroPrivateAccess);
+        }
     }
 
 
@@ -748,6 +852,10 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);
         this.setParamSimple(map, prefix + "KibanaConfig", this.KibanaConfig);
         this.setParamObj(map, prefix + "WebNodeTypeInfo.", this.WebNodeTypeInfo);
+        this.setParamSimple(map, prefix + "SwitchPrivateLink", this.SwitchPrivateLink);
+        this.setParamSimple(map, prefix + "EnableCerebro", this.EnableCerebro);
+        this.setParamSimple(map, prefix + "CerebroPublicAccess", this.CerebroPublicAccess);
+        this.setParamSimple(map, prefix + "CerebroPrivateAccess", this.CerebroPrivateAccess);
 
     }
 }

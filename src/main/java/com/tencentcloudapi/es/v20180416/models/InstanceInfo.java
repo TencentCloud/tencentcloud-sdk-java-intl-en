@@ -443,6 +443,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String Jdk;
 
     /**
+    * Cluster network communication protocol
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
+    * Security group ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SecurityGroups")
+    @Expose
+    private String [] SecurityGroups;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -1438,6 +1454,46 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.Jdk = Jdk;
     }
 
+    /**
+     * Get Cluster network communication protocol
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Protocol Cluster network communication protocol
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set Cluster network communication protocol
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Protocol Cluster network communication protocol
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
+    /**
+     * Get Security group ID
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return SecurityGroups Security group ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String [] getSecurityGroups() {
+        return this.SecurityGroups;
+    }
+
+    /**
+     * Set Security group ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param SecurityGroups Security group ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setSecurityGroups(String [] SecurityGroups) {
+        this.SecurityGroups = SecurityGroups;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1626,6 +1682,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.Jdk != null) {
             this.Jdk = new String(source.Jdk);
         }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.SecurityGroups != null) {
+            this.SecurityGroups = new String[source.SecurityGroups.length];
+            for (int i = 0; i < source.SecurityGroups.length; i++) {
+                this.SecurityGroups[i] = new String(source.SecurityGroups[i]);
+            }
+        }
     }
 
 
@@ -1690,6 +1755,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamObj(map, prefix + "KibanaNodeInfo.", this.KibanaNodeInfo);
         this.setParamObj(map, prefix + "WebNodeTypeInfo.", this.WebNodeTypeInfo);
         this.setParamSimple(map, prefix + "Jdk", this.Jdk);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
 
     }
 }
