@@ -37,6 +37,13 @@ public class UnassignPrivateIpAddressesRequest extends AbstractModel{
     private PrivateIpAddressSpecification [] PrivateIpAddresses;
 
     /**
+    * Instance ID of the server bound with this IP. This parameter is only applicable when you need to return an IP and unbind the related servers.
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get The ID of the ENI instance, such as `eni-m6dyj72l`. 
      * @return NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
      */
@@ -68,6 +75,22 @@ public class UnassignPrivateIpAddressesRequest extends AbstractModel{
         this.PrivateIpAddresses = PrivateIpAddresses;
     }
 
+    /**
+     * Get Instance ID of the server bound with this IP. This parameter is only applicable when you need to return an IP and unbind the related servers. 
+     * @return InstanceId Instance ID of the server bound with this IP. This parameter is only applicable when you need to return an IP and unbind the related servers.
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set Instance ID of the server bound with this IP. This parameter is only applicable when you need to return an IP and unbind the related servers.
+     * @param InstanceId Instance ID of the server bound with this IP. This parameter is only applicable when you need to return an IP and unbind the related servers.
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public UnassignPrivateIpAddressesRequest() {
     }
 
@@ -85,6 +108,9 @@ public class UnassignPrivateIpAddressesRequest extends AbstractModel{
                 this.PrivateIpAddresses[i] = new PrivateIpAddressSpecification(source.PrivateIpAddresses[i]);
             }
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class UnassignPrivateIpAddressesRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
         this.setParamArrayObj(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

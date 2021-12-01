@@ -65,7 +65,7 @@ public class CreateVpnGatewayRequest extends AbstractModel{
     private String Zone;
 
     /**
-    * VPN gateway type. Value: `CCN`, indicates CCN-type VPN gateway
+    * VPN gateway type. Values: `CCN` (CCN VPN gateway), `SSL` (SSL VPN gateway)
     */
     @SerializedName("Type")
     @Expose
@@ -77,6 +77,20 @@ public class CreateVpnGatewayRequest extends AbstractModel{
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
+
+    /**
+    * CDC instance ID
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
+    * Maximum number of connected clients allowed for the SSL VPN gateway. Valid values: [5, 10, 20, 50, 100]. This parameter is only required for SSL VPN gateways.
+    */
+    @SerializedName("MaxConnection")
+    @Expose
+    private Long MaxConnection;
 
     /**
      * Get VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API. 
@@ -175,16 +189,16 @@ public class CreateVpnGatewayRequest extends AbstractModel{
     }
 
     /**
-     * Get VPN gateway type. Value: `CCN`, indicates CCN-type VPN gateway 
-     * @return Type VPN gateway type. Value: `CCN`, indicates CCN-type VPN gateway
+     * Get VPN gateway type. Values: `CCN` (CCN VPN gateway), `SSL` (SSL VPN gateway) 
+     * @return Type VPN gateway type. Values: `CCN` (CCN VPN gateway), `SSL` (SSL VPN gateway)
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set VPN gateway type. Value: `CCN`, indicates CCN-type VPN gateway
-     * @param Type VPN gateway type. Value: `CCN`, indicates CCN-type VPN gateway
+     * Set VPN gateway type. Values: `CCN` (CCN VPN gateway), `SSL` (SSL VPN gateway)
+     * @param Type VPN gateway type. Values: `CCN` (CCN VPN gateway), `SSL` (SSL VPN gateway)
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -204,6 +218,38 @@ public class CreateVpnGatewayRequest extends AbstractModel{
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
+    }
+
+    /**
+     * Get CDC instance ID 
+     * @return CdcId CDC instance ID
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set CDC instance ID
+     * @param CdcId CDC instance ID
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
+    /**
+     * Get Maximum number of connected clients allowed for the SSL VPN gateway. Valid values: [5, 10, 20, 50, 100]. This parameter is only required for SSL VPN gateways. 
+     * @return MaxConnection Maximum number of connected clients allowed for the SSL VPN gateway. Valid values: [5, 10, 20, 50, 100]. This parameter is only required for SSL VPN gateways.
+     */
+    public Long getMaxConnection() {
+        return this.MaxConnection;
+    }
+
+    /**
+     * Set Maximum number of connected clients allowed for the SSL VPN gateway. Valid values: [5, 10, 20, 50, 100]. This parameter is only required for SSL VPN gateways.
+     * @param MaxConnection Maximum number of connected clients allowed for the SSL VPN gateway. Valid values: [5, 10, 20, 50, 100]. This parameter is only required for SSL VPN gateways.
+     */
+    public void setMaxConnection(Long MaxConnection) {
+        this.MaxConnection = MaxConnection;
     }
 
     public CreateVpnGatewayRequest() {
@@ -241,6 +287,12 @@ public class CreateVpnGatewayRequest extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
+        if (source.MaxConnection != null) {
+            this.MaxConnection = new Long(source.MaxConnection);
+        }
     }
 
 
@@ -256,6 +308,8 @@ public class CreateVpnGatewayRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
+        this.setParamSimple(map, prefix + "MaxConnection", this.MaxConnection);
 
     }
 }

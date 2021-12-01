@@ -30,7 +30,7 @@ public class Code extends AbstractModel{
     private String CosBucketName;
 
     /**
-    * COS object path
+    * File path of code package stored in COS, which should start with “/”
     */
     @SerializedName("CosObjectName")
     @Expose
@@ -144,16 +144,16 @@ public class Code extends AbstractModel{
     }
 
     /**
-     * Get COS object path 
-     * @return CosObjectName COS object path
+     * Get File path of code package stored in COS, which should start with “/” 
+     * @return CosObjectName File path of code package stored in COS, which should start with “/”
      */
     public String getCosObjectName() {
         return this.CosObjectName;
     }
 
     /**
-     * Set COS object path
-     * @param CosObjectName COS object path
+     * Set File path of code package stored in COS, which should start with “/”
+     * @param CosObjectName File path of code package stored in COS, which should start with “/”
      */
     public void setCosObjectName(String CosObjectName) {
         this.CosObjectName = CosObjectName;

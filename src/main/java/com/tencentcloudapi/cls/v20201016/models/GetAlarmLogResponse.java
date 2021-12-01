@@ -68,14 +68,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private LogItems [] AnalysisResults;
 
     /**
-    * 
+    * New log analysis result, which will be valid if `UseNewAnalysis` is `true`
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("AnalysisRecords")
     @Expose
     private String [] AnalysisRecords;
 
     /**
-    * 
+    * Column attribute of log analysis, which will be valid if `UseNewAnalysis` is `true`
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Columns")
     @Expose
@@ -197,32 +199,40 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get  
-     * @return AnalysisRecords 
+     * Get New log analysis result, which will be valid if `UseNewAnalysis` is `true`
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return AnalysisRecords New log analysis result, which will be valid if `UseNewAnalysis` is `true`
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String [] getAnalysisRecords() {
         return this.AnalysisRecords;
     }
 
     /**
-     * Set 
-     * @param AnalysisRecords 
+     * Set New log analysis result, which will be valid if `UseNewAnalysis` is `true`
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param AnalysisRecords New log analysis result, which will be valid if `UseNewAnalysis` is `true`
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setAnalysisRecords(String [] AnalysisRecords) {
         this.AnalysisRecords = AnalysisRecords;
     }
 
     /**
-     * Get  
-     * @return Columns 
+     * Get Column attribute of log analysis, which will be valid if `UseNewAnalysis` is `true`
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Columns Column attribute of log analysis, which will be valid if `UseNewAnalysis` is `true`
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Column [] getColumns() {
         return this.Columns;
     }
 
     /**
-     * Set 
-     * @param Columns 
+     * Set Column attribute of log analysis, which will be valid if `UseNewAnalysis` is `true`
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Columns Column attribute of log analysis, which will be valid if `UseNewAnalysis` is `true`
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setColumns(Column [] Columns) {
         this.Columns = Columns;

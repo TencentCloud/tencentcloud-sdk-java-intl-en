@@ -44,6 +44,13 @@ public class ModifyAddressTemplateAttributeRequest extends AbstractModel{
     private String [] Addresses;
 
     /**
+    * Address information with remarks, including the IP, CIDR block or IP address range.
+    */
+    @SerializedName("AddressesExtra")
+    @Expose
+    private AddressInfo [] AddressesExtra;
+
+    /**
      * Get IP address template instance ID, such as `ipm-mdunqeb6`. 
      * @return AddressTemplateId IP address template instance ID, such as `ipm-mdunqeb6`.
      */
@@ -91,6 +98,22 @@ public class ModifyAddressTemplateAttributeRequest extends AbstractModel{
         this.Addresses = Addresses;
     }
 
+    /**
+     * Get Address information with remarks, including the IP, CIDR block or IP address range. 
+     * @return AddressesExtra Address information with remarks, including the IP, CIDR block or IP address range.
+     */
+    public AddressInfo [] getAddressesExtra() {
+        return this.AddressesExtra;
+    }
+
+    /**
+     * Set Address information with remarks, including the IP, CIDR block or IP address range.
+     * @param AddressesExtra Address information with remarks, including the IP, CIDR block or IP address range.
+     */
+    public void setAddressesExtra(AddressInfo [] AddressesExtra) {
+        this.AddressesExtra = AddressesExtra;
+    }
+
     public ModifyAddressTemplateAttributeRequest() {
     }
 
@@ -111,6 +134,12 @@ public class ModifyAddressTemplateAttributeRequest extends AbstractModel{
                 this.Addresses[i] = new String(source.Addresses[i]);
             }
         }
+        if (source.AddressesExtra != null) {
+            this.AddressesExtra = new AddressInfo[source.AddressesExtra.length];
+            for (int i = 0; i < source.AddressesExtra.length; i++) {
+                this.AddressesExtra[i] = new AddressInfo(source.AddressesExtra[i]);
+            }
+        }
     }
 
 
@@ -121,6 +150,7 @@ public class ModifyAddressTemplateAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AddressTemplateId", this.AddressTemplateId);
         this.setParamSimple(map, prefix + "AddressTemplateName", this.AddressTemplateName);
         this.setParamArraySimple(map, prefix + "Addresses.", this.Addresses);
+        this.setParamArrayObj(map, prefix + "AddressesExtra.", this.AddressesExtra);
 
     }
 }

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DescribeIpGeolocationInfosRequest extends AbstractModel{
 
     /**
-    * IP addresses to be queried. Both IPv4 and IPv6 addresses are supported.
+    * The list of IP addresses (only IPv4 addresses are available currently) to be queried; upper limit: 100
     */
     @SerializedName("AddressIps")
     @Expose
     private String [] AddressIps;
 
     /**
-    * Fields of the IP addresses to be queried, including `Country`, `Province`, `City`, `Region`, `Isp`, `AsName` and `AsId`
+    * Fields of the IP addresses to be queried.
     */
     @SerializedName("Fields")
     @Expose
     private IpField Fields;
 
     /**
-     * Get IP addresses to be queried. Both IPv4 and IPv6 addresses are supported. 
-     * @return AddressIps IP addresses to be queried. Both IPv4 and IPv6 addresses are supported.
+     * Get The list of IP addresses (only IPv4 addresses are available currently) to be queried; upper limit: 100 
+     * @return AddressIps The list of IP addresses (only IPv4 addresses are available currently) to be queried; upper limit: 100
      */
     public String [] getAddressIps() {
         return this.AddressIps;
     }
 
     /**
-     * Set IP addresses to be queried. Both IPv4 and IPv6 addresses are supported.
-     * @param AddressIps IP addresses to be queried. Both IPv4 and IPv6 addresses are supported.
+     * Set The list of IP addresses (only IPv4 addresses are available currently) to be queried; upper limit: 100
+     * @param AddressIps The list of IP addresses (only IPv4 addresses are available currently) to be queried; upper limit: 100
      */
     public void setAddressIps(String [] AddressIps) {
         this.AddressIps = AddressIps;
     }
 
     /**
-     * Get Fields of the IP addresses to be queried, including `Country`, `Province`, `City`, `Region`, `Isp`, `AsName` and `AsId` 
-     * @return Fields Fields of the IP addresses to be queried, including `Country`, `Province`, `City`, `Region`, `Isp`, `AsName` and `AsId`
+     * Get Fields of the IP addresses to be queried. 
+     * @return Fields Fields of the IP addresses to be queried.
      */
     public IpField getFields() {
         return this.Fields;
     }
 
     /**
-     * Set Fields of the IP addresses to be queried, including `Country`, `Province`, `City`, `Region`, `Isp`, `AsName` and `AsId`
-     * @param Fields Fields of the IP addresses to be queried, including `Country`, `Province`, `City`, `Region`, `Isp`, `AsName` and `AsId`
+     * Set Fields of the IP addresses to be queried.
+     * @param Fields Fields of the IP addresses to be queried.
      */
     public void setFields(IpField Fields) {
         this.Fields = Fields;

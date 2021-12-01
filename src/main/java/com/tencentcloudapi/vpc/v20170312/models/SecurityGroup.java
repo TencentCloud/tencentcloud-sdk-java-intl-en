@@ -72,6 +72,14 @@ public class SecurityGroup extends AbstractModel{
     private Tag [] TagSet;
 
     /**
+    * Security group update time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
      * Get The security group instance ID, such as `sg-ohuuioma`. 
      * @return SecurityGroupId The security group instance ID, such as `sg-ohuuioma`.
      */
@@ -183,6 +191,26 @@ public class SecurityGroup extends AbstractModel{
         this.TagSet = TagSet;
     }
 
+    /**
+     * Get Security group update time.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return UpdateTime Security group update time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set Security group update time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param UpdateTime Security group update time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
     public SecurityGroup() {
     }
 
@@ -215,6 +243,9 @@ public class SecurityGroup extends AbstractModel{
                 this.TagSet[i] = new Tag(source.TagSet[i]);
             }
         }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
     }
 
 
@@ -229,6 +260,7 @@ public class SecurityGroup extends AbstractModel{
         this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

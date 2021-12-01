@@ -149,6 +149,20 @@ public class VpnGateway extends AbstractModel{
     private String NetworkInstanceId;
 
     /**
+    * CDC instance ID
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
+    * Maximum number of connected clients allowed for the SSL VPN gateway.
+    */
+    @SerializedName("MaxConnection")
+    @Expose
+    private Long MaxConnection;
+
+    /**
      * Get Gateway instance ID. 
      * @return VpnGatewayId Gateway instance ID.
      */
@@ -436,6 +450,38 @@ public class VpnGateway extends AbstractModel{
         this.NetworkInstanceId = NetworkInstanceId;
     }
 
+    /**
+     * Get CDC instance ID 
+     * @return CdcId CDC instance ID
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set CDC instance ID
+     * @param CdcId CDC instance ID
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
+    /**
+     * Get Maximum number of connected clients allowed for the SSL VPN gateway. 
+     * @return MaxConnection Maximum number of connected clients allowed for the SSL VPN gateway.
+     */
+    public Long getMaxConnection() {
+        return this.MaxConnection;
+    }
+
+    /**
+     * Set Maximum number of connected clients allowed for the SSL VPN gateway.
+     * @param MaxConnection Maximum number of connected clients allowed for the SSL VPN gateway.
+     */
+    public void setMaxConnection(Long MaxConnection) {
+        this.MaxConnection = MaxConnection;
+    }
+
     public VpnGateway() {
     }
 
@@ -501,6 +547,12 @@ public class VpnGateway extends AbstractModel{
         if (source.NetworkInstanceId != null) {
             this.NetworkInstanceId = new String(source.NetworkInstanceId);
         }
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
+        if (source.MaxConnection != null) {
+            this.MaxConnection = new Long(source.MaxConnection);
+        }
     }
 
 
@@ -526,6 +578,8 @@ public class VpnGateway extends AbstractModel{
         this.setParamArrayObj(map, prefix + "VpnGatewayQuotaSet.", this.VpnGatewayQuotaSet);
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "NetworkInstanceId", this.NetworkInstanceId);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
+        this.setParamSimple(map, prefix + "MaxConnection", this.MaxConnection);
 
     }
 }

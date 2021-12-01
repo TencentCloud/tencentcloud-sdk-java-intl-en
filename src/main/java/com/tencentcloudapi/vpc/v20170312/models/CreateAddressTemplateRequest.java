@@ -30,11 +30,18 @@ public class CreateAddressTemplateRequest extends AbstractModel{
     private String AddressTemplateName;
 
     /**
-    * Address information, including IP, CIDR and IP address range.
+    * The address information can be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
     */
     @SerializedName("Addresses")
     @Expose
     private String [] Addresses;
+
+    /**
+    * The address information can contain remarks and be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
+    */
+    @SerializedName("AddressesExtra")
+    @Expose
+    private AddressInfo [] AddressesExtra;
 
     /**
      * Get The name of the IP address template 
@@ -53,19 +60,35 @@ public class CreateAddressTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get Address information, including IP, CIDR and IP address range. 
-     * @return Addresses Address information, including IP, CIDR and IP address range.
+     * Get The address information can be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required. 
+     * @return Addresses The address information can be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
      */
     public String [] getAddresses() {
         return this.Addresses;
     }
 
     /**
-     * Set Address information, including IP, CIDR and IP address range.
-     * @param Addresses Address information, including IP, CIDR and IP address range.
+     * Set The address information can be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
+     * @param Addresses The address information can be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
      */
     public void setAddresses(String [] Addresses) {
         this.Addresses = Addresses;
+    }
+
+    /**
+     * Get The address information can contain remarks and be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required. 
+     * @return AddressesExtra The address information can contain remarks and be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
+     */
+    public AddressInfo [] getAddressesExtra() {
+        return this.AddressesExtra;
+    }
+
+    /**
+     * Set The address information can contain remarks and be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
+     * @param AddressesExtra The address information can contain remarks and be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
+     */
+    public void setAddressesExtra(AddressInfo [] AddressesExtra) {
+        this.AddressesExtra = AddressesExtra;
     }
 
     public CreateAddressTemplateRequest() {
@@ -85,6 +108,12 @@ public class CreateAddressTemplateRequest extends AbstractModel{
                 this.Addresses[i] = new String(source.Addresses[i]);
             }
         }
+        if (source.AddressesExtra != null) {
+            this.AddressesExtra = new AddressInfo[source.AddressesExtra.length];
+            for (int i = 0; i < source.AddressesExtra.length; i++) {
+                this.AddressesExtra[i] = new AddressInfo(source.AddressesExtra[i]);
+            }
+        }
     }
 
 
@@ -94,6 +123,7 @@ public class CreateAddressTemplateRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AddressTemplateName", this.AddressTemplateName);
         this.setParamArraySimple(map, prefix + "Addresses.", this.Addresses);
+        this.setParamArrayObj(map, prefix + "AddressesExtra.", this.AddressesExtra);
 
     }
 }

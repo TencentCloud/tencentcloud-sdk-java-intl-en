@@ -30,14 +30,14 @@ public class ModifyCcnAttributeRequest extends AbstractModel{
     private String CcnId;
 
     /**
-    * The name of the CCN. The maximum length is 60 characters.
+    * The name of CCN instance. Up to 60 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
     */
     @SerializedName("CcnName")
     @Expose
     private String CcnName;
 
     /**
-    * The description of the CCN. The maximum length is 100 characters.
+    * The description of CCN instance. Up to 100 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
     */
     @SerializedName("CcnDescription")
     @Expose
@@ -60,32 +60,32 @@ public class ModifyCcnAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get The name of the CCN. The maximum length is 60 characters. 
-     * @return CcnName The name of the CCN. The maximum length is 60 characters.
+     * Get The name of CCN instance. Up to 60 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified. 
+     * @return CcnName The name of CCN instance. Up to 60 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
      */
     public String getCcnName() {
         return this.CcnName;
     }
 
     /**
-     * Set The name of the CCN. The maximum length is 60 characters.
-     * @param CcnName The name of the CCN. The maximum length is 60 characters.
+     * Set The name of CCN instance. Up to 60 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
+     * @param CcnName The name of CCN instance. Up to 60 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
      */
     public void setCcnName(String CcnName) {
         this.CcnName = CcnName;
     }
 
     /**
-     * Get The description of the CCN. The maximum length is 100 characters. 
-     * @return CcnDescription The description of the CCN. The maximum length is 100 characters.
+     * Get The description of CCN instance. Up to 100 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified. 
+     * @return CcnDescription The description of CCN instance. Up to 100 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
      */
     public String getCcnDescription() {
         return this.CcnDescription;
     }
 
     /**
-     * Set The description of the CCN. The maximum length is 100 characters.
-     * @param CcnDescription The description of the CCN. The maximum length is 100 characters.
+     * Set The description of CCN instance. Up to 100 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
+     * @param CcnDescription The description of CCN instance. Up to 100 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
      */
     public void setCcnDescription(String CcnDescription) {
         this.CcnDescription = CcnDescription;

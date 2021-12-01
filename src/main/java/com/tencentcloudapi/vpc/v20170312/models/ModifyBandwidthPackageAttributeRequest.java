@@ -44,6 +44,13 @@ public class ModifyBandwidthPackageAttributeRequest extends AbstractModel{
     private String ChargeType;
 
     /**
+    * When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
+    */
+    @SerializedName("MigrateOnRefund")
+    @Expose
+    private Boolean MigrateOnRefund;
+
+    /**
      * Get The unique ID of the bandwidth package. 
      * @return BandwidthPackageId The unique ID of the bandwidth package.
      */
@@ -91,6 +98,22 @@ public class ModifyBandwidthPackageAttributeRequest extends AbstractModel{
         this.ChargeType = ChargeType;
     }
 
+    /**
+     * Get When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No` 
+     * @return MigrateOnRefund When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
+     */
+    public Boolean getMigrateOnRefund() {
+        return this.MigrateOnRefund;
+    }
+
+    /**
+     * Set When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
+     * @param MigrateOnRefund When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
+     */
+    public void setMigrateOnRefund(Boolean MigrateOnRefund) {
+        this.MigrateOnRefund = MigrateOnRefund;
+    }
+
     public ModifyBandwidthPackageAttributeRequest() {
     }
 
@@ -108,6 +131,9 @@ public class ModifyBandwidthPackageAttributeRequest extends AbstractModel{
         if (source.ChargeType != null) {
             this.ChargeType = new String(source.ChargeType);
         }
+        if (source.MigrateOnRefund != null) {
+            this.MigrateOnRefund = new Boolean(source.MigrateOnRefund);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class ModifyBandwidthPackageAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
         this.setParamSimple(map, prefix + "BandwidthPackageName", this.BandwidthPackageName);
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
+        this.setParamSimple(map, prefix + "MigrateOnRefund", this.MigrateOnRefund);
 
     }
 }

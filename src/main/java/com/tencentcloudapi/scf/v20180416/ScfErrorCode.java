@@ -9,6 +9,9 @@ public enum ScfErrorCode {
     // Failed to create the trigger.
      FAILEDOPERATION_APIGW("FailedOperation.Apigw"),
      
+    // Failed to obtain Apm InstanceId
+     FAILEDOPERATION_APMCONFIGINSTANCEID("FailedOperation.ApmConfigInstanceId"),
+     
     // This operation is not supported by the current async event status. Please try again later.
      FAILEDOPERATION_ASYNCEVENTSTATUS("FailedOperation.AsyncEventStatus"),
      
@@ -84,10 +87,10 @@ public enum ScfErrorCode {
     // Operation conflict.
      FAILEDOPERATION_OPERATIONCONFLICT("FailedOperation.OperationConflict"),
      
-    // 
+    // Failed to create the scheduled provisioned concurrency scaling action
      FAILEDOPERATION_PROVISIONCREATETIMER("FailedOperation.ProvisionCreateTimer"),
      
-    // 
+    // Failed to delete the scheduled provisioned concurrency scaling action
      FAILEDOPERATION_PROVISIONDELETETIMER("FailedOperation.ProvisionDeleteTimer"),
      
     // The function version already has a provisioned concurrency setting task in progress. Please try again later.
@@ -176,6 +179,15 @@ public enum ScfErrorCode {
      
     // ApiGateway parameter error.
      INVALIDPARAMETERVALUE_APIGATEWAY("InvalidParameterValue.ApiGateway"),
+     
+    // ApmConfig input error
+     INVALIDPARAMETERVALUE_APMCONFIG("InvalidParameterValue.ApmConfig"),
+     
+    // ApmConfigInstanceId input error
+     INVALIDPARAMETERVALUE_APMCONFIGINSTANCEID("InvalidParameterValue.ApmConfigInstanceId"),
+     
+    // ApmConfigRegion input error
+     INVALIDPARAMETERVALUE_APMCONFIGREGION("InvalidParameterValue.ApmConfigRegion"),
      
     // The parameter for async retry configuration of the function is invalid.
      INVALIDPARAMETERVALUE_ASYNCTRIGGERCONFIG("InvalidParameterValue.AsyncTriggerConfig"),
@@ -336,16 +348,16 @@ public enum ScfErrorCode {
     // ProtocolType input parameter error
      INVALIDPARAMETERVALUE_PROTOCOLTYPE("InvalidParameterValue.ProtocolType"),
      
-    // 
+    // Cron expression of the scheduled action already exists
      INVALIDPARAMETERVALUE_PROVISIONTRIGGERCRONCONFIGDUPLICATE("InvalidParameterValue.ProvisionTriggerCronConfigDuplicate"),
      
-    // 
+    // TriggerName input parameter error
      INVALIDPARAMETERVALUE_PROVISIONTRIGGERNAME("InvalidParameterValue.ProvisionTriggerName"),
      
-    // 
+    // TriggerName already exists
      INVALIDPARAMETERVALUE_PROVISIONTRIGGERNAMEDUPLICATE("InvalidParameterValue.ProvisionTriggerNameDuplicate"),
      
-    // 
+    // ProvisionType input parameter error
      INVALIDPARAMETERVALUE_PROVISIONTYPE("InvalidParameterValue.ProvisionType"),
      
     // The `PublicNetConfig` parameter is invalid.
@@ -390,10 +402,10 @@ public enum ScfErrorCode {
     // The value of `TraceEnable` is invalid. Please modify and try again.
      INVALIDPARAMETERVALUE_TRACEENABLE("InvalidParameterValue.TraceEnable"),
      
-    // 
+    // TriggerCronConfig input parameter error
      INVALIDPARAMETERVALUE_TRIGGERCRONCONFIG("InvalidParameterValue.TriggerCronConfig"),
      
-    // 
+    // The interval of triggering specified in TriggerCronConfig is smaller than the specified value.
      INVALIDPARAMETERVALUE_TRIGGERCRONCONFIGTIMEINTERVAL("InvalidParameterValue.TriggerCronConfigTimeInterval"),
      
     // TriggerDesc error.
@@ -402,7 +414,7 @@ public enum ScfErrorCode {
     // TriggerName error.
      INVALIDPARAMETERVALUE_TRIGGERNAME("InvalidParameterValue.TriggerName"),
      
-    // 
+    // TriggerProvisionedConcurrencyNum input parameter error
      INVALIDPARAMETERVALUE_TRIGGERPROVISIONEDCONCURRENCYNUM("InvalidParameterValue.TriggerProvisionedConcurrencyNum"),
      
     // Type error.
@@ -468,10 +480,10 @@ public enum ScfErrorCode {
     // Offset exceeds the upper limit.
      LIMITEXCEEDED_OFFSET("LimitExceeded.Offset"),
      
-    // 
+    // The number of provisioned concurrency specified for the scheduled action is too large.
      LIMITEXCEEDED_PROVISIONTRIGGERACTION("LimitExceeded.ProvisionTriggerAction"),
      
-    // 
+    // The interval of triggering is too short.
      LIMITEXCEEDED_PROVISIONTRIGGERINTERVAL("LimitExceeded.ProvisionTriggerInterval"),
      
     // The number of retry attempts in the async retry configuration of the function exceeds the limit.
@@ -578,6 +590,9 @@ public enum ScfErrorCode {
      
     // An error occurred while getting the CFS information.
      RESOURCENOTFOUND_GETCFSNOTMATCH("ResourceNotFound.GetCfsNotMatch"),
+     
+    // Failed to find the specified ImageConfig. Please create it first.
+     RESOURCENOTFOUND_IMAGECONFIG("ResourceNotFound.ImageConfig"),
      
     // The layer does not exist.
      RESOURCENOTFOUND_LAYER("ResourceNotFound.Layer"),

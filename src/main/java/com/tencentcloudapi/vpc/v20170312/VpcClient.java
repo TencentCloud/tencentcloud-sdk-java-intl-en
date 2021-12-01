@@ -2400,7 +2400,8 @@ A service provider can query all review requests created by any `APPID` under it
     }
 
     /**
-     *This API is used to query the information of IP addresses, including their geographical locations and networks.
+     *This API is used to query the location and network information of one or more IP addresses.
+This API is currently in beta test. To use it, please [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=660&source=0&data_title=%E5%BC%B9%E6%80%A7%E5%85%AC%E7%BD%91%20EIP&level3_id=662&queue=96&scene_code=16400&step=2).
      * @param req DescribeIpGeolocationInfosRequest
      * @return DescribeIpGeolocationInfosResponse
      * @throws TencentCloudSDKException

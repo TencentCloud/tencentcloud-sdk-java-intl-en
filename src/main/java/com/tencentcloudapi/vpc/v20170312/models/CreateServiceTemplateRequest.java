@@ -30,11 +30,18 @@ public class CreateServiceTemplateRequest extends AbstractModel{
     private String ServiceTemplateName;
 
     /**
-    * It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
+    * Supported ports inlcude single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
     */
     @SerializedName("Services")
     @Expose
     private String [] Services;
+
+    /**
+    * You can add remarks. Supported ports include single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
+    */
+    @SerializedName("ServicesExtra")
+    @Expose
+    private ServicesInfo [] ServicesExtra;
 
     /**
      * Get Template name of the protocol port 
@@ -53,19 +60,35 @@ public class CreateServiceTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE. 
-     * @return Services It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
+     * Get Supported ports inlcude single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required. 
+     * @return Services Supported ports inlcude single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
      */
     public String [] getServices() {
         return this.Services;
     }
 
     /**
-     * Set It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
-     * @param Services It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
+     * Set Supported ports inlcude single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
+     * @param Services Supported ports inlcude single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
      */
     public void setServices(String [] Services) {
         this.Services = Services;
+    }
+
+    /**
+     * Get You can add remarks. Supported ports include single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required. 
+     * @return ServicesExtra You can add remarks. Supported ports include single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
+     */
+    public ServicesInfo [] getServicesExtra() {
+        return this.ServicesExtra;
+    }
+
+    /**
+     * Set You can add remarks. Supported ports include single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
+     * @param ServicesExtra You can add remarks. Supported ports include single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
+     */
+    public void setServicesExtra(ServicesInfo [] ServicesExtra) {
+        this.ServicesExtra = ServicesExtra;
     }
 
     public CreateServiceTemplateRequest() {
@@ -85,6 +108,12 @@ public class CreateServiceTemplateRequest extends AbstractModel{
                 this.Services[i] = new String(source.Services[i]);
             }
         }
+        if (source.ServicesExtra != null) {
+            this.ServicesExtra = new ServicesInfo[source.ServicesExtra.length];
+            for (int i = 0; i < source.ServicesExtra.length; i++) {
+                this.ServicesExtra[i] = new ServicesInfo(source.ServicesExtra[i]);
+            }
+        }
     }
 
 
@@ -94,6 +123,7 @@ public class CreateServiceTemplateRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceTemplateName", this.ServiceTemplateName);
         this.setParamArraySimple(map, prefix + "Services.", this.Services);
+        this.setParamArrayObj(map, prefix + "ServicesExtra.", this.ServicesExtra);
 
     }
 }

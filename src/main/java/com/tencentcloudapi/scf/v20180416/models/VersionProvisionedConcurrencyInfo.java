@@ -58,6 +58,14 @@ public class VersionProvisionedConcurrencyInfo extends AbstractModel{
     private String Qualifier;
 
     /**
+    * List of scheduled provisioned concurrency scaling actions
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TriggerActions")
+    @Expose
+    private TriggerAction [] TriggerActions;
+
+    /**
      * Get Set provisioned concurrency amount. 
      * @return AllocatedProvisionedConcurrencyNum Set provisioned concurrency amount.
      */
@@ -137,6 +145,26 @@ public class VersionProvisionedConcurrencyInfo extends AbstractModel{
         this.Qualifier = Qualifier;
     }
 
+    /**
+     * Get List of scheduled provisioned concurrency scaling actions
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return TriggerActions List of scheduled provisioned concurrency scaling actions
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public TriggerAction [] getTriggerActions() {
+        return this.TriggerActions;
+    }
+
+    /**
+     * Set List of scheduled provisioned concurrency scaling actions
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param TriggerActions List of scheduled provisioned concurrency scaling actions
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTriggerActions(TriggerAction [] TriggerActions) {
+        this.TriggerActions = TriggerActions;
+    }
+
     public VersionProvisionedConcurrencyInfo() {
     }
 
@@ -160,6 +188,12 @@ public class VersionProvisionedConcurrencyInfo extends AbstractModel{
         if (source.Qualifier != null) {
             this.Qualifier = new String(source.Qualifier);
         }
+        if (source.TriggerActions != null) {
+            this.TriggerActions = new TriggerAction[source.TriggerActions.length];
+            for (int i = 0; i < source.TriggerActions.length; i++) {
+                this.TriggerActions[i] = new TriggerAction(source.TriggerActions[i]);
+            }
+        }
     }
 
 
@@ -172,6 +206,7 @@ public class VersionProvisionedConcurrencyInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "StatusReason", this.StatusReason);
         this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
+        this.setParamArrayObj(map, prefix + "TriggerActions.", this.TriggerActions);
 
     }
 }

@@ -51,6 +51,13 @@ public class PutProvisionedConcurrencyConfigRequest extends AbstractModel{
     private String Namespace;
 
     /**
+    * Scheduled provisioned concurrency scaling action
+    */
+    @SerializedName("TriggerActions")
+    @Expose
+    private TriggerAction [] TriggerActions;
+
+    /**
      * Get Name of the function for which to set the provisioned concurrency 
      * @return FunctionName Name of the function for which to set the provisioned concurrency
      */
@@ -114,6 +121,22 @@ public class PutProvisionedConcurrencyConfigRequest extends AbstractModel{
         this.Namespace = Namespace;
     }
 
+    /**
+     * Get Scheduled provisioned concurrency scaling action 
+     * @return TriggerActions Scheduled provisioned concurrency scaling action
+     */
+    public TriggerAction [] getTriggerActions() {
+        return this.TriggerActions;
+    }
+
+    /**
+     * Set Scheduled provisioned concurrency scaling action
+     * @param TriggerActions Scheduled provisioned concurrency scaling action
+     */
+    public void setTriggerActions(TriggerAction [] TriggerActions) {
+        this.TriggerActions = TriggerActions;
+    }
+
     public PutProvisionedConcurrencyConfigRequest() {
     }
 
@@ -134,6 +157,12 @@ public class PutProvisionedConcurrencyConfigRequest extends AbstractModel{
         if (source.Namespace != null) {
             this.Namespace = new String(source.Namespace);
         }
+        if (source.TriggerActions != null) {
+            this.TriggerActions = new TriggerAction[source.TriggerActions.length];
+            for (int i = 0; i < source.TriggerActions.length; i++) {
+                this.TriggerActions[i] = new TriggerAction(source.TriggerActions[i]);
+            }
+        }
     }
 
 
@@ -145,6 +174,7 @@ public class PutProvisionedConcurrencyConfigRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
         this.setParamSimple(map, prefix + "VersionProvisionedConcurrencyNum", this.VersionProvisionedConcurrencyNum);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamArrayObj(map, prefix + "TriggerActions.", this.TriggerActions);
 
     }
 }

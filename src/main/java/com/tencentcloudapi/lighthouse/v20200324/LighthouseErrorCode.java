@@ -132,7 +132,7 @@ public enum LighthouseErrorCode {
     // The type of the image OS is invalid.
      INVALIDPARAMETERVALUE_INVALIDBLUEPRINTPLATFORMTYPE("InvalidParameterValue.InvalidBlueprintPlatformType"),
      
-    // 
+    // Invalid image status value
      INVALIDPARAMETERVALUE_INVALIDBLUEPRINTSTATE("InvalidParameterValue.InvalidBlueprintState"),
      
     // The image type is invalid.
@@ -270,7 +270,7 @@ public enum LighthouseErrorCode {
     // Unsupported operation.
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
      
-    // 
+    // Unable to associate with CCN: there is no instance in this region
      UNSUPPORTEDOPERATION_ATTACHCCNCONDITIONUNSATISFIED("UnsupportedOperation.AttachCcnConditionUnsatisfied"),
      
     // Failed to associate the CCN instance. Please check the CCN status and try again later.

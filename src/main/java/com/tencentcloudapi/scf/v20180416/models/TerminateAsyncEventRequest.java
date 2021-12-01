@@ -44,6 +44,13 @@ public class TerminateAsyncEventRequest extends AbstractModel{
     private String Namespace;
 
     /**
+    * Specifies whether to enable graceful shutdown
+    */
+    @SerializedName("GraceShutdown")
+    @Expose
+    private Boolean GraceShutdown;
+
+    /**
      * Get Function name 
      * @return FunctionName Function name
      */
@@ -91,6 +98,22 @@ public class TerminateAsyncEventRequest extends AbstractModel{
         this.Namespace = Namespace;
     }
 
+    /**
+     * Get Specifies whether to enable graceful shutdown 
+     * @return GraceShutdown Specifies whether to enable graceful shutdown
+     */
+    public Boolean getGraceShutdown() {
+        return this.GraceShutdown;
+    }
+
+    /**
+     * Set Specifies whether to enable graceful shutdown
+     * @param GraceShutdown Specifies whether to enable graceful shutdown
+     */
+    public void setGraceShutdown(Boolean GraceShutdown) {
+        this.GraceShutdown = GraceShutdown;
+    }
+
     public TerminateAsyncEventRequest() {
     }
 
@@ -108,6 +131,9 @@ public class TerminateAsyncEventRequest extends AbstractModel{
         if (source.Namespace != null) {
             this.Namespace = new String(source.Namespace);
         }
+        if (source.GraceShutdown != null) {
+            this.GraceShutdown = new Boolean(source.GraceShutdown);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class TerminateAsyncEventRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);
         this.setParamSimple(map, prefix + "InvokeRequestId", this.InvokeRequestId);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "GraceShutdown", this.GraceShutdown);
 
     }
 }

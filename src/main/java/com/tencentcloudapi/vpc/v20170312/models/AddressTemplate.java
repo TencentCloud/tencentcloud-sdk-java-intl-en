@@ -51,6 +51,13 @@ public class AddressTemplate extends AbstractModel{
     private String CreatedTime;
 
     /**
+    * IP address information with remarks
+    */
+    @SerializedName("AddressExtraSet")
+    @Expose
+    private AddressInfo [] AddressExtraSet;
+
+    /**
      * Get IP address template name. 
      * @return AddressTemplateName IP address template name.
      */
@@ -114,6 +121,22 @@ public class AddressTemplate extends AbstractModel{
         this.CreatedTime = CreatedTime;
     }
 
+    /**
+     * Get IP address information with remarks 
+     * @return AddressExtraSet IP address information with remarks
+     */
+    public AddressInfo [] getAddressExtraSet() {
+        return this.AddressExtraSet;
+    }
+
+    /**
+     * Set IP address information with remarks
+     * @param AddressExtraSet IP address information with remarks
+     */
+    public void setAddressExtraSet(AddressInfo [] AddressExtraSet) {
+        this.AddressExtraSet = AddressExtraSet;
+    }
+
     public AddressTemplate() {
     }
 
@@ -137,6 +160,12 @@ public class AddressTemplate extends AbstractModel{
         if (source.CreatedTime != null) {
             this.CreatedTime = new String(source.CreatedTime);
         }
+        if (source.AddressExtraSet != null) {
+            this.AddressExtraSet = new AddressInfo[source.AddressExtraSet.length];
+            for (int i = 0; i < source.AddressExtraSet.length; i++) {
+                this.AddressExtraSet[i] = new AddressInfo(source.AddressExtraSet[i]);
+            }
+        }
     }
 
 
@@ -148,6 +177,7 @@ public class AddressTemplate extends AbstractModel{
         this.setParamSimple(map, prefix + "AddressTemplateId", this.AddressTemplateId);
         this.setParamArraySimple(map, prefix + "AddressSet.", this.AddressSet);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamArrayObj(map, prefix + "AddressExtraSet.", this.AddressExtraSet);
 
     }
 }
