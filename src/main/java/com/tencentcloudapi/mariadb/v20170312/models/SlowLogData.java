@@ -150,6 +150,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ExampleSql;
 
     /**
+    * Host address of the account
+    */
+    @SerializedName("Host")
+    @Expose
+    private String Host;
+
+    /**
      * Get Statement checksum for querying details 
      * @return CheckSum Statement checksum for querying details
      */
@@ -441,6 +448,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.ExampleSql = ExampleSql;
     }
 
+    /**
+     * Get Host address of the account 
+     * @return Host Host address of the account
+     */
+    public String getHost() {
+        return this.Host;
+    }
+
+    /**
+     * Set Host address of the account
+     * @param Host Host address of the account
+     */
+    public void setHost(String Host) {
+        this.Host = Host;
+    }
+
     public SlowLogData() {
     }
 
@@ -503,6 +526,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.ExampleSql != null) {
             this.ExampleSql = new String(source.ExampleSql);
         }
+        if (source.Host != null) {
+            this.Host = new String(source.Host);
+        }
     }
 
 
@@ -528,6 +554,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "TsMin", this.TsMin);
         this.setParamSimple(map, prefix + "User", this.User);
         this.setParamSimple(map, prefix + "ExampleSql", this.ExampleSql);
+        this.setParamSimple(map, prefix + "Host", this.Host);
 
     }
 }

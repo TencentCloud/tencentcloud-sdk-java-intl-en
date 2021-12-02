@@ -769,6 +769,26 @@ Note: accounts with the same username but different hosts are different accounts
     }
 
     /**
+     *This API is used to modify the sync mode of a TencentDB instance.
+     * @param req ModifyDBSyncModeRequest
+     * @return ModifyDBSyncModeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBSyncModeResponse ModifyDBSyncMode(ModifyDBSyncModeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBSyncModeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBSyncModeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDBSyncMode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify the number of days for retention of database backup logs.
      * @param req ModifyLogFileRetentionPeriodRequest
      * @return ModifyLogFileRetentionPeriodResponse
@@ -781,6 +801,26 @@ Note: accounts with the same username but different hosts are different accounts
                 Type type = new TypeToken<JsonResponseModel<ModifyLogFileRetentionPeriodResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyLogFileRetentionPeriod");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify sync task attributes (currently, only the task name can be modified).
+     * @param req ModifySyncTaskAttributeRequest
+     * @return ModifySyncTaskAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySyncTaskAttributeResponse ModifySyncTaskAttribute(ModifySyncTaskAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifySyncTaskAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifySyncTaskAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifySyncTaskAttribute");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
