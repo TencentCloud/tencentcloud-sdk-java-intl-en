@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreatePluginRequest extends AbstractModel{
 
     /**
-    * Custom plugin name. A plugin name contain up to 50 characters out of a-z, A-Z, 0-9, and _, which must begin with a letter and end with a letter or a number.
+    * Custom plugin name. A plugin name should contain 2-50 characters out of a-z, A-Z, 0-9, and _, which must begin with a letter and end with a letter or a number.
     */
     @SerializedName("PluginName")
     @Expose
     private String PluginName;
 
     /**
-    * Plugin type. Valid value: `IPControl`.
+    * Plugin type. Valid values: `IPControl`, `TrafficControl`, `Cors`, `CustomReq`, `CustomAuth`
     */
     @SerializedName("PluginType")
     @Expose
@@ -51,32 +51,32 @@ public class CreatePluginRequest extends AbstractModel{
     private String Description;
 
     /**
-     * Get Custom plugin name. A plugin name contain up to 50 characters out of a-z, A-Z, 0-9, and _, which must begin with a letter and end with a letter or a number. 
-     * @return PluginName Custom plugin name. A plugin name contain up to 50 characters out of a-z, A-Z, 0-9, and _, which must begin with a letter and end with a letter or a number.
+     * Get Custom plugin name. A plugin name should contain 2-50 characters out of a-z, A-Z, 0-9, and _, which must begin with a letter and end with a letter or a number. 
+     * @return PluginName Custom plugin name. A plugin name should contain 2-50 characters out of a-z, A-Z, 0-9, and _, which must begin with a letter and end with a letter or a number.
      */
     public String getPluginName() {
         return this.PluginName;
     }
 
     /**
-     * Set Custom plugin name. A plugin name contain up to 50 characters out of a-z, A-Z, 0-9, and _, which must begin with a letter and end with a letter or a number.
-     * @param PluginName Custom plugin name. A plugin name contain up to 50 characters out of a-z, A-Z, 0-9, and _, which must begin with a letter and end with a letter or a number.
+     * Set Custom plugin name. A plugin name should contain 2-50 characters out of a-z, A-Z, 0-9, and _, which must begin with a letter and end with a letter or a number.
+     * @param PluginName Custom plugin name. A plugin name should contain 2-50 characters out of a-z, A-Z, 0-9, and _, which must begin with a letter and end with a letter or a number.
      */
     public void setPluginName(String PluginName) {
         this.PluginName = PluginName;
     }
 
     /**
-     * Get Plugin type. Valid value: `IPControl`. 
-     * @return PluginType Plugin type. Valid value: `IPControl`.
+     * Get Plugin type. Valid values: `IPControl`, `TrafficControl`, `Cors`, `CustomReq`, `CustomAuth` 
+     * @return PluginType Plugin type. Valid values: `IPControl`, `TrafficControl`, `Cors`, `CustomReq`, `CustomAuth`
      */
     public String getPluginType() {
         return this.PluginType;
     }
 
     /**
-     * Set Plugin type. Valid value: `IPControl`.
-     * @param PluginType Plugin type. Valid value: `IPControl`.
+     * Set Plugin type. Valid values: `IPControl`, `TrafficControl`, `Cors`, `CustomReq`, `CustomAuth`
+     * @param PluginType Plugin type. Valid values: `IPControl`, `TrafficControl`, `Cors`, `CustomReq`, `CustomAuth`
      */
     public void setPluginType(String PluginType) {
         this.PluginType = PluginType;

@@ -94,7 +94,27 @@ public class DescribeBillDetailRequest extends AbstractModel{
     private String ResourceId;
 
     /**
-    * 
+    * Action type to query. Valid values:
+Purchase
+Renewal
+Modify
+Refund
+Deduction
+Hourly settlement
+Daily settlement
+Monthly settlement
+Offline project deduction
+Offline deduction
+adjust-CR
+adjust-DR
+One-off RI Fee
+Spot
+Hourly RI fee
+New monthly subscription
+Monthly subscription renewal
+Monthly subscription specification adjustment
+Monthly subscription specification adjustment
+Monthly subscription refund
     */
     @SerializedName("ActionType")
     @Expose
@@ -106,6 +126,14 @@ public class DescribeBillDetailRequest extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
+
+    /**
+    * Business code
+Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+    */
+    @SerializedName("BusinessCode")
+    @Expose
+    private String BusinessCode;
 
     /**
      * Get Offset 
@@ -272,16 +300,96 @@ public class DescribeBillDetailRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return ActionType 
+     * Get Action type to query. Valid values:
+Purchase
+Renewal
+Modify
+Refund
+Deduction
+Hourly settlement
+Daily settlement
+Monthly settlement
+Offline project deduction
+Offline deduction
+adjust-CR
+adjust-DR
+One-off RI Fee
+Spot
+Hourly RI fee
+New monthly subscription
+Monthly subscription renewal
+Monthly subscription specification adjustment
+Monthly subscription specification adjustment
+Monthly subscription refund 
+     * @return ActionType Action type to query. Valid values:
+Purchase
+Renewal
+Modify
+Refund
+Deduction
+Hourly settlement
+Daily settlement
+Monthly settlement
+Offline project deduction
+Offline deduction
+adjust-CR
+adjust-DR
+One-off RI Fee
+Spot
+Hourly RI fee
+New monthly subscription
+Monthly subscription renewal
+Monthly subscription specification adjustment
+Monthly subscription specification adjustment
+Monthly subscription refund
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set 
-     * @param ActionType 
+     * Set Action type to query. Valid values:
+Purchase
+Renewal
+Modify
+Refund
+Deduction
+Hourly settlement
+Daily settlement
+Monthly settlement
+Offline project deduction
+Offline deduction
+adjust-CR
+adjust-DR
+One-off RI Fee
+Spot
+Hourly RI fee
+New monthly subscription
+Monthly subscription renewal
+Monthly subscription specification adjustment
+Monthly subscription specification adjustment
+Monthly subscription refund
+     * @param ActionType Action type to query. Valid values:
+Purchase
+Renewal
+Modify
+Refund
+Deduction
+Hourly settlement
+Daily settlement
+Monthly settlement
+Offline project deduction
+Offline deduction
+adjust-CR
+adjust-DR
+One-off RI Fee
+Spot
+Hourly RI fee
+New monthly subscription
+Monthly subscription renewal
+Monthly subscription specification adjustment
+Monthly subscription specification adjustment
+Monthly subscription refund
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
@@ -301,6 +409,26 @@ public class DescribeBillDetailRequest extends AbstractModel{
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get Business code
+Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>. 
+     * @return BusinessCode Business code
+Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+     */
+    public String getBusinessCode() {
+        return this.BusinessCode;
+    }
+
+    /**
+     * Set Business code
+Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+     * @param BusinessCode Business code
+Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+     */
+    public void setBusinessCode(String BusinessCode) {
+        this.BusinessCode = BusinessCode;
     }
 
     public DescribeBillDetailRequest() {
@@ -347,6 +475,9 @@ public class DescribeBillDetailRequest extends AbstractModel{
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
         }
+        if (source.BusinessCode != null) {
+            this.BusinessCode = new String(source.BusinessCode);
+        }
     }
 
 
@@ -366,6 +497,7 @@ public class DescribeBillDetailRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
 
     }
 }

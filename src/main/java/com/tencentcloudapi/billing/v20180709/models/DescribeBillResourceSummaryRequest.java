@@ -100,6 +100,14 @@ Monthly subscription refund
     private String PayMode;
 
     /**
+    * Business code
+Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+    */
+    @SerializedName("BusinessCode")
+    @Expose
+    private String BusinessCode;
+
+    /**
      * Get Offset 
      * @return Offset Offset
      */
@@ -311,6 +319,26 @@ Monthly subscription refund
         this.PayMode = PayMode;
     }
 
+    /**
+     * Get Business code
+Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>. 
+     * @return BusinessCode Business code
+Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+     */
+    public String getBusinessCode() {
+        return this.BusinessCode;
+    }
+
+    /**
+     * Set Business code
+Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+     * @param BusinessCode Business code
+Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+     */
+    public void setBusinessCode(String BusinessCode) {
+        this.BusinessCode = BusinessCode;
+    }
+
     public DescribeBillResourceSummaryRequest() {
     }
 
@@ -343,6 +371,9 @@ Monthly subscription refund
         if (source.PayMode != null) {
             this.PayMode = new String(source.PayMode);
         }
+        if (source.BusinessCode != null) {
+            this.BusinessCode = new String(source.BusinessCode);
+        }
     }
 
 
@@ -358,6 +389,7 @@ Monthly subscription refund
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
 
     }
 }

@@ -167,6 +167,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String SetType;
 
     /**
+    * Cluster type for service deployment
+Note: this field may return null, indicating that no valid values found.
+    */
+    @SerializedName("DeploymentType")
+    @Expose
+    private String DeploymentType;
+
+    /**
      * Get Port for HTTPS access over private network.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return InnerHttpsPort Port for HTTPS access over private network.
@@ -526,6 +534,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.SetType = SetType;
     }
 
+    /**
+     * Get Cluster type for service deployment
+Note: this field may return null, indicating that no valid values found. 
+     * @return DeploymentType Cluster type for service deployment
+Note: this field may return null, indicating that no valid values found.
+     */
+    public String getDeploymentType() {
+        return this.DeploymentType;
+    }
+
+    /**
+     * Set Cluster type for service deployment
+Note: this field may return null, indicating that no valid values found.
+     * @param DeploymentType Cluster type for service deployment
+Note: this field may return null, indicating that no valid values found.
+     */
+    public void setDeploymentType(String DeploymentType) {
+        this.DeploymentType = DeploymentType;
+    }
+
     public Service() {
     }
 
@@ -597,6 +625,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.SetType != null) {
             this.SetType = new String(source.SetType);
         }
+        if (source.DeploymentType != null) {
+            this.DeploymentType = new String(source.DeploymentType);
+        }
     }
 
 
@@ -622,6 +653,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "SetType", this.SetType);
+        this.setParamSimple(map, prefix + "DeploymentType", this.DeploymentType);
 
     }
 }

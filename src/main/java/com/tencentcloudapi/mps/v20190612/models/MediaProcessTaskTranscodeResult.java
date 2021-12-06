@@ -66,6 +66,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private MediaTranscodeItem Output;
 
     /**
+    * Transcoding progress. Value range: 0-100
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Long Progress;
+
+    /**
      * Get Task status. Valid values: PROCESSING, SUCCESS, FAIL. 
      * @return Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
      */
@@ -165,6 +173,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Output = Output;
     }
 
+    /**
+     * Get Transcoding progress. Value range: 0-100
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return Progress Transcoding progress. Value range: 0-100
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public Long getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set Transcoding progress. Value range: 0-100
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param Progress Transcoding progress. Value range: 0-100
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setProgress(Long Progress) {
+        this.Progress = Progress;
+    }
+
     public MediaProcessTaskTranscodeResult() {
     }
 
@@ -191,6 +219,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Output != null) {
             this.Output = new MediaTranscodeItem(source.Output);
         }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
     }
 
 
@@ -204,6 +235,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
 
     }
 }

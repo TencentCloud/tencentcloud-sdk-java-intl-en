@@ -201,6 +201,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String SetType;
 
     /**
+    * Cluster type for service deployment
+Note: this field may return null, indicating that no valid values found.
+    */
+    @SerializedName("DeploymentType")
+    @Expose
+    private String DeploymentType;
+
+    /**
+    * Whether it’s for special usage
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SpecialUse")
+    @Expose
+    private String SpecialUse;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -632,6 +648,46 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Cluster type for service deployment
+Note: this field may return null, indicating that no valid values found. 
+     * @return DeploymentType Cluster type for service deployment
+Note: this field may return null, indicating that no valid values found.
+     */
+    public String getDeploymentType() {
+        return this.DeploymentType;
+    }
+
+    /**
+     * Set Cluster type for service deployment
+Note: this field may return null, indicating that no valid values found.
+     * @param DeploymentType Cluster type for service deployment
+Note: this field may return null, indicating that no valid values found.
+     */
+    public void setDeploymentType(String DeploymentType) {
+        this.DeploymentType = DeploymentType;
+    }
+
+    /**
+     * Get Whether it’s for special usage
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return SpecialUse Whether it’s for special usage
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getSpecialUse() {
+        return this.SpecialUse;
+    }
+
+    /**
+     * Set Whether it’s for special usage
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param SpecialUse Whether it’s for special usage
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setSpecialUse(String SpecialUse) {
+        this.SpecialUse = SpecialUse;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -742,6 +798,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.SetType != null) {
             this.SetType = new String(source.SetType);
         }
+        if (source.DeploymentType != null) {
+            this.DeploymentType = new String(source.DeploymentType);
+        }
+        if (source.SpecialUse != null) {
+            this.SpecialUse = new String(source.SpecialUse);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -776,6 +838,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "SetType", this.SetType);
+        this.setParamSimple(map, prefix + "DeploymentType", this.DeploymentType);
+        this.setParamSimple(map, prefix + "SpecialUse", this.SpecialUse);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
