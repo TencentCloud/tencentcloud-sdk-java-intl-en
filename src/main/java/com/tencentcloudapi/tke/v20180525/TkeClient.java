@@ -959,6 +959,46 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to disable cluster deletion protection.
+     * @param req DisableClusterDeletionProtectionRequest
+     * @return DisableClusterDeletionProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableClusterDeletionProtectionResponse DisableClusterDeletionProtection(DisableClusterDeletionProtectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableClusterDeletionProtectionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableClusterDeletionProtectionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableClusterDeletionProtection");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to enable cluster deletion protection.
+     * @param req EnableClusterDeletionProtectionRequest
+     * @return EnableClusterDeletionProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableClusterDeletionProtectionResponse EnableClusterDeletionProtection(EnableClusterDeletionProtectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableClusterDeletionProtectionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableClusterDeletionProtectionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableClusterDeletionProtection");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to enable the VPC-CNI network mode for GR clusters.
      * @param req EnableVpcCniNetworkTypeRequest
      * @return EnableVpcCniNetworkTypeResponse

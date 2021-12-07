@@ -161,6 +161,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String Domain;
 
     /**
+    * Whether to enable Sec-MCA. Valid values: `1` (enabled) and `0` (disabled).
+    */
+    @SerializedName("DamDDoSStatus")
+    @Expose
+    private Long DamDDoSStatus;
+
+    /**
+    * 
+    */
+    @SerializedName("V6Flag")
+    @Expose
+    private Long V6Flag;
+
+    /**
      * Get Anti-DDoS instance details 
      * @return InstanceDetail Anti-DDoS instance details
      */
@@ -508,6 +522,38 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.Domain = Domain;
     }
 
+    /**
+     * Get Whether to enable Sec-MCA. Valid values: `1` (enabled) and `0` (disabled). 
+     * @return DamDDoSStatus Whether to enable Sec-MCA. Valid values: `1` (enabled) and `0` (disabled).
+     */
+    public Long getDamDDoSStatus() {
+        return this.DamDDoSStatus;
+    }
+
+    /**
+     * Set Whether to enable Sec-MCA. Valid values: `1` (enabled) and `0` (disabled).
+     * @param DamDDoSStatus Whether to enable Sec-MCA. Valid values: `1` (enabled) and `0` (disabled).
+     */
+    public void setDamDDoSStatus(Long DamDDoSStatus) {
+        this.DamDDoSStatus = DamDDoSStatus;
+    }
+
+    /**
+     * Get  
+     * @return V6Flag 
+     */
+    public Long getV6Flag() {
+        return this.V6Flag;
+    }
+
+    /**
+     * Set 
+     * @param V6Flag 
+     */
+    public void setV6Flag(Long V6Flag) {
+        this.V6Flag = V6Flag;
+    }
+
     public BGPIPInstance() {
     }
 
@@ -567,6 +613,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
+        if (source.DamDDoSStatus != null) {
+            this.DamDDoSStatus = new Long(source.DamDDoSStatus);
+        }
+        if (source.V6Flag != null) {
+            this.V6Flag = new Long(source.V6Flag);
+        }
     }
 
 
@@ -591,6 +643,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamObj(map, prefix + "EipAddressPackRelation.", this.EipAddressPackRelation);
         this.setParamObj(map, prefix + "EipAddressInfo.", this.EipAddressInfo);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "DamDDoSStatus", this.DamDDoSStatus);
+        this.setParamSimple(map, prefix + "V6Flag", this.V6Flag);
 
     }
 }

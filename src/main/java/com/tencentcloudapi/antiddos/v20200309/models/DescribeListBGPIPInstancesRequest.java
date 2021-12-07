@@ -92,6 +92,13 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
     private String [] FilterEipEipAddressStatus;
 
     /**
+    * Whether to obtain only Anti-DDoS instances with Sec-MCA enabled. Valid values: `1` (only obtain Anti-DDoS instances with Sec-MCA enabled) and `0` (obtain other Anti-DDoS instances).
+    */
+    @SerializedName("FilterDamDDoSStatus")
+    @Expose
+    private Long FilterDamDDoSStatus;
+
+    /**
      * Get Starting offset of the page. Value: (number of pages – 1) * items per page. 
      * @return Offset Starting offset of the page. Value: (number of pages – 1) * items per page.
      */
@@ -259,6 +266,22 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
         this.FilterEipEipAddressStatus = FilterEipEipAddressStatus;
     }
 
+    /**
+     * Get Whether to obtain only Anti-DDoS instances with Sec-MCA enabled. Valid values: `1` (only obtain Anti-DDoS instances with Sec-MCA enabled) and `0` (obtain other Anti-DDoS instances). 
+     * @return FilterDamDDoSStatus Whether to obtain only Anti-DDoS instances with Sec-MCA enabled. Valid values: `1` (only obtain Anti-DDoS instances with Sec-MCA enabled) and `0` (obtain other Anti-DDoS instances).
+     */
+    public Long getFilterDamDDoSStatus() {
+        return this.FilterDamDDoSStatus;
+    }
+
+    /**
+     * Set Whether to obtain only Anti-DDoS instances with Sec-MCA enabled. Valid values: `1` (only obtain Anti-DDoS instances with Sec-MCA enabled) and `0` (obtain other Anti-DDoS instances).
+     * @param FilterDamDDoSStatus Whether to obtain only Anti-DDoS instances with Sec-MCA enabled. Valid values: `1` (only obtain Anti-DDoS instances with Sec-MCA enabled) and `0` (obtain other Anti-DDoS instances).
+     */
+    public void setFilterDamDDoSStatus(Long FilterDamDDoSStatus) {
+        this.FilterDamDDoSStatus = FilterDamDDoSStatus;
+    }
+
     public DescribeListBGPIPInstancesRequest() {
     }
 
@@ -297,6 +320,9 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
                 this.FilterEipEipAddressStatus[i] = new String(source.FilterEipEipAddressStatus[i]);
             }
         }
+        if (source.FilterDamDDoSStatus != null) {
+            this.FilterDamDDoSStatus = new Long(source.FilterDamDDoSStatus);
+        }
     }
 
 
@@ -313,6 +339,7 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FilterName", this.FilterName);
         this.setParamSimple(map, prefix + "FilterEipType", this.FilterEipType);
         this.setParamArraySimple(map, prefix + "FilterEipEipAddressStatus.", this.FilterEipEipAddressStatus);
+        this.setParamSimple(map, prefix + "FilterDamDDoSStatus", this.FilterDamDDoSStatus);
 
     }
 }

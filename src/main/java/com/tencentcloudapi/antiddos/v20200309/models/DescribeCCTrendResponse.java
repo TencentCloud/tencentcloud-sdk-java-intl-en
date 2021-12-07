@@ -80,7 +80,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String Id;
 
     /**
-    * Metric. Valid values: `inqps`: total peak requests; `dropqps`: peak attack requests
+    * Metric. Valid values: `inqps` (total QPS peaks), `dropqps` (attack QPS peaks), `incount` (total number of requests), and `dropcount` (number of attack requests).
     */
     @SerializedName("MetricName")
     @Expose
@@ -226,16 +226,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Metric. Valid values: `inqps`: total peak requests; `dropqps`: peak attack requests 
-     * @return MetricName Metric. Valid values: `inqps`: total peak requests; `dropqps`: peak attack requests
+     * Get Metric. Valid values: `inqps` (total QPS peaks), `dropqps` (attack QPS peaks), `incount` (total number of requests), and `dropcount` (number of attack requests). 
+     * @return MetricName Metric. Valid values: `inqps` (total QPS peaks), `dropqps` (attack QPS peaks), `incount` (total number of requests), and `dropcount` (number of attack requests).
      */
     public String getMetricName() {
         return this.MetricName;
     }
 
     /**
-     * Set Metric. Valid values: `inqps`: total peak requests; `dropqps`: peak attack requests
-     * @param MetricName Metric. Valid values: `inqps`: total peak requests; `dropqps`: peak attack requests
+     * Set Metric. Valid values: `inqps` (total QPS peaks), `dropqps` (attack QPS peaks), `incount` (total number of requests), and `dropcount` (number of attack requests).
+     * @param MetricName Metric. Valid values: `inqps` (total QPS peaks), `dropqps` (attack QPS peaks), `incount` (total number of requests), and `dropcount` (number of attack requests).
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;
