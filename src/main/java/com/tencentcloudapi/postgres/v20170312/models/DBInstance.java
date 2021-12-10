@@ -128,7 +128,7 @@ public class DBInstance extends AbstractModel{
     private String DBCharset;
 
     /**
-    * PostgreSQL kernel version
+    * PostgreSQL major version
     */
     @SerializedName("DBVersion")
     @Expose
@@ -250,6 +250,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     @SerializedName("OfflineTime")
     @Expose
     private String OfflineTime;
+
+    /**
+    * Database kernel version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DBKernelVersion")
+    @Expose
+    private String DBKernelVersion;
+
+    /**
+    * Network information list of the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("NetworkAccessList")
+    @Expose
+    private NetworkAccess [] NetworkAccessList;
 
     /**
      * Get Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet` 
@@ -492,16 +508,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get PostgreSQL kernel version 
-     * @return DBVersion PostgreSQL kernel version
+     * Get PostgreSQL major version 
+     * @return DBVersion PostgreSQL major version
      */
     public String getDBVersion() {
         return this.DBVersion;
     }
 
     /**
-     * Set PostgreSQL kernel version
-     * @param DBVersion PostgreSQL kernel version
+     * Set PostgreSQL major version
+     * @param DBVersion PostgreSQL major version
      */
     public void setDBVersion(String DBVersion) {
         this.DBVersion = DBVersion;
@@ -783,6 +799,46 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.OfflineTime = OfflineTime;
     }
 
+    /**
+     * Get Database kernel version
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return DBKernelVersion Database kernel version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getDBKernelVersion() {
+        return this.DBKernelVersion;
+    }
+
+    /**
+     * Set Database kernel version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param DBKernelVersion Database kernel version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDBKernelVersion(String DBKernelVersion) {
+        this.DBKernelVersion = DBKernelVersion;
+    }
+
+    /**
+     * Get Network information list of the instance
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return NetworkAccessList Network information list of the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public NetworkAccess [] getNetworkAccessList() {
+        return this.NetworkAccessList;
+    }
+
+    /**
+     * Set Network information list of the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param NetworkAccessList Network information list of the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setNetworkAccessList(NetworkAccess [] NetworkAccessList) {
+        this.NetworkAccessList = NetworkAccessList;
+    }
+
     public DBInstance() {
     }
 
@@ -893,6 +949,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.OfflineTime != null) {
             this.OfflineTime = new String(source.OfflineTime);
         }
+        if (source.DBKernelVersion != null) {
+            this.DBKernelVersion = new String(source.DBKernelVersion);
+        }
+        if (source.NetworkAccessList != null) {
+            this.NetworkAccessList = new NetworkAccess[source.NetworkAccessList.length];
+            for (int i = 0; i < source.NetworkAccessList.length; i++) {
+                this.NetworkAccessList[i] = new NetworkAccess(source.NetworkAccessList[i]);
+            }
+        }
     }
 
 
@@ -932,6 +997,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ReadOnlyInstanceNum", this.ReadOnlyInstanceNum);
         this.setParamSimple(map, prefix + "StatusInReadonlyGroup", this.StatusInReadonlyGroup);
         this.setParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
+        this.setParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
+        this.setParamArrayObj(map, prefix + "NetworkAccessList.", this.NetworkAccessList);
 
     }
 }

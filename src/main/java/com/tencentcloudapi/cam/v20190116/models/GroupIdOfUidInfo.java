@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class GroupIdOfUidInfo extends AbstractModel{
 
     /**
+    * User Group ID
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private Long GroupId;
+
+    /**
     * Sub-user UID
     */
     @SerializedName("Uid")
@@ -30,11 +37,27 @@ public class GroupIdOfUidInfo extends AbstractModel{
     private Long Uid;
 
     /**
-    * User Group ID
+    * Sub-user UIN. For UIN and UID, at least one of them is required.
     */
-    @SerializedName("GroupId")
+    @SerializedName("Uin")
     @Expose
-    private Long GroupId;
+    private Long Uin;
+
+    /**
+     * Get User Group ID 
+     * @return GroupId User Group ID
+     */
+    public Long getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set User Group ID
+     * @param GroupId User Group ID
+     */
+    public void setGroupId(Long GroupId) {
+        this.GroupId = GroupId;
+    }
 
     /**
      * Get Sub-user UID 
@@ -53,19 +76,19 @@ public class GroupIdOfUidInfo extends AbstractModel{
     }
 
     /**
-     * Get User Group ID 
-     * @return GroupId User Group ID
+     * Get Sub-user UIN. For UIN and UID, at least one of them is required. 
+     * @return Uin Sub-user UIN. For UIN and UID, at least one of them is required.
      */
-    public Long getGroupId() {
-        return this.GroupId;
+    public Long getUin() {
+        return this.Uin;
     }
 
     /**
-     * Set User Group ID
-     * @param GroupId User Group ID
+     * Set Sub-user UIN. For UIN and UID, at least one of them is required.
+     * @param Uin Sub-user UIN. For UIN and UID, at least one of them is required.
      */
-    public void setGroupId(Long GroupId) {
-        this.GroupId = GroupId;
+    public void setUin(Long Uin) {
+        this.Uin = Uin;
     }
 
     public GroupIdOfUidInfo() {
@@ -76,11 +99,14 @@ public class GroupIdOfUidInfo extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public GroupIdOfUidInfo(GroupIdOfUidInfo source) {
+        if (source.GroupId != null) {
+            this.GroupId = new Long(source.GroupId);
+        }
         if (source.Uid != null) {
             this.Uid = new Long(source.Uid);
         }
-        if (source.GroupId != null) {
-            this.GroupId = new Long(source.GroupId);
+        if (source.Uin != null) {
+            this.Uin = new Long(source.Uin);
         }
     }
 
@@ -89,8 +115,9 @@ public class GroupIdOfUidInfo extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Uid", this.Uid);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "Uid", this.Uid);
+        this.setParamSimple(map, prefix + "Uin", this.Uin);
 
     }
 }

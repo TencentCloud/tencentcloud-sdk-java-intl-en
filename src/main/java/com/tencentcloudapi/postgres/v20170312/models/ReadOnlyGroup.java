@@ -148,6 +148,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private DBInstanceNetInfo [] DBInstanceNetInfo;
 
     /**
+    * Network information list of the RO group
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("NetworkAccessList")
+    @Expose
+    private NetworkAccess [] NetworkAccessList;
+
+    /**
      * Get RO group identifier
 Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return ReadOnlyGroupId RO group identifier
@@ -443,6 +451,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.DBInstanceNetInfo = DBInstanceNetInfo;
     }
 
+    /**
+     * Get Network information list of the RO group
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return NetworkAccessList Network information list of the RO group
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public NetworkAccess [] getNetworkAccessList() {
+        return this.NetworkAccessList;
+    }
+
+    /**
+     * Set Network information list of the RO group
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param NetworkAccessList Network information list of the RO group
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setNetworkAccessList(NetworkAccess [] NetworkAccessList) {
+        this.NetworkAccessList = NetworkAccessList;
+    }
+
     public ReadOnlyGroup() {
     }
 
@@ -508,6 +536,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.DBInstanceNetInfo[i] = new DBInstanceNetInfo(source.DBInstanceNetInfo[i]);
             }
         }
+        if (source.NetworkAccessList != null) {
+            this.NetworkAccessList = new NetworkAccess[source.NetworkAccessList.length];
+            for (int i = 0; i < source.NetworkAccessList.length; i++) {
+                this.NetworkAccessList[i] = new NetworkAccess(source.NetworkAccessList[i]);
+            }
+        }
     }
 
 
@@ -532,6 +566,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamArrayObj(map, prefix + "ReadOnlyDBInstanceList.", this.ReadOnlyDBInstanceList);
         this.setParamSimple(map, prefix + "Rebalance", this.Rebalance);
         this.setParamArrayObj(map, prefix + "DBInstanceNetInfo.", this.DBInstanceNetInfo);
+        this.setParamArrayObj(map, prefix + "NetworkAccessList.", this.NetworkAccessList);
 
     }
 }

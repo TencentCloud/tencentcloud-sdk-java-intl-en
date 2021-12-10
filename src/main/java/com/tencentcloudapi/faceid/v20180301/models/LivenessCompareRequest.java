@@ -23,30 +23,34 @@ import java.util.HashMap;
 public class LivenessCompareRequest extends AbstractModel{
 
     /**
-    * Base64 string of the image for face comparison.
-The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
-Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
-    */
-    @SerializedName("ImageBase64")
-    @Expose
-    private String ImageBase64;
-
-    /**
-    * Base64 string of the video for liveness detection.
-The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
-Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
-    */
-    @SerializedName("VideoBase64")
-    @Expose
-    private String VideoBase64;
-
-    /**
     * Liveness detection type. Valid values: LIP/ACTION/SILENT.
 LIP: numeric mode; ACTION: motion mode; SILENT: silent mode. You need to select a mode to input.
     */
     @SerializedName("LivenessType")
     @Expose
     private String LivenessType;
+
+    /**
+    * Base64 string of the image for face comparison.
+The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
+
+Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageBase64` will be used.
+    */
+    @SerializedName("ImageBase64")
+    @Expose
+    private String ImageBase64;
+
+    /**
+    * URL of the image for face comparison. The size of the downloaded image after Base64 encoding can be up to 3 MB. JPG and PNG formats are supported.
+
+Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageBase64` will be used.
+
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+    */
+    @SerializedName("ImageUrl")
+    @Expose
+    private String ImageUrl;
 
     /**
     * Lip mode: set this parameter to a custom 4-digit verification code.
@@ -68,52 +72,26 @@ Silent mode: do not pass in this parameter.
     private String Optional;
 
     /**
-     * Get Base64 string of the image for face comparison.
-The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
-Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648. 
-     * @return ImageBase64 Base64 string of the image for face comparison.
-The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+    * Base64 string of the video for liveness detection.
+The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
 Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
-     */
-    public String getImageBase64() {
-        return this.ImageBase64;
-    }
+
+Either the `VideoUrl` or `VideoBase64` of the video must be provided. If both are provided, only `VideoBase64` will be used.
+    */
+    @SerializedName("VideoBase64")
+    @Expose
+    private String VideoBase64;
 
     /**
-     * Set Base64 string of the image for face comparison.
-The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
-Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
-     * @param ImageBase64 Base64 string of the image for face comparison.
-The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
-Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
-     */
-    public void setImageBase64(String ImageBase64) {
-        this.ImageBase64 = ImageBase64;
-    }
+    * URL of the video for liveness detection. The size of the downloaded video after Base64 encoding can be up to 8 MB. It takes no more than 4 seconds to download. MP4, AVI, and FLV formats are supported.
 
-    /**
-     * Get Base64 string of the video for liveness detection.
-The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
-Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648. 
-     * @return VideoBase64 Base64 string of the video for liveness detection.
-The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
-Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
-     */
-    public String getVideoBase64() {
-        return this.VideoBase64;
-    }
+Either the `VideoUrl` or `VideoBase64` of the video must be provided. If both are provided, only `VideoBase64` will be used.
 
-    /**
-     * Set Base64 string of the video for liveness detection.
-The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
-Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
-     * @param VideoBase64 Base64 string of the video for liveness detection.
-The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
-Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
-     */
-    public void setVideoBase64(String VideoBase64) {
-        this.VideoBase64 = VideoBase64;
-    }
+We recommend you store the video in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+    */
+    @SerializedName("VideoUrl")
+    @Expose
+    private String VideoUrl;
 
     /**
      * Get Liveness detection type. Valid values: LIP/ACTION/SILENT.
@@ -133,6 +111,70 @@ LIP: numeric mode; ACTION: motion mode; SILENT: silent mode. You need to select 
      */
     public void setLivenessType(String LivenessType) {
         this.LivenessType = LivenessType;
+    }
+
+    /**
+     * Get Base64 string of the image for face comparison.
+The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
+
+Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageBase64` will be used. 
+     * @return ImageBase64 Base64 string of the image for face comparison.
+The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
+
+Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageBase64` will be used.
+     */
+    public String getImageBase64() {
+        return this.ImageBase64;
+    }
+
+    /**
+     * Set Base64 string of the image for face comparison.
+The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
+
+Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageBase64` will be used.
+     * @param ImageBase64 Base64 string of the image for face comparison.
+The size of the Base64-encoded image data can be up to 3 MB. JPG and PNG formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
+
+Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageBase64` will be used.
+     */
+    public void setImageBase64(String ImageBase64) {
+        this.ImageBase64 = ImageBase64;
+    }
+
+    /**
+     * Get URL of the image for face comparison. The size of the downloaded image after Base64 encoding can be up to 3 MB. JPG and PNG formats are supported.
+
+Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageBase64` will be used.
+
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low. 
+     * @return ImageUrl URL of the image for face comparison. The size of the downloaded image after Base64 encoding can be up to 3 MB. JPG and PNG formats are supported.
+
+Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageBase64` will be used.
+
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+     */
+    public String getImageUrl() {
+        return this.ImageUrl;
+    }
+
+    /**
+     * Set URL of the image for face comparison. The size of the downloaded image after Base64 encoding can be up to 3 MB. JPG and PNG formats are supported.
+
+Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageBase64` will be used.
+
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+     * @param ImageUrl URL of the image for face comparison. The size of the downloaded image after Base64 encoding can be up to 3 MB. JPG and PNG formats are supported.
+
+Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageBase64` will be used.
+
+We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+     */
+    public void setImageUrl(String ImageUrl) {
+        this.ImageUrl = ImageUrl;
     }
 
     /**
@@ -187,6 +229,70 @@ Silent mode: do not pass in this parameter.
         this.Optional = Optional;
     }
 
+    /**
+     * Get Base64 string of the video for liveness detection.
+The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
+
+Either the `VideoUrl` or `VideoBase64` of the video must be provided. If both are provided, only `VideoBase64` will be used. 
+     * @return VideoBase64 Base64 string of the video for liveness detection.
+The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
+
+Either the `VideoUrl` or `VideoBase64` of the video must be provided. If both are provided, only `VideoBase64` will be used.
+     */
+    public String getVideoBase64() {
+        return this.VideoBase64;
+    }
+
+    /**
+     * Set Base64 string of the video for liveness detection.
+The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
+
+Either the `VideoUrl` or `VideoBase64` of the video must be provided. If both are provided, only `VideoBase64` will be used.
+     * @param VideoBase64 Base64 string of the video for liveness detection.
+The size of the Base64-encoded video data can be up to 8 MB. MP4, AVI, and FLV formats are supported.
+Please use the standard Base64 encoding scheme (with the "=" padding). For the encoding conventions, please see RFC 4648.
+
+Either the `VideoUrl` or `VideoBase64` of the video must be provided. If both are provided, only `VideoBase64` will be used.
+     */
+    public void setVideoBase64(String VideoBase64) {
+        this.VideoBase64 = VideoBase64;
+    }
+
+    /**
+     * Get URL of the video for liveness detection. The size of the downloaded video after Base64 encoding can be up to 8 MB. It takes no more than 4 seconds to download. MP4, AVI, and FLV formats are supported.
+
+Either the `VideoUrl` or `VideoBase64` of the video must be provided. If both are provided, only `VideoBase64` will be used.
+
+We recommend you store the video in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low. 
+     * @return VideoUrl URL of the video for liveness detection. The size of the downloaded video after Base64 encoding can be up to 8 MB. It takes no more than 4 seconds to download. MP4, AVI, and FLV formats are supported.
+
+Either the `VideoUrl` or `VideoBase64` of the video must be provided. If both are provided, only `VideoBase64` will be used.
+
+We recommend you store the video in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+     */
+    public String getVideoUrl() {
+        return this.VideoUrl;
+    }
+
+    /**
+     * Set URL of the video for liveness detection. The size of the downloaded video after Base64 encoding can be up to 8 MB. It takes no more than 4 seconds to download. MP4, AVI, and FLV formats are supported.
+
+Either the `VideoUrl` or `VideoBase64` of the video must be provided. If both are provided, only `VideoBase64` will be used.
+
+We recommend you store the video in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+     * @param VideoUrl URL of the video for liveness detection. The size of the downloaded video after Base64 encoding can be up to 8 MB. It takes no more than 4 seconds to download. MP4, AVI, and FLV formats are supported.
+
+Either the `VideoUrl` or `VideoBase64` of the video must be provided. If both are provided, only `VideoBase64` will be used.
+
+We recommend you store the video in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+     */
+    public void setVideoUrl(String VideoUrl) {
+        this.VideoUrl = VideoUrl;
+    }
+
     public LivenessCompareRequest() {
     }
 
@@ -195,20 +301,26 @@ Silent mode: do not pass in this parameter.
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public LivenessCompareRequest(LivenessCompareRequest source) {
+        if (source.LivenessType != null) {
+            this.LivenessType = new String(source.LivenessType);
+        }
         if (source.ImageBase64 != null) {
             this.ImageBase64 = new String(source.ImageBase64);
         }
-        if (source.VideoBase64 != null) {
-            this.VideoBase64 = new String(source.VideoBase64);
-        }
-        if (source.LivenessType != null) {
-            this.LivenessType = new String(source.LivenessType);
+        if (source.ImageUrl != null) {
+            this.ImageUrl = new String(source.ImageUrl);
         }
         if (source.ValidateData != null) {
             this.ValidateData = new String(source.ValidateData);
         }
         if (source.Optional != null) {
             this.Optional = new String(source.Optional);
+        }
+        if (source.VideoBase64 != null) {
+            this.VideoBase64 = new String(source.VideoBase64);
+        }
+        if (source.VideoUrl != null) {
+            this.VideoUrl = new String(source.VideoUrl);
         }
     }
 
@@ -217,11 +329,13 @@ Silent mode: do not pass in this parameter.
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
-        this.setParamSimple(map, prefix + "VideoBase64", this.VideoBase64);
         this.setParamSimple(map, prefix + "LivenessType", this.LivenessType);
+        this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
+        this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "ValidateData", this.ValidateData);
         this.setParamSimple(map, prefix + "Optional", this.Optional);
+        this.setParamSimple(map, prefix + "VideoBase64", this.VideoBase64);
+        this.setParamSimple(map, prefix + "VideoUrl", this.VideoUrl);
 
     }
 }

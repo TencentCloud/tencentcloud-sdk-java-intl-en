@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class RemoveUserFromGroupRequest extends AbstractModel{
 
     /**
-    * The UID of the user to be deleted and an array corresponding to the User Group IDs
+    * The user’s UIN/UID to be deleted and the array corresponding to the user group ID.
     */
     @SerializedName("Info")
     @Expose
     private GroupIdOfUidInfo [] Info;
 
     /**
-     * Get The UID of the user to be deleted and an array corresponding to the User Group IDs 
-     * @return Info The UID of the user to be deleted and an array corresponding to the User Group IDs
+     * Get The user’s UIN/UID to be deleted and the array corresponding to the user group ID. 
+     * @return Info The user’s UIN/UID to be deleted and the array corresponding to the user group ID.
      */
     public GroupIdOfUidInfo [] getInfo() {
         return this.Info;
     }
 
     /**
-     * Set The UID of the user to be deleted and an array corresponding to the User Group IDs
-     * @param Info The UID of the user to be deleted and an array corresponding to the User Group IDs
+     * Set The user’s UIN/UID to be deleted and the array corresponding to the user group ID.
+     * @param Info The user’s UIN/UID to be deleted and the array corresponding to the user group ID.
      */
     public void setInfo(GroupIdOfUidInfo [] Info) {
         this.Info = Info;

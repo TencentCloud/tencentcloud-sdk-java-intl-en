@@ -72,14 +72,14 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel{
     private Long SwitchTag;
 
     /**
-    * The earliest time to start a switch.
+    * The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00".
     */
     @SerializedName("SwitchStartTime")
     @Expose
     private String SwitchStartTime;
 
     /**
-    * The latest time to start a switch.
+    * The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00".
     */
     @SerializedName("SwitchEndTime")
     @Expose
@@ -198,32 +198,32 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel{
     }
 
     /**
-     * Get The earliest time to start a switch. 
-     * @return SwitchStartTime The earliest time to start a switch.
+     * Get The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00". 
+     * @return SwitchStartTime The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00".
      */
     public String getSwitchStartTime() {
         return this.SwitchStartTime;
     }
 
     /**
-     * Set The earliest time to start a switch.
-     * @param SwitchStartTime The earliest time to start a switch.
+     * Set The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00".
+     * @param SwitchStartTime The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00".
      */
     public void setSwitchStartTime(String SwitchStartTime) {
         this.SwitchStartTime = SwitchStartTime;
     }
 
     /**
-     * Get The latest time to start a switch. 
-     * @return SwitchEndTime The latest time to start a switch.
+     * Get The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00". 
+     * @return SwitchEndTime The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00".
      */
     public String getSwitchEndTime() {
         return this.SwitchEndTime;
     }
 
     /**
-     * Set The latest time to start a switch.
-     * @param SwitchEndTime The latest time to start a switch.
+     * Set The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00".
+     * @param SwitchEndTime The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00".
      */
     public void setSwitchEndTime(String SwitchEndTime) {
         this.SwitchEndTime = SwitchEndTime;

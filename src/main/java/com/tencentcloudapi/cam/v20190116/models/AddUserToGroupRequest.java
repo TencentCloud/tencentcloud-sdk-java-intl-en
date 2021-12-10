@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class AddUserToGroupRequest extends AbstractModel{
 
     /**
-    * How sub-user UIDs are associated with the ID of the user group they are added to.
+    * The association between the user group ID and the sub-user UIN/UID.
     */
     @SerializedName("Info")
     @Expose
     private GroupIdOfUidInfo [] Info;
 
     /**
-     * Get How sub-user UIDs are associated with the ID of the user group they are added to. 
-     * @return Info How sub-user UIDs are associated with the ID of the user group they are added to.
+     * Get The association between the user group ID and the sub-user UIN/UID. 
+     * @return Info The association between the user group ID and the sub-user UIN/UID.
      */
     public GroupIdOfUidInfo [] getInfo() {
         return this.Info;
     }
 
     /**
-     * Set How sub-user UIDs are associated with the ID of the user group they are added to.
-     * @param Info How sub-user UIDs are associated with the ID of the user group they are added to.
+     * Set The association between the user group ID and the sub-user UIN/UID.
+     * @param Info The association between the user group ID and the sub-user UIN/UID.
      */
     public void setInfo(GroupIdOfUidInfo [] Info) {
         this.Info = Info;

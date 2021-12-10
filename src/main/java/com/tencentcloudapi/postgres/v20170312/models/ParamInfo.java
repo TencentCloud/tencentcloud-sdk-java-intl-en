@@ -39,7 +39,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String Name;
 
     /**
-    * Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values)
+    * Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
+For an `integer` or `real` parameter, the `Min` field represents the minimum value and the `Max` field the maximum value. 
+For a `bool` parameter, the valid values include `true` and `false`; 
+For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ParamValueType")
@@ -199,9 +202,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values)
+     * Get Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
+For an `integer` or `real` parameter, the `Min` field represents the minimum value and the `Max` field the maximum value. 
+For a `bool` parameter, the valid values include `true` and `false`; 
+For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ParamValueType Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values)
+     * @return ParamValueType Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
+For an `integer` or `real` parameter, the `Min` field represents the minimum value and the `Max` field the maximum value. 
+For a `bool` parameter, the valid values include `true` and `false`; 
+For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getParamValueType() {
@@ -209,9 +218,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values)
+     * Set Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
+For an `integer` or `real` parameter, the `Min` field represents the minimum value and the `Max` field the maximum value. 
+For a `bool` parameter, the valid values include `true` and `false`; 
+For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ParamValueType Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values)
+     * @param ParamValueType Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
+For an `integer` or `real` parameter, the `Min` field represents the minimum value and the `Max` field the maximum value. 
+For a `bool` parameter, the valid values include `true` and `false`; 
+For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setParamValueType(String ParamValueType) {

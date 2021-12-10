@@ -143,6 +143,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Tag [] TagList;
 
     /**
+    * Database kernel version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DBKernelVersion")
+    @Expose
+    private String DBKernelVersion;
+
+    /**
      * Get Instance ID, which is the unique identifier
 Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return DBInstanceId Instance ID, which is the unique identifier
@@ -442,6 +450,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.TagList = TagList;
     }
 
+    /**
+     * Get Database kernel version
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return DBKernelVersion Database kernel version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getDBKernelVersion() {
+        return this.DBKernelVersion;
+    }
+
+    /**
+     * Set Database kernel version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param DBKernelVersion Database kernel version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDBKernelVersion(String DBKernelVersion) {
+        this.DBKernelVersion = DBKernelVersion;
+    }
+
     public ServerlessDBInstance() {
     }
 
@@ -507,6 +535,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.TagList[i] = new Tag(source.TagList[i]);
             }
         }
+        if (source.DBKernelVersion != null) {
+            this.DBKernelVersion = new String(source.DBKernelVersion);
+        }
     }
 
 
@@ -529,6 +560,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamArrayObj(map, prefix + "DBAccountSet.", this.DBAccountSet);
         this.setParamArraySimple(map, prefix + "DBDatabaseList.", this.DBDatabaseList);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
+        this.setParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
 
     }
 }

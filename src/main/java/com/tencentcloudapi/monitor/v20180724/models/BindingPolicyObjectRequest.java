@@ -23,18 +23,25 @@ import java.util.HashMap;
 public class BindingPolicyObjectRequest extends AbstractModel{
 
     /**
-    * Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., 0, can be passed in.
+    * Required. The value is fixed to monitor.
+    */
+    @SerializedName("Module")
+    @Expose
+    private String Module;
+
+    /**
+    * Policy group ID, such as `4739573`. This parameter will be disused soon. Another parameter `PolicyId` is recommended.
     */
     @SerializedName("GroupId")
     @Expose
     private Long GroupId;
 
     /**
-    * Required. The value is fixed to monitor.
+    * Alarm policy ID, such as `policy-gh892hg0`. At least one of the two parameters, `PolicyId` and `GroupId`, must be specified; otherwise, an error will be reported. `PolicyId` is preferred over `GroupId` when both of them are specified.
     */
-    @SerializedName("Module")
+    @SerializedName("PolicyId")
     @Expose
-    private String Module;
+    private String PolicyId;
 
     /**
     * Instance group ID.
@@ -51,29 +58,6 @@ public class BindingPolicyObjectRequest extends AbstractModel{
     private BindingPolicyObjectDimension [] Dimensions;
 
     /**
-    * Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
-    */
-    @SerializedName("PolicyId")
-    @Expose
-    private String PolicyId;
-
-    /**
-     * Get Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., 0, can be passed in. 
-     * @return GroupId Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., 0, can be passed in.
-     */
-    public Long getGroupId() {
-        return this.GroupId;
-    }
-
-    /**
-     * Set Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., 0, can be passed in.
-     * @param GroupId Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., 0, can be passed in.
-     */
-    public void setGroupId(Long GroupId) {
-        this.GroupId = GroupId;
-    }
-
-    /**
      * Get Required. The value is fixed to monitor. 
      * @return Module Required. The value is fixed to monitor.
      */
@@ -87,6 +71,38 @@ public class BindingPolicyObjectRequest extends AbstractModel{
      */
     public void setModule(String Module) {
         this.Module = Module;
+    }
+
+    /**
+     * Get Policy group ID, such as `4739573`. This parameter will be disused soon. Another parameter `PolicyId` is recommended. 
+     * @return GroupId Policy group ID, such as `4739573`. This parameter will be disused soon. Another parameter `PolicyId` is recommended.
+     */
+    public Long getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set Policy group ID, such as `4739573`. This parameter will be disused soon. Another parameter `PolicyId` is recommended.
+     * @param GroupId Policy group ID, such as `4739573`. This parameter will be disused soon. Another parameter `PolicyId` is recommended.
+     */
+    public void setGroupId(Long GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
+     * Get Alarm policy ID, such as `policy-gh892hg0`. At least one of the two parameters, `PolicyId` and `GroupId`, must be specified; otherwise, an error will be reported. `PolicyId` is preferred over `GroupId` when both of them are specified. 
+     * @return PolicyId Alarm policy ID, such as `policy-gh892hg0`. At least one of the two parameters, `PolicyId` and `GroupId`, must be specified; otherwise, an error will be reported. `PolicyId` is preferred over `GroupId` when both of them are specified.
+     */
+    public String getPolicyId() {
+        return this.PolicyId;
+    }
+
+    /**
+     * Set Alarm policy ID, such as `policy-gh892hg0`. At least one of the two parameters, `PolicyId` and `GroupId`, must be specified; otherwise, an error will be reported. `PolicyId` is preferred over `GroupId` when both of them are specified.
+     * @param PolicyId Alarm policy ID, such as `policy-gh892hg0`. At least one of the two parameters, `PolicyId` and `GroupId`, must be specified; otherwise, an error will be reported. `PolicyId` is preferred over `GroupId` when both of them are specified.
+     */
+    public void setPolicyId(String PolicyId) {
+        this.PolicyId = PolicyId;
     }
 
     /**
@@ -121,22 +137,6 @@ public class BindingPolicyObjectRequest extends AbstractModel{
         this.Dimensions = Dimensions;
     }
 
-    /**
-     * Get Alarm policy ID. If this parameter is used, `GroupId` will be ignored. 
-     * @return PolicyId Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
-     */
-    public String getPolicyId() {
-        return this.PolicyId;
-    }
-
-    /**
-     * Set Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
-     * @param PolicyId Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
-     */
-    public void setPolicyId(String PolicyId) {
-        this.PolicyId = PolicyId;
-    }
-
     public BindingPolicyObjectRequest() {
     }
 
@@ -145,11 +145,14 @@ public class BindingPolicyObjectRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public BindingPolicyObjectRequest(BindingPolicyObjectRequest source) {
+        if (source.Module != null) {
+            this.Module = new String(source.Module);
+        }
         if (source.GroupId != null) {
             this.GroupId = new Long(source.GroupId);
         }
-        if (source.Module != null) {
-            this.Module = new String(source.Module);
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
         }
         if (source.InstanceGroupId != null) {
             this.InstanceGroupId = new Long(source.InstanceGroupId);
@@ -160,9 +163,6 @@ public class BindingPolicyObjectRequest extends AbstractModel{
                 this.Dimensions[i] = new BindingPolicyObjectDimension(source.Dimensions[i]);
             }
         }
-        if (source.PolicyId != null) {
-            this.PolicyId = new String(source.PolicyId);
-        }
     }
 
 
@@ -170,11 +170,11 @@ public class BindingPolicyObjectRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "Module", this.Module);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
         this.setParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
         this.setParamArrayObj(map, prefix + "Dimensions.", this.Dimensions);
-        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
 
     }
 }

@@ -51,28 +51,28 @@ public class DescribeSlowQueryAnalysisRequest extends AbstractModel{
     private String DatabaseName;
 
     /**
-    * Sort by field. Valid values: `CallNum`, `CostTime`, `AvgCostTime`.
+    * Sort by field. Valid values: `CallNum`, `CostTime`, `AvgCostTime`. Default value: `CallNum`.
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Sorting order. Valid values: `asc` (ascending), `desc` (descending).
+    * Sorting order. Valid values: `asc` (ascending), `desc` (descending). Default value: `desc`.
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-    * Number of entries per page. Value range: [1,100].
+    * Number of entries per page. Value range: [1,100]. Default value: `50`.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Pagination offset. Value range: [0,INF).
+    * Pagination offset. Value range: [0,INF). Default value: `0`.
     */
     @SerializedName("Offset")
     @Expose
@@ -143,64 +143,64 @@ public class DescribeSlowQueryAnalysisRequest extends AbstractModel{
     }
 
     /**
-     * Get Sort by field. Valid values: `CallNum`, `CostTime`, `AvgCostTime`. 
-     * @return OrderBy Sort by field. Valid values: `CallNum`, `CostTime`, `AvgCostTime`.
+     * Get Sort by field. Valid values: `CallNum`, `CostTime`, `AvgCostTime`. Default value: `CallNum`. 
+     * @return OrderBy Sort by field. Valid values: `CallNum`, `CostTime`, `AvgCostTime`. Default value: `CallNum`.
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sort by field. Valid values: `CallNum`, `CostTime`, `AvgCostTime`.
-     * @param OrderBy Sort by field. Valid values: `CallNum`, `CostTime`, `AvgCostTime`.
+     * Set Sort by field. Valid values: `CallNum`, `CostTime`, `AvgCostTime`. Default value: `CallNum`.
+     * @param OrderBy Sort by field. Valid values: `CallNum`, `CostTime`, `AvgCostTime`. Default value: `CallNum`.
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Sorting order. Valid values: `asc` (ascending), `desc` (descending). 
-     * @return OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending).
+     * Get Sorting order. Valid values: `asc` (ascending), `desc` (descending). Default value: `desc`. 
+     * @return OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending). Default value: `desc`.
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set Sorting order. Valid values: `asc` (ascending), `desc` (descending).
-     * @param OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending).
+     * Set Sorting order. Valid values: `asc` (ascending), `desc` (descending). Default value: `desc`.
+     * @param OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending). Default value: `desc`.
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;
     }
 
     /**
-     * Get Number of entries per page. Value range: [1,100]. 
-     * @return Limit Number of entries per page. Value range: [1,100].
+     * Get Number of entries per page. Value range: [1,100]. Default value: `50`. 
+     * @return Limit Number of entries per page. Value range: [1,100]. Default value: `50`.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries per page. Value range: [1,100].
-     * @param Limit Number of entries per page. Value range: [1,100].
+     * Set Number of entries per page. Value range: [1,100]. Default value: `50`.
+     * @param Limit Number of entries per page. Value range: [1,100]. Default value: `50`.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Pagination offset. Value range: [0,INF). 
-     * @return Offset Pagination offset. Value range: [0,INF).
+     * Get Pagination offset. Value range: [0,INF). Default value: `0`. 
+     * @return Offset Pagination offset. Value range: [0,INF). Default value: `0`.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset. Value range: [0,INF).
-     * @param Offset Pagination offset. Value range: [0,INF).
+     * Set Pagination offset. Value range: [0,INF). Default value: `0`.
+     * @param Offset Pagination offset. Value range: [0,INF). Default value: `0`.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

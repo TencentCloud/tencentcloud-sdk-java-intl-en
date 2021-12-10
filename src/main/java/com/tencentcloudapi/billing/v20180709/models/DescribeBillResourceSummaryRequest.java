@@ -78,7 +78,6 @@ Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
 Monthly subscription specification adjustment
-Monthly subscription specification adjustment
 Monthly subscription refund
     */
     @SerializedName("ActionType")
@@ -211,7 +210,6 @@ Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
 Monthly subscription specification adjustment
-Monthly subscription specification adjustment
 Monthly subscription refund 
      * @return ActionType Action type to query. Valid values:
 Purchase
@@ -231,7 +229,6 @@ Spot
 Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
-Monthly subscription specification adjustment
 Monthly subscription specification adjustment
 Monthly subscription refund
      */
@@ -259,7 +256,6 @@ Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
 Monthly subscription specification adjustment
-Monthly subscription specification adjustment
 Monthly subscription refund
      * @param ActionType Action type to query. Valid values:
 Purchase
@@ -279,7 +275,6 @@ Spot
 Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
-Monthly subscription specification adjustment
 Monthly subscription specification adjustment
 Monthly subscription refund
      */
