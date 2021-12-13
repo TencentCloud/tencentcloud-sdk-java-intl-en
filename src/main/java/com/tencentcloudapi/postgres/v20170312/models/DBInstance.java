@@ -260,7 +260,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String DBKernelVersion;
 
     /**
-    * Network information list of the instance
+    * Network access list of the instance
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("NetworkAccessList")
@@ -820,9 +820,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Network information list of the instance
+     * Get Network access list of the instance
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return NetworkAccessList Network information list of the instance
+     * @return NetworkAccessList Network access list of the instance
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public NetworkAccess [] getNetworkAccessList() {
@@ -830,9 +830,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Network information list of the instance
+     * Set Network access list of the instance
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param NetworkAccessList Network information list of the instance
+     * @param NetworkAccessList Network access list of the instance
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setNetworkAccessList(NetworkAccess [] NetworkAccessList) {
