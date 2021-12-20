@@ -31,8 +31,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long Timestamp;
 
     /**
-    * SQL execution duration.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * SQL execution duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("QueryTime")
     @Expose
@@ -71,8 +71,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Database;
 
     /**
-    * Lock duration.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Lock duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("LockTime")
     @Expose
@@ -131,20 +131,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get SQL execution duration.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return QueryTime SQL execution duration.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get SQL execution duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return QueryTime SQL execution duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Float getQueryTime() {
         return this.QueryTime;
     }
 
     /**
-     * Set SQL execution duration.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param QueryTime SQL execution duration.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set SQL execution duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param QueryTime SQL execution duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setQueryTime(Float QueryTime) {
         this.QueryTime = QueryTime;
@@ -231,20 +231,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Lock duration.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return LockTime Lock duration.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Lock duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return LockTime Lock duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Float getLockTime() {
         return this.LockTime;
     }
 
     /**
-     * Set Lock duration.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param LockTime Lock duration.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Lock duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param LockTime Lock duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setLockTime(Float LockTime) {
         this.LockTime = LockTime;

@@ -60,6 +60,15 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private IpFilterPathRule [] FilterRules;
 
     /**
+    * HTTP code returned when the IP allowlist/blocklist verification fails
+Valid values: 400-499
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ReturnCode")
+    @Expose
+    private Long ReturnCode;
+
+    /**
      * Get IP blocklist/allowlist configuration switch
 on: enabled
 off: disabled 
@@ -159,6 +168,30 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.FilterRules = FilterRules;
     }
 
+    /**
+     * Get HTTP code returned when the IP allowlist/blocklist verification fails
+Valid values: 400-499
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ReturnCode HTTP code returned when the IP allowlist/blocklist verification fails
+Valid values: 400-499
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getReturnCode() {
+        return this.ReturnCode;
+    }
+
+    /**
+     * Set HTTP code returned when the IP allowlist/blocklist verification fails
+Valid values: 400-499
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ReturnCode HTTP code returned when the IP allowlist/blocklist verification fails
+Valid values: 400-499
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setReturnCode(Long ReturnCode) {
+        this.ReturnCode = ReturnCode;
+    }
+
     public IpFilter() {
     }
 
@@ -185,6 +218,9 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                 this.FilterRules[i] = new IpFilterPathRule(source.FilterRules[i]);
             }
         }
+        if (source.ReturnCode != null) {
+            this.ReturnCode = new Long(source.ReturnCode);
+        }
     }
 
 
@@ -196,6 +232,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.setParamSimple(map, prefix + "FilterType", this.FilterType);
         this.setParamArraySimple(map, prefix + "Filters.", this.Filters);
         this.setParamArrayObj(map, prefix + "FilterRules.", this.FilterRules);
+        this.setParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
 
     }
 }

@@ -20,85 +20,82 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RangeOriginPull extends AbstractModel{
+public class ShareCname extends AbstractModel{
 
     /**
-    * Range GETs configuration switch
-on: enabled
-off: disabled
+    * Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
+
+* ShareCname is only available to beta users. To use this feature, please submit a ticket for application.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Range GETs configuration
+    * Shared CNAME to be configured
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
-    @SerializedName("RangeRules")
+    @SerializedName("Cname")
     @Expose
-    private RangeOriginPullRule [] RangeRules;
+    private String Cname;
 
     /**
-     * Get Range GETs configuration switch
-on: enabled
-off: disabled 
-     * @return Switch Range GETs configuration switch
-on: enabled
-off: disabled
+     * Get Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
+
+* ShareCname is only available to beta users. To use this feature, please submit a ticket for application. 
+     * @return Switch Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
+
+* ShareCname is only available to beta users. To use this feature, please submit a ticket for application.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Range GETs configuration switch
-on: enabled
-off: disabled
-     * @param Switch Range GETs configuration switch
-on: enabled
-off: disabled
+     * Set Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
+
+* ShareCname is only available to beta users. To use this feature, please submit a ticket for application.
+     * @param Switch Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
+
+* ShareCname is only available to beta users. To use this feature, please submit a ticket for application.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Range GETs configuration
+     * Get Shared CNAME to be configured
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return RangeRules Range GETs configuration
+     * @return Cname Shared CNAME to be configured
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
-    public RangeOriginPullRule [] getRangeRules() {
-        return this.RangeRules;
+    public String getCname() {
+        return this.Cname;
     }
 
     /**
-     * Set Range GETs configuration
+     * Set Shared CNAME to be configured
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param RangeRules Range GETs configuration
+     * @param Cname Shared CNAME to be configured
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
-    public void setRangeRules(RangeOriginPullRule [] RangeRules) {
-        this.RangeRules = RangeRules;
+    public void setCname(String Cname) {
+        this.Cname = Cname;
     }
 
-    public RangeOriginPull() {
+    public ShareCname() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public RangeOriginPull(RangeOriginPull source) {
+    public ShareCname(ShareCname source) {
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }
-        if (source.RangeRules != null) {
-            this.RangeRules = new RangeOriginPullRule[source.RangeRules.length];
-            for (int i = 0; i < source.RangeRules.length; i++) {
-                this.RangeRules[i] = new RangeOriginPullRule(source.RangeRules[i]);
-            }
+        if (source.Cname != null) {
+            this.Cname = new String(source.Cname);
         }
     }
 
@@ -108,7 +105,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
-        this.setParamArrayObj(map, prefix + "RangeRules.", this.RangeRules);
+        this.setParamSimple(map, prefix + "Cname", this.Cname);
 
     }
 }

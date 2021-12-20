@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class ScdnAclRule extends AbstractModel{
 
     /**
-    * Match keywords. Valid values: `params`, `url`, `ip`, `referer`, and `user-agent`.
+    * Keyword
     */
     @SerializedName("MatchKey")
     @Expose
     private String MatchKey;
 
     /**
-    * Logical operator. Valid values: `exclude`, `include`, `notequal`, `equal`, `len-less`, `len-equal`, and `len-more`.
+    * Logical operator. Valid values:
     */
     @SerializedName("LogiOperator")
     @Expose
     private String LogiOperator;
 
     /**
-    * Match value
+    * Matched value
     */
     @SerializedName("MatchValue")
     @Expose
     private String MatchValue;
 
     /**
-     * Get Match keywords. Valid values: `params`, `url`, `ip`, `referer`, and `user-agent`. 
-     * @return MatchKey Match keywords. Valid values: `params`, `url`, `ip`, `referer`, and `user-agent`.
+     * Get Keyword 
+     * @return MatchKey Keyword
      */
     public String getMatchKey() {
         return this.MatchKey;
     }
 
     /**
-     * Set Match keywords. Valid values: `params`, `url`, `ip`, `referer`, and `user-agent`.
-     * @param MatchKey Match keywords. Valid values: `params`, `url`, `ip`, `referer`, and `user-agent`.
+     * Set Keyword
+     * @param MatchKey Keyword
      */
     public void setMatchKey(String MatchKey) {
         this.MatchKey = MatchKey;
     }
 
     /**
-     * Get Logical operator. Valid values: `exclude`, `include`, `notequal`, `equal`, `len-less`, `len-equal`, and `len-more`. 
-     * @return LogiOperator Logical operator. Valid values: `exclude`, `include`, `notequal`, `equal`, `len-less`, `len-equal`, and `len-more`.
+     * Get Logical operator. Valid values: 
+     * @return LogiOperator Logical operator. Valid values:
      */
     public String getLogiOperator() {
         return this.LogiOperator;
     }
 
     /**
-     * Set Logical operator. Valid values: `exclude`, `include`, `notequal`, `equal`, `len-less`, `len-equal`, and `len-more`.
-     * @param LogiOperator Logical operator. Valid values: `exclude`, `include`, `notequal`, `equal`, `len-less`, `len-equal`, and `len-more`.
+     * Set Logical operator. Valid values:
+     * @param LogiOperator Logical operator. Valid values:
      */
     public void setLogiOperator(String LogiOperator) {
         this.LogiOperator = LogiOperator;
     }
 
     /**
-     * Get Match value 
-     * @return MatchValue Match value
+     * Get Matched value 
+     * @return MatchValue Matched value
      */
     public String getMatchValue() {
         return this.MatchValue;
     }
 
     /**
-     * Set Match value
-     * @param MatchValue Match value
+     * Set Matched value
+     * @param MatchValue Matched value
      */
     public void setMatchValue(String MatchValue) {
         this.MatchValue = MatchValue;

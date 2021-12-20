@@ -56,6 +56,15 @@ blacklist: indicates that only the file types in the FileExtensions list are aut
     private String FilterType;
 
     /**
+    * Backup key, which is used to calculate a signature.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BackupSecretKey")
+    @Expose
+    private String BackupSecretKey;
+
+    /**
      * Get The key for signature calculation
 Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
 Note: this field may return null, indicating that no valid values can be obtained. 
@@ -139,6 +148,30 @@ blacklist: indicates that only the file types in the FileExtensions list are aut
         this.FilterType = FilterType;
     }
 
+    /**
+     * Get Backup key, which is used to calculate a signature.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return BackupSecretKey Backup key, which is used to calculate a signature.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getBackupSecretKey() {
+        return this.BackupSecretKey;
+    }
+
+    /**
+     * Set Backup key, which is used to calculate a signature.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param BackupSecretKey Backup key, which is used to calculate a signature.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setBackupSecretKey(String BackupSecretKey) {
+        this.BackupSecretKey = BackupSecretKey;
+    }
+
     public AuthenticationTypeB() {
     }
 
@@ -162,6 +195,9 @@ blacklist: indicates that only the file types in the FileExtensions list are aut
         if (source.FilterType != null) {
             this.FilterType = new String(source.FilterType);
         }
+        if (source.BackupSecretKey != null) {
+            this.BackupSecretKey = new String(source.BackupSecretKey);
+        }
     }
 
 
@@ -173,6 +209,7 @@ blacklist: indicates that only the file types in the FileExtensions list are aut
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamArraySimple(map, prefix + "FileExtensions.", this.FileExtensions);
         this.setParamSimple(map, prefix + "FilterType", this.FilterType);
+        this.setParamSimple(map, prefix + "BackupSecretKey", this.BackupSecretKey);
 
     }
 }

@@ -131,6 +131,13 @@ client: specifies to query data of the client region (where a user request devic
     private String Product;
 
     /**
+    * Returns the first N data entries. The default value is 100 if this parameter is not specified, whereas 1000 if `Metric` is `url`.
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
      * Get Query start time in the format of `yyyy-MM-dd HH:mm:ss`
 Only supports data query at daily granularity. The date in the input parameter is used as the start date.
 Data generated after or at 00:00:00 on the start date will be returned
@@ -430,6 +437,22 @@ client: specifies to query data of the client region (where a user request devic
         this.Product = Product;
     }
 
+    /**
+     * Get Returns the first N data entries. The default value is 100 if this parameter is not specified, whereas 1000 if `Metric` is `url`. 
+     * @return Limit Returns the first N data entries. The default value is 100 if this parameter is not specified, whereas 1000 if `Metric` is `url`.
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set Returns the first N data entries. The default value is 100 if this parameter is not specified, whereas 1000 if `Metric` is `url`.
+     * @param Limit Returns the first N data entries. The default value is 100 if this parameter is not specified, whereas 1000 if `Metric` is `url`.
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
     public ListTopDataRequest() {
     }
 
@@ -474,6 +497,9 @@ client: specifies to query data of the client region (where a user request devic
         if (source.Product != null) {
             this.Product = new String(source.Product);
         }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
     }
 
 
@@ -492,6 +518,7 @@ client: specifies to query data of the client region (where a user request devic
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "AreaType", this.AreaType);
         this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

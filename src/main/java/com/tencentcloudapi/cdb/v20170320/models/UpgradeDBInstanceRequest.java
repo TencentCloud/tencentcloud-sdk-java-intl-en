@@ -114,6 +114,13 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     private Long FastUpgrade;
 
     /**
+    * Delay threshold. Value range: 1-10. Default value: `10`.
+    */
+    @SerializedName("MaxDelayTime")
+    @Expose
+    private Long MaxDelayTime;
+
+    /**
      * Get Instance ID in the format of `cdb-c1nl9rpv` or `cdbro-c1nl9rpv`. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query the ID, whose value is the `InstanceId` value in output parameters. 
      * @return InstanceId Instance ID in the format of `cdb-c1nl9rpv` or `cdbro-c1nl9rpv`. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query the ID, whose value is the `InstanceId` value in output parameters.
      */
@@ -321,6 +328,22 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         this.FastUpgrade = FastUpgrade;
     }
 
+    /**
+     * Get Delay threshold. Value range: 1-10. Default value: `10`. 
+     * @return MaxDelayTime Delay threshold. Value range: 1-10. Default value: `10`.
+     */
+    public Long getMaxDelayTime() {
+        return this.MaxDelayTime;
+    }
+
+    /**
+     * Set Delay threshold. Value range: 1-10. Default value: `10`.
+     * @param MaxDelayTime Delay threshold. Value range: 1-10. Default value: `10`.
+     */
+    public void setMaxDelayTime(Long MaxDelayTime) {
+        this.MaxDelayTime = MaxDelayTime;
+    }
+
     public UpgradeDBInstanceRequest() {
     }
 
@@ -368,6 +391,9 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         if (source.FastUpgrade != null) {
             this.FastUpgrade = new Long(source.FastUpgrade);
         }
+        if (source.MaxDelayTime != null) {
+            this.MaxDelayTime = new Long(source.MaxDelayTime);
+        }
     }
 
 
@@ -388,6 +414,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "FastUpgrade", this.FastUpgrade);
+        this.setParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
 
     }
 }

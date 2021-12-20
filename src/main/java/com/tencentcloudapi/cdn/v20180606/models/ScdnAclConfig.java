@@ -30,7 +30,7 @@ public class ScdnAclConfig extends AbstractModel{
     private String Switch;
 
     /**
-    * ACL rule group, which is required when the access control is on.
+    * This field is disused. Please use `AdvancedScriptData` instead.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ScriptData")
@@ -44,6 +44,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     @SerializedName("ErrorPage")
     @Expose
     private ScdnErrorPage ErrorPage;
+
+    /**
+    * ACL rule group, which is required when the access control is on.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AdvancedScriptData")
+    @Expose
+    private AdvancedScdnAclGroup [] AdvancedScriptData;
 
     /**
      * Get Whether to enable. Valid values: `on` and `off`. 
@@ -62,9 +70,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get ACL rule group, which is required when the access control is on.
+     * Get This field is disused. Please use `AdvancedScriptData` instead.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ScriptData ACL rule group, which is required when the access control is on.
+     * @return ScriptData This field is disused. Please use `AdvancedScriptData` instead.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public ScdnAclGroup [] getScriptData() {
@@ -72,9 +80,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set ACL rule group, which is required when the access control is on.
+     * Set This field is disused. Please use `AdvancedScriptData` instead.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ScriptData ACL rule group, which is required when the access control is on.
+     * @param ScriptData This field is disused. Please use `AdvancedScriptData` instead.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setScriptData(ScdnAclGroup [] ScriptData) {
@@ -101,6 +109,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.ErrorPage = ErrorPage;
     }
 
+    /**
+     * Get ACL rule group, which is required when the access control is on.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return AdvancedScriptData ACL rule group, which is required when the access control is on.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public AdvancedScdnAclGroup [] getAdvancedScriptData() {
+        return this.AdvancedScriptData;
+    }
+
+    /**
+     * Set ACL rule group, which is required when the access control is on.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param AdvancedScriptData ACL rule group, which is required when the access control is on.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setAdvancedScriptData(AdvancedScdnAclGroup [] AdvancedScriptData) {
+        this.AdvancedScriptData = AdvancedScriptData;
+    }
+
     public ScdnAclConfig() {
     }
 
@@ -121,6 +149,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.ErrorPage != null) {
             this.ErrorPage = new ScdnErrorPage(source.ErrorPage);
         }
+        if (source.AdvancedScriptData != null) {
+            this.AdvancedScriptData = new AdvancedScdnAclGroup[source.AdvancedScriptData.length];
+            for (int i = 0; i < source.AdvancedScriptData.length; i++) {
+                this.AdvancedScriptData[i] = new AdvancedScdnAclGroup(source.AdvancedScriptData[i]);
+            }
+        }
     }
 
 
@@ -131,6 +165,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamArrayObj(map, prefix + "ScriptData.", this.ScriptData);
         this.setParamObj(map, prefix + "ErrorPage.", this.ErrorPage);
+        this.setParamArrayObj(map, prefix + "AdvancedScriptData.", this.AdvancedScriptData);
 
     }
 }

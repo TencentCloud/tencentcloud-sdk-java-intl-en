@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScdnAclGroup extends AbstractModel{
+public class AdvancedScdnAclGroup extends AbstractModel{
 
     /**
     * Rule name
@@ -34,7 +34,7 @@ public class ScdnAclGroup extends AbstractModel{
     */
     @SerializedName("Configure")
     @Expose
-    private ScdnAclRule [] Configure;
+    private AdvancedScdnAclRule [] Configure;
 
     /**
     * Action. Valid values: `intercept` and `redirect`.
@@ -44,15 +44,14 @@ public class ScdnAclGroup extends AbstractModel{
     private String Result;
 
     /**
-    * Whether the rule is effective. Valid values: `active` and `inactive`.
+    * Whether the rule is activated. Valid values: `active` and `inactive`.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error page configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Error page configuration
     */
     @SerializedName("ErrorPage")
     @Expose
@@ -78,7 +77,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * Get Specific configurations 
      * @return Configure Specific configurations
      */
-    public ScdnAclRule [] getConfigure() {
+    public AdvancedScdnAclRule [] getConfigure() {
         return this.Configure;
     }
 
@@ -86,7 +85,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * Set Specific configurations
      * @param Configure Specific configurations
      */
-    public void setConfigure(ScdnAclRule [] Configure) {
+    public void setConfigure(AdvancedScdnAclRule [] Configure) {
         this.Configure = Configure;
     }
 
@@ -107,56 +106,52 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Whether the rule is effective. Valid values: `active` and `inactive`. 
-     * @return Status Whether the rule is effective. Valid values: `active` and `inactive`.
+     * Get Whether the rule is activated. Valid values: `active` and `inactive`. 
+     * @return Status Whether the rule is activated. Valid values: `active` and `inactive`.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Whether the rule is effective. Valid values: `active` and `inactive`.
-     * @param Status Whether the rule is effective. Valid values: `active` and `inactive`.
+     * Set Whether the rule is activated. Valid values: `active` and `inactive`.
+     * @param Status Whether the rule is activated. Valid values: `active` and `inactive`.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error page configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ErrorPage Error page configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Error page configuration 
+     * @return ErrorPage Error page configuration
      */
     public ScdnErrorPage getErrorPage() {
         return this.ErrorPage;
     }
 
     /**
-     * Set Error page configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ErrorPage Error page configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Error page configuration
+     * @param ErrorPage Error page configuration
      */
     public void setErrorPage(ScdnErrorPage ErrorPage) {
         this.ErrorPage = ErrorPage;
     }
 
-    public ScdnAclGroup() {
+    public AdvancedScdnAclGroup() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ScdnAclGroup(ScdnAclGroup source) {
+    public AdvancedScdnAclGroup(AdvancedScdnAclGroup source) {
         if (source.RuleName != null) {
             this.RuleName = new String(source.RuleName);
         }
         if (source.Configure != null) {
-            this.Configure = new ScdnAclRule[source.Configure.length];
+            this.Configure = new AdvancedScdnAclRule[source.Configure.length];
             for (int i = 0; i < source.Configure.length; i++) {
-                this.Configure[i] = new ScdnAclRule(source.Configure[i]);
+                this.Configure[i] = new AdvancedScdnAclRule(source.Configure[i]);
             }
         }
         if (source.Result != null) {

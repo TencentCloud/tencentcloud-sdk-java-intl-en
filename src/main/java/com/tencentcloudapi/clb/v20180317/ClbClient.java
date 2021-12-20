@@ -1097,6 +1097,26 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
+     *This API is used to upgrade shared CLB instances to LCU-supported CLB instances (downgrade is not allowed) and upgrade/downgrade the specification of LCU-supported instances.
+     * @param req ModifyLoadBalancerSlaRequest
+     * @return ModifyLoadBalancerSlaResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLoadBalancerSlaResponse ModifyLoadBalancerSla(ModifyLoadBalancerSlaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLoadBalancerSlaResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLoadBalancerSlaResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLoadBalancerSla");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (ModifyRule) is used to modify the attributes of a forwarding rule under a layer-7 CLB listener, such as forwarding path, health check attribute, and forwarding policy.
 This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
      * @param req ModifyRuleRequest

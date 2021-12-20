@@ -31,6 +31,8 @@ public class SetLoadBalancerClsLogRequest extends AbstractModel{
 
     /**
     * CLS logset ID
+<li>Enter the ID of logset you need to add or update. You can acquire the ID by invoking [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
+<li>To delete the log set, set this parameter to `null`.</li>
     */
     @SerializedName("LogSetId")
     @Expose
@@ -38,13 +40,18 @@ public class SetLoadBalancerClsLogRequest extends AbstractModel{
 
     /**
     * CLS log topic ID
+<li>Enter the ID of log topic you need to add or update. You can acquire the ID by invoking [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
+<li>To delete the log set, set this parameter to `null`.</li>
     */
     @SerializedName("LogTopicId")
     @Expose
     private String LogTopicId;
 
     /**
-    * Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+    * Log type:
+<li>`ACCESS`: access logs</li>
+<li>`HEALTH`: health check logs</li>
+Default: `ACCESS`
     */
     @SerializedName("LogType")
     @Expose
@@ -67,8 +74,12 @@ public class SetLoadBalancerClsLogRequest extends AbstractModel{
     }
 
     /**
-     * Get CLS logset ID 
+     * Get CLS logset ID
+<li>Enter the ID of logset you need to add or update. You can acquire the ID by invoking [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
+<li>To delete the log set, set this parameter to `null`.</li> 
      * @return LogSetId CLS logset ID
+<li>Enter the ID of logset you need to add or update. You can acquire the ID by invoking [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
+<li>To delete the log set, set this parameter to `null`.</li>
      */
     public String getLogSetId() {
         return this.LogSetId;
@@ -76,15 +87,23 @@ public class SetLoadBalancerClsLogRequest extends AbstractModel{
 
     /**
      * Set CLS logset ID
+<li>Enter the ID of logset you need to add or update. You can acquire the ID by invoking [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
+<li>To delete the log set, set this parameter to `null`.</li>
      * @param LogSetId CLS logset ID
+<li>Enter the ID of logset you need to add or update. You can acquire the ID by invoking [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
+<li>To delete the log set, set this parameter to `null`.</li>
      */
     public void setLogSetId(String LogSetId) {
         this.LogSetId = LogSetId;
     }
 
     /**
-     * Get CLS log topic ID 
+     * Get CLS log topic ID
+<li>Enter the ID of log topic you need to add or update. You can acquire the ID by invoking [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
+<li>To delete the log set, set this parameter to `null`.</li> 
      * @return LogTopicId CLS log topic ID
+<li>Enter the ID of log topic you need to add or update. You can acquire the ID by invoking [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
+<li>To delete the log set, set this parameter to `null`.</li>
      */
     public String getLogTopicId() {
         return this.LogTopicId;
@@ -92,23 +111,39 @@ public class SetLoadBalancerClsLogRequest extends AbstractModel{
 
     /**
      * Set CLS log topic ID
+<li>Enter the ID of log topic you need to add or update. You can acquire the ID by invoking [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
+<li>To delete the log set, set this parameter to `null`.</li>
      * @param LogTopicId CLS log topic ID
+<li>Enter the ID of log topic you need to add or update. You can acquire the ID by invoking [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
+<li>To delete the log set, set this parameter to `null`.</li>
      */
     public void setLogTopicId(String LogTopicId) {
         this.LogTopicId = LogTopicId;
     }
 
     /**
-     * Get Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs). 
-     * @return LogType Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+     * Get Log type:
+<li>`ACCESS`: access logs</li>
+<li>`HEALTH`: health check logs</li>
+Default: `ACCESS` 
+     * @return LogType Log type:
+<li>`ACCESS`: access logs</li>
+<li>`HEALTH`: health check logs</li>
+Default: `ACCESS`
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
-     * @param LogType Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+     * Set Log type:
+<li>`ACCESS`: access logs</li>
+<li>`HEALTH`: health check logs</li>
+Default: `ACCESS`
+     * @param LogType Log type:
+<li>`ACCESS`: access logs</li>
+<li>`HEALTH`: health check logs</li>
+Default: `ACCESS`
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;

@@ -20,109 +20,121 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScdnConfig extends AbstractModel{
+public class RemoteAuthentication extends AbstractModel{
 
     /**
-    * Valid values: `on` and `off`.
+    * Remote authentication switch
+`on`: enable
+`off`: disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Custom CC attack defense rule
+    * Remote authentication rule configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
-    @SerializedName("Rules")
+    @SerializedName("RemoteAuthenticationRules")
     @Expose
-    private ScdnCCRules [] Rules;
+    private RemoteAuthenticationRule [] RemoteAuthenticationRules;
 
     /**
-    * Advanced custom CC attack defense rule
+    * Remote authentication server
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
-    @SerializedName("AdvancedRules")
+    @SerializedName("Server")
     @Expose
-    private AdvancedCCRules [] AdvancedRules;
+    private String Server;
 
     /**
-     * Get Valid values: `on` and `off`. 
-     * @return Switch Valid values: `on` and `off`.
+     * Get Remote authentication switch
+`on`: enable
+`off`: disable
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Switch Remote authentication switch
+`on`: enable
+`off`: disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Valid values: `on` and `off`.
-     * @param Switch Valid values: `on` and `off`.
+     * Set Remote authentication switch
+`on`: enable
+`off`: disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Switch Remote authentication switch
+`on`: enable
+`off`: disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Custom CC attack defense rule
+     * Get Remote authentication rule configuration
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Rules Custom CC attack defense rule
+     * @return RemoteAuthenticationRules Remote authentication rule configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
-    public ScdnCCRules [] getRules() {
-        return this.Rules;
+    public RemoteAuthenticationRule [] getRemoteAuthenticationRules() {
+        return this.RemoteAuthenticationRules;
     }
 
     /**
-     * Set Custom CC attack defense rule
+     * Set Remote authentication rule configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Rules Custom CC attack defense rule
+     * @param RemoteAuthenticationRules Remote authentication rule configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
-    public void setRules(ScdnCCRules [] Rules) {
-        this.Rules = Rules;
+    public void setRemoteAuthenticationRules(RemoteAuthenticationRule [] RemoteAuthenticationRules) {
+        this.RemoteAuthenticationRules = RemoteAuthenticationRules;
     }
 
     /**
-     * Get Advanced custom CC attack defense rule
+     * Get Remote authentication server
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return AdvancedRules Advanced custom CC attack defense rule
+     * @return Server Remote authentication server
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
-    public AdvancedCCRules [] getAdvancedRules() {
-        return this.AdvancedRules;
+    public String getServer() {
+        return this.Server;
     }
 
     /**
-     * Set Advanced custom CC attack defense rule
+     * Set Remote authentication server
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param AdvancedRules Advanced custom CC attack defense rule
+     * @param Server Remote authentication server
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
-    public void setAdvancedRules(AdvancedCCRules [] AdvancedRules) {
-        this.AdvancedRules = AdvancedRules;
+    public void setServer(String Server) {
+        this.Server = Server;
     }
 
-    public ScdnConfig() {
+    public RemoteAuthentication() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ScdnConfig(ScdnConfig source) {
+    public RemoteAuthentication(RemoteAuthentication source) {
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }
-        if (source.Rules != null) {
-            this.Rules = new ScdnCCRules[source.Rules.length];
-            for (int i = 0; i < source.Rules.length; i++) {
-                this.Rules[i] = new ScdnCCRules(source.Rules[i]);
+        if (source.RemoteAuthenticationRules != null) {
+            this.RemoteAuthenticationRules = new RemoteAuthenticationRule[source.RemoteAuthenticationRules.length];
+            for (int i = 0; i < source.RemoteAuthenticationRules.length; i++) {
+                this.RemoteAuthenticationRules[i] = new RemoteAuthenticationRule(source.RemoteAuthenticationRules[i]);
             }
         }
-        if (source.AdvancedRules != null) {
-            this.AdvancedRules = new AdvancedCCRules[source.AdvancedRules.length];
-            for (int i = 0; i < source.AdvancedRules.length; i++) {
-                this.AdvancedRules[i] = new AdvancedCCRules(source.AdvancedRules[i]);
-            }
+        if (source.Server != null) {
+            this.Server = new String(source.Server);
         }
     }
 
@@ -132,8 +144,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
-        this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
-        this.setParamArrayObj(map, prefix + "AdvancedRules.", this.AdvancedRules);
+        this.setParamArrayObj(map, prefix + "RemoteAuthenticationRules.", this.RemoteAuthenticationRules);
+        this.setParamSimple(map, prefix + "Server", this.Server);
 
     }
 }

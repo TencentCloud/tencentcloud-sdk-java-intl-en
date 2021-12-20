@@ -24,6 +24,8 @@ public class ScdnErrorPage extends AbstractModel{
 
     /**
     * Status code
+`403` is passed in when the action is `intercept`.
+`301` is passed in when the action is `redirect`.
     */
     @SerializedName("RedirectCode")
     @Expose
@@ -37,8 +39,12 @@ public class ScdnErrorPage extends AbstractModel{
     private String RedirectUrl;
 
     /**
-     * Get Status code 
+     * Get Status code
+`403` is passed in when the action is `intercept`.
+`301` is passed in when the action is `redirect`. 
      * @return RedirectCode Status code
+`403` is passed in when the action is `intercept`.
+`301` is passed in when the action is `redirect`.
      */
     public Long getRedirectCode() {
         return this.RedirectCode;
@@ -46,7 +52,11 @@ public class ScdnErrorPage extends AbstractModel{
 
     /**
      * Set Status code
+`403` is passed in when the action is `intercept`.
+`301` is passed in when the action is `redirect`.
      * @param RedirectCode Status code
+`403` is passed in when the action is `intercept`.
+`301` is passed in when the action is `redirect`.
      */
     public void setRedirectCode(Long RedirectCode) {
         this.RedirectCode = RedirectCode;

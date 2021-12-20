@@ -51,6 +51,13 @@ public class UpgradeDBInstanceEngineVersionRequest extends AbstractModel{
     private Long UpgradeSubversion;
 
     /**
+    * Delay threshold. Value range: 1-10
+    */
+    @SerializedName("MaxDelayTime")
+    @Expose
+    private Long MaxDelayTime;
+
+    /**
      * Get Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID, whose value is the `InstanceId` value in output parameters. 
      * @return InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID, whose value is the `InstanceId` value in output parameters.
      */
@@ -114,6 +121,22 @@ public class UpgradeDBInstanceEngineVersionRequest extends AbstractModel{
         this.UpgradeSubversion = UpgradeSubversion;
     }
 
+    /**
+     * Get Delay threshold. Value range: 1-10 
+     * @return MaxDelayTime Delay threshold. Value range: 1-10
+     */
+    public Long getMaxDelayTime() {
+        return this.MaxDelayTime;
+    }
+
+    /**
+     * Set Delay threshold. Value range: 1-10
+     * @param MaxDelayTime Delay threshold. Value range: 1-10
+     */
+    public void setMaxDelayTime(Long MaxDelayTime) {
+        this.MaxDelayTime = MaxDelayTime;
+    }
+
     public UpgradeDBInstanceEngineVersionRequest() {
     }
 
@@ -134,6 +157,9 @@ public class UpgradeDBInstanceEngineVersionRequest extends AbstractModel{
         if (source.UpgradeSubversion != null) {
             this.UpgradeSubversion = new Long(source.UpgradeSubversion);
         }
+        if (source.MaxDelayTime != null) {
+            this.MaxDelayTime = new Long(source.MaxDelayTime);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
         this.setParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
         this.setParamSimple(map, prefix + "UpgradeSubversion", this.UpgradeSubversion);
+        this.setParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
 
     }
 }

@@ -325,6 +325,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String TraceEnable;
 
     /**
+    * Protocols supported by HTTP-triggered functions. It supports WebSockets for now.
+Note: This field may return null, indicating that no valid value was found.
+    */
+    @SerializedName("ProtocolType")
+    @Expose
+    private String ProtocolType;
+
+    /**
+    * Parameters of the specified protocol
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ProtocolParams")
+    @Expose
+    private ProtocolParams ProtocolParams;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -1036,6 +1052,46 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get Protocols supported by HTTP-triggered functions. It supports WebSockets for now.
+Note: This field may return null, indicating that no valid value was found. 
+     * @return ProtocolType Protocols supported by HTTP-triggered functions. It supports WebSockets for now.
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public String getProtocolType() {
+        return this.ProtocolType;
+    }
+
+    /**
+     * Set Protocols supported by HTTP-triggered functions. It supports WebSockets for now.
+Note: This field may return null, indicating that no valid value was found.
+     * @param ProtocolType Protocols supported by HTTP-triggered functions. It supports WebSockets for now.
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public void setProtocolType(String ProtocolType) {
+        this.ProtocolType = ProtocolType;
+    }
+
+    /**
+     * Get Parameters of the specified protocol
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ProtocolParams Parameters of the specified protocol
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public ProtocolParams getProtocolParams() {
+        return this.ProtocolParams;
+    }
+
+    /**
+     * Set Parameters of the specified protocol
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ProtocolParams Parameters of the specified protocol
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setProtocolParams(ProtocolParams ProtocolParams) {
+        this.ProtocolParams = ProtocolParams;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -1197,6 +1253,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.TraceEnable != null) {
             this.TraceEnable = new String(source.TraceEnable);
         }
+        if (source.ProtocolType != null) {
+            this.ProtocolType = new String(source.ProtocolType);
+        }
+        if (source.ProtocolParams != null) {
+            this.ProtocolParams = new ProtocolParams(source.ProtocolParams);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1249,6 +1311,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamArrayObj(map, prefix + "StatusReasons.", this.StatusReasons);
         this.setParamSimple(map, prefix + "AsyncRunEnable", this.AsyncRunEnable);
         this.setParamSimple(map, prefix + "TraceEnable", this.TraceEnable);
+        this.setParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
+        this.setParamObj(map, prefix + "ProtocolParams.", this.ProtocolParams);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -929,7 +929,8 @@ This is an asynchronous API. You can also use the [DescribeDBInstances](https://
     }
 
     /**
-     *This API is used to query the details of instance error logs by search criteria. You can only query error logs within a month.
+     *This API is used to query the error logs of an instance over the past month by search criteria.
+Note: the HTTP response packet will be very large if it contain a single large error log, which causes the API call to time out. If this happens, we recommend you lower the value of the input parameter `Limit` to reduce the packet size so that the API can respond timely.
      * @param req DescribeErrorLogDataRequest
      * @return DescribeErrorLogDataResponse
      * @throws TencentCloudSDKException
@@ -1129,7 +1130,8 @@ This is an asynchronous API. You can also use the [DescribeDBInstances](https://
     }
 
     /**
-     *This API is used to search for slow logs of an instance by criteria. You can only view slow logs within a month.
+     *This API is used to query the slow logs of an instance over the past month by search criteria.
+Note: the HTTP response packet will be very large if it contain a single large slow log, which causes the API call to time out. If this happens, we recommend you lower the value of the input parameter `Limit` to reduce the packet size so that the API can respond timely.
      * @param req DescribeSlowLogDataRequest
      * @return DescribeSlowLogDataResponse
      * @throws TencentCloudSDKException

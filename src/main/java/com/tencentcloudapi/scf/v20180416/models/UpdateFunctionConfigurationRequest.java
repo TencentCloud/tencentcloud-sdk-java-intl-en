@@ -86,6 +86,13 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     private String Role;
 
     /**
+    * Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+    */
+    @SerializedName("InstallDependency")
+    @Expose
+    private String InstallDependency;
+
+    /**
     * CLS logset ID to which logs are shipped
     */
     @SerializedName("ClsLogsetId")
@@ -147,6 +154,13 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     @SerializedName("InitTimeout")
     @Expose
     private Long InitTimeout;
+
+    /**
+    * Parameters of the specified protocol
+    */
+    @SerializedName("ProtocolParams")
+    @Expose
+    private ProtocolParams ProtocolParams;
 
     /**
      * Get Name of the function to be modified 
@@ -293,6 +307,22 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
     }
 
     /**
+     * Get Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions. 
+     * @return InstallDependency Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+     */
+    public String getInstallDependency() {
+        return this.InstallDependency;
+    }
+
+    /**
+     * Set Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+     * @param InstallDependency Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+     */
+    public void setInstallDependency(String InstallDependency) {
+        this.InstallDependency = InstallDependency;
+    }
+
+    /**
      * Get CLS logset ID to which logs are shipped 
      * @return ClsLogsetId CLS logset ID to which logs are shipped
      */
@@ -436,6 +466,22 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
         this.InitTimeout = InitTimeout;
     }
 
+    /**
+     * Get Parameters of the specified protocol 
+     * @return ProtocolParams Parameters of the specified protocol
+     */
+    public ProtocolParams getProtocolParams() {
+        return this.ProtocolParams;
+    }
+
+    /**
+     * Set Parameters of the specified protocol
+     * @param ProtocolParams Parameters of the specified protocol
+     */
+    public void setProtocolParams(ProtocolParams ProtocolParams) {
+        this.ProtocolParams = ProtocolParams;
+    }
+
     public UpdateFunctionConfigurationRequest() {
     }
 
@@ -471,6 +517,9 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
         if (source.Role != null) {
             this.Role = new String(source.Role);
         }
+        if (source.InstallDependency != null) {
+            this.InstallDependency = new String(source.InstallDependency);
+        }
         if (source.ClsLogsetId != null) {
             this.ClsLogsetId = new String(source.ClsLogsetId);
         }
@@ -501,6 +550,9 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
         if (source.InitTimeout != null) {
             this.InitTimeout = new Long(source.InitTimeout);
         }
+        if (source.ProtocolParams != null) {
+            this.ProtocolParams = new ProtocolParams(source.ProtocolParams);
+        }
     }
 
 
@@ -517,6 +569,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamObj(map, prefix + "VpcConfig.", this.VpcConfig);
         this.setParamSimple(map, prefix + "Role", this.Role);
+        this.setParamSimple(map, prefix + "InstallDependency", this.InstallDependency);
         this.setParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
         this.setParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
         this.setParamSimple(map, prefix + "Publish", this.Publish);
@@ -526,6 +579,7 @@ public class UpdateFunctionConfigurationRequest extends AbstractModel{
         this.setParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
         this.setParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
         this.setParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
+        this.setParamObj(map, prefix + "ProtocolParams.", this.ProtocolParams);
 
     }
 }

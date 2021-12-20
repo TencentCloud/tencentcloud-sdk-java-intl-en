@@ -100,6 +100,13 @@ public class CreateFunctionRequest extends AbstractModel{
     private String Role;
 
     /**
+    * Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+    */
+    @SerializedName("InstallDependency")
+    @Expose
+    private String InstallDependency;
+
+    /**
     * CLS Logset ID to which the function logs are shipped
     */
     @SerializedName("ClsLogsetId")
@@ -182,6 +189,20 @@ public class CreateFunctionRequest extends AbstractModel{
     @SerializedName("TraceEnable")
     @Expose
     private String TraceEnable;
+
+    /**
+    * Protocols supported by HTTP-triggered functions. Valid value: `WS` (WebSockets)
+    */
+    @SerializedName("ProtocolType")
+    @Expose
+    private String ProtocolType;
+
+    /**
+    * Parameters of the specified protocol
+    */
+    @SerializedName("ProtocolParams")
+    @Expose
+    private ProtocolParams ProtocolParams;
 
     /**
      * Get Name of the new function. The name can contain 2 to 60 characters, including English letters, digits, hyphens (-), and underscores (_). The name must start with a letter and cannot end with a hyphen or underscore. 
@@ -357,6 +378,22 @@ public class CreateFunctionRequest extends AbstractModel{
      */
     public void setRole(String Role) {
         this.Role = Role;
+    }
+
+    /**
+     * Get Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions. 
+     * @return InstallDependency Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+     */
+    public String getInstallDependency() {
+        return this.InstallDependency;
+    }
+
+    /**
+     * Set Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+     * @param InstallDependency Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+     */
+    public void setInstallDependency(String InstallDependency) {
+        this.InstallDependency = InstallDependency;
     }
 
     /**
@@ -551,6 +588,38 @@ public class CreateFunctionRequest extends AbstractModel{
         this.TraceEnable = TraceEnable;
     }
 
+    /**
+     * Get Protocols supported by HTTP-triggered functions. Valid value: `WS` (WebSockets) 
+     * @return ProtocolType Protocols supported by HTTP-triggered functions. Valid value: `WS` (WebSockets)
+     */
+    public String getProtocolType() {
+        return this.ProtocolType;
+    }
+
+    /**
+     * Set Protocols supported by HTTP-triggered functions. Valid value: `WS` (WebSockets)
+     * @param ProtocolType Protocols supported by HTTP-triggered functions. Valid value: `WS` (WebSockets)
+     */
+    public void setProtocolType(String ProtocolType) {
+        this.ProtocolType = ProtocolType;
+    }
+
+    /**
+     * Get Parameters of the specified protocol 
+     * @return ProtocolParams Parameters of the specified protocol
+     */
+    public ProtocolParams getProtocolParams() {
+        return this.ProtocolParams;
+    }
+
+    /**
+     * Set Parameters of the specified protocol
+     * @param ProtocolParams Parameters of the specified protocol
+     */
+    public void setProtocolParams(ProtocolParams ProtocolParams) {
+        this.ProtocolParams = ProtocolParams;
+    }
+
     public CreateFunctionRequest() {
     }
 
@@ -591,6 +660,9 @@ public class CreateFunctionRequest extends AbstractModel{
         }
         if (source.Role != null) {
             this.Role = new String(source.Role);
+        }
+        if (source.InstallDependency != null) {
+            this.InstallDependency = new String(source.InstallDependency);
         }
         if (source.ClsLogsetId != null) {
             this.ClsLogsetId = new String(source.ClsLogsetId);
@@ -634,6 +706,12 @@ public class CreateFunctionRequest extends AbstractModel{
         if (source.TraceEnable != null) {
             this.TraceEnable = new String(source.TraceEnable);
         }
+        if (source.ProtocolType != null) {
+            this.ProtocolType = new String(source.ProtocolType);
+        }
+        if (source.ProtocolParams != null) {
+            this.ProtocolParams = new ProtocolParams(source.ProtocolParams);
+        }
     }
 
 
@@ -652,6 +730,7 @@ public class CreateFunctionRequest extends AbstractModel{
         this.setParamObj(map, prefix + "VpcConfig.", this.VpcConfig);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "Role", this.Role);
+        this.setParamSimple(map, prefix + "InstallDependency", this.InstallDependency);
         this.setParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
         this.setParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
         this.setParamSimple(map, prefix + "Type", this.Type);
@@ -664,6 +743,8 @@ public class CreateFunctionRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "AsyncRunEnable", this.AsyncRunEnable);
         this.setParamSimple(map, prefix + "TraceEnable", this.TraceEnable);
+        this.setParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
+        this.setParamObj(map, prefix + "ProtocolParams.", this.ProtocolParams);
 
     }
 }

@@ -30,14 +30,14 @@ public class CreateLoadBalancerSnatIpsRequest extends AbstractModel{
     private String LoadBalancerId;
 
     /**
-    * Information of the SNAT IP to be added. You can apply for a specified IP or apply for an automatically assigned IP by specifying a subnet.
+    * Information of the SNAT IP to be added. You can specify a SNAT IP or use the one automatically assigned by a subnet.
     */
     @SerializedName("SnatIps")
     @Expose
     private SnatIp [] SnatIps;
 
     /**
-    * Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available.
+    * Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available. It defaults to `1` and the upper limit is `10`.
     */
     @SerializedName("Number")
     @Expose
@@ -60,32 +60,32 @@ public class CreateLoadBalancerSnatIpsRequest extends AbstractModel{
     }
 
     /**
-     * Get Information of the SNAT IP to be added. You can apply for a specified IP or apply for an automatically assigned IP by specifying a subnet. 
-     * @return SnatIps Information of the SNAT IP to be added. You can apply for a specified IP or apply for an automatically assigned IP by specifying a subnet.
+     * Get Information of the SNAT IP to be added. You can specify a SNAT IP or use the one automatically assigned by a subnet. 
+     * @return SnatIps Information of the SNAT IP to be added. You can specify a SNAT IP or use the one automatically assigned by a subnet.
      */
     public SnatIp [] getSnatIps() {
         return this.SnatIps;
     }
 
     /**
-     * Set Information of the SNAT IP to be added. You can apply for a specified IP or apply for an automatically assigned IP by specifying a subnet.
-     * @param SnatIps Information of the SNAT IP to be added. You can apply for a specified IP or apply for an automatically assigned IP by specifying a subnet.
+     * Set Information of the SNAT IP to be added. You can specify a SNAT IP or use the one automatically assigned by a subnet.
+     * @param SnatIps Information of the SNAT IP to be added. You can specify a SNAT IP or use the one automatically assigned by a subnet.
      */
     public void setSnatIps(SnatIp [] SnatIps) {
         this.SnatIps = SnatIps;
     }
 
     /**
-     * Get Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available. 
-     * @return Number Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available.
+     * Get Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available. It defaults to `1` and the upper limit is `10`. 
+     * @return Number Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available. It defaults to `1` and the upper limit is `10`.
      */
     public Long getNumber() {
         return this.Number;
     }
 
     /**
-     * Set Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available.
-     * @param Number Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available.
+     * Set Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available. It defaults to `1` and the upper limit is `10`.
+     * @param Number Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available. It defaults to `1` and the upper limit is `10`.
      */
     public void setNumber(Long Number) {
         this.Number = Number;

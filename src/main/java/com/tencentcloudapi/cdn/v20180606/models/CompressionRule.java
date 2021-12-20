@@ -31,15 +31,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Boolean Compress;
 
     /**
-    * Compress according to the file suffix type
-Such as: jpg, txt
-Note: this field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("FileExtensions")
-    @Expose
-    private String [] FileExtensions;
-
-    /**
     * The minimum file size to trigger compression (in bytes)
 Note: this field may return null, indicating that no valid values can be obtained.
     */
@@ -67,6 +58,42 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String [] Algorithms;
 
     /**
+    * Compress according to the file suffix type
+Such as: jpg, txt
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("FileExtensions")
+    @Expose
+    private String [] FileExtensions;
+
+    /**
+    * Rule types:
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`contentType`: effective when the `ContentType` is specified
+If this field is specified, `FileExtensions` does not take effect.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RuleType")
+    @Expose
+    private String RuleType;
+
+    /**
+    * Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `contentType`, enter `text/html`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RulePaths")
+    @Expose
+    private String [] RulePaths;
+
+    /**
      * Get true: must be set as true, enables compression
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Compress true: must be set as true, enables compression
@@ -84,30 +111,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
      */
     public void setCompress(Boolean Compress) {
         this.Compress = Compress;
-    }
-
-    /**
-     * Get Compress according to the file suffix type
-Such as: jpg, txt
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FileExtensions Compress according to the file suffix type
-Such as: jpg, txt
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public String [] getFileExtensions() {
-        return this.FileExtensions;
-    }
-
-    /**
-     * Set Compress according to the file suffix type
-Such as: jpg, txt
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FileExtensions Compress according to the file suffix type
-Such as: jpg, txt
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public void setFileExtensions(String [] FileExtensions) {
-        this.FileExtensions = FileExtensions;
     }
 
     /**
@@ -182,6 +185,114 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Algorithms = Algorithms;
     }
 
+    /**
+     * Get Compress according to the file suffix type
+Such as: jpg, txt
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return FileExtensions Compress according to the file suffix type
+Such as: jpg, txt
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getFileExtensions() {
+        return this.FileExtensions;
+    }
+
+    /**
+     * Set Compress according to the file suffix type
+Such as: jpg, txt
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param FileExtensions Compress according to the file suffix type
+Such as: jpg, txt
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setFileExtensions(String [] FileExtensions) {
+        this.FileExtensions = FileExtensions;
+    }
+
+    /**
+     * Get Rule types:
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`contentType`: effective when the `ContentType` is specified
+If this field is specified, `FileExtensions` does not take effect.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return RuleType Rule types:
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`contentType`: effective when the `ContentType` is specified
+If this field is specified, `FileExtensions` does not take effect.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getRuleType() {
+        return this.RuleType;
+    }
+
+    /**
+     * Set Rule types:
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`contentType`: effective when the `ContentType` is specified
+If this field is specified, `FileExtensions` does not take effect.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param RuleType Rule types:
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`contentType`: effective when the `ContentType` is specified
+If this field is specified, `FileExtensions` does not take effect.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setRuleType(String RuleType) {
+        this.RuleType = RuleType;
+    }
+
+    /**
+     * Get Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `contentType`, enter `text/html`.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return RulePaths Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `contentType`, enter `text/html`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String [] getRulePaths() {
+        return this.RulePaths;
+    }
+
+    /**
+     * Set Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `contentType`, enter `text/html`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param RulePaths Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `contentType`, enter `text/html`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setRulePaths(String [] RulePaths) {
+        this.RulePaths = RulePaths;
+    }
+
     public CompressionRule() {
     }
 
@@ -192,12 +303,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public CompressionRule(CompressionRule source) {
         if (source.Compress != null) {
             this.Compress = new Boolean(source.Compress);
-        }
-        if (source.FileExtensions != null) {
-            this.FileExtensions = new String[source.FileExtensions.length];
-            for (int i = 0; i < source.FileExtensions.length; i++) {
-                this.FileExtensions[i] = new String(source.FileExtensions[i]);
-            }
         }
         if (source.MinLength != null) {
             this.MinLength = new Long(source.MinLength);
@@ -211,6 +316,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 this.Algorithms[i] = new String(source.Algorithms[i]);
             }
         }
+        if (source.FileExtensions != null) {
+            this.FileExtensions = new String[source.FileExtensions.length];
+            for (int i = 0; i < source.FileExtensions.length; i++) {
+                this.FileExtensions[i] = new String(source.FileExtensions[i]);
+            }
+        }
+        if (source.RuleType != null) {
+            this.RuleType = new String(source.RuleType);
+        }
+        if (source.RulePaths != null) {
+            this.RulePaths = new String[source.RulePaths.length];
+            for (int i = 0; i < source.RulePaths.length; i++) {
+                this.RulePaths[i] = new String(source.RulePaths[i]);
+            }
+        }
     }
 
 
@@ -219,10 +339,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Compress", this.Compress);
-        this.setParamArraySimple(map, prefix + "FileExtensions.", this.FileExtensions);
         this.setParamSimple(map, prefix + "MinLength", this.MinLength);
         this.setParamSimple(map, prefix + "MaxLength", this.MaxLength);
         this.setParamArraySimple(map, prefix + "Algorithms.", this.Algorithms);
+        this.setParamArraySimple(map, prefix + "FileExtensions.", this.FileExtensions);
+        this.setParamSimple(map, prefix + "RuleType", this.RuleType);
+        this.setParamArraySimple(map, prefix + "RulePaths.", this.RulePaths);
 
     }
 }

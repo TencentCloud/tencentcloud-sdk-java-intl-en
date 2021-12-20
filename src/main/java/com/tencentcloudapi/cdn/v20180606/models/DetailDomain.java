@@ -157,8 +157,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private FollowRedirect FollowRedirect;
 
     /**
-    * Custom error page configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Configuration of custom error page
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ErrorPage")
     @Expose
@@ -442,7 +442,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Ipv6Access Ipv6Access;
 
     /**
-    * Advanced configuration set
+    * Advanced configuration settings
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("AdvanceSet")
@@ -450,7 +450,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private AdvanceConfig [] AdvanceSet;
 
     /**
-    * Offline cache
+    * Offline cache (only available to beta users)
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("OfflineCache")
@@ -458,7 +458,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private OfflineCache OfflineCache;
 
     /**
-    * Merging pull requests
+    * Merging origin-pull requests (only available to beta users)
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("OriginCombine")
@@ -496,6 +496,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     @SerializedName("WebSocket")
     @Expose
     private WebSocket WebSocket;
+
+    /**
+    * Remote authentication configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RemoteAuthentication")
+    @Expose
+    private RemoteAuthentication RemoteAuthentication;
+
+    /**
+    * Shared CNAME configuration (only available to beta users)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ShareCname")
+    @Expose
+    private ShareCname ShareCname;
 
     /**
      * Get Domain name ID 
@@ -830,20 +846,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Custom error page configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ErrorPage Custom error page configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Configuration of custom error page
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ErrorPage Configuration of custom error page
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public ErrorPage getErrorPage() {
         return this.ErrorPage;
     }
 
     /**
-     * Set Custom error page configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ErrorPage Custom error page configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Configuration of custom error page
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ErrorPage Configuration of custom error page
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setErrorPage(ErrorPage ErrorPage) {
         this.ErrorPage = ErrorPage;
@@ -1562,9 +1578,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Advanced configuration set
+     * Get Advanced configuration settings
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return AdvanceSet Advanced configuration set
+     * @return AdvanceSet Advanced configuration settings
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public AdvanceConfig [] getAdvanceSet() {
@@ -1572,9 +1588,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Advanced configuration set
+     * Set Advanced configuration settings
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param AdvanceSet Advanced configuration set
+     * @param AdvanceSet Advanced configuration settings
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setAdvanceSet(AdvanceConfig [] AdvanceSet) {
@@ -1582,9 +1598,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Offline cache
+     * Get Offline cache (only available to beta users)
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return OfflineCache Offline cache
+     * @return OfflineCache Offline cache (only available to beta users)
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public OfflineCache getOfflineCache() {
@@ -1592,9 +1608,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Offline cache
+     * Set Offline cache (only available to beta users)
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param OfflineCache Offline cache
+     * @param OfflineCache Offline cache (only available to beta users)
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setOfflineCache(OfflineCache OfflineCache) {
@@ -1602,9 +1618,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Merging pull requests
+     * Get Merging origin-pull requests (only available to beta users)
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return OriginCombine Merging pull requests
+     * @return OriginCombine Merging origin-pull requests (only available to beta users)
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public OriginCombine getOriginCombine() {
@@ -1612,9 +1628,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Merging pull requests
+     * Set Merging origin-pull requests (only available to beta users)
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param OriginCombine Merging pull requests
+     * @param OriginCombine Merging origin-pull requests (only available to beta users)
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setOriginCombine(OriginCombine OriginCombine) {
@@ -1699,6 +1715,46 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      */
     public void setWebSocket(WebSocket WebSocket) {
         this.WebSocket = WebSocket;
+    }
+
+    /**
+     * Get Remote authentication configuration
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return RemoteAuthentication Remote authentication configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public RemoteAuthentication getRemoteAuthentication() {
+        return this.RemoteAuthentication;
+    }
+
+    /**
+     * Set Remote authentication configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param RemoteAuthentication Remote authentication configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setRemoteAuthentication(RemoteAuthentication RemoteAuthentication) {
+        this.RemoteAuthentication = RemoteAuthentication;
+    }
+
+    /**
+     * Get Shared CNAME configuration (only available to beta users)
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ShareCname Shared CNAME configuration (only available to beta users)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public ShareCname getShareCname() {
+        return this.ShareCname;
+    }
+
+    /**
+     * Set Shared CNAME configuration (only available to beta users)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ShareCname Shared CNAME configuration (only available to beta users)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setShareCname(ShareCname ShareCname) {
+        this.ShareCname = ShareCname;
     }
 
     public DetailDomain() {
@@ -1892,6 +1948,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.WebSocket != null) {
             this.WebSocket = new WebSocket(source.WebSocket);
         }
+        if (source.RemoteAuthentication != null) {
+            this.RemoteAuthentication = new RemoteAuthentication(source.RemoteAuthentication);
+        }
+        if (source.ShareCname != null) {
+            this.ShareCname = new ShareCname(source.ShareCname);
+        }
     }
 
 
@@ -1957,6 +2019,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamObj(map, prefix + "Quic.", this.Quic);
         this.setParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
         this.setParamObj(map, prefix + "WebSocket.", this.WebSocket);
+        this.setParamObj(map, prefix + "RemoteAuthentication.", this.RemoteAuthentication);
+        this.setParamObj(map, prefix + "ShareCname.", this.ShareCname);
 
     }
 }

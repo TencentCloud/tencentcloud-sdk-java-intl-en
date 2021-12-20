@@ -217,9 +217,10 @@ Applicable to cases where the acceleration domain name configuration differs for
 
     /**
     * Domain name acceleration region
-mainland: acceleration inside mainland China
-overseas: acceleration outside mainland China
-global: global acceleration
+`mainland`: acceleration inside the Chinese mainland
+`overseas`: acceleration outside the Chinese mainland
+`global`: global acceleration
+When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
     */
     @SerializedName("Area")
     @Expose
@@ -254,7 +255,7 @@ global: global acceleration
     private AccessControl AccessControl;
 
     /**
-    * URL redirect configuration
+    * Configuration of URL rewriting
     */
     @SerializedName("UrlRedirect")
     @Expose
@@ -322,6 +323,20 @@ global: global acceleration
     @SerializedName("WebSocket")
     @Expose
     private WebSocket WebSocket;
+
+    /**
+    * Configuration of remote authentication
+    */
+    @SerializedName("RemoteAuthentication")
+    @Expose
+    private RemoteAuthentication RemoteAuthentication;
+
+    /**
+    * Shared CNAME configuration (only available to beta users)
+    */
+    @SerializedName("ShareCname")
+    @Expose
+    private ShareCname ShareCname;
 
     /**
      * Get Domain name 
@@ -773,13 +788,15 @@ Applicable to cases where the acceleration domain name configuration differs for
 
     /**
      * Get Domain name acceleration region
-mainland: acceleration inside mainland China
-overseas: acceleration outside mainland China
-global: global acceleration 
+`mainland`: acceleration inside the Chinese mainland
+`overseas`: acceleration outside the Chinese mainland
+`global`: global acceleration
+When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings. 
      * @return Area Domain name acceleration region
-mainland: acceleration inside mainland China
-overseas: acceleration outside mainland China
-global: global acceleration
+`mainland`: acceleration inside the Chinese mainland
+`overseas`: acceleration outside the Chinese mainland
+`global`: global acceleration
+When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
      */
     public String getArea() {
         return this.Area;
@@ -787,13 +804,15 @@ global: global acceleration
 
     /**
      * Set Domain name acceleration region
-mainland: acceleration inside mainland China
-overseas: acceleration outside mainland China
-global: global acceleration
+`mainland`: acceleration inside the Chinese mainland
+`overseas`: acceleration outside the Chinese mainland
+`global`: global acceleration
+When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
      * @param Area Domain name acceleration region
-mainland: acceleration inside mainland China
-overseas: acceleration outside mainland China
-global: global acceleration
+`mainland`: acceleration inside the Chinese mainland
+`overseas`: acceleration outside the Chinese mainland
+`global`: global acceleration
+When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
      */
     public void setArea(String Area) {
         this.Area = Area;
@@ -864,16 +883,16 @@ global: global acceleration
     }
 
     /**
-     * Get URL redirect configuration 
-     * @return UrlRedirect URL redirect configuration
+     * Get Configuration of URL rewriting 
+     * @return UrlRedirect Configuration of URL rewriting
      */
     public UrlRedirect getUrlRedirect() {
         return this.UrlRedirect;
     }
 
     /**
-     * Set URL redirect configuration
-     * @param UrlRedirect URL redirect configuration
+     * Set Configuration of URL rewriting
+     * @param UrlRedirect Configuration of URL rewriting
      */
     public void setUrlRedirect(UrlRedirect UrlRedirect) {
         this.UrlRedirect = UrlRedirect;
@@ -1023,6 +1042,38 @@ global: global acceleration
         this.WebSocket = WebSocket;
     }
 
+    /**
+     * Get Configuration of remote authentication 
+     * @return RemoteAuthentication Configuration of remote authentication
+     */
+    public RemoteAuthentication getRemoteAuthentication() {
+        return this.RemoteAuthentication;
+    }
+
+    /**
+     * Set Configuration of remote authentication
+     * @param RemoteAuthentication Configuration of remote authentication
+     */
+    public void setRemoteAuthentication(RemoteAuthentication RemoteAuthentication) {
+        this.RemoteAuthentication = RemoteAuthentication;
+    }
+
+    /**
+     * Get Shared CNAME configuration (only available to beta users) 
+     * @return ShareCname Shared CNAME configuration (only available to beta users)
+     */
+    public ShareCname getShareCname() {
+        return this.ShareCname;
+    }
+
+    /**
+     * Set Shared CNAME configuration (only available to beta users)
+     * @param ShareCname Shared CNAME configuration (only available to beta users)
+     */
+    public void setShareCname(ShareCname ShareCname) {
+        this.ShareCname = ShareCname;
+    }
+
     public UpdateDomainConfigRequest() {
     }
 
@@ -1160,6 +1211,12 @@ global: global acceleration
         if (source.WebSocket != null) {
             this.WebSocket = new WebSocket(source.WebSocket);
         }
+        if (source.RemoteAuthentication != null) {
+            this.RemoteAuthentication = new RemoteAuthentication(source.RemoteAuthentication);
+        }
+        if (source.ShareCname != null) {
+            this.ShareCname = new ShareCname(source.ShareCname);
+        }
     }
 
 
@@ -1209,6 +1266,8 @@ global: global acceleration
         this.setParamObj(map, prefix + "Quic.", this.Quic);
         this.setParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
         this.setParamObj(map, prefix + "WebSocket.", this.WebSocket);
+        this.setParamObj(map, prefix + "RemoteAuthentication.", this.RemoteAuthentication);
+        this.setParamObj(map, prefix + "ShareCname.", this.ShareCname);
 
     }
 }

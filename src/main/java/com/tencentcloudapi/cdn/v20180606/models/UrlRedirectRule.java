@@ -52,6 +52,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String RedirectHost;
 
     /**
+    * Whether to use full-path matching or arbitrary matching
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("FullMatch")
+    @Expose
+    private Boolean FullMatch;
+
+    /**
      * Get Redirect status code. Valid values: 301, 302 
      * @return RedirectStatusCode Redirect status code. Valid values: 301, 302
      */
@@ -119,6 +127,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.RedirectHost = RedirectHost;
     }
 
+    /**
+     * Get Whether to use full-path matching or arbitrary matching
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return FullMatch Whether to use full-path matching or arbitrary matching
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Boolean getFullMatch() {
+        return this.FullMatch;
+    }
+
+    /**
+     * Set Whether to use full-path matching or arbitrary matching
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param FullMatch Whether to use full-path matching or arbitrary matching
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setFullMatch(Boolean FullMatch) {
+        this.FullMatch = FullMatch;
+    }
+
     public UrlRedirectRule() {
     }
 
@@ -139,6 +167,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.RedirectHost != null) {
             this.RedirectHost = new String(source.RedirectHost);
         }
+        if (source.FullMatch != null) {
+            this.FullMatch = new Boolean(source.FullMatch);
+        }
     }
 
 
@@ -150,6 +181,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Pattern", this.Pattern);
         this.setParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
         this.setParamSimple(map, prefix + "RedirectHost", this.RedirectHost);
+        this.setParamSimple(map, prefix + "FullMatch", this.FullMatch);
 
     }
 }
