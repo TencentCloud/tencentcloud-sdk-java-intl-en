@@ -123,7 +123,7 @@ public enum GaapErrorCode {
     // Incorrect parameter value.
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-    // 
+    // The HTTP certificate does not match the domain name.
      INVALIDPARAMETERVALUE_CERTIFICATENOTMATCHDOMAIN("InvalidParameterValue.CertificateNotMatchDomain"),
      
     // The domain name is blocked for ICP issues.

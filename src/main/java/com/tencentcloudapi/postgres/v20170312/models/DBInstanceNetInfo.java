@@ -51,11 +51,27 @@ public class DBInstanceNetInfo extends AbstractModel{
     private String NetType;
 
     /**
-    * Network connection status
+    * Network connection status. Valid values: `initing` (never enabled before), `opened` (enabled), `closed` (disabled), `opening` (enabling), `closing` (disabling)
     */
     @SerializedName("Status")
     @Expose
     private String Status;
+
+    /**
+    * VPC ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
+    * Subnet ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
 
     /**
      * Get DNS domain name 
@@ -122,19 +138,59 @@ public class DBInstanceNetInfo extends AbstractModel{
     }
 
     /**
-     * Get Network connection status 
-     * @return Status Network connection status
+     * Get Network connection status. Valid values: `initing` (never enabled before), `opened` (enabled), `closed` (disabled), `opening` (enabling), `closing` (disabling) 
+     * @return Status Network connection status. Valid values: `initing` (never enabled before), `opened` (enabled), `closed` (disabled), `opening` (enabling), `closing` (disabling)
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Network connection status
-     * @param Status Network connection status
+     * Set Network connection status. Valid values: `initing` (never enabled before), `opened` (enabled), `closed` (disabled), `opening` (enabling), `closing` (disabling)
+     * @param Status Network connection status. Valid values: `initing` (never enabled before), `opened` (enabled), `closed` (disabled), `opening` (enabling), `closing` (disabling)
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get VPC ID
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return VpcId VPC ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set VPC ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param VpcId VPC ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * Get Subnet ID
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return SubnetId Subnet ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set Subnet ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param SubnetId Subnet ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
     }
 
     public DBInstanceNetInfo() {
@@ -160,6 +216,12 @@ public class DBInstanceNetInfo extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
     }
 
 
@@ -172,6 +234,8 @@ public class DBInstanceNetInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "NetType", this.NetType);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }
 }

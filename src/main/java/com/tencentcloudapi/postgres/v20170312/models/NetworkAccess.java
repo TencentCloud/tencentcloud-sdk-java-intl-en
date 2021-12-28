@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class NetworkAccess extends AbstractModel{
 
     /**
-    * Network resource ID, instance ID or RO group ID (this field has been deprecated)
+    * Network resource ID, instance ID, or RO group ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ResourceId")
@@ -31,7 +31,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String ResourceId;
 
     /**
-    * Resource type. Valid values: `1` (instance), `2` (RO group) (this field has been deprecated)
+    * Resource type. Valid values: `1` (instance), `2` (RO group)
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ResourceType")
@@ -87,9 +87,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long VpcStatus;
 
     /**
-     * Get Network resource ID, instance ID or RO group ID (this field has been deprecated)
+     * Get Network resource ID, instance ID, or RO group ID
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ResourceId Network resource ID, instance ID or RO group ID (this field has been deprecated)
+     * @return ResourceId Network resource ID, instance ID, or RO group ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getResourceId() {
@@ -97,9 +97,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Network resource ID, instance ID or RO group ID (this field has been deprecated)
+     * Set Network resource ID, instance ID, or RO group ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ResourceId Network resource ID, instance ID or RO group ID (this field has been deprecated)
+     * @param ResourceId Network resource ID, instance ID, or RO group ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setResourceId(String ResourceId) {
@@ -107,9 +107,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Resource type. Valid values: `1` (instance), `2` (RO group) (this field has been deprecated)
+     * Get Resource type. Valid values: `1` (instance), `2` (RO group)
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ResourceType Resource type. Valid values: `1` (instance), `2` (RO group) (this field has been deprecated)
+     * @return ResourceType Resource type. Valid values: `1` (instance), `2` (RO group)
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getResourceType() {
@@ -117,9 +117,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Resource type. Valid values: `1` (instance), `2` (RO group) (this field has been deprecated)
+     * Set Resource type. Valid values: `1` (instance), `2` (RO group)
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ResourceType Resource type. Valid values: `1` (instance), `2` (RO group) (this field has been deprecated)
+     * @param ResourceType Resource type. Valid values: `1` (instance), `2` (RO group)
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setResourceType(Long ResourceType) {

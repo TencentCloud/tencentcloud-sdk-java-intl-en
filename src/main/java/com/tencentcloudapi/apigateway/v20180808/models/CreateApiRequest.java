@@ -352,6 +352,34 @@ public class CreateApiRequest extends AbstractModel{
     private String ServiceScfFunctionType;
 
     /**
+    * EIAM application type.
+    */
+    @SerializedName("EIAMAppType")
+    @Expose
+    private String EIAMAppType;
+
+    /**
+    * EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+    */
+    @SerializedName("EIAMAuthType")
+    @Expose
+    private String EIAMAuthType;
+
+    /**
+    * Validity of the EIAM application token. Unit: second. Default value: `7200`.
+    */
+    @SerializedName("TokenTimeout")
+    @Expose
+    private Long TokenTimeout;
+
+    /**
+    * EIAM application ID.
+    */
+    @SerializedName("EIAMAppId")
+    @Expose
+    private String EIAMAppId;
+
+    /**
      * Get Unique service ID of API. 
      * @return ServiceId Unique service ID of API.
      */
@@ -1103,6 +1131,70 @@ public class CreateApiRequest extends AbstractModel{
         this.ServiceScfFunctionType = ServiceScfFunctionType;
     }
 
+    /**
+     * Get EIAM application type. 
+     * @return EIAMAppType EIAM application type.
+     */
+    public String getEIAMAppType() {
+        return this.EIAMAppType;
+    }
+
+    /**
+     * Set EIAM application type.
+     * @param EIAMAppType EIAM application type.
+     */
+    public void setEIAMAppType(String EIAMAppType) {
+        this.EIAMAppType = EIAMAppType;
+    }
+
+    /**
+     * Get EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`. 
+     * @return EIAMAuthType EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+     */
+    public String getEIAMAuthType() {
+        return this.EIAMAuthType;
+    }
+
+    /**
+     * Set EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+     * @param EIAMAuthType EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+     */
+    public void setEIAMAuthType(String EIAMAuthType) {
+        this.EIAMAuthType = EIAMAuthType;
+    }
+
+    /**
+     * Get Validity of the EIAM application token. Unit: second. Default value: `7200`. 
+     * @return TokenTimeout Validity of the EIAM application token. Unit: second. Default value: `7200`.
+     */
+    public Long getTokenTimeout() {
+        return this.TokenTimeout;
+    }
+
+    /**
+     * Set Validity of the EIAM application token. Unit: second. Default value: `7200`.
+     * @param TokenTimeout Validity of the EIAM application token. Unit: second. Default value: `7200`.
+     */
+    public void setTokenTimeout(Long TokenTimeout) {
+        this.TokenTimeout = TokenTimeout;
+    }
+
+    /**
+     * Get EIAM application ID. 
+     * @return EIAMAppId EIAM application ID.
+     */
+    public String getEIAMAppId() {
+        return this.EIAMAppId;
+    }
+
+    /**
+     * Set EIAM application ID.
+     * @param EIAMAppId EIAM application ID.
+     */
+    public void setEIAMAppId(String EIAMAppId) {
+        this.EIAMAppId = EIAMAppId;
+    }
+
     public CreateApiRequest() {
     }
 
@@ -1270,6 +1362,18 @@ public class CreateApiRequest extends AbstractModel{
         if (source.ServiceScfFunctionType != null) {
             this.ServiceScfFunctionType = new String(source.ServiceScfFunctionType);
         }
+        if (source.EIAMAppType != null) {
+            this.EIAMAppType = new String(source.EIAMAppType);
+        }
+        if (source.EIAMAuthType != null) {
+            this.EIAMAuthType = new String(source.EIAMAuthType);
+        }
+        if (source.TokenTimeout != null) {
+            this.TokenTimeout = new Long(source.TokenTimeout);
+        }
+        if (source.EIAMAppId != null) {
+            this.EIAMAppId = new String(source.EIAMAppId);
+        }
     }
 
 
@@ -1324,6 +1428,10 @@ public class CreateApiRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UserType", this.UserType);
         this.setParamSimple(map, prefix + "IsBase64Encoded", this.IsBase64Encoded);
         this.setParamSimple(map, prefix + "ServiceScfFunctionType", this.ServiceScfFunctionType);
+        this.setParamSimple(map, prefix + "EIAMAppType", this.EIAMAppType);
+        this.setParamSimple(map, prefix + "EIAMAuthType", this.EIAMAuthType);
+        this.setParamSimple(map, prefix + "TokenTimeout", this.TokenTimeout);
+        this.setParamSimple(map, prefix + "EIAMAppId", this.EIAMAppId);
 
     }
 }

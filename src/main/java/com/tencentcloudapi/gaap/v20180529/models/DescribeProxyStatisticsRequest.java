@@ -61,6 +61,13 @@ Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
     private Long Granularity;
 
     /**
+    * Specifies the ISP. Valid values: `CMCC`, `CUCC`, and `CTCC`. If it is not specified, all ISP data will be returned. Note that this field is valid only when a non-BGP connection is used.
+    */
+    @SerializedName("Isp")
+    @Expose
+    private String Isp;
+
+    /**
      * Get Connection ID 
      * @return ProxyId Connection ID
      */
@@ -152,6 +159,22 @@ Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
         this.Granularity = Granularity;
     }
 
+    /**
+     * Get Specifies the ISP. Valid values: `CMCC`, `CUCC`, and `CTCC`. If it is not specified, all ISP data will be returned. Note that this field is valid only when a non-BGP connection is used. 
+     * @return Isp Specifies the ISP. Valid values: `CMCC`, `CUCC`, and `CTCC`. If it is not specified, all ISP data will be returned. Note that this field is valid only when a non-BGP connection is used.
+     */
+    public String getIsp() {
+        return this.Isp;
+    }
+
+    /**
+     * Set Specifies the ISP. Valid values: `CMCC`, `CUCC`, and `CTCC`. If it is not specified, all ISP data will be returned. Note that this field is valid only when a non-BGP connection is used.
+     * @param Isp Specifies the ISP. Valid values: `CMCC`, `CUCC`, and `CTCC`. If it is not specified, all ISP data will be returned. Note that this field is valid only when a non-BGP connection is used.
+     */
+    public void setIsp(String Isp) {
+        this.Isp = Isp;
+    }
+
     public DescribeProxyStatisticsRequest() {
     }
 
@@ -178,6 +201,9 @@ Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
         if (source.Granularity != null) {
             this.Granularity = new Long(source.Granularity);
         }
+        if (source.Isp != null) {
+            this.Isp = new String(source.Isp);
+        }
     }
 
 
@@ -190,6 +216,7 @@ Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArraySimple(map, prefix + "MetricNames.", this.MetricNames);
         this.setParamSimple(map, prefix + "Granularity", this.Granularity);
+        this.setParamSimple(map, prefix + "Isp", this.Isp);
 
     }
 }

@@ -72,7 +72,7 @@ public class DBInstance extends AbstractModel{
     private String DBInstanceName;
 
     /**
-    * Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`
+    * Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`, `network changing`
     */
     @SerializedName("DBInstanceStatus")
     @Expose
@@ -260,12 +260,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String DBKernelVersion;
 
     /**
-    * Network access list of the instance
+    * Network access list of the instance (this field has been deprecated)
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("NetworkAccessList")
     @Expose
     private NetworkAccess [] NetworkAccessList;
+
+    /**
+    * 
+    */
+    @SerializedName("DBMajorVersion")
+    @Expose
+    private String DBMajorVersion;
 
     /**
      * Get Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet` 
@@ -380,16 +387,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting` 
-     * @return DBInstanceStatus Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`
+     * Get Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`, `network changing` 
+     * @return DBInstanceStatus Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`, `network changing`
      */
     public String getDBInstanceStatus() {
         return this.DBInstanceStatus;
     }
 
     /**
-     * Set Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`
-     * @param DBInstanceStatus Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`
+     * Set Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`, `network changing`
+     * @param DBInstanceStatus Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`, `network changing`
      */
     public void setDBInstanceStatus(String DBInstanceStatus) {
         this.DBInstanceStatus = DBInstanceStatus;
@@ -820,9 +827,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Network access list of the instance
+     * Get Network access list of the instance (this field has been deprecated)
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return NetworkAccessList Network access list of the instance
+     * @return NetworkAccessList Network access list of the instance (this field has been deprecated)
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public NetworkAccess [] getNetworkAccessList() {
@@ -830,13 +837,29 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Network access list of the instance
+     * Set Network access list of the instance (this field has been deprecated)
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param NetworkAccessList Network access list of the instance
+     * @param NetworkAccessList Network access list of the instance (this field has been deprecated)
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setNetworkAccessList(NetworkAccess [] NetworkAccessList) {
         this.NetworkAccessList = NetworkAccessList;
+    }
+
+    /**
+     * Get  
+     * @return DBMajorVersion 
+     */
+    public String getDBMajorVersion() {
+        return this.DBMajorVersion;
+    }
+
+    /**
+     * Set 
+     * @param DBMajorVersion 
+     */
+    public void setDBMajorVersion(String DBMajorVersion) {
+        this.DBMajorVersion = DBMajorVersion;
     }
 
     public DBInstance() {
@@ -958,6 +981,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.NetworkAccessList[i] = new NetworkAccess(source.NetworkAccessList[i]);
             }
         }
+        if (source.DBMajorVersion != null) {
+            this.DBMajorVersion = new String(source.DBMajorVersion);
+        }
     }
 
 
@@ -999,6 +1025,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
         this.setParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
         this.setParamArrayObj(map, prefix + "NetworkAccessList.", this.NetworkAccessList);
+        this.setParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
 
     }
 }

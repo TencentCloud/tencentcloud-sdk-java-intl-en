@@ -13,97 +13,123 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.apigateway.v20180808.models;
+package com.tencentcloudapi.privatedns.v20201028.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeServicesStatusRequest extends AbstractModel{
+public class DescribeAccountVpcListRequest extends AbstractModel{
 
     /**
-    * Number of results to be returned. Default value: 20. Maximum value: 100.
+    * UIN of account
     */
-    @SerializedName("Limit")
+    @SerializedName("AccountUin")
     @Expose
-    private Long Limit;
+    private String AccountUin;
 
     /**
-    * Offset. Default value: 0.
+    * Pagination offset, starting from 0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Filter. Valid values: `ServiceId`, `ServiceName`, `NotUsagePlanId`, `Environment`, `IpVersion`, `InstanceId`, `NetType`, `EIAMAppId`.
+    * Number of entries per page. Maximum value: `100`. Default value: `20`
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * Filter parameters
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get Number of results to be returned. Default value: 20. Maximum value: 100. 
-     * @return Limit Number of results to be returned. Default value: 20. Maximum value: 100.
+     * Get UIN of account 
+     * @return AccountUin UIN of account
      */
-    public Long getLimit() {
-        return this.Limit;
+    public String getAccountUin() {
+        return this.AccountUin;
     }
 
     /**
-     * Set Number of results to be returned. Default value: 20. Maximum value: 100.
-     * @param Limit Number of results to be returned. Default value: 20. Maximum value: 100.
+     * Set UIN of account
+     * @param AccountUin UIN of account
      */
-    public void setLimit(Long Limit) {
-        this.Limit = Limit;
+    public void setAccountUin(String AccountUin) {
+        this.AccountUin = AccountUin;
     }
 
     /**
-     * Get Offset. Default value: 0. 
-     * @return Offset Offset. Default value: 0.
+     * Get Pagination offset, starting from 0 
+     * @return Offset Pagination offset, starting from 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. Default value: 0.
-     * @param Offset Offset. Default value: 0.
+     * Set Pagination offset, starting from 0
+     * @param Offset Pagination offset, starting from 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Filter. Valid values: `ServiceId`, `ServiceName`, `NotUsagePlanId`, `Environment`, `IpVersion`, `InstanceId`, `NetType`, `EIAMAppId`. 
-     * @return Filters Filter. Valid values: `ServiceId`, `ServiceName`, `NotUsagePlanId`, `Environment`, `IpVersion`, `InstanceId`, `NetType`, `EIAMAppId`.
+     * Get Number of entries per page. Maximum value: `100`. Default value: `20` 
+     * @return Limit Number of entries per page. Maximum value: `100`. Default value: `20`
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set Number of entries per page. Maximum value: `100`. Default value: `20`
+     * @param Limit Number of entries per page. Maximum value: `100`. Default value: `20`
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get Filter parameters 
+     * @return Filters Filter parameters
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter. Valid values: `ServiceId`, `ServiceName`, `NotUsagePlanId`, `Environment`, `IpVersion`, `InstanceId`, `NetType`, `EIAMAppId`.
-     * @param Filters Filter. Valid values: `ServiceId`, `ServiceName`, `NotUsagePlanId`, `Environment`, `IpVersion`, `InstanceId`, `NetType`, `EIAMAppId`.
+     * Set Filter parameters
+     * @param Filters Filter parameters
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
-    public DescribeServicesStatusRequest() {
+    public DescribeAccountVpcListRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeServicesStatusRequest(DescribeServicesStatusRequest source) {
-        if (source.Limit != null) {
-            this.Limit = new Long(source.Limit);
+    public DescribeAccountVpcListRequest(DescribeAccountVpcListRequest source) {
+        if (source.AccountUin != null) {
+            this.AccountUin = new String(source.AccountUin);
         }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
         }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
@@ -118,8 +144,9 @@ public class DescribeServicesStatusRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "AccountUin", this.AccountUin);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }

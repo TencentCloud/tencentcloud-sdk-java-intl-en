@@ -168,7 +168,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long DamDDoSStatus;
 
     /**
-    * 
+    * Whether it’s an IPv6 address. `1`: Yes; `0`: No.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("V6Flag")
     @Expose
@@ -539,16 +540,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get  
-     * @return V6Flag 
+     * Get Whether it’s an IPv6 address. `1`: Yes; `0`: No.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return V6Flag Whether it’s an IPv6 address. `1`: Yes; `0`: No.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getV6Flag() {
         return this.V6Flag;
     }
 
     /**
-     * Set 
-     * @param V6Flag 
+     * Set Whether it’s an IPv6 address. `1`: Yes; `0`: No.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param V6Flag Whether it’s an IPv6 address. `1`: Yes; `0`: No.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setV6Flag(Long V6Flag) {
         this.V6Flag = V6Flag;

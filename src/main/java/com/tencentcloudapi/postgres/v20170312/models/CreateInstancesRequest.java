@@ -30,13 +30,6 @@ public class CreateInstancesRequest extends AbstractModel{
     private String SpecCode;
 
     /**
-    * PostgreSQL kernel version. Valid values: `9.3.5`, `9.5.4`, `10.4`, `11.8`, `12.4`.
-    */
-    @SerializedName("DBVersion")
-    @Expose
-    private String DBVersion;
-
-    /**
     * Instance storage capacity in GB
     */
     @SerializedName("Storage")
@@ -91,6 +84,13 @@ public class CreateInstancesRequest extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
+
+    /**
+    * PostgreSQL major version. Valid values: `9.3`, `9.5`, `10`, `11`, `12`, `13`, `9.3.5`, `9.5.4`, `10.4`, `11.8`, `12.4`.
+    */
+    @SerializedName("DBVersion")
+    @Expose
+    private String DBVersion;
 
     /**
     * Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
@@ -170,6 +170,20 @@ public class CreateInstancesRequest extends AbstractModel{
     private String [] SecurityGroupIds;
 
     /**
+    * 
+    */
+    @SerializedName("DBMajorVersion")
+    @Expose
+    private String DBMajorVersion;
+
+    /**
+    * 
+    */
+    @SerializedName("DBKernelVersion")
+    @Expose
+    private String DBKernelVersion;
+
+    /**
      * Get Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API. 
      * @return SpecCode Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
      */
@@ -183,22 +197,6 @@ public class CreateInstancesRequest extends AbstractModel{
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;
-    }
-
-    /**
-     * Get PostgreSQL kernel version. Valid values: `9.3.5`, `9.5.4`, `10.4`, `11.8`, `12.4`. 
-     * @return DBVersion PostgreSQL kernel version. Valid values: `9.3.5`, `9.5.4`, `10.4`, `11.8`, `12.4`.
-     */
-    public String getDBVersion() {
-        return this.DBVersion;
-    }
-
-    /**
-     * Set PostgreSQL kernel version. Valid values: `9.3.5`, `9.5.4`, `10.4`, `11.8`, `12.4`.
-     * @param DBVersion PostgreSQL kernel version. Valid values: `9.3.5`, `9.5.4`, `10.4`, `11.8`, `12.4`.
-     */
-    public void setDBVersion(String DBVersion) {
-        this.DBVersion = DBVersion;
     }
 
     /**
@@ -327,6 +325,22 @@ public class CreateInstancesRequest extends AbstractModel{
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get PostgreSQL major version. Valid values: `9.3`, `9.5`, `10`, `11`, `12`, `13`, `9.3.5`, `9.5.4`, `10.4`, `11.8`, `12.4`. 
+     * @return DBVersion PostgreSQL major version. Valid values: `9.3`, `9.5`, `10`, `11`, `12`, `13`, `9.3.5`, `9.5.4`, `10.4`, `11.8`, `12.4`.
+     */
+    public String getDBVersion() {
+        return this.DBVersion;
+    }
+
+    /**
+     * Set PostgreSQL major version. Valid values: `9.3`, `9.5`, `10`, `11`, `12`, `13`, `9.3.5`, `9.5.4`, `10.4`, `11.8`, `12.4`.
+     * @param DBVersion PostgreSQL major version. Valid values: `9.3`, `9.5`, `10`, `11`, `12`, `13`, `9.3.5`, `9.5.4`, `10.4`, `11.8`, `12.4`.
+     */
+    public void setDBVersion(String DBVersion) {
+        this.DBVersion = DBVersion;
     }
 
     /**
@@ -505,6 +519,38 @@ public class CreateInstancesRequest extends AbstractModel{
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
+    /**
+     * Get  
+     * @return DBMajorVersion 
+     */
+    public String getDBMajorVersion() {
+        return this.DBMajorVersion;
+    }
+
+    /**
+     * Set 
+     * @param DBMajorVersion 
+     */
+    public void setDBMajorVersion(String DBMajorVersion) {
+        this.DBMajorVersion = DBMajorVersion;
+    }
+
+    /**
+     * Get  
+     * @return DBKernelVersion 
+     */
+    public String getDBKernelVersion() {
+        return this.DBKernelVersion;
+    }
+
+    /**
+     * Set 
+     * @param DBKernelVersion 
+     */
+    public void setDBKernelVersion(String DBKernelVersion) {
+        this.DBKernelVersion = DBKernelVersion;
+    }
+
     public CreateInstancesRequest() {
     }
 
@@ -515,9 +561,6 @@ public class CreateInstancesRequest extends AbstractModel{
     public CreateInstancesRequest(CreateInstancesRequest source) {
         if (source.SpecCode != null) {
             this.SpecCode = new String(source.SpecCode);
-        }
-        if (source.DBVersion != null) {
-            this.DBVersion = new String(source.DBVersion);
         }
         if (source.Storage != null) {
             this.Storage = new Long(source.Storage);
@@ -542,6 +585,9 @@ public class CreateInstancesRequest extends AbstractModel{
         }
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.DBVersion != null) {
+            this.DBVersion = new String(source.DBVersion);
         }
         if (source.InstanceChargeType != null) {
             this.InstanceChargeType = new String(source.InstanceChargeType);
@@ -585,6 +631,12 @@ public class CreateInstancesRequest extends AbstractModel{
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
             }
         }
+        if (source.DBMajorVersion != null) {
+            this.DBMajorVersion = new String(source.DBMajorVersion);
+        }
+        if (source.DBKernelVersion != null) {
+            this.DBKernelVersion = new String(source.DBKernelVersion);
+        }
     }
 
 
@@ -593,7 +645,6 @@ public class CreateInstancesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SpecCode", this.SpecCode);
-        this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
         this.setParamSimple(map, prefix + "Storage", this.Storage);
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamSimple(map, prefix + "Period", this.Period);
@@ -602,6 +653,7 @@ public class CreateInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AdminName", this.AdminName);
         this.setParamSimple(map, prefix + "AdminPassword", this.AdminPassword);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
@@ -613,6 +665,8 @@ public class CreateInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NeedSupportIpv6", this.NeedSupportIpv6);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
+        this.setParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
 
     }
 }

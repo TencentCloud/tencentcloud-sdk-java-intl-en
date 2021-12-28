@@ -148,7 +148,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private DBInstanceNetInfo [] DBInstanceNetInfo;
 
     /**
-    * Network access list of the RO group
+    * Network access list of the RO group (this field has been deprecated)
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("NetworkAccessList")
@@ -452,9 +452,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Network access list of the RO group
+     * Get Network access list of the RO group (this field has been deprecated)
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return NetworkAccessList Network access list of the RO group
+     * @return NetworkAccessList Network access list of the RO group (this field has been deprecated)
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public NetworkAccess [] getNetworkAccessList() {
@@ -462,9 +462,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Network access list of the RO group
+     * Set Network access list of the RO group (this field has been deprecated)
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param NetworkAccessList Network access list of the RO group
+     * @param NetworkAccessList Network access list of the RO group (this field has been deprecated)
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setNetworkAccessList(NetworkAccess [] NetworkAccessList) {
