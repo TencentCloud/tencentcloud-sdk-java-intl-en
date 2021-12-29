@@ -164,6 +164,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private WechatMiniProgramPublishTask WechatMiniProgramPublishCompleteEvent;
 
     /**
+    * Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RestoreMediaCompleteEvent")
+    @Expose
+    private RestoreMediaTask RestoreMediaCompleteEvent;
+
+    /**
      * Get Event handler. The caller must call `ConfirmEvents` to confirm that the message has been received, and the confirmation is valid for 30 seconds. After the confirmation expires, the event can be obtained again. 
      * @return EventHandle Event handler. The caller must call `ConfirmEvents` to confirm that the message has been received, and the confirmation is valid for 30 seconds. After the confirmation expires, the event can be obtained again.
      */
@@ -535,6 +543,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.WechatMiniProgramPublishCompleteEvent = WechatMiniProgramPublishCompleteEvent;
     }
 
+    /**
+     * Get Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return RestoreMediaCompleteEvent Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public RestoreMediaTask getRestoreMediaCompleteEvent() {
+        return this.RestoreMediaCompleteEvent;
+    }
+
+    /**
+     * Set Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param RestoreMediaCompleteEvent Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setRestoreMediaCompleteEvent(RestoreMediaTask RestoreMediaCompleteEvent) {
+        this.RestoreMediaCompleteEvent = RestoreMediaCompleteEvent;
+    }
+
     public EventContent() {
     }
 
@@ -591,6 +619,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.WechatMiniProgramPublishCompleteEvent != null) {
             this.WechatMiniProgramPublishCompleteEvent = new WechatMiniProgramPublishTask(source.WechatMiniProgramPublishCompleteEvent);
         }
+        if (source.RestoreMediaCompleteEvent != null) {
+            this.RestoreMediaCompleteEvent = new RestoreMediaTask(source.RestoreMediaCompleteEvent);
+        }
     }
 
 
@@ -614,6 +645,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "SnapshotByTimeOffsetCompleteEvent.", this.SnapshotByTimeOffsetCompleteEvent);
         this.setParamObj(map, prefix + "WechatPublishCompleteEvent.", this.WechatPublishCompleteEvent);
         this.setParamObj(map, prefix + "WechatMiniProgramPublishCompleteEvent.", this.WechatMiniProgramPublishCompleteEvent);
+        this.setParamObj(map, prefix + "RestoreMediaCompleteEvent.", this.RestoreMediaCompleteEvent);
 
     }
 }

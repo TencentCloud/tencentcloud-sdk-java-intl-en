@@ -23,19 +23,27 @@ import java.util.HashMap;
 public class ListClsLogTopicsResponse extends AbstractModel{
 
     /**
-    * Logset information
+    * Information of logsets in the Shanghai region
     */
     @SerializedName("Logset")
     @Expose
     private LogSetInfo Logset;
 
     /**
-    * Log topic information list
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Information of log topics in the Shanghai region
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Topics")
     @Expose
     private TopicInfo [] Topics;
+
+    /**
+    * Information on logsets in regions except Shanghai
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ExtraLogset")
+    @Expose
+    private ExtraLogset [] ExtraLogset;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,39 +53,59 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Logset information 
-     * @return Logset Logset information
+     * Get Information of logsets in the Shanghai region 
+     * @return Logset Information of logsets in the Shanghai region
      */
     public LogSetInfo getLogset() {
         return this.Logset;
     }
 
     /**
-     * Set Logset information
-     * @param Logset Logset information
+     * Set Information of logsets in the Shanghai region
+     * @param Logset Information of logsets in the Shanghai region
      */
     public void setLogset(LogSetInfo Logset) {
         this.Logset = Logset;
     }
 
     /**
-     * Get Log topic information list
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Topics Log topic information list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Information of log topics in the Shanghai region
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Topics Information of log topics in the Shanghai region
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public TopicInfo [] getTopics() {
         return this.Topics;
     }
 
     /**
-     * Set Log topic information list
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Topics Log topic information list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Information of log topics in the Shanghai region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Topics Information of log topics in the Shanghai region
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setTopics(TopicInfo [] Topics) {
         this.Topics = Topics;
+    }
+
+    /**
+     * Get Information on logsets in regions except Shanghai
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ExtraLogset Information on logsets in regions except Shanghai
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public ExtraLogset [] getExtraLogset() {
+        return this.ExtraLogset;
+    }
+
+    /**
+     * Set Information on logsets in regions except Shanghai
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ExtraLogset Information on logsets in regions except Shanghai
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setExtraLogset(ExtraLogset [] ExtraLogset) {
+        this.ExtraLogset = ExtraLogset;
     }
 
     /**
@@ -113,6 +141,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 this.Topics[i] = new TopicInfo(source.Topics[i]);
             }
         }
+        if (source.ExtraLogset != null) {
+            this.ExtraLogset = new ExtraLogset[source.ExtraLogset.length];
+            for (int i = 0; i < source.ExtraLogset.length; i++) {
+                this.ExtraLogset[i] = new ExtraLogset(source.ExtraLogset[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -125,6 +159,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Logset.", this.Logset);
         this.setParamArrayObj(map, prefix + "Topics.", this.Topics);
+        this.setParamArrayObj(map, prefix + "ExtraLogset.", this.ExtraLogset);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

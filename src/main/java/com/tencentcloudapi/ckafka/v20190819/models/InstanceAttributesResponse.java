@@ -259,6 +259,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String DeleteRouteTimestamp;
 
     /**
+    * Number of remaining creatable partitions
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RemainingPartitions")
+    @Expose
+    private Long RemainingPartitions;
+
+    /**
+    * Number of remaining creatable topics
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RemainingTopics")
+    @Expose
+    private Long RemainingTopics;
+
+    /**
+    * 
+    */
+    @SerializedName("DynamicDiskConfig")
+    @Expose
+    private DynamicDiskConfig DynamicDiskConfig;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -818,6 +841,62 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.DeleteRouteTimestamp = DeleteRouteTimestamp;
     }
 
+    /**
+     * Get Number of remaining creatable partitions
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return RemainingPartitions Number of remaining creatable partitions
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getRemainingPartitions() {
+        return this.RemainingPartitions;
+    }
+
+    /**
+     * Set Number of remaining creatable partitions
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param RemainingPartitions Number of remaining creatable partitions
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setRemainingPartitions(Long RemainingPartitions) {
+        this.RemainingPartitions = RemainingPartitions;
+    }
+
+    /**
+     * Get Number of remaining creatable topics
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return RemainingTopics Number of remaining creatable topics
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getRemainingTopics() {
+        return this.RemainingTopics;
+    }
+
+    /**
+     * Set Number of remaining creatable topics
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param RemainingTopics Number of remaining creatable topics
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setRemainingTopics(Long RemainingTopics) {
+        this.RemainingTopics = RemainingTopics;
+    }
+
+    /**
+     * Get  
+     * @return DynamicDiskConfig 
+     */
+    public DynamicDiskConfig getDynamicDiskConfig() {
+        return this.DynamicDiskConfig;
+    }
+
+    /**
+     * Set 
+     * @param DynamicDiskConfig 
+     */
+    public void setDynamicDiskConfig(DynamicDiskConfig DynamicDiskConfig) {
+        this.DynamicDiskConfig = DynamicDiskConfig;
+    }
+
     public InstanceAttributesResponse() {
     }
 
@@ -934,6 +1013,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.DeleteRouteTimestamp != null) {
             this.DeleteRouteTimestamp = new String(source.DeleteRouteTimestamp);
         }
+        if (source.RemainingPartitions != null) {
+            this.RemainingPartitions = new Long(source.RemainingPartitions);
+        }
+        if (source.RemainingTopics != null) {
+            this.RemainingTopics = new Long(source.RemainingTopics);
+        }
+        if (source.DynamicDiskConfig != null) {
+            this.DynamicDiskConfig = new DynamicDiskConfig(source.DynamicDiskConfig);
+        }
     }
 
 
@@ -973,6 +1061,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "MaxConnection", this.MaxConnection);
         this.setParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
         this.setParamSimple(map, prefix + "DeleteRouteTimestamp", this.DeleteRouteTimestamp);
+        this.setParamSimple(map, prefix + "RemainingPartitions", this.RemainingPartitions);
+        this.setParamSimple(map, prefix + "RemainingTopics", this.RemainingTopics);
+        this.setParamObj(map, prefix + "DynamicDiskConfig.", this.DynamicDiskConfig);
 
     }
 }

@@ -131,6 +131,17 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
     private Long ProductId;
 
     /**
+    * Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+    */
+    @SerializedName("SceneName")
+    @Expose
+    private String SceneName;
+
+    /**
      * Get Time unit of instance purchase duration. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li> 
      * @return TimeUnit Time unit of instance purchase duration. Valid values:
@@ -406,6 +417,38 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
         this.ProductId = ProductId;
     }
 
+    /**
+     * Get Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase 
+     * @return SceneName Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+     */
+    public String getSceneName() {
+        return this.SceneName;
+    }
+
+    /**
+     * Set Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+     * @param SceneName Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+     */
+    public void setSceneName(String SceneName) {
+        this.SceneName = SceneName;
+    }
+
     public InquiryPriceCreateInstanceRequest() {
     }
 
@@ -456,6 +499,9 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
         if (source.ProductId != null) {
             this.ProductId = new Long(source.ProductId);
         }
+        if (source.SceneName != null) {
+            this.SceneName = new String(source.SceneName);
+        }
     }
 
 
@@ -476,6 +522,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UnifyMetaInstanceId", this.UnifyMetaInstanceId);
         this.setParamObj(map, prefix + "MetaDBInfo.", this.MetaDBInfo);
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
+        this.setParamSimple(map, prefix + "SceneName", this.SceneName);
 
     }
 }

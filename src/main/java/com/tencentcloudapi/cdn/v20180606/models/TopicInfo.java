@@ -60,6 +60,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String Channel;
 
     /**
+    * Whether the log topic has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Deleted")
+    @Expose
+    private String Deleted;
+
+    /**
      * Get Topic ID 
      * @return TopicId Topic ID
      */
@@ -147,6 +155,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.Channel = Channel;
     }
 
+    /**
+     * Get Whether the log topic has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Deleted Whether the log topic has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getDeleted() {
+        return this.Deleted;
+    }
+
+    /**
+     * Set Whether the log topic has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Deleted Whether the log topic has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDeleted(String Deleted) {
+        this.Deleted = Deleted;
+    }
+
     public TopicInfo() {
     }
 
@@ -170,6 +198,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.Channel != null) {
             this.Channel = new String(source.Channel);
         }
+        if (source.Deleted != null) {
+            this.Deleted = new String(source.Deleted);
+        }
     }
 
 
@@ -182,6 +213,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Channel", this.Channel);
+        this.setParamSimple(map, prefix + "Deleted", this.Deleted);
 
     }
 }

@@ -80,6 +80,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Region;
 
     /**
+    * Whether the logset has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Deleted")
+    @Expose
+    private String Deleted;
+
+    /**
+    * Whether English is used in this region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RegionEn")
+    @Expose
+    private String RegionEn;
+
+    /**
      * Get Developer ID 
      * @return AppId Developer ID
      */
@@ -211,6 +227,46 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Region = Region;
     }
 
+    /**
+     * Get Whether the logset has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Deleted Whether the logset has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getDeleted() {
+        return this.Deleted;
+    }
+
+    /**
+     * Set Whether the logset has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Deleted Whether the logset has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDeleted(String Deleted) {
+        this.Deleted = Deleted;
+    }
+
+    /**
+     * Get Whether English is used in this region
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return RegionEn Whether English is used in this region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getRegionEn() {
+        return this.RegionEn;
+    }
+
+    /**
+     * Set Whether English is used in this region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param RegionEn Whether English is used in this region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setRegionEn(String RegionEn) {
+        this.RegionEn = RegionEn;
+    }
+
     public LogSetInfo() {
     }
 
@@ -243,6 +299,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.Region != null) {
             this.Region = new String(source.Region);
         }
+        if (source.Deleted != null) {
+            this.Deleted = new String(source.Deleted);
+        }
+        if (source.RegionEn != null) {
+            this.RegionEn = new String(source.RegionEn);
+        }
     }
 
 
@@ -258,6 +320,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "LogsetSavePeriod", this.LogsetSavePeriod);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "Deleted", this.Deleted);
+        this.setParamSimple(map, prefix + "RegionEn", this.RegionEn);
 
     }
 }

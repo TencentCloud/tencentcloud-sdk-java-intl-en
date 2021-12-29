@@ -252,6 +252,17 @@ This parameter can be obtained in the `SecurityGroupId` field in the return valu
     private String ApplicationRole;
 
     /**
+    * Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+    */
+    @SerializedName("SceneName")
+    @Expose
+    private String SceneName;
+
+    /**
      * Get Product ID. Different product IDs represent different EMR product versions. Valid values:
 <li>1: EMR v1.3.1</li>
 <li>2: EMR v2.0.1</li>
@@ -843,6 +854,38 @@ This parameter can be obtained in the `SecurityGroupId` field in the return valu
         this.ApplicationRole = ApplicationRole;
     }
 
+    /**
+     * Get Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase 
+     * @return SceneName Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+     */
+    public String getSceneName() {
+        return this.SceneName;
+    }
+
+    /**
+     * Set Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+     * @param SceneName Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+     */
+    public void setSceneName(String SceneName) {
+        this.SceneName = SceneName;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -944,6 +987,9 @@ This parameter can be obtained in the `SecurityGroupId` field in the return valu
         if (source.ApplicationRole != null) {
             this.ApplicationRole = new String(source.ApplicationRole);
         }
+        if (source.SceneName != null) {
+            this.SceneName = new String(source.SceneName);
+        }
     }
 
 
@@ -978,6 +1024,7 @@ This parameter can be obtained in the `SecurityGroupId` field in the return valu
         this.setParamSimple(map, prefix + "UnifyMetaInstanceId", this.UnifyMetaInstanceId);
         this.setParamObj(map, prefix + "MetaDBInfo.", this.MetaDBInfo);
         this.setParamSimple(map, prefix + "ApplicationRole", this.ApplicationRole);
+        this.setParamSimple(map, prefix + "SceneName", this.SceneName);
 
     }
 }

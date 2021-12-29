@@ -40,11 +40,26 @@ public class AiReviewProhibitedOcrTaskOutput extends AbstractModel{
     private String Suggestion;
 
     /**
-    * List of video segments that contain the OCR-detected prohibited information in text.
+    * List of video segments that contain OCR-detected prohibited information
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaContentReviewOcrTextSegmentItem [] SegmentSet;
+
+    /**
+    * URL to the file for video segments that contain OCR-detected prohibited information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+    */
+    @SerializedName("SegmentSetFileUrl")
+    @Expose
+    private String SegmentSetFileUrl;
+
+    /**
+    * Expiration time of the URL for video segments that contain OCR-detected prohibited information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+    */
+    @SerializedName("SegmentSetFileUrlExpireTime")
+    @Expose
+    private String SegmentSetFileUrlExpireTime;
 
     /**
      * Get Score of OCR-detected prohibited information in text between 0 and 100. 
@@ -91,19 +106,55 @@ public class AiReviewProhibitedOcrTaskOutput extends AbstractModel{
     }
 
     /**
-     * Get List of video segments that contain the OCR-detected prohibited information in text. 
-     * @return SegmentSet List of video segments that contain the OCR-detected prohibited information in text.
+     * Get List of video segments that contain OCR-detected prohibited information
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`. 
+     * @return SegmentSet List of video segments that contain OCR-detected prohibited information
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
      */
     public MediaContentReviewOcrTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set List of video segments that contain the OCR-detected prohibited information in text.
-     * @param SegmentSet List of video segments that contain the OCR-detected prohibited information in text.
+     * Set List of video segments that contain OCR-detected prohibited information
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
+     * @param SegmentSet List of video segments that contain OCR-detected prohibited information
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
      */
     public void setSegmentSet(MediaContentReviewOcrTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
+    }
+
+    /**
+     * Get URL to the file for video segments that contain OCR-detected prohibited information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`. 
+     * @return SegmentSetFileUrl URL to the file for video segments that contain OCR-detected prohibited information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+     */
+    public String getSegmentSetFileUrl() {
+        return this.SegmentSetFileUrl;
+    }
+
+    /**
+     * Set URL to the file for video segments that contain OCR-detected prohibited information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+     * @param SegmentSetFileUrl URL to the file for video segments that contain OCR-detected prohibited information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+     */
+    public void setSegmentSetFileUrl(String SegmentSetFileUrl) {
+        this.SegmentSetFileUrl = SegmentSetFileUrl;
+    }
+
+    /**
+     * Get Expiration time of the URL for video segments that contain OCR-detected prohibited information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) 
+     * @return SegmentSetFileUrlExpireTime Expiration time of the URL for video segments that contain OCR-detected prohibited information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     */
+    public String getSegmentSetFileUrlExpireTime() {
+        return this.SegmentSetFileUrlExpireTime;
+    }
+
+    /**
+     * Set Expiration time of the URL for video segments that contain OCR-detected prohibited information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * @param SegmentSetFileUrlExpireTime Expiration time of the URL for video segments that contain OCR-detected prohibited information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     */
+    public void setSegmentSetFileUrlExpireTime(String SegmentSetFileUrlExpireTime) {
+        this.SegmentSetFileUrlExpireTime = SegmentSetFileUrlExpireTime;
     }
 
     public AiReviewProhibitedOcrTaskOutput() {
@@ -126,6 +177,12 @@ public class AiReviewProhibitedOcrTaskOutput extends AbstractModel{
                 this.SegmentSet[i] = new MediaContentReviewOcrTextSegmentItem(source.SegmentSet[i]);
             }
         }
+        if (source.SegmentSetFileUrl != null) {
+            this.SegmentSetFileUrl = new String(source.SegmentSetFileUrl);
+        }
+        if (source.SegmentSetFileUrlExpireTime != null) {
+            this.SegmentSetFileUrlExpireTime = new String(source.SegmentSetFileUrlExpireTime);
+        }
     }
 
 
@@ -136,6 +193,8 @@ public class AiReviewProhibitedOcrTaskOutput extends AbstractModel{
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
         this.setParamSimple(map, prefix + "Suggestion", this.Suggestion);
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
+        this.setParamSimple(map, prefix + "SegmentSetFileUrl", this.SegmentSetFileUrl);
+        this.setParamSimple(map, prefix + "SegmentSetFileUrlExpireTime", this.SegmentSetFileUrlExpireTime);
 
     }
 }

@@ -290,6 +290,54 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     private String Zone;
 
     /**
+    * Scenario name
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("SceneName")
+    @Expose
+    private String SceneName;
+
+    /**
+    * Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("SceneServiceClass")
+    @Expose
+    private String SceneServiceClass;
+
+    /**
+    * Scenario-based EMR version
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("SceneEmrVersion")
+    @Expose
+    private String SceneEmrVersion;
+
+    /**
+    * Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("DisplayName")
+    @Expose
+    private String DisplayName;
+
+    /**
+    * VPC name
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("VpcName")
+    @Expose
+    private String VpcName;
+
+    /**
+    * Subnet name
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("SubnetName")
+    @Expose
+    private String SubnetName;
+
+    /**
      * Get ID
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Id ID
@@ -997,6 +1045,126 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         this.Zone = Zone;
     }
 
+    /**
+     * Get Scenario name
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return SceneName Scenario name
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getSceneName() {
+        return this.SceneName;
+    }
+
+    /**
+     * Set Scenario name
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param SceneName Scenario name
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setSceneName(String SceneName) {
+        this.SceneName = SceneName;
+    }
+
+    /**
+     * Get Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return SceneServiceClass Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getSceneServiceClass() {
+        return this.SceneServiceClass;
+    }
+
+    /**
+     * Set Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param SceneServiceClass Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setSceneServiceClass(String SceneServiceClass) {
+        this.SceneServiceClass = SceneServiceClass;
+    }
+
+    /**
+     * Get Scenario-based EMR version
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return SceneEmrVersion Scenario-based EMR version
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getSceneEmrVersion() {
+        return this.SceneEmrVersion;
+    }
+
+    /**
+     * Set Scenario-based EMR version
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param SceneEmrVersion Scenario-based EMR version
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setSceneEmrVersion(String SceneEmrVersion) {
+        this.SceneEmrVersion = SceneEmrVersion;
+    }
+
+    /**
+     * Get Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return DisplayName Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getDisplayName() {
+        return this.DisplayName;
+    }
+
+    /**
+     * Set Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param DisplayName Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setDisplayName(String DisplayName) {
+        this.DisplayName = DisplayName;
+    }
+
+    /**
+     * Get VPC name
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return VpcName VPC name
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getVpcName() {
+        return this.VpcName;
+    }
+
+    /**
+     * Set VPC name
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param VpcName VPC name
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setVpcName(String VpcName) {
+        this.VpcName = VpcName;
+    }
+
+    /**
+     * Get Subnet name
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return SubnetName Subnet name
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getSubnetName() {
+        return this.SubnetName;
+    }
+
+    /**
+     * Set Subnet name
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param SubnetName Subnet name
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setSubnetName(String SubnetName) {
+        this.SubnetName = SubnetName;
+    }
+
     public ClusterInstancesInfo() {
     }
 
@@ -1098,6 +1266,24 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.SceneName != null) {
+            this.SceneName = new String(source.SceneName);
+        }
+        if (source.SceneServiceClass != null) {
+            this.SceneServiceClass = new String(source.SceneServiceClass);
+        }
+        if (source.SceneEmrVersion != null) {
+            this.SceneEmrVersion = new String(source.SceneEmrVersion);
+        }
+        if (source.DisplayName != null) {
+            this.DisplayName = new String(source.DisplayName);
+        }
+        if (source.VpcName != null) {
+            this.VpcName = new String(source.VpcName);
+        }
+        if (source.SubnetName != null) {
+            this.SubnetName = new String(source.SubnetName);
+        }
     }
 
 
@@ -1135,6 +1321,12 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "AliasInfo", this.AliasInfo);
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "SceneName", this.SceneName);
+        this.setParamSimple(map, prefix + "SceneServiceClass", this.SceneServiceClass);
+        this.setParamSimple(map, prefix + "SceneEmrVersion", this.SceneEmrVersion);
+        this.setParamSimple(map, prefix + "DisplayName", this.DisplayName);
+        this.setParamSimple(map, prefix + "VpcName", this.VpcName);
+        this.setParamSimple(map, prefix + "SubnetName", this.SubnetName);
 
     }
 }

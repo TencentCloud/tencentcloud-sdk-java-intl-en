@@ -58,7 +58,7 @@ public class DescribeInstancesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Tag key match.
+    * Tag key value (this field has been deprecated).
     */
     @SerializedName("TagKey")
     @Expose
@@ -145,16 +145,16 @@ public class DescribeInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Tag key match. 
-     * @return TagKey Tag key match.
+     * Get Tag key value (this field has been deprecated). 
+     * @return TagKey Tag key value (this field has been deprecated).
      */
     public String getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set Tag key match.
-     * @param TagKey Tag key match.
+     * Set Tag key value (this field has been deprecated).
+     * @param TagKey Tag key value (this field has been deprecated).
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;

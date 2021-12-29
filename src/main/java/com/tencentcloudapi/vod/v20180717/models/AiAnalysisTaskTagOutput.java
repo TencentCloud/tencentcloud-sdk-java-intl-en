@@ -23,26 +23,77 @@ import java.util.HashMap;
 public class AiAnalysisTaskTagOutput extends AbstractModel{
 
     /**
-    * List of intelligently generated video tags.
+    * List of intelligently generated video tags
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `TagSetFileUrl`.
     */
     @SerializedName("TagSet")
     @Expose
     private MediaAiAnalysisTagItem [] TagSet;
 
     /**
-     * Get List of intelligently generated video tags. 
-     * @return TagSet List of intelligently generated video tags.
+    * URL to the file for intelligently generated video tags. The file is in JSON format and has the same data structure as `TagSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `TagSetFileUrlExpireTime`.
+    */
+    @SerializedName("TagSetFileUrl")
+    @Expose
+    private String TagSetFileUrl;
+
+    /**
+    * Expiration time of the URL to the file for intelligently generated video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+    */
+    @SerializedName("TagSetFileUrlExpireTime")
+    @Expose
+    private String TagSetFileUrlExpireTime;
+
+    /**
+     * Get List of intelligently generated video tags
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `TagSetFileUrl`. 
+     * @return TagSet List of intelligently generated video tags
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `TagSetFileUrl`.
      */
     public MediaAiAnalysisTagItem [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set List of intelligently generated video tags.
-     * @param TagSet List of intelligently generated video tags.
+     * Set List of intelligently generated video tags
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `TagSetFileUrl`.
+     * @param TagSet List of intelligently generated video tags
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `TagSetFileUrl`.
      */
     public void setTagSet(MediaAiAnalysisTagItem [] TagSet) {
         this.TagSet = TagSet;
+    }
+
+    /**
+     * Get URL to the file for intelligently generated video tags. The file is in JSON format and has the same data structure as `TagSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `TagSetFileUrlExpireTime`. 
+     * @return TagSetFileUrl URL to the file for intelligently generated video tags. The file is in JSON format and has the same data structure as `TagSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `TagSetFileUrlExpireTime`.
+     */
+    public String getTagSetFileUrl() {
+        return this.TagSetFileUrl;
+    }
+
+    /**
+     * Set URL to the file for intelligently generated video tags. The file is in JSON format and has the same data structure as `TagSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `TagSetFileUrlExpireTime`.
+     * @param TagSetFileUrl URL to the file for intelligently generated video tags. The file is in JSON format and has the same data structure as `TagSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `TagSetFileUrlExpireTime`.
+     */
+    public void setTagSetFileUrl(String TagSetFileUrl) {
+        this.TagSetFileUrl = TagSetFileUrl;
+    }
+
+    /**
+     * Get Expiration time of the URL to the file for intelligently generated video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) 
+     * @return TagSetFileUrlExpireTime Expiration time of the URL to the file for intelligently generated video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     */
+    public String getTagSetFileUrlExpireTime() {
+        return this.TagSetFileUrlExpireTime;
+    }
+
+    /**
+     * Set Expiration time of the URL to the file for intelligently generated video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * @param TagSetFileUrlExpireTime Expiration time of the URL to the file for intelligently generated video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     */
+    public void setTagSetFileUrlExpireTime(String TagSetFileUrlExpireTime) {
+        this.TagSetFileUrlExpireTime = TagSetFileUrlExpireTime;
     }
 
     public AiAnalysisTaskTagOutput() {
@@ -59,6 +110,12 @@ public class AiAnalysisTaskTagOutput extends AbstractModel{
                 this.TagSet[i] = new MediaAiAnalysisTagItem(source.TagSet[i]);
             }
         }
+        if (source.TagSetFileUrl != null) {
+            this.TagSetFileUrl = new String(source.TagSetFileUrl);
+        }
+        if (source.TagSetFileUrlExpireTime != null) {
+            this.TagSetFileUrlExpireTime = new String(source.TagSetFileUrlExpireTime);
+        }
     }
 
 
@@ -67,6 +124,8 @@ public class AiAnalysisTaskTagOutput extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamSimple(map, prefix + "TagSetFileUrl", this.TagSetFileUrl);
+        this.setParamSimple(map, prefix + "TagSetFileUrlExpireTime", this.TagSetFileUrlExpireTime);
 
     }
 }

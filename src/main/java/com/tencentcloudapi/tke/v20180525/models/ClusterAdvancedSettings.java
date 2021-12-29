@@ -113,7 +113,7 @@ The following conditions are required to use ipvs-bpf network mode:
     private String AuditLogTopicId;
 
     /**
-    * Specifies whether the VPC CNI type is multi-IP ENI or or independent ENI.
+    * Specifies the ENI type. Values: `tke-route-eni` (multi-IP shared ENI); `tke-direct-eni` (independent ENI). It defaults to `tke-route-eni`.
     */
     @SerializedName("VpcCniType")
     @Expose
@@ -364,16 +364,16 @@ The following conditions are required to use ipvs-bpf network mode:
     }
 
     /**
-     * Get Specifies whether the VPC CNI type is multi-IP ENI or or independent ENI. 
-     * @return VpcCniType Specifies whether the VPC CNI type is multi-IP ENI or or independent ENI.
+     * Get Specifies the ENI type. Values: `tke-route-eni` (multi-IP shared ENI); `tke-direct-eni` (independent ENI). It defaults to `tke-route-eni`. 
+     * @return VpcCniType Specifies the ENI type. Values: `tke-route-eni` (multi-IP shared ENI); `tke-direct-eni` (independent ENI). It defaults to `tke-route-eni`.
      */
     public String getVpcCniType() {
         return this.VpcCniType;
     }
 
     /**
-     * Set Specifies whether the VPC CNI type is multi-IP ENI or or independent ENI.
-     * @param VpcCniType Specifies whether the VPC CNI type is multi-IP ENI or or independent ENI.
+     * Set Specifies the ENI type. Values: `tke-route-eni` (multi-IP shared ENI); `tke-direct-eni` (independent ENI). It defaults to `tke-route-eni`.
+     * @param VpcCniType Specifies the ENI type. Values: `tke-route-eni` (multi-IP shared ENI); `tke-direct-eni` (independent ENI). It defaults to `tke-route-eni`.
      */
     public void setVpcCniType(String VpcCniType) {
         this.VpcCniType = VpcCniType;

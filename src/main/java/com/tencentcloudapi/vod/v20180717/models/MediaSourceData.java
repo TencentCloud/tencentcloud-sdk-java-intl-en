@@ -23,12 +23,12 @@ import java.util.HashMap;
 public class MediaSourceData extends AbstractModel{
 
     /**
-    * Source category of media file:
-<li>Record: recording, such as LVB recording and LVB time shifting recording.</li>
-<li>Upload: upload, such as pull for upload, upload from server, and UCG upload from client.</li>
-<li>VideoProcessing: video processing, such as video splicing and video clipping.</li>
-<li>Unknown: unknown source.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Source of a media file:
+<li>`Record`: recording, such as live or time-shift recording</li>
+<li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
+<li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
+<li>`WebPageRecord`: panoramic recording </li>
+<li>`Unknown`: unknown source</li>
     */
     @SerializedName("SourceType")
     @Expose
@@ -43,36 +43,36 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String SourceContext;
 
     /**
-     * Get Source category of media file:
-<li>Record: recording, such as LVB recording and LVB time shifting recording.</li>
-<li>Upload: upload, such as pull for upload, upload from server, and UCG upload from client.</li>
-<li>VideoProcessing: video processing, such as video splicing and video clipping.</li>
-<li>Unknown: unknown source.</li>
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SourceType Source category of media file:
-<li>Record: recording, such as LVB recording and LVB time shifting recording.</li>
-<li>Upload: upload, such as pull for upload, upload from server, and UCG upload from client.</li>
-<li>VideoProcessing: video processing, such as video splicing and video clipping.</li>
-<li>Unknown: unknown source.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Source of a media file:
+<li>`Record`: recording, such as live or time-shift recording</li>
+<li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
+<li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
+<li>`WebPageRecord`: panoramic recording </li>
+<li>`Unknown`: unknown source</li> 
+     * @return SourceType Source of a media file:
+<li>`Record`: recording, such as live or time-shift recording</li>
+<li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
+<li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
+<li>`WebPageRecord`: panoramic recording </li>
+<li>`Unknown`: unknown source</li>
      */
     public String getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set Source category of media file:
-<li>Record: recording, such as LVB recording and LVB time shifting recording.</li>
-<li>Upload: upload, such as pull for upload, upload from server, and UCG upload from client.</li>
-<li>VideoProcessing: video processing, such as video splicing and video clipping.</li>
-<li>Unknown: unknown source.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SourceType Source category of media file:
-<li>Record: recording, such as LVB recording and LVB time shifting recording.</li>
-<li>Upload: upload, such as pull for upload, upload from server, and UCG upload from client.</li>
-<li>VideoProcessing: video processing, such as video splicing and video clipping.</li>
-<li>Unknown: unknown source.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Source of a media file:
+<li>`Record`: recording, such as live or time-shift recording</li>
+<li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
+<li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
+<li>`WebPageRecord`: panoramic recording </li>
+<li>`Unknown`: unknown source</li>
+     * @param SourceType Source of a media file:
+<li>`Record`: recording, such as live or time-shift recording</li>
+<li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
+<li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
+<li>`WebPageRecord`: panoramic recording </li>
+<li>`Unknown`: unknown source</li>
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;

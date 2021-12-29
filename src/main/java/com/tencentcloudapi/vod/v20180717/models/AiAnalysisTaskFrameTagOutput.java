@@ -23,26 +23,77 @@ import java.util.HashMap;
 public class AiAnalysisTaskFrameTagOutput extends AbstractModel{
 
     /**
-    * List of frame-specific video tags.
+    * List of frame-specific video tags
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaAiAnalysisFrameTagSegmentItem [] SegmentSet;
 
     /**
-     * Get List of frame-specific video tags. 
-     * @return SegmentSet List of frame-specific video tags.
+    * URL to the file for frame-specific video tags. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+    */
+    @SerializedName("SegmentSetFileUrl")
+    @Expose
+    private String SegmentSetFileUrl;
+
+    /**
+    * Expiration time of the URL to the file for frame-specific video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+    */
+    @SerializedName("SegmentSetFileUrlExpireTime")
+    @Expose
+    private String SegmentSetFileUrlExpireTime;
+
+    /**
+     * Get List of frame-specific video tags
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`. 
+     * @return SegmentSet List of frame-specific video tags
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
      */
     public MediaAiAnalysisFrameTagSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set List of frame-specific video tags.
-     * @param SegmentSet List of frame-specific video tags.
+     * Set List of frame-specific video tags
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
+     * @param SegmentSet List of frame-specific video tags
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
      */
     public void setSegmentSet(MediaAiAnalysisFrameTagSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
+    }
+
+    /**
+     * Get URL to the file for frame-specific video tags. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`. 
+     * @return SegmentSetFileUrl URL to the file for frame-specific video tags. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+     */
+    public String getSegmentSetFileUrl() {
+        return this.SegmentSetFileUrl;
+    }
+
+    /**
+     * Set URL to the file for frame-specific video tags. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+     * @param SegmentSetFileUrl URL to the file for frame-specific video tags. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+     */
+    public void setSegmentSetFileUrl(String SegmentSetFileUrl) {
+        this.SegmentSetFileUrl = SegmentSetFileUrl;
+    }
+
+    /**
+     * Get Expiration time of the URL to the file for frame-specific video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) 
+     * @return SegmentSetFileUrlExpireTime Expiration time of the URL to the file for frame-specific video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     */
+    public String getSegmentSetFileUrlExpireTime() {
+        return this.SegmentSetFileUrlExpireTime;
+    }
+
+    /**
+     * Set Expiration time of the URL to the file for frame-specific video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * @param SegmentSetFileUrlExpireTime Expiration time of the URL to the file for frame-specific video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     */
+    public void setSegmentSetFileUrlExpireTime(String SegmentSetFileUrlExpireTime) {
+        this.SegmentSetFileUrlExpireTime = SegmentSetFileUrlExpireTime;
     }
 
     public AiAnalysisTaskFrameTagOutput() {
@@ -59,6 +110,12 @@ public class AiAnalysisTaskFrameTagOutput extends AbstractModel{
                 this.SegmentSet[i] = new MediaAiAnalysisFrameTagSegmentItem(source.SegmentSet[i]);
             }
         }
+        if (source.SegmentSetFileUrl != null) {
+            this.SegmentSetFileUrl = new String(source.SegmentSetFileUrl);
+        }
+        if (source.SegmentSetFileUrlExpireTime != null) {
+            this.SegmentSetFileUrlExpireTime = new String(source.SegmentSetFileUrlExpireTime);
+        }
     }
 
 
@@ -67,6 +124,8 @@ public class AiAnalysisTaskFrameTagOutput extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
+        this.setParamSimple(map, prefix + "SegmentSetFileUrl", this.SegmentSetFileUrl);
+        this.setParamSimple(map, prefix + "SegmentSetFileUrlExpireTime", this.SegmentSetFileUrlExpireTime);
 
     }
 }
