@@ -79,7 +79,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create an alarm notification template.
+     *This API is used to create a notification group.
      * @param req CreateAlarmNoticeRequest
      * @return CreateAlarmNoticeResponse
      * @throws TencentCloudSDKException
@@ -151,6 +151,26 @@ public class ClsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateConfigResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a shipping task.
+     * @param req CreateConsumerRequest
+     * @return CreateConsumerResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateConsumerResponse CreateConsumer(CreateConsumerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateConsumerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateConsumerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateConsumer");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -299,7 +319,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete an alarm notification template.
+     *This API is used to delete a notification group.
      * @param req DeleteAlarmNoticeRequest
      * @return DeleteAlarmNoticeResponse
      * @throws TencentCloudSDKException
@@ -391,6 +411,26 @@ public class ClsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteConfigFromMachineGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteConfigFromMachineGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a shipping task.
+     * @param req DeleteConsumerRequest
+     * @return DeleteConsumerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteConsumerResponse DeleteConsumer(DeleteConsumerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteConsumerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteConsumerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteConsumer");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -519,7 +559,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the list of alarm notification templates.
+     *This API is used to get the notification group list.
      * @param req DescribeAlarmNoticesRequest
      * @return DescribeAlarmNoticesResponse
      * @throws TencentCloudSDKException
@@ -539,7 +579,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the list of alarm policies.
+     *This API is used to get the alarm policy list.
      * @param req DescribeAlarmsRequest
      * @return DescribeAlarmsResponse
      * @throws TencentCloudSDKException
@@ -671,6 +711,26 @@ public class ClsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeConfigsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeConfigs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query a shipping task.
+     * @param req DescribeConsumerRequest
+     * @return DescribeConsumerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConsumerResponse DescribeConsumer(DescribeConsumerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeConsumerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeConsumerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeConsumer");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -959,7 +1019,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify an alarm notification template.
+     *This API is used to modify a notification group.
      * @param req ModifyAlarmNoticeRequest
      * @return ModifyAlarmNoticeResponse
      * @throws TencentCloudSDKException
@@ -991,6 +1051,26 @@ public class ClsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyConfigResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a shipping task.
+     * @param req ModifyConsumerRequest
+     * @return ModifyConsumerResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyConsumerResponse ModifyConsumer(ModifyConsumerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyConsumerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyConsumerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyConsumer");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1120,7 +1200,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to search for logs.
+     *This API is used to search logs. It is subject to the default API rate limit, and the number of concurrent calls to the same log topic cannot exceed 15.
      * @param req SearchLogRequest
      * @return SearchLogResponse
      * @throws TencentCloudSDKException

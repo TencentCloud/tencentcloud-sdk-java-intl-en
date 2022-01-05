@@ -25,35 +25,37 @@ public class DescribeAlarmsRequest extends AbstractModel{
     /**
     * <br><li> name
 
-Filter by **alarm policy name**.
-Type: String
+Filter by **alarm policy name**
+Type: string
 
 Required: no
 
 <br><li> alarmId
 
-Filter by **alarm policy ID**.
-Type: String
+Filter by **alarm policy ID**
+Type: string
 
 Required: no
 
 <br><li> topicId
 
-Filter by **log topic ID of monitoring object**.
+Filter by **log topic ID**
 
-Type: String
+Type: string
 
 Required: no
 
 <br><li> enable
 
-Filter by **enablement status**.
+Filter by **enablement status**
 
-Type: String
+Type: string
+
+Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an “invalid parameter” error will be returned.
 
 Required: no
 
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 5 `Filter.Values`.
     */
     @SerializedName("Filters")
     @Expose
@@ -76,66 +78,70 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
     /**
      * Get <br><li> name
 
-Filter by **alarm policy name**.
-Type: String
+Filter by **alarm policy name**
+Type: string
 
 Required: no
 
 <br><li> alarmId
 
-Filter by **alarm policy ID**.
-Type: String
+Filter by **alarm policy ID**
+Type: string
 
 Required: no
 
 <br><li> topicId
 
-Filter by **log topic ID of monitoring object**.
+Filter by **log topic ID**
 
-Type: String
+Type: string
 
 Required: no
 
 <br><li> enable
 
-Filter by **enablement status**.
+Filter by **enablement status**
 
-Type: String
+Type: string
+
+Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an “invalid parameter” error will be returned.
 
 Required: no
 
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. 
+Each request can have up to 10 `Filters` and 5 `Filter.Values`. 
      * @return Filters <br><li> name
 
-Filter by **alarm policy name**.
-Type: String
+Filter by **alarm policy name**
+Type: string
 
 Required: no
 
 <br><li> alarmId
 
-Filter by **alarm policy ID**.
-Type: String
+Filter by **alarm policy ID**
+Type: string
 
 Required: no
 
 <br><li> topicId
 
-Filter by **log topic ID of monitoring object**.
+Filter by **log topic ID**
 
-Type: String
+Type: string
 
 Required: no
 
 <br><li> enable
 
-Filter by **enablement status**.
+Filter by **enablement status**
 
-Type: String
+Type: string
+
+Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an “invalid parameter” error will be returned.
 
 Required: no
 
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 5 `Filter.Values`.
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -144,66 +150,70 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
     /**
      * Set <br><li> name
 
-Filter by **alarm policy name**.
-Type: String
+Filter by **alarm policy name**
+Type: string
 
 Required: no
 
 <br><li> alarmId
 
-Filter by **alarm policy ID**.
-Type: String
+Filter by **alarm policy ID**
+Type: string
 
 Required: no
 
 <br><li> topicId
 
-Filter by **log topic ID of monitoring object**.
+Filter by **log topic ID**
 
-Type: String
+Type: string
 
 Required: no
 
 <br><li> enable
 
-Filter by **enablement status**.
+Filter by **enablement status**
 
-Type: String
+Type: string
+
+Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an “invalid parameter” error will be returned.
 
 Required: no
 
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 5 `Filter.Values`.
      * @param Filters <br><li> name
 
-Filter by **alarm policy name**.
-Type: String
+Filter by **alarm policy name**
+Type: string
 
 Required: no
 
 <br><li> alarmId
 
-Filter by **alarm policy ID**.
-Type: String
+Filter by **alarm policy ID**
+Type: string
 
 Required: no
 
 <br><li> topicId
 
-Filter by **log topic ID of monitoring object**.
+Filter by **log topic ID**
 
-Type: String
+Type: string
 
 Required: no
 
 <br><li> enable
 
-Filter by **enablement status**.
+Filter by **enablement status**
 
-Type: String
+Type: string
+
+Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an “invalid parameter” error will be returned.
 
 Required: no
 
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 5 `Filter.Values`.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

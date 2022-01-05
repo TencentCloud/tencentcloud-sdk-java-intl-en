@@ -58,7 +58,7 @@ public class SearchLogRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * This field is used to load more logs. Pass through the last `Context` value returned to get more log content. It will expire after 1 hour.
+    * This parameter is used to load more logs. Pass through the last `Context` value returned to get more log content. Up to 10,000 raw logs can be obtained in total. This parameter expires in 1 hour.
     */
     @SerializedName("Context")
     @Expose
@@ -159,16 +159,16 @@ public class SearchLogRequest extends AbstractModel{
     }
 
     /**
-     * Get This field is used to load more logs. Pass through the last `Context` value returned to get more log content. It will expire after 1 hour. 
-     * @return Context This field is used to load more logs. Pass through the last `Context` value returned to get more log content. It will expire after 1 hour.
+     * Get This parameter is used to load more logs. Pass through the last `Context` value returned to get more log content. Up to 10,000 raw logs can be obtained in total. This parameter expires in 1 hour. 
+     * @return Context This parameter is used to load more logs. Pass through the last `Context` value returned to get more log content. Up to 10,000 raw logs can be obtained in total. This parameter expires in 1 hour.
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set This field is used to load more logs. Pass through the last `Context` value returned to get more log content. It will expire after 1 hour.
-     * @param Context This field is used to load more logs. Pass through the last `Context` value returned to get more log content. It will expire after 1 hour.
+     * Set This parameter is used to load more logs. Pass through the last `Context` value returned to get more log content. Up to 10,000 raw logs can be obtained in total. This parameter expires in 1 hour.
+     * @param Context This parameter is used to load more logs. Pass through the last `Context` value returned to get more log content. Up to 10,000 raw logs can be obtained in total. This parameter expires in 1 hour.
      */
     public void setContext(String Context) {
         this.Context = Context;

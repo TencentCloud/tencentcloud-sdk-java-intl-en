@@ -87,7 +87,7 @@ public enum ClsErrorCode {
     // Invalid `Content`.
      INVALIDPARAMETER_CONTENT("InvalidParameter.Content"),
      
-    // 
+    // IA storage does not support key-value or tag index configuration.
      INVALIDPARAMETER_INVALIDINDEXRULEFORSEARCHLOW("InvalidParameter.InValidIndexRuleForSearchLow"),
      
     // An index rule already exists for the specified log topic.
@@ -171,7 +171,7 @@ public enum ClsErrorCode {
     // The account does not exist.
      OPERATIONDENIED_ACCOUNTNOTEXISTS("OperationDenied.AccountNotExists"),
      
-    // 
+    // IA storage does not support alarms.
      OPERATIONDENIED_ALARMNOTSUPPORTFORSEARCHLOW("OperationDenied.AlarmNotSupportForSearchLow"),
      
     // The analysis feature is not enabled for the field.
@@ -180,7 +180,7 @@ public enum ClsErrorCode {
     // The notification template is bound to an alarm and cannot be deleted.
      OPERATIONDENIED_NOTICEHASALARM("OperationDenied.NoticeHasAlarm"),
      
-    // 
+    // A data processing task is bound to this topic.
      OPERATIONDENIED_TOPICHASDATAFORMTASK("OperationDenied.TopicHasDataFormTask"),
      
     // The topic is bound to a function for shipping.

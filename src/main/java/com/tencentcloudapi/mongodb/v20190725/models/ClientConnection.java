@@ -37,6 +37,13 @@ public class ClientConnection extends AbstractModel{
     private Long Count;
 
     /**
+    * Whether it is the Tencent Cloud IP for automated testing
+    */
+    @SerializedName("InternalService")
+    @Expose
+    private Boolean InternalService;
+
+    /**
      * Get Client IP of a connection 
      * @return IP Client IP of a connection
      */
@@ -68,6 +75,22 @@ public class ClientConnection extends AbstractModel{
         this.Count = Count;
     }
 
+    /**
+     * Get Whether it is the Tencent Cloud IP for automated testing 
+     * @return InternalService Whether it is the Tencent Cloud IP for automated testing
+     */
+    public Boolean getInternalService() {
+        return this.InternalService;
+    }
+
+    /**
+     * Set Whether it is the Tencent Cloud IP for automated testing
+     * @param InternalService Whether it is the Tencent Cloud IP for automated testing
+     */
+    public void setInternalService(Boolean InternalService) {
+        this.InternalService = InternalService;
+    }
+
     public ClientConnection() {
     }
 
@@ -82,6 +105,9 @@ public class ClientConnection extends AbstractModel{
         if (source.Count != null) {
             this.Count = new Long(source.Count);
         }
+        if (source.InternalService != null) {
+            this.InternalService = new Boolean(source.InternalService);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class ClientConnection extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IP", this.IP);
         this.setParamSimple(map, prefix + "Count", this.Count);
+        this.setParamSimple(map, prefix + "InternalService", this.InternalService);
 
     }
 }
