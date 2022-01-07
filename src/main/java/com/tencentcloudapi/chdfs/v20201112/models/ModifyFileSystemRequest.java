@@ -66,6 +66,20 @@ Note: the file system capacity after change cannot be smaller than the currently
     private Boolean PosixAcl;
 
     /**
+    * Whether to enable verification of Ranger service addresses
+    */
+    @SerializedName("EnableRanger")
+    @Expose
+    private Boolean EnableRanger;
+
+    /**
+    * List of Ranger service addresses, which can be an empty array
+    */
+    @SerializedName("RangerServiceAddresses")
+    @Expose
+    private String [] RangerServiceAddresses;
+
+    /**
      * Get File system ID 
      * @return FileSystemId File system ID
      */
@@ -165,6 +179,38 @@ Note: the file system capacity after change cannot be smaller than the currently
         this.PosixAcl = PosixAcl;
     }
 
+    /**
+     * Get Whether to enable verification of Ranger service addresses 
+     * @return EnableRanger Whether to enable verification of Ranger service addresses
+     */
+    public Boolean getEnableRanger() {
+        return this.EnableRanger;
+    }
+
+    /**
+     * Set Whether to enable verification of Ranger service addresses
+     * @param EnableRanger Whether to enable verification of Ranger service addresses
+     */
+    public void setEnableRanger(Boolean EnableRanger) {
+        this.EnableRanger = EnableRanger;
+    }
+
+    /**
+     * Get List of Ranger service addresses, which can be an empty array 
+     * @return RangerServiceAddresses List of Ranger service addresses, which can be an empty array
+     */
+    public String [] getRangerServiceAddresses() {
+        return this.RangerServiceAddresses;
+    }
+
+    /**
+     * Set List of Ranger service addresses, which can be an empty array
+     * @param RangerServiceAddresses List of Ranger service addresses, which can be an empty array
+     */
+    public void setRangerServiceAddresses(String [] RangerServiceAddresses) {
+        this.RangerServiceAddresses = RangerServiceAddresses;
+    }
+
     public ModifyFileSystemRequest() {
     }
 
@@ -194,6 +240,15 @@ Note: the file system capacity after change cannot be smaller than the currently
         if (source.PosixAcl != null) {
             this.PosixAcl = new Boolean(source.PosixAcl);
         }
+        if (source.EnableRanger != null) {
+            this.EnableRanger = new Boolean(source.EnableRanger);
+        }
+        if (source.RangerServiceAddresses != null) {
+            this.RangerServiceAddresses = new String[source.RangerServiceAddresses.length];
+            for (int i = 0; i < source.RangerServiceAddresses.length; i++) {
+                this.RangerServiceAddresses[i] = new String(source.RangerServiceAddresses[i]);
+            }
+        }
     }
 
 
@@ -207,6 +262,8 @@ Note: the file system capacity after change cannot be smaller than the currently
         this.setParamSimple(map, prefix + "CapacityQuota", this.CapacityQuota);
         this.setParamArraySimple(map, prefix + "SuperUsers.", this.SuperUsers);
         this.setParamSimple(map, prefix + "PosixAcl", this.PosixAcl);
+        this.setParamSimple(map, prefix + "EnableRanger", this.EnableRanger);
+        this.setParamArraySimple(map, prefix + "RangerServiceAddresses.", this.RangerServiceAddresses);
 
     }
 }

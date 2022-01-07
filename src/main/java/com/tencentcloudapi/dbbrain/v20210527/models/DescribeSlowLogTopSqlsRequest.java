@@ -37,7 +37,7 @@ public class DescribeSlowLogTopSqlsRequest extends AbstractModel{
     private String StartTime;
 
     /**
-    * End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
+    * End time in the format of "2019-09-11 10:13:14". The interval between the end time and the start time can be up to 7 days.
     */
     @SerializedName("EndTime")
     @Expose
@@ -118,16 +118,16 @@ public class DescribeSlowLogTopSqlsRequest extends AbstractModel{
     }
 
     /**
-     * Get End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days. 
-     * @return EndTime End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
+     * Get End time in the format of "2019-09-11 10:13:14". The interval between the end time and the start time can be up to 7 days. 
+     * @return EndTime End time in the format of "2019-09-11 10:13:14". The interval between the end time and the start time can be up to 7 days.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
-     * @param EndTime End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
+     * Set End time in the format of "2019-09-11 10:13:14". The interval between the end time and the start time can be up to 7 days.
+     * @param EndTime End time in the format of "2019-09-11 10:13:14". The interval between the end time and the start time can be up to 7 days.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

@@ -239,6 +239,26 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain the diagnosis event list in a specified time period by risk level, instance ID, etc.
+     * @param req DescribeDBDiagEventsRequest
+     * @return DescribeDBDiagEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBDiagEventsResponse DescribeDBDiagEvents(DescribeDBDiagEventsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBDiagEventsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBDiagEventsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBDiagEvents");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the list of instance diagnosis events.
      * @param req DescribeDBDiagHistoryRequest
      * @return DescribeDBDiagHistoryResponse

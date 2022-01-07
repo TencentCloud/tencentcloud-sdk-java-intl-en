@@ -72,6 +72,20 @@ public class CreateFileSystemRequest extends AbstractModel{
     private String RootInodeGroup;
 
     /**
+    * Whether to enable verification of Ranger service addresses
+    */
+    @SerializedName("EnableRanger")
+    @Expose
+    private Boolean EnableRanger;
+
+    /**
+    * List of Ranger service addresses (empty array by default)
+    */
+    @SerializedName("RangerServiceAddresses")
+    @Expose
+    private String [] RangerServiceAddresses;
+
+    /**
      * Get File system name 
      * @return FileSystemName File system name
      */
@@ -183,6 +197,38 @@ public class CreateFileSystemRequest extends AbstractModel{
         this.RootInodeGroup = RootInodeGroup;
     }
 
+    /**
+     * Get Whether to enable verification of Ranger service addresses 
+     * @return EnableRanger Whether to enable verification of Ranger service addresses
+     */
+    public Boolean getEnableRanger() {
+        return this.EnableRanger;
+    }
+
+    /**
+     * Set Whether to enable verification of Ranger service addresses
+     * @param EnableRanger Whether to enable verification of Ranger service addresses
+     */
+    public void setEnableRanger(Boolean EnableRanger) {
+        this.EnableRanger = EnableRanger;
+    }
+
+    /**
+     * Get List of Ranger service addresses (empty array by default) 
+     * @return RangerServiceAddresses List of Ranger service addresses (empty array by default)
+     */
+    public String [] getRangerServiceAddresses() {
+        return this.RangerServiceAddresses;
+    }
+
+    /**
+     * Set List of Ranger service addresses (empty array by default)
+     * @param RangerServiceAddresses List of Ranger service addresses (empty array by default)
+     */
+    public void setRangerServiceAddresses(String [] RangerServiceAddresses) {
+        this.RangerServiceAddresses = RangerServiceAddresses;
+    }
+
     public CreateFileSystemRequest() {
     }
 
@@ -215,6 +261,15 @@ public class CreateFileSystemRequest extends AbstractModel{
         if (source.RootInodeGroup != null) {
             this.RootInodeGroup = new String(source.RootInodeGroup);
         }
+        if (source.EnableRanger != null) {
+            this.EnableRanger = new Boolean(source.EnableRanger);
+        }
+        if (source.RangerServiceAddresses != null) {
+            this.RangerServiceAddresses = new String[source.RangerServiceAddresses.length];
+            for (int i = 0; i < source.RangerServiceAddresses.length; i++) {
+                this.RangerServiceAddresses[i] = new String(source.RangerServiceAddresses[i]);
+            }
+        }
     }
 
 
@@ -229,6 +284,8 @@ public class CreateFileSystemRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "SuperUsers.", this.SuperUsers);
         this.setParamSimple(map, prefix + "RootInodeUser", this.RootInodeUser);
         this.setParamSimple(map, prefix + "RootInodeGroup", this.RootInodeGroup);
+        this.setParamSimple(map, prefix + "EnableRanger", this.EnableRanger);
+        this.setParamArraySimple(map, prefix + "RangerServiceAddresses.", this.RangerServiceAddresses);
 
     }
 }

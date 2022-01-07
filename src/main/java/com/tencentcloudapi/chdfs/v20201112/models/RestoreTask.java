@@ -37,7 +37,7 @@ public class RestoreTask extends AbstractModel{
     private String FilePath;
 
     /**
-    * Restoration task type (1: standard; 2: expedited; 3: bulk)
+    * Restoration task type (`1`: standard; `2`: expedited; `3`: bulk, with only the expedited type available currently)
     */
     @SerializedName("Type")
     @Expose
@@ -97,16 +97,16 @@ public class RestoreTask extends AbstractModel{
     }
 
     /**
-     * Get Restoration task type (1: standard; 2: expedited; 3: bulk) 
-     * @return Type Restoration task type (1: standard; 2: expedited; 3: bulk)
+     * Get Restoration task type (`1`: standard; `2`: expedited; `3`: bulk, with only the expedited type available currently) 
+     * @return Type Restoration task type (`1`: standard; `2`: expedited; `3`: bulk, with only the expedited type available currently)
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set Restoration task type (1: standard; 2: expedited; 3: bulk)
-     * @param Type Restoration task type (1: standard; 2: expedited; 3: bulk)
+     * Set Restoration task type (`1`: standard; `2`: expedited; `3`: bulk, with only the expedited type available currently)
+     * @param Type Restoration task type (`1`: standard; `2`: expedited; `3`: bulk, with only the expedited type available currently)
      */
     public void setType(Long Type) {
         this.Type = Type;

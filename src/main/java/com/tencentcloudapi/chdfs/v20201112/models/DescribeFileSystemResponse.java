@@ -30,20 +30,36 @@ public class DescribeFileSystemResponse extends AbstractModel{
     private FileSystem FileSystem;
 
     /**
-    * Used capacity (in bytes), including STANDARD storage and ARCHIVE storage
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Used capacity of the file system, in bytes
+Note: this field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("CapacityUsed")
     @Expose
     private Long CapacityUsed;
 
     /**
-    * Used ARCHIVE storage capacity (in bytes)
+    * Used ARCHIVE capacity of COS, in bytes
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ArchiveCapacityUsed")
     @Expose
     private Long ArchiveCapacityUsed;
+
+    /**
+    * Used STANDARD capacity of COS, in bytes
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("StandardCapacityUsed")
+    @Expose
+    private Long StandardCapacityUsed;
+
+    /**
+    * Used STANDARD_IA capacity of COS, in bytes
+Note: this field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("DegradeCapacityUsed")
+    @Expose
+    private Long DegradeCapacityUsed;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -69,29 +85,29 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Used capacity (in bytes), including STANDARD storage and ARCHIVE storage
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return CapacityUsed Used capacity (in bytes), including STANDARD storage and ARCHIVE storage
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Used capacity of the file system, in bytes
+Note: this field may return `null`, indicating that no valid value was found. 
+     * @return CapacityUsed Used capacity of the file system, in bytes
+Note: this field may return `null`, indicating that no valid value was found.
      */
     public Long getCapacityUsed() {
         return this.CapacityUsed;
     }
 
     /**
-     * Set Used capacity (in bytes), including STANDARD storage and ARCHIVE storage
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param CapacityUsed Used capacity (in bytes), including STANDARD storage and ARCHIVE storage
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Used capacity of the file system, in bytes
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param CapacityUsed Used capacity of the file system, in bytes
+Note: this field may return `null`, indicating that no valid value was found.
      */
     public void setCapacityUsed(Long CapacityUsed) {
         this.CapacityUsed = CapacityUsed;
     }
 
     /**
-     * Get Used ARCHIVE storage capacity (in bytes)
+     * Get Used ARCHIVE capacity of COS, in bytes
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ArchiveCapacityUsed Used ARCHIVE storage capacity (in bytes)
+     * @return ArchiveCapacityUsed Used ARCHIVE capacity of COS, in bytes
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getArchiveCapacityUsed() {
@@ -99,13 +115,53 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Used ARCHIVE storage capacity (in bytes)
+     * Set Used ARCHIVE capacity of COS, in bytes
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ArchiveCapacityUsed Used ARCHIVE storage capacity (in bytes)
+     * @param ArchiveCapacityUsed Used ARCHIVE capacity of COS, in bytes
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setArchiveCapacityUsed(Long ArchiveCapacityUsed) {
         this.ArchiveCapacityUsed = ArchiveCapacityUsed;
+    }
+
+    /**
+     * Get Used STANDARD capacity of COS, in bytes
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return StandardCapacityUsed Used STANDARD capacity of COS, in bytes
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getStandardCapacityUsed() {
+        return this.StandardCapacityUsed;
+    }
+
+    /**
+     * Set Used STANDARD capacity of COS, in bytes
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param StandardCapacityUsed Used STANDARD capacity of COS, in bytes
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setStandardCapacityUsed(Long StandardCapacityUsed) {
+        this.StandardCapacityUsed = StandardCapacityUsed;
+    }
+
+    /**
+     * Get Used STANDARD_IA capacity of COS, in bytes
+Note: this field may return `null`, indicating that no valid value was found. 
+     * @return DegradeCapacityUsed Used STANDARD_IA capacity of COS, in bytes
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public Long getDegradeCapacityUsed() {
+        return this.DegradeCapacityUsed;
+    }
+
+    /**
+     * Set Used STANDARD_IA capacity of COS, in bytes
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param DegradeCapacityUsed Used STANDARD_IA capacity of COS, in bytes
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public void setDegradeCapacityUsed(Long DegradeCapacityUsed) {
+        this.DegradeCapacityUsed = DegradeCapacityUsed;
     }
 
     /**
@@ -141,6 +197,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.ArchiveCapacityUsed != null) {
             this.ArchiveCapacityUsed = new Long(source.ArchiveCapacityUsed);
         }
+        if (source.StandardCapacityUsed != null) {
+            this.StandardCapacityUsed = new Long(source.StandardCapacityUsed);
+        }
+        if (source.DegradeCapacityUsed != null) {
+            this.DegradeCapacityUsed = new Long(source.DegradeCapacityUsed);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -154,6 +216,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamObj(map, prefix + "FileSystem.", this.FileSystem);
         this.setParamSimple(map, prefix + "CapacityUsed", this.CapacityUsed);
         this.setParamSimple(map, prefix + "ArchiveCapacityUsed", this.ArchiveCapacityUsed);
+        this.setParamSimple(map, prefix + "StandardCapacityUsed", this.StandardCapacityUsed);
+        this.setParamSimple(map, prefix + "DegradeCapacityUsed", this.DegradeCapacityUsed);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

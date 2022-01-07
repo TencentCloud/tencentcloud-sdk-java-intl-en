@@ -30,7 +30,7 @@ public class Transition extends AbstractModel{
     private Long Days;
 
     /**
-    * Transition type (1: archive; 2: deletion)
+    * Transition type (`1`: transition to ARCHIVE; `2`: delete; `3`: transition to STANDARD_IA)
     */
     @SerializedName("Type")
     @Expose
@@ -53,16 +53,16 @@ public class Transition extends AbstractModel{
     }
 
     /**
-     * Get Transition type (1: archive; 2: deletion) 
-     * @return Type Transition type (1: archive; 2: deletion)
+     * Get Transition type (`1`: transition to ARCHIVE; `2`: delete; `3`: transition to STANDARD_IA) 
+     * @return Type Transition type (`1`: transition to ARCHIVE; `2`: delete; `3`: transition to STANDARD_IA)
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set Transition type (1: archive; 2: deletion)
-     * @param Type Transition type (1: archive; 2: deletion)
+     * Set Transition type (`1`: transition to ARCHIVE; `2`: delete; `3`: transition to STANDARD_IA)
+     * @param Type Transition type (`1`: transition to ARCHIVE; `2`: delete; `3`: transition to STANDARD_IA)
      */
     public void setType(Long Type) {
         this.Type = Type;

@@ -100,6 +100,22 @@ public class FileSystem extends AbstractModel{
     private Boolean PosixAcl;
 
     /**
+    * Whether to enable verification of Ranger service addresses
+Note: this field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("EnableRanger")
+    @Expose
+    private Boolean EnableRanger;
+
+    /**
+    * List of Ranger service addresses
+Note: this field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("RangerServiceAddresses")
+    @Expose
+    private String [] RangerServiceAddresses;
+
+    /**
      * Get Resource owner `AppId` 
      * @return AppId Resource owner `AppId`
      */
@@ -275,6 +291,46 @@ public class FileSystem extends AbstractModel{
         this.PosixAcl = PosixAcl;
     }
 
+    /**
+     * Get Whether to enable verification of Ranger service addresses
+Note: this field may return `null`, indicating that no valid value was found. 
+     * @return EnableRanger Whether to enable verification of Ranger service addresses
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public Boolean getEnableRanger() {
+        return this.EnableRanger;
+    }
+
+    /**
+     * Set Whether to enable verification of Ranger service addresses
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param EnableRanger Whether to enable verification of Ranger service addresses
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public void setEnableRanger(Boolean EnableRanger) {
+        this.EnableRanger = EnableRanger;
+    }
+
+    /**
+     * Get List of Ranger service addresses
+Note: this field may return `null`, indicating that no valid value was found. 
+     * @return RangerServiceAddresses List of Ranger service addresses
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public String [] getRangerServiceAddresses() {
+        return this.RangerServiceAddresses;
+    }
+
+    /**
+     * Set List of Ranger service addresses
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param RangerServiceAddresses List of Ranger service addresses
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public void setRangerServiceAddresses(String [] RangerServiceAddresses) {
+        this.RangerServiceAddresses = RangerServiceAddresses;
+    }
+
     public FileSystem() {
     }
 
@@ -319,6 +375,15 @@ public class FileSystem extends AbstractModel{
         if (source.PosixAcl != null) {
             this.PosixAcl = new Boolean(source.PosixAcl);
         }
+        if (source.EnableRanger != null) {
+            this.EnableRanger = new Boolean(source.EnableRanger);
+        }
+        if (source.RangerServiceAddresses != null) {
+            this.RangerServiceAddresses = new String[source.RangerServiceAddresses.length];
+            for (int i = 0; i < source.RangerServiceAddresses.length; i++) {
+                this.RangerServiceAddresses[i] = new String(source.RangerServiceAddresses[i]);
+            }
+        }
     }
 
 
@@ -337,6 +402,8 @@ public class FileSystem extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArraySimple(map, prefix + "SuperUsers.", this.SuperUsers);
         this.setParamSimple(map, prefix + "PosixAcl", this.PosixAcl);
+        this.setParamSimple(map, prefix + "EnableRanger", this.EnableRanger);
+        this.setParamArraySimple(map, prefix + "RangerServiceAddresses.", this.RangerServiceAddresses);
 
     }
 }
