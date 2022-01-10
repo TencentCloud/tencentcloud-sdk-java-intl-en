@@ -86,6 +86,13 @@ public class ClusterBasicSettings extends AbstractModel{
     private Boolean NeedWorkSecurityGroup;
 
     /**
+    * When the Cilium Overlay add-on is selected, TKE will take two IPs from the subnet to create the private network CLB.
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
      * Get Cluster operating system. CentOS 7.2x86_64 or Ubuntu 16.04.1 LTSx86_64. Default value: Ubuntu 16.04.1 LTSx86_64 
      * @return ClusterOs Cluster operating system. CentOS 7.2x86_64 or Ubuntu 16.04.1 LTSx86_64. Default value: Ubuntu 16.04.1 LTSx86_64
      */
@@ -229,6 +236,22 @@ public class ClusterBasicSettings extends AbstractModel{
         this.NeedWorkSecurityGroup = NeedWorkSecurityGroup;
     }
 
+    /**
+     * Get When the Cilium Overlay add-on is selected, TKE will take two IPs from the subnet to create the private network CLB. 
+     * @return SubnetId When the Cilium Overlay add-on is selected, TKE will take two IPs from the subnet to create the private network CLB.
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set When the Cilium Overlay add-on is selected, TKE will take two IPs from the subnet to create the private network CLB.
+     * @param SubnetId When the Cilium Overlay add-on is selected, TKE will take two IPs from the subnet to create the private network CLB.
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
     public ClusterBasicSettings() {
     }
 
@@ -267,6 +290,9 @@ public class ClusterBasicSettings extends AbstractModel{
         if (source.NeedWorkSecurityGroup != null) {
             this.NeedWorkSecurityGroup = new Boolean(source.NeedWorkSecurityGroup);
         }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
     }
 
 
@@ -283,6 +309,7 @@ public class ClusterBasicSettings extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
         this.setParamSimple(map, prefix + "NeedWorkSecurityGroup", this.NeedWorkSecurityGroup);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }
 }

@@ -20,39 +20,39 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StopDelayReplicationRequest extends AbstractModel{
+public class StartReplicationRequest extends AbstractModel{
 
     /**
-    * Instance ID
+    * Read-Only instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Read-Only instance ID. 
+     * @return InstanceId Read-Only instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Read-Only instance ID.
+     * @param InstanceId Read-Only instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
-    public StopDelayReplicationRequest() {
+    public StartReplicationRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public StopDelayReplicationRequest(StopDelayReplicationRequest source) {
+    public StartReplicationRequest(StartReplicationRequest source) {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }

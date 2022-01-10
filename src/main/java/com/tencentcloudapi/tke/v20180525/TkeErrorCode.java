@@ -183,7 +183,7 @@ public enum TkeErrorCode {
     // Auto scaling group creation parameter error.
      INVALIDPARAMETER_ASCOMMONERROR("InvalidParameter.AsCommonError"),
      
-    // 
+    // Invalid CIDR block mask (valid range: 10 to 24).
      INVALIDPARAMETER_CIDRMASKSIZEOUTOFRANGE("InvalidParameter.CIDRMaskSizeOutOfRange"),
      
     // The CIDR block conflicts with the CIDR blocks of other clusters.
@@ -210,7 +210,7 @@ public enum TkeErrorCode {
     // Next hop address is already associated with a CIDR block.
      INVALIDPARAMETER_GATEWAYALREADYASSOCIATEDCIDR("InvalidParameter.GatewayAlreadyAssociatedCidr"),
      
-    // 
+    // Invalid private CIDR block.
      INVALIDPARAMETER_INVALIDPRIVATENETWORKCIDR("InvalidParameter.InvalidPrivateNetworkCIDR"),
      
     // Invalid parameter.

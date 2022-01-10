@@ -37,6 +37,20 @@ public class ApplySnapshotRequest extends AbstractModel{
     private String DiskId;
 
     /**
+    * Specifies whether to shut down a CVM automatically before a rollback
+    */
+    @SerializedName("AutoStopInstance")
+    @Expose
+    private Boolean AutoStopInstance;
+
+    /**
+    * Specifies whether to start up a CVM automatically after a rollback
+    */
+    @SerializedName("AutoStartInstance")
+    @Expose
+    private Boolean AutoStartInstance;
+
+    /**
      * Get Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1). 
      * @return SnapshotId Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
      */
@@ -68,6 +82,38 @@ public class ApplySnapshotRequest extends AbstractModel{
         this.DiskId = DiskId;
     }
 
+    /**
+     * Get Specifies whether to shut down a CVM automatically before a rollback 
+     * @return AutoStopInstance Specifies whether to shut down a CVM automatically before a rollback
+     */
+    public Boolean getAutoStopInstance() {
+        return this.AutoStopInstance;
+    }
+
+    /**
+     * Set Specifies whether to shut down a CVM automatically before a rollback
+     * @param AutoStopInstance Specifies whether to shut down a CVM automatically before a rollback
+     */
+    public void setAutoStopInstance(Boolean AutoStopInstance) {
+        this.AutoStopInstance = AutoStopInstance;
+    }
+
+    /**
+     * Get Specifies whether to start up a CVM automatically after a rollback 
+     * @return AutoStartInstance Specifies whether to start up a CVM automatically after a rollback
+     */
+    public Boolean getAutoStartInstance() {
+        return this.AutoStartInstance;
+    }
+
+    /**
+     * Set Specifies whether to start up a CVM automatically after a rollback
+     * @param AutoStartInstance Specifies whether to start up a CVM automatically after a rollback
+     */
+    public void setAutoStartInstance(Boolean AutoStartInstance) {
+        this.AutoStartInstance = AutoStartInstance;
+    }
+
     public ApplySnapshotRequest() {
     }
 
@@ -82,6 +128,12 @@ public class ApplySnapshotRequest extends AbstractModel{
         if (source.DiskId != null) {
             this.DiskId = new String(source.DiskId);
         }
+        if (source.AutoStopInstance != null) {
+            this.AutoStopInstance = new Boolean(source.AutoStopInstance);
+        }
+        if (source.AutoStartInstance != null) {
+            this.AutoStartInstance = new Boolean(source.AutoStartInstance);
+        }
     }
 
 
@@ -91,6 +143,8 @@ public class ApplySnapshotRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
         this.setParamSimple(map, prefix + "DiskId", this.DiskId);
+        this.setParamSimple(map, prefix + "AutoStopInstance", this.AutoStopInstance);
+        this.setParamSimple(map, prefix + "AutoStartInstance", this.AutoStartInstance);
 
     }
 }

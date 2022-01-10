@@ -121,6 +121,20 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     private Long MaxDelayTime;
 
     /**
+    * Whether to migrate the source node across AZs. Valid values: `0` (no), `1`(yes). Default value: `0`. If it is `1`, you can modify the source node AZ.
+    */
+    @SerializedName("CrossCluster")
+    @Expose
+    private Long CrossCluster;
+
+    /**
+    * New AZ of the source node. This field is only valid when `CrossCluster` is `1`. Only migration across AZs in the same region is supported.
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private String ZoneId;
+
+    /**
      * Get Instance ID in the format of `cdb-c1nl9rpv` or `cdbro-c1nl9rpv`. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query the ID, whose value is the `InstanceId` value in output parameters. 
      * @return InstanceId Instance ID in the format of `cdb-c1nl9rpv` or `cdbro-c1nl9rpv`. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query the ID, whose value is the `InstanceId` value in output parameters.
      */
@@ -344,6 +358,38 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         this.MaxDelayTime = MaxDelayTime;
     }
 
+    /**
+     * Get Whether to migrate the source node across AZs. Valid values: `0` (no), `1`(yes). Default value: `0`. If it is `1`, you can modify the source node AZ. 
+     * @return CrossCluster Whether to migrate the source node across AZs. Valid values: `0` (no), `1`(yes). Default value: `0`. If it is `1`, you can modify the source node AZ.
+     */
+    public Long getCrossCluster() {
+        return this.CrossCluster;
+    }
+
+    /**
+     * Set Whether to migrate the source node across AZs. Valid values: `0` (no), `1`(yes). Default value: `0`. If it is `1`, you can modify the source node AZ.
+     * @param CrossCluster Whether to migrate the source node across AZs. Valid values: `0` (no), `1`(yes). Default value: `0`. If it is `1`, you can modify the source node AZ.
+     */
+    public void setCrossCluster(Long CrossCluster) {
+        this.CrossCluster = CrossCluster;
+    }
+
+    /**
+     * Get New AZ of the source node. This field is only valid when `CrossCluster` is `1`. Only migration across AZs in the same region is supported. 
+     * @return ZoneId New AZ of the source node. This field is only valid when `CrossCluster` is `1`. Only migration across AZs in the same region is supported.
+     */
+    public String getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set New AZ of the source node. This field is only valid when `CrossCluster` is `1`. Only migration across AZs in the same region is supported.
+     * @param ZoneId New AZ of the source node. This field is only valid when `CrossCluster` is `1`. Only migration across AZs in the same region is supported.
+     */
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
     public UpgradeDBInstanceRequest() {
     }
 
@@ -394,6 +440,12 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         if (source.MaxDelayTime != null) {
             this.MaxDelayTime = new Long(source.MaxDelayTime);
         }
+        if (source.CrossCluster != null) {
+            this.CrossCluster = new Long(source.CrossCluster);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
+        }
     }
 
 
@@ -415,6 +467,8 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "FastUpgrade", this.FastUpgrade);
         this.setParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
+        this.setParamSimple(map, prefix + "CrossCluster", this.CrossCluster);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
 
     }
 }

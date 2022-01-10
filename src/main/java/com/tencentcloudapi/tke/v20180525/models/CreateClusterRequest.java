@@ -65,7 +65,7 @@ public class CreateClusterRequest extends AbstractModel{
     private InstanceAdvancedSettings InstanceAdvancedSettings;
 
     /**
-    * Configuration information of an existing instance
+    * The configuration information for existing instances. All instances must be in the same VPC. Up to 100 instances are allowed in one VPC. Spot instances are not supported.
     */
     @SerializedName("ExistedInstancesForNode")
     @Expose
@@ -182,16 +182,16 @@ public class CreateClusterRequest extends AbstractModel{
     }
 
     /**
-     * Get Configuration information of an existing instance 
-     * @return ExistedInstancesForNode Configuration information of an existing instance
+     * Get The configuration information for existing instances. All instances must be in the same VPC. Up to 100 instances are allowed in one VPC. Spot instances are not supported. 
+     * @return ExistedInstancesForNode The configuration information for existing instances. All instances must be in the same VPC. Up to 100 instances are allowed in one VPC. Spot instances are not supported.
      */
     public ExistedInstancesForNode [] getExistedInstancesForNode() {
         return this.ExistedInstancesForNode;
     }
 
     /**
-     * Set Configuration information of an existing instance
-     * @param ExistedInstancesForNode Configuration information of an existing instance
+     * Set The configuration information for existing instances. All instances must be in the same VPC. Up to 100 instances are allowed in one VPC. Spot instances are not supported.
+     * @param ExistedInstancesForNode The configuration information for existing instances. All instances must be in the same VPC. Up to 100 instances are allowed in one VPC. Spot instances are not supported.
      */
     public void setExistedInstancesForNode(ExistedInstancesForNode [] ExistedInstancesForNode) {
         this.ExistedInstancesForNode = ExistedInstancesForNode;

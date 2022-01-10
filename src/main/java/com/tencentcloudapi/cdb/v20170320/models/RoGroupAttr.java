@@ -58,6 +58,13 @@ public class RoGroupAttr extends AbstractModel{
     private String WeightMode;
 
     /**
+    * Replication delay.
+    */
+    @SerializedName("ReplicationDelayTime")
+    @Expose
+    private Long ReplicationDelayTime;
+
+    /**
      * Get RO group name. 
      * @return RoGroupName RO group name.
      */
@@ -137,6 +144,22 @@ public class RoGroupAttr extends AbstractModel{
         this.WeightMode = WeightMode;
     }
 
+    /**
+     * Get Replication delay. 
+     * @return ReplicationDelayTime Replication delay.
+     */
+    public Long getReplicationDelayTime() {
+        return this.ReplicationDelayTime;
+    }
+
+    /**
+     * Set Replication delay.
+     * @param ReplicationDelayTime Replication delay.
+     */
+    public void setReplicationDelayTime(Long ReplicationDelayTime) {
+        this.ReplicationDelayTime = ReplicationDelayTime;
+    }
+
     public RoGroupAttr() {
     }
 
@@ -160,6 +183,9 @@ public class RoGroupAttr extends AbstractModel{
         if (source.WeightMode != null) {
             this.WeightMode = new String(source.WeightMode);
         }
+        if (source.ReplicationDelayTime != null) {
+            this.ReplicationDelayTime = new Long(source.ReplicationDelayTime);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class RoGroupAttr extends AbstractModel{
         this.setParamSimple(map, prefix + "RoOfflineDelay", this.RoOfflineDelay);
         this.setParamSimple(map, prefix + "MinRoInGroup", this.MinRoInGroup);
         this.setParamSimple(map, prefix + "WeightMode", this.WeightMode);
+        this.setParamSimple(map, prefix + "ReplicationDelayTime", this.ReplicationDelayTime);
 
     }
 }

@@ -121,6 +121,13 @@ public class CreateDisksRequest extends AbstractModel{
     private Long DeleteSnapshot;
 
     /**
+    * When a cloud disk is created, automatically initialize it and attach it to the specified mount point
+    */
+    @SerializedName("AutoMountConfiguration")
+    @Expose
+    private AutoMountConfiguration AutoMountConfiguration;
+
+    /**
      * Get The location of the instance. The availability zone and the project that the instance belongs to can be specified using this parameter. If the project is not specified, it will be created under the default project. 
      * @return Placement The location of the instance. The availability zone and the project that the instance belongs to can be specified using this parameter. If the project is not specified, it will be created under the default project.
      */
@@ -344,6 +351,22 @@ public class CreateDisksRequest extends AbstractModel{
         this.DeleteSnapshot = DeleteSnapshot;
     }
 
+    /**
+     * Get When a cloud disk is created, automatically initialize it and attach it to the specified mount point 
+     * @return AutoMountConfiguration When a cloud disk is created, automatically initialize it and attach it to the specified mount point
+     */
+    public AutoMountConfiguration getAutoMountConfiguration() {
+        return this.AutoMountConfiguration;
+    }
+
+    /**
+     * Set When a cloud disk is created, automatically initialize it and attach it to the specified mount point
+     * @param AutoMountConfiguration When a cloud disk is created, automatically initialize it and attach it to the specified mount point
+     */
+    public void setAutoMountConfiguration(AutoMountConfiguration AutoMountConfiguration) {
+        this.AutoMountConfiguration = AutoMountConfiguration;
+    }
+
     public CreateDisksRequest() {
     }
 
@@ -397,6 +420,9 @@ public class CreateDisksRequest extends AbstractModel{
         if (source.DeleteSnapshot != null) {
             this.DeleteSnapshot = new Long(source.DeleteSnapshot);
         }
+        if (source.AutoMountConfiguration != null) {
+            this.AutoMountConfiguration = new AutoMountConfiguration(source.AutoMountConfiguration);
+        }
     }
 
 
@@ -418,6 +444,7 @@ public class CreateDisksRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Encrypt", this.Encrypt);
         this.setParamObj(map, prefix + "DiskChargePrepaid.", this.DiskChargePrepaid);
         this.setParamSimple(map, prefix + "DeleteSnapshot", this.DeleteSnapshot);
+        this.setParamObj(map, prefix + "AutoMountConfiguration.", this.AutoMountConfiguration);
 
     }
 }

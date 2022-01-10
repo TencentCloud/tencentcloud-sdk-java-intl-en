@@ -20,67 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyRoReplicationDelayRequest extends AbstractModel{
+public class StopReplicationRequest extends AbstractModel{
 
     /**
-    * Instance ID
+    * Read-Only instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Replication delay in seconds. Value range: 1 to 259200.
-    */
-    @SerializedName("ReplicationDelay")
-    @Expose
-    private Long ReplicationDelay;
-
-    /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Read-Only instance ID. 
+     * @return InstanceId Read-Only instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Read-Only instance ID.
+     * @param InstanceId Read-Only instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
-    /**
-     * Get Replication delay in seconds. Value range: 1 to 259200. 
-     * @return ReplicationDelay Replication delay in seconds. Value range: 1 to 259200.
-     */
-    public Long getReplicationDelay() {
-        return this.ReplicationDelay;
-    }
-
-    /**
-     * Set Replication delay in seconds. Value range: 1 to 259200.
-     * @param ReplicationDelay Replication delay in seconds. Value range: 1 to 259200.
-     */
-    public void setReplicationDelay(Long ReplicationDelay) {
-        this.ReplicationDelay = ReplicationDelay;
-    }
-
-    public ModifyRoReplicationDelayRequest() {
+    public StopReplicationRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyRoReplicationDelayRequest(ModifyRoReplicationDelayRequest source) {
+    public StopReplicationRequest(StopReplicationRequest source) {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
-        }
-        if (source.ReplicationDelay != null) {
-            this.ReplicationDelay = new Long(source.ReplicationDelay);
         }
     }
 
@@ -90,7 +64,6 @@ public class ModifyRoReplicationDelayRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "ReplicationDelay", this.ReplicationDelay);
 
     }
 }

@@ -3,6 +3,9 @@ public enum ClbErrorCode {
     // CAM signature/authentication error
      AUTHFAILURE("AuthFailure"),
      
+    // DryRun operation, which means the DryRun parameter is passed in yet the request will still be successful.
+     DRYRUNOPERATION("DryRunOperation"),
+     
     // Operation failed.
      FAILEDOPERATION("FailedOperation"),
      
@@ -63,11 +66,23 @@ public enum ClbErrorCode {
     // Missing parameter.
      MISSINGPARAMETER("MissingParameter"),
      
+    // Operation denied.
+     OPERATIONDENIED("OperationDenied"),
+     
+    // The number of requests exceeds the frequency limit.
+     REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
+     
+    // The resource is occupied.
+     RESOURCEINUSE("ResourceInUse"),
+     
     // Insufficient resources.
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
      
     // Resources do not exist.
      RESOURCENOTFOUND("ResourceNotFound"),
+     
+    // The resources have been sold out.
+     RESOURCESSOLDOUT("ResourcesSoldOut"),
      
     // Unauthorized operation.
      UNAUTHORIZEDOPERATION("UnauthorizedOperation");

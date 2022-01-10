@@ -132,6 +132,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RoGroupZone;
 
     /**
+    * Replication delay.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DelayReplicationTime")
+    @Expose
+    private Long DelayReplicationTime;
+
+    /**
      * Get Read-only group mode. Valid values: `alone` (the system assigns a read-only group automatically), `allinone` (a new read-only group will be created), `join` (an existing read-only group will be used). 
      * @return RoGroupMode Read-only group mode. Valid values: `alone` (the system assigns a read-only group automatically), `allinone` (a new read-only group will be created), `join` (an existing read-only group will be used).
      */
@@ -387,6 +395,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.RoGroupZone = RoGroupZone;
     }
 
+    /**
+     * Get Replication delay.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return DelayReplicationTime Replication delay.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getDelayReplicationTime() {
+        return this.DelayReplicationTime;
+    }
+
+    /**
+     * Set Replication delay.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param DelayReplicationTime Replication delay.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDelayReplicationTime(Long DelayReplicationTime) {
+        this.DelayReplicationTime = DelayReplicationTime;
+    }
+
     public RoGroup() {
     }
 
@@ -443,6 +471,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.RoGroupZone != null) {
             this.RoGroupZone = new String(source.RoGroupZone);
         }
+        if (source.DelayReplicationTime != null) {
+            this.DelayReplicationTime = new Long(source.DelayReplicationTime);
+        }
     }
 
 
@@ -465,6 +496,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
         this.setParamSimple(map, prefix + "RoGroupRegion", this.RoGroupRegion);
         this.setParamSimple(map, prefix + "RoGroupZone", this.RoGroupZone);
+        this.setParamSimple(map, prefix + "DelayReplicationTime", this.DelayReplicationTime);
 
     }
 }

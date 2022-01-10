@@ -141,6 +141,26 @@ This is an async API. After it is returned successfully, you can call the `Descr
     }
 
     /**
+     *This API is used to generate a CLB instance that has the same rules and binding relations as the specified CLB instance.
+     * @param req CloneLoadBalancerRequest
+     * @return CloneLoadBalancerResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloneLoadBalancerResponse CloneLoadBalancer(CloneLoadBalancerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloneLoadBalancerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloneLoadBalancerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CloneLoadBalancer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a CLB exclusive logset for storing CLB logs.
      * @param req CreateClsLogSetRequest
      * @return CreateClsLogSetResponse
@@ -723,6 +743,26 @@ This is an async API. After it is returned successfully, you can call the Descri
                 Type type = new TypeToken<JsonResponseModel<DescribeLoadBalancerListByCertIdResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeLoadBalancerListByCertId");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *Queries the total number of CLB instances and the number of CLB instances in different status (running, isolated and about to expire).
+     * @param req DescribeLoadBalancerOverviewRequest
+     * @return DescribeLoadBalancerOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLoadBalancerOverviewResponse DescribeLoadBalancerOverview(DescribeLoadBalancerOverviewRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLoadBalancerOverviewResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLoadBalancerOverviewResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLoadBalancerOverview");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -427,6 +427,21 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String HealthLogTopicId;
 
     /**
+    * 
+    */
+    @SerializedName("ClusterIds")
+    @Expose
+    private String [] ClusterIds;
+
+    /**
+    * CLB attribute
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AttributeFlags")
+    @Expose
+    private String [] AttributeFlags;
+
+    /**
      * Get CLB instance ID. 
      * @return LoadBalancerId CLB instance ID.
      */
@@ -1430,6 +1445,42 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.HealthLogTopicId = HealthLogTopicId;
     }
 
+    /**
+     * Get  
+     * @return ClusterIds 
+     */
+    public String [] getClusterIds() {
+        return this.ClusterIds;
+    }
+
+    /**
+     * Set 
+     * @param ClusterIds 
+     */
+    public void setClusterIds(String [] ClusterIds) {
+        this.ClusterIds = ClusterIds;
+    }
+
+    /**
+     * Get CLB attribute
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return AttributeFlags CLB attribute
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String [] getAttributeFlags() {
+        return this.AttributeFlags;
+    }
+
+    /**
+     * Set CLB attribute
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param AttributeFlags CLB attribute
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setAttributeFlags(String [] AttributeFlags) {
+        this.AttributeFlags = AttributeFlags;
+    }
+
     public LoadBalancer() {
     }
 
@@ -1609,6 +1660,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.HealthLogTopicId != null) {
             this.HealthLogTopicId = new String(source.HealthLogTopicId);
         }
+        if (source.ClusterIds != null) {
+            this.ClusterIds = new String[source.ClusterIds.length];
+            for (int i = 0; i < source.ClusterIds.length; i++) {
+                this.ClusterIds[i] = new String(source.ClusterIds[i]);
+            }
+        }
+        if (source.AttributeFlags != null) {
+            this.AttributeFlags = new String[source.AttributeFlags.length];
+            for (int i = 0; i < source.AttributeFlags.length; i++) {
+                this.AttributeFlags[i] = new String(source.AttributeFlags[i]);
+            }
+        }
     }
 
 
@@ -1667,6 +1730,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "NfvInfo", this.NfvInfo);
         this.setParamSimple(map, prefix + "HealthLogSetId", this.HealthLogSetId);
         this.setParamSimple(map, prefix + "HealthLogTopicId", this.HealthLogTopicId);
+        this.setParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
+        this.setParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
 
     }
 }

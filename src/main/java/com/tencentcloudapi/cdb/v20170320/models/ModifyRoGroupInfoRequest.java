@@ -51,6 +51,13 @@ public class ModifyRoGroupInfoRequest extends AbstractModel{
     private Long IsBalanceRoLoad;
 
     /**
+    * This field has been deprecated.
+    */
+    @SerializedName("ReplicationDelayTime")
+    @Expose
+    private Long ReplicationDelayTime;
+
+    /**
      * Get RO group ID. 
      * @return RoGroupId RO group ID.
      */
@@ -114,6 +121,22 @@ public class ModifyRoGroupInfoRequest extends AbstractModel{
         this.IsBalanceRoLoad = IsBalanceRoLoad;
     }
 
+    /**
+     * Get This field has been deprecated. 
+     * @return ReplicationDelayTime This field has been deprecated.
+     */
+    public Long getReplicationDelayTime() {
+        return this.ReplicationDelayTime;
+    }
+
+    /**
+     * Set This field has been deprecated.
+     * @param ReplicationDelayTime This field has been deprecated.
+     */
+    public void setReplicationDelayTime(Long ReplicationDelayTime) {
+        this.ReplicationDelayTime = ReplicationDelayTime;
+    }
+
     public ModifyRoGroupInfoRequest() {
     }
 
@@ -137,6 +160,9 @@ public class ModifyRoGroupInfoRequest extends AbstractModel{
         if (source.IsBalanceRoLoad != null) {
             this.IsBalanceRoLoad = new Long(source.IsBalanceRoLoad);
         }
+        if (source.ReplicationDelayTime != null) {
+            this.ReplicationDelayTime = new Long(source.ReplicationDelayTime);
+        }
     }
 
 
@@ -148,6 +174,7 @@ public class ModifyRoGroupInfoRequest extends AbstractModel{
         this.setParamObj(map, prefix + "RoGroupInfo.", this.RoGroupInfo);
         this.setParamArrayObj(map, prefix + "RoWeightValues.", this.RoWeightValues);
         this.setParamSimple(map, prefix + "IsBalanceRoLoad", this.IsBalanceRoLoad);
+        this.setParamSimple(map, prefix + "ReplicationDelayTime", this.ReplicationDelayTime);
 
     }
 }
