@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dts.v20180330.models;
+package com.tencentcloudapi.es.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeSyncCheckJobRequest extends AbstractModel{
+public class DescribeViewsRequest extends AbstractModel{
 
     /**
-    * ID of the disaster recovery sync task to be queried
+    * Cluster instance ID
     */
-    @SerializedName("JobId")
+    @SerializedName("InstanceId")
     @Expose
-    private String JobId;
+    private String InstanceId;
 
     /**
-     * Get ID of the disaster recovery sync task to be queried 
-     * @return JobId ID of the disaster recovery sync task to be queried
+     * Get Cluster instance ID 
+     * @return InstanceId Cluster instance ID
      */
-    public String getJobId() {
-        return this.JobId;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set ID of the disaster recovery sync task to be queried
-     * @param JobId ID of the disaster recovery sync task to be queried
+     * Set Cluster instance ID
+     * @param InstanceId Cluster instance ID
      */
-    public void setJobId(String JobId) {
-        this.JobId = JobId;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
-    public DescribeSyncCheckJobRequest() {
+    public DescribeViewsRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeSyncCheckJobRequest(DescribeSyncCheckJobRequest source) {
-        if (source.JobId != null) {
-            this.JobId = new String(source.JobId);
+    public DescribeViewsRequest(DescribeViewsRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
     }
 
@@ -63,7 +63,7 @@ public class DescribeSyncCheckJobRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

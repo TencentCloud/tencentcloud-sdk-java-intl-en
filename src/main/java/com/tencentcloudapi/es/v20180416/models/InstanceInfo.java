@@ -277,7 +277,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("WarmNodeType")
     @Expose
@@ -285,7 +285,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of warm nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("WarmNodeNum")
     @Expose
@@ -293,15 +293,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Number of warm node CPU cores
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("WarmCpuNum")
     @Expose
     private Long WarmCpuNum;
 
     /**
-    * Warm node memory size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Warm node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("WarmMemSize")
     @Expose
@@ -309,15 +309,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Warm node disk type
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("WarmDiskType")
     @Expose
     private String WarmDiskType;
 
     /**
-    * Warm node disk size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Warm node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("WarmDiskSize")
     @Expose
@@ -457,6 +457,102 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     @SerializedName("SecurityGroups")
     @Expose
     private String [] SecurityGroups;
+
+    /**
+    * Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("ColdNodeType")
+    @Expose
+    private String ColdNodeType;
+
+    /**
+    * Number of cold nodes
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("ColdNodeNum")
+    @Expose
+    private Long ColdNodeNum;
+
+    /**
+    * Number of cold node CPU cores
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("ColdCpuNum")
+    @Expose
+    private Long ColdCpuNum;
+
+    /**
+    * Cold node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("ColdMemSize")
+    @Expose
+    private Long ColdMemSize;
+
+    /**
+    * Cold node disk type
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("ColdDiskType")
+    @Expose
+    private String ColdDiskType;
+
+    /**
+    * Cold node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("ColdDiskSize")
+    @Expose
+    private Long ColdDiskSize;
+
+    /**
+    * Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("FrozenNodeType")
+    @Expose
+    private String FrozenNodeType;
+
+    /**
+    * Number of frozen nodes
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("FrozenNodeNum")
+    @Expose
+    private Long FrozenNodeNum;
+
+    /**
+    * Number of frozen node CPU cores
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("FrozenCpuNum")
+    @Expose
+    private Long FrozenCpuNum;
+
+    /**
+    * Frozen node memory size (GB)
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("FrozenMemSize")
+    @Expose
+    private Long FrozenMemSize;
+
+    /**
+    * Frozen node disk type
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("FrozenDiskType")
+    @Expose
+    private String FrozenDiskType;
+
+    /**
+    * Frozen node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("FrozenDiskSize")
+    @Expose
+    private Long FrozenDiskSize;
 
     /**
      * Get Instance ID 
@@ -1040,9 +1136,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value was found. 
      * @return WarmNodeType Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public String getWarmNodeType() {
         return this.WarmNodeType;
@@ -1050,9 +1146,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
      * @param WarmNodeType Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setWarmNodeType(String WarmNodeType) {
         this.WarmNodeType = WarmNodeType;
@@ -1060,9 +1156,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Number of warm nodes
-Note: This field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value was found. 
      * @return WarmNodeNum Number of warm nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public Long getWarmNodeNum() {
         return this.WarmNodeNum;
@@ -1070,9 +1166,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of warm nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
      * @param WarmNodeNum Number of warm nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setWarmNodeNum(Long WarmNodeNum) {
         this.WarmNodeNum = WarmNodeNum;
@@ -1080,9 +1176,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Number of warm node CPU cores
-Note: This field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value was found. 
      * @return WarmCpuNum Number of warm node CPU cores
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public Long getWarmCpuNum() {
         return this.WarmCpuNum;
@@ -1090,29 +1186,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Number of warm node CPU cores
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
      * @param WarmCpuNum Number of warm node CPU cores
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setWarmCpuNum(Long WarmCpuNum) {
         this.WarmCpuNum = WarmCpuNum;
     }
 
     /**
-     * Get Warm node memory size in GB
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WarmMemSize Warm node memory size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Warm node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return WarmMemSize Warm node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public Long getWarmMemSize() {
         return this.WarmMemSize;
     }
 
     /**
-     * Set Warm node memory size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WarmMemSize Warm node memory size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Warm node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param WarmMemSize Warm node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setWarmMemSize(Long WarmMemSize) {
         this.WarmMemSize = WarmMemSize;
@@ -1120,9 +1216,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Warm node disk type
-Note: This field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value was found. 
      * @return WarmDiskType Warm node disk type
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public String getWarmDiskType() {
         return this.WarmDiskType;
@@ -1130,29 +1226,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Warm node disk type
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
      * @param WarmDiskType Warm node disk type
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setWarmDiskType(String WarmDiskType) {
         this.WarmDiskType = WarmDiskType;
     }
 
     /**
-     * Get Warm node disk size in GB
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WarmDiskSize Warm node disk size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Warm node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return WarmDiskSize Warm node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public Long getWarmDiskSize() {
         return this.WarmDiskSize;
     }
 
     /**
-     * Set Warm node disk size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WarmDiskSize Warm node disk size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Warm node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param WarmDiskSize Warm node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setWarmDiskSize(Long WarmDiskSize) {
         this.WarmDiskSize = WarmDiskSize;
@@ -1494,6 +1590,246 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.SecurityGroups = SecurityGroups;
     }
 
+    /**
+     * Get Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return ColdNodeType Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getColdNodeType() {
+        return this.ColdNodeType;
+    }
+
+    /**
+     * Set Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param ColdNodeType Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setColdNodeType(String ColdNodeType) {
+        this.ColdNodeType = ColdNodeType;
+    }
+
+    /**
+     * Get Number of cold nodes
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return ColdNodeNum Number of cold nodes
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public Long getColdNodeNum() {
+        return this.ColdNodeNum;
+    }
+
+    /**
+     * Set Number of cold nodes
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param ColdNodeNum Number of cold nodes
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setColdNodeNum(Long ColdNodeNum) {
+        this.ColdNodeNum = ColdNodeNum;
+    }
+
+    /**
+     * Get Number of cold node CPU cores
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return ColdCpuNum Number of cold node CPU cores
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public Long getColdCpuNum() {
+        return this.ColdCpuNum;
+    }
+
+    /**
+     * Set Number of cold node CPU cores
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param ColdCpuNum Number of cold node CPU cores
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setColdCpuNum(Long ColdCpuNum) {
+        this.ColdCpuNum = ColdCpuNum;
+    }
+
+    /**
+     * Get Cold node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return ColdMemSize Cold node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public Long getColdMemSize() {
+        return this.ColdMemSize;
+    }
+
+    /**
+     * Set Cold node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param ColdMemSize Cold node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setColdMemSize(Long ColdMemSize) {
+        this.ColdMemSize = ColdMemSize;
+    }
+
+    /**
+     * Get Cold node disk type
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return ColdDiskType Cold node disk type
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getColdDiskType() {
+        return this.ColdDiskType;
+    }
+
+    /**
+     * Set Cold node disk type
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param ColdDiskType Cold node disk type
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setColdDiskType(String ColdDiskType) {
+        this.ColdDiskType = ColdDiskType;
+    }
+
+    /**
+     * Get Cold node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return ColdDiskSize Cold node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public Long getColdDiskSize() {
+        return this.ColdDiskSize;
+    }
+
+    /**
+     * Set Cold node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param ColdDiskSize Cold node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setColdDiskSize(Long ColdDiskSize) {
+        this.ColdDiskSize = ColdDiskSize;
+    }
+
+    /**
+     * Get Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return FrozenNodeType Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getFrozenNodeType() {
+        return this.FrozenNodeType;
+    }
+
+    /**
+     * Set Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param FrozenNodeType Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setFrozenNodeType(String FrozenNodeType) {
+        this.FrozenNodeType = FrozenNodeType;
+    }
+
+    /**
+     * Get Number of frozen nodes
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return FrozenNodeNum Number of frozen nodes
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public Long getFrozenNodeNum() {
+        return this.FrozenNodeNum;
+    }
+
+    /**
+     * Set Number of frozen nodes
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param FrozenNodeNum Number of frozen nodes
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setFrozenNodeNum(Long FrozenNodeNum) {
+        this.FrozenNodeNum = FrozenNodeNum;
+    }
+
+    /**
+     * Get Number of frozen node CPU cores
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return FrozenCpuNum Number of frozen node CPU cores
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public Long getFrozenCpuNum() {
+        return this.FrozenCpuNum;
+    }
+
+    /**
+     * Set Number of frozen node CPU cores
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param FrozenCpuNum Number of frozen node CPU cores
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setFrozenCpuNum(Long FrozenCpuNum) {
+        this.FrozenCpuNum = FrozenCpuNum;
+    }
+
+    /**
+     * Get Frozen node memory size (GB)
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return FrozenMemSize Frozen node memory size (GB)
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public Long getFrozenMemSize() {
+        return this.FrozenMemSize;
+    }
+
+    /**
+     * Set Frozen node memory size (GB)
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param FrozenMemSize Frozen node memory size (GB)
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setFrozenMemSize(Long FrozenMemSize) {
+        this.FrozenMemSize = FrozenMemSize;
+    }
+
+    /**
+     * Get Frozen node disk type
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return FrozenDiskType Frozen node disk type
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getFrozenDiskType() {
+        return this.FrozenDiskType;
+    }
+
+    /**
+     * Set Frozen node disk type
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param FrozenDiskType Frozen node disk type
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setFrozenDiskType(String FrozenDiskType) {
+        this.FrozenDiskType = FrozenDiskType;
+    }
+
+    /**
+     * Get Frozen node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return FrozenDiskSize Frozen node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public Long getFrozenDiskSize() {
+        return this.FrozenDiskSize;
+    }
+
+    /**
+     * Set Frozen node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param FrozenDiskSize Frozen node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setFrozenDiskSize(Long FrozenDiskSize) {
+        this.FrozenDiskSize = FrozenDiskSize;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1691,6 +2027,42 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.SecurityGroups[i] = new String(source.SecurityGroups[i]);
             }
         }
+        if (source.ColdNodeType != null) {
+            this.ColdNodeType = new String(source.ColdNodeType);
+        }
+        if (source.ColdNodeNum != null) {
+            this.ColdNodeNum = new Long(source.ColdNodeNum);
+        }
+        if (source.ColdCpuNum != null) {
+            this.ColdCpuNum = new Long(source.ColdCpuNum);
+        }
+        if (source.ColdMemSize != null) {
+            this.ColdMemSize = new Long(source.ColdMemSize);
+        }
+        if (source.ColdDiskType != null) {
+            this.ColdDiskType = new String(source.ColdDiskType);
+        }
+        if (source.ColdDiskSize != null) {
+            this.ColdDiskSize = new Long(source.ColdDiskSize);
+        }
+        if (source.FrozenNodeType != null) {
+            this.FrozenNodeType = new String(source.FrozenNodeType);
+        }
+        if (source.FrozenNodeNum != null) {
+            this.FrozenNodeNum = new Long(source.FrozenNodeNum);
+        }
+        if (source.FrozenCpuNum != null) {
+            this.FrozenCpuNum = new Long(source.FrozenCpuNum);
+        }
+        if (source.FrozenMemSize != null) {
+            this.FrozenMemSize = new Long(source.FrozenMemSize);
+        }
+        if (source.FrozenDiskType != null) {
+            this.FrozenDiskType = new String(source.FrozenDiskType);
+        }
+        if (source.FrozenDiskSize != null) {
+            this.FrozenDiskSize = new Long(source.FrozenDiskSize);
+        }
     }
 
 
@@ -1757,6 +2129,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Jdk", this.Jdk);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
+        this.setParamSimple(map, prefix + "ColdNodeType", this.ColdNodeType);
+        this.setParamSimple(map, prefix + "ColdNodeNum", this.ColdNodeNum);
+        this.setParamSimple(map, prefix + "ColdCpuNum", this.ColdCpuNum);
+        this.setParamSimple(map, prefix + "ColdMemSize", this.ColdMemSize);
+        this.setParamSimple(map, prefix + "ColdDiskType", this.ColdDiskType);
+        this.setParamSimple(map, prefix + "ColdDiskSize", this.ColdDiskSize);
+        this.setParamSimple(map, prefix + "FrozenNodeType", this.FrozenNodeType);
+        this.setParamSimple(map, prefix + "FrozenNodeNum", this.FrozenNodeNum);
+        this.setParamSimple(map, prefix + "FrozenCpuNum", this.FrozenCpuNum);
+        this.setParamSimple(map, prefix + "FrozenMemSize", this.FrozenMemSize);
+        this.setParamSimple(map, prefix + "FrozenDiskType", this.FrozenDiskType);
+        this.setParamSimple(map, prefix + "FrozenDiskSize", this.FrozenDiskSize);
 
     }
 }

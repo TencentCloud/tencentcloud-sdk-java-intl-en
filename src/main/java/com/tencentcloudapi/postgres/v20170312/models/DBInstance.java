@@ -128,7 +128,7 @@ public class DBInstance extends AbstractModel{
     private String DBCharset;
 
     /**
-    * PostgreSQL major version
+    * PostgreSQL version number
     */
     @SerializedName("DBVersion")
     @Expose
@@ -268,11 +268,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private NetworkAccess [] NetworkAccessList;
 
     /**
-    * 
+    * PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("DBMajorVersion")
     @Expose
     private String DBMajorVersion;
+
+    /**
+    * 
+    */
+    @SerializedName("DBNodeSet")
+    @Expose
+    private DBNode [] DBNodeSet;
 
     /**
      * Get Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet` 
@@ -515,16 +523,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get PostgreSQL major version 
-     * @return DBVersion PostgreSQL major version
+     * Get PostgreSQL version number 
+     * @return DBVersion PostgreSQL version number
      */
     public String getDBVersion() {
         return this.DBVersion;
     }
 
     /**
-     * Set PostgreSQL major version
-     * @param DBVersion PostgreSQL major version
+     * Set PostgreSQL version number
+     * @param DBVersion PostgreSQL version number
      */
     public void setDBVersion(String DBVersion) {
         this.DBVersion = DBVersion;
@@ -847,19 +855,39 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get  
-     * @return DBMajorVersion 
+     * Get PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return DBMajorVersion PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getDBMajorVersion() {
         return this.DBMajorVersion;
     }
 
     /**
-     * Set 
-     * @param DBMajorVersion 
+     * Set PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param DBMajorVersion PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setDBMajorVersion(String DBMajorVersion) {
         this.DBMajorVersion = DBMajorVersion;
+    }
+
+    /**
+     * Get  
+     * @return DBNodeSet 
+     */
+    public DBNode [] getDBNodeSet() {
+        return this.DBNodeSet;
+    }
+
+    /**
+     * Set 
+     * @param DBNodeSet 
+     */
+    public void setDBNodeSet(DBNode [] DBNodeSet) {
+        this.DBNodeSet = DBNodeSet;
     }
 
     public DBInstance() {
@@ -984,6 +1012,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.DBMajorVersion != null) {
             this.DBMajorVersion = new String(source.DBMajorVersion);
         }
+        if (source.DBNodeSet != null) {
+            this.DBNodeSet = new DBNode[source.DBNodeSet.length];
+            for (int i = 0; i < source.DBNodeSet.length; i++) {
+                this.DBNodeSet[i] = new DBNode(source.DBNodeSet[i]);
+            }
+        }
     }
 
 
@@ -1026,6 +1060,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
         this.setParamArrayObj(map, prefix + "NetworkAccessList.", this.NetworkAccessList);
         this.setParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
+        this.setParamArrayObj(map, prefix + "DBNodeSet.", this.DBNodeSet);
 
     }
 }

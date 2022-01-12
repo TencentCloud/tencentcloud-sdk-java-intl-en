@@ -275,7 +275,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long RemainingTopics;
 
     /**
-    * 
+    * Dynamic disk expansion policy.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("DynamicDiskConfig")
     @Expose
@@ -882,16 +883,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get  
-     * @return DynamicDiskConfig 
+     * Get Dynamic disk expansion policy.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return DynamicDiskConfig Dynamic disk expansion policy.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public DynamicDiskConfig getDynamicDiskConfig() {
         return this.DynamicDiskConfig;
     }
 
     /**
-     * Set 
-     * @param DynamicDiskConfig 
+     * Set Dynamic disk expansion policy.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param DynamicDiskConfig Dynamic disk expansion policy.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setDynamicDiskConfig(DynamicDiskConfig DynamicDiskConfig) {
         this.DynamicDiskConfig = DynamicDiskConfig;

@@ -139,6 +139,26 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query view data from three dimensions: cluster, node, and Kibana.
+     * @param req DescribeViewsRequest
+     * @return DescribeViewsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeViewsResponse DescribeViews(DescribeViewsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeViewsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeViewsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeViews");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the node types used to receive client requests.
      * @param req GetRequestTargetNodeTypesRequest
      * @return GetRequestTargetNodeTypesResponse

@@ -13,74 +13,77 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dts.v20180330.models;
+package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SyncInstanceInfo extends AbstractModel{
+public class BatchModifyTopicAttributesRequest extends AbstractModel{
 
     /**
-    * Region name, such as ap-guangzhou
-    */
-    @SerializedName("Region")
-    @Expose
-    private String Region;
-
-    /**
-    * Short instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Region name, such as ap-guangzhou 
-     * @return Region Region name, such as ap-guangzhou
-     */
-    public String getRegion() {
-        return this.Region;
-    }
+    * Topic attribute list
+    */
+    @SerializedName("Topic")
+    @Expose
+    private BatchModifyTopicInfo [] Topic;
 
     /**
-     * Set Region name, such as ap-guangzhou
-     * @param Region Region name, such as ap-guangzhou
-     */
-    public void setRegion(String Region) {
-        this.Region = Region;
-    }
-
-    /**
-     * Get Short instance ID 
-     * @return InstanceId Short instance ID
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Short instance ID
-     * @param InstanceId Short instance ID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
-    public SyncInstanceInfo() {
+    /**
+     * Get Topic attribute list 
+     * @return Topic Topic attribute list
+     */
+    public BatchModifyTopicInfo [] getTopic() {
+        return this.Topic;
+    }
+
+    /**
+     * Set Topic attribute list
+     * @param Topic Topic attribute list
+     */
+    public void setTopic(BatchModifyTopicInfo [] Topic) {
+        this.Topic = Topic;
+    }
+
+    public BatchModifyTopicAttributesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SyncInstanceInfo(SyncInstanceInfo source) {
-        if (source.Region != null) {
-            this.Region = new String(source.Region);
-        }
+    public BatchModifyTopicAttributesRequest(BatchModifyTopicAttributesRequest source) {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Topic != null) {
+            this.Topic = new BatchModifyTopicInfo[source.Topic.length];
+            for (int i = 0; i < source.Topic.length; i++) {
+                this.Topic[i] = new BatchModifyTopicInfo(source.Topic[i]);
+            }
         }
     }
 
@@ -89,8 +92,8 @@ public class SyncInstanceInfo extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamArrayObj(map, prefix + "Topic.", this.Topic);
 
     }
 }

@@ -23,11 +23,39 @@ import java.util.HashMap;
 public class UpgradeLicenseResponse extends AbstractModel{
 
     /**
+    * Order ID
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("DealName")
+    @Expose
+    private String DealName;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Order ID
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return DealName Order ID
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getDealName() {
+        return this.DealName;
+    }
+
+    /**
+     * Set Order ID
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param DealName Order ID
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setDealName(String DealName) {
+        this.DealName = DealName;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -53,6 +81,9 @@ public class UpgradeLicenseResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public UpgradeLicenseResponse(UpgradeLicenseResponse source) {
+        if (source.DealName != null) {
+            this.DealName = new String(source.DealName);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +94,7 @@ public class UpgradeLicenseResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DealName", this.DealName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

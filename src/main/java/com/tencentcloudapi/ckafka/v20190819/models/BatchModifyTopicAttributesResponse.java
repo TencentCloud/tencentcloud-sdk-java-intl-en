@@ -13,14 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dts.v20180330.models;
+package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class StartSyncJobResponse extends AbstractModel{
+public class BatchModifyTopicAttributesResponse extends AbstractModel{
+
+    /**
+    * Returned result.
+    */
+    @SerializedName("Result")
+    @Expose
+    private BatchModifyTopicResultDTO [] Result;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -28,6 +35,22 @@ public class StartSyncJobResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Returned result. 
+     * @return Result Returned result.
+     */
+    public BatchModifyTopicResultDTO [] getResult() {
+        return this.Result;
+    }
+
+    /**
+     * Set Returned result.
+     * @param Result Returned result.
+     */
+    public void setResult(BatchModifyTopicResultDTO [] Result) {
+        this.Result = Result;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -45,14 +68,20 @@ public class StartSyncJobResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public StartSyncJobResponse() {
+    public BatchModifyTopicAttributesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public StartSyncJobResponse(StartSyncJobResponse source) {
+    public BatchModifyTopicAttributesResponse(BatchModifyTopicAttributesResponse source) {
+        if (source.Result != null) {
+            this.Result = new BatchModifyTopicResultDTO[source.Result.length];
+            for (int i = 0; i < source.Result.length; i++) {
+                this.Result[i] = new BatchModifyTopicResultDTO(source.Result[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +92,7 @@ public class StartSyncJobResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

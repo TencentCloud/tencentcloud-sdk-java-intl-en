@@ -98,6 +98,22 @@ Note: `null` may be returned for this field, indicating that no valid values can
     private String Physical;
 
     /**
+    * Public network bandwidth.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PublicNetwork")
+    @Expose
+    private String PublicNetwork;
+
+    /**
+    * Public network bandwidth configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PublicNetworkLimit")
+    @Expose
+    private String PublicNetworkLimit;
+
+    /**
      * Get Zone list 
      * @return ZoneList Zone list
      */
@@ -277,6 +293,46 @@ Note: `null` may be returned for this field, indicating that no valid values can
         this.Physical = Physical;
     }
 
+    /**
+     * Get Public network bandwidth.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return PublicNetwork Public network bandwidth.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getPublicNetwork() {
+        return this.PublicNetwork;
+    }
+
+    /**
+     * Set Public network bandwidth.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param PublicNetwork Public network bandwidth.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setPublicNetwork(String PublicNetwork) {
+        this.PublicNetwork = PublicNetwork;
+    }
+
+    /**
+     * Get Public network bandwidth configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return PublicNetworkLimit Public network bandwidth configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getPublicNetworkLimit() {
+        return this.PublicNetworkLimit;
+    }
+
+    /**
+     * Set Public network bandwidth configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param PublicNetworkLimit Public network bandwidth configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setPublicNetworkLimit(String PublicNetworkLimit) {
+        this.PublicNetworkLimit = PublicNetworkLimit;
+    }
+
     public ZoneResponse() {
     }
 
@@ -321,6 +377,12 @@ Note: `null` may be returned for this field, indicating that no valid values can
         if (source.Physical != null) {
             this.Physical = new String(source.Physical);
         }
+        if (source.PublicNetwork != null) {
+            this.PublicNetwork = new String(source.PublicNetwork);
+        }
+        if (source.PublicNetworkLimit != null) {
+            this.PublicNetworkLimit = new String(source.PublicNetworkLimit);
+        }
     }
 
 
@@ -338,6 +400,8 @@ Note: `null` may be returned for this field, indicating that no valid values can
         this.setParamSimple(map, prefix + "StandardS2", this.StandardS2);
         this.setParamSimple(map, prefix + "Profession", this.Profession);
         this.setParamSimple(map, prefix + "Physical", this.Physical);
+        this.setParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
+        this.setParamSimple(map, prefix + "PublicNetworkLimit", this.PublicNetworkLimit);
 
     }
 }

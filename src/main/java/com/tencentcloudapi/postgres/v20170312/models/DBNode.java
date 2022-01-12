@@ -13,48 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dts.v20180330.models;
+package com.tencentcloudapi.postgres.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteSyncJobRequest extends AbstractModel{
+public class DBNode extends AbstractModel{
 
     /**
-    * ID of the disaster recovery sync task to be deleted
+    * 
     */
-    @SerializedName("JobId")
+    @SerializedName("Role")
     @Expose
-    private String JobId;
+    private String Role;
 
     /**
-     * Get ID of the disaster recovery sync task to be deleted 
-     * @return JobId ID of the disaster recovery sync task to be deleted
+    * 
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
+     * Get  
+     * @return Role 
      */
-    public String getJobId() {
-        return this.JobId;
+    public String getRole() {
+        return this.Role;
     }
 
     /**
-     * Set ID of the disaster recovery sync task to be deleted
-     * @param JobId ID of the disaster recovery sync task to be deleted
+     * Set 
+     * @param Role 
      */
-    public void setJobId(String JobId) {
-        this.JobId = JobId;
+    public void setRole(String Role) {
+        this.Role = Role;
     }
 
-    public DeleteSyncJobRequest() {
+    /**
+     * Get  
+     * @return Zone 
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set 
+     * @param Zone 
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
+    public DBNode() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteSyncJobRequest(DeleteSyncJobRequest source) {
-        if (source.JobId != null) {
-            this.JobId = new String(source.JobId);
+    public DBNode(DBNode source) {
+        if (source.Role != null) {
+            this.Role = new String(source.Role);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
         }
     }
 
@@ -63,7 +89,8 @@ public class DeleteSyncJobRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamSimple(map, prefix + "Role", this.Role);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }

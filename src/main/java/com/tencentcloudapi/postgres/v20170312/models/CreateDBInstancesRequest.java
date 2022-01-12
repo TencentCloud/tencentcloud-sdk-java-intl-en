@@ -30,13 +30,6 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private String SpecCode;
 
     /**
-    * PostgreSQL kernel version. Valid values: `9.3.5`, `9.5.4`, `10.4`, `11.8`, `12.4`.
-    */
-    @SerializedName("DBVersion")
-    @Expose
-    private String DBVersion;
-
-    /**
     * Instance capacity size in GB.
     */
     @SerializedName("Storage")
@@ -70,6 +63,13 @@ public class CreateDBInstancesRequest extends AbstractModel{
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
+
+    /**
+    * PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
+    */
+    @SerializedName("DBVersion")
+    @Expose
+    private String DBVersion;
 
     /**
     * Instance billing type.
@@ -149,6 +149,20 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private String [] SecurityGroupIds;
 
     /**
+    * PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
+    */
+    @SerializedName("DBMajorVersion")
+    @Expose
+    private String DBMajorVersion;
+
+    /**
+    * PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
+    */
+    @SerializedName("DBKernelVersion")
+    @Expose
+    private String DBKernelVersion;
+
+    /**
      * Get Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API. 
      * @return SpecCode Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
      */
@@ -162,22 +176,6 @@ public class CreateDBInstancesRequest extends AbstractModel{
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;
-    }
-
-    /**
-     * Get PostgreSQL kernel version. Valid values: `9.3.5`, `9.5.4`, `10.4`, `11.8`, `12.4`. 
-     * @return DBVersion PostgreSQL kernel version. Valid values: `9.3.5`, `9.5.4`, `10.4`, `11.8`, `12.4`.
-     */
-    public String getDBVersion() {
-        return this.DBVersion;
-    }
-
-    /**
-     * Set PostgreSQL kernel version. Valid values: `9.3.5`, `9.5.4`, `10.4`, `11.8`, `12.4`.
-     * @param DBVersion PostgreSQL kernel version. Valid values: `9.3.5`, `9.5.4`, `10.4`, `11.8`, `12.4`.
-     */
-    public void setDBVersion(String DBVersion) {
-        this.DBVersion = DBVersion;
     }
 
     /**
@@ -258,6 +256,22 @@ public class CreateDBInstancesRequest extends AbstractModel{
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. 
+     * @return DBVersion PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
+     */
+    public String getDBVersion() {
+        return this.DBVersion;
+    }
+
+    /**
+     * Set PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
+     * @param DBVersion PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
+     */
+    public void setDBVersion(String DBVersion) {
+        this.DBVersion = DBVersion;
     }
 
     /**
@@ -436,6 +450,38 @@ public class CreateDBInstancesRequest extends AbstractModel{
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
+    /**
+     * Get PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. 
+     * @return DBMajorVersion PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
+     */
+    public String getDBMajorVersion() {
+        return this.DBMajorVersion;
+    }
+
+    /**
+     * Set PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
+     * @param DBMajorVersion PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
+     */
+    public void setDBMajorVersion(String DBMajorVersion) {
+        this.DBMajorVersion = DBMajorVersion;
+    }
+
+    /**
+     * Get PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created. 
+     * @return DBKernelVersion PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
+     */
+    public String getDBKernelVersion() {
+        return this.DBKernelVersion;
+    }
+
+    /**
+     * Set PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
+     * @param DBKernelVersion PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
+     */
+    public void setDBKernelVersion(String DBKernelVersion) {
+        this.DBKernelVersion = DBKernelVersion;
+    }
+
     public CreateDBInstancesRequest() {
     }
 
@@ -446,9 +492,6 @@ public class CreateDBInstancesRequest extends AbstractModel{
     public CreateDBInstancesRequest(CreateDBInstancesRequest source) {
         if (source.SpecCode != null) {
             this.SpecCode = new String(source.SpecCode);
-        }
-        if (source.DBVersion != null) {
-            this.DBVersion = new String(source.DBVersion);
         }
         if (source.Storage != null) {
             this.Storage = new Long(source.Storage);
@@ -464,6 +507,9 @@ public class CreateDBInstancesRequest extends AbstractModel{
         }
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.DBVersion != null) {
+            this.DBVersion = new String(source.DBVersion);
         }
         if (source.InstanceChargeType != null) {
             this.InstanceChargeType = new String(source.InstanceChargeType);
@@ -507,6 +553,12 @@ public class CreateDBInstancesRequest extends AbstractModel{
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
             }
         }
+        if (source.DBMajorVersion != null) {
+            this.DBMajorVersion = new String(source.DBMajorVersion);
+        }
+        if (source.DBKernelVersion != null) {
+            this.DBKernelVersion = new String(source.DBKernelVersion);
+        }
     }
 
 
@@ -515,12 +567,12 @@ public class CreateDBInstancesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SpecCode", this.SpecCode);
-        this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
         this.setParamSimple(map, prefix + "Storage", this.Storage);
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
@@ -532,6 +584,8 @@ public class CreateDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NeedSupportIpv6", this.NeedSupportIpv6);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
+        this.setParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
 
     }
 }

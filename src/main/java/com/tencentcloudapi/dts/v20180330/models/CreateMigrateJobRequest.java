@@ -37,7 +37,7 @@ public class CreateMigrateJobRequest extends AbstractModel{
     private MigrateOption MigrateOption;
 
     /**
-    * Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona. For more information on the supported types in a specific region, see the migration task creation page in the console.
+    * Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, Percona, and SQL Server. For more information on the supported types in a specific region, see the migration task creation page in the console.
     */
     @SerializedName("SrcDatabaseType")
     @Expose
@@ -58,7 +58,7 @@ public class CreateMigrateJobRequest extends AbstractModel{
     private SrcInfo SrcInfo;
 
     /**
-    * Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona. For more information on the supported types in a specific region, see the migration task creation page in the console.
+    * Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona, SQL Server, and TDSQL-C for MySQL. For more information on the supported types in a specific region, see the migration task creation page in the console.
     */
     @SerializedName("DstDatabaseType")
     @Expose
@@ -81,17 +81,20 @@ public class CreateMigrateJobRequest extends AbstractModel{
     /**
     * Information of the source table to be migrated, which is described in JSON string format. It is required if MigrateOption.MigrateObject is 2 (migrating the specified table).
 For databases with a database-table structure:
-[{Database:db1,Table:[table1,table2]},{Database:db2}]
+[{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
 For databases with a database-schema-table structure:
-[{Database:db1,Schema:s1
-Table:[table1,table2]},{Database:db1,Schema:s2
-Table:[table1,table2]},{Database:db2,Schema:s1
-Table:[table1,table2]},{Database:db3},{Database:db4
-Schema:s1}]
+[{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
     */
     @SerializedName("DatabaseInfo")
     @Expose
     private String DatabaseInfo;
+
+    /**
+    * Tag of the instance to be migrated.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagItem [] Tags;
 
     /**
      * Get Data migration task name 
@@ -126,16 +129,16 @@ Schema:s1}]
     }
 
     /**
-     * Get Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona. For more information on the supported types in a specific region, see the migration task creation page in the console. 
-     * @return SrcDatabaseType Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona. For more information on the supported types in a specific region, see the migration task creation page in the console.
+     * Get Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, Percona, and SQL Server. For more information on the supported types in a specific region, see the migration task creation page in the console. 
+     * @return SrcDatabaseType Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, Percona, and SQL Server. For more information on the supported types in a specific region, see the migration task creation page in the console.
      */
     public String getSrcDatabaseType() {
         return this.SrcDatabaseType;
     }
 
     /**
-     * Set Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona. For more information on the supported types in a specific region, see the migration task creation page in the console.
-     * @param SrcDatabaseType Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona. For more information on the supported types in a specific region, see the migration task creation page in the console.
+     * Set Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, Percona, and SQL Server. For more information on the supported types in a specific region, see the migration task creation page in the console.
+     * @param SrcDatabaseType Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, Percona, and SQL Server. For more information on the supported types in a specific region, see the migration task creation page in the console.
      */
     public void setSrcDatabaseType(String SrcDatabaseType) {
         this.SrcDatabaseType = SrcDatabaseType;
@@ -174,16 +177,16 @@ Schema:s1}]
     }
 
     /**
-     * Get Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona. For more information on the supported types in a specific region, see the migration task creation page in the console. 
-     * @return DstDatabaseType Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona. For more information on the supported types in a specific region, see the migration task creation page in the console.
+     * Get Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona, SQL Server, and TDSQL-C for MySQL. For more information on the supported types in a specific region, see the migration task creation page in the console. 
+     * @return DstDatabaseType Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona, SQL Server, and TDSQL-C for MySQL. For more information on the supported types in a specific region, see the migration task creation page in the console.
      */
     public String getDstDatabaseType() {
         return this.DstDatabaseType;
     }
 
     /**
-     * Set Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona. For more information on the supported types in a specific region, see the migration task creation page in the console.
-     * @param DstDatabaseType Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona. For more information on the supported types in a specific region, see the migration task creation page in the console.
+     * Set Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona, SQL Server, and TDSQL-C for MySQL. For more information on the supported types in a specific region, see the migration task creation page in the console.
+     * @param DstDatabaseType Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona, SQL Server, and TDSQL-C for MySQL. For more information on the supported types in a specific region, see the migration task creation page in the console.
      */
     public void setDstDatabaseType(String DstDatabaseType) {
         this.DstDatabaseType = DstDatabaseType;
@@ -224,22 +227,14 @@ Schema:s1}]
     /**
      * Get Information of the source table to be migrated, which is described in JSON string format. It is required if MigrateOption.MigrateObject is 2 (migrating the specified table).
 For databases with a database-table structure:
-[{Database:db1,Table:[table1,table2]},{Database:db2}]
+[{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
 For databases with a database-schema-table structure:
-[{Database:db1,Schema:s1
-Table:[table1,table2]},{Database:db1,Schema:s2
-Table:[table1,table2]},{Database:db2,Schema:s1
-Table:[table1,table2]},{Database:db3},{Database:db4
-Schema:s1}] 
+[{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}] 
      * @return DatabaseInfo Information of the source table to be migrated, which is described in JSON string format. It is required if MigrateOption.MigrateObject is 2 (migrating the specified table).
 For databases with a database-table structure:
-[{Database:db1,Table:[table1,table2]},{Database:db2}]
+[{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
 For databases with a database-schema-table structure:
-[{Database:db1,Schema:s1
-Table:[table1,table2]},{Database:db1,Schema:s2
-Table:[table1,table2]},{Database:db2,Schema:s1
-Table:[table1,table2]},{Database:db3},{Database:db4
-Schema:s1}]
+[{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
      */
     public String getDatabaseInfo() {
         return this.DatabaseInfo;
@@ -248,25 +243,33 @@ Schema:s1}]
     /**
      * Set Information of the source table to be migrated, which is described in JSON string format. It is required if MigrateOption.MigrateObject is 2 (migrating the specified table).
 For databases with a database-table structure:
-[{Database:db1,Table:[table1,table2]},{Database:db2}]
+[{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
 For databases with a database-schema-table structure:
-[{Database:db1,Schema:s1
-Table:[table1,table2]},{Database:db1,Schema:s2
-Table:[table1,table2]},{Database:db2,Schema:s1
-Table:[table1,table2]},{Database:db3},{Database:db4
-Schema:s1}]
+[{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
      * @param DatabaseInfo Information of the source table to be migrated, which is described in JSON string format. It is required if MigrateOption.MigrateObject is 2 (migrating the specified table).
 For databases with a database-table structure:
-[{Database:db1,Table:[table1,table2]},{Database:db2}]
+[{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
 For databases with a database-schema-table structure:
-[{Database:db1,Schema:s1
-Table:[table1,table2]},{Database:db1,Schema:s2
-Table:[table1,table2]},{Database:db2,Schema:s1
-Table:[table1,table2]},{Database:db3},{Database:db4
-Schema:s1}]
+[{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
      */
     public void setDatabaseInfo(String DatabaseInfo) {
         this.DatabaseInfo = DatabaseInfo;
+    }
+
+    /**
+     * Get Tag of the instance to be migrated. 
+     * @return Tags Tag of the instance to be migrated.
+     */
+    public TagItem [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag of the instance to be migrated.
+     * @param Tags Tag of the instance to be migrated.
+     */
+    public void setTags(TagItem [] Tags) {
+        this.Tags = Tags;
     }
 
     public CreateMigrateJobRequest() {
@@ -304,6 +307,12 @@ Schema:s1}]
         if (source.DatabaseInfo != null) {
             this.DatabaseInfo = new String(source.DatabaseInfo);
         }
+        if (source.Tags != null) {
+            this.Tags = new TagItem[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagItem(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -320,6 +329,7 @@ Schema:s1}]
         this.setParamSimple(map, prefix + "DstAccessType", this.DstAccessType);
         this.setParamObj(map, prefix + "DstInfo.", this.DstInfo);
         this.setParamSimple(map, prefix + "DatabaseInfo", this.DatabaseInfo);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

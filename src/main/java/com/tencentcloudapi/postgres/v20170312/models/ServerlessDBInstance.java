@@ -151,6 +151,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String DBKernelVersion;
 
     /**
+    * Database major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DBMajorVersion")
+    @Expose
+    private String DBMajorVersion;
+
+    /**
      * Get Instance ID, which is the unique identifier
 Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return DBInstanceId Instance ID, which is the unique identifier
@@ -470,6 +478,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.DBKernelVersion = DBKernelVersion;
     }
 
+    /**
+     * Get Database major version number
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return DBMajorVersion Database major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getDBMajorVersion() {
+        return this.DBMajorVersion;
+    }
+
+    /**
+     * Set Database major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param DBMajorVersion Database major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDBMajorVersion(String DBMajorVersion) {
+        this.DBMajorVersion = DBMajorVersion;
+    }
+
     public ServerlessDBInstance() {
     }
 
@@ -538,6 +566,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.DBKernelVersion != null) {
             this.DBKernelVersion = new String(source.DBKernelVersion);
         }
+        if (source.DBMajorVersion != null) {
+            this.DBMajorVersion = new String(source.DBMajorVersion);
+        }
     }
 
 
@@ -561,6 +592,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamArraySimple(map, prefix + "DBDatabaseList.", this.DBDatabaseList);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
         this.setParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
+        this.setParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
 
     }
 }

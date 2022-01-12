@@ -146,48 +146,6 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
     }
 
     /**
-     *Before the StartSyncJob API is called to start disaster recovery sync, this API should be called first to create a check. Data sync can start only if the check succeeds. You can view the check result through the DescribeSyncCheckJob API.
-Sync can begin only if the check succeeds.
-     * @param req CreateSyncCheckJobRequest
-     * @return CreateSyncCheckJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateSyncCheckJobResponse CreateSyncCheckJob(CreateSyncCheckJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateSyncCheckJobResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateSyncCheckJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateSyncCheckJob");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API (CreateSyncJob) is used to create a disaster recovery sync task.
-After successful creation, check can be initiated through the CreateSyncCheckJob API. The sync task can be started through the StartSyncJob API only if the check succeeds.
-     * @param req CreateSyncJobRequest
-     * @return CreateSyncJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateSyncJobResponse CreateSyncJob(CreateSyncJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateSyncJobResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateSyncJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateSyncJob");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API (DeleteMigrationJob) is used to delete a data migration task. If the task status queried through the DescribeMigrateJobs API is checking (status=3), running (status=7), ready (status=8), canceling (status=11), or completing (status=12), the task cannot be deleted.
      * @param req DeleteMigrateJobRequest
      * @return DeleteMigrateJobResponse
@@ -200,26 +158,6 @@ After successful creation, check can be initiated through the CreateSyncCheckJob
                 Type type = new TypeToken<JsonResponseModel<DeleteMigrateJobResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteMigrateJob");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to delete a disaster recovery sync task. Sync tasks that are running cannot be deleted.
-     * @param req DeleteSyncJobRequest
-     * @return DeleteSyncJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteSyncJobResponse DeleteSyncJob(DeleteSyncJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteSyncJobResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteSyncJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteSyncJob");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -351,51 +289,6 @@ For a finance zone linkage, please use the domain name https://dts.ap-shenzhen-f
     }
 
     /**
-     *This API is used to get the check result after a disaster recovery sync check task is created through the CreateSyncCheckJob API. Check status and progress can be queried.
-If the check succeeds, you can call the StartSyncJob API to start the sync task.
-If the check fails, the reason will be returned. You can modify the configuration through the ModifySyncJob API and initiate check again.
-It takes about 30 seconds to complete the check task. If the returned status is not "finished", the check has not been completed, and this API needs to be polled.
-If Status=finished and CheckFlag=1, the check succeeds.
-If Status=finished and CheckFlag !=1, the check fails.
-     * @param req DescribeSyncCheckJobRequest
-     * @return DescribeSyncCheckJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeSyncCheckJobResponse DescribeSyncCheckJob(DescribeSyncCheckJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSyncCheckJobResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSyncCheckJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSyncCheckJob");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query disaster recovery sync tasks initiated on the DTS platform.
-     * @param req DescribeSyncJobsRequest
-     * @return DescribeSyncJobsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeSyncJobsResponse DescribeSyncJobs(DescribeSyncJobsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeSyncJobsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeSyncJobsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeSyncJobs");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to isolate an hourly billed subscription instance. After this API is called, the instance will become unavailable and billing will stop for it.
      * @param req IsolateSubscribeRequest
      * @return IsolateSubscribeResponse
@@ -519,28 +412,6 @@ For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tence
     }
 
     /**
-     *This API is used to modify a disaster recovery sync task. 
-If the status of a sync task is creating, created, check succeeded, or check failed, this API can be called to modify the task. 
-The information of the source and target instances cannot be modified, but the task name and the tables to be synced can.
-     * @param req ModifySyncJobRequest
-     * @return ModifySyncJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifySyncJobResponse ModifySyncJob(ModifySyncJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifySyncJobResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifySyncJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifySyncJob");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to deactivate an isolated data subscription instance.
      * @param req OfflineIsolatedSubscribeRequest
      * @return OfflineIsolatedSubscribeResponse
@@ -602,26 +473,6 @@ Before calling this API, be sure to use the CreateMigrateCheckJob API to check t
     }
 
     /**
-     *This API is used to start a disaster recovery sync task after it is successfully checked through the CreateSyncCheckJob and DescribeSyncCheckJob APIs.
-     * @param req StartSyncJobRequest
-     * @return StartSyncJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public StartSyncJobResponse StartSyncJob(StartSyncJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StartSyncJobResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<StartSyncJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StartSyncJob");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API (StopMigrateJob) is used to cancel a data migration task.
 During migration, this API can be used to cancel migration if the task status queried through the DescribeMigrateJobs API is running (status=7) or ready (status=8), and the migration task will fail.
      * @param req StopMigrateJobRequest
@@ -635,26 +486,6 @@ During migration, this API can be used to cancel migration if the task status qu
                 Type type = new TypeToken<JsonResponseModel<StopMigrateJobResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StopMigrateJob");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to promote a disaster recovery instance to a master instance, which will stop sync from the original master instance and end the master/slave relationship.
-     * @param req SwitchDrToMasterRequest
-     * @return SwitchDrToMasterResponse
-     * @throws TencentCloudSDKException
-     */
-    public SwitchDrToMasterResponse SwitchDrToMaster(SwitchDrToMasterRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SwitchDrToMasterResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<SwitchDrToMasterResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SwitchDrToMaster");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

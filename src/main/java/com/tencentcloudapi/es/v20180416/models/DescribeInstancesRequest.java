@@ -86,6 +86,13 @@ public class DescribeInstancesRequest extends AbstractModel{
     private String [] IpList;
 
     /**
+    * List of availability zones
+    */
+    @SerializedName("ZoneList")
+    @Expose
+    private String [] ZoneList;
+
+    /**
      * Get AZ of the cluster instance. If this is not passed in, all AZs are used by default 
      * @return Zone AZ of the cluster instance. If this is not passed in, all AZs are used by default
      */
@@ -229,6 +236,22 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.IpList = IpList;
     }
 
+    /**
+     * Get List of availability zones 
+     * @return ZoneList List of availability zones
+     */
+    public String [] getZoneList() {
+        return this.ZoneList;
+    }
+
+    /**
+     * Set List of availability zones
+     * @param ZoneList List of availability zones
+     */
+    public void setZoneList(String [] ZoneList) {
+        this.ZoneList = ZoneList;
+    }
+
     public DescribeInstancesRequest() {
     }
 
@@ -276,6 +299,12 @@ public class DescribeInstancesRequest extends AbstractModel{
                 this.IpList[i] = new String(source.IpList[i]);
             }
         }
+        if (source.ZoneList != null) {
+            this.ZoneList = new String[source.ZoneList.length];
+            for (int i = 0; i < source.ZoneList.length; i++) {
+                this.ZoneList[i] = new String(source.ZoneList[i]);
+            }
+        }
     }
 
 
@@ -292,6 +321,7 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
         this.setParamArraySimple(map, prefix + "IpList.", this.IpList);
+        this.setParamArraySimple(map, prefix + "ZoneList.", this.ZoneList);
 
     }
 }

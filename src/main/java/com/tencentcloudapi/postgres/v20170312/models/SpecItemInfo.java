@@ -30,7 +30,7 @@ public class SpecItemInfo extends AbstractModel{
     private String SpecCode;
 
     /**
-    * PostgreSQL kernel version number
+    * PostgerSQL version number
     */
     @SerializedName("Version")
     @Expose
@@ -93,6 +93,22 @@ public class SpecItemInfo extends AbstractModel{
     private String Type;
 
     /**
+    * PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MajorVersion")
+    @Expose
+    private String MajorVersion;
+
+    /**
+    * PostgreSQL kernel version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("KernelVersion")
+    @Expose
+    private String KernelVersion;
+
+    /**
      * Get Specification ID 
      * @return SpecCode Specification ID
      */
@@ -109,16 +125,16 @@ public class SpecItemInfo extends AbstractModel{
     }
 
     /**
-     * Get PostgreSQL kernel version number 
-     * @return Version PostgreSQL kernel version number
+     * Get PostgerSQL version number 
+     * @return Version PostgerSQL version number
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set PostgreSQL kernel version number
-     * @param Version PostgreSQL kernel version number
+     * Set PostgerSQL version number
+     * @param Version PostgerSQL version number
      */
     public void setVersion(String Version) {
         this.Version = Version;
@@ -252,6 +268,46 @@ public class SpecItemInfo extends AbstractModel{
         this.Type = Type;
     }
 
+    /**
+     * Get PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return MajorVersion PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getMajorVersion() {
+        return this.MajorVersion;
+    }
+
+    /**
+     * Set PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param MajorVersion PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setMajorVersion(String MajorVersion) {
+        this.MajorVersion = MajorVersion;
+    }
+
+    /**
+     * Get PostgreSQL kernel version number
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return KernelVersion PostgreSQL kernel version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getKernelVersion() {
+        return this.KernelVersion;
+    }
+
+    /**
+     * Set PostgreSQL kernel version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param KernelVersion PostgreSQL kernel version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setKernelVersion(String KernelVersion) {
+        this.KernelVersion = KernelVersion;
+    }
+
     public SpecItemInfo() {
     }
 
@@ -290,6 +346,12 @@ public class SpecItemInfo extends AbstractModel{
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.MajorVersion != null) {
+            this.MajorVersion = new String(source.MajorVersion);
+        }
+        if (source.KernelVersion != null) {
+            this.KernelVersion = new String(source.KernelVersion);
+        }
     }
 
 
@@ -307,6 +369,8 @@ public class SpecItemInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Qps", this.Qps);
         this.setParamSimple(map, prefix + "Pid", this.Pid);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "MajorVersion", this.MajorVersion);
+        this.setParamSimple(map, prefix + "KernelVersion", this.KernelVersion);
 
     }
 }

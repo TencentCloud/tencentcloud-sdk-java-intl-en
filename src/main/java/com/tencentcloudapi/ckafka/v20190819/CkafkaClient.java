@@ -59,6 +59,46 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *This API is used to batch modify consumer group offsets.
+     * @param req BatchModifyGroupOffsetsRequest
+     * @return BatchModifyGroupOffsetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchModifyGroupOffsetsResponse BatchModifyGroupOffsets(BatchModifyGroupOffsetsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchModifyGroupOffsetsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchModifyGroupOffsetsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchModifyGroupOffsets");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to batch set topic attributes.
+     * @param req BatchModifyTopicAttributesRequest
+     * @return BatchModifyTopicAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchModifyTopicAttributesResponse BatchModifyTopicAttributes(BatchModifyTopicAttributesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchModifyTopicAttributesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchModifyTopicAttributesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchModifyTopicAttributes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to add an ACL policy.
      * @param req CreateAclRequest
      * @return CreateAclResponse
@@ -399,7 +439,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get instance attributes.
+     *This API is used to get instance attributes. 
      * @param req DescribeInstanceAttributesRequest
      * @return DescribeInstanceAttributesResponse
      * @throws TencentCloudSDKException

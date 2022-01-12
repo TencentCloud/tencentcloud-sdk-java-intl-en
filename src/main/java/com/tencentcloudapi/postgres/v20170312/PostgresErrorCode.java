@@ -36,6 +36,9 @@ public enum PostgresErrorCode {
     // Failed to get project information. Please try again later. If the problem persists, please contact customer service.
      FAILEDOPERATION_CDBCGWCONNECTERROR("FailedOperation.CdbCgwConnectError"),
      
+    // 
+     FAILEDOPERATION_CREATEBASICNETWORKDENIEDERROR("FailedOperation.CreateBasicNetworkDeniedError"),
+     
     // Failed to create the renewal order.
      FAILEDOPERATION_CREATEORDERFAILED("FailedOperation.CreateOrderFailed"),
      
@@ -350,6 +353,9 @@ public enum PostgresErrorCode {
      
     // The length of parameter exceeds the limit.
      INVALIDPARAMETERVALUE_PARAMETERLENGTHLIMITERROR("InvalidParameterValue.ParameterLengthLimitError"),
+     
+    // 
+     INVALIDPARAMETERVALUE_PARAMETEROUTRANGEERROR("InvalidParameterValue.ParameterOutRangeError"),
      
     // The maximum value of the parameter has been reached.
      INVALIDPARAMETERVALUE_PARAMETERVALUEEXCEEDERROR("InvalidParameterValue.ParameterValueExceedError"),

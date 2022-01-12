@@ -23,92 +23,112 @@ import java.util.HashMap;
 public class DynamicDiskConfig extends AbstractModel{
 
     /**
-    * 
+    * Whether to enable dynamic disk expansion configuration. `0`: disable, `1`: enable.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Enable")
     @Expose
     private Long Enable;
 
     /**
-    * 
+    * Percentage of dynamic disk expansion each time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("StepForwardPercentage")
     @Expose
     private Long StepForwardPercentage;
 
     /**
-    * 
+    * Disk quota threshold (in percentage) for triggering the automatic disk expansion event.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("DiskQuotaPercentage")
     @Expose
     private Long DiskQuotaPercentage;
 
     /**
-    * 
+    * Max disk space in GB.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("MaxDiskSpace")
     @Expose
     private Long MaxDiskSpace;
 
     /**
-     * Get  
-     * @return Enable 
+     * Get Whether to enable dynamic disk expansion configuration. `0`: disable, `1`: enable.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Enable Whether to enable dynamic disk expansion configuration. `0`: disable, `1`: enable.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 
-     * @param Enable 
+     * Set Whether to enable dynamic disk expansion configuration. `0`: disable, `1`: enable.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Enable Whether to enable dynamic disk expansion configuration. `0`: disable, `1`: enable.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get  
-     * @return StepForwardPercentage 
+     * Get Percentage of dynamic disk expansion each time.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return StepForwardPercentage Percentage of dynamic disk expansion each time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getStepForwardPercentage() {
         return this.StepForwardPercentage;
     }
 
     /**
-     * Set 
-     * @param StepForwardPercentage 
+     * Set Percentage of dynamic disk expansion each time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param StepForwardPercentage Percentage of dynamic disk expansion each time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setStepForwardPercentage(Long StepForwardPercentage) {
         this.StepForwardPercentage = StepForwardPercentage;
     }
 
     /**
-     * Get  
-     * @return DiskQuotaPercentage 
+     * Get Disk quota threshold (in percentage) for triggering the automatic disk expansion event.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return DiskQuotaPercentage Disk quota threshold (in percentage) for triggering the automatic disk expansion event.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getDiskQuotaPercentage() {
         return this.DiskQuotaPercentage;
     }
 
     /**
-     * Set 
-     * @param DiskQuotaPercentage 
+     * Set Disk quota threshold (in percentage) for triggering the automatic disk expansion event.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param DiskQuotaPercentage Disk quota threshold (in percentage) for triggering the automatic disk expansion event.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setDiskQuotaPercentage(Long DiskQuotaPercentage) {
         this.DiskQuotaPercentage = DiskQuotaPercentage;
     }
 
     /**
-     * Get  
-     * @return MaxDiskSpace 
+     * Get Max disk space in GB.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return MaxDiskSpace Max disk space in GB.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getMaxDiskSpace() {
         return this.MaxDiskSpace;
     }
 
     /**
-     * Set 
-     * @param MaxDiskSpace 
+     * Set Max disk space in GB.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param MaxDiskSpace Max disk space in GB.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setMaxDiskSpace(Long MaxDiskSpace) {
         this.MaxDiskSpace = MaxDiskSpace;

@@ -86,7 +86,7 @@ public class CreateInstancesRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * PostgreSQL major version. Valid values: `9.3`, `9.5`, `10`, `11`, `12`, `13`, `9.3.5`, `9.5.4`, `10.4`, `11.8`, `12.4`.
+    * PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
     */
     @SerializedName("DBVersion")
     @Expose
@@ -170,18 +170,25 @@ public class CreateInstancesRequest extends AbstractModel{
     private String [] SecurityGroupIds;
 
     /**
-    * 
+    * PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
     */
     @SerializedName("DBMajorVersion")
     @Expose
     private String DBMajorVersion;
 
     /**
-    * 
+    * PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
     */
     @SerializedName("DBKernelVersion")
     @Expose
     private String DBKernelVersion;
+
+    /**
+    * 
+    */
+    @SerializedName("DBNodeSet")
+    @Expose
+    private DBNode [] DBNodeSet;
 
     /**
      * Get Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API. 
@@ -328,16 +335,16 @@ public class CreateInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get PostgreSQL major version. Valid values: `9.3`, `9.5`, `10`, `11`, `12`, `13`, `9.3.5`, `9.5.4`, `10.4`, `11.8`, `12.4`. 
-     * @return DBVersion PostgreSQL major version. Valid values: `9.3`, `9.5`, `10`, `11`, `12`, `13`, `9.3.5`, `9.5.4`, `10.4`, `11.8`, `12.4`.
+     * Get PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. 
+     * @return DBVersion PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
      */
     public String getDBVersion() {
         return this.DBVersion;
     }
 
     /**
-     * Set PostgreSQL major version. Valid values: `9.3`, `9.5`, `10`, `11`, `12`, `13`, `9.3.5`, `9.5.4`, `10.4`, `11.8`, `12.4`.
-     * @param DBVersion PostgreSQL major version. Valid values: `9.3`, `9.5`, `10`, `11`, `12`, `13`, `9.3.5`, `9.5.4`, `10.4`, `11.8`, `12.4`.
+     * Set PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
+     * @param DBVersion PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
      */
     public void setDBVersion(String DBVersion) {
         this.DBVersion = DBVersion;
@@ -520,35 +527,51 @@ public class CreateInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return DBMajorVersion 
+     * Get PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. 
+     * @return DBMajorVersion PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
      */
     public String getDBMajorVersion() {
         return this.DBMajorVersion;
     }
 
     /**
-     * Set 
-     * @param DBMajorVersion 
+     * Set PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
+     * @param DBMajorVersion PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
      */
     public void setDBMajorVersion(String DBMajorVersion) {
         this.DBMajorVersion = DBMajorVersion;
     }
 
     /**
-     * Get  
-     * @return DBKernelVersion 
+     * Get PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created. 
+     * @return DBKernelVersion PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
      */
     public String getDBKernelVersion() {
         return this.DBKernelVersion;
     }
 
     /**
-     * Set 
-     * @param DBKernelVersion 
+     * Set PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
+     * @param DBKernelVersion PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
      */
     public void setDBKernelVersion(String DBKernelVersion) {
         this.DBKernelVersion = DBKernelVersion;
+    }
+
+    /**
+     * Get  
+     * @return DBNodeSet 
+     */
+    public DBNode [] getDBNodeSet() {
+        return this.DBNodeSet;
+    }
+
+    /**
+     * Set 
+     * @param DBNodeSet 
+     */
+    public void setDBNodeSet(DBNode [] DBNodeSet) {
+        this.DBNodeSet = DBNodeSet;
     }
 
     public CreateInstancesRequest() {
@@ -637,6 +660,12 @@ public class CreateInstancesRequest extends AbstractModel{
         if (source.DBKernelVersion != null) {
             this.DBKernelVersion = new String(source.DBKernelVersion);
         }
+        if (source.DBNodeSet != null) {
+            this.DBNodeSet = new DBNode[source.DBNodeSet.length];
+            for (int i = 0; i < source.DBNodeSet.length; i++) {
+                this.DBNodeSet[i] = new DBNode(source.DBNodeSet[i]);
+            }
+        }
     }
 
 
@@ -667,6 +696,7 @@ public class CreateInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
         this.setParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
+        this.setParamArrayObj(map, prefix + "DBNodeSet.", this.DBNodeSet);
 
     }
 }
