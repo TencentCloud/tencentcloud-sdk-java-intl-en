@@ -139,7 +139,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private PathBasedOriginRule [] PathBasedOrigin;
 
     /**
-    * 
+    * Advanced HTTPS forwarding configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("AdvanceHttps")
     @Expose
@@ -478,16 +479,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get  
-     * @return AdvanceHttps 
+     * Get Advanced HTTPS forwarding configuration
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return AdvanceHttps Advanced HTTPS forwarding configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public AdvanceHttps getAdvanceHttps() {
         return this.AdvanceHttps;
     }
 
     /**
-     * Set 
-     * @param AdvanceHttps 
+     * Set Advanced HTTPS forwarding configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param AdvanceHttps Advanced HTTPS forwarding configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setAdvanceHttps(AdvanceHttps AdvanceHttps) {
         this.AdvanceHttps = AdvanceHttps;

@@ -23,138 +23,183 @@ import java.util.HashMap;
 public class AdvanceHttps extends AbstractModel{
 
     /**
-    * 
+    * Custom TLS data switch
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("CustomTlsStatus")
     @Expose
     private String CustomTlsStatus;
 
     /**
-    * 
+    * Specifies the TLS version. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("TlsVersion")
     @Expose
     private String [] TlsVersion;
 
     /**
-    * 
+    * Custom encryption suite
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Cipher")
     @Expose
     private String Cipher;
 
     /**
-    * 
+    * Origin authentication type
+`off`: disable authentication
+`oneWay`: authenticate the origin 
+`twoWay`: two-way authentication
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("VerifyOriginType")
     @Expose
     private String VerifyOriginType;
 
     /**
-    * 
+    * Information of the origin-pull certificate
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("CertInfo")
     @Expose
     private ServerCert CertInfo;
 
     /**
-    * 
+    * Information of the origin server certificate
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("OriginCertInfo")
     @Expose
     private ClientCert OriginCertInfo;
 
     /**
-     * Get  
-     * @return CustomTlsStatus 
+     * Get Custom TLS data switch
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return CustomTlsStatus Custom TLS data switch
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getCustomTlsStatus() {
         return this.CustomTlsStatus;
     }
 
     /**
-     * Set 
-     * @param CustomTlsStatus 
+     * Set Custom TLS data switch
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param CustomTlsStatus Custom TLS data switch
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setCustomTlsStatus(String CustomTlsStatus) {
         this.CustomTlsStatus = CustomTlsStatus;
     }
 
     /**
-     * Get  
-     * @return TlsVersion 
+     * Get Specifies the TLS version. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return TlsVersion Specifies the TLS version. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String [] getTlsVersion() {
         return this.TlsVersion;
     }
 
     /**
-     * Set 
-     * @param TlsVersion 
+     * Set Specifies the TLS version. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param TlsVersion Specifies the TLS version. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setTlsVersion(String [] TlsVersion) {
         this.TlsVersion = TlsVersion;
     }
 
     /**
-     * Get  
-     * @return Cipher 
+     * Get Custom encryption suite
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Cipher Custom encryption suite
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getCipher() {
         return this.Cipher;
     }
 
     /**
-     * Set 
-     * @param Cipher 
+     * Set Custom encryption suite
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Cipher Custom encryption suite
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setCipher(String Cipher) {
         this.Cipher = Cipher;
     }
 
     /**
-     * Get  
-     * @return VerifyOriginType 
+     * Get Origin authentication type
+`off`: disable authentication
+`oneWay`: authenticate the origin 
+`twoWay`: two-way authentication
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return VerifyOriginType Origin authentication type
+`off`: disable authentication
+`oneWay`: authenticate the origin 
+`twoWay`: two-way authentication
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getVerifyOriginType() {
         return this.VerifyOriginType;
     }
 
     /**
-     * Set 
-     * @param VerifyOriginType 
+     * Set Origin authentication type
+`off`: disable authentication
+`oneWay`: authenticate the origin 
+`twoWay`: two-way authentication
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param VerifyOriginType Origin authentication type
+`off`: disable authentication
+`oneWay`: authenticate the origin 
+`twoWay`: two-way authentication
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setVerifyOriginType(String VerifyOriginType) {
         this.VerifyOriginType = VerifyOriginType;
     }
 
     /**
-     * Get  
-     * @return CertInfo 
+     * Get Information of the origin-pull certificate
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return CertInfo Information of the origin-pull certificate
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public ServerCert getCertInfo() {
         return this.CertInfo;
     }
 
     /**
-     * Set 
-     * @param CertInfo 
+     * Set Information of the origin-pull certificate
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param CertInfo Information of the origin-pull certificate
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setCertInfo(ServerCert CertInfo) {
         this.CertInfo = CertInfo;
     }
 
     /**
-     * Get  
-     * @return OriginCertInfo 
+     * Get Information of the origin server certificate
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return OriginCertInfo Information of the origin server certificate
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public ClientCert getOriginCertInfo() {
         return this.OriginCertInfo;
     }
 
     /**
-     * Set 
-     * @param OriginCertInfo 
+     * Set Information of the origin server certificate
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param OriginCertInfo Information of the origin server certificate
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setOriginCertInfo(ClientCert OriginCertInfo) {
         this.OriginCertInfo = OriginCertInfo;
