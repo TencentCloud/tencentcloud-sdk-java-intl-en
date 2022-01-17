@@ -45,7 +45,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String RegistryId;
 
     /**
-    * Entry point of the application
+    * Disused
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("EntryPoint")
@@ -121,9 +121,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Entry point of the application
+     * Get Disused
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return EntryPoint Entry point of the application
+     * @return EntryPoint Disused
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getEntryPoint() {
@@ -131,9 +131,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Entry point of the application
+     * Set Disused
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param EntryPoint Entry point of the application
+     * @param EntryPoint Disused
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setEntryPoint(String EntryPoint) {

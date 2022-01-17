@@ -37,6 +37,13 @@ public class DeleteFunctionRequest extends AbstractModel{
     private String Namespace;
 
     /**
+    * Function version. Enter the number of the version that needs to be deleted, otherwise all versions of the function will be deleted.
+    */
+    @SerializedName("Qualifier")
+    @Expose
+    private String Qualifier;
+
+    /**
      * Get Name of the function to be deleted 
      * @return FunctionName Name of the function to be deleted
      */
@@ -68,6 +75,22 @@ public class DeleteFunctionRequest extends AbstractModel{
         this.Namespace = Namespace;
     }
 
+    /**
+     * Get Function version. Enter the number of the version that needs to be deleted, otherwise all versions of the function will be deleted. 
+     * @return Qualifier Function version. Enter the number of the version that needs to be deleted, otherwise all versions of the function will be deleted.
+     */
+    public String getQualifier() {
+        return this.Qualifier;
+    }
+
+    /**
+     * Set Function version. Enter the number of the version that needs to be deleted, otherwise all versions of the function will be deleted.
+     * @param Qualifier Function version. Enter the number of the version that needs to be deleted, otherwise all versions of the function will be deleted.
+     */
+    public void setQualifier(String Qualifier) {
+        this.Qualifier = Qualifier;
+    }
+
     public DeleteFunctionRequest() {
     }
 
@@ -82,6 +105,9 @@ public class DeleteFunctionRequest extends AbstractModel{
         if (source.Namespace != null) {
             this.Namespace = new String(source.Namespace);
         }
+        if (source.Qualifier != null) {
+            this.Qualifier = new String(source.Qualifier);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class DeleteFunctionRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "Qualifier", this.Qualifier);
 
     }
 }

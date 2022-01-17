@@ -44,7 +44,7 @@ public class TerminateAsyncEventRequest extends AbstractModel{
     private String Namespace;
 
     /**
-    * Specifies whether to enable graceful shutdown
+    * Disused
     */
     @SerializedName("GraceShutdown")
     @Expose
@@ -99,16 +99,16 @@ public class TerminateAsyncEventRequest extends AbstractModel{
     }
 
     /**
-     * Get Specifies whether to enable graceful shutdown 
-     * @return GraceShutdown Specifies whether to enable graceful shutdown
+     * Get Disused 
+     * @return GraceShutdown Disused
      */
     public Boolean getGraceShutdown() {
         return this.GraceShutdown;
     }
 
     /**
-     * Set Specifies whether to enable graceful shutdown
-     * @param GraceShutdown Specifies whether to enable graceful shutdown
+     * Set Disused
+     * @param GraceShutdown Disused
      */
     public void setGraceShutdown(Boolean GraceShutdown) {
         this.GraceShutdown = GraceShutdown;

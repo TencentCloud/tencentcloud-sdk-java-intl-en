@@ -23,18 +23,18 @@ import java.util.HashMap;
 public class UpdateFunctionCodeRequest extends AbstractModel{
 
     /**
-    * Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
-    */
-    @SerializedName("Handler")
-    @Expose
-    private String Handler;
-
-    /**
     * Name of the function to be modified
     */
     @SerializedName("FunctionName")
     @Expose
     private String FunctionName;
+
+    /**
+    * Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
+    */
+    @SerializedName("Handler")
+    @Expose
+    private String Handler;
 
     /**
     * COS bucket name
@@ -72,6 +72,13 @@ public class UpdateFunctionCodeRequest extends AbstractModel{
     private String CosBucketRegion;
 
     /**
+    * Whether to install dependencies automatically
+    */
+    @SerializedName("InstallDependency")
+    @Expose
+    private String InstallDependency;
+
+    /**
     * Function environment
     */
     @SerializedName("EnvId")
@@ -100,22 +107,6 @@ public class UpdateFunctionCodeRequest extends AbstractModel{
     private String CodeSource;
 
     /**
-     * Get Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-). 
-     * @return Handler Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
-     */
-    public String getHandler() {
-        return this.Handler;
-    }
-
-    /**
-     * Set Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
-     * @param Handler Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
-     */
-    public void setHandler(String Handler) {
-        this.Handler = Handler;
-    }
-
-    /**
      * Get Name of the function to be modified 
      * @return FunctionName Name of the function to be modified
      */
@@ -129,6 +120,22 @@ public class UpdateFunctionCodeRequest extends AbstractModel{
      */
     public void setFunctionName(String FunctionName) {
         this.FunctionName = FunctionName;
+    }
+
+    /**
+     * Get Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-). 
+     * @return Handler Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
+     */
+    public String getHandler() {
+        return this.Handler;
+    }
+
+    /**
+     * Set Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
+     * @param Handler Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
+     */
+    public void setHandler(String Handler) {
+        this.Handler = Handler;
     }
 
     /**
@@ -212,6 +219,22 @@ public class UpdateFunctionCodeRequest extends AbstractModel{
     }
 
     /**
+     * Get Whether to install dependencies automatically 
+     * @return InstallDependency Whether to install dependencies automatically
+     */
+    public String getInstallDependency() {
+        return this.InstallDependency;
+    }
+
+    /**
+     * Set Whether to install dependencies automatically
+     * @param InstallDependency Whether to install dependencies automatically
+     */
+    public void setInstallDependency(String InstallDependency) {
+        this.InstallDependency = InstallDependency;
+    }
+
+    /**
      * Get Function environment 
      * @return EnvId Function environment
      */
@@ -283,11 +306,11 @@ public class UpdateFunctionCodeRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public UpdateFunctionCodeRequest(UpdateFunctionCodeRequest source) {
-        if (source.Handler != null) {
-            this.Handler = new String(source.Handler);
-        }
         if (source.FunctionName != null) {
             this.FunctionName = new String(source.FunctionName);
+        }
+        if (source.Handler != null) {
+            this.Handler = new String(source.Handler);
         }
         if (source.CosBucketName != null) {
             this.CosBucketName = new String(source.CosBucketName);
@@ -303,6 +326,9 @@ public class UpdateFunctionCodeRequest extends AbstractModel{
         }
         if (source.CosBucketRegion != null) {
             this.CosBucketRegion = new String(source.CosBucketRegion);
+        }
+        if (source.InstallDependency != null) {
+            this.InstallDependency = new String(source.InstallDependency);
         }
         if (source.EnvId != null) {
             this.EnvId = new String(source.EnvId);
@@ -323,13 +349,14 @@ public class UpdateFunctionCodeRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Handler", this.Handler);
         this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);
+        this.setParamSimple(map, prefix + "Handler", this.Handler);
         this.setParamSimple(map, prefix + "CosBucketName", this.CosBucketName);
         this.setParamSimple(map, prefix + "CosObjectName", this.CosObjectName);
         this.setParamSimple(map, prefix + "ZipFile", this.ZipFile);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "CosBucketRegion", this.CosBucketRegion);
+        this.setParamSimple(map, prefix + "InstallDependency", this.InstallDependency);
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
         this.setParamSimple(map, prefix + "Publish", this.Publish);
         this.setParamObj(map, prefix + "Code.", this.Code);

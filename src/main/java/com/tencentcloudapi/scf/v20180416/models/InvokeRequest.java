@@ -37,7 +37,7 @@ public class InvokeRequest extends AbstractModel{
     private String InvocationType;
 
     /**
-    * Version number or name of the triggered function
+    * The version or alias of the triggered function. It defaults to $LATEST
     */
     @SerializedName("Qualifier")
     @Expose
@@ -104,16 +104,16 @@ public class InvokeRequest extends AbstractModel{
     }
 
     /**
-     * Get Version number or name of the triggered function 
-     * @return Qualifier Version number or name of the triggered function
+     * Get The version or alias of the triggered function. It defaults to $LATEST 
+     * @return Qualifier The version or alias of the triggered function. It defaults to $LATEST
      */
     public String getQualifier() {
         return this.Qualifier;
     }
 
     /**
-     * Set Version number or name of the triggered function
-     * @param Qualifier Version number or name of the triggered function
+     * Set The version or alias of the triggered function. It defaults to $LATEST
+     * @param Qualifier The version or alias of the triggered function. It defaults to $LATEST
      */
     public void setQualifier(String Qualifier) {
         this.Qualifier = Qualifier;

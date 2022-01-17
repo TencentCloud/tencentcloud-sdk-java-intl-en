@@ -23,7 +23,10 @@ import java.util.HashMap;
 public class Filter extends AbstractModel{
 
     /**
-    * Fields to be filtered
+    * Fields to be filtered. Up to 10 conditions allowed.
+Values of `Name`: `VpcId`, `SubnetId`, `ClsTopicId`, `ClsLogsetId`, `Role`, `CfsId`, `CfsMountInsId`, `Eip`. Values limit: 1.
+Name options: Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable. Values limit: 20.
+When `Name` is `Runtime`, `CustomImage` refers to the image type function 
     */
     @SerializedName("Name")
     @Expose
@@ -37,16 +40,28 @@ public class Filter extends AbstractModel{
     private String [] Values;
 
     /**
-     * Get Fields to be filtered 
-     * @return Name Fields to be filtered
+     * Get Fields to be filtered. Up to 10 conditions allowed.
+Values of `Name`: `VpcId`, `SubnetId`, `ClsTopicId`, `ClsLogsetId`, `Role`, `CfsId`, `CfsMountInsId`, `Eip`. Values limit: 1.
+Name options: Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable. Values limit: 20.
+When `Name` is `Runtime`, `CustomImage` refers to the image type function  
+     * @return Name Fields to be filtered. Up to 10 conditions allowed.
+Values of `Name`: `VpcId`, `SubnetId`, `ClsTopicId`, `ClsLogsetId`, `Role`, `CfsId`, `CfsMountInsId`, `Eip`. Values limit: 1.
+Name options: Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable. Values limit: 20.
+When `Name` is `Runtime`, `CustomImage` refers to the image type function 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Fields to be filtered
-     * @param Name Fields to be filtered
+     * Set Fields to be filtered. Up to 10 conditions allowed.
+Values of `Name`: `VpcId`, `SubnetId`, `ClsTopicId`, `ClsLogsetId`, `Role`, `CfsId`, `CfsMountInsId`, `Eip`. Values limit: 1.
+Name options: Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable. Values limit: 20.
+When `Name` is `Runtime`, `CustomImage` refers to the image type function 
+     * @param Name Fields to be filtered. Up to 10 conditions allowed.
+Values of `Name`: `VpcId`, `SubnetId`, `ClsTopicId`, `ClsLogsetId`, `Role`, `CfsId`, `CfsMountInsId`, `Eip`. Values limit: 1.
+Name options: Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable. Values limit: 20.
+When `Name` is `Runtime`, `CustomImage` refers to the image type function 
      */
     public void setName(String Name) {
         this.Name = Name;

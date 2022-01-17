@@ -54,6 +54,14 @@ Note: This field may return null, indicating that no valid value was found.
     private String ModTime;
 
     /**
+    * Version status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
      * Get Function version name 
      * @return Version Function version name
      */
@@ -129,6 +137,26 @@ Note: This field may return null, indicating that no valid value was found.
         this.ModTime = ModTime;
     }
 
+    /**
+     * Get Version status
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Status Version status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Version status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Status Version status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
     public FunctionVersion() {
     }
 
@@ -149,6 +177,9 @@ Note: This field may return null, indicating that no valid value was found.
         if (source.ModTime != null) {
             this.ModTime = new String(source.ModTime);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
     }
 
 
@@ -160,6 +191,7 @@ Note: This field may return null, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "AddTime", this.AddTime);
         this.setParamSimple(map, prefix + "ModTime", this.ModTime);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

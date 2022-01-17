@@ -326,6 +326,26 @@ An alias must point to a master version and can point to an additional version a
     }
 
     /**
+     *This API is used to get the status of an async function execution event. The event status is retained for 3*24 hours, counting from the completion of the event.
+     * @param req GetAsyncEventStatusRequest
+     * @return GetAsyncEventStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAsyncEventStatusResponse GetAsyncEventStatus(GetAsyncEventStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetAsyncEventStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetAsyncEventStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetAsyncEventStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to obtain function details, such as name, code, handler, associated trigger, and timeout.
      * @param req GetFunctionRequest
      * @return GetFunctionResponse
@@ -438,6 +458,26 @@ An alias must point to a master version and can point to an additional version a
                 Type type = new TypeToken<JsonResponseModel<GetProvisionedConcurrencyConfigResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetProvisionedConcurrencyConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the status of a single function request.
+     * @param req GetRequestStatusRequest
+     * @return GetRequestStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRequestStatusResponse GetRequestStatus(GetRequestStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetRequestStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetRequestStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetRequestStatus");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
