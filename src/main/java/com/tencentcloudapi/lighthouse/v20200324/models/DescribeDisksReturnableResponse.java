@@ -20,22 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquirePriceRenewInstancesResponse extends AbstractModel{
+public class DescribeDisksReturnableResponse extends AbstractModel{
 
     /**
-    * Price query information.
+    * List of returnable cloud disks.
     */
-    @SerializedName("Price")
+    @SerializedName("DiskReturnableSet")
     @Expose
-    private Price Price;
+    private DiskReturnable [] DiskReturnableSet;
 
     /**
-    * List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Number of eligible cloud disks.
     */
-    @SerializedName("DataDiskPriceSet")
+    @SerializedName("TotalCount")
     @Expose
-    private DataDiskPrice [] DataDiskPriceSet;
+    private Long TotalCount;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,39 +44,35 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Price query information. 
-     * @return Price Price query information.
+     * Get List of returnable cloud disks. 
+     * @return DiskReturnableSet List of returnable cloud disks.
      */
-    public Price getPrice() {
-        return this.Price;
+    public DiskReturnable [] getDiskReturnableSet() {
+        return this.DiskReturnableSet;
     }
 
     /**
-     * Set Price query information.
-     * @param Price Price query information.
+     * Set List of returnable cloud disks.
+     * @param DiskReturnableSet List of returnable cloud disks.
      */
-    public void setPrice(Price Price) {
-        this.Price = Price;
+    public void setDiskReturnableSet(DiskReturnable [] DiskReturnableSet) {
+        this.DiskReturnableSet = DiskReturnableSet;
     }
 
     /**
-     * Get List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DataDiskPriceSet List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Number of eligible cloud disks. 
+     * @return TotalCount Number of eligible cloud disks.
      */
-    public DataDiskPrice [] getDataDiskPriceSet() {
-        return this.DataDiskPriceSet;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DataDiskPriceSet List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Number of eligible cloud disks.
+     * @param TotalCount Number of eligible cloud disks.
      */
-    public void setDataDiskPriceSet(DataDiskPrice [] DataDiskPriceSet) {
-        this.DataDiskPriceSet = DataDiskPriceSet;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -96,22 +91,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public InquirePriceRenewInstancesResponse() {
+    public DescribeDisksReturnableResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InquirePriceRenewInstancesResponse(InquirePriceRenewInstancesResponse source) {
-        if (source.Price != null) {
-            this.Price = new Price(source.Price);
-        }
-        if (source.DataDiskPriceSet != null) {
-            this.DataDiskPriceSet = new DataDiskPrice[source.DataDiskPriceSet.length];
-            for (int i = 0; i < source.DataDiskPriceSet.length; i++) {
-                this.DataDiskPriceSet[i] = new DataDiskPrice(source.DataDiskPriceSet[i]);
+    public DescribeDisksReturnableResponse(DescribeDisksReturnableResponse source) {
+        if (source.DiskReturnableSet != null) {
+            this.DiskReturnableSet = new DiskReturnable[source.DiskReturnableSet.length];
+            for (int i = 0; i < source.DiskReturnableSet.length; i++) {
+                this.DiskReturnableSet[i] = new DiskReturnable(source.DiskReturnableSet[i]);
             }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -123,8 +118,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Price.", this.Price);
-        this.setParamArrayObj(map, prefix + "DataDiskPriceSet.", this.DataDiskPriceSet);
+        this.setParamArrayObj(map, prefix + "DiskReturnableSet.", this.DiskReturnableSet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

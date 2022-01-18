@@ -20,22 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquirePriceRenewInstancesResponse extends AbstractModel{
+public class DescribeDisksDeniedActionsResponse extends AbstractModel{
 
     /**
-    * Price query information.
+    * List of operation limits of cloud disks.
     */
-    @SerializedName("Price")
+    @SerializedName("DiskDeniedActionSet")
     @Expose
-    private Price Price;
-
-    /**
-    * List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("DataDiskPriceSet")
-    @Expose
-    private DataDiskPrice [] DataDiskPriceSet;
+    private DiskDeniedActions [] DiskDeniedActionSet;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,39 +37,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Price query information. 
-     * @return Price Price query information.
+     * Get List of operation limits of cloud disks. 
+     * @return DiskDeniedActionSet List of operation limits of cloud disks.
      */
-    public Price getPrice() {
-        return this.Price;
+    public DiskDeniedActions [] getDiskDeniedActionSet() {
+        return this.DiskDeniedActionSet;
     }
 
     /**
-     * Set Price query information.
-     * @param Price Price query information.
+     * Set List of operation limits of cloud disks.
+     * @param DiskDeniedActionSet List of operation limits of cloud disks.
      */
-    public void setPrice(Price Price) {
-        this.Price = Price;
-    }
-
-    /**
-     * Get List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DataDiskPriceSet List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public DataDiskPrice [] getDataDiskPriceSet() {
-        return this.DataDiskPriceSet;
-    }
-
-    /**
-     * Set List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DataDiskPriceSet List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public void setDataDiskPriceSet(DataDiskPrice [] DataDiskPriceSet) {
-        this.DataDiskPriceSet = DataDiskPriceSet;
+    public void setDiskDeniedActionSet(DiskDeniedActions [] DiskDeniedActionSet) {
+        this.DiskDeniedActionSet = DiskDeniedActionSet;
     }
 
     /**
@@ -96,21 +68,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public InquirePriceRenewInstancesResponse() {
+    public DescribeDisksDeniedActionsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InquirePriceRenewInstancesResponse(InquirePriceRenewInstancesResponse source) {
-        if (source.Price != null) {
-            this.Price = new Price(source.Price);
-        }
-        if (source.DataDiskPriceSet != null) {
-            this.DataDiskPriceSet = new DataDiskPrice[source.DataDiskPriceSet.length];
-            for (int i = 0; i < source.DataDiskPriceSet.length; i++) {
-                this.DataDiskPriceSet[i] = new DataDiskPrice(source.DataDiskPriceSet[i]);
+    public DescribeDisksDeniedActionsResponse(DescribeDisksDeniedActionsResponse source) {
+        if (source.DiskDeniedActionSet != null) {
+            this.DiskDeniedActionSet = new DiskDeniedActions[source.DiskDeniedActionSet.length];
+            for (int i = 0; i < source.DiskDeniedActionSet.length; i++) {
+                this.DiskDeniedActionSet[i] = new DiskDeniedActions(source.DiskDeniedActionSet[i]);
             }
         }
         if (source.RequestId != null) {
@@ -123,8 +92,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Price.", this.Price);
-        this.setParamArrayObj(map, prefix + "DataDiskPriceSet.", this.DataDiskPriceSet);
+        this.setParamArrayObj(map, prefix + "DiskDeniedActionSet.", this.DiskDeniedActionSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

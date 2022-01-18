@@ -215,6 +215,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Zone;
 
     /**
+    * The list of tags associated with the instance
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Instance ID. 
      * @return InstanceId Instance ID.
      */
@@ -682,6 +689,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Zone = Zone;
     }
 
+    /**
+     * Get The list of tags associated with the instance 
+     * @return Tags The list of tags associated with the instance
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set The list of tags associated with the instance
+     * @param Tags The list of tags associated with the instance
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public Instance() {
     }
 
@@ -771,6 +794,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -803,6 +832,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Platform", this.Platform);
         this.setParamSimple(map, prefix + "OsName", this.OsName);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

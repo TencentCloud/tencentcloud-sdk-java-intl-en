@@ -1,5 +1,8 @@
 package com.tencentcloudapi.lighthouse.v20200324;
 public enum LighthouseErrorCode {
+    // Error with CAM signature/authentication.
+     AUTHFAILURE("AuthFailure"),
+     
     // Failed to create the image.
      FAILEDOPERATION_CREATEBLUEPRINTFAILED("FailedOperation.CreateBlueprintFailed"),
      
@@ -26,6 +29,9 @@ public enum LighthouseErrorCode {
      
     // Internal error.
      INTERNALERROR("InternalError"),
+     
+    // The disk query returned invalid content.
+     INTERNALERROR_DESCRIBEDISKSRETURNABLEERROR("InternalError.DescribeDisksReturnableError"),
      
     // Failed to query the instance status. Please try again later.
      INTERNALERROR_DESCRIBEINSTANCESTATUS("InternalError.DescribeInstanceStatus"),
@@ -54,8 +60,14 @@ public enum LighthouseErrorCode {
     // There was an error in the request.
      INTERNALERROR_REQUESTERROR("InternalError.RequestError"),
      
+    // Failed to call billing gateway service
+     INTERNALERROR_TRADECALLBILLINGGATEWAYFAILED("InternalError.TradeCallBillingGatewayFailed"),
+     
     // Failed to get the price.
      INTERNALERROR_TRADEGETPRICEFAILED("InternalError.TradeGetPriceFailed"),
+     
+    // Incorrect parameter.
+     INVALIDPARAMETER("InvalidParameter"),
      
     // Undefined service package ID.
      INVALIDPARAMETER_BUNDLEIDNOTFOUND("InvalidParameter.BundleIdNotFound"),
@@ -201,6 +213,9 @@ public enum LighthouseErrorCode {
     // Invalid AZ.
      INVALIDPARAMETERVALUE_ZONEINVALID("InvalidParameterValue.ZoneInvalid"),
      
+    // Reached the upper limit of attached data disks of the instance
+     LIMITEXCEEDED_ATTACHDATADISKQUOTALIMITEXCEEDED("LimitExceeded.AttachDataDiskQuotaLimitExceeded"),
+     
     // The firewall rule quota is exceeded.
      LIMITEXCEEDED_FIREWALLRULESLIMITEXCEEDED("LimitExceeded.FirewallRulesLimitExceeded"),
      
@@ -215,6 +230,15 @@ public enum LighthouseErrorCode {
      
     // This instance does not support upgrading packages.
      OPERATIONDENIED_BUNDLENOTSUPPORTMODIFY("OperationDenied.BundleNotSupportModify"),
+     
+    // The disk is being created.
+     OPERATIONDENIED_DISKCREATING("OperationDenied.DiskCreating"),
+     
+    // The disk is being manipulated. Try again later.
+     OPERATIONDENIED_DISKOPERATIONINPROGRESS("OperationDenied.DiskOperationInProgress"),
+     
+    // The cloud disk type of the disk does not support this operation.
+     OPERATIONDENIED_DISKUSAGENOTSUPPORTOPERATION("OperationDenied.DiskUsageNotSupportOperation"),
      
     // It is not allowed to manipulate this instance, as it is being created.
      OPERATIONDENIED_INSTANCECREATING("OperationDenied.InstanceCreating"),
@@ -236,6 +260,9 @@ public enum LighthouseErrorCode {
      
     // The specified image does not exist. Please check whether the `BlueprintId` of the image is correct.
      RESOURCENOTFOUND_BLUEPRINTNOTFOUND("ResourceNotFound.BlueprintNotFound"),
+     
+    // The disk ID does not exist.
+     RESOURCENOTFOUND_DISKIDNOTFOUND("ResourceNotFound.DiskIdNotFound"),
      
     // The disk does not exist.
      RESOURCENOTFOUND_DISKNOTFOUND("ResourceNotFound.DiskNotFound"),
@@ -263,6 +290,9 @@ public enum LighthouseErrorCode {
      
     // The resource is unavailable.
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
+     
+    // 
+     RESOURCEUNAVAILABLE_BLUEPRINTUNAVAILABLE("ResourceUnavailable.BlueprintUnavailable"),
      
     // MFA has expired.
      UNAUTHORIZEDOPERATION_MFAEXPIRED("UnauthorizedOperation.MFAExpired"),
@@ -311,6 +341,9 @@ public enum LighthouseErrorCode {
      
     // Unsupported operation: the instance has expired.
      UNSUPPORTEDOPERATION_INSTANCEEXPIRED("UnsupportedOperation.InstanceExpired"),
+     
+    // The disk's status does not support this operation.
+     UNSUPPORTEDOPERATION_INVALIDDISKSTATE("UnsupportedOperation.InvalidDiskState"),
      
     // Unsupported operation: the instance status is invalid.
      UNSUPPORTEDOPERATION_INVALIDINSTANCESTATE("UnsupportedOperation.InvalidInstanceState"),

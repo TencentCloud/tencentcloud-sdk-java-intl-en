@@ -37,6 +37,20 @@ public class InquirePriceRenewInstancesRequest extends AbstractModel{
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
+    * Whether to renew the data disk
+    */
+    @SerializedName("RenewDataDisk")
+    @Expose
+    private Boolean RenewDataDisk;
+
+    /**
+    * Whether the data disk has the same expiration time as the instance
+    */
+    @SerializedName("AlignInstanceExpiredTime")
+    @Expose
+    private Boolean AlignInstanceExpiredTime;
+
+    /**
      * Get Instance to be renewed. 
      * @return InstanceIds Instance to be renewed.
      */
@@ -68,6 +82,38 @@ public class InquirePriceRenewInstancesRequest extends AbstractModel{
         this.InstanceChargePrepaid = InstanceChargePrepaid;
     }
 
+    /**
+     * Get Whether to renew the data disk 
+     * @return RenewDataDisk Whether to renew the data disk
+     */
+    public Boolean getRenewDataDisk() {
+        return this.RenewDataDisk;
+    }
+
+    /**
+     * Set Whether to renew the data disk
+     * @param RenewDataDisk Whether to renew the data disk
+     */
+    public void setRenewDataDisk(Boolean RenewDataDisk) {
+        this.RenewDataDisk = RenewDataDisk;
+    }
+
+    /**
+     * Get Whether the data disk has the same expiration time as the instance 
+     * @return AlignInstanceExpiredTime Whether the data disk has the same expiration time as the instance
+     */
+    public Boolean getAlignInstanceExpiredTime() {
+        return this.AlignInstanceExpiredTime;
+    }
+
+    /**
+     * Set Whether the data disk has the same expiration time as the instance
+     * @param AlignInstanceExpiredTime Whether the data disk has the same expiration time as the instance
+     */
+    public void setAlignInstanceExpiredTime(Boolean AlignInstanceExpiredTime) {
+        this.AlignInstanceExpiredTime = AlignInstanceExpiredTime;
+    }
+
     public InquirePriceRenewInstancesRequest() {
     }
 
@@ -85,6 +131,12 @@ public class InquirePriceRenewInstancesRequest extends AbstractModel{
         if (source.InstanceChargePrepaid != null) {
             this.InstanceChargePrepaid = new InstanceChargePrepaid(source.InstanceChargePrepaid);
         }
+        if (source.RenewDataDisk != null) {
+            this.RenewDataDisk = new Boolean(source.RenewDataDisk);
+        }
+        if (source.AlignInstanceExpiredTime != null) {
+            this.AlignInstanceExpiredTime = new Boolean(source.AlignInstanceExpiredTime);
+        }
     }
 
 
@@ -94,6 +146,8 @@ public class InquirePriceRenewInstancesRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
+        this.setParamSimple(map, prefix + "RenewDataDisk", this.RenewDataDisk);
+        this.setParamSimple(map, prefix + "AlignInstanceExpiredTime", this.AlignInstanceExpiredTime);
 
     }
 }

@@ -20,22 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquirePriceRenewInstancesResponse extends AbstractModel{
+public class InquirePriceRenewDisksResponse extends AbstractModel{
 
     /**
-    * Price query information.
+    * Cloud disk price.
     */
-    @SerializedName("Price")
+    @SerializedName("DiskPrice")
     @Expose
-    private Price Price;
-
-    /**
-    * List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("DataDiskPriceSet")
-    @Expose
-    private DataDiskPrice [] DataDiskPriceSet;
+    private DiskPrice DiskPrice;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,39 +37,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Price query information. 
-     * @return Price Price query information.
+     * Get Cloud disk price. 
+     * @return DiskPrice Cloud disk price.
      */
-    public Price getPrice() {
-        return this.Price;
+    public DiskPrice getDiskPrice() {
+        return this.DiskPrice;
     }
 
     /**
-     * Set Price query information.
-     * @param Price Price query information.
+     * Set Cloud disk price.
+     * @param DiskPrice Cloud disk price.
      */
-    public void setPrice(Price Price) {
-        this.Price = Price;
-    }
-
-    /**
-     * Get List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DataDiskPriceSet List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public DataDiskPrice [] getDataDiskPriceSet() {
-        return this.DataDiskPriceSet;
-    }
-
-    /**
-     * Set List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DataDiskPriceSet List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public void setDataDiskPriceSet(DataDiskPrice [] DataDiskPriceSet) {
-        this.DataDiskPriceSet = DataDiskPriceSet;
+    public void setDiskPrice(DiskPrice DiskPrice) {
+        this.DiskPrice = DiskPrice;
     }
 
     /**
@@ -96,22 +68,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public InquirePriceRenewInstancesResponse() {
+    public InquirePriceRenewDisksResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InquirePriceRenewInstancesResponse(InquirePriceRenewInstancesResponse source) {
-        if (source.Price != null) {
-            this.Price = new Price(source.Price);
-        }
-        if (source.DataDiskPriceSet != null) {
-            this.DataDiskPriceSet = new DataDiskPrice[source.DataDiskPriceSet.length];
-            for (int i = 0; i < source.DataDiskPriceSet.length; i++) {
-                this.DataDiskPriceSet[i] = new DataDiskPrice(source.DataDiskPriceSet[i]);
-            }
+    public InquirePriceRenewDisksResponse(InquirePriceRenewDisksResponse source) {
+        if (source.DiskPrice != null) {
+            this.DiskPrice = new DiskPrice(source.DiskPrice);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -123,8 +89,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Price.", this.Price);
-        this.setParamArrayObj(map, prefix + "DataDiskPriceSet.", this.DataDiskPriceSet);
+        this.setParamObj(map, prefix + "DiskPrice.", this.DiskPrice);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -20,22 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquirePriceRenewInstancesResponse extends AbstractModel{
+public class DescribeDisksResponse extends AbstractModel{
 
     /**
-    * Price query information.
+    * List of cloud disk information.
     */
-    @SerializedName("Price")
+    @SerializedName("DiskSet")
     @Expose
-    private Price Price;
+    private Disk [] DiskSet;
 
     /**
-    * List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Number of eligible cloud disks.
     */
-    @SerializedName("DataDiskPriceSet")
+    @SerializedName("TotalCount")
     @Expose
-    private DataDiskPrice [] DataDiskPriceSet;
+    private Long TotalCount;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,39 +44,35 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Price query information. 
-     * @return Price Price query information.
+     * Get List of cloud disk information. 
+     * @return DiskSet List of cloud disk information.
      */
-    public Price getPrice() {
-        return this.Price;
+    public Disk [] getDiskSet() {
+        return this.DiskSet;
     }
 
     /**
-     * Set Price query information.
-     * @param Price Price query information.
+     * Set List of cloud disk information.
+     * @param DiskSet List of cloud disk information.
      */
-    public void setPrice(Price Price) {
-        this.Price = Price;
+    public void setDiskSet(Disk [] DiskSet) {
+        this.DiskSet = DiskSet;
     }
 
     /**
-     * Get List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DataDiskPriceSet List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Number of eligible cloud disks. 
+     * @return TotalCount Number of eligible cloud disks.
      */
-    public DataDiskPrice [] getDataDiskPriceSet() {
-        return this.DataDiskPriceSet;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DataDiskPriceSet List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Number of eligible cloud disks.
+     * @param TotalCount Number of eligible cloud disks.
      */
-    public void setDataDiskPriceSet(DataDiskPrice [] DataDiskPriceSet) {
-        this.DataDiskPriceSet = DataDiskPriceSet;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -96,22 +91,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public InquirePriceRenewInstancesResponse() {
+    public DescribeDisksResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InquirePriceRenewInstancesResponse(InquirePriceRenewInstancesResponse source) {
-        if (source.Price != null) {
-            this.Price = new Price(source.Price);
-        }
-        if (source.DataDiskPriceSet != null) {
-            this.DataDiskPriceSet = new DataDiskPrice[source.DataDiskPriceSet.length];
-            for (int i = 0; i < source.DataDiskPriceSet.length; i++) {
-                this.DataDiskPriceSet[i] = new DataDiskPrice(source.DataDiskPriceSet[i]);
+    public DescribeDisksResponse(DescribeDisksResponse source) {
+        if (source.DiskSet != null) {
+            this.DiskSet = new Disk[source.DiskSet.length];
+            for (int i = 0; i < source.DiskSet.length; i++) {
+                this.DiskSet[i] = new Disk(source.DiskSet[i]);
             }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -123,8 +118,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Price.", this.Price);
-        this.setParamArrayObj(map, prefix + "DataDiskPriceSet.", this.DataDiskPriceSet);
+        this.setParamArrayObj(map, prefix + "DiskSet.", this.DiskSet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
