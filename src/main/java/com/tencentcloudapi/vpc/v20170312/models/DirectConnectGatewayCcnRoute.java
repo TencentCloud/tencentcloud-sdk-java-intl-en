@@ -44,6 +44,20 @@ public class DirectConnectGatewayCcnRoute extends AbstractModel{
     private String [] ASPath;
 
     /**
+    * Remarks
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * Last updated time
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
      * Get Route ID. 
      * @return RouteId Route ID.
      */
@@ -91,6 +105,38 @@ public class DirectConnectGatewayCcnRoute extends AbstractModel{
         this.ASPath = ASPath;
     }
 
+    /**
+     * Get Remarks 
+     * @return Description Remarks
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set Remarks
+     * @param Description Remarks
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * Get Last updated time 
+     * @return UpdateTime Last updated time
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set Last updated time
+     * @param UpdateTime Last updated time
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
     public DirectConnectGatewayCcnRoute() {
     }
 
@@ -111,6 +157,12 @@ public class DirectConnectGatewayCcnRoute extends AbstractModel{
                 this.ASPath[i] = new String(source.ASPath[i]);
             }
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
     }
 
 
@@ -121,6 +173,8 @@ public class DirectConnectGatewayCcnRoute extends AbstractModel{
         this.setParamSimple(map, prefix + "RouteId", this.RouteId);
         this.setParamSimple(map, prefix + "DestinationCidrBlock", this.DestinationCidrBlock);
         this.setParamArraySimple(map, prefix + "ASPath.", this.ASPath);
+        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

@@ -60,6 +60,26 @@ public class AsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add CLBs to a security group.
+     * @param req AttachLoadBalancersRequest
+     * @return AttachLoadBalancersResponse
+     * @throws TencentCloudSDKException
+     */
+    public AttachLoadBalancersResponse AttachLoadBalancers(AttachLoadBalancersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AttachLoadBalancersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AttachLoadBalancersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AttachLoadBalancers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to clear specific attributes of the launch configuration.
      * @param req ClearLaunchConfigurationAttributesRequest
      * @return ClearLaunchConfigurationAttributesResponse
@@ -458,6 +478,26 @@ When the notification is sent to a CMQ topic or queue, the following contents ar
     }
 
     /**
+     *This API is used to query suggestions for scaling group configurations.
+     * @param req DescribeAutoScalingAdvicesRequest
+     * @return DescribeAutoScalingAdvicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAutoScalingAdvicesResponse DescribeAutoScalingAdvices(DescribeAutoScalingAdvicesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAutoScalingAdvicesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAutoScalingAdvicesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAutoScalingAdvices");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the latest activity history of an auto scaling group.
      * @param req DescribeAutoScalingGroupLastActivitiesRequest
      * @return DescribeAutoScalingGroupLastActivitiesResponse
@@ -659,6 +699,26 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
     }
 
     /**
+     *This API is used to unbind one or more CLBs from a scaling group. This API will not terminate CLBs.
+     * @param req DetachLoadBalancersRequest
+     * @return DetachLoadBalancersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetachLoadBalancersResponse DetachLoadBalancers(DetachLoadBalancersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DetachLoadBalancersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DetachLoadBalancersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DetachLoadBalancers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DisableAutoScalingGroup) is used to disable the specified auto scaling group.
      * @param req DisableAutoScalingGroupRequest
      * @return DisableAutoScalingGroupResponse
@@ -777,6 +837,26 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
                 Type type = new TypeToken<JsonResponseModel<ModifyLaunchConfigurationAttributesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyLaunchConfigurationAttributes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the target rule attributes of the CLB in the scaling group.
+     * @param req ModifyLoadBalancerTargetAttributesRequest
+     * @return ModifyLoadBalancerTargetAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLoadBalancerTargetAttributesResponse ModifyLoadBalancerTargetAttributes(ModifyLoadBalancerTargetAttributesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLoadBalancerTargetAttributesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLoadBalancerTargetAttributesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLoadBalancerTargetAttributes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

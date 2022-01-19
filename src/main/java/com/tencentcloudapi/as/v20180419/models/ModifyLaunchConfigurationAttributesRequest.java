@@ -166,6 +166,13 @@ This field requires passing in the `InstanceName` field. Other fields that are n
     private EnhancedService EnhancedService;
 
     /**
+    * CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+    */
+    @SerializedName("CamRoleName")
+    @Expose
+    private String CamRoleName;
+
+    /**
      * Get Launch configuration ID 
      * @return LaunchConfigurationId Launch configuration ID
      */
@@ -533,6 +540,22 @@ This field requires passing in the `InstanceName` field. Other fields that are n
         this.EnhancedService = EnhancedService;
     }
 
+    /**
+     * Get CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API. 
+     * @return CamRoleName CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+     */
+    public String getCamRoleName() {
+        return this.CamRoleName;
+    }
+
+    /**
+     * Set CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+     * @param CamRoleName CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+     */
+    public void setCamRoleName(String CamRoleName) {
+        this.CamRoleName = CamRoleName;
+    }
+
     public ModifyLaunchConfigurationAttributesRequest() {
     }
 
@@ -601,6 +624,9 @@ This field requires passing in the `InstanceName` field. Other fields that are n
         if (source.EnhancedService != null) {
             this.EnhancedService = new EnhancedService(source.EnhancedService);
         }
+        if (source.CamRoleName != null) {
+            this.CamRoleName = new String(source.CamRoleName);
+        }
     }
 
 
@@ -625,6 +651,7 @@ This field requires passing in the `InstanceName` field. Other fields that are n
         this.setParamObj(map, prefix + "HostNameSettings.", this.HostNameSettings);
         this.setParamObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
         this.setParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
+        this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
 
     }
 }

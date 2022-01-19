@@ -50,21 +50,28 @@ public class CreateNotificationConfigurationRequest extends AbstractModel{
     private String [] NotificationUserGroupIds;
 
     /**
-    * Notification receiver type. Values: `USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`. Default: `USER_GROUP`.
+    * Notification receiver type. Valid values:
+<br><li>USER_GROUP:User group
+<br><li>CMQ_QUEUE:CMQ queue
+<br><li>CMQ_TOPIC:CMQ topic
+<br><li>TDMQ_CMQ_TOPIC:TDMQ CMQ topic
+<br><li>TDMQ_CMQ_QUEUE:TDMQ CMQ queue
+
+Default value: `USER_GROUP`.
     */
     @SerializedName("TargetType")
     @Expose
     private String TargetType;
 
     /**
-    * CMQ queue name. This field is required when `TargetType` is `CMQ_QUEUE`.
+    * CMQ queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
     */
     @SerializedName("QueueName")
     @Expose
     private String QueueName;
 
     /**
-    * CMQ topic name. This field is required when `TargetType` is `CMQ_TOPIC`.
+    * CMQ topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
     */
     @SerializedName("TopicName")
     @Expose
@@ -143,48 +150,76 @@ public class CreateNotificationConfigurationRequest extends AbstractModel{
     }
 
     /**
-     * Get Notification receiver type. Values: `USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`. Default: `USER_GROUP`. 
-     * @return TargetType Notification receiver type. Values: `USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`. Default: `USER_GROUP`.
+     * Get Notification receiver type. Valid values:
+<br><li>USER_GROUP:User group
+<br><li>CMQ_QUEUE:CMQ queue
+<br><li>CMQ_TOPIC:CMQ topic
+<br><li>TDMQ_CMQ_TOPIC:TDMQ CMQ topic
+<br><li>TDMQ_CMQ_QUEUE:TDMQ CMQ queue
+
+Default value: `USER_GROUP`. 
+     * @return TargetType Notification receiver type. Valid values:
+<br><li>USER_GROUP:User group
+<br><li>CMQ_QUEUE:CMQ queue
+<br><li>CMQ_TOPIC:CMQ topic
+<br><li>TDMQ_CMQ_TOPIC:TDMQ CMQ topic
+<br><li>TDMQ_CMQ_QUEUE:TDMQ CMQ queue
+
+Default value: `USER_GROUP`.
      */
     public String getTargetType() {
         return this.TargetType;
     }
 
     /**
-     * Set Notification receiver type. Values: `USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`. Default: `USER_GROUP`.
-     * @param TargetType Notification receiver type. Values: `USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`. Default: `USER_GROUP`.
+     * Set Notification receiver type. Valid values:
+<br><li>USER_GROUP:User group
+<br><li>CMQ_QUEUE:CMQ queue
+<br><li>CMQ_TOPIC:CMQ topic
+<br><li>TDMQ_CMQ_TOPIC:TDMQ CMQ topic
+<br><li>TDMQ_CMQ_QUEUE:TDMQ CMQ queue
+
+Default value: `USER_GROUP`.
+     * @param TargetType Notification receiver type. Valid values:
+<br><li>USER_GROUP:User group
+<br><li>CMQ_QUEUE:CMQ queue
+<br><li>CMQ_TOPIC:CMQ topic
+<br><li>TDMQ_CMQ_TOPIC:TDMQ CMQ topic
+<br><li>TDMQ_CMQ_QUEUE:TDMQ CMQ queue
+
+Default value: `USER_GROUP`.
      */
     public void setTargetType(String TargetType) {
         this.TargetType = TargetType;
     }
 
     /**
-     * Get CMQ queue name. This field is required when `TargetType` is `CMQ_QUEUE`. 
-     * @return QueueName CMQ queue name. This field is required when `TargetType` is `CMQ_QUEUE`.
+     * Get CMQ queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`. 
+     * @return QueueName CMQ queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
      */
     public String getQueueName() {
         return this.QueueName;
     }
 
     /**
-     * Set CMQ queue name. This field is required when `TargetType` is `CMQ_QUEUE`.
-     * @param QueueName CMQ queue name. This field is required when `TargetType` is `CMQ_QUEUE`.
+     * Set CMQ queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
+     * @param QueueName CMQ queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;
     }
 
     /**
-     * Get CMQ topic name. This field is required when `TargetType` is `CMQ_TOPIC`. 
-     * @return TopicName CMQ topic name. This field is required when `TargetType` is `CMQ_TOPIC`.
+     * Get CMQ topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`. 
+     * @return TopicName CMQ topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set CMQ topic name. This field is required when `TargetType` is `CMQ_TOPIC`.
-     * @param TopicName CMQ topic name. This field is required when `TargetType` is `CMQ_TOPIC`.
+     * Set CMQ topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
+     * @param TopicName CMQ topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

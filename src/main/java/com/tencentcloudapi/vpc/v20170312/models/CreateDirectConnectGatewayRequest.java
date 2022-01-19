@@ -70,6 +70,13 @@ public class CreateDirectConnectGatewayRequest extends AbstractModel{
     private String Zone;
 
     /**
+    * ID of DC highly available placement group
+    */
+    @SerializedName("HaZoneGroupId")
+    @Expose
+    private String HaZoneGroupId;
+
+    /**
      * Get The name of the direct connect gateway. 
      * @return DirectConnectGatewayName The name of the direct connect gateway.
      */
@@ -185,6 +192,22 @@ public class CreateDirectConnectGatewayRequest extends AbstractModel{
         this.Zone = Zone;
     }
 
+    /**
+     * Get ID of DC highly available placement group 
+     * @return HaZoneGroupId ID of DC highly available placement group
+     */
+    public String getHaZoneGroupId() {
+        return this.HaZoneGroupId;
+    }
+
+    /**
+     * Set ID of DC highly available placement group
+     * @param HaZoneGroupId ID of DC highly available placement group
+     */
+    public void setHaZoneGroupId(String HaZoneGroupId) {
+        this.HaZoneGroupId = HaZoneGroupId;
+    }
+
     public CreateDirectConnectGatewayRequest() {
     }
 
@@ -211,6 +234,9 @@ public class CreateDirectConnectGatewayRequest extends AbstractModel{
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.HaZoneGroupId != null) {
+            this.HaZoneGroupId = new String(source.HaZoneGroupId);
+        }
     }
 
 
@@ -224,6 +250,7 @@ public class CreateDirectConnectGatewayRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "GatewayType", this.GatewayType);
         this.setParamSimple(map, prefix + "ModeType", this.ModeType);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "HaZoneGroupId", this.HaZoneGroupId);
 
     }
 }

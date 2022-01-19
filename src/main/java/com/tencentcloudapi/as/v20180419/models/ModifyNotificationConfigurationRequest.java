@@ -50,14 +50,14 @@ public class ModifyNotificationConfigurationRequest extends AbstractModel{
     private String [] NotificationUserGroupIds;
 
     /**
-    * CMQ queue name.
+    * CMQ or TDMQ CMQ queue name.
     */
     @SerializedName("QueueName")
     @Expose
     private String QueueName;
 
     /**
-    * CMQ topic name.
+    * CMQ or TDMQ CMQ toipc name.
     */
     @SerializedName("TopicName")
     @Expose
@@ -136,32 +136,32 @@ public class ModifyNotificationConfigurationRequest extends AbstractModel{
     }
 
     /**
-     * Get CMQ queue name. 
-     * @return QueueName CMQ queue name.
+     * Get CMQ or TDMQ CMQ queue name. 
+     * @return QueueName CMQ or TDMQ CMQ queue name.
      */
     public String getQueueName() {
         return this.QueueName;
     }
 
     /**
-     * Set CMQ queue name.
-     * @param QueueName CMQ queue name.
+     * Set CMQ or TDMQ CMQ queue name.
+     * @param QueueName CMQ or TDMQ CMQ queue name.
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;
     }
 
     /**
-     * Get CMQ topic name. 
-     * @return TopicName CMQ topic name.
+     * Get CMQ or TDMQ CMQ toipc name. 
+     * @return TopicName CMQ or TDMQ CMQ toipc name.
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set CMQ topic name.
-     * @param TopicName CMQ topic name.
+     * Set CMQ or TDMQ CMQ toipc name.
+     * @param TopicName CMQ or TDMQ CMQ toipc name.
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

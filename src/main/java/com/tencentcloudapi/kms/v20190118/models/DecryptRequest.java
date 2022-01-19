@@ -37,6 +37,20 @@ public class DecryptRequest extends AbstractModel{
     private String EncryptionContext;
 
     /**
+    * PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
+    */
+    @SerializedName("EncryptionPublicKey")
+    @Expose
+    private String EncryptionPublicKey;
+
+    /**
+    * Asymmetric encryption algorithm. Valid values: `SM2(C1C3C2)`, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used in combination with `EncryptionPublicKey` for encryption. If it is left empty, a SM2 public key will be used by default.
+    */
+    @SerializedName("EncryptionAlgorithm")
+    @Expose
+    private String EncryptionAlgorithm;
+
+    /**
      * Get The ciphertext data to be decrypted. 
      * @return CiphertextBlob The ciphertext data to be decrypted.
      */
@@ -68,6 +82,38 @@ public class DecryptRequest extends AbstractModel{
         this.EncryptionContext = EncryptionContext;
     }
 
+    /**
+     * Get PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted. 
+     * @return EncryptionPublicKey PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
+     */
+    public String getEncryptionPublicKey() {
+        return this.EncryptionPublicKey;
+    }
+
+    /**
+     * Set PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
+     * @param EncryptionPublicKey PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
+     */
+    public void setEncryptionPublicKey(String EncryptionPublicKey) {
+        this.EncryptionPublicKey = EncryptionPublicKey;
+    }
+
+    /**
+     * Get Asymmetric encryption algorithm. Valid values: `SM2(C1C3C2)`, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used in combination with `EncryptionPublicKey` for encryption. If it is left empty, a SM2 public key will be used by default. 
+     * @return EncryptionAlgorithm Asymmetric encryption algorithm. Valid values: `SM2(C1C3C2)`, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used in combination with `EncryptionPublicKey` for encryption. If it is left empty, a SM2 public key will be used by default.
+     */
+    public String getEncryptionAlgorithm() {
+        return this.EncryptionAlgorithm;
+    }
+
+    /**
+     * Set Asymmetric encryption algorithm. Valid values: `SM2(C1C3C2)`, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used in combination with `EncryptionPublicKey` for encryption. If it is left empty, a SM2 public key will be used by default.
+     * @param EncryptionAlgorithm Asymmetric encryption algorithm. Valid values: `SM2(C1C3C2)`, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used in combination with `EncryptionPublicKey` for encryption. If it is left empty, a SM2 public key will be used by default.
+     */
+    public void setEncryptionAlgorithm(String EncryptionAlgorithm) {
+        this.EncryptionAlgorithm = EncryptionAlgorithm;
+    }
+
     public DecryptRequest() {
     }
 
@@ -82,6 +128,12 @@ public class DecryptRequest extends AbstractModel{
         if (source.EncryptionContext != null) {
             this.EncryptionContext = new String(source.EncryptionContext);
         }
+        if (source.EncryptionPublicKey != null) {
+            this.EncryptionPublicKey = new String(source.EncryptionPublicKey);
+        }
+        if (source.EncryptionAlgorithm != null) {
+            this.EncryptionAlgorithm = new String(source.EncryptionAlgorithm);
+        }
     }
 
 
@@ -91,6 +143,8 @@ public class DecryptRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CiphertextBlob", this.CiphertextBlob);
         this.setParamSimple(map, prefix + "EncryptionContext", this.EncryptionContext);
+        this.setParamSimple(map, prefix + "EncryptionPublicKey", this.EncryptionPublicKey);
+        this.setParamSimple(map, prefix + "EncryptionAlgorithm", this.EncryptionAlgorithm);
 
     }
 }

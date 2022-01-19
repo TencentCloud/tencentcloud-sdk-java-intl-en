@@ -23,79 +23,89 @@ import java.util.HashMap;
 public class NotificationTarget extends AbstractModel{
 
     /**
-    * Target type. Value range: `CMQ_QUEUE`, `CMQ_TOPIC`.
-<li> CMQ_QUEUE: CMQ_QUEUE: CMQ queue model.</li>
-<li> CMQ_TOPIC: CMQ topic model.</li>
+    * Target type. Valid values: `CMQ_QUEUE`, `CMQ_TOPIC`, `TDMQ_CMQ_QUEUE` and `TDMQ_CMQ_TOPIC`.
+<li> CMQ_QUEUE: Tencent Cloud message queue - queue model.</li>
+<li> CMQ_TOPIC: Tencent Cloud message queue - topic model.</li>
+<li> TDMQ_CMQ_QUEUE: Tencent Cloud TDMQ message queue - queue model.</li>
+<li> TDMQ_CMQ_TOPIC: Tencent Cloud TDMQ message queue - topic model.</li>
     */
     @SerializedName("TargetType")
     @Expose
     private String TargetType;
 
     /**
-    * Queue name. If `TargetType` is `CMQ_QUEUE`, this parameter is required.
+    * Queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
     */
     @SerializedName("QueueName")
     @Expose
     private String QueueName;
 
     /**
-    * Topic name. If `TargetType` is `CMQ_TOPIC`, this parameter is required.
+    * Topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-     * Get Target type. Value range: `CMQ_QUEUE`, `CMQ_TOPIC`.
-<li> CMQ_QUEUE: CMQ_QUEUE: CMQ queue model.</li>
-<li> CMQ_TOPIC: CMQ topic model.</li> 
-     * @return TargetType Target type. Value range: `CMQ_QUEUE`, `CMQ_TOPIC`.
-<li> CMQ_QUEUE: CMQ_QUEUE: CMQ queue model.</li>
-<li> CMQ_TOPIC: CMQ topic model.</li>
+     * Get Target type. Valid values: `CMQ_QUEUE`, `CMQ_TOPIC`, `TDMQ_CMQ_QUEUE` and `TDMQ_CMQ_TOPIC`.
+<li> CMQ_QUEUE: Tencent Cloud message queue - queue model.</li>
+<li> CMQ_TOPIC: Tencent Cloud message queue - topic model.</li>
+<li> TDMQ_CMQ_QUEUE: Tencent Cloud TDMQ message queue - queue model.</li>
+<li> TDMQ_CMQ_TOPIC: Tencent Cloud TDMQ message queue - topic model.</li> 
+     * @return TargetType Target type. Valid values: `CMQ_QUEUE`, `CMQ_TOPIC`, `TDMQ_CMQ_QUEUE` and `TDMQ_CMQ_TOPIC`.
+<li> CMQ_QUEUE: Tencent Cloud message queue - queue model.</li>
+<li> CMQ_TOPIC: Tencent Cloud message queue - topic model.</li>
+<li> TDMQ_CMQ_QUEUE: Tencent Cloud TDMQ message queue - queue model.</li>
+<li> TDMQ_CMQ_TOPIC: Tencent Cloud TDMQ message queue - topic model.</li>
      */
     public String getTargetType() {
         return this.TargetType;
     }
 
     /**
-     * Set Target type. Value range: `CMQ_QUEUE`, `CMQ_TOPIC`.
-<li> CMQ_QUEUE: CMQ_QUEUE: CMQ queue model.</li>
-<li> CMQ_TOPIC: CMQ topic model.</li>
-     * @param TargetType Target type. Value range: `CMQ_QUEUE`, `CMQ_TOPIC`.
-<li> CMQ_QUEUE: CMQ_QUEUE: CMQ queue model.</li>
-<li> CMQ_TOPIC: CMQ topic model.</li>
+     * Set Target type. Valid values: `CMQ_QUEUE`, `CMQ_TOPIC`, `TDMQ_CMQ_QUEUE` and `TDMQ_CMQ_TOPIC`.
+<li> CMQ_QUEUE: Tencent Cloud message queue - queue model.</li>
+<li> CMQ_TOPIC: Tencent Cloud message queue - topic model.</li>
+<li> TDMQ_CMQ_QUEUE: Tencent Cloud TDMQ message queue - queue model.</li>
+<li> TDMQ_CMQ_TOPIC: Tencent Cloud TDMQ message queue - topic model.</li>
+     * @param TargetType Target type. Valid values: `CMQ_QUEUE`, `CMQ_TOPIC`, `TDMQ_CMQ_QUEUE` and `TDMQ_CMQ_TOPIC`.
+<li> CMQ_QUEUE: Tencent Cloud message queue - queue model.</li>
+<li> CMQ_TOPIC: Tencent Cloud message queue - topic model.</li>
+<li> TDMQ_CMQ_QUEUE: Tencent Cloud TDMQ message queue - queue model.</li>
+<li> TDMQ_CMQ_TOPIC: Tencent Cloud TDMQ message queue - topic model.</li>
      */
     public void setTargetType(String TargetType) {
         this.TargetType = TargetType;
     }
 
     /**
-     * Get Queue name. If `TargetType` is `CMQ_QUEUE`, this parameter is required. 
-     * @return QueueName Queue name. If `TargetType` is `CMQ_QUEUE`, this parameter is required.
+     * Get Queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`. 
+     * @return QueueName Queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
      */
     public String getQueueName() {
         return this.QueueName;
     }
 
     /**
-     * Set Queue name. If `TargetType` is `CMQ_QUEUE`, this parameter is required.
-     * @param QueueName Queue name. If `TargetType` is `CMQ_QUEUE`, this parameter is required.
+     * Set Queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
+     * @param QueueName Queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;
     }
 
     /**
-     * Get Topic name. If `TargetType` is `CMQ_TOPIC`, this parameter is required. 
-     * @return TopicName Topic name. If `TargetType` is `CMQ_TOPIC`, this parameter is required.
+     * Get Topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`. 
+     * @return TopicName Topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Topic name. If `TargetType` is `CMQ_TOPIC`, this parameter is required.
-     * @param TopicName Topic name. If `TargetType` is `CMQ_TOPIC`, this parameter is required.
+     * Set Topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
+     * @param TopicName Topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

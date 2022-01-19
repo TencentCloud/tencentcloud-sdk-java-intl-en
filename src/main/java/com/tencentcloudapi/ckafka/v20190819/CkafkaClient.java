@@ -760,4 +760,24 @@ This API is used to get the list of topics in a CKafka instance of a user.
         return rsp.response;
     }
 
+    /**
+     *This API is used to send messages through the HTTP access layer.
+     * @param req SendMessageRequest
+     * @return SendMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendMessageResponse SendMessage(SendMessageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SendMessageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SendMessageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SendMessage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

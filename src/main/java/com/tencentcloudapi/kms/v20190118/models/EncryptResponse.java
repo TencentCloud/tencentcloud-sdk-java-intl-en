@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class EncryptResponse extends AbstractModel{
 
     /**
-    * Base64-encoded encrypted ciphertext
+    * Base64-encoded ciphertext, which is the encrypted information of the ciphertext and key. To get the plaintext, you need to pass in this field to the Decrypt API.
     */
     @SerializedName("CiphertextBlob")
     @Expose
@@ -44,16 +44,16 @@ public class EncryptResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Base64-encoded encrypted ciphertext 
-     * @return CiphertextBlob Base64-encoded encrypted ciphertext
+     * Get Base64-encoded ciphertext, which is the encrypted information of the ciphertext and key. To get the plaintext, you need to pass in this field to the Decrypt API. 
+     * @return CiphertextBlob Base64-encoded ciphertext, which is the encrypted information of the ciphertext and key. To get the plaintext, you need to pass in this field to the Decrypt API.
      */
     public String getCiphertextBlob() {
         return this.CiphertextBlob;
     }
 
     /**
-     * Set Base64-encoded encrypted ciphertext
-     * @param CiphertextBlob Base64-encoded encrypted ciphertext
+     * Set Base64-encoded ciphertext, which is the encrypted information of the ciphertext and key. To get the plaintext, you need to pass in this field to the Decrypt API.
+     * @param CiphertextBlob Base64-encoded ciphertext, which is the encrypted information of the ciphertext and key. To get the plaintext, you need to pass in this field to the Decrypt API.
      */
     public void setCiphertextBlob(String CiphertextBlob) {
         this.CiphertextBlob = CiphertextBlob;

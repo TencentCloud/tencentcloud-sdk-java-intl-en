@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.kms.v20190118.models;
+package com.tencentcloudapi.as.v20180419.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VerifyByAsymmetricKeyResponse extends AbstractModel{
+public class DescribeAutoScalingAdvicesResponse extends AbstractModel{
 
     /**
-    * Whether the signature is valid. `true`: the signature is valid; `false`: the signature is invalid.
+    * A collection of suggestions for scaling group configurations.
     */
-    @SerializedName("SignatureValid")
+    @SerializedName("AutoScalingAdviceSet")
     @Expose
-    private Boolean SignatureValid;
+    private AutoScalingAdvice [] AutoScalingAdviceSet;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +37,19 @@ public class VerifyByAsymmetricKeyResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Whether the signature is valid. `true`: the signature is valid; `false`: the signature is invalid. 
-     * @return SignatureValid Whether the signature is valid. `true`: the signature is valid; `false`: the signature is invalid.
+     * Get A collection of suggestions for scaling group configurations. 
+     * @return AutoScalingAdviceSet A collection of suggestions for scaling group configurations.
      */
-    public Boolean getSignatureValid() {
-        return this.SignatureValid;
+    public AutoScalingAdvice [] getAutoScalingAdviceSet() {
+        return this.AutoScalingAdviceSet;
     }
 
     /**
-     * Set Whether the signature is valid. `true`: the signature is valid; `false`: the signature is invalid.
-     * @param SignatureValid Whether the signature is valid. `true`: the signature is valid; `false`: the signature is invalid.
+     * Set A collection of suggestions for scaling group configurations.
+     * @param AutoScalingAdviceSet A collection of suggestions for scaling group configurations.
      */
-    public void setSignatureValid(Boolean SignatureValid) {
-        this.SignatureValid = SignatureValid;
+    public void setAutoScalingAdviceSet(AutoScalingAdvice [] AutoScalingAdviceSet) {
+        this.AutoScalingAdviceSet = AutoScalingAdviceSet;
     }
 
     /**
@@ -68,16 +68,19 @@ public class VerifyByAsymmetricKeyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public VerifyByAsymmetricKeyResponse() {
+    public DescribeAutoScalingAdvicesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public VerifyByAsymmetricKeyResponse(VerifyByAsymmetricKeyResponse source) {
-        if (source.SignatureValid != null) {
-            this.SignatureValid = new Boolean(source.SignatureValid);
+    public DescribeAutoScalingAdvicesResponse(DescribeAutoScalingAdvicesResponse source) {
+        if (source.AutoScalingAdviceSet != null) {
+            this.AutoScalingAdviceSet = new AutoScalingAdvice[source.AutoScalingAdviceSet.length];
+            for (int i = 0; i < source.AutoScalingAdviceSet.length; i++) {
+                this.AutoScalingAdviceSet[i] = new AutoScalingAdvice(source.AutoScalingAdviceSet[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +92,7 @@ public class VerifyByAsymmetricKeyResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SignatureValid", this.SignatureValid);
+        this.setParamArrayObj(map, prefix + "AutoScalingAdviceSet.", this.AutoScalingAdviceSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

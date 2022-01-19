@@ -156,6 +156,53 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String Zone;
 
     /**
+    * The status of gateway traffic monitoring
+0: disable
+1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EnableFlowDetails")
+    @Expose
+    private Long EnableFlowDetails;
+
+    /**
+    * The last time when the gateway traffic monitoring is enabled/disabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("FlowDetailsUpdateTime")
+    @Expose
+    private String FlowDetailsUpdateTime;
+
+    /**
+    * Whether gateway traffic monitoring is supported
+0: No
+1: Yes
+Note: this field may return `null`, indicating that no valid values can be found.
+    */
+    @SerializedName("NewAfc")
+    @Expose
+    private Long NewAfc;
+
+    /**
+    * Direct connect gateway access network types:
+<li>`VXLAN` - VXLAN type.</li>
+<li>`MPLS` - MPLS type.</li>
+<li>`Hybrid` - Hybrid type.</li>
+Note: this field may return `null`, indicating that no valid values can be found.
+    */
+    @SerializedName("AccessNetworkType")
+    @Expose
+    private String AccessNetworkType;
+
+    /**
+    * AZ list of direct connect gateway with cross-AZ placement groups
+Note: this field may return `null`, indicating that no valid values can be found.
+    */
+    @SerializedName("HaZoneList")
+    @Expose
+    private String [] HaZoneList;
+
+    /**
      * Get Direct Connect `ID`. 
      * @return DirectConnectGatewayId Direct Connect `ID`.
      */
@@ -483,6 +530,134 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.Zone = Zone;
     }
 
+    /**
+     * Get The status of gateway traffic monitoring
+0: disable
+1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return EnableFlowDetails The status of gateway traffic monitoring
+0: disable
+1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getEnableFlowDetails() {
+        return this.EnableFlowDetails;
+    }
+
+    /**
+     * Set The status of gateway traffic monitoring
+0: disable
+1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param EnableFlowDetails The status of gateway traffic monitoring
+0: disable
+1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setEnableFlowDetails(Long EnableFlowDetails) {
+        this.EnableFlowDetails = EnableFlowDetails;
+    }
+
+    /**
+     * Get The last time when the gateway traffic monitoring is enabled/disabled
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return FlowDetailsUpdateTime The last time when the gateway traffic monitoring is enabled/disabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getFlowDetailsUpdateTime() {
+        return this.FlowDetailsUpdateTime;
+    }
+
+    /**
+     * Set The last time when the gateway traffic monitoring is enabled/disabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param FlowDetailsUpdateTime The last time when the gateway traffic monitoring is enabled/disabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setFlowDetailsUpdateTime(String FlowDetailsUpdateTime) {
+        this.FlowDetailsUpdateTime = FlowDetailsUpdateTime;
+    }
+
+    /**
+     * Get Whether gateway traffic monitoring is supported
+0: No
+1: Yes
+Note: this field may return `null`, indicating that no valid values can be found. 
+     * @return NewAfc Whether gateway traffic monitoring is supported
+0: No
+1: Yes
+Note: this field may return `null`, indicating that no valid values can be found.
+     */
+    public Long getNewAfc() {
+        return this.NewAfc;
+    }
+
+    /**
+     * Set Whether gateway traffic monitoring is supported
+0: No
+1: Yes
+Note: this field may return `null`, indicating that no valid values can be found.
+     * @param NewAfc Whether gateway traffic monitoring is supported
+0: No
+1: Yes
+Note: this field may return `null`, indicating that no valid values can be found.
+     */
+    public void setNewAfc(Long NewAfc) {
+        this.NewAfc = NewAfc;
+    }
+
+    /**
+     * Get Direct connect gateway access network types:
+<li>`VXLAN` - VXLAN type.</li>
+<li>`MPLS` - MPLS type.</li>
+<li>`Hybrid` - Hybrid type.</li>
+Note: this field may return `null`, indicating that no valid values can be found. 
+     * @return AccessNetworkType Direct connect gateway access network types:
+<li>`VXLAN` - VXLAN type.</li>
+<li>`MPLS` - MPLS type.</li>
+<li>`Hybrid` - Hybrid type.</li>
+Note: this field may return `null`, indicating that no valid values can be found.
+     */
+    public String getAccessNetworkType() {
+        return this.AccessNetworkType;
+    }
+
+    /**
+     * Set Direct connect gateway access network types:
+<li>`VXLAN` - VXLAN type.</li>
+<li>`MPLS` - MPLS type.</li>
+<li>`Hybrid` - Hybrid type.</li>
+Note: this field may return `null`, indicating that no valid values can be found.
+     * @param AccessNetworkType Direct connect gateway access network types:
+<li>`VXLAN` - VXLAN type.</li>
+<li>`MPLS` - MPLS type.</li>
+<li>`Hybrid` - Hybrid type.</li>
+Note: this field may return `null`, indicating that no valid values can be found.
+     */
+    public void setAccessNetworkType(String AccessNetworkType) {
+        this.AccessNetworkType = AccessNetworkType;
+    }
+
+    /**
+     * Get AZ list of direct connect gateway with cross-AZ placement groups
+Note: this field may return `null`, indicating that no valid values can be found. 
+     * @return HaZoneList AZ list of direct connect gateway with cross-AZ placement groups
+Note: this field may return `null`, indicating that no valid values can be found.
+     */
+    public String [] getHaZoneList() {
+        return this.HaZoneList;
+    }
+
+    /**
+     * Set AZ list of direct connect gateway with cross-AZ placement groups
+Note: this field may return `null`, indicating that no valid values can be found.
+     * @param HaZoneList AZ list of direct connect gateway with cross-AZ placement groups
+Note: this field may return `null`, indicating that no valid values can be found.
+     */
+    public void setHaZoneList(String [] HaZoneList) {
+        this.HaZoneList = HaZoneList;
+    }
+
     public DirectConnectGateway() {
     }
 
@@ -545,6 +720,24 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.EnableFlowDetails != null) {
+            this.EnableFlowDetails = new Long(source.EnableFlowDetails);
+        }
+        if (source.FlowDetailsUpdateTime != null) {
+            this.FlowDetailsUpdateTime = new String(source.FlowDetailsUpdateTime);
+        }
+        if (source.NewAfc != null) {
+            this.NewAfc = new Long(source.NewAfc);
+        }
+        if (source.AccessNetworkType != null) {
+            this.AccessNetworkType = new String(source.AccessNetworkType);
+        }
+        if (source.HaZoneList != null) {
+            this.HaZoneList = new String[source.HaZoneList.length];
+            for (int i = 0; i < source.HaZoneList.length; i++) {
+                this.HaZoneList[i] = new String(source.HaZoneList[i]);
+            }
+        }
     }
 
 
@@ -569,6 +762,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "ModeType", this.ModeType);
         this.setParamSimple(map, prefix + "LocalZone", this.LocalZone);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "EnableFlowDetails", this.EnableFlowDetails);
+        this.setParamSimple(map, prefix + "FlowDetailsUpdateTime", this.FlowDetailsUpdateTime);
+        this.setParamSimple(map, prefix + "NewAfc", this.NewAfc);
+        this.setParamSimple(map, prefix + "AccessNetworkType", this.AccessNetworkType);
+        this.setParamArraySimple(map, prefix + "HaZoneList.", this.HaZoneList);
 
     }
 }

@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.kms.v20190118.models;
+package com.tencentcloudapi.as.v20180419.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VerifyByAsymmetricKeyResponse extends AbstractModel{
+public class AttachLoadBalancersResponse extends AbstractModel{
 
     /**
-    * Whether the signature is valid. `true`: the signature is valid; `false`: the signature is invalid.
+    * Scaling activity ID
     */
-    @SerializedName("SignatureValid")
+    @SerializedName("ActivityId")
     @Expose
-    private Boolean SignatureValid;
+    private String ActivityId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +37,19 @@ public class VerifyByAsymmetricKeyResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Whether the signature is valid. `true`: the signature is valid; `false`: the signature is invalid. 
-     * @return SignatureValid Whether the signature is valid. `true`: the signature is valid; `false`: the signature is invalid.
+     * Get Scaling activity ID 
+     * @return ActivityId Scaling activity ID
      */
-    public Boolean getSignatureValid() {
-        return this.SignatureValid;
+    public String getActivityId() {
+        return this.ActivityId;
     }
 
     /**
-     * Set Whether the signature is valid. `true`: the signature is valid; `false`: the signature is invalid.
-     * @param SignatureValid Whether the signature is valid. `true`: the signature is valid; `false`: the signature is invalid.
+     * Set Scaling activity ID
+     * @param ActivityId Scaling activity ID
      */
-    public void setSignatureValid(Boolean SignatureValid) {
-        this.SignatureValid = SignatureValid;
+    public void setActivityId(String ActivityId) {
+        this.ActivityId = ActivityId;
     }
 
     /**
@@ -68,16 +68,16 @@ public class VerifyByAsymmetricKeyResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public VerifyByAsymmetricKeyResponse() {
+    public AttachLoadBalancersResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public VerifyByAsymmetricKeyResponse(VerifyByAsymmetricKeyResponse source) {
-        if (source.SignatureValid != null) {
-            this.SignatureValid = new Boolean(source.SignatureValid);
+    public AttachLoadBalancersResponse(AttachLoadBalancersResponse source) {
+        if (source.ActivityId != null) {
+            this.ActivityId = new String(source.ActivityId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +89,7 @@ public class VerifyByAsymmetricKeyResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SignatureValid", this.SignatureValid);
+        this.setParamSimple(map, prefix + "ActivityId", this.ActivityId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

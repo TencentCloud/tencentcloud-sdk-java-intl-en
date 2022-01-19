@@ -30,6 +30,22 @@ public class DescribeSecurityGroupPoliciesRequest extends AbstractModel{
     private String SecurityGroupId;
 
     /**
+    * Filter conditions. `SecurityGroupId` and `Filters` cannot be specified at the same time.
+<li>security-group-id - String - Security group ID.</li>
+<li>ip - String - IP. IPV4 and IPV6 fuzzy matching is supported.</li>
+<li>address-module - String - IP address or address group template ID.</li>
+<li>service-module - String - Protocol port or port group template ID.</li>
+<li>protocol-type - String - Protocol supported by the security group policy. Valid values: `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, `ALL`.</li>
+<li>port - String - Optional - Protocol port. Fuzzy matching is supported. Query all ports when the protocol value is `ALL`.</li>
+<li>poly - String - Protocol policy. Valid values: `ALL` (means "all policies"), `ACCEPT` (means "allow") and `DROP` (means "reject").</li>
+<li>direction - String - Protocol rule. Valid values: `ALL` (means "all rules"), `INBOUND`(means "inbound rules") and `OUTBOUND` (means "outbound rules").</li>
+<li>description - String - Protocol description. Fuzzy matching is supported in this filter condition.</li>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups. 
      * @return SecurityGroupId The security group instance ID, such as `sg-33ocnj9n`. It can be obtained through DescribeSecurityGroups.
      */
@@ -45,6 +61,58 @@ public class DescribeSecurityGroupPoliciesRequest extends AbstractModel{
         this.SecurityGroupId = SecurityGroupId;
     }
 
+    /**
+     * Get Filter conditions. `SecurityGroupId` and `Filters` cannot be specified at the same time.
+<li>security-group-id - String - Security group ID.</li>
+<li>ip - String - IP. IPV4 and IPV6 fuzzy matching is supported.</li>
+<li>address-module - String - IP address or address group template ID.</li>
+<li>service-module - String - Protocol port or port group template ID.</li>
+<li>protocol-type - String - Protocol supported by the security group policy. Valid values: `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, `ALL`.</li>
+<li>port - String - Optional - Protocol port. Fuzzy matching is supported. Query all ports when the protocol value is `ALL`.</li>
+<li>poly - String - Protocol policy. Valid values: `ALL` (means "all policies"), `ACCEPT` (means "allow") and `DROP` (means "reject").</li>
+<li>direction - String - Protocol rule. Valid values: `ALL` (means "all rules"), `INBOUND`(means "inbound rules") and `OUTBOUND` (means "outbound rules").</li>
+<li>description - String - Protocol description. Fuzzy matching is supported in this filter condition.</li> 
+     * @return Filters Filter conditions. `SecurityGroupId` and `Filters` cannot be specified at the same time.
+<li>security-group-id - String - Security group ID.</li>
+<li>ip - String - IP. IPV4 and IPV6 fuzzy matching is supported.</li>
+<li>address-module - String - IP address or address group template ID.</li>
+<li>service-module - String - Protocol port or port group template ID.</li>
+<li>protocol-type - String - Protocol supported by the security group policy. Valid values: `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, `ALL`.</li>
+<li>port - String - Optional - Protocol port. Fuzzy matching is supported. Query all ports when the protocol value is `ALL`.</li>
+<li>poly - String - Protocol policy. Valid values: `ALL` (means "all policies"), `ACCEPT` (means "allow") and `DROP` (means "reject").</li>
+<li>direction - String - Protocol rule. Valid values: `ALL` (means "all rules"), `INBOUND`(means "inbound rules") and `OUTBOUND` (means "outbound rules").</li>
+<li>description - String - Protocol description. Fuzzy matching is supported in this filter condition.</li>
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set Filter conditions. `SecurityGroupId` and `Filters` cannot be specified at the same time.
+<li>security-group-id - String - Security group ID.</li>
+<li>ip - String - IP. IPV4 and IPV6 fuzzy matching is supported.</li>
+<li>address-module - String - IP address or address group template ID.</li>
+<li>service-module - String - Protocol port or port group template ID.</li>
+<li>protocol-type - String - Protocol supported by the security group policy. Valid values: `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, `ALL`.</li>
+<li>port - String - Optional - Protocol port. Fuzzy matching is supported. Query all ports when the protocol value is `ALL`.</li>
+<li>poly - String - Protocol policy. Valid values: `ALL` (means "all policies"), `ACCEPT` (means "allow") and `DROP` (means "reject").</li>
+<li>direction - String - Protocol rule. Valid values: `ALL` (means "all rules"), `INBOUND`(means "inbound rules") and `OUTBOUND` (means "outbound rules").</li>
+<li>description - String - Protocol description. Fuzzy matching is supported in this filter condition.</li>
+     * @param Filters Filter conditions. `SecurityGroupId` and `Filters` cannot be specified at the same time.
+<li>security-group-id - String - Security group ID.</li>
+<li>ip - String - IP. IPV4 and IPV6 fuzzy matching is supported.</li>
+<li>address-module - String - IP address or address group template ID.</li>
+<li>service-module - String - Protocol port or port group template ID.</li>
+<li>protocol-type - String - Protocol supported by the security group policy. Valid values: `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, `ALL`.</li>
+<li>port - String - Optional - Protocol port. Fuzzy matching is supported. Query all ports when the protocol value is `ALL`.</li>
+<li>poly - String - Protocol policy. Valid values: `ALL` (means "all policies"), `ACCEPT` (means "allow") and `DROP` (means "reject").</li>
+<li>direction - String - Protocol rule. Valid values: `ALL` (means "all rules"), `INBOUND`(means "inbound rules") and `OUTBOUND` (means "outbound rules").</li>
+<li>description - String - Protocol description. Fuzzy matching is supported in this filter condition.</li>
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeSecurityGroupPoliciesRequest() {
     }
 
@@ -56,6 +124,12 @@ public class DescribeSecurityGroupPoliciesRequest extends AbstractModel{
         if (source.SecurityGroupId != null) {
             this.SecurityGroupId = new String(source.SecurityGroupId);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -64,6 +138,7 @@ public class DescribeSecurityGroupPoliciesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

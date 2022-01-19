@@ -115,6 +115,34 @@ This parameter is optional for a CCN-based VPN tunnel.
     private String RouteType;
 
     /**
+    * Negotiation type. Valid values: `active` (default value), `passive` and `flowTrigger`.
+    */
+    @SerializedName("NegotiationType")
+    @Expose
+    private String NegotiationType;
+
+    /**
+    * Specifies whether to enable DPD. Valid values: `0` (disable) and `1` (enable)
+    */
+    @SerializedName("DpdEnable")
+    @Expose
+    private Long DpdEnable;
+
+    /**
+    * DPD timeout period. Default: 30; unit: second. If the request is not responded within this period, the peer end is considered not exists. This parameter is valid when the value of `DpdEnable` is 1. 
+    */
+    @SerializedName("DpdTimeout")
+    @Expose
+    private String DpdTimeout;
+
+    /**
+    * The action after DPD timeout. Valid values: `clear` (disconnect) and `restart` (try again). It’s valid when `DpdEnable` is `1`. 
+    */
+    @SerializedName("DpdAction")
+    @Expose
+    private String DpdAction;
+
+    /**
      * Get The ID of the VPN gateway instance. 
      * @return VpnGatewayId The ID of the VPN gateway instance.
      */
@@ -326,6 +354,70 @@ This parameter is optional for a CCN-based VPN tunnel.
         this.RouteType = RouteType;
     }
 
+    /**
+     * Get Negotiation type. Valid values: `active` (default value), `passive` and `flowTrigger`. 
+     * @return NegotiationType Negotiation type. Valid values: `active` (default value), `passive` and `flowTrigger`.
+     */
+    public String getNegotiationType() {
+        return this.NegotiationType;
+    }
+
+    /**
+     * Set Negotiation type. Valid values: `active` (default value), `passive` and `flowTrigger`.
+     * @param NegotiationType Negotiation type. Valid values: `active` (default value), `passive` and `flowTrigger`.
+     */
+    public void setNegotiationType(String NegotiationType) {
+        this.NegotiationType = NegotiationType;
+    }
+
+    /**
+     * Get Specifies whether to enable DPD. Valid values: `0` (disable) and `1` (enable) 
+     * @return DpdEnable Specifies whether to enable DPD. Valid values: `0` (disable) and `1` (enable)
+     */
+    public Long getDpdEnable() {
+        return this.DpdEnable;
+    }
+
+    /**
+     * Set Specifies whether to enable DPD. Valid values: `0` (disable) and `1` (enable)
+     * @param DpdEnable Specifies whether to enable DPD. Valid values: `0` (disable) and `1` (enable)
+     */
+    public void setDpdEnable(Long DpdEnable) {
+        this.DpdEnable = DpdEnable;
+    }
+
+    /**
+     * Get DPD timeout period. Default: 30; unit: second. If the request is not responded within this period, the peer end is considered not exists. This parameter is valid when the value of `DpdEnable` is 1.  
+     * @return DpdTimeout DPD timeout period. Default: 30; unit: second. If the request is not responded within this period, the peer end is considered not exists. This parameter is valid when the value of `DpdEnable` is 1. 
+     */
+    public String getDpdTimeout() {
+        return this.DpdTimeout;
+    }
+
+    /**
+     * Set DPD timeout period. Default: 30; unit: second. If the request is not responded within this period, the peer end is considered not exists. This parameter is valid when the value of `DpdEnable` is 1. 
+     * @param DpdTimeout DPD timeout period. Default: 30; unit: second. If the request is not responded within this period, the peer end is considered not exists. This parameter is valid when the value of `DpdEnable` is 1. 
+     */
+    public void setDpdTimeout(String DpdTimeout) {
+        this.DpdTimeout = DpdTimeout;
+    }
+
+    /**
+     * Get The action after DPD timeout. Valid values: `clear` (disconnect) and `restart` (try again). It’s valid when `DpdEnable` is `1`.  
+     * @return DpdAction The action after DPD timeout. Valid values: `clear` (disconnect) and `restart` (try again). It’s valid when `DpdEnable` is `1`. 
+     */
+    public String getDpdAction() {
+        return this.DpdAction;
+    }
+
+    /**
+     * Set The action after DPD timeout. Valid values: `clear` (disconnect) and `restart` (try again). It’s valid when `DpdEnable` is `1`. 
+     * @param DpdAction The action after DPD timeout. Valid values: `clear` (disconnect) and `restart` (try again). It’s valid when `DpdEnable` is `1`. 
+     */
+    public void setDpdAction(String DpdAction) {
+        this.DpdAction = DpdAction;
+    }
+
     public CreateVpnConnectionRequest() {
     }
 
@@ -379,6 +471,18 @@ This parameter is optional for a CCN-based VPN tunnel.
         if (source.RouteType != null) {
             this.RouteType = new String(source.RouteType);
         }
+        if (source.NegotiationType != null) {
+            this.NegotiationType = new String(source.NegotiationType);
+        }
+        if (source.DpdEnable != null) {
+            this.DpdEnable = new Long(source.DpdEnable);
+        }
+        if (source.DpdTimeout != null) {
+            this.DpdTimeout = new String(source.DpdTimeout);
+        }
+        if (source.DpdAction != null) {
+            this.DpdAction = new String(source.DpdAction);
+        }
     }
 
 
@@ -399,6 +503,10 @@ This parameter is optional for a CCN-based VPN tunnel.
         this.setParamSimple(map, prefix + "HealthCheckLocalIp", this.HealthCheckLocalIp);
         this.setParamSimple(map, prefix + "HealthCheckRemoteIp", this.HealthCheckRemoteIp);
         this.setParamSimple(map, prefix + "RouteType", this.RouteType);
+        this.setParamSimple(map, prefix + "NegotiationType", this.NegotiationType);
+        this.setParamSimple(map, prefix + "DpdEnable", this.DpdEnable);
+        this.setParamSimple(map, prefix + "DpdTimeout", this.DpdTimeout);
+        this.setParamSimple(map, prefix + "DpdAction", this.DpdAction);
 
     }
 }
