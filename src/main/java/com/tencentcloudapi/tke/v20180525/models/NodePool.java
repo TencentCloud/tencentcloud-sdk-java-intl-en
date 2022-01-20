@@ -157,6 +157,14 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private String UserScript;
 
     /**
+    * Resource tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Node pool ID 
      * @return NodePoolId Node pool ID
      */
@@ -476,6 +484,26 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.UserScript = UserScript;
     }
 
+    /**
+     * Get Resource tag
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Tags Resource tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Resource tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Tags Resource tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public NodePool() {
     }
 
@@ -544,6 +572,12 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         if (source.UserScript != null) {
             this.UserScript = new String(source.UserScript);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -569,6 +603,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
         this.setParamSimple(map, prefix + "DesiredPodNum", this.DesiredPodNum);
         this.setParamSimple(map, prefix + "UserScript", this.UserScript);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

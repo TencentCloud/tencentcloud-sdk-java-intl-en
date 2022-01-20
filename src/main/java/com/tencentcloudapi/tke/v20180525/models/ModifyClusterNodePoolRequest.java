@@ -100,6 +100,20 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
     private InstanceExtraArgs ExtraArgs;
 
     /**
+    * Resource tag
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * 
+    */
+    @SerializedName("Unschedulable")
+    @Expose
+    private Long Unschedulable;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -275,6 +289,38 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         this.ExtraArgs = ExtraArgs;
     }
 
+    /**
+     * Get Resource tag 
+     * @return Tags Resource tag
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Resource tag
+     * @param Tags Resource tag
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get  
+     * @return Unschedulable 
+     */
+    public Long getUnschedulable() {
+        return this.Unschedulable;
+    }
+
+    /**
+     * Set 
+     * @param Unschedulable 
+     */
+    public void setUnschedulable(Long Unschedulable) {
+        this.Unschedulable = Unschedulable;
+    }
+
     public ModifyClusterNodePoolRequest() {
     }
 
@@ -322,6 +368,15 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         if (source.ExtraArgs != null) {
             this.ExtraArgs = new InstanceExtraArgs(source.ExtraArgs);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.Unschedulable != null) {
+            this.Unschedulable = new Long(source.Unschedulable);
+        }
     }
 
 
@@ -340,6 +395,8 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "OsName", this.OsName);
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
         this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Unschedulable", this.Unschedulable);
 
     }
 }

@@ -37,7 +37,7 @@ public class DescribeAccessRegionsByDestRegionRequest extends AbstractModel{
     private String IPAddressVersion;
 
     /**
-    * Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+    * Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
     */
     @SerializedName("PackageType")
     @Expose
@@ -76,16 +76,16 @@ public class DescribeAccessRegionsByDestRegionRequest extends AbstractModel{
     }
 
     /**
-     * Get Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group). 
-     * @return PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+     * Get Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection). 
+     * @return PackageType Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
-     * @param PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+     * Set Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
+     * @param PackageType Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;

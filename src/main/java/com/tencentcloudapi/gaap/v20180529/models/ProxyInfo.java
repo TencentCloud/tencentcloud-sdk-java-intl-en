@@ -251,7 +251,8 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     private String NetworkType;
 
     /**
-    * Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+    * Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), 
+and `CrossBorder` (cross-MLC-border connection).
 Note: this field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("PackageType")
@@ -272,6 +273,13 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     @SerializedName("IPList")
     @Expose
     private IPDetail [] IPList;
+
+    /**
+    * 
+    */
+    @SerializedName("Http3Supported")
+    @Expose
+    private Long Http3Supported;
 
     /**
      * Get Connection instance ID; It's an old parameter, please switch to ProxyId.
@@ -838,9 +846,11 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+     * Get Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), 
+and `CrossBorder` (cross-MLC-border connection).
 Note: this field may return `null`, indicating that no valid value can be obtained. 
-     * @return PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+     * @return PackageType Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), 
+and `CrossBorder` (cross-MLC-border connection).
 Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public String getPackageType() {
@@ -848,9 +858,11 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Set Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+     * Set Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), 
+and `CrossBorder` (cross-MLC-border connection).
 Note: this field may return `null`, indicating that no valid value can be obtained.
-     * @param PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+     * @param PackageType Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), 
+and `CrossBorder` (cross-MLC-border connection).
 Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public void setPackageType(String PackageType) {
@@ -891,6 +903,22 @@ Note: this field may return `null`, indicating that no valid value can be obtain
      */
     public void setIPList(IPDetail [] IPList) {
         this.IPList = IPList;
+    }
+
+    /**
+     * Get  
+     * @return Http3Supported 
+     */
+    public Long getHttp3Supported() {
+        return this.Http3Supported;
+    }
+
+    /**
+     * Set 
+     * @param Http3Supported 
+     */
+    public void setHttp3Supported(Long Http3Supported) {
+        this.Http3Supported = Http3Supported;
     }
 
     public ProxyInfo() {
@@ -1012,6 +1040,9 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                 this.IPList[i] = new IPDetail(source.IPList[i]);
             }
         }
+        if (source.Http3Supported != null) {
+            this.Http3Supported = new Long(source.Http3Supported);
+        }
     }
 
 
@@ -1051,6 +1082,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "PackageType", this.PackageType);
         this.setParamSimple(map, prefix + "BanStatus", this.BanStatus);
         this.setParamArrayObj(map, prefix + "IPList.", this.IPList);
+        this.setParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
 
     }
 }

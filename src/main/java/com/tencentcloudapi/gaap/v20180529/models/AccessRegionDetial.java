@@ -72,6 +72,13 @@ public class AccessRegionDetial extends AbstractModel{
     private String IDCType;
 
     /**
+    * 
+    */
+    @SerializedName("FeatureBitmap")
+    @Expose
+    private Long FeatureBitmap;
+
+    /**
      * Get Region ID 
      * @return RegionId Region ID
      */
@@ -183,6 +190,22 @@ public class AccessRegionDetial extends AbstractModel{
         this.IDCType = IDCType;
     }
 
+    /**
+     * Get  
+     * @return FeatureBitmap 
+     */
+    public Long getFeatureBitmap() {
+        return this.FeatureBitmap;
+    }
+
+    /**
+     * Set 
+     * @param FeatureBitmap 
+     */
+    public void setFeatureBitmap(Long FeatureBitmap) {
+        this.FeatureBitmap = FeatureBitmap;
+    }
+
     public AccessRegionDetial() {
     }
 
@@ -218,6 +241,9 @@ public class AccessRegionDetial extends AbstractModel{
         if (source.IDCType != null) {
             this.IDCType = new String(source.IDCType);
         }
+        if (source.FeatureBitmap != null) {
+            this.FeatureBitmap = new Long(source.FeatureBitmap);
+        }
     }
 
 
@@ -232,6 +258,7 @@ public class AccessRegionDetial extends AbstractModel{
         this.setParamSimple(map, prefix + "RegionArea", this.RegionArea);
         this.setParamSimple(map, prefix + "RegionAreaName", this.RegionAreaName);
         this.setParamSimple(map, prefix + "IDCType", this.IDCType);
+        this.setParamSimple(map, prefix + "FeatureBitmap", this.FeatureBitmap);
 
     }
 }

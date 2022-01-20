@@ -37,7 +37,7 @@ public class CreateSnapshotRequest extends AbstractModel{
     private String SnapshotName;
 
     /**
-    * Expiration time of the snapshot. The snapshot will be automatically deleted upon expiration.
+    * Expiration time of the snapshot. It must be in UTC ISO-8601 format, eg. 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires
     */
     @SerializedName("Deadline")
     @Expose
@@ -76,16 +76,16 @@ public class CreateSnapshotRequest extends AbstractModel{
     }
 
     /**
-     * Get Expiration time of the snapshot. The snapshot will be automatically deleted upon expiration. 
-     * @return Deadline Expiration time of the snapshot. The snapshot will be automatically deleted upon expiration.
+     * Get Expiration time of the snapshot. It must be in UTC ISO-8601 format, eg. 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires 
+     * @return Deadline Expiration time of the snapshot. It must be in UTC ISO-8601 format, eg. 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires
      */
     public String getDeadline() {
         return this.Deadline;
     }
 
     /**
-     * Set Expiration time of the snapshot. The snapshot will be automatically deleted upon expiration.
-     * @param Deadline Expiration time of the snapshot. The snapshot will be automatically deleted upon expiration.
+     * Set Expiration time of the snapshot. It must be in UTC ISO-8601 format, eg. 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires
+     * @param Deadline Expiration time of the snapshot. It must be in UTC ISO-8601 format, eg. 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires
      */
     public void setDeadline(String Deadline) {
         this.Deadline = Deadline;

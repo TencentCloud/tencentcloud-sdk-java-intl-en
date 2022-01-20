@@ -30,6 +30,13 @@ public class TerminateDisksRequest extends AbstractModel{
     private String [] DiskIds;
 
     /**
+    * Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+    */
+    @SerializedName("DeleteSnapshot")
+    @Expose
+    private Long DeleteSnapshot;
+
+    /**
      * Get List of cloud disk IDs required to be returned. 
      * @return DiskIds List of cloud disk IDs required to be returned.
      */
@@ -43,6 +50,22 @@ public class TerminateDisksRequest extends AbstractModel{
      */
     public void setDiskIds(String [] DiskIds) {
         this.DiskIds = DiskIds;
+    }
+
+    /**
+     * Get Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API.  
+     * @return DeleteSnapshot Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+     */
+    public Long getDeleteSnapshot() {
+        return this.DeleteSnapshot;
+    }
+
+    /**
+     * Set Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+     * @param DeleteSnapshot Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+     */
+    public void setDeleteSnapshot(Long DeleteSnapshot) {
+        this.DeleteSnapshot = DeleteSnapshot;
     }
 
     public TerminateDisksRequest() {
@@ -59,6 +82,9 @@ public class TerminateDisksRequest extends AbstractModel{
                 this.DiskIds[i] = new String(source.DiskIds[i]);
             }
         }
+        if (source.DeleteSnapshot != null) {
+            this.DeleteSnapshot = new Long(source.DeleteSnapshot);
+        }
     }
 
 
@@ -67,6 +93,7 @@ public class TerminateDisksRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
+        this.setParamSimple(map, prefix + "DeleteSnapshot", this.DeleteSnapshot);
 
     }
 }

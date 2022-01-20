@@ -73,6 +73,22 @@ Default value: 5.
     private String ServiceName;
 
     /**
+    * Region. Valid values:
+China Mainland
+Asia Pacific I
+Asia Pacific II
+Asia Pacific III
+Europe
+North America
+South America
+Middle East
+Africa
+    */
+    @SerializedName("RegionNames")
+    @Expose
+    private String [] RegionNames;
+
+    /**
      * Get Start time point in the format of `yyyy-mm-dd HH:MM:SS`. 
      * @return StartTime Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
      */
@@ -200,6 +216,58 @@ Default value: 5.
         this.ServiceName = ServiceName;
     }
 
+    /**
+     * Get Region. Valid values:
+China Mainland
+Asia Pacific I
+Asia Pacific II
+Asia Pacific III
+Europe
+North America
+South America
+Middle East
+Africa 
+     * @return RegionNames Region. Valid values:
+China Mainland
+Asia Pacific I
+Asia Pacific II
+Asia Pacific III
+Europe
+North America
+South America
+Middle East
+Africa
+     */
+    public String [] getRegionNames() {
+        return this.RegionNames;
+    }
+
+    /**
+     * Set Region. Valid values:
+China Mainland
+Asia Pacific I
+Asia Pacific II
+Asia Pacific III
+Europe
+North America
+South America
+Middle East
+Africa
+     * @param RegionNames Region. Valid values:
+China Mainland
+Asia Pacific I
+Asia Pacific II
+Asia Pacific III
+Europe
+North America
+South America
+Middle East
+Africa
+     */
+    public void setRegionNames(String [] RegionNames) {
+        this.RegionNames = RegionNames;
+    }
+
     public DescribeBillBandwidthAndFluxListRequest() {
     }
 
@@ -229,6 +297,12 @@ Default value: 5.
         if (source.ServiceName != null) {
             this.ServiceName = new String(source.ServiceName);
         }
+        if (source.RegionNames != null) {
+            this.RegionNames = new String[source.RegionNames.length];
+            for (int i = 0; i < source.RegionNames.length; i++) {
+                this.RegionNames[i] = new String(source.RegionNames[i]);
+            }
+        }
     }
 
 
@@ -242,6 +316,7 @@ Default value: 5.
         this.setParamSimple(map, prefix + "MainlandOrOversea", this.MainlandOrOversea);
         this.setParamSimple(map, prefix + "Granularity", this.Granularity);
         this.setParamSimple(map, prefix + "ServiceName", this.ServiceName);
+        this.setParamArraySimple(map, prefix + "RegionNames.", this.RegionNames);
 
     }
 }

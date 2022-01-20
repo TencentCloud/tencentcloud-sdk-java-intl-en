@@ -93,6 +93,13 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
     private String OsCustomizeType;
 
     /**
+    * Resource tag
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -252,6 +259,22 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
         this.OsCustomizeType = OsCustomizeType;
     }
 
+    /**
+     * Get Resource tag 
+     * @return Tags Resource tag
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Resource tag
+     * @param Tags Resource tag
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateClusterNodePoolRequest() {
     }
 
@@ -296,6 +319,12 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
         if (source.OsCustomizeType != null) {
             this.OsCustomizeType = new String(source.OsCustomizeType);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -313,6 +342,7 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
         this.setParamSimple(map, prefix + "NodePoolOs", this.NodePoolOs);
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

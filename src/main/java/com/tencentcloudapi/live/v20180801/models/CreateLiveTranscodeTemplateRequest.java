@@ -96,9 +96,10 @@ It must be a multiple of 2. The original width is 0.
     private Long NeedAudio;
 
     /**
-    * Height. Default value: 0.
-Value range: [0,3000]
-The value must be a multiple of 2, and 0 is the original height.
+    * Height. Default value: 0
+Value range: 0-3000
+The value must be a multiple of 2. The original height is `0`.
+This parameter is required for a top speed codec template (when `AiTransCode` is `1`).
     */
     @SerializedName("Height")
     @Expose
@@ -372,24 +373,28 @@ It must be a multiple of 2. The original width is 0.
     }
 
     /**
-     * Get Height. Default value: 0.
-Value range: [0,3000]
-The value must be a multiple of 2, and 0 is the original height. 
-     * @return Height Height. Default value: 0.
-Value range: [0,3000]
-The value must be a multiple of 2, and 0 is the original height.
+     * Get Height. Default value: 0
+Value range: 0-3000
+The value must be a multiple of 2. The original height is `0`.
+This parameter is required for a top speed codec template (when `AiTransCode` is `1`). 
+     * @return Height Height. Default value: 0
+Value range: 0-3000
+The value must be a multiple of 2. The original height is `0`.
+This parameter is required for a top speed codec template (when `AiTransCode` is `1`).
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Height. Default value: 0.
-Value range: [0,3000]
-The value must be a multiple of 2, and 0 is the original height.
-     * @param Height Height. Default value: 0.
-Value range: [0,3000]
-The value must be a multiple of 2, and 0 is the original height.
+     * Set Height. Default value: 0
+Value range: 0-3000
+The value must be a multiple of 2. The original height is `0`.
+This parameter is required for a top speed codec template (when `AiTransCode` is `1`).
+     * @param Height Height. Default value: 0
+Value range: 0-3000
+The value must be a multiple of 2. The original height is `0`.
+This parameter is required for a top speed codec template (when `AiTransCode` is `1`).
      */
     public void setHeight(Long Height) {
         this.Height = Height;

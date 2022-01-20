@@ -157,6 +157,13 @@ which is left empty by default. Specify this parameter when cloning a strong syn
     private Boolean DryRun;
 
     /**
+    * Financial cage ID.
+    */
+    @SerializedName("CageId")
+    @Expose
+    private String CageId;
+
+    /**
      * Get ID of the instance to be cloned from 
      * @return InstanceId ID of the instance to be cloned from
      */
@@ -464,6 +471,22 @@ which is left empty by default. Specify this parameter when cloning a strong syn
         this.DryRun = DryRun;
     }
 
+    /**
+     * Get Financial cage ID. 
+     * @return CageId Financial cage ID.
+     */
+    public String getCageId() {
+        return this.CageId;
+    }
+
+    /**
+     * Set Financial cage ID.
+     * @param CageId Financial cage ID.
+     */
+    public void setCageId(String CageId) {
+        this.CageId = CageId;
+    }
+
     public CreateCloneInstanceRequest() {
     }
 
@@ -535,6 +558,9 @@ which is left empty by default. Specify this parameter when cloning a strong syn
         if (source.DryRun != null) {
             this.DryRun = new Boolean(source.DryRun);
         }
+        if (source.CageId != null) {
+            this.CageId = new String(source.CageId);
+        }
     }
 
 
@@ -561,6 +587,7 @@ which is left empty by default. Specify this parameter when cloning a strong syn
         this.setParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
         this.setParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
+        this.setParamSimple(map, prefix + "CageId", this.CageId);
 
     }
 }

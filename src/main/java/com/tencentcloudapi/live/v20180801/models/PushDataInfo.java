@@ -58,7 +58,7 @@ public class PushDataInfo extends AbstractModel{
     private Long VideoFps;
 
     /**
-    * Pushed video bitrate in bps.
+    * Video bitrate (Kbps) for publishing
     */
     @SerializedName("VideoSpeed")
     @Expose
@@ -72,7 +72,7 @@ public class PushDataInfo extends AbstractModel{
     private Long AudioFps;
 
     /**
-    * Pushed audio bitrate in bps.
+    * Audio bitrate (Kbps) for publishing
     */
     @SerializedName("AudioSpeed")
     @Expose
@@ -224,16 +224,16 @@ Example: H.264.
     }
 
     /**
-     * Get Pushed video bitrate in bps. 
-     * @return VideoSpeed Pushed video bitrate in bps.
+     * Get Video bitrate (Kbps) for publishing 
+     * @return VideoSpeed Video bitrate (Kbps) for publishing
      */
     public Long getVideoSpeed() {
         return this.VideoSpeed;
     }
 
     /**
-     * Set Pushed video bitrate in bps.
-     * @param VideoSpeed Pushed video bitrate in bps.
+     * Set Video bitrate (Kbps) for publishing
+     * @param VideoSpeed Video bitrate (Kbps) for publishing
      */
     public void setVideoSpeed(Long VideoSpeed) {
         this.VideoSpeed = VideoSpeed;
@@ -256,16 +256,16 @@ Example: H.264.
     }
 
     /**
-     * Get Pushed audio bitrate in bps. 
-     * @return AudioSpeed Pushed audio bitrate in bps.
+     * Get Audio bitrate (Kbps) for publishing 
+     * @return AudioSpeed Audio bitrate (Kbps) for publishing
      */
     public Long getAudioSpeed() {
         return this.AudioSpeed;
     }
 
     /**
-     * Set Pushed audio bitrate in bps.
-     * @param AudioSpeed Pushed audio bitrate in bps.
+     * Set Audio bitrate (Kbps) for publishing
+     * @param AudioSpeed Audio bitrate (Kbps) for publishing
      */
     public void setAudioSpeed(Long AudioSpeed) {
         this.AudioSpeed = AudioSpeed;

@@ -247,6 +247,13 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private String CageId;
 
     /**
+    * Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+    */
+    @SerializedName("ParamTemplateType")
+    @Expose
+    private String ParamTemplateType;
+
+    /**
     * The array of alarm policy names, such as ["policy-uyoee9wg"]. If the `AlarmPolicyList` parameter is specified, this parameter is invalid.
     */
     @SerializedName("AlarmPolicyIdList")
@@ -773,6 +780,22 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
+     * Get Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template). 
+     * @return ParamTemplateType Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+     */
+    public String getParamTemplateType() {
+        return this.ParamTemplateType;
+    }
+
+    /**
+     * Set Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+     * @param ParamTemplateType Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+     */
+    public void setParamTemplateType(String ParamTemplateType) {
+        this.ParamTemplateType = ParamTemplateType;
+    }
+
+    /**
      * Get The array of alarm policy names, such as ["policy-uyoee9wg"]. If the `AlarmPolicyList` parameter is specified, this parameter is invalid. 
      * @return AlarmPolicyIdList The array of alarm policy names, such as ["policy-uyoee9wg"]. If the `AlarmPolicyList` parameter is specified, this parameter is invalid.
      */
@@ -920,6 +943,9 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
         if (source.CageId != null) {
             this.CageId = new String(source.CageId);
         }
+        if (source.ParamTemplateType != null) {
+            this.ParamTemplateType = new String(source.ParamTemplateType);
+        }
         if (source.AlarmPolicyIdList != null) {
             this.AlarmPolicyIdList = new String[source.AlarmPolicyIdList.length];
             for (int i = 0; i < source.AlarmPolicyIdList.length; i++) {
@@ -968,6 +994,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "AutoSyncFlag", this.AutoSyncFlag);
         this.setParamSimple(map, prefix + "CageId", this.CageId);
+        this.setParamSimple(map, prefix + "ParamTemplateType", this.ParamTemplateType);
         this.setParamArraySimple(map, prefix + "AlarmPolicyIdList.", this.AlarmPolicyIdList);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
 

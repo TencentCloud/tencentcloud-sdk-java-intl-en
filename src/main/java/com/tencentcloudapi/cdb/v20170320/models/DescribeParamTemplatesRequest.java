@@ -22,6 +22,29 @@ import java.util.HashMap;
 
 public class DescribeParamTemplatesRequest extends AbstractModel{
 
+    /**
+    * 
+    */
+    @SerializedName("EngineVersions")
+    @Expose
+    private String [] EngineVersions;
+
+    /**
+     * Get  
+     * @return EngineVersions 
+     */
+    public String [] getEngineVersions() {
+        return this.EngineVersions;
+    }
+
+    /**
+     * Set 
+     * @param EngineVersions 
+     */
+    public void setEngineVersions(String [] EngineVersions) {
+        this.EngineVersions = EngineVersions;
+    }
+
     public DescribeParamTemplatesRequest() {
     }
 
@@ -30,6 +53,12 @@ public class DescribeParamTemplatesRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeParamTemplatesRequest(DescribeParamTemplatesRequest source) {
+        if (source.EngineVersions != null) {
+            this.EngineVersions = new String[source.EngineVersions.length];
+            for (int i = 0; i < source.EngineVersions.length; i++) {
+                this.EngineVersions[i] = new String(source.EngineVersions[i]);
+            }
+        }
     }
 
 
@@ -37,6 +66,7 @@ public class DescribeParamTemplatesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "EngineVersions.", this.EngineVersions);
 
     }
 }

@@ -641,7 +641,7 @@ This API only supports connections of version 3.0.
     }
 
     /**
-     *This API (DescribeAccessRegionsByDestRegion) is used to query the list of the available acceleration regions based on the origin server region.
+     *This API is used to query the available accelerator region based on the origin server region.
      * @param req DescribeAccessRegionsByDestRegionRequest
      * @return DescribeAccessRegionsByDestRegionResponse
      * @throws TencentCloudSDKException

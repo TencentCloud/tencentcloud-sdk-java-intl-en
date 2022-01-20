@@ -86,11 +86,18 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
     private String NetworkType;
 
     /**
-    * Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+    * Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
     */
     @SerializedName("PackageType")
     @Expose
     private String PackageType;
+
+    /**
+    * 
+    */
+    @SerializedName("Http3Supported")
+    @Expose
+    private Long Http3Supported;
 
     /**
      * Get Acceleration region name. 
@@ -237,19 +244,35 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
     }
 
     /**
-     * Get Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group). 
-     * @return PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+     * Get Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection). 
+     * @return PackageType Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
-     * @param PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+     * Set Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
+     * @param PackageType Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
+    }
+
+    /**
+     * Get  
+     * @return Http3Supported 
+     */
+    public Long getHttp3Supported() {
+        return this.Http3Supported;
+    }
+
+    /**
+     * Set 
+     * @param Http3Supported 
+     */
+    public void setHttp3Supported(Long Http3Supported) {
+        this.Http3Supported = Http3Supported;
     }
 
     public InquiryPriceCreateProxyRequest() {
@@ -290,6 +313,9 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
         if (source.PackageType != null) {
             this.PackageType = new String(source.PackageType);
         }
+        if (source.Http3Supported != null) {
+            this.Http3Supported = new Long(source.Http3Supported);
+        }
     }
 
 
@@ -307,6 +333,7 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
         this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
         this.setParamSimple(map, prefix + "PackageType", this.PackageType);
+        this.setParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
 
     }
 }

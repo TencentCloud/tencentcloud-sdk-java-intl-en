@@ -63,8 +63,8 @@ Only letters, digits, underscores, and hyphens can be contained.
     private String Description;
 
     /**
-    * Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-300s.
+    * Screencapturing interval (s). Default value: 10
+Value range: 2-300
     */
     @SerializedName("SnapshotInterval")
     @Expose
@@ -214,20 +214,20 @@ Only letters, digits, underscores, and hyphens can be contained.
     }
 
     /**
-     * Get Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-300s. 
-     * @return SnapshotInterval Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-300s.
+     * Get Screencapturing interval (s). Default value: 10
+Value range: 2-300 
+     * @return SnapshotInterval Screencapturing interval (s). Default value: 10
+Value range: 2-300
      */
     public Long getSnapshotInterval() {
         return this.SnapshotInterval;
     }
 
     /**
-     * Set Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-300s.
-     * @param SnapshotInterval Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-300s.
+     * Set Screencapturing interval (s). Default value: 10
+Value range: 2-300
+     * @param SnapshotInterval Screencapturing interval (s). Default value: 10
+Value range: 2-300
      */
     public void setSnapshotInterval(Long SnapshotInterval) {
         this.SnapshotInterval = SnapshotInterval;

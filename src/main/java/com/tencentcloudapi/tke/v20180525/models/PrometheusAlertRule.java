@@ -74,6 +74,14 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     private Label [] Annotations;
 
     /**
+    * Alarm rule status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RuleState")
+    @Expose
+    private Long RuleState;
+
+    /**
      * Get Rule name 
      * @return Name Rule name
      */
@@ -193,6 +201,26 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         this.Annotations = Annotations;
     }
 
+    /**
+     * Get Alarm rule status
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return RuleState Alarm rule status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getRuleState() {
+        return this.RuleState;
+    }
+
+    /**
+     * Set Alarm rule status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param RuleState Alarm rule status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setRuleState(Long RuleState) {
+        this.RuleState = RuleState;
+    }
+
     public PrometheusAlertRule() {
     }
 
@@ -228,6 +256,9 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                 this.Annotations[i] = new Label(source.Annotations[i]);
             }
         }
+        if (source.RuleState != null) {
+            this.RuleState = new Long(source.RuleState);
+        }
     }
 
 
@@ -242,6 +273,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "For", this.For);
         this.setParamSimple(map, prefix + "Describe", this.Describe);
         this.setParamArrayObj(map, prefix + "Annotations.", this.Annotations);
+        this.setParamSimple(map, prefix + "RuleState", this.RuleState);
 
     }
 }

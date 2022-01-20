@@ -1271,7 +1271,7 @@ Note: the HTTP response packet will be very large if it contain a single large s
     }
 
     /**
-     *This API is used to query the list of user-imported SQL files.
+     *This API is used to query the list of SQL files imported by users. The common request parameter `Region` must be `ap-shanghai`.
      * @param req DescribeUploadedFilesRequest
      * @return DescribeUploadedFilesResponse
      * @throws TencentCloudSDKException

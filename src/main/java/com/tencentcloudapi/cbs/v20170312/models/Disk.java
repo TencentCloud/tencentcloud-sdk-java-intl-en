@@ -281,6 +281,13 @@ Note: This field may return null, indicating that no valid value was found.
     private String CreateTime;
 
     /**
+    * Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+    */
+    @SerializedName("DeleteSnapshot")
+    @Expose
+    private Long DeleteSnapshot;
+
+    /**
      * Get Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
 Note: This field may return null, indicating that no valid value was found. 
      * @return DeleteWithInstance Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
@@ -892,6 +899,22 @@ Note: This field may return null, indicating that no valid value was found.
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API.  
+     * @return DeleteSnapshot Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+     */
+    public Long getDeleteSnapshot() {
+        return this.DeleteSnapshot;
+    }
+
+    /**
+     * Set Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+     * @param DeleteSnapshot Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+     */
+    public void setDeleteSnapshot(Long DeleteSnapshot) {
+        this.DeleteSnapshot = DeleteSnapshot;
+    }
+
     public Disk() {
     }
 
@@ -1014,6 +1037,9 @@ Note: This field may return null, indicating that no valid value was found.
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.DeleteSnapshot != null) {
+            this.DeleteSnapshot = new Long(source.DeleteSnapshot);
+        }
     }
 
 
@@ -1056,6 +1082,7 @@ Note: This field may return null, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "ReturnFailCode", this.ReturnFailCode);
         this.setParamSimple(map, prefix + "Shareable", this.Shareable);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "DeleteSnapshot", this.DeleteSnapshot);
 
     }
 }

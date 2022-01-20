@@ -63,6 +63,9 @@ public enum LiveErrorCode {
     // The stream does not exist.
      FAILEDOPERATION_STREAMNOTEXIST("FailedOperation.StreamNotExist"),
      
+    // Failed to unbind the tag. Try unbinding it manually.
+     FAILEDOPERATION_TAGUNBINDERROR("FailedOperation.TagUnbindError"),
+     
     // Internal error.
      INTERNALERROR("InternalError"),
      
@@ -81,7 +84,7 @@ public enum LiveErrorCode {
     // The template does not exist.
      INTERNALERROR_CONFNOTFOUND("InternalError.ConfNotFound"),
      
-    // The number of templates exceeds the limit.
+    // The number of templates exceeded the limit.
      INTERNALERROR_CONFOUTLIMIT("InternalError.ConfOutLimit"),
      
     // The configuration does not exist.

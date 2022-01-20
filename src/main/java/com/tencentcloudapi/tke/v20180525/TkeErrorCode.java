@@ -63,6 +63,9 @@ public enum TkeErrorCode {
     // Some of the CVMs cannot be found
      INTERNALERROR_CVMNUMBERNOTMATCH("InternalError.CvmNumberNotMatch"),
      
+    // Exceptional CVM status.
+     INTERNALERROR_CVMSTATUS("InternalError.CvmStatus"),
+     
     // DB error.
      INTERNALERROR_DB("InternalError.Db"),
      

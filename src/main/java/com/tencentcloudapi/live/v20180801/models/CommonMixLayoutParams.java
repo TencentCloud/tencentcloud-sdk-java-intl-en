@@ -23,9 +23,10 @@ import java.util.HashMap;
 public class CommonMixLayoutParams extends AbstractModel{
 
     /**
-    * Input layer. Value range: [1,16].
-1) For `image_layer` of background stream (i.e., main host video image or canvas), enter 1.
-2) For audio stream mix, this parameter is also required.
+    * Input layer. Value range: [1,16]
+(1) For the background stream, i.e., the room owner’s image or the canvas, set this parameter to `1`.
+(2) This parameter is required for audio-only stream mixing as well.
+Note that two inputs cannot have the same `ImageLayer` value.
     */
     @SerializedName("ImageLayer")
     @Expose
@@ -45,17 +46,6 @@ If this parameter is left empty, 0 will be used by default.
     private Long InputType;
 
     /**
-    * Output width of input video image. Value range:
-Pixel: [0,2000]
-Percentage: [0.01,0.99]
-If this parameter is left empty, the input stream width will be used by default.
-If percentage is used, the expected output is (percentage * background width).
-    */
-    @SerializedName("ImageWidth")
-    @Expose
-    private Float ImageWidth;
-
-    /**
     * Output height of input video image. Value range:
 Pixel: [0,2000]
 Percentage: [0.01,0.99]
@@ -65,6 +55,17 @@ If percentage is used, the expected output is (percentage * background height).
     @SerializedName("ImageHeight")
     @Expose
     private Float ImageHeight;
+
+    /**
+    * Output width of input video image. Value range:
+Pixel: [0,2000]
+Percentage: [0.01,0.99]
+If this parameter is left empty, the input stream width will be used by default.
+If percentage is used, the expected output is (percentage * background width).
+    */
+    @SerializedName("ImageWidth")
+    @Expose
+    private Float ImageWidth;
 
     /**
     * X-axis offset of input in output video image. Value range:
@@ -113,24 +114,28 @@ Gray: 0x999999
     private Long WatermarkId;
 
     /**
-     * Get Input layer. Value range: [1,16].
-1) For `image_layer` of background stream (i.e., main host video image or canvas), enter 1.
-2) For audio stream mix, this parameter is also required. 
-     * @return ImageLayer Input layer. Value range: [1,16].
-1) For `image_layer` of background stream (i.e., main host video image or canvas), enter 1.
-2) For audio stream mix, this parameter is also required.
+     * Get Input layer. Value range: [1,16]
+(1) For the background stream, i.e., the room owner’s image or the canvas, set this parameter to `1`.
+(2) This parameter is required for audio-only stream mixing as well.
+Note that two inputs cannot have the same `ImageLayer` value. 
+     * @return ImageLayer Input layer. Value range: [1,16]
+(1) For the background stream, i.e., the room owner’s image or the canvas, set this parameter to `1`.
+(2) This parameter is required for audio-only stream mixing as well.
+Note that two inputs cannot have the same `ImageLayer` value.
      */
     public Long getImageLayer() {
         return this.ImageLayer;
     }
 
     /**
-     * Set Input layer. Value range: [1,16].
-1) For `image_layer` of background stream (i.e., main host video image or canvas), enter 1.
-2) For audio stream mix, this parameter is also required.
-     * @param ImageLayer Input layer. Value range: [1,16].
-1) For `image_layer` of background stream (i.e., main host video image or canvas), enter 1.
-2) For audio stream mix, this parameter is also required.
+     * Set Input layer. Value range: [1,16]
+(1) For the background stream, i.e., the room owner’s image or the canvas, set this parameter to `1`.
+(2) This parameter is required for audio-only stream mixing as well.
+Note that two inputs cannot have the same `ImageLayer` value.
+     * @param ImageLayer Input layer. Value range: [1,16]
+(1) For the background stream, i.e., the room owner’s image or the canvas, set this parameter to `1`.
+(2) This parameter is required for audio-only stream mixing as well.
+Note that two inputs cannot have the same `ImageLayer` value.
      */
     public void setImageLayer(Long ImageLayer) {
         this.ImageLayer = ImageLayer;
@@ -177,38 +182,6 @@ If this parameter is left empty, 0 will be used by default.
     }
 
     /**
-     * Get Output width of input video image. Value range:
-Pixel: [0,2000]
-Percentage: [0.01,0.99]
-If this parameter is left empty, the input stream width will be used by default.
-If percentage is used, the expected output is (percentage * background width). 
-     * @return ImageWidth Output width of input video image. Value range:
-Pixel: [0,2000]
-Percentage: [0.01,0.99]
-If this parameter is left empty, the input stream width will be used by default.
-If percentage is used, the expected output is (percentage * background width).
-     */
-    public Float getImageWidth() {
-        return this.ImageWidth;
-    }
-
-    /**
-     * Set Output width of input video image. Value range:
-Pixel: [0,2000]
-Percentage: [0.01,0.99]
-If this parameter is left empty, the input stream width will be used by default.
-If percentage is used, the expected output is (percentage * background width).
-     * @param ImageWidth Output width of input video image. Value range:
-Pixel: [0,2000]
-Percentage: [0.01,0.99]
-If this parameter is left empty, the input stream width will be used by default.
-If percentage is used, the expected output is (percentage * background width).
-     */
-    public void setImageWidth(Float ImageWidth) {
-        this.ImageWidth = ImageWidth;
-    }
-
-    /**
      * Get Output height of input video image. Value range:
 Pixel: [0,2000]
 Percentage: [0.01,0.99]
@@ -238,6 +211,38 @@ If percentage is used, the expected output is (percentage * background height).
      */
     public void setImageHeight(Float ImageHeight) {
         this.ImageHeight = ImageHeight;
+    }
+
+    /**
+     * Get Output width of input video image. Value range:
+Pixel: [0,2000]
+Percentage: [0.01,0.99]
+If this parameter is left empty, the input stream width will be used by default.
+If percentage is used, the expected output is (percentage * background width). 
+     * @return ImageWidth Output width of input video image. Value range:
+Pixel: [0,2000]
+Percentage: [0.01,0.99]
+If this parameter is left empty, the input stream width will be used by default.
+If percentage is used, the expected output is (percentage * background width).
+     */
+    public Float getImageWidth() {
+        return this.ImageWidth;
+    }
+
+    /**
+     * Set Output width of input video image. Value range:
+Pixel: [0,2000]
+Percentage: [0.01,0.99]
+If this parameter is left empty, the input stream width will be used by default.
+If percentage is used, the expected output is (percentage * background width).
+     * @param ImageWidth Output width of input video image. Value range:
+Pixel: [0,2000]
+Percentage: [0.01,0.99]
+If this parameter is left empty, the input stream width will be used by default.
+If percentage is used, the expected output is (percentage * background width).
+     */
+    public void setImageWidth(Float ImageWidth) {
+        this.ImageWidth = ImageWidth;
     }
 
     /**
@@ -390,11 +395,11 @@ Gray: 0x999999
         if (source.InputType != null) {
             this.InputType = new Long(source.InputType);
         }
-        if (source.ImageWidth != null) {
-            this.ImageWidth = new Float(source.ImageWidth);
-        }
         if (source.ImageHeight != null) {
             this.ImageHeight = new Float(source.ImageHeight);
+        }
+        if (source.ImageWidth != null) {
+            this.ImageWidth = new Float(source.ImageWidth);
         }
         if (source.LocationX != null) {
             this.LocationX = new Float(source.LocationX);
@@ -417,8 +422,8 @@ Gray: 0x999999
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageLayer", this.ImageLayer);
         this.setParamSimple(map, prefix + "InputType", this.InputType);
-        this.setParamSimple(map, prefix + "ImageWidth", this.ImageWidth);
         this.setParamSimple(map, prefix + "ImageHeight", this.ImageHeight);
+        this.setParamSimple(map, prefix + "ImageWidth", this.ImageWidth);
         this.setParamSimple(map, prefix + "LocationX", this.LocationX);
         this.setParamSimple(map, prefix + "LocationY", this.LocationY);
         this.setParamSimple(map, prefix + "Color", this.Color);

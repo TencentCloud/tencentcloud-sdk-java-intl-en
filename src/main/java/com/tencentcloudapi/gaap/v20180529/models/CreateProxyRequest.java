@@ -109,11 +109,25 @@ The connection is to be replicated if this parameter is set.
     private String IPAddressVersion;
 
     /**
-    * Network type. Valid values: `normal` (default), `cn2`
+    * Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
     */
     @SerializedName("NetworkType")
     @Expose
     private String NetworkType;
+
+    /**
+    * Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
+    */
+    @SerializedName("PackageType")
+    @Expose
+    private String PackageType;
+
+    /**
+    * 
+    */
+    @SerializedName("Http3Supported")
+    @Expose
+    private Long Http3Supported;
 
     /**
      * Get Project ID of connection. 
@@ -316,19 +330,51 @@ The connection is to be replicated if this parameter is set.
     }
 
     /**
-     * Get Network type. Valid values: `normal` (default), `cn2` 
-     * @return NetworkType Network type. Valid values: `normal` (default), `cn2`
+     * Get Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland). 
+     * @return NetworkType Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set Network type. Valid values: `normal` (default), `cn2`
-     * @param NetworkType Network type. Valid values: `normal` (default), `cn2`
+     * Set Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
+     * @param NetworkType Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
+    }
+
+    /**
+     * Get Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection). 
+     * @return PackageType Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
+     */
+    public String getPackageType() {
+        return this.PackageType;
+    }
+
+    /**
+     * Set Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
+     * @param PackageType Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
+     */
+    public void setPackageType(String PackageType) {
+        this.PackageType = PackageType;
+    }
+
+    /**
+     * Get  
+     * @return Http3Supported 
+     */
+    public Long getHttp3Supported() {
+        return this.Http3Supported;
+    }
+
+    /**
+     * Set 
+     * @param Http3Supported 
+     */
+    public void setHttp3Supported(Long Http3Supported) {
+        this.Http3Supported = Http3Supported;
     }
 
     public CreateProxyRequest() {
@@ -381,6 +427,12 @@ The connection is to be replicated if this parameter is set.
         if (source.NetworkType != null) {
             this.NetworkType = new String(source.NetworkType);
         }
+        if (source.PackageType != null) {
+            this.PackageType = new String(source.PackageType);
+        }
+        if (source.Http3Supported != null) {
+            this.Http3Supported = new Long(source.Http3Supported);
+        }
     }
 
 
@@ -401,6 +453,8 @@ The connection is to be replicated if this parameter is set.
         this.setParamSimple(map, prefix + "BillingType", this.BillingType);
         this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
         this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
+        this.setParamSimple(map, prefix + "PackageType", this.PackageType);
+        this.setParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
 
     }
 }
