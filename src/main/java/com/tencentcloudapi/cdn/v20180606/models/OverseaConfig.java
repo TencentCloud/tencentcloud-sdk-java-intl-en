@@ -215,6 +215,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private VideoSeek VideoSeek;
 
     /**
+    * Private access for S3 origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AwsPrivateAccess")
+    @Expose
+    private AwsPrivateAccess AwsPrivateAccess;
+
+    /**
+    * Private access for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OssPrivateAccess")
+    @Expose
+    private OssPrivateAccess OssPrivateAccess;
+
+    /**
      * Get Timestamp hotlink protection configuration.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Authentication Timestamp hotlink protection configuration.
@@ -694,6 +710,46 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.VideoSeek = VideoSeek;
     }
 
+    /**
+     * Get Private access for S3 origin
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return AwsPrivateAccess Private access for S3 origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public AwsPrivateAccess getAwsPrivateAccess() {
+        return this.AwsPrivateAccess;
+    }
+
+    /**
+     * Set Private access for S3 origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param AwsPrivateAccess Private access for S3 origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setAwsPrivateAccess(AwsPrivateAccess AwsPrivateAccess) {
+        this.AwsPrivateAccess = AwsPrivateAccess;
+    }
+
+    /**
+     * Get Private access for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return OssPrivateAccess Private access for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public OssPrivateAccess getOssPrivateAccess() {
+        return this.OssPrivateAccess;
+    }
+
+    /**
+     * Set Private access for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param OssPrivateAccess Private access for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setOssPrivateAccess(OssPrivateAccess OssPrivateAccess) {
+        this.OssPrivateAccess = OssPrivateAccess;
+    }
+
     public OverseaConfig() {
     }
 
@@ -774,6 +830,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.VideoSeek != null) {
             this.VideoSeek = new VideoSeek(source.VideoSeek);
         }
+        if (source.AwsPrivateAccess != null) {
+            this.AwsPrivateAccess = new AwsPrivateAccess(source.AwsPrivateAccess);
+        }
+        if (source.OssPrivateAccess != null) {
+            this.OssPrivateAccess = new OssPrivateAccess(source.OssPrivateAccess);
+        }
     }
 
 
@@ -805,6 +867,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
         this.setParamObj(map, prefix + "StatusCodeCache.", this.StatusCodeCache);
         this.setParamObj(map, prefix + "VideoSeek.", this.VideoSeek);
+        this.setParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
+        this.setParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
 
     }
 }

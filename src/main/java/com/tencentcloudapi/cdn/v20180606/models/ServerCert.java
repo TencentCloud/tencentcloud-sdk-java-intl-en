@@ -23,9 +23,8 @@ import java.util.HashMap;
 public class ServerCert extends AbstractModel{
 
     /**
-    * Server certificate ID
-This is auto-generated when the certificate is being hosted by the SSL Certificate Service
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Server certificate ID, which is auto-generated when the certificate is added to Tencent Cloud SSL Certificates
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("CertId")
     @Expose
@@ -85,24 +84,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Message;
 
     /**
-     * Get Server certificate ID
-This is auto-generated when the certificate is being hosted by the SSL Certificate Service
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CertId Server certificate ID
-This is auto-generated when the certificate is being hosted by the SSL Certificate Service
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Server certificate ID, which is auto-generated when the certificate is added to Tencent Cloud SSL Certificates
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return CertId Server certificate ID, which is auto-generated when the certificate is added to Tencent Cloud SSL Certificates
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set Server certificate ID
-This is auto-generated when the certificate is being hosted by the SSL Certificate Service
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CertId Server certificate ID
-This is auto-generated when the certificate is being hosted by the SSL Certificate Service
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Server certificate ID, which is auto-generated when the certificate is added to Tencent Cloud SSL Certificates
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param CertId Server certificate ID, which is auto-generated when the certificate is added to Tencent Cloud SSL Certificates
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;

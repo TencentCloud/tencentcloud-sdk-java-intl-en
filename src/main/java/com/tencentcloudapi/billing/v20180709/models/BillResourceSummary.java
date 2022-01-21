@@ -30,7 +30,7 @@ public class BillResourceSummary extends AbstractModel{
     private String BusinessCodeName;
 
     /**
-    * Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, '-' is returned.
+    * Subproduct name, which is the subcategory of a Tencent Cloud product, such as CVM-Standard S1. If no subproduct name can be obtained, `-` is returned.
     */
     @SerializedName("ProductCodeName")
     @Expose
@@ -235,14 +235,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String OperateUin;
 
     /**
-    * 
+    * Product code
     */
     @SerializedName("BusinessCode")
     @Expose
     private String BusinessCode;
 
     /**
-    * 
+    * Subproduct code
     */
     @SerializedName("ProductCode")
     @Expose
@@ -272,16 +272,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, '-' is returned. 
-     * @return ProductCodeName Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, '-' is returned.
+     * Get Subproduct name, which is the subcategory of a Tencent Cloud product, such as CVM-Standard S1. If no subproduct name can be obtained, `-` is returned. 
+     * @return ProductCodeName Subproduct name, which is the subcategory of a Tencent Cloud product, such as CVM-Standard S1. If no subproduct name can be obtained, `-` is returned.
      */
     public String getProductCodeName() {
         return this.ProductCodeName;
     }
 
     /**
-     * Set Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, '-' is returned.
-     * @param ProductCodeName Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, '-' is returned.
+     * Set Subproduct name, which is the subcategory of a Tencent Cloud product, such as CVM-Standard S1. If no subproduct name can be obtained, `-` is returned.
+     * @param ProductCodeName Subproduct name, which is the subcategory of a Tencent Cloud product, such as CVM-Standard S1. If no subproduct name can be obtained, `-` is returned.
      */
     public void setProductCodeName(String ProductCodeName) {
         this.ProductCodeName = ProductCodeName;
@@ -744,32 +744,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return BusinessCode 
+     * Get Product code 
+     * @return BusinessCode Product code
      */
     public String getBusinessCode() {
         return this.BusinessCode;
     }
 
     /**
-     * Set 
-     * @param BusinessCode 
+     * Set Product code
+     * @param BusinessCode Product code
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;
     }
 
     /**
-     * Get  
-     * @return ProductCode 
+     * Get Subproduct code 
+     * @return ProductCode Subproduct code
      */
     public String getProductCode() {
         return this.ProductCode;
     }
 
     /**
-     * Set 
-     * @param ProductCode 
+     * Set Subproduct code
+     * @param ProductCode Subproduct code
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;

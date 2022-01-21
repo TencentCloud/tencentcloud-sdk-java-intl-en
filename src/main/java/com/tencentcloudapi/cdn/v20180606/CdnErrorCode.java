@@ -42,7 +42,7 @@ public enum CdnErrorCode {
     // Internal service error. Please submit a ticket for troubleshooting.
      INTERNALERROR_PROXYSERVER("InternalError.ProxyServer"),
      
-    // 
+    // Internal service error. Please submit a ticket for troubleshooting.
      INTERNALERROR_ROUTEERROR("InternalError.RouteError"),
      
     // The SCDN service is not activated. Please purchase or renew an SCDN packet and try again.
@@ -54,8 +54,14 @@ public enum CdnErrorCode {
     // Internal error. Please try again or contact the customer service for assistance.
      INTERNALERROR_TAGSYSTEMERROR("InternalError.TagSystemError"),
      
-    // 
+    // To enable HTTPS, access port 443 must be enabled.
      INVALIDPARAMETER_ACCESSPORTOPENEDHTTPS("InvalidParameter.AccessPortOpenedHttps"),
+     
+    // 
+     INVALIDPARAMETER_BANDLIMITREQUIREDMAINLAND("InvalidParameter.BandLimitRequiredMainland"),
+     
+    // 
+     INVALIDPARAMETER_BANDWIDTHALERTCOUNTERMEASURECONFLICTORIGINTYPE("InvalidParameter.BandwidthAlertCounterMeasureConflictOriginType"),
      
     // Invalid domain name status.
      INVALIDPARAMETER_CDNSTATUSINVALIDDOMAIN("InvalidParameter.CDNStatusInvalidDomain"),
@@ -288,9 +294,6 @@ public enum CdnErrorCode {
     // Daily task quota exceeded
      LIMITEXCEEDED_SCDNLOGTASKEXCEEDDAYLIMIT("LimitExceeded.ScdnLogTaskExceedDayLimit"),
      
-    // The domain name conflicts with an existing domain name in the system.
-     RESOURCEINUSE_CDNCONFLICTHOSTEXISTS("ResourceInUse.CdnConflictHostExists"),
-     
     // Domain name already exists.
      RESOURCEINUSE_CDNHOSTEXISTS("ResourceInUse.CdnHostExists"),
      
@@ -326,9 +329,6 @@ public enum CdnErrorCode {
      
     // The domain name has been connected to the service region outside Chinese mainland. If you need to switch the service region to "Global", please verify its ownership for domain name retrieval.
      RESOURCEUNAVAILABLE_CDNHOSTBELONGSTOOTHERSINOVERSEAS("ResourceUnavailable.CdnHostBelongsToOthersInOverseas"),
-     
-    // The DSA feature is already enabled for the domain name.
-     RESOURCEUNAVAILABLE_CDNHOSTEXISTSINDSA("ResourceUnavailable.CdnHostExistsInDsa"),
      
     // The domain name has been connected in the TCB console.
      RESOURCEUNAVAILABLE_CDNHOSTEXISTSINTCB("ResourceUnavailable.CdnHostExistsInTcb"),
@@ -366,7 +366,7 @@ public enum CdnErrorCode {
     // The domain name already exists in the system. Please submit a ticket.
      UNAUTHORIZEDOPERATION_CDNHOSTEXISTSININTERNAL("UnauthorizedOperation.CdnHostExistsInInternal"),
      
-    // 
+    // The domain name is not secure and cannot be connected.
      UNAUTHORIZEDOPERATION_CDNHOSTINICPBLACKLIST("UnauthorizedOperation.CdnHostInIcpBlacklist"),
      
     // This domain name belongs to another account, and you do not have permission to connect it.

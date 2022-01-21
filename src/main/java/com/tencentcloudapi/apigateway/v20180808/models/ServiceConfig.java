@@ -58,6 +58,14 @@ public class ServiceConfig extends AbstractModel{
     private String Method;
 
     /**
+    * API backend COS configuration. It’s required if the `ServiceType` is ·`COS`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CosConfig")
+    @Expose
+    private CosConfig CosConfig;
+
+    /**
      * Get Backend type, which takes effect when VPC is enabled. Valid values: `clb` and `upstream` (VPC channel) 
      * @return Product Backend type, which takes effect when VPC is enabled. Valid values: `clb` and `upstream` (VPC channel)
      */
@@ -137,6 +145,26 @@ public class ServiceConfig extends AbstractModel{
         this.Method = Method;
     }
 
+    /**
+     * Get API backend COS configuration. It’s required if the `ServiceType` is ·`COS`.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return CosConfig API backend COS configuration. It’s required if the `ServiceType` is ·`COS`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public CosConfig getCosConfig() {
+        return this.CosConfig;
+    }
+
+    /**
+     * Set API backend COS configuration. It’s required if the `ServiceType` is ·`COS`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param CosConfig API backend COS configuration. It’s required if the `ServiceType` is ·`COS`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setCosConfig(CosConfig CosConfig) {
+        this.CosConfig = CosConfig;
+    }
+
     public ServiceConfig() {
     }
 
@@ -160,6 +188,9 @@ public class ServiceConfig extends AbstractModel{
         if (source.Method != null) {
             this.Method = new String(source.Method);
         }
+        if (source.CosConfig != null) {
+            this.CosConfig = new CosConfig(source.CosConfig);
+        }
     }
 
 
@@ -172,6 +203,7 @@ public class ServiceConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "Method", this.Method);
+        this.setParamObj(map, prefix + "CosConfig.", this.CosConfig);
 
     }
 }

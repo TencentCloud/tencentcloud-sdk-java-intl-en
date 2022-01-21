@@ -158,7 +158,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Product code
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be found.
     */
     @SerializedName("BusinessCode")
     @Expose
@@ -166,14 +166,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Subproduct code
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be found.
     */
     @SerializedName("ProductCode")
     @Expose
     private String ProductCode;
 
     /**
-    * Transaction type/code (optional)
+    * Transaction type
+Note: This field may return `null`, indicating that no valid value can be found.
     */
     @SerializedName("ActionType")
     @Expose
@@ -503,9 +504,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Product code
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be found. 
      * @return BusinessCode Product code
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public String getBusinessCode() {
         return this.BusinessCode;
@@ -513,9 +514,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Product code
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be found.
      * @param BusinessCode Product code
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;
@@ -523,9 +524,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Subproduct code
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be found. 
      * @return ProductCode Subproduct code
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public String getProductCode() {
         return this.ProductCode;
@@ -533,25 +534,29 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Subproduct code
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be found.
      * @param ProductCode Subproduct code
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get Transaction type/code (optional) 
-     * @return ActionType Transaction type/code (optional)
+     * Get Transaction type
+Note: This field may return `null`, indicating that no valid value can be found. 
+     * @return ActionType Transaction type
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set Transaction type/code (optional)
-     * @param ActionType Transaction type/code (optional)
+     * Set Transaction type
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param ActionType Transaction type
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;

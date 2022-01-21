@@ -24,7 +24,7 @@ public class BusinessSummaryOverviewItem extends AbstractModel{
 
     /**
     * Product code
-Note: This field may return null, indicating that no valid value was found.
+Note: This field may return `null`, indicating that no valid value can be found.
     */
     @SerializedName("BusinessCode")
     @Expose
@@ -88,9 +88,9 @@ Note: This field may return null, indicating that no valid value was found.
 
     /**
      * Get Product code
-Note: This field may return null, indicating that no valid value was found. 
+Note: This field may return `null`, indicating that no valid value can be found. 
      * @return BusinessCode Product code
-Note: This field may return null, indicating that no valid value was found.
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public String getBusinessCode() {
         return this.BusinessCode;
@@ -98,9 +98,9 @@ Note: This field may return null, indicating that no valid value was found.
 
     /**
      * Set Product code
-Note: This field may return null, indicating that no valid value was found.
+Note: This field may return `null`, indicating that no valid value can be found.
      * @param BusinessCode Product code
-Note: This field may return null, indicating that no valid value was found.
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;

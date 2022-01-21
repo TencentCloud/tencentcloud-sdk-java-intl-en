@@ -3,6 +3,9 @@ public enum BillingErrorCode {
     // No permission.
      AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnauthorizedOperation"),
      
+    // Failed to get the number of data entries.
+     FAILEDOPERATION_QUERYCOUNTFAILED("FailedOperation.QueryCountFailed"),
+     
     // Summary is being built. Please try again later.
      FAILEDOPERATION_SUMMARYDATANOTREADY("FailedOperation.SummaryDataNotReady"),
      

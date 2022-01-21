@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dcdb.v20180411.models;
+package com.tencentcloudapi.cam.v20190116.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
+public class ListAttachedUserAllPoliciesResponse extends AbstractModel{
 
     /**
-    * Security group details
+    * Policy list.
     */
-    @SerializedName("Groups")
+    @SerializedName("PolicyList")
     @Expose
-    private SecurityGroup [] Groups;
+    private AttachedUserPolicy [] PolicyList;
 
     /**
-    * Number of security groups.
+    * Total number of policies.
     */
-    @SerializedName("Total")
+    @SerializedName("TotalNum")
     @Expose
-    private Long Total;
+    private Long TotalNum;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +44,35 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Security group details 
-     * @return Groups Security group details
+     * Get Policy list. 
+     * @return PolicyList Policy list.
      */
-    public SecurityGroup [] getGroups() {
-        return this.Groups;
+    public AttachedUserPolicy [] getPolicyList() {
+        return this.PolicyList;
     }
 
     /**
-     * Set Security group details
-     * @param Groups Security group details
+     * Set Policy list.
+     * @param PolicyList Policy list.
      */
-    public void setGroups(SecurityGroup [] Groups) {
-        this.Groups = Groups;
+    public void setPolicyList(AttachedUserPolicy [] PolicyList) {
+        this.PolicyList = PolicyList;
     }
 
     /**
-     * Get Number of security groups. 
-     * @return Total Number of security groups.
+     * Get Total number of policies. 
+     * @return TotalNum Total number of policies.
      */
-    public Long getTotal() {
-        return this.Total;
+    public Long getTotalNum() {
+        return this.TotalNum;
     }
 
     /**
-     * Set Number of security groups.
-     * @param Total Number of security groups.
+     * Set Total number of policies.
+     * @param TotalNum Total number of policies.
      */
-    public void setTotal(Long Total) {
-        this.Total = Total;
+    public void setTotalNum(Long TotalNum) {
+        this.TotalNum = TotalNum;
     }
 
     /**
@@ -91,22 +91,22 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeProjectSecurityGroupsResponse() {
+    public ListAttachedUserAllPoliciesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeProjectSecurityGroupsResponse(DescribeProjectSecurityGroupsResponse source) {
-        if (source.Groups != null) {
-            this.Groups = new SecurityGroup[source.Groups.length];
-            for (int i = 0; i < source.Groups.length; i++) {
-                this.Groups[i] = new SecurityGroup(source.Groups[i]);
+    public ListAttachedUserAllPoliciesResponse(ListAttachedUserAllPoliciesResponse source) {
+        if (source.PolicyList != null) {
+            this.PolicyList = new AttachedUserPolicy[source.PolicyList.length];
+            for (int i = 0; i < source.PolicyList.length; i++) {
+                this.PolicyList[i] = new AttachedUserPolicy(source.PolicyList[i]);
             }
         }
-        if (source.Total != null) {
-            this.Total = new Long(source.Total);
+        if (source.TotalNum != null) {
+            this.TotalNum = new Long(source.TotalNum);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +118,8 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Groups.", this.Groups);
-        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "PolicyList.", this.PolicyList);
+        this.setParamSimple(map, prefix + "TotalNum", this.TotalNum);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

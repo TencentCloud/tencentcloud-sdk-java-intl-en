@@ -919,6 +919,26 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *This API is used to list policies associated with the user (including those inherited from the user group).
+     * @param req ListAttachedUserAllPoliciesRequest
+     * @return ListAttachedUserAllPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListAttachedUserAllPoliciesResponse ListAttachedUserAllPolicies(ListAttachedUserAllPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListAttachedUserAllPoliciesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListAttachedUserAllPoliciesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListAttachedUserAllPolicies");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (ListAttachedUserPolicies) is used to query the list of policies associated with a sub-account.
      * @param req ListAttachedUserPoliciesRequest
      * @return ListAttachedUserPoliciesResponse

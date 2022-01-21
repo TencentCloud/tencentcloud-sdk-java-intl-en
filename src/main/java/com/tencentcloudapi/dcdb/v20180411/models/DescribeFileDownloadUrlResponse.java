@@ -20,21 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
+public class DescribeFileDownloadUrlResponse extends AbstractModel{
 
     /**
-    * Security group details
+    * Signed download URL
     */
-    @SerializedName("Groups")
+    @SerializedName("PreSignedUrl")
     @Expose
-    private SecurityGroup [] Groups;
-
-    /**
-    * Number of security groups.
-    */
-    @SerializedName("Total")
-    @Expose
-    private Long Total;
+    private String PreSignedUrl;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +37,19 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Security group details 
-     * @return Groups Security group details
+     * Get Signed download URL 
+     * @return PreSignedUrl Signed download URL
      */
-    public SecurityGroup [] getGroups() {
-        return this.Groups;
+    public String getPreSignedUrl() {
+        return this.PreSignedUrl;
     }
 
     /**
-     * Set Security group details
-     * @param Groups Security group details
+     * Set Signed download URL
+     * @param PreSignedUrl Signed download URL
      */
-    public void setGroups(SecurityGroup [] Groups) {
-        this.Groups = Groups;
-    }
-
-    /**
-     * Get Number of security groups. 
-     * @return Total Number of security groups.
-     */
-    public Long getTotal() {
-        return this.Total;
-    }
-
-    /**
-     * Set Number of security groups.
-     * @param Total Number of security groups.
-     */
-    public void setTotal(Long Total) {
-        this.Total = Total;
+    public void setPreSignedUrl(String PreSignedUrl) {
+        this.PreSignedUrl = PreSignedUrl;
     }
 
     /**
@@ -91,22 +68,16 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeProjectSecurityGroupsResponse() {
+    public DescribeFileDownloadUrlResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeProjectSecurityGroupsResponse(DescribeProjectSecurityGroupsResponse source) {
-        if (source.Groups != null) {
-            this.Groups = new SecurityGroup[source.Groups.length];
-            for (int i = 0; i < source.Groups.length; i++) {
-                this.Groups[i] = new SecurityGroup(source.Groups[i]);
-            }
-        }
-        if (source.Total != null) {
-            this.Total = new Long(source.Total);
+    public DescribeFileDownloadUrlResponse(DescribeFileDownloadUrlResponse source) {
+        if (source.PreSignedUrl != null) {
+            this.PreSignedUrl = new String(source.PreSignedUrl);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +89,7 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Groups.", this.Groups);
-        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamSimple(map, prefix + "PreSignedUrl", this.PreSignedUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

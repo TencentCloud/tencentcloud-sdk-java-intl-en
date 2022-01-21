@@ -442,6 +442,26 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
     }
 
     /**
+     *This API is used to get the download URL of a specific backup or log file of a database.
+     * @param req DescribeFileDownloadUrlRequest
+     * @return DescribeFileDownloadUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFileDownloadUrlResponse DescribeFileDownloadUrl(DescribeFileDownloadUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFileDownloadUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFileDownloadUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFileDownloadUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query task status.
      * @param req DescribeFlowRequest
      * @return DescribeFlowResponse

@@ -1,5 +1,8 @@
 package com.tencentcloudapi.cam.v20190116;
 public enum CamErrorCode {
+    // No permission.
+     AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnauthorizedOperation"),
+     
     // Operation failed.
      FAILEDOPERATION("FailedOperation"),
      

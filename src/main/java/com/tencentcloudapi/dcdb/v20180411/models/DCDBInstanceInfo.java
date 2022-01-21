@@ -369,6 +369,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long InstanceType;
 
     /**
+    * Instance tag information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private ResourceTag [] ResourceTags;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -1176,6 +1184,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.InstanceType = InstanceType;
     }
 
+    /**
+     * Get Instance tag information
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ResourceTags Instance tag information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public ResourceTag [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set Instance tag information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ResourceTags Instance tag information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setResourceTags(ResourceTag [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
     public DCDBInstanceInfo() {
     }
 
@@ -1331,6 +1359,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.InstanceType != null) {
             this.InstanceType = new Long(source.InstanceType);
         }
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new ResourceTag[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new ResourceTag(source.ResourceTags[i]);
+            }
+        }
     }
 
 
@@ -1386,6 +1420,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "DcnStatus", this.DcnStatus);
         this.setParamSimple(map, prefix + "DcnDstNum", this.DcnDstNum);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
 
     }
 }
