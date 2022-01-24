@@ -99,6 +99,26 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create session killing tasks.
+     * @param req CreateKillTaskRequest
+     * @return CreateKillTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateKillTaskResponse CreateKillTask(CreateKillTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateKillTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateKillTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateKillTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create the email configuration. The input parameter `ProfileType` represents the type of the email configuration. Valid values: `dbScan_mail_configuration` (email configuration of database inspection report) and `scheduler_mail_configuration` (email sending configuration of scheduled task health report). Please always select Guangzhou for `Region`, regardless of the region where the instance resides.
      * @param req CreateMailProfileRequest
      * @return CreateMailProfileResponse
@@ -111,6 +131,26 @@ public class DbbrainClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateMailProfileResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateMailProfile");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create an async task of killing all proxy node connection sessions and is currently supported only for Redis. The async task ID is the returned value, which can be passed to the API `DescribeProxySessionKillTasks` as a parameter to query the execution status of the session killing task.
+     * @param req CreateProxySessionKillTaskRequest
+     * @return CreateProxySessionKillTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateProxySessionKillTaskResponse CreateProxySessionKillTask(CreateProxySessionKillTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateProxySessionKillTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateProxySessionKillTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateProxySessionKillTask");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

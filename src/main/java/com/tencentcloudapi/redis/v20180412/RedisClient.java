@@ -79,7 +79,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to promote a replica node group of a multi-AZ deployed instance to master node group.
+     *This API is used to promote a replica node group of a multi-AZ deployed instance to master node group or a replica node of a single-AZ deployed instance to master node.
      * @param req ChangeReplicaToMasterRequest
      * @return ChangeReplicaToMasterResponse
      * @throws TencentCloudSDKException

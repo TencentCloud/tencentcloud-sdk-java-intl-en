@@ -13,30 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dbbrain.v20210527.models;
+package com.tencentcloudapi.ses.v20201002.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMailProfileResponse extends AbstractModel{
+public class ListReceiversResponse extends AbstractModel{
 
     /**
-    * Email configuration details.
-Note: this field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("ProfileList")
-    @Expose
-    private UserProfile [] ProfileList;
-
-    /**
-    * Total number of the configured emails.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Total number
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
+
+    /**
+    * Data record
+    */
+    @SerializedName("Data")
+    @Expose
+    private ReceiverData [] Data;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,43 +44,35 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Email configuration details.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ProfileList Email configuration details.
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public UserProfile [] getProfileList() {
-        return this.ProfileList;
-    }
-
-    /**
-     * Set Email configuration details.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ProfileList Email configuration details.
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public void setProfileList(UserProfile [] ProfileList) {
-        this.ProfileList = ProfileList;
-    }
-
-    /**
-     * Get Total number of the configured emails.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Total number of the configured emails.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Total number 
+     * @return TotalCount Total number
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of the configured emails.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Total number of the configured emails.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Total number
+     * @param TotalCount Total number
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get Data record 
+     * @return Data Data record
+     */
+    public ReceiverData [] getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set Data record
+     * @param Data Data record
+     */
+    public void setData(ReceiverData [] Data) {
+        this.Data = Data;
     }
 
     /**
@@ -101,22 +91,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public DescribeMailProfileResponse() {
+    public ListReceiversResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeMailProfileResponse(DescribeMailProfileResponse source) {
-        if (source.ProfileList != null) {
-            this.ProfileList = new UserProfile[source.ProfileList.length];
-            for (int i = 0; i < source.ProfileList.length; i++) {
-                this.ProfileList[i] = new UserProfile(source.ProfileList[i]);
-            }
-        }
+    public ListReceiversResponse(ListReceiversResponse source) {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Data != null) {
+            this.Data = new ReceiverData[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new ReceiverData(source.Data[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -128,8 +118,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "ProfileList.", this.ProfileList);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

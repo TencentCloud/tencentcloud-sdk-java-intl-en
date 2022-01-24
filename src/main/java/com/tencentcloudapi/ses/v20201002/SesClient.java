@@ -120,6 +120,46 @@ Note: only an approved template can be used to send emails.
     }
 
     /**
+     *This API is used to create a recipient group, which is the list of target email addresses for batch sending emails. After creating a group, you need to upload recipient email addresses. Then, you can create a sending task and select the group to batch send emails.
+     * @param req CreateReceiverRequest
+     * @return CreateReceiverResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateReceiverResponse CreateReceiver(CreateReceiverRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateReceiverResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateReceiverResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateReceiver");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to add recipient email addresses (up to 100,000 at a time) to a recipient group. This will be processed asynchronously. You can upload recipient email addresses only once. If the data volume is large, it may take some time to upload. You can check the recipient group to learn the upload status and upload quantity.
+     * @param req CreateReceiverDetailRequest
+     * @return CreateReceiverDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateReceiverDetailResponse CreateReceiverDetail(CreateReceiverDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateReceiverDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateReceiverDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateReceiverDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to unblocklist email addresses. If you confirm that a blocklisted recipient address is valid and active, you can remove it from Tencent Cloud’s address blocklist database.
      * @param req DeleteBlackListRequest
      * @return DeleteBlackListResponse
@@ -240,7 +280,7 @@ Note: only an approved template can be used to send emails.
     }
 
     /**
-     *This API is used to get email sending status. Only data within 90 days can be queried.
+     *This API is used to get email sending status. Only data within 30 days can be queried.
      * @param req GetSendEmailStatusRequest
      * @return GetSendEmailStatusResponse
      * @throws TencentCloudSDKException
@@ -352,6 +392,46 @@ Note: only an approved template can be used to send emails.
                 Type type = new TypeToken<JsonResponseModel<ListEmailTemplatesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ListEmailTemplates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query recipient groups. It supports pagination, fuzzy query, and query by status.
+     * @param req ListReceiversRequest
+     * @return ListReceiversResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListReceiversResponse ListReceivers(ListReceiversRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListReceiversResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListReceiversResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListReceivers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query batch email sending tasks (including immediate, scheduled, and recurring tasks) by page. You can query task data including the number of emails requested to be sent, the number of sent emails, the number of cached emails, and task status.
+     * @param req ListSendTasksRequest
+     * @return ListSendTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListSendTasksResponse ListSendTasks(ListSendTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ListSendTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ListSendTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ListSendTasks");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

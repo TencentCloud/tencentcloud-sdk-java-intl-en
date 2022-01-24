@@ -142,6 +142,13 @@ Hadoop-Hbase
     private String SceneName;
 
     /**
+    * Shared component information
+    */
+    @SerializedName("ExternalService")
+    @Expose
+    private ExternalService [] ExternalService;
+
+    /**
      * Get Time unit of instance purchase duration. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li> 
      * @return TimeUnit Time unit of instance purchase duration. Valid values:
@@ -449,6 +456,22 @@ Hadoop-Hbase
         this.SceneName = SceneName;
     }
 
+    /**
+     * Get Shared component information 
+     * @return ExternalService Shared component information
+     */
+    public ExternalService [] getExternalService() {
+        return this.ExternalService;
+    }
+
+    /**
+     * Set Shared component information
+     * @param ExternalService Shared component information
+     */
+    public void setExternalService(ExternalService [] ExternalService) {
+        this.ExternalService = ExternalService;
+    }
+
     public InquiryPriceCreateInstanceRequest() {
     }
 
@@ -502,6 +525,12 @@ Hadoop-Hbase
         if (source.SceneName != null) {
             this.SceneName = new String(source.SceneName);
         }
+        if (source.ExternalService != null) {
+            this.ExternalService = new ExternalService[source.ExternalService.length];
+            for (int i = 0; i < source.ExternalService.length; i++) {
+                this.ExternalService[i] = new ExternalService(source.ExternalService[i]);
+            }
+        }
     }
 
 
@@ -523,6 +552,7 @@ Hadoop-Hbase
         this.setParamObj(map, prefix + "MetaDBInfo.", this.MetaDBInfo);
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "SceneName", this.SceneName);
+        this.setParamArrayObj(map, prefix + "ExternalService.", this.ExternalService);
 
     }
 }

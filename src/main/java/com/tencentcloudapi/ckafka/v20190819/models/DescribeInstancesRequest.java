@@ -65,6 +65,13 @@ public class DescribeInstancesRequest extends AbstractModel{
     private String TagKey;
 
     /**
+    * VPC ID.
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
      * Get (Filter) filter by instance ID 
      * @return InstanceId (Filter) filter by instance ID
      */
@@ -160,6 +167,22 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.TagKey = TagKey;
     }
 
+    /**
+     * Get VPC ID. 
+     * @return VpcId VPC ID.
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set VPC ID.
+     * @param VpcId VPC ID.
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
     public DescribeInstancesRequest() {
     }
 
@@ -189,6 +212,9 @@ public class DescribeInstancesRequest extends AbstractModel{
         if (source.TagKey != null) {
             this.TagKey = new String(source.TagKey);
         }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
     }
 
 
@@ -202,6 +228,7 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "TagKey", this.TagKey);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
 
     }
 }

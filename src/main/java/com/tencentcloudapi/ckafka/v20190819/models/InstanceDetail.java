@@ -220,6 +220,30 @@ Note: `null` may be returned for this field, indicating that no valid values can
     private String RebalanceTime;
 
     /**
+    * Number of partitions in the current instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PartitionNumber")
+    @Expose
+    private Long PartitionNumber;
+
+    /**
+    * Public network bandwidth type.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PublicNetworkChargeType")
+    @Expose
+    private String PublicNetworkChargeType;
+
+    /**
+    * Public network bandwidth.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PublicNetwork")
+    @Expose
+    private Long PublicNetwork;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -683,6 +707,66 @@ Note: `null` may be returned for this field, indicating that no valid values can
         this.RebalanceTime = RebalanceTime;
     }
 
+    /**
+     * Get Number of partitions in the current instance.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return PartitionNumber Number of partitions in the current instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getPartitionNumber() {
+        return this.PartitionNumber;
+    }
+
+    /**
+     * Set Number of partitions in the current instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param PartitionNumber Number of partitions in the current instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setPartitionNumber(Long PartitionNumber) {
+        this.PartitionNumber = PartitionNumber;
+    }
+
+    /**
+     * Get Public network bandwidth type.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return PublicNetworkChargeType Public network bandwidth type.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getPublicNetworkChargeType() {
+        return this.PublicNetworkChargeType;
+    }
+
+    /**
+     * Set Public network bandwidth type.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param PublicNetworkChargeType Public network bandwidth type.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setPublicNetworkChargeType(String PublicNetworkChargeType) {
+        this.PublicNetworkChargeType = PublicNetworkChargeType;
+    }
+
+    /**
+     * Get Public network bandwidth.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return PublicNetwork Public network bandwidth.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getPublicNetwork() {
+        return this.PublicNetwork;
+    }
+
+    /**
+     * Set Public network bandwidth.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param PublicNetwork Public network bandwidth.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setPublicNetwork(Long PublicNetwork) {
+        this.PublicNetwork = PublicNetwork;
+    }
+
     public InstanceDetail() {
     }
 
@@ -781,6 +865,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
         if (source.RebalanceTime != null) {
             this.RebalanceTime = new String(source.RebalanceTime);
         }
+        if (source.PartitionNumber != null) {
+            this.PartitionNumber = new Long(source.PartitionNumber);
+        }
+        if (source.PublicNetworkChargeType != null) {
+            this.PublicNetworkChargeType = new String(source.PublicNetworkChargeType);
+        }
+        if (source.PublicNetwork != null) {
+            this.PublicNetwork = new Long(source.PublicNetwork);
+        }
     }
 
 
@@ -815,6 +908,9 @@ Note: `null` may be returned for this field, indicating that no valid values can
         this.setParamSimple(map, prefix + "MaxTopicNumber", this.MaxTopicNumber);
         this.setParamSimple(map, prefix + "MaxPartitionNumber", this.MaxPartitionNumber);
         this.setParamSimple(map, prefix + "RebalanceTime", this.RebalanceTime);
+        this.setParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
+        this.setParamSimple(map, prefix + "PublicNetworkChargeType", this.PublicNetworkChargeType);
+        this.setParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
 
     }
 }

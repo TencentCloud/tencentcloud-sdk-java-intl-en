@@ -43,6 +43,13 @@ public class KillMasterGroupRequest extends AbstractModel{
     private String Password;
 
     /**
+    * Node information of a single-AZ deployed instance
+    */
+    @SerializedName("ShardIds")
+    @Expose
+    private Long [] ShardIds;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -98,6 +105,22 @@ public class KillMasterGroupRequest extends AbstractModel{
         this.Password = Password;
     }
 
+    /**
+     * Get Node information of a single-AZ deployed instance 
+     * @return ShardIds Node information of a single-AZ deployed instance
+     */
+    public Long [] getShardIds() {
+        return this.ShardIds;
+    }
+
+    /**
+     * Set Node information of a single-AZ deployed instance
+     * @param ShardIds Node information of a single-AZ deployed instance
+     */
+    public void setShardIds(Long [] ShardIds) {
+        this.ShardIds = ShardIds;
+    }
+
     public KillMasterGroupRequest() {
     }
 
@@ -112,6 +135,12 @@ public class KillMasterGroupRequest extends AbstractModel{
         if (source.Password != null) {
             this.Password = new String(source.Password);
         }
+        if (source.ShardIds != null) {
+            this.ShardIds = new Long[source.ShardIds.length];
+            for (int i = 0; i < source.ShardIds.length; i++) {
+                this.ShardIds[i] = new Long(source.ShardIds[i]);
+            }
+        }
     }
 
 
@@ -121,6 +150,7 @@ public class KillMasterGroupRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamArraySimple(map, prefix + "ShardIds.", this.ShardIds);
 
     }
 }

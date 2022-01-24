@@ -46,7 +46,7 @@ Tencent Cloud team <noreply@mail.qcloud.com>
     private String Subject;
 
     /**
-    * Task type. Valid values: `1`: batch; `2`: scheduled; `3`: recurring
+    * Task type. `1`: immediate; `2`: scheduled; `3`: recurring
     */
     @SerializedName("TaskType")
     @Expose
@@ -93,6 +93,13 @@ Tencent Cloud team <noreply@mail.qcloud.com>
     @SerializedName("TimedParam")
     @Expose
     private TimedEmailParam TimedParam;
+
+    /**
+    * Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
+    */
+    @SerializedName("Unsubscribe")
+    @Expose
+    private String Unsubscribe;
 
     /**
      * Get Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format:
@@ -151,16 +158,16 @@ Tencent Cloud team <noreply@mail.qcloud.com>
     }
 
     /**
-     * Get Task type. Valid values: `1`: batch; `2`: scheduled; `3`: recurring 
-     * @return TaskType Task type. Valid values: `1`: batch; `2`: scheduled; `3`: recurring
+     * Get Task type. `1`: immediate; `2`: scheduled; `3`: recurring 
+     * @return TaskType Task type. `1`: immediate; `2`: scheduled; `3`: recurring
      */
     public Long getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set Task type. Valid values: `1`: batch; `2`: scheduled; `3`: recurring
-     * @param TaskType Task type. Valid values: `1`: batch; `2`: scheduled; `3`: recurring
+     * Set Task type. `1`: immediate; `2`: scheduled; `3`: recurring
+     * @param TaskType Task type. `1`: immediate; `2`: scheduled; `3`: recurring
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;
@@ -262,6 +269,22 @@ Tencent Cloud team <noreply@mail.qcloud.com>
         this.TimedParam = TimedParam;
     }
 
+    /**
+     * Get Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link 
+     * @return Unsubscribe Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
+     */
+    public String getUnsubscribe() {
+        return this.Unsubscribe;
+    }
+
+    /**
+     * Set Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
+     * @param Unsubscribe Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
+     */
+    public void setUnsubscribe(String Unsubscribe) {
+        this.Unsubscribe = Unsubscribe;
+    }
+
     public BatchSendEmailRequest() {
     }
 
@@ -303,6 +326,9 @@ Tencent Cloud team <noreply@mail.qcloud.com>
         if (source.TimedParam != null) {
             this.TimedParam = new TimedEmailParam(source.TimedParam);
         }
+        if (source.Unsubscribe != null) {
+            this.Unsubscribe = new String(source.Unsubscribe);
+        }
     }
 
 
@@ -320,6 +346,7 @@ Tencent Cloud team <noreply@mail.qcloud.com>
         this.setParamArrayObj(map, prefix + "Attachments.", this.Attachments);
         this.setParamObj(map, prefix + "CycleParam.", this.CycleParam);
         this.setParamObj(map, prefix + "TimedParam.", this.TimedParam);
+        this.setParamSimple(map, prefix + "Unsubscribe", this.Unsubscribe);
 
     }
 }

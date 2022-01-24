@@ -23,9 +23,9 @@ import java.util.HashMap;
 public class SendEmailRequest extends AbstractModel{
 
     /**
-    * Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format: 
-Sender <email address>, for example:
-Tencent Cloud team <noreply@mail.qcloud.com>
+    * Sender address. Enter a sender address, for example, noreply@mail.qcloud.com.
+To display the sender name, enter the address in the following format: 
+Sender <email address>
     */
     @SerializedName("FromEmailAddress")
     @Expose
@@ -74,24 +74,31 @@ Tencent Cloud team <noreply@mail.qcloud.com>
     private Attachment [] Attachments;
 
     /**
-     * Get Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format: 
-Sender <email address>, for example:
-Tencent Cloud team <noreply@mail.qcloud.com> 
-     * @return FromEmailAddress Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format: 
-Sender <email address>, for example:
-Tencent Cloud team <noreply@mail.qcloud.com>
+    * Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
+    */
+    @SerializedName("Unsubscribe")
+    @Expose
+    private String Unsubscribe;
+
+    /**
+     * Get Sender address. Enter a sender address, for example, noreply@mail.qcloud.com.
+To display the sender name, enter the address in the following format: 
+Sender <email address> 
+     * @return FromEmailAddress Sender address. Enter a sender address, for example, noreply@mail.qcloud.com.
+To display the sender name, enter the address in the following format: 
+Sender <email address>
      */
     public String getFromEmailAddress() {
         return this.FromEmailAddress;
     }
 
     /**
-     * Set Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format: 
-Sender <email address>, for example:
-Tencent Cloud team <noreply@mail.qcloud.com>
-     * @param FromEmailAddress Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format: 
-Sender <email address>, for example:
-Tencent Cloud team <noreply@mail.qcloud.com>
+     * Set Sender address. Enter a sender address, for example, noreply@mail.qcloud.com.
+To display the sender name, enter the address in the following format: 
+Sender <email address>
+     * @param FromEmailAddress Sender address. Enter a sender address, for example, noreply@mail.qcloud.com.
+To display the sender name, enter the address in the following format: 
+Sender <email address>
      */
     public void setFromEmailAddress(String FromEmailAddress) {
         this.FromEmailAddress = FromEmailAddress;
@@ -193,6 +200,22 @@ Tencent Cloud team <noreply@mail.qcloud.com>
         this.Attachments = Attachments;
     }
 
+    /**
+     * Get Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link 
+     * @return Unsubscribe Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
+     */
+    public String getUnsubscribe() {
+        return this.Unsubscribe;
+    }
+
+    /**
+     * Set Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
+     * @param Unsubscribe Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
+     */
+    public void setUnsubscribe(String Unsubscribe) {
+        this.Unsubscribe = Unsubscribe;
+    }
+
     public SendEmailRequest() {
     }
 
@@ -228,6 +251,9 @@ Tencent Cloud team <noreply@mail.qcloud.com>
                 this.Attachments[i] = new Attachment(source.Attachments[i]);
             }
         }
+        if (source.Unsubscribe != null) {
+            this.Unsubscribe = new String(source.Unsubscribe);
+        }
     }
 
 
@@ -242,6 +268,7 @@ Tencent Cloud team <noreply@mail.qcloud.com>
         this.setParamObj(map, prefix + "Template.", this.Template);
         this.setParamObj(map, prefix + "Simple.", this.Simple);
         this.setParamArrayObj(map, prefix + "Attachments.", this.Attachments);
+        this.setParamSimple(map, prefix + "Unsubscribe", this.Unsubscribe);
 
     }
 }

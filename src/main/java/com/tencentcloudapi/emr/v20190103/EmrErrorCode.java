@@ -72,6 +72,9 @@ public enum EmrErrorCode {
     // Incorrect display policy.
      INVALIDPARAMETER_DISPLAYSTRATEGYNOTMATCH("InvalidParameter.DisplayStrategyNotMatch"),
      
+    // Parameter error.
+     INVALIDPARAMETER_HALESSMASTERCOUNT("InvalidParameter.HALessMasterCount"),
+     
     // The number of common nodes is invalid.
      INVALIDPARAMETER_INCORRECTCOMMONCOUNT("InvalidParameter.IncorrectCommonCount"),
      
@@ -119,6 +122,9 @@ public enum EmrErrorCode {
      
     // Invalid cluster name.
      INVALIDPARAMETER_INVALIDINSTANCENAME("InvalidParameter.InvalidInstanceName"),
+     
+    // Invalid model.
+     INVALIDPARAMETER_INVALIDINSTANCETYPE("InvalidParameter.InvalidInstanceType"),
      
     // Invalid login settings.
      INVALIDPARAMETER_INVALIDLOGINSETTING("InvalidParameter.InvalidLoginSetting"),

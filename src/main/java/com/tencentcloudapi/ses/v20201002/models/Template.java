@@ -31,6 +31,8 @@ public class Template extends AbstractModel{
 
     /**
     * Variable parameters in the template. Please use `json.dump` to format the JSON object into a string type. The object is a set of key-value pairs. Each key denotes a variable, which is represented by {{key}}. The key will be replaced with the corresponding value (represented by {{value}}) when sending the email.
+Note: The parameter value cannot be data of a complex type such as HTML.
+Example: {"name":"xxx","age":"xx"}
     */
     @SerializedName("TemplateData")
     @Expose
@@ -53,8 +55,12 @@ public class Template extends AbstractModel{
     }
 
     /**
-     * Get Variable parameters in the template. Please use `json.dump` to format the JSON object into a string type. The object is a set of key-value pairs. Each key denotes a variable, which is represented by {{key}}. The key will be replaced with the corresponding value (represented by {{value}}) when sending the email. 
+     * Get Variable parameters in the template. Please use `json.dump` to format the JSON object into a string type. The object is a set of key-value pairs. Each key denotes a variable, which is represented by {{key}}. The key will be replaced with the corresponding value (represented by {{value}}) when sending the email.
+Note: The parameter value cannot be data of a complex type such as HTML.
+Example: {"name":"xxx","age":"xx"} 
      * @return TemplateData Variable parameters in the template. Please use `json.dump` to format the JSON object into a string type. The object is a set of key-value pairs. Each key denotes a variable, which is represented by {{key}}. The key will be replaced with the corresponding value (represented by {{value}}) when sending the email.
+Note: The parameter value cannot be data of a complex type such as HTML.
+Example: {"name":"xxx","age":"xx"}
      */
     public String getTemplateData() {
         return this.TemplateData;
@@ -62,7 +68,11 @@ public class Template extends AbstractModel{
 
     /**
      * Set Variable parameters in the template. Please use `json.dump` to format the JSON object into a string type. The object is a set of key-value pairs. Each key denotes a variable, which is represented by {{key}}. The key will be replaced with the corresponding value (represented by {{value}}) when sending the email.
+Note: The parameter value cannot be data of a complex type such as HTML.
+Example: {"name":"xxx","age":"xx"}
      * @param TemplateData Variable parameters in the template. Please use `json.dump` to format the JSON object into a string type. The object is a set of key-value pairs. Each key denotes a variable, which is represented by {{key}}. The key will be replaced with the corresponding value (represented by {{value}}) when sending the email.
+Note: The parameter value cannot be data of a complex type such as HTML.
+Example: {"name":"xxx","age":"xx"}
      */
     public void setTemplateData(String TemplateData) {
         this.TemplateData = TemplateData;

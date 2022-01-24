@@ -1,5 +1,8 @@
 package com.tencentcloudapi.ses.v20201002;
 public enum SesErrorCode {
+    // Operation failed.
+     FAILEDOPERATION("FailedOperation"),
+     
     // The attachments are too large. Make sure they do not exceed the size limit for a single attachment and the overall limit for all attachments.
      FAILEDOPERATION_ATTACHCONTENTTOOLARGE("FailedOperation.AttachContentToolarge"),
      
@@ -120,11 +123,20 @@ public enum SesErrorCode {
     // This sender domain does not exist. Create it first.
      INVALIDPARAMETERVALUE_NOTEXISTDOMAIN("InvalidParameterValue.NotExistDomain"),
      
+    // Invalid recipient group description. The description cannot contain special characters and must contain 1 to 300 characters.
+     INVALIDPARAMETERVALUE_RECEIVERDESCILLEGAL("InvalidParameterValue.ReceiverDescIllegal"),
+     
+    // Invalid recipient group name. Check the name and its size.
+     INVALIDPARAMETERVALUE_RECEIVERNAMEILLEGAL("InvalidParameterValue.ReceiverNameIllegal"),
+     
     // This sender domain already exists. Do not create it again.
      INVALIDPARAMETERVALUE_REPEATCREATION("InvalidParameterValue.RepeatCreation"),
      
     // This email address already exists. Do not create it again.
      INVALIDPARAMETERVALUE_REPEATEMAILADDRESS("InvalidParameterValue.RepeatEmailAddress"),
+     
+    // Duplicate recipient group name.
+     INVALIDPARAMETERVALUE_REPEATRECEIVERNAME("InvalidParameterValue.RepeatReceiverName"),
      
     // The template resource is empty.
      INVALIDPARAMETERVALUE_TEMPLATECONTENTISNULL("InvalidParameterValue.TemplateContentIsNULL"),
@@ -150,11 +162,23 @@ public enum SesErrorCode {
     // The quota limit is exceeded.
      LIMITEXCEEDED("LimitExceeded"),
      
+    // The number of recipient email addresses exceeded the limit.
+     LIMITEXCEEDED_EXCEEDRECEIVERDETAILLIMIT("LimitExceeded.ExceedReceiverDetailLimit"),
+     
+    // The number of recipient groups exceeded the limit.
+     LIMITEXCEEDED_EXCEEDRECEIVERLIMIT("LimitExceeded.ExceedReceiverLimit"),
+     
     // Missing parameter.
      MISSINGPARAMETER("MissingParameter"),
      
     // For a recurring sending task, you must select the start time and recurrence.
      MISSINGPARAMETER_CYCLEPARAMNECESSARY("MissingParameter.CycleParamNecessary"),
+     
+    // The recipient email address is required.
+     MISSINGPARAMETER_EMAILSNECESSARY("MissingParameter.EmailsNecessary"),
+     
+    // The recipient group ID is required.
+     MISSINGPARAMETER_RECEIVERIDNECESSARY("MissingParameter.ReceiverIdNecessary"),
      
     // Sender address, recipient group, and email template are required.
      MISSINGPARAMETER_SENDPARAMNECESSARY("MissingParameter.SendParamNecessary"),
@@ -173,6 +197,9 @@ public enum SesErrorCode {
      
     // The number of sender addresses exceeds the upper limit.
      OPERATIONDENIED_EXCEEDSENDERLIMIT("OperationDenied.ExceedSenderLimit"),
+     
+    // The recipient group is being operated. Please try later.
+     OPERATIONDENIED_RECEIVERISOPERATING("OperationDenied.ReceiverIsOperating"),
      
     // The recipient group does not exist.
      OPERATIONDENIED_RECEIVERNOTEXIST("OperationDenied.ReceiverNotExist"),
