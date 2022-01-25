@@ -1463,6 +1463,29 @@ This API allows you to query the status of a stream in real time. Given external
     }
 
     /**
+     *This API is used to query your total usage of the transcoding service in the last 30 days.
+Notes:
+If the start time and end time are on the same day, the data returned will be on a 5-minute basis.
+If not or if the data of specified domains is queried, the data returned will be on an hourly basis.
+     * @param req DescribeLiveTranscodeTotalInfoRequest
+     * @return DescribeLiveTranscodeTotalInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveTranscodeTotalInfoResponse DescribeLiveTranscodeTotalInfo(DescribeLiveTranscodeTotalInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveTranscodeTotalInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveTranscodeTotalInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLiveTranscodeTotalInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the information of a single watermark.
      * @param req DescribeLiveWatermarkRequest
      * @return DescribeLiveWatermarkResponse
