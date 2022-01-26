@@ -37,6 +37,14 @@ public class GetServiceStatusResponse extends AbstractModel{
     private Long InvalidType;
 
     /**
+    * `true`: allow SSM to manage Tencent Cloud API key secrets.
+`false`: forbid SSM to manage Tencent Cloud API key secrets.
+    */
+    @SerializedName("AccessKeyEscrowEnabled")
+    @Expose
+    private Boolean AccessKeyEscrowEnabled;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -76,6 +84,26 @@ public class GetServiceStatusResponse extends AbstractModel{
     }
 
     /**
+     * Get `true`: allow SSM to manage Tencent Cloud API key secrets.
+`false`: forbid SSM to manage Tencent Cloud API key secrets. 
+     * @return AccessKeyEscrowEnabled `true`: allow SSM to manage Tencent Cloud API key secrets.
+`false`: forbid SSM to manage Tencent Cloud API key secrets.
+     */
+    public Boolean getAccessKeyEscrowEnabled() {
+        return this.AccessKeyEscrowEnabled;
+    }
+
+    /**
+     * Set `true`: allow SSM to manage Tencent Cloud API key secrets.
+`false`: forbid SSM to manage Tencent Cloud API key secrets.
+     * @param AccessKeyEscrowEnabled `true`: allow SSM to manage Tencent Cloud API key secrets.
+`false`: forbid SSM to manage Tencent Cloud API key secrets.
+     */
+    public void setAccessKeyEscrowEnabled(Boolean AccessKeyEscrowEnabled) {
+        this.AccessKeyEscrowEnabled = AccessKeyEscrowEnabled;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -105,6 +133,9 @@ public class GetServiceStatusResponse extends AbstractModel{
         if (source.InvalidType != null) {
             this.InvalidType = new Long(source.InvalidType);
         }
+        if (source.AccessKeyEscrowEnabled != null) {
+            this.AccessKeyEscrowEnabled = new Boolean(source.AccessKeyEscrowEnabled);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +148,7 @@ public class GetServiceStatusResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ServiceEnabled", this.ServiceEnabled);
         this.setParamSimple(map, prefix + "InvalidType", this.InvalidType);
+        this.setParamSimple(map, prefix + "AccessKeyEscrowEnabled", this.AccessKeyEscrowEnabled);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -75,6 +75,7 @@ The `PendingCreate` and `CreateFailed` status only take effect when `SecretType`
     * `0` (default): user-defined secret.
 `1`: Tencent Cloud services secret.
 `2`: SSH key secret.
+`3`: Tencent Cloud API key secret.
     */
     @SerializedName("SecretType")
     @Expose
@@ -218,10 +219,12 @@ The `PendingCreate` and `CreateFailed` status only take effect when `SecretType`
     /**
      * Get `0` (default): user-defined secret.
 `1`: Tencent Cloud services secret.
-`2`: SSH key secret. 
+`2`: SSH key secret.
+`3`: Tencent Cloud API key secret. 
      * @return SecretType `0` (default): user-defined secret.
 `1`: Tencent Cloud services secret.
 `2`: SSH key secret.
+`3`: Tencent Cloud API key secret.
      */
     public Long getSecretType() {
         return this.SecretType;
@@ -231,9 +234,11 @@ The `PendingCreate` and `CreateFailed` status only take effect when `SecretType`
      * Set `0` (default): user-defined secret.
 `1`: Tencent Cloud services secret.
 `2`: SSH key secret.
+`3`: Tencent Cloud API key secret.
      * @param SecretType `0` (default): user-defined secret.
 `1`: Tencent Cloud services secret.
 `2`: SSH key secret.
+`3`: Tencent Cloud API key secret.
      */
     public void setSecretType(Long SecretType) {
         this.SecretType = SecretType;

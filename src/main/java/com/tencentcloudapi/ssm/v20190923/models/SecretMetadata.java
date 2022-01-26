@@ -95,8 +95,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long NextRotationTime;
 
     /**
-    * 0: user-defined credential; 1: Tencent Cloud service credential.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * `0`: user-defined secret.
+`1`: Tencent Cloud services secret.
+`2`: SSH key secret.
+`3`: Tencent Cloud API key secret.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("SecretType")
     @Expose
@@ -133,6 +136,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     @SerializedName("AssociatedInstanceIDs")
     @Expose
     private String [] AssociatedInstanceIDs;
+
+    /**
+    * UIN of the Tencent Cloud API key. This field is valid when the secret type is Tencent Cloud API key secret.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TargetUin")
+    @Expose
+    private Long TargetUin;
 
     /**
      * Get Credential name 
@@ -303,20 +314,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get 0: user-defined credential; 1: Tencent Cloud service credential.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SecretType 0: user-defined credential; 1: Tencent Cloud service credential.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get `0`: user-defined secret.
+`1`: Tencent Cloud services secret.
+`2`: SSH key secret.
+`3`: Tencent Cloud API key secret.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return SecretType `0`: user-defined secret.
+`1`: Tencent Cloud services secret.
+`2`: SSH key secret.
+`3`: Tencent Cloud API key secret.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getSecretType() {
         return this.SecretType;
     }
 
     /**
-     * Set 0: user-defined credential; 1: Tencent Cloud service credential.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SecretType 0: user-defined credential; 1: Tencent Cloud service credential.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set `0`: user-defined secret.
+`1`: Tencent Cloud services secret.
+`2`: SSH key secret.
+`3`: Tencent Cloud API key secret.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param SecretType `0`: user-defined secret.
+`1`: Tencent Cloud services secret.
+`2`: SSH key secret.
+`3`: Tencent Cloud API key secret.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSecretType(Long SecretType) {
         this.SecretType = SecretType;
@@ -402,6 +425,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.AssociatedInstanceIDs = AssociatedInstanceIDs;
     }
 
+    /**
+     * Get UIN of the Tencent Cloud API key. This field is valid when the secret type is Tencent Cloud API key secret.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return TargetUin UIN of the Tencent Cloud API key. This field is valid when the secret type is Tencent Cloud API key secret.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getTargetUin() {
+        return this.TargetUin;
+    }
+
+    /**
+     * Set UIN of the Tencent Cloud API key. This field is valid when the secret type is Tencent Cloud API key secret.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param TargetUin UIN of the Tencent Cloud API key. This field is valid when the secret type is Tencent Cloud API key secret.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTargetUin(Long TargetUin) {
+        this.TargetUin = TargetUin;
+    }
+
     public SecretMetadata() {
     }
 
@@ -458,6 +501,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.AssociatedInstanceIDs[i] = new String(source.AssociatedInstanceIDs[i]);
             }
         }
+        if (source.TargetUin != null) {
+            this.TargetUin = new Long(source.TargetUin);
+        }
     }
 
 
@@ -480,6 +526,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "ResourceName", this.ResourceName);
         this.setParamSimple(map, prefix + "ProjectID", this.ProjectID);
         this.setParamArraySimple(map, prefix + "AssociatedInstanceIDs.", this.AssociatedInstanceIDs);
+        this.setParamSimple(map, prefix + "TargetUin", this.TargetUin);
 
     }
 }

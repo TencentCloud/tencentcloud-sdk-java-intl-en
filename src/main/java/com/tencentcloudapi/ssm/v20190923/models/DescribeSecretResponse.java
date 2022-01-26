@@ -96,8 +96,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ResourceID;
 
     /**
-    * Whether to enable rotation. True: yes; False: no.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Whether to enable rotation. `True`: enable rotation; `False`: disable rotation.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("RotationStatus")
     @Expose
@@ -134,6 +134,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     @SerializedName("AssociatedInstanceIDs")
     @Expose
     private String [] AssociatedInstanceIDs;
+
+    /**
+    * UIN of the Tencent Cloud API key. This field is valid when the secret type is Tencent Cloud API key secret.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TargetUin")
+    @Expose
+    private Long TargetUin;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -315,20 +323,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable rotation. True: yes; False: no.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RotationStatus Whether to enable rotation. True: yes; False: no.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Whether to enable rotation. `True`: enable rotation; `False`: disable rotation.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return RotationStatus Whether to enable rotation. `True`: enable rotation; `False`: disable rotation.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Boolean getRotationStatus() {
         return this.RotationStatus;
     }
 
     /**
-     * Set Whether to enable rotation. True: yes; False: no.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RotationStatus Whether to enable rotation. True: yes; False: no.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Whether to enable rotation. `True`: enable rotation; `False`: disable rotation.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param RotationStatus Whether to enable rotation. `True`: enable rotation; `False`: disable rotation.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setRotationStatus(Boolean RotationStatus) {
         this.RotationStatus = RotationStatus;
@@ -415,6 +423,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get UIN of the Tencent Cloud API key. This field is valid when the secret type is Tencent Cloud API key secret.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return TargetUin UIN of the Tencent Cloud API key. This field is valid when the secret type is Tencent Cloud API key secret.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getTargetUin() {
+        return this.TargetUin;
+    }
+
+    /**
+     * Set UIN of the Tencent Cloud API key. This field is valid when the secret type is Tencent Cloud API key secret.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param TargetUin UIN of the Tencent Cloud API key. This field is valid when the secret type is Tencent Cloud API key secret.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTargetUin(Long TargetUin) {
+        this.TargetUin = TargetUin;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -486,6 +514,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 this.AssociatedInstanceIDs[i] = new String(source.AssociatedInstanceIDs[i]);
             }
         }
+        if (source.TargetUin != null) {
+            this.TargetUin = new Long(source.TargetUin);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -511,6 +542,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ResourceName", this.ResourceName);
         this.setParamSimple(map, prefix + "ProjectID", this.ProjectID);
         this.setParamArraySimple(map, prefix + "AssociatedInstanceIDs.", this.AssociatedInstanceIDs);
+        this.setParamSimple(map, prefix + "TargetUin", this.TargetUin);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

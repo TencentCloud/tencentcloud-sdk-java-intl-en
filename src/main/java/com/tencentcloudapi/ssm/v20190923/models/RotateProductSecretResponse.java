@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class RotateProductSecretResponse extends AbstractModel{
 
     /**
-    * Async rotation task ID.
+    * Asynchronous rotation task ID. This field is valid when `SecretType` is `1` (i.e., the secret type is Tencent Cloud services secret, such as MySQL/TDSQL credentials).
     */
     @SerializedName("FlowID")
     @Expose
@@ -37,16 +37,16 @@ public class RotateProductSecretResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Async rotation task ID. 
-     * @return FlowID Async rotation task ID.
+     * Get Asynchronous rotation task ID. This field is valid when `SecretType` is `1` (i.e., the secret type is Tencent Cloud services secret, such as MySQL/TDSQL credentials). 
+     * @return FlowID Asynchronous rotation task ID. This field is valid when `SecretType` is `1` (i.e., the secret type is Tencent Cloud services secret, such as MySQL/TDSQL credentials).
      */
     public Long getFlowID() {
         return this.FlowID;
     }
 
     /**
-     * Set Async rotation task ID.
-     * @param FlowID Async rotation task ID.
+     * Set Asynchronous rotation task ID. This field is valid when `SecretType` is `1` (i.e., the secret type is Tencent Cloud services secret, such as MySQL/TDSQL credentials).
+     * @param FlowID Asynchronous rotation task ID. This field is valid when `SecretType` is `1` (i.e., the secret type is Tencent Cloud services secret, such as MySQL/TDSQL credentials).
      */
     public void setFlowID(Long FlowID) {
         this.FlowID = FlowID;
