@@ -51,6 +51,13 @@ public class ModifyDBInstanceNetworkRequest extends AbstractModel{
     private Long OldIpRetainTime;
 
     /**
+    * New VIP
+    */
+    @SerializedName("Vip")
+    @Expose
+    private String Vip;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -114,6 +121,22 @@ public class ModifyDBInstanceNetworkRequest extends AbstractModel{
         this.OldIpRetainTime = OldIpRetainTime;
     }
 
+    /**
+     * Get New VIP 
+     * @return Vip New VIP
+     */
+    public String getVip() {
+        return this.Vip;
+    }
+
+    /**
+     * Set New VIP
+     * @param Vip New VIP
+     */
+    public void setVip(String Vip) {
+        this.Vip = Vip;
+    }
+
     public ModifyDBInstanceNetworkRequest() {
     }
 
@@ -134,6 +157,9 @@ public class ModifyDBInstanceNetworkRequest extends AbstractModel{
         if (source.OldIpRetainTime != null) {
             this.OldIpRetainTime = new Long(source.OldIpRetainTime);
         }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class ModifyDBInstanceNetworkRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NewVpcId", this.NewVpcId);
         this.setParamSimple(map, prefix + "NewSubnetId", this.NewSubnetId);
         this.setParamSimple(map, prefix + "OldIpRetainTime", this.OldIpRetainTime);
+        this.setParamSimple(map, prefix + "Vip", this.Vip);
 
     }
 }

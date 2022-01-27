@@ -464,6 +464,30 @@ You can filter according to the snapshot ID. The snapshot ID format is as follow
     }
 
     /**
+     *This API is used to reinitialize the cloud disks. Note the following when reinitializing the cloud disks:
+1. For a cloud disk created from a snapshot, it is rolled back to the state of the snapshot;
+2. For a cloud disk created from the scratch, all data are cleared. Please check and back up the necessary data before the reinitialization;
+3. Currently, you can only re-initialize a cloud disk when it’s not attached to a resource and not shared by others;
+4. For a cloud disk created from a snapshot, if the snapshot has been deleted, it cannot be reinitialized.
+     * @param req InitializeDisksRequest
+     * @return InitializeDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public InitializeDisksResponse InitializeDisks(InitializeDisksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InitializeDisksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InitializeDisksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InitializeDisks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the price for adjusting the cloud disk’s extra performance.
      * @param req InquirePriceModifyDiskExtraPerformanceRequest
      * @return InquirePriceModifyDiskExtraPerformanceResponse
