@@ -20,21 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
+public class SwitchDBInstanceHAResponse extends AbstractModel{
 
     /**
-    * Security group details
+    * Async task ID
     */
-    @SerializedName("Groups")
+    @SerializedName("FlowId")
     @Expose
-    private SecurityGroup [] Groups;
-
-    /**
-    * Total number of security groups.
-    */
-    @SerializedName("Total")
-    @Expose
-    private Long Total;
+    private Long FlowId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +37,19 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Security group details 
-     * @return Groups Security group details
+     * Get Async task ID 
+     * @return FlowId Async task ID
      */
-    public SecurityGroup [] getGroups() {
-        return this.Groups;
+    public Long getFlowId() {
+        return this.FlowId;
     }
 
     /**
-     * Set Security group details
-     * @param Groups Security group details
+     * Set Async task ID
+     * @param FlowId Async task ID
      */
-    public void setGroups(SecurityGroup [] Groups) {
-        this.Groups = Groups;
-    }
-
-    /**
-     * Get Total number of security groups. 
-     * @return Total Total number of security groups.
-     */
-    public Long getTotal() {
-        return this.Total;
-    }
-
-    /**
-     * Set Total number of security groups.
-     * @param Total Total number of security groups.
-     */
-    public void setTotal(Long Total) {
-        this.Total = Total;
+    public void setFlowId(Long FlowId) {
+        this.FlowId = FlowId;
     }
 
     /**
@@ -91,22 +68,16 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeProjectSecurityGroupsResponse() {
+    public SwitchDBInstanceHAResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeProjectSecurityGroupsResponse(DescribeProjectSecurityGroupsResponse source) {
-        if (source.Groups != null) {
-            this.Groups = new SecurityGroup[source.Groups.length];
-            for (int i = 0; i < source.Groups.length; i++) {
-                this.Groups[i] = new SecurityGroup(source.Groups[i]);
-            }
-        }
-        if (source.Total != null) {
-            this.Total = new Long(source.Total);
+    public SwitchDBInstanceHAResponse(SwitchDBInstanceHAResponse source) {
+        if (source.FlowId != null) {
+            this.FlowId = new Long(source.FlowId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +89,7 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Groups.", this.Groups);
-        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

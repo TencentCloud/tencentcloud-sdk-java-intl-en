@@ -160,6 +160,26 @@ Note: accounts with the same username but different hosts are different accounts
     }
 
     /**
+     *This API is used to create pay-as-you-go instances.
+     * @param req CreateHourDBInstanceRequest
+     * @return CreateHourDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateHourDBInstanceResponse CreateHourDBInstance(CreateHourDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateHourDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateHourDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateHourDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a TencentDB account, which is uniquely identified by username and host.
      * @param req DeleteAccountRequest
      * @return DeleteAccountResponse
@@ -882,6 +902,26 @@ Note: accounts with the same username but different hosts are different accounts
                 Type type = new TypeToken<JsonResponseModel<ResetAccountPasswordResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ResetAccountPassword");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to start a primary-replica switch of instances.
+     * @param req SwitchDBInstanceHARequest
+     * @return SwitchDBInstanceHAResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchDBInstanceHAResponse SwitchDBInstanceHA(SwitchDBInstanceHARequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SwitchDBInstanceHAResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SwitchDBInstanceHAResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SwitchDBInstanceHA");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
