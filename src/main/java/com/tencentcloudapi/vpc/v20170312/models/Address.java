@@ -100,7 +100,7 @@ public class Address extends AbstractModel{
     private Boolean IsEipDirectConnection;
 
     /**
-    * The resource type of the EIP. This includes `CalcIP`, `WanIP`, `EIP`, and `AnycastEIP`. Among these, `CalcIP` indicates the device IP, `WanIP` indicates the common public IP, `EIP` indicates Elastic IP, and `AnycastEip` indicates accelerated EIP.
+    * EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (elastic IP) and `AnycastEIP` (accelerated EIP).
     */
     @SerializedName("AddressType")
     @Expose
@@ -144,6 +144,16 @@ Note: this field may return `null`, indicating that no valid value was found.
 
     /**
     * Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+Including:
+<li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li>
+<p style="padding-left: 30px;">Prepaid by monthly-subscribed bandwidth.</p>
+<li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">Pay-as-you-go billing by hourly traffic.</p>
+<li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">Pay-as-you-go billing by hourly bandwidth.</p>
+<li><strong>BANDWIDTH_PACKAGE</strong></li>
+<p style="padding-left: 30px;">Bandwidth package.</p>
 Note: this field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("InternetChargeType")
@@ -335,16 +345,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get The resource type of the EIP. This includes `CalcIP`, `WanIP`, `EIP`, and `AnycastEIP`. Among these, `CalcIP` indicates the device IP, `WanIP` indicates the common public IP, `EIP` indicates Elastic IP, and `AnycastEip` indicates accelerated EIP. 
-     * @return AddressType The resource type of the EIP. This includes `CalcIP`, `WanIP`, `EIP`, and `AnycastEIP`. Among these, `CalcIP` indicates the device IP, `WanIP` indicates the common public IP, `EIP` indicates Elastic IP, and `AnycastEip` indicates accelerated EIP.
+     * Get EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (elastic IP) and `AnycastEIP` (accelerated EIP). 
+     * @return AddressType EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (elastic IP) and `AnycastEIP` (accelerated EIP).
      */
     public String getAddressType() {
         return this.AddressType;
     }
 
     /**
-     * Set The resource type of the EIP. This includes `CalcIP`, `WanIP`, `EIP`, and `AnycastEIP`. Among these, `CalcIP` indicates the device IP, `WanIP` indicates the common public IP, `EIP` indicates Elastic IP, and `AnycastEip` indicates accelerated EIP.
-     * @param AddressType The resource type of the EIP. This includes `CalcIP`, `WanIP`, `EIP`, and `AnycastEIP`. Among these, `CalcIP` indicates the device IP, `WanIP` indicates the common public IP, `EIP` indicates Elastic IP, and `AnycastEip` indicates accelerated EIP.
+     * Set EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (elastic IP) and `AnycastEIP` (accelerated EIP).
+     * @param AddressType EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (elastic IP) and `AnycastEIP` (accelerated EIP).
      */
     public void setAddressType(String AddressType) {
         this.AddressType = AddressType;
@@ -436,8 +446,28 @@ Note: this field may return `null`, indicating that no valid value was found.
 
     /**
      * Get Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+Including:
+<li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li>
+<p style="padding-left: 30px;">Prepaid by monthly-subscribed bandwidth.</p>
+<li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">Pay-as-you-go billing by hourly traffic.</p>
+<li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">Pay-as-you-go billing by hourly bandwidth.</p>
+<li><strong>BANDWIDTH_PACKAGE</strong></li>
+<p style="padding-left: 30px;">Bandwidth package.</p>
 Note: this field may return `null`, indicating that no valid value was found. 
      * @return InternetChargeType Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+Including:
+<li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li>
+<p style="padding-left: 30px;">Prepaid by monthly-subscribed bandwidth.</p>
+<li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">Pay-as-you-go billing by hourly traffic.</p>
+<li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">Pay-as-you-go billing by hourly bandwidth.</p>
+<li><strong>BANDWIDTH_PACKAGE</strong></li>
+<p style="padding-left: 30px;">Bandwidth package.</p>
 Note: this field may return `null`, indicating that no valid value was found.
      */
     public String getInternetChargeType() {
@@ -447,7 +477,27 @@ Note: this field may return `null`, indicating that no valid value was found.
     /**
      * Set Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
 Note: this field may return `null`, indicating that no valid value was found.
+Including:
+<li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li>
+<p style="padding-left: 30px;">Prepaid by monthly-subscribed bandwidth.</p>
+<li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">Pay-as-you-go billing by hourly traffic.</p>
+<li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">Pay-as-you-go billing by hourly bandwidth.</p>
+<li><strong>BANDWIDTH_PACKAGE</strong></li>
+<p style="padding-left: 30px;">Bandwidth package.</p>
+Note: this field may return `null`, indicating that no valid value was found.
      * @param InternetChargeType Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+Including:
+<li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li>
+<p style="padding-left: 30px;">Prepaid by monthly-subscribed bandwidth.</p>
+<li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">Pay-as-you-go billing by hourly traffic.</p>
+<li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">Pay-as-you-go billing by hourly bandwidth.</p>
+<li><strong>BANDWIDTH_PACKAGE</strong></li>
+<p style="padding-left: 30px;">Bandwidth package.</p>
 Note: this field may return `null`, indicating that no valid value was found.
      */
     public void setInternetChargeType(String InternetChargeType) {

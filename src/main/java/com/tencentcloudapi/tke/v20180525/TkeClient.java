@@ -779,6 +779,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the information of clusters under the current account.
+     * @param req DescribeClusterStatusRequest
+     * @return DescribeClusterStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterStatusResponse DescribeClusterStatus(DescribeClusterStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query clusters list.
      * @param req DescribeClustersRequest
      * @return DescribeClustersResponse

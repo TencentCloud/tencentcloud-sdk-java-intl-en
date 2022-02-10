@@ -184,7 +184,7 @@ public class CreateInstancesRequest extends AbstractModel{
     private String DBKernelVersion;
 
     /**
-    * 
+    * Instance node information, which is required if you purchase a multi-AZ deployed instance.
     */
     @SerializedName("DBNodeSet")
     @Expose
@@ -559,16 +559,16 @@ public class CreateInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return DBNodeSet 
+     * Get Instance node information, which is required if you purchase a multi-AZ deployed instance. 
+     * @return DBNodeSet Instance node information, which is required if you purchase a multi-AZ deployed instance.
      */
     public DBNode [] getDBNodeSet() {
         return this.DBNodeSet;
     }
 
     /**
-     * Set 
-     * @param DBNodeSet 
+     * Set Instance node information, which is required if you purchase a multi-AZ deployed instance.
+     * @param DBNodeSet Instance node information, which is required if you purchase a multi-AZ deployed instance.
      */
     public void setDBNodeSet(DBNode [] DBNodeSet) {
         this.DBNodeSet = DBNodeSet;

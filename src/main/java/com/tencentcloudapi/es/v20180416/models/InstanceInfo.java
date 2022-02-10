@@ -555,6 +555,14 @@ Note: This field may return `null`, indicating that no valid value was found.
     private Long FrozenDiskSize;
 
     /**
+    * Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("HealthStatus")
+    @Expose
+    private Long HealthStatus;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -1830,6 +1838,26 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.FrozenDiskSize = FrozenDiskSize;
     }
 
+    /**
+     * Get Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return HealthStatus Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public Long getHealthStatus() {
+        return this.HealthStatus;
+    }
+
+    /**
+     * Set Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param HealthStatus Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setHealthStatus(Long HealthStatus) {
+        this.HealthStatus = HealthStatus;
+    }
+
     public InstanceInfo() {
     }
 
@@ -2063,6 +2091,9 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.FrozenDiskSize != null) {
             this.FrozenDiskSize = new Long(source.FrozenDiskSize);
         }
+        if (source.HealthStatus != null) {
+            this.HealthStatus = new Long(source.HealthStatus);
+        }
     }
 
 
@@ -2141,6 +2172,7 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "FrozenMemSize", this.FrozenMemSize);
         this.setParamSimple(map, prefix + "FrozenDiskType", this.FrozenDiskType);
         this.setParamSimple(map, prefix + "FrozenDiskSize", this.FrozenDiskSize);
+        this.setParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
 
     }
 }

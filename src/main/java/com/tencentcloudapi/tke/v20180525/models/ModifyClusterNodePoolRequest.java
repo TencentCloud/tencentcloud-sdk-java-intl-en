@@ -107,7 +107,7 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
-    * 
+    * Sets whether the added node is schedulable. 0 (default): schedulable; other values: unschedulable. After node initialization is completed, you can run `kubectl uncordon nodename` to enable this node for scheduling.
     */
     @SerializedName("Unschedulable")
     @Expose
@@ -306,16 +306,16 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Unschedulable 
+     * Get Sets whether the added node is schedulable. 0 (default): schedulable; other values: unschedulable. After node initialization is completed, you can run `kubectl uncordon nodename` to enable this node for scheduling. 
+     * @return Unschedulable Sets whether the added node is schedulable. 0 (default): schedulable; other values: unschedulable. After node initialization is completed, you can run `kubectl uncordon nodename` to enable this node for scheduling.
      */
     public Long getUnschedulable() {
         return this.Unschedulable;
     }
 
     /**
-     * Set 
-     * @param Unschedulable 
+     * Set Sets whether the added node is schedulable. 0 (default): schedulable; other values: unschedulable. After node initialization is completed, you can run `kubectl uncordon nodename` to enable this node for scheduling.
+     * @param Unschedulable Sets whether the added node is schedulable. 0 (default): schedulable; other values: unschedulable. After node initialization is completed, you can run `kubectl uncordon nodename` to enable this node for scheduling.
      */
     public void setUnschedulable(Long Unschedulable) {
         this.Unschedulable = Unschedulable;

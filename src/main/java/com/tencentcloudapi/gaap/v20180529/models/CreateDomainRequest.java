@@ -60,6 +60,16 @@ This field or the `ClientCertificateId` field is required for mutual authenticat
     private String [] PolyClientCertificateIds;
 
     /**
+    * Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+HTTP3 is not enabled by default. You can enable it with this field SetDomainHttp3.
+    */
+    @SerializedName("Http3Supported")
+    @Expose
+    private Long Http3Supported;
+
+    /**
      * Get Listener ID. 
      * @return ListenerId Listener ID.
      */
@@ -147,6 +157,34 @@ This field or the `ClientCertificateId` field is required for mutual authenticat
         this.PolyClientCertificateIds = PolyClientCertificateIds;
     }
 
+    /**
+     * Get Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+HTTP3 is not enabled by default. You can enable it with this field SetDomainHttp3. 
+     * @return Http3Supported Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+HTTP3 is not enabled by default. You can enable it with this field SetDomainHttp3.
+     */
+    public Long getHttp3Supported() {
+        return this.Http3Supported;
+    }
+
+    /**
+     * Set Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+HTTP3 is not enabled by default. You can enable it with this field SetDomainHttp3.
+     * @param Http3Supported Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+HTTP3 is not enabled by default. You can enable it with this field SetDomainHttp3.
+     */
+    public void setHttp3Supported(Long Http3Supported) {
+        this.Http3Supported = Http3Supported;
+    }
+
     public CreateDomainRequest() {
     }
 
@@ -173,6 +211,9 @@ This field or the `ClientCertificateId` field is required for mutual authenticat
                 this.PolyClientCertificateIds[i] = new String(source.PolyClientCertificateIds[i]);
             }
         }
+        if (source.Http3Supported != null) {
+            this.Http3Supported = new Long(source.Http3Supported);
+        }
     }
 
 
@@ -185,6 +226,7 @@ This field or the `ClientCertificateId` field is required for mutual authenticat
         this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
         this.setParamSimple(map, prefix + "ClientCertificateId", this.ClientCertificateId);
         this.setParamArraySimple(map, prefix + "PolyClientCertificateIds.", this.PolyClientCertificateIds);
+        this.setParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
 
     }
 }

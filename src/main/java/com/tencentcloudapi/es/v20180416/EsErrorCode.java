@@ -18,7 +18,7 @@ public enum EsErrorCode {
     // No replicas for indexes in the cluster.
      FAILEDOPERATION_ERRORCLUSTERSTATENOREPLICATION("FailedOperation.ErrorClusterStateNoReplication"),
      
-    // 
+    // The cluster is unhealthy.
      FAILEDOPERATION_ERRORCLUSTERSTATEUNHEALTH("FailedOperation.ErrorClusterStateUnhealth"),
      
     // No credit card or PayPal account is linked to the current account. Unable to make a payment.
@@ -45,7 +45,7 @@ public enum EsErrorCode {
     // Insufficient account balance.
      RESOURCEINSUFFICIENT_BALANCE("ResourceInsufficient.Balance"),
      
-    // 
+    // Dedicated master node resources in the hidden availability zone are insufficient.
      RESOURCEINSUFFICIENT_HIDDENZONE("ResourceInsufficient.HiddenZone"),
      
     // Insufficient number of remaining subnet IPs.

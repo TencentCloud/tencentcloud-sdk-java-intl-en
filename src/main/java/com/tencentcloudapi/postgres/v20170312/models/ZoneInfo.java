@@ -44,7 +44,7 @@ public class ZoneInfo extends AbstractModel{
     private Long ZoneId;
 
     /**
-    * Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
+    * Availability status. Valid values: `UNAVAILABLE`, `AVAILABLE`, `SELLOUT`
     */
     @SerializedName("ZoneState")
     @Expose
@@ -56,6 +56,14 @@ public class ZoneInfo extends AbstractModel{
     @SerializedName("ZoneSupportIpv6")
     @Expose
     private Long ZoneSupportIpv6;
+
+    /**
+    * AZs that can be used as standby when this AZ is primary
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("StandbyZoneSet")
+    @Expose
+    private String [] StandbyZoneSet;
 
     /**
      * Get AZ abbreviation 
@@ -106,16 +114,16 @@ public class ZoneInfo extends AbstractModel{
     }
 
     /**
-     * Get Availability status. UNAVAILABLE: unavailable, AVAILABLE: available 
-     * @return ZoneState Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
+     * Get Availability status. Valid values: `UNAVAILABLE`, `AVAILABLE`, `SELLOUT` 
+     * @return ZoneState Availability status. Valid values: `UNAVAILABLE`, `AVAILABLE`, `SELLOUT`
      */
     public String getZoneState() {
         return this.ZoneState;
     }
 
     /**
-     * Set Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
-     * @param ZoneState Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
+     * Set Availability status. Valid values: `UNAVAILABLE`, `AVAILABLE`, `SELLOUT`
+     * @param ZoneState Availability status. Valid values: `UNAVAILABLE`, `AVAILABLE`, `SELLOUT`
      */
     public void setZoneState(String ZoneState) {
         this.ZoneState = ZoneState;
@@ -135,6 +143,26 @@ public class ZoneInfo extends AbstractModel{
      */
     public void setZoneSupportIpv6(Long ZoneSupportIpv6) {
         this.ZoneSupportIpv6 = ZoneSupportIpv6;
+    }
+
+    /**
+     * Get AZs that can be used as standby when this AZ is primary
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return StandbyZoneSet AZs that can be used as standby when this AZ is primary
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String [] getStandbyZoneSet() {
+        return this.StandbyZoneSet;
+    }
+
+    /**
+     * Set AZs that can be used as standby when this AZ is primary
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param StandbyZoneSet AZs that can be used as standby when this AZ is primary
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setStandbyZoneSet(String [] StandbyZoneSet) {
+        this.StandbyZoneSet = StandbyZoneSet;
     }
 
     public ZoneInfo() {
@@ -160,6 +188,12 @@ public class ZoneInfo extends AbstractModel{
         if (source.ZoneSupportIpv6 != null) {
             this.ZoneSupportIpv6 = new Long(source.ZoneSupportIpv6);
         }
+        if (source.StandbyZoneSet != null) {
+            this.StandbyZoneSet = new String[source.StandbyZoneSet.length];
+            for (int i = 0; i < source.StandbyZoneSet.length; i++) {
+                this.StandbyZoneSet[i] = new String(source.StandbyZoneSet[i]);
+            }
+        }
     }
 
 
@@ -172,6 +206,7 @@ public class ZoneInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "ZoneState", this.ZoneState);
         this.setParamSimple(map, prefix + "ZoneSupportIpv6", this.ZoneSupportIpv6);
+        this.setParamArraySimple(map, prefix + "StandbyZoneSet.", this.StandbyZoneSet);
 
     }
 }

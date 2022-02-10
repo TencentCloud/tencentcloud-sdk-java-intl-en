@@ -100,6 +100,14 @@ public class DBBackup extends AbstractModel{
     private String ExternalAddr;
 
     /**
+    * Backup set ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SetId")
+    @Expose
+    private String SetId;
+
+    /**
      * Get Unique backup file ID 
      * @return Id Unique backup file ID
      */
@@ -275,6 +283,26 @@ public class DBBackup extends AbstractModel{
         this.ExternalAddr = ExternalAddr;
     }
 
+    /**
+     * Get Backup set ID
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return SetId Backup set ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getSetId() {
+        return this.SetId;
+    }
+
+    /**
+     * Set Backup set ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param SetId Backup set ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setSetId(String SetId) {
+        this.SetId = SetId;
+    }
+
     public DBBackup() {
     }
 
@@ -319,6 +347,9 @@ public class DBBackup extends AbstractModel{
         if (source.ExternalAddr != null) {
             this.ExternalAddr = new String(source.ExternalAddr);
         }
+        if (source.SetId != null) {
+            this.SetId = new String(source.SetId);
+        }
     }
 
 
@@ -337,6 +368,7 @@ public class DBBackup extends AbstractModel{
         this.setParamArraySimple(map, prefix + "DbList.", this.DbList);
         this.setParamSimple(map, prefix + "InternalAddr", this.InternalAddr);
         this.setParamSimple(map, prefix + "ExternalAddr", this.ExternalAddr);
+        this.setParamSimple(map, prefix + "SetId", this.SetId);
 
     }
 }

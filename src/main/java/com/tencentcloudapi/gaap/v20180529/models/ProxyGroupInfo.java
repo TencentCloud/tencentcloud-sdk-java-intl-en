@@ -103,6 +103,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long ProxyType;
 
     /**
+    * Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Http3Supported")
+    @Expose
+    private Long Http3Supported;
+
+    /**
      * Get Connection group ID 
      * @return GroupId Connection group ID
      */
@@ -302,6 +312,34 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.ProxyType = ProxyType;
     }
 
+    /**
+     * Get Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Http3Supported Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getHttp3Supported() {
+        return this.Http3Supported;
+    }
+
+    /**
+     * Set Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Http3Supported Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setHttp3Supported(Long Http3Supported) {
+        this.Http3Supported = Http3Supported;
+    }
+
     public ProxyGroupInfo() {
     }
 
@@ -343,6 +381,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.ProxyType != null) {
             this.ProxyType = new Long(source.ProxyType);
         }
+        if (source.Http3Supported != null) {
+            this.Http3Supported = new Long(source.Http3Supported);
+        }
     }
 
 
@@ -360,6 +401,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ProxyType", this.ProxyType);
+        this.setParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
 
     }
 }

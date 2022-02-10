@@ -24,6 +24,7 @@ public class SearchFacesRequest extends AbstractModel{
 
     /**
     * List of groups to be searched in (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
+You cannot search for groups using different algorithm model versions (`FaceModelVersion`) at a time.
     */
     @SerializedName("GroupIds")
     @Expose
@@ -111,8 +112,10 @@ If the image quality does not meet the requirement, the returned result will pro
     private Long NeedRotateDetection;
 
     /**
-     * Get List of groups to be searched in (up to 100). The array element value is the `GroupId` in the `CreateGroup` API. 
+     * Get List of groups to be searched in (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
+You cannot search for groups using different algorithm model versions (`FaceModelVersion`) at a time. 
      * @return GroupIds List of groups to be searched in (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
+You cannot search for groups using different algorithm model versions (`FaceModelVersion`) at a time.
      */
     public String [] getGroupIds() {
         return this.GroupIds;
@@ -120,7 +123,9 @@ If the image quality does not meet the requirement, the returned result will pro
 
     /**
      * Set List of groups to be searched in (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
+You cannot search for groups using different algorithm model versions (`FaceModelVersion`) at a time.
      * @param GroupIds List of groups to be searched in (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
+You cannot search for groups using different algorithm model versions (`FaceModelVersion`) at a time.
      */
     public void setGroupIds(String [] GroupIds) {
         this.GroupIds = GroupIds;

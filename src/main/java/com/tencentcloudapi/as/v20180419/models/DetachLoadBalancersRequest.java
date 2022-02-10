@@ -30,14 +30,14 @@ public class DetachLoadBalancersRequest extends AbstractModel{
     private String AutoScalingGroupId;
 
     /**
-    * List of classic CLB IDs. Up to 20 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
+    * List of classic CLB IDs. Up to 20 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time.
     */
     @SerializedName("LoadBalancerIds")
     @Expose
     private String [] LoadBalancerIds;
 
     /**
-    * List of application CLB IDs. Up to 50 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
+    * List of application CLB IDs. Up to 50 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time.
     */
     @SerializedName("ForwardLoadBalancerIdentifications")
     @Expose
@@ -60,32 +60,32 @@ public class DetachLoadBalancersRequest extends AbstractModel{
     }
 
     /**
-     * Get List of classic CLB IDs. Up to 20 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time. 
-     * @return LoadBalancerIds List of classic CLB IDs. Up to 20 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
+     * Get List of classic CLB IDs. Up to 20 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time. 
+     * @return LoadBalancerIds List of classic CLB IDs. Up to 20 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time.
      */
     public String [] getLoadBalancerIds() {
         return this.LoadBalancerIds;
     }
 
     /**
-     * Set List of classic CLB IDs. Up to 20 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
-     * @param LoadBalancerIds List of classic CLB IDs. Up to 20 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
+     * Set List of classic CLB IDs. Up to 20 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time.
+     * @param LoadBalancerIds List of classic CLB IDs. Up to 20 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time.
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;
     }
 
     /**
-     * Get List of application CLB IDs. Up to 50 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time. 
-     * @return ForwardLoadBalancerIdentifications List of application CLB IDs. Up to 50 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
+     * Get List of application CLB IDs. Up to 50 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time. 
+     * @return ForwardLoadBalancerIdentifications List of application CLB IDs. Up to 50 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time.
      */
     public ForwardLoadBalancerIdentification [] getForwardLoadBalancerIdentifications() {
         return this.ForwardLoadBalancerIdentifications;
     }
 
     /**
-     * Set List of application CLB IDs. Up to 50 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
-     * @param ForwardLoadBalancerIdentifications List of application CLB IDs. Up to 50 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
+     * Set List of application CLB IDs. Up to 50 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time.
+     * @param ForwardLoadBalancerIdentifications List of application CLB IDs. Up to 50 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time.
      */
     public void setForwardLoadBalancerIdentifications(ForwardLoadBalancerIdentification [] ForwardLoadBalancerIdentifications) {
         this.ForwardLoadBalancerIdentifications = ForwardLoadBalancerIdentifications;

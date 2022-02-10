@@ -79,6 +79,26 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a temporary or long-term instance access credential.
+     * @param req CreateInstanceTokenRequest
+     * @return CreateInstanceTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInstanceTokenResponse CreateInstanceToken(CreateInstanceTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateInstanceTokenResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateInstanceTokenResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateInstanceToken");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create multiple public network access allowlist policies of the TCR instance.
      * @param req CreateMultipleSecurityPolicyRequest
      * @return CreateMultipleSecurityPolicyResponse

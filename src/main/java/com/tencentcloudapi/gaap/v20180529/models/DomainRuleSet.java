@@ -190,6 +190,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String BanStatus;
 
     /**
+    * Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Http3Supported")
+    @Expose
+    private Long Http3Supported;
+
+    /**
      * Get Forwarding rule domain name. 
      * @return Domain Forwarding rule domain name.
      */
@@ -617,6 +627,34 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.BanStatus = BanStatus;
     }
 
+    /**
+     * Get Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Http3Supported Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getHttp3Supported() {
+        return this.Http3Supported;
+    }
+
+    /**
+     * Set Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Http3Supported Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setHttp3Supported(Long Http3Supported) {
+        this.Http3Supported = Http3Supported;
+    }
+
     public DomainRuleSet() {
     }
 
@@ -694,6 +732,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.BanStatus != null) {
             this.BanStatus = new String(source.BanStatus);
         }
+        if (source.Http3Supported != null) {
+            this.Http3Supported = new Long(source.Http3Supported);
+        }
     }
 
 
@@ -721,6 +762,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamArrayObj(map, prefix + "PolyRealServerCertificateAliasInfo.", this.PolyRealServerCertificateAliasInfo);
         this.setParamSimple(map, prefix + "DomainStatus", this.DomainStatus);
         this.setParamSimple(map, prefix + "BanStatus", this.BanStatus);
+        this.setParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
 
     }
 }

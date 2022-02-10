@@ -93,7 +93,7 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
     private String PackageType;
 
     /**
-    * 
+    * Specifies whether to enable HTTP3. Valid values: `0` (disable HTTP3); `1` (enable HTTP3). Note: If HTTP3 is enabled for a connection, TCP/UDP access will not be allowed. After the connection is created, you cannot change your HTTP3 setting.
     */
     @SerializedName("Http3Supported")
     @Expose
@@ -260,16 +260,16 @@ public class InquiryPriceCreateProxyRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Http3Supported 
+     * Get Specifies whether to enable HTTP3. Valid values: `0` (disable HTTP3); `1` (enable HTTP3). Note: If HTTP3 is enabled for a connection, TCP/UDP access will not be allowed. After the connection is created, you cannot change your HTTP3 setting. 
+     * @return Http3Supported Specifies whether to enable HTTP3. Valid values: `0` (disable HTTP3); `1` (enable HTTP3). Note: If HTTP3 is enabled for a connection, TCP/UDP access will not be allowed. After the connection is created, you cannot change your HTTP3 setting.
      */
     public Long getHttp3Supported() {
         return this.Http3Supported;
     }
 
     /**
-     * Set 
-     * @param Http3Supported 
+     * Set Specifies whether to enable HTTP3. Valid values: `0` (disable HTTP3); `1` (enable HTTP3). Note: If HTTP3 is enabled for a connection, TCP/UDP access will not be allowed. After the connection is created, you cannot change your HTTP3 setting.
+     * @param Http3Supported Specifies whether to enable HTTP3. Valid values: `0` (disable HTTP3); `1` (enable HTTP3). Note: If HTTP3 is enabled for a connection, TCP/UDP access will not be allowed. After the connection is created, you cannot change your HTTP3 setting.
      */
     public void setHttp3Supported(Long Http3Supported) {
         this.Http3Supported = Http3Supported;

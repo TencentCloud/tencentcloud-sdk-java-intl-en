@@ -72,6 +72,17 @@ public class CreateProxyGroupRequest extends AbstractModel{
     private String PackageType;
 
     /**
+    * Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note that if HTTP3 is enabled for a connection, TCP/UDP access will not be allowed.
+After the connection is created, you cannot change your HTTP3 setting.
+    */
+    @SerializedName("Http3Supported")
+    @Expose
+    private Long Http3Supported;
+
+    /**
      * Get Project ID of connection group 
      * @return ProjectId Project ID of connection group
      */
@@ -183,6 +194,38 @@ public class CreateProxyGroupRequest extends AbstractModel{
         this.PackageType = PackageType;
     }
 
+    /**
+     * Get Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note that if HTTP3 is enabled for a connection, TCP/UDP access will not be allowed.
+After the connection is created, you cannot change your HTTP3 setting. 
+     * @return Http3Supported Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note that if HTTP3 is enabled for a connection, TCP/UDP access will not be allowed.
+After the connection is created, you cannot change your HTTP3 setting.
+     */
+    public Long getHttp3Supported() {
+        return this.Http3Supported;
+    }
+
+    /**
+     * Set Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note that if HTTP3 is enabled for a connection, TCP/UDP access will not be allowed.
+After the connection is created, you cannot change your HTTP3 setting.
+     * @param Http3Supported Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note that if HTTP3 is enabled for a connection, TCP/UDP access will not be allowed.
+After the connection is created, you cannot change your HTTP3 setting.
+     */
+    public void setHttp3Supported(Long Http3Supported) {
+        this.Http3Supported = Http3Supported;
+    }
+
     public CreateProxyGroupRequest() {
     }
 
@@ -218,6 +261,9 @@ public class CreateProxyGroupRequest extends AbstractModel{
         if (source.PackageType != null) {
             this.PackageType = new String(source.PackageType);
         }
+        if (source.Http3Supported != null) {
+            this.Http3Supported = new Long(source.Http3Supported);
+        }
     }
 
 
@@ -232,6 +278,7 @@ public class CreateProxyGroupRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "AccessRegionSet.", this.AccessRegionSet);
         this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
         this.setParamSimple(map, prefix + "PackageType", this.PackageType);
+        this.setParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
 
     }
 }

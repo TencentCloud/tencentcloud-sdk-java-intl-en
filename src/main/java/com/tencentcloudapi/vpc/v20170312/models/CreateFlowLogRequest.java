@@ -51,13 +51,6 @@ public class CreateFlowLogRequest extends AbstractModel{
     private String TrafficType;
 
     /**
-    * The storage ID of the flow log.
-    */
-    @SerializedName("CloudLogId")
-    @Expose
-    private String CloudLogId;
-
-    /**
     * The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
     */
     @SerializedName("VpcId")
@@ -72,11 +65,32 @@ public class CreateFlowLogRequest extends AbstractModel{
     private String FlowLogDescription;
 
     /**
+    * The storage ID of the flow log.
+    */
+    @SerializedName("CloudLogId")
+    @Expose
+    private String CloudLogId;
+
+    /**
     * Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
+
+    /**
+    * Consumer types: `cls` and `ckafka`
+    */
+    @SerializedName("StorageType")
+    @Expose
+    private String StorageType;
+
+    /**
+    * Information of the flow log consumer, which is required when the consumer type is `ckafka`.
+    */
+    @SerializedName("FlowLogStorage")
+    @Expose
+    private FlowLogStorage FlowLogStorage;
 
     /**
      * Get The name of the flow log instance. 
@@ -143,22 +157,6 @@ public class CreateFlowLogRequest extends AbstractModel{
     }
 
     /**
-     * Get The storage ID of the flow log. 
-     * @return CloudLogId The storage ID of the flow log.
-     */
-    public String getCloudLogId() {
-        return this.CloudLogId;
-    }
-
-    /**
-     * Set The storage ID of the flow log.
-     * @param CloudLogId The storage ID of the flow log.
-     */
-    public void setCloudLogId(String CloudLogId) {
-        this.CloudLogId = CloudLogId;
-    }
-
-    /**
      * Get The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`. 
      * @return VpcId The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
      */
@@ -191,6 +189,22 @@ public class CreateFlowLogRequest extends AbstractModel{
     }
 
     /**
+     * Get The storage ID of the flow log. 
+     * @return CloudLogId The storage ID of the flow log.
+     */
+    public String getCloudLogId() {
+        return this.CloudLogId;
+    }
+
+    /**
+     * Set The storage ID of the flow log.
+     * @param CloudLogId The storage ID of the flow log.
+     */
+    public void setCloudLogId(String CloudLogId) {
+        this.CloudLogId = CloudLogId;
+    }
+
+    /**
      * Get Bound tags, such as [{"Key": "city", "Value": "shanghai"}] 
      * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
      */
@@ -204,6 +218,38 @@ public class CreateFlowLogRequest extends AbstractModel{
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
+    }
+
+    /**
+     * Get Consumer types: `cls` and `ckafka` 
+     * @return StorageType Consumer types: `cls` and `ckafka`
+     */
+    public String getStorageType() {
+        return this.StorageType;
+    }
+
+    /**
+     * Set Consumer types: `cls` and `ckafka`
+     * @param StorageType Consumer types: `cls` and `ckafka`
+     */
+    public void setStorageType(String StorageType) {
+        this.StorageType = StorageType;
+    }
+
+    /**
+     * Get Information of the flow log consumer, which is required when the consumer type is `ckafka`. 
+     * @return FlowLogStorage Information of the flow log consumer, which is required when the consumer type is `ckafka`.
+     */
+    public FlowLogStorage getFlowLogStorage() {
+        return this.FlowLogStorage;
+    }
+
+    /**
+     * Set Information of the flow log consumer, which is required when the consumer type is `ckafka`.
+     * @param FlowLogStorage Information of the flow log consumer, which is required when the consumer type is `ckafka`.
+     */
+    public void setFlowLogStorage(FlowLogStorage FlowLogStorage) {
+        this.FlowLogStorage = FlowLogStorage;
     }
 
     public CreateFlowLogRequest() {
@@ -226,20 +272,26 @@ public class CreateFlowLogRequest extends AbstractModel{
         if (source.TrafficType != null) {
             this.TrafficType = new String(source.TrafficType);
         }
-        if (source.CloudLogId != null) {
-            this.CloudLogId = new String(source.CloudLogId);
-        }
         if (source.VpcId != null) {
             this.VpcId = new String(source.VpcId);
         }
         if (source.FlowLogDescription != null) {
             this.FlowLogDescription = new String(source.FlowLogDescription);
         }
+        if (source.CloudLogId != null) {
+            this.CloudLogId = new String(source.CloudLogId);
+        }
         if (source.Tags != null) {
             this.Tags = new Tag[source.Tags.length];
             for (int i = 0; i < source.Tags.length; i++) {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
+        }
+        if (source.StorageType != null) {
+            this.StorageType = new String(source.StorageType);
+        }
+        if (source.FlowLogStorage != null) {
+            this.FlowLogStorage = new FlowLogStorage(source.FlowLogStorage);
         }
     }
 
@@ -252,10 +304,12 @@ public class CreateFlowLogRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "TrafficType", this.TrafficType);
-        this.setParamSimple(map, prefix + "CloudLogId", this.CloudLogId);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "FlowLogDescription", this.FlowLogDescription);
+        this.setParamSimple(map, prefix + "CloudLogId", this.CloudLogId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "StorageType", this.StorageType);
+        this.setParamObj(map, prefix + "FlowLogStorage.", this.FlowLogStorage);
 
     }
 }

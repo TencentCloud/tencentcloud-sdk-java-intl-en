@@ -23,46 +23,56 @@ import java.util.HashMap;
 public class DBNode extends AbstractModel{
 
     /**
-    * 
+    * Node type. Valid values:
+`Primary`;
+`Standby`.
     */
     @SerializedName("Role")
     @Expose
     private String Role;
 
     /**
-    * 
+    * AZ where the node resides, such as ap-guangzhou-1.
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-     * Get  
-     * @return Role 
+     * Get Node type. Valid values:
+`Primary`;
+`Standby`. 
+     * @return Role Node type. Valid values:
+`Primary`;
+`Standby`.
      */
     public String getRole() {
         return this.Role;
     }
 
     /**
-     * Set 
-     * @param Role 
+     * Set Node type. Valid values:
+`Primary`;
+`Standby`.
+     * @param Role Node type. Valid values:
+`Primary`;
+`Standby`.
      */
     public void setRole(String Role) {
         this.Role = Role;
     }
 
     /**
-     * Get  
-     * @return Zone 
+     * Get AZ where the node resides, such as ap-guangzhou-1. 
+     * @return Zone AZ where the node resides, such as ap-guangzhou-1.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 
-     * @param Zone 
+     * Set AZ where the node resides, such as ap-guangzhou-1.
+     * @param Zone AZ where the node resides, such as ap-guangzhou-1.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

@@ -58,8 +58,8 @@ public class PersonInfo extends AbstractModel{
     private String [] FaceIds;
 
     /**
-    * Person creation time and date (`CreationTimestamp`), whose value is the number of milliseconds between the UNIX epoch time and the group creation time. 
-The UNIX epoch time is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the UNIX time document.
+    * Person creation time, measured in the number of milliseconds elapsed since the Unix epoch 
+The Unix epoch is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the Unix time document.
     */
     @SerializedName("CreationTimestamp")
     @Expose
@@ -146,20 +146,20 @@ The UNIX epoch time is 00:00:00, Thursday, January 1, 1970, Coordinated Universa
     }
 
     /**
-     * Get Person creation time and date (`CreationTimestamp`), whose value is the number of milliseconds between the UNIX epoch time and the group creation time. 
-The UNIX epoch time is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the UNIX time document. 
-     * @return CreationTimestamp Person creation time and date (`CreationTimestamp`), whose value is the number of milliseconds between the UNIX epoch time and the group creation time. 
-The UNIX epoch time is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the UNIX time document.
+     * Get Person creation time, measured in the number of milliseconds elapsed since the Unix epoch 
+The Unix epoch is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the Unix time document. 
+     * @return CreationTimestamp Person creation time, measured in the number of milliseconds elapsed since the Unix epoch 
+The Unix epoch is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the Unix time document.
      */
     public Long getCreationTimestamp() {
         return this.CreationTimestamp;
     }
 
     /**
-     * Set Person creation time and date (`CreationTimestamp`), whose value is the number of milliseconds between the UNIX epoch time and the group creation time. 
-The UNIX epoch time is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the UNIX time document.
-     * @param CreationTimestamp Person creation time and date (`CreationTimestamp`), whose value is the number of milliseconds between the UNIX epoch time and the group creation time. 
-The UNIX epoch time is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the UNIX time document.
+     * Set Person creation time, measured in the number of milliseconds elapsed since the Unix epoch 
+The Unix epoch is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the Unix time document.
+     * @param CreationTimestamp Person creation time, measured in the number of milliseconds elapsed since the Unix epoch 
+The Unix epoch is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the Unix time document.
      */
     public void setCreationTimestamp(Long CreationTimestamp) {
         this.CreationTimestamp = CreationTimestamp;

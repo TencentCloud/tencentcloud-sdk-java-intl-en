@@ -1,5 +1,11 @@
 package com.tencentcloudapi.iai.v20200303;
 public enum IaiErrorCode {
+    // Authentication failed.
+     AUTHFAILURE_INVALIDAUTHORIZATION("AuthFailure.InvalidAuthorization"),
+     
+    // Operation failed.
+     FAILEDOPERATION("FailedOperation"),
+     
     // This operation cannot be performed across algorithm model versions.
      FAILEDOPERATION_ACROSSVERSIONSERROR("FailedOperation.AcrossVersionsError"),
      

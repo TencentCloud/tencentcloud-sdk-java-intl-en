@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class FlowLog extends AbstractModel{
 
     /**
-    * ID of the VPC instance
+    * ID of the VPC instance.
     */
     @SerializedName("VpcId")
     @Expose
@@ -51,7 +51,7 @@ public class FlowLog extends AbstractModel{
     private String ResourceType;
 
     /**
-    * The unique ID of the resource.
+    * The unique ID of the resource
     */
     @SerializedName("ResourceId")
     @Expose
@@ -65,14 +65,14 @@ public class FlowLog extends AbstractModel{
     private String TrafficType;
 
     /**
-    * The storage ID of the flow log.
+    * The storage ID of the flow log
     */
     @SerializedName("CloudLogId")
     @Expose
     private String CloudLogId;
 
     /**
-    * The storage ID status of the flow log.
+    * Flow log storage ID status.
     */
     @SerializedName("CloudLogState")
     @Expose
@@ -93,23 +93,46 @@ public class FlowLog extends AbstractModel{
     private String CreatedTime;
 
     /**
-    * Tag list, such as [{"Key": "city", "Value": "shanghai"}]
+    * Tag list, such as [{"Key": "city", "Value": "shanghai"}].
     */
     @SerializedName("TagSet")
     @Expose
     private Tag [] TagSet;
 
     /**
-     * Get ID of the VPC instance 
-     * @return VpcId ID of the VPC instance
+    * Whether to enable. `true`: yes; `false`: no.
+    */
+    @SerializedName("Enable")
+    @Expose
+    private Boolean Enable;
+
+    /**
+    * Consumer end types: cls and ckafka
+Note: this field may return `null`, indicating that no valid value can be found.
+    */
+    @SerializedName("StorageType")
+    @Expose
+    private String StorageType;
+
+    /**
+    * Information of the consumer, which is returned when the consumer type is `ckafka`.
+Note: this field may return `null`, indicating that no valid value can be found.
+    */
+    @SerializedName("FlowLogStorage")
+    @Expose
+    private FlowLogStorage FlowLogStorage;
+
+    /**
+     * Get ID of the VPC instance. 
+     * @return VpcId ID of the VPC instance.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set ID of the VPC instance
-     * @param VpcId ID of the VPC instance
+     * Set ID of the VPC instance.
+     * @param VpcId ID of the VPC instance.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -164,16 +187,16 @@ public class FlowLog extends AbstractModel{
     }
 
     /**
-     * Get The unique ID of the resource. 
-     * @return ResourceId The unique ID of the resource.
+     * Get The unique ID of the resource 
+     * @return ResourceId The unique ID of the resource
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set The unique ID of the resource.
-     * @param ResourceId The unique ID of the resource.
+     * Set The unique ID of the resource
+     * @param ResourceId The unique ID of the resource
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
@@ -196,32 +219,32 @@ public class FlowLog extends AbstractModel{
     }
 
     /**
-     * Get The storage ID of the flow log. 
-     * @return CloudLogId The storage ID of the flow log.
+     * Get The storage ID of the flow log 
+     * @return CloudLogId The storage ID of the flow log
      */
     public String getCloudLogId() {
         return this.CloudLogId;
     }
 
     /**
-     * Set The storage ID of the flow log.
-     * @param CloudLogId The storage ID of the flow log.
+     * Set The storage ID of the flow log
+     * @param CloudLogId The storage ID of the flow log
      */
     public void setCloudLogId(String CloudLogId) {
         this.CloudLogId = CloudLogId;
     }
 
     /**
-     * Get The storage ID status of the flow log. 
-     * @return CloudLogState The storage ID status of the flow log.
+     * Get Flow log storage ID status. 
+     * @return CloudLogState Flow log storage ID status.
      */
     public String getCloudLogState() {
         return this.CloudLogState;
     }
 
     /**
-     * Set The storage ID status of the flow log.
-     * @param CloudLogState The storage ID status of the flow log.
+     * Set Flow log storage ID status.
+     * @param CloudLogState Flow log storage ID status.
      */
     public void setCloudLogState(String CloudLogState) {
         this.CloudLogState = CloudLogState;
@@ -260,19 +283,75 @@ public class FlowLog extends AbstractModel{
     }
 
     /**
-     * Get Tag list, such as [{"Key": "city", "Value": "shanghai"}] 
-     * @return TagSet Tag list, such as [{"Key": "city", "Value": "shanghai"}]
+     * Get Tag list, such as [{"Key": "city", "Value": "shanghai"}]. 
+     * @return TagSet Tag list, such as [{"Key": "city", "Value": "shanghai"}].
      */
     public Tag [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set Tag list, such as [{"Key": "city", "Value": "shanghai"}]
-     * @param TagSet Tag list, such as [{"Key": "city", "Value": "shanghai"}]
+     * Set Tag list, such as [{"Key": "city", "Value": "shanghai"}].
+     * @param TagSet Tag list, such as [{"Key": "city", "Value": "shanghai"}].
      */
     public void setTagSet(Tag [] TagSet) {
         this.TagSet = TagSet;
+    }
+
+    /**
+     * Get Whether to enable. `true`: yes; `false`: no. 
+     * @return Enable Whether to enable. `true`: yes; `false`: no.
+     */
+    public Boolean getEnable() {
+        return this.Enable;
+    }
+
+    /**
+     * Set Whether to enable. `true`: yes; `false`: no.
+     * @param Enable Whether to enable. `true`: yes; `false`: no.
+     */
+    public void setEnable(Boolean Enable) {
+        this.Enable = Enable;
+    }
+
+    /**
+     * Get Consumer end types: cls and ckafka
+Note: this field may return `null`, indicating that no valid value can be found. 
+     * @return StorageType Consumer end types: cls and ckafka
+Note: this field may return `null`, indicating that no valid value can be found.
+     */
+    public String getStorageType() {
+        return this.StorageType;
+    }
+
+    /**
+     * Set Consumer end types: cls and ckafka
+Note: this field may return `null`, indicating that no valid value can be found.
+     * @param StorageType Consumer end types: cls and ckafka
+Note: this field may return `null`, indicating that no valid value can be found.
+     */
+    public void setStorageType(String StorageType) {
+        this.StorageType = StorageType;
+    }
+
+    /**
+     * Get Information of the consumer, which is returned when the consumer type is `ckafka`.
+Note: this field may return `null`, indicating that no valid value can be found. 
+     * @return FlowLogStorage Information of the consumer, which is returned when the consumer type is `ckafka`.
+Note: this field may return `null`, indicating that no valid value can be found.
+     */
+    public FlowLogStorage getFlowLogStorage() {
+        return this.FlowLogStorage;
+    }
+
+    /**
+     * Set Information of the consumer, which is returned when the consumer type is `ckafka`.
+Note: this field may return `null`, indicating that no valid value can be found.
+     * @param FlowLogStorage Information of the consumer, which is returned when the consumer type is `ckafka`.
+Note: this field may return `null`, indicating that no valid value can be found.
+     */
+    public void setFlowLogStorage(FlowLogStorage FlowLogStorage) {
+        this.FlowLogStorage = FlowLogStorage;
     }
 
     public FlowLog() {
@@ -319,6 +398,15 @@ public class FlowLog extends AbstractModel{
                 this.TagSet[i] = new Tag(source.TagSet[i]);
             }
         }
+        if (source.Enable != null) {
+            this.Enable = new Boolean(source.Enable);
+        }
+        if (source.StorageType != null) {
+            this.StorageType = new String(source.StorageType);
+        }
+        if (source.FlowLogStorage != null) {
+            this.FlowLogStorage = new FlowLogStorage(source.FlowLogStorage);
+        }
     }
 
 
@@ -337,6 +425,9 @@ public class FlowLog extends AbstractModel{
         this.setParamSimple(map, prefix + "FlowLogDescription", this.FlowLogDescription);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamSimple(map, prefix + "Enable", this.Enable);
+        this.setParamSimple(map, prefix + "StorageType", this.StorageType);
+        this.setParamObj(map, prefix + "FlowLogStorage.", this.FlowLogStorage);
 
     }
 }

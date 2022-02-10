@@ -30,7 +30,7 @@ public class ModifyLoadBalancerTargetAttributesRequest extends AbstractModel{
     private String AutoScalingGroupId;
 
     /**
-    * List of application CLBs to modify.Up to 50 CLBs allowed.
+    * List of application CLBs to modify. Up to 50 CLBs allowed.
     */
     @SerializedName("ForwardLoadBalancers")
     @Expose
@@ -53,16 +53,16 @@ public class ModifyLoadBalancerTargetAttributesRequest extends AbstractModel{
     }
 
     /**
-     * Get List of application CLBs to modify.Up to 50 CLBs allowed. 
-     * @return ForwardLoadBalancers List of application CLBs to modify.Up to 50 CLBs allowed.
+     * Get List of application CLBs to modify. Up to 50 CLBs allowed. 
+     * @return ForwardLoadBalancers List of application CLBs to modify. Up to 50 CLBs allowed.
      */
     public ForwardLoadBalancer [] getForwardLoadBalancers() {
         return this.ForwardLoadBalancers;
     }
 
     /**
-     * Set List of application CLBs to modify.Up to 50 CLBs allowed.
-     * @param ForwardLoadBalancers List of application CLBs to modify.Up to 50 CLBs allowed.
+     * Set List of application CLBs to modify. Up to 50 CLBs allowed.
+     * @param ForwardLoadBalancers List of application CLBs to modify. Up to 50 CLBs allowed.
      */
     public void setForwardLoadBalancers(ForwardLoadBalancer [] ForwardLoadBalancers) {
         this.ForwardLoadBalancers = ForwardLoadBalancers;

@@ -57,9 +57,15 @@ You can enter content in the corresponding field to register a person's student 
     private String Tag;
 
     /**
-    * Algorithm model version used by the Face Recognition service. Valid values: 2.0, 3.0.
-This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API previously, `2.0` will be used by default. 
-Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is thus recommended.
+    * Algorithm model version used by the Face Recognition service.
+
+Currently, `2.0` and `3.0` are supported.
+
+This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API, `2.0` will be used by default.
+
+The parameter can be set only to `3.0` for accounts that purchase the service after November 26, 2020.
+
+Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is recommended.
     */
     @SerializedName("FaceModelVersion")
     @Expose
@@ -154,24 +160,48 @@ You can enter content in the corresponding field to register a person's student 
     }
 
     /**
-     * Get Algorithm model version used by the Face Recognition service. Valid values: 2.0, 3.0.
-This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API previously, `2.0` will be used by default. 
-Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is thus recommended. 
-     * @return FaceModelVersion Algorithm model version used by the Face Recognition service. Valid values: 2.0, 3.0.
-This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API previously, `2.0` will be used by default. 
-Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is thus recommended.
+     * Get Algorithm model version used by the Face Recognition service.
+
+Currently, `2.0` and `3.0` are supported.
+
+This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API, `2.0` will be used by default.
+
+The parameter can be set only to `3.0` for accounts that purchase the service after November 26, 2020.
+
+Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is recommended. 
+     * @return FaceModelVersion Algorithm model version used by the Face Recognition service.
+
+Currently, `2.0` and `3.0` are supported.
+
+This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API, `2.0` will be used by default.
+
+The parameter can be set only to `3.0` for accounts that purchase the service after November 26, 2020.
+
+Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is recommended.
      */
     public String getFaceModelVersion() {
         return this.FaceModelVersion;
     }
 
     /**
-     * Set Algorithm model version used by the Face Recognition service. Valid values: 2.0, 3.0.
-This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API previously, `2.0` will be used by default. 
-Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is thus recommended.
-     * @param FaceModelVersion Algorithm model version used by the Face Recognition service. Valid values: 2.0, 3.0.
-This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API previously, `2.0` will be used by default. 
-Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is thus recommended.
+     * Set Algorithm model version used by the Face Recognition service.
+
+Currently, `2.0` and `3.0` are supported.
+
+This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API, `2.0` will be used by default.
+
+The parameter can be set only to `3.0` for accounts that purchase the service after November 26, 2020.
+
+Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is recommended.
+     * @param FaceModelVersion Algorithm model version used by the Face Recognition service.
+
+Currently, `2.0` and `3.0` are supported.
+
+This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API, `2.0` will be used by default.
+
+The parameter can be set only to `3.0` for accounts that purchase the service after November 26, 2020.
+
+Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is recommended.
      */
     public void setFaceModelVersion(String FaceModelVersion) {
         this.FaceModelVersion = FaceModelVersion;

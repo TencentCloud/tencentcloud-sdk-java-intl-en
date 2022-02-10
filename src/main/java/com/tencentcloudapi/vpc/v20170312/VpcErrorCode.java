@@ -15,6 +15,12 @@ public enum VpcErrorCode {
     // An internal error occurred.
      INTERNALERROR("InternalError"),
      
+    // Failed to create the Ckafka route. Please retry later.
+     INTERNALERROR_CREATECKAFKAROUTEERROR("InternalError.CreateCkafkaRouteError"),
+     
+    // 
+     INTERNALERROR_NETDETECTTIMEOUT("InternalError.NetDetectTimeOut"),
+     
     // Internal error.
      INTERNALSERVERERROR("InternalServerError"),
      
@@ -93,7 +99,7 @@ public enum VpcErrorCode {
     // This IP address is not a CalcIP (device IP).
      INVALIDPARAMETERVALUE_ADDRESSNOTCALCIP("InvalidParameterValue.AddressNotCalcIP"),
      
-    // 
+    // This IP is not an EIP.
      INVALIDPARAMETERVALUE_ADDRESSNOTEIP("InvalidParameterValue.AddressNotEIP"),
      
     // Unable to find the address.
@@ -102,7 +108,7 @@ public enum VpcErrorCode {
     // The bandwidth exceeds the limit.
      INVALIDPARAMETERVALUE_BANDWIDTHOUTOFRANGE("InvalidParameterValue.BandwidthOutOfRange"),
      
-    // 
+    // Incorrect bandwidth package ID.
      INVALIDPARAMETERVALUE_BANDWIDTHPACKAGEIDMALFORMED("InvalidParameterValue.BandwidthPackageIdMalformed"),
      
     // The bandwidth package is in use.
@@ -147,7 +153,7 @@ public enum VpcErrorCode {
     // Failed to bind: this IP is restricted
      INVALIDPARAMETERVALUE_INSTANCENORMALPUBLICIPBLOCKED("InvalidParameterValue.InstanceNormalPublicIpBlocked"),
      
-    // 
+    // The ENI and the IP are bound with different instances.
      INVALIDPARAMETERVALUE_INSTANCENOTMATCHASSOCIATEENI("InvalidParameterValue.InstanceNotMatchAssociateEni"),
      
     // The network billing mode has not been changed.
@@ -180,7 +186,7 @@ public enum VpcErrorCode {
     // Invalid input parameter format.
      INVALIDPARAMETERVALUE_MALFORMED("InvalidParameterValue.Malformed"),
      
-    // 
+    // The bound instance is missing.
      INVALIDPARAMETERVALUE_MISSINGASSOCIATEENTITY("InvalidParameterValue.MissingAssociateEntity"),
      
     // A request cannot contain IP addresses with different cluster types.
@@ -213,7 +219,7 @@ public enum VpcErrorCode {
     // The resource has already added to another bandwidth package.
      INVALIDPARAMETERVALUE_RESOURCEALREADYEXISTED("InvalidParameterValue.ResourceAlreadyExisted"),
      
-    // 
+    // The resource has expired.
      INVALIDPARAMETERVALUE_RESOURCEEXPIRED("InvalidParameterValue.ResourceExpired"),
      
     // The resource ID is incorrect.
@@ -231,7 +237,7 @@ public enum VpcErrorCode {
     // Subnet CIDR conflict.
      INVALIDPARAMETERVALUE_SUBNETCONFLICT("InvalidParameterValue.SubnetConflict"),
      
-    // 
+    // The subnet IP range overlaps with the the secondary CIDR block.
      INVALIDPARAMETERVALUE_SUBNETOVERLAPASSISTCIDR("InvalidParameterValue.SubnetOverlapAssistCidr"),
      
     // Invalid subnet CIDR.
@@ -243,7 +249,7 @@ public enum VpcErrorCode {
     // Invalid parameter value. The parameter value is too long.
      INVALIDPARAMETERVALUE_TOOLONG("InvalidParameterValue.TooLong"),
      
-    // 
+    // This availability zone is unavailable.
      INVALIDPARAMETERVALUE_UNAVAILABLEZONE("InvalidParameterValue.UnavailableZone"),
      
     // Destination IP address range conflicts with CIDR of the current VPC.
@@ -305,6 +311,9 @@ public enum VpcErrorCode {
      
     // The number of EIPs applied for exceeds the daily upper limit.
      LIMITEXCEEDED_DAILYALLOCATEADDRESSQUOTALIMITEXCEEDED("LimitExceeded.DailyAllocateAddressQuotaLimitExceeded"),
+     
+    // Reached the upper limit of NAT gateways.
+     LIMITEXCEEDED_NATGATEWAYLIMITEXCEEDED("LimitExceeded.NatGatewayLimitExceeded"),
      
     // The number of NAT gateways created by the VPC has reached the upper limit.
      LIMITEXCEEDED_NATGATEWAYPERVPCLIMITEXCEEDED("LimitExceeded.NatGatewayPerVpcLimitExceeded"),
@@ -444,7 +453,13 @@ public enum VpcErrorCode {
     // The endpoint service itself cannot be set as the endpoint.
      UNSUPPORTEDOPERATION_ENDPOINTSERVICE("UnsupportedOperation.EndPointService"),
      
-    // 
+    // Unable to create a flow log: the current ENI is bound with a KO model.
+     UNSUPPORTEDOPERATION_FLOWLOGSNOTSUPPORTKOINSTANCEENI("UnsupportedOperation.FlowLogsNotSupportKoInstanceEni"),
+     
+    // Unable to create a flow log: the current ENI is not bound to an instance.
+     UNSUPPORTEDOPERATION_FLOWLOGSNOTSUPPORTNULLINSTANCEENI("UnsupportedOperation.FlowLogsNotSupportNullInstanceEni"),
+     
+    // This type of address does not support this operation.
      UNSUPPORTEDOPERATION_INCORRECTADDRESSRESOURCETYPE("UnsupportedOperation.IncorrectAddressResourceType"),
      
     // The configured instance does not match with the route table.
@@ -506,6 +521,9 @@ public enum VpcErrorCode {
      
     // The specified routing policy cannot be published to or withdrawn from CCN.
      UNSUPPORTEDOPERATION_NOTIFYCCN("UnsupportedOperation.NotifyCcn"),
+     
+    // Only the Ckafka Pro Edition is supported.
+     UNSUPPORTEDOPERATION_ONLYSUPPORTPROFESSIONKAFKA("UnsupportedOperation.OnlySupportProfessionKafka"),
      
     // The monthly subscription CCN instance only supports the inter-region bandwidth limit.
      UNSUPPORTEDOPERATION_PREPAIDCCNONLYSUPPORTINTERREGIONLIMIT("UnsupportedOperation.PrepaidCcnOnlySupportInterRegionLimit"),

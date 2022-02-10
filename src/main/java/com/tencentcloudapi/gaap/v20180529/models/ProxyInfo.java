@@ -275,7 +275,10 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     private IPDetail [] IPList;
 
     /**
-    * 
+    * Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: this field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Http3Supported")
     @Expose
@@ -906,16 +909,28 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get  
-     * @return Http3Supported 
+     * Get Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return Http3Supported Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public Long getHttp3Supported() {
         return this.Http3Supported;
     }
 
     /**
-     * Set 
-     * @param Http3Supported 
+     * Set Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param Http3Supported Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public void setHttp3Supported(Long Http3Supported) {
         this.Http3Supported = Http3Supported;

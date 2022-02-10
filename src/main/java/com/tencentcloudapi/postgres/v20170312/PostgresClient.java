@@ -59,6 +59,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to clone an instance by specifying a backup set or a point in time.
+     * @param req CloneDBInstanceRequest
+     * @return CloneDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloneDBInstanceResponse CloneDBInstance(CloneDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloneDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloneDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CloneDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to disable the public network link to an instance.
      * @param req CloseDBExtranetAccessRequest
      * @return CloseDBExtranetAccessResponse
@@ -251,6 +271,66 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAccounts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the available restoration time of an instance.
+     * @param req DescribeAvailableRecoveryTimeRequest
+     * @return DescribeAvailableRecoveryTimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAvailableRecoveryTimeResponse DescribeAvailableRecoveryTime(DescribeAvailableRecoveryTimeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAvailableRecoveryTimeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAvailableRecoveryTimeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAvailableRecoveryTime");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query all backup plans of an instance.
+     * @param req DescribeBackupPlansRequest
+     * @return DescribeBackupPlansResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupPlansResponse DescribeBackupPlans(DescribeBackupPlansRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupPlansResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupPlansResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupPlans");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the minimum specification required by a cloned instance, including `SpecCode` and disk specification.
+     * @param req DescribeCloneDBInstanceSpecRequest
+     * @return DescribeCloneDBInstanceSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloneDBInstanceSpecResponse DescribeCloneDBInstanceSpec(DescribeCloneDBInstanceSpecRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloneDBInstanceSpecResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloneDBInstanceSpecResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCloneDBInstanceSpec");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -751,6 +831,46 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyAccountRemarkResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyAccountRemark");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the backup plan of an instance, such as modifying the backup start time. By default, a full backup starts at midnight every day and the generated backup files will be retained for seven days.
+     * @param req ModifyBackupPlanRequest
+     * @return ModifyBackupPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBackupPlanResponse ModifyBackupPlan(ModifyBackupPlanRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyBackupPlanResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyBackupPlanResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyBackupPlan");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the AZs where the nodes of a source instance reside.
+     * @param req ModifyDBInstanceDeploymentRequest
+     * @return ModifyDBInstanceDeploymentResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceDeploymentResponse ModifyDBInstanceDeployment(ModifyDBInstanceDeploymentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBInstanceDeploymentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceDeploymentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDBInstanceDeployment");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

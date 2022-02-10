@@ -276,7 +276,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String DBMajorVersion;
 
     /**
-    * 
+    * Instance node information
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("DBNodeSet")
     @Expose
@@ -875,16 +876,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get  
-     * @return DBNodeSet 
+     * Get Instance node information
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return DBNodeSet Instance node information
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public DBNode [] getDBNodeSet() {
         return this.DBNodeSet;
     }
 
     /**
-     * Set 
-     * @param DBNodeSet 
+     * Set Instance node information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param DBNodeSet Instance node information
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setDBNodeSet(DBNode [] DBNodeSet) {
         this.DBNodeSet = DBNodeSet;

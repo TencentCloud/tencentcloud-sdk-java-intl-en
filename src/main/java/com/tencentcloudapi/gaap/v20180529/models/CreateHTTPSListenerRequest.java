@@ -89,6 +89,17 @@ The one-way authentication is used by default.
     private String GroupId;
 
     /**
+    * Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: If HTTP3 is enabled for a connection, the listener will use the port that is originally accessed to UDP, and a UDP listener with the same port cannot be created.
+After the connection is created, you cannot change your HTTP3 setting.
+    */
+    @SerializedName("Http3Supported")
+    @Expose
+    private Long Http3Supported;
+
+    /**
      * Get Listener name 
      * @return ListenerName Listener name
      */
@@ -244,6 +255,38 @@ The one-way authentication is used by default.
         this.GroupId = GroupId;
     }
 
+    /**
+     * Get Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: If HTTP3 is enabled for a connection, the listener will use the port that is originally accessed to UDP, and a UDP listener with the same port cannot be created.
+After the connection is created, you cannot change your HTTP3 setting. 
+     * @return Http3Supported Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: If HTTP3 is enabled for a connection, the listener will use the port that is originally accessed to UDP, and a UDP listener with the same port cannot be created.
+After the connection is created, you cannot change your HTTP3 setting.
+     */
+    public Long getHttp3Supported() {
+        return this.Http3Supported;
+    }
+
+    /**
+     * Set Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: If HTTP3 is enabled for a connection, the listener will use the port that is originally accessed to UDP, and a UDP listener with the same port cannot be created.
+After the connection is created, you cannot change your HTTP3 setting.
+     * @param Http3Supported Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: If HTTP3 is enabled for a connection, the listener will use the port that is originally accessed to UDP, and a UDP listener with the same port cannot be created.
+After the connection is created, you cannot change your HTTP3 setting.
+     */
+    public void setHttp3Supported(Long Http3Supported) {
+        this.Http3Supported = Http3Supported;
+    }
+
     public CreateHTTPSListenerRequest() {
     }
 
@@ -282,6 +325,9 @@ The one-way authentication is used by default.
         if (source.GroupId != null) {
             this.GroupId = new String(source.GroupId);
         }
+        if (source.Http3Supported != null) {
+            this.Http3Supported = new Long(source.Http3Supported);
+        }
     }
 
 
@@ -298,6 +344,7 @@ The one-way authentication is used by default.
         this.setParamSimple(map, prefix + "ClientCertificateId", this.ClientCertificateId);
         this.setParamArraySimple(map, prefix + "PolyClientCertificateIds.", this.PolyClientCertificateIds);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
 
     }
 }

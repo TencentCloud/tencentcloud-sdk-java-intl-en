@@ -93,6 +93,13 @@ public class DescribeInstancesRequest extends AbstractModel{
     private String [] ZoneList;
 
     /**
+    * Health status filter list
+    */
+    @SerializedName("HealthStatus")
+    @Expose
+    private Long [] HealthStatus;
+
+    /**
      * Get AZ of the cluster instance. If this is not passed in, all AZs are used by default 
      * @return Zone AZ of the cluster instance. If this is not passed in, all AZs are used by default
      */
@@ -252,6 +259,22 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.ZoneList = ZoneList;
     }
 
+    /**
+     * Get Health status filter list 
+     * @return HealthStatus Health status filter list
+     */
+    public Long [] getHealthStatus() {
+        return this.HealthStatus;
+    }
+
+    /**
+     * Set Health status filter list
+     * @param HealthStatus Health status filter list
+     */
+    public void setHealthStatus(Long [] HealthStatus) {
+        this.HealthStatus = HealthStatus;
+    }
+
     public DescribeInstancesRequest() {
     }
 
@@ -305,6 +328,12 @@ public class DescribeInstancesRequest extends AbstractModel{
                 this.ZoneList[i] = new String(source.ZoneList[i]);
             }
         }
+        if (source.HealthStatus != null) {
+            this.HealthStatus = new Long[source.HealthStatus.length];
+            for (int i = 0; i < source.HealthStatus.length; i++) {
+                this.HealthStatus[i] = new Long(source.HealthStatus[i]);
+            }
+        }
     }
 
 
@@ -322,6 +351,7 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
         this.setParamArraySimple(map, prefix + "IpList.", this.IpList);
         this.setParamArraySimple(map, prefix + "ZoneList.", this.ZoneList);
+        this.setParamArraySimple(map, prefix + "HealthStatus.", this.HealthStatus);
 
     }
 }

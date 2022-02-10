@@ -58,6 +58,24 @@ public class RegionDetail extends AbstractModel{
     private String IDCType;
 
     /**
+    * Feature bitmap. Valid values:
+`0`: the feature is not supported;
+`1`: the feature is supported.
+Each bit in the bitmap represents a feature:
+1st bit: layer-4 acceleration;
+2nd bit: layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: dedicated BGP access;
+6th bit: non-BGP access;
+7th bit: QoS acceleration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("FeatureBitmap")
+    @Expose
+    private Long FeatureBitmap;
+
+    /**
      * Get Region ID 
      * @return RegionId Region ID
      */
@@ -137,6 +155,66 @@ public class RegionDetail extends AbstractModel{
         this.IDCType = IDCType;
     }
 
+    /**
+     * Get Feature bitmap. Valid values:
+`0`: the feature is not supported;
+`1`: the feature is supported.
+Each bit in the bitmap represents a feature:
+1st bit: layer-4 acceleration;
+2nd bit: layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: dedicated BGP access;
+6th bit: non-BGP access;
+7th bit: QoS acceleration.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return FeatureBitmap Feature bitmap. Valid values:
+`0`: the feature is not supported;
+`1`: the feature is supported.
+Each bit in the bitmap represents a feature:
+1st bit: layer-4 acceleration;
+2nd bit: layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: dedicated BGP access;
+6th bit: non-BGP access;
+7th bit: QoS acceleration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getFeatureBitmap() {
+        return this.FeatureBitmap;
+    }
+
+    /**
+     * Set Feature bitmap. Valid values:
+`0`: the feature is not supported;
+`1`: the feature is supported.
+Each bit in the bitmap represents a feature:
+1st bit: layer-4 acceleration;
+2nd bit: layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: dedicated BGP access;
+6th bit: non-BGP access;
+7th bit: QoS acceleration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param FeatureBitmap Feature bitmap. Valid values:
+`0`: the feature is not supported;
+`1`: the feature is supported.
+Each bit in the bitmap represents a feature:
+1st bit: layer-4 acceleration;
+2nd bit: layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: dedicated BGP access;
+6th bit: non-BGP access;
+7th bit: QoS acceleration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setFeatureBitmap(Long FeatureBitmap) {
+        this.FeatureBitmap = FeatureBitmap;
+    }
+
     public RegionDetail() {
     }
 
@@ -160,6 +238,9 @@ public class RegionDetail extends AbstractModel{
         if (source.IDCType != null) {
             this.IDCType = new String(source.IDCType);
         }
+        if (source.FeatureBitmap != null) {
+            this.FeatureBitmap = new Long(source.FeatureBitmap);
+        }
     }
 
 
@@ -172,6 +253,7 @@ public class RegionDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "RegionArea", this.RegionArea);
         this.setParamSimple(map, prefix + "RegionAreaName", this.RegionAreaName);
         this.setParamSimple(map, prefix + "IDCType", this.IDCType);
+        this.setParamSimple(map, prefix + "FeatureBitmap", this.FeatureBitmap);
 
     }
 }
