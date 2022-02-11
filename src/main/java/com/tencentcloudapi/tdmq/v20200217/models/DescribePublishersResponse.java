@@ -20,21 +20,22 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProducersResponse extends AbstractModel{
+public class DescribePublishersResponse extends AbstractModel{
 
     /**
-    * Array set of producers.
-    */
-    @SerializedName("ProducerSets")
-    @Expose
-    private Producer [] ProducerSets;
-
-    /**
-    * Total number of records.
+    * Total number of query results.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
+
+    /**
+    * List of producer information.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Publishers")
+    @Expose
+    private Publisher [] Publishers;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +45,39 @@ public class DescribeProducersResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Array set of producers. 
-     * @return ProducerSets Array set of producers.
-     */
-    public Producer [] getProducerSets() {
-        return this.ProducerSets;
-    }
-
-    /**
-     * Set Array set of producers.
-     * @param ProducerSets Array set of producers.
-     */
-    public void setProducerSets(Producer [] ProducerSets) {
-        this.ProducerSets = ProducerSets;
-    }
-
-    /**
-     * Get Total number of records. 
-     * @return TotalCount Total number of records.
+     * Get Total number of query results. 
+     * @return TotalCount Total number of query results.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of records.
-     * @param TotalCount Total number of records.
+     * Set Total number of query results.
+     * @param TotalCount Total number of query results.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get List of producer information.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Publishers List of producer information.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Publisher [] getPublishers() {
+        return this.Publishers;
+    }
+
+    /**
+     * Set List of producer information.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Publishers List of producer information.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setPublishers(Publisher [] Publishers) {
+        this.Publishers = Publishers;
     }
 
     /**
@@ -91,22 +96,22 @@ public class DescribeProducersResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeProducersResponse() {
+    public DescribePublishersResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeProducersResponse(DescribeProducersResponse source) {
-        if (source.ProducerSets != null) {
-            this.ProducerSets = new Producer[source.ProducerSets.length];
-            for (int i = 0; i < source.ProducerSets.length; i++) {
-                this.ProducerSets[i] = new Producer(source.ProducerSets[i]);
-            }
-        }
+    public DescribePublishersResponse(DescribePublishersResponse source) {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Publishers != null) {
+            this.Publishers = new Publisher[source.Publishers.length];
+            for (int i = 0; i < source.Publishers.length; i++) {
+                this.Publishers[i] = new Publisher(source.Publishers[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +123,8 @@ public class DescribeProducersResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "ProducerSets.", this.ProducerSets);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Publishers.", this.Publishers);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

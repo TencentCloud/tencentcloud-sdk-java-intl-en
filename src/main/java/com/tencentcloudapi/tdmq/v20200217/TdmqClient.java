@@ -879,18 +879,38 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the list of producers. Only online producers will be displayed.
-     * @param req DescribeProducersRequest
-     * @return DescribeProducersResponse
+     *This API is used to obtain message production overview information.
+     * @param req DescribePublisherSummaryRequest
+     * @return DescribePublisherSummaryResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeProducersResponse DescribeProducers(DescribeProducersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeProducersResponse> rsp = null;
+    public DescribePublisherSummaryResponse DescribePublisherSummary(DescribePublisherSummaryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePublisherSummaryResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DescribeProducersResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribePublisherSummaryResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DescribeProducers");
+                rspStr = this.internalRequest(req, "DescribePublisherSummary");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain the list of producer information.
+     * @param req DescribePublishersRequest
+     * @return DescribePublishersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePublishersResponse DescribePublishers(DescribePublishersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePublishersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePublishersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePublishers");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

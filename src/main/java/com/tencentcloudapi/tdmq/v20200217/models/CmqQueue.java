@@ -236,6 +236,30 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String NamespaceName;
 
     /**
+    * Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * The maximum number of unacknowledged messages.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MaxUnackedMsgNum")
+    @Expose
+    private Long MaxUnackedMsgNum;
+
+    /**
+    * Maximum size of heaped messages in bytes.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MaxMsgBacklogSize")
+    @Expose
+    private Long MaxMsgBacklogSize;
+
+    /**
      * Get Message queue ID. 
      * @return QueueId Message queue ID.
      */
@@ -763,6 +787,66 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.NamespaceName = NamespaceName;
     }
 
+    /**
+     * Get Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Status Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Status Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get The maximum number of unacknowledged messages.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return MaxUnackedMsgNum The maximum number of unacknowledged messages.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getMaxUnackedMsgNum() {
+        return this.MaxUnackedMsgNum;
+    }
+
+    /**
+     * Set The maximum number of unacknowledged messages.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param MaxUnackedMsgNum The maximum number of unacknowledged messages.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setMaxUnackedMsgNum(Long MaxUnackedMsgNum) {
+        this.MaxUnackedMsgNum = MaxUnackedMsgNum;
+    }
+
+    /**
+     * Get Maximum size of heaped messages in bytes.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return MaxMsgBacklogSize Maximum size of heaped messages in bytes.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getMaxMsgBacklogSize() {
+        return this.MaxMsgBacklogSize;
+    }
+
+    /**
+     * Set Maximum size of heaped messages in bytes.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param MaxMsgBacklogSize Maximum size of heaped messages in bytes.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setMaxMsgBacklogSize(Long MaxMsgBacklogSize) {
+        this.MaxMsgBacklogSize = MaxMsgBacklogSize;
+    }
+
     public CmqQueue() {
     }
 
@@ -858,6 +942,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.NamespaceName != null) {
             this.NamespaceName = new String(source.NamespaceName);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.MaxUnackedMsgNum != null) {
+            this.MaxUnackedMsgNum = new Long(source.MaxUnackedMsgNum);
+        }
+        if (source.MaxMsgBacklogSize != null) {
+            this.MaxMsgBacklogSize = new Long(source.MaxMsgBacklogSize);
+        }
     }
 
 
@@ -892,6 +985,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Trace", this.Trace);
         this.setParamSimple(map, prefix + "TenantId", this.TenantId);
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "MaxUnackedMsgNum", this.MaxUnackedMsgNum);
+        this.setParamSimple(map, prefix + "MaxMsgBacklogSize", this.MaxMsgBacklogSize);
 
     }
 }

@@ -44,7 +44,7 @@ public class CreateClusterRequest extends AbstractModel{
     private String Remark;
 
     /**
-    * List of cluster tags
+    * Cluster tag list (deprecated).
     */
     @SerializedName("Tags")
     @Expose
@@ -106,16 +106,16 @@ public class CreateClusterRequest extends AbstractModel{
     }
 
     /**
-     * Get List of cluster tags 
-     * @return Tags List of cluster tags
+     * Get Cluster tag list (deprecated). 
+     * @return Tags Cluster tag list (deprecated).
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set List of cluster tags
-     * @param Tags List of cluster tags
+     * Set Cluster tag list (deprecated).
+     * @param Tags Cluster tag list (deprecated).
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

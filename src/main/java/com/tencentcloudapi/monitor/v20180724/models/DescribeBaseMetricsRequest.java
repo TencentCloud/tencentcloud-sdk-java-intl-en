@@ -37,6 +37,13 @@ public class DescribeBaseMetricsRequest extends AbstractModel{
     private String MetricName;
 
     /**
+    * Filter by dimension. This parameter is optional.
+    */
+    @SerializedName("Dimensions")
+    @Expose
+    private String [] Dimensions;
+
+    /**
      * Get Service namespace. Tencent Cloud services have different namespaces. For more information on service namespaces, see the monitoring metric documentation of each service. For example, see [CVM Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6843?from_cn_redirect=1) for the namespace of CVM 
      * @return Namespace Service namespace. Tencent Cloud services have different namespaces. For more information on service namespaces, see the monitoring metric documentation of each service. For example, see [CVM Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6843?from_cn_redirect=1) for the namespace of CVM
      */
@@ -68,6 +75,22 @@ public class DescribeBaseMetricsRequest extends AbstractModel{
         this.MetricName = MetricName;
     }
 
+    /**
+     * Get Filter by dimension. This parameter is optional. 
+     * @return Dimensions Filter by dimension. This parameter is optional.
+     */
+    public String [] getDimensions() {
+        return this.Dimensions;
+    }
+
+    /**
+     * Set Filter by dimension. This parameter is optional.
+     * @param Dimensions Filter by dimension. This parameter is optional.
+     */
+    public void setDimensions(String [] Dimensions) {
+        this.Dimensions = Dimensions;
+    }
+
     public DescribeBaseMetricsRequest() {
     }
 
@@ -82,6 +105,12 @@ public class DescribeBaseMetricsRequest extends AbstractModel{
         if (source.MetricName != null) {
             this.MetricName = new String(source.MetricName);
         }
+        if (source.Dimensions != null) {
+            this.Dimensions = new String[source.Dimensions.length];
+            for (int i = 0; i < source.Dimensions.length; i++) {
+                this.Dimensions[i] = new String(source.Dimensions[i]);
+            }
+        }
     }
 
 
@@ -91,6 +120,7 @@ public class DescribeBaseMetricsRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "MetricName", this.MetricName);
+        this.setParamArraySimple(map, prefix + "Dimensions.", this.Dimensions);
 
     }
 }
