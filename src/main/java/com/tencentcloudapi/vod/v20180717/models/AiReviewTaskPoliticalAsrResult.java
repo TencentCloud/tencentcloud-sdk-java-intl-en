@@ -52,14 +52,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Message;
 
     /**
-    * Input of ASR-based politically sensitive information detection in speech task in content audit.
+    * Input for ASR-based recognition of politically sensitive content
     */
     @SerializedName("Input")
     @Expose
     private AiReviewPoliticalAsrTaskInput Input;
 
     /**
-    * Output of ASR-based politically sensitive information detection in speech task in content audit.
+    * Output for ASR-based recognition of politically sensitive content
     */
     @SerializedName("Output")
     @Expose
@@ -134,32 +134,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Input of ASR-based politically sensitive information detection in speech task in content audit. 
-     * @return Input Input of ASR-based politically sensitive information detection in speech task in content audit.
+     * Get Input for ASR-based recognition of politically sensitive content 
+     * @return Input Input for ASR-based recognition of politically sensitive content
      */
     public AiReviewPoliticalAsrTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of ASR-based politically sensitive information detection in speech task in content audit.
-     * @param Input Input of ASR-based politically sensitive information detection in speech task in content audit.
+     * Set Input for ASR-based recognition of politically sensitive content
+     * @param Input Input for ASR-based recognition of politically sensitive content
      */
     public void setInput(AiReviewPoliticalAsrTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of ASR-based politically sensitive information detection in speech task in content audit. 
-     * @return Output Output of ASR-based politically sensitive information detection in speech task in content audit.
+     * Get Output for ASR-based recognition of politically sensitive content 
+     * @return Output Output for ASR-based recognition of politically sensitive content
      */
     public AiReviewPoliticalAsrTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of ASR-based politically sensitive information detection in speech task in content audit.
-     * @param Output Output of ASR-based politically sensitive information detection in speech task in content audit.
+     * Set Output for ASR-based recognition of politically sensitive content
+     * @param Output Output for ASR-based recognition of politically sensitive content
      */
     public void setOutput(AiReviewPoliticalAsrTaskOutput Output) {
         this.Output = Output;

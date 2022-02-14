@@ -52,15 +52,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Message;
 
     /**
-    * Input of porn information detection task in content audit.
+    * Input for intelligent recognition of pornographic content
     */
     @SerializedName("Input")
     @Expose
     private AiReviewPornTaskInput Input;
 
     /**
-    * Output of porn information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Output for intelligent recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
     */
     @SerializedName("Output")
     @Expose
@@ -135,36 +135,36 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Input of porn information detection task in content audit. 
-     * @return Input Input of porn information detection task in content audit.
+     * Get Input for intelligent recognition of pornographic content 
+     * @return Input Input for intelligent recognition of pornographic content
      */
     public AiReviewPornTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of porn information detection task in content audit.
-     * @param Input Input of porn information detection task in content audit.
+     * Set Input for intelligent recognition of pornographic content
+     * @param Input Input for intelligent recognition of pornographic content
      */
     public void setInput(AiReviewPornTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of porn information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output of porn information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Output for intelligent recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found. 
+     * @return Output Output for intelligent recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public AiReviewPornTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of porn information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Output Output of porn information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Output for intelligent recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param Output Output for intelligent recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public void setOutput(AiReviewPornTaskOutput Output) {
         this.Output = Output;

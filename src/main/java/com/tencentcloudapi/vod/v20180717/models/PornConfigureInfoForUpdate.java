@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class PornConfigureInfoForUpdate extends AbstractModel{
 
     /**
-    * Control parameter of porn detection in video image.
+    * Parameters for recognition of pornographic content in images
     */
     @SerializedName("ImgReviewInfo")
     @Expose
     private PornImgReviewTemplateInfoForUpdate ImgReviewInfo;
 
     /**
-    * Control parameter of porn detection in speech.
+    * Parameters for ASR-based recognition of pornographic content
     */
     @SerializedName("AsrReviewInfo")
     @Expose
     private PornAsrReviewTemplateInfoForUpdate AsrReviewInfo;
 
     /**
-    * Control parameter of porn detection in text.
+    * Parameters for OCR-based recognition of pornographic content
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private PornOcrReviewTemplateInfoForUpdate OcrReviewInfo;
 
     /**
-     * Get Control parameter of porn detection in video image. 
-     * @return ImgReviewInfo Control parameter of porn detection in video image.
+     * Get Parameters for recognition of pornographic content in images 
+     * @return ImgReviewInfo Parameters for recognition of pornographic content in images
      */
     public PornImgReviewTemplateInfoForUpdate getImgReviewInfo() {
         return this.ImgReviewInfo;
     }
 
     /**
-     * Set Control parameter of porn detection in video image.
-     * @param ImgReviewInfo Control parameter of porn detection in video image.
+     * Set Parameters for recognition of pornographic content in images
+     * @param ImgReviewInfo Parameters for recognition of pornographic content in images
      */
     public void setImgReviewInfo(PornImgReviewTemplateInfoForUpdate ImgReviewInfo) {
         this.ImgReviewInfo = ImgReviewInfo;
     }
 
     /**
-     * Get Control parameter of porn detection in speech. 
-     * @return AsrReviewInfo Control parameter of porn detection in speech.
+     * Get Parameters for ASR-based recognition of pornographic content 
+     * @return AsrReviewInfo Parameters for ASR-based recognition of pornographic content
      */
     public PornAsrReviewTemplateInfoForUpdate getAsrReviewInfo() {
         return this.AsrReviewInfo;
     }
 
     /**
-     * Set Control parameter of porn detection in speech.
-     * @param AsrReviewInfo Control parameter of porn detection in speech.
+     * Set Parameters for ASR-based recognition of pornographic content
+     * @param AsrReviewInfo Parameters for ASR-based recognition of pornographic content
      */
     public void setAsrReviewInfo(PornAsrReviewTemplateInfoForUpdate AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
     }
 
     /**
-     * Get Control parameter of porn detection in text. 
-     * @return OcrReviewInfo Control parameter of porn detection in text.
+     * Get Parameters for OCR-based recognition of pornographic content 
+     * @return OcrReviewInfo Parameters for OCR-based recognition of pornographic content
      */
     public PornOcrReviewTemplateInfoForUpdate getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set Control parameter of porn detection in text.
-     * @param OcrReviewInfo Control parameter of porn detection in text.
+     * Set Parameters for OCR-based recognition of pornographic content
+     * @param OcrReviewInfo Parameters for OCR-based recognition of pornographic content
      */
     public void setOcrReviewInfo(PornOcrReviewTemplateInfoForUpdate OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

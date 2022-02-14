@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class UserDefineConfigureInfoForUpdate extends AbstractModel{
 
     /**
-    * Control parameter of custom figure audit.
+    * Parameters for custom facial recognition
     */
     @SerializedName("FaceReviewInfo")
     @Expose
     private UserDefineFaceReviewTemplateInfoForUpdate FaceReviewInfo;
 
     /**
-    * Control parameter of custom speech audit.
+    * Parameters for custom ASR-based recognition
     */
     @SerializedName("AsrReviewInfo")
     @Expose
     private UserDefineAsrTextReviewTemplateInfoForUpdate AsrReviewInfo;
 
     /**
-    * Control parameter of custom text audit.
+    * Parameters for custom OCR-based recognition
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private UserDefineOcrTextReviewTemplateInfoForUpdate OcrReviewInfo;
 
     /**
-     * Get Control parameter of custom figure audit. 
-     * @return FaceReviewInfo Control parameter of custom figure audit.
+     * Get Parameters for custom facial recognition 
+     * @return FaceReviewInfo Parameters for custom facial recognition
      */
     public UserDefineFaceReviewTemplateInfoForUpdate getFaceReviewInfo() {
         return this.FaceReviewInfo;
     }
 
     /**
-     * Set Control parameter of custom figure audit.
-     * @param FaceReviewInfo Control parameter of custom figure audit.
+     * Set Parameters for custom facial recognition
+     * @param FaceReviewInfo Parameters for custom facial recognition
      */
     public void setFaceReviewInfo(UserDefineFaceReviewTemplateInfoForUpdate FaceReviewInfo) {
         this.FaceReviewInfo = FaceReviewInfo;
     }
 
     /**
-     * Get Control parameter of custom speech audit. 
-     * @return AsrReviewInfo Control parameter of custom speech audit.
+     * Get Parameters for custom ASR-based recognition 
+     * @return AsrReviewInfo Parameters for custom ASR-based recognition
      */
     public UserDefineAsrTextReviewTemplateInfoForUpdate getAsrReviewInfo() {
         return this.AsrReviewInfo;
     }
 
     /**
-     * Set Control parameter of custom speech audit.
-     * @param AsrReviewInfo Control parameter of custom speech audit.
+     * Set Parameters for custom ASR-based recognition
+     * @param AsrReviewInfo Parameters for custom ASR-based recognition
      */
     public void setAsrReviewInfo(UserDefineAsrTextReviewTemplateInfoForUpdate AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
     }
 
     /**
-     * Get Control parameter of custom text audit. 
-     * @return OcrReviewInfo Control parameter of custom text audit.
+     * Get Parameters for custom OCR-based recognition 
+     * @return OcrReviewInfo Parameters for custom OCR-based recognition
      */
     public UserDefineOcrTextReviewTemplateInfoForUpdate getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set Control parameter of custom text audit.
-     * @param OcrReviewInfo Control parameter of custom text audit.
+     * Set Parameters for custom OCR-based recognition
+     * @param OcrReviewInfo Parameters for custom OCR-based recognition
      */
     public void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfoForUpdate OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

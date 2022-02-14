@@ -23,82 +23,82 @@ import java.util.HashMap;
 public class PoliticalAsrReviewTemplateInfo extends AbstractModel{
 
     /**
-    * Switch of politically sensitive information detection in speech task. Valid values:
-<li>ON: enables politically sensitive information detection in speech task;</li>
-<li>OFF: disables politically sensitive information detection in speech task.</li>
+    * Whether to enable ASR-based recognition of politically sensitive content. Valid values:
+<li>ON</li>
+<li>OFF</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 100 will be used by default. Value range: 0-100.
-    */
-    @SerializedName("BlockConfidence")
-    @Expose
-    private Long BlockConfidence;
-
-    /**
-    * Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 75 will be used by default. Value range: 0-100.
+    * Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `75` will be used by default. Value range: 0-100
     */
     @SerializedName("ReviewConfidence")
     @Expose
     private Long ReviewConfidence;
 
     /**
-     * Get Switch of politically sensitive information detection in speech task. Valid values:
-<li>ON: enables politically sensitive information detection in speech task;</li>
-<li>OFF: disables politically sensitive information detection in speech task.</li> 
-     * @return Switch Switch of politically sensitive information detection in speech task. Valid values:
-<li>ON: enables politically sensitive information detection in speech task;</li>
-<li>OFF: disables politically sensitive information detection in speech task.</li>
+    * Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `100` will be used by default. Value range: 0-100
+    */
+    @SerializedName("BlockConfidence")
+    @Expose
+    private Long BlockConfidence;
+
+    /**
+     * Get Whether to enable ASR-based recognition of politically sensitive content. Valid values:
+<li>ON</li>
+<li>OFF</li> 
+     * @return Switch Whether to enable ASR-based recognition of politically sensitive content. Valid values:
+<li>ON</li>
+<li>OFF</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch of politically sensitive information detection in speech task. Valid values:
-<li>ON: enables politically sensitive information detection in speech task;</li>
-<li>OFF: disables politically sensitive information detection in speech task.</li>
-     * @param Switch Switch of politically sensitive information detection in speech task. Valid values:
-<li>ON: enables politically sensitive information detection in speech task;</li>
-<li>OFF: disables politically sensitive information detection in speech task.</li>
+     * Set Whether to enable ASR-based recognition of politically sensitive content. Valid values:
+<li>ON</li>
+<li>OFF</li>
+     * @param Switch Whether to enable ASR-based recognition of politically sensitive content. Valid values:
+<li>ON</li>
+<li>OFF</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 100 will be used by default. Value range: 0-100. 
-     * @return BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 100 will be used by default. Value range: 0-100.
-     */
-    public Long getBlockConfidence() {
-        return this.BlockConfidence;
-    }
-
-    /**
-     * Set Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 100 will be used by default. Value range: 0-100.
-     * @param BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 100 will be used by default. Value range: 0-100.
-     */
-    public void setBlockConfidence(Long BlockConfidence) {
-        this.BlockConfidence = BlockConfidence;
-    }
-
-    /**
-     * Get Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 75 will be used by default. Value range: 0-100. 
-     * @return ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 75 will be used by default. Value range: 0-100.
+     * Get Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `75` will be used by default. Value range: 0-100 
+     * @return ReviewConfidence Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `75` will be used by default. Value range: 0-100
      */
     public Long getReviewConfidence() {
         return this.ReviewConfidence;
     }
 
     /**
-     * Set Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 75 will be used by default. Value range: 0-100.
-     * @param ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 75 will be used by default. Value range: 0-100.
+     * Set Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `75` will be used by default. Value range: 0-100
+     * @param ReviewConfidence Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `75` will be used by default. Value range: 0-100
      */
     public void setReviewConfidence(Long ReviewConfidence) {
         this.ReviewConfidence = ReviewConfidence;
+    }
+
+    /**
+     * Get Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `100` will be used by default. Value range: 0-100 
+     * @return BlockConfidence Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `100` will be used by default. Value range: 0-100
+     */
+    public Long getBlockConfidence() {
+        return this.BlockConfidence;
+    }
+
+    /**
+     * Set Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `100` will be used by default. Value range: 0-100
+     * @param BlockConfidence Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `100` will be used by default. Value range: 0-100
+     */
+    public void setBlockConfidence(Long BlockConfidence) {
+        this.BlockConfidence = BlockConfidence;
     }
 
     public PoliticalAsrReviewTemplateInfo() {
@@ -112,11 +112,11 @@ public class PoliticalAsrReviewTemplateInfo extends AbstractModel{
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }
-        if (source.BlockConfidence != null) {
-            this.BlockConfidence = new Long(source.BlockConfidence);
-        }
         if (source.ReviewConfidence != null) {
             this.ReviewConfidence = new Long(source.ReviewConfidence);
+        }
+        if (source.BlockConfidence != null) {
+            this.BlockConfidence = new Long(source.BlockConfidence);
         }
     }
 
@@ -126,8 +126,8 @@ public class PoliticalAsrReviewTemplateInfo extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
-        this.setParamSimple(map, prefix + "BlockConfidence", this.BlockConfidence);
         this.setParamSimple(map, prefix + "ReviewConfidence", this.ReviewConfidence);
+        this.setParamSimple(map, prefix + "BlockConfidence", this.BlockConfidence);
 
     }
 }

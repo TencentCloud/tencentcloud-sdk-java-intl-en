@@ -23,45 +23,45 @@ import java.util.HashMap;
 public class ContentReviewTemplateItem extends AbstractModel{
 
     /**
-    * Unique ID of content audit template.
+    * Unique ID of an intelligent recognition template
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Content audit template name. Length limit: 64 characters.
+    * Name of an intelligent recognition template. Max 64 characters
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Content audit template description. Length limit: 256 characters.
+    * Description of an intelligent recognition template. Max 256 characters
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Porn information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Parameters for recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
     */
     @SerializedName("PornConfigure")
     @Expose
     private PornConfigureInfo PornConfigure;
 
     /**
-    * Terrorism information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Parameters for recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
     */
     @SerializedName("TerrorismConfigure")
     @Expose
     private TerrorismConfigureInfo TerrorismConfigure;
 
     /**
-    * Politically sensitive information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Parameters for recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
     */
     @SerializedName("PoliticalConfigure")
     @Expose
@@ -78,17 +78,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private ProhibitedConfigureInfo ProhibitedConfigure;
 
     /**
-    * Custom content audit control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Custom recognition parameters
+Note: This field may return `null`, indicating that no valid value can be found.
     */
     @SerializedName("UserDefineConfigure")
     @Expose
     private UserDefineConfigureInfo UserDefineConfigure;
 
     /**
-    * Switch controlling whether to add audit result to review list (for human review).
-<li>ON: yes;</li>
-<li>OFF: no.</li>
+    * Whether to subject the recognition result to human review
+<li>ON</li>
+<li>OFF</li>
     */
     @SerializedName("ReviewWallSwitch")
     @Expose
@@ -116,108 +116,108 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String UpdateTime;
 
     /**
-     * Get Unique ID of content audit template. 
-     * @return Definition Unique ID of content audit template.
+     * Get Unique ID of an intelligent recognition template 
+     * @return Definition Unique ID of an intelligent recognition template
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique ID of content audit template.
-     * @param Definition Unique ID of content audit template.
+     * Set Unique ID of an intelligent recognition template
+     * @param Definition Unique ID of an intelligent recognition template
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Content audit template name. Length limit: 64 characters. 
-     * @return Name Content audit template name. Length limit: 64 characters.
+     * Get Name of an intelligent recognition template. Max 64 characters 
+     * @return Name Name of an intelligent recognition template. Max 64 characters
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Content audit template name. Length limit: 64 characters.
-     * @param Name Content audit template name. Length limit: 64 characters.
+     * Set Name of an intelligent recognition template. Max 64 characters
+     * @param Name Name of an intelligent recognition template. Max 64 characters
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Content audit template description. Length limit: 256 characters. 
-     * @return Comment Content audit template description. Length limit: 256 characters.
+     * Get Description of an intelligent recognition template. Max 256 characters 
+     * @return Comment Description of an intelligent recognition template. Max 256 characters
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Content audit template description. Length limit: 256 characters.
-     * @param Comment Content audit template description. Length limit: 256 characters.
+     * Set Description of an intelligent recognition template. Max 256 characters
+     * @param Comment Description of an intelligent recognition template. Max 256 characters
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Porn information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PornConfigure Porn information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Parameters for recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found. 
+     * @return PornConfigure Parameters for recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public PornConfigureInfo getPornConfigure() {
         return this.PornConfigure;
     }
 
     /**
-     * Set Porn information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PornConfigure Porn information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Parameters for recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param PornConfigure Parameters for recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public void setPornConfigure(PornConfigureInfo PornConfigure) {
         this.PornConfigure = PornConfigure;
     }
 
     /**
-     * Get Terrorism information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TerrorismConfigure Terrorism information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Parameters for recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found. 
+     * @return TerrorismConfigure Parameters for recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public TerrorismConfigureInfo getTerrorismConfigure() {
         return this.TerrorismConfigure;
     }
 
     /**
-     * Set Terrorism information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TerrorismConfigure Terrorism information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Parameters for recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param TerrorismConfigure Parameters for recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public void setTerrorismConfigure(TerrorismConfigureInfo TerrorismConfigure) {
         this.TerrorismConfigure = TerrorismConfigure;
     }
 
     /**
-     * Get Politically sensitive information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PoliticalConfigure Politically sensitive information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Parameters for recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found. 
+     * @return PoliticalConfigure Parameters for recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public PoliticalConfigureInfo getPoliticalConfigure() {
         return this.PoliticalConfigure;
     }
 
     /**
-     * Set Politically sensitive information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PoliticalConfigure Politically sensitive information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Parameters for recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param PoliticalConfigure Parameters for recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public void setPoliticalConfigure(PoliticalConfigureInfo PoliticalConfigure) {
         this.PoliticalConfigure = PoliticalConfigure;
@@ -252,44 +252,44 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Custom content audit control parameter.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return UserDefineConfigure Custom content audit control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Custom recognition parameters
+Note: This field may return `null`, indicating that no valid value can be found. 
+     * @return UserDefineConfigure Custom recognition parameters
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public UserDefineConfigureInfo getUserDefineConfigure() {
         return this.UserDefineConfigure;
     }
 
     /**
-     * Set Custom content audit control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param UserDefineConfigure Custom content audit control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Custom recognition parameters
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param UserDefineConfigure Custom recognition parameters
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public void setUserDefineConfigure(UserDefineConfigureInfo UserDefineConfigure) {
         this.UserDefineConfigure = UserDefineConfigure;
     }
 
     /**
-     * Get Switch controlling whether to add audit result to review list (for human review).
-<li>ON: yes;</li>
-<li>OFF: no.</li> 
-     * @return ReviewWallSwitch Switch controlling whether to add audit result to review list (for human review).
-<li>ON: yes;</li>
-<li>OFF: no.</li>
+     * Get Whether to subject the recognition result to human review
+<li>ON</li>
+<li>OFF</li> 
+     * @return ReviewWallSwitch Whether to subject the recognition result to human review
+<li>ON</li>
+<li>OFF</li>
      */
     public String getReviewWallSwitch() {
         return this.ReviewWallSwitch;
     }
 
     /**
-     * Set Switch controlling whether to add audit result to review list (for human review).
-<li>ON: yes;</li>
-<li>OFF: no.</li>
-     * @param ReviewWallSwitch Switch controlling whether to add audit result to review list (for human review).
-<li>ON: yes;</li>
-<li>OFF: no.</li>
+     * Set Whether to subject the recognition result to human review
+<li>ON</li>
+<li>OFF</li>
+     * @param ReviewWallSwitch Whether to subject the recognition result to human review
+<li>ON</li>
+<li>OFF</li>
      */
     public void setReviewWallSwitch(String ReviewWallSwitch) {
         this.ReviewWallSwitch = ReviewWallSwitch;

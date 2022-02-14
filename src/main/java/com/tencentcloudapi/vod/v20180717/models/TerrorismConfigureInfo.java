@@ -23,56 +23,56 @@ import java.util.HashMap;
 public class TerrorismConfigureInfo extends AbstractModel{
 
     /**
-    * Control parameter of terrorism information detection in video image task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Parameters for recognition of terrorism content in images
+Note: This field may return `null`, indicating that no valid value can be found.
     */
     @SerializedName("ImgReviewInfo")
     @Expose
     private TerrorismImgReviewTemplateInfo ImgReviewInfo;
 
     /**
-    * Control parameter of terrorism information detection in text task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Parameters for OCR-based recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private TerrorismOcrReviewTemplateInfo OcrReviewInfo;
 
     /**
-     * Get Control parameter of terrorism information detection in video image task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ImgReviewInfo Control parameter of terrorism information detection in video image task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Parameters for recognition of terrorism content in images
+Note: This field may return `null`, indicating that no valid value can be found. 
+     * @return ImgReviewInfo Parameters for recognition of terrorism content in images
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public TerrorismImgReviewTemplateInfo getImgReviewInfo() {
         return this.ImgReviewInfo;
     }
 
     /**
-     * Set Control parameter of terrorism information detection in video image task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ImgReviewInfo Control parameter of terrorism information detection in video image task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Parameters for recognition of terrorism content in images
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param ImgReviewInfo Parameters for recognition of terrorism content in images
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public void setImgReviewInfo(TerrorismImgReviewTemplateInfo ImgReviewInfo) {
         this.ImgReviewInfo = ImgReviewInfo;
     }
 
     /**
-     * Get Control parameter of terrorism information detection in text task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OcrReviewInfo Control parameter of terrorism information detection in text task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Parameters for OCR-based recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found. 
+     * @return OcrReviewInfo Parameters for OCR-based recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public TerrorismOcrReviewTemplateInfo getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set Control parameter of terrorism information detection in text task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OcrReviewInfo Control parameter of terrorism information detection in text task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Parameters for OCR-based recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param OcrReviewInfo Parameters for OCR-based recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

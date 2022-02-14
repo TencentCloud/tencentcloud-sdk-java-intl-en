@@ -47,11 +47,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Float Confidence;
 
     /**
-    * Suggestion for suspected segment audit. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Processing suggestion for the detected suspicious content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
     */
     @SerializedName("Suggestion")
     @Expose
@@ -149,32 +148,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Suggestion for suspected segment audit. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Suggestion Suggestion for suspected segment audit. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Processing suggestion for the detected suspicious content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li> 
+     * @return Suggestion Processing suggestion for the detected suspicious content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set Suggestion for suspected segment audit. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Suggestion Suggestion for suspected segment audit. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Processing suggestion for the detected suspicious content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+     * @param Suggestion Processing suggestion for the detected suspicious content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;

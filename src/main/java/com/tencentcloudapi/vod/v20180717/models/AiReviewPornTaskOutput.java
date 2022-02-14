@@ -23,38 +23,35 @@ import java.util.HashMap;
 public class AiReviewPornTaskOutput extends AbstractModel{
 
     /**
-    * Score of detected porn information in video between 0 and 100.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Confidence score for the detected pornographic content. Value range: 0-100
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Suggestion for detected porn information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Processing suggestion for the detected pornographic content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * Tag of detected porn information in video. Valid values:
-<li>porn: porn.</li>
-<li>sexy: sexiness.</li>
-<li>vulgar: vulgarity.</li>
-<li>intimacy: intimacy.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Labels for the detected pornographic content. Valid values:
+<li>porn</li>
+<li>sexy</li>
+<li>vulgar</li>
+<li>intimacy</li>
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * List of video segments that contain porn information
+    * List of video segments that contain detected pornographic content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
     */
     @SerializedName("SegmentSet")
@@ -62,111 +59,99 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private MediaContentReviewSegmentItem [] SegmentSet;
 
     /**
-    * URL to the file for video segments that contain porn information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+    * URL to the file for video segments that contain detected pornographic content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
     */
     @SerializedName("SegmentSetFileUrl")
     @Expose
     private String SegmentSetFileUrl;
 
     /**
-    * Expiration time of the URL to the file of for video segments that contain porn information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+    * Expiration time of the URL to the file for video segments that contain detected pornographic content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
     */
     @SerializedName("SegmentSetFileUrlExpireTime")
     @Expose
     private String SegmentSetFileUrlExpireTime;
 
     /**
-     * Get Score of detected porn information in video between 0 and 100.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Confidence Score of detected porn information in video between 0 and 100.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Confidence score for the detected pornographic content. Value range: 0-100 
+     * @return Confidence Confidence score for the detected pornographic content. Value range: 0-100
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Score of detected porn information in video between 0 and 100.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Confidence Score of detected porn information in video between 0 and 100.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Confidence score for the detected pornographic content. Value range: 0-100
+     * @param Confidence Confidence score for the detected pornographic content. Value range: 0-100
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Suggestion for detected porn information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Suggestion Suggestion for detected porn information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Processing suggestion for the detected pornographic content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li> 
+     * @return Suggestion Processing suggestion for the detected pornographic content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set Suggestion for detected porn information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Suggestion Suggestion for detected porn information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Processing suggestion for the detected pornographic content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+     * @param Suggestion Processing suggestion for the detected pornographic content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get Tag of detected porn information in video. Valid values:
-<li>porn: porn.</li>
-<li>sexy: sexiness.</li>
-<li>vulgar: vulgarity.</li>
-<li>intimacy: intimacy.</li>
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Label Tag of detected porn information in video. Valid values:
-<li>porn: porn.</li>
-<li>sexy: sexiness.</li>
-<li>vulgar: vulgarity.</li>
-<li>intimacy: intimacy.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Labels for the detected pornographic content. Valid values:
+<li>porn</li>
+<li>sexy</li>
+<li>vulgar</li>
+<li>intimacy</li> 
+     * @return Label Labels for the detected pornographic content. Valid values:
+<li>porn</li>
+<li>sexy</li>
+<li>vulgar</li>
+<li>intimacy</li>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set Tag of detected porn information in video. Valid values:
-<li>porn: porn.</li>
-<li>sexy: sexiness.</li>
-<li>vulgar: vulgarity.</li>
-<li>intimacy: intimacy.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Label Tag of detected porn information in video. Valid values:
-<li>porn: porn.</li>
-<li>sexy: sexiness.</li>
-<li>vulgar: vulgarity.</li>
-<li>intimacy: intimacy.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Labels for the detected pornographic content. Valid values:
+<li>porn</li>
+<li>sexy</li>
+<li>vulgar</li>
+<li>intimacy</li>
+     * @param Label Labels for the detected pornographic content. Valid values:
+<li>porn</li>
+<li>sexy</li>
+<li>vulgar</li>
+<li>intimacy</li>
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get List of video segments that contain porn information
+     * Get List of video segments that contain detected pornographic content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`. 
-     * @return SegmentSet List of video segments that contain porn information
+     * @return SegmentSet List of video segments that contain detected pornographic content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
      */
     public MediaContentReviewSegmentItem [] getSegmentSet() {
@@ -174,9 +159,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set List of video segments that contain porn information
+     * Set List of video segments that contain detected pornographic content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
-     * @param SegmentSet List of video segments that contain porn information
+     * @param SegmentSet List of video segments that contain detected pornographic content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
      */
     public void setSegmentSet(MediaContentReviewSegmentItem [] SegmentSet) {
@@ -184,32 +169,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get URL to the file for video segments that contain porn information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`. 
-     * @return SegmentSetFileUrl URL to the file for video segments that contain porn information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+     * Get URL to the file for video segments that contain detected pornographic content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`. 
+     * @return SegmentSetFileUrl URL to the file for video segments that contain detected pornographic content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
      */
     public String getSegmentSetFileUrl() {
         return this.SegmentSetFileUrl;
     }
 
     /**
-     * Set URL to the file for video segments that contain porn information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
-     * @param SegmentSetFileUrl URL to the file for video segments that contain porn information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+     * Set URL to the file for video segments that contain detected pornographic content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+     * @param SegmentSetFileUrl URL to the file for video segments that contain detected pornographic content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
      */
     public void setSegmentSetFileUrl(String SegmentSetFileUrl) {
         this.SegmentSetFileUrl = SegmentSetFileUrl;
     }
 
     /**
-     * Get Expiration time of the URL to the file of for video segments that contain porn information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) 
-     * @return SegmentSetFileUrlExpireTime Expiration time of the URL to the file of for video segments that contain porn information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * Get Expiration time of the URL to the file for video segments that contain detected pornographic content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) 
+     * @return SegmentSetFileUrlExpireTime Expiration time of the URL to the file for video segments that contain detected pornographic content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
      */
     public String getSegmentSetFileUrlExpireTime() {
         return this.SegmentSetFileUrlExpireTime;
     }
 
     /**
-     * Set Expiration time of the URL to the file of for video segments that contain porn information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
-     * @param SegmentSetFileUrlExpireTime Expiration time of the URL to the file of for video segments that contain porn information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * Set Expiration time of the URL to the file for video segments that contain detected pornographic content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * @param SegmentSetFileUrlExpireTime Expiration time of the URL to the file for video segments that contain detected pornographic content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
      */
     public void setSegmentSetFileUrlExpireTime(String SegmentSetFileUrlExpireTime) {
         this.SegmentSetFileUrlExpireTime = SegmentSetFileUrlExpireTime;

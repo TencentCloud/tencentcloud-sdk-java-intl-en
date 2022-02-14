@@ -23,84 +23,84 @@ import java.util.HashMap;
 public class PornConfigureInfo extends AbstractModel{
 
     /**
-    * Control parameter of porn information detection in video image.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Parameters for recognition of pornographic content in images
+Note: This field may return `null`, indicating that no valid value can be found.
     */
     @SerializedName("ImgReviewInfo")
     @Expose
     private PornImgReviewTemplateInfo ImgReviewInfo;
 
     /**
-    * Control parameter of porn information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Parameters for ASR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
     */
     @SerializedName("AsrReviewInfo")
     @Expose
     private PornAsrReviewTemplateInfo AsrReviewInfo;
 
     /**
-    * Control parameter of porn information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Parameters for OCR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private PornOcrReviewTemplateInfo OcrReviewInfo;
 
     /**
-     * Get Control parameter of porn information detection in video image.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ImgReviewInfo Control parameter of porn information detection in video image.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Parameters for recognition of pornographic content in images
+Note: This field may return `null`, indicating that no valid value can be found. 
+     * @return ImgReviewInfo Parameters for recognition of pornographic content in images
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public PornImgReviewTemplateInfo getImgReviewInfo() {
         return this.ImgReviewInfo;
     }
 
     /**
-     * Set Control parameter of porn information detection in video image.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ImgReviewInfo Control parameter of porn information detection in video image.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Parameters for recognition of pornographic content in images
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param ImgReviewInfo Parameters for recognition of pornographic content in images
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public void setImgReviewInfo(PornImgReviewTemplateInfo ImgReviewInfo) {
         this.ImgReviewInfo = ImgReviewInfo;
     }
 
     /**
-     * Get Control parameter of porn information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AsrReviewInfo Control parameter of porn information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Parameters for ASR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found. 
+     * @return AsrReviewInfo Parameters for ASR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public PornAsrReviewTemplateInfo getAsrReviewInfo() {
         return this.AsrReviewInfo;
     }
 
     /**
-     * Set Control parameter of porn information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AsrReviewInfo Control parameter of porn information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Parameters for ASR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param AsrReviewInfo Parameters for ASR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public void setAsrReviewInfo(PornAsrReviewTemplateInfo AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
     }
 
     /**
-     * Get Control parameter of porn information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OcrReviewInfo Control parameter of porn information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Parameters for OCR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found. 
+     * @return OcrReviewInfo Parameters for OCR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public PornOcrReviewTemplateInfo getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set Control parameter of porn information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OcrReviewInfo Control parameter of porn information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Parameters for OCR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param OcrReviewInfo Parameters for OCR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public void setOcrReviewInfo(PornOcrReviewTemplateInfo OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

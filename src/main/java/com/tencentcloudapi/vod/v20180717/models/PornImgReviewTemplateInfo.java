@@ -23,122 +23,122 @@ import java.util.HashMap;
 public class PornImgReviewTemplateInfo extends AbstractModel{
 
     /**
-    * Switch of porn information detection in video image task. Valid values:
-<li>ON: enables porn information detection in video image task;</li>
-<li>OFF: disables porn information detection in video image task.</li>
+    * Whether to enable recognition of pornographic content in images. Valid values:
+<li>ON</li>
+<li>OFF</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Filter tag for porn information detection in video image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
-<li>porn: porn;</li>
-<li>vulgar: vulgarity;</li>
-<li>intimacy: intimacy;</li>
-<li>sexy: sexiness.</li>
+    * Filter labels for recognition of pornographic content in images. Results containing the specified labels are returned. If no labels are specified, all results are returned. Valid values:
+<li>porn</li>
+<li>vulgar</li>
+<li>intimacy</li>
+<li>sexy</li>
     */
     @SerializedName("LabelSet")
     @Expose
     private String [] LabelSet;
 
     /**
-    * Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 90 will be used by default. Value range: 0-100.
+    * Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `90` will be used by default. Value range: 0-100
     */
     @SerializedName("BlockConfidence")
     @Expose
     private Long BlockConfidence;
 
     /**
-    * Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 0 will be used by default. Value range: 0-100.
+    * Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `0` will be used by default. Value range: 0-100
     */
     @SerializedName("ReviewConfidence")
     @Expose
     private Long ReviewConfidence;
 
     /**
-     * Get Switch of porn information detection in video image task. Valid values:
-<li>ON: enables porn information detection in video image task;</li>
-<li>OFF: disables porn information detection in video image task.</li> 
-     * @return Switch Switch of porn information detection in video image task. Valid values:
-<li>ON: enables porn information detection in video image task;</li>
-<li>OFF: disables porn information detection in video image task.</li>
+     * Get Whether to enable recognition of pornographic content in images. Valid values:
+<li>ON</li>
+<li>OFF</li> 
+     * @return Switch Whether to enable recognition of pornographic content in images. Valid values:
+<li>ON</li>
+<li>OFF</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch of porn information detection in video image task. Valid values:
-<li>ON: enables porn information detection in video image task;</li>
-<li>OFF: disables porn information detection in video image task.</li>
-     * @param Switch Switch of porn information detection in video image task. Valid values:
-<li>ON: enables porn information detection in video image task;</li>
-<li>OFF: disables porn information detection in video image task.</li>
+     * Set Whether to enable recognition of pornographic content in images. Valid values:
+<li>ON</li>
+<li>OFF</li>
+     * @param Switch Whether to enable recognition of pornographic content in images. Valid values:
+<li>ON</li>
+<li>OFF</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Filter tag for porn information detection in video image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
-<li>porn: porn;</li>
-<li>vulgar: vulgarity;</li>
-<li>intimacy: intimacy;</li>
-<li>sexy: sexiness.</li> 
-     * @return LabelSet Filter tag for porn information detection in video image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
-<li>porn: porn;</li>
-<li>vulgar: vulgarity;</li>
-<li>intimacy: intimacy;</li>
-<li>sexy: sexiness.</li>
+     * Get Filter labels for recognition of pornographic content in images. Results containing the specified labels are returned. If no labels are specified, all results are returned. Valid values:
+<li>porn</li>
+<li>vulgar</li>
+<li>intimacy</li>
+<li>sexy</li> 
+     * @return LabelSet Filter labels for recognition of pornographic content in images. Results containing the specified labels are returned. If no labels are specified, all results are returned. Valid values:
+<li>porn</li>
+<li>vulgar</li>
+<li>intimacy</li>
+<li>sexy</li>
      */
     public String [] getLabelSet() {
         return this.LabelSet;
     }
 
     /**
-     * Set Filter tag for porn information detection in video image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
-<li>porn: porn;</li>
-<li>vulgar: vulgarity;</li>
-<li>intimacy: intimacy;</li>
-<li>sexy: sexiness.</li>
-     * @param LabelSet Filter tag for porn information detection in video image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
-<li>porn: porn;</li>
-<li>vulgar: vulgarity;</li>
-<li>intimacy: intimacy;</li>
-<li>sexy: sexiness.</li>
+     * Set Filter labels for recognition of pornographic content in images. Results containing the specified labels are returned. If no labels are specified, all results are returned. Valid values:
+<li>porn</li>
+<li>vulgar</li>
+<li>intimacy</li>
+<li>sexy</li>
+     * @param LabelSet Filter labels for recognition of pornographic content in images. Results containing the specified labels are returned. If no labels are specified, all results are returned. Valid values:
+<li>porn</li>
+<li>vulgar</li>
+<li>intimacy</li>
+<li>sexy</li>
      */
     public void setLabelSet(String [] LabelSet) {
         this.LabelSet = LabelSet;
     }
 
     /**
-     * Get Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 90 will be used by default. Value range: 0-100. 
-     * @return BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 90 will be used by default. Value range: 0-100.
+     * Get Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `90` will be used by default. Value range: 0-100 
+     * @return BlockConfidence Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `90` will be used by default. Value range: 0-100
      */
     public Long getBlockConfidence() {
         return this.BlockConfidence;
     }
 
     /**
-     * Set Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 90 will be used by default. Value range: 0-100.
-     * @param BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 90 will be used by default. Value range: 0-100.
+     * Set Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `90` will be used by default. Value range: 0-100
+     * @param BlockConfidence Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `90` will be used by default. Value range: 0-100
      */
     public void setBlockConfidence(Long BlockConfidence) {
         this.BlockConfidence = BlockConfidence;
     }
 
     /**
-     * Get Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 0 will be used by default. Value range: 0-100. 
-     * @return ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 0 will be used by default. Value range: 0-100.
+     * Get Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `0` will be used by default. Value range: 0-100 
+     * @return ReviewConfidence Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `0` will be used by default. Value range: 0-100
      */
     public Long getReviewConfidence() {
         return this.ReviewConfidence;
     }
 
     /**
-     * Set Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 0 will be used by default. Value range: 0-100.
-     * @param ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 0 will be used by default. Value range: 0-100.
+     * Set Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `0` will be used by default. Value range: 0-100
+     * @param ReviewConfidence Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `0` will be used by default. Value range: 0-100
      */
     public void setReviewConfidence(Long ReviewConfidence) {
         this.ReviewConfidence = ReviewConfidence;

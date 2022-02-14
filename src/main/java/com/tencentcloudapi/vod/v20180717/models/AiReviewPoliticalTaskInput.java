@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class AiReviewPoliticalTaskInput extends AbstractModel{
 
     /**
-    * Politically sensitive information detection template ID.
+    * ID of the template for recognition of politically sensitive content
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get Politically sensitive information detection template ID. 
-     * @return Definition Politically sensitive information detection template ID.
+     * Get ID of the template for recognition of politically sensitive content 
+     * @return Definition ID of the template for recognition of politically sensitive content
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Politically sensitive information detection template ID.
-     * @param Definition Politically sensitive information detection template ID.
+     * Set ID of the template for recognition of politically sensitive content
+     * @param Definition ID of the template for recognition of politically sensitive content
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

@@ -54,8 +54,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private MediaProcessTaskInput MediaProcessTask;
 
     /**
-    * Parameter of AI-based content audit task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Intelligent recognition task
+Note: This field may return `null`, indicating that no valid value can be found.
     */
     @SerializedName("AiContentReviewTask")
     @Expose
@@ -176,20 +176,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Parameter of AI-based content audit task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AiContentReviewTask Parameter of AI-based content audit task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Intelligent recognition task
+Note: This field may return `null`, indicating that no valid value can be found. 
+     * @return AiContentReviewTask Intelligent recognition task
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
         return this.AiContentReviewTask;
     }
 
     /**
-     * Set Parameter of AI-based content audit task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AiContentReviewTask Parameter of AI-based content audit task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Intelligent recognition task
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param AiContentReviewTask Intelligent recognition task
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
         this.AiContentReviewTask = AiContentReviewTask;

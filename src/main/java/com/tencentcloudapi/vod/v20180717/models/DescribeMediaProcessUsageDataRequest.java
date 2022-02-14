@@ -37,13 +37,14 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * This API is used to query video processing task types. Valid values:
-<li>Transcoding: basic transcoding</li>
-<li>Transcoding-TESHD: TESHD transcoding</li>
-<li>Editing: video editing</li>
-<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
-<li>ContentAudit: content moderation</li>
-<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
+    * Type of media processing task. Valid values:
+<li>`Transcoding`: basic transcoding</li>
+<li>`Transcoding-TESHD`: TESHD transcoding</li>
+<li>`Editing`: video editing</li>
+<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
+<li>`ContentAudit`: content moderation</li>
+<li>`RemoveWatermark`: watermark removal</li>
+<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
     */
     @SerializedName("Type")
     @Expose
@@ -89,40 +90,44 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel{
     }
 
     /**
-     * Get This API is used to query video processing task types. Valid values:
-<li>Transcoding: basic transcoding</li>
-<li>Transcoding-TESHD: TESHD transcoding</li>
-<li>Editing: video editing</li>
-<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
-<li>ContentAudit: content moderation</li>
-<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li> 
-     * @return Type This API is used to query video processing task types. Valid values:
-<li>Transcoding: basic transcoding</li>
-<li>Transcoding-TESHD: TESHD transcoding</li>
-<li>Editing: video editing</li>
-<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
-<li>ContentAudit: content moderation</li>
-<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
+     * Get Type of media processing task. Valid values:
+<li>`Transcoding`: basic transcoding</li>
+<li>`Transcoding-TESHD`: TESHD transcoding</li>
+<li>`Editing`: video editing</li>
+<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
+<li>`ContentAudit`: content moderation</li>
+<li>`RemoveWatermark`: watermark removal</li>
+<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li> 
+     * @return Type Type of media processing task. Valid values:
+<li>`Transcoding`: basic transcoding</li>
+<li>`Transcoding-TESHD`: TESHD transcoding</li>
+<li>`Editing`: video editing</li>
+<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
+<li>`ContentAudit`: content moderation</li>
+<li>`RemoveWatermark`: watermark removal</li>
+<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set This API is used to query video processing task types. Valid values:
-<li>Transcoding: basic transcoding</li>
-<li>Transcoding-TESHD: TESHD transcoding</li>
-<li>Editing: video editing</li>
-<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
-<li>ContentAudit: content moderation</li>
-<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
-     * @param Type This API is used to query video processing task types. Valid values:
-<li>Transcoding: basic transcoding</li>
-<li>Transcoding-TESHD: TESHD transcoding</li>
-<li>Editing: video editing</li>
-<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
-<li>ContentAudit: content moderation</li>
-<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
+     * Set Type of media processing task. Valid values:
+<li>`Transcoding`: basic transcoding</li>
+<li>`Transcoding-TESHD`: TESHD transcoding</li>
+<li>`Editing`: video editing</li>
+<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
+<li>`ContentAudit`: content moderation</li>
+<li>`RemoveWatermark`: watermark removal</li>
+<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
+     * @param Type Type of media processing task. Valid values:
+<li>`Transcoding`: basic transcoding</li>
+<li>`Transcoding-TESHD`: TESHD transcoding</li>
+<li>`Editing`: video editing</li>
+<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
+<li>`ContentAudit`: content moderation</li>
+<li>`RemoveWatermark`: watermark removal</li>
+<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
      */
     public void setType(String Type) {
         this.Type = Type;

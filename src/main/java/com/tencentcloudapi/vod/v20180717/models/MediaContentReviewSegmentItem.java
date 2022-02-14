@@ -37,24 +37,24 @@ public class MediaContentReviewSegmentItem extends AbstractModel{
     private Float EndTimeOffset;
 
     /**
-    * Score of a suspected porn segment.
+    * Confidence score for the detected pornographic content
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Tag of porn information detection result of a suspected segment.
+    * Label for the detected pornographic content
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * Suggestion for porn information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+    * Processing suggestion for the detected pornographic content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
     */
     @SerializedName("Suggestion")
     @Expose
@@ -115,60 +115,60 @@ public class MediaContentReviewSegmentItem extends AbstractModel{
     }
 
     /**
-     * Get Score of a suspected porn segment. 
-     * @return Confidence Score of a suspected porn segment.
+     * Get Confidence score for the detected pornographic content 
+     * @return Confidence Confidence score for the detected pornographic content
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Score of a suspected porn segment.
-     * @param Confidence Score of a suspected porn segment.
+     * Set Confidence score for the detected pornographic content
+     * @param Confidence Confidence score for the detected pornographic content
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Tag of porn information detection result of a suspected segment. 
-     * @return Label Tag of porn information detection result of a suspected segment.
+     * Get Label for the detected pornographic content 
+     * @return Label Label for the detected pornographic content
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set Tag of porn information detection result of a suspected segment.
-     * @param Label Tag of porn information detection result of a suspected segment.
+     * Set Label for the detected pornographic content
+     * @param Label Label for the detected pornographic content
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get Suggestion for porn information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li> 
-     * @return Suggestion Suggestion for porn information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+     * Get Processing suggestion for the detected pornographic content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li> 
+     * @return Suggestion Processing suggestion for the detected pornographic content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set Suggestion for porn information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-     * @param Suggestion Suggestion for porn information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+     * Set Processing suggestion for the detected pornographic content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+     * @param Suggestion Processing suggestion for the detected pornographic content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;

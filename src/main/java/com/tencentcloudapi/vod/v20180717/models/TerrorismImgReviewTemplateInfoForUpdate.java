@@ -23,20 +23,20 @@ import java.util.HashMap;
 public class TerrorismImgReviewTemplateInfoForUpdate extends AbstractModel{
 
     /**
-    * Switch of terrorism information detection in video image task. Valid values:
-<li>ON: enables terrorism information detection in video image task;</li>
-<li>OFF: disables terrorism information detection in video image task.</li>
+    * Whether to enable recognition of terrorism content in images. Valid values:
+<li>ON</li>
+<li>OFF</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Filter tags for terrorism information detection in images. If a moderation result contains a selected tag, it will be returned. If no filter tag is specified, all moderation results will be returned. Valid values:
+    * Filter labels for recognition of terrorism content in images. Results containing the specified labels are returned. If no labels are specified, all results are returned. Valid values:
 <li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`bloody`: bloody images</li>
-<li>`police`: police forces</li>
+<li>`crowd`: crowd</li>
+<li>`bloody`: bloody scenes</li>
+<li>`police`: police force</li>
 <li>`banners`: terrorism flags</li>
 <li>`militant`: militants</li>
 <li>`explosion`: explosions and fires</li>
@@ -48,59 +48,59 @@ public class TerrorismImgReviewTemplateInfoForUpdate extends AbstractModel{
     private String [] LabelSet;
 
     /**
-    * Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100.
+    * Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. Value range: 0-100
     */
     @SerializedName("BlockConfidence")
     @Expose
     private Long BlockConfidence;
 
     /**
-    * Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0–100.
+    * Confidence score threshold for human review. If this threshold is reached, human review is needed. Value range: 0-100
     */
     @SerializedName("ReviewConfidence")
     @Expose
     private Long ReviewConfidence;
 
     /**
-     * Get Switch of terrorism information detection in video image task. Valid values:
-<li>ON: enables terrorism information detection in video image task;</li>
-<li>OFF: disables terrorism information detection in video image task.</li> 
-     * @return Switch Switch of terrorism information detection in video image task. Valid values:
-<li>ON: enables terrorism information detection in video image task;</li>
-<li>OFF: disables terrorism information detection in video image task.</li>
+     * Get Whether to enable recognition of terrorism content in images. Valid values:
+<li>ON</li>
+<li>OFF</li> 
+     * @return Switch Whether to enable recognition of terrorism content in images. Valid values:
+<li>ON</li>
+<li>OFF</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch of terrorism information detection in video image task. Valid values:
-<li>ON: enables terrorism information detection in video image task;</li>
-<li>OFF: disables terrorism information detection in video image task.</li>
-     * @param Switch Switch of terrorism information detection in video image task. Valid values:
-<li>ON: enables terrorism information detection in video image task;</li>
-<li>OFF: disables terrorism information detection in video image task.</li>
+     * Set Whether to enable recognition of terrorism content in images. Valid values:
+<li>ON</li>
+<li>OFF</li>
+     * @param Switch Whether to enable recognition of terrorism content in images. Valid values:
+<li>ON</li>
+<li>OFF</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Filter tags for terrorism information detection in images. If a moderation result contains a selected tag, it will be returned. If no filter tag is specified, all moderation results will be returned. Valid values:
+     * Get Filter labels for recognition of terrorism content in images. Results containing the specified labels are returned. If no labels are specified, all results are returned. Valid values:
 <li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`bloody`: bloody images</li>
-<li>`police`: police forces</li>
+<li>`crowd`: crowd</li>
+<li>`bloody`: bloody scenes</li>
+<li>`police`: police force</li>
 <li>`banners`: terrorism flags</li>
 <li>`militant`: militants</li>
 <li>`explosion`: explosions and fires</li>
 <li>`terrorists`: terrorists</li>
 <li>`scenario`: terrorism images</li> 
-     * @return LabelSet Filter tags for terrorism information detection in images. If a moderation result contains a selected tag, it will be returned. If no filter tag is specified, all moderation results will be returned. Valid values:
+     * @return LabelSet Filter labels for recognition of terrorism content in images. Results containing the specified labels are returned. If no labels are specified, all results are returned. Valid values:
 <li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`bloody`: bloody images</li>
-<li>`police`: police forces</li>
+<li>`crowd`: crowd</li>
+<li>`bloody`: bloody scenes</li>
+<li>`police`: police force</li>
 <li>`banners`: terrorism flags</li>
 <li>`militant`: militants</li>
 <li>`explosion`: explosions and fires</li>
@@ -112,21 +112,21 @@ public class TerrorismImgReviewTemplateInfoForUpdate extends AbstractModel{
     }
 
     /**
-     * Set Filter tags for terrorism information detection in images. If a moderation result contains a selected tag, it will be returned. If no filter tag is specified, all moderation results will be returned. Valid values:
+     * Set Filter labels for recognition of terrorism content in images. Results containing the specified labels are returned. If no labels are specified, all results are returned. Valid values:
 <li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`bloody`: bloody images</li>
-<li>`police`: police forces</li>
+<li>`crowd`: crowd</li>
+<li>`bloody`: bloody scenes</li>
+<li>`police`: police force</li>
 <li>`banners`: terrorism flags</li>
 <li>`militant`: militants</li>
 <li>`explosion`: explosions and fires</li>
 <li>`terrorists`: terrorists</li>
 <li>`scenario`: terrorism images</li>
-     * @param LabelSet Filter tags for terrorism information detection in images. If a moderation result contains a selected tag, it will be returned. If no filter tag is specified, all moderation results will be returned. Valid values:
+     * @param LabelSet Filter labels for recognition of terrorism content in images. Results containing the specified labels are returned. If no labels are specified, all results are returned. Valid values:
 <li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`bloody`: bloody images</li>
-<li>`police`: police forces</li>
+<li>`crowd`: crowd</li>
+<li>`bloody`: bloody scenes</li>
+<li>`police`: police force</li>
 <li>`banners`: terrorism flags</li>
 <li>`militant`: militants</li>
 <li>`explosion`: explosions and fires</li>
@@ -138,32 +138,32 @@ public class TerrorismImgReviewTemplateInfoForUpdate extends AbstractModel{
     }
 
     /**
-     * Get Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100. 
-     * @return BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100.
+     * Get Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. Value range: 0-100 
+     * @return BlockConfidence Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. Value range: 0-100
      */
     public Long getBlockConfidence() {
         return this.BlockConfidence;
     }
 
     /**
-     * Set Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100.
-     * @param BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100.
+     * Set Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. Value range: 0-100
+     * @param BlockConfidence Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. Value range: 0-100
      */
     public void setBlockConfidence(Long BlockConfidence) {
         this.BlockConfidence = BlockConfidence;
     }
 
     /**
-     * Get Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0–100. 
-     * @return ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0–100.
+     * Get Confidence score threshold for human review. If this threshold is reached, human review is needed. Value range: 0-100 
+     * @return ReviewConfidence Confidence score threshold for human review. If this threshold is reached, human review is needed. Value range: 0-100
      */
     public Long getReviewConfidence() {
         return this.ReviewConfidence;
     }
 
     /**
-     * Set Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0–100.
-     * @param ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0–100.
+     * Set Confidence score threshold for human review. If this threshold is reached, human review is needed. Value range: 0-100
+     * @param ReviewConfidence Confidence score threshold for human review. If this threshold is reached, human review is needed. Value range: 0-100
      */
     public void setReviewConfidence(Long ReviewConfidence) {
         this.ReviewConfidence = ReviewConfidence;

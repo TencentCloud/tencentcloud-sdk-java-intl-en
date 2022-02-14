@@ -23,84 +23,84 @@ import java.util.HashMap;
 public class UserDefineConfigureInfo extends AbstractModel{
 
     /**
-    * Control parameter of custom figure audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Parameters for custom facial recognition
+Note: This field may return `null`, indicating that no valid value can be found.
     */
     @SerializedName("FaceReviewInfo")
     @Expose
     private UserDefineFaceReviewTemplateInfo FaceReviewInfo;
 
     /**
-    * Control parameter of custom speech audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Parameters for custom ASR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found.
     */
     @SerializedName("AsrReviewInfo")
     @Expose
     private UserDefineAsrTextReviewTemplateInfo AsrReviewInfo;
 
     /**
-    * Control parameter of custom text audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Parameters for custom OCR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found.
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private UserDefineOcrTextReviewTemplateInfo OcrReviewInfo;
 
     /**
-     * Get Control parameter of custom figure audit.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FaceReviewInfo Control parameter of custom figure audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Parameters for custom facial recognition
+Note: This field may return `null`, indicating that no valid value can be found. 
+     * @return FaceReviewInfo Parameters for custom facial recognition
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public UserDefineFaceReviewTemplateInfo getFaceReviewInfo() {
         return this.FaceReviewInfo;
     }
 
     /**
-     * Set Control parameter of custom figure audit.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FaceReviewInfo Control parameter of custom figure audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Parameters for custom facial recognition
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param FaceReviewInfo Parameters for custom facial recognition
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public void setFaceReviewInfo(UserDefineFaceReviewTemplateInfo FaceReviewInfo) {
         this.FaceReviewInfo = FaceReviewInfo;
     }
 
     /**
-     * Get Control parameter of custom speech audit.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AsrReviewInfo Control parameter of custom speech audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Parameters for custom ASR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found. 
+     * @return AsrReviewInfo Parameters for custom ASR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public UserDefineAsrTextReviewTemplateInfo getAsrReviewInfo() {
         return this.AsrReviewInfo;
     }
 
     /**
-     * Set Control parameter of custom speech audit.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AsrReviewInfo Control parameter of custom speech audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Parameters for custom ASR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param AsrReviewInfo Parameters for custom ASR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public void setAsrReviewInfo(UserDefineAsrTextReviewTemplateInfo AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
     }
 
     /**
-     * Get Control parameter of custom text audit.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OcrReviewInfo Control parameter of custom text audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Parameters for custom OCR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found. 
+     * @return OcrReviewInfo Parameters for custom OCR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public UserDefineOcrTextReviewTemplateInfo getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set Control parameter of custom text audit.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OcrReviewInfo Control parameter of custom text audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Parameters for custom OCR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param OcrReviewInfo Parameters for custom OCR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfo OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

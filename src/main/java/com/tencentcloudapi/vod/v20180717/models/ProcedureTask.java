@@ -99,8 +99,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private MediaProcessTaskResult [] MediaProcessResultSet;
 
     /**
-    * Execution status and result of video content audit task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Status and result of an intelligent recognition task
     */
     @SerializedName("AiContentReviewResultSet")
     @Expose
@@ -354,20 +353,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Execution status and result of video content audit task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AiContentReviewResultSet Execution status and result of video content audit task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Status and result of an intelligent recognition task 
+     * @return AiContentReviewResultSet Status and result of an intelligent recognition task
      */
     public AiContentReviewResult [] getAiContentReviewResultSet() {
         return this.AiContentReviewResultSet;
     }
 
     /**
-     * Set Execution status and result of video content audit task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AiContentReviewResultSet Execution status and result of video content audit task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Status and result of an intelligent recognition task
+     * @param AiContentReviewResultSet Status and result of an intelligent recognition task
      */
     public void setAiContentReviewResultSet(AiContentReviewResult [] AiContentReviewResultSet) {
         this.AiContentReviewResultSet = AiContentReviewResultSet;

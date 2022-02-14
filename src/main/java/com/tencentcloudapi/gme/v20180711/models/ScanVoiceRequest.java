@@ -30,7 +30,7 @@ public class ScanVoiceRequest extends AbstractModel{
     private Long BizId;
 
     /**
-    * Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, politically sensitive, advertising, terrorism, and prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
+    * Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
     */
     @SerializedName("Scenes")
     @Expose
@@ -60,6 +60,13 @@ public class ScanVoiceRequest extends AbstractModel{
     private String Callback;
 
     /**
+    * The language. `jp` represents Japanese
+    */
+    @SerializedName("Lang")
+    @Expose
+    private String Lang;
+
+    /**
      * Get Application ID, which is the `AppID` obtained when you create an application in [Console > Service Management](https://console.cloud.tencent.com/gamegme) 
      * @return BizId Application ID, which is the `AppID` obtained when you create an application in [Console > Service Management](https://console.cloud.tencent.com/gamegme)
      */
@@ -76,16 +83,16 @@ public class ScanVoiceRequest extends AbstractModel{
     }
 
     /**
-     * Get Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, politically sensitive, advertising, terrorism, and prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above. 
-     * @return Scenes Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, politically sensitive, advertising, terrorism, and prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
+     * Get Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above. 
+     * @return Scenes Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
      */
     public String [] getScenes() {
         return this.Scenes;
     }
 
     /**
-     * Set Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, politically sensitive, advertising, terrorism, and prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
-     * @param Scenes Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, politically sensitive, advertising, terrorism, and prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
+     * Set Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
+     * @param Scenes Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
      */
     public void setScenes(String [] Scenes) {
         this.Scenes = Scenes;
@@ -147,6 +154,22 @@ public class ScanVoiceRequest extends AbstractModel{
         this.Callback = Callback;
     }
 
+    /**
+     * Get The language. `jp` represents Japanese 
+     * @return Lang The language. `jp` represents Japanese
+     */
+    public String getLang() {
+        return this.Lang;
+    }
+
+    /**
+     * Set The language. `jp` represents Japanese
+     * @param Lang The language. `jp` represents Japanese
+     */
+    public void setLang(String Lang) {
+        this.Lang = Lang;
+    }
+
     public ScanVoiceRequest() {
     }
 
@@ -176,6 +199,9 @@ public class ScanVoiceRequest extends AbstractModel{
         if (source.Callback != null) {
             this.Callback = new String(source.Callback);
         }
+        if (source.Lang != null) {
+            this.Lang = new String(source.Lang);
+        }
     }
 
 
@@ -188,6 +214,7 @@ public class ScanVoiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Live", this.Live);
         this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
         this.setParamSimple(map, prefix + "Callback", this.Callback);
+        this.setParamSimple(map, prefix + "Lang", this.Lang);
 
     }
 }

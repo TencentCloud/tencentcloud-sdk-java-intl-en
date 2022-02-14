@@ -37,7 +37,7 @@ public class ProcessMediaRequest extends AbstractModel{
     private MediaProcessTaskInput MediaProcessTask;
 
     /**
-    * Type parameter of video content audit task.
+    * Parameters for intelligent recognition
     */
     @SerializedName("AiContentReviewTask")
     @Expose
@@ -132,16 +132,16 @@ public class ProcessMediaRequest extends AbstractModel{
     }
 
     /**
-     * Get Type parameter of video content audit task. 
-     * @return AiContentReviewTask Type parameter of video content audit task.
+     * Get Parameters for intelligent recognition 
+     * @return AiContentReviewTask Parameters for intelligent recognition
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
         return this.AiContentReviewTask;
     }
 
     /**
-     * Set Type parameter of video content audit task.
-     * @param AiContentReviewTask Type parameter of video content audit task.
+     * Set Parameters for intelligent recognition
+     * @param AiContentReviewTask Parameters for intelligent recognition
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
         this.AiContentReviewTask = AiContentReviewTask;

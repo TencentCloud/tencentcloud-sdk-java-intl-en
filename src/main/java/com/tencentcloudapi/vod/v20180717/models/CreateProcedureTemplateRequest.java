@@ -44,7 +44,7 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
     private MediaProcessTaskInput MediaProcessTask;
 
     /**
-    * Parameter of AI-based content audit task.
+    * Intelligent recognition task
     */
     @SerializedName("AiContentReviewTask")
     @Expose
@@ -120,16 +120,16 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get Parameter of AI-based content audit task. 
-     * @return AiContentReviewTask Parameter of AI-based content audit task.
+     * Get Intelligent recognition task 
+     * @return AiContentReviewTask Intelligent recognition task
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
         return this.AiContentReviewTask;
     }
 
     /**
-     * Set Parameter of AI-based content audit task.
-     * @param AiContentReviewTask Parameter of AI-based content audit task.
+     * Set Intelligent recognition task
+     * @param AiContentReviewTask Intelligent recognition task
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
         this.AiContentReviewTask = AiContentReviewTask;

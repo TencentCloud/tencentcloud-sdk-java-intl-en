@@ -119,6 +119,29 @@ public class TemClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete an application.
+  - Stop the application if it’s running
+  - Delete resources associated with this application
+  - Delele the application
+     * @param req DeleteApplicationRequest
+     * @return DeleteApplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteApplicationResponse DeleteApplication(DeleteApplicationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteApplicationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteApplicationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteApplication");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete an ingress rule.
      * @param req DeleteIngressRequest
      * @return DeleteIngressResponse
@@ -339,6 +362,26 @@ public class TemClient extends AbstractClient{
     }
 
     /**
+     *This API is used to restart an application.
+     * @param req RestartApplicationRequest
+     * @return RestartApplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartApplicationResponse RestartApplication(RestartApplicationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RestartApplicationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RestartApplicationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RestartApplication");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to restart an application pod.
      * @param req RestartApplicationPodRequest
      * @return RestartApplicationPodResponse
@@ -351,6 +394,46 @@ public class TemClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RestartApplicationPodResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RestartApplicationPod");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to configure the rolling update policy for an application.
+     * @param req RollingUpdateApplicationByVersionRequest
+     * @return RollingUpdateApplicationByVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public RollingUpdateApplicationByVersionResponse RollingUpdateApplicationByVersion(RollingUpdateApplicationByVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RollingUpdateApplicationByVersionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RollingUpdateApplicationByVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RollingUpdateApplicationByVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to stop an application.
+     * @param req StopApplicationRequest
+     * @return StopApplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopApplicationResponse StopApplication(StopApplicationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopApplicationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopApplicationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopApplication");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

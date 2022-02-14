@@ -52,15 +52,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Message;
 
     /**
-    * Input of ASR-based porn information detection in speech task in content audit.
+    * Input for ASR-based recognition of pornographic content
     */
     @SerializedName("Input")
     @Expose
     private AiReviewPornAsrTaskInput Input;
 
     /**
-    * Output of ASR-based porn information detection in speech task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Output for ASR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
     */
     @SerializedName("Output")
     @Expose
@@ -135,36 +135,36 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Input of ASR-based porn information detection in speech task in content audit. 
-     * @return Input Input of ASR-based porn information detection in speech task in content audit.
+     * Get Input for ASR-based recognition of pornographic content 
+     * @return Input Input for ASR-based recognition of pornographic content
      */
     public AiReviewPornAsrTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of ASR-based porn information detection in speech task in content audit.
-     * @param Input Input of ASR-based porn information detection in speech task in content audit.
+     * Set Input for ASR-based recognition of pornographic content
+     * @param Input Input for ASR-based recognition of pornographic content
      */
     public void setInput(AiReviewPornAsrTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of ASR-based porn information detection in speech task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output of ASR-based porn information detection in speech task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Output for ASR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found. 
+     * @return Output Output for ASR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public AiReviewPornAsrTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of ASR-based porn information detection in speech task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Output Output of ASR-based porn information detection in speech task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Output for ASR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param Output Output for ASR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public void setOutput(AiReviewPornAsrTaskOutput Output) {
         this.Output = Output;

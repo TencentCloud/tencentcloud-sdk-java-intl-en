@@ -561,6 +561,9 @@ public enum VodErrorCode {
     // The resource does not exist: figure.
      RESOURCENOTFOUND_PERSON("ResourceNotFound.Person"),
      
+    // The service is not activated.
+     RESOURCENOTFOUND_SERVICENOTEXIST("ResourceNotFound.ServiceNotExist"),
+     
     // The resource does not exist: the template does not exist.
      RESOURCENOTFOUND_TEMPLATENOTEXIST("ResourceNotFound.TemplateNotExist"),
      

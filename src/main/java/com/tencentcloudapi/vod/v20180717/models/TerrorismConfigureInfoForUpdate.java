@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class TerrorismConfigureInfoForUpdate extends AbstractModel{
 
     /**
-    * Control parameter of terrorism information detection in video image task.
+    * Parameters for recognition of terrorism content in images
     */
     @SerializedName("ImgReviewInfo")
     @Expose
     private TerrorismImgReviewTemplateInfoForUpdate ImgReviewInfo;
 
     /**
-    * Control parameter of terrorism information detection in text task.
+    * Parameters for OCR-based recognition of terrorism content
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private TerrorismOcrReviewTemplateInfoForUpdate OcrReviewInfo;
 
     /**
-     * Get Control parameter of terrorism information detection in video image task. 
-     * @return ImgReviewInfo Control parameter of terrorism information detection in video image task.
+     * Get Parameters for recognition of terrorism content in images 
+     * @return ImgReviewInfo Parameters for recognition of terrorism content in images
      */
     public TerrorismImgReviewTemplateInfoForUpdate getImgReviewInfo() {
         return this.ImgReviewInfo;
     }
 
     /**
-     * Set Control parameter of terrorism information detection in video image task.
-     * @param ImgReviewInfo Control parameter of terrorism information detection in video image task.
+     * Set Parameters for recognition of terrorism content in images
+     * @param ImgReviewInfo Parameters for recognition of terrorism content in images
      */
     public void setImgReviewInfo(TerrorismImgReviewTemplateInfoForUpdate ImgReviewInfo) {
         this.ImgReviewInfo = ImgReviewInfo;
     }
 
     /**
-     * Get Control parameter of terrorism information detection in text task. 
-     * @return OcrReviewInfo Control parameter of terrorism information detection in text task.
+     * Get Parameters for OCR-based recognition of terrorism content 
+     * @return OcrReviewInfo Parameters for OCR-based recognition of terrorism content
      */
     public TerrorismOcrReviewTemplateInfoForUpdate getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set Control parameter of terrorism information detection in text task.
-     * @param OcrReviewInfo Control parameter of terrorism information detection in text task.
+     * Set Parameters for OCR-based recognition of terrorism content
+     * @param OcrReviewInfo Parameters for OCR-based recognition of terrorism content
      */
     public void setOcrReviewInfo(TerrorismOcrReviewTemplateInfoForUpdate OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

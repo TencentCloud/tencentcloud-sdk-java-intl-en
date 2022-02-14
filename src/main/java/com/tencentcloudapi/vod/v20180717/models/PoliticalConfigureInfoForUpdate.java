@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class PoliticalConfigureInfoForUpdate extends AbstractModel{
 
     /**
-    * Control parameter of politically sensitive information detection in video image.
+    * Parameters for recognition of politically sensitive content in images
     */
     @SerializedName("ImgReviewInfo")
     @Expose
     private PoliticalImgReviewTemplateInfoForUpdate ImgReviewInfo;
 
     /**
-    * Control parameter of politically sensitive information detection in speech.
+    * Parameters for ASR-based recognition of politically sensitive content
     */
     @SerializedName("AsrReviewInfo")
     @Expose
     private PoliticalAsrReviewTemplateInfoForUpdate AsrReviewInfo;
 
     /**
-    * Control parameter of politically sensitive information detection in text.
+    * Parameters for OCR-based recognition of politically sensitive content
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private PoliticalOcrReviewTemplateInfoForUpdate OcrReviewInfo;
 
     /**
-     * Get Control parameter of politically sensitive information detection in video image. 
-     * @return ImgReviewInfo Control parameter of politically sensitive information detection in video image.
+     * Get Parameters for recognition of politically sensitive content in images 
+     * @return ImgReviewInfo Parameters for recognition of politically sensitive content in images
      */
     public PoliticalImgReviewTemplateInfoForUpdate getImgReviewInfo() {
         return this.ImgReviewInfo;
     }
 
     /**
-     * Set Control parameter of politically sensitive information detection in video image.
-     * @param ImgReviewInfo Control parameter of politically sensitive information detection in video image.
+     * Set Parameters for recognition of politically sensitive content in images
+     * @param ImgReviewInfo Parameters for recognition of politically sensitive content in images
      */
     public void setImgReviewInfo(PoliticalImgReviewTemplateInfoForUpdate ImgReviewInfo) {
         this.ImgReviewInfo = ImgReviewInfo;
     }
 
     /**
-     * Get Control parameter of politically sensitive information detection in speech. 
-     * @return AsrReviewInfo Control parameter of politically sensitive information detection in speech.
+     * Get Parameters for ASR-based recognition of politically sensitive content 
+     * @return AsrReviewInfo Parameters for ASR-based recognition of politically sensitive content
      */
     public PoliticalAsrReviewTemplateInfoForUpdate getAsrReviewInfo() {
         return this.AsrReviewInfo;
     }
 
     /**
-     * Set Control parameter of politically sensitive information detection in speech.
-     * @param AsrReviewInfo Control parameter of politically sensitive information detection in speech.
+     * Set Parameters for ASR-based recognition of politically sensitive content
+     * @param AsrReviewInfo Parameters for ASR-based recognition of politically sensitive content
      */
     public void setAsrReviewInfo(PoliticalAsrReviewTemplateInfoForUpdate AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
     }
 
     /**
-     * Get Control parameter of politically sensitive information detection in text. 
-     * @return OcrReviewInfo Control parameter of politically sensitive information detection in text.
+     * Get Parameters for OCR-based recognition of politically sensitive content 
+     * @return OcrReviewInfo Parameters for OCR-based recognition of politically sensitive content
      */
     public PoliticalOcrReviewTemplateInfoForUpdate getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set Control parameter of politically sensitive information detection in text.
-     * @param OcrReviewInfo Control parameter of politically sensitive information detection in text.
+     * Set Parameters for OCR-based recognition of politically sensitive content
+     * @param OcrReviewInfo Parameters for OCR-based recognition of politically sensitive content
      */
     public void setOcrReviewInfo(PoliticalOcrReviewTemplateInfoForUpdate OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

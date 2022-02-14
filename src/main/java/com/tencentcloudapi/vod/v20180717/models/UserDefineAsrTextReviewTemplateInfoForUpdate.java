@@ -23,107 +23,107 @@ import java.util.HashMap;
 public class UserDefineAsrTextReviewTemplateInfoForUpdate extends AbstractModel{
 
     /**
-    * Switch of custom speech audit task. Valid values:
-<li>ON: enables custom speech audit task;</li>
-<li>OFF: disables custom speech audit task.</li>
+    * Whether to enable custom ASR-based recognition. Valid values:
+<li>ON</li>
+<li>OFF</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Custom speech filter tag. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. To use the tag filtering feature, you need to add the corresponding tag when adding materials for custom speech keywords.
-There can be up to 10 tags, each with a length limit of 16 characters.
+    * Filter labels for custom ASR-based recognition. Results containing the specified labels are returned. If no labels are specified, all results are returned. To filter by labels, specify the labels when adding keywords for custom ASR-based recognition.
+Up to 10 labels are allowed, each containing no more than 16 characters.
     */
     @SerializedName("LabelSet")
     @Expose
     private String [] LabelSet;
 
     /**
-    * Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100.
+    * Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. Value range: 0-100
     */
     @SerializedName("BlockConfidence")
     @Expose
     private Long BlockConfidence;
 
     /**
-    * Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0–100.
+    * Confidence score threshold for human review. If this threshold is reached, human review is needed. Value range: 0-100
     */
     @SerializedName("ReviewConfidence")
     @Expose
     private Long ReviewConfidence;
 
     /**
-     * Get Switch of custom speech audit task. Valid values:
-<li>ON: enables custom speech audit task;</li>
-<li>OFF: disables custom speech audit task.</li> 
-     * @return Switch Switch of custom speech audit task. Valid values:
-<li>ON: enables custom speech audit task;</li>
-<li>OFF: disables custom speech audit task.</li>
+     * Get Whether to enable custom ASR-based recognition. Valid values:
+<li>ON</li>
+<li>OFF</li> 
+     * @return Switch Whether to enable custom ASR-based recognition. Valid values:
+<li>ON</li>
+<li>OFF</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch of custom speech audit task. Valid values:
-<li>ON: enables custom speech audit task;</li>
-<li>OFF: disables custom speech audit task.</li>
-     * @param Switch Switch of custom speech audit task. Valid values:
-<li>ON: enables custom speech audit task;</li>
-<li>OFF: disables custom speech audit task.</li>
+     * Set Whether to enable custom ASR-based recognition. Valid values:
+<li>ON</li>
+<li>OFF</li>
+     * @param Switch Whether to enable custom ASR-based recognition. Valid values:
+<li>ON</li>
+<li>OFF</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Custom speech filter tag. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. To use the tag filtering feature, you need to add the corresponding tag when adding materials for custom speech keywords.
-There can be up to 10 tags, each with a length limit of 16 characters. 
-     * @return LabelSet Custom speech filter tag. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. To use the tag filtering feature, you need to add the corresponding tag when adding materials for custom speech keywords.
-There can be up to 10 tags, each with a length limit of 16 characters.
+     * Get Filter labels for custom ASR-based recognition. Results containing the specified labels are returned. If no labels are specified, all results are returned. To filter by labels, specify the labels when adding keywords for custom ASR-based recognition.
+Up to 10 labels are allowed, each containing no more than 16 characters. 
+     * @return LabelSet Filter labels for custom ASR-based recognition. Results containing the specified labels are returned. If no labels are specified, all results are returned. To filter by labels, specify the labels when adding keywords for custom ASR-based recognition.
+Up to 10 labels are allowed, each containing no more than 16 characters.
      */
     public String [] getLabelSet() {
         return this.LabelSet;
     }
 
     /**
-     * Set Custom speech filter tag. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. To use the tag filtering feature, you need to add the corresponding tag when adding materials for custom speech keywords.
-There can be up to 10 tags, each with a length limit of 16 characters.
-     * @param LabelSet Custom speech filter tag. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. To use the tag filtering feature, you need to add the corresponding tag when adding materials for custom speech keywords.
-There can be up to 10 tags, each with a length limit of 16 characters.
+     * Set Filter labels for custom ASR-based recognition. Results containing the specified labels are returned. If no labels are specified, all results are returned. To filter by labels, specify the labels when adding keywords for custom ASR-based recognition.
+Up to 10 labels are allowed, each containing no more than 16 characters.
+     * @param LabelSet Filter labels for custom ASR-based recognition. Results containing the specified labels are returned. If no labels are specified, all results are returned. To filter by labels, specify the labels when adding keywords for custom ASR-based recognition.
+Up to 10 labels are allowed, each containing no more than 16 characters.
      */
     public void setLabelSet(String [] LabelSet) {
         this.LabelSet = LabelSet;
     }
 
     /**
-     * Get Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100. 
-     * @return BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100.
+     * Get Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. Value range: 0-100 
+     * @return BlockConfidence Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. Value range: 0-100
      */
     public Long getBlockConfidence() {
         return this.BlockConfidence;
     }
 
     /**
-     * Set Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100.
-     * @param BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100.
+     * Set Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. Value range: 0-100
+     * @param BlockConfidence Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. Value range: 0-100
      */
     public void setBlockConfidence(Long BlockConfidence) {
         this.BlockConfidence = BlockConfidence;
     }
 
     /**
-     * Get Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0–100. 
-     * @return ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0–100.
+     * Get Confidence score threshold for human review. If this threshold is reached, human review is needed. Value range: 0-100 
+     * @return ReviewConfidence Confidence score threshold for human review. If this threshold is reached, human review is needed. Value range: 0-100
      */
     public Long getReviewConfidence() {
         return this.ReviewConfidence;
     }
 
     /**
-     * Set Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0–100.
-     * @param ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0–100.
+     * Set Confidence score threshold for human review. If this threshold is reached, human review is needed. Value range: 0-100
+     * @param ReviewConfidence Confidence score threshold for human review. If this threshold is reached, human review is needed. Value range: 0-100
      */
     public void setReviewConfidence(Long ReviewConfidence) {
         this.ReviewConfidence = ReviewConfidence;

@@ -23,24 +23,24 @@ import java.util.HashMap;
 public class AiReviewPornAsrTaskOutput extends AbstractModel{
 
     /**
-    * Score of ASR-detected porn information in speech between 0 and 100.
+    * Confidence score for the ASR-detected pornographic content
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Suggestion for ASR-detected porn information in speech. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+    * Processing suggestion for the ASR-detected pornographic content
+<li>pass</li>
+<li>review</li>
+<li>block</li>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * List of video segments that contain ASR-detected porn information
+    * List of video segments that contain ASR-detected pornographic content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
     */
     @SerializedName("SegmentSet")
@@ -48,67 +48,67 @@ public class AiReviewPornAsrTaskOutput extends AbstractModel{
     private MediaContentReviewAsrTextSegmentItem [] SegmentSet;
 
     /**
-    * URL to the file for video segments that contain ASR-detected porn information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+    * URL to the file for video segments that contain ASR-detected pornographic content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
     */
     @SerializedName("SegmentSetFileUrl")
     @Expose
     private String SegmentSetFileUrl;
 
     /**
-    * Expiration time of the URL to the file for video segments that contain ASR-detected porn information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+    * Expiration time of the URL to the file for video segments that contain ASR-detected pornographic content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
     */
     @SerializedName("SegmentSetFileUrlExpireTime")
     @Expose
     private String SegmentSetFileUrlExpireTime;
 
     /**
-     * Get Score of ASR-detected porn information in speech between 0 and 100. 
-     * @return Confidence Score of ASR-detected porn information in speech between 0 and 100.
+     * Get Confidence score for the ASR-detected pornographic content 
+     * @return Confidence Confidence score for the ASR-detected pornographic content
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Score of ASR-detected porn information in speech between 0 and 100.
-     * @param Confidence Score of ASR-detected porn information in speech between 0 and 100.
+     * Set Confidence score for the ASR-detected pornographic content
+     * @param Confidence Confidence score for the ASR-detected pornographic content
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Suggestion for ASR-detected porn information in speech. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li> 
-     * @return Suggestion Suggestion for ASR-detected porn information in speech. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+     * Get Processing suggestion for the ASR-detected pornographic content
+<li>pass</li>
+<li>review</li>
+<li>block</li> 
+     * @return Suggestion Processing suggestion for the ASR-detected pornographic content
+<li>pass</li>
+<li>review</li>
+<li>block</li>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set Suggestion for ASR-detected porn information in speech. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-     * @param Suggestion Suggestion for ASR-detected porn information in speech. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+     * Set Processing suggestion for the ASR-detected pornographic content
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+     * @param Suggestion Processing suggestion for the ASR-detected pornographic content
+<li>pass</li>
+<li>review</li>
+<li>block</li>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get List of video segments that contain ASR-detected porn information
+     * Get List of video segments that contain ASR-detected pornographic content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`. 
-     * @return SegmentSet List of video segments that contain ASR-detected porn information
+     * @return SegmentSet List of video segments that contain ASR-detected pornographic content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
      */
     public MediaContentReviewAsrTextSegmentItem [] getSegmentSet() {
@@ -116,9 +116,9 @@ public class AiReviewPornAsrTaskOutput extends AbstractModel{
     }
 
     /**
-     * Set List of video segments that contain ASR-detected porn information
+     * Set List of video segments that contain ASR-detected pornographic content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
-     * @param SegmentSet List of video segments that contain ASR-detected porn information
+     * @param SegmentSet List of video segments that contain ASR-detected pornographic content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
      */
     public void setSegmentSet(MediaContentReviewAsrTextSegmentItem [] SegmentSet) {
@@ -126,32 +126,32 @@ public class AiReviewPornAsrTaskOutput extends AbstractModel{
     }
 
     /**
-     * Get URL to the file for video segments that contain ASR-detected porn information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`. 
-     * @return SegmentSetFileUrl URL to the file for video segments that contain ASR-detected porn information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+     * Get URL to the file for video segments that contain ASR-detected pornographic content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`. 
+     * @return SegmentSetFileUrl URL to the file for video segments that contain ASR-detected pornographic content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
      */
     public String getSegmentSetFileUrl() {
         return this.SegmentSetFileUrl;
     }
 
     /**
-     * Set URL to the file for video segments that contain ASR-detected porn information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
-     * @param SegmentSetFileUrl URL to the file for video segments that contain ASR-detected porn information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+     * Set URL to the file for video segments that contain ASR-detected pornographic content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+     * @param SegmentSetFileUrl URL to the file for video segments that contain ASR-detected pornographic content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
      */
     public void setSegmentSetFileUrl(String SegmentSetFileUrl) {
         this.SegmentSetFileUrl = SegmentSetFileUrl;
     }
 
     /**
-     * Get Expiration time of the URL to the file for video segments that contain ASR-detected porn information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) 
-     * @return SegmentSetFileUrlExpireTime Expiration time of the URL to the file for video segments that contain ASR-detected porn information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * Get Expiration time of the URL to the file for video segments that contain ASR-detected pornographic content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) 
+     * @return SegmentSetFileUrlExpireTime Expiration time of the URL to the file for video segments that contain ASR-detected pornographic content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
      */
     public String getSegmentSetFileUrlExpireTime() {
         return this.SegmentSetFileUrlExpireTime;
     }
 
     /**
-     * Set Expiration time of the URL to the file for video segments that contain ASR-detected porn information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
-     * @param SegmentSetFileUrlExpireTime Expiration time of the URL to the file for video segments that contain ASR-detected porn information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * Set Expiration time of the URL to the file for video segments that contain ASR-detected pornographic content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * @param SegmentSetFileUrlExpireTime Expiration time of the URL to the file for video segments that contain ASR-detected pornographic content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
      */
     public void setSegmentSetFileUrlExpireTime(String SegmentSetFileUrlExpireTime) {
         this.SegmentSetFileUrlExpireTime = SegmentSetFileUrlExpireTime;

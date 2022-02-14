@@ -23,9 +23,9 @@ import java.util.HashMap;
 public class PornOcrReviewTemplateInfoForUpdate extends AbstractModel{
 
     /**
-    * Switch of porn detection in text task. Valid values:
-<li>ON: enables porn detection in text task;</li>
-<li>OFF: disables porn detection in text task.</li>
+    * Whether to enable OCR-based recognition of pornographic content. Valid values:
+<li>ON</li>
+<li>OFF</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -46,24 +46,24 @@ public class PornOcrReviewTemplateInfoForUpdate extends AbstractModel{
     private Long ReviewConfidence;
 
     /**
-     * Get Switch of porn detection in text task. Valid values:
-<li>ON: enables porn detection in text task;</li>
-<li>OFF: disables porn detection in text task.</li> 
-     * @return Switch Switch of porn detection in text task. Valid values:
-<li>ON: enables porn detection in text task;</li>
-<li>OFF: disables porn detection in text task.</li>
+     * Get Whether to enable OCR-based recognition of pornographic content. Valid values:
+<li>ON</li>
+<li>OFF</li> 
+     * @return Switch Whether to enable OCR-based recognition of pornographic content. Valid values:
+<li>ON</li>
+<li>OFF</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch of porn detection in text task. Valid values:
-<li>ON: enables porn detection in text task;</li>
-<li>OFF: disables porn detection in text task.</li>
-     * @param Switch Switch of porn detection in text task. Valid values:
-<li>ON: enables porn detection in text task;</li>
-<li>OFF: disables porn detection in text task.</li>
+     * Set Whether to enable OCR-based recognition of pornographic content. Valid values:
+<li>ON</li>
+<li>OFF</li>
+     * @param Switch Whether to enable OCR-based recognition of pornographic content. Valid values:
+<li>ON</li>
+<li>OFF</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

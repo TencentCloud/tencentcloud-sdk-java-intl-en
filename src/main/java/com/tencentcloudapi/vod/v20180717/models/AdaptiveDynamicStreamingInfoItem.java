@@ -51,6 +51,16 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
     private String Url;
 
     /**
+    * File size (bytes)
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+<li>If the file is a DASH file, the value of this parameter is the sum of the size of the MPD and segment files.</li>
+<li><font color=red>Note</font>: For adaptive bitrate streaming files generated before 2022-01-10T16:00:00Z, the value of this parameter is `0`.</li>
+    */
+    @SerializedName("Size")
+    @Expose
+    private Long Size;
+
+    /**
      * Get Adaptive bitrate streaming specification. 
      * @return Definition Adaptive bitrate streaming specification.
      */
@@ -114,6 +124,34 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
         this.Url = Url;
     }
 
+    /**
+     * Get File size (bytes)
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+<li>If the file is a DASH file, the value of this parameter is the sum of the size of the MPD and segment files.</li>
+<li><font color=red>Note</font>: For adaptive bitrate streaming files generated before 2022-01-10T16:00:00Z, the value of this parameter is `0`.</li> 
+     * @return Size File size (bytes)
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+<li>If the file is a DASH file, the value of this parameter is the sum of the size of the MPD and segment files.</li>
+<li><font color=red>Note</font>: For adaptive bitrate streaming files generated before 2022-01-10T16:00:00Z, the value of this parameter is `0`.</li>
+     */
+    public Long getSize() {
+        return this.Size;
+    }
+
+    /**
+     * Set File size (bytes)
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+<li>If the file is a DASH file, the value of this parameter is the sum of the size of the MPD and segment files.</li>
+<li><font color=red>Note</font>: For adaptive bitrate streaming files generated before 2022-01-10T16:00:00Z, the value of this parameter is `0`.</li>
+     * @param Size File size (bytes)
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+<li>If the file is a DASH file, the value of this parameter is the sum of the size of the MPD and segment files.</li>
+<li><font color=red>Note</font>: For adaptive bitrate streaming files generated before 2022-01-10T16:00:00Z, the value of this parameter is `0`.</li>
+     */
+    public void setSize(Long Size) {
+        this.Size = Size;
+    }
+
     public AdaptiveDynamicStreamingInfoItem() {
     }
 
@@ -134,6 +172,9 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.Size != null) {
+            this.Size = new Long(source.Size);
+        }
     }
 
 
@@ -145,6 +186,7 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Package", this.Package);
         this.setParamSimple(map, prefix + "DrmType", this.DrmType);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "Size", this.Size);
 
     }
 }

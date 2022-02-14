@@ -51,15 +51,15 @@ public class AiReviewTaskProhibitedAsrResult extends AbstractModel{
     private String Message;
 
     /**
-    * Input of ASR-based prohibited information detection in speech task in content audit
+    * Input for ASR-based recognition of banned content
     */
     @SerializedName("Input")
     @Expose
     private AiReviewProhibitedAsrTaskInput Input;
 
     /**
-    * Output of ASR-based prohibited information detection in speech task in content audit
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Output for ASR-based recognition of banned content
+Note: This field may return `null`, indicating that no valid value can be found.
     */
     @SerializedName("Output")
     @Expose
@@ -130,36 +130,36 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Input of ASR-based prohibited information detection in speech task in content audit 
-     * @return Input Input of ASR-based prohibited information detection in speech task in content audit
+     * Get Input for ASR-based recognition of banned content 
+     * @return Input Input for ASR-based recognition of banned content
      */
     public AiReviewProhibitedAsrTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of ASR-based prohibited information detection in speech task in content audit
-     * @param Input Input of ASR-based prohibited information detection in speech task in content audit
+     * Set Input for ASR-based recognition of banned content
+     * @param Input Input for ASR-based recognition of banned content
      */
     public void setInput(AiReviewProhibitedAsrTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of ASR-based prohibited information detection in speech task in content audit
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output of ASR-based prohibited information detection in speech task in content audit
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Output for ASR-based recognition of banned content
+Note: This field may return `null`, indicating that no valid value can be found. 
+     * @return Output Output for ASR-based recognition of banned content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public AiReviewProhibitedAsrTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of ASR-based prohibited information detection in speech task in content audit
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Output Output of ASR-based prohibited information detection in speech task in content audit
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Output for ASR-based recognition of banned content
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param Output Output for ASR-based recognition of banned content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public void setOutput(AiReviewProhibitedAsrTaskOutput Output) {
         this.Output = Output;

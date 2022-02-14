@@ -23,13 +23,14 @@ import java.util.HashMap;
 public class TaskStatData extends AbstractModel{
 
     /**
-    * Task type.
-<li>Transcoding: basic transcoding</li>
-<li>Transcoding-TESHD: TESHD transcoding</li>
-<li>Editing: video editing</li>
-<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
-<li>ContentAudit: content moderation</li>
-<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
+    * Task type
+<li>`Transcoding`: basic transcoding</li>
+<li>`Transcoding-TESHD`: TESHD transcoding</li>
+<li>`Editing`: video editing</li>
+<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
+<li>`ContentAudit`: content moderation</li>
+<li>`RemoveWatermark`: watermark removal</li>
+<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -43,81 +44,92 @@ public class TaskStatData extends AbstractModel{
     private TaskStatDataItem [] Summary;
 
     /**
-    * Detailed statistics of tasks with different specifications.
-Transcoding specification:
-<li>Remuxing: remuxing</li>
-<li>Audio: audio transcoding</li>
-<li>Standard.H264.SD: H.264 SD transcoding</li>
-<li>Standard.H264.HD: H.264 HD transcoding</li>
-<li>Standard.H264.FHD: H.264 FHD transcoding</li>
-<li>Standard.H264.2K: H.264 2K transcoding</li>
-<li>Standard.H264.4K: H.264 4K transcoding</li>
-<li>Standard.H265.SD: H.265 SD transcoding</li>
-<li>Standard.H265.HD: H.265 HD transcoding</li>
-<li>Standard.H265.FHD: H.265 FHD transcoding</li>
-<li>Standard.H265.2K: H.265 2K transcoding</li>
-<li>Standard.H265.4K: H.265 4K transcoding</li>
-<li>TESHD-10.H264.SD: H.264 SD TESHD transcoding</li>
-<li>TESHD-10.H264.HD: H.264 HD TESHD transcoding</li>
-<li>TESHD-10.H264.FHD: H.264 FHD TESHD transcoding</li>
-<li>TESHD-10.H264.2K: H.264 2K TESHD transcoding</li>
-<li>TESHD-10.H264.4K: H.264 4K TESHD transcoding</li>
-<li>TESHD-10.H265.SD: H.265 SD TESHD transcoding</li>
-<li>TESHD-10.H265.HD: H.265 HD TESHD transcoding</li>
-<li>TESHD-10.H265.FHD: H.265 FHD TESHD transcoding</li>
-<li>TESHD-10.H265.2K: H.265 2K TESHD transcoding</li>
-<li>TESHD-10.H265.4K: H.265 4K TESHD transcoding</li>
-<li>Edit.Audio: audio editing</li>
-<li>Edit.H264.SD: H.264 SD video editing</li>
-<li>Edit.H264.HD: H.264 HD video editing</li>
-<li>Edit.H264.FHD: H.264 FHD video editing</li>
-<li>Edit.H264.2K: H.264 2K video editing</li>
-<li>Edit.H264.4K: H.264 4K video editing</li>
-<li>Edit.H265.SD: H.265 SD video editing</li>
-<li>Edit.H265.HD: H.265 HD video editing</li>
-<li>Edit.H265.FHD: H.265 FHD video editing</li>
-<li>Edit.H265.2K: H.265 2K video editing</li>
-<li>Edit.H265.4K: H.265 4K video editing</li>
+    * Detailed statistics of different tasks
+Transcoding statistics:
+<li>Remuxing</li>
+<li>Audio</li>
+<li>Standard.H264.SD</li>
+<li>Standard.H264.HD</li>
+<li>Standard.H264.FHD</li>
+<li>Standard.H264.2K</li>
+<li>Standard.H264.4K</li>
+<li>Standard.H265.SD</li>
+<li>Standard.H265.HD</li>
+<li>Standard.H265.FHD</li>
+<li>Standard.H265.2K</li>
+<li>Standard.H265.4K</li>
+<li>TESHD-10.H264.SD</li>
+<li>TESHD-10.H264.HD</li>
+<li>TESHD-10.H264.FHD</li>
+<li>TESHD-10.H264.2K</li>
+<li>TESHD-10.H264.4K</li>
+<li>TESHD-10.H265.SD</li>
+<li>TESHD-10.H265.HD</li>
+<li>TESHD-10.H265.FHD</li>
+<li>TESHD-10.H265.2K</li>
+<li>TESHD-10.H265.4K</li>
+<li>Edit.Audio</li>
+<li>Edit.H264.SD</li>
+<li>Edit.H264.HD</li>
+<li>Edit.H264.FHD</li>
+<li>Edit.H264.2K</li>
+<li>Edit.H264.4K</li>
+<li>Edit.H265.SD</li>
+<li>Edit.H265.HD</li>
+<li>Edit.H265.FHD</li>
+<li>Edit.H265.2K</li>
+<li>Edit.H265.4K</li>
+Watermark removal:
+<li>`480P`: 640 × 480 and below</li>
+<li>`720P`: 1280 × 720 and below</li>
+<li>`1080P`: 1920 × 1080 and below</li>
+<li>`2K`: 2560 × 1440 and below</li>
+<li>`4K`: 3840 × 2160 and below</li>
+<li>`8K`: 7680 × 4320 and below</li>
     */
     @SerializedName("Details")
     @Expose
     private SpecificationDataItem [] Details;
 
     /**
-     * Get Task type.
-<li>Transcoding: basic transcoding</li>
-<li>Transcoding-TESHD: TESHD transcoding</li>
-<li>Editing: video editing</li>
-<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
-<li>ContentAudit: content moderation</li>
-<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li> 
-     * @return TaskType Task type.
-<li>Transcoding: basic transcoding</li>
-<li>Transcoding-TESHD: TESHD transcoding</li>
-<li>Editing: video editing</li>
-<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
-<li>ContentAudit: content moderation</li>
-<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
+     * Get Task type
+<li>`Transcoding`: basic transcoding</li>
+<li>`Transcoding-TESHD`: TESHD transcoding</li>
+<li>`Editing`: video editing</li>
+<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
+<li>`ContentAudit`: content moderation</li>
+<li>`RemoveWatermark`: watermark removal</li>
+<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li> 
+     * @return TaskType Task type
+<li>`Transcoding`: basic transcoding</li>
+<li>`Transcoding-TESHD`: TESHD transcoding</li>
+<li>`Editing`: video editing</li>
+<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
+<li>`ContentAudit`: content moderation</li>
+<li>`RemoveWatermark`: watermark removal</li>
+<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set Task type.
-<li>Transcoding: basic transcoding</li>
-<li>Transcoding-TESHD: TESHD transcoding</li>
-<li>Editing: video editing</li>
-<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
-<li>ContentAudit: content moderation</li>
-<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
-     * @param TaskType Task type.
-<li>Transcoding: basic transcoding</li>
-<li>Transcoding-TESHD: TESHD transcoding</li>
-<li>Editing: video editing</li>
-<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
-<li>ContentAudit: content moderation</li>
-<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
+     * Set Task type
+<li>`Transcoding`: basic transcoding</li>
+<li>`Transcoding-TESHD`: TESHD transcoding</li>
+<li>`Editing`: video editing</li>
+<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
+<li>`ContentAudit`: content moderation</li>
+<li>`RemoveWatermark`: watermark removal</li>
+<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
+     * @param TaskType Task type
+<li>`Transcoding`: basic transcoding</li>
+<li>`Transcoding-TESHD`: TESHD transcoding</li>
+<li>`Editing`: video editing</li>
+<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
+<li>`ContentAudit`: content moderation</li>
+<li>`RemoveWatermark`: watermark removal</li>
+<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
@@ -140,152 +152,180 @@ Transcoding specification:
     }
 
     /**
-     * Get Detailed statistics of tasks with different specifications.
-Transcoding specification:
-<li>Remuxing: remuxing</li>
-<li>Audio: audio transcoding</li>
-<li>Standard.H264.SD: H.264 SD transcoding</li>
-<li>Standard.H264.HD: H.264 HD transcoding</li>
-<li>Standard.H264.FHD: H.264 FHD transcoding</li>
-<li>Standard.H264.2K: H.264 2K transcoding</li>
-<li>Standard.H264.4K: H.264 4K transcoding</li>
-<li>Standard.H265.SD: H.265 SD transcoding</li>
-<li>Standard.H265.HD: H.265 HD transcoding</li>
-<li>Standard.H265.FHD: H.265 FHD transcoding</li>
-<li>Standard.H265.2K: H.265 2K transcoding</li>
-<li>Standard.H265.4K: H.265 4K transcoding</li>
-<li>TESHD-10.H264.SD: H.264 SD TESHD transcoding</li>
-<li>TESHD-10.H264.HD: H.264 HD TESHD transcoding</li>
-<li>TESHD-10.H264.FHD: H.264 FHD TESHD transcoding</li>
-<li>TESHD-10.H264.2K: H.264 2K TESHD transcoding</li>
-<li>TESHD-10.H264.4K: H.264 4K TESHD transcoding</li>
-<li>TESHD-10.H265.SD: H.265 SD TESHD transcoding</li>
-<li>TESHD-10.H265.HD: H.265 HD TESHD transcoding</li>
-<li>TESHD-10.H265.FHD: H.265 FHD TESHD transcoding</li>
-<li>TESHD-10.H265.2K: H.265 2K TESHD transcoding</li>
-<li>TESHD-10.H265.4K: H.265 4K TESHD transcoding</li>
-<li>Edit.Audio: audio editing</li>
-<li>Edit.H264.SD: H.264 SD video editing</li>
-<li>Edit.H264.HD: H.264 HD video editing</li>
-<li>Edit.H264.FHD: H.264 FHD video editing</li>
-<li>Edit.H264.2K: H.264 2K video editing</li>
-<li>Edit.H264.4K: H.264 4K video editing</li>
-<li>Edit.H265.SD: H.265 SD video editing</li>
-<li>Edit.H265.HD: H.265 HD video editing</li>
-<li>Edit.H265.FHD: H.265 FHD video editing</li>
-<li>Edit.H265.2K: H.265 2K video editing</li>
-<li>Edit.H265.4K: H.265 4K video editing</li> 
-     * @return Details Detailed statistics of tasks with different specifications.
-Transcoding specification:
-<li>Remuxing: remuxing</li>
-<li>Audio: audio transcoding</li>
-<li>Standard.H264.SD: H.264 SD transcoding</li>
-<li>Standard.H264.HD: H.264 HD transcoding</li>
-<li>Standard.H264.FHD: H.264 FHD transcoding</li>
-<li>Standard.H264.2K: H.264 2K transcoding</li>
-<li>Standard.H264.4K: H.264 4K transcoding</li>
-<li>Standard.H265.SD: H.265 SD transcoding</li>
-<li>Standard.H265.HD: H.265 HD transcoding</li>
-<li>Standard.H265.FHD: H.265 FHD transcoding</li>
-<li>Standard.H265.2K: H.265 2K transcoding</li>
-<li>Standard.H265.4K: H.265 4K transcoding</li>
-<li>TESHD-10.H264.SD: H.264 SD TESHD transcoding</li>
-<li>TESHD-10.H264.HD: H.264 HD TESHD transcoding</li>
-<li>TESHD-10.H264.FHD: H.264 FHD TESHD transcoding</li>
-<li>TESHD-10.H264.2K: H.264 2K TESHD transcoding</li>
-<li>TESHD-10.H264.4K: H.264 4K TESHD transcoding</li>
-<li>TESHD-10.H265.SD: H.265 SD TESHD transcoding</li>
-<li>TESHD-10.H265.HD: H.265 HD TESHD transcoding</li>
-<li>TESHD-10.H265.FHD: H.265 FHD TESHD transcoding</li>
-<li>TESHD-10.H265.2K: H.265 2K TESHD transcoding</li>
-<li>TESHD-10.H265.4K: H.265 4K TESHD transcoding</li>
-<li>Edit.Audio: audio editing</li>
-<li>Edit.H264.SD: H.264 SD video editing</li>
-<li>Edit.H264.HD: H.264 HD video editing</li>
-<li>Edit.H264.FHD: H.264 FHD video editing</li>
-<li>Edit.H264.2K: H.264 2K video editing</li>
-<li>Edit.H264.4K: H.264 4K video editing</li>
-<li>Edit.H265.SD: H.265 SD video editing</li>
-<li>Edit.H265.HD: H.265 HD video editing</li>
-<li>Edit.H265.FHD: H.265 FHD video editing</li>
-<li>Edit.H265.2K: H.265 2K video editing</li>
-<li>Edit.H265.4K: H.265 4K video editing</li>
+     * Get Detailed statistics of different tasks
+Transcoding statistics:
+<li>Remuxing</li>
+<li>Audio</li>
+<li>Standard.H264.SD</li>
+<li>Standard.H264.HD</li>
+<li>Standard.H264.FHD</li>
+<li>Standard.H264.2K</li>
+<li>Standard.H264.4K</li>
+<li>Standard.H265.SD</li>
+<li>Standard.H265.HD</li>
+<li>Standard.H265.FHD</li>
+<li>Standard.H265.2K</li>
+<li>Standard.H265.4K</li>
+<li>TESHD-10.H264.SD</li>
+<li>TESHD-10.H264.HD</li>
+<li>TESHD-10.H264.FHD</li>
+<li>TESHD-10.H264.2K</li>
+<li>TESHD-10.H264.4K</li>
+<li>TESHD-10.H265.SD</li>
+<li>TESHD-10.H265.HD</li>
+<li>TESHD-10.H265.FHD</li>
+<li>TESHD-10.H265.2K</li>
+<li>TESHD-10.H265.4K</li>
+<li>Edit.Audio</li>
+<li>Edit.H264.SD</li>
+<li>Edit.H264.HD</li>
+<li>Edit.H264.FHD</li>
+<li>Edit.H264.2K</li>
+<li>Edit.H264.4K</li>
+<li>Edit.H265.SD</li>
+<li>Edit.H265.HD</li>
+<li>Edit.H265.FHD</li>
+<li>Edit.H265.2K</li>
+<li>Edit.H265.4K</li>
+Watermark removal:
+<li>`480P`: 640 × 480 and below</li>
+<li>`720P`: 1280 × 720 and below</li>
+<li>`1080P`: 1920 × 1080 and below</li>
+<li>`2K`: 2560 × 1440 and below</li>
+<li>`4K`: 3840 × 2160 and below</li>
+<li>`8K`: 7680 × 4320 and below</li> 
+     * @return Details Detailed statistics of different tasks
+Transcoding statistics:
+<li>Remuxing</li>
+<li>Audio</li>
+<li>Standard.H264.SD</li>
+<li>Standard.H264.HD</li>
+<li>Standard.H264.FHD</li>
+<li>Standard.H264.2K</li>
+<li>Standard.H264.4K</li>
+<li>Standard.H265.SD</li>
+<li>Standard.H265.HD</li>
+<li>Standard.H265.FHD</li>
+<li>Standard.H265.2K</li>
+<li>Standard.H265.4K</li>
+<li>TESHD-10.H264.SD</li>
+<li>TESHD-10.H264.HD</li>
+<li>TESHD-10.H264.FHD</li>
+<li>TESHD-10.H264.2K</li>
+<li>TESHD-10.H264.4K</li>
+<li>TESHD-10.H265.SD</li>
+<li>TESHD-10.H265.HD</li>
+<li>TESHD-10.H265.FHD</li>
+<li>TESHD-10.H265.2K</li>
+<li>TESHD-10.H265.4K</li>
+<li>Edit.Audio</li>
+<li>Edit.H264.SD</li>
+<li>Edit.H264.HD</li>
+<li>Edit.H264.FHD</li>
+<li>Edit.H264.2K</li>
+<li>Edit.H264.4K</li>
+<li>Edit.H265.SD</li>
+<li>Edit.H265.HD</li>
+<li>Edit.H265.FHD</li>
+<li>Edit.H265.2K</li>
+<li>Edit.H265.4K</li>
+Watermark removal:
+<li>`480P`: 640 × 480 and below</li>
+<li>`720P`: 1280 × 720 and below</li>
+<li>`1080P`: 1920 × 1080 and below</li>
+<li>`2K`: 2560 × 1440 and below</li>
+<li>`4K`: 3840 × 2160 and below</li>
+<li>`8K`: 7680 × 4320 and below</li>
      */
     public SpecificationDataItem [] getDetails() {
         return this.Details;
     }
 
     /**
-     * Set Detailed statistics of tasks with different specifications.
-Transcoding specification:
-<li>Remuxing: remuxing</li>
-<li>Audio: audio transcoding</li>
-<li>Standard.H264.SD: H.264 SD transcoding</li>
-<li>Standard.H264.HD: H.264 HD transcoding</li>
-<li>Standard.H264.FHD: H.264 FHD transcoding</li>
-<li>Standard.H264.2K: H.264 2K transcoding</li>
-<li>Standard.H264.4K: H.264 4K transcoding</li>
-<li>Standard.H265.SD: H.265 SD transcoding</li>
-<li>Standard.H265.HD: H.265 HD transcoding</li>
-<li>Standard.H265.FHD: H.265 FHD transcoding</li>
-<li>Standard.H265.2K: H.265 2K transcoding</li>
-<li>Standard.H265.4K: H.265 4K transcoding</li>
-<li>TESHD-10.H264.SD: H.264 SD TESHD transcoding</li>
-<li>TESHD-10.H264.HD: H.264 HD TESHD transcoding</li>
-<li>TESHD-10.H264.FHD: H.264 FHD TESHD transcoding</li>
-<li>TESHD-10.H264.2K: H.264 2K TESHD transcoding</li>
-<li>TESHD-10.H264.4K: H.264 4K TESHD transcoding</li>
-<li>TESHD-10.H265.SD: H.265 SD TESHD transcoding</li>
-<li>TESHD-10.H265.HD: H.265 HD TESHD transcoding</li>
-<li>TESHD-10.H265.FHD: H.265 FHD TESHD transcoding</li>
-<li>TESHD-10.H265.2K: H.265 2K TESHD transcoding</li>
-<li>TESHD-10.H265.4K: H.265 4K TESHD transcoding</li>
-<li>Edit.Audio: audio editing</li>
-<li>Edit.H264.SD: H.264 SD video editing</li>
-<li>Edit.H264.HD: H.264 HD video editing</li>
-<li>Edit.H264.FHD: H.264 FHD video editing</li>
-<li>Edit.H264.2K: H.264 2K video editing</li>
-<li>Edit.H264.4K: H.264 4K video editing</li>
-<li>Edit.H265.SD: H.265 SD video editing</li>
-<li>Edit.H265.HD: H.265 HD video editing</li>
-<li>Edit.H265.FHD: H.265 FHD video editing</li>
-<li>Edit.H265.2K: H.265 2K video editing</li>
-<li>Edit.H265.4K: H.265 4K video editing</li>
-     * @param Details Detailed statistics of tasks with different specifications.
-Transcoding specification:
-<li>Remuxing: remuxing</li>
-<li>Audio: audio transcoding</li>
-<li>Standard.H264.SD: H.264 SD transcoding</li>
-<li>Standard.H264.HD: H.264 HD transcoding</li>
-<li>Standard.H264.FHD: H.264 FHD transcoding</li>
-<li>Standard.H264.2K: H.264 2K transcoding</li>
-<li>Standard.H264.4K: H.264 4K transcoding</li>
-<li>Standard.H265.SD: H.265 SD transcoding</li>
-<li>Standard.H265.HD: H.265 HD transcoding</li>
-<li>Standard.H265.FHD: H.265 FHD transcoding</li>
-<li>Standard.H265.2K: H.265 2K transcoding</li>
-<li>Standard.H265.4K: H.265 4K transcoding</li>
-<li>TESHD-10.H264.SD: H.264 SD TESHD transcoding</li>
-<li>TESHD-10.H264.HD: H.264 HD TESHD transcoding</li>
-<li>TESHD-10.H264.FHD: H.264 FHD TESHD transcoding</li>
-<li>TESHD-10.H264.2K: H.264 2K TESHD transcoding</li>
-<li>TESHD-10.H264.4K: H.264 4K TESHD transcoding</li>
-<li>TESHD-10.H265.SD: H.265 SD TESHD transcoding</li>
-<li>TESHD-10.H265.HD: H.265 HD TESHD transcoding</li>
-<li>TESHD-10.H265.FHD: H.265 FHD TESHD transcoding</li>
-<li>TESHD-10.H265.2K: H.265 2K TESHD transcoding</li>
-<li>TESHD-10.H265.4K: H.265 4K TESHD transcoding</li>
-<li>Edit.Audio: audio editing</li>
-<li>Edit.H264.SD: H.264 SD video editing</li>
-<li>Edit.H264.HD: H.264 HD video editing</li>
-<li>Edit.H264.FHD: H.264 FHD video editing</li>
-<li>Edit.H264.2K: H.264 2K video editing</li>
-<li>Edit.H264.4K: H.264 4K video editing</li>
-<li>Edit.H265.SD: H.265 SD video editing</li>
-<li>Edit.H265.HD: H.265 HD video editing</li>
-<li>Edit.H265.FHD: H.265 FHD video editing</li>
-<li>Edit.H265.2K: H.265 2K video editing</li>
-<li>Edit.H265.4K: H.265 4K video editing</li>
+     * Set Detailed statistics of different tasks
+Transcoding statistics:
+<li>Remuxing</li>
+<li>Audio</li>
+<li>Standard.H264.SD</li>
+<li>Standard.H264.HD</li>
+<li>Standard.H264.FHD</li>
+<li>Standard.H264.2K</li>
+<li>Standard.H264.4K</li>
+<li>Standard.H265.SD</li>
+<li>Standard.H265.HD</li>
+<li>Standard.H265.FHD</li>
+<li>Standard.H265.2K</li>
+<li>Standard.H265.4K</li>
+<li>TESHD-10.H264.SD</li>
+<li>TESHD-10.H264.HD</li>
+<li>TESHD-10.H264.FHD</li>
+<li>TESHD-10.H264.2K</li>
+<li>TESHD-10.H264.4K</li>
+<li>TESHD-10.H265.SD</li>
+<li>TESHD-10.H265.HD</li>
+<li>TESHD-10.H265.FHD</li>
+<li>TESHD-10.H265.2K</li>
+<li>TESHD-10.H265.4K</li>
+<li>Edit.Audio</li>
+<li>Edit.H264.SD</li>
+<li>Edit.H264.HD</li>
+<li>Edit.H264.FHD</li>
+<li>Edit.H264.2K</li>
+<li>Edit.H264.4K</li>
+<li>Edit.H265.SD</li>
+<li>Edit.H265.HD</li>
+<li>Edit.H265.FHD</li>
+<li>Edit.H265.2K</li>
+<li>Edit.H265.4K</li>
+Watermark removal:
+<li>`480P`: 640 × 480 and below</li>
+<li>`720P`: 1280 × 720 and below</li>
+<li>`1080P`: 1920 × 1080 and below</li>
+<li>`2K`: 2560 × 1440 and below</li>
+<li>`4K`: 3840 × 2160 and below</li>
+<li>`8K`: 7680 × 4320 and below</li>
+     * @param Details Detailed statistics of different tasks
+Transcoding statistics:
+<li>Remuxing</li>
+<li>Audio</li>
+<li>Standard.H264.SD</li>
+<li>Standard.H264.HD</li>
+<li>Standard.H264.FHD</li>
+<li>Standard.H264.2K</li>
+<li>Standard.H264.4K</li>
+<li>Standard.H265.SD</li>
+<li>Standard.H265.HD</li>
+<li>Standard.H265.FHD</li>
+<li>Standard.H265.2K</li>
+<li>Standard.H265.4K</li>
+<li>TESHD-10.H264.SD</li>
+<li>TESHD-10.H264.HD</li>
+<li>TESHD-10.H264.FHD</li>
+<li>TESHD-10.H264.2K</li>
+<li>TESHD-10.H264.4K</li>
+<li>TESHD-10.H265.SD</li>
+<li>TESHD-10.H265.HD</li>
+<li>TESHD-10.H265.FHD</li>
+<li>TESHD-10.H265.2K</li>
+<li>TESHD-10.H265.4K</li>
+<li>Edit.Audio</li>
+<li>Edit.H264.SD</li>
+<li>Edit.H264.HD</li>
+<li>Edit.H264.FHD</li>
+<li>Edit.H264.2K</li>
+<li>Edit.H264.4K</li>
+<li>Edit.H265.SD</li>
+<li>Edit.H265.HD</li>
+<li>Edit.H265.FHD</li>
+<li>Edit.H265.2K</li>
+<li>Edit.H265.4K</li>
+Watermark removal:
+<li>`480P`: 640 × 480 and below</li>
+<li>`720P`: 1280 × 720 and below</li>
+<li>`1080P`: 1920 × 1080 and below</li>
+<li>`2K`: 2560 × 1440 and below</li>
+<li>`4K`: 3840 × 2160 and below</li>
+<li>`8K`: 7680 × 4320 and below</li>
      */
     public void setDetails(SpecificationDataItem [] Details) {
         this.Details = Details;

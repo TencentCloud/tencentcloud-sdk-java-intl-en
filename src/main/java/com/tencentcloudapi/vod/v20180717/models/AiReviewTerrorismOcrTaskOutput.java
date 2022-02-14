@@ -23,24 +23,24 @@ import java.util.HashMap;
 public class AiReviewTerrorismOcrTaskOutput extends AbstractModel{
 
     /**
-    * Score of OCR-detected terrorism information in text between 0 and 100.
+    * Confidence score for the OCR-detected terrorism content. Value range: 0-100
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Suggestion for OCR-detected terrorism information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+    * Processing suggestion for the OCR-detected terrorism content
+<li>pass</li>
+<li>review</li>
+<li>block</li>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * List of video segments that contain OCR-detected terrorism information
+    * List of video segments that contain OCR-detected terrorism content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
     */
     @SerializedName("SegmentSet")
@@ -48,67 +48,67 @@ public class AiReviewTerrorismOcrTaskOutput extends AbstractModel{
     private MediaContentReviewOcrTextSegmentItem [] SegmentSet;
 
     /**
-    * URL to the file for video segments that contain OCR-detected terrorism information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+    * URL to the file for video segments that contain OCR-detected terrorism content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
     */
     @SerializedName("SegmentSetFileUrl")
     @Expose
     private String SegmentSetFileUrl;
 
     /**
-    * Expiration time of the URL to the file for video segments that contain OCR-detected terrorism information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+    * Expiration time of the URL to the file for video segments that contain OCR-detected terrorism content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
     */
     @SerializedName("SegmentSetFileUrlExpireTime")
     @Expose
     private String SegmentSetFileUrlExpireTime;
 
     /**
-     * Get Score of OCR-detected terrorism information in text between 0 and 100. 
-     * @return Confidence Score of OCR-detected terrorism information in text between 0 and 100.
+     * Get Confidence score for the OCR-detected terrorism content. Value range: 0-100 
+     * @return Confidence Confidence score for the OCR-detected terrorism content. Value range: 0-100
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Score of OCR-detected terrorism information in text between 0 and 100.
-     * @param Confidence Score of OCR-detected terrorism information in text between 0 and 100.
+     * Set Confidence score for the OCR-detected terrorism content. Value range: 0-100
+     * @param Confidence Confidence score for the OCR-detected terrorism content. Value range: 0-100
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Suggestion for OCR-detected terrorism information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li> 
-     * @return Suggestion Suggestion for OCR-detected terrorism information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+     * Get Processing suggestion for the OCR-detected terrorism content
+<li>pass</li>
+<li>review</li>
+<li>block</li> 
+     * @return Suggestion Processing suggestion for the OCR-detected terrorism content
+<li>pass</li>
+<li>review</li>
+<li>block</li>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set Suggestion for OCR-detected terrorism information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-     * @param Suggestion Suggestion for OCR-detected terrorism information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+     * Set Processing suggestion for the OCR-detected terrorism content
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+     * @param Suggestion Processing suggestion for the OCR-detected terrorism content
+<li>pass</li>
+<li>review</li>
+<li>block</li>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get List of video segments that contain OCR-detected terrorism information
+     * Get List of video segments that contain OCR-detected terrorism content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`. 
-     * @return SegmentSet List of video segments that contain OCR-detected terrorism information
+     * @return SegmentSet List of video segments that contain OCR-detected terrorism content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
      */
     public MediaContentReviewOcrTextSegmentItem [] getSegmentSet() {
@@ -116,9 +116,9 @@ public class AiReviewTerrorismOcrTaskOutput extends AbstractModel{
     }
 
     /**
-     * Set List of video segments that contain OCR-detected terrorism information
+     * Set List of video segments that contain OCR-detected terrorism content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
-     * @param SegmentSet List of video segments that contain OCR-detected terrorism information
+     * @param SegmentSet List of video segments that contain OCR-detected terrorism content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
      */
     public void setSegmentSet(MediaContentReviewOcrTextSegmentItem [] SegmentSet) {
@@ -126,32 +126,32 @@ public class AiReviewTerrorismOcrTaskOutput extends AbstractModel{
     }
 
     /**
-     * Get URL to the file for video segments that contain OCR-detected terrorism information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`. 
-     * @return SegmentSetFileUrl URL to the file for video segments that contain OCR-detected terrorism information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+     * Get URL to the file for video segments that contain OCR-detected terrorism content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`. 
+     * @return SegmentSetFileUrl URL to the file for video segments that contain OCR-detected terrorism content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
      */
     public String getSegmentSetFileUrl() {
         return this.SegmentSetFileUrl;
     }
 
     /**
-     * Set URL to the file for video segments that contain OCR-detected terrorism information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
-     * @param SegmentSetFileUrl URL to the file for video segments that contain OCR-detected terrorism information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+     * Set URL to the file for video segments that contain OCR-detected terrorism content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+     * @param SegmentSetFileUrl URL to the file for video segments that contain OCR-detected terrorism content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
      */
     public void setSegmentSetFileUrl(String SegmentSetFileUrl) {
         this.SegmentSetFileUrl = SegmentSetFileUrl;
     }
 
     /**
-     * Get Expiration time of the URL to the file for video segments that contain OCR-detected terrorism information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) 
-     * @return SegmentSetFileUrlExpireTime Expiration time of the URL to the file for video segments that contain OCR-detected terrorism information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * Get Expiration time of the URL to the file for video segments that contain OCR-detected terrorism content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) 
+     * @return SegmentSetFileUrlExpireTime Expiration time of the URL to the file for video segments that contain OCR-detected terrorism content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
      */
     public String getSegmentSetFileUrlExpireTime() {
         return this.SegmentSetFileUrlExpireTime;
     }
 
     /**
-     * Set Expiration time of the URL to the file for video segments that contain OCR-detected terrorism information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
-     * @param SegmentSetFileUrlExpireTime Expiration time of the URL to the file for video segments that contain OCR-detected terrorism information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * Set Expiration time of the URL to the file for video segments that contain OCR-detected terrorism content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * @param SegmentSetFileUrlExpireTime Expiration time of the URL to the file for video segments that contain OCR-detected terrorism content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
      */
     public void setSegmentSetFileUrlExpireTime(String SegmentSetFileUrlExpireTime) {
         this.SegmentSetFileUrlExpireTime = SegmentSetFileUrlExpireTime;
