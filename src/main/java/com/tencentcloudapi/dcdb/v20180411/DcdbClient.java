@@ -764,4 +764,24 @@ Note: accounts with the same username but different hosts are different accounts
         return rsp.response;
     }
 
+    /**
+     *This API is used to start a source-replica switch of instances.
+     * @param req SwitchDBInstanceHARequest
+     * @return SwitchDBInstanceHAResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchDBInstanceHAResponse SwitchDBInstanceHA(SwitchDBInstanceHARequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SwitchDBInstanceHAResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SwitchDBInstanceHAResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SwitchDBInstanceHA");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

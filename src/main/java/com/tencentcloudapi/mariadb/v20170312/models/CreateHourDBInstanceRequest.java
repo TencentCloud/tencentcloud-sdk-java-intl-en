@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateHourDBInstanceRequest extends AbstractModel{
 
     /**
-    * AZs to deploy instance nodes. You can specify up to two AZs. If each shard has one primary node and two replica nodes, two of the three will be deployed in the first AZ you have specified.
+    * AZs to deploy instance nodes. You can specify up to two AZs.
     */
     @SerializedName("Zones")
     @Expose
@@ -153,16 +153,16 @@ If this parameter is left empty, `10.1.9` will be used.
     private String RollbackTime;
 
     /**
-     * Get AZs to deploy instance nodes. You can specify up to two AZs. If each shard has one primary node and two replica nodes, two of the three will be deployed in the first AZ you have specified. 
-     * @return Zones AZs to deploy instance nodes. You can specify up to two AZs. If each shard has one primary node and two replica nodes, two of the three will be deployed in the first AZ you have specified.
+     * Get AZs to deploy instance nodes. You can specify up to two AZs. 
+     * @return Zones AZs to deploy instance nodes. You can specify up to two AZs.
      */
     public String [] getZones() {
         return this.Zones;
     }
 
     /**
-     * Set AZs to deploy instance nodes. You can specify up to two AZs. If each shard has one primary node and two replica nodes, two of the three will be deployed in the first AZ you have specified.
-     * @param Zones AZs to deploy instance nodes. You can specify up to two AZs. If each shard has one primary node and two replica nodes, two of the three will be deployed in the first AZ you have specified.
+     * Set AZs to deploy instance nodes. You can specify up to two AZs.
+     * @param Zones AZs to deploy instance nodes. You can specify up to two AZs.
      */
     public void setZones(String [] Zones) {
         this.Zones = Zones;
