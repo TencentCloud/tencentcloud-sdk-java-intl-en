@@ -20,44 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeParamTemplatesRequest extends AbstractModel{
+public class ModifyCDBProxyDescResponse extends AbstractModel{
 
     /**
-    * Engine version. If it is left empty, all parameter templates will be queried.
+    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
-    @SerializedName("EngineVersions")
+    @SerializedName("RequestId")
     @Expose
-    private String [] EngineVersions;
+    private String RequestId;
 
     /**
-     * Get Engine version. If it is left empty, all parameter templates will be queried. 
-     * @return EngineVersions Engine version. If it is left empty, all parameter templates will be queried.
+     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
+     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public String [] getEngineVersions() {
-        return this.EngineVersions;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set Engine version. If it is left empty, all parameter templates will be queried.
-     * @param EngineVersions Engine version. If it is left empty, all parameter templates will be queried.
+     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public void setEngineVersions(String [] EngineVersions) {
-        this.EngineVersions = EngineVersions;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public DescribeParamTemplatesRequest() {
+    public ModifyCDBProxyDescResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeParamTemplatesRequest(DescribeParamTemplatesRequest source) {
-        if (source.EngineVersions != null) {
-            this.EngineVersions = new String[source.EngineVersions.length];
-            for (int i = 0; i < source.EngineVersions.length; i++) {
-                this.EngineVersions[i] = new String(source.EngineVersions[i]);
-            }
+    public ModifyCDBProxyDescResponse(ModifyCDBProxyDescResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -66,7 +63,7 @@ public class DescribeParamTemplatesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "EngineVersions.", this.EngineVersions);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

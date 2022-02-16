@@ -20,44 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeParamTemplatesRequest extends AbstractModel{
+public class DescribeLocalBinlogConfigRequest extends AbstractModel{
 
     /**
-    * Engine version. If it is left empty, all parameter templates will be queried.
+    * Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
     */
-    @SerializedName("EngineVersions")
+    @SerializedName("InstanceId")
     @Expose
-    private String [] EngineVersions;
+    private String InstanceId;
 
     /**
-     * Get Engine version. If it is left empty, all parameter templates will be queried. 
-     * @return EngineVersions Engine version. If it is left empty, all parameter templates will be queried.
+     * Get Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console. 
+     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
      */
-    public String [] getEngineVersions() {
-        return this.EngineVersions;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set Engine version. If it is left empty, all parameter templates will be queried.
-     * @param EngineVersions Engine version. If it is left empty, all parameter templates will be queried.
+     * Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
      */
-    public void setEngineVersions(String [] EngineVersions) {
-        this.EngineVersions = EngineVersions;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
-    public DescribeParamTemplatesRequest() {
+    public DescribeLocalBinlogConfigRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeParamTemplatesRequest(DescribeParamTemplatesRequest source) {
-        if (source.EngineVersions != null) {
-            this.EngineVersions = new String[source.EngineVersions.length];
-            for (int i = 0; i < source.EngineVersions.length; i++) {
-                this.EngineVersions[i] = new String(source.EngineVersions[i]);
-            }
+    public DescribeLocalBinlogConfigRequest(DescribeLocalBinlogConfigRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
     }
 
@@ -66,7 +63,7 @@ public class DescribeParamTemplatesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "EngineVersions.", this.EngineVersions);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

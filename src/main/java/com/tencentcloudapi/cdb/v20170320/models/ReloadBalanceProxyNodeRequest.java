@@ -20,44 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeParamTemplatesRequest extends AbstractModel{
+public class ReloadBalanceProxyNodeRequest extends AbstractModel{
 
     /**
-    * Engine version. If it is left empty, all parameter templates will be queried.
+    * Proxy group ID
     */
-    @SerializedName("EngineVersions")
+    @SerializedName("ProxyGroupId")
     @Expose
-    private String [] EngineVersions;
+    private String ProxyGroupId;
 
     /**
-     * Get Engine version. If it is left empty, all parameter templates will be queried. 
-     * @return EngineVersions Engine version. If it is left empty, all parameter templates will be queried.
+     * Get Proxy group ID 
+     * @return ProxyGroupId Proxy group ID
      */
-    public String [] getEngineVersions() {
-        return this.EngineVersions;
+    public String getProxyGroupId() {
+        return this.ProxyGroupId;
     }
 
     /**
-     * Set Engine version. If it is left empty, all parameter templates will be queried.
-     * @param EngineVersions Engine version. If it is left empty, all parameter templates will be queried.
+     * Set Proxy group ID
+     * @param ProxyGroupId Proxy group ID
      */
-    public void setEngineVersions(String [] EngineVersions) {
-        this.EngineVersions = EngineVersions;
+    public void setProxyGroupId(String ProxyGroupId) {
+        this.ProxyGroupId = ProxyGroupId;
     }
 
-    public DescribeParamTemplatesRequest() {
+    public ReloadBalanceProxyNodeRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeParamTemplatesRequest(DescribeParamTemplatesRequest source) {
-        if (source.EngineVersions != null) {
-            this.EngineVersions = new String[source.EngineVersions.length];
-            for (int i = 0; i < source.EngineVersions.length; i++) {
-                this.EngineVersions[i] = new String(source.EngineVersions[i]);
-            }
+    public ReloadBalanceProxyNodeRequest(ReloadBalanceProxyNodeRequest source) {
+        if (source.ProxyGroupId != null) {
+            this.ProxyGroupId = new String(source.ProxyGroupId);
         }
     }
 
@@ -66,7 +63,7 @@ public class DescribeParamTemplatesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "EngineVersions.", this.EngineVersions);
+        this.setParamSimple(map, prefix + "ProxyGroupId", this.ProxyGroupId);
 
     }
 }

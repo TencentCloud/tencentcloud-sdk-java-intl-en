@@ -51,6 +51,13 @@ public class ParamTemplateInfo extends AbstractModel{
     private String EngineVersion;
 
     /**
+    * Parameter template type
+    */
+    @SerializedName("TemplateType")
+    @Expose
+    private String TemplateType;
+
+    /**
      * Get Parameter template ID 
      * @return TemplateId Parameter template ID
      */
@@ -114,6 +121,22 @@ public class ParamTemplateInfo extends AbstractModel{
         this.EngineVersion = EngineVersion;
     }
 
+    /**
+     * Get Parameter template type 
+     * @return TemplateType Parameter template type
+     */
+    public String getTemplateType() {
+        return this.TemplateType;
+    }
+
+    /**
+     * Set Parameter template type
+     * @param TemplateType Parameter template type
+     */
+    public void setTemplateType(String TemplateType) {
+        this.TemplateType = TemplateType;
+    }
+
     public ParamTemplateInfo() {
     }
 
@@ -134,6 +157,9 @@ public class ParamTemplateInfo extends AbstractModel{
         if (source.EngineVersion != null) {
             this.EngineVersion = new String(source.EngineVersion);
         }
+        if (source.TemplateType != null) {
+            this.TemplateType = new String(source.TemplateType);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class ParamTemplateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
+        this.setParamSimple(map, prefix + "TemplateType", this.TemplateType);
 
     }
 }

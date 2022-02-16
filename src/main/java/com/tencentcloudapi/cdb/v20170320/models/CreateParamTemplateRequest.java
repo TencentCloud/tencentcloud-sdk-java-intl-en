@@ -58,6 +58,13 @@ public class CreateParamTemplateRequest extends AbstractModel{
     private Parameter [] ParamList;
 
     /**
+    * Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+    */
+    @SerializedName("TemplateType")
+    @Expose
+    private String TemplateType;
+
+    /**
      * Get Parameter template name. 
      * @return Name Parameter template name.
      */
@@ -137,6 +144,22 @@ public class CreateParamTemplateRequest extends AbstractModel{
         this.ParamList = ParamList;
     }
 
+    /**
+     * Get Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template). 
+     * @return TemplateType Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+     */
+    public String getTemplateType() {
+        return this.TemplateType;
+    }
+
+    /**
+     * Set Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+     * @param TemplateType Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+     */
+    public void setTemplateType(String TemplateType) {
+        this.TemplateType = TemplateType;
+    }
+
     public CreateParamTemplateRequest() {
     }
 
@@ -163,6 +186,9 @@ public class CreateParamTemplateRequest extends AbstractModel{
                 this.ParamList[i] = new Parameter(source.ParamList[i]);
             }
         }
+        if (source.TemplateType != null) {
+            this.TemplateType = new String(source.TemplateType);
+        }
     }
 
 
@@ -175,6 +201,7 @@ public class CreateParamTemplateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamArrayObj(map, prefix + "ParamList.", this.ParamList);
+        this.setParamSimple(map, prefix + "TemplateType", this.TemplateType);
 
     }
 }

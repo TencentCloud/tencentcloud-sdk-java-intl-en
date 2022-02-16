@@ -30,7 +30,7 @@ public class ParameterDetail extends AbstractModel{
     private String Name;
 
     /**
-    * Parameter type
+    * Parameter type. Valid values: `integer`, `enum`, `float`, `string`, `func`
     */
     @SerializedName("ParamType")
     @Expose
@@ -86,6 +86,20 @@ public class ParameterDetail extends AbstractModel{
     private String [] EnumValue;
 
     /**
+    * Maximum parameter value, which is valid only when `ParamType` is set to `func`
+    */
+    @SerializedName("MaxFunc")
+    @Expose
+    private String MaxFunc;
+
+    /**
+    * Minimum parameter value, which is valid only when `ParamType` is set to `func`
+    */
+    @SerializedName("MinFunc")
+    @Expose
+    private String MinFunc;
+
+    /**
      * Get Parameter name 
      * @return Name Parameter name
      */
@@ -102,16 +116,16 @@ public class ParameterDetail extends AbstractModel{
     }
 
     /**
-     * Get Parameter type 
-     * @return ParamType Parameter type
+     * Get Parameter type. Valid values: `integer`, `enum`, `float`, `string`, `func` 
+     * @return ParamType Parameter type. Valid values: `integer`, `enum`, `float`, `string`, `func`
      */
     public String getParamType() {
         return this.ParamType;
     }
 
     /**
-     * Set Parameter type
-     * @param ParamType Parameter type
+     * Set Parameter type. Valid values: `integer`, `enum`, `float`, `string`, `func`
+     * @param ParamType Parameter type. Valid values: `integer`, `enum`, `float`, `string`, `func`
      */
     public void setParamType(String ParamType) {
         this.ParamType = ParamType;
@@ -229,6 +243,38 @@ public class ParameterDetail extends AbstractModel{
         this.EnumValue = EnumValue;
     }
 
+    /**
+     * Get Maximum parameter value, which is valid only when `ParamType` is set to `func` 
+     * @return MaxFunc Maximum parameter value, which is valid only when `ParamType` is set to `func`
+     */
+    public String getMaxFunc() {
+        return this.MaxFunc;
+    }
+
+    /**
+     * Set Maximum parameter value, which is valid only when `ParamType` is set to `func`
+     * @param MaxFunc Maximum parameter value, which is valid only when `ParamType` is set to `func`
+     */
+    public void setMaxFunc(String MaxFunc) {
+        this.MaxFunc = MaxFunc;
+    }
+
+    /**
+     * Get Minimum parameter value, which is valid only when `ParamType` is set to `func` 
+     * @return MinFunc Minimum parameter value, which is valid only when `ParamType` is set to `func`
+     */
+    public String getMinFunc() {
+        return this.MinFunc;
+    }
+
+    /**
+     * Set Minimum parameter value, which is valid only when `ParamType` is set to `func`
+     * @param MinFunc Minimum parameter value, which is valid only when `ParamType` is set to `func`
+     */
+    public void setMinFunc(String MinFunc) {
+        this.MinFunc = MinFunc;
+    }
+
     public ParameterDetail() {
     }
 
@@ -267,6 +313,12 @@ public class ParameterDetail extends AbstractModel{
                 this.EnumValue[i] = new String(source.EnumValue[i]);
             }
         }
+        if (source.MaxFunc != null) {
+            this.MaxFunc = new String(source.MaxFunc);
+        }
+        if (source.MinFunc != null) {
+            this.MinFunc = new String(source.MinFunc);
+        }
     }
 
 
@@ -283,6 +335,8 @@ public class ParameterDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "Max", this.Max);
         this.setParamSimple(map, prefix + "Min", this.Min);
         this.setParamArraySimple(map, prefix + "EnumValue.", this.EnumValue);
+        this.setParamSimple(map, prefix + "MaxFunc", this.MaxFunc);
+        this.setParamSimple(map, prefix + "MinFunc", this.MinFunc);
 
     }
 }

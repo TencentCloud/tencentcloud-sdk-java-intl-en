@@ -39,6 +39,9 @@ public enum CdbErrorCode {
     // Database operation failed.
      FAILEDOPERATION_DBOPERATIONACTIONERROR("FailedOperation.DBOperationActionError"),
      
+    // 
+     FAILEDOPERATION_DESCRIBEPROXYGROUPERROR("FailedOperation.DescribeProxyGroupError"),
+     
     // An error occurred while obtaining permissions.
      FAILEDOPERATION_GETPRIVILEGEERROR("FailedOperation.GetPrivilegeError"),
      
@@ -54,8 +57,14 @@ public enum CdbErrorCode {
     // The executed operation to modify permissions is invalid. You can refer to product documentation for more information about permissions that can be modified for this instance. If you have any questions, please contact customer service.
      FAILEDOPERATION_PRIVILEGEDATAILLEGAL("FailedOperation.PrivilegeDataIllegal"),
      
+    // 
+     FAILEDOPERATION_PROXYGROUPSTATUSERROR("FailedOperation.ProxyGroupStatusError"),
+     
     // Log query failed.
      FAILEDOPERATION_QUERYLOGERROR("FailedOperation.QueryLogError"),
+     
+    // 
+     FAILEDOPERATION_REPEATCREATEPROXYERROR("FailedOperation.RepeatCreateProxyError"),
      
     // Exception with the backend request for the service. Please contact customer service.
      FAILEDOPERATION_RESPONSEVALUEERROR("FailedOperation.ResponseValueError"),

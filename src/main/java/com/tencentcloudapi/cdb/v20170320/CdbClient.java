@@ -59,6 +59,26 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a database proxy group for a source instance.
+     * @param req ApplyCDBProxyRequest
+     * @return ApplyCDBProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyCDBProxyResponse ApplyCDBProxy(ApplyCDBProxyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplyCDBProxyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplyCDBProxyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ApplyCDBProxy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (AssociateSecurityGroups) is used to bind security groups to instances in batches.
      * @param req AssociateSecurityGroupsRequest
      * @return AssociateSecurityGroupsResponse
@@ -91,6 +111,26 @@ public class CdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<BalanceRoGroupLoadResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "BalanceRoGroupLoad");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to disable database proxy.
+     * @param req CloseCDBProxyRequest
+     * @return CloseCDBProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseCDBProxyResponse CloseCDBProxy(CloseCDBProxyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloseCDBProxyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloseCDBProxyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CloseCDBProxy");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -609,6 +649,26 @@ This is an asynchronous API. You can also use the [DescribeDBInstances](https://
     }
 
     /**
+     *This API is used to query the information of database proxy.
+     * @param req DescribeCDBProxyRequest
+     * @return DescribeCDBProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCDBProxyResponse DescribeCDBProxy(DescribeCDBProxyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCDBProxyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCDBProxyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCDBProxy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the clone task list of an instance.
      * @param req DescribeCloneListRequest
      * @return DescribeCloneListResponse
@@ -990,6 +1050,26 @@ Note: the HTTP response packet will be very large if it contain a single large e
     }
 
     /**
+     *This API is used to query the retention policy of local binlog of an instance.
+     * @param req DescribeLocalBinlogConfigRequest
+     * @return DescribeLocalBinlogConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLocalBinlogConfigResponse DescribeLocalBinlogConfig(DescribeLocalBinlogConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLocalBinlogConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLocalBinlogConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLocalBinlogConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query parameter template details. The common request parameter `Region` can only be set to `ap-guangzhou`.
      * @param req DescribeParamTemplateInfoRequest
      * @return DescribeParamTemplateInfoResponse
@@ -1010,7 +1090,7 @@ Note: the HTTP response packet will be very large if it contain a single large e
     }
 
     /**
-     *This API (DescribeParamTemplates) is used to query the list of parameter templates
+     *This API is used to query the parameter template list. The common request parameter `Region` can only be set to `ap-guangzhou`.
      * @param req DescribeParamTemplatesRequest
      * @return DescribeParamTemplatesResponse
      * @throws TencentCloudSDKException
@@ -1042,6 +1122,46 @@ Note: the HTTP response packet will be very large if it contain a single large e
                 Type type = new TypeToken<JsonResponseModel<DescribeProjectSecurityGroupsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeProjectSecurityGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the connection pool configuration of database proxy.
+     * @param req DescribeProxyConnectionPoolConfRequest
+     * @return DescribeProxyConnectionPoolConfResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProxyConnectionPoolConfResponse DescribeProxyConnectionPoolConf(DescribeProxyConnectionPoolConfRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProxyConnectionPoolConfResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProxyConnectionPoolConfResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeProxyConnectionPoolConf");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the proxy configuration.
+     * @param req DescribeProxyCustomConfRequest
+     * @return DescribeProxyCustomConfResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProxyCustomConfResponse DescribeProxyCustomConf(DescribeProxyCustomConfRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProxyCustomConfResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProxyCustomConfResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeProxyCustomConf");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1494,6 +1614,86 @@ Note that when modifying account permissions, you need to pass in the full permi
     }
 
     /**
+     *This API is used to configure read/write separation of database proxy.
+     * @param req ModifyCDBProxyRequest
+     * @return ModifyCDBProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCDBProxyResponse ModifyCDBProxy(ModifyCDBProxyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCDBProxyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCDBProxyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCDBProxy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to configure the connection pool of database proxy. You can use the `DescribeProxyConnectionPoolConf` API to query the supported connection pool configurations.
+     * @param req ModifyCDBProxyConnectionPoolRequest
+     * @return ModifyCDBProxyConnectionPoolResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCDBProxyConnectionPoolResponse ModifyCDBProxyConnectionPool(ModifyCDBProxyConnectionPoolRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCDBProxyConnectionPoolResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCDBProxyConnectionPoolResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCDBProxyConnectionPool");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the description of database proxy.
+     * @param req ModifyCDBProxyDescRequest
+     * @return ModifyCDBProxyDescResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCDBProxyDescResponse ModifyCDBProxyDesc(ModifyCDBProxyDescRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCDBProxyDescResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCDBProxyDescResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCDBProxyDesc");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the VIP or port of database proxy.
+     * @param req ModifyCDBProxyVipVPortRequest
+     * @return ModifyCDBProxyVipVPortResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCDBProxyVipVPortResponse ModifyCDBProxyVipVPort(ModifyCDBProxyVipVPortRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCDBProxyVipVPortResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCDBProxyVipVPortResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCDBProxyVipVPort");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (ModifyDBInstanceName) is used to rename a TencentDB instance.
      * @param req ModifyDBInstanceNameRequest
      * @return ModifyDBInstanceNameResponse
@@ -1606,6 +1806,26 @@ Note that when modifying account permissions, you need to pass in the full permi
                 Type type = new TypeToken<JsonResponseModel<ModifyInstanceTagResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyInstanceTag");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the retention policy of local binlog of an instance.
+     * @param req ModifyLocalBinlogConfigRequest
+     * @return ModifyLocalBinlogConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLocalBinlogConfigResponse ModifyLocalBinlogConfig(ModifyLocalBinlogConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLocalBinlogConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLocalBinlogConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLocalBinlogConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1760,6 +1980,26 @@ Note that before enabling public network access, you need to first [initialize t
     }
 
     /**
+     *This API is used to query the proxy details.
+     * @param req QueryCDBProxyRequest
+     * @return QueryCDBProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryCDBProxyResponse QueryCDBProxy(QueryCDBProxyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryCDBProxyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryCDBProxyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryCDBProxy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to deisolate an isolated TencentDB instance.
      * @param req ReleaseIsolatedDBInstancesRequest
      * @return ReleaseIsolatedDBInstancesResponse
@@ -1772,6 +2012,26 @@ Note that before enabling public network access, you need to first [initialize t
                 Type type = new TypeToken<JsonResponseModel<ReleaseIsolatedDBInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ReleaseIsolatedDBInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to rebalance the load on database proxy.
+     * @param req ReloadBalanceProxyNodeRequest
+     * @return ReloadBalanceProxyNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReloadBalanceProxyNodeResponse ReloadBalanceProxyNode(ReloadBalanceProxyNodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReloadBalanceProxyNodeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReloadBalanceProxyNodeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReloadBalanceProxyNode");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1904,6 +2164,26 @@ Note:
     }
 
     /**
+     *This API is used to switch database proxy after the proxy configuration is modified or the proxy version is upgraded.
+     * @param req SwitchCDBProxyRequest
+     * @return SwitchCDBProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchCDBProxyResponse SwitchCDBProxy(SwitchCDBProxyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SwitchCDBProxyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SwitchCDBProxyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SwitchCDBProxy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used for source-to-replica switch.
      * @param req SwitchDBInstanceMasterSlaveRequest
      * @return SwitchDBInstanceMasterSlaveResponse
@@ -1956,6 +2236,46 @@ Note:
                 Type type = new TypeToken<JsonResponseModel<SwitchForUpgradeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SwitchForUpgrade");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to upgrade the configuration of database proxy.
+     * @param req UpgradeCDBProxyRequest
+     * @return UpgradeCDBProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeCDBProxyResponse UpgradeCDBProxy(UpgradeCDBProxyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeCDBProxyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeCDBProxyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpgradeCDBProxy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to upgrade the version of database proxy.
+     * @param req UpgradeCDBProxyVersionRequest
+     * @return UpgradeCDBProxyVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeCDBProxyVersionResponse UpgradeCDBProxyVersion(UpgradeCDBProxyVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeCDBProxyVersionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeCDBProxyVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpgradeCDBProxyVersion");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
