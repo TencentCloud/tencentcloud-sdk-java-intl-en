@@ -72,6 +72,20 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
     private Long FilterLine;
 
     /**
+    * Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+    */
+    @SerializedName("FilterStatus")
+    @Expose
+    private String FilterStatus;
+
+    /**
+    * Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
+    */
+    @SerializedName("FilterBoundStatus")
+    @Expose
+    private String FilterBoundStatus;
+
+    /**
      * Get Starting offset of the page. Value: (number of pages – 1) * items per page. 
      * @return Offset Starting offset of the page. Value: (number of pages – 1) * items per page.
      */
@@ -183,6 +197,38 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         this.FilterLine = FilterLine;
     }
 
+    /**
+     * Get Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked 
+     * @return FilterStatus Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+     */
+    public String getFilterStatus() {
+        return this.FilterStatus;
+    }
+
+    /**
+     * Set Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+     * @param FilterStatus Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+     */
+    public void setFilterStatus(String FilterStatus) {
+        this.FilterStatus = FilterStatus;
+    }
+
+    /**
+     * Get Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed. 
+     * @return FilterBoundStatus Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
+     */
+    public String getFilterBoundStatus() {
+        return this.FilterBoundStatus;
+    }
+
+    /**
+     * Set Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
+     * @param FilterBoundStatus Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
+     */
+    public void setFilterBoundStatus(String FilterBoundStatus) {
+        this.FilterBoundStatus = FilterBoundStatus;
+    }
+
     public DescribeListBGPInstancesRequest() {
     }
 
@@ -212,6 +258,12 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         if (source.FilterLine != null) {
             this.FilterLine = new Long(source.FilterLine);
         }
+        if (source.FilterStatus != null) {
+            this.FilterStatus = new String(source.FilterStatus);
+        }
+        if (source.FilterBoundStatus != null) {
+            this.FilterBoundStatus = new String(source.FilterBoundStatus);
+        }
     }
 
 
@@ -226,6 +278,8 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FilterRegion", this.FilterRegion);
         this.setParamSimple(map, prefix + "FilterName", this.FilterName);
         this.setParamSimple(map, prefix + "FilterLine", this.FilterLine);
+        this.setParamSimple(map, prefix + "FilterStatus", this.FilterStatus);
+        this.setParamSimple(map, prefix + "FilterBoundStatus", this.FilterBoundStatus);
 
     }
 }

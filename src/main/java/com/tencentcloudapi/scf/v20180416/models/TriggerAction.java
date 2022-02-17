@@ -47,6 +47,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String TriggerCronConfig;
 
     /**
+    * The provision type. Value: `Default`
+Note: This field may return `null`, indicating that no valid value can be found.
+    */
+    @SerializedName("ProvisionedType")
+    @Expose
+    private String ProvisionedType;
+
+    /**
      * Get Scheduled action name
 Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return TriggerName Scheduled action name
@@ -106,6 +114,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.TriggerCronConfig = TriggerCronConfig;
     }
 
+    /**
+     * Get The provision type. Value: `Default`
+Note: This field may return `null`, indicating that no valid value can be found. 
+     * @return ProvisionedType The provision type. Value: `Default`
+Note: This field may return `null`, indicating that no valid value can be found.
+     */
+    public String getProvisionedType() {
+        return this.ProvisionedType;
+    }
+
+    /**
+     * Set The provision type. Value: `Default`
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param ProvisionedType The provision type. Value: `Default`
+Note: This field may return `null`, indicating that no valid value can be found.
+     */
+    public void setProvisionedType(String ProvisionedType) {
+        this.ProvisionedType = ProvisionedType;
+    }
+
     public TriggerAction() {
     }
 
@@ -123,6 +151,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.TriggerCronConfig != null) {
             this.TriggerCronConfig = new String(source.TriggerCronConfig);
         }
+        if (source.ProvisionedType != null) {
+            this.ProvisionedType = new String(source.ProvisionedType);
+        }
     }
 
 
@@ -133,6 +164,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "TriggerName", this.TriggerName);
         this.setParamSimple(map, prefix + "TriggerProvisionedConcurrencyNum", this.TriggerProvisionedConcurrencyNum);
         this.setParamSimple(map, prefix + "TriggerCronConfig", this.TriggerCronConfig);
+        this.setParamSimple(map, prefix + "ProvisionedType", this.ProvisionedType);
 
     }
 }

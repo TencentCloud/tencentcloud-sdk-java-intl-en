@@ -53,7 +53,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String EntryPoint;
 
     /**
-    * entrypoint execution command
+    * The command to start up the container, such as `python`. If it’s not specified, Entrypoint in Dockerfile is used.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Command")
@@ -61,8 +61,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String Command;
 
     /**
-    * Command parameters
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * The parameters to start up the container. Separate parameters with spaces, such as `u app.py`. If it’s not specified, `CMD in Dockerfile is used.
+Note: This field may return `null`, indicating that no valid value can be found.
     */
     @SerializedName("Args")
     @Expose
@@ -141,9 +141,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get entrypoint execution command
+     * Get The command to start up the container, such as `python`. If it’s not specified, Entrypoint in Dockerfile is used.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Command entrypoint execution command
+     * @return Command The command to start up the container, such as `python`. If it’s not specified, Entrypoint in Dockerfile is used.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getCommand() {
@@ -151,9 +151,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set entrypoint execution command
+     * Set The command to start up the container, such as `python`. If it’s not specified, Entrypoint in Dockerfile is used.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Command entrypoint execution command
+     * @param Command The command to start up the container, such as `python`. If it’s not specified, Entrypoint in Dockerfile is used.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setCommand(String Command) {
@@ -161,20 +161,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Command parameters
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Args Command parameters
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get The parameters to start up the container. Separate parameters with spaces, such as `u app.py`. If it’s not specified, `CMD in Dockerfile is used.
+Note: This field may return `null`, indicating that no valid value can be found. 
+     * @return Args The parameters to start up the container. Separate parameters with spaces, such as `u app.py`. If it’s not specified, `CMD in Dockerfile is used.
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public String getArgs() {
         return this.Args;
     }
 
     /**
-     * Set Command parameters
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Args Command parameters
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set The parameters to start up the container. Separate parameters with spaces, such as `u app.py`. If it’s not specified, `CMD in Dockerfile is used.
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param Args The parameters to start up the container. Separate parameters with spaces, such as `u app.py`. If it’s not specified, `CMD in Dockerfile is used.
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public void setArgs(String Args) {
         this.Args = Args;

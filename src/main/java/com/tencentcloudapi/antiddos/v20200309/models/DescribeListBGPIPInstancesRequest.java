@@ -99,6 +99,13 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
     private Long FilterDamDDoSStatus;
 
     /**
+    * Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+    */
+    @SerializedName("FilterStatus")
+    @Expose
+    private String FilterStatus;
+
+    /**
      * Get Starting offset of the page. Value: (number of pages – 1) * items per page. 
      * @return Offset Starting offset of the page. Value: (number of pages – 1) * items per page.
      */
@@ -282,6 +289,22 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
         this.FilterDamDDoSStatus = FilterDamDDoSStatus;
     }
 
+    /**
+     * Get Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked 
+     * @return FilterStatus Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+     */
+    public String getFilterStatus() {
+        return this.FilterStatus;
+    }
+
+    /**
+     * Set Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+     * @param FilterStatus Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+     */
+    public void setFilterStatus(String FilterStatus) {
+        this.FilterStatus = FilterStatus;
+    }
+
     public DescribeListBGPIPInstancesRequest() {
     }
 
@@ -323,6 +346,9 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
         if (source.FilterDamDDoSStatus != null) {
             this.FilterDamDDoSStatus = new Long(source.FilterDamDDoSStatus);
         }
+        if (source.FilterStatus != null) {
+            this.FilterStatus = new String(source.FilterStatus);
+        }
     }
 
 
@@ -340,6 +366,7 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FilterEipType", this.FilterEipType);
         this.setParamArraySimple(map, prefix + "FilterEipEipAddressStatus.", this.FilterEipEipAddressStatus);
         this.setParamSimple(map, prefix + "FilterDamDDoSStatus", this.FilterDamDDoSStatus);
+        this.setParamSimple(map, prefix + "FilterStatus", this.FilterStatus);
 
     }
 }

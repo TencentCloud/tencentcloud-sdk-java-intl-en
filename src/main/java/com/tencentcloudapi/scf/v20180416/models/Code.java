@@ -65,56 +65,56 @@ public class Code extends AbstractModel{
     private String TempCosObjectName;
 
     /**
-    * Git address
+    * (Disused) Git address
     */
     @SerializedName("GitUrl")
     @Expose
     private String GitUrl;
 
     /**
-    * Git user name
+    * (Disused) Git username
     */
     @SerializedName("GitUserName")
     @Expose
     private String GitUserName;
 
     /**
-    * Git password
+    * (Disused) Git password
     */
     @SerializedName("GitPassword")
     @Expose
     private String GitPassword;
 
     /**
-    * Git password after encryption. In general, this value is not required.
+    * (Disused) Git password after encryption. It’s usually not required.
     */
     @SerializedName("GitPasswordSecret")
     @Expose
     private String GitPasswordSecret;
 
     /**
-    * Git branch
+    * (Disused) Git branch
     */
     @SerializedName("GitBranch")
     @Expose
     private String GitBranch;
 
     /**
-    * Code path in Git repository
+    * (Disused) Directory to the codes in the Git repository. 
     */
     @SerializedName("GitDirectory")
     @Expose
     private String GitDirectory;
 
     /**
-    * Version to be pulled
+    * (Disused) 
     */
     @SerializedName("GitCommitId")
     @Expose
     private String GitCommitId;
 
     /**
-    * Git user name after encryption. In general, this value is not required.
+    * (Disused) Git username after encryption. It’s usually not required.
     */
     @SerializedName("GitUserNameSecret")
     @Expose
@@ -224,128 +224,128 @@ public class Code extends AbstractModel{
     }
 
     /**
-     * Get Git address 
-     * @return GitUrl Git address
+     * Get (Disused) Git address 
+     * @return GitUrl (Disused) Git address
      */
     public String getGitUrl() {
         return this.GitUrl;
     }
 
     /**
-     * Set Git address
-     * @param GitUrl Git address
+     * Set (Disused) Git address
+     * @param GitUrl (Disused) Git address
      */
     public void setGitUrl(String GitUrl) {
         this.GitUrl = GitUrl;
     }
 
     /**
-     * Get Git user name 
-     * @return GitUserName Git user name
+     * Get (Disused) Git username 
+     * @return GitUserName (Disused) Git username
      */
     public String getGitUserName() {
         return this.GitUserName;
     }
 
     /**
-     * Set Git user name
-     * @param GitUserName Git user name
+     * Set (Disused) Git username
+     * @param GitUserName (Disused) Git username
      */
     public void setGitUserName(String GitUserName) {
         this.GitUserName = GitUserName;
     }
 
     /**
-     * Get Git password 
-     * @return GitPassword Git password
+     * Get (Disused) Git password 
+     * @return GitPassword (Disused) Git password
      */
     public String getGitPassword() {
         return this.GitPassword;
     }
 
     /**
-     * Set Git password
-     * @param GitPassword Git password
+     * Set (Disused) Git password
+     * @param GitPassword (Disused) Git password
      */
     public void setGitPassword(String GitPassword) {
         this.GitPassword = GitPassword;
     }
 
     /**
-     * Get Git password after encryption. In general, this value is not required. 
-     * @return GitPasswordSecret Git password after encryption. In general, this value is not required.
+     * Get (Disused) Git password after encryption. It’s usually not required. 
+     * @return GitPasswordSecret (Disused) Git password after encryption. It’s usually not required.
      */
     public String getGitPasswordSecret() {
         return this.GitPasswordSecret;
     }
 
     /**
-     * Set Git password after encryption. In general, this value is not required.
-     * @param GitPasswordSecret Git password after encryption. In general, this value is not required.
+     * Set (Disused) Git password after encryption. It’s usually not required.
+     * @param GitPasswordSecret (Disused) Git password after encryption. It’s usually not required.
      */
     public void setGitPasswordSecret(String GitPasswordSecret) {
         this.GitPasswordSecret = GitPasswordSecret;
     }
 
     /**
-     * Get Git branch 
-     * @return GitBranch Git branch
+     * Get (Disused) Git branch 
+     * @return GitBranch (Disused) Git branch
      */
     public String getGitBranch() {
         return this.GitBranch;
     }
 
     /**
-     * Set Git branch
-     * @param GitBranch Git branch
+     * Set (Disused) Git branch
+     * @param GitBranch (Disused) Git branch
      */
     public void setGitBranch(String GitBranch) {
         this.GitBranch = GitBranch;
     }
 
     /**
-     * Get Code path in Git repository 
-     * @return GitDirectory Code path in Git repository
+     * Get (Disused) Directory to the codes in the Git repository.  
+     * @return GitDirectory (Disused) Directory to the codes in the Git repository. 
      */
     public String getGitDirectory() {
         return this.GitDirectory;
     }
 
     /**
-     * Set Code path in Git repository
-     * @param GitDirectory Code path in Git repository
+     * Set (Disused) Directory to the codes in the Git repository. 
+     * @param GitDirectory (Disused) Directory to the codes in the Git repository. 
      */
     public void setGitDirectory(String GitDirectory) {
         this.GitDirectory = GitDirectory;
     }
 
     /**
-     * Get Version to be pulled 
-     * @return GitCommitId Version to be pulled
+     * Get (Disused)  
+     * @return GitCommitId (Disused) 
      */
     public String getGitCommitId() {
         return this.GitCommitId;
     }
 
     /**
-     * Set Version to be pulled
-     * @param GitCommitId Version to be pulled
+     * Set (Disused) 
+     * @param GitCommitId (Disused) 
      */
     public void setGitCommitId(String GitCommitId) {
         this.GitCommitId = GitCommitId;
     }
 
     /**
-     * Get Git user name after encryption. In general, this value is not required. 
-     * @return GitUserNameSecret Git user name after encryption. In general, this value is not required.
+     * Get (Disused) Git username after encryption. It’s usually not required. 
+     * @return GitUserNameSecret (Disused) Git username after encryption. It’s usually not required.
      */
     public String getGitUserNameSecret() {
         return this.GitUserNameSecret;
     }
 
     /**
-     * Set Git user name after encryption. In general, this value is not required.
-     * @param GitUserNameSecret Git user name after encryption. In general, this value is not required.
+     * Set (Disused) Git username after encryption. It’s usually not required.
+     * @param GitUserNameSecret (Disused) Git username after encryption. It’s usually not required.
      */
     public void setGitUserNameSecret(String GitUserNameSecret) {
         this.GitUserNameSecret = GitUserNameSecret;

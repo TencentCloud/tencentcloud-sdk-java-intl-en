@@ -44,7 +44,7 @@ public class TerminateAsyncEventRequest extends AbstractModel{
     private String Namespace;
 
     /**
-    * Disused
+    * Whether to enable grace shutdown. If it’s `true`, a `SIGTERM` signal is sent to the specified request. See [Sending termination signal](https://intl.cloud.tencent.com/document/product/583/63969?from_cn_redirect=1#.E5.8F.91.E9.80.81.E7.BB.88.E6.AD.A2.E4.BF.A1.E5.8F.B7]. It’s set to `false` by default.
     */
     @SerializedName("GraceShutdown")
     @Expose
@@ -99,16 +99,16 @@ public class TerminateAsyncEventRequest extends AbstractModel{
     }
 
     /**
-     * Get Disused 
-     * @return GraceShutdown Disused
+     * Get Whether to enable grace shutdown. If it’s `true`, a `SIGTERM` signal is sent to the specified request. See [Sending termination signal](https://intl.cloud.tencent.com/document/product/583/63969?from_cn_redirect=1#.E5.8F.91.E9.80.81.E7.BB.88.E6.AD.A2.E4.BF.A1.E5.8F.B7]. It’s set to `false` by default. 
+     * @return GraceShutdown Whether to enable grace shutdown. If it’s `true`, a `SIGTERM` signal is sent to the specified request. See [Sending termination signal](https://intl.cloud.tencent.com/document/product/583/63969?from_cn_redirect=1#.E5.8F.91.E9.80.81.E7.BB.88.E6.AD.A2.E4.BF.A1.E5.8F.B7]. It’s set to `false` by default.
      */
     public Boolean getGraceShutdown() {
         return this.GraceShutdown;
     }
 
     /**
-     * Set Disused
-     * @param GraceShutdown Disused
+     * Set Whether to enable grace shutdown. If it’s `true`, a `SIGTERM` signal is sent to the specified request. See [Sending termination signal](https://intl.cloud.tencent.com/document/product/583/63969?from_cn_redirect=1#.E5.8F.91.E9.80.81.E7.BB.88.E6.AD.A2.E4.BF.A1.E5.8F.B7]. It’s set to `false` by default.
+     * @param GraceShutdown Whether to enable grace shutdown. If it’s `true`, a `SIGTERM` signal is sent to the specified request. See [Sending termination signal](https://intl.cloud.tencent.com/document/product/583/63969?from_cn_redirect=1#.E5.8F.91.E9.80.81.E7.BB.88.E6.AD.A2.E4.BF.A1.E5.8F.B7]. It’s set to `false` by default.
      */
     public void setGraceShutdown(Boolean GraceShutdown) {
         this.GraceShutdown = GraceShutdown;

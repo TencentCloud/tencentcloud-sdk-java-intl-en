@@ -37,7 +37,7 @@ public class DeleteFunctionRequest extends AbstractModel{
     private String Namespace;
 
     /**
-    * Function version. Enter the number of the version that needs to be deleted, otherwise all versions of the function will be deleted.
+    * ID of the version to delete. All versions are deleted if it’s left empty.
     */
     @SerializedName("Qualifier")
     @Expose
@@ -76,16 +76,16 @@ public class DeleteFunctionRequest extends AbstractModel{
     }
 
     /**
-     * Get Function version. Enter the number of the version that needs to be deleted, otherwise all versions of the function will be deleted. 
-     * @return Qualifier Function version. Enter the number of the version that needs to be deleted, otherwise all versions of the function will be deleted.
+     * Get ID of the version to delete. All versions are deleted if it’s left empty. 
+     * @return Qualifier ID of the version to delete. All versions are deleted if it’s left empty.
      */
     public String getQualifier() {
         return this.Qualifier;
     }
 
     /**
-     * Set Function version. Enter the number of the version that needs to be deleted, otherwise all versions of the function will be deleted.
-     * @param Qualifier Function version. Enter the number of the version that needs to be deleted, otherwise all versions of the function will be deleted.
+     * Set ID of the version to delete. All versions are deleted if it’s left empty.
+     * @param Qualifier ID of the version to delete. All versions are deleted if it’s left empty.
      */
     public void setQualifier(String Qualifier) {
         this.Qualifier = Qualifier;

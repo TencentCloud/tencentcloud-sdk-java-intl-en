@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class LayerVersionSimple extends AbstractModel{
 
     /**
-    * Layer name
+    * Name of the layer to bind. Leave it blank if you want to unbind layers
     */
     @SerializedName("LayerName")
     @Expose
     private String LayerName;
 
     /**
-    * Version number
+    * Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
     */
     @SerializedName("LayerVersion")
     @Expose
     private Long LayerVersion;
 
     /**
-     * Get Layer name 
-     * @return LayerName Layer name
+     * Get Name of the layer to bind. Leave it blank if you want to unbind layers 
+     * @return LayerName Name of the layer to bind. Leave it blank if you want to unbind layers
      */
     public String getLayerName() {
         return this.LayerName;
     }
 
     /**
-     * Set Layer name
-     * @param LayerName Layer name
+     * Set Name of the layer to bind. Leave it blank if you want to unbind layers
+     * @param LayerName Name of the layer to bind. Leave it blank if you want to unbind layers
      */
     public void setLayerName(String LayerName) {
         this.LayerName = LayerName;
     }
 
     /**
-     * Get Version number 
-     * @return LayerVersion Version number
+     * Get Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`. 
+     * @return LayerVersion Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
      */
     public Long getLayerVersion() {
         return this.LayerVersion;
     }
 
     /**
-     * Set Version number
-     * @param LayerVersion Version number
+     * Set Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
+     * @param LayerVersion Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
      */
     public void setLayerVersion(Long LayerVersion) {
         this.LayerVersion = LayerVersion;
