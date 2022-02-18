@@ -78,7 +78,7 @@ public enum MariadbErrorCode {
     // Failed to query the information of a dedicated cluster.
      INTERNALERROR_FENCEERROR("InternalError.FenceError"),
      
-    // Failed to get the monitoring metric data.
+    // Failed to obtain monitoring data.
      INTERNALERROR_FETCHMETRICDATAFAILED("InternalError.FetchMetricDataFailed"),
      
     // Failed to get database instance parameters.
@@ -104,6 +104,9 @@ public enum MariadbErrorCode {
      
     // Failed to query the VPC subnet information.
      INTERNALERROR_GETSUBNETFAILED("InternalError.GetSubnetFailed"),
+     
+    // Failed to obtain information about the table structure.
+     INTERNALERROR_GETTABLEINFOFAILED("InternalError.GetTableInfoFailed"),
      
     // Failed to get the account list.
      INTERNALERROR_GETUSERLISTFAILED("InternalError.GetUserListFailed"),
@@ -168,7 +171,7 @@ public enum MariadbErrorCode {
     // The password contains invalid characters.
      INVALIDPARAMETER_CHARACTERERROR("InvalidParameter.CharacterError"),
      
-    // Parameter check failed.
+    // Verification of input parameters failed.
      INVALIDPARAMETER_CHECKPARAMNOTPASS("InvalidParameter.CheckParamNotPass"),
      
     // The specified flow information was not found.

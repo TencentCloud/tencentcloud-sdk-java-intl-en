@@ -442,6 +442,26 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     }
 
     /**
+     *This API is used to query the table information of a TencentDB instance.
+     * @param req DescribeDatabaseTableRequest
+     * @return DescribeDatabaseTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatabaseTableResponse DescribeDatabaseTable(DescribeDatabaseTableRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDatabaseTableResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDatabaseTableResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDatabaseTable");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the list of databases of a TencentDB instance.
      * @param req DescribeDatabasesRequest
      * @return DescribeDatabasesResponse
