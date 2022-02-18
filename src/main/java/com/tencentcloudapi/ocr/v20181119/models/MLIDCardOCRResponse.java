@@ -51,10 +51,11 @@ public class MLIDCardOCRResponse extends AbstractModel{
     private String Sex;
 
     /**
-    * Alarm code
--9103	Alarm for photographed document
--9102	Alarm for photocopied document
--9106       Alarm for covered card
+    * Warning code
+-9103 Warning for spoofed card
+-9102 Warning for photocopied card
+-9106 Warning for covered card
+-9107 Warning for blurry image
     */
     @SerializedName("Warn")
     @Expose
@@ -175,28 +176,32 @@ MyKid   Kid card
     }
 
     /**
-     * Get Alarm code
--9103	Alarm for photographed document
--9102	Alarm for photocopied document
--9106       Alarm for covered card 
-     * @return Warn Alarm code
--9103	Alarm for photographed document
--9102	Alarm for photocopied document
--9106       Alarm for covered card
+     * Get Warning code
+-9103 Warning for spoofed card
+-9102 Warning for photocopied card
+-9106 Warning for covered card
+-9107 Warning for blurry image 
+     * @return Warn Warning code
+-9103 Warning for spoofed card
+-9102 Warning for photocopied card
+-9106 Warning for covered card
+-9107 Warning for blurry image
      */
     public Long [] getWarn() {
         return this.Warn;
     }
 
     /**
-     * Set Alarm code
--9103	Alarm for photographed document
--9102	Alarm for photocopied document
--9106       Alarm for covered card
-     * @param Warn Alarm code
--9103	Alarm for photographed document
--9102	Alarm for photocopied document
--9106       Alarm for covered card
+     * Set Warning code
+-9103 Warning for spoofed card
+-9102 Warning for photocopied card
+-9106 Warning for covered card
+-9107 Warning for blurry image
+     * @param Warn Warning code
+-9103 Warning for spoofed card
+-9102 Warning for photocopied card
+-9106 Warning for covered card
+-9107 Warning for blurry image
      */
     public void setWarn(Long [] Warn) {
         this.Warn = Warn;
