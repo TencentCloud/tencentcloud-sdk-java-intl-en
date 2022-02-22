@@ -30,7 +30,7 @@ public class SlaUpdateParam extends AbstractModel{
     private String LoadBalancerId;
 
     /**
-    * Target instance specification
+    * To upgrade to LCU-supported CLB instances. It must be `SLA`.
     */
     @SerializedName("SlaType")
     @Expose
@@ -53,16 +53,16 @@ public class SlaUpdateParam extends AbstractModel{
     }
 
     /**
-     * Get Target instance specification 
-     * @return SlaType Target instance specification
+     * Get To upgrade to LCU-supported CLB instances. It must be `SLA`. 
+     * @return SlaType To upgrade to LCU-supported CLB instances. It must be `SLA`.
      */
     public String getSlaType() {
         return this.SlaType;
     }
 
     /**
-     * Set Target instance specification
-     * @param SlaType Target instance specification
+     * Set To upgrade to LCU-supported CLB instances. It must be `SLA`.
+     * @param SlaType To upgrade to LCU-supported CLB instances. It must be `SLA`.
      */
     public void setSlaType(String SlaType) {
         this.SlaType = SlaType;

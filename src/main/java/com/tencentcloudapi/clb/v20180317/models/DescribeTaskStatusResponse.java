@@ -30,6 +30,14 @@ public class DescribeTaskStatusResponse extends AbstractModel{
     private Long Status;
 
     /**
+    * Array of unique CLB instance IDs.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("LoadBalancerIds")
+    @Expose
+    private String [] LoadBalancerIds;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -50,6 +58,26 @@ public class DescribeTaskStatusResponse extends AbstractModel{
      */
     public void setStatus(Long Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get Array of unique CLB instance IDs.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return LoadBalancerIds Array of unique CLB instance IDs.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String [] getLoadBalancerIds() {
+        return this.LoadBalancerIds;
+    }
+
+    /**
+     * Set Array of unique CLB instance IDs.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param LoadBalancerIds Array of unique CLB instance IDs.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setLoadBalancerIds(String [] LoadBalancerIds) {
+        this.LoadBalancerIds = LoadBalancerIds;
     }
 
     /**
@@ -79,6 +107,12 @@ public class DescribeTaskStatusResponse extends AbstractModel{
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.LoadBalancerIds != null) {
+            this.LoadBalancerIds = new String[source.LoadBalancerIds.length];
+            for (int i = 0; i < source.LoadBalancerIds.length; i++) {
+                this.LoadBalancerIds[i] = new String(source.LoadBalancerIds[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +124,7 @@ public class DescribeTaskStatusResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArraySimple(map, prefix + "LoadBalancerIds.", this.LoadBalancerIds);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ModifyDomainRequest extends AbstractModel{
 
     /**
-    * CLB instance ID
+    * CLB instance ID.
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * CLB listener ID
+    * CLB listener ID.
     */
     @SerializedName("ListenerId")
     @Expose
@@ -51,32 +51,32 @@ public class ModifyDomainRequest extends AbstractModel{
     private String NewDomain;
 
     /**
-     * Get CLB instance ID 
-     * @return LoadBalancerId CLB instance ID
+     * Get CLB instance ID. 
+     * @return LoadBalancerId CLB instance ID.
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set CLB instance ID
-     * @param LoadBalancerId CLB instance ID
+     * Set CLB instance ID.
+     * @param LoadBalancerId CLB instance ID.
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get CLB listener ID 
-     * @return ListenerId CLB listener ID
+     * Get CLB listener ID. 
+     * @return ListenerId CLB listener ID.
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set CLB listener ID
-     * @param ListenerId CLB listener ID
+     * Set CLB listener ID.
+     * @param ListenerId CLB listener ID.
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;

@@ -38,7 +38,7 @@ Note: if the name of a new CLB instance already exists, a default name will be g
     private String LoadBalancerName;
 
     /**
-    * ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
+    * Project ID of the CLB instance, which can be obtained through the [`DescribeProject`](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this field is not specified, it will default to the default project.
     */
     @SerializedName("ProjectId")
     @Expose
@@ -46,7 +46,7 @@ Note: if the name of a new CLB instance already exists, a default name will be g
 
     /**
     * Sets the primary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB.
-Note: A primary AZ is the default AZ that carries traffic. When it fails, the optimal secondary AZ is chosen automatically to take its place. 
+Note: A primary AZ carries traffic by default, while a secondary AZ does not. It only works when the primary AZ is faulty.
     */
     @SerializedName("MasterZoneId")
     @Expose
@@ -131,7 +131,7 @@ Note: A secondary AZ carries traffic when the primary AZ fails.
     private String [] ClusterIds;
 
     /**
-    * 
+    * Guaranteed performance specification.
     */
     @SerializedName("SlaType")
     @Expose
@@ -195,16 +195,16 @@ Note: if the name of a new CLB instance already exists, a default name will be g
     }
 
     /**
-     * Get ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used. 
-     * @return ProjectId ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
+     * Get Project ID of the CLB instance, which can be obtained through the [`DescribeProject`](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this field is not specified, it will default to the default project. 
+     * @return ProjectId Project ID of the CLB instance, which can be obtained through the [`DescribeProject`](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this field is not specified, it will default to the default project.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
-     * @param ProjectId ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
+     * Set Project ID of the CLB instance, which can be obtained through the [`DescribeProject`](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this field is not specified, it will default to the default project.
+     * @param ProjectId Project ID of the CLB instance, which can be obtained through the [`DescribeProject`](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this field is not specified, it will default to the default project.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
@@ -212,9 +212,9 @@ Note: if the name of a new CLB instance already exists, a default name will be g
 
     /**
      * Get Sets the primary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB.
-Note: A primary AZ is the default AZ that carries traffic. When it fails, the optimal secondary AZ is chosen automatically to take its place.  
+Note: A primary AZ carries traffic by default, while a secondary AZ does not. It only works when the primary AZ is faulty. 
      * @return MasterZoneId Sets the primary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB.
-Note: A primary AZ is the default AZ that carries traffic. When it fails, the optimal secondary AZ is chosen automatically to take its place. 
+Note: A primary AZ carries traffic by default, while a secondary AZ does not. It only works when the primary AZ is faulty.
      */
     public String getMasterZoneId() {
         return this.MasterZoneId;
@@ -222,9 +222,9 @@ Note: A primary AZ is the default AZ that carries traffic. When it fails, the op
 
     /**
      * Set Sets the primary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB.
-Note: A primary AZ is the default AZ that carries traffic. When it fails, the optimal secondary AZ is chosen automatically to take its place. 
+Note: A primary AZ carries traffic by default, while a secondary AZ does not. It only works when the primary AZ is faulty.
      * @param MasterZoneId Sets the primary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB.
-Note: A primary AZ is the default AZ that carries traffic. When it fails, the optimal secondary AZ is chosen automatically to take its place. 
+Note: A primary AZ carries traffic by default, while a secondary AZ does not. It only works when the primary AZ is faulty.
      */
     public void setMasterZoneId(String MasterZoneId) {
         this.MasterZoneId = MasterZoneId;
@@ -411,16 +411,16 @@ Note: A secondary AZ carries traffic when the primary AZ fails.
     }
 
     /**
-     * Get  
-     * @return SlaType 
+     * Get Guaranteed performance specification. 
+     * @return SlaType Guaranteed performance specification.
      */
     public String getSlaType() {
         return this.SlaType;
     }
 
     /**
-     * Set 
-     * @param SlaType 
+     * Set Guaranteed performance specification.
+     * @param SlaType Guaranteed performance specification.
      */
     public void setSlaType(String SlaType) {
         this.SlaType = SlaType;

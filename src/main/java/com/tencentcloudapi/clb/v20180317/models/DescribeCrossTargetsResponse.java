@@ -20,22 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLoadBalancerResponse extends AbstractModel{
+public class DescribeCrossTargetsResponse extends AbstractModel{
 
     /**
-    * Array of unique CLB instance IDs.
+    * Total number of real server lists
     */
-    @SerializedName("LoadBalancerIds")
+    @SerializedName("TotalCount")
     @Expose
-    private String [] LoadBalancerIds;
+    private Long TotalCount;
 
     /**
-    * Order ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Real server list
     */
-    @SerializedName("DealName")
+    @SerializedName("CrossTargetSet")
     @Expose
-    private String DealName;
+    private CrossTargets [] CrossTargetSet;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,39 +44,35 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get Array of unique CLB instance IDs. 
-     * @return LoadBalancerIds Array of unique CLB instance IDs.
+     * Get Total number of real server lists 
+     * @return TotalCount Total number of real server lists
      */
-    public String [] getLoadBalancerIds() {
-        return this.LoadBalancerIds;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set Array of unique CLB instance IDs.
-     * @param LoadBalancerIds Array of unique CLB instance IDs.
+     * Set Total number of real server lists
+     * @param TotalCount Total number of real server lists
      */
-    public void setLoadBalancerIds(String [] LoadBalancerIds) {
-        this.LoadBalancerIds = LoadBalancerIds;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Order ID.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return DealName Order ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Real server list 
+     * @return CrossTargetSet Real server list
      */
-    public String getDealName() {
-        return this.DealName;
+    public CrossTargets [] getCrossTargetSet() {
+        return this.CrossTargetSet;
     }
 
     /**
-     * Set Order ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param DealName Order ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Real server list
+     * @param CrossTargetSet Real server list
      */
-    public void setDealName(String DealName) {
-        this.DealName = DealName;
+    public void setCrossTargetSet(CrossTargets [] CrossTargetSet) {
+        this.CrossTargetSet = CrossTargetSet;
     }
 
     /**
@@ -96,22 +91,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.RequestId = RequestId;
     }
 
-    public CreateLoadBalancerResponse() {
+    public DescribeCrossTargetsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateLoadBalancerResponse(CreateLoadBalancerResponse source) {
-        if (source.LoadBalancerIds != null) {
-            this.LoadBalancerIds = new String[source.LoadBalancerIds.length];
-            for (int i = 0; i < source.LoadBalancerIds.length; i++) {
-                this.LoadBalancerIds[i] = new String(source.LoadBalancerIds[i]);
-            }
+    public DescribeCrossTargetsResponse(DescribeCrossTargetsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.DealName != null) {
-            this.DealName = new String(source.DealName);
+        if (source.CrossTargetSet != null) {
+            this.CrossTargetSet = new CrossTargets[source.CrossTargetSet.length];
+            for (int i = 0; i < source.CrossTargetSet.length; i++) {
+                this.CrossTargetSet[i] = new CrossTargets(source.CrossTargetSet[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -123,8 +118,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "LoadBalancerIds.", this.LoadBalancerIds);
-        this.setParamSimple(map, prefix + "DealName", this.DealName);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "CrossTargetSet.", this.CrossTargetSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

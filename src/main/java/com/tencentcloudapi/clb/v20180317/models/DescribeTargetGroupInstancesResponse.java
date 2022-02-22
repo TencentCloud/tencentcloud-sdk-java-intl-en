@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeTargetGroupInstancesResponse extends AbstractModel{
 
     /**
-    * Number of results in current query
+    * Number of results returned for the current query
     */
     @SerializedName("TotalCount")
     @Expose
@@ -37,7 +37,7 @@ public class DescribeTargetGroupInstancesResponse extends AbstractModel{
     private TargetGroupBackend [] TargetGroupInstanceSet;
 
     /**
-    * Actual statistics, which are not affected by `Limit`, `Offset`, and `CAM`.
+    * The actual total number of bound instances, which is not affected by the setting of `Limit`, `Offset` and the CAM permissions.
     */
     @SerializedName("RealCount")
     @Expose
@@ -51,16 +51,16 @@ public class DescribeTargetGroupInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Number of results in current query 
-     * @return TotalCount Number of results in current query
+     * Get Number of results returned for the current query 
+     * @return TotalCount Number of results returned for the current query
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of results in current query
-     * @param TotalCount Number of results in current query
+     * Set Number of results returned for the current query
+     * @param TotalCount Number of results returned for the current query
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
@@ -83,16 +83,16 @@ public class DescribeTargetGroupInstancesResponse extends AbstractModel{
     }
 
     /**
-     * Get Actual statistics, which are not affected by `Limit`, `Offset`, and `CAM`. 
-     * @return RealCount Actual statistics, which are not affected by `Limit`, `Offset`, and `CAM`.
+     * Get The actual total number of bound instances, which is not affected by the setting of `Limit`, `Offset` and the CAM permissions. 
+     * @return RealCount The actual total number of bound instances, which is not affected by the setting of `Limit`, `Offset` and the CAM permissions.
      */
     public Long getRealCount() {
         return this.RealCount;
     }
 
     /**
-     * Set Actual statistics, which are not affected by `Limit`, `Offset`, and `CAM`.
-     * @param RealCount Actual statistics, which are not affected by `Limit`, `Offset`, and `CAM`.
+     * Set The actual total number of bound instances, which is not affected by the setting of `Limit`, `Offset` and the CAM permissions.
+     * @param RealCount The actual total number of bound instances, which is not affected by the setting of `Limit`, `Offset` and the CAM permissions.
      */
     public void setRealCount(Long RealCount) {
         this.RealCount = RealCount;

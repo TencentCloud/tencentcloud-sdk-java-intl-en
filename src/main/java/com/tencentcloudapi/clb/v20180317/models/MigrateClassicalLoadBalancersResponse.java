@@ -20,22 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLoadBalancerResponse extends AbstractModel{
-
-    /**
-    * Array of unique CLB instance IDs.
-    */
-    @SerializedName("LoadBalancerIds")
-    @Expose
-    private String [] LoadBalancerIds;
-
-    /**
-    * Order ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-    */
-    @SerializedName("DealName")
-    @Expose
-    private String DealName;
+public class MigrateClassicalLoadBalancersResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -43,42 +28,6 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get Array of unique CLB instance IDs. 
-     * @return LoadBalancerIds Array of unique CLB instance IDs.
-     */
-    public String [] getLoadBalancerIds() {
-        return this.LoadBalancerIds;
-    }
-
-    /**
-     * Set Array of unique CLB instance IDs.
-     * @param LoadBalancerIds Array of unique CLB instance IDs.
-     */
-    public void setLoadBalancerIds(String [] LoadBalancerIds) {
-        this.LoadBalancerIds = LoadBalancerIds;
-    }
-
-    /**
-     * Get Order ID.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return DealName Order ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     */
-    public String getDealName() {
-        return this.DealName;
-    }
-
-    /**
-     * Set Order ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param DealName Order ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     */
-    public void setDealName(String DealName) {
-        this.DealName = DealName;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -96,23 +45,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.RequestId = RequestId;
     }
 
-    public CreateLoadBalancerResponse() {
+    public MigrateClassicalLoadBalancersResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateLoadBalancerResponse(CreateLoadBalancerResponse source) {
-        if (source.LoadBalancerIds != null) {
-            this.LoadBalancerIds = new String[source.LoadBalancerIds.length];
-            for (int i = 0; i < source.LoadBalancerIds.length; i++) {
-                this.LoadBalancerIds[i] = new String(source.LoadBalancerIds[i]);
-            }
-        }
-        if (source.DealName != null) {
-            this.DealName = new String(source.DealName);
-        }
+    public MigrateClassicalLoadBalancersResponse(MigrateClassicalLoadBalancersResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -123,8 +63,6 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "LoadBalancerIds.", this.LoadBalancerIds);
-        this.setParamSimple(map, prefix + "DealName", this.DealName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

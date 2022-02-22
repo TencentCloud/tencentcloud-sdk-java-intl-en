@@ -156,6 +156,13 @@ public class FileSystemInfo extends AbstractModel{
     private Long Capacity;
 
     /**
+    * File system tag list
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagInfo [] Tags;
+
+    /**
      * Get Creation time 
      * @return CreationTime Creation time
      */
@@ -459,6 +466,22 @@ public class FileSystemInfo extends AbstractModel{
         this.Capacity = Capacity;
     }
 
+    /**
+     * Get File system tag list 
+     * @return Tags File system tag list
+     */
+    public TagInfo [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set File system tag list
+     * @param Tags File system tag list
+     */
+    public void setTags(TagInfo [] Tags) {
+        this.Tags = Tags;
+    }
+
     public FileSystemInfo() {
     }
 
@@ -524,6 +547,12 @@ public class FileSystemInfo extends AbstractModel{
         if (source.Capacity != null) {
             this.Capacity = new Long(source.Capacity);
         }
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -550,6 +579,7 @@ public class FileSystemInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "BandwidthLimit", this.BandwidthLimit);
         this.setParamSimple(map, prefix + "Capacity", this.Capacity);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

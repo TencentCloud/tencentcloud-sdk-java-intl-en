@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class ModifyLoadBalancerSlaRequest extends AbstractModel{
 
     /**
-    * ID of the LCU-supported CLB instance, and the target specification
+    * CLB instance information
     */
     @SerializedName("LoadBalancerSla")
     @Expose
     private SlaUpdateParam [] LoadBalancerSla;
 
     /**
-     * Get ID of the LCU-supported CLB instance, and the target specification 
-     * @return LoadBalancerSla ID of the LCU-supported CLB instance, and the target specification
+     * Get CLB instance information 
+     * @return LoadBalancerSla CLB instance information
      */
     public SlaUpdateParam [] getLoadBalancerSla() {
         return this.LoadBalancerSla;
     }
 
     /**
-     * Set ID of the LCU-supported CLB instance, and the target specification
-     * @param LoadBalancerSla ID of the LCU-supported CLB instance, and the target specification
+     * Set CLB instance information
+     * @param LoadBalancerSla CLB instance information
      */
     public void setLoadBalancerSla(SlaUpdateParam [] LoadBalancerSla) {
         this.LoadBalancerSla = LoadBalancerSla;
