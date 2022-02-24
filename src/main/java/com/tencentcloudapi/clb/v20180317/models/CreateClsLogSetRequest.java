@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class CreateClsLogSetRequest extends AbstractModel{
 
     /**
-    * Logset retention period in days; max value: 90
-    */
-    @SerializedName("Period")
-    @Expose
-    private Long Period;
-
-    /**
     * Logset name, which must be unique among all CLS logsets; default value: clb_logset
     */
     @SerializedName("LogsetName")
@@ -37,27 +30,18 @@ public class CreateClsLogSetRequest extends AbstractModel{
     private String LogsetName;
 
     /**
+    * Logset retention period (in days)
+    */
+    @SerializedName("Period")
+    @Expose
+    private Long Period;
+
+    /**
     * Logset type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
     */
     @SerializedName("LogsetType")
     @Expose
     private String LogsetType;
-
-    /**
-     * Get Logset retention period in days; max value: 90 
-     * @return Period Logset retention period in days; max value: 90
-     */
-    public Long getPeriod() {
-        return this.Period;
-    }
-
-    /**
-     * Set Logset retention period in days; max value: 90
-     * @param Period Logset retention period in days; max value: 90
-     */
-    public void setPeriod(Long Period) {
-        this.Period = Period;
-    }
 
     /**
      * Get Logset name, which must be unique among all CLS logsets; default value: clb_logset 
@@ -73,6 +57,22 @@ public class CreateClsLogSetRequest extends AbstractModel{
      */
     public void setLogsetName(String LogsetName) {
         this.LogsetName = LogsetName;
+    }
+
+    /**
+     * Get Logset retention period (in days) 
+     * @return Period Logset retention period (in days)
+     */
+    public Long getPeriod() {
+        return this.Period;
+    }
+
+    /**
+     * Set Logset retention period (in days)
+     * @param Period Logset retention period (in days)
+     */
+    public void setPeriod(Long Period) {
+        this.Period = Period;
     }
 
     /**
@@ -99,11 +99,11 @@ public class CreateClsLogSetRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateClsLogSetRequest(CreateClsLogSetRequest source) {
-        if (source.Period != null) {
-            this.Period = new Long(source.Period);
-        }
         if (source.LogsetName != null) {
             this.LogsetName = new String(source.LogsetName);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
         }
         if (source.LogsetType != null) {
             this.LogsetType = new String(source.LogsetType);
@@ -115,8 +115,8 @@ public class CreateClsLogSetRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "LogsetName", this.LogsetName);
+        this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "LogsetType", this.LogsetType);
 
     }

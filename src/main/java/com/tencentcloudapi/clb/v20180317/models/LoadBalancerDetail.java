@@ -287,6 +287,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String TargetHealth;
 
     /**
+    * List o domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Domains")
+    @Expose
+    private String Domains;
+
+    /**
      * Get CLB instance ID. 
      * @return LoadBalancerId CLB instance ID.
      */
@@ -946,6 +954,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.TargetHealth = TargetHealth;
     }
 
+    /**
+     * Get List o domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Domains List o domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getDomains() {
+        return this.Domains;
+    }
+
+    /**
+     * Set List o domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Domains List o domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDomains(String Domains) {
+        this.Domains = Domains;
+    }
+
     public LoadBalancerDetail() {
     }
 
@@ -1059,6 +1087,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.TargetHealth != null) {
             this.TargetHealth = new String(source.TargetHealth);
         }
+        if (source.Domains != null) {
+            this.Domains = new String(source.Domains);
+        }
     }
 
 
@@ -1099,6 +1130,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
         this.setParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
         this.setParamSimple(map, prefix + "TargetHealth", this.TargetHealth);
+        this.setParamSimple(map, prefix + "Domains", this.Domains);
 
     }
 }

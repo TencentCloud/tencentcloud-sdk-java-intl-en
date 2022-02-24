@@ -44,7 +44,7 @@ public class DeleteRuleRequest extends AbstractModel{
     private String [] LocationIds;
 
     /**
-    * Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
+    * Specifies the target domain name. Only one domain name is allowed. This field is invalid when `LocationIds` is specified.
     */
     @SerializedName("Domain")
     @Expose
@@ -58,7 +58,7 @@ public class DeleteRuleRequest extends AbstractModel{
     private String Url;
 
     /**
-    * A listener must be configured with a default domain name. If you need to delete the default domain name, you can specify another one as the new default domain name.
+    * Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
     */
     @SerializedName("NewDefaultServerDomain")
     @Expose
@@ -113,16 +113,16 @@ public class DeleteRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified. 
-     * @return Domain Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
+     * Get Specifies the target domain name. Only one domain name is allowed. This field is invalid when `LocationIds` is specified. 
+     * @return Domain Specifies the target domain name. Only one domain name is allowed. This field is invalid when `LocationIds` is specified.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
-     * @param Domain Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
+     * Set Specifies the target domain name. Only one domain name is allowed. This field is invalid when `LocationIds` is specified.
+     * @param Domain Specifies the target domain name. Only one domain name is allowed. This field is invalid when `LocationIds` is specified.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
@@ -145,16 +145,16 @@ public class DeleteRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get A listener must be configured with a default domain name. If you need to delete the default domain name, you can specify another one as the new default domain name. 
-     * @return NewDefaultServerDomain A listener must be configured with a default domain name. If you need to delete the default domain name, you can specify another one as the new default domain name.
+     * Get Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them. 
+     * @return NewDefaultServerDomain Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
      */
     public String getNewDefaultServerDomain() {
         return this.NewDefaultServerDomain;
     }
 
     /**
-     * Set A listener must be configured with a default domain name. If you need to delete the default domain name, you can specify another one as the new default domain name.
-     * @param NewDefaultServerDomain A listener must be configured with a default domain name. If you need to delete the default domain name, you can specify another one as the new default domain name.
+     * Set Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
+     * @param NewDefaultServerDomain Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
      */
     public void setNewDefaultServerDomain(String NewDefaultServerDomain) {
         this.NewDefaultServerDomain = NewDefaultServerDomain;

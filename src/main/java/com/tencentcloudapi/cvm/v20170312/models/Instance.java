@@ -270,6 +270,14 @@ Note: this field may return null, indicating that no valid value was found.
     private String IsolatedSource;
 
     /**
+    * GPU information. This field is only returned for GPU instances.
+Note: this field may return null, indicating that no valid value was found.
+    */
+    @SerializedName("GPUInfo")
+    @Expose
+    private GPUInfo GPUInfo;
+
+    /**
      * Get Location of the instance 
      * @return Placement Location of the instance
      */
@@ -849,6 +857,26 @@ Note: this field may return null, indicating that no valid value was found.
         this.IsolatedSource = IsolatedSource;
     }
 
+    /**
+     * Get GPU information. This field is only returned for GPU instances.
+Note: this field may return null, indicating that no valid value was found. 
+     * @return GPUInfo GPU information. This field is only returned for GPU instances.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public GPUInfo getGPUInfo() {
+        return this.GPUInfo;
+    }
+
+    /**
+     * Set GPU information. This field is only returned for GPU instances.
+Note: this field may return null, indicating that no valid value was found.
+     * @param GPUInfo GPU information. This field is only returned for GPU instances.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public void setGPUInfo(GPUInfo GPUInfo) {
+        this.GPUInfo = GPUInfo;
+    }
+
     public Instance() {
     }
 
@@ -980,6 +1008,9 @@ Note: this field may return null, indicating that no valid value was found.
         if (source.IsolatedSource != null) {
             this.IsolatedSource = new String(source.IsolatedSource);
         }
+        if (source.GPUInfo != null) {
+            this.GPUInfo = new GPUInfo(source.GPUInfo);
+        }
     }
 
 
@@ -1021,6 +1052,7 @@ Note: this field may return null, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
         this.setParamArraySimple(map, prefix + "RdmaIpAddresses.", this.RdmaIpAddresses);
         this.setParamSimple(map, prefix + "IsolatedSource", this.IsolatedSource);
+        this.setParamObj(map, prefix + "GPUInfo.", this.GPUInfo);
 
     }
 }

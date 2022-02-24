@@ -359,6 +359,48 @@ public class ModifyApiRequest extends AbstractModel{
     private Base64EncodedTriggerRule [] Base64EncodedTriggerRules;
 
     /**
+    * Event bus ID.
+    */
+    @SerializedName("EventBusId")
+    @Expose
+    private String EventBusId;
+
+    /**
+    * SCF function type, which takes effect when the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+    */
+    @SerializedName("ServiceScfFunctionType")
+    @Expose
+    private String ServiceScfFunctionType;
+
+    /**
+    * EIAM application type.
+    */
+    @SerializedName("EIAMAppType")
+    @Expose
+    private String EIAMAppType;
+
+    /**
+    * EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+    */
+    @SerializedName("EIAMAuthType")
+    @Expose
+    private String EIAMAuthType;
+
+    /**
+    * Validity of the EIAM application token. Unit: second. Default value: `7200`.
+    */
+    @SerializedName("EIAMAppId")
+    @Expose
+    private String EIAMAppId;
+
+    /**
+    * EIAM application ID.
+    */
+    @SerializedName("TokenTimeout")
+    @Expose
+    private Long TokenTimeout;
+
+    /**
      * Get Unique service ID of API. 
      * @return ServiceId Unique service ID of API.
      */
@@ -1126,6 +1168,102 @@ public class ModifyApiRequest extends AbstractModel{
         this.Base64EncodedTriggerRules = Base64EncodedTriggerRules;
     }
 
+    /**
+     * Get Event bus ID. 
+     * @return EventBusId Event bus ID.
+     */
+    public String getEventBusId() {
+        return this.EventBusId;
+    }
+
+    /**
+     * Set Event bus ID.
+     * @param EventBusId Event bus ID.
+     */
+    public void setEventBusId(String EventBusId) {
+        this.EventBusId = EventBusId;
+    }
+
+    /**
+     * Get SCF function type, which takes effect when the backend type is `SCF`. Valid values: `EVENT` and `HTTP`. 
+     * @return ServiceScfFunctionType SCF function type, which takes effect when the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+     */
+    public String getServiceScfFunctionType() {
+        return this.ServiceScfFunctionType;
+    }
+
+    /**
+     * Set SCF function type, which takes effect when the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+     * @param ServiceScfFunctionType SCF function type, which takes effect when the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+     */
+    public void setServiceScfFunctionType(String ServiceScfFunctionType) {
+        this.ServiceScfFunctionType = ServiceScfFunctionType;
+    }
+
+    /**
+     * Get EIAM application type. 
+     * @return EIAMAppType EIAM application type.
+     */
+    public String getEIAMAppType() {
+        return this.EIAMAppType;
+    }
+
+    /**
+     * Set EIAM application type.
+     * @param EIAMAppType EIAM application type.
+     */
+    public void setEIAMAppType(String EIAMAppType) {
+        this.EIAMAppType = EIAMAppType;
+    }
+
+    /**
+     * Get EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`. 
+     * @return EIAMAuthType EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+     */
+    public String getEIAMAuthType() {
+        return this.EIAMAuthType;
+    }
+
+    /**
+     * Set EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+     * @param EIAMAuthType EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+     */
+    public void setEIAMAuthType(String EIAMAuthType) {
+        this.EIAMAuthType = EIAMAuthType;
+    }
+
+    /**
+     * Get Validity of the EIAM application token. Unit: second. Default value: `7200`. 
+     * @return EIAMAppId Validity of the EIAM application token. Unit: second. Default value: `7200`.
+     */
+    public String getEIAMAppId() {
+        return this.EIAMAppId;
+    }
+
+    /**
+     * Set Validity of the EIAM application token. Unit: second. Default value: `7200`.
+     * @param EIAMAppId Validity of the EIAM application token. Unit: second. Default value: `7200`.
+     */
+    public void setEIAMAppId(String EIAMAppId) {
+        this.EIAMAppId = EIAMAppId;
+    }
+
+    /**
+     * Get EIAM application ID. 
+     * @return TokenTimeout EIAM application ID.
+     */
+    public Long getTokenTimeout() {
+        return this.TokenTimeout;
+    }
+
+    /**
+     * Set EIAM application ID.
+     * @param TokenTimeout EIAM application ID.
+     */
+    public void setTokenTimeout(Long TokenTimeout) {
+        this.TokenTimeout = TokenTimeout;
+    }
+
     public ModifyApiRequest() {
     }
 
@@ -1296,6 +1434,24 @@ public class ModifyApiRequest extends AbstractModel{
                 this.Base64EncodedTriggerRules[i] = new Base64EncodedTriggerRule(source.Base64EncodedTriggerRules[i]);
             }
         }
+        if (source.EventBusId != null) {
+            this.EventBusId = new String(source.EventBusId);
+        }
+        if (source.ServiceScfFunctionType != null) {
+            this.ServiceScfFunctionType = new String(source.ServiceScfFunctionType);
+        }
+        if (source.EIAMAppType != null) {
+            this.EIAMAppType = new String(source.EIAMAppType);
+        }
+        if (source.EIAMAuthType != null) {
+            this.EIAMAuthType = new String(source.EIAMAuthType);
+        }
+        if (source.EIAMAppId != null) {
+            this.EIAMAppId = new String(source.EIAMAppId);
+        }
+        if (source.TokenTimeout != null) {
+            this.TokenTimeout = new Long(source.TokenTimeout);
+        }
     }
 
 
@@ -1351,6 +1507,12 @@ public class ModifyApiRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "IsBase64Encoded", this.IsBase64Encoded);
         this.setParamSimple(map, prefix + "IsBase64Trigger", this.IsBase64Trigger);
         this.setParamArrayObj(map, prefix + "Base64EncodedTriggerRules.", this.Base64EncodedTriggerRules);
+        this.setParamSimple(map, prefix + "EventBusId", this.EventBusId);
+        this.setParamSimple(map, prefix + "ServiceScfFunctionType", this.ServiceScfFunctionType);
+        this.setParamSimple(map, prefix + "EIAMAppType", this.EIAMAppType);
+        this.setParamSimple(map, prefix + "EIAMAuthType", this.EIAMAuthType);
+        this.setParamSimple(map, prefix + "EIAMAppId", this.EIAMAppId);
+        this.setParamSimple(map, prefix + "TokenTimeout", this.TokenTimeout);
 
     }
 }

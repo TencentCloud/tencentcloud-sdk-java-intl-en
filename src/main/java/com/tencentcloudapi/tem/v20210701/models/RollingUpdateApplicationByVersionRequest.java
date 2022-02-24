@@ -58,35 +58,35 @@ public class RollingUpdateApplicationByVersionRequest extends AbstractModel{
     private String From;
 
     /**
-    * 
+    * The deployment policy. Values: `AUTO` (automatically deploy), `BETA` (deploy a small batch first to test the result, and deploy the rest automatically) and `MANUAL` (manually deploy)
     */
     @SerializedName("DeployStrategyType")
     @Expose
     private String DeployStrategyType;
 
     /**
-    * 
+    * Total number of batches
     */
     @SerializedName("TotalBatchCount")
     @Expose
     private Long TotalBatchCount;
 
     /**
-    * 
+    * Interval between the batches
     */
     @SerializedName("BatchInterval")
     @Expose
     private Long BatchInterval;
 
     /**
-    * 
+    * Number of instances in a beta batch
     */
     @SerializedName("BetaBatchNum")
     @Expose
     private Long BetaBatchNum;
 
     /**
-    * 
+    * Minimum number of available instances during the deployment
     */
     @SerializedName("MinAvailable")
     @Expose
@@ -173,80 +173,80 @@ public class RollingUpdateApplicationByVersionRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return DeployStrategyType 
+     * Get The deployment policy. Values: `AUTO` (automatically deploy), `BETA` (deploy a small batch first to test the result, and deploy the rest automatically) and `MANUAL` (manually deploy) 
+     * @return DeployStrategyType The deployment policy. Values: `AUTO` (automatically deploy), `BETA` (deploy a small batch first to test the result, and deploy the rest automatically) and `MANUAL` (manually deploy)
      */
     public String getDeployStrategyType() {
         return this.DeployStrategyType;
     }
 
     /**
-     * Set 
-     * @param DeployStrategyType 
+     * Set The deployment policy. Values: `AUTO` (automatically deploy), `BETA` (deploy a small batch first to test the result, and deploy the rest automatically) and `MANUAL` (manually deploy)
+     * @param DeployStrategyType The deployment policy. Values: `AUTO` (automatically deploy), `BETA` (deploy a small batch first to test the result, and deploy the rest automatically) and `MANUAL` (manually deploy)
      */
     public void setDeployStrategyType(String DeployStrategyType) {
         this.DeployStrategyType = DeployStrategyType;
     }
 
     /**
-     * Get  
-     * @return TotalBatchCount 
+     * Get Total number of batches 
+     * @return TotalBatchCount Total number of batches
      */
     public Long getTotalBatchCount() {
         return this.TotalBatchCount;
     }
 
     /**
-     * Set 
-     * @param TotalBatchCount 
+     * Set Total number of batches
+     * @param TotalBatchCount Total number of batches
      */
     public void setTotalBatchCount(Long TotalBatchCount) {
         this.TotalBatchCount = TotalBatchCount;
     }
 
     /**
-     * Get  
-     * @return BatchInterval 
+     * Get Interval between the batches 
+     * @return BatchInterval Interval between the batches
      */
     public Long getBatchInterval() {
         return this.BatchInterval;
     }
 
     /**
-     * Set 
-     * @param BatchInterval 
+     * Set Interval between the batches
+     * @param BatchInterval Interval between the batches
      */
     public void setBatchInterval(Long BatchInterval) {
         this.BatchInterval = BatchInterval;
     }
 
     /**
-     * Get  
-     * @return BetaBatchNum 
+     * Get Number of instances in a beta batch 
+     * @return BetaBatchNum Number of instances in a beta batch
      */
     public Long getBetaBatchNum() {
         return this.BetaBatchNum;
     }
 
     /**
-     * Set 
-     * @param BetaBatchNum 
+     * Set Number of instances in a beta batch
+     * @param BetaBatchNum Number of instances in a beta batch
      */
     public void setBetaBatchNum(Long BetaBatchNum) {
         this.BetaBatchNum = BetaBatchNum;
     }
 
     /**
-     * Get  
-     * @return MinAvailable 
+     * Get Minimum number of available instances during the deployment 
+     * @return MinAvailable Minimum number of available instances during the deployment
      */
     public Long getMinAvailable() {
         return this.MinAvailable;
     }
 
     /**
-     * Set 
-     * @param MinAvailable 
+     * Set Minimum number of available instances during the deployment
+     * @param MinAvailable Minimum number of available instances during the deployment
      */
     public void setMinAvailable(Long MinAvailable) {
         this.MinAvailable = MinAvailable;

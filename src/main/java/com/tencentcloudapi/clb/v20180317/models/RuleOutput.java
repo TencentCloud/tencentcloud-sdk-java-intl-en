@@ -180,6 +180,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String QuicStatus;
 
     /**
+    * List of domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Domains")
+    @Expose
+    private String [] Domains;
+
+    /**
      * Get Forwarding rule ID 
      * @return LocationId Forwarding rule ID
      */
@@ -555,6 +563,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.QuicStatus = QuicStatus;
     }
 
+    /**
+     * Get List of domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Domains List of domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String [] getDomains() {
+        return this.Domains;
+    }
+
+    /**
+     * Set List of domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Domains List of domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDomains(String [] Domains) {
+        this.Domains = Domains;
+    }
+
     public RuleOutput() {
     }
 
@@ -626,6 +654,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.QuicStatus != null) {
             this.QuicStatus = new String(source.QuicStatus);
         }
+        if (source.Domains != null) {
+            this.Domains = new String[source.Domains.length];
+            for (int i = 0; i < source.Domains.length; i++) {
+                this.Domains[i] = new String(source.Domains[i]);
+            }
+        }
     }
 
 
@@ -654,6 +688,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
         this.setParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
         this.setParamSimple(map, prefix + "QuicStatus", this.QuicStatus);
+        this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
 
     }
 }

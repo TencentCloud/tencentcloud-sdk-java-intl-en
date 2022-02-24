@@ -30,7 +30,7 @@ public class DescribeDataPvUrlStatisticsRequest extends AbstractModel{
     private Long StartTime;
 
     /**
-    * Type: "allcount", "falls", "samp", "version", "ext3", "nettype", "platform", "isp", "region", "device", "browser", "ext1", "ext2"
+    * `allcount`; performance view; `day`: 14-day data, `vp`: performance; `ckuv`: UV; `ckpv`: PV; `condition`: condition list; `nettype`/`version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: network/platform view; version view; device view; ISP view; region view; browser view; custom view, and so on.
     */
     @SerializedName("Type")
     @Expose
@@ -186,16 +186,16 @@ public class DescribeDataPvUrlStatisticsRequest extends AbstractModel{
     }
 
     /**
-     * Get Type: "allcount", "falls", "samp", "version", "ext3", "nettype", "platform", "isp", "region", "device", "browser", "ext1", "ext2" 
-     * @return Type Type: "allcount", "falls", "samp", "version", "ext3", "nettype", "platform", "isp", "region", "device", "browser", "ext1", "ext2"
+     * Get `allcount`; performance view; `day`: 14-day data, `vp`: performance; `ckuv`: UV; `ckpv`: PV; `condition`: condition list; `nettype`/`version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: network/platform view; version view; device view; ISP view; region view; browser view; custom view, and so on. 
+     * @return Type `allcount`; performance view; `day`: 14-day data, `vp`: performance; `ckuv`: UV; `ckpv`: PV; `condition`: condition list; `nettype`/`version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: network/platform view; version view; device view; ISP view; region view; browser view; custom view, and so on.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type: "allcount", "falls", "samp", "version", "ext3", "nettype", "platform", "isp", "region", "device", "browser", "ext1", "ext2"
-     * @param Type Type: "allcount", "falls", "samp", "version", "ext3", "nettype", "platform", "isp", "region", "device", "browser", "ext1", "ext2"
+     * Set `allcount`; performance view; `day`: 14-day data, `vp`: performance; `ckuv`: UV; `ckpv`: PV; `condition`: condition list; `nettype`/`version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: network/platform view; version view; device view; ISP view; region view; browser view; custom view, and so on.
+     * @param Type `allcount`; performance view; `day`: 14-day data, `vp`: performance; `ckuv`: UV; `ckpv`: PV; `condition`: condition list; `nettype`/`version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: network/platform view; version view; device view; ISP view; region view; browser view; custom view, and so on.
      */
     public void setType(String Type) {
         this.Type = Type;

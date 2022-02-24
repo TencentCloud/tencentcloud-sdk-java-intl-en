@@ -82,6 +82,13 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
     private Boolean DryRun;
 
     /**
+    * Tag description list. This parameter is used to bind a tag to a custom image.
+    */
+    @SerializedName("TagSpecification")
+    @Expose
+    private TagSpecification [] TagSpecification;
+
+    /**
      * Get Image name 
      * @return ImageName Image name
      */
@@ -221,6 +228,22 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
         this.DryRun = DryRun;
     }
 
+    /**
+     * Get Tag description list. This parameter is used to bind a tag to a custom image. 
+     * @return TagSpecification Tag description list. This parameter is used to bind a tag to a custom image.
+     */
+    public TagSpecification [] getTagSpecification() {
+        return this.TagSpecification;
+    }
+
+    /**
+     * Set Tag description list. This parameter is used to bind a tag to a custom image.
+     * @param TagSpecification Tag description list. This parameter is used to bind a tag to a custom image.
+     */
+    public void setTagSpecification(TagSpecification [] TagSpecification) {
+        this.TagSpecification = TagSpecification;
+    }
+
     public CreateImageRequest() {
     }
 
@@ -259,6 +282,12 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
         if (source.DryRun != null) {
             this.DryRun = new Boolean(source.DryRun);
         }
+        if (source.TagSpecification != null) {
+            this.TagSpecification = new TagSpecification[source.TagSpecification.length];
+            for (int i = 0; i < source.TagSpecification.length; i++) {
+                this.TagSpecification[i] = new TagSpecification(source.TagSpecification[i]);
+            }
+        }
     }
 
 
@@ -274,6 +303,7 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
         this.setParamArraySimple(map, prefix + "DataDiskIds.", this.DataDiskIds);
         this.setParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
+        this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
 
     }
 }

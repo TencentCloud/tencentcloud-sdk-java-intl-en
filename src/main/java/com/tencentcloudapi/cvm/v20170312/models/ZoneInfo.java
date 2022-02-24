@@ -60,7 +60,7 @@ The following is a list of all availability zones:
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
-<li> ap-beijing-1 </li>
+<li> ap-beijing-1 (sold out) </li>
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
@@ -76,6 +76,7 @@ The following is a list of all availability zones:
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
+<li> sa-saopaulo-1</li>
     */
     @SerializedName("Zone")
     @Expose
@@ -140,7 +141,7 @@ The following is a list of all availability zones:
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
-<li> ap-beijing-1 </li>
+<li> ap-beijing-1 (sold out) </li>
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
@@ -155,7 +156,8 @@ The following is a list of all availability zones:
 <li> na-ashburn-1 </li>
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
-<li> ap-nanjing-2 </li> 
+<li> ap-nanjing-2 </li>
+<li> sa-saopaulo-1</li> 
      * @return Zone Availability zone name, such as `ap-guangzhou-3`.
 The following is a list of all availability zones:
 <li> ap-chongqing-1 </li>
@@ -193,7 +195,7 @@ The following is a list of all availability zones:
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
-<li> ap-beijing-1 </li>
+<li> ap-beijing-1 (sold out) </li>
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
@@ -209,6 +211,7 @@ The following is a list of all availability zones:
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
+<li> sa-saopaulo-1</li>
      */
     public String getZone() {
         return this.Zone;
@@ -252,7 +255,7 @@ The following is a list of all availability zones:
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
-<li> ap-beijing-1 </li>
+<li> ap-beijing-1 (sold out) </li>
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
@@ -268,6 +271,7 @@ The following is a list of all availability zones:
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
+<li> sa-saopaulo-1</li>
      * @param Zone Availability zone name, such as `ap-guangzhou-3`.
 The following is a list of all availability zones:
 <li> ap-chongqing-1 </li>
@@ -305,7 +309,7 @@ The following is a list of all availability zones:
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
-<li> ap-beijing-1 </li>
+<li> ap-beijing-1 (sold out) </li>
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
@@ -321,6 +325,7 @@ The following is a list of all availability zones:
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
+<li> sa-saopaulo-1</li>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

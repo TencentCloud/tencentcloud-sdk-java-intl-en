@@ -143,8 +143,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String HttpVersion;
 
     /**
-    * Specifies the source IP for health check. `0`: use the CLB VIP as the source IP; `1`: IP range starting with 100.64 serving as the source IP. Default: `0`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("SourceIpType")
     @Expose
@@ -451,20 +451,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Specifies the source IP for health check. `0`: use the CLB VIP as the source IP; `1`: IP range starting with 100.64 serving as the source IP. Default: `0`.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return SourceIpType Specifies the source IP for health check. `0`: use the CLB VIP as the source IP; `1`: IP range starting with 100.64 serving as the source IP. Default: `0`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return SourceIpType Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getSourceIpType() {
         return this.SourceIpType;
     }
 
     /**
-     * Set Specifies the source IP for health check. `0`: use the CLB VIP as the source IP; `1`: IP range starting with 100.64 serving as the source IP. Default: `0`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param SourceIpType Specifies the source IP for health check. `0`: use the CLB VIP as the source IP; `1`: IP range starting with 100.64 serving as the source IP. Default: `0`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param SourceIpType Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSourceIpType(Long SourceIpType) {
         this.SourceIpType = SourceIpType;

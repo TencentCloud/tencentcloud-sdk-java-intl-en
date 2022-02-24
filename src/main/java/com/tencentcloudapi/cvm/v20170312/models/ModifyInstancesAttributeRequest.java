@@ -30,18 +30,26 @@ public class ModifyInstancesAttributeRequest extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-    * Instance name. You can specify any name you like, but its length cannot exceed 60 characters.
+    * The instance name, which can not exceed 60 characters
+<dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they can not be both specified.</dx-alert>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * ID list of security groups of the instance. The instance will be associated with the specified security groups and will be disassociated from the original security groups.
+    * IDs of security groups associated with the specified instance. You can associate with a security group by adding its ID, or cancel the association with a security group by removing its ID. <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they cannot be both set.</dx-alert>
     */
     @SerializedName("SecurityGroups")
     @Expose
     private String [] SecurityGroups;
+
+    /**
+    * 
+    */
+    @SerializedName("DisableApiTermination")
+    @Expose
+    private Boolean DisableApiTermination;
 
     /**
      * Get Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100. 
@@ -60,35 +68,55 @@ public class ModifyInstancesAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance name. You can specify any name you like, but its length cannot exceed 60 characters. 
-     * @return InstanceName Instance name. You can specify any name you like, but its length cannot exceed 60 characters.
+     * Get The instance name, which can not exceed 60 characters
+<dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they can not be both specified.</dx-alert> 
+     * @return InstanceName The instance name, which can not exceed 60 characters
+<dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they can not be both specified.</dx-alert>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name. You can specify any name you like, but its length cannot exceed 60 characters.
-     * @param InstanceName Instance name. You can specify any name you like, but its length cannot exceed 60 characters.
+     * Set The instance name, which can not exceed 60 characters
+<dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they can not be both specified.</dx-alert>
+     * @param InstanceName The instance name, which can not exceed 60 characters
+<dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they can not be both specified.</dx-alert>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get ID list of security groups of the instance. The instance will be associated with the specified security groups and will be disassociated from the original security groups. 
-     * @return SecurityGroups ID list of security groups of the instance. The instance will be associated with the specified security groups and will be disassociated from the original security groups.
+     * Get IDs of security groups associated with the specified instance. You can associate with a security group by adding its ID, or cancel the association with a security group by removing its ID. <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they cannot be both set.</dx-alert> 
+     * @return SecurityGroups IDs of security groups associated with the specified instance. You can associate with a security group by adding its ID, or cancel the association with a security group by removing its ID. <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they cannot be both set.</dx-alert>
      */
     public String [] getSecurityGroups() {
         return this.SecurityGroups;
     }
 
     /**
-     * Set ID list of security groups of the instance. The instance will be associated with the specified security groups and will be disassociated from the original security groups.
-     * @param SecurityGroups ID list of security groups of the instance. The instance will be associated with the specified security groups and will be disassociated from the original security groups.
+     * Set IDs of security groups associated with the specified instance. You can associate with a security group by adding its ID, or cancel the association with a security group by removing its ID. <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they cannot be both set.</dx-alert>
+     * @param SecurityGroups IDs of security groups associated with the specified instance. You can associate with a security group by adding its ID, or cancel the association with a security group by removing its ID. <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they cannot be both set.</dx-alert>
      */
     public void setSecurityGroups(String [] SecurityGroups) {
         this.SecurityGroups = SecurityGroups;
+    }
+
+    /**
+     * Get  
+     * @return DisableApiTermination 
+     */
+    public Boolean getDisableApiTermination() {
+        return this.DisableApiTermination;
+    }
+
+    /**
+     * Set 
+     * @param DisableApiTermination 
+     */
+    public void setDisableApiTermination(Boolean DisableApiTermination) {
+        this.DisableApiTermination = DisableApiTermination;
     }
 
     public ModifyInstancesAttributeRequest() {
@@ -114,6 +142,9 @@ public class ModifyInstancesAttributeRequest extends AbstractModel{
                 this.SecurityGroups[i] = new String(source.SecurityGroups[i]);
             }
         }
+        if (source.DisableApiTermination != null) {
+            this.DisableApiTermination = new Boolean(source.DisableApiTermination);
+        }
     }
 
 
@@ -124,6 +155,7 @@ public class ModifyInstancesAttributeRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
+        this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
 
     }
 }

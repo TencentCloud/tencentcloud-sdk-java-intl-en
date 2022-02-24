@@ -170,6 +170,50 @@ If you currently use a password to log in, you will no longer be able to do so a
     }
 
     /**
+     *This API is used to create an instance launch template.
+
+An instance launch template contains the configuration information required to create an instance, including instance type, data/system disk type and size, and security group, etc.
+
+When a template is created, it defaults to Version 1. You can use `CreateLaunchTemplateVersion` to create new versions of this template, with the version number increasing. When you run `RunInstances` to create instances, you can specify the instance launch template version. If it’s not specified, the default template version is used.
+     * @param req CreateLaunchTemplateRequest
+     * @return CreateLaunchTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLaunchTemplateResponse CreateLaunchTemplate(CreateLaunchTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLaunchTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLaunchTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateLaunchTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create an instance launch template based on the specified template ID and the corresponding template version number. The default version number will be used when no template version numbers are specified. Each instance launch template can have up to 30 version numbers.
+     * @param req CreateLaunchTemplateVersionRequest
+     * @return CreateLaunchTemplateVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLaunchTemplateVersionResponse CreateLaunchTemplateVersion(CreateLaunchTemplateVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLaunchTemplateVersionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLaunchTemplateVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateLaunchTemplateVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a [spread placement group](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1). Only empty placement groups can be deleted. To delete a non-empty group, you need to terminate all the CVM instances in it first. Otherwise, the deletion will fail.
      * @param req DeleteDisasterRecoverGroupsRequest
      * @return DeleteDisasterRecoverGroupsResponse
@@ -229,6 +273,46 @@ If you currently use a password to log in, you will no longer be able to do so a
                 Type type = new TypeToken<JsonResponseModel<DeleteKeyPairsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteKeyPairs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete an instance launch template.
+     * @param req DeleteLaunchTemplateRequest
+     * @return DeleteLaunchTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLaunchTemplateResponse DeleteLaunchTemplate(DeleteLaunchTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLaunchTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLaunchTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteLaunchTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete one or more instance launch template versions.
+     * @param req DeleteLaunchTemplateVersionsRequest
+     * @return DeleteLaunchTemplateVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLaunchTemplateVersionsResponse DeleteLaunchTemplateVersions(DeleteLaunchTemplateVersionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLaunchTemplateVersionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLaunchTemplateVersionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteLaunchTemplateVersions");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -560,6 +644,46 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 Type type = new TypeToken<JsonResponseModel<DescribeKeyPairsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeKeyPairs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the information of instance launch template versions.
+     * @param req DescribeLaunchTemplateVersionsRequest
+     * @return DescribeLaunchTemplateVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLaunchTemplateVersionsResponse DescribeLaunchTemplateVersions(DescribeLaunchTemplateVersionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLaunchTemplateVersionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLaunchTemplateVersionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLaunchTemplateVersions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query one or more instance launch templates.
+     * @param req DescribeLaunchTemplatesRequest
+     * @return DescribeLaunchTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLaunchTemplatesResponse DescribeLaunchTemplates(DescribeLaunchTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLaunchTemplatesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLaunchTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLaunchTemplates");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -998,12 +1122,13 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
-     *The API is used to modify the attributes of an instance. Currently, you can only use the API to modify the name and the associated security groups of the instance.
+     *The API is used to modify the attributes of an instance. Only the name and the associated security groups can be modified for now.
 
-* **Instance names** are used only for users' convenience. Tencent Cloud does not use these names for online support or instance management.
-* Batch operations are supported. The maximum number of Batch instances in each request is 100.
-* When you modify the security groups associated with an instance, the original security groups will be disassociated.
-* You can use the [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) API to query the instance operation result. If the 'LatestOperationState' in the response is **SUCCESS**, the operation is successful.
+* An attribute must be specified in the request.
+* "Instance name" is a custom name for easier management. Tencent Cloud does not use the name for online support or instance management.
+* Batch operations are supported. Each request can modify up to 100 instances.
+* When you modify the security groups associated with an instance is modified, the original security groups are disassociated.
+* You can use the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) to query the instance operation result. If the 'LatestOperationState' in the response is **SUCCESS**, the operation is successful.
      * @param req ModifyInstancesAttributeRequest
      * @return ModifyInstancesAttributeResponse
      * @throws TencentCloudSDKException
@@ -1087,6 +1212,26 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 Type type = new TypeToken<JsonResponseModel<ModifyKeyPairAttributeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyKeyPairAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the default version of the instance launch template.
+     * @param req ModifyLaunchTemplateDefaultVersionRequest
+     * @return ModifyLaunchTemplateDefaultVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLaunchTemplateDefaultVersionResponse ModifyLaunchTemplateDefaultVersion(ModifyLaunchTemplateDefaultVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLaunchTemplateDefaultVersionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLaunchTemplateDefaultVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLaunchTemplateDefaultVersion");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

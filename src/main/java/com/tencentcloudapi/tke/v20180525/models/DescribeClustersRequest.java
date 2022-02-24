@@ -48,32 +48,42 @@ all clusters under the account will be obtained)
     * ·  ClusterName
     Filters by the cluster name
     Type: String
-    Required: no
+    Required: No
+
+·  ClusterType
+    Filters by the cluster type
+    Type: String
+    Required: No
+
+·  ClusterStatus
+    Filters by the cluster status
+    Type: String
+    Required: No
 
 ·  Tags
     Filters by key-value pairs of tags
     Type: String
-    Required: no
+    Required: No
 
 ·  vpc-id
     Filters by the VPC ID
     Type: String
-    Required: no
+    Required: No
 
 ·  tag-key
     Filters by the tag key
     Type: String
-    Required: no
+    Required: No
 
 ·  tag-value
     Filters by the tag value
     Type: String
-    Required: no
+    Required: No
 
 ·  tag:tag-key
     Filters by key-value pairs of tags
     Type: String
-    Required: no
+    Required: No
     */
     @SerializedName("Filters")
     @Expose
@@ -142,61 +152,81 @@ all clusters under the account will be obtained)
      * Get ·  ClusterName
     Filters by the cluster name
     Type: String
-    Required: no
+    Required: No
+
+·  ClusterType
+    Filters by the cluster type
+    Type: String
+    Required: No
+
+·  ClusterStatus
+    Filters by the cluster status
+    Type: String
+    Required: No
 
 ·  Tags
     Filters by key-value pairs of tags
     Type: String
-    Required: no
+    Required: No
 
 ·  vpc-id
     Filters by the VPC ID
     Type: String
-    Required: no
+    Required: No
 
 ·  tag-key
     Filters by the tag key
     Type: String
-    Required: no
+    Required: No
 
 ·  tag-value
     Filters by the tag value
     Type: String
-    Required: no
+    Required: No
 
 ·  tag:tag-key
     Filters by key-value pairs of tags
     Type: String
-    Required: no 
+    Required: No 
      * @return Filters ·  ClusterName
     Filters by the cluster name
     Type: String
-    Required: no
+    Required: No
+
+·  ClusterType
+    Filters by the cluster type
+    Type: String
+    Required: No
+
+·  ClusterStatus
+    Filters by the cluster status
+    Type: String
+    Required: No
 
 ·  Tags
     Filters by key-value pairs of tags
     Type: String
-    Required: no
+    Required: No
 
 ·  vpc-id
     Filters by the VPC ID
     Type: String
-    Required: no
+    Required: No
 
 ·  tag-key
     Filters by the tag key
     Type: String
-    Required: no
+    Required: No
 
 ·  tag-value
     Filters by the tag value
     Type: String
-    Required: no
+    Required: No
 
 ·  tag:tag-key
     Filters by key-value pairs of tags
     Type: String
-    Required: no
+    Required: No
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -206,61 +236,81 @@ all clusters under the account will be obtained)
      * Set ·  ClusterName
     Filters by the cluster name
     Type: String
-    Required: no
+    Required: No
+
+·  ClusterType
+    Filters by the cluster type
+    Type: String
+    Required: No
+
+·  ClusterStatus
+    Filters by the cluster status
+    Type: String
+    Required: No
 
 ·  Tags
     Filters by key-value pairs of tags
     Type: String
-    Required: no
+    Required: No
 
 ·  vpc-id
     Filters by the VPC ID
     Type: String
-    Required: no
+    Required: No
 
 ·  tag-key
     Filters by the tag key
     Type: String
-    Required: no
+    Required: No
 
 ·  tag-value
     Filters by the tag value
     Type: String
-    Required: no
+    Required: No
 
 ·  tag:tag-key
     Filters by key-value pairs of tags
     Type: String
-    Required: no
+    Required: No
      * @param Filters ·  ClusterName
     Filters by the cluster name
     Type: String
-    Required: no
+    Required: No
+
+·  ClusterType
+    Filters by the cluster type
+    Type: String
+    Required: No
+
+·  ClusterStatus
+    Filters by the cluster status
+    Type: String
+    Required: No
 
 ·  Tags
     Filters by key-value pairs of tags
     Type: String
-    Required: no
+    Required: No
 
 ·  vpc-id
     Filters by the VPC ID
     Type: String
-    Required: no
+    Required: No
 
 ·  tag-key
     Filters by the tag key
     Type: String
-    Required: no
+    Required: No
 
 ·  tag-value
     Filters by the tag value
     Type: String
-    Required: no
+    Required: No
 
 ·  tag:tag-key
     Filters by key-value pairs of tags
     Type: String
-    Required: no
+    Required: No
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

@@ -37,14 +37,14 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
     private String ListenerId;
 
     /**
-    * Domain name, which must be under a created forwarding rule.
+    * The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * New domain name
+    * The one domain name to modify. `NewDomain` and `NewDomains` can not be both specified.
     */
     @SerializedName("NewDomain")
     @Expose
@@ -72,11 +72,18 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
     private Boolean DefaultServer;
 
     /**
-    * A listener must be configured with a default domain name. If you need to disable the default domain name, you must specify another one as the new default domain name.
+    * Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
     */
     @SerializedName("NewDefaultServerDomain")
     @Expose
     private String NewDefaultServerDomain;
+
+    /**
+    * The new domain names to modify. `NewDomain` and `NewDomains` can not be both specified.
+    */
+    @SerializedName("NewDomains")
+    @Expose
+    private String [] NewDomains;
 
     /**
      * Get CLB instance ID 
@@ -111,32 +118,32 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
     }
 
     /**
-     * Get Domain name, which must be under a created forwarding rule. 
-     * @return Domain Domain name, which must be under a created forwarding rule.
+     * Get The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one. 
+     * @return Domain The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Domain name, which must be under a created forwarding rule.
-     * @param Domain Domain name, which must be under a created forwarding rule.
+     * Set The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
+     * @param Domain The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get New domain name 
-     * @return NewDomain New domain name
+     * Get The one domain name to modify. `NewDomain` and `NewDomains` can not be both specified. 
+     * @return NewDomain The one domain name to modify. `NewDomain` and `NewDomains` can not be both specified.
      */
     public String getNewDomain() {
         return this.NewDomain;
     }
 
     /**
-     * Set New domain name
-     * @param NewDomain New domain name
+     * Set The one domain name to modify. `NewDomain` and `NewDomains` can not be both specified.
+     * @param NewDomain The one domain name to modify. `NewDomain` and `NewDomains` can not be both specified.
      */
     public void setNewDomain(String NewDomain) {
         this.NewDomain = NewDomain;
@@ -191,19 +198,35 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
     }
 
     /**
-     * Get A listener must be configured with a default domain name. If you need to disable the default domain name, you must specify another one as the new default domain name. 
-     * @return NewDefaultServerDomain A listener must be configured with a default domain name. If you need to disable the default domain name, you must specify another one as the new default domain name.
+     * Get Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them. 
+     * @return NewDefaultServerDomain Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
      */
     public String getNewDefaultServerDomain() {
         return this.NewDefaultServerDomain;
     }
 
     /**
-     * Set A listener must be configured with a default domain name. If you need to disable the default domain name, you must specify another one as the new default domain name.
-     * @param NewDefaultServerDomain A listener must be configured with a default domain name. If you need to disable the default domain name, you must specify another one as the new default domain name.
+     * Set Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
+     * @param NewDefaultServerDomain Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
      */
     public void setNewDefaultServerDomain(String NewDefaultServerDomain) {
         this.NewDefaultServerDomain = NewDefaultServerDomain;
+    }
+
+    /**
+     * Get The new domain names to modify. `NewDomain` and `NewDomains` can not be both specified. 
+     * @return NewDomains The new domain names to modify. `NewDomain` and `NewDomains` can not be both specified.
+     */
+    public String [] getNewDomains() {
+        return this.NewDomains;
+    }
+
+    /**
+     * Set The new domain names to modify. `NewDomain` and `NewDomains` can not be both specified.
+     * @param NewDomains The new domain names to modify. `NewDomain` and `NewDomains` can not be both specified.
+     */
+    public void setNewDomains(String [] NewDomains) {
+        this.NewDomains = NewDomains;
     }
 
     public ModifyDomainAttributesRequest() {
@@ -238,6 +261,12 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
         if (source.NewDefaultServerDomain != null) {
             this.NewDefaultServerDomain = new String(source.NewDefaultServerDomain);
         }
+        if (source.NewDomains != null) {
+            this.NewDomains = new String[source.NewDomains.length];
+            for (int i = 0; i < source.NewDomains.length; i++) {
+                this.NewDomains[i] = new String(source.NewDomains[i]);
+            }
+        }
     }
 
 
@@ -253,6 +282,7 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Http2", this.Http2);
         this.setParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
         this.setParamSimple(map, prefix + "NewDefaultServerDomain", this.NewDefaultServerDomain);
+        this.setParamArraySimple(map, prefix + "NewDomains.", this.NewDomains);
 
     }
 }

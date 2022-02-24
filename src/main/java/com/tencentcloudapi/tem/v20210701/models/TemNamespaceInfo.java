@@ -136,6 +136,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Boolean EnableTswTraceService;
 
     /**
+    * Whether the environment is locked. `1`: locked; `0`: not locked
+    */
+    @SerializedName("Locked")
+    @Expose
+    private Long Locked;
+
+    /**
      * Get Environment ID 
      * @return EnvironmentId Environment ID
      */
@@ -395,6 +402,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.EnableTswTraceService = EnableTswTraceService;
     }
 
+    /**
+     * Get Whether the environment is locked. `1`: locked; `0`: not locked 
+     * @return Locked Whether the environment is locked. `1`: locked; `0`: not locked
+     */
+    public Long getLocked() {
+        return this.Locked;
+    }
+
+    /**
+     * Set Whether the environment is locked. `1`: locked; `0`: not locked
+     * @param Locked Whether the environment is locked. `1`: locked; `0`: not locked
+     */
+    public void setLocked(Long Locked) {
+        this.Locked = Locked;
+    }
+
     public TemNamespaceInfo() {
     }
 
@@ -451,6 +474,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.EnableTswTraceService != null) {
             this.EnableTswTraceService = new Boolean(source.EnableTswTraceService);
         }
+        if (source.Locked != null) {
+            this.Locked = new Long(source.Locked);
+        }
     }
 
 
@@ -474,6 +500,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
         this.setParamSimple(map, prefix + "EnableTswTraceService", this.EnableTswTraceService);
+        this.setParamSimple(map, prefix + "Locked", this.Locked);
 
     }
 }

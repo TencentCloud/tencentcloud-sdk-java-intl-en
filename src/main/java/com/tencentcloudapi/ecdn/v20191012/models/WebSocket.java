@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class WebSocket extends AbstractModel{
 
     /**
-    * WebSocket configuration switch, which can be `on` or `off`.
+    * Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
+
+* WebSocket is now only available for beta users. To use it, please submit a ticket.
     */
     @SerializedName("Switch")
     @Expose
@@ -38,16 +40,24 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long Timeout;
 
     /**
-     * Get WebSocket configuration switch, which can be `on` or `off`. 
-     * @return Switch WebSocket configuration switch, which can be `on` or `off`.
+     * Get Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
+
+* WebSocket is now only available for beta users. To use it, please submit a ticket. 
+     * @return Switch Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
+
+* WebSocket is now only available for beta users. To use it, please submit a ticket.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set WebSocket configuration switch, which can be `on` or `off`.
-     * @param Switch WebSocket configuration switch, which can be `on` or `off`.
+     * Set Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
+
+* WebSocket is now only available for beta users. To use it, please submit a ticket.
+     * @param Switch Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
+
+* WebSocket is now only available for beta users. To use it, please submit a ticket.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

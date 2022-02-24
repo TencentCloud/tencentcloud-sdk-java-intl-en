@@ -142,6 +142,8 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
     * JDK version
 - KONA: use KONA JDK
 - OPEN: use open JDK
+- KONA: use KONA JDK
+- OPEN: use open JDK
     */
     @SerializedName("JdkVersion")
     @Expose
@@ -272,6 +274,27 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
     @SerializedName("LogEnable")
     @Expose
     private Long LogEnable;
+
+    /**
+    * Whether the configuration is modified (except for the image configuration)
+    */
+    @SerializedName("ConfEdited")
+    @Expose
+    private Boolean ConfEdited;
+
+    /**
+    * Whether the application acceleration is enabled 
+    */
+    @SerializedName("SpeedUp")
+    @Expose
+    private Boolean SpeedUp;
+
+    /**
+    * Whether to enable probing
+    */
+    @SerializedName("StartupProbe")
+    @Expose
+    private HealthCheckConfig StartupProbe;
 
     /**
      * Get Application ID 
@@ -548,8 +571,12 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
     /**
      * Get JDK version
 - KONA: use KONA JDK
+- OPEN: use open JDK
+- KONA: use KONA JDK
 - OPEN: use open JDK 
      * @return JdkVersion JDK version
+- KONA: use KONA JDK
+- OPEN: use open JDK
 - KONA: use KONA JDK
 - OPEN: use open JDK
      */
@@ -561,7 +588,11 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
      * Set JDK version
 - KONA: use KONA JDK
 - OPEN: use open JDK
+- KONA: use KONA JDK
+- OPEN: use open JDK
      * @param JdkVersion JDK version
+- KONA: use KONA JDK
+- OPEN: use open JDK
 - KONA: use KONA JDK
 - OPEN: use open JDK
      */
@@ -857,6 +888,54 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
         this.LogEnable = LogEnable;
     }
 
+    /**
+     * Get Whether the configuration is modified (except for the image configuration) 
+     * @return ConfEdited Whether the configuration is modified (except for the image configuration)
+     */
+    public Boolean getConfEdited() {
+        return this.ConfEdited;
+    }
+
+    /**
+     * Set Whether the configuration is modified (except for the image configuration)
+     * @param ConfEdited Whether the configuration is modified (except for the image configuration)
+     */
+    public void setConfEdited(Boolean ConfEdited) {
+        this.ConfEdited = ConfEdited;
+    }
+
+    /**
+     * Get Whether the application acceleration is enabled  
+     * @return SpeedUp Whether the application acceleration is enabled 
+     */
+    public Boolean getSpeedUp() {
+        return this.SpeedUp;
+    }
+
+    /**
+     * Set Whether the application acceleration is enabled 
+     * @param SpeedUp Whether the application acceleration is enabled 
+     */
+    public void setSpeedUp(Boolean SpeedUp) {
+        this.SpeedUp = SpeedUp;
+    }
+
+    /**
+     * Get Whether to enable probing 
+     * @return StartupProbe Whether to enable probing
+     */
+    public HealthCheckConfig getStartupProbe() {
+        return this.StartupProbe;
+    }
+
+    /**
+     * Set Whether to enable probing
+     * @param StartupProbe Whether to enable probing
+     */
+    public void setStartupProbe(HealthCheckConfig StartupProbe) {
+        this.StartupProbe = StartupProbe;
+    }
+
     public DeployApplicationRequest() {
     }
 
@@ -997,6 +1076,15 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
         if (source.LogEnable != null) {
             this.LogEnable = new Long(source.LogEnable);
         }
+        if (source.ConfEdited != null) {
+            this.ConfEdited = new Boolean(source.ConfEdited);
+        }
+        if (source.SpeedUp != null) {
+            this.SpeedUp = new Boolean(source.SpeedUp);
+        }
+        if (source.StartupProbe != null) {
+            this.StartupProbe = new HealthCheckConfig(source.StartupProbe);
+        }
     }
 
 
@@ -1039,6 +1127,9 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
         this.setParamArrayObj(map, prefix + "HorizontalAutoscaler.", this.HorizontalAutoscaler);
         this.setParamArrayObj(map, prefix + "CronHorizontalAutoscaler.", this.CronHorizontalAutoscaler);
         this.setParamSimple(map, prefix + "LogEnable", this.LogEnable);
+        this.setParamSimple(map, prefix + "ConfEdited", this.ConfEdited);
+        this.setParamSimple(map, prefix + "SpeedUp", this.SpeedUp);
+        this.setParamObj(map, prefix + "StartupProbe.", this.StartupProbe);
 
     }
 }

@@ -72,6 +72,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String BackupOriginType;
 
     /**
+    * HTTPS advanced origin-pull configuration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AdvanceHttps")
+    @Expose
+    private AdvanceHttps AdvanceHttps;
+
+    /**
      * Get Primary origin server list. IP and the domain name of the origin server cannot be entered at the same time. Configure origin server port in the format of ["origin1:port1", "origin2:port2"]. Configure origin-pull weight in the format of ["origin1::weight1", "origin2::weight2"]. Configure both port and weight in the format of ["origin1:port1:weight1", "origin2:port2:weight2"]. Valid range of weight value: 0 - 100. 
      * @return Origins Primary origin server list. IP and the domain name of the origin server cannot be entered at the same time. Configure origin server port in the format of ["origin1:port1", "origin2:port2"]. Configure origin-pull weight in the format of ["origin1::weight1", "origin2::weight2"]. Configure both port and weight in the format of ["origin1:port1:weight1", "origin2:port2:weight2"]. Valid range of weight value: 0 - 100.
      */
@@ -195,6 +203,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.BackupOriginType = BackupOriginType;
     }
 
+    /**
+     * Get HTTPS advanced origin-pull configuration
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return AdvanceHttps HTTPS advanced origin-pull configuration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public AdvanceHttps getAdvanceHttps() {
+        return this.AdvanceHttps;
+    }
+
+    /**
+     * Set HTTPS advanced origin-pull configuration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param AdvanceHttps HTTPS advanced origin-pull configuration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setAdvanceHttps(AdvanceHttps AdvanceHttps) {
+        this.AdvanceHttps = AdvanceHttps;
+    }
+
     public Origin() {
     }
 
@@ -227,6 +255,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.BackupOriginType != null) {
             this.BackupOriginType = new String(source.BackupOriginType);
         }
+        if (source.AdvanceHttps != null) {
+            this.AdvanceHttps = new AdvanceHttps(source.AdvanceHttps);
+        }
     }
 
 
@@ -240,6 +271,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "OriginPullProtocol", this.OriginPullProtocol);
         this.setParamArraySimple(map, prefix + "BackupOrigins.", this.BackupOrigins);
         this.setParamSimple(map, prefix + "BackupOriginType", this.BackupOriginType);
+        this.setParamObj(map, prefix + "AdvanceHttps.", this.AdvanceHttps);
 
     }
 }

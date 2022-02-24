@@ -345,6 +345,13 @@ public class CreateApiRequest extends AbstractModel{
     private Boolean IsBase64Encoded;
 
     /**
+    * Event bus ID.
+    */
+    @SerializedName("EventBusId")
+    @Expose
+    private String EventBusId;
+
+    /**
     * SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
     */
     @SerializedName("ServiceScfFunctionType")
@@ -1116,6 +1123,22 @@ public class CreateApiRequest extends AbstractModel{
     }
 
     /**
+     * Get Event bus ID. 
+     * @return EventBusId Event bus ID.
+     */
+    public String getEventBusId() {
+        return this.EventBusId;
+    }
+
+    /**
+     * Set Event bus ID.
+     * @param EventBusId Event bus ID.
+     */
+    public void setEventBusId(String EventBusId) {
+        this.EventBusId = EventBusId;
+    }
+
+    /**
      * Get SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`. 
      * @return ServiceScfFunctionType SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
      */
@@ -1359,6 +1382,9 @@ public class CreateApiRequest extends AbstractModel{
         if (source.IsBase64Encoded != null) {
             this.IsBase64Encoded = new Boolean(source.IsBase64Encoded);
         }
+        if (source.EventBusId != null) {
+            this.EventBusId = new String(source.EventBusId);
+        }
         if (source.ServiceScfFunctionType != null) {
             this.ServiceScfFunctionType = new String(source.ServiceScfFunctionType);
         }
@@ -1427,6 +1453,7 @@ public class CreateApiRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TargetNamespaceId", this.TargetNamespaceId);
         this.setParamSimple(map, prefix + "UserType", this.UserType);
         this.setParamSimple(map, prefix + "IsBase64Encoded", this.IsBase64Encoded);
+        this.setParamSimple(map, prefix + "EventBusId", this.EventBusId);
         this.setParamSimple(map, prefix + "ServiceScfFunctionType", this.ServiceScfFunctionType);
         this.setParamSimple(map, prefix + "EIAMAppType", this.EIAMAppType);
         this.setParamSimple(map, prefix + "EIAMAuthType", this.EIAMAuthType);

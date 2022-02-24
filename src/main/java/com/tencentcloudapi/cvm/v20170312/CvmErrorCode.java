@@ -33,6 +33,9 @@ public enum CvmErrorCode {
     // The EMR instance `ins-xxxxxxxx` does not support this operation.
      FAILEDOPERATION_INVALIDINSTANCEAPPLICATIONROLEEMR("FailedOperation.InvalidInstanceApplicationRoleEmr"),
      
+    // No available IPs in the subnet.
+     FAILEDOPERATION_NOAVAILABLEIPADDRESSCOUNTINSUBNET("FailedOperation.NoAvailableIpAddressCountInSubnet"),
+     
     // This instance does not bind an EIP.
      FAILEDOPERATION_NOTFOUNDEIP("FailedOperation.NotFoundEIP"),
      
@@ -74,6 +77,9 @@ public enum CvmErrorCode {
      
     // You are trying to create more instances than your remaining quota allows.
      INSTANCESQUOTALIMITEXCEEDED("InstancesQuotaLimitExceeded"),
+     
+    // Internal error.
+     INTERNALERROR("InternalError"),
      
     // Internal error.
      INTERNALERROR_TRADEUNKNOWNERROR("InternalError.TradeUnknownError"),
@@ -189,7 +195,7 @@ public enum CvmErrorCode {
     // Only one system disk snapshot can be included.
      INVALIDPARAMETER_DUPLICATESYSTEMSNAPSHOTS("InvalidParameter.DuplicateSystemSnapshots"),
      
-    // 
+    // This operation is not supported under the current status of the CVM.
      INVALIDPARAMETER_HOSTIDSTATUSNOTSUPPORT("InvalidParameter.HostIdStatusNotSupport"),
      
     // The specified HostName is invalid.
@@ -218,6 +224,9 @@ public enum CvmErrorCode {
      
     // Specifying an SSH key will override the original one of the image.
      INVALIDPARAMETER_PARAMETERCONFLICT("InvalidParameter.ParameterConflict"),
+     
+    // Setting login password is not supported.
+     INVALIDPARAMETER_PASSWORDNOTSUPPORTED("InvalidParameter.PasswordNotSupported"),
      
     // The specified snapshot does not exist.
      INVALIDPARAMETER_SNAPSHOTNOTFOUND("InvalidParameter.SnapshotNotFound"),
@@ -257,6 +266,9 @@ public enum CvmErrorCode {
      
     // Illegal core count.
      INVALIDPARAMETERVALUE_CORECOUNTVALUE("InvalidParameterValue.CoreCountValue"),
+     
+    // 
+     INVALIDPARAMETERVALUE_DISASTERRECOVERGROUPIDMALFORMED("InvalidParameterValue.DisasterRecoverGroupIdMalformed"),
      
     // Duplicate parameter value
      INVALIDPARAMETERVALUE_DUPLICATE("InvalidParameterValue.Duplicate"),
@@ -300,6 +312,9 @@ public enum CvmErrorCode {
     // The image does not support this operation.
      INVALIDPARAMETERVALUE_INVALIDIMAGEID("InvalidParameterValue.InvalidImageId"),
      
+    // 
+     INVALIDPARAMETERVALUE_INVALIDIMAGEIDFORRETSETINSTANCE("InvalidParameterValue.InvalidImageIdForRetsetInstance"),
+     
     // The operating system of the specified image is not available in the current region.
      INVALIDPARAMETERVALUE_INVALIDIMAGEOSNAME("InvalidParameterValue.InvalidImageOsName"),
      
@@ -309,8 +324,20 @@ public enum CvmErrorCode {
     // Invalid IP address.
      INVALIDPARAMETERVALUE_INVALIDIPFORMAT("InvalidParameterValue.InvalidIpFormat"),
      
+    // Incorrect format of instance launch template description.
+     INVALIDPARAMETERVALUE_INVALIDLAUNCHTEMPLATEDESCRIPTION("InvalidParameterValue.InvalidLaunchTemplateDescription"),
+     
+    // Incorrect format of instance launch template name.
+     INVALIDPARAMETERVALUE_INVALIDLAUNCHTEMPLATENAME("InvalidParameterValue.InvalidLaunchTemplateName"),
+     
+    // Incorrect format of instance launch template version description.
+     INVALIDPARAMETERVALUE_INVALIDLAUNCHTEMPLATEVERSIONDESCRIPTION("InvalidParameterValue.InvalidLaunchTemplateVersionDescription"),
+     
     // Invalid parameter value.
      INVALIDPARAMETERVALUE_INVALIDPARAMETERVALUELIMIT("InvalidParameterValue.InvalidParameterValueLimit"),
+     
+    // Invalid password. The specified password does not meet the complexity requirements (e.g., too long or too short)
+     INVALIDPARAMETERVALUE_INVALIDPASSWORD("InvalidParameterValue.InvalidPassword"),
      
     // Incorrect time format.
      INVALIDPARAMETERVALUE_INVALIDTIMEFORMAT("InvalidParameterValue.InvalidTimeFormat"),
@@ -327,8 +354,26 @@ public enum CvmErrorCode {
     // The specified key does not support the operation.
      INVALIDPARAMETERVALUE_KEYPAIRNOTSUPPORTED("InvalidParameterValue.KeyPairNotSupported"),
      
+    // The default launch template version cannot be operated.
+     INVALIDPARAMETERVALUE_LAUNCHTEMPLATEDEFAULTVERSION("InvalidParameterValue.LaunchTemplateDefaultVersion"),
+     
+    // Incorrect format of instance launch template ID.
+     INVALIDPARAMETERVALUE_LAUNCHTEMPLATEIDMALFORMED("InvalidParameterValue.LaunchTemplateIdMalformed"),
+     
     // The instance launch template ID does not exist.
      INVALIDPARAMETERVALUE_LAUNCHTEMPLATEIDNOTEXISTED("InvalidParameterValue.LaunchTemplateIdNotExisted"),
+     
+    // The combination of the template and the version ID does not exist.
+     INVALIDPARAMETERVALUE_LAUNCHTEMPLATEIDVERNOTEXISTED("InvalidParameterValue.LaunchTemplateIdVerNotExisted"),
+     
+    // The specified instance launch template ID doesn't exist.
+     INVALIDPARAMETERVALUE_LAUNCHTEMPLATEIDVERSETALREADY("InvalidParameterValue.LaunchTemplateIdVerSetAlready"),
+     
+    // The instance launch template is not found.
+     INVALIDPARAMETERVALUE_LAUNCHTEMPLATENOTFOUND("InvalidParameterValue.LaunchTemplateNotFound"),
+     
+    // Invalid instance launch template version number.
+     INVALIDPARAMETERVALUE_LAUNCHTEMPLATEVERSION("InvalidParameterValue.LaunchTemplateVersion"),
      
     // The number of parameter values exceeds the limit.
      INVALIDPARAMETERVALUE_LIMITEXCEEDED("InvalidParameterValue.LimitExceeded"),
@@ -366,8 +411,14 @@ public enum CvmErrorCode {
     // The VPC ID `xxx` is invalid. Please provide a VPC ID in the format of vpc-xxxxxxxx, where “x” can be a lowercase letter or number.
      INVALIDPARAMETERVALUE_VPCIDMALFORMED("InvalidParameterValue.VpcIdMalformed"),
      
+    // The specified VpcId doesn't exist.
+     INVALIDPARAMETERVALUE_VPCIDNOTEXIST("InvalidParameterValue.VpcIdNotExist"),
+     
     // The VPC and instance must be in the same availability zone.
      INVALIDPARAMETERVALUE_VPCIDZONEIDNOTMATCH("InvalidParameterValue.VpcIdZoneIdNotMatch"),
+     
+    // 
+     INVALIDPARAMETERVALUE_VPCNOTSUPPORTIPV6ADDRESS("InvalidParameterValue.VpcNotSupportIpv6Address"),
      
     // The availability zone does not support this operation.
      INVALIDPARAMETERVALUE_ZONENOTSUPPORTED("InvalidParameterValue.ZoneNotSupported"),
@@ -426,11 +477,20 @@ public enum CvmErrorCode {
     // Number of IPs on this ENI reached the upper limit
      LIMITEXCEEDED_IPV6ADDRESSNUM("LimitExceeded.IPv6AddressNum"),
      
+    // 
+     LIMITEXCEEDED_INSTANCEENINUMLIMIT("LimitExceeded.InstanceEniNumLimit"),
+     
     // You are short of the instance quota.
      LIMITEXCEEDED_INSTANCEQUOTA("LimitExceeded.InstanceQuota"),
      
     // Unable to adjust: the target instance type does not support the configured public network bandwidth cap. See [Public Network Bandwidth Cap](https://intl.cloud.tencent.com/document/product/213/12523).
      LIMITEXCEEDED_INSTANCETYPEBANDWIDTH("LimitExceeded.InstanceTypeBandwidth"),
+     
+    // The number of instance launch templates exceeds the limit.
+     LIMITEXCEEDED_LAUNCHTEMPLATEQUOTA("LimitExceeded.LaunchTemplateQuota"),
+     
+    // The number of instance launch template versions exceeds the limit.
+     LIMITEXCEEDED_LAUNCHTEMPLATEVERSIONQUOTA("LimitExceeded.LaunchTemplateVersionQuota"),
      
     // Your quota for monthly-subscribed instances is full. Increase your quota and try again.
      LIMITEXCEEDED_PREPAYQUOTA("LimitExceeded.PrepayQuota"),
@@ -465,6 +525,9 @@ public enum CvmErrorCode {
     // An identical job is running.
      MUTEXOPERATION_TASKRUNNING("MutexOperation.TaskRunning"),
      
+    // A CHC instance without network configured is not allowed for the installation of a cloud image
+     OPERATIONDENIED_CHCINSTALLCLOUDIMAGEWITHOUTDEPLOYNETWORK("OperationDenied.ChcInstallCloudImageWithoutDeployNetwork"),
+     
     // The instance has an operation in progress. Please try again later.
      OPERATIONDENIED_INSTANCEOPERATIONINPROGRESS("OperationDenied.InstanceOperationInProgress"),
      
@@ -491,6 +554,9 @@ public enum CvmErrorCode {
      
     // The specified instance type is insufficient.
      RESOURCEINSUFFICIENT_SPECIFIEDINSTANCETYPE("ResourceInsufficient.SpecifiedInstanceType"),
+     
+    // The instances of the specified types were sold out in the selected AZs.
+     RESOURCEINSUFFICIENT_ZONESOLDOUTFORSPECIFIEDINSTANCE("ResourceInsufficient.ZoneSoldOutForSpecifiedInstance"),
      
     // The HPC cluster does not exist.
      RESOURCENOTFOUND_HPCCLUSTER("ResourceNotFound.HpcCluster"),
@@ -540,8 +606,17 @@ public enum CvmErrorCode {
     // You’re not authorized for the operation. Please check the CAM policy.
      UNAUTHORIZEDOPERATION_PERMISSIONDENIED("UnauthorizedOperation.PermissionDenied"),
      
+    // Unknown parameter error.
+     UNKNOWNPARAMETER("UnknownParameter"),
+     
+    // Unsupported operation.
+     UNSUPPORTEDOPERATION("UnsupportedOperation"),
+     
     // The specified instance or network cannot use the bandwidth package.
      UNSUPPORTEDOPERATION_BANDWIDTHPACKAGEIDNOTSUPPORTED("UnsupportedOperation.BandwidthPackageIdNotSupported"),
+     
+    // You cannot change the model of a heterogeneous instance.
+     UNSUPPORTEDOPERATION_HETEROGENEOUSCHANGEINSTANCEFAMILY("UnsupportedOperation.HeterogeneousChangeInstanceFamily"),
      
     // IPv6 instances cannot be migrated from Classiclink to VPC.
      UNSUPPORTEDOPERATION_IPV6NOTSUPPORTVPCMIGRATE("UnsupportedOperation.IPv6NotSupportVpcMigrate"),
@@ -549,8 +624,14 @@ public enum CvmErrorCode {
     // This instance billing mode does not support the operation.
      UNSUPPORTEDOPERATION_INSTANCECHARGETYPE("UnsupportedOperation.InstanceChargeType"),
      
+    // A mixed payment mode is not supported.
+     UNSUPPORTEDOPERATION_INSTANCEMIXEDPRICINGMODEL("UnsupportedOperation.InstanceMixedPricingModel"),
+     
     // The instance `ins-xxxxxx` with the `Xserver windows2012cndatacenterx86_64` operating system does not support this operation.
      UNSUPPORTEDOPERATION_INSTANCEOSWINDOWS("UnsupportedOperation.InstanceOsWindows"),
+     
+    // This CVM is blocked. Please submit a ticket.
+     UNSUPPORTEDOPERATION_INSTANCESTATEBANNING("UnsupportedOperation.InstanceStateBanning"),
      
     // The instances are permanently corrupted, and this operation is not supported.
      UNSUPPORTEDOPERATION_INSTANCESTATECORRUPTED("UnsupportedOperation.InstanceStateCorrupted"),
@@ -566,6 +647,9 @@ public enum CvmErrorCode {
      
     // The instance `ins-xxxxxx` in the `EXIT_SERVICE_LIVE_MIGRATE` status is not supported.
      UNSUPPORTEDOPERATION_INSTANCESTATEEXITSERVICELIVEMIGRATE("UnsupportedOperation.InstanceStateExitServiceLiveMigrate"),
+     
+    // The operation is not supported for the frozen instances.
+     UNSUPPORTEDOPERATION_INSTANCESTATEFREEZING("UnsupportedOperation.InstanceStateFreezing"),
      
     // Unable to isolate: the instance is isolated
      UNSUPPORTEDOPERATION_INSTANCESTATEISOLATING("UnsupportedOperation.InstanceStateIsolating"),
@@ -603,6 +687,9 @@ public enum CvmErrorCode {
     // The instance is being terminated, and the operation is not supported.
      UNSUPPORTEDOPERATION_INSTANCESTATETERMINATING("UnsupportedOperation.InstanceStateTerminating"),
      
+    // 
+     UNSUPPORTEDOPERATION_INSTANCESPROTECTED("UnsupportedOperation.InstancesProtected"),
+     
     // The specified disk is not supported.
      UNSUPPORTEDOPERATION_INVALIDDISK("UnsupportedOperation.InvalidDisk"),
      
@@ -617,6 +704,9 @@ public enum CvmErrorCode {
      
     // A model whose data disks are all local disks does not support cross-model configuration adjustment.
      UNSUPPORTEDOPERATION_LOCALDATADISKCHANGEINSTANCEFAMILY("UnsupportedOperation.LocalDataDiskChangeInstanceFamily"),
+     
+    // 
+     UNSUPPORTEDOPERATION_LOCALDISKMIGRATINGTOCLOUDDISK("UnsupportedOperation.LocalDiskMigratingToCloudDisk"),
      
     // An instance bound with CLB does not support modifying its VPC attributes.
      UNSUPPORTEDOPERATION_MODIFYVPCWITHCLB("UnsupportedOperation.ModifyVPCWithCLB"),
@@ -659,6 +749,9 @@ public enum CvmErrorCode {
      
     // The target model (SA3) does not support configuration adjustment.
      UNSUPPORTEDOPERATION_UNSUPPORTEDCHANGEINSTANCEFAMILYTOSA3("UnsupportedOperation.UnsupportedChangeInstanceFamilyToSA3"),
+     
+    // Changing to this model type for this instance is not allowed.
+     UNSUPPORTEDOPERATION_UNSUPPORTEDCHANGEINSTANCETOTHISINSTANCEFAMILY("UnsupportedOperation.UnsupportedChangeInstanceToThisInstanceFamily"),
      
     // A Tencent Cloud International account does not support this operation.
      UNSUPPORTEDOPERATION_UNSUPPORTEDINTERNATIONALUSER("UnsupportedOperation.UnsupportedInternationalUser"),

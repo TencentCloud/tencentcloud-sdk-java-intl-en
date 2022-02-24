@@ -79,6 +79,13 @@ public class ImportImageRequest extends AbstractModel{
     private Boolean Force;
 
     /**
+    * Tag description list. This parameter is used to bind a tag to a custom image.
+    */
+    @SerializedName("TagSpecification")
+    @Expose
+    private TagSpecification [] TagSpecification;
+
+    /**
      * Get OS architecture of the image to be imported, `x86_64` or `i386`. 
      * @return Architecture OS architecture of the image to be imported, `x86_64` or `i386`.
      */
@@ -206,6 +213,22 @@ public class ImportImageRequest extends AbstractModel{
         this.Force = Force;
     }
 
+    /**
+     * Get Tag description list. This parameter is used to bind a tag to a custom image. 
+     * @return TagSpecification Tag description list. This parameter is used to bind a tag to a custom image.
+     */
+    public TagSpecification [] getTagSpecification() {
+        return this.TagSpecification;
+    }
+
+    /**
+     * Set Tag description list. This parameter is used to bind a tag to a custom image.
+     * @param TagSpecification Tag description list. This parameter is used to bind a tag to a custom image.
+     */
+    public void setTagSpecification(TagSpecification [] TagSpecification) {
+        this.TagSpecification = TagSpecification;
+    }
+
     public ImportImageRequest() {
     }
 
@@ -238,6 +261,12 @@ public class ImportImageRequest extends AbstractModel{
         if (source.Force != null) {
             this.Force = new Boolean(source.Force);
         }
+        if (source.TagSpecification != null) {
+            this.TagSpecification = new TagSpecification[source.TagSpecification.length];
+            for (int i = 0; i < source.TagSpecification.length; i++) {
+                this.TagSpecification[i] = new TagSpecification(source.TagSpecification[i]);
+            }
+        }
     }
 
 
@@ -253,6 +282,7 @@ public class ImportImageRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ImageDescription", this.ImageDescription);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
         this.setParamSimple(map, prefix + "Force", this.Force);
+        this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
 
     }
 }

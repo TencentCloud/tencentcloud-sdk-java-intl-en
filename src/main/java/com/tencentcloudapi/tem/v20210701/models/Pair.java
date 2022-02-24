@@ -37,6 +37,22 @@ public class Pair extends AbstractModel{
     private String Value;
 
     /**
+    * `default``: Custom. `reserved`: System variable. `referenced`: Referenced configuration item.
+Note: This field may return `null`, indicating that no valid value can be found.
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * Configuration name
+Note: This field may return `null`, indicating that no valid value can be found.
+    */
+    @SerializedName("Config")
+    @Expose
+    private String Config;
+
+    /**
      * Get Key 
      * @return Key Key
      */
@@ -68,6 +84,46 @@ public class Pair extends AbstractModel{
         this.Value = Value;
     }
 
+    /**
+     * Get `default``: Custom. `reserved`: System variable. `referenced`: Referenced configuration item.
+Note: This field may return `null`, indicating that no valid value can be found. 
+     * @return Type `default``: Custom. `reserved`: System variable. `referenced`: Referenced configuration item.
+Note: This field may return `null`, indicating that no valid value can be found.
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set `default``: Custom. `reserved`: System variable. `referenced`: Referenced configuration item.
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param Type `default``: Custom. `reserved`: System variable. `referenced`: Referenced configuration item.
+Note: This field may return `null`, indicating that no valid value can be found.
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get Configuration name
+Note: This field may return `null`, indicating that no valid value can be found. 
+     * @return Config Configuration name
+Note: This field may return `null`, indicating that no valid value can be found.
+     */
+    public String getConfig() {
+        return this.Config;
+    }
+
+    /**
+     * Set Configuration name
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param Config Configuration name
+Note: This field may return `null`, indicating that no valid value can be found.
+     */
+    public void setConfig(String Config) {
+        this.Config = Config;
+    }
+
     public Pair() {
     }
 
@@ -82,6 +138,12 @@ public class Pair extends AbstractModel{
         if (source.Value != null) {
             this.Value = new String(source.Value);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Config != null) {
+            this.Config = new String(source.Config);
+        }
     }
 
 
@@ -91,6 +153,8 @@ public class Pair extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Key", this.Key);
         this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Config", this.Config);
 
     }
 }

@@ -1072,7 +1072,7 @@ Default API request rate limit: 20 requests/sec.
     }
 
     /**
-     *This API is used to add or modify a project limit.
+     *This API is used to add or modify data reporting limit.
      * @param req ModifyProjectLimitRequest
      * @return ModifyProjectLimitResponse
      * @throws TencentCloudSDKException

@@ -23,18 +23,18 @@ import java.util.HashMap;
 public class RuleInput extends AbstractModel{
 
     /**
-    * Domain name of the forwarding rule. Length: 1-80.
-    */
-    @SerializedName("Domain")
-    @Expose
-    private String Domain;
-
-    /**
     * Forwarding rule path. Length: 1-200.
     */
     @SerializedName("Url")
     @Expose
     private String Url;
+
+    /**
+    * The domain name associated with the forwarding rule. It can contain 1-80 characters. Only one domain name can be entered. If you need to enter multiple domain names, use `Domains`.
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
 
     /**
     * Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
@@ -115,20 +115,11 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     private Boolean Quic;
 
     /**
-     * Get Domain name of the forwarding rule. Length: 1-80. 
-     * @return Domain Domain name of the forwarding rule. Length: 1-80.
-     */
-    public String getDomain() {
-        return this.Domain;
-    }
-
-    /**
-     * Set Domain name of the forwarding rule. Length: 1-80.
-     * @param Domain Domain name of the forwarding rule. Length: 1-80.
-     */
-    public void setDomain(String Domain) {
-        this.Domain = Domain;
-    }
+    * The domain name associated with the forwarding rule. Each contain 1-80 characters. If you only need to enter one domain name, use `Domain` instead.
+    */
+    @SerializedName("Domains")
+    @Expose
+    private String [] Domains;
 
     /**
      * Get Forwarding rule path. Length: 1-200. 
@@ -144,6 +135,22 @@ They represent weighted round robin, least connections, and IP hash, respectivel
      */
     public void setUrl(String Url) {
         this.Url = Url;
+    }
+
+    /**
+     * Get The domain name associated with the forwarding rule. It can contain 1-80 characters. Only one domain name can be entered. If you need to enter multiple domain names, use `Domains`. 
+     * @return Domain The domain name associated with the forwarding rule. It can contain 1-80 characters. Only one domain name can be entered. If you need to enter multiple domain names, use `Domains`.
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set The domain name associated with the forwarding rule. It can contain 1-80 characters. Only one domain name can be entered. If you need to enter multiple domain names, use `Domains`.
+     * @param Domain The domain name associated with the forwarding rule. It can contain 1-80 characters. Only one domain name can be entered. If you need to enter multiple domain names, use `Domains`.
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
     }
 
     /**
@@ -326,6 +333,22 @@ They represent weighted round robin, least connections, and IP hash, respectivel
         this.Quic = Quic;
     }
 
+    /**
+     * Get The domain name associated with the forwarding rule. Each contain 1-80 characters. If you only need to enter one domain name, use `Domain` instead. 
+     * @return Domains The domain name associated with the forwarding rule. Each contain 1-80 characters. If you only need to enter one domain name, use `Domain` instead.
+     */
+    public String [] getDomains() {
+        return this.Domains;
+    }
+
+    /**
+     * Set The domain name associated with the forwarding rule. Each contain 1-80 characters. If you only need to enter one domain name, use `Domain` instead.
+     * @param Domains The domain name associated with the forwarding rule. Each contain 1-80 characters. If you only need to enter one domain name, use `Domain` instead.
+     */
+    public void setDomains(String [] Domains) {
+        this.Domains = Domains;
+    }
+
     public RuleInput() {
     }
 
@@ -334,11 +357,11 @@ They represent weighted round robin, least connections, and IP hash, respectivel
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public RuleInput(RuleInput source) {
-        if (source.Domain != null) {
-            this.Domain = new String(source.Domain);
-        }
         if (source.Url != null) {
             this.Url = new String(source.Url);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
         }
         if (source.SessionExpireTime != null) {
             this.SessionExpireTime = new Long(source.SessionExpireTime);
@@ -373,6 +396,12 @@ They represent weighted round robin, least connections, and IP hash, respectivel
         if (source.Quic != null) {
             this.Quic = new Boolean(source.Quic);
         }
+        if (source.Domains != null) {
+            this.Domains = new String[source.Domains.length];
+            for (int i = 0; i < source.Domains.length; i++) {
+                this.Domains[i] = new String(source.Domains[i]);
+            }
+        }
     }
 
 
@@ -380,8 +409,8 @@ They represent weighted round robin, least connections, and IP hash, respectivel
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
         this.setParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
         this.setParamObj(map, prefix + "Certificate.", this.Certificate);
@@ -393,6 +422,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
         this.setParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
         this.setParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
         this.setParamSimple(map, prefix + "Quic", this.Quic);
+        this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
 
     }
 }

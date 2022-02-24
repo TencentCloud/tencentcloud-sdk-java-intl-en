@@ -107,6 +107,14 @@ public class DomainBriefInfo extends AbstractModel{
     private String Readonly;
 
     /**
+    * Domain name tag
+Note: This field may return `null`, indicating that no valid value can be found.
+    */
+    @SerializedName("Tag")
+    @Expose
+    private Tag [] Tag;
+
+    /**
      * Get Domain name ID. 
      * @return ResourceId Domain name ID.
      */
@@ -298,6 +306,26 @@ public class DomainBriefInfo extends AbstractModel{
         this.Readonly = Readonly;
     }
 
+    /**
+     * Get Domain name tag
+Note: This field may return `null`, indicating that no valid value can be found. 
+     * @return Tag Domain name tag
+Note: This field may return `null`, indicating that no valid value can be found.
+     */
+    public Tag [] getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set Domain name tag
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param Tag Domain name tag
+Note: This field may return `null`, indicating that no valid value can be found.
+     */
+    public void setTag(Tag [] Tag) {
+        this.Tag = Tag;
+    }
+
     public DomainBriefInfo() {
     }
 
@@ -342,6 +370,12 @@ public class DomainBriefInfo extends AbstractModel{
         if (source.Readonly != null) {
             this.Readonly = new String(source.Readonly);
         }
+        if (source.Tag != null) {
+            this.Tag = new Tag[source.Tag.length];
+            for (int i = 0; i < source.Tag.length; i++) {
+                this.Tag[i] = new Tag(source.Tag[i]);
+            }
+        }
     }
 
 
@@ -361,6 +395,7 @@ public class DomainBriefInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Disable", this.Disable);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "Readonly", this.Readonly);
+        this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
 
     }
 }

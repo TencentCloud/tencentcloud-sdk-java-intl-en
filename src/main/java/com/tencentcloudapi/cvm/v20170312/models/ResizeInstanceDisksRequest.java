@@ -44,6 +44,20 @@ public class ResizeInstanceDisksRequest extends AbstractModel{
     private Boolean ForceStop;
 
     /**
+    * Configuration of the system disk to be expanded. Only cloud disks are supported.
+    */
+    @SerializedName("SystemDisk")
+    @Expose
+    private SystemDisk SystemDisk;
+
+    /**
+    * Whether the cloud disk is expanded online.
+    */
+    @SerializedName("ResizeOnline")
+    @Expose
+    private Boolean ResizeOnline;
+
+    /**
      * Get Instance ID. To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. 
      * @return InstanceId Instance ID. To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response.
      */
@@ -91,6 +105,38 @@ public class ResizeInstanceDisksRequest extends AbstractModel{
         this.ForceStop = ForceStop;
     }
 
+    /**
+     * Get Configuration of the system disk to be expanded. Only cloud disks are supported. 
+     * @return SystemDisk Configuration of the system disk to be expanded. Only cloud disks are supported.
+     */
+    public SystemDisk getSystemDisk() {
+        return this.SystemDisk;
+    }
+
+    /**
+     * Set Configuration of the system disk to be expanded. Only cloud disks are supported.
+     * @param SystemDisk Configuration of the system disk to be expanded. Only cloud disks are supported.
+     */
+    public void setSystemDisk(SystemDisk SystemDisk) {
+        this.SystemDisk = SystemDisk;
+    }
+
+    /**
+     * Get Whether the cloud disk is expanded online. 
+     * @return ResizeOnline Whether the cloud disk is expanded online.
+     */
+    public Boolean getResizeOnline() {
+        return this.ResizeOnline;
+    }
+
+    /**
+     * Set Whether the cloud disk is expanded online.
+     * @param ResizeOnline Whether the cloud disk is expanded online.
+     */
+    public void setResizeOnline(Boolean ResizeOnline) {
+        this.ResizeOnline = ResizeOnline;
+    }
+
     public ResizeInstanceDisksRequest() {
     }
 
@@ -111,6 +157,12 @@ public class ResizeInstanceDisksRequest extends AbstractModel{
         if (source.ForceStop != null) {
             this.ForceStop = new Boolean(source.ForceStop);
         }
+        if (source.SystemDisk != null) {
+            this.SystemDisk = new SystemDisk(source.SystemDisk);
+        }
+        if (source.ResizeOnline != null) {
+            this.ResizeOnline = new Boolean(source.ResizeOnline);
+        }
     }
 
 
@@ -121,6 +173,8 @@ public class ResizeInstanceDisksRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         this.setParamSimple(map, prefix + "ForceStop", this.ForceStop);
+        this.setParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
+        this.setParamSimple(map, prefix + "ResizeOnline", this.ResizeOnline);
 
     }
 }

@@ -51,6 +51,13 @@ public class DeployStrategyConf extends AbstractModel{
     private Long BatchInterval;
 
     /**
+    * The minimum number of available pods
+    */
+    @SerializedName("MinAvailable")
+    @Expose
+    private Long MinAvailable;
+
+    /**
      * Get Total batches 
      * @return TotalBatchCount Total batches
      */
@@ -114,6 +121,22 @@ public class DeployStrategyConf extends AbstractModel{
         this.BatchInterval = BatchInterval;
     }
 
+    /**
+     * Get The minimum number of available pods 
+     * @return MinAvailable The minimum number of available pods
+     */
+    public Long getMinAvailable() {
+        return this.MinAvailable;
+    }
+
+    /**
+     * Set The minimum number of available pods
+     * @param MinAvailable The minimum number of available pods
+     */
+    public void setMinAvailable(Long MinAvailable) {
+        this.MinAvailable = MinAvailable;
+    }
+
     public DeployStrategyConf() {
     }
 
@@ -134,6 +157,9 @@ public class DeployStrategyConf extends AbstractModel{
         if (source.BatchInterval != null) {
             this.BatchInterval = new Long(source.BatchInterval);
         }
+        if (source.MinAvailable != null) {
+            this.MinAvailable = new Long(source.MinAvailable);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class DeployStrategyConf extends AbstractModel{
         this.setParamSimple(map, prefix + "BetaBatchNum", this.BetaBatchNum);
         this.setParamSimple(map, prefix + "DeployStrategyType", this.DeployStrategyType);
         this.setParamSimple(map, prefix + "BatchInterval", this.BatchInterval);
+        this.setParamSimple(map, prefix + "MinAvailable", this.MinAvailable);
 
     }
 }

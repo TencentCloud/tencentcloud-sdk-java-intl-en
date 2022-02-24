@@ -51,11 +51,11 @@ request: number of requests
     private String [] Metrics;
 
     /**
-    * Time granularity, which can be:
-1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2-3 days 15, 30, 60, 120, 240, 1440
-4-7 days 30, 60, 120, 240, 1440
-8-90 days	 60, 120, 240, 1440
+    * Sampling interval in minutes. The available options vary for different query period. See below: 
+1 day: `1`, `5`, `15`, `30`, `60`, `120`, `240`, `1440` 
+2 to 3 days: `15`, `30`, `60`, `120`, `240`, `1440`
+4 to 7 days: `30`, `60`, `120`, `240`, `1440`
+8 to 31 days: `60`, `120`, `240`, `1440`
     */
     @SerializedName("Interval")
     @Expose
@@ -166,32 +166,32 @@ request: number of requests
     }
 
     /**
-     * Get Time granularity, which can be:
-1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2-3 days 15, 30, 60, 120, 240, 1440
-4-7 days 30, 60, 120, 240, 1440
-8-90 days	 60, 120, 240, 1440 
-     * @return Interval Time granularity, which can be:
-1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2-3 days 15, 30, 60, 120, 240, 1440
-4-7 days 30, 60, 120, 240, 1440
-8-90 days	 60, 120, 240, 1440
+     * Get Sampling interval in minutes. The available options vary for different query period. See below: 
+1 day: `1`, `5`, `15`, `30`, `60`, `120`, `240`, `1440` 
+2 to 3 days: `15`, `30`, `60`, `120`, `240`, `1440`
+4 to 7 days: `30`, `60`, `120`, `240`, `1440`
+8 to 31 days: `60`, `120`, `240`, `1440` 
+     * @return Interval Sampling interval in minutes. The available options vary for different query period. See below: 
+1 day: `1`, `5`, `15`, `30`, `60`, `120`, `240`, `1440` 
+2 to 3 days: `15`, `30`, `60`, `120`, `240`, `1440`
+4 to 7 days: `30`, `60`, `120`, `240`, `1440`
+8 to 31 days: `60`, `120`, `240`, `1440`
      */
     public Long getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set Time granularity, which can be:
-1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2-3 days 15, 30, 60, 120, 240, 1440
-4-7 days 30, 60, 120, 240, 1440
-8-90 days	 60, 120, 240, 1440
-     * @param Interval Time granularity, which can be:
-1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2-3 days 15, 30, 60, 120, 240, 1440
-4-7 days 30, 60, 120, 240, 1440
-8-90 days	 60, 120, 240, 1440
+     * Set Sampling interval in minutes. The available options vary for different query period. See below: 
+1 day: `1`, `5`, `15`, `30`, `60`, `120`, `240`, `1440` 
+2 to 3 days: `15`, `30`, `60`, `120`, `240`, `1440`
+4 to 7 days: `30`, `60`, `120`, `240`, `1440`
+8 to 31 days: `60`, `120`, `240`, `1440`
+     * @param Interval Sampling interval in minutes. The available options vary for different query period. See below: 
+1 day: `1`, `5`, `15`, `30`, `60`, `120`, `240`, `1440` 
+2 to 3 days: `15`, `30`, `60`, `120`, `240`, `1440`
+4 to 7 days: `30`, `60`, `120`, `240`, `1440`
+8 to 31 days: `60`, `120`, `240`, `1440`
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;

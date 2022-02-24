@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class PurgeUrlsCacheResponse extends AbstractModel{
 
     /**
-    * Purge task ID. The first ten digits are the UTC time when the task is submitted.
+    * Purge task ID
     */
     @SerializedName("TaskId")
     @Expose
@@ -37,16 +37,16 @@ public class PurgeUrlsCacheResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Purge task ID. The first ten digits are the UTC time when the task is submitted. 
-     * @return TaskId Purge task ID. The first ten digits are the UTC time when the task is submitted.
+     * Get Purge task ID 
+     * @return TaskId Purge task ID
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Purge task ID. The first ten digits are the UTC time when the task is submitted.
-     * @param TaskId Purge task ID. The first ten digits are the UTC time when the task is submitted.
+     * Set Purge task ID
+     * @param TaskId Purge task ID
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
