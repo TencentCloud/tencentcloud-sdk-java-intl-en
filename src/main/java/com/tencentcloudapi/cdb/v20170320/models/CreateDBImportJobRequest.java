@@ -30,18 +30,18 @@ public class CreateDBImportJobRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Filename. The file must be a .sql file uploaded to Tencent Cloud.
-    */
-    @SerializedName("FileName")
-    @Expose
-    private String FileName;
-
-    /**
     * TencentDB username
     */
     @SerializedName("User")
     @Expose
     private String User;
+
+    /**
+    * Filename. The file must be a .sql file uploaded to Tencent Cloud.
+    */
+    @SerializedName("FileName")
+    @Expose
+    private String FileName;
 
     /**
     * Password of a TencentDB instance user account
@@ -56,6 +56,13 @@ public class CreateDBImportJobRequest extends AbstractModel{
     @SerializedName("DbName")
     @Expose
     private String DbName;
+
+    /**
+    * URL of a .sql file stored in COS. Either `FileName` or `CosUrl` must be specified.
+    */
+    @SerializedName("CosUrl")
+    @Expose
+    private String CosUrl;
 
     /**
      * Get Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. 
@@ -74,22 +81,6 @@ public class CreateDBImportJobRequest extends AbstractModel{
     }
 
     /**
-     * Get Filename. The file must be a .sql file uploaded to Tencent Cloud. 
-     * @return FileName Filename. The file must be a .sql file uploaded to Tencent Cloud.
-     */
-    public String getFileName() {
-        return this.FileName;
-    }
-
-    /**
-     * Set Filename. The file must be a .sql file uploaded to Tencent Cloud.
-     * @param FileName Filename. The file must be a .sql file uploaded to Tencent Cloud.
-     */
-    public void setFileName(String FileName) {
-        this.FileName = FileName;
-    }
-
-    /**
      * Get TencentDB username 
      * @return User TencentDB username
      */
@@ -103,6 +94,22 @@ public class CreateDBImportJobRequest extends AbstractModel{
      */
     public void setUser(String User) {
         this.User = User;
+    }
+
+    /**
+     * Get Filename. The file must be a .sql file uploaded to Tencent Cloud. 
+     * @return FileName Filename. The file must be a .sql file uploaded to Tencent Cloud.
+     */
+    public String getFileName() {
+        return this.FileName;
+    }
+
+    /**
+     * Set Filename. The file must be a .sql file uploaded to Tencent Cloud.
+     * @param FileName Filename. The file must be a .sql file uploaded to Tencent Cloud.
+     */
+    public void setFileName(String FileName) {
+        this.FileName = FileName;
     }
 
     /**
@@ -137,6 +144,22 @@ public class CreateDBImportJobRequest extends AbstractModel{
         this.DbName = DbName;
     }
 
+    /**
+     * Get URL of a .sql file stored in COS. Either `FileName` or `CosUrl` must be specified. 
+     * @return CosUrl URL of a .sql file stored in COS. Either `FileName` or `CosUrl` must be specified.
+     */
+    public String getCosUrl() {
+        return this.CosUrl;
+    }
+
+    /**
+     * Set URL of a .sql file stored in COS. Either `FileName` or `CosUrl` must be specified.
+     * @param CosUrl URL of a .sql file stored in COS. Either `FileName` or `CosUrl` must be specified.
+     */
+    public void setCosUrl(String CosUrl) {
+        this.CosUrl = CosUrl;
+    }
+
     public CreateDBImportJobRequest() {
     }
 
@@ -148,17 +171,20 @@ public class CreateDBImportJobRequest extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
-        if (source.FileName != null) {
-            this.FileName = new String(source.FileName);
-        }
         if (source.User != null) {
             this.User = new String(source.User);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
         }
         if (source.Password != null) {
             this.Password = new String(source.Password);
         }
         if (source.DbName != null) {
             this.DbName = new String(source.DbName);
+        }
+        if (source.CosUrl != null) {
+            this.CosUrl = new String(source.CosUrl);
         }
     }
 
@@ -168,10 +194,11 @@ public class CreateDBImportJobRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "User", this.User);
+        this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "DbName", this.DbName);
+        this.setParamSimple(map, prefix + "CosUrl", this.CosUrl);
 
     }
 }

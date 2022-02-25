@@ -128,6 +128,13 @@ public class CreateCmqQueueRequest extends AbstractModel{
     private Boolean Trace;
 
     /**
+    * Tag array.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter. 
      * @return QueueName Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
      */
@@ -367,6 +374,22 @@ public class CreateCmqQueueRequest extends AbstractModel{
         this.Trace = Trace;
     }
 
+    /**
+     * Get Tag array. 
+     * @return Tags Tag array.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag array.
+     * @param Tags Tag array.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateCmqQueueRequest() {
     }
 
@@ -420,6 +443,12 @@ public class CreateCmqQueueRequest extends AbstractModel{
         if (source.Trace != null) {
             this.Trace = new Boolean(source.Trace);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -442,6 +471,7 @@ public class CreateCmqQueueRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MaxReceiveCount", this.MaxReceiveCount);
         this.setParamSimple(map, prefix + "MaxTimeToLive", this.MaxTimeToLive);
         this.setParamSimple(map, prefix + "Trace", this.Trace);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

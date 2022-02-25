@@ -197,6 +197,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ConsumerLimit;
 
     /**
+    * `0`: Non-persistent and non-partitioned
+`1`: Non-persistent and partitioned
+`2`: Persistent and non-partitioned
+`3`: Persistent and partitioned
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PulsarTopicType")
+    @Expose
+    private Long PulsarTopicType;
+
+    /**
      * Get Average size of the messages published in the last interval in bytes.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return AverageMsgSize Average size of the messages published in the last interval in bytes.
@@ -640,6 +651,38 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.ConsumerLimit = ConsumerLimit;
     }
 
+    /**
+     * Get `0`: Non-persistent and non-partitioned
+`1`: Non-persistent and partitioned
+`2`: Persistent and non-partitioned
+`3`: Persistent and partitioned
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return PulsarTopicType `0`: Non-persistent and non-partitioned
+`1`: Non-persistent and partitioned
+`2`: Persistent and non-partitioned
+`3`: Persistent and partitioned
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getPulsarTopicType() {
+        return this.PulsarTopicType;
+    }
+
+    /**
+     * Set `0`: Non-persistent and non-partitioned
+`1`: Non-persistent and partitioned
+`2`: Persistent and non-partitioned
+`3`: Persistent and partitioned
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param PulsarTopicType `0`: Non-persistent and non-partitioned
+`1`: Non-persistent and partitioned
+`2`: Persistent and non-partitioned
+`3`: Persistent and partitioned
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setPulsarTopicType(Long PulsarTopicType) {
+        this.PulsarTopicType = PulsarTopicType;
+    }
+
     public Topic() {
     }
 
@@ -714,6 +757,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.ConsumerLimit != null) {
             this.ConsumerLimit = new String(source.ConsumerLimit);
         }
+        if (source.PulsarTopicType != null) {
+            this.PulsarTopicType = new Long(source.PulsarTopicType);
+        }
     }
 
 
@@ -742,6 +788,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "ProducerLimit", this.ProducerLimit);
         this.setParamSimple(map, prefix + "ConsumerLimit", this.ConsumerLimit);
+        this.setParamSimple(map, prefix + "PulsarTopicType", this.PulsarTopicType);
 
     }
 }

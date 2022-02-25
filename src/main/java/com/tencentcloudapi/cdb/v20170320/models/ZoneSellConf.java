@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ZoneSellConf extends AbstractModel{
 
     /**
-    * AZ status. Value range: 0 (not available), 1 (available), 2 (purchasable), 3 (not purchasable), 4 (not displayed)
+    * AZ status used to indicate whether instances are purchasable. Value range: `1` (purchasable), `3` (not purchasable), `4` (AZ not displayed)
     */
     @SerializedName("Status")
     @Expose
@@ -136,16 +136,39 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String [] RemoteRoZone;
 
     /**
-     * Get AZ status. Value range: 0 (not available), 1 (available), 2 (purchasable), 3 (not purchasable), 4 (not displayed) 
-     * @return Status AZ status. Value range: 0 (not available), 1 (available), 2 (purchasable), 3 (not purchasable), 4 (not displayed)
+    * AZ status used to indicate whether dedicated instances are purchasable. Valid values: `1 (purchasable), `3` (not purchasable), `4` (AZ not displayed)
+    */
+    @SerializedName("ExClusterStatus")
+    @Expose
+    private Long ExClusterStatus;
+
+    /**
+    * AZ information of the cross-AZ deployed read-only instances which are associated with a dedicated instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ExClusterRemoteRoZone")
+    @Expose
+    private String [] ExClusterRemoteRoZone;
+
+    /**
+    * AZ information of a multi-AZ deployed dedicated instance.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ExClusterZoneConf")
+    @Expose
+    private ZoneConf ExClusterZoneConf;
+
+    /**
+     * Get AZ status used to indicate whether instances are purchasable. Value range: `1` (purchasable), `3` (not purchasable), `4` (AZ not displayed) 
+     * @return Status AZ status used to indicate whether instances are purchasable. Value range: `1` (purchasable), `3` (not purchasable), `4` (AZ not displayed)
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set AZ status. Value range: 0 (not available), 1 (available), 2 (purchasable), 3 (not purchasable), 4 (not displayed)
-     * @param Status AZ status. Value range: 0 (not available), 1 (available), 2 (purchasable), 3 (not purchasable), 4 (not displayed)
+     * Set AZ status used to indicate whether instances are purchasable. Value range: `1` (purchasable), `3` (not purchasable), `4` (AZ not displayed)
+     * @param Status AZ status used to indicate whether instances are purchasable. Value range: `1` (purchasable), `3` (not purchasable), `4` (AZ not displayed)
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -395,6 +418,62 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.RemoteRoZone = RemoteRoZone;
     }
 
+    /**
+     * Get AZ status used to indicate whether dedicated instances are purchasable. Valid values: `1 (purchasable), `3` (not purchasable), `4` (AZ not displayed) 
+     * @return ExClusterStatus AZ status used to indicate whether dedicated instances are purchasable. Valid values: `1 (purchasable), `3` (not purchasable), `4` (AZ not displayed)
+     */
+    public Long getExClusterStatus() {
+        return this.ExClusterStatus;
+    }
+
+    /**
+     * Set AZ status used to indicate whether dedicated instances are purchasable. Valid values: `1 (purchasable), `3` (not purchasable), `4` (AZ not displayed)
+     * @param ExClusterStatus AZ status used to indicate whether dedicated instances are purchasable. Valid values: `1 (purchasable), `3` (not purchasable), `4` (AZ not displayed)
+     */
+    public void setExClusterStatus(Long ExClusterStatus) {
+        this.ExClusterStatus = ExClusterStatus;
+    }
+
+    /**
+     * Get AZ information of the cross-AZ deployed read-only instances which are associated with a dedicated instance
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ExClusterRemoteRoZone AZ information of the cross-AZ deployed read-only instances which are associated with a dedicated instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String [] getExClusterRemoteRoZone() {
+        return this.ExClusterRemoteRoZone;
+    }
+
+    /**
+     * Set AZ information of the cross-AZ deployed read-only instances which are associated with a dedicated instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ExClusterRemoteRoZone AZ information of the cross-AZ deployed read-only instances which are associated with a dedicated instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setExClusterRemoteRoZone(String [] ExClusterRemoteRoZone) {
+        this.ExClusterRemoteRoZone = ExClusterRemoteRoZone;
+    }
+
+    /**
+     * Get AZ information of a multi-AZ deployed dedicated instance.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ExClusterZoneConf AZ information of a multi-AZ deployed dedicated instance.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public ZoneConf getExClusterZoneConf() {
+        return this.ExClusterZoneConf;
+    }
+
+    /**
+     * Set AZ information of a multi-AZ deployed dedicated instance.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ExClusterZoneConf AZ information of a multi-AZ deployed dedicated instance.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setExClusterZoneConf(ZoneConf ExClusterZoneConf) {
+        this.ExClusterZoneConf = ExClusterZoneConf;
+    }
+
     public ZoneSellConf() {
     }
 
@@ -466,6 +545,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 this.RemoteRoZone[i] = new String(source.RemoteRoZone[i]);
             }
         }
+        if (source.ExClusterStatus != null) {
+            this.ExClusterStatus = new Long(source.ExClusterStatus);
+        }
+        if (source.ExClusterRemoteRoZone != null) {
+            this.ExClusterRemoteRoZone = new String[source.ExClusterRemoteRoZone.length];
+            for (int i = 0; i < source.ExClusterRemoteRoZone.length; i++) {
+                this.ExClusterRemoteRoZone[i] = new String(source.ExClusterRemoteRoZone[i]);
+            }
+        }
+        if (source.ExClusterZoneConf != null) {
+            this.ExClusterZoneConf = new ZoneConf(source.ExClusterZoneConf);
+        }
     }
 
 
@@ -489,6 +580,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamArraySimple(map, prefix + "DrZone.", this.DrZone);
         this.setParamSimple(map, prefix + "IsSupportRemoteRo", this.IsSupportRemoteRo);
         this.setParamArraySimple(map, prefix + "RemoteRoZone.", this.RemoteRoZone);
+        this.setParamSimple(map, prefix + "ExClusterStatus", this.ExClusterStatus);
+        this.setParamArraySimple(map, prefix + "ExClusterRemoteRoZone.", this.ExClusterRemoteRoZone);
+        this.setParamObj(map, prefix + "ExClusterZoneConf.", this.ExClusterZoneConf);
 
     }
 }

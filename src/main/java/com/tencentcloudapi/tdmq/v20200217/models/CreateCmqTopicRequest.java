@@ -58,6 +58,13 @@ public class CreateCmqTopicRequest extends AbstractModel{
     private Boolean Trace;
 
     /**
+    * Tag array.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Topic name, which must be unique in the same topic under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter. 
      * @return TopicName Topic name, which must be unique in the same topic under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
      */
@@ -137,6 +144,22 @@ public class CreateCmqTopicRequest extends AbstractModel{
         this.Trace = Trace;
     }
 
+    /**
+     * Get Tag array. 
+     * @return Tags Tag array.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag array.
+     * @param Tags Tag array.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateCmqTopicRequest() {
     }
 
@@ -160,6 +183,12 @@ public class CreateCmqTopicRequest extends AbstractModel{
         if (source.Trace != null) {
             this.Trace = new Boolean(source.Trace);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -172,6 +201,7 @@ public class CreateCmqTopicRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FilterType", this.FilterType);
         this.setParamSimple(map, prefix + "MsgRetentionSeconds", this.MsgRetentionSeconds);
         this.setParamSimple(map, prefix + "Trace", this.Trace);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -55,6 +55,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ClientVersion;
 
     /**
+    * Serial number of the topic partition connected to the consumer.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Partition")
+    @Expose
+    private Long Partition;
+
+    /**
      * Get The time when the consumer started connecting.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return ConnectedSince The time when the consumer started connecting.
@@ -134,6 +142,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.ClientVersion = ClientVersion;
     }
 
+    /**
+     * Get Serial number of the topic partition connected to the consumer.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Partition Serial number of the topic partition connected to the consumer.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getPartition() {
+        return this.Partition;
+    }
+
+    /**
+     * Set Serial number of the topic partition connected to the consumer.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Partition Serial number of the topic partition connected to the consumer.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setPartition(Long Partition) {
+        this.Partition = Partition;
+    }
+
     public Consumer() {
     }
 
@@ -154,6 +182,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.ClientVersion != null) {
             this.ClientVersion = new String(source.ClientVersion);
         }
+        if (source.Partition != null) {
+            this.Partition = new Long(source.Partition);
+        }
     }
 
 
@@ -165,6 +196,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ConsumerAddr", this.ConsumerAddr);
         this.setParamSimple(map, prefix + "ConsumerName", this.ConsumerName);
         this.setParamSimple(map, prefix + "ClientVersion", this.ClientVersion);
+        this.setParamSimple(map, prefix + "Partition", this.Partition);
 
     }
 }

@@ -44,6 +44,13 @@ public class CreateTopicRequest extends AbstractModel{
     private Long Partitions;
 
     /**
+    * Remarks (up to 128 characters).
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
     * 0: general message;
 1: globally sequential message;
 2: partitionally sequential message;
@@ -55,18 +62,22 @@ public class CreateTopicRequest extends AbstractModel{
     private Long TopicType;
 
     /**
-    * Remarks (up to 128 characters).
-    */
-    @SerializedName("Remark")
-    @Expose
-    private String Remark;
-
-    /**
     * Pulsar cluster ID
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
+
+    /**
+    * Pulsar topic type.
+`0`: Non-persistent and non-partitioned
+`1`: Non-persistent and partitioned
+`2`: Persistent and non-partitioned
+`3`: Persistent and partitioned
+    */
+    @SerializedName("PulsarTopicType")
+    @Expose
+    private Long PulsarTopicType;
 
     /**
      * Get Environment (namespace) name. 
@@ -117,6 +128,22 @@ public class CreateTopicRequest extends AbstractModel{
     }
 
     /**
+     * Get Remarks (up to 128 characters). 
+     * @return Remark Remarks (up to 128 characters).
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set Remarks (up to 128 characters).
+     * @param Remark Remarks (up to 128 characters).
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
+    /**
      * Get 0: general message;
 1: globally sequential message;
 2: partitionally sequential message;
@@ -149,22 +176,6 @@ public class CreateTopicRequest extends AbstractModel{
     }
 
     /**
-     * Get Remarks (up to 128 characters). 
-     * @return Remark Remarks (up to 128 characters).
-     */
-    public String getRemark() {
-        return this.Remark;
-    }
-
-    /**
-     * Set Remarks (up to 128 characters).
-     * @param Remark Remarks (up to 128 characters).
-     */
-    public void setRemark(String Remark) {
-        this.Remark = Remark;
-    }
-
-    /**
      * Get Pulsar cluster ID 
      * @return ClusterId Pulsar cluster ID
      */
@@ -178,6 +189,38 @@ public class CreateTopicRequest extends AbstractModel{
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get Pulsar topic type.
+`0`: Non-persistent and non-partitioned
+`1`: Non-persistent and partitioned
+`2`: Persistent and non-partitioned
+`3`: Persistent and partitioned 
+     * @return PulsarTopicType Pulsar topic type.
+`0`: Non-persistent and non-partitioned
+`1`: Non-persistent and partitioned
+`2`: Persistent and non-partitioned
+`3`: Persistent and partitioned
+     */
+    public Long getPulsarTopicType() {
+        return this.PulsarTopicType;
+    }
+
+    /**
+     * Set Pulsar topic type.
+`0`: Non-persistent and non-partitioned
+`1`: Non-persistent and partitioned
+`2`: Persistent and non-partitioned
+`3`: Persistent and partitioned
+     * @param PulsarTopicType Pulsar topic type.
+`0`: Non-persistent and non-partitioned
+`1`: Non-persistent and partitioned
+`2`: Persistent and non-partitioned
+`3`: Persistent and partitioned
+     */
+    public void setPulsarTopicType(Long PulsarTopicType) {
+        this.PulsarTopicType = PulsarTopicType;
     }
 
     public CreateTopicRequest() {
@@ -197,14 +240,17 @@ public class CreateTopicRequest extends AbstractModel{
         if (source.Partitions != null) {
             this.Partitions = new Long(source.Partitions);
         }
-        if (source.TopicType != null) {
-            this.TopicType = new Long(source.TopicType);
-        }
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.TopicType != null) {
+            this.TopicType = new Long(source.TopicType);
+        }
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.PulsarTopicType != null) {
+            this.PulsarTopicType = new Long(source.PulsarTopicType);
         }
     }
 
@@ -216,9 +262,10 @@ public class CreateTopicRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamSimple(map, prefix + "Partitions", this.Partitions);
-        this.setParamSimple(map, prefix + "TopicType", this.TopicType);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "TopicType", this.TopicType);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "PulsarTopicType", this.PulsarTopicType);
 
     }
 }

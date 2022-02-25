@@ -30,6 +30,13 @@ public class DescribeDefaultParamsRequest extends AbstractModel{
     private String EngineVersion;
 
     /**
+    * Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+    */
+    @SerializedName("TemplateType")
+    @Expose
+    private String TemplateType;
+
+    /**
      * Get MySQL version. Currently, the supported versions are ["5.1", "5.5", "5.6", "5.7"]. 
      * @return EngineVersion MySQL version. Currently, the supported versions are ["5.1", "5.5", "5.6", "5.7"].
      */
@@ -45,6 +52,22 @@ public class DescribeDefaultParamsRequest extends AbstractModel{
         this.EngineVersion = EngineVersion;
     }
 
+    /**
+     * Get Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template). 
+     * @return TemplateType Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+     */
+    public String getTemplateType() {
+        return this.TemplateType;
+    }
+
+    /**
+     * Set Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+     * @param TemplateType Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+     */
+    public void setTemplateType(String TemplateType) {
+        this.TemplateType = TemplateType;
+    }
+
     public DescribeDefaultParamsRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DescribeDefaultParamsRequest extends AbstractModel{
         if (source.EngineVersion != null) {
             this.EngineVersion = new String(source.EngineVersion);
         }
+        if (source.TemplateType != null) {
+            this.TemplateType = new String(source.TemplateType);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribeDefaultParamsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
+        this.setParamSimple(map, prefix + "TemplateType", this.TemplateType);
 
     }
 }

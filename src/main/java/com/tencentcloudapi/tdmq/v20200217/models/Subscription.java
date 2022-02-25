@@ -157,6 +157,30 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String UpdateTime;
 
     /**
+    * Subscription type. Valid values: `Exclusive`, `Shared`, `Failover`, and `Key_Shared`. An empty string or `NULL`: Unknown.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SubType")
+    @Expose
+    private String SubType;
+
+    /**
+    * Whether messages are blocked as the limit of unacknowledged messages has been reached.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BlockedSubscriptionOnUnackedMsgs")
+    @Expose
+    private Boolean BlockedSubscriptionOnUnackedMsgs;
+
+    /**
+    * Maximum number of unacknowledged messages.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MaxUnackedMsgNum")
+    @Expose
+    private Long MaxUnackedMsgNum;
+
+    /**
      * Get Topic name. 
      * @return TopicName Topic name.
      */
@@ -488,6 +512,66 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get Subscription type. Valid values: `Exclusive`, `Shared`, `Failover`, and `Key_Shared`. An empty string or `NULL`: Unknown.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return SubType Subscription type. Valid values: `Exclusive`, `Shared`, `Failover`, and `Key_Shared`. An empty string or `NULL`: Unknown.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getSubType() {
+        return this.SubType;
+    }
+
+    /**
+     * Set Subscription type. Valid values: `Exclusive`, `Shared`, `Failover`, and `Key_Shared`. An empty string or `NULL`: Unknown.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param SubType Subscription type. Valid values: `Exclusive`, `Shared`, `Failover`, and `Key_Shared`. An empty string or `NULL`: Unknown.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setSubType(String SubType) {
+        this.SubType = SubType;
+    }
+
+    /**
+     * Get Whether messages are blocked as the limit of unacknowledged messages has been reached.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return BlockedSubscriptionOnUnackedMsgs Whether messages are blocked as the limit of unacknowledged messages has been reached.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Boolean getBlockedSubscriptionOnUnackedMsgs() {
+        return this.BlockedSubscriptionOnUnackedMsgs;
+    }
+
+    /**
+     * Set Whether messages are blocked as the limit of unacknowledged messages has been reached.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param BlockedSubscriptionOnUnackedMsgs Whether messages are blocked as the limit of unacknowledged messages has been reached.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setBlockedSubscriptionOnUnackedMsgs(Boolean BlockedSubscriptionOnUnackedMsgs) {
+        this.BlockedSubscriptionOnUnackedMsgs = BlockedSubscriptionOnUnackedMsgs;
+    }
+
+    /**
+     * Get Maximum number of unacknowledged messages.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return MaxUnackedMsgNum Maximum number of unacknowledged messages.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getMaxUnackedMsgNum() {
+        return this.MaxUnackedMsgNum;
+    }
+
+    /**
+     * Set Maximum number of unacknowledged messages.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param MaxUnackedMsgNum Maximum number of unacknowledged messages.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setMaxUnackedMsgNum(Long MaxUnackedMsgNum) {
+        this.MaxUnackedMsgNum = MaxUnackedMsgNum;
+    }
+
     public Subscription() {
     }
 
@@ -553,6 +637,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.SubType != null) {
+            this.SubType = new String(source.SubType);
+        }
+        if (source.BlockedSubscriptionOnUnackedMsgs != null) {
+            this.BlockedSubscriptionOnUnackedMsgs = new Boolean(source.BlockedSubscriptionOnUnackedMsgs);
+        }
+        if (source.MaxUnackedMsgNum != null) {
+            this.MaxUnackedMsgNum = new Long(source.MaxUnackedMsgNum);
+        }
     }
 
 
@@ -577,6 +670,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "SubType", this.SubType);
+        this.setParamSimple(map, prefix + "BlockedSubscriptionOnUnackedMsgs", this.BlockedSubscriptionOnUnackedMsgs);
+        this.setParamSimple(map, prefix + "MaxUnackedMsgNum", this.MaxUnackedMsgNum);
 
     }
 }

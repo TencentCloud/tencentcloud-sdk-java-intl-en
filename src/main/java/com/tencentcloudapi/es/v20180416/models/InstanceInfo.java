@@ -563,6 +563,22 @@ Note: This field may return `null`, indicating that no valid value was found.
     private Long HealthStatus;
 
     /**
+    * Private URL of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("EsPrivateUrl")
+    @Expose
+    private String EsPrivateUrl;
+
+    /**
+    * Private domain of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("EsPrivateDomain")
+    @Expose
+    private String EsPrivateDomain;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -1858,6 +1874,46 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.HealthStatus = HealthStatus;
     }
 
+    /**
+     * Get Private URL of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return EsPrivateUrl Private URL of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getEsPrivateUrl() {
+        return this.EsPrivateUrl;
+    }
+
+    /**
+     * Set Private URL of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param EsPrivateUrl Private URL of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setEsPrivateUrl(String EsPrivateUrl) {
+        this.EsPrivateUrl = EsPrivateUrl;
+    }
+
+    /**
+     * Get Private domain of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return EsPrivateDomain Private domain of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getEsPrivateDomain() {
+        return this.EsPrivateDomain;
+    }
+
+    /**
+     * Set Private domain of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param EsPrivateDomain Private domain of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setEsPrivateDomain(String EsPrivateDomain) {
+        this.EsPrivateDomain = EsPrivateDomain;
+    }
+
     public InstanceInfo() {
     }
 
@@ -2094,6 +2150,12 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.HealthStatus != null) {
             this.HealthStatus = new Long(source.HealthStatus);
         }
+        if (source.EsPrivateUrl != null) {
+            this.EsPrivateUrl = new String(source.EsPrivateUrl);
+        }
+        if (source.EsPrivateDomain != null) {
+            this.EsPrivateDomain = new String(source.EsPrivateDomain);
+        }
     }
 
 
@@ -2173,6 +2235,8 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "FrozenDiskType", this.FrozenDiskType);
         this.setParamSimple(map, prefix + "FrozenDiskSize", this.FrozenDiskSize);
         this.setParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
+        this.setParamSimple(map, prefix + "EsPrivateUrl", this.EsPrivateUrl);
+        this.setParamSimple(map, prefix + "EsPrivateDomain", this.EsPrivateDomain);
 
     }
 }

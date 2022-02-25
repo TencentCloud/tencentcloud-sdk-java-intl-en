@@ -439,6 +439,26 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the result of the session killing task executed by the Redis proxy node. The async task ID (an input parameter) is obtained after the API `CreateProxySessionKillTask` is successfully called. Currently, the only valid value of `product` is `redis`.
+     * @param req DescribeProxySessionKillTasksRequest
+     * @return DescribeProxySessionKillTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProxySessionKillTasksResponse DescribeProxySessionKillTasks(DescribeProxySessionKillTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProxySessionKillTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProxySessionKillTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeProxySessionKillTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the download link of a security audit log export file. Currently, log file download only provides a Tencent Cloud private network address. Please download it by using a CVM instance in the Guangzhou region.
      * @param req DescribeSecurityAuditLogDownloadUrlsRequest
      * @return DescribeSecurityAuditLogDownloadUrlsResponse

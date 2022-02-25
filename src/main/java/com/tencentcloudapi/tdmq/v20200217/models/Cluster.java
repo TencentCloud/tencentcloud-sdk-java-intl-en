@@ -219,6 +219,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Tag [] Tags;
 
     /**
+    * Billing mode:
+`0`: Pay-as-you-go
+`1`: Monthly subscription
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private Long PayMode;
+
+    /**
      * Get Cluster ID. 
      * @return ClusterId Cluster ID.
      */
@@ -690,6 +700,34 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Tags = Tags;
     }
 
+    /**
+     * Get Billing mode:
+`0`: Pay-as-you-go
+`1`: Monthly subscription
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return PayMode Billing mode:
+`0`: Pay-as-you-go
+`1`: Monthly subscription
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set Billing mode:
+`0`: Pay-as-you-go
+`1`: Monthly subscription
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param PayMode Billing mode:
+`0`: Pay-as-you-go
+`1`: Monthly subscription
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setPayMode(Long PayMode) {
+        this.PayMode = PayMode;
+    }
+
     public Cluster() {
     }
 
@@ -779,6 +817,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
     }
 
 
@@ -812,6 +853,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "MaxMessageDelayInSeconds", this.MaxMessageDelayInSeconds);
         this.setParamSimple(map, prefix + "PublicAccessEnabled", this.PublicAccessEnabled);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
 
     }
 }
