@@ -30,6 +30,16 @@ public class ModifySuperPlayerConfigRequest extends AbstractModel{
     private String Name;
 
     /**
+    * Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
+    */
+    @SerializedName("AudioVideoType")
+    @Expose
+    private String AudioVideoType;
+
+    /**
     * Switch of DRM-protected adaptive bitstream playback:
 <li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
 <li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
@@ -51,6 +61,13 @@ public class ModifySuperPlayerConfigRequest extends AbstractModel{
     @SerializedName("DrmStreamingsInfo")
     @Expose
     private DrmStreamingsInfoForUpdate DrmStreamingsInfo;
+
+    /**
+    * ID of the transcoding template allowed for playback
+    */
+    @SerializedName("TranscodeDefinition")
+    @Expose
+    private Long TranscodeDefinition;
 
     /**
     * ID of the image sprite generating template that allows output.
@@ -114,6 +131,34 @@ public class ModifySuperPlayerConfigRequest extends AbstractModel{
     }
 
     /**
+     * Get Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li> 
+     * @return AudioVideoType Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
+     */
+    public String getAudioVideoType() {
+        return this.AudioVideoType;
+    }
+
+    /**
+     * Set Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
+     * @param AudioVideoType Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
+     */
+    public void setAudioVideoType(String AudioVideoType) {
+        this.AudioVideoType = AudioVideoType;
+    }
+
+    /**
      * Get Switch of DRM-protected adaptive bitstream playback:
 <li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
 <li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li> 
@@ -167,6 +212,22 @@ public class ModifySuperPlayerConfigRequest extends AbstractModel{
      */
     public void setDrmStreamingsInfo(DrmStreamingsInfoForUpdate DrmStreamingsInfo) {
         this.DrmStreamingsInfo = DrmStreamingsInfo;
+    }
+
+    /**
+     * Get ID of the transcoding template allowed for playback 
+     * @return TranscodeDefinition ID of the transcoding template allowed for playback
+     */
+    public Long getTranscodeDefinition() {
+        return this.TranscodeDefinition;
+    }
+
+    /**
+     * Set ID of the transcoding template allowed for playback
+     * @param TranscodeDefinition ID of the transcoding template allowed for playback
+     */
+    public void setTranscodeDefinition(Long TranscodeDefinition) {
+        this.TranscodeDefinition = TranscodeDefinition;
     }
 
     /**
@@ -288,6 +349,9 @@ public class ModifySuperPlayerConfigRequest extends AbstractModel{
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.AudioVideoType != null) {
+            this.AudioVideoType = new String(source.AudioVideoType);
+        }
         if (source.DrmSwitch != null) {
             this.DrmSwitch = new String(source.DrmSwitch);
         }
@@ -296,6 +360,9 @@ public class ModifySuperPlayerConfigRequest extends AbstractModel{
         }
         if (source.DrmStreamingsInfo != null) {
             this.DrmStreamingsInfo = new DrmStreamingsInfoForUpdate(source.DrmStreamingsInfo);
+        }
+        if (source.TranscodeDefinition != null) {
+            this.TranscodeDefinition = new Long(source.TranscodeDefinition);
         }
         if (source.ImageSpriteDefinition != null) {
             this.ImageSpriteDefinition = new Long(source.ImageSpriteDefinition);
@@ -326,9 +393,11 @@ public class ModifySuperPlayerConfigRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "AudioVideoType", this.AudioVideoType);
         this.setParamSimple(map, prefix + "DrmSwitch", this.DrmSwitch);
         this.setParamSimple(map, prefix + "AdaptiveDynamicStreamingDefinition", this.AdaptiveDynamicStreamingDefinition);
         this.setParamObj(map, prefix + "DrmStreamingsInfo.", this.DrmStreamingsInfo);
+        this.setParamSimple(map, prefix + "TranscodeDefinition", this.TranscodeDefinition);
         this.setParamSimple(map, prefix + "ImageSpriteDefinition", this.ImageSpriteDefinition);
         this.setParamArrayObj(map, prefix + "ResolutionNames.", this.ResolutionNames);
         this.setParamSimple(map, prefix + "Domain", this.Domain);

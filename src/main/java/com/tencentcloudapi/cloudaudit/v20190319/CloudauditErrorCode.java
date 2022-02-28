@@ -4,7 +4,13 @@ public enum CloudauditErrorCode {
      INTERNALERROR("InternalError"),
      
     // Parameter error.
-     INVALIDPARAMETER("InvalidParameter");
+     INVALIDPARAMETER("InvalidParameter"),
+     
+    // The alias already exists.
+     INVALIDPARAMETERVALUE_ALIASALREADYEXISTS("InvalidParameterValue.AliasAlreadyExists"),
+     
+    // The maximum number of tracking sets has been exceeded.
+     LIMITEXCEEDED_OVERAMOUNT("LimitExceeded.OverAmount");
      
     private String value;
     private CloudauditErrorCode (String value){

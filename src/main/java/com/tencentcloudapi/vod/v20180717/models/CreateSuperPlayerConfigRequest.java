@@ -30,28 +30,53 @@ public class CreateSuperPlayerConfigRequest extends AbstractModel{
     private String Name;
 
     /**
-    * Switch of DRM-protected adaptive bitstream playback:
-<li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
-<li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
-Default value: OFF.
+    * Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
+Default value: `AdaptiveDynamicStream`
+    */
+    @SerializedName("AudioVideoType")
+    @Expose
+    private String AudioVideoType;
+
+    /**
+    * Whether to allow only adaptive bitrate streaming playback protected by DRM. Valid values:
+<li>`ON`: allow only adaptive bitrate streaming playback protected by DRM</li>
+<li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
+Default value: `OFF`
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
     */
     @SerializedName("DrmSwitch")
     @Expose
     private String DrmSwitch;
 
     /**
-    * ID of the unencrypted adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `OFF`.
+    * ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
     */
     @SerializedName("AdaptiveDynamicStreamingDefinition")
     @Expose
     private Long AdaptiveDynamicStreamingDefinition;
 
     /**
-    * Content of the DRM-protected adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `ON`.
+    * Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
     */
     @SerializedName("DrmStreamingsInfo")
     @Expose
     private DrmStreamingsInfo DrmStreamingsInfo;
+
+    /**
+    * ID of the transcoding template allowed for playback
+
+This parameter is required if `AudioVideoType` is `Transcode`.
+    */
+    @SerializedName("TranscodeDefinition")
+    @Expose
+    private Long TranscodeDefinition;
 
     /**
     * ID of the image sprite generating template that allows output.
@@ -121,63 +146,139 @@ Default value: OFF.
     }
 
     /**
-     * Get Switch of DRM-protected adaptive bitstream playback:
-<li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
-<li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
-Default value: OFF. 
-     * @return DrmSwitch Switch of DRM-protected adaptive bitstream playback:
-<li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
-<li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
-Default value: OFF.
+     * Get Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
+Default value: `AdaptiveDynamicStream` 
+     * @return AudioVideoType Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
+Default value: `AdaptiveDynamicStream`
+     */
+    public String getAudioVideoType() {
+        return this.AudioVideoType;
+    }
+
+    /**
+     * Set Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
+Default value: `AdaptiveDynamicStream`
+     * @param AudioVideoType Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
+Default value: `AdaptiveDynamicStream`
+     */
+    public void setAudioVideoType(String AudioVideoType) {
+        this.AudioVideoType = AudioVideoType;
+    }
+
+    /**
+     * Get Whether to allow only adaptive bitrate streaming playback protected by DRM. Valid values:
+<li>`ON`: allow only adaptive bitrate streaming playback protected by DRM</li>
+<li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
+Default value: `OFF`
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`. 
+     * @return DrmSwitch Whether to allow only adaptive bitrate streaming playback protected by DRM. Valid values:
+<li>`ON`: allow only adaptive bitrate streaming playback protected by DRM</li>
+<li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
+Default value: `OFF`
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
      */
     public String getDrmSwitch() {
         return this.DrmSwitch;
     }
 
     /**
-     * Set Switch of DRM-protected adaptive bitstream playback:
-<li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
-<li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
-Default value: OFF.
-     * @param DrmSwitch Switch of DRM-protected adaptive bitstream playback:
-<li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
-<li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
-Default value: OFF.
+     * Set Whether to allow only adaptive bitrate streaming playback protected by DRM. Valid values:
+<li>`ON`: allow only adaptive bitrate streaming playback protected by DRM</li>
+<li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
+Default value: `OFF`
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
+     * @param DrmSwitch Whether to allow only adaptive bitrate streaming playback protected by DRM. Valid values:
+<li>`ON`: allow only adaptive bitrate streaming playback protected by DRM</li>
+<li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
+Default value: `OFF`
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
      */
     public void setDrmSwitch(String DrmSwitch) {
         this.DrmSwitch = DrmSwitch;
     }
 
     /**
-     * Get ID of the unencrypted adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `OFF`. 
-     * @return AdaptiveDynamicStreamingDefinition ID of the unencrypted adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `OFF`.
+     * Get ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`. 
+     * @return AdaptiveDynamicStreamingDefinition ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
      */
     public Long getAdaptiveDynamicStreamingDefinition() {
         return this.AdaptiveDynamicStreamingDefinition;
     }
 
     /**
-     * Set ID of the unencrypted adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `OFF`.
-     * @param AdaptiveDynamicStreamingDefinition ID of the unencrypted adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `OFF`.
+     * Set ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
+     * @param AdaptiveDynamicStreamingDefinition ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
      */
     public void setAdaptiveDynamicStreamingDefinition(Long AdaptiveDynamicStreamingDefinition) {
         this.AdaptiveDynamicStreamingDefinition = AdaptiveDynamicStreamingDefinition;
     }
 
     /**
-     * Get Content of the DRM-protected adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `ON`. 
-     * @return DrmStreamingsInfo Content of the DRM-protected adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `ON`.
+     * Get Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`. 
+     * @return DrmStreamingsInfo Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
      */
     public DrmStreamingsInfo getDrmStreamingsInfo() {
         return this.DrmStreamingsInfo;
     }
 
     /**
-     * Set Content of the DRM-protected adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `ON`.
-     * @param DrmStreamingsInfo Content of the DRM-protected adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `ON`.
+     * Set Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
+     * @param DrmStreamingsInfo Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
      */
     public void setDrmStreamingsInfo(DrmStreamingsInfo DrmStreamingsInfo) {
         this.DrmStreamingsInfo = DrmStreamingsInfo;
+    }
+
+    /**
+     * Get ID of the transcoding template allowed for playback
+
+This parameter is required if `AudioVideoType` is `Transcode`. 
+     * @return TranscodeDefinition ID of the transcoding template allowed for playback
+
+This parameter is required if `AudioVideoType` is `Transcode`.
+     */
+    public Long getTranscodeDefinition() {
+        return this.TranscodeDefinition;
+    }
+
+    /**
+     * Set ID of the transcoding template allowed for playback
+
+This parameter is required if `AudioVideoType` is `Transcode`.
+     * @param TranscodeDefinition ID of the transcoding template allowed for playback
+
+This parameter is required if `AudioVideoType` is `Transcode`.
+     */
+    public void setTranscodeDefinition(Long TranscodeDefinition) {
+        this.TranscodeDefinition = TranscodeDefinition;
     }
 
     /**
@@ -323,6 +424,9 @@ Default value: OFF.
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.AudioVideoType != null) {
+            this.AudioVideoType = new String(source.AudioVideoType);
+        }
         if (source.DrmSwitch != null) {
             this.DrmSwitch = new String(source.DrmSwitch);
         }
@@ -331,6 +435,9 @@ Default value: OFF.
         }
         if (source.DrmStreamingsInfo != null) {
             this.DrmStreamingsInfo = new DrmStreamingsInfo(source.DrmStreamingsInfo);
+        }
+        if (source.TranscodeDefinition != null) {
+            this.TranscodeDefinition = new Long(source.TranscodeDefinition);
         }
         if (source.ImageSpriteDefinition != null) {
             this.ImageSpriteDefinition = new Long(source.ImageSpriteDefinition);
@@ -361,9 +468,11 @@ Default value: OFF.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "AudioVideoType", this.AudioVideoType);
         this.setParamSimple(map, prefix + "DrmSwitch", this.DrmSwitch);
         this.setParamSimple(map, prefix + "AdaptiveDynamicStreamingDefinition", this.AdaptiveDynamicStreamingDefinition);
         this.setParamObj(map, prefix + "DrmStreamingsInfo.", this.DrmStreamingsInfo);
+        this.setParamSimple(map, prefix + "TranscodeDefinition", this.TranscodeDefinition);
         this.setParamSimple(map, prefix + "ImageSpriteDefinition", this.ImageSpriteDefinition);
         this.setParamArrayObj(map, prefix + "ResolutionNames.", this.ResolutionNames);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
