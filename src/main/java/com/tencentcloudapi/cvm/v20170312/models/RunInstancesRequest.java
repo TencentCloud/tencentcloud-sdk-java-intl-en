@@ -104,7 +104,7 @@ public class RunInstancesRequest extends AbstractModel{
     private String InstanceName;
 
     /**
-    * Login settings of the instance. You can use this parameter to set the login method, password, and key of the instance or keep the login settings of the original image. By default, a random password will be generated and sent to you via the Message Center.
+    * Instance login settings. You can use this parameter to set the login method, login password and SSH key, or keep the original login settings of the image. If it's not specified, the user needs to set the login password using the "Reset password" option in the CVM console or calling the API `ResetInstancesPassword` to complete the creation of the CVM instance(s).
     */
     @SerializedName("LoginSettings")
     @Expose
@@ -206,7 +206,7 @@ false (default value): send a normal request and create instance(s) if all the r
     private LaunchTemplate LaunchTemplate;
 
     /**
-    * 
+    * Specify the CHC physical server that used to create the CHC CVM.
     */
     @SerializedName("ChcIds")
     @Expose
@@ -405,16 +405,16 @@ false (default value): send a normal request and create instance(s) if all the r
     }
 
     /**
-     * Get Login settings of the instance. You can use this parameter to set the login method, password, and key of the instance or keep the login settings of the original image. By default, a random password will be generated and sent to you via the Message Center. 
-     * @return LoginSettings Login settings of the instance. You can use this parameter to set the login method, password, and key of the instance or keep the login settings of the original image. By default, a random password will be generated and sent to you via the Message Center.
+     * Get Instance login settings. You can use this parameter to set the login method, login password and SSH key, or keep the original login settings of the image. If it's not specified, the user needs to set the login password using the "Reset password" option in the CVM console or calling the API `ResetInstancesPassword` to complete the creation of the CVM instance(s). 
+     * @return LoginSettings Instance login settings. You can use this parameter to set the login method, login password and SSH key, or keep the original login settings of the image. If it's not specified, the user needs to set the login password using the "Reset password" option in the CVM console or calling the API `ResetInstancesPassword` to complete the creation of the CVM instance(s).
      */
     public LoginSettings getLoginSettings() {
         return this.LoginSettings;
     }
 
     /**
-     * Set Login settings of the instance. You can use this parameter to set the login method, password, and key of the instance or keep the login settings of the original image. By default, a random password will be generated and sent to you via the Message Center.
-     * @param LoginSettings Login settings of the instance. You can use this parameter to set the login method, password, and key of the instance or keep the login settings of the original image. By default, a random password will be generated and sent to you via the Message Center.
+     * Set Instance login settings. You can use this parameter to set the login method, login password and SSH key, or keep the original login settings of the image. If it's not specified, the user needs to set the login password using the "Reset password" option in the CVM console or calling the API `ResetInstancesPassword` to complete the creation of the CVM instance(s).
+     * @param LoginSettings Instance login settings. You can use this parameter to set the login method, login password and SSH key, or keep the original login settings of the image. If it's not specified, the user needs to set the login password using the "Reset password" option in the CVM console or calling the API `ResetInstancesPassword` to complete the creation of the CVM instance(s).
      */
     public void setLoginSettings(LoginSettings LoginSettings) {
         this.LoginSettings = LoginSettings;
@@ -645,16 +645,16 @@ false (default value): send a normal request and create instance(s) if all the r
     }
 
     /**
-     * Get  
-     * @return ChcIds 
+     * Get Specify the CHC physical server that used to create the CHC CVM. 
+     * @return ChcIds Specify the CHC physical server that used to create the CHC CVM.
      */
     public String [] getChcIds() {
         return this.ChcIds;
     }
 
     /**
-     * Set 
-     * @param ChcIds 
+     * Set Specify the CHC physical server that used to create the CHC CVM.
+     * @param ChcIds Specify the CHC physical server that used to create the CHC CVM.
      */
     public void setChcIds(String [] ChcIds) {
         this.ChcIds = ChcIds;
