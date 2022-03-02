@@ -80,11 +80,25 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
     private String ForwardProtocol;
 
     /**
-    * Remote host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
+    * The forwarding host. If it’s not specified, the default host is used, that is the host with which the client initiates HTTP requests.
     */
     @SerializedName("ForwardHost")
     @Expose
     private String ForwardHost;
+
+    /**
+    * Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+    */
+    @SerializedName("ServerNameIndicationSwitch")
+    @Expose
+    private String ServerNameIndicationSwitch;
+
+    /**
+    * Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+    */
+    @SerializedName("ServerNameIndication")
+    @Expose
+    private String ServerNameIndication;
 
     /**
      * Get Layer-7 listener ID 
@@ -219,19 +233,51 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
     }
 
     /**
-     * Get Remote host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests. 
-     * @return ForwardHost Remote host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
+     * Get The forwarding host. If it’s not specified, the default host is used, that is the host with which the client initiates HTTP requests. 
+     * @return ForwardHost The forwarding host. If it’s not specified, the default host is used, that is the host with which the client initiates HTTP requests.
      */
     public String getForwardHost() {
         return this.ForwardHost;
     }
 
     /**
-     * Set Remote host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
-     * @param ForwardHost Remote host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
+     * Set The forwarding host. If it’s not specified, the default host is used, that is the host with which the client initiates HTTP requests.
+     * @param ForwardHost The forwarding host. If it’s not specified, the default host is used, that is the host with which the client initiates HTTP requests.
      */
     public void setForwardHost(String ForwardHost) {
         this.ForwardHost = ForwardHost;
+    }
+
+    /**
+     * Get Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable). 
+     * @return ServerNameIndicationSwitch Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+     */
+    public String getServerNameIndicationSwitch() {
+        return this.ServerNameIndicationSwitch;
+    }
+
+    /**
+     * Set Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+     * @param ServerNameIndicationSwitch Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+     */
+    public void setServerNameIndicationSwitch(String ServerNameIndicationSwitch) {
+        this.ServerNameIndicationSwitch = ServerNameIndicationSwitch;
+    }
+
+    /**
+     * Get Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`. 
+     * @return ServerNameIndication Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+     */
+    public String getServerNameIndication() {
+        return this.ServerNameIndication;
+    }
+
+    /**
+     * Set Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+     * @param ServerNameIndication Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+     */
+    public void setServerNameIndication(String ServerNameIndication) {
+        this.ServerNameIndication = ServerNameIndication;
     }
 
     public CreateRuleRequest() {
@@ -269,6 +315,12 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
         if (source.ForwardHost != null) {
             this.ForwardHost = new String(source.ForwardHost);
         }
+        if (source.ServerNameIndicationSwitch != null) {
+            this.ServerNameIndicationSwitch = new String(source.ServerNameIndicationSwitch);
+        }
+        if (source.ServerNameIndication != null) {
+            this.ServerNameIndication = new String(source.ServerNameIndication);
+        }
     }
 
 
@@ -285,6 +337,8 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
         this.setParamObj(map, prefix + "CheckParams.", this.CheckParams);
         this.setParamSimple(map, prefix + "ForwardProtocol", this.ForwardProtocol);
         this.setParamSimple(map, prefix + "ForwardHost", this.ForwardHost);
+        this.setParamSimple(map, prefix + "ServerNameIndicationSwitch", this.ServerNameIndicationSwitch);
+        this.setParamSimple(map, prefix + "ServerNameIndication", this.ServerNameIndication);
 
     }
 }

@@ -70,10 +70,12 @@ offline: disabled
     private Long ProjectId;
 
     /**
-    * Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming VOD acceleration
+    * Acceleration domain name service type
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
     */
     @SerializedName("ServiceType")
     @Expose
@@ -514,6 +516,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private ShareCname ShareCname;
 
     /**
+    * Rule engine
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RuleEngine")
+    @Expose
+    private RuleEngine RuleEngine;
+
+    /**
      * Get Domain name ID 
      * @return ResourceId Domain name ID
      */
@@ -630,28 +640,36 @@ offline: disabled
     }
 
     /**
-     * Get Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming VOD acceleration 
-     * @return ServiceType Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming VOD acceleration
+     * Get Acceleration domain name service type
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration 
+     * @return ServiceType Acceleration domain name service type
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming VOD acceleration
-     * @param ServiceType Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming VOD acceleration
+     * Set Acceleration domain name service type
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
+     * @param ServiceType Acceleration domain name service type
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
@@ -1757,6 +1775,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.ShareCname = ShareCname;
     }
 
+    /**
+     * Get Rule engine
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return RuleEngine Rule engine
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public RuleEngine getRuleEngine() {
+        return this.RuleEngine;
+    }
+
+    /**
+     * Set Rule engine
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param RuleEngine Rule engine
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setRuleEngine(RuleEngine RuleEngine) {
+        this.RuleEngine = RuleEngine;
+    }
+
     public DetailDomain() {
     }
 
@@ -1954,6 +1992,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.ShareCname != null) {
             this.ShareCname = new ShareCname(source.ShareCname);
         }
+        if (source.RuleEngine != null) {
+            this.RuleEngine = new RuleEngine(source.RuleEngine);
+        }
     }
 
 
@@ -2021,6 +2062,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamObj(map, prefix + "WebSocket.", this.WebSocket);
         this.setParamObj(map, prefix + "RemoteAuthentication.", this.RemoteAuthentication);
         this.setParamObj(map, prefix + "ShareCname.", this.ShareCname);
+        this.setParamObj(map, prefix + "RuleEngine.", this.RuleEngine);
 
     }
 }

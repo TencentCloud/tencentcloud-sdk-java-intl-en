@@ -152,8 +152,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String IPAddressVersion;
 
     /**
-    * Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("PackageType")
     @Expose
@@ -482,20 +482,20 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return PackageType Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return PackageType Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param PackageType Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param PackageType Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;

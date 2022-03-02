@@ -84,6 +84,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Message;
 
     /**
+    * Certificate source
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("From")
+    @Expose
+    private String From;
+
+    /**
      * Get Server certificate ID, which is auto-generated when the certificate is added to Tencent Cloud SSL Certificates
 Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return CertId Server certificate ID, which is auto-generated when the certificate is added to Tencent Cloud SSL Certificates
@@ -243,6 +251,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Message = Message;
     }
 
+    /**
+     * Get Certificate source
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return From Certificate source
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getFrom() {
+        return this.From;
+    }
+
+    /**
+     * Set Certificate source
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param From Certificate source
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setFrom(String From) {
+        this.From = From;
+    }
+
     public ServerCert() {
     }
 
@@ -272,6 +300,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.Message != null) {
             this.Message = new String(source.Message);
         }
+        if (source.From != null) {
+            this.From = new String(source.From);
+        }
     }
 
 
@@ -286,6 +317,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "DeployTime", this.DeployTime);
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "From", this.From);
 
     }
 }

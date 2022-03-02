@@ -71,6 +71,8 @@ public class DescribeAlarmPoliciesRequest extends AbstractModel{
 You can also refer to the “Example 2” below.
 
 For more information on the parameter samples of different Tencent Cloud services, see [Product Policy Type and Dimension Information](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1).
+
+Note: If `1` is passed in for `NeedCorrespondence`, the relationship between a policy and an instance needs to be returned. You can pass in up to 20 alarm object dimensions to avoid request timeout.
     */
     @SerializedName("Dimensions")
     @Expose
@@ -154,6 +156,13 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
     @SerializedName("InstanceGroupId")
     @Expose
     private Long InstanceGroupId;
+
+    /**
+    * Whether the relationship between a policy and the input parameter filter dimension is required. `1`: Yes. `0`: No. Default value: `0`.
+    */
+    @SerializedName("NeedCorrespondence")
+    @Expose
+    private Long NeedCorrespondence;
 
     /**
      * Get Value fixed at "monitor" 
@@ -260,12 +269,16 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
 `[ {"Dimensions": {"unInstanceId": "ins-qr8d555g"}}, {"Dimensions": {"unInstanceId": "ins-qr8d555h"}} ]`
 You can also refer to the “Example 2” below.
 
-For more information on the parameter samples of different Tencent Cloud services, see [Product Policy Type and Dimension Information](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1). 
+For more information on the parameter samples of different Tencent Cloud services, see [Product Policy Type and Dimension Information](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1).
+
+Note: If `1` is passed in for `NeedCorrespondence`, the relationship between a policy and an instance needs to be returned. You can pass in up to 20 alarm object dimensions to avoid request timeout. 
      * @return Dimensions The alarm object list, which is a JSON string. The outer array corresponds to multiple instances, and the inner array is the dimension of an object. For example, “CVM - Basic Monitor” can be written as:
 `[ {"Dimensions": {"unInstanceId": "ins-qr8d555g"}}, {"Dimensions": {"unInstanceId": "ins-qr8d555h"}} ]`
 You can also refer to the “Example 2” below.
 
 For more information on the parameter samples of different Tencent Cloud services, see [Product Policy Type and Dimension Information](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1).
+
+Note: If `1` is passed in for `NeedCorrespondence`, the relationship between a policy and an instance needs to be returned. You can pass in up to 20 alarm object dimensions to avoid request timeout.
      */
     public String getDimensions() {
         return this.Dimensions;
@@ -277,11 +290,15 @@ For more information on the parameter samples of different Tencent Cloud service
 You can also refer to the “Example 2” below.
 
 For more information on the parameter samples of different Tencent Cloud services, see [Product Policy Type and Dimension Information](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1).
+
+Note: If `1` is passed in for `NeedCorrespondence`, the relationship between a policy and an instance needs to be returned. You can pass in up to 20 alarm object dimensions to avoid request timeout.
      * @param Dimensions The alarm object list, which is a JSON string. The outer array corresponds to multiple instances, and the inner array is the dimension of an object. For example, “CVM - Basic Monitor” can be written as:
 `[ {"Dimensions": {"unInstanceId": "ins-qr8d555g"}}, {"Dimensions": {"unInstanceId": "ins-qr8d555h"}} ]`
 You can also refer to the “Example 2” below.
 
 For more information on the parameter samples of different Tencent Cloud services, see [Product Policy Type and Dimension Information](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1).
+
+Note: If `1` is passed in for `NeedCorrespondence`, the relationship between a policy and an instance needs to be returned. You can pass in up to 20 alarm object dimensions to avoid request timeout.
      */
     public void setDimensions(String Dimensions) {
         this.Dimensions = Dimensions;
@@ -471,6 +488,22 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
         this.InstanceGroupId = InstanceGroupId;
     }
 
+    /**
+     * Get Whether the relationship between a policy and the input parameter filter dimension is required. `1`: Yes. `0`: No. Default value: `0`. 
+     * @return NeedCorrespondence Whether the relationship between a policy and the input parameter filter dimension is required. `1`: Yes. `0`: No. Default value: `0`.
+     */
+    public Long getNeedCorrespondence() {
+        return this.NeedCorrespondence;
+    }
+
+    /**
+     * Set Whether the relationship between a policy and the input parameter filter dimension is required. `1`: Yes. `0`: No. Default value: `0`.
+     * @param NeedCorrespondence Whether the relationship between a policy and the input parameter filter dimension is required. `1`: Yes. `0`: No. Default value: `0`.
+     */
+    public void setNeedCorrespondence(Long NeedCorrespondence) {
+        this.NeedCorrespondence = NeedCorrespondence;
+    }
+
     public DescribeAlarmPoliciesRequest() {
     }
 
@@ -560,6 +593,9 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
         if (source.InstanceGroupId != null) {
             this.InstanceGroupId = new Long(source.InstanceGroupId);
         }
+        if (source.NeedCorrespondence != null) {
+            this.NeedCorrespondence = new Long(source.NeedCorrespondence);
+        }
     }
 
 
@@ -585,6 +621,7 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
         this.setParamArraySimple(map, prefix + "Enable.", this.Enable);
         this.setParamSimple(map, prefix + "NotBindingNoticeRule", this.NotBindingNoticeRule);
         this.setParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
+        this.setParamSimple(map, prefix + "NeedCorrespondence", this.NeedCorrespondence);
 
     }
 }

@@ -31,9 +31,11 @@ public class AddCdnDomainRequest extends AbstractModel{
 
     /**
     * Acceleration domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
     */
     @SerializedName("ServiceType")
     @Expose
@@ -262,7 +264,7 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
     private OfflineCache OfflineCache;
 
     /**
-    * QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+    * QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
     */
     @SerializedName("Quic")
     @Expose
@@ -300,13 +302,17 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
 
     /**
      * Get Acceleration domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration 
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration 
      * @return ServiceType Acceleration domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
      */
     public String getServiceType() {
         return this.ServiceType;
@@ -314,13 +320,17 @@ media: streaming media VOD acceleration
 
     /**
      * Set Acceleration domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
      * @param ServiceType Acceleration domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
@@ -843,16 +853,16 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
     }
 
     /**
-     * Get QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents. 
-     * @return Quic QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+     * Get QUIC access, which is a paid service. You can check the product document and Billing Overview for more information. 
+     * @return Quic QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
      */
     public Quic getQuic() {
         return this.Quic;
     }
 
     /**
-     * Set QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
-     * @param Quic QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+     * Set QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
+     * @param Quic QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
      */
     public void setQuic(Quic Quic) {
         this.Quic = Quic;

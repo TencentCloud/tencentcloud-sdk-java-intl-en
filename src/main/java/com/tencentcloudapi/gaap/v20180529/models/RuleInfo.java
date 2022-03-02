@@ -110,6 +110,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ForwardHost;
 
     /**
+    * Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("ServerNameIndicationSwitch")
+    @Expose
+    private String ServerNameIndicationSwitch;
+
+    /**
+    * Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("ServerNameIndication")
+    @Expose
+    private String ServerNameIndication;
+
+    /**
      * Get Rule information 
      * @return RuleId Rule information
      */
@@ -313,6 +331,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ForwardHost = ForwardHost;
     }
 
+    /**
+     * Get Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return ServerNameIndicationSwitch Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getServerNameIndicationSwitch() {
+        return this.ServerNameIndicationSwitch;
+    }
+
+    /**
+     * Set Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param ServerNameIndicationSwitch Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setServerNameIndicationSwitch(String ServerNameIndicationSwitch) {
+        this.ServerNameIndicationSwitch = ServerNameIndicationSwitch;
+    }
+
+    /**
+     * Get Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return ServerNameIndication Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getServerNameIndication() {
+        return this.ServerNameIndication;
+    }
+
+    /**
+     * Set Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param ServerNameIndication Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setServerNameIndication(String ServerNameIndication) {
+        this.ServerNameIndication = ServerNameIndication;
+    }
+
     public RuleInfo() {
     }
 
@@ -360,6 +426,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ForwardHost != null) {
             this.ForwardHost = new String(source.ForwardHost);
         }
+        if (source.ServerNameIndicationSwitch != null) {
+            this.ServerNameIndicationSwitch = new String(source.ServerNameIndicationSwitch);
+        }
+        if (source.ServerNameIndication != null) {
+            this.ServerNameIndication = new String(source.ServerNameIndication);
+        }
     }
 
 
@@ -379,6 +451,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "RealServerSet.", this.RealServerSet);
         this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
         this.setParamSimple(map, prefix + "ForwardHost", this.ForwardHost);
+        this.setParamSimple(map, prefix + "ServerNameIndicationSwitch", this.ServerNameIndicationSwitch);
+        this.setParamSimple(map, prefix + "ServerNameIndication", this.ServerNameIndication);
 
     }
 }

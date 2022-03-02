@@ -88,7 +88,7 @@ The default value is 0.
     private String RealServerCertificateId;
 
     /**
-    * Domain name of the origin server certificate.
+    * This field has been disused. Use ServerNameIndication instead.
     */
     @SerializedName("RealServerCertificateDomain")
     @Expose
@@ -266,16 +266,16 @@ The default value is 0.
     }
 
     /**
-     * Get Domain name of the origin server certificate. 
-     * @return RealServerCertificateDomain Domain name of the origin server certificate.
+     * Get This field has been disused. Use ServerNameIndication instead. 
+     * @return RealServerCertificateDomain This field has been disused. Use ServerNameIndication instead.
      */
     public String getRealServerCertificateDomain() {
         return this.RealServerCertificateDomain;
     }
 
     /**
-     * Set Domain name of the origin server certificate.
-     * @param RealServerCertificateDomain Domain name of the origin server certificate.
+     * Set This field has been disused. Use ServerNameIndication instead.
+     * @param RealServerCertificateDomain This field has been disused. Use ServerNameIndication instead.
      */
     public void setRealServerCertificateDomain(String RealServerCertificateDomain) {
         this.RealServerCertificateDomain = RealServerCertificateDomain;

@@ -78,12 +78,26 @@ If `ForwardProtocol=default`, the `ForwardProtocol` of the listener will be used
     private String ForwardProtocol;
 
     /**
-    * The `host` carried in the request forwarded from the acceleration connection to the origin server.
-If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
+    * The forwarding host, which is carried in the request forwarded from the acceleration connection to the origin server.
+If `ForwardHost=default`, the domain name configured with the forwarding rule will be used. For other cases, the value set in this field will be used.
     */
     @SerializedName("ForwardHost")
     @Expose
     private String ForwardHost;
+
+    /**
+    * Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+    */
+    @SerializedName("ServerNameIndicationSwitch")
+    @Expose
+    private String ServerNameIndicationSwitch;
+
+    /**
+    * Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+    */
+    @SerializedName("ServerNameIndication")
+    @Expose
+    private String ServerNameIndication;
 
     /**
      * Get Listener ID 
@@ -222,23 +236,55 @@ If `ForwardProtocol=default`, the `ForwardProtocol` of the listener will be used
     }
 
     /**
-     * Get The `host` carried in the request forwarded from the acceleration connection to the origin server.
-If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used. 
-     * @return ForwardHost The `host` carried in the request forwarded from the acceleration connection to the origin server.
-If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
+     * Get The forwarding host, which is carried in the request forwarded from the acceleration connection to the origin server.
+If `ForwardHost=default`, the domain name configured with the forwarding rule will be used. For other cases, the value set in this field will be used. 
+     * @return ForwardHost The forwarding host, which is carried in the request forwarded from the acceleration connection to the origin server.
+If `ForwardHost=default`, the domain name configured with the forwarding rule will be used. For other cases, the value set in this field will be used.
      */
     public String getForwardHost() {
         return this.ForwardHost;
     }
 
     /**
-     * Set The `host` carried in the request forwarded from the acceleration connection to the origin server.
-If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
-     * @param ForwardHost The `host` carried in the request forwarded from the acceleration connection to the origin server.
-If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
+     * Set The forwarding host, which is carried in the request forwarded from the acceleration connection to the origin server.
+If `ForwardHost=default`, the domain name configured with the forwarding rule will be used. For other cases, the value set in this field will be used.
+     * @param ForwardHost The forwarding host, which is carried in the request forwarded from the acceleration connection to the origin server.
+If `ForwardHost=default`, the domain name configured with the forwarding rule will be used. For other cases, the value set in this field will be used.
      */
     public void setForwardHost(String ForwardHost) {
         this.ForwardHost = ForwardHost;
+    }
+
+    /**
+     * Get Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable). 
+     * @return ServerNameIndicationSwitch Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+     */
+    public String getServerNameIndicationSwitch() {
+        return this.ServerNameIndicationSwitch;
+    }
+
+    /**
+     * Set Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+     * @param ServerNameIndicationSwitch Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+     */
+    public void setServerNameIndicationSwitch(String ServerNameIndicationSwitch) {
+        this.ServerNameIndicationSwitch = ServerNameIndicationSwitch;
+    }
+
+    /**
+     * Get Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`. 
+     * @return ServerNameIndication Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+     */
+    public String getServerNameIndication() {
+        return this.ServerNameIndication;
+    }
+
+    /**
+     * Set Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+     * @param ServerNameIndication Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+     */
+    public void setServerNameIndication(String ServerNameIndication) {
+        this.ServerNameIndication = ServerNameIndication;
     }
 
     public ModifyRuleAttributeRequest() {
@@ -273,6 +319,12 @@ If `ForwardHost=default`, the domain name of rule will be used. For other cases,
         if (source.ForwardHost != null) {
             this.ForwardHost = new String(source.ForwardHost);
         }
+        if (source.ServerNameIndicationSwitch != null) {
+            this.ServerNameIndicationSwitch = new String(source.ServerNameIndicationSwitch);
+        }
+        if (source.ServerNameIndication != null) {
+            this.ServerNameIndication = new String(source.ServerNameIndication);
+        }
     }
 
 
@@ -288,6 +340,8 @@ If `ForwardHost=default`, the domain name of rule will be used. For other cases,
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "ForwardProtocol", this.ForwardProtocol);
         this.setParamSimple(map, prefix + "ForwardHost", this.ForwardHost);
+        this.setParamSimple(map, prefix + "ServerNameIndicationSwitch", this.ServerNameIndicationSwitch);
+        this.setParamSimple(map, prefix + "ServerNameIndication", this.ServerNameIndication);
 
     }
 }

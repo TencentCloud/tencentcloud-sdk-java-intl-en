@@ -258,6 +258,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private TagInstance [] TagInstances;
 
     /**
+    * Information on the filter dimension associated with a policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("FilterDimensionsParam")
+    @Expose
+    private String FilterDimensionsParam;
+
+    /**
      * Get Alarm policy ID
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return PolicyId Alarm policy ID
@@ -849,6 +857,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.TagInstances = TagInstances;
     }
 
+    /**
+     * Get Information on the filter dimension associated with a policy.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return FilterDimensionsParam Information on the filter dimension associated with a policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getFilterDimensionsParam() {
+        return this.FilterDimensionsParam;
+    }
+
+    /**
+     * Set Information on the filter dimension associated with a policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param FilterDimensionsParam Information on the filter dimension associated with a policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setFilterDimensionsParam(String FilterDimensionsParam) {
+        this.FilterDimensionsParam = FilterDimensionsParam;
+    }
+
     public AlarmPolicy() {
     }
 
@@ -959,6 +987,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 this.TagInstances[i] = new TagInstance(source.TagInstances[i]);
             }
         }
+        if (source.FilterDimensionsParam != null) {
+            this.FilterDimensionsParam = new String(source.FilterDimensionsParam);
+        }
     }
 
 
@@ -995,6 +1026,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
         this.setParamSimple(map, prefix + "OriginId", this.OriginId);
         this.setParamArrayObj(map, prefix + "TagInstances.", this.TagInstances);
+        this.setParamSimple(map, prefix + "FilterDimensionsParam", this.FilterDimensionsParam);
 
     }
 }

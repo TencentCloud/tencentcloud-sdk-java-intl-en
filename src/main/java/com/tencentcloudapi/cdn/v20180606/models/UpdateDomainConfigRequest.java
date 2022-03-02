@@ -304,7 +304,7 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
     private OriginCombine OriginCombine;
 
     /**
-    * QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+    * QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
     */
     @SerializedName("Quic")
     @Expose
@@ -995,16 +995,16 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
     }
 
     /**
-     * Get QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents. 
-     * @return Quic QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+     * Get QUIC access, which is a paid service. You can check the product document and Billing Overview for more information. 
+     * @return Quic QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
      */
     public Quic getQuic() {
         return this.Quic;
     }
 
     /**
-     * Set QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
-     * @param Quic QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+     * Set QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
+     * @param Quic QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
      */
     public void setQuic(Quic Quic) {
         this.Quic = Quic;

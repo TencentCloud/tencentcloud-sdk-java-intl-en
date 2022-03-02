@@ -47,8 +47,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long EndTime;
 
     /**
-    * Notification channel list. Valid values: EMAIL (email), SMS (SMS), CALL (phone), WECHAT (WeChat)
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Notification channel list. Valid values: `EMAIL` (email), `SMS` (SMS), `CALL` (phone), `WECHAT` (WeChat), `RTX` (WeCom)
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("NoticeWay")
     @Expose
@@ -111,6 +111,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long NeedPhoneArriveNotice;
 
     /**
+    * Dial type. `SYNC` (simultaneous dial), `CIRCLE` (polled dial). Default value: `CIRCLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PhoneCallType")
+    @Expose
+    private String PhoneCallType;
+
+    /**
      * Get Recipient type. Valid values: USER (user), GROUP (user group)
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return ReceiverType Recipient type. Valid values: USER (user), GROUP (user group)
@@ -171,20 +179,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Notification channel list. Valid values: EMAIL (email), SMS (SMS), CALL (phone), WECHAT (WeChat)
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return NoticeWay Notification channel list. Valid values: EMAIL (email), SMS (SMS), CALL (phone), WECHAT (WeChat)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Notification channel list. Valid values: `EMAIL` (email), `SMS` (SMS), `CALL` (phone), `WECHAT` (WeChat), `RTX` (WeCom)
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return NoticeWay Notification channel list. Valid values: `EMAIL` (email), `SMS` (SMS), `CALL` (phone), `WECHAT` (WeChat), `RTX` (WeCom)
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String [] getNoticeWay() {
         return this.NoticeWay;
     }
 
     /**
-     * Set Notification channel list. Valid values: EMAIL (email), SMS (SMS), CALL (phone), WECHAT (WeChat)
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param NoticeWay Notification channel list. Valid values: EMAIL (email), SMS (SMS), CALL (phone), WECHAT (WeChat)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Notification channel list. Valid values: `EMAIL` (email), `SMS` (SMS), `CALL` (phone), `WECHAT` (WeChat), `RTX` (WeCom)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param NoticeWay Notification channel list. Valid values: `EMAIL` (email), `SMS` (SMS), `CALL` (phone), `WECHAT` (WeChat), `RTX` (WeCom)
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setNoticeWay(String [] NoticeWay) {
         this.NoticeWay = NoticeWay;
@@ -330,6 +338,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.NeedPhoneArriveNotice = NeedPhoneArriveNotice;
     }
 
+    /**
+     * Get Dial type. `SYNC` (simultaneous dial), `CIRCLE` (polled dial). Default value: `CIRCLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return PhoneCallType Dial type. `SYNC` (simultaneous dial), `CIRCLE` (polled dial). Default value: `CIRCLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getPhoneCallType() {
+        return this.PhoneCallType;
+    }
+
+    /**
+     * Set Dial type. `SYNC` (simultaneous dial), `CIRCLE` (polled dial). Default value: `CIRCLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param PhoneCallType Dial type. `SYNC` (simultaneous dial), `CIRCLE` (polled dial). Default value: `CIRCLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setPhoneCallType(String PhoneCallType) {
+        this.PhoneCallType = PhoneCallType;
+    }
+
     public UserNotice() {
     }
 
@@ -383,6 +411,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.NeedPhoneArriveNotice != null) {
             this.NeedPhoneArriveNotice = new Long(source.NeedPhoneArriveNotice);
         }
+        if (source.PhoneCallType != null) {
+            this.PhoneCallType = new String(source.PhoneCallType);
+        }
     }
 
 
@@ -401,6 +432,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "PhoneInnerInterval", this.PhoneInnerInterval);
         this.setParamSimple(map, prefix + "PhoneCircleInterval", this.PhoneCircleInterval);
         this.setParamSimple(map, prefix + "NeedPhoneArriveNotice", this.NeedPhoneArriveNotice);
+        this.setParamSimple(map, prefix + "PhoneCallType", this.PhoneCallType);
 
     }
 }

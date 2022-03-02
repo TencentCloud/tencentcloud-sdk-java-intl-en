@@ -251,9 +251,9 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     private String NetworkType;
 
     /**
-    * Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), 
+    * Package type of connections. Valid values: `Thunder` (general connection), `Accelerator` (silver connection), 
 and `CrossBorder` (cross-MLC-border connection).
-Note: this field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("PackageType")
     @Expose
@@ -283,6 +283,14 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     @SerializedName("Http3Supported")
     @Expose
     private Long Http3Supported;
+
+    /**
+    * Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("InBanBlacklist")
+    @Expose
+    private Long InBanBlacklist;
 
     /**
      * Get Connection instance ID; It's an old parameter, please switch to ProxyId.
@@ -849,24 +857,24 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), 
+     * Get Package type of connections. Valid values: `Thunder` (general connection), `Accelerator` (silver connection), 
 and `CrossBorder` (cross-MLC-border connection).
-Note: this field may return `null`, indicating that no valid value can be obtained. 
-     * @return PackageType Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return PackageType Package type of connections. Valid values: `Thunder` (general connection), `Accelerator` (silver connection), 
 and `CrossBorder` (cross-MLC-border connection).
-Note: this field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getPackageType() {
         return this.PackageType;
     }
 
     /**
-     * Set Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), 
+     * Set Package type of connections. Valid values: `Thunder` (general connection), `Accelerator` (silver connection), 
 and `CrossBorder` (cross-MLC-border connection).
-Note: this field may return `null`, indicating that no valid value can be obtained.
-     * @param PackageType Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), 
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param PackageType Package type of connections. Valid values: `Thunder` (general connection), `Accelerator` (silver connection), 
 and `CrossBorder` (cross-MLC-border connection).
-Note: this field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
@@ -934,6 +942,26 @@ Note: this field may return `null`, indicating that no valid value can be obtain
      */
     public void setHttp3Supported(Long Http3Supported) {
         this.Http3Supported = Http3Supported;
+    }
+
+    /**
+     * Get Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return InBanBlacklist Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Long getInBanBlacklist() {
+        return this.InBanBlacklist;
+    }
+
+    /**
+     * Set Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param InBanBlacklist Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setInBanBlacklist(Long InBanBlacklist) {
+        this.InBanBlacklist = InBanBlacklist;
     }
 
     public ProxyInfo() {
@@ -1058,6 +1086,9 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         if (source.Http3Supported != null) {
             this.Http3Supported = new Long(source.Http3Supported);
         }
+        if (source.InBanBlacklist != null) {
+            this.InBanBlacklist = new Long(source.InBanBlacklist);
+        }
     }
 
 
@@ -1098,6 +1129,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "BanStatus", this.BanStatus);
         this.setParamArrayObj(map, prefix + "IPList.", this.IPList);
         this.setParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
+        this.setParamSimple(map, prefix + "InBanBlacklist", this.InBanBlacklist);
 
     }
 }

@@ -51,6 +51,13 @@ public class RealServer extends AbstractModel{
     private Long ProjectId;
 
     /**
+    * Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+    */
+    @SerializedName("InBanBlacklist")
+    @Expose
+    private Long InBanBlacklist;
+
+    /**
      * Get Origin server IP or domain name 
      * @return RealServerIP Origin server IP or domain name
      */
@@ -114,6 +121,22 @@ public class RealServer extends AbstractModel{
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes). 
+     * @return InBanBlacklist Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+     */
+    public Long getInBanBlacklist() {
+        return this.InBanBlacklist;
+    }
+
+    /**
+     * Set Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+     * @param InBanBlacklist Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+     */
+    public void setInBanBlacklist(Long InBanBlacklist) {
+        this.InBanBlacklist = InBanBlacklist;
+    }
+
     public RealServer() {
     }
 
@@ -134,6 +157,9 @@ public class RealServer extends AbstractModel{
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
         }
+        if (source.InBanBlacklist != null) {
+            this.InBanBlacklist = new Long(source.InBanBlacklist);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class RealServer extends AbstractModel{
         this.setParamSimple(map, prefix + "RealServerId", this.RealServerId);
         this.setParamSimple(map, prefix + "RealServerName", this.RealServerName);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "InBanBlacklist", this.InBanBlacklist);
 
     }
 }
