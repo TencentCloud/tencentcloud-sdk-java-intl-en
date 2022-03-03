@@ -115,6 +115,13 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
     private String RateControlMode;
 
     /**
+    * Watermark ID
+    */
+    @SerializedName("WatermarkId")
+    @Expose
+    private String WatermarkId;
+
+    /**
      * Get Name of an audio/video transcoding template, which can contain 1-20 case-sensitive letters and digits 
      * @return Name Name of an audio/video transcoding template, which can contain 1-20 case-sensitive letters and digits
      */
@@ -326,6 +333,22 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
         this.RateControlMode = RateControlMode;
     }
 
+    /**
+     * Get Watermark ID 
+     * @return WatermarkId Watermark ID
+     */
+    public String getWatermarkId() {
+        return this.WatermarkId;
+    }
+
+    /**
+     * Set Watermark ID
+     * @param WatermarkId Watermark ID
+     */
+    public void setWatermarkId(String WatermarkId) {
+        this.WatermarkId = WatermarkId;
+    }
+
     public AVTemplate() {
     }
 
@@ -373,6 +396,9 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
         if (source.RateControlMode != null) {
             this.RateControlMode = new String(source.RateControlMode);
         }
+        if (source.WatermarkId != null) {
+            this.WatermarkId = new String(source.WatermarkId);
+        }
     }
 
 
@@ -393,6 +419,7 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
         this.setParamSimple(map, prefix + "AudioBitrate", this.AudioBitrate);
         this.setParamSimple(map, prefix + "VideoBitrate", this.VideoBitrate);
         this.setParamSimple(map, prefix + "RateControlMode", this.RateControlMode);
+        this.setParamSimple(map, prefix + "WatermarkId", this.WatermarkId);
 
     }
 }

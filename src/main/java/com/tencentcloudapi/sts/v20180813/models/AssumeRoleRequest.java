@@ -23,14 +23,19 @@ import java.util.HashMap;
 public class AssumeRoleRequest extends AbstractModel{
 
     /**
-    * Role resource description, such as qcs::cam::uin/12345678:role/4611686018427397919, qcs::cam::uin/12345678:roleName/testRoleName
+    * Resource descriptions of a role, which can be obtained by clicking the role name in the [CAM console](https://console.cloud.tencent.com/cam/role).
+General role:
+qcs::cam::uin/12345678:role/4611686018427397919, qcs::cam::uin/12345678:roleName/testRoleName
+Service role:
+qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920, qcs::cam::uin/12345678:role/tencentcloudServiceRoleName/testServiceRoleName
     */
     @SerializedName("RoleArn")
     @Expose
     private String RoleArn;
 
     /**
-    * User-defined temporary session name
+    * User-defined temporary session name.
+It can contain 2-128 letters, digits, and symbols (=,.@_-). Regex: [\w+=,.@_-]*
     */
     @SerializedName("RoleSessionName")
     @Expose
@@ -46,8 +51,8 @@ public class AssumeRoleRequest extends AbstractModel{
     /**
     * Policy description
 Note:
-1. The policy needs to be URL-encoded (if you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://cloud.tencent.com/document/api/598/33159#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
-2. For the policy syntax, please see CAM’s [Syntax Logic](https://cloud.tencent.com/document/product/598/10603).
+1. The policy needs to be URL-encoded (if you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://intl.cloud.tencent.com/document/api/598/33159?from_cn_redirect=1#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
+2. For the policy syntax, please see CAM's [Syntax Logic](https://intl.cloud.tencent.com/document/product/598/10603?from_cn_redirect=1).
 3. The policy cannot contain the `principal` element.
     */
     @SerializedName("Policy")
@@ -55,32 +60,60 @@ Note:
     private String Policy;
 
     /**
-     * Get Role resource description, such as qcs::cam::uin/12345678:role/4611686018427397919, qcs::cam::uin/12345678:roleName/testRoleName 
-     * @return RoleArn Role resource description, such as qcs::cam::uin/12345678:role/4611686018427397919, qcs::cam::uin/12345678:roleName/testRoleName
+    * External role ID, which can be obtained by clicking the role name in the [CAM console](https://console.cloud.tencent.com/cam/role).
+It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-]*
+    */
+    @SerializedName("ExternalId")
+    @Expose
+    private String ExternalId;
+
+    /**
+     * Get Resource descriptions of a role, which can be obtained by clicking the role name in the [CAM console](https://console.cloud.tencent.com/cam/role).
+General role:
+qcs::cam::uin/12345678:role/4611686018427397919, qcs::cam::uin/12345678:roleName/testRoleName
+Service role:
+qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920, qcs::cam::uin/12345678:role/tencentcloudServiceRoleName/testServiceRoleName 
+     * @return RoleArn Resource descriptions of a role, which can be obtained by clicking the role name in the [CAM console](https://console.cloud.tencent.com/cam/role).
+General role:
+qcs::cam::uin/12345678:role/4611686018427397919, qcs::cam::uin/12345678:roleName/testRoleName
+Service role:
+qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920, qcs::cam::uin/12345678:role/tencentcloudServiceRoleName/testServiceRoleName
      */
     public String getRoleArn() {
         return this.RoleArn;
     }
 
     /**
-     * Set Role resource description, such as qcs::cam::uin/12345678:role/4611686018427397919, qcs::cam::uin/12345678:roleName/testRoleName
-     * @param RoleArn Role resource description, such as qcs::cam::uin/12345678:role/4611686018427397919, qcs::cam::uin/12345678:roleName/testRoleName
+     * Set Resource descriptions of a role, which can be obtained by clicking the role name in the [CAM console](https://console.cloud.tencent.com/cam/role).
+General role:
+qcs::cam::uin/12345678:role/4611686018427397919, qcs::cam::uin/12345678:roleName/testRoleName
+Service role:
+qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920, qcs::cam::uin/12345678:role/tencentcloudServiceRoleName/testServiceRoleName
+     * @param RoleArn Resource descriptions of a role, which can be obtained by clicking the role name in the [CAM console](https://console.cloud.tencent.com/cam/role).
+General role:
+qcs::cam::uin/12345678:role/4611686018427397919, qcs::cam::uin/12345678:roleName/testRoleName
+Service role:
+qcs::cam::uin/12345678:role/tencentcloudServiceRole/4611686018427397920, qcs::cam::uin/12345678:role/tencentcloudServiceRoleName/testServiceRoleName
      */
     public void setRoleArn(String RoleArn) {
         this.RoleArn = RoleArn;
     }
 
     /**
-     * Get User-defined temporary session name 
-     * @return RoleSessionName User-defined temporary session name
+     * Get User-defined temporary session name.
+It can contain 2-128 letters, digits, and symbols (=,.@_-). Regex: [\w+=,.@_-]* 
+     * @return RoleSessionName User-defined temporary session name.
+It can contain 2-128 letters, digits, and symbols (=,.@_-). Regex: [\w+=,.@_-]*
      */
     public String getRoleSessionName() {
         return this.RoleSessionName;
     }
 
     /**
-     * Set User-defined temporary session name
-     * @param RoleSessionName User-defined temporary session name
+     * Set User-defined temporary session name.
+It can contain 2-128 letters, digits, and symbols (=,.@_-). Regex: [\w+=,.@_-]*
+     * @param RoleSessionName User-defined temporary session name.
+It can contain 2-128 letters, digits, and symbols (=,.@_-). Regex: [\w+=,.@_-]*
      */
     public void setRoleSessionName(String RoleSessionName) {
         this.RoleSessionName = RoleSessionName;
@@ -105,13 +138,13 @@ Note:
     /**
      * Get Policy description
 Note:
-1. The policy needs to be URL-encoded (if you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://cloud.tencent.com/document/api/598/33159#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
-2. For the policy syntax, please see CAM’s [Syntax Logic](https://cloud.tencent.com/document/product/598/10603).
+1. The policy needs to be URL-encoded (if you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://intl.cloud.tencent.com/document/api/598/33159?from_cn_redirect=1#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
+2. For the policy syntax, please see CAM's [Syntax Logic](https://intl.cloud.tencent.com/document/product/598/10603?from_cn_redirect=1).
 3. The policy cannot contain the `principal` element. 
      * @return Policy Policy description
 Note:
-1. The policy needs to be URL-encoded (if you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://cloud.tencent.com/document/api/598/33159#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
-2. For the policy syntax, please see CAM’s [Syntax Logic](https://cloud.tencent.com/document/product/598/10603).
+1. The policy needs to be URL-encoded (if you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://intl.cloud.tencent.com/document/api/598/33159?from_cn_redirect=1#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
+2. For the policy syntax, please see CAM's [Syntax Logic](https://intl.cloud.tencent.com/document/product/598/10603?from_cn_redirect=1).
 3. The policy cannot contain the `principal` element.
      */
     public String getPolicy() {
@@ -121,17 +154,37 @@ Note:
     /**
      * Set Policy description
 Note:
-1. The policy needs to be URL-encoded (if you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://cloud.tencent.com/document/api/598/33159#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
-2. For the policy syntax, please see CAM’s [Syntax Logic](https://cloud.tencent.com/document/product/598/10603).
+1. The policy needs to be URL-encoded (if you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://intl.cloud.tencent.com/document/api/598/33159?from_cn_redirect=1#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
+2. For the policy syntax, please see CAM's [Syntax Logic](https://intl.cloud.tencent.com/document/product/598/10603?from_cn_redirect=1).
 3. The policy cannot contain the `principal` element.
      * @param Policy Policy description
 Note:
-1. The policy needs to be URL-encoded (if you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://cloud.tencent.com/document/api/598/33159#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
-2. For the policy syntax, please see CAM’s [Syntax Logic](https://cloud.tencent.com/document/product/598/10603).
+1. The policy needs to be URL-encoded (if you request a TencentCloud API through the GET method, all parameters must be URL-encoded again in accordance with [Signature v3](https://intl.cloud.tencent.com/document/api/598/33159?from_cn_redirect=1#1.-.E6.8B.BC.E6.8E.A5.E8.A7.84.E8.8C.83.E8.AF.B7.E6.B1.82.E4.B8.B2) before the request is sent).
+2. For the policy syntax, please see CAM's [Syntax Logic](https://intl.cloud.tencent.com/document/product/598/10603?from_cn_redirect=1).
 3. The policy cannot contain the `principal` element.
      */
     public void setPolicy(String Policy) {
         this.Policy = Policy;
+    }
+
+    /**
+     * Get External role ID, which can be obtained by clicking the role name in the [CAM console](https://console.cloud.tencent.com/cam/role).
+It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-]* 
+     * @return ExternalId External role ID, which can be obtained by clicking the role name in the [CAM console](https://console.cloud.tencent.com/cam/role).
+It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-]*
+     */
+    public String getExternalId() {
+        return this.ExternalId;
+    }
+
+    /**
+     * Set External role ID, which can be obtained by clicking the role name in the [CAM console](https://console.cloud.tencent.com/cam/role).
+It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-]*
+     * @param ExternalId External role ID, which can be obtained by clicking the role name in the [CAM console](https://console.cloud.tencent.com/cam/role).
+It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-]*
+     */
+    public void setExternalId(String ExternalId) {
+        this.ExternalId = ExternalId;
     }
 
     public AssumeRoleRequest() {
@@ -154,6 +207,9 @@ Note:
         if (source.Policy != null) {
             this.Policy = new String(source.Policy);
         }
+        if (source.ExternalId != null) {
+            this.ExternalId = new String(source.ExternalId);
+        }
     }
 
 
@@ -165,6 +221,7 @@ Note:
         this.setParamSimple(map, prefix + "RoleSessionName", this.RoleSessionName);
         this.setParamSimple(map, prefix + "DurationSeconds", this.DurationSeconds);
         this.setParamSimple(map, prefix + "Policy", this.Policy);
+        this.setParamSimple(map, prefix + "ExternalId", this.ExternalId);
 
     }
 }

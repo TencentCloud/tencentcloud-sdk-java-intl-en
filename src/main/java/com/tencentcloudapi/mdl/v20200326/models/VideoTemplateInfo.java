@@ -86,6 +86,14 @@ public class VideoTemplateInfo extends AbstractModel{
     private String RateControlMode;
 
     /**
+    * Watermark ID
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("WatermarkId")
+    @Expose
+    private String WatermarkId;
+
+    /**
      * Get Video transcoding template name, which can contain 1-20 letters and digits. 
      * @return Name Video transcoding template name, which can contain 1-20 letters and digits.
      */
@@ -229,6 +237,26 @@ public class VideoTemplateInfo extends AbstractModel{
         this.RateControlMode = RateControlMode;
     }
 
+    /**
+     * Get Watermark ID
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return WatermarkId Watermark ID
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getWatermarkId() {
+        return this.WatermarkId;
+    }
+
+    /**
+     * Set Watermark ID
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param WatermarkId Watermark ID
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setWatermarkId(String WatermarkId) {
+        this.WatermarkId = WatermarkId;
+    }
+
     public VideoTemplateInfo() {
     }
 
@@ -264,6 +292,9 @@ public class VideoTemplateInfo extends AbstractModel{
         if (source.RateControlMode != null) {
             this.RateControlMode = new String(source.RateControlMode);
         }
+        if (source.WatermarkId != null) {
+            this.WatermarkId = new String(source.WatermarkId);
+        }
     }
 
 
@@ -280,6 +311,7 @@ public class VideoTemplateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "TopSpeed", this.TopSpeed);
         this.setParamSimple(map, prefix + "BitrateCompressionRatio", this.BitrateCompressionRatio);
         this.setParamSimple(map, prefix + "RateControlMode", this.RateControlMode);
+        this.setParamSimple(map, prefix + "WatermarkId", this.WatermarkId);
 
     }
 }

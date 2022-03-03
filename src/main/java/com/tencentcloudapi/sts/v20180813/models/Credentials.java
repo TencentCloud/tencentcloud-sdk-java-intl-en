@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class Credentials extends AbstractModel{
 
     /**
-    * token
+    * Token, which contains up to 4,096 bytes depending on the associated policies.
     */
     @SerializedName("Token")
     @Expose
     private String Token;
 
     /**
-    * Temporary credentials secret ID
+    * Temporary credentials key ID, which contains up to 1,024 bytes.
     */
     @SerializedName("TmpSecretId")
     @Expose
     private String TmpSecretId;
 
     /**
-    * Temporary credentials secret key
+    * Temporary credentials key, which contains up to 1,024 bytes.
     */
     @SerializedName("TmpSecretKey")
     @Expose
     private String TmpSecretKey;
 
     /**
-     * Get token 
-     * @return Token token
+     * Get Token, which contains up to 4,096 bytes depending on the associated policies. 
+     * @return Token Token, which contains up to 4,096 bytes depending on the associated policies.
      */
     public String getToken() {
         return this.Token;
     }
 
     /**
-     * Set token
-     * @param Token token
+     * Set Token, which contains up to 4,096 bytes depending on the associated policies.
+     * @param Token Token, which contains up to 4,096 bytes depending on the associated policies.
      */
     public void setToken(String Token) {
         this.Token = Token;
     }
 
     /**
-     * Get Temporary credentials secret ID 
-     * @return TmpSecretId Temporary credentials secret ID
+     * Get Temporary credentials key ID, which contains up to 1,024 bytes. 
+     * @return TmpSecretId Temporary credentials key ID, which contains up to 1,024 bytes.
      */
     public String getTmpSecretId() {
         return this.TmpSecretId;
     }
 
     /**
-     * Set Temporary credentials secret ID
-     * @param TmpSecretId Temporary credentials secret ID
+     * Set Temporary credentials key ID, which contains up to 1,024 bytes.
+     * @param TmpSecretId Temporary credentials key ID, which contains up to 1,024 bytes.
      */
     public void setTmpSecretId(String TmpSecretId) {
         this.TmpSecretId = TmpSecretId;
     }
 
     /**
-     * Get Temporary credentials secret key 
-     * @return TmpSecretKey Temporary credentials secret key
+     * Get Temporary credentials key, which contains up to 1,024 bytes. 
+     * @return TmpSecretKey Temporary credentials key, which contains up to 1,024 bytes.
      */
     public String getTmpSecretKey() {
         return this.TmpSecretKey;
     }
 
     /**
-     * Set Temporary credentials secret key
-     * @param TmpSecretKey Temporary credentials secret key
+     * Set Temporary credentials key, which contains up to 1,024 bytes.
+     * @param TmpSecretKey Temporary credentials key, which contains up to 1,024 bytes.
      */
     public void setTmpSecretKey(String TmpSecretKey) {
         this.TmpSecretKey = TmpSecretKey;

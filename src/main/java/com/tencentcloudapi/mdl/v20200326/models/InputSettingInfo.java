@@ -23,24 +23,24 @@ import java.util.HashMap;
 public class InputSettingInfo extends AbstractModel{
 
     /**
-    * Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("StreamName")
     @Expose
     private String StreamName;
 
     /**
-    * Origin-pull URL, which is used for RTMP_PULL/HLS_PULL/MP4_PULL. Length limit: [1,512].
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL` and can contain 1-512 characters
+Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("SourceUrl")
     @Expose
@@ -63,60 +63,70 @@ Note: this field may return `null`, indicating that no valid value was found.
     private String SourceType;
 
     /**
-     * Get Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AppName Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
+Value range: 0 (default) or 10000-600000
+The value must be a multiple of 1,000.
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("DelayTime")
+    @Expose
+    private Long DelayTime;
+
+    /**
+     * Get Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return AppName Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AppName Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param AppName Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return StreamName Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return StreamName Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public String getStreamName() {
         return this.StreamName;
     }
 
     /**
-     * Set Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param StreamName Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param StreamName Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setStreamName(String StreamName) {
         this.StreamName = StreamName;
     }
 
     /**
-     * Get Origin-pull URL, which is used for RTMP_PULL/HLS_PULL/MP4_PULL. Length limit: [1,512].
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SourceUrl Origin-pull URL, which is used for RTMP_PULL/HLS_PULL/MP4_PULL. Length limit: [1,512].
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL` and can contain 1-512 characters
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return SourceUrl Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL` and can contain 1-512 characters
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public String getSourceUrl() {
         return this.SourceUrl;
     }
 
     /**
-     * Set Origin-pull URL, which is used for RTMP_PULL/HLS_PULL/MP4_PULL. Length limit: [1,512].
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SourceUrl Origin-pull URL, which is used for RTMP_PULL/HLS_PULL/MP4_PULL. Length limit: [1,512].
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL` and can contain 1-512 characters
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param SourceUrl Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL` and can contain 1-512 characters
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setSourceUrl(String SourceUrl) {
         this.SourceUrl = SourceUrl;
@@ -162,6 +172,34 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.SourceType = SourceType;
     }
 
+    /**
+     * Get Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
+Value range: 0 (default) or 10000-600000
+The value must be a multiple of 1,000.
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return DelayTime Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
+Value range: 0 (default) or 10000-600000
+The value must be a multiple of 1,000.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public Long getDelayTime() {
+        return this.DelayTime;
+    }
+
+    /**
+     * Set Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
+Value range: 0 (default) or 10000-600000
+The value must be a multiple of 1,000.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param DelayTime Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
+Value range: 0 (default) or 10000-600000
+The value must be a multiple of 1,000.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setDelayTime(Long DelayTime) {
+        this.DelayTime = DelayTime;
+    }
+
     public InputSettingInfo() {
     }
 
@@ -185,6 +223,9 @@ Note: this field may return `null`, indicating that no valid value was found.
         if (source.SourceType != null) {
             this.SourceType = new String(source.SourceType);
         }
+        if (source.DelayTime != null) {
+            this.DelayTime = new Long(source.DelayTime);
+        }
     }
 
 
@@ -197,6 +238,7 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "SourceUrl", this.SourceUrl);
         this.setParamSimple(map, prefix + "InputAddress", this.InputAddress);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
+        this.setParamSimple(map, prefix + "DelayTime", this.DelayTime);
 
     }
 }

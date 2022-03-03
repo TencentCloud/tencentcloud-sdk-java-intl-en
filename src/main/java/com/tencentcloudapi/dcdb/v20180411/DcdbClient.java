@@ -281,6 +281,26 @@ Note: accounts with the same username but different hosts are different accounts
     }
 
     /**
+     *This API is used to query the list of slow query logs.
+     * @param req DescribeDBSlowLogsRequest
+     * @return DescribeDBSlowLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBSlowLogsResponse DescribeDBSlowLogs(DescribeDBSlowLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBSlowLogsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBSlowLogsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBSlowLogs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the sync mode of a TencentDB instance.
      * @param req DescribeDBSyncModeRequest
      * @return DescribeDBSyncModeResponse
