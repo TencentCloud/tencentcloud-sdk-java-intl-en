@@ -72,6 +72,14 @@ public class PullSmsSendStatus extends AbstractModel{
     private String Description;
 
     /**
+    * User session content, which is the same as the `SessionContext` in the request and is empty by default. If you need to activate it, contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SessionContext")
+    @Expose
+    private String SessionContext;
+
+    /**
      * Get Actual time of SMS receipt by user in seconds in the format of UNIX timestamp. 
      * @return UserReceiveTime Actual time of SMS receipt by user in seconds in the format of UNIX timestamp.
      */
@@ -183,6 +191,26 @@ public class PullSmsSendStatus extends AbstractModel{
         this.Description = Description;
     }
 
+    /**
+     * Get User session content, which is the same as the `SessionContext` in the request and is empty by default. If you need to activate it, contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SessionContext User session content, which is the same as the `SessionContext` in the request and is empty by default. If you need to activate it, contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getSessionContext() {
+        return this.SessionContext;
+    }
+
+    /**
+     * Set User session content, which is the same as the `SessionContext` in the request and is empty by default. If you need to activate it, contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SessionContext User session content, which is the same as the `SessionContext` in the request and is empty by default. If you need to activate it, contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSessionContext(String SessionContext) {
+        this.SessionContext = SessionContext;
+    }
+
     public PullSmsSendStatus() {
     }
 
@@ -212,6 +240,9 @@ public class PullSmsSendStatus extends AbstractModel{
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.SessionContext != null) {
+            this.SessionContext = new String(source.SessionContext);
+        }
     }
 
 
@@ -226,6 +257,7 @@ public class PullSmsSendStatus extends AbstractModel{
         this.setParamSimple(map, prefix + "SerialNo", this.SerialNo);
         this.setParamSimple(map, prefix + "ReportStatus", this.ReportStatus);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
 
     }
 }
