@@ -37,6 +37,13 @@ public class ModifyClusterParamRequest extends AbstractModel{
     private ParamItem [] ParamList;
 
     /**
+    * Valid values: `yes` (execute during maintenance time), `no` (execute now)
+    */
+    @SerializedName("IsInMaintainPeriod")
+    @Expose
+    private String IsInMaintainPeriod;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -68,6 +75,22 @@ public class ModifyClusterParamRequest extends AbstractModel{
         this.ParamList = ParamList;
     }
 
+    /**
+     * Get Valid values: `yes` (execute during maintenance time), `no` (execute now) 
+     * @return IsInMaintainPeriod Valid values: `yes` (execute during maintenance time), `no` (execute now)
+     */
+    public String getIsInMaintainPeriod() {
+        return this.IsInMaintainPeriod;
+    }
+
+    /**
+     * Set Valid values: `yes` (execute during maintenance time), `no` (execute now)
+     * @param IsInMaintainPeriod Valid values: `yes` (execute during maintenance time), `no` (execute now)
+     */
+    public void setIsInMaintainPeriod(String IsInMaintainPeriod) {
+        this.IsInMaintainPeriod = IsInMaintainPeriod;
+    }
+
     public ModifyClusterParamRequest() {
     }
 
@@ -85,6 +108,9 @@ public class ModifyClusterParamRequest extends AbstractModel{
                 this.ParamList[i] = new ParamItem(source.ParamList[i]);
             }
         }
+        if (source.IsInMaintainPeriod != null) {
+            this.IsInMaintainPeriod = new String(source.IsInMaintainPeriod);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class ModifyClusterParamRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArrayObj(map, prefix + "ParamList.", this.ParamList);
+        this.setParamSimple(map, prefix + "IsInMaintainPeriod", this.IsInMaintainPeriod);
 
     }
 }

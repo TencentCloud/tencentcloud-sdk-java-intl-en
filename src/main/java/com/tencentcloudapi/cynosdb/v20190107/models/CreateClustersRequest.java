@@ -67,21 +67,24 @@ public class CreateClustersRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * Number of CPU cores of normal instance
+    * It is required when `DbMode` is set to `NORMAL` or left empty.
+Number of CPU cores of a non-serverless instance
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * Memory of a non-serverless instance in GB
+    * It is required when `DbMode` is set to `NORMAL` or left empty.
+Memory of a non-serverless instance in GB
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Storage capacity in GB
+    * This parameter has been deprecated.
+Storage capacity in GB.
     */
     @SerializedName("Storage")
     @Expose
@@ -154,7 +157,8 @@ timeRollback: rollback by time point
     private String ExpectTime;
 
     /**
-    * Specified allowed time range for time point rollback
+    * This parameter has been deprecated.
+Specified allowed time range for time point rollback
     */
     @SerializedName("ExpectTimeThresh")
     @Expose
@@ -417,48 +421,60 @@ Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
     }
 
     /**
-     * Get Number of CPU cores of normal instance 
-     * @return Cpu Number of CPU cores of normal instance
+     * Get It is required when `DbMode` is set to `NORMAL` or left empty.
+Number of CPU cores of a non-serverless instance 
+     * @return Cpu It is required when `DbMode` is set to `NORMAL` or left empty.
+Number of CPU cores of a non-serverless instance
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Number of CPU cores of normal instance
-     * @param Cpu Number of CPU cores of normal instance
+     * Set It is required when `DbMode` is set to `NORMAL` or left empty.
+Number of CPU cores of a non-serverless instance
+     * @param Cpu It is required when `DbMode` is set to `NORMAL` or left empty.
+Number of CPU cores of a non-serverless instance
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Memory of a non-serverless instance in GB 
-     * @return Memory Memory of a non-serverless instance in GB
+     * Get It is required when `DbMode` is set to `NORMAL` or left empty.
+Memory of a non-serverless instance in GB 
+     * @return Memory It is required when `DbMode` is set to `NORMAL` or left empty.
+Memory of a non-serverless instance in GB
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Memory of a non-serverless instance in GB
-     * @param Memory Memory of a non-serverless instance in GB
+     * Set It is required when `DbMode` is set to `NORMAL` or left empty.
+Memory of a non-serverless instance in GB
+     * @param Memory It is required when `DbMode` is set to `NORMAL` or left empty.
+Memory of a non-serverless instance in GB
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Storage capacity in GB 
-     * @return Storage Storage capacity in GB
+     * Get This parameter has been deprecated.
+Storage capacity in GB. 
+     * @return Storage This parameter has been deprecated.
+Storage capacity in GB.
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set Storage capacity in GB
-     * @param Storage Storage capacity in GB
+     * Set This parameter has been deprecated.
+Storage capacity in GB.
+     * @param Storage This parameter has been deprecated.
+Storage capacity in GB.
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
@@ -621,16 +637,20 @@ timeRollback: rollback by time point
     }
 
     /**
-     * Get Specified allowed time range for time point rollback 
-     * @return ExpectTimeThresh Specified allowed time range for time point rollback
+     * Get This parameter has been deprecated.
+Specified allowed time range for time point rollback 
+     * @return ExpectTimeThresh This parameter has been deprecated.
+Specified allowed time range for time point rollback
      */
     public Long getExpectTimeThresh() {
         return this.ExpectTimeThresh;
     }
 
     /**
-     * Set Specified allowed time range for time point rollback
-     * @param ExpectTimeThresh Specified allowed time range for time point rollback
+     * Set This parameter has been deprecated.
+Specified allowed time range for time point rollback
+     * @param ExpectTimeThresh This parameter has been deprecated.
+Specified allowed time range for time point rollback
      */
     public void setExpectTimeThresh(Long ExpectTimeThresh) {
         this.ExpectTimeThresh = ExpectTimeThresh;

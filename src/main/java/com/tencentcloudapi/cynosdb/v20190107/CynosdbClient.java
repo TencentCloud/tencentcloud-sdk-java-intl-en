@@ -39,6 +39,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to remove the isolation of an instance to make it accessible again.
+     * @param req ActivateInstanceRequest
+     * @return ActivateInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ActivateInstanceResponse ActivateInstance(ActivateInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ActivateInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ActivateInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ActivateInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to add an instance in a cluster.
      * @param req AddInstancesRequest
      * @return AddInstancesResponse
@@ -531,6 +551,46 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<OfflineInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "OfflineInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to pause a serverless cluster.
+     * @param req PauseServerlessRequest
+     * @return PauseServerlessResponse
+     * @throws TencentCloudSDKException
+     */
+    public PauseServerlessResponse PauseServerless(PauseServerlessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PauseServerlessResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PauseServerlessResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PauseServerless");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to resume a serverless cluster.
+     * @param req ResumeServerlessRequest
+     * @return ResumeServerlessResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResumeServerlessResponse ResumeServerless(ResumeServerlessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResumeServerlessResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResumeServerlessResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ResumeServerless");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

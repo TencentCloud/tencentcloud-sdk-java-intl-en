@@ -37,6 +37,20 @@ public class ModifyDesiredCapacityRequest extends AbstractModel{
     private Long DesiredCapacity;
 
     /**
+    * Minimum number of instances. Value range: 0-2000.
+    */
+    @SerializedName("MinSize")
+    @Expose
+    private Long MinSize;
+
+    /**
+    * Maximum number of instances. Value range: 0-2000.
+    */
+    @SerializedName("MaxSize")
+    @Expose
+    private Long MaxSize;
+
+    /**
      * Get Auto scaling group ID 
      * @return AutoScalingGroupId Auto scaling group ID
      */
@@ -68,6 +82,38 @@ public class ModifyDesiredCapacityRequest extends AbstractModel{
         this.DesiredCapacity = DesiredCapacity;
     }
 
+    /**
+     * Get Minimum number of instances. Value range: 0-2000. 
+     * @return MinSize Minimum number of instances. Value range: 0-2000.
+     */
+    public Long getMinSize() {
+        return this.MinSize;
+    }
+
+    /**
+     * Set Minimum number of instances. Value range: 0-2000.
+     * @param MinSize Minimum number of instances. Value range: 0-2000.
+     */
+    public void setMinSize(Long MinSize) {
+        this.MinSize = MinSize;
+    }
+
+    /**
+     * Get Maximum number of instances. Value range: 0-2000. 
+     * @return MaxSize Maximum number of instances. Value range: 0-2000.
+     */
+    public Long getMaxSize() {
+        return this.MaxSize;
+    }
+
+    /**
+     * Set Maximum number of instances. Value range: 0-2000.
+     * @param MaxSize Maximum number of instances. Value range: 0-2000.
+     */
+    public void setMaxSize(Long MaxSize) {
+        this.MaxSize = MaxSize;
+    }
+
     public ModifyDesiredCapacityRequest() {
     }
 
@@ -82,6 +128,12 @@ public class ModifyDesiredCapacityRequest extends AbstractModel{
         if (source.DesiredCapacity != null) {
             this.DesiredCapacity = new Long(source.DesiredCapacity);
         }
+        if (source.MinSize != null) {
+            this.MinSize = new Long(source.MinSize);
+        }
+        if (source.MaxSize != null) {
+            this.MaxSize = new Long(source.MaxSize);
+        }
     }
 
 
@@ -91,6 +143,8 @@ public class ModifyDesiredCapacityRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
         this.setParamSimple(map, prefix + "DesiredCapacity", this.DesiredCapacity);
+        this.setParamSimple(map, prefix + "MinSize", this.MinSize);
+        this.setParamSimple(map, prefix + "MaxSize", this.MaxSize);
 
     }
 }

@@ -39,6 +39,26 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to remove the isolation of pay-as-you-go instances.
+     * @param req ActivateHourDBInstanceRequest
+     * @return ActivateHourDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ActivateHourDBInstanceResponse ActivateHourDBInstance(ActivateHourDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ActivateHourDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ActivateHourDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ActivateHourDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to associate security groups with Tencent Cloud resources in batches.
      * @param req AssociateSecurityGroupsRequest
      * @return AssociateSecurityGroupsResponse
@@ -442,6 +462,26 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     }
 
     /**
+     *This API is used to query the list of database objects in a TencentDB instance, including tables, stored procedures, views, and functions.
+     * @param req DescribeDatabaseObjectsRequest
+     * @return DescribeDatabaseObjectsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatabaseObjectsResponse DescribeDatabaseObjects(DescribeDatabaseObjectsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDatabaseObjectsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDatabaseObjectsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDatabaseObjects");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the table information of a TencentDB instance.
      * @param req DescribeDatabaseTableRequest
      * @return DescribeDatabaseTableResponse
@@ -675,6 +715,26 @@ Note: accounts with the same username but different hosts are different accounts
                 Type type = new TypeToken<JsonResponseModel<InitDBInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "InitDBInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to isolate pay-as-you-go instances.
+     * @param req IsolateHourDBInstanceRequest
+     * @return IsolateHourDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public IsolateHourDBInstanceResponse IsolateHourDBInstance(IsolateHourDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<IsolateHourDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<IsolateHourDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "IsolateHourDBInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

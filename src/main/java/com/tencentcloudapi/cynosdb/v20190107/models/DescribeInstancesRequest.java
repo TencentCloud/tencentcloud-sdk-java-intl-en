@@ -69,7 +69,14 @@ public class DescribeInstancesRequest extends AbstractModel{
     private String DbType;
 
     /**
-    * Instance status
+    * Instance status. Valid values:
+creating
+running
+isolating
+isolated
+activating: Removing the instance from isolation
+offlining: Eliminating the instance
+offlined: Instance eliminated
     */
     @SerializedName("Status")
     @Expose
@@ -195,16 +202,44 @@ public class DescribeInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance status 
-     * @return Status Instance status
+     * Get Instance status. Valid values:
+creating
+running
+isolating
+isolated
+activating: Removing the instance from isolation
+offlining: Eliminating the instance
+offlined: Instance eliminated 
+     * @return Status Instance status. Valid values:
+creating
+running
+isolating
+isolated
+activating: Removing the instance from isolation
+offlining: Eliminating the instance
+offlined: Instance eliminated
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status
-     * @param Status Instance status
+     * Set Instance status. Valid values:
+creating
+running
+isolating
+isolated
+activating: Removing the instance from isolation
+offlining: Eliminating the instance
+offlined: Instance eliminated
+     * @param Status Instance status. Valid values:
+creating
+running
+isolating
+isolated
+activating: Removing the instance from isolation
+offlining: Eliminating the instance
+offlined: Instance eliminated
      */
     public void setStatus(String Status) {
         this.Status = Status;
