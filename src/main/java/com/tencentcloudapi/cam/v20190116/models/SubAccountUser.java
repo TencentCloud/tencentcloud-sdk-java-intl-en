@@ -37,7 +37,7 @@ public class SubAccountUser extends AbstractModel{
     private String Name;
 
     /**
-    * Sub-user UID
+    * Sub-user UID. UID is the unique identifier of a user who is a message recipient, while UIN is a unique identifier of a user.
     */
     @SerializedName("Uid")
     @Expose
@@ -112,16 +112,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Sub-user UID 
-     * @return Uid Sub-user UID
+     * Get Sub-user UID. UID is the unique identifier of a user who is a message recipient, while UIN is a unique identifier of a user. 
+     * @return Uid Sub-user UID. UID is the unique identifier of a user who is a message recipient, while UIN is a unique identifier of a user.
      */
     public Long getUid() {
         return this.Uid;
     }
 
     /**
-     * Set Sub-user UID
-     * @param Uid Sub-user UID
+     * Set Sub-user UID. UID is the unique identifier of a user who is a message recipient, while UIN is a unique identifier of a user.
+     * @param Uid Sub-user UID. UID is the unique identifier of a user who is a message recipient, while UIN is a unique identifier of a user.
      */
     public void setUid(Long Uid) {
         this.Uid = Uid;

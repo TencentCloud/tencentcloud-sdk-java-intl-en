@@ -87,6 +87,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String CreateTime;
 
     /**
+    * Nickname.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("NickName")
+    @Expose
+    private String NickName;
+
+    /**
      * Get Sub-user user ID 
      * @return Uin Sub-user user ID
      */
@@ -234,6 +242,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get Nickname.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return NickName Nickname.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getNickName() {
+        return this.NickName;
+    }
+
+    /**
+     * Set Nickname.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param NickName Nickname.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setNickName(String NickName) {
+        this.NickName = NickName;
+    }
+
     public SubAccountInfo() {
     }
 
@@ -269,6 +297,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.NickName != null) {
+            this.NickName = new String(source.NickName);
+        }
     }
 
 
@@ -285,6 +316,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "CountryCode", this.CountryCode);
         this.setParamSimple(map, prefix + "Email", this.Email);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "NickName", this.NickName);
 
     }
 }

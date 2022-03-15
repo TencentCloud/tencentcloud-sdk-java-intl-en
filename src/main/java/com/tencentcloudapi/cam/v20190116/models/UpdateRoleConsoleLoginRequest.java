@@ -30,14 +30,14 @@ public class UpdateRoleConsoleLoginRequest extends AbstractModel{
     private Long ConsoleLogin;
 
     /**
-    * Role ID
+    * Role ID. Use either `RoleId` or `RoleName` as the input parameter.
     */
     @SerializedName("RoleId")
     @Expose
     private Long RoleId;
 
     /**
-    * Role name
+    * Role name. Use either `RoleId` or `RoleName` as the input parameter.
     */
     @SerializedName("RoleName")
     @Expose
@@ -60,32 +60,32 @@ public class UpdateRoleConsoleLoginRequest extends AbstractModel{
     }
 
     /**
-     * Get Role ID 
-     * @return RoleId Role ID
+     * Get Role ID. Use either `RoleId` or `RoleName` as the input parameter. 
+     * @return RoleId Role ID. Use either `RoleId` or `RoleName` as the input parameter.
      */
     public Long getRoleId() {
         return this.RoleId;
     }
 
     /**
-     * Set Role ID
-     * @param RoleId Role ID
+     * Set Role ID. Use either `RoleId` or `RoleName` as the input parameter.
+     * @param RoleId Role ID. Use either `RoleId` or `RoleName` as the input parameter.
      */
     public void setRoleId(Long RoleId) {
         this.RoleId = RoleId;
     }
 
     /**
-     * Get Role name 
-     * @return RoleName Role name
+     * Get Role name. Use either `RoleId` or `RoleName` as the input parameter. 
+     * @return RoleName Role name. Use either `RoleId` or `RoleName` as the input parameter.
      */
     public String getRoleName() {
         return this.RoleName;
     }
 
     /**
-     * Set Role name
-     * @param RoleName Role name
+     * Set Role name. Use either `RoleId` or `RoleName` as the input parameter.
+     * @param RoleName Role name. Use either `RoleId` or `RoleName` as the input parameter.
      */
     public void setRoleName(String RoleName) {
         this.RoleName = RoleName;

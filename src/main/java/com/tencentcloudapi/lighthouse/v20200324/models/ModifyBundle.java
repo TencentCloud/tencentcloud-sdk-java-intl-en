@@ -47,6 +47,14 @@ public class ModifyBundle extends AbstractModel{
     private Bundle Bundle;
 
     /**
+    * The reason of package changing failure. It’s empty if the package change status is `AVAILABLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("NotSupportModifyMessage")
+    @Expose
+    private String NotSupportModifyMessage;
+
+    /**
      * Get Price difference that you need to pay for the new instance package after change. 
      * @return ModifyPrice Price difference that you need to pay for the new instance package after change.
      */
@@ -106,6 +114,26 @@ public class ModifyBundle extends AbstractModel{
         this.Bundle = Bundle;
     }
 
+    /**
+     * Get The reason of package changing failure. It’s empty if the package change status is `AVAILABLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return NotSupportModifyMessage The reason of package changing failure. It’s empty if the package change status is `AVAILABLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getNotSupportModifyMessage() {
+        return this.NotSupportModifyMessage;
+    }
+
+    /**
+     * Set The reason of package changing failure. It’s empty if the package change status is `AVAILABLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param NotSupportModifyMessage The reason of package changing failure. It’s empty if the package change status is `AVAILABLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setNotSupportModifyMessage(String NotSupportModifyMessage) {
+        this.NotSupportModifyMessage = NotSupportModifyMessage;
+    }
+
     public ModifyBundle() {
     }
 
@@ -123,6 +151,9 @@ public class ModifyBundle extends AbstractModel{
         if (source.Bundle != null) {
             this.Bundle = new Bundle(source.Bundle);
         }
+        if (source.NotSupportModifyMessage != null) {
+            this.NotSupportModifyMessage = new String(source.NotSupportModifyMessage);
+        }
     }
 
 
@@ -133,6 +164,7 @@ public class ModifyBundle extends AbstractModel{
         this.setParamObj(map, prefix + "ModifyPrice.", this.ModifyPrice);
         this.setParamSimple(map, prefix + "ModifyBundleState", this.ModifyBundleState);
         this.setParamObj(map, prefix + "Bundle.", this.Bundle);
+        this.setParamSimple(map, prefix + "NotSupportModifyMessage", this.NotSupportModifyMessage);
 
     }
 }

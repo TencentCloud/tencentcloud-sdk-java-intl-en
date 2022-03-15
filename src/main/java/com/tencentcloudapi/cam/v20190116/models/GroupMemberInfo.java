@@ -58,7 +58,7 @@ public class GroupMemberInfo extends AbstractModel{
     private String CountryCode;
 
     /**
-    * If mobile number has been verified
+    * Whether the mobile phone has been verified. `0`: No; `1`: Yes.
     */
     @SerializedName("PhoneFlag")
     @Expose
@@ -72,14 +72,14 @@ public class GroupMemberInfo extends AbstractModel{
     private String Email;
 
     /**
-    * If email has been verified
+    * Whether the email has been verified. `0`: No; `1`: Yes.
     */
     @SerializedName("EmailFlag")
     @Expose
     private Long EmailFlag;
 
     /**
-    * User type
+    * User type. `1`: Global collaborator; `2`: Project collaborator; `3`: Message recipient.
     */
     @SerializedName("UserType")
     @Expose
@@ -93,7 +93,7 @@ public class GroupMemberInfo extends AbstractModel{
     private String CreateTime;
 
     /**
-    * If the user is the main message recipient
+    * Whether the user is the primary message recipient. `0`: No; `1`: Yes.
     */
     @SerializedName("IsReceiverOwner")
     @Expose
@@ -180,16 +180,16 @@ public class GroupMemberInfo extends AbstractModel{
     }
 
     /**
-     * Get If mobile number has been verified 
-     * @return PhoneFlag If mobile number has been verified
+     * Get Whether the mobile phone has been verified. `0`: No; `1`: Yes. 
+     * @return PhoneFlag Whether the mobile phone has been verified. `0`: No; `1`: Yes.
      */
     public Long getPhoneFlag() {
         return this.PhoneFlag;
     }
 
     /**
-     * Set If mobile number has been verified
-     * @param PhoneFlag If mobile number has been verified
+     * Set Whether the mobile phone has been verified. `0`: No; `1`: Yes.
+     * @param PhoneFlag Whether the mobile phone has been verified. `0`: No; `1`: Yes.
      */
     public void setPhoneFlag(Long PhoneFlag) {
         this.PhoneFlag = PhoneFlag;
@@ -212,32 +212,32 @@ public class GroupMemberInfo extends AbstractModel{
     }
 
     /**
-     * Get If email has been verified 
-     * @return EmailFlag If email has been verified
+     * Get Whether the email has been verified. `0`: No; `1`: Yes. 
+     * @return EmailFlag Whether the email has been verified. `0`: No; `1`: Yes.
      */
     public Long getEmailFlag() {
         return this.EmailFlag;
     }
 
     /**
-     * Set If email has been verified
-     * @param EmailFlag If email has been verified
+     * Set Whether the email has been verified. `0`: No; `1`: Yes.
+     * @param EmailFlag Whether the email has been verified. `0`: No; `1`: Yes.
      */
     public void setEmailFlag(Long EmailFlag) {
         this.EmailFlag = EmailFlag;
     }
 
     /**
-     * Get User type 
-     * @return UserType User type
+     * Get User type. `1`: Global collaborator; `2`: Project collaborator; `3`: Message recipient. 
+     * @return UserType User type. `1`: Global collaborator; `2`: Project collaborator; `3`: Message recipient.
      */
     public Long getUserType() {
         return this.UserType;
     }
 
     /**
-     * Set User type
-     * @param UserType User type
+     * Set User type. `1`: Global collaborator; `2`: Project collaborator; `3`: Message recipient.
+     * @param UserType User type. `1`: Global collaborator; `2`: Project collaborator; `3`: Message recipient.
      */
     public void setUserType(Long UserType) {
         this.UserType = UserType;
@@ -260,16 +260,16 @@ public class GroupMemberInfo extends AbstractModel{
     }
 
     /**
-     * Get If the user is the main message recipient 
-     * @return IsReceiverOwner If the user is the main message recipient
+     * Get Whether the user is the primary message recipient. `0`: No; `1`: Yes. 
+     * @return IsReceiverOwner Whether the user is the primary message recipient. `0`: No; `1`: Yes.
      */
     public Long getIsReceiverOwner() {
         return this.IsReceiverOwner;
     }
 
     /**
-     * Set If the user is the main message recipient
-     * @param IsReceiverOwner If the user is the main message recipient
+     * Set Whether the user is the primary message recipient. `0`: No; `1`: Yes.
+     * @param IsReceiverOwner Whether the user is the primary message recipient. `0`: No; `1`: Yes.
      */
     public void setIsReceiverOwner(Long IsReceiverOwner) {
         this.IsReceiverOwner = IsReceiverOwner;

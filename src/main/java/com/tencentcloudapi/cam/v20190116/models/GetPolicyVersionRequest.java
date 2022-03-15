@@ -30,7 +30,7 @@ public class GetPolicyVersionRequest extends AbstractModel{
     private Long PolicyId;
 
     /**
-    * Policy version ID
+    * Policy version, which can be obtained through `ListPolicyVersions`.
     */
     @SerializedName("VersionId")
     @Expose
@@ -53,16 +53,16 @@ public class GetPolicyVersionRequest extends AbstractModel{
     }
 
     /**
-     * Get Policy version ID 
-     * @return VersionId Policy version ID
+     * Get Policy version, which can be obtained through `ListPolicyVersions`. 
+     * @return VersionId Policy version, which can be obtained through `ListPolicyVersions`.
      */
     public Long getVersionId() {
         return this.VersionId;
     }
 
     /**
-     * Set Policy version ID
-     * @param VersionId Policy version ID
+     * Set Policy version, which can be obtained through `ListPolicyVersions`.
+     * @param VersionId Policy version, which can be obtained through `ListPolicyVersions`.
      */
     public void setVersionId(Long VersionId) {
         this.VersionId = VersionId;

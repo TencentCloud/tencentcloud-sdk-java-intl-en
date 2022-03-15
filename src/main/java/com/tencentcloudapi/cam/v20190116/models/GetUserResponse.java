@@ -45,13 +45,14 @@ public class GetUserResponse extends AbstractModel{
 
     /**
     * Sub-user remarks
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * If sub-user can log in to the Console
+    * Whether the sub-user can log in to the console. `0`: No; `1`: Yes.
     */
     @SerializedName("ConsoleLogin")
     @Expose
@@ -134,8 +135,10 @@ public class GetUserResponse extends AbstractModel{
     }
 
     /**
-     * Get Sub-user remarks 
+     * Get Sub-user remarks
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return Remark Sub-user remarks
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getRemark() {
         return this.Remark;
@@ -143,23 +146,25 @@ public class GetUserResponse extends AbstractModel{
 
     /**
      * Set Sub-user remarks
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param Remark Sub-user remarks
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get If sub-user can log in to the Console 
-     * @return ConsoleLogin If sub-user can log in to the Console
+     * Get Whether the sub-user can log in to the console. `0`: No; `1`: Yes. 
+     * @return ConsoleLogin Whether the sub-user can log in to the console. `0`: No; `1`: Yes.
      */
     public Long getConsoleLogin() {
         return this.ConsoleLogin;
     }
 
     /**
-     * Set If sub-user can log in to the Console
-     * @param ConsoleLogin If sub-user can log in to the Console
+     * Set Whether the sub-user can log in to the console. `0`: No; `1`: Yes.
+     * @param ConsoleLogin Whether the sub-user can log in to the console. `0`: No; `1`: Yes.
      */
     public void setConsoleLogin(Long ConsoleLogin) {
         this.ConsoleLogin = ConsoleLogin;

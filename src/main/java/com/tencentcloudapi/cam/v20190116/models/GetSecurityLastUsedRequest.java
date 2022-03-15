@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class GetSecurityLastUsedRequest extends AbstractModel{
 
     /**
-    * A parameter used to query the key ID list.
+    * Key ID list query. Up to 10 key IDs can be queried.
     */
     @SerializedName("SecretIdList")
     @Expose
     private String [] SecretIdList;
 
     /**
-     * Get A parameter used to query the key ID list. 
-     * @return SecretIdList A parameter used to query the key ID list.
+     * Get Key ID list query. Up to 10 key IDs can be queried. 
+     * @return SecretIdList Key ID list query. Up to 10 key IDs can be queried.
      */
     public String [] getSecretIdList() {
         return this.SecretIdList;
     }
 
     /**
-     * Set A parameter used to query the key ID list.
-     * @param SecretIdList A parameter used to query the key ID list.
+     * Set Key ID list query. Up to 10 key IDs can be queried.
+     * @param SecretIdList Key ID list query. Up to 10 key IDs can be queried.
      */
     public void setSecretIdList(String [] SecretIdList) {
         this.SecretIdList = SecretIdList;

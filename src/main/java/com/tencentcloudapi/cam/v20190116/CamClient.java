@@ -859,6 +859,26 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get the user AppId.
+     * @param req GetUserAppIdRequest
+     * @return GetUserAppIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetUserAppIdResponse GetUserAppId(GetUserAppIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetUserAppIdResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetUserAppIdResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetUserAppId");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to list the access keys associated with a specified CAM user.
      * @param req ListAccessKeysRequest
      * @return ListAccessKeysResponse

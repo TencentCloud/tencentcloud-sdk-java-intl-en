@@ -30,7 +30,7 @@ public class DescribeUserSAMLConfigResponse extends AbstractModel{
     private String SAMLMetadata;
 
     /**
-    * Status. `0`: not set, `11`: enabled, `2`: disabled.
+    * Status. `0`: not set, `1`: enabled, `2`: disabled.
     */
     @SerializedName("Status")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeUserSAMLConfigResponse extends AbstractModel{
     }
 
     /**
-     * Get Status. `0`: not set, `11`: enabled, `2`: disabled. 
-     * @return Status Status. `0`: not set, `11`: enabled, `2`: disabled.
+     * Get Status. `0`: not set, `1`: enabled, `2`: disabled. 
+     * @return Status Status. `0`: not set, `1`: enabled, `2`: disabled.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status. `0`: not set, `11`: enabled, `2`: disabled.
-     * @param Status Status. `0`: not set, `11`: enabled, `2`: disabled.
+     * Set Status. `0`: not set, `1`: enabled, `2`: disabled.
+     * @param Status Status. `0`: not set, `1`: enabled, `2`: disabled.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
