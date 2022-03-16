@@ -119,6 +119,26 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add a watermark.
+     * @param req CreateStreamLiveWatermarkRequest
+     * @return CreateStreamLiveWatermarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStreamLiveWatermarkResponse CreateStreamLiveWatermark(CreateStreamLiveWatermarkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateStreamLiveWatermarkResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateStreamLiveWatermarkResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateStreamLiveWatermark");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a StreamLive channel.
      * @param req DeleteStreamLiveChannelRequest
      * @return DeleteStreamLiveChannelResponse
@@ -191,6 +211,26 @@ public class MdlClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteStreamLivePlanResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteStreamLivePlan");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a watermark.
+     * @param req DeleteStreamLiveWatermarkRequest
+     * @return DeleteStreamLiveWatermarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteStreamLiveWatermarkResponse DeleteStreamLiveWatermark(DeleteStreamLiveWatermarkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteStreamLiveWatermarkResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteStreamLiveWatermarkResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteStreamLiveWatermark");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -439,6 +479,46 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query a watermark.
+     * @param req DescribeStreamLiveWatermarkRequest
+     * @return DescribeStreamLiveWatermarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamLiveWatermarkResponse DescribeStreamLiveWatermark(DescribeStreamLiveWatermarkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLiveWatermarkResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveWatermarkResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStreamLiveWatermark");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query multiple watermarks at a time.
+     * @param req DescribeStreamLiveWatermarksRequest
+     * @return DescribeStreamLiveWatermarksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamLiveWatermarksResponse DescribeStreamLiveWatermarks(DescribeStreamLiveWatermarksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLiveWatermarksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveWatermarksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStreamLiveWatermarks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify a StreamLive channel.
      * @param req ModifyStreamLiveChannelRequest
      * @return ModifyStreamLiveChannelResponse
@@ -491,6 +571,26 @@ public class MdlClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyStreamLiveInputSecurityGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyStreamLiveInputSecurityGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a watermark.
+     * @param req ModifyStreamLiveWatermarkRequest
+     * @return ModifyStreamLiveWatermarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyStreamLiveWatermarkResponse ModifyStreamLiveWatermark(ModifyStreamLiveWatermarkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyStreamLiveWatermarkResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyStreamLiveWatermarkResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyStreamLiveWatermark");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -51,7 +51,7 @@ public class InstanceIntegerParam extends AbstractModel{
     private String Min;
 
     /**
-    * Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no)
+    * Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
     */
     @SerializedName("NeedRestart")
     @Expose
@@ -79,14 +79,14 @@ public class InstanceIntegerParam extends AbstractModel{
     private String ValueType;
 
     /**
-    * Whether the TencentDB for MongoDB console has pulled parameter information successfully. Valid values: `1` (no), `0` (yes). This field is only used in the console.
+    * Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * This field is not in use
+    * Redundant field which can be ignored
     */
     @SerializedName("Unit")
     @Expose
@@ -157,16 +157,16 @@ public class InstanceIntegerParam extends AbstractModel{
     }
 
     /**
-     * Get Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no) 
-     * @return NeedRestart Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no)
+     * Get Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately) 
+     * @return NeedRestart Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
      */
     public String getNeedRestart() {
         return this.NeedRestart;
     }
 
     /**
-     * Set Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no)
-     * @param NeedRestart Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no)
+     * Set Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
+     * @param NeedRestart Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
      */
     public void setNeedRestart(String NeedRestart) {
         this.NeedRestart = NeedRestart;
@@ -221,32 +221,32 @@ public class InstanceIntegerParam extends AbstractModel{
     }
 
     /**
-     * Get Whether the TencentDB for MongoDB console has pulled parameter information successfully. Valid values: `1` (no), `0` (yes). This field is only used in the console. 
-     * @return Status Whether the TencentDB for MongoDB console has pulled parameter information successfully. Valid values: `1` (no), `0` (yes). This field is only used in the console.
+     * Get Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no) 
+     * @return Status Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Whether the TencentDB for MongoDB console has pulled parameter information successfully. Valid values: `1` (no), `0` (yes). This field is only used in the console.
-     * @param Status Whether the TencentDB for MongoDB console has pulled parameter information successfully. Valid values: `1` (no), `0` (yes). This field is only used in the console.
+     * Set Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+     * @param Status Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get This field is not in use 
-     * @return Unit This field is not in use
+     * Get Redundant field which can be ignored 
+     * @return Unit Redundant field which can be ignored
      */
     public String getUnit() {
         return this.Unit;
     }
 
     /**
-     * Set This field is not in use
-     * @param Unit This field is not in use
+     * Set Redundant field which can be ignored
+     * @param Unit Redundant field which can be ignored
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;

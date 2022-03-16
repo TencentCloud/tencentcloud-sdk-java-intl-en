@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mongodb.v20190725.models;
+package com.tencentcloudapi.mdl.v20200326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReplicaSetInfo extends AbstractModel{
+public class DeleteStreamLiveWatermarkRequest extends AbstractModel{
 
     /**
-    * Replica set ID
+    * Watermark ID
     */
-    @SerializedName("ReplicaSetId")
+    @SerializedName("Id")
     @Expose
-    private String ReplicaSetId;
+    private String Id;
 
     /**
-     * Get Replica set ID 
-     * @return ReplicaSetId Replica set ID
+     * Get Watermark ID 
+     * @return Id Watermark ID
      */
-    public String getReplicaSetId() {
-        return this.ReplicaSetId;
+    public String getId() {
+        return this.Id;
     }
 
     /**
-     * Set Replica set ID
-     * @param ReplicaSetId Replica set ID
+     * Set Watermark ID
+     * @param Id Watermark ID
      */
-    public void setReplicaSetId(String ReplicaSetId) {
-        this.ReplicaSetId = ReplicaSetId;
+    public void setId(String Id) {
+        this.Id = Id;
     }
 
-    public ReplicaSetInfo() {
+    public DeleteStreamLiveWatermarkRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ReplicaSetInfo(ReplicaSetInfo source) {
-        if (source.ReplicaSetId != null) {
-            this.ReplicaSetId = new String(source.ReplicaSetId);
+    public DeleteStreamLiveWatermarkRequest(DeleteStreamLiveWatermarkRequest source) {
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
         }
     }
 
@@ -63,7 +63,7 @@ public class ReplicaSetInfo extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ReplicaSetId", this.ReplicaSetId);
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }

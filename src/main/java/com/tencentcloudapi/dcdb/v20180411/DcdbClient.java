@@ -39,6 +39,26 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to remove the isolation of pay-as-you-go TDSQL for MySQL instances.
+     * @param req ActiveHourDCDBInstanceRequest
+     * @return ActiveHourDCDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ActiveHourDCDBInstanceResponse ActiveHourDCDBInstance(ActiveHourDCDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ActiveHourDCDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ActiveHourDCDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ActiveHourDCDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to associate security groups with Tencent Cloud resources in batches.
      * @param req AssociateSecurityGroupsRequest
      * @return AssociateSecurityGroupsResponse
@@ -152,6 +172,26 @@ Note: Accounts with the same username but different hosts are different accounts
                 Type type = new TypeToken<JsonResponseModel<CreateAccountResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateAccount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create pay-as-you-go TDSQL for MySQL instances.
+     * @param req CreateHourDCDBInstanceRequest
+     * @return CreateHourDCDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateHourDCDBInstanceResponse CreateHourDCDBInstance(CreateHourDCDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateHourDCDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateHourDCDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateHourDCDBInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -635,6 +675,26 @@ Note: accounts with the same username but different hosts are different accounts
                 Type type = new TypeToken<JsonResponseModel<InitDCDBInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "InitDCDBInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to isolate pay-as-you-go TDSQL for MySQL instances.
+     * @param req IsolateHourDCDBInstanceRequest
+     * @return IsolateHourDCDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public IsolateHourDCDBInstanceResponse IsolateHourDCDBInstance(IsolateHourDCDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<IsolateHourDCDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<IsolateHourDCDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "IsolateHourDCDBInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

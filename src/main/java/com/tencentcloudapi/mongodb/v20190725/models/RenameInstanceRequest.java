@@ -30,7 +30,7 @@ public class RenameInstanceRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Instance name
+    * Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
     */
     @SerializedName("NewName")
     @Expose
@@ -53,16 +53,16 @@ public class RenameInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance name 
-     * @return NewName Instance name
+     * Get Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-) 
+     * @return NewName Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
      */
     public String getNewName() {
         return this.NewName;
     }
 
     /**
-     * Set Instance name
-     * @param NewName Instance name
+     * Set Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
+     * @param NewName Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
      */
     public void setNewName(String NewName) {
         this.NewName = NewName;

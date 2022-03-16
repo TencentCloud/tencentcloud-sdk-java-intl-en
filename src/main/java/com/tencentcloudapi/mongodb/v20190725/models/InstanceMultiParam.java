@@ -44,7 +44,7 @@ public class InstanceMultiParam extends AbstractModel{
     private String [] EnumValue;
 
     /**
-    * Whether to restart the instance for the parameter to take effect
+    * Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
     */
     @SerializedName("NeedRestart")
     @Expose
@@ -58,7 +58,7 @@ public class InstanceMultiParam extends AbstractModel{
     private String ParamName;
 
     /**
-    * Whether the TencentDB for MongoDB console has pulled parameter information successfully
+    * Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
     */
     @SerializedName("Status")
     @Expose
@@ -72,7 +72,7 @@ public class InstanceMultiParam extends AbstractModel{
     private String [] Tips;
 
     /**
-    * Data type of the parameter
+    * Data type of the current value. Default value: `multi`
     */
     @SerializedName("ValueType")
     @Expose
@@ -127,16 +127,16 @@ public class InstanceMultiParam extends AbstractModel{
     }
 
     /**
-     * Get Whether to restart the instance for the parameter to take effect 
-     * @return NeedRestart Whether to restart the instance for the parameter to take effect
+     * Get Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately) 
+     * @return NeedRestart Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
      */
     public String getNeedRestart() {
         return this.NeedRestart;
     }
 
     /**
-     * Set Whether to restart the instance for the parameter to take effect
-     * @param NeedRestart Whether to restart the instance for the parameter to take effect
+     * Set Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
+     * @param NeedRestart Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
      */
     public void setNeedRestart(String NeedRestart) {
         this.NeedRestart = NeedRestart;
@@ -159,16 +159,16 @@ public class InstanceMultiParam extends AbstractModel{
     }
 
     /**
-     * Get Whether the TencentDB for MongoDB console has pulled parameter information successfully 
-     * @return Status Whether the TencentDB for MongoDB console has pulled parameter information successfully
+     * Get Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no) 
+     * @return Status Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Whether the TencentDB for MongoDB console has pulled parameter information successfully
-     * @param Status Whether the TencentDB for MongoDB console has pulled parameter information successfully
+     * Set Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+     * @param Status Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -191,16 +191,16 @@ public class InstanceMultiParam extends AbstractModel{
     }
 
     /**
-     * Get Data type of the parameter 
-     * @return ValueType Data type of the parameter
+     * Get Data type of the current value. Default value: `multi` 
+     * @return ValueType Data type of the current value. Default value: `multi`
      */
     public String getValueType() {
         return this.ValueType;
     }
 
     /**
-     * Set Data type of the parameter
-     * @param ValueType Data type of the parameter
+     * Set Data type of the current value. Default value: `multi`
+     * @param ValueType Data type of the current value. Default value: `multi`
      */
     public void setValueType(String ValueType) {
         this.ValueType = ValueType;

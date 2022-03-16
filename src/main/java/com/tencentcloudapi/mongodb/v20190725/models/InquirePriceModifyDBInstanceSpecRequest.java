@@ -44,6 +44,20 @@ public class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel{
     private Long Volume;
 
     /**
+    * Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+    */
+    @SerializedName("NodeNum")
+    @Expose
+    private Long NodeNum;
+
+    /**
+    * Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+    */
+    @SerializedName("ReplicateSetNum")
+    @Expose
+    private Long ReplicateSetNum;
+
+    /**
      * Get Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed in the TencentDB Console. 
      * @return InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed in the TencentDB Console.
      */
@@ -91,6 +105,38 @@ public class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel{
         this.Volume = Volume;
     }
 
+    /**
+     * Get Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged. 
+     * @return NodeNum Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+     */
+    public Long getNodeNum() {
+        return this.NodeNum;
+    }
+
+    /**
+     * Set Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+     * @param NodeNum Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+     */
+    public void setNodeNum(Long NodeNum) {
+        this.NodeNum = NodeNum;
+    }
+
+    /**
+     * Get Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged. 
+     * @return ReplicateSetNum Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+     */
+    public Long getReplicateSetNum() {
+        return this.ReplicateSetNum;
+    }
+
+    /**
+     * Set Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+     * @param ReplicateSetNum Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+     */
+    public void setReplicateSetNum(Long ReplicateSetNum) {
+        this.ReplicateSetNum = ReplicateSetNum;
+    }
+
     public InquirePriceModifyDBInstanceSpecRequest() {
     }
 
@@ -108,6 +154,12 @@ public class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel{
         if (source.Volume != null) {
             this.Volume = new Long(source.Volume);
         }
+        if (source.NodeNum != null) {
+            this.NodeNum = new Long(source.NodeNum);
+        }
+        if (source.ReplicateSetNum != null) {
+            this.ReplicateSetNum = new Long(source.ReplicateSetNum);
+        }
     }
 
 
@@ -118,6 +170,8 @@ public class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "Volume", this.Volume);
+        this.setParamSimple(map, prefix + "NodeNum", this.NodeNum);
+        this.setParamSimple(map, prefix + "ReplicateSetNum", this.ReplicateSetNum);
 
     }
 }

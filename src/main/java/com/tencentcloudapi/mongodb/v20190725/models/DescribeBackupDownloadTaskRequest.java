@@ -44,7 +44,7 @@ public class DescribeBackupDownloadTaskRequest extends AbstractModel{
     private String StartTime;
 
     /**
-    * The end time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the end time can be any time later than the start time.
+    * The end time of the query period. Tasks will be queried if their start and end times fall within the query period. If it is left empty, the end time can be any time later than the start time.
     */
     @SerializedName("EndTime")
     @Expose
@@ -134,16 +134,16 @@ public class DescribeBackupDownloadTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get The end time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the end time can be any time later than the start time. 
-     * @return EndTime The end time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the end time can be any time later than the start time.
+     * Get The end time of the query period. Tasks will be queried if their start and end times fall within the query period. If it is left empty, the end time can be any time later than the start time. 
+     * @return EndTime The end time of the query period. Tasks will be queried if their start and end times fall within the query period. If it is left empty, the end time can be any time later than the start time.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set The end time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the end time can be any time later than the start time.
-     * @param EndTime The end time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the end time can be any time later than the start time.
+     * Set The end time of the query period. Tasks will be queried if their start and end times fall within the query period. If it is left empty, the end time can be any time later than the start time.
+     * @param EndTime The end time of the query period. Tasks will be queried if their start and end times fall within the query period. If it is left empty, the end time can be any time later than the start time.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

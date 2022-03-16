@@ -3,6 +3,9 @@ public enum BillingErrorCode {
     // No permission.
      AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnauthorizedOperation"),
      
+    // Invalid App ID.
+     FAILEDOPERATION_INVALIDAPPID("FailedOperation.InvalidAppId"),
+     
     // Failed to get the number of data entries.
      FAILEDOPERATION_QUERYCOUNTFAILED("FailedOperation.QueryCountFailed"),
      

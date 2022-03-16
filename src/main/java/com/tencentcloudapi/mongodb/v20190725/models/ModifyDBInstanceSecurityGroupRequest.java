@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ResetDBInstancePasswordRequest extends AbstractModel{
+public class ModifyDBInstanceSecurityGroupRequest extends AbstractModel{
 
     /**
     * Instance ID
@@ -30,18 +30,11 @@ public class ResetDBInstancePasswordRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Instance account name
+    * Target security group IDs
     */
-    @SerializedName("UserName")
+    @SerializedName("SecurityGroupIds")
     @Expose
-    private String UserName;
-
-    /**
-    * New password, which must contain at least eight characters
-    */
-    @SerializedName("Password")
-    @Expose
-    private String Password;
+    private String [] SecurityGroupIds;
 
     /**
      * Get Instance ID 
@@ -60,53 +53,37 @@ public class ResetDBInstancePasswordRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance account name 
-     * @return UserName Instance account name
+     * Get Target security group IDs 
+     * @return SecurityGroupIds Target security group IDs
      */
-    public String getUserName() {
-        return this.UserName;
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
     }
 
     /**
-     * Set Instance account name
-     * @param UserName Instance account name
+     * Set Target security group IDs
+     * @param SecurityGroupIds Target security group IDs
      */
-    public void setUserName(String UserName) {
-        this.UserName = UserName;
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
     }
 
-    /**
-     * Get New password, which must contain at least eight characters 
-     * @return Password New password, which must contain at least eight characters
-     */
-    public String getPassword() {
-        return this.Password;
-    }
-
-    /**
-     * Set New password, which must contain at least eight characters
-     * @param Password New password, which must contain at least eight characters
-     */
-    public void setPassword(String Password) {
-        this.Password = Password;
-    }
-
-    public ResetDBInstancePasswordRequest() {
+    public ModifyDBInstanceSecurityGroupRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ResetDBInstancePasswordRequest(ResetDBInstancePasswordRequest source) {
+    public ModifyDBInstanceSecurityGroupRequest(ModifyDBInstanceSecurityGroupRequest source) {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
-        if (source.UserName != null) {
-            this.UserName = new String(source.UserName);
-        }
-        if (source.Password != null) {
-            this.Password = new String(source.Password);
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
         }
     }
 
@@ -116,8 +93,7 @@ public class ResetDBInstancePasswordRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "UserName", this.UserName);
-        this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
 
     }
 }

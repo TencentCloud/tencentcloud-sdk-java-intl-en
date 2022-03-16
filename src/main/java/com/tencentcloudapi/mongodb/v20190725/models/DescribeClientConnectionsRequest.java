@@ -30,7 +30,7 @@ public class DescribeClientConnectionsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * The number of records that will be returned. Default value: 10,000.
+    * Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
     */
     @SerializedName("Limit")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeClientConnectionsRequest extends AbstractModel{
     }
 
     /**
-     * Get The number of records that will be returned. Default value: 10,000. 
-     * @return Limit The number of records that will be returned. Default value: 10,000.
+     * Get Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000 
+     * @return Limit Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The number of records that will be returned. Default value: 10,000.
-     * @param Limit The number of records that will be returned. Default value: 10,000.
+     * Set Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
+     * @param Limit Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

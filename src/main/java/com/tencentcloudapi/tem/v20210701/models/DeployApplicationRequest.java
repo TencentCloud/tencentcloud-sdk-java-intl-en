@@ -297,6 +297,19 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
     private HealthCheckConfig StartupProbe;
 
     /**
+    * The version of the operating system
+If `openjdk` is selected, the value can be: 
+- ALPINE
+- CENTOS
+If `konajdk` is selected, the value can be: 
+- ALPINE
+- TENCENTOS
+    */
+    @SerializedName("OsFlavour")
+    @Expose
+    private String OsFlavour;
+
+    /**
      * Get Application ID 
      * @return ApplicationId Application ID
      */
@@ -936,6 +949,46 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
         this.StartupProbe = StartupProbe;
     }
 
+    /**
+     * Get The version of the operating system
+If `openjdk` is selected, the value can be: 
+- ALPINE
+- CENTOS
+If `konajdk` is selected, the value can be: 
+- ALPINE
+- TENCENTOS 
+     * @return OsFlavour The version of the operating system
+If `openjdk` is selected, the value can be: 
+- ALPINE
+- CENTOS
+If `konajdk` is selected, the value can be: 
+- ALPINE
+- TENCENTOS
+     */
+    public String getOsFlavour() {
+        return this.OsFlavour;
+    }
+
+    /**
+     * Set The version of the operating system
+If `openjdk` is selected, the value can be: 
+- ALPINE
+- CENTOS
+If `konajdk` is selected, the value can be: 
+- ALPINE
+- TENCENTOS
+     * @param OsFlavour The version of the operating system
+If `openjdk` is selected, the value can be: 
+- ALPINE
+- CENTOS
+If `konajdk` is selected, the value can be: 
+- ALPINE
+- TENCENTOS
+     */
+    public void setOsFlavour(String OsFlavour) {
+        this.OsFlavour = OsFlavour;
+    }
+
     public DeployApplicationRequest() {
     }
 
@@ -1085,6 +1138,9 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
         if (source.StartupProbe != null) {
             this.StartupProbe = new HealthCheckConfig(source.StartupProbe);
         }
+        if (source.OsFlavour != null) {
+            this.OsFlavour = new String(source.OsFlavour);
+        }
     }
 
 
@@ -1130,6 +1186,7 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
         this.setParamSimple(map, prefix + "ConfEdited", this.ConfEdited);
         this.setParamSimple(map, prefix + "SpeedUp", this.SpeedUp);
         this.setParamObj(map, prefix + "StartupProbe.", this.StartupProbe);
+        this.setParamSimple(map, prefix + "OsFlavour", this.OsFlavour);
 
     }
 }

@@ -484,6 +484,26 @@ This API is used to get the permission to download a backup file. The detailed b
     }
 
     /**
+     *This API is used to modify the security groups associated with an instance.
+     * @param req ModifyDBInstanceSecurityGroupRequest
+     * @return ModifyDBInstanceSecurityGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceSecurityGroupResponse ModifyDBInstanceSecurityGroup(ModifyDBInstanceSecurityGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBInstanceSecurityGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceSecurityGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDBInstanceSecurityGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to adjust the specification configuration of a TencentDB for MongoDB. The purchasable specifications supported by the API can be obtained through the DescribeSpecInfo API.
      * @param req ModifyDBInstanceSpecRequest
      * @return ModifyDBInstanceSpecResponse

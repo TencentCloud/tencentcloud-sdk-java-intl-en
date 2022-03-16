@@ -23,184 +23,184 @@ import java.util.HashMap;
 public class InstanceTextParam extends AbstractModel{
 
     /**
-    * Current value (not in use)
+    * Current value
     */
     @SerializedName("CurrentValue")
     @Expose
     private String CurrentValue;
 
     /**
-    * Default value (not in use)
+    * Default value
     */
     @SerializedName("DefaultValue")
     @Expose
     private String DefaultValue;
 
     /**
-    * Whether to restart the instance for the parameter to take effect (not in use)
+    * Whether to restart the instance for the parameter to take effect
     */
     @SerializedName("NeedRestart")
     @Expose
     private String NeedRestart;
 
     /**
-    * Parameter name (not in use)
+    * Parameter name
     */
     @SerializedName("ParamName")
     @Expose
     private String ParamName;
 
     /**
-    * Acceptable values (not in use)
+    * Value of a text parameter
     */
     @SerializedName("TextValue")
     @Expose
     private String TextValue;
 
     /**
-    * Parameter description (not in use)
+    * Parameter description
     */
     @SerializedName("Tips")
     @Expose
     private String [] Tips;
 
     /**
-    * Data type of the parameter (not in use)
+    * Value type
     */
     @SerializedName("ValueType")
     @Expose
     private String ValueType;
 
     /**
-    * Whether the TencentDB for MongoDB console has pulled parameter information successfully (not in use)
+    * Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get Current value (not in use) 
-     * @return CurrentValue Current value (not in use)
+     * Get Current value 
+     * @return CurrentValue Current value
      */
     public String getCurrentValue() {
         return this.CurrentValue;
     }
 
     /**
-     * Set Current value (not in use)
-     * @param CurrentValue Current value (not in use)
+     * Set Current value
+     * @param CurrentValue Current value
      */
     public void setCurrentValue(String CurrentValue) {
         this.CurrentValue = CurrentValue;
     }
 
     /**
-     * Get Default value (not in use) 
-     * @return DefaultValue Default value (not in use)
+     * Get Default value 
+     * @return DefaultValue Default value
      */
     public String getDefaultValue() {
         return this.DefaultValue;
     }
 
     /**
-     * Set Default value (not in use)
-     * @param DefaultValue Default value (not in use)
+     * Set Default value
+     * @param DefaultValue Default value
      */
     public void setDefaultValue(String DefaultValue) {
         this.DefaultValue = DefaultValue;
     }
 
     /**
-     * Get Whether to restart the instance for the parameter to take effect (not in use) 
-     * @return NeedRestart Whether to restart the instance for the parameter to take effect (not in use)
+     * Get Whether to restart the instance for the parameter to take effect 
+     * @return NeedRestart Whether to restart the instance for the parameter to take effect
      */
     public String getNeedRestart() {
         return this.NeedRestart;
     }
 
     /**
-     * Set Whether to restart the instance for the parameter to take effect (not in use)
-     * @param NeedRestart Whether to restart the instance for the parameter to take effect (not in use)
+     * Set Whether to restart the instance for the parameter to take effect
+     * @param NeedRestart Whether to restart the instance for the parameter to take effect
      */
     public void setNeedRestart(String NeedRestart) {
         this.NeedRestart = NeedRestart;
     }
 
     /**
-     * Get Parameter name (not in use) 
-     * @return ParamName Parameter name (not in use)
+     * Get Parameter name 
+     * @return ParamName Parameter name
      */
     public String getParamName() {
         return this.ParamName;
     }
 
     /**
-     * Set Parameter name (not in use)
-     * @param ParamName Parameter name (not in use)
+     * Set Parameter name
+     * @param ParamName Parameter name
      */
     public void setParamName(String ParamName) {
         this.ParamName = ParamName;
     }
 
     /**
-     * Get Acceptable values (not in use) 
-     * @return TextValue Acceptable values (not in use)
+     * Get Value of a text parameter 
+     * @return TextValue Value of a text parameter
      */
     public String getTextValue() {
         return this.TextValue;
     }
 
     /**
-     * Set Acceptable values (not in use)
-     * @param TextValue Acceptable values (not in use)
+     * Set Value of a text parameter
+     * @param TextValue Value of a text parameter
      */
     public void setTextValue(String TextValue) {
         this.TextValue = TextValue;
     }
 
     /**
-     * Get Parameter description (not in use) 
-     * @return Tips Parameter description (not in use)
+     * Get Parameter description 
+     * @return Tips Parameter description
      */
     public String [] getTips() {
         return this.Tips;
     }
 
     /**
-     * Set Parameter description (not in use)
-     * @param Tips Parameter description (not in use)
+     * Set Parameter description
+     * @param Tips Parameter description
      */
     public void setTips(String [] Tips) {
         this.Tips = Tips;
     }
 
     /**
-     * Get Data type of the parameter (not in use) 
-     * @return ValueType Data type of the parameter (not in use)
+     * Get Value type 
+     * @return ValueType Value type
      */
     public String getValueType() {
         return this.ValueType;
     }
 
     /**
-     * Set Data type of the parameter (not in use)
-     * @param ValueType Data type of the parameter (not in use)
+     * Set Value type
+     * @param ValueType Value type
      */
     public void setValueType(String ValueType) {
         this.ValueType = ValueType;
     }
 
     /**
-     * Get Whether the TencentDB for MongoDB console has pulled parameter information successfully (not in use) 
-     * @return Status Whether the TencentDB for MongoDB console has pulled parameter information successfully (not in use)
+     * Get Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no) 
+     * @return Status Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Whether the TencentDB for MongoDB console has pulled parameter information successfully (not in use)
-     * @param Status Whether the TencentDB for MongoDB console has pulled parameter information successfully (not in use)
+     * Set Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+     * @param Status Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
      */
     public void setStatus(String Status) {
         this.Status = Status;

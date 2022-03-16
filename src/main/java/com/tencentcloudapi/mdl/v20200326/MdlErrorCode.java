@@ -30,6 +30,9 @@ public enum MdlErrorCode {
     // Invalid `Id`.
      INVALIDPARAMETER_ID("InvalidParameter.Id"),
      
+    // Watermark image configuration error.
+     INVALIDPARAMETER_IMAGESETTINGS("InvalidParameter.ImageSettings"),
+     
     // Invalid `InputSettings`.
      INVALIDPARAMETER_INPUTSETTINGS("InvalidParameter.InputSettings"),
      
@@ -56,6 +59,9 @@ public enum MdlErrorCode {
      
     // Incorrect status.
      INVALIDPARAMETER_STATEERROR("InvalidParameter.StateError"),
+     
+    // Watermark text configuration error.
+     INVALIDPARAMETER_TEXTSETTINGS("InvalidParameter.TextSettings"),
      
     // Invalid `Type`.
      INVALIDPARAMETER_TYPE("InvalidParameter.Type"),

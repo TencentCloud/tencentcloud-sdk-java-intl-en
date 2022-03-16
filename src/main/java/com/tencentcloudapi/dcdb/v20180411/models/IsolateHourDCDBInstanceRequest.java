@@ -13,77 +13,51 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mongodb.v20190725.models;
+package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AssignProjectRequest extends AbstractModel{
+public class IsolateHourDCDBInstanceRequest extends AbstractModel{
 
     /**
-    * List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+    * Instance ID list
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * Unique ID of an existing project (instead of a new project).
-    */
-    @SerializedName("ProjectId")
-    @Expose
-    private Long ProjectId;
-
-    /**
-     * Get List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page 
-     * @return InstanceIds List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+     * Get Instance ID list 
+     * @return InstanceIds Instance ID list
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
-     * @param InstanceIds List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+     * Set Instance ID list
+     * @param InstanceIds Instance ID list
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
-    /**
-     * Get Unique ID of an existing project (instead of a new project). 
-     * @return ProjectId Unique ID of an existing project (instead of a new project).
-     */
-    public Long getProjectId() {
-        return this.ProjectId;
-    }
-
-    /**
-     * Set Unique ID of an existing project (instead of a new project).
-     * @param ProjectId Unique ID of an existing project (instead of a new project).
-     */
-    public void setProjectId(Long ProjectId) {
-        this.ProjectId = ProjectId;
-    }
-
-    public AssignProjectRequest() {
+    public IsolateHourDCDBInstanceRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AssignProjectRequest(AssignProjectRequest source) {
+    public IsolateHourDCDBInstanceRequest(IsolateHourDCDBInstanceRequest source) {
         if (source.InstanceIds != null) {
             this.InstanceIds = new String[source.InstanceIds.length];
             for (int i = 0; i < source.InstanceIds.length; i++) {
                 this.InstanceIds[i] = new String(source.InstanceIds[i]);
             }
-        }
-        if (source.ProjectId != null) {
-            this.ProjectId = new Long(source.ProjectId);
         }
     }
 
@@ -93,7 +67,6 @@ public class AssignProjectRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
-        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

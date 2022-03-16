@@ -79,6 +79,21 @@ public class BackupDownloadTask extends AbstractModel{
     private String Url;
 
     /**
+    * Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
+    */
+    @SerializedName("BackupMethod")
+    @Expose
+    private Long BackupMethod;
+
+    /**
+    * Backup description you set when starting a backup task
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BackupDesc")
+    @Expose
+    private String BackupDesc;
+
+    /**
      * Get Task creation time 
      * @return CreateTime Task creation time
      */
@@ -206,6 +221,42 @@ public class BackupDownloadTask extends AbstractModel{
         this.Url = Url;
     }
 
+    /**
+     * Get Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup) 
+     * @return BackupMethod Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
+     */
+    public Long getBackupMethod() {
+        return this.BackupMethod;
+    }
+
+    /**
+     * Set Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
+     * @param BackupMethod Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
+     */
+    public void setBackupMethod(Long BackupMethod) {
+        this.BackupMethod = BackupMethod;
+    }
+
+    /**
+     * Get Backup description you set when starting a backup task
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return BackupDesc Backup description you set when starting a backup task
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getBackupDesc() {
+        return this.BackupDesc;
+    }
+
+    /**
+     * Set Backup description you set when starting a backup task
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param BackupDesc Backup description you set when starting a backup task
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setBackupDesc(String BackupDesc) {
+        this.BackupDesc = BackupDesc;
+    }
+
     public BackupDownloadTask() {
     }
 
@@ -238,6 +289,12 @@ public class BackupDownloadTask extends AbstractModel{
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.BackupMethod != null) {
+            this.BackupMethod = new Long(source.BackupMethod);
+        }
+        if (source.BackupDesc != null) {
+            this.BackupDesc = new String(source.BackupDesc);
+        }
     }
 
 
@@ -253,6 +310,8 @@ public class BackupDownloadTask extends AbstractModel{
         this.setParamSimple(map, prefix + "Percent", this.Percent);
         this.setParamSimple(map, prefix + "TimeSpend", this.TimeSpend);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
+        this.setParamSimple(map, prefix + "BackupDesc", this.BackupDesc);
 
     }
 }

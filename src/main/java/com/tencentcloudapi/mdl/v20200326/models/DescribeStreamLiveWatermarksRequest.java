@@ -13,49 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mongodb.v20190725.models;
+package com.tencentcloudapi.mdl.v20200326.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReplicaSetInfo extends AbstractModel{
+public class DescribeStreamLiveWatermarksRequest extends AbstractModel{
 
-    /**
-    * Replica set ID
-    */
-    @SerializedName("ReplicaSetId")
-    @Expose
-    private String ReplicaSetId;
-
-    /**
-     * Get Replica set ID 
-     * @return ReplicaSetId Replica set ID
-     */
-    public String getReplicaSetId() {
-        return this.ReplicaSetId;
-    }
-
-    /**
-     * Set Replica set ID
-     * @param ReplicaSetId Replica set ID
-     */
-    public void setReplicaSetId(String ReplicaSetId) {
-        this.ReplicaSetId = ReplicaSetId;
-    }
-
-    public ReplicaSetInfo() {
+    public DescribeStreamLiveWatermarksRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ReplicaSetInfo(ReplicaSetInfo source) {
-        if (source.ReplicaSetId != null) {
-            this.ReplicaSetId = new String(source.ReplicaSetId);
-        }
+    public DescribeStreamLiveWatermarksRequest(DescribeStreamLiveWatermarksRequest source) {
     }
 
 
@@ -63,7 +37,6 @@ public class ReplicaSetInfo extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ReplicaSetId", this.ReplicaSetId);
 
     }
 }
