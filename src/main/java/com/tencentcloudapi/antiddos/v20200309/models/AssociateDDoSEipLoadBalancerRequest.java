@@ -51,6 +51,13 @@ public class AssociateDDoSEipLoadBalancerRequest extends AbstractModel{
     private String LoadBalancerRegion;
 
     /**
+    * CLB private IP
+    */
+    @SerializedName("Vip")
+    @Expose
+    private String Vip;
+
+    /**
      * Get Anti-DDoS instance ID (only Anti-DDoS Advanced). For example, `bgpip-0000011x`. 
      * @return InstanceId Anti-DDoS instance ID (only Anti-DDoS Advanced). For example, `bgpip-0000011x`.
      */
@@ -114,6 +121,22 @@ public class AssociateDDoSEipLoadBalancerRequest extends AbstractModel{
         this.LoadBalancerRegion = LoadBalancerRegion;
     }
 
+    /**
+     * Get CLB private IP 
+     * @return Vip CLB private IP
+     */
+    public String getVip() {
+        return this.Vip;
+    }
+
+    /**
+     * Set CLB private IP
+     * @param Vip CLB private IP
+     */
+    public void setVip(String Vip) {
+        this.Vip = Vip;
+    }
+
     public AssociateDDoSEipLoadBalancerRequest() {
     }
 
@@ -134,6 +157,9 @@ public class AssociateDDoSEipLoadBalancerRequest extends AbstractModel{
         if (source.LoadBalancerRegion != null) {
             this.LoadBalancerRegion = new String(source.LoadBalancerRegion);
         }
+        if (source.Vip != null) {
+            this.Vip = new String(source.Vip);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class AssociateDDoSEipLoadBalancerRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Eip", this.Eip);
         this.setParamSimple(map, prefix + "LoadBalancerID", this.LoadBalancerID);
         this.setParamSimple(map, prefix + "LoadBalancerRegion", this.LoadBalancerRegion);
+        this.setParamSimple(map, prefix + "Vip", this.Vip);
 
     }
 }

@@ -72,7 +72,7 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
     private Long FilterLine;
 
     /**
-    * Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+    * Filters by instance status. `idle`: Running; `attacking`: Being attacked; `blocking`: Being blocked.
     */
     @SerializedName("FilterStatus")
     @Expose
@@ -198,16 +198,16 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked 
-     * @return FilterStatus Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+     * Get Filters by instance status. `idle`: Running; `attacking`: Being attacked; `blocking`: Being blocked. 
+     * @return FilterStatus Filters by instance status. `idle`: Running; `attacking`: Being attacked; `blocking`: Being blocked.
      */
     public String getFilterStatus() {
         return this.FilterStatus;
     }
 
     /**
-     * Set Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
-     * @param FilterStatus Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+     * Set Filters by instance status. `idle`: Running; `attacking`: Being attacked; `blocking`: Being blocked.
+     * @param FilterStatus Filters by instance status. `idle`: Running; `attacking`: Being attacked; `blocking`: Being blocked.
      */
     public void setFilterStatus(String FilterStatus) {
         this.FilterStatus = FilterStatus;

@@ -44,6 +44,13 @@ public class DescribeUserSqlAdviceRequest extends AbstractModel{
     private String Schema;
 
     /**
+    * Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL), `dbbrain-mysql` (self-built MySQL). Default value: `mysql`.
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
+
+    /**
      * Get Instance ID. 
      * @return InstanceId Instance ID.
      */
@@ -91,6 +98,22 @@ public class DescribeUserSqlAdviceRequest extends AbstractModel{
         this.Schema = Schema;
     }
 
+    /**
+     * Get Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL), `dbbrain-mysql` (self-built MySQL). Default value: `mysql`. 
+     * @return Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL), `dbbrain-mysql` (self-built MySQL). Default value: `mysql`.
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL), `dbbrain-mysql` (self-built MySQL). Default value: `mysql`.
+     * @param Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL), `dbbrain-mysql` (self-built MySQL). Default value: `mysql`.
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
     public DescribeUserSqlAdviceRequest() {
     }
 
@@ -108,6 +131,9 @@ public class DescribeUserSqlAdviceRequest extends AbstractModel{
         if (source.Schema != null) {
             this.Schema = new String(source.Schema);
         }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class DescribeUserSqlAdviceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "SqlText", this.SqlText);
         this.setParamSimple(map, prefix + "Schema", this.Schema);
+        this.setParamSimple(map, prefix + "Product", this.Product);
 
     }
 }

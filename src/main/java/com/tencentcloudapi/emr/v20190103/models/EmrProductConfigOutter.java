@@ -167,6 +167,14 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     private String [] SecurityGroups;
 
     /**
+    * SSH key ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PublicKeyId")
+    @Expose
+    private String PublicKeyId;
+
+    /**
      * Get Software information
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return SoftInfo Software information
@@ -526,6 +534,26 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         this.SecurityGroups = SecurityGroups;
     }
 
+    /**
+     * Get SSH key ID
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return PublicKeyId SSH key ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getPublicKeyId() {
+        return this.PublicKeyId;
+    }
+
+    /**
+     * Set SSH key ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param PublicKeyId SSH key ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setPublicKeyId(String PublicKeyId) {
+        this.PublicKeyId = PublicKeyId;
+    }
+
     public EmrProductConfigOutter() {
     }
 
@@ -594,6 +622,9 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                 this.SecurityGroups[i] = new String(source.SecurityGroups[i]);
             }
         }
+        if (source.PublicKeyId != null) {
+            this.PublicKeyId = new String(source.PublicKeyId);
+        }
     }
 
 
@@ -619,6 +650,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "CbsEncrypt", this.CbsEncrypt);
         this.setParamSimple(map, prefix + "ApplicationRole", this.ApplicationRole);
         this.setParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
+        this.setParamSimple(map, prefix + "PublicKeyId", this.PublicKeyId);
 
     }
 }

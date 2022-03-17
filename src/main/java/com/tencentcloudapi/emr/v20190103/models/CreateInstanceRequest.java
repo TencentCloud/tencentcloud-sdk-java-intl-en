@@ -263,6 +263,13 @@ Hadoop-Hbase
     private String SceneName;
 
     /**
+    * Shared component information
+    */
+    @SerializedName("ExternalService")
+    @Expose
+    private ExternalService [] ExternalService;
+
+    /**
      * Get Product ID. Different product IDs represent different EMR product versions. Valid values:
 <li>1: EMR v1.3.1</li>
 <li>2: EMR v2.0.1</li>
@@ -886,6 +893,22 @@ Hadoop-Hbase
         this.SceneName = SceneName;
     }
 
+    /**
+     * Get Shared component information 
+     * @return ExternalService Shared component information
+     */
+    public ExternalService [] getExternalService() {
+        return this.ExternalService;
+    }
+
+    /**
+     * Set Shared component information
+     * @param ExternalService Shared component information
+     */
+    public void setExternalService(ExternalService [] ExternalService) {
+        this.ExternalService = ExternalService;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -990,6 +1013,12 @@ Hadoop-Hbase
         if (source.SceneName != null) {
             this.SceneName = new String(source.SceneName);
         }
+        if (source.ExternalService != null) {
+            this.ExternalService = new ExternalService[source.ExternalService.length];
+            for (int i = 0; i < source.ExternalService.length; i++) {
+                this.ExternalService[i] = new ExternalService(source.ExternalService[i]);
+            }
+        }
     }
 
 
@@ -1025,6 +1054,7 @@ Hadoop-Hbase
         this.setParamObj(map, prefix + "MetaDBInfo.", this.MetaDBInfo);
         this.setParamSimple(map, prefix + "ApplicationRole", this.ApplicationRole);
         this.setParamSimple(map, prefix + "SceneName", this.SceneName);
+        this.setParamArrayObj(map, prefix + "ExternalService.", this.ExternalService);
 
     }
 }

@@ -107,7 +107,7 @@ public class InstanceDetail extends AbstractModel{
     private Long RenewFlag;
 
     /**
-    * Instance status, which is an int-type value. 0: healthy, 1: alarmed, 2: exceptional
+    * Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
     */
     @SerializedName("Healthy")
     @Expose
@@ -436,16 +436,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Instance status, which is an int-type value. 0: healthy, 1: alarmed, 2: exceptional 
-     * @return Healthy Instance status, which is an int-type value. 0: healthy, 1: alarmed, 2: exceptional
+     * Get Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional 
+     * @return Healthy Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
      */
     public Long getHealthy() {
         return this.Healthy;
     }
 
     /**
-     * Set Instance status, which is an int-type value. 0: healthy, 1: alarmed, 2: exceptional
-     * @param Healthy Instance status, which is an int-type value. 0: healthy, 1: alarmed, 2: exceptional
+     * Set Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
+     * @param Healthy Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
      */
     public void setHealthy(Long Healthy) {
         this.Healthy = Healthy;

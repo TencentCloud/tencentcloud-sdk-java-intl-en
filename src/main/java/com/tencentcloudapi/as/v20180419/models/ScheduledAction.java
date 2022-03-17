@@ -93,6 +93,13 @@ public class ScheduledAction extends AbstractModel{
     private String CreatedTime;
 
     /**
+    * Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
+    */
+    @SerializedName("ScheduledType")
+    @Expose
+    private String ScheduledType;
+
+    /**
      * Get Scheduled task ID. 
      * @return ScheduledActionId Scheduled task ID.
      */
@@ -252,6 +259,22 @@ public class ScheduledAction extends AbstractModel{
         this.CreatedTime = CreatedTime;
     }
 
+    /**
+     * Get Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once 
+     * @return ScheduledType Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
+     */
+    public String getScheduledType() {
+        return this.ScheduledType;
+    }
+
+    /**
+     * Set Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
+     * @param ScheduledType Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
+     */
+    public void setScheduledType(String ScheduledType) {
+        this.ScheduledType = ScheduledType;
+    }
+
     public ScheduledAction() {
     }
 
@@ -290,6 +313,9 @@ public class ScheduledAction extends AbstractModel{
         if (source.CreatedTime != null) {
             this.CreatedTime = new String(source.CreatedTime);
         }
+        if (source.ScheduledType != null) {
+            this.ScheduledType = new String(source.ScheduledType);
+        }
     }
 
 
@@ -307,6 +333,7 @@ public class ScheduledAction extends AbstractModel{
         this.setParamSimple(map, prefix + "DesiredCapacity", this.DesiredCapacity);
         this.setParamSimple(map, prefix + "MinSize", this.MinSize);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamSimple(map, prefix + "ScheduledType", this.ScheduledType);
 
     }
 }

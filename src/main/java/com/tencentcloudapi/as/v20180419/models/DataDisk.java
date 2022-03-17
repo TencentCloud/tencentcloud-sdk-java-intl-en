@@ -47,6 +47,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String SnapshotId;
 
     /**
+    * Specifies whether the data disk is terminated along with the termination of the associated CVM instance.  Values: <br><li>`TRUE` (only available for pay-as-you-go cloud disks that are billed by hour) and `FALSE`.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("DeleteWithInstance")
+    @Expose
+    private Boolean DeleteWithInstance;
+
+    /**
      * Get Data disk type. For more information on limits of data disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: local disk <br><li>`LOCAL_SSD`: local SSD disk <br><li>`CLOUD_BASIC`: HDD cloud disk <br><li>`CLOUD_PREMIUM`: premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk <br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
 Note: this field may return `null`, indicating that no valid value can be obtained. 
      * @return DiskType Data disk type. For more information on limits of data disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: local disk <br><li>`LOCAL_SSD`: local SSD disk <br><li>`CLOUD_BASIC`: HDD cloud disk <br><li>`CLOUD_PREMIUM`: premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk <br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
@@ -106,6 +114,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.SnapshotId = SnapshotId;
     }
 
+    /**
+     * Get Specifies whether the data disk is terminated along with the termination of the associated CVM instance.  Values: <br><li>`TRUE` (only available for pay-as-you-go cloud disks that are billed by hour) and `FALSE`.
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return DeleteWithInstance Specifies whether the data disk is terminated along with the termination of the associated CVM instance.  Values: <br><li>`TRUE` (only available for pay-as-you-go cloud disks that are billed by hour) and `FALSE`.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Boolean getDeleteWithInstance() {
+        return this.DeleteWithInstance;
+    }
+
+    /**
+     * Set Specifies whether the data disk is terminated along with the termination of the associated CVM instance.  Values: <br><li>`TRUE` (only available for pay-as-you-go cloud disks that are billed by hour) and `FALSE`.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param DeleteWithInstance Specifies whether the data disk is terminated along with the termination of the associated CVM instance.  Values: <br><li>`TRUE` (only available for pay-as-you-go cloud disks that are billed by hour) and `FALSE`.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setDeleteWithInstance(Boolean DeleteWithInstance) {
+        this.DeleteWithInstance = DeleteWithInstance;
+    }
+
     public DataDisk() {
     }
 
@@ -123,6 +151,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.SnapshotId != null) {
             this.SnapshotId = new String(source.SnapshotId);
         }
+        if (source.DeleteWithInstance != null) {
+            this.DeleteWithInstance = new Boolean(source.DeleteWithInstance);
+        }
     }
 
 
@@ -133,6 +164,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
+        this.setParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
 
     }
 }

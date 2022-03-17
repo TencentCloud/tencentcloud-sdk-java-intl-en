@@ -338,6 +338,14 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String SubnetName;
 
     /**
+    * Cluster dependency
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("ClusterExternalServiceInfo")
+    @Expose
+    private ClusterExternalServiceInfo [] ClusterExternalServiceInfo;
+
+    /**
      * Get ID
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Id ID
@@ -1165,6 +1173,26 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.SubnetName = SubnetName;
     }
 
+    /**
+     * Get Cluster dependency
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return ClusterExternalServiceInfo Cluster dependency
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public ClusterExternalServiceInfo [] getClusterExternalServiceInfo() {
+        return this.ClusterExternalServiceInfo;
+    }
+
+    /**
+     * Set Cluster dependency
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param ClusterExternalServiceInfo Cluster dependency
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setClusterExternalServiceInfo(ClusterExternalServiceInfo [] ClusterExternalServiceInfo) {
+        this.ClusterExternalServiceInfo = ClusterExternalServiceInfo;
+    }
+
     public ClusterInstancesInfo() {
     }
 
@@ -1284,6 +1312,12 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.SubnetName != null) {
             this.SubnetName = new String(source.SubnetName);
         }
+        if (source.ClusterExternalServiceInfo != null) {
+            this.ClusterExternalServiceInfo = new ClusterExternalServiceInfo[source.ClusterExternalServiceInfo.length];
+            for (int i = 0; i < source.ClusterExternalServiceInfo.length; i++) {
+                this.ClusterExternalServiceInfo[i] = new ClusterExternalServiceInfo(source.ClusterExternalServiceInfo[i]);
+            }
+        }
     }
 
 
@@ -1327,6 +1361,7 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "DisplayName", this.DisplayName);
         this.setParamSimple(map, prefix + "VpcName", this.VpcName);
         this.setParamSimple(map, prefix + "SubnetName", this.SubnetName);
+        this.setParamArrayObj(map, prefix + "ClusterExternalServiceInfo.", this.ClusterExternalServiceInfo);
 
     }
 }

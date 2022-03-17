@@ -119,6 +119,86 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a CC precise protection policy.
+     * @param req CreateCCPrecisionPolicyRequest
+     * @return CreateCCPrecisionPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCCPrecisionPolicyResponse CreateCCPrecisionPolicy(CreateCCPrecisionPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCCPrecisionPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCCPrecisionPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCCPrecisionPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a CC frequency limit policy.
+     * @param req CreateCCReqLimitPolicyRequest
+     * @return CreateCCReqLimitPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCCReqLimitPolicyResponse CreateCCReqLimitPolicy(CreateCCReqLimitPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCCReqLimitPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCCReqLimitPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCCReqLimitPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a layer 4 access control list to prevent CC attacks.
+     * @param req CreateCcBlackWhiteIpListRequest
+     * @return CreateCcBlackWhiteIpListResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCcBlackWhiteIpListResponse CreateCcBlackWhiteIpList(CreateCcBlackWhiteIpListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCcBlackWhiteIpListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCcBlackWhiteIpListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCcBlackWhiteIpList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a regional blocking configuration.
+     * @param req CreateCcGeoIPBlockConfigRequest
+     * @return CreateCcGeoIPBlockConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCcGeoIPBlockConfigResponse CreateCcGeoIPBlockConfig(CreateCcGeoIPBlockConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCcGeoIPBlockConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCcGeoIPBlockConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCcGeoIPBlockConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to set Anti-DDoS AI protection switches.
      * @param req CreateDDoSAIRequest
      * @return CreateDDoSAIResponse
@@ -359,6 +439,106 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete a level-defining policy of CC attacks. 
+     * @param req DeleteCCLevelPolicyRequest
+     * @return DeleteCCLevelPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCCLevelPolicyResponse DeleteCCLevelPolicy(DeleteCCLevelPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCCLevelPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCCLevelPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteCCLevelPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a CC precise protection policy.
+     * @param req DeleteCCPrecisionPolicyRequest
+     * @return DeleteCCPrecisionPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCCPrecisionPolicyResponse DeleteCCPrecisionPolicy(DeleteCCPrecisionPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCCPrecisionPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCCPrecisionPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteCCPrecisionPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a CC cleansing threshold policy.
+     * @param req DeleteCCThresholdPolicyRequest
+     * @return DeleteCCThresholdPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCCThresholdPolicyResponse DeleteCCThresholdPolicy(DeleteCCThresholdPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCCThresholdPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCCThresholdPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteCCThresholdPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a layer-4 access control list.
+     * @param req DeleteCcBlackWhiteIpListRequest
+     * @return DeleteCcBlackWhiteIpListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCcBlackWhiteIpListResponse DeleteCcBlackWhiteIpList(DeleteCcBlackWhiteIpListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCcBlackWhiteIpListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCcBlackWhiteIpListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteCcBlackWhiteIpList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a regional blocking configuration.
+     * @param req DeleteCcGeoIPBlockConfigRequest
+     * @return DeleteCcGeoIPBlockConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCcGeoIPBlockConfigResponse DeleteCcGeoIPBlockConfig(DeleteCcGeoIPBlockConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCcGeoIPBlockConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCcGeoIPBlockConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteCcGeoIPBlockConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete Anti-DDoS region blocking configurations.
      * @param req DeleteDDoSGeoIPBlockConfigRequest
      * @return DeleteDDoSGeoIPBlockConfigResponse
@@ -519,6 +699,86 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the list of CC protection levels.
+     * @param req DescribeCCLevelListRequest
+     * @return DescribeCCLevelListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCCLevelListResponse DescribeCCLevelList(DescribeCCLevelListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCCLevelListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCCLevelListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCCLevelList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used the query a level-defining policy of CC attacks
+     * @param req DescribeCCLevelPolicyRequest
+     * @return DescribeCCLevelPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCCLevelPolicyResponse DescribeCCLevelPolicy(DescribeCCLevelPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCCLevelPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCCLevelPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCCLevelPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain a CC precise protection policy.
+     * @param req DescribeCCPrecisionPlyListRequest
+     * @return DescribeCCPrecisionPlyListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCCPrecisionPlyListResponse DescribeCCPrecisionPlyList(DescribeCCPrecisionPlyListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCCPrecisionPlyListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCCPrecisionPlyListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCCPrecisionPlyList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of CC cleansing thresholds.
+     * @param req DescribeCCThresholdListRequest
+     * @return DescribeCCThresholdListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCCThresholdListResponse DescribeCCThresholdList(DescribeCCThresholdListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCCThresholdListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCCThresholdListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCCThresholdList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get CC attack data, including total QPS peaks, attack QPS, total number of requests and number of attack requests.
      * @param req DescribeCCTrendRequest
      * @return DescribeCCTrendResponse
@@ -531,6 +791,46 @@ public class AntiddosClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCCTrendResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeCCTrend");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain a layer-4 access control list.
+     * @param req DescribeCcBlackWhiteIpListRequest
+     * @return DescribeCcBlackWhiteIpListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCcBlackWhiteIpListResponse DescribeCcBlackWhiteIpList(DescribeCcBlackWhiteIpListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCcBlackWhiteIpListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCcBlackWhiteIpListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCcBlackWhiteIpList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain a list of regional blocking configurations.
+     * @param req DescribeCcGeoIPBlockConfigListRequest
+     * @return DescribeCcGeoIPBlockConfigListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCcGeoIPBlockConfigListResponse DescribeCcGeoIPBlockConfigList(DescribeCcGeoIPBlockConfigListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCcGeoIPBlockConfigListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCcGeoIPBlockConfigListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCcGeoIPBlockConfigList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -873,6 +1173,46 @@ public class AntiddosClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DisassociateDDoSEipAddressResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DisassociateDDoSEipAddress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a CC precise protection policy.
+     * @param req ModifyCCPrecisionPolicyRequest
+     * @return ModifyCCPrecisionPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCCPrecisionPolicyResponse ModifyCCPrecisionPolicy(ModifyCCPrecisionPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCCPrecisionPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCCPrecisionPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCCPrecisionPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a layer-4 access control list.
+     * @param req ModifyCcBlackWhiteIpListRequest
+     * @return ModifyCcBlackWhiteIpListResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCcBlackWhiteIpListResponse ModifyCcBlackWhiteIpList(ModifyCcBlackWhiteIpListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCcBlackWhiteIpListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCcBlackWhiteIpListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCcBlackWhiteIpList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -119,6 +119,26 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a consumer group.
+     * @param req CreateConsumerRequest
+     * @return CreateConsumerResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateConsumerResponse CreateConsumer(CreateConsumerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateConsumerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateConsumerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateConsumer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to add a partition in a topic.
      * @param req CreatePartitionRequest
      * @return CreatePartitionResponse
