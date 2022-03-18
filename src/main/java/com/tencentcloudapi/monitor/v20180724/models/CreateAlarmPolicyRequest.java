@@ -72,7 +72,7 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * ID of trigger condition template. This parameter can be left empty.
+    * Trigger condition template ID. Pass in this parameter if the policy is associated with the trigger condition template; otherwise, pass in the `Condition` parameter. The trigger condition template ID can be obtained via [`DescribeConditionsTemplateList`](https://intl.cloud.tencent.com/document/api/248/70250?from_cn_redirect=1).
     */
     @SerializedName("ConditionTemplateId")
     @Expose
@@ -233,16 +233,16 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get ID of trigger condition template. This parameter can be left empty. 
-     * @return ConditionTemplateId ID of trigger condition template. This parameter can be left empty.
+     * Get Trigger condition template ID. Pass in this parameter if the policy is associated with the trigger condition template; otherwise, pass in the `Condition` parameter. The trigger condition template ID can be obtained via [`DescribeConditionsTemplateList`](https://intl.cloud.tencent.com/document/api/248/70250?from_cn_redirect=1). 
+     * @return ConditionTemplateId Trigger condition template ID. Pass in this parameter if the policy is associated with the trigger condition template; otherwise, pass in the `Condition` parameter. The trigger condition template ID can be obtained via [`DescribeConditionsTemplateList`](https://intl.cloud.tencent.com/document/api/248/70250?from_cn_redirect=1).
      */
     public Long getConditionTemplateId() {
         return this.ConditionTemplateId;
     }
 
     /**
-     * Set ID of trigger condition template. This parameter can be left empty.
-     * @param ConditionTemplateId ID of trigger condition template. This parameter can be left empty.
+     * Set Trigger condition template ID. Pass in this parameter if the policy is associated with the trigger condition template; otherwise, pass in the `Condition` parameter. The trigger condition template ID can be obtained via [`DescribeConditionsTemplateList`](https://intl.cloud.tencent.com/document/api/248/70250?from_cn_redirect=1).
+     * @param ConditionTemplateId Trigger condition template ID. Pass in this parameter if the policy is associated with the trigger condition template; otherwise, pass in the `Condition` parameter. The trigger condition template ID can be obtained via [`DescribeConditionsTemplateList`](https://intl.cloud.tencent.com/document/api/248/70250?from_cn_redirect=1).
      */
     public void setConditionTemplateId(Long ConditionTemplateId) {
         this.ConditionTemplateId = ConditionTemplateId;

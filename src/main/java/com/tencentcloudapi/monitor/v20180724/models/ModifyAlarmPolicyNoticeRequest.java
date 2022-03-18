@@ -23,72 +23,95 @@ import java.util.HashMap;
 public class ModifyAlarmPolicyNoticeRequest extends AbstractModel{
 
     /**
-    * Module name. Enter "monitor" here
+    * Module name, which is specified as `monitor`.
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * Alarm policy ID
+    * Alarm policy ID. If both `PolicyIds` and this parameter are returned, only `PolicyIds` takes effect.
     */
     @SerializedName("PolicyId")
     @Expose
     private String PolicyId;
 
     /**
-    * Alarm notification template ID list
+    * List of alarm notification template IDs.
     */
     @SerializedName("NoticeIds")
     @Expose
     private String [] NoticeIds;
 
     /**
-     * Get Module name. Enter "monitor" here 
-     * @return Module Module name. Enter "monitor" here
+    * Alarm policy ID array, which can be used to associate notification templates with multiple alarm policies. Max value: 30.
+    */
+    @SerializedName("PolicyIds")
+    @Expose
+    private String [] PolicyIds;
+
+    /**
+     * Get Module name, which is specified as `monitor`. 
+     * @return Module Module name, which is specified as `monitor`.
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set Module name. Enter "monitor" here
-     * @param Module Module name. Enter "monitor" here
+     * Set Module name, which is specified as `monitor`.
+     * @param Module Module name, which is specified as `monitor`.
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get Alarm policy ID 
-     * @return PolicyId Alarm policy ID
+     * Get Alarm policy ID. If both `PolicyIds` and this parameter are returned, only `PolicyIds` takes effect. 
+     * @return PolicyId Alarm policy ID. If both `PolicyIds` and this parameter are returned, only `PolicyIds` takes effect.
      */
     public String getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set Alarm policy ID
-     * @param PolicyId Alarm policy ID
+     * Set Alarm policy ID. If both `PolicyIds` and this parameter are returned, only `PolicyIds` takes effect.
+     * @param PolicyId Alarm policy ID. If both `PolicyIds` and this parameter are returned, only `PolicyIds` takes effect.
      */
     public void setPolicyId(String PolicyId) {
         this.PolicyId = PolicyId;
     }
 
     /**
-     * Get Alarm notification template ID list 
-     * @return NoticeIds Alarm notification template ID list
+     * Get List of alarm notification template IDs. 
+     * @return NoticeIds List of alarm notification template IDs.
      */
     public String [] getNoticeIds() {
         return this.NoticeIds;
     }
 
     /**
-     * Set Alarm notification template ID list
-     * @param NoticeIds Alarm notification template ID list
+     * Set List of alarm notification template IDs.
+     * @param NoticeIds List of alarm notification template IDs.
      */
     public void setNoticeIds(String [] NoticeIds) {
         this.NoticeIds = NoticeIds;
+    }
+
+    /**
+     * Get Alarm policy ID array, which can be used to associate notification templates with multiple alarm policies. Max value: 30. 
+     * @return PolicyIds Alarm policy ID array, which can be used to associate notification templates with multiple alarm policies. Max value: 30.
+     */
+    public String [] getPolicyIds() {
+        return this.PolicyIds;
+    }
+
+    /**
+     * Set Alarm policy ID array, which can be used to associate notification templates with multiple alarm policies. Max value: 30.
+     * @param PolicyIds Alarm policy ID array, which can be used to associate notification templates with multiple alarm policies. Max value: 30.
+     */
+    public void setPolicyIds(String [] PolicyIds) {
+        this.PolicyIds = PolicyIds;
     }
 
     public ModifyAlarmPolicyNoticeRequest() {
@@ -111,6 +134,12 @@ public class ModifyAlarmPolicyNoticeRequest extends AbstractModel{
                 this.NoticeIds[i] = new String(source.NoticeIds[i]);
             }
         }
+        if (source.PolicyIds != null) {
+            this.PolicyIds = new String[source.PolicyIds.length];
+            for (int i = 0; i < source.PolicyIds.length; i++) {
+                this.PolicyIds[i] = new String(source.PolicyIds[i]);
+            }
+        }
     }
 
 
@@ -121,6 +150,7 @@ public class ModifyAlarmPolicyNoticeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Module", this.Module);
         this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
         this.setParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
+        this.setParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
 
     }
 }

@@ -79,7 +79,7 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create an alarm policy.
+     *This API is used to create a Cloud Monitor alarm policy.
      * @param req CreateAlarmPolicyRequest
      * @return CreateAlarmPolicyResponse
      * @throws TencentCloudSDKException
@@ -433,6 +433,26 @@ Note: **If you query the alarm records as a sub-user, you can only query those o
                 Type type = new TypeToken<JsonResponseModel<DescribeBindingPolicyObjectListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeBindingPolicyObjectList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the trigger condition template.
+     * @param req DescribeConditionsTemplateListRequest
+     * @return DescribeConditionsTemplateListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConditionsTemplateListResponse DescribeConditionsTemplateList(DescribeConditionsTemplateListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeConditionsTemplateListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeConditionsTemplateListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeConditionsTemplateList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

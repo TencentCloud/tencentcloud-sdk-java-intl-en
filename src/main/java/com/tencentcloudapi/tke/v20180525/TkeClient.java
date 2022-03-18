@@ -939,6 +939,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the URL of TKE edge script.
+     * @param req DescribeTKEEdgeScriptRequest
+     * @return DescribeTKEEdgeScriptResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTKEEdgeScriptResponse DescribeTKEEdgeScript(DescribeTKEEdgeScriptRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTKEEdgeScriptResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTKEEdgeScriptResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTKEEdgeScript");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query cluster version information.
      * @param req DescribeVersionsRequest
      * @return DescribeVersionsResponse
