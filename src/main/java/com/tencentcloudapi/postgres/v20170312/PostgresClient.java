@@ -119,6 +119,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add a network for an instance.
+     * @param req CreateDBInstanceNetworkAccessRequest
+     * @return CreateDBInstanceNetworkAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDBInstanceNetworkAccessResponse CreateDBInstanceNetworkAccess(CreateDBInstanceNetworkAccessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDBInstanceNetworkAccessResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDBInstanceNetworkAccessResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDBInstanceNetworkAccess");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create (but not initialize) one or more TencentDB for PostgreSQL instances.
      * @param req CreateDBInstancesRequest
      * @return CreateDBInstancesResponse
@@ -199,6 +219,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add a network for an RO group.
+     * @param req CreateReadOnlyGroupNetworkAccessRequest
+     * @return CreateReadOnlyGroupNetworkAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateReadOnlyGroupNetworkAccessResponse CreateReadOnlyGroupNetworkAccess(CreateReadOnlyGroupNetworkAccessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateReadOnlyGroupNetworkAccessResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateReadOnlyGroupNetworkAccessResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateReadOnlyGroupNetworkAccess");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a PostgreSQL for Serverless instance. If the creation succeeds, the instance ID will be returned.
      * @param req CreateServerlessDBInstanceRequest
      * @return CreateServerlessDBInstanceResponse
@@ -219,6 +259,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete a network of an instance.
+     * @param req DeleteDBInstanceNetworkAccessRequest
+     * @return DeleteDBInstanceNetworkAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDBInstanceNetworkAccessResponse DeleteDBInstanceNetworkAccess(DeleteDBInstanceNetworkAccessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDBInstanceNetworkAccessResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDBInstanceNetworkAccessResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteDBInstanceNetworkAccess");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete an RO group.
      * @param req DeleteReadOnlyGroupRequest
      * @return DeleteReadOnlyGroupResponse
@@ -231,6 +291,26 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteReadOnlyGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteReadOnlyGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a network of an RO group.
+     * @param req DeleteReadOnlyGroupNetworkAccessRequest
+     * @return DeleteReadOnlyGroupNetworkAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteReadOnlyGroupNetworkAccessResponse DeleteReadOnlyGroupNetworkAccess(DeleteReadOnlyGroupNetworkAccessRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteReadOnlyGroupNetworkAccessResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteReadOnlyGroupNetworkAccessResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteReadOnlyGroupNetworkAccess");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
