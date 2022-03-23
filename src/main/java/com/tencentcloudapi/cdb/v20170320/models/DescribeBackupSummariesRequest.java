@@ -30,28 +30,28 @@ public class DescribeBackupSummariesRequest extends AbstractModel{
     private String Product;
 
     /**
-    * Pagination offset.
+    * Paginated query offset. Default value: `0`.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Paginated query limit. Default value: 20.
+    * Maximum entries returned per page, which ranges from 1 to 100. Default value: `20`.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Sorting criterion. Valid values: BackupVolume (backup capacity), DataBackupVolume (data backup capacity), BinlogBackupVolume (log backup capacity), AutoBackupVolume (automatic backup capacity), ManualBackupVolume (manual backup capacity).
+    * Sorting criterion. Valid values: `BackupVolume` (backup capacity), `DataBackupVolume` (data backup capacity), `BinlogBackupVolume` (log backup capacity), `AutoBackupVolume` (automatic backup capacity), `ManualBackupVolume` (manual backup capacity). Default value: `BackupVolume`.
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Sorting order. Valid values: ASC (ascending), DESC (descending).
+    * Sorting order. Valid values: `ASC` (ascending), `DESC` (descending). Default value: `ASC`.
     */
     @SerializedName("OrderDirection")
     @Expose
@@ -74,64 +74,64 @@ public class DescribeBackupSummariesRequest extends AbstractModel{
     }
 
     /**
-     * Get Pagination offset. 
-     * @return Offset Pagination offset.
+     * Get Paginated query offset. Default value: `0`. 
+     * @return Offset Paginated query offset. Default value: `0`.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset.
-     * @param Offset Pagination offset.
+     * Set Paginated query offset. Default value: `0`.
+     * @param Offset Paginated query offset. Default value: `0`.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Paginated query limit. Default value: 20. 
-     * @return Limit Paginated query limit. Default value: 20.
+     * Get Maximum entries returned per page, which ranges from 1 to 100. Default value: `20`. 
+     * @return Limit Maximum entries returned per page, which ranges from 1 to 100. Default value: `20`.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Paginated query limit. Default value: 20.
-     * @param Limit Paginated query limit. Default value: 20.
+     * Set Maximum entries returned per page, which ranges from 1 to 100. Default value: `20`.
+     * @param Limit Maximum entries returned per page, which ranges from 1 to 100. Default value: `20`.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Sorting criterion. Valid values: BackupVolume (backup capacity), DataBackupVolume (data backup capacity), BinlogBackupVolume (log backup capacity), AutoBackupVolume (automatic backup capacity), ManualBackupVolume (manual backup capacity). 
-     * @return OrderBy Sorting criterion. Valid values: BackupVolume (backup capacity), DataBackupVolume (data backup capacity), BinlogBackupVolume (log backup capacity), AutoBackupVolume (automatic backup capacity), ManualBackupVolume (manual backup capacity).
+     * Get Sorting criterion. Valid values: `BackupVolume` (backup capacity), `DataBackupVolume` (data backup capacity), `BinlogBackupVolume` (log backup capacity), `AutoBackupVolume` (automatic backup capacity), `ManualBackupVolume` (manual backup capacity). Default value: `BackupVolume`. 
+     * @return OrderBy Sorting criterion. Valid values: `BackupVolume` (backup capacity), `DataBackupVolume` (data backup capacity), `BinlogBackupVolume` (log backup capacity), `AutoBackupVolume` (automatic backup capacity), `ManualBackupVolume` (manual backup capacity). Default value: `BackupVolume`.
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sorting criterion. Valid values: BackupVolume (backup capacity), DataBackupVolume (data backup capacity), BinlogBackupVolume (log backup capacity), AutoBackupVolume (automatic backup capacity), ManualBackupVolume (manual backup capacity).
-     * @param OrderBy Sorting criterion. Valid values: BackupVolume (backup capacity), DataBackupVolume (data backup capacity), BinlogBackupVolume (log backup capacity), AutoBackupVolume (automatic backup capacity), ManualBackupVolume (manual backup capacity).
+     * Set Sorting criterion. Valid values: `BackupVolume` (backup capacity), `DataBackupVolume` (data backup capacity), `BinlogBackupVolume` (log backup capacity), `AutoBackupVolume` (automatic backup capacity), `ManualBackupVolume` (manual backup capacity). Default value: `BackupVolume`.
+     * @param OrderBy Sorting criterion. Valid values: `BackupVolume` (backup capacity), `DataBackupVolume` (data backup capacity), `BinlogBackupVolume` (log backup capacity), `AutoBackupVolume` (automatic backup capacity), `ManualBackupVolume` (manual backup capacity). Default value: `BackupVolume`.
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Sorting order. Valid values: ASC (ascending), DESC (descending). 
-     * @return OrderDirection Sorting order. Valid values: ASC (ascending), DESC (descending).
+     * Get Sorting order. Valid values: `ASC` (ascending), `DESC` (descending). Default value: `ASC`. 
+     * @return OrderDirection Sorting order. Valid values: `ASC` (ascending), `DESC` (descending). Default value: `ASC`.
      */
     public String getOrderDirection() {
         return this.OrderDirection;
     }
 
     /**
-     * Set Sorting order. Valid values: ASC (ascending), DESC (descending).
-     * @param OrderDirection Sorting order. Valid values: ASC (ascending), DESC (descending).
+     * Set Sorting order. Valid values: `ASC` (ascending), `DESC` (descending). Default value: `ASC`.
+     * @param OrderDirection Sorting order. Valid values: `ASC` (ascending), `DESC` (descending). Default value: `ASC`.
      */
     public void setOrderDirection(String OrderDirection) {
         this.OrderDirection = OrderDirection;

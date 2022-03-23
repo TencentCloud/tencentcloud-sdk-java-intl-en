@@ -72,7 +72,7 @@ public class RoInstanceInfo extends AbstractModel{
     private String InstanceId;
 
     /**
-    * RO instance status. Value range: 0 (creating), 1 (running), 4 (deleting)
+    * RO instance status. Valid values: `0` (creating), `1` (running), `3` (remote RO), `4` (deleting). When the `DescribeDBInstances` API is used to query the information of the source instance, if the source instance is associated with a remote read-only instance, the returned status value of the remote read-only instance always shows 3.
     */
     @SerializedName("Status")
     @Expose
@@ -296,16 +296,16 @@ public class RoInstanceInfo extends AbstractModel{
     }
 
     /**
-     * Get RO instance status. Value range: 0 (creating), 1 (running), 4 (deleting) 
-     * @return Status RO instance status. Value range: 0 (creating), 1 (running), 4 (deleting)
+     * Get RO instance status. Valid values: `0` (creating), `1` (running), `3` (remote RO), `4` (deleting). When the `DescribeDBInstances` API is used to query the information of the source instance, if the source instance is associated with a remote read-only instance, the returned status value of the remote read-only instance always shows 3. 
+     * @return Status RO instance status. Valid values: `0` (creating), `1` (running), `3` (remote RO), `4` (deleting). When the `DescribeDBInstances` API is used to query the information of the source instance, if the source instance is associated with a remote read-only instance, the returned status value of the remote read-only instance always shows 3.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set RO instance status. Value range: 0 (creating), 1 (running), 4 (deleting)
-     * @param Status RO instance status. Value range: 0 (creating), 1 (running), 4 (deleting)
+     * Set RO instance status. Valid values: `0` (creating), `1` (running), `3` (remote RO), `4` (deleting). When the `DescribeDBInstances` API is used to query the information of the source instance, if the source instance is associated with a remote read-only instance, the returned status value of the remote read-only instance always shows 3.
+     * @param Status RO instance status. Valid values: `0` (creating), `1` (running), `3` (remote RO), `4` (deleting). When the `DescribeDBInstances` API is used to query the information of the source instance, if the source instance is associated with a remote read-only instance, the returned status value of the remote read-only instance always shows 3.
      */
     public void setStatus(Long Status) {
         this.Status = Status;

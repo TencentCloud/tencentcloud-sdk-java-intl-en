@@ -30,7 +30,7 @@ public class DescribeSlowLogsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Offset. Minimum value: 0.
+    * Pagination offset, starting from `0`. Default value: `0`.
     */
     @SerializedName("Offset")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeSlowLogsRequest extends AbstractModel{
     }
 
     /**
-     * Get Offset. Minimum value: 0. 
-     * @return Offset Offset. Minimum value: 0.
+     * Get Pagination offset, starting from `0`. Default value: `0`. 
+     * @return Offset Pagination offset, starting from `0`. Default value: `0`.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. Minimum value: 0.
-     * @param Offset Offset. Minimum value: 0.
+     * Set Pagination offset, starting from `0`. Default value: `0`.
+     * @param Offset Pagination offset, starting from `0`. Default value: `0`.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

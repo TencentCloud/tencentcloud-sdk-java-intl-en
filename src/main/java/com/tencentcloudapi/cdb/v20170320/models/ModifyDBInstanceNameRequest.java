@@ -30,7 +30,7 @@ public class ModifyDBInstanceNameRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Instance name.
+    * The modified instance name.
     */
     @SerializedName("InstanceName")
     @Expose
@@ -53,16 +53,16 @@ public class ModifyDBInstanceNameRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance name. 
-     * @return InstanceName Instance name.
+     * Get The modified instance name. 
+     * @return InstanceName The modified instance name.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name.
-     * @param InstanceName Instance name.
+     * Set The modified instance name.
+     * @param InstanceName The modified instance name.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
