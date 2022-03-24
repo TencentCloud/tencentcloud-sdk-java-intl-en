@@ -100,7 +100,7 @@ public class SesClient extends AbstractClient{
 
     /**
      *This API is used to create a TEXT or HTML email template. To create an HTML template, ensure that it does not include external CSS files. You can use {{variable name}} to specify a variable in the template.
-Note: only an approved template can be used to send emails.
+Note: Only an approved template can be used to send emails.
      * @param req CreateEmailTemplateRequest
      * @return CreateEmailTemplateResponse
      * @throws TencentCloudSDKException
@@ -232,6 +232,26 @@ Note: only an approved template can be used to send emails.
                 Type type = new TypeToken<JsonResponseModel<DeleteEmailTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteEmailTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a recipient group and all recipient email addresses in the group based on the recipient group ID.
+     * @param req DeleteReceiverRequest
+     * @return DeleteReceiverResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteReceiverResponse DeleteReceiver(DeleteReceiverRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteReceiverResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteReceiverResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteReceiver");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

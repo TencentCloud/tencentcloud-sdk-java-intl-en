@@ -324,6 +324,26 @@ A service is the biggest usage unit in API Gateway. Each service can contain mul
     }
 
     /**
+     *This API is used to create an upstream.
+     * @param req CreateUpstreamRequest
+     * @return CreateUpstreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUpstreamResponse CreateUpstream(CreateUpstreamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateUpstreamResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateUpstreamResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateUpstream");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a usage plan.
 To use API Gateway, you need to create a usage plan and bind it to a service environment.
      * @param req CreateUsagePlanRequest
@@ -498,6 +518,26 @@ You can use this API if you use a custom domain name and custom mapping. Please 
                 Type type = new TypeToken<JsonResponseModel<DeleteServiceSubDomainMappingResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteServiceSubDomainMapping");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete an upstream. Note that you can only delete an upstream when it’s not bound with an API.
+     * @param req DeleteUpstreamRequest
+     * @return DeleteUpstreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteUpstreamResponse DeleteUpstream(DeleteUpstreamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteUpstreamResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteUpstreamResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteUpstream");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -769,8 +809,8 @@ After creating an API key, you can query its details by using this API.
     }
 
     /**
-     *This API is used to query the list of keys.
-If you have created multiple API key pairs, you can use this API to query the information of one or more keys. This API does not display the `secretKey`.
+     *This API is used to query the information of one or more API keys.
+ 
      * @param req DescribeApiKeysStatusRequest
      * @return DescribeApiKeysStatusResponse
      * @throws TencentCloudSDKException
@@ -1156,6 +1196,46 @@ To make authentication and throttling for a service take effect, you need to bin
     }
 
     /**
+     *This API is used to query the list of APIs bound with an upstream.
+     * @param req DescribeUpstreamBindApisRequest
+     * @return DescribeUpstreamBindApisResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUpstreamBindApisResponse DescribeUpstreamBindApis(DescribeUpstreamBindApisRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUpstreamBindApisResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUpstreamBindApisResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUpstreamBindApis");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of upstreams.
+     * @param req DescribeUpstreamsRequest
+     * @return DescribeUpstreamsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUpstreamsResponse DescribeUpstreams(DescribeUpstreamsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUpstreamsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUpstreamsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUpstreams");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the details of a usage plan, such as its name, QPS, creation time, and bound environment.
      * @param req DescribeUsagePlanRequest
      * @return DescribeUsagePlanResponse
@@ -1510,6 +1590,26 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
                 Type type = new TypeToken<JsonResponseModel<ModifySubDomainResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifySubDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify an upstream.
+     * @param req ModifyUpstreamRequest
+     * @return ModifyUpstreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUpstreamResponse ModifyUpstream(ModifyUpstreamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyUpstreamResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyUpstreamResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyUpstream");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -31,16 +31,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ApiId;
 
     /**
-    * path
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Path
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * method
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Request method
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Method")
     @Expose
@@ -53,6 +53,30 @@ Note: this field may return null, indicating that no valid values can be obtaine
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
+
+    /**
+    * Status of the import task
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * Details of the error
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ErrMsg")
+    @Expose
+    private String ErrMsg;
+
+    /**
+    * API name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ApiName")
+    @Expose
+    private String ApiName;
 
     /**
      * Get API ID
@@ -75,40 +99,40 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get path
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Path path
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Path
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Path Path
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set path
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Path path
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Path
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Path Path
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get method
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Method method
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Request method
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Method Request method
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getMethod() {
         return this.Method;
     }
 
     /**
-     * Set method
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Method method
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Request method
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Method Request method
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setMethod(String Method) {
         this.Method = Method;
@@ -134,6 +158,66 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.CreatedTime = CreatedTime;
     }
 
+    /**
+     * Get Status of the import task
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Status Status of the import task
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Status of the import task
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Status Status of the import task
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get Details of the error
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ErrMsg Details of the error
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getErrMsg() {
+        return this.ErrMsg;
+    }
+
+    /**
+     * Set Details of the error
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ErrMsg Details of the error
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setErrMsg(String ErrMsg) {
+        this.ErrMsg = ErrMsg;
+    }
+
+    /**
+     * Get API name
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ApiName API name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getApiName() {
+        return this.ApiName;
+    }
+
+    /**
+     * Set API name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ApiName API name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setApiName(String ApiName) {
+        this.ApiName = ApiName;
+    }
+
     public CreateApiRsp() {
     }
 
@@ -154,6 +238,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.CreatedTime != null) {
             this.CreatedTime = new String(source.CreatedTime);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.ErrMsg != null) {
+            this.ErrMsg = new String(source.ErrMsg);
+        }
+        if (source.ApiName != null) {
+            this.ApiName = new String(source.ApiName);
+        }
     }
 
 
@@ -165,6 +258,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "Method", this.Method);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
+        this.setParamSimple(map, prefix + "ApiName", this.ApiName);
 
     }
 }

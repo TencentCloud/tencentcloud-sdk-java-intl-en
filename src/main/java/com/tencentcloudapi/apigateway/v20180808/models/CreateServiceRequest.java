@@ -93,6 +93,13 @@ public class CreateServiceRequest extends AbstractModel{
     private String InstanceId;
 
     /**
+    * VPC attribute
+    */
+    @SerializedName("UniqVpcId")
+    @Expose
+    private String UniqVpcId;
+
+    /**
      * Get Custom service name. 
      * @return ServiceName Custom service name.
      */
@@ -252,6 +259,22 @@ public class CreateServiceRequest extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get VPC attribute 
+     * @return UniqVpcId VPC attribute
+     */
+    public String getUniqVpcId() {
+        return this.UniqVpcId;
+    }
+
+    /**
+     * Set VPC attribute
+     * @param UniqVpcId VPC attribute
+     */
+    public void setUniqVpcId(String UniqVpcId) {
+        this.UniqVpcId = UniqVpcId;
+    }
+
     public CreateServiceRequest() {
     }
 
@@ -296,6 +319,9 @@ public class CreateServiceRequest extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.UniqVpcId != null) {
+            this.UniqVpcId = new String(source.UniqVpcId);
+        }
     }
 
 
@@ -313,6 +339,7 @@ public class CreateServiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AppIdType", this.AppIdType);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
 
     }
 }

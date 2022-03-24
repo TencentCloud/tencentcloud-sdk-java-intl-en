@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ServiceConfig extends AbstractModel{
 
     /**
-    * Backend type, which takes effect when VPC is enabled. Valid values: `clb` and `upstream` (VPC channel)
+    * The backend type. It’s available when `vpc` is enabled. Values: `clb`, `cvm` and `upstream`.
     */
     @SerializedName("Product")
     @Expose
@@ -66,16 +66,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private CosConfig CosConfig;
 
     /**
-     * Get Backend type, which takes effect when VPC is enabled. Valid values: `clb` and `upstream` (VPC channel) 
-     * @return Product Backend type, which takes effect when VPC is enabled. Valid values: `clb` and `upstream` (VPC channel)
+     * Get The backend type. It’s available when `vpc` is enabled. Values: `clb`, `cvm` and `upstream`. 
+     * @return Product The backend type. It’s available when `vpc` is enabled. Values: `clb`, `cvm` and `upstream`.
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set Backend type, which takes effect when VPC is enabled. Valid values: `clb` and `upstream` (VPC channel)
-     * @param Product Backend type, which takes effect when VPC is enabled. Valid values: `clb` and `upstream` (VPC channel)
+     * Set The backend type. It’s available when `vpc` is enabled. Values: `clb`, `cvm` and `upstream`.
+     * @param Product The backend type. It’s available when `vpc` is enabled. Values: `clb`, `cvm` and `upstream`.
      */
     public void setProduct(String Product) {
         this.Product = Product;

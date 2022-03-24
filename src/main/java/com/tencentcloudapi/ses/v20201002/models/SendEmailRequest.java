@@ -81,6 +81,13 @@ Sender <email address>
     private String Unsubscribe;
 
     /**
+    * Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
+    */
+    @SerializedName("TriggerType")
+    @Expose
+    private Long TriggerType;
+
+    /**
      * Get Sender address. Enter a sender address, for example, noreply@mail.qcloud.com.
 To display the sender name, enter the address in the following format: 
 Sender <email address> 
@@ -216,6 +223,22 @@ Sender <email address>
         this.Unsubscribe = Unsubscribe;
     }
 
+    /**
+     * Get Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type. 
+     * @return TriggerType Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
+     */
+    public Long getTriggerType() {
+        return this.TriggerType;
+    }
+
+    /**
+     * Set Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
+     * @param TriggerType Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
+     */
+    public void setTriggerType(Long TriggerType) {
+        this.TriggerType = TriggerType;
+    }
+
     public SendEmailRequest() {
     }
 
@@ -254,6 +277,9 @@ Sender <email address>
         if (source.Unsubscribe != null) {
             this.Unsubscribe = new String(source.Unsubscribe);
         }
+        if (source.TriggerType != null) {
+            this.TriggerType = new Long(source.TriggerType);
+        }
     }
 
 
@@ -269,6 +295,7 @@ Sender <email address>
         this.setParamObj(map, prefix + "Simple.", this.Simple);
         this.setParamArrayObj(map, prefix + "Attachments.", this.Attachments);
         this.setParamSimple(map, prefix + "Unsubscribe", this.Unsubscribe);
+        this.setParamSimple(map, prefix + "TriggerType", this.TriggerType);
 
     }
 }

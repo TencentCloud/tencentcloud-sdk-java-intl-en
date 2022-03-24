@@ -67,14 +67,14 @@ Tencent Cloud team <noreply@mail.qcloud.com>
     private Template Template;
 
     /**
-    * Email content when emails are sent by calling the API
+    * Email content when emails are sent by calling the API. This parameter is currently unavailable.
     */
     @SerializedName("Simple")
     @Expose
     private Simple Simple;
 
     /**
-    * Email attachments
+    * Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
     */
     @SerializedName("Attachments")
     @Expose
@@ -100,6 +100,13 @@ Tencent Cloud team <noreply@mail.qcloud.com>
     @SerializedName("Unsubscribe")
     @Expose
     private String Unsubscribe;
+
+    /**
+    * 
+    */
+    @SerializedName("ADLocation")
+    @Expose
+    private Long ADLocation;
 
     /**
      * Get Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format:
@@ -206,32 +213,32 @@ Tencent Cloud team <noreply@mail.qcloud.com>
     }
 
     /**
-     * Get Email content when emails are sent by calling the API 
-     * @return Simple Email content when emails are sent by calling the API
+     * Get Email content when emails are sent by calling the API. This parameter is currently unavailable. 
+     * @return Simple Email content when emails are sent by calling the API. This parameter is currently unavailable.
      */
     public Simple getSimple() {
         return this.Simple;
     }
 
     /**
-     * Set Email content when emails are sent by calling the API
-     * @param Simple Email content when emails are sent by calling the API
+     * Set Email content when emails are sent by calling the API. This parameter is currently unavailable.
+     * @param Simple Email content when emails are sent by calling the API. This parameter is currently unavailable.
      */
     public void setSimple(Simple Simple) {
         this.Simple = Simple;
     }
 
     /**
-     * Get Email attachments 
-     * @return Attachments Email attachments
+     * Get Attachment parameters to set when you need to send attachments. This parameter is currently unavailable. 
+     * @return Attachments Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
      */
     public Attachment [] getAttachments() {
         return this.Attachments;
     }
 
     /**
-     * Set Email attachments
-     * @param Attachments Email attachments
+     * Set Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
+     * @param Attachments Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
      */
     public void setAttachments(Attachment [] Attachments) {
         this.Attachments = Attachments;
@@ -285,6 +292,22 @@ Tencent Cloud team <noreply@mail.qcloud.com>
         this.Unsubscribe = Unsubscribe;
     }
 
+    /**
+     * Get  
+     * @return ADLocation 
+     */
+    public Long getADLocation() {
+        return this.ADLocation;
+    }
+
+    /**
+     * Set 
+     * @param ADLocation 
+     */
+    public void setADLocation(Long ADLocation) {
+        this.ADLocation = ADLocation;
+    }
+
     public BatchSendEmailRequest() {
     }
 
@@ -329,6 +352,9 @@ Tencent Cloud team <noreply@mail.qcloud.com>
         if (source.Unsubscribe != null) {
             this.Unsubscribe = new String(source.Unsubscribe);
         }
+        if (source.ADLocation != null) {
+            this.ADLocation = new Long(source.ADLocation);
+        }
     }
 
 
@@ -347,6 +373,7 @@ Tencent Cloud team <noreply@mail.qcloud.com>
         this.setParamObj(map, prefix + "CycleParam.", this.CycleParam);
         this.setParamObj(map, prefix + "TimedParam.", this.TimedParam);
         this.setParamSimple(map, prefix + "Unsubscribe", this.Unsubscribe);
+        this.setParamSimple(map, prefix + "ADLocation", this.ADLocation);
 
     }
 }

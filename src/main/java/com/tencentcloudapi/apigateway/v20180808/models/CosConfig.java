@@ -52,6 +52,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Boolean Authorization;
 
     /**
+    * The path matching mode of the backend COS service
+`BackEndPath`: Match the backend path
+`FullPath`: Match the full path
+
+Default: `BackEndPath`
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PathMatchMode")
+    @Expose
+    private String PathMatchMode;
+
+    /**
      * Get Specifies how the backend COS bucket is called by the API. The frontend request method and Action can be:
 GET：GetObject
 PUT：PutObject
@@ -131,6 +143,42 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.Authorization = Authorization;
     }
 
+    /**
+     * Get The path matching mode of the backend COS service
+`BackEndPath`: Match the backend path
+`FullPath`: Match the full path
+
+Default: `BackEndPath`
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return PathMatchMode The path matching mode of the backend COS service
+`BackEndPath`: Match the backend path
+`FullPath`: Match the full path
+
+Default: `BackEndPath`
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getPathMatchMode() {
+        return this.PathMatchMode;
+    }
+
+    /**
+     * Set The path matching mode of the backend COS service
+`BackEndPath`: Match the backend path
+`FullPath`: Match the full path
+
+Default: `BackEndPath`
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param PathMatchMode The path matching mode of the backend COS service
+`BackEndPath`: Match the backend path
+`FullPath`: Match the full path
+
+Default: `BackEndPath`
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setPathMatchMode(String PathMatchMode) {
+        this.PathMatchMode = PathMatchMode;
+    }
+
     public CosConfig() {
     }
 
@@ -148,6 +196,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.Authorization != null) {
             this.Authorization = new Boolean(source.Authorization);
         }
+        if (source.PathMatchMode != null) {
+            this.PathMatchMode = new String(source.PathMatchMode);
+        }
     }
 
 
@@ -158,6 +209,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "BucketName", this.BucketName);
         this.setParamSimple(map, prefix + "Authorization", this.Authorization);
+        this.setParamSimple(map, prefix + "PathMatchMode", this.PathMatchMode);
 
     }
 }
