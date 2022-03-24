@@ -128,6 +128,20 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * Production throttling in MB/sec.
+    */
+    @SerializedName("QuotaProducerByteRate")
+    @Expose
+    private Long QuotaProducerByteRate;
+
+    /**
+    * Consumption throttling in MB/sec.
+    */
+    @SerializedName("QuotaConsumerByteRate")
+    @Expose
+    private Long QuotaConsumerByteRate;
+
+    /**
      * Get Instance ID. 
      * @return InstanceId Instance ID.
      */
@@ -367,6 +381,38 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get Production throttling in MB/sec. 
+     * @return QuotaProducerByteRate Production throttling in MB/sec.
+     */
+    public Long getQuotaProducerByteRate() {
+        return this.QuotaProducerByteRate;
+    }
+
+    /**
+     * Set Production throttling in MB/sec.
+     * @param QuotaProducerByteRate Production throttling in MB/sec.
+     */
+    public void setQuotaProducerByteRate(Long QuotaProducerByteRate) {
+        this.QuotaProducerByteRate = QuotaProducerByteRate;
+    }
+
+    /**
+     * Get Consumption throttling in MB/sec. 
+     * @return QuotaConsumerByteRate Consumption throttling in MB/sec.
+     */
+    public Long getQuotaConsumerByteRate() {
+        return this.QuotaConsumerByteRate;
+    }
+
+    /**
+     * Set Consumption throttling in MB/sec.
+     * @param QuotaConsumerByteRate Consumption throttling in MB/sec.
+     */
+    public void setQuotaConsumerByteRate(Long QuotaConsumerByteRate) {
+        this.QuotaConsumerByteRate = QuotaConsumerByteRate;
+    }
+
     public ModifyTopicAttributesRequest() {
     }
 
@@ -426,6 +472,12 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.QuotaProducerByteRate != null) {
+            this.QuotaProducerByteRate = new Long(source.QuotaProducerByteRate);
+        }
+        if (source.QuotaConsumerByteRate != null) {
+            this.QuotaConsumerByteRate = new Long(source.QuotaConsumerByteRate);
+        }
     }
 
 
@@ -448,6 +500,8 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
         this.setParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "QuotaProducerByteRate", this.QuotaProducerByteRate);
+        this.setParamSimple(map, prefix + "QuotaConsumerByteRate", this.QuotaConsumerByteRate);
 
     }
 }

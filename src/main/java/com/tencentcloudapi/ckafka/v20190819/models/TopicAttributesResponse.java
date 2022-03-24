@@ -96,6 +96,14 @@ Note: `null` may be returned for this field, indicating that no valid values can
     private AclRule [] AclRuleList;
 
     /**
+    * Traffic throttling policy in topic dimension.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("QuotaConfig")
+    @Expose
+    private InstanceQuotaConfigResp QuotaConfig;
+
+    /**
      * Get Topic ID 
      * @return TopicId Topic ID
      */
@@ -267,6 +275,26 @@ Note: `null` may be returned for this field, indicating that no valid values can
         this.AclRuleList = AclRuleList;
     }
 
+    /**
+     * Get Traffic throttling policy in topic dimension.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return QuotaConfig Traffic throttling policy in topic dimension.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public InstanceQuotaConfigResp getQuotaConfig() {
+        return this.QuotaConfig;
+    }
+
+    /**
+     * Set Traffic throttling policy in topic dimension.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param QuotaConfig Traffic throttling policy in topic dimension.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setQuotaConfig(InstanceQuotaConfigResp QuotaConfig) {
+        this.QuotaConfig = QuotaConfig;
+    }
+
     public TopicAttributesResponse() {
     }
 
@@ -314,6 +342,9 @@ Note: `null` may be returned for this field, indicating that no valid values can
                 this.AclRuleList[i] = new AclRule(source.AclRuleList[i]);
             }
         }
+        if (source.QuotaConfig != null) {
+            this.QuotaConfig = new InstanceQuotaConfigResp(source.QuotaConfig);
+        }
     }
 
 
@@ -331,6 +362,7 @@ Note: `null` may be returned for this field, indicating that no valid values can
         this.setParamArrayObj(map, prefix + "Partitions.", this.Partitions);
         this.setParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);
         this.setParamArrayObj(map, prefix + "AclRuleList.", this.AclRuleList);
+        this.setParamObj(map, prefix + "QuotaConfig.", this.QuotaConfig);
 
     }
 }

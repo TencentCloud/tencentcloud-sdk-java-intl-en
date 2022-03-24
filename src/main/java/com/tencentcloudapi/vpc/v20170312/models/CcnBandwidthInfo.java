@@ -71,6 +71,14 @@ Note: this field may return null, indicating that no valid value was found.
     private CcnRegionBandwidthLimit CcnRegionBandwidthLimit;
 
     /**
+    * Cloud marketplace instance ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MarketId")
+    @Expose
+    private String MarketId;
+
+    /**
      * Get The CCN ID that the bandwidth belongs to.
 Note: this field may return null, indicating that no valid value was found. 
      * @return CcnId The CCN ID that the bandwidth belongs to.
@@ -190,6 +198,26 @@ Note: this field may return null, indicating that no valid value was found.
         this.CcnRegionBandwidthLimit = CcnRegionBandwidthLimit;
     }
 
+    /**
+     * Get Cloud marketplace instance ID.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return MarketId Cloud marketplace instance ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getMarketId() {
+        return this.MarketId;
+    }
+
+    /**
+     * Set Cloud marketplace instance ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param MarketId Cloud marketplace instance ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setMarketId(String MarketId) {
+        this.MarketId = MarketId;
+    }
+
     public CcnBandwidthInfo() {
     }
 
@@ -216,6 +244,9 @@ Note: this field may return null, indicating that no valid value was found.
         if (source.CcnRegionBandwidthLimit != null) {
             this.CcnRegionBandwidthLimit = new CcnRegionBandwidthLimit(source.CcnRegionBandwidthLimit);
         }
+        if (source.MarketId != null) {
+            this.MarketId = new String(source.MarketId);
+        }
     }
 
 
@@ -229,6 +260,7 @@ Note: this field may return null, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "RegionFlowControlId", this.RegionFlowControlId);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamObj(map, prefix + "CcnRegionBandwidthLimit.", this.CcnRegionBandwidthLimit);
+        this.setParamSimple(map, prefix + "MarketId", this.MarketId);
 
     }
 }

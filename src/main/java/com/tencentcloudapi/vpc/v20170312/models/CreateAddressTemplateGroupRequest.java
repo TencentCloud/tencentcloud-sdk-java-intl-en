@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class CreateAddressTemplateGroupRequest extends AbstractModel{
 
     /**
-    * The name of the IP address template group.
+    * Name of the IP address template group
     */
     @SerializedName("AddressTemplateGroupName")
     @Expose
     private String AddressTemplateGroupName;
 
     /**
-    * The instance ID of the IP address template, such as `ipm-mdunqeb6`.
+    * IP address template instance ID, such as `ipm-mdunqeb6`.
     */
     @SerializedName("AddressTemplateIds")
     @Expose
     private String [] AddressTemplateIds;
 
     /**
-     * Get The name of the IP address template group. 
-     * @return AddressTemplateGroupName The name of the IP address template group.
+     * Get Name of the IP address template group 
+     * @return AddressTemplateGroupName Name of the IP address template group
      */
     public String getAddressTemplateGroupName() {
         return this.AddressTemplateGroupName;
     }
 
     /**
-     * Set The name of the IP address template group.
-     * @param AddressTemplateGroupName The name of the IP address template group.
+     * Set Name of the IP address template group
+     * @param AddressTemplateGroupName Name of the IP address template group
      */
     public void setAddressTemplateGroupName(String AddressTemplateGroupName) {
         this.AddressTemplateGroupName = AddressTemplateGroupName;
     }
 
     /**
-     * Get The instance ID of the IP address template, such as `ipm-mdunqeb6`. 
-     * @return AddressTemplateIds The instance ID of the IP address template, such as `ipm-mdunqeb6`.
+     * Get IP address template instance ID, such as `ipm-mdunqeb6`. 
+     * @return AddressTemplateIds IP address template instance ID, such as `ipm-mdunqeb6`.
      */
     public String [] getAddressTemplateIds() {
         return this.AddressTemplateIds;
     }
 
     /**
-     * Set The instance ID of the IP address template, such as `ipm-mdunqeb6`.
-     * @param AddressTemplateIds The instance ID of the IP address template, such as `ipm-mdunqeb6`.
+     * Set IP address template instance ID, such as `ipm-mdunqeb6`.
+     * @param AddressTemplateIds IP address template instance ID, such as `ipm-mdunqeb6`.
      */
     public void setAddressTemplateIds(String [] AddressTemplateIds) {
         this.AddressTemplateIds = AddressTemplateIds;

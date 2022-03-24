@@ -12,14 +12,17 @@ public enum VpcErrorCode {
     // The ENI information is not available in this address.
      FAILEDOPERATION_ADDRESSENIINFONOTFOUND("FailedOperation.AddressEniInfoNotFound"),
      
+    // Unsupported region.
+     FAILEDOPERATION_INVALIDREGION("FailedOperation.InvalidRegion"),
+     
+    // Network probe timed out. Please retry later.
+     FAILEDOPERATION_NETDETECTTIMEOUT("FailedOperation.NetDetectTimeOut"),
+     
     // An internal error occurred.
      INTERNALERROR("InternalError"),
      
     // Failed to create the Ckafka route. Please retry later.
      INTERNALERROR_CREATECKAFKAROUTEERROR("InternalError.CreateCkafkaRouteError"),
-     
-    // 
-     INTERNALERROR_NETDETECTTIMEOUT("InternalError.NetDetectTimeOut"),
      
     // Internal error.
      INTERNALSERVERERROR("InternalServerError"),
@@ -84,6 +87,9 @@ public enum VpcErrorCode {
     // Incorrect parameter value.
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
+    // Attacked IP address.
+     INVALIDPARAMETERVALUE_ADDRESSATTACKED("InvalidParameterValue.AddressAttacked"),
+     
     // This IP address ID is invalid.
      INVALIDPARAMETERVALUE_ADDRESSIDMALFORMED("InvalidParameterValue.AddressIdMalformed"),
      
@@ -132,6 +138,9 @@ public enum VpcErrorCode {
     // The input parameter already exists.
      INVALIDPARAMETERVALUE_DUPLICATE("InvalidParameterValue.Duplicate"),
      
+    // The parameter value already exists.
+     INVALIDPARAMETERVALUE_DUPLICATEPARA("InvalidParameterValue.DuplicatePara"),
+     
     // Missing parameters.
      INVALIDPARAMETERVALUE_EMPTY("InvalidParameterValue.Empty"),
      
@@ -143,6 +152,9 @@ public enum VpcErrorCode {
      
     // This instance already has a WanIP (public IP).
      INVALIDPARAMETERVALUE_INSTANCEHASWANIP("InvalidParameterValue.InstanceHasWanIP"),
+     
+    // Incorrect instance ID.
+     INVALIDPARAMETERVALUE_INSTANCEIDMALFORMED("InvalidParameterValue.InstanceIdMalformed"),
      
     // Request failed: this instance does not have a CalcIP (device IP).
      INVALIDPARAMETERVALUE_INSTANCENOCALCIP("InvalidParameterValue.InstanceNoCalcIP"),
@@ -192,6 +204,9 @@ public enum VpcErrorCode {
     // A request cannot contain IP addresses with different cluster types.
      INVALIDPARAMETERVALUE_MIXEDADDRESSIPSETTYPE("InvalidParameterValue.MixedAddressIpSetType"),
      
+    // The SNAT forwarding rule of the NAT gateway does not exist.
+     INVALIDPARAMETERVALUE_NATGATEWAYSNATRULENOTEXISTS("InvalidParameterValue.NatGatewaySnatRuleNotExists"),
+     
     // The NAT Gateway already has an identical SNAT rule.
      INVALIDPARAMETERVALUE_NATSNATRULEEXISTS("InvalidParameterValue.NatSnatRuleExists"),
      
@@ -237,9 +252,6 @@ public enum VpcErrorCode {
     // Subnet CIDR conflict.
      INVALIDPARAMETERVALUE_SUBNETCONFLICT("InvalidParameterValue.SubnetConflict"),
      
-    // The subnet IP range overlaps with the the secondary CIDR block.
-     INVALIDPARAMETERVALUE_SUBNETOVERLAPASSISTCIDR("InvalidParameterValue.SubnetOverlapAssistCidr"),
-     
     // Invalid subnet CIDR.
      INVALIDPARAMETERVALUE_SUBNETRANGE("InvalidParameterValue.SubnetRange"),
      
@@ -270,15 +282,6 @@ public enum VpcErrorCode {
     // The specified private IP of the specified ENI has already been bound to an EIP. A private IP cannot be bound to more than one EIP.
      INVALIDPRIVATEIPADDRESS_ALREADYBINDEIP("InvalidPrivateIpAddress.AlreadyBindEip"),
      
-    // Invalid routing policy ID (RouteId).
-     INVALIDROUTEID_NOTFOUND("InvalidRouteId.NotFound"),
-     
-    // Invalid route table. The route table ID is invalid.
-     INVALIDROUTETABLEID_MALFORMED("InvalidRouteTableId.Malformed"),
-     
-    // Invalid route table. The VPC resource does not exist. Please check and enter the correct resource information.
-     INVALIDROUTETABLEID_NOTFOUND("InvalidRouteTableId.NotFound"),
-     
     // Invalid security group. The security group instance ID is invalid.
      INVALIDSECURITYGROUPID_MALFORMED("InvalidSecurityGroupID.Malformed"),
      
@@ -300,11 +303,17 @@ public enum VpcErrorCode {
     // Quota limit is reached.
      LIMITEXCEEDED("LimitExceeded"),
      
+    // 
+     LIMITEXCEEDED_ACCOUNTRETURNQUOTA("LimitExceeded.AccountReturnQuota"),
+     
     // The number of assigned IP addresses has reached the upper limit.
      LIMITEXCEEDED_ADDRESS("LimitExceeded.Address"),
      
     // The number of EIPs applied for exceeds the upper limit.
      LIMITEXCEEDED_ADDRESSQUOTALIMITEXCEEDED("LimitExceeded.AddressQuotaLimitExceeded"),
+     
+    // Exceeded the upper limit of the bandwidth package quota.
+     LIMITEXCEEDED_BANDWIDTHPACKAGEQUOTA("LimitExceeded.BandwidthPackageQuota"),
      
     // The number of assigned IP ranges of the VPC has reached the upper limit.
      LIMITEXCEEDED_CIDRBLOCK("LimitExceeded.CidrBlock"),
@@ -312,11 +321,23 @@ public enum VpcErrorCode {
     // The number of EIPs applied for exceeds the daily upper limit.
      LIMITEXCEEDED_DAILYALLOCATEADDRESSQUOTALIMITEXCEEDED("LimitExceeded.DailyAllocateAddressQuotaLimitExceeded"),
      
+    // Exceeded the upper limit of the EIPs bound to the instance.
+     LIMITEXCEEDED_INSTANCEADDRESSQUOTA("LimitExceeded.InstanceAddressQuota"),
+     
+    // Ran out of the quota of chances to change the IP billing mode.
+     LIMITEXCEEDED_MODIFYADDRESSINTERNETCHARGETYPEQUOTA("LimitExceeded.ModifyAddressInternetChargeTypeQuota"),
+     
+    // Ran out of the monthly quota of chances to retrieve IPs.
+     LIMITEXCEEDED_MONTHLYADDRESSRECOVERYQUOTA("LimitExceeded.MonthlyAddressRecoveryQuota"),
+     
     // Reached the upper limit of NAT gateways.
      LIMITEXCEEDED_NATGATEWAYLIMITEXCEEDED("LimitExceeded.NatGatewayLimitExceeded"),
      
     // The number of NAT gateways created by the VPC has reached the upper limit.
      LIMITEXCEEDED_NATGATEWAYPERVPCLIMITEXCEEDED("LimitExceeded.NatGatewayPerVpcLimitExceeded"),
+     
+    // 
+     LIMITEXCEEDED_NUMBEROFFILTERS("LimitExceeded.NumberOfFilters"),
      
     // The number of EIPs bound to the NAT gateway has reached the upper limit.
      LIMITEXCEEDED_PUBLICIPADDRESSPERNATGATEWAYLIMITEXCEEDED("LimitExceeded.PublicIpAddressPerNatGatewayLimitExceeded"),
@@ -359,6 +380,9 @@ public enum VpcErrorCode {
      
     // The binding relationship does not exist.
      UNAUTHORIZEDOPERATION_ATTACHMENTNOTFOUND("UnauthorizedOperation.AttachmentNotFound"),
+     
+    // 
+     UNAUTHORIZEDOPERATION_INVALIDACCOUNT("UnauthorizedOperation.InvalidAccount"),
      
     // Identity verification has not been completed for the account.
      UNAUTHORIZEDOPERATION_NOREALNAMEAUTHENTICATION("UnauthorizedOperation.NoRealNameAuthentication"),
@@ -513,14 +537,14 @@ public enum VpcErrorCode {
     // The specified subnet does not support creating a route to the local gateway.
      UNSUPPORTEDOPERATION_NORMALSUBNETNOTSUPPORTLOCALGATEWAY("UnsupportedOperation.NormalSubnetNotSupportLocalGateway"),
      
+    // This operation is not allowed because the current instance is blocked.
+     UNSUPPORTEDOPERATION_NOTLOCKEDINSTANCEOPERATION("UnsupportedOperation.NotLockedInstanceOperation"),
+     
     // Unsupported operation: the current CCN instance is not in “Applying” status.
      UNSUPPORTEDOPERATION_NOTPENDINGCCNINSTANCE("UnsupportedOperation.NotPendingCcnInstance"),
      
     // Unsupported operation: the current CCN instance is not billed on a pay-as-you-go basis.
      UNSUPPORTEDOPERATION_NOTPOSTPAIDCCNOPERATION("UnsupportedOperation.NotPostpaidCcnOperation"),
-     
-    // The specified routing policy cannot be published to or withdrawn from CCN.
-     UNSUPPORTEDOPERATION_NOTIFYCCN("UnsupportedOperation.NotifyCcn"),
      
     // Only the Ckafka Pro Edition is supported.
      UNSUPPORTEDOPERATION_ONLYSUPPORTPROFESSIONKAFKA("UnsupportedOperation.OnlySupportProfessionKafka"),
@@ -542,6 +566,9 @@ public enum VpcErrorCode {
      
     // The EIP bound to the NAT gateway is not bill-by-traffic.
      UNSUPPORTEDOPERATION_PUBLICIPADDRESSNOTBILLEDBYTRAFFIC("UnsupportedOperation.PublicIpAddressNotBilledByTraffic"),
+     
+    // The current account can not use this service in the current region.
+     UNSUPPORTEDOPERATION_PURCHASELIMIT("UnsupportedOperation.PurchaseLimit"),
      
     // The resource ID entered does not match with any resource bound with the IP. Check and try again.
      UNSUPPORTEDOPERATION_RESOURCEMISMATCH("UnsupportedOperation.ResourceMismatch"),

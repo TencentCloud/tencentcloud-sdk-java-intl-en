@@ -479,6 +479,26 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the transcoding information of StreamLive streams.
+     * @param req DescribeStreamLiveTranscodeDetailRequest
+     * @return DescribeStreamLiveTranscodeDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamLiveTranscodeDetailResponse DescribeStreamLiveTranscodeDetail(DescribeStreamLiveTranscodeDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLiveTranscodeDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLiveTranscodeDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStreamLiveTranscodeDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query a watermark.
      * @param req DescribeStreamLiveWatermarkRequest
      * @return DescribeStreamLiveWatermarkResponse

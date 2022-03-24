@@ -37,7 +37,8 @@ public class SecurityGroupPolicy extends AbstractModel{
     private String Protocol;
 
     /**
-    * Port (all, discrete port, range).
+    * Port (`all`, a single port, or a port range).
+Note: If the `Protocol` value is set to `ALL`, the `Port` value also needs to be set to `all`.
     */
     @SerializedName("Port")
     @Expose
@@ -132,16 +133,20 @@ public class SecurityGroupPolicy extends AbstractModel{
     }
 
     /**
-     * Get Port (all, discrete port, range). 
-     * @return Port Port (all, discrete port, range).
+     * Get Port (`all`, a single port, or a port range).
+Note: If the `Protocol` value is set to `ALL`, the `Port` value also needs to be set to `all`. 
+     * @return Port Port (`all`, a single port, or a port range).
+Note: If the `Protocol` value is set to `ALL`, the `Port` value also needs to be set to `all`.
      */
     public String getPort() {
         return this.Port;
     }
 
     /**
-     * Set Port (all, discrete port, range).
-     * @param Port Port (all, discrete port, range).
+     * Set Port (`all`, a single port, or a port range).
+Note: If the `Protocol` value is set to `ALL`, the `Port` value also needs to be set to `all`.
+     * @param Port Port (`all`, a single port, or a port range).
+Note: If the `Protocol` value is set to `ALL`, the `Port` value also needs to be set to `all`.
      */
     public void setPort(String Port) {
         this.Port = Port;

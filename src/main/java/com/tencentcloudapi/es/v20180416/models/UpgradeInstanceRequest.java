@@ -65,6 +65,13 @@ public class UpgradeInstanceRequest extends AbstractModel{
     private String UpgradeMode;
 
     /**
+    * Whether to back up the cluster before version upgrade (no backup by default)
+    */
+    @SerializedName("CosBackup")
+    @Expose
+    private Boolean CosBackup;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -160,6 +167,22 @@ public class UpgradeInstanceRequest extends AbstractModel{
         this.UpgradeMode = UpgradeMode;
     }
 
+    /**
+     * Get Whether to back up the cluster before version upgrade (no backup by default) 
+     * @return CosBackup Whether to back up the cluster before version upgrade (no backup by default)
+     */
+    public Boolean getCosBackup() {
+        return this.CosBackup;
+    }
+
+    /**
+     * Set Whether to back up the cluster before version upgrade (no backup by default)
+     * @param CosBackup Whether to back up the cluster before version upgrade (no backup by default)
+     */
+    public void setCosBackup(Boolean CosBackup) {
+        this.CosBackup = CosBackup;
+    }
+
     public UpgradeInstanceRequest() {
     }
 
@@ -186,6 +209,9 @@ public class UpgradeInstanceRequest extends AbstractModel{
         if (source.UpgradeMode != null) {
             this.UpgradeMode = new String(source.UpgradeMode);
         }
+        if (source.CosBackup != null) {
+            this.CosBackup = new Boolean(source.CosBackup);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class UpgradeInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
         this.setParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
         this.setParamSimple(map, prefix + "UpgradeMode", this.UpgradeMode);
+        this.setParamSimple(map, prefix + "CosBackup", this.CosBackup);
 
     }
 }

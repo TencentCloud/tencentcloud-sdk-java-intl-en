@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateAddressTemplateRequest extends AbstractModel{
 
     /**
-    * The name of the IP address template
+    * IP address template name.
     */
     @SerializedName("AddressTemplateName")
     @Expose
@@ -44,16 +44,16 @@ public class CreateAddressTemplateRequest extends AbstractModel{
     private AddressInfo [] AddressesExtra;
 
     /**
-     * Get The name of the IP address template 
-     * @return AddressTemplateName The name of the IP address template
+     * Get IP address template name. 
+     * @return AddressTemplateName IP address template name.
      */
     public String getAddressTemplateName() {
         return this.AddressTemplateName;
     }
 
     /**
-     * Set The name of the IP address template
-     * @param AddressTemplateName The name of the IP address template
+     * Set IP address template name.
+     * @param AddressTemplateName IP address template name.
      */
     public void setAddressTemplateName(String AddressTemplateName) {
         this.AddressTemplateName = AddressTemplateName;

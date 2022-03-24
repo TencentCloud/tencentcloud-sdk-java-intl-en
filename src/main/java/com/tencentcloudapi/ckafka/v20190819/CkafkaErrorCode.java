@@ -45,7 +45,7 @@ public enum CkafkaErrorCode {
     // Operation denied.
      OPERATIONDENIED("OperationDenied"),
      
-    // 
+    // Task paused.
      OPERATIONDENIED_RESOURCETASKPAUSED("OperationDenied.ResourceTaskPaused"),
      
     // The number of requests exceeds the frequency limit.

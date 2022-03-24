@@ -55,6 +55,14 @@ public class AdaptiveStreamTemplate extends AbstractModel{
     private Long RemoveVideo;
 
     /**
+    * TESHD transcoding parameters
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("TEHDConfig")
+    @Expose
+    private TEHDConfig TEHDConfig;
+
+    /**
      * Get Video parameter information. 
      * @return Video Video parameter information.
      */
@@ -134,6 +142,26 @@ public class AdaptiveStreamTemplate extends AbstractModel{
         this.RemoveVideo = RemoveVideo;
     }
 
+    /**
+     * Get TESHD transcoding parameters
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return TEHDConfig TESHD transcoding parameters
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public TEHDConfig getTEHDConfig() {
+        return this.TEHDConfig;
+    }
+
+    /**
+     * Set TESHD transcoding parameters
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param TEHDConfig TESHD transcoding parameters
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setTEHDConfig(TEHDConfig TEHDConfig) {
+        this.TEHDConfig = TEHDConfig;
+    }
+
     public AdaptiveStreamTemplate() {
     }
 
@@ -154,6 +182,9 @@ public class AdaptiveStreamTemplate extends AbstractModel{
         if (source.RemoveVideo != null) {
             this.RemoveVideo = new Long(source.RemoveVideo);
         }
+        if (source.TEHDConfig != null) {
+            this.TEHDConfig = new TEHDConfig(source.TEHDConfig);
+        }
     }
 
 
@@ -165,6 +196,7 @@ public class AdaptiveStreamTemplate extends AbstractModel{
         this.setParamObj(map, prefix + "Audio.", this.Audio);
         this.setParamSimple(map, prefix + "RemoveAudio", this.RemoveAudio);
         this.setParamSimple(map, prefix + "RemoveVideo", this.RemoveVideo);
+        this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
 
     }
 }

@@ -23,9 +23,7 @@ import java.util.HashMap;
 public class TEHDConfig extends AbstractModel{
 
     /**
-    * TESHD type. Valid values:
-<li>TEHD-100: TESHD-100.</li>
-If this parameter is left blank, TESHD will not be enabled.
+    * TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
     */
     @SerializedName("Type")
     @Expose
@@ -40,24 +38,16 @@ If this parameter is left blank or 0 is entered, there will be no upper limit fo
     private Long MaxVideoBitrate;
 
     /**
-     * Get TESHD type. Valid values:
-<li>TEHD-100: TESHD-100.</li>
-If this parameter is left blank, TESHD will not be enabled. 
-     * @return Type TESHD type. Valid values:
-<li>TEHD-100: TESHD-100.</li>
-If this parameter is left blank, TESHD will not be enabled.
+     * Get TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li> 
+     * @return Type TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set TESHD type. Valid values:
-<li>TEHD-100: TESHD-100.</li>
-If this parameter is left blank, TESHD will not be enabled.
-     * @param Type TESHD type. Valid values:
-<li>TEHD-100: TESHD-100.</li>
-If this parameter is left blank, TESHD will not be enabled.
+     * Set TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
+     * @param Type TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
      */
     public void setType(String Type) {
         this.Type = Type;

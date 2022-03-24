@@ -21,6 +21,9 @@ public enum MdlErrorCode {
     // Incorrect audio transcoding template.
      INVALIDPARAMETER_AUDIOTEMPLATES("InvalidParameter.AudioTemplates"),
      
+    // Channel ID error.
+     INVALIDPARAMETER_CHANNELID("InvalidParameter.ChannelId"),
+     
     // Invalid `EndTime`.
      INVALIDPARAMETER_ENDTIME("InvalidParameter.EndTime"),
      
@@ -44,6 +47,9 @@ public enum MdlErrorCode {
      
     // Invalid `OutputGroups`.
      INVALIDPARAMETER_OUTPUTGROUPS("InvalidParameter.OutputGroups"),
+     
+    // Page number error.
+     INVALIDPARAMETER_PAGENUM("InvalidParameter.PageNum"),
      
     // Invalid `Plan` parameter
      INVALIDPARAMETER_PLAN("InvalidParameter.Plan"),

@@ -262,26 +262,6 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
-     *This API is used to associate a network ACL with subnets in a VPC instance.
-     * @param req AssociateNetworkAclSubnetsRequest
-     * @return AssociateNetworkAclSubnetsResponse
-     * @throws TencentCloudSDKException
-     */
-    public AssociateNetworkAclSubnetsResponse AssociateNetworkAclSubnets(AssociateNetworkAclSubnetsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AssociateNetworkAclSubnetsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<AssociateNetworkAclSubnetsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "AssociateNetworkAclSubnets");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API (AssociateNetworkInterfaceSecurityGroups) is used to attach a security group to an ENI.
      * @param req AssociateNetworkInterfaceSecurityGroupsRequest
      * @return AssociateNetworkInterfaceSecurityGroupsResponse
@@ -458,7 +438,7 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
-     *This API (CreateAddressTemplate) is used to create an IP address template.
+     *This API is used to create an IP address template.
      * @param req CreateAddressTemplateRequest
      * @return CreateAddressTemplateResponse
      * @throws TencentCloudSDKException
@@ -478,7 +458,7 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
-     *This API (CreateAddressTemplateGroup) is used to create an IP address template group.
+     *This API is used to create an IP address template group.
      * @param req CreateAddressTemplateGroupRequest
      * @return CreateAddressTemplateGroupResponse
      * @throws TencentCloudSDKException
@@ -517,26 +497,6 @@ This API is completed asynchronously. If you need to query the execution result 
                 Type type = new TypeToken<JsonResponseModel<CreateAndAttachNetworkInterfaceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateAndAttachNetworkInterface");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API (CreateAssistantCidr) is used to batch create secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
-     * @param req CreateAssistantCidrRequest
-     * @return CreateAssistantCidrResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateAssistantCidrResponse CreateAssistantCidr(CreateAssistantCidrRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateAssistantCidrResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateAssistantCidrResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateAssistantCidr");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -808,27 +768,6 @@ Before taking actions on a NAT Gateway, ensure that it has been successfully cre
                 Type type = new TypeToken<JsonResponseModel<CreateNetDetectResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateNetDetect");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to create a <a href="https://intl.cloud.tencent.com/document/product/215/20088?from_cn_redirect=1">network ACL</a>.
-* The inbound and outbound rules for a new network ACL are "Deny All" by default. You need to call `ModifyNetworkAclEntries` after creation to set rules for the network ACL as needed.
-     * @param req CreateNetworkAclRequest
-     * @return CreateNetworkAclResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateNetworkAclResponse CreateNetworkAcl(CreateNetworkAclRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateNetworkAclResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateNetworkAclResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateNetworkAcl");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1274,26 +1213,6 @@ Description:
     }
 
     /**
-     *This API (DeleteAssistantCidr) is used to delete secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
-     * @param req DeleteAssistantCidrRequest
-     * @return DeleteAssistantCidrResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteAssistantCidrResponse DeleteAssistantCidr(DeleteAssistantCidrRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteAssistantCidrResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteAssistantCidrResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteAssistantCidr");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to delete bandwidth packages, including [device bandwidth packages](https://intl.cloud.tencent.com/document/product/684/15246?from_cn_redirect=1#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://intl.cloud.tencent.com/document/product/684/15246?from_cn_redirect=1#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85).
      * @param req DeleteBandwidthPackageRequest
      * @return DeleteBandwidthPackageResponse
@@ -1534,26 +1453,6 @@ After the deletion of a NAT gateway, the system will automatically delete the ro
                 Type type = new TypeToken<JsonResponseModel<DeleteNetDetectResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteNetDetect");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to delete a network ACL.
-     * @param req DeleteNetworkAclRequest
-     * @return DeleteNetworkAclResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteNetworkAclResponse DeleteNetworkAcl(DeleteNetworkAclRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteNetworkAclResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteNetworkAclResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteNetworkAcl");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2340,26 +2239,6 @@ A service provider can query all review requests created by any `APPID` under it
     }
 
     /**
-     *This API (DescribeGatewayFlowQos) is used to query the QoS bandwidth limit of inbound IP flow in a gateway.
-     * @param req DescribeGatewayFlowQosRequest
-     * @return DescribeGatewayFlowQosResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeGatewayFlowQosResponse DescribeGatewayFlowQos(DescribeGatewayFlowQosRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeGatewayFlowQosResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeGatewayFlowQosResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeGatewayFlowQos");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API (DescribeHaVips) is used to query the list of highly available virtual IPs (HAVIP).
      * @param req DescribeHaVipsRequest
      * @return DescribeHaVipsResponse
@@ -2923,26 +2802,6 @@ This API is used to query only the information of IP addresses that are already 
     }
 
     /**
-     *This API is used to query the execution result of a VPC task.
-     * @param req DescribeVpcTaskResultRequest
-     * @return DescribeVpcTaskResultResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeVpcTaskResultResponse DescribeVpcTaskResult(DescribeVpcTaskResultRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeVpcTaskResultResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeVpcTaskResultResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeVpcTaskResult");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API (DescribeVpcs) is used to query the VPC list.
      * @param req DescribeVpcsRequest
      * @return DescribeVpcsResponse
@@ -3127,26 +2986,6 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
-     *This API (DisableGatewayFlowMonitor) is used to disable gateway flow monitor.
-     * @param req DisableGatewayFlowMonitorRequest
-     * @return DisableGatewayFlowMonitorResponse
-     * @throws TencentCloudSDKException
-     */
-    public DisableGatewayFlowMonitorResponse DisableGatewayFlowMonitor(DisableGatewayFlowMonitorRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DisableGatewayFlowMonitorResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DisableGatewayFlowMonitorResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DisableGatewayFlowMonitor");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to unbind an [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) (EIP for short).
 * This API supports unbinding an EIP from CVM instances and ENIs.
 * This API does not support unbinding an EIP from a NAT Gateway. To unbind an EIP from a NAT Gateway, use the [`DisassociateNatGatewayAddress`](https://intl.cloud.tencent.com/document/api/215/36716?from_cn_redirect=1) API.
@@ -3203,26 +3042,6 @@ This API is completed asynchronously. If you need to query the execution result 
                 Type type = new TypeToken<JsonResponseModel<DisassociateNatGatewayAddressResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DisassociateNatGatewayAddress");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to disassociate a network ACL from subnets in a VPC instance.
-     * @param req DisassociateNetworkAclSubnetsRequest
-     * @return DisassociateNetworkAclSubnetsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DisassociateNetworkAclSubnetsResponse DisassociateNetworkAclSubnets(DisassociateNetworkAclSubnetsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DisassociateNetworkAclSubnetsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DisassociateNetworkAclSubnetsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DisassociateNetworkAclSubnets");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3304,26 +3123,6 @@ This API is used to verify whether there will be conflict with an existing route
                 Type type = new TypeToken<JsonResponseModel<EnableCcnRoutesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "EnableCcnRoutes");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API (EnableGatewayFlowMonitor) is used to enable gateway flow monitor.
-     * @param req EnableGatewayFlowMonitorRequest
-     * @return EnableGatewayFlowMonitorResponse
-     * @throws TencentCloudSDKException
-     */
-    public EnableGatewayFlowMonitorResponse EnableGatewayFlowMonitor(EnableGatewayFlowMonitorRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EnableGatewayFlowMonitorResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<EnableGatewayFlowMonitorResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EnableGatewayFlowMonitor");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3641,26 +3440,6 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
-     *This API (ModifyAssistantCidr) is used to batch modify (e.g. add and delete) secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
-     * @param req ModifyAssistantCidrRequest
-     * @return ModifyAssistantCidrResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyAssistantCidrResponse ModifyAssistantCidr(ModifyAssistantCidrRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyAssistantCidrResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyAssistantCidrResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyAssistantCidr");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to modify the attributes of a bandwidth package, including the bandwidth package name, and so on.
      * @param req ModifyBandwidthPackageAttributeRequest
      * @return ModifyBandwidthPackageAttributeResponse
@@ -3802,26 +3581,6 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
-     *This API (ModifyGatewayFlowQos) is used to adjust the QoS bandwidth limit in a gateway.
-     * @param req ModifyGatewayFlowQosRequest
-     * @return ModifyGatewayFlowQosResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyGatewayFlowQosResponse ModifyGatewayFlowQos(ModifyGatewayFlowQosRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyGatewayFlowQosResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyGatewayFlowQosResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyGatewayFlowQos");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API (ModifyHaVipAttribute) is used to modify HAVIP attributes.
      * @param req ModifyHaVipAttributeRequest
      * @return ModifyHaVipAttributeResponse
@@ -3954,46 +3713,6 @@ This API is completed asynchronously. If you need to query the execution result 
                 Type type = new TypeToken<JsonResponseModel<ModifyNetDetectResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyNetDetect");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to modify the attributes of a network ACL.
-     * @param req ModifyNetworkAclAttributeRequest
-     * @return ModifyNetworkAclAttributeResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyNetworkAclAttributeResponse ModifyNetworkAclAttribute(ModifyNetworkAclAttributeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyNetworkAclAttributeResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyNetworkAclAttributeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyNetworkAclAttribute");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to modify (add or delete) the inbound and outbound rules of a network ACL.
-     * @param req ModifyNetworkAclEntriesRequest
-     * @return ModifyNetworkAclEntriesResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyNetworkAclEntriesResponse ModifyNetworkAclEntries(ModifyNetworkAclEntriesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyNetworkAclEntriesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyNetworkAclEntriesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyNetworkAclEntries");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -4331,26 +4050,6 @@ This API is completed asynchronously. If you need to query the execution result 
                 Type type = new TypeToken<JsonResponseModel<ModifyVpnGatewayRoutesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyVpnGatewayRoutes");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to publish a route to CCN. This can also be done by clicking the **Publish to CCN** button on the route table page.
-     * @param req NotifyRoutesRequest
-     * @return NotifyRoutesResponse
-     * @throws TencentCloudSDKException
-     */
-    public NotifyRoutesResponse NotifyRoutes(NotifyRoutesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<NotifyRoutesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<NotifyRoutesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "NotifyRoutes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -4744,26 +4443,6 @@ This API is completed asynchronously. If you need to query the execution result 
                 Type type = new TypeToken<JsonResponseModel<UnassignPrivateIpAddressesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UnassignPrivateIpAddresses");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to withdraw a route from CCN. This can also be done by clicking the **Withdraw from CCN** button on the route table page.
-     * @param req WithdrawNotifyRoutesRequest
-     * @return WithdrawNotifyRoutesResponse
-     * @throws TencentCloudSDKException
-     */
-    public WithdrawNotifyRoutesResponse WithdrawNotifyRoutes(WithdrawNotifyRoutesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<WithdrawNotifyRoutesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<WithdrawNotifyRoutesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "WithdrawNotifyRoutes");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

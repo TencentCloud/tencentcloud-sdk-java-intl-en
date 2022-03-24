@@ -1732,6 +1732,38 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     }
 
     /**
+     *This API is used to modify the storage class of media files.
+If the current storage class is STANDARD, it can be changed to one of the following classes:
+<li>STANDARD_IA</li>
+<li>ARCHIVE</li>
+<li>DEEP ARCHIVE</li>
+If the current storage class is STANDARD_IA, it can be changed to one of the following classes:
+<li>STANDARD</li>
+<li>ARCHIVE</li>
+<li>DEEP ARCHIVE</li>
+If the current storage class is ARCHIVE, it can be changed to the following class:
+<li>STANDARD</li>
+If the current storage class is DEEP ARCHIVE, it can be changed to the following class:
+<li>STANDARD</li>
+     * @param req ModifyMediaStorageClassRequest
+     * @return ModifyMediaStorageClassResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMediaStorageClassResponse ModifyMediaStorageClass(ModifyMediaStorageClassRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyMediaStorageClassResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyMediaStorageClassResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyMediaStorageClass");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify sample information according to the sample ID. You can modify the name and description, add, delete, and reset facial features or tags. Leave at least one image after deleting facial features. To leave no image, please use the reset operation.
      * @param req ModifyPersonSampleRequest
      * @return ModifyPersonSampleResponse
