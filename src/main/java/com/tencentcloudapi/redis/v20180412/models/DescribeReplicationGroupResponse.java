@@ -20,15 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceCreateInstanceResponse extends AbstractModel{
+public class DescribeReplicationGroupResponse extends AbstractModel{
 
     /**
-    * Price. Unit: USD (accurate down to the cent)
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Number of replication group
     */
-    @SerializedName("Price")
+    @SerializedName("TotalCount")
     @Expose
-    private Float Price;
+    private Long TotalCount;
+
+    /**
+    * Replication group info
+    */
+    @SerializedName("Groups")
+    @Expose
+    private Groups [] Groups;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,23 +44,35 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get Price. Unit: USD (accurate down to the cent)
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Price Price. Unit: USD (accurate down to the cent)
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Number of replication group 
+     * @return TotalCount Number of replication group
      */
-    public Float getPrice() {
-        return this.Price;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set Price. Unit: USD (accurate down to the cent)
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Price Price. Unit: USD (accurate down to the cent)
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Number of replication group
+     * @param TotalCount Number of replication group
      */
-    public void setPrice(Float Price) {
-        this.Price = Price;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get Replication group info 
+     * @return Groups Replication group info
+     */
+    public Groups [] getGroups() {
+        return this.Groups;
+    }
+
+    /**
+     * Set Replication group info
+     * @param Groups Replication group info
+     */
+    public void setGroups(Groups [] Groups) {
+        this.Groups = Groups;
     }
 
     /**
@@ -73,16 +91,22 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.RequestId = RequestId;
     }
 
-    public InquiryPriceCreateInstanceResponse() {
+    public DescribeReplicationGroupResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InquiryPriceCreateInstanceResponse(InquiryPriceCreateInstanceResponse source) {
-        if (source.Price != null) {
-            this.Price = new Float(source.Price);
+    public DescribeReplicationGroupResponse(DescribeReplicationGroupResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Groups != null) {
+            this.Groups = new Groups[source.Groups.length];
+            for (int i = 0; i < source.Groups.length; i++) {
+                this.Groups[i] = new Groups(source.Groups[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +118,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Price", this.Price);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Groups.", this.Groups);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

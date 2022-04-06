@@ -13,22 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.redis.v20180412.models;
+package com.tencentcloudapi.es.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceCreateInstanceResponse extends AbstractModel{
-
-    /**
-    * Price. Unit: USD (accurate down to the cent)
-Note: This field may return `null`, indicating that no valid values can be obtained.
-    */
-    @SerializedName("Price")
-    @Expose
-    private Float Price;
+public class UpdateDictionariesResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -36,26 +28,6 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get Price. Unit: USD (accurate down to the cent)
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Price Price. Unit: USD (accurate down to the cent)
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     */
-    public Float getPrice() {
-        return this.Price;
-    }
-
-    /**
-     * Set Price. Unit: USD (accurate down to the cent)
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Price Price. Unit: USD (accurate down to the cent)
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     */
-    public void setPrice(Float Price) {
-        this.Price = Price;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -73,17 +45,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.RequestId = RequestId;
     }
 
-    public InquiryPriceCreateInstanceResponse() {
+    public UpdateDictionariesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InquiryPriceCreateInstanceResponse(InquiryPriceCreateInstanceResponse source) {
-        if (source.Price != null) {
-            this.Price = new Float(source.Price);
-        }
+    public UpdateDictionariesResponse(UpdateDictionariesResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,7 +63,6 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Price", this.Price);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

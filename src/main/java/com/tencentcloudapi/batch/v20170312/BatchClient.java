@@ -528,26 +528,6 @@ Job retry is supported only if a job is in the "FAILED" state. After the retry o
     }
 
     /**
-     *This API is used to submit a instance.
-     * @param req SubmitJobRequest
-     * @return SubmitJobResponse
-     * @throws TencentCloudSDKException
-     */
-    public SubmitJobResponse SubmitJob(SubmitJobRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SubmitJobResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<SubmitJobResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SubmitJob");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to terminate a compute node.
 Termination is allowed for nodes in the CREATED, CREATION_FAILED, RUNNING or ABNORMAL state.
      * @param req TerminateComputeNodeRequest

@@ -88,6 +88,13 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel{
     private RecordParam Mp3Param;
 
     /**
+    * Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
+    */
+    @SerializedName("RemoveWatermark")
+    @Expose
+    private Boolean RemoveWatermark;
+
+    /**
      * Get Template name. Only letters, digits, underscores, and hyphens can be contained. 
      * @return TemplateName Template name. Only letters, digits, underscores, and hyphens can be contained.
      */
@@ -239,6 +246,22 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel{
         this.Mp3Param = Mp3Param;
     }
 
+    /**
+     * Get Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`. 
+     * @return RemoveWatermark Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
+     */
+    public Boolean getRemoveWatermark() {
+        return this.RemoveWatermark;
+    }
+
+    /**
+     * Set Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
+     * @param RemoveWatermark Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
+     */
+    public void setRemoveWatermark(Boolean RemoveWatermark) {
+        this.RemoveWatermark = RemoveWatermark;
+    }
+
     public CreateLiveRecordTemplateRequest() {
     }
 
@@ -274,6 +297,9 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel{
         if (source.Mp3Param != null) {
             this.Mp3Param = new RecordParam(source.Mp3Param);
         }
+        if (source.RemoveWatermark != null) {
+            this.RemoveWatermark = new Boolean(source.RemoveWatermark);
+        }
     }
 
 
@@ -290,6 +316,7 @@ public class CreateLiveRecordTemplateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
         this.setParamObj(map, prefix + "HlsSpecialParam.", this.HlsSpecialParam);
         this.setParamObj(map, prefix + "Mp3Param.", this.Mp3Param);
+        this.setParamSimple(map, prefix + "RemoveWatermark", this.RemoveWatermark);
 
     }
 }

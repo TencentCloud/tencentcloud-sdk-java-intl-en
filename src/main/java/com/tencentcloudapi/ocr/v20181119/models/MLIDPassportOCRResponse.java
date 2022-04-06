@@ -104,6 +104,20 @@ public class MLIDPassportOCRResponse extends AbstractModel{
     private String AdvancedInfo;
 
     /**
+    * The first row of the machine-readable zone (MRZ) at the bottom
+    */
+    @SerializedName("CodeSet")
+    @Expose
+    private String CodeSet;
+
+    /**
+    * The second row of the MRZ at the bottom
+    */
+    @SerializedName("CodeCrc")
+    @Expose
+    private String CodeCrc;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -315,6 +329,38 @@ public class MLIDPassportOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get The first row of the machine-readable zone (MRZ) at the bottom 
+     * @return CodeSet The first row of the machine-readable zone (MRZ) at the bottom
+     */
+    public String getCodeSet() {
+        return this.CodeSet;
+    }
+
+    /**
+     * Set The first row of the machine-readable zone (MRZ) at the bottom
+     * @param CodeSet The first row of the machine-readable zone (MRZ) at the bottom
+     */
+    public void setCodeSet(String CodeSet) {
+        this.CodeSet = CodeSet;
+    }
+
+    /**
+     * Get The second row of the MRZ at the bottom 
+     * @return CodeCrc The second row of the MRZ at the bottom
+     */
+    public String getCodeCrc() {
+        return this.CodeCrc;
+    }
+
+    /**
+     * Set The second row of the MRZ at the bottom
+     * @param CodeCrc The second row of the MRZ at the bottom
+     */
+    public void setCodeCrc(String CodeCrc) {
+        this.CodeCrc = CodeCrc;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -371,6 +417,12 @@ public class MLIDPassportOCRResponse extends AbstractModel{
         if (source.AdvancedInfo != null) {
             this.AdvancedInfo = new String(source.AdvancedInfo);
         }
+        if (source.CodeSet != null) {
+            this.CodeSet = new String(source.CodeSet);
+        }
+        if (source.CodeCrc != null) {
+            this.CodeCrc = new String(source.CodeCrc);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -391,6 +443,8 @@ public class MLIDPassportOCRResponse extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Warn.", this.Warn);
         this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
+        this.setParamSimple(map, prefix + "CodeSet", this.CodeSet);
+        this.setParamSimple(map, prefix + "CodeCrc", this.CodeCrc);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

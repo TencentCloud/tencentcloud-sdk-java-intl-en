@@ -94,6 +94,14 @@ public class RecordTemplateInfo extends AbstractModel{
     private RecordParam Mp3Param;
 
     /**
+    * Whether the watermark is removed.
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("RemoveWatermark")
+    @Expose
+    private Boolean RemoveWatermark;
+
+    /**
      * Get Template ID. 
      * @return TemplateId Template ID.
      */
@@ -257,6 +265,26 @@ public class RecordTemplateInfo extends AbstractModel{
         this.Mp3Param = Mp3Param;
     }
 
+    /**
+     * Get Whether the watermark is removed.
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return RemoveWatermark Whether the watermark is removed.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public Boolean getRemoveWatermark() {
+        return this.RemoveWatermark;
+    }
+
+    /**
+     * Set Whether the watermark is removed.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param RemoveWatermark Whether the watermark is removed.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setRemoveWatermark(Boolean RemoveWatermark) {
+        this.RemoveWatermark = RemoveWatermark;
+    }
+
     public RecordTemplateInfo() {
     }
 
@@ -295,6 +323,9 @@ public class RecordTemplateInfo extends AbstractModel{
         if (source.Mp3Param != null) {
             this.Mp3Param = new RecordParam(source.Mp3Param);
         }
+        if (source.RemoveWatermark != null) {
+            this.RemoveWatermark = new Boolean(source.RemoveWatermark);
+        }
     }
 
 
@@ -312,6 +343,7 @@ public class RecordTemplateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
         this.setParamObj(map, prefix + "HlsSpecialParam.", this.HlsSpecialParam);
         this.setParamObj(map, prefix + "Mp3Param.", this.Mp3Param);
+        this.setParamSimple(map, prefix + "RemoveWatermark", this.RemoveWatermark);
 
     }
 }

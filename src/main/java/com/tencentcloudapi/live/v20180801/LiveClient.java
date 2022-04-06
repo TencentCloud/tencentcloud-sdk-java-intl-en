@@ -760,26 +760,6 @@ Note: only one screencapturing template can be associated with one domain name.
     }
 
     /**
-     *This API is used to query the data of billable LVB bandwidth and traffic.
-     * @param req DescribeBillBandwidthAndFluxListRequest
-     * @return DescribeBillBandwidthAndFluxListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeBillBandwidthAndFluxListResponse DescribeBillBandwidthAndFluxList(DescribeBillBandwidthAndFluxListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBillBandwidthAndFluxListResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBillBandwidthAndFluxListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBillBandwidthAndFluxList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to query the number of concurrent recording channels, which is applicable to LCB and LVB.
      * @param req DescribeConcurrentRecordStreamNumRequest
      * @return DescribeConcurrentRecordStreamNumResponse
@@ -1681,26 +1661,6 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamPlayInfoListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeStreamPlayInfoList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query the upstream push quality data by stream ID, including frame rate, bitrate, elapsed time, and codec of audio and video files.
-     * @param req DescribeStreamPushInfoListRequest
-     * @return DescribeStreamPushInfoListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeStreamPushInfoListResponse DescribeStreamPushInfoList(DescribeStreamPushInfoListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeStreamPushInfoListResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeStreamPushInfoListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeStreamPushInfoList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

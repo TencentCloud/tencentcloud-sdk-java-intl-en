@@ -86,6 +86,13 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel{
     private RecordParam Mp3Param;
 
     /**
+    * Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
+    */
+    @SerializedName("RemoveWatermark")
+    @Expose
+    private Boolean RemoveWatermark;
+
+    /**
      * Get Template ID obtained through the `DescribeRecordTemplates` API. 
      * @return TemplateId Template ID obtained through the `DescribeRecordTemplates` API.
      */
@@ -229,6 +236,22 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel{
         this.Mp3Param = Mp3Param;
     }
 
+    /**
+     * Get Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`. 
+     * @return RemoveWatermark Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
+     */
+    public Boolean getRemoveWatermark() {
+        return this.RemoveWatermark;
+    }
+
+    /**
+     * Set Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
+     * @param RemoveWatermark Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
+     */
+    public void setRemoveWatermark(Boolean RemoveWatermark) {
+        this.RemoveWatermark = RemoveWatermark;
+    }
+
     public ModifyLiveRecordTemplateRequest() {
     }
 
@@ -264,6 +287,9 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel{
         if (source.Mp3Param != null) {
             this.Mp3Param = new RecordParam(source.Mp3Param);
         }
+        if (source.RemoveWatermark != null) {
+            this.RemoveWatermark = new Boolean(source.RemoveWatermark);
+        }
     }
 
 
@@ -280,6 +306,7 @@ public class ModifyLiveRecordTemplateRequest extends AbstractModel{
         this.setParamObj(map, prefix + "AacParam.", this.AacParam);
         this.setParamObj(map, prefix + "HlsSpecialParam.", this.HlsSpecialParam);
         this.setParamObj(map, prefix + "Mp3Param.", this.Mp3Param);
+        this.setParamSimple(map, prefix + "RemoveWatermark", this.RemoveWatermark);
 
     }
 }

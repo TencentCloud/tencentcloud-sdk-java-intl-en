@@ -13,22 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.redis.v20180412.models;
+package com.tencentcloudapi.privatedns.v20201028.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceCreateInstanceResponse extends AbstractModel{
+public class DescribeQuotaUsageResponse extends AbstractModel{
 
     /**
-    * Price. Unit: USD (accurate down to the cent)
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * TLD quota usage
     */
-    @SerializedName("Price")
+    @SerializedName("TldQuota")
     @Expose
-    private Float Price;
+    private TldQuota TldQuota;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,23 +37,19 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get Price. Unit: USD (accurate down to the cent)
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Price Price. Unit: USD (accurate down to the cent)
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get TLD quota usage 
+     * @return TldQuota TLD quota usage
      */
-    public Float getPrice() {
-        return this.Price;
+    public TldQuota getTldQuota() {
+        return this.TldQuota;
     }
 
     /**
-     * Set Price. Unit: USD (accurate down to the cent)
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Price Price. Unit: USD (accurate down to the cent)
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set TLD quota usage
+     * @param TldQuota TLD quota usage
      */
-    public void setPrice(Float Price) {
-        this.Price = Price;
+    public void setTldQuota(TldQuota TldQuota) {
+        this.TldQuota = TldQuota;
     }
 
     /**
@@ -73,16 +68,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.RequestId = RequestId;
     }
 
-    public InquiryPriceCreateInstanceResponse() {
+    public DescribeQuotaUsageResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InquiryPriceCreateInstanceResponse(InquiryPriceCreateInstanceResponse source) {
-        if (source.Price != null) {
-            this.Price = new Float(source.Price);
+    public DescribeQuotaUsageResponse(DescribeQuotaUsageResponse source) {
+        if (source.TldQuota != null) {
+            this.TldQuota = new TldQuota(source.TldQuota);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +89,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Price", this.Price);
+        this.setParamObj(map, prefix + "TldQuota.", this.TldQuota);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

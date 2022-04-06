@@ -239,6 +239,26 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to update ES cluster dictionaries.
+     * @param req UpdateDictionariesRequest
+     * @return UpdateDictionariesResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateDictionariesResponse UpdateDictionaries(UpdateDictionariesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateDictionariesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateDictionariesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateDictionaries");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used for operations such as modifying node specification, renaming an instance, modifying configuration, resetting password, and setting Kibana blocklist/allowlist. `InstanceId` is required, while `ForceRestart` is optional. Other parameters or parameter combinations and their meanings are as follows:
 - InstanceName: renames an instance (only for instance identification)
 - NodeInfoList: modifies node configuration (horizontally scaling nodes, vertically scaling nodes, adding primary nodes, adding cold nodes, etc.)

@@ -58,7 +58,7 @@ public class PushDataInfo extends AbstractModel{
     private Long VideoFps;
 
     /**
-    * Video bitrate (Kbps) for publishing
+    * Video bitrate (bps) for publishing
     */
     @SerializedName("VideoSpeed")
     @Expose
@@ -72,7 +72,7 @@ public class PushDataInfo extends AbstractModel{
     private Long AudioFps;
 
     /**
-    * Audio bitrate (Kbps) for publishing
+    * Audio bitrate (bps) for publishing
     */
     @SerializedName("AudioSpeed")
     @Expose
@@ -123,14 +123,14 @@ Example: H.264.
     private Long AsampleRate;
 
     /**
-    * Audio bitrate in `metadata` in Kbps.
+    * Audio bitrate (bps) in metadata
     */
     @SerializedName("MetaAudioSpeed")
     @Expose
     private Long MetaAudioSpeed;
 
     /**
-    * Video bitrate in `metadata` in Kbps.
+    * Video bitrate (bps) in metadata
     */
     @SerializedName("MetaVideoSpeed")
     @Expose
@@ -224,16 +224,16 @@ Example: H.264.
     }
 
     /**
-     * Get Video bitrate (Kbps) for publishing 
-     * @return VideoSpeed Video bitrate (Kbps) for publishing
+     * Get Video bitrate (bps) for publishing 
+     * @return VideoSpeed Video bitrate (bps) for publishing
      */
     public Long getVideoSpeed() {
         return this.VideoSpeed;
     }
 
     /**
-     * Set Video bitrate (Kbps) for publishing
-     * @param VideoSpeed Video bitrate (Kbps) for publishing
+     * Set Video bitrate (bps) for publishing
+     * @param VideoSpeed Video bitrate (bps) for publishing
      */
     public void setVideoSpeed(Long VideoSpeed) {
         this.VideoSpeed = VideoSpeed;
@@ -256,16 +256,16 @@ Example: H.264.
     }
 
     /**
-     * Get Audio bitrate (Kbps) for publishing 
-     * @return AudioSpeed Audio bitrate (Kbps) for publishing
+     * Get Audio bitrate (bps) for publishing 
+     * @return AudioSpeed Audio bitrate (bps) for publishing
      */
     public Long getAudioSpeed() {
         return this.AudioSpeed;
     }
 
     /**
-     * Set Audio bitrate (Kbps) for publishing
-     * @param AudioSpeed Audio bitrate (Kbps) for publishing
+     * Set Audio bitrate (bps) for publishing
+     * @param AudioSpeed Audio bitrate (bps) for publishing
      */
     public void setAudioSpeed(Long AudioSpeed) {
         this.AudioSpeed = AudioSpeed;
@@ -376,32 +376,32 @@ Example: H.264.
     }
 
     /**
-     * Get Audio bitrate in `metadata` in Kbps. 
-     * @return MetaAudioSpeed Audio bitrate in `metadata` in Kbps.
+     * Get Audio bitrate (bps) in metadata 
+     * @return MetaAudioSpeed Audio bitrate (bps) in metadata
      */
     public Long getMetaAudioSpeed() {
         return this.MetaAudioSpeed;
     }
 
     /**
-     * Set Audio bitrate in `metadata` in Kbps.
-     * @param MetaAudioSpeed Audio bitrate in `metadata` in Kbps.
+     * Set Audio bitrate (bps) in metadata
+     * @param MetaAudioSpeed Audio bitrate (bps) in metadata
      */
     public void setMetaAudioSpeed(Long MetaAudioSpeed) {
         this.MetaAudioSpeed = MetaAudioSpeed;
     }
 
     /**
-     * Get Video bitrate in `metadata` in Kbps. 
-     * @return MetaVideoSpeed Video bitrate in `metadata` in Kbps.
+     * Get Video bitrate (bps) in metadata 
+     * @return MetaVideoSpeed Video bitrate (bps) in metadata
      */
     public Long getMetaVideoSpeed() {
         return this.MetaVideoSpeed;
     }
 
     /**
-     * Set Video bitrate in `metadata` in Kbps.
-     * @param MetaVideoSpeed Video bitrate in `metadata` in Kbps.
+     * Set Video bitrate (bps) in metadata
+     * @param MetaVideoSpeed Video bitrate (bps) in metadata
      */
     public void setMetaVideoSpeed(Long MetaVideoSpeed) {
         this.MetaVideoSpeed = MetaVideoSpeed;
