@@ -79,18 +79,18 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a cluster.
-     * @param req CreateClustersRequest
-     * @return CreateClustersResponse
+     *This API is used to create an account.
+     * @param req CreateAccountsRequest
+     * @return CreateAccountsResponse
      * @throws TencentCloudSDKException
      */
-    public CreateClustersResponse CreateClusters(CreateClustersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateClustersResponse> rsp = null;
+    public CreateAccountsResponse CreateAccounts(CreateAccountsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAccountsResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateClustersResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<CreateAccountsResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "CreateClusters");
+                rspStr = this.internalRequest(req, "CreateAccounts");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -459,6 +459,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify cluster name.
+     * @param req ModifyClusterNameRequest
+     * @return ModifyClusterNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterNameResponse ModifyClusterName(ModifyClusterNameRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyClusterNameResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyClusterNameResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyClusterName");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify the parameters of a cluster.
      * @param req ModifyClusterParamRequest
      * @return ModifyClusterParamResponse
@@ -491,6 +511,26 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyDBInstanceSecurityGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify instance name.
+     * @param req ModifyInstanceNameRequest
+     * @return ModifyInstanceNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceNameResponse ModifyInstanceName(ModifyInstanceNameRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceNameResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceNameResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstanceName");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

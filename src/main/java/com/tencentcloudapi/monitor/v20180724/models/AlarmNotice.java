@@ -103,6 +103,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String [] PolicyIds;
 
     /**
+    * Channel to push alarm notifications to CLS.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CLSNotices")
+    @Expose
+    private CLSNotice [] CLSNotices;
+
+    /**
      * Get Alarm notification template ID
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Id Alarm notification template ID
@@ -302,6 +310,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.PolicyIds = PolicyIds;
     }
 
+    /**
+     * Get Channel to push alarm notifications to CLS.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return CLSNotices Channel to push alarm notifications to CLS.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public CLSNotice [] getCLSNotices() {
+        return this.CLSNotices;
+    }
+
+    /**
+     * Set Channel to push alarm notifications to CLS.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param CLSNotices Channel to push alarm notifications to CLS.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setCLSNotices(CLSNotice [] CLSNotices) {
+        this.CLSNotices = CLSNotices;
+    }
+
     public AlarmNotice() {
     }
 
@@ -349,6 +377,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 this.PolicyIds[i] = new String(source.PolicyIds[i]);
             }
         }
+        if (source.CLSNotices != null) {
+            this.CLSNotices = new CLSNotice[source.CLSNotices.length];
+            for (int i = 0; i < source.CLSNotices.length; i++) {
+                this.CLSNotices[i] = new CLSNotice(source.CLSNotices[i]);
+            }
+        }
     }
 
 
@@ -366,6 +400,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "IsPreset", this.IsPreset);
         this.setParamSimple(map, prefix + "NoticeLanguage", this.NoticeLanguage);
         this.setParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
+        this.setParamArrayObj(map, prefix + "CLSNotices.", this.CLSNotices);
 
     }
 }

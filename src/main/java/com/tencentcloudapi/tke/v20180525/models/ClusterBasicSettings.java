@@ -93,6 +93,20 @@ public class ClusterBasicSettings extends AbstractModel{
     private String SubnetId;
 
     /**
+    * Cluster specifications available for managed clusters
+    */
+    @SerializedName("ClusterLevel")
+    @Expose
+    private String ClusterLevel;
+
+    /**
+    * Auto cluster upgrade for managed clusters
+    */
+    @SerializedName("AutoUpgradeClusterLevel")
+    @Expose
+    private AutoUpgradeClusterLevel AutoUpgradeClusterLevel;
+
+    /**
      * Get Cluster operating system. CentOS 7.2x86_64 or Ubuntu 16.04.1 LTSx86_64. Default value: Ubuntu 16.04.1 LTSx86_64 
      * @return ClusterOs Cluster operating system. CentOS 7.2x86_64 or Ubuntu 16.04.1 LTSx86_64. Default value: Ubuntu 16.04.1 LTSx86_64
      */
@@ -252,6 +266,38 @@ public class ClusterBasicSettings extends AbstractModel{
         this.SubnetId = SubnetId;
     }
 
+    /**
+     * Get Cluster specifications available for managed clusters 
+     * @return ClusterLevel Cluster specifications available for managed clusters
+     */
+    public String getClusterLevel() {
+        return this.ClusterLevel;
+    }
+
+    /**
+     * Set Cluster specifications available for managed clusters
+     * @param ClusterLevel Cluster specifications available for managed clusters
+     */
+    public void setClusterLevel(String ClusterLevel) {
+        this.ClusterLevel = ClusterLevel;
+    }
+
+    /**
+     * Get Auto cluster upgrade for managed clusters 
+     * @return AutoUpgradeClusterLevel Auto cluster upgrade for managed clusters
+     */
+    public AutoUpgradeClusterLevel getAutoUpgradeClusterLevel() {
+        return this.AutoUpgradeClusterLevel;
+    }
+
+    /**
+     * Set Auto cluster upgrade for managed clusters
+     * @param AutoUpgradeClusterLevel Auto cluster upgrade for managed clusters
+     */
+    public void setAutoUpgradeClusterLevel(AutoUpgradeClusterLevel AutoUpgradeClusterLevel) {
+        this.AutoUpgradeClusterLevel = AutoUpgradeClusterLevel;
+    }
+
     public ClusterBasicSettings() {
     }
 
@@ -293,6 +339,12 @@ public class ClusterBasicSettings extends AbstractModel{
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
+        if (source.ClusterLevel != null) {
+            this.ClusterLevel = new String(source.ClusterLevel);
+        }
+        if (source.AutoUpgradeClusterLevel != null) {
+            this.AutoUpgradeClusterLevel = new AutoUpgradeClusterLevel(source.AutoUpgradeClusterLevel);
+        }
     }
 
 
@@ -310,6 +362,8 @@ public class ClusterBasicSettings extends AbstractModel{
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
         this.setParamSimple(map, prefix + "NeedWorkSecurityGroup", this.NeedWorkSecurityGroup);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
+        this.setParamObj(map, prefix + "AutoUpgradeClusterLevel.", this.AutoUpgradeClusterLevel);
 
     }
 }

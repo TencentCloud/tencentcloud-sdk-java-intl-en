@@ -18,14 +18,8 @@ public enum CynosdbErrorCode {
     // Failed to query the backup policy. Please try again later. If the problem persists, please contact customer service.
      FAILEDOPERATION_GETBACKUPSTRATEGYERROR("FailedOperation.GetBackupStrategyError"),
      
-    // Insufficient account balance.
-     FAILEDOPERATION_INSUFFICIENTBALANCE("FailedOperation.InsufficientBalance"),
-     
     // Operation failed ({{1}}). Please try again later. If the problem persists, please contact customer service.
      FAILEDOPERATION_OPERATIONFAILEDERROR("FailedOperation.OperationFailedError"),
-     
-    // 
-     FAILEDOPERATION_QUERYSPECBYSPECCODEERROR("FailedOperation.QuerySpecBySpecCodeError"),
      
     // Failed to create the order and make a payment. Please try again later. If the problem persists, please contact customer service.
      FAILEDOPERATION_TRADECREATEORDERERROR("FailedOperation.TradeCreateOrderError"),
@@ -51,6 +45,9 @@ public enum CynosdbErrorCode {
     // Failed to query instances by security group.
      INTERNALERROR_LISTINSTANCEFAILED("InternalError.ListInstanceFailed"),
      
+    // Public network operation failed.
+     INTERNALERROR_OPERATEWANFAIL("InternalError.OperateWanFail"),
+     
     // Unsupported operation.
      INTERNALERROR_OPERATIONNOTSUPPORT("InternalError.OperationNotSupport"),
      
@@ -69,6 +66,12 @@ public enum CynosdbErrorCode {
     // The current instance cannot be isolated.
      INVALIDPARAMETER_ISOLATENOTALLOWED("InvalidParameter.IsolateNotAllowed"),
      
+    // The account already exists.
+     INVALIDPARAMETERVALUE_ACCOUNTALREADYEXISTERROR("InvalidParameterValue.AccountAlreadyExistError"),
+     
+    // The account already exists.
+     INVALIDPARAMETERVALUE_ACCOUNTEXIST("InvalidParameterValue.AccountExist"),
+     
     // No cluster found.
      INVALIDPARAMETERVALUE_CLUSTERNOTFOUND("InvalidParameterValue.ClusterNotFound"),
      
@@ -80,6 +83,9 @@ public enum CynosdbErrorCode {
      
     // No order ID found.
      INVALIDPARAMETERVALUE_DEALNAMENOTFOUND("InvalidParameterValue.DealNameNotFound"),
+     
+    // Taskflow ID doesn’t exist.
+     INVALIDPARAMETERVALUE_FLOWNOTFOUND("InvalidParameterValue.FlowNotFound"),
      
     // The instance name contains invalid characters.
      INVALIDPARAMETERVALUE_ILLEGALINSTANCENAME("InvalidParameterValue.IllegalInstanceName"),
@@ -93,6 +99,9 @@ public enum CynosdbErrorCode {
     // The instance does not exist.
      INVALIDPARAMETERVALUE_INSTANCENOTFOUND("InvalidParameterValue.InstanceNotFound"),
      
+    // The operation is not allowed for system account.
+     INVALIDPARAMETERVALUE_INTERNALACCOUNT("InvalidParameterValue.InternalAccount"),
+     
     // Invalid instance version.
      INVALIDPARAMETERVALUE_INVALIDDBVERSION("InvalidParameterValue.InvalidDBVersion"),
      
@@ -104,9 +113,6 @@ public enum CynosdbErrorCode {
      
     // Invalid instance specification.
      INVALIDPARAMETERVALUE_INVALIDSPEC("InvalidParameterValue.InvalidSpec"),
-     
-    // Invalid availability zone ({{1}}).
-     INVALIDPARAMETERVALUE_INVALIDZONEIDERROR("InvalidParameterValue.InvalidZoneIdError"),
      
     // The parameters (`{{1}}` and `{{2}}`) cannot be set at the same time.
      INVALIDPARAMETERVALUE_PARAMBOTHSETERROR("InvalidParameterValue.ParamBothSetError"),
@@ -153,7 +159,7 @@ public enum CynosdbErrorCode {
     // You need to verify your identity to make a purchase.
      OPERATIONDENIED_USERNOTAUTHENTICATEDERROR("OperationDenied.UserNotAuthenticatedError"),
      
-    // 
+    // Unsupported version: {{1}}
      OPERATIONDENIED_VERSIONNOTSUPPORTERROR("OperationDenied.VersionNotSupportError"),
      
     // The cluster ({{1}}) does not exist.
@@ -162,7 +168,7 @@ public enum CynosdbErrorCode {
     // The instance ({{1}}) does not exist.
      RESOURCENOTFOUND_INSTANCENOTFOUNDERROR("ResourceNotFound.InstanceNotFoundError"),
      
-    // 
+    // The resource corresponding to the parameter ({{1}}) doesn’t exist.
      RESOURCENOTFOUND_RESOURCEERROR("ResourceNotFound.ResourceError"),
      
     // Failed to lock the instance, so the operation cannot be performed temporarily.
@@ -170,9 +176,6 @@ public enum CynosdbErrorCode {
      
     // The instance is exceptional, so the operation cannot be performed temporarily.
      RESOURCEUNAVAILABLE_INSTANCESTATUSABNORMAL("ResourceUnavailable.InstanceStatusAbnormal"),
-     
-    // Users who haven't completed identity verification cannot make purchases.
-     UNAUTHORIZEDOPERATION_NOTREALNAMEACCOUNT("UnauthorizedOperation.NotRealNameAccount"),
      
     // CAM authentication failed.
      UNAUTHORIZEDOPERATION_PERMISSIONDENIED("UnauthorizedOperation.PermissionDenied");

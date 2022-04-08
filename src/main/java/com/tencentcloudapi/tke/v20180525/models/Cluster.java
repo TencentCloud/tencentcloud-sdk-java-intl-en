@@ -93,7 +93,7 @@ public class Cluster extends AbstractModel{
     private TagSpecification [] TagSpecification;
 
     /**
-    * Cluster status (Running, Creating, or Abnormal)
+    * Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
     */
     @SerializedName("ClusterStatus")
     @Expose
@@ -160,6 +160,20 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     @SerializedName("EnableExternalNode")
     @Expose
     private Boolean EnableExternalNode;
+
+    /**
+    * 
+    */
+    @SerializedName("ClusterLevel")
+    @Expose
+    private String ClusterLevel;
+
+    /**
+    * 
+    */
+    @SerializedName("AutoUpgradeClusterLevel")
+    @Expose
+    private Boolean AutoUpgradeClusterLevel;
 
     /**
      * Get Cluster ID 
@@ -322,16 +336,16 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Cluster status (Running, Creating, or Abnormal) 
-     * @return ClusterStatus Cluster status (Running, Creating, or Abnormal)
+     * Get Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`) 
+     * @return ClusterStatus Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
      */
     public String getClusterStatus() {
         return this.ClusterStatus;
     }
 
     /**
-     * Set Cluster status (Running, Creating, or Abnormal)
-     * @param ClusterStatus Cluster status (Running, Creating, or Abnormal)
+     * Set Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
+     * @param ClusterStatus Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
      */
     public void setClusterStatus(String ClusterStatus) {
         this.ClusterStatus = ClusterStatus;
@@ -489,6 +503,38 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         this.EnableExternalNode = EnableExternalNode;
     }
 
+    /**
+     * Get  
+     * @return ClusterLevel 
+     */
+    public String getClusterLevel() {
+        return this.ClusterLevel;
+    }
+
+    /**
+     * Set 
+     * @param ClusterLevel 
+     */
+    public void setClusterLevel(String ClusterLevel) {
+        this.ClusterLevel = ClusterLevel;
+    }
+
+    /**
+     * Get  
+     * @return AutoUpgradeClusterLevel 
+     */
+    public Boolean getAutoUpgradeClusterLevel() {
+        return this.AutoUpgradeClusterLevel;
+    }
+
+    /**
+     * Set 
+     * @param AutoUpgradeClusterLevel 
+     */
+    public void setAutoUpgradeClusterLevel(Boolean AutoUpgradeClusterLevel) {
+        this.AutoUpgradeClusterLevel = AutoUpgradeClusterLevel;
+    }
+
     public Cluster() {
     }
 
@@ -557,6 +603,12 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         if (source.EnableExternalNode != null) {
             this.EnableExternalNode = new Boolean(source.EnableExternalNode);
         }
+        if (source.ClusterLevel != null) {
+            this.ClusterLevel = new String(source.ClusterLevel);
+        }
+        if (source.AutoUpgradeClusterLevel != null) {
+            this.AutoUpgradeClusterLevel = new Boolean(source.AutoUpgradeClusterLevel);
+        }
     }
 
 
@@ -583,6 +635,8 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
         this.setParamSimple(map, prefix + "EnableExternalNode", this.EnableExternalNode);
+        this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
+        this.setParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
 
     }
 }

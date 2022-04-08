@@ -65,6 +65,13 @@ public class CreateAlarmNoticeRequest extends AbstractModel{
     private URLNotice [] URLNotices;
 
     /**
+    * The operation of pushing alarm notifications to CLS. Up to one CLS log topic can be configured.
+    */
+    @SerializedName("CLSNotices")
+    @Expose
+    private CLSNotice [] CLSNotices;
+
+    /**
      * Get Module name. Enter "monitor" here 
      * @return Module Module name. Enter "monitor" here
      */
@@ -160,6 +167,22 @@ public class CreateAlarmNoticeRequest extends AbstractModel{
         this.URLNotices = URLNotices;
     }
 
+    /**
+     * Get The operation of pushing alarm notifications to CLS. Up to one CLS log topic can be configured. 
+     * @return CLSNotices The operation of pushing alarm notifications to CLS. Up to one CLS log topic can be configured.
+     */
+    public CLSNotice [] getCLSNotices() {
+        return this.CLSNotices;
+    }
+
+    /**
+     * Set The operation of pushing alarm notifications to CLS. Up to one CLS log topic can be configured.
+     * @param CLSNotices The operation of pushing alarm notifications to CLS. Up to one CLS log topic can be configured.
+     */
+    public void setCLSNotices(CLSNotice [] CLSNotices) {
+        this.CLSNotices = CLSNotices;
+    }
+
     public CreateAlarmNoticeRequest() {
     }
 
@@ -192,6 +215,12 @@ public class CreateAlarmNoticeRequest extends AbstractModel{
                 this.URLNotices[i] = new URLNotice(source.URLNotices[i]);
             }
         }
+        if (source.CLSNotices != null) {
+            this.CLSNotices = new CLSNotice[source.CLSNotices.length];
+            for (int i = 0; i < source.CLSNotices.length; i++) {
+                this.CLSNotices[i] = new CLSNotice(source.CLSNotices[i]);
+            }
+        }
     }
 
 
@@ -205,6 +234,7 @@ public class CreateAlarmNoticeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NoticeLanguage", this.NoticeLanguage);
         this.setParamArrayObj(map, prefix + "UserNotices.", this.UserNotices);
         this.setParamArrayObj(map, prefix + "URLNotices.", this.URLNotices);
+        this.setParamArrayObj(map, prefix + "CLSNotices.", this.CLSNotices);
 
     }
 }

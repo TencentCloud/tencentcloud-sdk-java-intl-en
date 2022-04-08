@@ -39,26 +39,6 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to remove the isolation of pay-as-you-go instances.
-     * @param req ActivateHourDBInstanceRequest
-     * @return ActivateHourDBInstanceResponse
-     * @throws TencentCloudSDKException
-     */
-    public ActivateHourDBInstanceResponse ActivateHourDBInstance(ActivateHourDBInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ActivateHourDBInstanceResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ActivateHourDBInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ActivateHourDBInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to associate security groups with Tencent Cloud resources in batches.
      * @param req AssociateSecurityGroupsRequest
      * @return AssociateSecurityGroupsResponse
@@ -91,26 +71,6 @@ public class MariadbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CancelDcnJobResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CancelDcnJob");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to clone an instance account.
-     * @param req CloneAccountRequest
-     * @return CloneAccountResponse
-     * @throws TencentCloudSDKException
-     */
-    public CloneAccountResponse CloneAccount(CloneAccountRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CloneAccountResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CloneAccountResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CloneAccount");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -220,67 +180,6 @@ Note: accounts with the same username but different hosts are different accounts
     }
 
     /**
-     *This API is used to query the permissions of a TencentDB account.
-Note: accounts with the same username but different hosts are different accounts.
-     * @param req DescribeAccountPrivilegesRequest
-     * @return DescribeAccountPrivilegesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAccountPrivilegesResponse DescribeAccountPrivileges(DescribeAccountPrivilegesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAccountPrivilegesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAccountPrivilegesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAccountPrivileges");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query the list of accounts of a specified TencentDB instance.
-     * @param req DescribeAccountsRequest
-     * @return DescribeAccountsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAccountsResponse DescribeAccounts(DescribeAccountsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAccountsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAccountsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAccounts");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to get the backup time of a TencentDB instance. The backend system will perform instance backup regularly according to this configuration.
-     * @param req DescribeBackupTimeRequest
-     * @return DescribeBackupTimeResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeBackupTimeResponse DescribeBackupTime(DescribeBackupTimeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBackupTimeResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBackupTimeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBackupTime");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to query the TencentDB instance list. It supports filtering instances by project ID, instance ID, private address, and instance name.
 If no filter is specified, 20 instances will be returned by default. Up to 100 instances can be returned for a single request.
      * @param req DescribeDBInstancesRequest
@@ -322,106 +221,6 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     }
 
     /**
-     *This API is used to get the current parameter settings of a database.
-     * @param req DescribeDBParametersRequest
-     * @return DescribeDBParametersResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDBParametersResponse DescribeDBParameters(DescribeDBParametersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDBParametersResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDBParametersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDBParameters");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to view the current performance data of a database instance.
-     * @param req DescribeDBPerformanceRequest
-     * @return DescribeDBPerformanceResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDBPerformanceResponse DescribeDBPerformance(DescribeDBPerformanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDBPerformanceResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDBPerformanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDBPerformance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to view the instance performance data details.
-     * @param req DescribeDBPerformanceDetailsRequest
-     * @return DescribeDBPerformanceDetailsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDBPerformanceDetailsResponse DescribeDBPerformanceDetails(DescribeDBPerformanceDetailsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDBPerformanceDetailsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDBPerformanceDetailsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDBPerformanceDetails");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to view the resource usage of a database instance.
-     * @param req DescribeDBResourceUsageRequest
-     * @return DescribeDBResourceUsageResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDBResourceUsageResponse DescribeDBResourceUsage(DescribeDBResourceUsageRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDBResourceUsageResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDBResourceUsageResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDBResourceUsage");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to view the current performance data of a database instance.
-     * @param req DescribeDBResourceUsageDetailsRequest
-     * @return DescribeDBResourceUsageDetailsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDBResourceUsageDetailsResponse DescribeDBResourceUsageDetails(DescribeDBResourceUsageDetailsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDBResourceUsageDetailsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDBResourceUsageDetailsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDBResourceUsageDetails");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to query the security group details of an instance.
      * @param req DescribeDBSecurityGroupsRequest
      * @return DescribeDBSecurityGroupsResponse
@@ -434,86 +233,6 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
                 Type type = new TypeToken<JsonResponseModel<DescribeDBSecurityGroupsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDBSecurityGroups");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query the slow query log list.
-     * @param req DescribeDBSlowLogsRequest
-     * @return DescribeDBSlowLogsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDBSlowLogsResponse DescribeDBSlowLogs(DescribeDBSlowLogsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDBSlowLogsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDBSlowLogsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDBSlowLogs");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query the list of database objects in a TencentDB instance, including tables, stored procedures, views, and functions.
-     * @param req DescribeDatabaseObjectsRequest
-     * @return DescribeDatabaseObjectsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDatabaseObjectsResponse DescribeDatabaseObjects(DescribeDatabaseObjectsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDatabaseObjectsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDatabaseObjectsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDatabaseObjects");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query the table information of a TencentDB instance.
-     * @param req DescribeDatabaseTableRequest
-     * @return DescribeDatabaseTableResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDatabaseTableResponse DescribeDatabaseTable(DescribeDatabaseTableRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDatabaseTableResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDatabaseTableResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDatabaseTable");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query the list of databases of a TencentDB instance.
-     * @param req DescribeDatabasesRequest
-     * @return DescribeDatabasesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDatabasesResponse DescribeDatabases(DescribeDatabasesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDatabasesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDatabasesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDatabases");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -562,26 +281,6 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     }
 
     /**
-     *This API is used to query flow status.
-     * @param req DescribeFlowRequest
-     * @return DescribeFlowResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeFlowResponse DescribeFlow(DescribeFlowRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeFlowResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeFlowResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeFlow");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to query the information of primary and replica nodes of an instance.
      * @param req DescribeInstanceNodeInfoRequest
      * @return DescribeInstanceNodeInfoResponse
@@ -594,26 +293,6 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceNodeInfoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeInstanceNodeInfo");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to view the configured number of days for retention of database backup logs.
-     * @param req DescribeLogFileRetentionPeriodRequest
-     * @return DescribeLogFileRetentionPeriodResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeLogFileRetentionPeriodResponse DescribeLogFileRetentionPeriod(DescribeLogFileRetentionPeriodRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLogFileRetentionPeriodResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLogFileRetentionPeriodResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLogFileRetentionPeriod");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -703,46 +382,6 @@ Note: accounts with the same username but different hosts are different accounts
     }
 
     /**
-     *This API is used to initialize TencentDB instances, including setting the default character set and table name case sensitivity.
-     * @param req InitDBInstancesRequest
-     * @return InitDBInstancesResponse
-     * @throws TencentCloudSDKException
-     */
-    public InitDBInstancesResponse InitDBInstances(InitDBInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<InitDBInstancesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<InitDBInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "InitDBInstances");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to isolate pay-as-you-go instances.
-     * @param req IsolateHourDBInstanceRequest
-     * @return IsolateHourDBInstanceResponse
-     * @throws TencentCloudSDKException
-     */
-    public IsolateHourDBInstanceResponse IsolateHourDBInstance(IsolateHourDBInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<IsolateHourDBInstanceResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<IsolateHourDBInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "IsolateHourDBInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to modify the remarks of a TencentDB account.
 Note: accounts with the same username but different hosts are different accounts.
      * @param req ModifyAccountDescriptionRequest
@@ -789,66 +428,6 @@ Note: accounts with the same username but different hosts are different accounts
     }
 
     /**
-     *This API is used to set the backup time of a TencentDB instance. The backend system will perform instance backup regularly according to this configuration.
-     * @param req ModifyBackupTimeRequest
-     * @return ModifyBackupTimeResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyBackupTimeResponse ModifyBackupTime(ModifyBackupTimeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyBackupTimeResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyBackupTimeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyBackupTime");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to rename a TencentDB instance.
-     * @param req ModifyDBInstanceNameRequest
-     * @return ModifyDBInstanceNameResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyDBInstanceNameResponse ModifyDBInstanceName(ModifyDBInstanceNameRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDBInstanceNameResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceNameResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyDBInstanceName");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to modify the security groups associated with TencentDB.
-     * @param req ModifyDBInstanceSecurityGroupsRequest
-     * @return ModifyDBInstanceSecurityGroupsResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(ModifyDBInstanceSecurityGroupsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyDBInstanceSecurityGroups");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to modify the project to which TencentDB instances belong.
      * @param req ModifyDBInstancesProjectRequest
      * @return ModifyDBInstancesProjectResponse
@@ -861,66 +440,6 @@ Note: accounts with the same username but different hosts are different accounts
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstancesProjectResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyDBInstancesProject");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to modify database parameters.
-     * @param req ModifyDBParametersRequest
-     * @return ModifyDBParametersResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyDBParametersResponse ModifyDBParameters(ModifyDBParametersRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDBParametersResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyDBParametersResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyDBParameters");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to modify the sync mode of a TencentDB instance.
-     * @param req ModifyDBSyncModeRequest
-     * @return ModifyDBSyncModeResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyDBSyncModeResponse ModifyDBSyncMode(ModifyDBSyncModeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDBSyncModeResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyDBSyncModeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyDBSyncMode");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to modify the number of days for retention of database backup logs.
-     * @param req ModifyLogFileRetentionPeriodRequest
-     * @return ModifyLogFileRetentionPeriodResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyLogFileRetentionPeriodResponse ModifyLogFileRetentionPeriod(ModifyLogFileRetentionPeriodRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLogFileRetentionPeriodResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLogFileRetentionPeriodResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLogFileRetentionPeriod");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -949,26 +468,6 @@ Note: accounts with the same username but different hosts are different accounts
     }
 
     /**
-     *This API is used to enable public network access for a TencentDB instance. After that, you can access the instance with the public domain name and port obtained through the `DescribeDCDBInstances` API.
-     * @param req OpenDBExtranetAccessRequest
-     * @return OpenDBExtranetAccessResponse
-     * @throws TencentCloudSDKException
-     */
-    public OpenDBExtranetAccessResponse OpenDBExtranetAccess(OpenDBExtranetAccessRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<OpenDBExtranetAccessResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<OpenDBExtranetAccessResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "OpenDBExtranetAccess");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to reset the password of a TencentDB account.
 Note: accounts with the same username but different hosts are different accounts.
      * @param req ResetAccountPasswordRequest
@@ -982,26 +481,6 @@ Note: accounts with the same username but different hosts are different accounts
                 Type type = new TypeToken<JsonResponseModel<ResetAccountPasswordResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ResetAccountPassword");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to start a primary-replica switch of instances.
-     * @param req SwitchDBInstanceHARequest
-     * @return SwitchDBInstanceHAResponse
-     * @throws TencentCloudSDKException
-     */
-    public SwitchDBInstanceHAResponse SwitchDBInstanceHA(SwitchDBInstanceHARequest req) throws TencentCloudSDKException{
-        JsonResponseModel<SwitchDBInstanceHAResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<SwitchDBInstanceHAResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "SwitchDBInstanceHA");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -165,6 +165,13 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
     private Long NeedCorrespondence;
 
     /**
+    * Filter alarm policy by triggered task (such as auto scaling task). Up to 10 tasks can be specified.
+    */
+    @SerializedName("TriggerTasks")
+    @Expose
+    private AlarmPolicyTriggerTask [] TriggerTasks;
+
+    /**
      * Get Value fixed at "monitor" 
      * @return Module Value fixed at "monitor"
      */
@@ -504,6 +511,22 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
         this.NeedCorrespondence = NeedCorrespondence;
     }
 
+    /**
+     * Get Filter alarm policy by triggered task (such as auto scaling task). Up to 10 tasks can be specified. 
+     * @return TriggerTasks Filter alarm policy by triggered task (such as auto scaling task). Up to 10 tasks can be specified.
+     */
+    public AlarmPolicyTriggerTask [] getTriggerTasks() {
+        return this.TriggerTasks;
+    }
+
+    /**
+     * Set Filter alarm policy by triggered task (such as auto scaling task). Up to 10 tasks can be specified.
+     * @param TriggerTasks Filter alarm policy by triggered task (such as auto scaling task). Up to 10 tasks can be specified.
+     */
+    public void setTriggerTasks(AlarmPolicyTriggerTask [] TriggerTasks) {
+        this.TriggerTasks = TriggerTasks;
+    }
+
     public DescribeAlarmPoliciesRequest() {
     }
 
@@ -596,6 +619,12 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
         if (source.NeedCorrespondence != null) {
             this.NeedCorrespondence = new Long(source.NeedCorrespondence);
         }
+        if (source.TriggerTasks != null) {
+            this.TriggerTasks = new AlarmPolicyTriggerTask[source.TriggerTasks.length];
+            for (int i = 0; i < source.TriggerTasks.length; i++) {
+                this.TriggerTasks[i] = new AlarmPolicyTriggerTask(source.TriggerTasks[i]);
+            }
+        }
     }
 
 
@@ -622,6 +651,7 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
         this.setParamSimple(map, prefix + "NotBindingNoticeRule", this.NotBindingNoticeRule);
         this.setParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
         this.setParamSimple(map, prefix + "NeedCorrespondence", this.NeedCorrespondence);
+        this.setParamArrayObj(map, prefix + "TriggerTasks.", this.TriggerTasks);
 
     }
 }

@@ -75,15 +75,6 @@ public enum DcdbErrorCode {
     // Failed to query the information of a dedicated cluster.
      INTERNALERROR_FENCEERROR("InternalError.FenceError"),
      
-    // Failed to get database instance parameters.
-     INTERNALERROR_GETDBCONFIGFAILED("InternalError.GetDbConfigFailed"),
-     
-    // Failed to get the list of databases.
-     INTERNALERROR_GETDBLISTFAILED("InternalError.GetDbListFailed"),
-     
-    // Failed to get the database objects.
-     INTERNALERROR_GETDBOBJECTFAILED("InternalError.GetDbObjectFailed"),
-     
     // Failed to get the instance details.
      INTERNALERROR_GETINSTANCEDETAILFAILED("InternalError.GetInstanceDetailFailed"),
      
@@ -96,14 +87,8 @@ public enum DcdbErrorCode {
     // Failed to query security group details.
      INTERNALERROR_GETSECURITYGROUPDETAILFAILED("InternalError.GetSecurityGroupDetailFailed"),
      
-    // Failed to query slow query logs.
-     INTERNALERROR_GETSLOWLOGFAILED("InternalError.GetSlowLogFailed"),
-     
     // Failed to query the VPC subnet information.
      INTERNALERROR_GETSUBNETFAILED("InternalError.GetSubnetFailed"),
-     
-    // Failed to get the table information.
-     INTERNALERROR_GETTABLEINFOFAILED("InternalError.GetTableInfoFailed"),
      
     // Failed to get the list of accounts.
      INTERNALERROR_GETUSERLISTFAILED("InternalError.GetUserListFailed"),
@@ -174,9 +159,6 @@ public enum DcdbErrorCode {
     // Invalid parameters.
      INVALIDPARAMETER_ILLEGALPARAMETERERROR("InvalidParameter.IllegalParameterError"),
      
-    // Incorrect time parameter.
-     INVALIDPARAMETER_ILLEGALTIME("InvalidParameter.IllegalTime"),
-     
     // Failed to find the requested instance.
      INVALIDPARAMETER_INSTANCENOTFOUND("InvalidParameter.InstanceNotFound"),
      
@@ -198,9 +180,6 @@ public enum DcdbErrorCode {
     // The account to be created already exists.
      INVALIDPARAMETERVALUE_ACCOUNTALREADYEXISTS("InvalidParameterValue.AccountAlreadyExists"),
      
-    // The instance does not support this sync mode.
-     INVALIDPARAMETERVALUE_BADSYNCMODE("InvalidParameterValue.BadSyncMode"),
-     
     // The specified permission could not be granted to this account.
      INVALIDPARAMETERVALUE_BADUSERRIGHT("InvalidParameterValue.BadUserRight"),
      
@@ -209,9 +188,6 @@ public enum DcdbErrorCode {
      
     // The dedicated cluster to which the database instance belongs was not found.
      INVALIDPARAMETERVALUE_ILLEGALEXCLUSTERID("InvalidParameterValue.IllegalExclusterID"),
-     
-    // An error occurred while initializing database instance parameters.
-     INVALIDPARAMETERVALUE_ILLEGALINITPARAM("InvalidParameterValue.IllegalInitParam"),
      
     // Incorrect permission parameter
      INVALIDPARAMETERVALUE_ILLEGALRIGHTPARAM("InvalidParameterValue.IllegalRightParam"),
@@ -237,9 +213,6 @@ public enum DcdbErrorCode {
     // Failed to find the configuration of the product associated with the security group.
      RESOURCENOTFOUND_PRODUCTCONFIGNOTEXISTEDERROR("ResourceNotFound.ProductConfigNotExistedError"),
      
-    // Incorrect instance status. Unable to initialize.
-     RESOURCEUNAVAILABLE_BADINSTANCESTATUS("ResourceUnavailable.BadInstanceStatus"),
-     
     // An error occurred while calling COS APIs.
      RESOURCEUNAVAILABLE_COSAPIFAILED("ResourceUnavailable.CosApiFailed"),
      
@@ -254,9 +227,6 @@ public enum DcdbErrorCode {
      
     // You have no permission to manipulate this API or resource.
      UNAUTHORIZEDOPERATION_PERMISSIONDENIED("UnauthorizedOperation.PermissionDenied"),
-     
-    // Unsupported operation.
-     UNSUPPORTEDOPERATION_INVALIDOPERATION("UnsupportedOperation.InvalidOperation"),
      
     // The proxy program is too old. Please contact customer service for upgrade and try again.
      UNSUPPORTEDOPERATION_OLDPROXYVERSION("UnsupportedOperation.OldProxyVersion");

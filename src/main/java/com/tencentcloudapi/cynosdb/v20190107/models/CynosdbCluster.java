@@ -23,7 +23,16 @@ import java.util.HashMap;
 public class CynosdbCluster extends AbstractModel{
 
     /**
-    * Cluster status
+    * Cluster status. Valid values are as follows:
+creating
+running
+isolating
+isolated
+activating (removing isolation)
+offlining (deactivating)
+offlined (deactivated)
+deleting
+deleted
     */
     @SerializedName("Status")
     @Expose
@@ -263,16 +272,52 @@ pause
     private NetAddr [] NetAddrs;
 
     /**
-     * Get Cluster status 
-     * @return Status Cluster status
+     * Get Cluster status. Valid values are as follows:
+creating
+running
+isolating
+isolated
+activating (removing isolation)
+offlining (deactivating)
+offlined (deactivated)
+deleting
+deleted 
+     * @return Status Cluster status. Valid values are as follows:
+creating
+running
+isolating
+isolated
+activating (removing isolation)
+offlining (deactivating)
+offlined (deactivated)
+deleting
+deleted
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Cluster status
-     * @param Status Cluster status
+     * Set Cluster status. Valid values are as follows:
+creating
+running
+isolating
+isolated
+activating (removing isolation)
+offlining (deactivating)
+offlined (deactivated)
+deleting
+deleted
+     * @param Status Cluster status. Valid values are as follows:
+creating
+running
+isolating
+isolated
+activating (removing isolation)
+offlining (deactivating)
+offlined (deactivated)
+deleting
+deleted
      */
     public void setStatus(String Status) {
         this.Status = Status;
