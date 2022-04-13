@@ -79,6 +79,13 @@ public class CreateTawInstanceRequest extends AbstractModel{
     private String PeriodRetain;
 
     /**
+    * Instance purchase channel. Valid value: `cdn`.
+    */
+    @SerializedName("BuyingChannel")
+    @Expose
+    private String BuyingChannel;
+
+    /**
      * Get Region ID (at least greater than 0) 
      * @return AreaId Region ID (at least greater than 0)
      */
@@ -206,6 +213,22 @@ public class CreateTawInstanceRequest extends AbstractModel{
         this.PeriodRetain = PeriodRetain;
     }
 
+    /**
+     * Get Instance purchase channel. Valid value: `cdn`. 
+     * @return BuyingChannel Instance purchase channel. Valid value: `cdn`.
+     */
+    public String getBuyingChannel() {
+        return this.BuyingChannel;
+    }
+
+    /**
+     * Set Instance purchase channel. Valid value: `cdn`.
+     * @param BuyingChannel Instance purchase channel. Valid value: `cdn`.
+     */
+    public void setBuyingChannel(String BuyingChannel) {
+        this.BuyingChannel = BuyingChannel;
+    }
+
     public CreateTawInstanceRequest() {
     }
 
@@ -241,6 +264,9 @@ public class CreateTawInstanceRequest extends AbstractModel{
         if (source.PeriodRetain != null) {
             this.PeriodRetain = new String(source.PeriodRetain);
         }
+        if (source.BuyingChannel != null) {
+            this.BuyingChannel = new String(source.BuyingChannel);
+        }
     }
 
 
@@ -256,6 +282,7 @@ public class CreateTawInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceDesc", this.InstanceDesc);
         this.setParamSimple(map, prefix + "CountNum", this.CountNum);
         this.setParamSimple(map, prefix + "PeriodRetain", this.PeriodRetain);
+        this.setParamSimple(map, prefix + "BuyingChannel", this.BuyingChannel);
 
     }
 }

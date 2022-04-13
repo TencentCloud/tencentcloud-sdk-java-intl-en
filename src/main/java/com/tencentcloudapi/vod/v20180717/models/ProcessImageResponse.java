@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.rum.v20210622.models;
+package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeScoresResponse extends AbstractModel{
+public class ProcessImageResponse extends AbstractModel{
 
     /**
-    * Array
+    * The image recognition result.
     */
-    @SerializedName("ScoreSet")
+    @SerializedName("ContentReviewResultSet")
     @Expose
-    private ScoreInfo [] ScoreSet;
+    private ContentReviewResult [] ContentReviewResultSet;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +37,19 @@ public class DescribeScoresResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Array 
-     * @return ScoreSet Array
+     * Get The image recognition result. 
+     * @return ContentReviewResultSet The image recognition result.
      */
-    public ScoreInfo [] getScoreSet() {
-        return this.ScoreSet;
+    public ContentReviewResult [] getContentReviewResultSet() {
+        return this.ContentReviewResultSet;
     }
 
     /**
-     * Set Array
-     * @param ScoreSet Array
+     * Set The image recognition result.
+     * @param ContentReviewResultSet The image recognition result.
      */
-    public void setScoreSet(ScoreInfo [] ScoreSet) {
-        this.ScoreSet = ScoreSet;
+    public void setContentReviewResultSet(ContentReviewResult [] ContentReviewResultSet) {
+        this.ContentReviewResultSet = ContentReviewResultSet;
     }
 
     /**
@@ -68,18 +68,18 @@ public class DescribeScoresResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeScoresResponse() {
+    public ProcessImageResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeScoresResponse(DescribeScoresResponse source) {
-        if (source.ScoreSet != null) {
-            this.ScoreSet = new ScoreInfo[source.ScoreSet.length];
-            for (int i = 0; i < source.ScoreSet.length; i++) {
-                this.ScoreSet[i] = new ScoreInfo(source.ScoreSet[i]);
+    public ProcessImageResponse(ProcessImageResponse source) {
+        if (source.ContentReviewResultSet != null) {
+            this.ContentReviewResultSet = new ContentReviewResult[source.ContentReviewResultSet.length];
+            for (int i = 0; i < source.ContentReviewResultSet.length; i++) {
+                this.ContentReviewResultSet[i] = new ContentReviewResult(source.ContentReviewResultSet[i]);
             }
         }
         if (source.RequestId != null) {
@@ -92,7 +92,7 @@ public class DescribeScoresResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "ScoreSet.", this.ScoreSet);
+        this.setParamArrayObj(map, prefix + "ContentReviewResultSet.", this.ContentReviewResultSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

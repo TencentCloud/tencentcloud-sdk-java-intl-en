@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.rum.v20210622.models;
+package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTawInstancesResponse extends AbstractModel{
+public class DescribeMediaPlayStatDetailsResponse extends AbstractModel{
 
     /**
-    * Instance list
+    * The playback statistics.
     */
-    @SerializedName("InstanceSet")
+    @SerializedName("PlayStatInfoSet")
     @Expose
-    private RumInstanceInfo [] InstanceSet;
-
-    /**
-    * Total number of instances
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+    private PlayStatInfo [] PlayStatInfoSet;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +37,19 @@ public class DescribeTawInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Instance list 
-     * @return InstanceSet Instance list
+     * Get The playback statistics. 
+     * @return PlayStatInfoSet The playback statistics.
      */
-    public RumInstanceInfo [] getInstanceSet() {
-        return this.InstanceSet;
+    public PlayStatInfo [] getPlayStatInfoSet() {
+        return this.PlayStatInfoSet;
     }
 
     /**
-     * Set Instance list
-     * @param InstanceSet Instance list
+     * Set The playback statistics.
+     * @param PlayStatInfoSet The playback statistics.
      */
-    public void setInstanceSet(RumInstanceInfo [] InstanceSet) {
-        this.InstanceSet = InstanceSet;
-    }
-
-    /**
-     * Get Total number of instances 
-     * @return TotalCount Total number of instances
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set Total number of instances
-     * @param TotalCount Total number of instances
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setPlayStatInfoSet(PlayStatInfo [] PlayStatInfoSet) {
+        this.PlayStatInfoSet = PlayStatInfoSet;
     }
 
     /**
@@ -91,22 +68,19 @@ public class DescribeTawInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeTawInstancesResponse() {
+    public DescribeMediaPlayStatDetailsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTawInstancesResponse(DescribeTawInstancesResponse source) {
-        if (source.InstanceSet != null) {
-            this.InstanceSet = new RumInstanceInfo[source.InstanceSet.length];
-            for (int i = 0; i < source.InstanceSet.length; i++) {
-                this.InstanceSet[i] = new RumInstanceInfo(source.InstanceSet[i]);
+    public DescribeMediaPlayStatDetailsResponse(DescribeMediaPlayStatDetailsResponse source) {
+        if (source.PlayStatInfoSet != null) {
+            this.PlayStatInfoSet = new PlayStatInfo[source.PlayStatInfoSet.length];
+            for (int i = 0; i < source.PlayStatInfoSet.length; i++) {
+                this.PlayStatInfoSet[i] = new PlayStatInfo(source.PlayStatInfoSet[i]);
             }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +92,7 @@ public class DescribeTawInstancesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "InstanceSet.", this.InstanceSet);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "PlayStatInfoSet.", this.PlayStatInfoSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

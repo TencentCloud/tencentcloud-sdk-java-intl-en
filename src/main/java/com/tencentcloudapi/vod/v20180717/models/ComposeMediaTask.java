@@ -81,8 +81,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private ComposeMediaTaskOutput Output;
 
     /**
-    * Metadata of a source video.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * The metadata of the output video.
+Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("MetaData")
     @Expose
@@ -251,20 +251,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Metadata of a source video.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return MetaData Metadata of a source video.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get The metadata of the output video.
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return MetaData The metadata of the output video.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set Metadata of a source video.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param MetaData Metadata of a source video.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set The metadata of the output video.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param MetaData The metadata of the output video.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;

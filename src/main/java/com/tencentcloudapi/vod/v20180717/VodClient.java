@@ -1104,6 +1104,29 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *This API is used to query the playback statistics of a media file at the specified granularity.
+* You can query playback statistics in the past year.
+* If the granularity is an hour, the start and end time cannot be more than seven days apart.
+* If the granularity is a day, the start and end time cannot be more than 90 days apart.
+     * @param req DescribeMediaPlayStatDetailsRequest
+     * @return DescribeMediaPlayStatDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMediaPlayStatDetailsResponse DescribeMediaPlayStatDetails(DescribeMediaPlayStatDetailsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeMediaPlayStatDetailsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeMediaPlayStatDetailsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeMediaPlayStatDetails");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the information of video processing usage within the specified time range.
    1. Statistics on video processing for the last 365 days can be queried.
    2. The query time range cannot be more than 90 days.
@@ -1428,36 +1451,6 @@ This API returns the video content duration for intelligent recognition in secon
                 Type type = new TypeToken<JsonResponseModel<DescribeWordSamplesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeWordSamples");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to edit a video (by clipping, splicing, etc.) to generate a new VOD video. Editing features include:
-
-1. Clipping a file in VOD to generate a new video;
-2. Splicing multiple files in VOD to generate a new video;
-3. Clipping multiple files in VOD and then splicing the clips to generate a new video;
-4. Directly generating a new video from a stream in VOD;
-5. Clipping a stream in VOD to generate a new video;
-6. Splicing multiple streams in VOD to generate a new video;
-7. Clipping multiple streams in VOD and then splicing the clips to generate a new video.
-
-You can also specify whether to perform a task flow for the generated new video.
-     * @param req EditMediaRequest
-     * @return EditMediaResponse
-     * @throws TencentCloudSDKException
-     */
-    public EditMediaResponse EditMedia(EditMediaRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<EditMediaResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<EditMediaResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "EditMedia");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2006,6 +1999,33 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
     }
 
     /**
+     *This API is used to initiate an image processing task. Image processing operations include the following:
+
+1. Intelligent recognition of pornographic, terrorism, and politically sensitive content
+
+><li>File size: < 5 MB</li>
+><li>Resolution: Preferably higher than 256 x 256. Resolution lower than this may compromise the recognition performance.</li>
+><li>Supported image formats: PNG, JPG, JPEG, BMP, GIF, WEBP</li>
+
+     * @param req ProcessImageRequest
+     * @return ProcessImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ProcessImageResponse ProcessImage(ProcessImageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ProcessImageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ProcessImageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ProcessImage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to initiate a media processing task on a VOD file. The task may include:
 1. Video transcoding (with watermark)
 2. Animated image generating
@@ -2255,26 +2275,6 @@ Clipping for temporary sharing is lightweight and incurs no additional storage f
                 Type type = new TypeToken<JsonResponseModel<SimpleHlsClipResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SimpleHlsClip");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to publish a VOD video on WeChat Mini Program for playback in the WeChat Mini Program player.
-     * @param req WeChatMiniProgramPublishRequest
-     * @return WeChatMiniProgramPublishResponse
-     * @throws TencentCloudSDKException
-     */
-    public WeChatMiniProgramPublishResponse WeChatMiniProgramPublish(WeChatMiniProgramPublishRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<WeChatMiniProgramPublishResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<WeChatMiniProgramPublishResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "WeChatMiniProgramPublish");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

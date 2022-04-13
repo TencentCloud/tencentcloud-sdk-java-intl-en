@@ -71,7 +71,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private MediaBasicInfo MediaBasicInfo;
 
     /**
-    * Metadata of a source video
+    * The metadata of the output video.
     */
     @SerializedName("MetaData")
     @Expose
@@ -226,16 +226,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Metadata of a source video 
-     * @return MetaData Metadata of a source video
+     * Get The metadata of the output video. 
+     * @return MetaData The metadata of the output video.
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set Metadata of a source video
-     * @param MetaData Metadata of a source video
+     * Set The metadata of the output video.
+     * @param MetaData The metadata of the output video.
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;

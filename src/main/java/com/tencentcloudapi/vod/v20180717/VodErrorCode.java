@@ -36,9 +36,6 @@ public enum VodErrorCode {
     // Network error.
      FAILEDOPERATION_NETWORKERROR("FailedOperation.NetWorkError"),
      
-    // No permission to use this API.
-     FAILEDOPERATION_NOPRIVILEGES("FailedOperation.NoPrivileges"),
-     
     // Operation failed: the parent category ID does not exist.
      FAILEDOPERATION_PARENTIDNOFOUND("FailedOperation.ParentIdNoFound"),
      
@@ -255,9 +252,6 @@ public enum VodErrorCode {
     // Incorrect parameter value: too many `FileId`
      INVALIDPARAMETERVALUE_FILEIDSTOOMANY("InvalidParameterValue.FileIdsTooMany"),
      
-    // Incorrect video type.
-     INVALIDPARAMETERVALUE_FILETYPE("InvalidParameterValue.FileType"),
-     
     // Invalid parameter: incorrect fill type.
      INVALIDPARAMETERVALUE_FILLTYPE("InvalidParameterValue.FillType"),
      
@@ -302,6 +296,9 @@ public enum VodErrorCode {
      
     // Invalid parameter: image watermarking template.
      INVALIDPARAMETERVALUE_IMAGETEMPLATE("InvalidParameterValue.ImageTemplate"),
+     
+    // Invalid `Interval` value
+     INVALIDPARAMETERVALUE_INTERVAL("InvalidParameterValue.Interval"),
      
     // Invalid `OperationType`.
      INVALIDPARAMETERVALUE_INVALIDOPERATIONTYPE("InvalidParameterValue.InvalidOperationType"),
@@ -422,9 +419,6 @@ public enum VodErrorCode {
      
     // Incorrect parameter: audio channel system.
      INVALIDPARAMETERVALUE_SOUNDSYSTEM("InvalidParameterValue.SoundSystem"),
-     
-    // Incorrect `SourceDefinition`. Please check whether the media file is bound with a transcoding template.  
-     INVALIDPARAMETERVALUE_SOURCEDEFINITION("InvalidParameterValue.SourceDefinition"),
      
     // Incorrect parameter value: invalid `SourceType`.
      INVALIDPARAMETERVALUE_SOURCETYPE("InvalidParameterValue.SourceType"),

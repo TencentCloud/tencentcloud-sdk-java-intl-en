@@ -65,7 +65,7 @@ public class DescribeLogListRequest extends AbstractModel{
     private String Context;
 
     /**
-    * Query statement. Maximum length: 4096
+    * Query statement, which can contain up to 4,096 characters.
     */
     @SerializedName("Query")
     @Expose
@@ -175,16 +175,16 @@ public class DescribeLogListRequest extends AbstractModel{
     }
 
     /**
-     * Get Query statement. Maximum length: 4096 
-     * @return Query Query statement. Maximum length: 4096
+     * Get Query statement, which can contain up to 4,096 characters. 
+     * @return Query Query statement, which can contain up to 4,096 characters.
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set Query statement. Maximum length: 4096
-     * @param Query Query statement. Maximum length: 4096
+     * Set Query statement, which can contain up to 4,096 characters.
+     * @param Query Query statement, which can contain up to 4,096 characters.
      */
     public void setQuery(String Query) {
         this.Query = Query;
