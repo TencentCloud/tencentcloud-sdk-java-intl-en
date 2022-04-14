@@ -22,6 +22,29 @@ import java.util.HashMap;
 
 public class CreateSchedulingDomainRequest extends AbstractModel{
 
+    /**
+    * 
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
+
+    /**
+     * Get  
+     * @return Product 
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set 
+     * @param Product 
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
     public CreateSchedulingDomainRequest() {
     }
 
@@ -30,6 +53,9 @@ public class CreateSchedulingDomainRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateSchedulingDomainRequest(CreateSchedulingDomainRequest source) {
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
     }
 
 
@@ -37,6 +63,7 @@ public class CreateSchedulingDomainRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Product", this.Product);
 
     }
 }

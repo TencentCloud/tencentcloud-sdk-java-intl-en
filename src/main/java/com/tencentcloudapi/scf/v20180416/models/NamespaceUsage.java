@@ -44,6 +44,22 @@ public class NamespaceUsage extends AbstractModel{
     private Long FunctionsCount;
 
     /**
+    * Total memory quota of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TotalConcurrencyMem")
+    @Expose
+    private Long TotalConcurrencyMem;
+
+    /**
+    * Memory usage of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TotalAllocatedConcurrencyMem")
+    @Expose
+    private Long TotalAllocatedConcurrencyMem;
+
+    /**
      * Get Function array 
      * @return Functions Function array
      */
@@ -91,6 +107,46 @@ public class NamespaceUsage extends AbstractModel{
         this.FunctionsCount = FunctionsCount;
     }
 
+    /**
+     * Get Total memory quota of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return TotalConcurrencyMem Total memory quota of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getTotalConcurrencyMem() {
+        return this.TotalConcurrencyMem;
+    }
+
+    /**
+     * Set Total memory quota of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param TotalConcurrencyMem Total memory quota of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTotalConcurrencyMem(Long TotalConcurrencyMem) {
+        this.TotalConcurrencyMem = TotalConcurrencyMem;
+    }
+
+    /**
+     * Get Memory usage of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return TotalAllocatedConcurrencyMem Memory usage of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getTotalAllocatedConcurrencyMem() {
+        return this.TotalAllocatedConcurrencyMem;
+    }
+
+    /**
+     * Set Memory usage of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param TotalAllocatedConcurrencyMem Memory usage of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTotalAllocatedConcurrencyMem(Long TotalAllocatedConcurrencyMem) {
+        this.TotalAllocatedConcurrencyMem = TotalAllocatedConcurrencyMem;
+    }
+
     public NamespaceUsage() {
     }
 
@@ -111,6 +167,12 @@ public class NamespaceUsage extends AbstractModel{
         if (source.FunctionsCount != null) {
             this.FunctionsCount = new Long(source.FunctionsCount);
         }
+        if (source.TotalConcurrencyMem != null) {
+            this.TotalConcurrencyMem = new Long(source.TotalConcurrencyMem);
+        }
+        if (source.TotalAllocatedConcurrencyMem != null) {
+            this.TotalAllocatedConcurrencyMem = new Long(source.TotalAllocatedConcurrencyMem);
+        }
     }
 
 
@@ -121,6 +183,8 @@ public class NamespaceUsage extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Functions.", this.Functions);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "FunctionsCount", this.FunctionsCount);
+        this.setParamSimple(map, prefix + "TotalConcurrencyMem", this.TotalConcurrencyMem);
+        this.setParamSimple(map, prefix + "TotalAllocatedConcurrencyMem", this.TotalAllocatedConcurrencyMem);
 
     }
 }

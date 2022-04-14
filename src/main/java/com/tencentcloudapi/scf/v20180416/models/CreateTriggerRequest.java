@@ -58,7 +58,7 @@ public class CreateTriggerRequest extends AbstractModel{
     private String Namespace;
 
     /**
-    * Function version
+    * Function version. It defaults to `$LATEST`. It’s recommended to use `[$DEFAULT](https://intl.cloud.tencent.com/document/product/583/36149?from_cn_redirect=1#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)` for canary release.
     */
     @SerializedName("Qualifier")
     @Expose
@@ -159,16 +159,16 @@ public class CreateTriggerRequest extends AbstractModel{
     }
 
     /**
-     * Get Function version 
-     * @return Qualifier Function version
+     * Get Function version. It defaults to `$LATEST`. It’s recommended to use `[$DEFAULT](https://intl.cloud.tencent.com/document/product/583/36149?from_cn_redirect=1#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)` for canary release. 
+     * @return Qualifier Function version. It defaults to `$LATEST`. It’s recommended to use `[$DEFAULT](https://intl.cloud.tencent.com/document/product/583/36149?from_cn_redirect=1#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)` for canary release.
      */
     public String getQualifier() {
         return this.Qualifier;
     }
 
     /**
-     * Set Function version
-     * @param Qualifier Function version
+     * Set Function version. It defaults to `$LATEST`. It’s recommended to use `[$DEFAULT](https://intl.cloud.tencent.com/document/product/583/36149?from_cn_redirect=1#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)` for canary release.
+     * @param Qualifier Function version. It defaults to `$LATEST`. It’s recommended to use `[$DEFAULT](https://intl.cloud.tencent.com/document/product/583/36149?from_cn_redirect=1#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)` for canary release.
      */
     public void setQualifier(String Qualifier) {
         this.Qualifier = Qualifier;

@@ -739,26 +739,6 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
-     *This API is used to obtain a CC precise protection policy.
-     * @param req DescribeCCPrecisionPlyListRequest
-     * @return DescribeCCPrecisionPlyListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCCPrecisionPlyListResponse DescribeCCPrecisionPlyList(DescribeCCPrecisionPlyListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCCPrecisionPlyListResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCCPrecisionPlyListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCCPrecisionPlyList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to query the list of CC cleansing thresholds.
      * @param req DescribeCCThresholdListRequest
      * @return DescribeCCThresholdListResponse
@@ -791,46 +771,6 @@ public class AntiddosClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeCCTrendResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeCCTrend");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to obtain a layer-4 access control list.
-     * @param req DescribeCcBlackWhiteIpListRequest
-     * @return DescribeCcBlackWhiteIpListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCcBlackWhiteIpListResponse DescribeCcBlackWhiteIpList(DescribeCcBlackWhiteIpListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCcBlackWhiteIpListResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCcBlackWhiteIpListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCcBlackWhiteIpList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to obtain a list of regional blocking configurations.
-     * @param req DescribeCcGeoIPBlockConfigListRequest
-     * @return DescribeCcGeoIPBlockConfigListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCcGeoIPBlockConfigListResponse DescribeCcGeoIPBlockConfigList(DescribeCcGeoIPBlockConfigListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCcGeoIPBlockConfigListResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCcGeoIPBlockConfigListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCcGeoIPBlockConfigList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -912,27 +852,6 @@ public class AntiddosClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeListBGPIPInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeListBGPIPInstances");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to get a list of Anti-DDoS Pro instances.
-
-     * @param req DescribeListBGPInstancesRequest
-     * @return DescribeListBGPInstancesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeListBGPInstancesResponse DescribeListBGPInstances(DescribeListBGPInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeListBGPInstancesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeListBGPInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeListBGPInstances");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

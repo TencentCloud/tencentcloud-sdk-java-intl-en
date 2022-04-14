@@ -58,6 +58,39 @@ public class PutProvisionedConcurrencyConfigRequest extends AbstractModel{
     private TriggerAction [] TriggerActions;
 
     /**
+    * Specifies the provisioned concurrency type.
+`Default`: Static provisioned concurrency. 
+`ConcurrencyUtilizationTracking`: Scales the concurrency automatically according to the concurrency utilization.
+If `ConcurrencyUtilizationTracking` is passed in, 
+
+`TrackingTarget`, `MinCapacity` and `MaxCapacity` are required, and `VersionProvisionedConcurrencyNum` must be `0`. 
+    */
+    @SerializedName("ProvisionedType")
+    @Expose
+    private String ProvisionedType;
+
+    /**
+    * The target concurrency utilization. Range: (0,1) (two decimal places)
+    */
+    @SerializedName("TrackingTarget")
+    @Expose
+    private Float TrackingTarget;
+
+    /**
+    * The minimum number of instances. It can not be smaller than `1`.
+    */
+    @SerializedName("MinCapacity")
+    @Expose
+    private Long MinCapacity;
+
+    /**
+    * The maximum number of instances
+    */
+    @SerializedName("MaxCapacity")
+    @Expose
+    private Long MaxCapacity;
+
+    /**
      * Get Name of the function for which to set the provisioned concurrency 
      * @return FunctionName Name of the function for which to set the provisioned concurrency
      */
@@ -137,6 +170,90 @@ public class PutProvisionedConcurrencyConfigRequest extends AbstractModel{
         this.TriggerActions = TriggerActions;
     }
 
+    /**
+     * Get Specifies the provisioned concurrency type.
+`Default`: Static provisioned concurrency. 
+`ConcurrencyUtilizationTracking`: Scales the concurrency automatically according to the concurrency utilization.
+If `ConcurrencyUtilizationTracking` is passed in, 
+
+`TrackingTarget`, `MinCapacity` and `MaxCapacity` are required, and `VersionProvisionedConcurrencyNum` must be `0`.  
+     * @return ProvisionedType Specifies the provisioned concurrency type.
+`Default`: Static provisioned concurrency. 
+`ConcurrencyUtilizationTracking`: Scales the concurrency automatically according to the concurrency utilization.
+If `ConcurrencyUtilizationTracking` is passed in, 
+
+`TrackingTarget`, `MinCapacity` and `MaxCapacity` are required, and `VersionProvisionedConcurrencyNum` must be `0`. 
+     */
+    public String getProvisionedType() {
+        return this.ProvisionedType;
+    }
+
+    /**
+     * Set Specifies the provisioned concurrency type.
+`Default`: Static provisioned concurrency. 
+`ConcurrencyUtilizationTracking`: Scales the concurrency automatically according to the concurrency utilization.
+If `ConcurrencyUtilizationTracking` is passed in, 
+
+`TrackingTarget`, `MinCapacity` and `MaxCapacity` are required, and `VersionProvisionedConcurrencyNum` must be `0`. 
+     * @param ProvisionedType Specifies the provisioned concurrency type.
+`Default`: Static provisioned concurrency. 
+`ConcurrencyUtilizationTracking`: Scales the concurrency automatically according to the concurrency utilization.
+If `ConcurrencyUtilizationTracking` is passed in, 
+
+`TrackingTarget`, `MinCapacity` and `MaxCapacity` are required, and `VersionProvisionedConcurrencyNum` must be `0`. 
+     */
+    public void setProvisionedType(String ProvisionedType) {
+        this.ProvisionedType = ProvisionedType;
+    }
+
+    /**
+     * Get The target concurrency utilization. Range: (0,1) (two decimal places) 
+     * @return TrackingTarget The target concurrency utilization. Range: (0,1) (two decimal places)
+     */
+    public Float getTrackingTarget() {
+        return this.TrackingTarget;
+    }
+
+    /**
+     * Set The target concurrency utilization. Range: (0,1) (two decimal places)
+     * @param TrackingTarget The target concurrency utilization. Range: (0,1) (two decimal places)
+     */
+    public void setTrackingTarget(Float TrackingTarget) {
+        this.TrackingTarget = TrackingTarget;
+    }
+
+    /**
+     * Get The minimum number of instances. It can not be smaller than `1`. 
+     * @return MinCapacity The minimum number of instances. It can not be smaller than `1`.
+     */
+    public Long getMinCapacity() {
+        return this.MinCapacity;
+    }
+
+    /**
+     * Set The minimum number of instances. It can not be smaller than `1`.
+     * @param MinCapacity The minimum number of instances. It can not be smaller than `1`.
+     */
+    public void setMinCapacity(Long MinCapacity) {
+        this.MinCapacity = MinCapacity;
+    }
+
+    /**
+     * Get The maximum number of instances 
+     * @return MaxCapacity The maximum number of instances
+     */
+    public Long getMaxCapacity() {
+        return this.MaxCapacity;
+    }
+
+    /**
+     * Set The maximum number of instances
+     * @param MaxCapacity The maximum number of instances
+     */
+    public void setMaxCapacity(Long MaxCapacity) {
+        this.MaxCapacity = MaxCapacity;
+    }
+
     public PutProvisionedConcurrencyConfigRequest() {
     }
 
@@ -163,6 +280,18 @@ public class PutProvisionedConcurrencyConfigRequest extends AbstractModel{
                 this.TriggerActions[i] = new TriggerAction(source.TriggerActions[i]);
             }
         }
+        if (source.ProvisionedType != null) {
+            this.ProvisionedType = new String(source.ProvisionedType);
+        }
+        if (source.TrackingTarget != null) {
+            this.TrackingTarget = new Float(source.TrackingTarget);
+        }
+        if (source.MinCapacity != null) {
+            this.MinCapacity = new Long(source.MinCapacity);
+        }
+        if (source.MaxCapacity != null) {
+            this.MaxCapacity = new Long(source.MaxCapacity);
+        }
     }
 
 
@@ -175,6 +304,10 @@ public class PutProvisionedConcurrencyConfigRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "VersionProvisionedConcurrencyNum", this.VersionProvisionedConcurrencyNum);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamArrayObj(map, prefix + "TriggerActions.", this.TriggerActions);
+        this.setParamSimple(map, prefix + "ProvisionedType", this.ProvisionedType);
+        this.setParamSimple(map, prefix + "TrackingTarget", this.TrackingTarget);
+        this.setParamSimple(map, prefix + "MinCapacity", this.MinCapacity);
+        this.setParamSimple(map, prefix + "MaxCapacity", this.MaxCapacity);
 
     }
 }

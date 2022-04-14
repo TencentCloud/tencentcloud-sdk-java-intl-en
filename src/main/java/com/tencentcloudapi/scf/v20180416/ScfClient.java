@@ -86,26 +86,6 @@ An alias must point to a master version and can point to an additional version a
     }
 
     /**
-     *This API is used to create a function based on the input parameters.
-     * @param req CreateFunctionRequest
-     * @return CreateFunctionResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateFunctionResponse CreateFunction(CreateFunctionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateFunctionResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateFunctionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateFunction");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to create a namespace based on the input parameters.
      * @param req CreateNamespaceRequest
      * @return CreateNamespaceResponse
@@ -338,26 +318,6 @@ An alias must point to a master version and can point to an additional version a
                 Type type = new TypeToken<JsonResponseModel<GetAsyncEventStatusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetAsyncEventStatus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to obtain function details, such as name, code, handler, associated trigger, and timeout.
-     * @param req GetFunctionRequest
-     * @return GetFunctionResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetFunctionResponse GetFunction(GetFunctionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetFunctionResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetFunctionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetFunction");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -858,26 +818,6 @@ An alias must point to a master version and can point to an additional version a
                 Type type = new TypeToken<JsonResponseModel<UpdateFunctionCodeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdateFunctionCode");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to update the function configuration based on the input parameters.
-     * @param req UpdateFunctionConfigurationRequest
-     * @return UpdateFunctionConfigurationResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpdateFunctionConfigurationResponse UpdateFunctionConfiguration(UpdateFunctionConfigurationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateFunctionConfigurationResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<UpdateFunctionConfigurationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateFunctionConfiguration");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
