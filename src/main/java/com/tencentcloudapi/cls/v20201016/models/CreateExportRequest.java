@@ -23,25 +23,25 @@ import java.util.HashMap;
 public class CreateExportRequest extends AbstractModel{
 
     /**
-    * Log topic
+    * Log topic ID
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * Log export search statement
-    */
-    @SerializedName("Query")
-    @Expose
-    private String Query;
-
-    /**
-    * Number of logs to be exported. Maximum value: 10 million
+    * Number of logs to be exported. Maximum value: 50 million
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
+
+    /**
+    * Search statements for log export. <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statements]</a> are not supported.
+    */
+    @SerializedName("Query")
+    @Expose
+    private String Query;
 
     /**
     * Start time of the log to be exported, which is a timestamp in milliseconds
@@ -72,51 +72,51 @@ public class CreateExportRequest extends AbstractModel{
     private String Format;
 
     /**
-     * Get Log topic 
-     * @return TopicId Log topic
+     * Get Log topic ID 
+     * @return TopicId Log topic ID
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Log topic
-     * @param TopicId Log topic
+     * Set Log topic ID
+     * @param TopicId Log topic ID
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get Log export search statement 
-     * @return Query Log export search statement
-     */
-    public String getQuery() {
-        return this.Query;
-    }
-
-    /**
-     * Set Log export search statement
-     * @param Query Log export search statement
-     */
-    public void setQuery(String Query) {
-        this.Query = Query;
-    }
-
-    /**
-     * Get Number of logs to be exported. Maximum value: 10 million 
-     * @return Count Number of logs to be exported. Maximum value: 10 million
+     * Get Number of logs to be exported. Maximum value: 50 million 
+     * @return Count Number of logs to be exported. Maximum value: 50 million
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set Number of logs to be exported. Maximum value: 10 million
-     * @param Count Number of logs to be exported. Maximum value: 10 million
+     * Set Number of logs to be exported. Maximum value: 50 million
+     * @param Count Number of logs to be exported. Maximum value: 50 million
      */
     public void setCount(Long Count) {
         this.Count = Count;
+    }
+
+    /**
+     * Get Search statements for log export. <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statements]</a> are not supported. 
+     * @return Query Search statements for log export. <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statements]</a> are not supported.
+     */
+    public String getQuery() {
+        return this.Query;
+    }
+
+    /**
+     * Set Search statements for log export. <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statements]</a> are not supported.
+     * @param Query Search statements for log export. <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statements]</a> are not supported.
+     */
+    public void setQuery(String Query) {
+        this.Query = Query;
     }
 
     /**
@@ -194,11 +194,11 @@ public class CreateExportRequest extends AbstractModel{
         if (source.TopicId != null) {
             this.TopicId = new String(source.TopicId);
         }
-        if (source.Query != null) {
-            this.Query = new String(source.Query);
-        }
         if (source.Count != null) {
             this.Count = new Long(source.Count);
+        }
+        if (source.Query != null) {
+            this.Query = new String(source.Query);
         }
         if (source.From != null) {
             this.From = new Long(source.From);
@@ -220,8 +220,8 @@ public class CreateExportRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
-        this.setParamSimple(map, prefix + "Query", this.Query);
         this.setParamSimple(map, prefix + "Count", this.Count);
+        this.setParamSimple(map, prefix + "Query", this.Query);
         this.setParamSimple(map, prefix + "From", this.From);
         this.setParamSimple(map, prefix + "To", this.To);
         this.setParamSimple(map, prefix + "Order", this.Order);

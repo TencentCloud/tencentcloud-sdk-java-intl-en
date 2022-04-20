@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DeleteAlarmNoticeRequest extends AbstractModel{
 
     /**
-    * Alarm notification template
+    * Notification group ID
     */
     @SerializedName("AlarmNoticeId")
     @Expose
     private String AlarmNoticeId;
 
     /**
-     * Get Alarm notification template 
-     * @return AlarmNoticeId Alarm notification template
+     * Get Notification group ID 
+     * @return AlarmNoticeId Notification group ID
      */
     public String getAlarmNoticeId() {
         return this.AlarmNoticeId;
     }
 
     /**
-     * Set Alarm notification template
-     * @param AlarmNoticeId Alarm notification template
+     * Set Notification group ID
+     * @param AlarmNoticeId Notification group ID
      */
     public void setAlarmNoticeId(String AlarmNoticeId) {
         this.AlarmNoticeId = AlarmNoticeId;

@@ -31,8 +31,8 @@ public class WebCallback extends AbstractModel{
 
     /**
     * Callback type. Valid values:
-<br><li> WeCom
-<br><li> Http
+<li> WeCom
+<li> Http
     */
     @SerializedName("CallbackType")
     @Expose
@@ -40,10 +40,10 @@ public class WebCallback extends AbstractModel{
 
     /**
     * Callback method. Valid values:
-<br><li> POST
-<br><li> PUT
+<li> POST
+<li> PUT
 Default value: `POST`. This parameter is required if `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("Method")
     @Expose
@@ -51,15 +51,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Request header
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This parameter is disused. To specify request headers, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("Headers")
     @Expose
     private String [] Headers;
 
     /**
-    * Request content, which is required when `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Request content
+Note: This parameter is disused. To specify request content, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("Body")
     @Expose
@@ -90,11 +92,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Callback type. Valid values:
-<br><li> WeCom
-<br><li> Http 
+<li> WeCom
+<li> Http 
      * @return CallbackType Callback type. Valid values:
-<br><li> WeCom
-<br><li> Http
+<li> WeCom
+<li> Http
      */
     public String getCallbackType() {
         return this.CallbackType;
@@ -102,11 +104,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Callback type. Valid values:
-<br><li> WeCom
-<br><li> Http
+<li> WeCom
+<li> Http
      * @param CallbackType Callback type. Valid values:
-<br><li> WeCom
-<br><li> Http
+<li> WeCom
+<li> Http
      */
     public void setCallbackType(String CallbackType) {
         this.CallbackType = CallbackType;
@@ -114,15 +116,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Callback method. Valid values:
-<br><li> POST
-<br><li> PUT
+<li> POST
+<li> PUT
 Default value: `POST`. This parameter is required if `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value was found. 
      * @return Method Callback method. Valid values:
-<br><li> POST
-<br><li> PUT
+<li> POST
+<li> PUT
 Default value: `POST`. This parameter is required if `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public String getMethod() {
         return this.Method;
@@ -130,15 +132,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Callback method. Valid values:
-<br><li> POST
-<br><li> PUT
+<li> POST
+<li> PUT
 Default value: `POST`. This parameter is required if `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
      * @param Method Callback method. Valid values:
-<br><li> POST
-<br><li> PUT
+<li> POST
+<li> PUT
 Default value: `POST`. This parameter is required if `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setMethod(String Method) {
         this.Method = Method;
@@ -146,9 +148,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Request header
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This parameter is disused. To specify request headers, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found. 
      * @return Headers Request header
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This parameter is disused. To specify request headers, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public String [] getHeaders() {
         return this.Headers;
@@ -156,29 +160,35 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Request header
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This parameter is disused. To specify request headers, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found.
      * @param Headers Request header
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This parameter is disused. To specify request headers, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setHeaders(String [] Headers) {
         this.Headers = Headers;
     }
 
     /**
-     * Get Request content, which is required when `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Body Request content, which is required when `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Request content
+Note: This parameter is disused. To specify request content, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return Body Request content
+Note: This parameter is disused. To specify request content, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public String getBody() {
         return this.Body;
     }
 
     /**
-     * Set Request content, which is required when `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Body Request content, which is required when `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Request content
+Note: This parameter is disused. To specify request content, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param Body Request content
+Note: This parameter is disused. To specify request content, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setBody(String Body) {
         this.Body = Body;

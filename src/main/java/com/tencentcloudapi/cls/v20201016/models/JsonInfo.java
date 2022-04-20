@@ -30,8 +30,8 @@ public class JsonInfo extends AbstractModel{
     private Boolean EnableTag;
 
     /**
-    * Metadata information list
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Metadata information list. Valid values: __SOURCE__; __FILENAME__; __TIMESTAMP__
+Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("MetaFields")
     @Expose
@@ -54,20 +54,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Metadata information list
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return MetaFields Metadata information list
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Metadata information list. Valid values: __SOURCE__; __FILENAME__; __TIMESTAMP__
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return MetaFields Metadata information list. Valid values: __SOURCE__; __FILENAME__; __TIMESTAMP__
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public String [] getMetaFields() {
         return this.MetaFields;
     }
 
     /**
-     * Set Metadata information list
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param MetaFields Metadata information list
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Metadata information list. Valid values: __SOURCE__; __FILENAME__; __TIMESTAMP__
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param MetaFields Metadata information list. Valid values: __SOURCE__; __FILENAME__; __TIMESTAMP__
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setMetaFields(String [] MetaFields) {
         this.MetaFields = MetaFields;

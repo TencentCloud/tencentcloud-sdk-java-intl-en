@@ -51,7 +51,7 @@ public class DescribeMachinesResponse extends AbstractModel{
     private String UpdateEndTime;
 
     /**
-    * Latest LogListener version available to the current user
+    * Latest LogListener version available to the current user
     */
     @SerializedName("LatestAgentVersion")
     @Expose
@@ -136,16 +136,16 @@ public class DescribeMachinesResponse extends AbstractModel{
     }
 
     /**
-     * Get Latest LogListener version available to the current user 
-     * @return LatestAgentVersion Latest LogListener version available to the current user
+     * Get Latest LogListener version available to the current user 
+     * @return LatestAgentVersion Latest LogListener version available to the current user
      */
     public String getLatestAgentVersion() {
         return this.LatestAgentVersion;
     }
 
     /**
-     * Set Latest LogListener version available to the current user
-     * @param LatestAgentVersion Latest LogListener version available to the current user
+     * Set Latest LogListener version available to the current user
+     * @param LatestAgentVersion Latest LogListener version available to the current user
      */
     public void setLatestAgentVersion(String LatestAgentVersion) {
         this.LatestAgentVersion = LatestAgentVersion;

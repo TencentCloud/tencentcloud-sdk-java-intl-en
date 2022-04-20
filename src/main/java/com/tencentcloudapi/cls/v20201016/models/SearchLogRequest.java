@@ -23,184 +23,244 @@ import java.util.HashMap;
 public class SearchLogRequest extends AbstractModel{
 
     /**
-    * Log topic ID to be queried
+    * ID of the log topic to be searched
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * Start time of the log to be queried, which is a Unix timestamp in milliseconds
+    * Start time of the log to be searched, which is a Unix timestamp in milliseconds
     */
     @SerializedName("From")
     @Expose
     private Long From;
 
     /**
-    * End time of the log to be queried, which is a Unix timestamp in milliseconds
+    * End time of the log to be searched, which is a Unix timestamp in milliseconds
     */
     @SerializedName("To")
     @Expose
     private Long To;
 
     /**
-    * Query statement. Maximum length: 4096
+    * Statement for search and analysis. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-    * Number of raw logs returned in a single query. Maximum value: 100. If the query statement (Query) contains an SQL query, you need to specify the number of SQL query results in `Query`. For more information, please visit https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1
+    * The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * This parameter is used to load more logs. Pass through the last `Context` value returned to get more log content. Up to 10,000 raw logs can be obtained in total. This parameter expires in 1 hour.
+    * You can pass through the `Context` value (validity: 1 hour) returned by the last API to continue to get logs, which can get up to 10,000 raw logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
     */
     @SerializedName("Context")
     @Expose
     private String Context;
 
     /**
-    * Order of the logs sorted by time returned by the log API. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
+    * Time order of the logs returned. Valid values: `asc` (ascending); `desc`: (descending). Default value: `desc`
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To sort the analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58978?from_cn_redirect=1" target="_blank">SQL ORDER BY Syntax</a>.
     */
     @SerializedName("Sort")
     @Expose
     private String Sort;
 
     /**
-    * If the value is `true`, the new search method will be used, and the response parameters `AnalysisRecords` and `Columns` will be valid. If the value is `false`, the old search method will be used, and `AnalysisResults` and `ColNames` will be valid.
+    * If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
+If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
+The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
     */
     @SerializedName("UseNewAnalysis")
     @Expose
     private Boolean UseNewAnalysis;
 
     /**
-     * Get Log topic ID to be queried 
-     * @return TopicId Log topic ID to be queried
+     * Get ID of the log topic to be searched 
+     * @return TopicId ID of the log topic to be searched
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Log topic ID to be queried
-     * @param TopicId Log topic ID to be queried
+     * Set ID of the log topic to be searched
+     * @param TopicId ID of the log topic to be searched
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get Start time of the log to be queried, which is a Unix timestamp in milliseconds 
-     * @return From Start time of the log to be queried, which is a Unix timestamp in milliseconds
+     * Get Start time of the log to be searched, which is a Unix timestamp in milliseconds 
+     * @return From Start time of the log to be searched, which is a Unix timestamp in milliseconds
      */
     public Long getFrom() {
         return this.From;
     }
 
     /**
-     * Set Start time of the log to be queried, which is a Unix timestamp in milliseconds
-     * @param From Start time of the log to be queried, which is a Unix timestamp in milliseconds
+     * Set Start time of the log to be searched, which is a Unix timestamp in milliseconds
+     * @param From Start time of the log to be searched, which is a Unix timestamp in milliseconds
      */
     public void setFrom(Long From) {
         this.From = From;
     }
 
     /**
-     * Get End time of the log to be queried, which is a Unix timestamp in milliseconds 
-     * @return To End time of the log to be queried, which is a Unix timestamp in milliseconds
+     * Get End time of the log to be searched, which is a Unix timestamp in milliseconds 
+     * @return To End time of the log to be searched, which is a Unix timestamp in milliseconds
      */
     public Long getTo() {
         return this.To;
     }
 
     /**
-     * Set End time of the log to be queried, which is a Unix timestamp in milliseconds
-     * @param To End time of the log to be queried, which is a Unix timestamp in milliseconds
+     * Set End time of the log to be searched, which is a Unix timestamp in milliseconds
+     * @param To End time of the log to be searched, which is a Unix timestamp in milliseconds
      */
     public void setTo(Long To) {
         this.To = To;
     }
 
     /**
-     * Get Query statement. Maximum length: 4096 
-     * @return Query Query statement. Maximum length: 4096
+     * Get Statement for search and analysis. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required. 
+     * @return Query Statement for search and analysis. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set Query statement. Maximum length: 4096
-     * @param Query Query statement. Maximum length: 4096
+     * Set Statement for search and analysis. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+     * @param Query Statement for search and analysis. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get Number of raw logs returned in a single query. Maximum value: 100. If the query statement (Query) contains an SQL query, you need to specify the number of SQL query results in `Query`. For more information, please visit https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1 
-     * @return Limit Number of raw logs returned in a single query. Maximum value: 100. If the query statement (Query) contains an SQL query, you need to specify the number of SQL query results in `Query`. For more information, please visit https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1
+     * Get The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>. 
+     * @return Limit The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of raw logs returned in a single query. Maximum value: 100. If the query statement (Query) contains an SQL query, you need to specify the number of SQL query results in `Query`. For more information, please visit https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1
-     * @param Limit Number of raw logs returned in a single query. Maximum value: 100. If the query statement (Query) contains an SQL query, you need to specify the number of SQL query results in `Query`. For more information, please visit https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1
+     * Set The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
+     * @param Limit The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get This parameter is used to load more logs. Pass through the last `Context` value returned to get more log content. Up to 10,000 raw logs can be obtained in total. This parameter expires in 1 hour. 
-     * @return Context This parameter is used to load more logs. Pass through the last `Context` value returned to get more log content. Up to 10,000 raw logs can be obtained in total. This parameter expires in 1 hour.
+     * Get You can pass through the `Context` value (validity: 1 hour) returned by the last API to continue to get logs, which can get up to 10,000 raw logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>. 
+     * @return Context You can pass through the `Context` value (validity: 1 hour) returned by the last API to continue to get logs, which can get up to 10,000 raw logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set This parameter is used to load more logs. Pass through the last `Context` value returned to get more log content. Up to 10,000 raw logs can be obtained in total. This parameter expires in 1 hour.
-     * @param Context This parameter is used to load more logs. Pass through the last `Context` value returned to get more log content. Up to 10,000 raw logs can be obtained in total. This parameter expires in 1 hour.
+     * Set You can pass through the `Context` value (validity: 1 hour) returned by the last API to continue to get logs, which can get up to 10,000 raw logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
+     * @param Context You can pass through the `Context` value (validity: 1 hour) returned by the last API to continue to get logs, which can get up to 10,000 raw logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
      */
     public void setContext(String Context) {
         this.Context = Context;
     }
 
     /**
-     * Get Order of the logs sorted by time returned by the log API. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc` 
-     * @return Sort Order of the logs sorted by time returned by the log API. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
+     * Get Time order of the logs returned. Valid values: `asc` (ascending); `desc`: (descending). Default value: `desc`
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To sort the analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58978?from_cn_redirect=1" target="_blank">SQL ORDER BY Syntax</a>. 
+     * @return Sort Time order of the logs returned. Valid values: `asc` (ascending); `desc`: (descending). Default value: `desc`
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To sort the analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58978?from_cn_redirect=1" target="_blank">SQL ORDER BY Syntax</a>.
      */
     public String getSort() {
         return this.Sort;
     }
 
     /**
-     * Set Order of the logs sorted by time returned by the log API. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
-     * @param Sort Order of the logs sorted by time returned by the log API. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
+     * Set Time order of the logs returned. Valid values: `asc` (ascending); `desc`: (descending). Default value: `desc`
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To sort the analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58978?from_cn_redirect=1" target="_blank">SQL ORDER BY Syntax</a>.
+     * @param Sort Time order of the logs returned. Valid values: `asc` (ascending); `desc`: (descending). Default value: `desc`
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To sort the analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58978?from_cn_redirect=1" target="_blank">SQL ORDER BY Syntax</a>.
      */
     public void setSort(String Sort) {
         this.Sort = Sort;
     }
 
     /**
-     * Get If the value is `true`, the new search method will be used, and the response parameters `AnalysisRecords` and `Columns` will be valid. If the value is `false`, the old search method will be used, and `AnalysisResults` and `ColNames` will be valid. 
-     * @return UseNewAnalysis If the value is `true`, the new search method will be used, and the response parameters `AnalysisRecords` and `Columns` will be valid. If the value is `false`, the old search method will be used, and `AnalysisResults` and `ColNames` will be valid.
+     * Get If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
+If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
+The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`). 
+     * @return UseNewAnalysis If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
+If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
+The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
      */
     public Boolean getUseNewAnalysis() {
         return this.UseNewAnalysis;
     }
 
     /**
-     * Set If the value is `true`, the new search method will be used, and the response parameters `AnalysisRecords` and `Columns` will be valid. If the value is `false`, the old search method will be used, and `AnalysisResults` and `ColNames` will be valid.
-     * @param UseNewAnalysis If the value is `true`, the new search method will be used, and the response parameters `AnalysisRecords` and `Columns` will be valid. If the value is `false`, the old search method will be used, and `AnalysisResults` and `ColNames` will be valid.
+     * Set If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
+If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
+The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
+     * @param UseNewAnalysis If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
+If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
+The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
      */
     public void setUseNewAnalysis(Boolean UseNewAnalysis) {
         this.UseNewAnalysis = UseNewAnalysis;

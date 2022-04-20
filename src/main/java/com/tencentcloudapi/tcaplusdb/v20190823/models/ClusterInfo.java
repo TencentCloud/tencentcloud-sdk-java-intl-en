@@ -217,6 +217,30 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private KafkaInfo KafkaInfo;
 
     /**
+    * The number of days after which the cluster Txh backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TxhBackupExpireDay")
+    @Expose
+    private Long TxhBackupExpireDay;
+
+    /**
+    * The number of days after which the cluster Ulog backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("UlogBackupExpireDay")
+    @Expose
+    private Long UlogBackupExpireDay;
+
+    /**
+    * Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsReadOnlyUlogBackupExpireDay")
+    @Expose
+    private Long IsReadOnlyUlogBackupExpireDay;
+
+    /**
      * Get Cluster name 
      * @return ClusterName Cluster name
      */
@@ -680,6 +704,66 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.KafkaInfo = KafkaInfo;
     }
 
+    /**
+     * Get The number of days after which the cluster Txh backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return TxhBackupExpireDay The number of days after which the cluster Txh backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getTxhBackupExpireDay() {
+        return this.TxhBackupExpireDay;
+    }
+
+    /**
+     * Set The number of days after which the cluster Txh backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param TxhBackupExpireDay The number of days after which the cluster Txh backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTxhBackupExpireDay(Long TxhBackupExpireDay) {
+        this.TxhBackupExpireDay = TxhBackupExpireDay;
+    }
+
+    /**
+     * Get The number of days after which the cluster Ulog backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return UlogBackupExpireDay The number of days after which the cluster Ulog backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getUlogBackupExpireDay() {
+        return this.UlogBackupExpireDay;
+    }
+
+    /**
+     * Set The number of days after which the cluster Ulog backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param UlogBackupExpireDay The number of days after which the cluster Ulog backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setUlogBackupExpireDay(Long UlogBackupExpireDay) {
+        this.UlogBackupExpireDay = UlogBackupExpireDay;
+    }
+
+    /**
+     * Get Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return IsReadOnlyUlogBackupExpireDay Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getIsReadOnlyUlogBackupExpireDay() {
+        return this.IsReadOnlyUlogBackupExpireDay;
+    }
+
+    /**
+     * Set Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param IsReadOnlyUlogBackupExpireDay Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setIsReadOnlyUlogBackupExpireDay(Long IsReadOnlyUlogBackupExpireDay) {
+        this.IsReadOnlyUlogBackupExpireDay = IsReadOnlyUlogBackupExpireDay;
+    }
+
     public ClusterInfo() {
     }
 
@@ -775,6 +859,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.KafkaInfo != null) {
             this.KafkaInfo = new KafkaInfo(source.KafkaInfo);
         }
+        if (source.TxhBackupExpireDay != null) {
+            this.TxhBackupExpireDay = new Long(source.TxhBackupExpireDay);
+        }
+        if (source.UlogBackupExpireDay != null) {
+            this.UlogBackupExpireDay = new Long(source.UlogBackupExpireDay);
+        }
+        if (source.IsReadOnlyUlogBackupExpireDay != null) {
+            this.IsReadOnlyUlogBackupExpireDay = new Long(source.IsReadOnlyUlogBackupExpireDay);
+        }
     }
 
 
@@ -808,6 +901,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamArraySimple(map, prefix + "DbaUins.", this.DbaUins);
         this.setParamSimple(map, prefix + "DataFlowStatus", this.DataFlowStatus);
         this.setParamObj(map, prefix + "KafkaInfo.", this.KafkaInfo);
+        this.setParamSimple(map, prefix + "TxhBackupExpireDay", this.TxhBackupExpireDay);
+        this.setParamSimple(map, prefix + "UlogBackupExpireDay", this.UlogBackupExpireDay);
+        this.setParamSimple(map, prefix + "IsReadOnlyUlogBackupExpireDay", this.IsReadOnlyUlogBackupExpireDay);
 
     }
 }

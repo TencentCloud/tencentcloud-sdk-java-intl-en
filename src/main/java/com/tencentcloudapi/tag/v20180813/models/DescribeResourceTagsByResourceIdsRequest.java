@@ -37,7 +37,7 @@ public class DescribeResourceTagsByResourceIdsRequest extends AbstractModel{
     private String ResourcePrefix;
 
     /**
-    * Unique resource ID.
+    * Array of resource IDs (up to 50)
     */
     @SerializedName("ResourceIds")
     @Expose
@@ -97,16 +97,16 @@ public class DescribeResourceTagsByResourceIdsRequest extends AbstractModel{
     }
 
     /**
-     * Get Unique resource ID. 
-     * @return ResourceIds Unique resource ID.
+     * Get Array of resource IDs (up to 50) 
+     * @return ResourceIds Array of resource IDs (up to 50)
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set Unique resource ID.
-     * @param ResourceIds Unique resource ID.
+     * Set Array of resource IDs (up to 50)
+     * @param ResourceIds Array of resource IDs (up to 50)
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;

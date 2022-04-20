@@ -30,7 +30,7 @@ public class ModifyConsumerRequest extends AbstractModel{
     private String TopicId;
 
     /**
-    * Whether to enable the shipping task
+    * Whether the shipping task takes effect (default: no)
     */
     @SerializedName("Effective")
     @Expose
@@ -74,16 +74,16 @@ public class ModifyConsumerRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to enable the shipping task 
-     * @return Effective Whether to enable the shipping task
+     * Get Whether the shipping task takes effect (default: no) 
+     * @return Effective Whether the shipping task takes effect (default: no)
      */
     public Boolean getEffective() {
         return this.Effective;
     }
 
     /**
-     * Set Whether to enable the shipping task
-     * @param Effective Whether to enable the shipping task
+     * Set Whether the shipping task takes effect (default: no)
+     * @param Effective Whether the shipping task takes effect (default: no)
      */
     public void setEffective(Boolean Effective) {
         this.Effective = Effective;

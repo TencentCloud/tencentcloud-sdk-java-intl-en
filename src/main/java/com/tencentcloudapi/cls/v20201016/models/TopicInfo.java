@@ -104,8 +104,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String StorageType;
 
     /**
-    * Lifecycle in days
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("Period")
     @Expose
@@ -304,20 +304,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Lifecycle in days
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Period Lifecycle in days
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return Period Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Lifecycle in days
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Period Lifecycle in days
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param Period Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setPeriod(Long Period) {
         this.Period = Period;

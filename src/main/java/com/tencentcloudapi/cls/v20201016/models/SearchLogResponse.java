@@ -23,61 +23,66 @@ import java.util.HashMap;
 public class SearchLogResponse extends AbstractModel{
 
     /**
-    * `Context` for loading subsequent content. It will expire after 1 hour.
+    * You can pass through the `Context` value (validity: 1 hour) returned by this API to continue to get more logs.
     */
     @SerializedName("Context")
     @Expose
     private String Context;
 
     /**
-    * Whether to return all raw log query results. This parameter is meaningless if the query statement (Query) contains an SQL query.
+    * Whether to return all raw log query results. If not, you can use `Context` to continue to get logs.
+Note: This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
     */
     @SerializedName("ListOver")
     @Expose
     private Boolean ListOver;
 
     /**
-    * Whether the return is the analysis result
+    * Whether the returned data is the analysis (SQL) result
     */
     @SerializedName("Analysis")
     @Expose
     private Boolean Analysis;
 
     /**
-    * If `Analysis` is `true`, column name of the analysis result will be returned; otherwise, empty content will be returned.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-    */
-    @SerializedName("ColNames")
-    @Expose
-    private String [] ColNames;
-
-    /**
-    * Log query result. If `Analysis` is `True`, `null` may be returned
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Raw logs that meet the search conditions
+Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("Results")
     @Expose
     private LogInfo [] Results;
 
     /**
-    * Log analysis result. If `Analysis` is `False`, `null` may be returned
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Column names of log analysis
+This parameter is valid only when `UseNewAnalysis` is `false`.
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("ColNames")
+    @Expose
+    private String [] ColNames;
+
+    /**
+    * Log analysis result
+This parameter is valid only when `UseNewAnalysis` is `false`.
+Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("AnalysisResults")
     @Expose
     private LogItems [] AnalysisResults;
 
     /**
-    * New log analysis result, which will be valid if `UseNewAnalysis` is `true`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Log analysis result
+This parameter is valid only when `UseNewAnalysis` is `true`.
+Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("AnalysisRecords")
     @Expose
     private String [] AnalysisRecords;
 
     /**
-    * Column attribute of log analysis, which will be valid if `UseNewAnalysis` is `true`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Column attributes of log analysis
+This parameter is valid only when `UseNewAnalysis` is `true`.
+Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("Columns")
     @Expose
@@ -91,148 +96,168 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get `Context` for loading subsequent content. It will expire after 1 hour. 
-     * @return Context `Context` for loading subsequent content. It will expire after 1 hour.
+     * Get You can pass through the `Context` value (validity: 1 hour) returned by this API to continue to get more logs. 
+     * @return Context You can pass through the `Context` value (validity: 1 hour) returned by this API to continue to get more logs.
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set `Context` for loading subsequent content. It will expire after 1 hour.
-     * @param Context `Context` for loading subsequent content. It will expire after 1 hour.
+     * Set You can pass through the `Context` value (validity: 1 hour) returned by this API to continue to get more logs.
+     * @param Context You can pass through the `Context` value (validity: 1 hour) returned by this API to continue to get more logs.
      */
     public void setContext(String Context) {
         this.Context = Context;
     }
 
     /**
-     * Get Whether to return all raw log query results. This parameter is meaningless if the query statement (Query) contains an SQL query. 
-     * @return ListOver Whether to return all raw log query results. This parameter is meaningless if the query statement (Query) contains an SQL query.
+     * Get Whether to return all raw log query results. If not, you can use `Context` to continue to get logs.
+Note: This parameter is valid only when the query statement (`Query`) does not contain an SQL statement. 
+     * @return ListOver Whether to return all raw log query results. If not, you can use `Context` to continue to get logs.
+Note: This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
      */
     public Boolean getListOver() {
         return this.ListOver;
     }
 
     /**
-     * Set Whether to return all raw log query results. This parameter is meaningless if the query statement (Query) contains an SQL query.
-     * @param ListOver Whether to return all raw log query results. This parameter is meaningless if the query statement (Query) contains an SQL query.
+     * Set Whether to return all raw log query results. If not, you can use `Context` to continue to get logs.
+Note: This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+     * @param ListOver Whether to return all raw log query results. If not, you can use `Context` to continue to get logs.
+Note: This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
      */
     public void setListOver(Boolean ListOver) {
         this.ListOver = ListOver;
     }
 
     /**
-     * Get Whether the return is the analysis result 
-     * @return Analysis Whether the return is the analysis result
+     * Get Whether the returned data is the analysis (SQL) result 
+     * @return Analysis Whether the returned data is the analysis (SQL) result
      */
     public Boolean getAnalysis() {
         return this.Analysis;
     }
 
     /**
-     * Set Whether the return is the analysis result
-     * @param Analysis Whether the return is the analysis result
+     * Set Whether the returned data is the analysis (SQL) result
+     * @param Analysis Whether the returned data is the analysis (SQL) result
      */
     public void setAnalysis(Boolean Analysis) {
         this.Analysis = Analysis;
     }
 
     /**
-     * Get If `Analysis` is `true`, column name of the analysis result will be returned; otherwise, empty content will be returned.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ColNames If `Analysis` is `true`, column name of the analysis result will be returned; otherwise, empty content will be returned.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     */
-    public String [] getColNames() {
-        return this.ColNames;
-    }
-
-    /**
-     * Set If `Analysis` is `true`, column name of the analysis result will be returned; otherwise, empty content will be returned.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ColNames If `Analysis` is `true`, column name of the analysis result will be returned; otherwise, empty content will be returned.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     */
-    public void setColNames(String [] ColNames) {
-        this.ColNames = ColNames;
-    }
-
-    /**
-     * Get Log query result. If `Analysis` is `True`, `null` may be returned
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Results Log query result. If `Analysis` is `True`, `null` may be returned
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Raw logs that meet the search conditions
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return Results Raw logs that meet the search conditions
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public LogInfo [] getResults() {
         return this.Results;
     }
 
     /**
-     * Set Log query result. If `Analysis` is `True`, `null` may be returned
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Results Log query result. If `Analysis` is `True`, `null` may be returned
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Raw logs that meet the search conditions
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param Results Raw logs that meet the search conditions
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setResults(LogInfo [] Results) {
         this.Results = Results;
     }
 
     /**
-     * Get Log analysis result. If `Analysis` is `False`, `null` may be returned
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return AnalysisResults Log analysis result. If `Analysis` is `False`, `null` may be returned
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Column names of log analysis
+This parameter is valid only when `UseNewAnalysis` is `false`.
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return ColNames Column names of log analysis
+This parameter is valid only when `UseNewAnalysis` is `false`.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String [] getColNames() {
+        return this.ColNames;
+    }
+
+    /**
+     * Set Column names of log analysis
+This parameter is valid only when `UseNewAnalysis` is `false`.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param ColNames Column names of log analysis
+This parameter is valid only when `UseNewAnalysis` is `false`.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setColNames(String [] ColNames) {
+        this.ColNames = ColNames;
+    }
+
+    /**
+     * Get Log analysis result
+This parameter is valid only when `UseNewAnalysis` is `false`.
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return AnalysisResults Log analysis result
+This parameter is valid only when `UseNewAnalysis` is `false`.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public LogItems [] getAnalysisResults() {
         return this.AnalysisResults;
     }
 
     /**
-     * Set Log analysis result. If `Analysis` is `False`, `null` may be returned
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param AnalysisResults Log analysis result. If `Analysis` is `False`, `null` may be returned
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Log analysis result
+This parameter is valid only when `UseNewAnalysis` is `false`.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param AnalysisResults Log analysis result
+This parameter is valid only when `UseNewAnalysis` is `false`.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setAnalysisResults(LogItems [] AnalysisResults) {
         this.AnalysisResults = AnalysisResults;
     }
 
     /**
-     * Get New log analysis result, which will be valid if `UseNewAnalysis` is `true`
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return AnalysisRecords New log analysis result, which will be valid if `UseNewAnalysis` is `true`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Log analysis result
+This parameter is valid only when `UseNewAnalysis` is `true`.
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return AnalysisRecords Log analysis result
+This parameter is valid only when `UseNewAnalysis` is `true`.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public String [] getAnalysisRecords() {
         return this.AnalysisRecords;
     }
 
     /**
-     * Set New log analysis result, which will be valid if `UseNewAnalysis` is `true`
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param AnalysisRecords New log analysis result, which will be valid if `UseNewAnalysis` is `true`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Log analysis result
+This parameter is valid only when `UseNewAnalysis` is `true`.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param AnalysisRecords Log analysis result
+This parameter is valid only when `UseNewAnalysis` is `true`.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setAnalysisRecords(String [] AnalysisRecords) {
         this.AnalysisRecords = AnalysisRecords;
     }
 
     /**
-     * Get Column attribute of log analysis, which will be valid if `UseNewAnalysis` is `true`
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Columns Column attribute of log analysis, which will be valid if `UseNewAnalysis` is `true`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Column attributes of log analysis
+This parameter is valid only when `UseNewAnalysis` is `true`.
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return Columns Column attributes of log analysis
+This parameter is valid only when `UseNewAnalysis` is `true`.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public Column [] getColumns() {
         return this.Columns;
     }
 
     /**
-     * Set Column attribute of log analysis, which will be valid if `UseNewAnalysis` is `true`
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Columns Column attribute of log analysis, which will be valid if `UseNewAnalysis` is `true`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Column attributes of log analysis
+This parameter is valid only when `UseNewAnalysis` is `true`.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param Columns Column attributes of log analysis
+This parameter is valid only when `UseNewAnalysis` is `true`.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setColumns(Column [] Columns) {
         this.Columns = Columns;
@@ -271,16 +296,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.Analysis != null) {
             this.Analysis = new Boolean(source.Analysis);
         }
-        if (source.ColNames != null) {
-            this.ColNames = new String[source.ColNames.length];
-            for (int i = 0; i < source.ColNames.length; i++) {
-                this.ColNames[i] = new String(source.ColNames[i]);
-            }
-        }
         if (source.Results != null) {
             this.Results = new LogInfo[source.Results.length];
             for (int i = 0; i < source.Results.length; i++) {
                 this.Results[i] = new LogInfo(source.Results[i]);
+            }
+        }
+        if (source.ColNames != null) {
+            this.ColNames = new String[source.ColNames.length];
+            for (int i = 0; i < source.ColNames.length; i++) {
+                this.ColNames[i] = new String(source.ColNames[i]);
             }
         }
         if (source.AnalysisResults != null) {
@@ -314,8 +339,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Context", this.Context);
         this.setParamSimple(map, prefix + "ListOver", this.ListOver);
         this.setParamSimple(map, prefix + "Analysis", this.Analysis);
-        this.setParamArraySimple(map, prefix + "ColNames.", this.ColNames);
         this.setParamArrayObj(map, prefix + "Results.", this.Results);
+        this.setParamArraySimple(map, prefix + "ColNames.", this.ColNames);
         this.setParamArrayObj(map, prefix + "AnalysisResults.", this.AnalysisResults);
         this.setParamArraySimple(map, prefix + "AnalysisRecords.", this.AnalysisRecords);
         this.setParamArrayObj(map, prefix + "Columns.", this.Columns);

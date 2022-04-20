@@ -39,6 +39,14 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String [] MetaFields;
 
     /**
+    * This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("TagJsonNotTiled")
+    @Expose
+    private Boolean TagJsonNotTiled;
+
+    /**
      * Get Whether to ship tag information
 Note: This field may return `null`, indicating that no valid value was found. 
      * @return EnableTag Whether to ship tag information
@@ -78,6 +86,26 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.MetaFields = MetaFields;
     }
 
+    /**
+     * Get This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return TagJsonNotTiled This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public Boolean getTagJsonNotTiled() {
+        return this.TagJsonNotTiled;
+    }
+
+    /**
+     * Set This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param TagJsonNotTiled This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setTagJsonNotTiled(Boolean TagJsonNotTiled) {
+        this.TagJsonNotTiled = TagJsonNotTiled;
+    }
+
     public ConsumerContent() {
     }
 
@@ -95,6 +123,9 @@ Note: This field may return `null`, indicating that no valid value was found.
                 this.MetaFields[i] = new String(source.MetaFields[i]);
             }
         }
+        if (source.TagJsonNotTiled != null) {
+            this.TagJsonNotTiled = new Boolean(source.TagJsonNotTiled);
+        }
     }
 
 
@@ -104,6 +135,7 @@ Note: This field may return `null`, indicating that no valid value was found.
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnableTag", this.EnableTag);
         this.setParamArraySimple(map, prefix + "MetaFields.", this.MetaFields);
+        this.setParamSimple(map, prefix + "TagJsonNotTiled", this.TagJsonNotTiled);
 
     }
 }

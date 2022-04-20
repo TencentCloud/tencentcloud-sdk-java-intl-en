@@ -114,7 +114,7 @@ public enum PrivatednsErrorCode {
     // Incorrect parameter value.
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-    // Cannot create a dedicated internal TLD.
+    // This is a reserved domain name and cannot be created.
      INVALIDPARAMETERVALUE_RESERVEDDOMAIN("InvalidParameterValue.ReservedDomain"),
      
     // The quota limit is exceeded.
@@ -149,9 +149,6 @@ public enum PrivatednsErrorCode {
      
     // The resource is unavailable.
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
-     
-    //  
-     RESOURCEUNAVAILABLE_TLDOPERATELIMIT("ResourceUnavailable.TldOperateLimit"),
      
     // The TLD value-added package expired.
      RESOURCEUNAVAILABLE_TLDPACKAGEEXPIRED("ResourceUnavailable.TldPackageExpired"),

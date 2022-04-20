@@ -484,6 +484,26 @@ This API is used to get the permission to download a backup file. The detailed b
     }
 
     /**
+     *This API is used to modify the network settings of a TencentDB instance, such as switching its network type from classic network to VPC or between VPCs.
+     * @param req ModifyDBInstanceNetworkAddressRequest
+     * @return ModifyDBInstanceNetworkAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceNetworkAddressResponse ModifyDBInstanceNetworkAddress(ModifyDBInstanceNetworkAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBInstanceNetworkAddressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceNetworkAddressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDBInstanceNetworkAddress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify the security groups associated with an instance.
      * @param req ModifyDBInstanceSecurityGroupRequest
      * @return ModifyDBInstanceSecurityGroupResponse

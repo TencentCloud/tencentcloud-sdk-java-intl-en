@@ -37,11 +37,25 @@ public class ModifyIndexRequest extends AbstractModel{
     private Boolean Status;
 
     /**
-    * Index rule. Either `Rule` or `Effective` must exist.
+    * Index rule
     */
     @SerializedName("Rule")
     @Expose
     private RuleInfo Rule;
+
+    /**
+    * 
+    */
+    @SerializedName("IncludeInternalFields")
+    @Expose
+    private Boolean IncludeInternalFields;
+
+    /**
+    * 
+    */
+    @SerializedName("MetadataFlag")
+    @Expose
+    private Long MetadataFlag;
 
     /**
      * Get Log topic ID 
@@ -76,19 +90,51 @@ public class ModifyIndexRequest extends AbstractModel{
     }
 
     /**
-     * Get Index rule. Either `Rule` or `Effective` must exist. 
-     * @return Rule Index rule. Either `Rule` or `Effective` must exist.
+     * Get Index rule 
+     * @return Rule Index rule
      */
     public RuleInfo getRule() {
         return this.Rule;
     }
 
     /**
-     * Set Index rule. Either `Rule` or `Effective` must exist.
-     * @param Rule Index rule. Either `Rule` or `Effective` must exist.
+     * Set Index rule
+     * @param Rule Index rule
      */
     public void setRule(RuleInfo Rule) {
         this.Rule = Rule;
+    }
+
+    /**
+     * Get  
+     * @return IncludeInternalFields 
+     */
+    public Boolean getIncludeInternalFields() {
+        return this.IncludeInternalFields;
+    }
+
+    /**
+     * Set 
+     * @param IncludeInternalFields 
+     */
+    public void setIncludeInternalFields(Boolean IncludeInternalFields) {
+        this.IncludeInternalFields = IncludeInternalFields;
+    }
+
+    /**
+     * Get  
+     * @return MetadataFlag 
+     */
+    public Long getMetadataFlag() {
+        return this.MetadataFlag;
+    }
+
+    /**
+     * Set 
+     * @param MetadataFlag 
+     */
+    public void setMetadataFlag(Long MetadataFlag) {
+        this.MetadataFlag = MetadataFlag;
     }
 
     public ModifyIndexRequest() {
@@ -108,6 +154,12 @@ public class ModifyIndexRequest extends AbstractModel{
         if (source.Rule != null) {
             this.Rule = new RuleInfo(source.Rule);
         }
+        if (source.IncludeInternalFields != null) {
+            this.IncludeInternalFields = new Boolean(source.IncludeInternalFields);
+        }
+        if (source.MetadataFlag != null) {
+            this.MetadataFlag = new Long(source.MetadataFlag);
+        }
     }
 
 
@@ -118,6 +170,8 @@ public class ModifyIndexRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamObj(map, prefix + "Rule.", this.Rule);
+        this.setParamSimple(map, prefix + "IncludeInternalFields", this.IncludeInternalFields);
+        this.setParamSimple(map, prefix + "MetadataFlag", this.MetadataFlag);
 
     }
 }

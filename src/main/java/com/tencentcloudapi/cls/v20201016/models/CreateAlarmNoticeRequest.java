@@ -23,107 +23,107 @@ import java.util.HashMap;
 public class CreateAlarmNoticeRequest extends AbstractModel{
 
     /**
-    * Alarm template name
+    * Notification group name
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared
+    * Notification type. Valid values:
+<li> `Trigger`: alarm triggered
+<li> `Recovery`: alarm cleared
+<li> `All`: alarm triggered and alarm cleared
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Information of the recipient in alarm template
+    * Notification recipient
     */
     @SerializedName("NoticeReceivers")
     @Expose
     private NoticeReceiver [] NoticeReceivers;
 
     /**
-    * Alarm template callback information
+    * API callback information (including WeCom)
     */
     @SerializedName("WebCallbacks")
     @Expose
     private WebCallback [] WebCallbacks;
 
     /**
-     * Get Alarm template name 
-     * @return Name Alarm template name
+     * Get Notification group name 
+     * @return Name Notification group name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Alarm template name
-     * @param Name Alarm template name
+     * Set Notification group name
+     * @param Name Notification group name
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared 
-     * @return Type Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared
+     * Get Notification type. Valid values:
+<li> `Trigger`: alarm triggered
+<li> `Recovery`: alarm cleared
+<li> `All`: alarm triggered and alarm cleared 
+     * @return Type Notification type. Valid values:
+<li> `Trigger`: alarm triggered
+<li> `Recovery`: alarm cleared
+<li> `All`: alarm triggered and alarm cleared
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared
-     * @param Type Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared
+     * Set Notification type. Valid values:
+<li> `Trigger`: alarm triggered
+<li> `Recovery`: alarm cleared
+<li> `All`: alarm triggered and alarm cleared
+     * @param Type Notification type. Valid values:
+<li> `Trigger`: alarm triggered
+<li> `Recovery`: alarm cleared
+<li> `All`: alarm triggered and alarm cleared
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Information of the recipient in alarm template 
-     * @return NoticeReceivers Information of the recipient in alarm template
+     * Get Notification recipient 
+     * @return NoticeReceivers Notification recipient
      */
     public NoticeReceiver [] getNoticeReceivers() {
         return this.NoticeReceivers;
     }
 
     /**
-     * Set Information of the recipient in alarm template
-     * @param NoticeReceivers Information of the recipient in alarm template
+     * Set Notification recipient
+     * @param NoticeReceivers Notification recipient
      */
     public void setNoticeReceivers(NoticeReceiver [] NoticeReceivers) {
         this.NoticeReceivers = NoticeReceivers;
     }
 
     /**
-     * Get Alarm template callback information 
-     * @return WebCallbacks Alarm template callback information
+     * Get API callback information (including WeCom) 
+     * @return WebCallbacks API callback information (including WeCom)
      */
     public WebCallback [] getWebCallbacks() {
         return this.WebCallbacks;
     }
 
     /**
-     * Set Alarm template callback information
-     * @param WebCallbacks Alarm template callback information
+     * Set API callback information (including WeCom)
+     * @param WebCallbacks API callback information (including WeCom)
      */
     public void setWebCallbacks(WebCallback [] WebCallbacks) {
         this.WebCallbacks = WebCallbacks;

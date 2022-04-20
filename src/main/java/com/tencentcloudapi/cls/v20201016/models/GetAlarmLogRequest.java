@@ -44,7 +44,7 @@ public class GetAlarmLogRequest extends AbstractModel{
     private String Query;
 
     /**
-    * Number of logs returned in a single query. Maximum value: 100
+    * Number of logs returned in a single query. Maximum value: 1000
     */
     @SerializedName("Limit")
     @Expose
@@ -120,16 +120,16 @@ public class GetAlarmLogRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of logs returned in a single query. Maximum value: 100 
-     * @return Limit Number of logs returned in a single query. Maximum value: 100
+     * Get Number of logs returned in a single query. Maximum value: 1000 
+     * @return Limit Number of logs returned in a single query. Maximum value: 1000
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of logs returned in a single query. Maximum value: 100
-     * @param Limit Number of logs returned in a single query. Maximum value: 100
+     * Set Number of logs returned in a single query. Maximum value: 1000
+     * @param Limit Number of logs returned in a single query. Maximum value: 1000
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

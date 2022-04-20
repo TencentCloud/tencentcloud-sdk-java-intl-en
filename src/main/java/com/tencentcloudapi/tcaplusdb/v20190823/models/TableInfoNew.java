@@ -239,6 +239,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String DbClusterInfoStruct;
 
     /**
+    * The number of days after which the table Txh backup files will be expire and deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TxhBackupExpireDay")
+    @Expose
+    private Long TxhBackupExpireDay;
+
+    /**
      * Get Table name
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return TableName Table name
@@ -778,6 +786,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.DbClusterInfoStruct = DbClusterInfoStruct;
     }
 
+    /**
+     * Get The number of days after which the table Txh backup files will be expire and deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return TxhBackupExpireDay The number of days after which the table Txh backup files will be expire and deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getTxhBackupExpireDay() {
+        return this.TxhBackupExpireDay;
+    }
+
+    /**
+     * Set The number of days after which the table Txh backup files will be expire and deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param TxhBackupExpireDay The number of days after which the table Txh backup files will be expire and deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTxhBackupExpireDay(Long TxhBackupExpireDay) {
+        this.TxhBackupExpireDay = TxhBackupExpireDay;
+    }
+
     public TableInfoNew() {
     }
 
@@ -870,6 +898,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.DbClusterInfoStruct != null) {
             this.DbClusterInfoStruct = new String(source.DbClusterInfoStruct);
         }
+        if (source.TxhBackupExpireDay != null) {
+            this.TxhBackupExpireDay = new Long(source.TxhBackupExpireDay);
+        }
     }
 
 
@@ -904,6 +935,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "SortFieldNum", this.SortFieldNum);
         this.setParamSimple(map, prefix + "SortRule", this.SortRule);
         this.setParamSimple(map, prefix + "DbClusterInfoStruct", this.DbClusterInfoStruct);
+        this.setParamSimple(map, prefix + "TxhBackupExpireDay", this.TxhBackupExpireDay);
 
     }
 }

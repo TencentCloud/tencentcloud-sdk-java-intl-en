@@ -319,26 +319,6 @@ public class TcaplusdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the list of cluster operation applications.
-     * @param req DescribeApplicationsRequest
-     * @return DescribeApplicationsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeApplicationsResponse DescribeApplications(DescribeApplicationsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeApplicationsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeApplicationsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeApplications");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to get the associated tag list of a cluster.
      * @param req DescribeClusterTagsRequest
      * @return DescribeClusterTagsResponse

@@ -51,7 +51,7 @@ public class DescribeResourceTagsRequest extends AbstractModel{
     private String ResourcePrefix;
 
     /**
-    * Unique resource ID
+    * Unique resource ID. Queries with `ResourceId` only may be slow or fail to return results. We recommend you also enter `ServiceType`, `ResourcePrefix`, and `ResourceRegion` (which can be ignored for resources that don't have the region attribute) when entering `ResourceId`.
     */
     @SerializedName("ResourceId")
     @Expose
@@ -72,7 +72,7 @@ public class DescribeResourceTagsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Whether it is a COS resource ID
+    * Whether it is a COS resource (0 or 1). This parameter is required when the entered `ResourceId` is a COS resource.
     */
     @SerializedName("CosResourceId")
     @Expose
@@ -143,16 +143,16 @@ public class DescribeResourceTagsRequest extends AbstractModel{
     }
 
     /**
-     * Get Unique resource ID 
-     * @return ResourceId Unique resource ID
+     * Get Unique resource ID. Queries with `ResourceId` only may be slow or fail to return results. We recommend you also enter `ServiceType`, `ResourcePrefix`, and `ResourceRegion` (which can be ignored for resources that don't have the region attribute) when entering `ResourceId`. 
+     * @return ResourceId Unique resource ID. Queries with `ResourceId` only may be slow or fail to return results. We recommend you also enter `ServiceType`, `ResourcePrefix`, and `ResourceRegion` (which can be ignored for resources that don't have the region attribute) when entering `ResourceId`.
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set Unique resource ID
-     * @param ResourceId Unique resource ID
+     * Set Unique resource ID. Queries with `ResourceId` only may be slow or fail to return results. We recommend you also enter `ServiceType`, `ResourcePrefix`, and `ResourceRegion` (which can be ignored for resources that don't have the region attribute) when entering `ResourceId`.
+     * @param ResourceId Unique resource ID. Queries with `ResourceId` only may be slow or fail to return results. We recommend you also enter `ServiceType`, `ResourcePrefix`, and `ResourceRegion` (which can be ignored for resources that don't have the region attribute) when entering `ResourceId`.
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
@@ -191,16 +191,16 @@ public class DescribeResourceTagsRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether it is a COS resource ID 
-     * @return CosResourceId Whether it is a COS resource ID
+     * Get Whether it is a COS resource (0 or 1). This parameter is required when the entered `ResourceId` is a COS resource. 
+     * @return CosResourceId Whether it is a COS resource (0 or 1). This parameter is required when the entered `ResourceId` is a COS resource.
      */
     public Long getCosResourceId() {
         return this.CosResourceId;
     }
 
     /**
-     * Set Whether it is a COS resource ID
-     * @param CosResourceId Whether it is a COS resource ID
+     * Set Whether it is a COS resource (0 or 1). This parameter is required when the entered `ResourceId` is a COS resource.
+     * @param CosResourceId Whether it is a COS resource (0 or 1). This parameter is required when the entered `ResourceId` is a COS resource.
      */
     public void setCosResourceId(Long CosResourceId) {
         this.CosResourceId = CosResourceId;

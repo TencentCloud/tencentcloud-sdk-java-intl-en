@@ -37,6 +37,14 @@ public class CreateHourDCDBInstanceResponse extends AbstractModel{
     private Long FlowId;
 
     /**
+    * Order ID, which is used for calling the `DescribeOrders` API.
+ The parameter can be used to either query order details or call the user account APIs to make another payment when this payment fails.
+    */
+    @SerializedName("DealName")
+    @Expose
+    private String DealName;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -76,6 +84,26 @@ public class CreateHourDCDBInstanceResponse extends AbstractModel{
     }
 
     /**
+     * Get Order ID, which is used for calling the `DescribeOrders` API.
+ The parameter can be used to either query order details or call the user account APIs to make another payment when this payment fails. 
+     * @return DealName Order ID, which is used for calling the `DescribeOrders` API.
+ The parameter can be used to either query order details or call the user account APIs to make another payment when this payment fails.
+     */
+    public String getDealName() {
+        return this.DealName;
+    }
+
+    /**
+     * Set Order ID, which is used for calling the `DescribeOrders` API.
+ The parameter can be used to either query order details or call the user account APIs to make another payment when this payment fails.
+     * @param DealName Order ID, which is used for calling the `DescribeOrders` API.
+ The parameter can be used to either query order details or call the user account APIs to make another payment when this payment fails.
+     */
+    public void setDealName(String DealName) {
+        this.DealName = DealName;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -108,6 +136,9 @@ public class CreateHourDCDBInstanceResponse extends AbstractModel{
         if (source.FlowId != null) {
             this.FlowId = new Long(source.FlowId);
         }
+        if (source.DealName != null) {
+            this.DealName = new String(source.DealName);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -120,6 +151,7 @@ public class CreateHourDCDBInstanceResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamSimple(map, prefix + "DealName", this.DealName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

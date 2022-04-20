@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyResourcesTagValueRequest extends AbstractModel{
 
     /**
-    * Resource service name
+    * Resource service name (the third segment in the six-segment resource description)
     */
     @SerializedName("ServiceType")
     @Expose
@@ -51,30 +51,30 @@ public class ModifyResourcesTagValueRequest extends AbstractModel{
     private String TagValue;
 
     /**
-    * Resource region. This field is not required for resources that do not have the region attribute
+    * Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
     */
     @SerializedName("ResourceRegion")
     @Expose
     private String ResourceRegion;
 
     /**
-    * Resource prefix, which is not required for COS buckets
+    * Resource prefix (the part before "/" in the last segment in the six-segment resource description), which is optional for COS buckets but required for other Tencent Cloud resources.
     */
     @SerializedName("ResourcePrefix")
     @Expose
     private String ResourcePrefix;
 
     /**
-     * Get Resource service name 
-     * @return ServiceType Resource service name
+     * Get Resource service name (the third segment in the six-segment resource description) 
+     * @return ServiceType Resource service name (the third segment in the six-segment resource description)
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set Resource service name
-     * @param ServiceType Resource service name
+     * Set Resource service name (the third segment in the six-segment resource description)
+     * @param ServiceType Resource service name (the third segment in the six-segment resource description)
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
@@ -129,32 +129,32 @@ public class ModifyResourcesTagValueRequest extends AbstractModel{
     }
 
     /**
-     * Get Resource region. This field is not required for resources that do not have the region attribute 
-     * @return ResourceRegion Resource region. This field is not required for resources that do not have the region attribute
+     * Get Resource region. If resources have the region attribute, this field is required; otherwise, it is optional. 
+     * @return ResourceRegion Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
      */
     public String getResourceRegion() {
         return this.ResourceRegion;
     }
 
     /**
-     * Set Resource region. This field is not required for resources that do not have the region attribute
-     * @param ResourceRegion Resource region. This field is not required for resources that do not have the region attribute
+     * Set Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
+     * @param ResourceRegion Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
      */
     public void setResourceRegion(String ResourceRegion) {
         this.ResourceRegion = ResourceRegion;
     }
 
     /**
-     * Get Resource prefix, which is not required for COS buckets 
-     * @return ResourcePrefix Resource prefix, which is not required for COS buckets
+     * Get Resource prefix (the part before "/" in the last segment in the six-segment resource description), which is optional for COS buckets but required for other Tencent Cloud resources. 
+     * @return ResourcePrefix Resource prefix (the part before "/" in the last segment in the six-segment resource description), which is optional for COS buckets but required for other Tencent Cloud resources.
      */
     public String getResourcePrefix() {
         return this.ResourcePrefix;
     }
 
     /**
-     * Set Resource prefix, which is not required for COS buckets
-     * @param ResourcePrefix Resource prefix, which is not required for COS buckets
+     * Set Resource prefix (the part before "/" in the last segment in the six-segment resource description), which is optional for COS buckets but required for other Tencent Cloud resources.
+     * @param ResourcePrefix Resource prefix (the part before "/" in the last segment in the six-segment resource description), which is optional for COS buckets but required for other Tencent Cloud resources.
      */
     public void setResourcePrefix(String ResourcePrefix) {
         this.ResourcePrefix = ResourcePrefix;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class KeyValueInfo extends AbstractModel{
 
     /**
-    * The field that needs to be configured with a key value or metafield index
+    * When a key value or metafield index needs to be configured for a field, the metafield `Key` does not need to be prefixed with `__TAG__.` and is consistent with the one when logs are uploaded. `__TAG__.` will be prefixed automatically for display in the console.
     */
     @SerializedName("Key")
     @Expose
@@ -37,16 +37,16 @@ public class KeyValueInfo extends AbstractModel{
     private ValueInfo Value;
 
     /**
-     * Get The field that needs to be configured with a key value or metafield index 
-     * @return Key The field that needs to be configured with a key value or metafield index
+     * Get When a key value or metafield index needs to be configured for a field, the metafield `Key` does not need to be prefixed with `__TAG__.` and is consistent with the one when logs are uploaded. `__TAG__.` will be prefixed automatically for display in the console. 
+     * @return Key When a key value or metafield index needs to be configured for a field, the metafield `Key` does not need to be prefixed with `__TAG__.` and is consistent with the one when logs are uploaded. `__TAG__.` will be prefixed automatically for display in the console.
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set The field that needs to be configured with a key value or metafield index
-     * @param Key The field that needs to be configured with a key value or metafield index
+     * Set When a key value or metafield index needs to be configured for a field, the metafield `Key` does not need to be prefixed with `__TAG__.` and is consistent with the one when logs are uploaded. `__TAG__.` will be prefixed automatically for display in the console.
+     * @param Key When a key value or metafield index needs to be configured for a field, the metafield `Key` does not need to be prefixed with `__TAG__.` and is consistent with the one when logs are uploaded. `__TAG__.` will be prefixed automatically for display in the console.
      */
     public void setKey(String Key) {
         this.Key = Key;

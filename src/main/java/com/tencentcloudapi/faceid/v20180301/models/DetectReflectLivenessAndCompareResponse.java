@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class DetectReflectLivenessAndCompareResponse extends AbstractModel{
 
     /**
-    * URL of the best screenshot (in JPG format) of the video after successful verification
+    * Temporary URL of the best screenshot (.jpg) of the video after successful verification. Both the screenshot and the URL are valid for two hours only, so you need to download the screenshot within this period.
     */
     @SerializedName("BestFrameUrl")
     @Expose
     private String BestFrameUrl;
 
     /**
-    * MD5 hash value of the best screenshot of the video after successful verification
+    * MD5 hash value (32-bit) of the best screenshot of the video after successful verification, which is used to verify the `BestFrame` consistency.
     */
     @SerializedName("BestFrameMd5")
     @Expose
     private String BestFrameMd5;
 
     /**
-    * Service error code. `Success` will be returned for success. For error information, please see the `FailedOperation` section in the error code list below.
+    * Service error code. `Success` will be returned for success. For error information, see the `FailedOperation` section in the error code list below.
     */
     @SerializedName("Result")
     @Expose
@@ -65,48 +65,48 @@ public class DetectReflectLivenessAndCompareResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get URL of the best screenshot (in JPG format) of the video after successful verification 
-     * @return BestFrameUrl URL of the best screenshot (in JPG format) of the video after successful verification
+     * Get Temporary URL of the best screenshot (.jpg) of the video after successful verification. Both the screenshot and the URL are valid for two hours only, so you need to download the screenshot within this period. 
+     * @return BestFrameUrl Temporary URL of the best screenshot (.jpg) of the video after successful verification. Both the screenshot and the URL are valid for two hours only, so you need to download the screenshot within this period.
      */
     public String getBestFrameUrl() {
         return this.BestFrameUrl;
     }
 
     /**
-     * Set URL of the best screenshot (in JPG format) of the video after successful verification
-     * @param BestFrameUrl URL of the best screenshot (in JPG format) of the video after successful verification
+     * Set Temporary URL of the best screenshot (.jpg) of the video after successful verification. Both the screenshot and the URL are valid for two hours only, so you need to download the screenshot within this period.
+     * @param BestFrameUrl Temporary URL of the best screenshot (.jpg) of the video after successful verification. Both the screenshot and the URL are valid for two hours only, so you need to download the screenshot within this period.
      */
     public void setBestFrameUrl(String BestFrameUrl) {
         this.BestFrameUrl = BestFrameUrl;
     }
 
     /**
-     * Get MD5 hash value of the best screenshot of the video after successful verification 
-     * @return BestFrameMd5 MD5 hash value of the best screenshot of the video after successful verification
+     * Get MD5 hash value (32-bit) of the best screenshot of the video after successful verification, which is used to verify the `BestFrame` consistency. 
+     * @return BestFrameMd5 MD5 hash value (32-bit) of the best screenshot of the video after successful verification, which is used to verify the `BestFrame` consistency.
      */
     public String getBestFrameMd5() {
         return this.BestFrameMd5;
     }
 
     /**
-     * Set MD5 hash value of the best screenshot of the video after successful verification
-     * @param BestFrameMd5 MD5 hash value of the best screenshot of the video after successful verification
+     * Set MD5 hash value (32-bit) of the best screenshot of the video after successful verification, which is used to verify the `BestFrame` consistency.
+     * @param BestFrameMd5 MD5 hash value (32-bit) of the best screenshot of the video after successful verification, which is used to verify the `BestFrame` consistency.
      */
     public void setBestFrameMd5(String BestFrameMd5) {
         this.BestFrameMd5 = BestFrameMd5;
     }
 
     /**
-     * Get Service error code. `Success` will be returned for success. For error information, please see the `FailedOperation` section in the error code list below. 
-     * @return Result Service error code. `Success` will be returned for success. For error information, please see the `FailedOperation` section in the error code list below.
+     * Get Service error code. `Success` will be returned for success. For error information, see the `FailedOperation` section in the error code list below. 
+     * @return Result Service error code. `Success` will be returned for success. For error information, see the `FailedOperation` section in the error code list below.
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set Service error code. `Success` will be returned for success. For error information, please see the `FailedOperation` section in the error code list below.
-     * @param Result Service error code. `Success` will be returned for success. For error information, please see the `FailedOperation` section in the error code list below.
+     * Set Service error code. `Success` will be returned for success. For error information, see the `FailedOperation` section in the error code list below.
+     * @param Result Service error code. `Success` will be returned for success. For error information, see the `FailedOperation` section in the error code list below.
      */
     public void setResult(String Result) {
         this.Result = Result;

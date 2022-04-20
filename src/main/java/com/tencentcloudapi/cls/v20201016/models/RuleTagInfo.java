@@ -30,7 +30,7 @@ public class RuleTagInfo extends AbstractModel{
     private Boolean CaseSensitive;
 
     /**
-    * Field information in tag index configuration
+    * Field information in the metafield index configuration
     */
     @SerializedName("KeyValues")
     @Expose
@@ -53,16 +53,16 @@ public class RuleTagInfo extends AbstractModel{
     }
 
     /**
-     * Get Field information in tag index configuration 
-     * @return KeyValues Field information in tag index configuration
+     * Get Field information in the metafield index configuration 
+     * @return KeyValues Field information in the metafield index configuration
      */
     public KeyValueInfo [] getKeyValues() {
         return this.KeyValues;
     }
 
     /**
-     * Set Field information in tag index configuration
-     * @param KeyValues Field information in tag index configuration
+     * Set Field information in the metafield index configuration
+     * @param KeyValues Field information in the metafield index configuration
      */
     public void setKeyValues(KeyValueInfo [] KeyValues) {
         this.KeyValues = KeyValues;

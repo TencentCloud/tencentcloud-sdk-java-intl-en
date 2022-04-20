@@ -65,14 +65,14 @@ public class CreateTopicRequest extends AbstractModel{
     private Long MaxSplitPartitions;
 
     /**
-    * Log topic storage class. Valid values: `hot`: real-time storage; `cold`: offline storage. Default value: `hot`. If `cold` is passed in, please contact the customer service to add the log topic to the allowlist first.
+    * Log topic storage type. Valid values: `hot` (real-time storage); `cold` (IA storage). Default value: `hot`.
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-    * Lifecycle in days. Value range: 1–366. Default value: 30
+    * Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
     */
     @SerializedName("Period")
     @Expose
@@ -175,32 +175,32 @@ public class CreateTopicRequest extends AbstractModel{
     }
 
     /**
-     * Get Log topic storage class. Valid values: `hot`: real-time storage; `cold`: offline storage. Default value: `hot`. If `cold` is passed in, please contact the customer service to add the log topic to the allowlist first. 
-     * @return StorageType Log topic storage class. Valid values: `hot`: real-time storage; `cold`: offline storage. Default value: `hot`. If `cold` is passed in, please contact the customer service to add the log topic to the allowlist first.
+     * Get Log topic storage type. Valid values: `hot` (real-time storage); `cold` (IA storage). Default value: `hot`. 
+     * @return StorageType Log topic storage type. Valid values: `hot` (real-time storage); `cold` (IA storage). Default value: `hot`.
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set Log topic storage class. Valid values: `hot`: real-time storage; `cold`: offline storage. Default value: `hot`. If `cold` is passed in, please contact the customer service to add the log topic to the allowlist first.
-     * @param StorageType Log topic storage class. Valid values: `hot`: real-time storage; `cold`: offline storage. Default value: `hot`. If `cold` is passed in, please contact the customer service to add the log topic to the allowlist first.
+     * Set Log topic storage type. Valid values: `hot` (real-time storage); `cold` (IA storage). Default value: `hot`.
+     * @param StorageType Log topic storage type. Valid values: `hot` (real-time storage); `cold` (IA storage). Default value: `hot`.
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get Lifecycle in days. Value range: 1–366. Default value: 30 
-     * @return Period Lifecycle in days. Value range: 1–366. Default value: 30
+     * Get Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention) 
+     * @return Period Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Lifecycle in days. Value range: 1–366. Default value: 30
-     * @param Period Lifecycle in days. Value range: 1–366. Default value: 30
+     * Set Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+     * @param Period Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
      */
     public void setPeriod(Long Period) {
         this.Period = Period;

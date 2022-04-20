@@ -30,7 +30,7 @@ public class DescribeLogContextRequest extends AbstractModel{
     private String TopicId;
 
     /**
-    * Log time in the format of `YYYY-mm-dd HH:MM:SS`
+    * Log time in the format of YYYY-mm-dd HH:MM:SS.FFF
     */
     @SerializedName("BTime")
     @Expose
@@ -81,16 +81,16 @@ public class DescribeLogContextRequest extends AbstractModel{
     }
 
     /**
-     * Get Log time in the format of `YYYY-mm-dd HH:MM:SS` 
-     * @return BTime Log time in the format of `YYYY-mm-dd HH:MM:SS`
+     * Get Log time in the format of YYYY-mm-dd HH:MM:SS.FFF 
+     * @return BTime Log time in the format of YYYY-mm-dd HH:MM:SS.FFF
      */
     public String getBTime() {
         return this.BTime;
     }
 
     /**
-     * Set Log time in the format of `YYYY-mm-dd HH:MM:SS`
-     * @param BTime Log time in the format of `YYYY-mm-dd HH:MM:SS`
+     * Set Log time in the format of YYYY-mm-dd HH:MM:SS.FFF
+     * @param BTime Log time in the format of YYYY-mm-dd HH:MM:SS.FFF
      */
     public void setBTime(String BTime) {
         this.BTime = BTime;

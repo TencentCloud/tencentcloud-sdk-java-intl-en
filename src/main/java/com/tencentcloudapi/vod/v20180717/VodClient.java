@@ -369,6 +369,28 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *This API is used to enable storage in a region.
+  1. When you activate VOD, the system will enable storage for you in certain regions. If you need to store data in another region, you can use this API to enable storage in that region.
+  2. You can use the `DescribeStorageRegions` API to query all supported storage regions and the regions you have storage access to currently.
+     * @param req CreateStorageRegionRequest
+     * @return CreateStorageRegionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStorageRegionResponse CreateStorageRegion(CreateStorageRegionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateStorageRegionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateStorageRegionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateStorageRegion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a VOD subapplication.
      * @param req CreateSubAppIdRequest
      * @return CreateSubAppIdResponse
@@ -1297,6 +1319,29 @@ This API returns the video content duration for intelligent recognition in secon
     }
 
     /**
+     *This API is used to query the following information:
+  1. All supported storage regions.
+  2. The regions you have storage access to currently.
+  3. The default storage region.
+     * @param req DescribeStorageRegionsRequest
+     * @return DescribeStorageRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStorageRegionsResponse DescribeStorageRegions(DescribeStorageRegionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStorageRegionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStorageRegionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStorageRegions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the list of the primary application and subapplications of the current account.
      * @param req DescribeSubAppIdsRequest
      * @return DescribeSubAppIdsResponse
@@ -1677,6 +1722,26 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
                 Type type = new TypeToken<JsonResponseModel<ModifyContentReviewTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyContentReviewTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to set the default storage region. A file will be stored in the default region if no region is specified for file upload.
+     * @param req ModifyDefaultStorageRegionRequest
+     * @return ModifyDefaultStorageRegionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDefaultStorageRegionResponse ModifyDefaultStorageRegion(ModifyDefaultStorageRegionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDefaultStorageRegionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDefaultStorageRegionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDefaultStorageRegion");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

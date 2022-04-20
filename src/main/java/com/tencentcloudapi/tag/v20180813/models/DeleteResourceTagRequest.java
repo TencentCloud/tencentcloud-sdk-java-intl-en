@@ -30,7 +30,7 @@ public class DeleteResourceTagRequest extends AbstractModel{
     private String TagKey;
 
     /**
-    * [Six-segment resource description](https://cloud.tencent.com/document/product/598/10606)
+    * [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
     */
     @SerializedName("Resource")
     @Expose
@@ -53,16 +53,16 @@ public class DeleteResourceTagRequest extends AbstractModel{
     }
 
     /**
-     * Get [Six-segment resource description](https://cloud.tencent.com/document/product/598/10606) 
-     * @return Resource [Six-segment resource description](https://cloud.tencent.com/document/product/598/10606)
+     * Get [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1) 
+     * @return Resource [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
      */
     public String getResource() {
         return this.Resource;
     }
 
     /**
-     * Set [Six-segment resource description](https://cloud.tencent.com/document/product/598/10606)
-     * @param Resource [Six-segment resource description](https://cloud.tencent.com/document/product/598/10606)
+     * Set [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
+     * @param Resource [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
