@@ -170,30 +170,6 @@ If you currently use a password to log in, you will no longer be able to do so a
     }
 
     /**
-     *This API is used to create an instance launch template.
-
-An instance launch template contains the configuration information required to create an instance, including instance type, data/system disk type and size, and security group, etc.
-
-When a template is created, it defaults to Version 1. You can use `CreateLaunchTemplateVersion` to create new versions of this template, with the version number increasing. When you run `RunInstances` to create instances, you can specify the instance launch template version. If it’s not specified, the default template version is used.
-     * @param req CreateLaunchTemplateRequest
-     * @return CreateLaunchTemplateResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateLaunchTemplateResponse CreateLaunchTemplate(CreateLaunchTemplateRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateLaunchTemplateResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateLaunchTemplateResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLaunchTemplate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to create an instance launch template based on the specified template ID and the corresponding template version number. The default version number will be used when no template version numbers are specified. Each instance launch template can have up to 30 version numbers.
      * @param req CreateLaunchTemplateVersionRequest
      * @return CreateLaunchTemplateVersionResponse
@@ -234,10 +210,10 @@ When a template is created, it defaults to Version 1. You can use `CreateLaunchT
     }
 
     /**
-     *This API is used to delete images.
+     *This API is used to delete one or more images.
 
-* If the [ImageState](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#image_state) of an image is `Creating` or `In Use`, it cannot be deleted. Use [DescribeImages](https://intl.cloud.tencent.com/document/api/213/9418?from_cn_redirect=1) to query the image state.
-* You can only create up to 10 custom images in each region. If you have used up the quota, you can delete images to create new ones.
+* If the [ImageState](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#Image) of an image is `CREATING` or `USING`, the image cannot be deleted. Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API to query the image status.
+* Up to 10 custom images are allowed in each region. If you have run out of the quota, delete unused images to create new ones.
 * A shared image cannot be deleted.
      * @param req DeleteImagesRequest
      * @return DeleteImagesResponse
@@ -484,64 +460,6 @@ When a template is created, it defaults to Version 1. You can use `CreateLaunchT
     }
 
     /**
-     *This API is used to query the model configuration of an instance.
-
-* You can filter the query results with `zone` or `instance-family`. For more information on filtering conditions, see [`Filter`](https://intl.cloud.tencent.com/document/api/213/15753?from_cn_redirect=1#Filter).
-* If no parameter is defined, the model configuration of all the instances in the specified region will be returned.
-     * @param req DescribeInstanceTypeConfigsRequest
-     * @return DescribeInstanceTypeConfigsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeInstanceTypeConfigsResponse DescribeInstanceTypeConfigs(DescribeInstanceTypeConfigsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstanceTypeConfigsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceTypeConfigsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstanceTypeConfigs");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query the Virtual Network Console (VNC) URL of an instance for its login to the VNC.
-
-* It does not support `STOPPED` CVMs.
-* A VNC URL is only valid for 15 seconds. If you do not access the URL within 15 seconds, it will become invalid and you have to query a URL again.
-* Once the VNC URL is accessed, it will become invalid and you have to query a URL again if needed.
-* If the connection is interrupted, you can make up to 30 reconnection attempts per minute.
-* After getting the value `InstanceVncUrl`, you need to append `InstanceVncUrl=xxxx` to the end of the link <https://img.qcloud.com/qcloud/app/active_vnc/index.html?>.
-
-  - `InstanceVncUrl`: its value will be returned after the API is successfully called.
-
-    The final URL is in the following format:
-
-```
-https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F%2Fbjvnc.qcloud.com%3A26789%2Fvnc%3Fs%3DaHpjWnRVMFNhYmxKdDM5MjRHNlVTSVQwajNUSW0wb2tBbmFtREFCTmFrcy8vUUNPMG0wSHZNOUUxRm5PMmUzWmFDcWlOdDJIbUJxSTZDL0RXcHZxYnZZMmRkWWZWcEZia2lyb09XMzdKNmM9
-```
-
-     * @param req DescribeInstanceVncUrlRequest
-     * @return DescribeInstanceVncUrlResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeInstanceVncUrlResponse DescribeInstanceVncUrl(DescribeInstanceVncUrlRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstanceVncUrlResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceVncUrlResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstanceVncUrl");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to query the details of instances.
 
 * You can filter the query results with the instance `ID`, name, or billing method. See `Filter` for more information.
@@ -712,26 +630,6 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
-     *This API is used to list reserved instances the user has purchased.
-     * @param req DescribeReservedInstancesRequest
-     * @return DescribeReservedInstancesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeReservedInstancesResponse DescribeReservedInstances(DescribeReservedInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeReservedInstancesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeReservedInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeReservedInstances");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to describe reserved instance (RI) offerings. Currently, RIs are only offered to beta users.
      * @param req DescribeReservedInstancesConfigInfosRequest
      * @return DescribeReservedInstancesConfigInfosResponse
@@ -879,7 +777,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     /**
      *This API is used to import key pairs.
 
-* You can use this API to import key pairs to a user account, but the key pairs will not be automatically associated with any instance. You may use [AssociasteInstancesKeyPair](https://intl.cloud.tencent.com/document/api/213/9404?from_cn_redirect=1) to associate key pairs with instances.
+* You can use this API to import key pairs to a user account, but the key pairs will not be automatically associated with any instance. You may use [AssociasteInstancesKeyPair](https://intl.cloud.tencent.com/document/api/213/15698?from_cn_redirect=1) to associate key pairs with instances.
 * You need to specify the names of the key pairs and the content of the public keys.
 * If you only have private keys, you can convert them to public keys with the `SSL` tool before importing them.
      * @param req ImportKeyPairRequest
@@ -1006,26 +904,6 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceResizeInstanceDisksResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "InquiryPriceResizeInstanceDisks");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query the price of creating instances. You can only use this API for instances whose configuration is within the purchase limit. For more information, see [RunInstances](https://intl.cloud.tencent.com/document/api/213/15730?from_cn_redirect=1).
-     * @param req InquiryPriceRunInstancesRequest
-     * @return InquiryPriceRunInstancesResponse
-     * @throws TencentCloudSDKException
-     */
-    public InquiryPriceRunInstancesResponse InquiryPriceRunInstances(InquiryPriceRunInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<InquiryPriceRunInstancesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<InquiryPriceRunInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "InquiryPriceRunInstances");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1398,31 +1276,6 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 Type type = new TypeToken<JsonResponseModel<ResizeInstanceDisksResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ResizeInstanceDisks");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to create one or more instances with a specified configuration.
-
-* After an instance is created successfully, it will start up automatically, and the [instance state](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#instance_state) will become "Running".
-* If you create a pay-as-you-go instance billed on an hourly basis, an amount equivalent to the hourly rate will be frozen before the creation. Make sure your account balance is sufficient before calling this API.
-* The number of instances you can purchase through this API is subject to the [CVM instance purchase limit](https://intl.cloud.tencent.com/document/product/213/2664?from_cn_redirect=1). Both the instances created through this API and the console will be counted toward the quota.
-* This API is an async API. An instance `ID` list will be returned after you successfully make a creation request. However, it does not mean the creation has been completed. The state of the instance will be `Creating` during the creation. You can use [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) to query the status of the instance. If the status changes from `Creating` to `Running`, it means that the instance has been created successfully.
-     * @param req RunInstancesRequest
-     * @return RunInstancesResponse
-     * @throws TencentCloudSDKException
-     */
-    public RunInstancesResponse RunInstances(RunInstancesRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<RunInstancesResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<RunInstancesResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "RunInstances");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

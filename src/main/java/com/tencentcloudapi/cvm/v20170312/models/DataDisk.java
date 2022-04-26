@@ -37,7 +37,8 @@ public class DataDisk extends AbstractModel{
     private String DiskType;
 
     /**
-    * Data disk ID. Data disks of the type `LOCAL_BASIC` or `LOCAL_SSD` do not have IDs and do not support this parameter.
+    * Data disk ID. Note that it’s not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
+This parameter is only available for the `DescribeInstances` API.
     */
     @SerializedName("DiskId")
     @Expose
@@ -134,16 +135,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Data disk ID. Data disks of the type `LOCAL_BASIC` or `LOCAL_SSD` do not have IDs and do not support this parameter. 
-     * @return DiskId Data disk ID. Data disks of the type `LOCAL_BASIC` or `LOCAL_SSD` do not have IDs and do not support this parameter.
+     * Get Data disk ID. Note that it’s not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
+This parameter is only available for the `DescribeInstances` API. 
+     * @return DiskId Data disk ID. Note that it’s not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
+This parameter is only available for the `DescribeInstances` API.
      */
     public String getDiskId() {
         return this.DiskId;
     }
 
     /**
-     * Set Data disk ID. Data disks of the type `LOCAL_BASIC` or `LOCAL_SSD` do not have IDs and do not support this parameter.
-     * @param DiskId Data disk ID. Data disks of the type `LOCAL_BASIC` or `LOCAL_SSD` do not have IDs and do not support this parameter.
+     * Set Data disk ID. Note that it’s not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
+This parameter is only available for the `DescribeInstances` API.
+     * @param DiskId Data disk ID. Note that it’s not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
+This parameter is only available for the `DescribeInstances` API.
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;
