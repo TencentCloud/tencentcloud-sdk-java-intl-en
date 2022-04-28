@@ -72,6 +72,13 @@ public class DescribeTimeWindowResponse extends AbstractModel{
     private String [] Sunday;
 
     /**
+    * Maximum data delay threshold
+    */
+    @SerializedName("MaxDelayTime")
+    @Expose
+    private Long MaxDelayTime;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -191,6 +198,22 @@ public class DescribeTimeWindowResponse extends AbstractModel{
     }
 
     /**
+     * Get Maximum data delay threshold 
+     * @return MaxDelayTime Maximum data delay threshold
+     */
+    public Long getMaxDelayTime() {
+        return this.MaxDelayTime;
+    }
+
+    /**
+     * Set Maximum data delay threshold
+     * @param MaxDelayTime Maximum data delay threshold
+     */
+    public void setMaxDelayTime(Long MaxDelayTime) {
+        this.MaxDelayTime = MaxDelayTime;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -256,6 +279,9 @@ public class DescribeTimeWindowResponse extends AbstractModel{
                 this.Sunday[i] = new String(source.Sunday[i]);
             }
         }
+        if (source.MaxDelayTime != null) {
+            this.MaxDelayTime = new Long(source.MaxDelayTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -273,6 +299,7 @@ public class DescribeTimeWindowResponse extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Friday.", this.Friday);
         this.setParamArraySimple(map, prefix + "Saturday.", this.Saturday);
         this.setParamArraySimple(map, prefix + "Sunday.", this.Sunday);
+        this.setParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

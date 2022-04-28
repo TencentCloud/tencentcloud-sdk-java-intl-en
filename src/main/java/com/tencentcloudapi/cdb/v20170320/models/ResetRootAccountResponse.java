@@ -20,15 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBInstanceVipVportResponse extends AbstractModel{
-
-    /**
-    * Async task ID. (This returned field has been disused)
-Note: this field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("AsyncRequestId")
-    @Expose
-    private String AsyncRequestId;
+public class ResetRootAccountResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -36,26 +28,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get Async task ID. (This returned field has been disused)
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AsyncRequestId Async task ID. (This returned field has been disused)
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public String getAsyncRequestId() {
-        return this.AsyncRequestId;
-    }
-
-    /**
-     * Set Async task ID. (This returned field has been disused)
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AsyncRequestId Async task ID. (This returned field has been disused)
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public void setAsyncRequestId(String AsyncRequestId) {
-        this.AsyncRequestId = AsyncRequestId;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -73,17 +45,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public ModifyDBInstanceVipVportResponse() {
+    public ResetRootAccountResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyDBInstanceVipVportResponse(ModifyDBInstanceVipVportResponse source) {
-        if (source.AsyncRequestId != null) {
-            this.AsyncRequestId = new String(source.AsyncRequestId);
-        }
+    public ResetRootAccountResponse(ResetRootAccountResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,7 +63,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

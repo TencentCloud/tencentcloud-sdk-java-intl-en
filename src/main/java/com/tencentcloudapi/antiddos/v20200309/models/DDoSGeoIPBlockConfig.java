@@ -24,9 +24,9 @@ public class DDoSGeoIPBlockConfig extends AbstractModel{
 
     /**
     * Region type. Valid values:
-oversea: outside the Chinese mainland
-`china`: the Chinese mainland
-`customized`: custom region
+`oversea`: Outside the Chinese mainland
+`china`: The Chinese mainland
+`customized`: User-specified region
 ]
     */
     @SerializedName("RegionType")
@@ -59,14 +59,14 @@ oversea: outside the Chinese mainland
 
     /**
      * Get Region type. Valid values:
-oversea: outside the Chinese mainland
-`china`: the Chinese mainland
-`customized`: custom region
+`oversea`: Outside the Chinese mainland
+`china`: The Chinese mainland
+`customized`: User-specified region
 ] 
      * @return RegionType Region type. Valid values:
-oversea: outside the Chinese mainland
-`china`: the Chinese mainland
-`customized`: custom region
+`oversea`: Outside the Chinese mainland
+`china`: The Chinese mainland
+`customized`: User-specified region
 ]
      */
     public String getRegionType() {
@@ -75,14 +75,14 @@ oversea: outside the Chinese mainland
 
     /**
      * Set Region type. Valid values:
-oversea: outside the Chinese mainland
-`china`: the Chinese mainland
-`customized`: custom region
+`oversea`: Outside the Chinese mainland
+`china`: The Chinese mainland
+`customized`: User-specified region
 ]
      * @param RegionType Region type. Valid values:
-oversea: outside the Chinese mainland
-`china`: the Chinese mainland
-`customized`: custom region
+`oversea`: Outside the Chinese mainland
+`china`: The Chinese mainland
+`customized`: User-specified region
 ]
      */
     public void setRegionType(String RegionType) {

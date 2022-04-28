@@ -37,6 +37,13 @@ public class SyncImagesRequest extends AbstractModel{
     private String [] DestinationRegions;
 
     /**
+    * Checks whether image synchronization can be initiated 
+    */
+    @SerializedName("DryRun")
+    @Expose
+    private Boolean DryRun;
+
+    /**
      * Get List of image IDs. You can obtain the image IDs in two ways: <br><li>Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API and find the value of `ImageId` in the response. <br><li>Find the image IDs in the [Image Console](https://console.cloud.tencent.com/cvm/image). <br>The specified images must meet the following requirement: <br><li>the images must be in the `NORMAL` state. <br>For more information on image status, see [Image Data Table](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#Image). 
      * @return ImageIds List of image IDs. You can obtain the image IDs in two ways: <br><li>Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API and find the value of `ImageId` in the response. <br><li>Find the image IDs in the [Image Console](https://console.cloud.tencent.com/cvm/image). <br>The specified images must meet the following requirement: <br><li>the images must be in the `NORMAL` state. <br>For more information on image status, see [Image Data Table](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#Image).
      */
@@ -68,6 +75,22 @@ public class SyncImagesRequest extends AbstractModel{
         this.DestinationRegions = DestinationRegions;
     }
 
+    /**
+     * Get Checks whether image synchronization can be initiated  
+     * @return DryRun Checks whether image synchronization can be initiated 
+     */
+    public Boolean getDryRun() {
+        return this.DryRun;
+    }
+
+    /**
+     * Set Checks whether image synchronization can be initiated 
+     * @param DryRun Checks whether image synchronization can be initiated 
+     */
+    public void setDryRun(Boolean DryRun) {
+        this.DryRun = DryRun;
+    }
+
     public SyncImagesRequest() {
     }
 
@@ -88,6 +111,9 @@ public class SyncImagesRequest extends AbstractModel{
                 this.DestinationRegions[i] = new String(source.DestinationRegions[i]);
             }
         }
+        if (source.DryRun != null) {
+            this.DryRun = new Boolean(source.DryRun);
+        }
     }
 
 
@@ -97,6 +123,7 @@ public class SyncImagesRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "ImageIds.", this.ImageIds);
         this.setParamArraySimple(map, prefix + "DestinationRegions.", this.DestinationRegions);
+        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
 
     }
 }

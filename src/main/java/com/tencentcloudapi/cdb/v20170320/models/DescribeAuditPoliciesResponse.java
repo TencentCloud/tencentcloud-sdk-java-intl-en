@@ -20,7 +20,22 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteDeployGroupsResponse extends AbstractModel{
+public class DescribeAuditPoliciesResponse extends AbstractModel{
+
+    /**
+    * Number of eligible audit policies
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
+    * Audit policy details
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("Items")
+    @Expose
+    private AuditPolicy [] Items;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -28,6 +43,42 @@ public class DeleteDeployGroupsResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Number of eligible audit policies 
+     * @return TotalCount Number of eligible audit policies
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set Number of eligible audit policies
+     * @param TotalCount Number of eligible audit policies
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get Audit policy details
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return Items Audit policy details
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public AuditPolicy [] getItems() {
+        return this.Items;
+    }
+
+    /**
+     * Set Audit policy details
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param Items Audit policy details
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setItems(AuditPolicy [] Items) {
+        this.Items = Items;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -45,14 +96,23 @@ public class DeleteDeployGroupsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DeleteDeployGroupsResponse() {
+    public DescribeAuditPoliciesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteDeployGroupsResponse(DeleteDeployGroupsResponse source) {
+    public DescribeAuditPoliciesResponse(DescribeAuditPoliciesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Items != null) {
+            this.Items = new AuditPolicy[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new AuditPolicy(source.Items[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +123,8 @@ public class DeleteDeployGroupsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

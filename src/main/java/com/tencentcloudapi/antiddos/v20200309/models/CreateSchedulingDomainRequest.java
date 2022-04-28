@@ -23,23 +23,33 @@ import java.util.HashMap;
 public class CreateSchedulingDomainRequest extends AbstractModel{
 
     /**
-    * 
+    * Indicates whether a hybrid cloud product is used.
+`hybrid`: Anti-DDoS Service Platform
+For other products, leave this field empty.
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-     * Get  
-     * @return Product 
+     * Get Indicates whether a hybrid cloud product is used.
+`hybrid`: Anti-DDoS Service Platform
+For other products, leave this field empty. 
+     * @return Product Indicates whether a hybrid cloud product is used.
+`hybrid`: Anti-DDoS Service Platform
+For other products, leave this field empty.
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set 
-     * @param Product 
+     * Set Indicates whether a hybrid cloud product is used.
+`hybrid`: Anti-DDoS Service Platform
+For other products, leave this field empty.
+     * @param Product Indicates whether a hybrid cloud product is used.
+`hybrid`: Anti-DDoS Service Platform
+For other products, leave this field empty.
      */
     public void setProduct(String Product) {
         this.Product = Product;

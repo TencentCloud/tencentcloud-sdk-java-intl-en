@@ -13,29 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDeployGroupListResponse extends AbstractModel{
+public class DescribeClusterLevelChangeRecordsResponse extends AbstractModel{
 
     /**
-    * Number of eligible entries.
+    * Total number
     */
-    @SerializedName("Total")
+    @SerializedName("TotalCount")
     @Expose
-    private Long Total;
+    private Long TotalCount;
 
     /**
-    * List of returned results.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Cluster model
     */
     @SerializedName("Items")
     @Expose
-    private DeployGroupInfo [] Items;
+    private ClusterLevelChangeRecord [] Items;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,38 +44,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Number of eligible entries. 
-     * @return Total Number of eligible entries.
+     * Get Total number 
+     * @return TotalCount Total number
      */
-    public Long getTotal() {
-        return this.Total;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set Number of eligible entries.
-     * @param Total Number of eligible entries.
+     * Set Total number
+     * @param TotalCount Total number
      */
-    public void setTotal(Long Total) {
-        this.Total = Total;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of returned results.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Items List of returned results.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Cluster model 
+     * @return Items Cluster model
      */
-    public DeployGroupInfo [] getItems() {
+    public ClusterLevelChangeRecord [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set List of returned results.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Items List of returned results.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Cluster model
+     * @param Items Cluster model
      */
-    public void setItems(DeployGroupInfo [] Items) {
+    public void setItems(ClusterLevelChangeRecord [] Items) {
         this.Items = Items;
     }
 
@@ -96,21 +91,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public DescribeDeployGroupListResponse() {
+    public DescribeClusterLevelChangeRecordsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDeployGroupListResponse(DescribeDeployGroupListResponse source) {
-        if (source.Total != null) {
-            this.Total = new Long(source.Total);
+    public DescribeClusterLevelChangeRecordsResponse(DescribeClusterLevelChangeRecordsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.Items != null) {
-            this.Items = new DeployGroupInfo[source.Items.length];
+            this.Items = new ClusterLevelChangeRecord[source.Items.length];
             for (int i = 0; i < source.Items.length; i++) {
-                this.Items[i] = new DeployGroupInfo(source.Items[i]);
+                this.Items[i] = new ClusterLevelChangeRecord(source.Items[i]);
             }
         }
         if (source.RequestId != null) {
@@ -123,7 +118,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

@@ -37,7 +37,7 @@ public class CloseCDBProxyRequest extends AbstractModel{
     private String ProxyGroupId;
 
     /**
-    * Whether only to disable read/write separation. Valid values: `true`, `false`
+    * Whether only to disable read/write separation. Valid values: `true`, `false`. Default value: `false`.
     */
     @SerializedName("OnlyCloseRW")
     @Expose
@@ -76,16 +76,16 @@ public class CloseCDBProxyRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether only to disable read/write separation. Valid values: `true`, `false` 
-     * @return OnlyCloseRW Whether only to disable read/write separation. Valid values: `true`, `false`
+     * Get Whether only to disable read/write separation. Valid values: `true`, `false`. Default value: `false`. 
+     * @return OnlyCloseRW Whether only to disable read/write separation. Valid values: `true`, `false`. Default value: `false`.
      */
     public Boolean getOnlyCloseRW() {
         return this.OnlyCloseRW;
     }
 
     /**
-     * Set Whether only to disable read/write separation. Valid values: `true`, `false`
-     * @param OnlyCloseRW Whether only to disable read/write separation. Valid values: `true`, `false`
+     * Set Whether only to disable read/write separation. Valid values: `true`, `false`. Default value: `false`.
+     * @param OnlyCloseRW Whether only to disable read/write separation. Valid values: `true`, `false`. Default value: `false`.
      */
     public void setOnlyCloseRW(Boolean OnlyCloseRW) {
         this.OnlyCloseRW = OnlyCloseRW;

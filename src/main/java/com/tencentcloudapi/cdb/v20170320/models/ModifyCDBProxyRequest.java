@@ -30,14 +30,14 @@ public class ModifyCDBProxyRequest extends AbstractModel{
     private String ProxyGroupId;
 
     /**
-    * Whether to remove delayed read-only instances from the proxy group. Valid values: `true`, `false`
+    * Whether to remove delayed read-only instances from the proxy group. Valid values: `true`, `false`. Default value: `false`.
     */
     @SerializedName("IsKickout")
     @Expose
     private Boolean IsKickout;
 
     /**
-    * The minimum number of read-only instances allowed by the proxy group
+    * The minimum number of read-only instances allowed by the proxy group. Minimum value: 1; maximum value: The number of instances.
     */
     @SerializedName("MinCount")
     @Expose
@@ -65,14 +65,14 @@ public class ModifyCDBProxyRequest extends AbstractModel{
     private RoWeight RoWeightValues;
 
     /**
-    * Whether to enable failover. If it is enabled, the connection address will route requests to the source instance in case of proxy failure. Valid values: `true`, `false`
+    * Whether to enable failover. If it is enabled, the connection address will route requests to the source instance in case of proxy failure. Valid values: `true`, `false`. Default value: `false`.
     */
     @SerializedName("FailOver")
     @Expose
     private Boolean FailOver;
 
     /**
-    * Whether to automatically add newly created read-only instances to the proxy group. Valid values: `true`, `false`
+    * Whether to automatically add newly created read-only instances to the proxy group. Valid values: `true`, `false` Default value: `false`.
     */
     @SerializedName("AutoAddRo")
     @Expose
@@ -95,32 +95,32 @@ public class ModifyCDBProxyRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to remove delayed read-only instances from the proxy group. Valid values: `true`, `false` 
-     * @return IsKickout Whether to remove delayed read-only instances from the proxy group. Valid values: `true`, `false`
+     * Get Whether to remove delayed read-only instances from the proxy group. Valid values: `true`, `false`. Default value: `false`. 
+     * @return IsKickout Whether to remove delayed read-only instances from the proxy group. Valid values: `true`, `false`. Default value: `false`.
      */
     public Boolean getIsKickout() {
         return this.IsKickout;
     }
 
     /**
-     * Set Whether to remove delayed read-only instances from the proxy group. Valid values: `true`, `false`
-     * @param IsKickout Whether to remove delayed read-only instances from the proxy group. Valid values: `true`, `false`
+     * Set Whether to remove delayed read-only instances from the proxy group. Valid values: `true`, `false`. Default value: `false`.
+     * @param IsKickout Whether to remove delayed read-only instances from the proxy group. Valid values: `true`, `false`. Default value: `false`.
      */
     public void setIsKickout(Boolean IsKickout) {
         this.IsKickout = IsKickout;
     }
 
     /**
-     * Get The minimum number of read-only instances allowed by the proxy group 
-     * @return MinCount The minimum number of read-only instances allowed by the proxy group
+     * Get The minimum number of read-only instances allowed by the proxy group. Minimum value: 1; maximum value: The number of instances. 
+     * @return MinCount The minimum number of read-only instances allowed by the proxy group. Minimum value: 1; maximum value: The number of instances.
      */
     public Long getMinCount() {
         return this.MinCount;
     }
 
     /**
-     * Set The minimum number of read-only instances allowed by the proxy group
-     * @param MinCount The minimum number of read-only instances allowed by the proxy group
+     * Set The minimum number of read-only instances allowed by the proxy group. Minimum value: 1; maximum value: The number of instances.
+     * @param MinCount The minimum number of read-only instances allowed by the proxy group. Minimum value: 1; maximum value: The number of instances.
      */
     public void setMinCount(Long MinCount) {
         this.MinCount = MinCount;
@@ -175,32 +175,32 @@ public class ModifyCDBProxyRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to enable failover. If it is enabled, the connection address will route requests to the source instance in case of proxy failure. Valid values: `true`, `false` 
-     * @return FailOver Whether to enable failover. If it is enabled, the connection address will route requests to the source instance in case of proxy failure. Valid values: `true`, `false`
+     * Get Whether to enable failover. If it is enabled, the connection address will route requests to the source instance in case of proxy failure. Valid values: `true`, `false`. Default value: `false`. 
+     * @return FailOver Whether to enable failover. If it is enabled, the connection address will route requests to the source instance in case of proxy failure. Valid values: `true`, `false`. Default value: `false`.
      */
     public Boolean getFailOver() {
         return this.FailOver;
     }
 
     /**
-     * Set Whether to enable failover. If it is enabled, the connection address will route requests to the source instance in case of proxy failure. Valid values: `true`, `false`
-     * @param FailOver Whether to enable failover. If it is enabled, the connection address will route requests to the source instance in case of proxy failure. Valid values: `true`, `false`
+     * Set Whether to enable failover. If it is enabled, the connection address will route requests to the source instance in case of proxy failure. Valid values: `true`, `false`. Default value: `false`.
+     * @param FailOver Whether to enable failover. If it is enabled, the connection address will route requests to the source instance in case of proxy failure. Valid values: `true`, `false`. Default value: `false`.
      */
     public void setFailOver(Boolean FailOver) {
         this.FailOver = FailOver;
     }
 
     /**
-     * Get Whether to automatically add newly created read-only instances to the proxy group. Valid values: `true`, `false` 
-     * @return AutoAddRo Whether to automatically add newly created read-only instances to the proxy group. Valid values: `true`, `false`
+     * Get Whether to automatically add newly created read-only instances to the proxy group. Valid values: `true`, `false` Default value: `false`. 
+     * @return AutoAddRo Whether to automatically add newly created read-only instances to the proxy group. Valid values: `true`, `false` Default value: `false`.
      */
     public Boolean getAutoAddRo() {
         return this.AutoAddRo;
     }
 
     /**
-     * Set Whether to automatically add newly created read-only instances to the proxy group. Valid values: `true`, `false`
-     * @param AutoAddRo Whether to automatically add newly created read-only instances to the proxy group. Valid values: `true`, `false`
+     * Set Whether to automatically add newly created read-only instances to the proxy group. Valid values: `true`, `false` Default value: `false`.
+     * @param AutoAddRo Whether to automatically add newly created read-only instances to the proxy group. Valid values: `true`, `false` Default value: `false`.
      */
     public void setAutoAddRo(Boolean AutoAddRo) {
         this.AutoAddRo = AutoAddRo;

@@ -162,14 +162,16 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     private Boolean EnableExternalNode;
 
     /**
-    * 
+    * Cluster models. It’s valid for managed clusters.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ClusterLevel")
     @Expose
     private String ClusterLevel;
 
     /**
-    * 
+    * The target cluster model for auto-upgrade
+Note: this field may return null, indicating that no valid value is obtained.
     */
     @SerializedName("AutoUpgradeClusterLevel")
     @Expose
@@ -504,32 +506,40 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get  
-     * @return ClusterLevel 
+     * Get Cluster models. It’s valid for managed clusters.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ClusterLevel Cluster models. It’s valid for managed clusters.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getClusterLevel() {
         return this.ClusterLevel;
     }
 
     /**
-     * Set 
-     * @param ClusterLevel 
+     * Set Cluster models. It’s valid for managed clusters.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ClusterLevel Cluster models. It’s valid for managed clusters.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setClusterLevel(String ClusterLevel) {
         this.ClusterLevel = ClusterLevel;
     }
 
     /**
-     * Get  
-     * @return AutoUpgradeClusterLevel 
+     * Get The target cluster model for auto-upgrade
+Note: this field may return null, indicating that no valid value is obtained. 
+     * @return AutoUpgradeClusterLevel The target cluster model for auto-upgrade
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public Boolean getAutoUpgradeClusterLevel() {
         return this.AutoUpgradeClusterLevel;
     }
 
     /**
-     * Set 
-     * @param AutoUpgradeClusterLevel 
+     * Set The target cluster model for auto-upgrade
+Note: this field may return null, indicating that no valid value is obtained.
+     * @param AutoUpgradeClusterLevel The target cluster model for auto-upgrade
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public void setAutoUpgradeClusterLevel(Boolean AutoUpgradeClusterLevel) {
         this.AutoUpgradeClusterLevel = AutoUpgradeClusterLevel;

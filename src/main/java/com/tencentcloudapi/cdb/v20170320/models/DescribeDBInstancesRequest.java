@@ -121,7 +121,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private Long [] SubnetIds;
 
     /**
-    * Lock flag.
+    * Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
     */
     @SerializedName("CdbErrors")
     @Expose
@@ -217,6 +217,27 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     @SerializedName("CageIds")
     @Expose
     private String [] CageIds;
+
+    /**
+    * Tag value
+    */
+    @SerializedName("TagValues")
+    @Expose
+    private String [] TagValues;
+
+    /**
+    * VPC character vpcId
+    */
+    @SerializedName("UniqueVpcIds")
+    @Expose
+    private String [] UniqueVpcIds;
+
+    /**
+    * VPC character subnetId
+    */
+    @SerializedName("UniqSubnetIds")
+    @Expose
+    private String [] UniqSubnetIds;
 
     /**
      * Get Project ID. 
@@ -443,16 +464,16 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Lock flag. 
-     * @return CdbErrors Lock flag.
+     * Get Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0. 
+     * @return CdbErrors Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
      */
     public Long [] getCdbErrors() {
         return this.CdbErrors;
     }
 
     /**
-     * Set Lock flag.
-     * @param CdbErrors Lock flag.
+     * Set Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
+     * @param CdbErrors Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
      */
     public void setCdbErrors(Long [] CdbErrors) {
         this.CdbErrors = CdbErrors;
@@ -666,6 +687,54 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.CageIds = CageIds;
     }
 
+    /**
+     * Get Tag value 
+     * @return TagValues Tag value
+     */
+    public String [] getTagValues() {
+        return this.TagValues;
+    }
+
+    /**
+     * Set Tag value
+     * @param TagValues Tag value
+     */
+    public void setTagValues(String [] TagValues) {
+        this.TagValues = TagValues;
+    }
+
+    /**
+     * Get VPC character vpcId 
+     * @return UniqueVpcIds VPC character vpcId
+     */
+    public String [] getUniqueVpcIds() {
+        return this.UniqueVpcIds;
+    }
+
+    /**
+     * Set VPC character vpcId
+     * @param UniqueVpcIds VPC character vpcId
+     */
+    public void setUniqueVpcIds(String [] UniqueVpcIds) {
+        this.UniqueVpcIds = UniqueVpcIds;
+    }
+
+    /**
+     * Get VPC character subnetId 
+     * @return UniqSubnetIds VPC character subnetId
+     */
+    public String [] getUniqSubnetIds() {
+        return this.UniqSubnetIds;
+    }
+
+    /**
+     * Set VPC character subnetId
+     * @param UniqSubnetIds VPC character subnetId
+     */
+    public void setUniqSubnetIds(String [] UniqSubnetIds) {
+        this.UniqSubnetIds = UniqSubnetIds;
+    }
+
     public DescribeDBInstancesRequest() {
     }
 
@@ -803,6 +872,24 @@ public class DescribeDBInstancesRequest extends AbstractModel{
                 this.CageIds[i] = new String(source.CageIds[i]);
             }
         }
+        if (source.TagValues != null) {
+            this.TagValues = new String[source.TagValues.length];
+            for (int i = 0; i < source.TagValues.length; i++) {
+                this.TagValues[i] = new String(source.TagValues[i]);
+            }
+        }
+        if (source.UniqueVpcIds != null) {
+            this.UniqueVpcIds = new String[source.UniqueVpcIds.length];
+            for (int i = 0; i < source.UniqueVpcIds.length; i++) {
+                this.UniqueVpcIds[i] = new String(source.UniqueVpcIds[i]);
+            }
+        }
+        if (source.UniqSubnetIds != null) {
+            this.UniqSubnetIds = new String[source.UniqSubnetIds.length];
+            for (int i = 0; i < source.UniqSubnetIds.length; i++) {
+                this.UniqSubnetIds[i] = new String(source.UniqSubnetIds[i]);
+            }
+        }
     }
 
 
@@ -838,6 +925,9 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "DeployGroupIds.", this.DeployGroupIds);
         this.setParamArraySimple(map, prefix + "TagKeysForSearch.", this.TagKeysForSearch);
         this.setParamArraySimple(map, prefix + "CageIds.", this.CageIds);
+        this.setParamArraySimple(map, prefix + "TagValues.", this.TagValues);
+        this.setParamArraySimple(map, prefix + "UniqueVpcIds.", this.UniqueVpcIds);
+        this.setParamArraySimple(map, prefix + "UniqSubnetIds.", this.UniqSubnetIds);
 
     }
 }

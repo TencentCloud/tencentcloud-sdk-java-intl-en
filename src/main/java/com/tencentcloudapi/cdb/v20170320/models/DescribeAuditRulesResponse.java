@@ -20,28 +20,22 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAccountsResponse extends AbstractModel{
+public class DescribeAuditRulesResponse extends AbstractModel{
 
     /**
-    * Number of eligible accounts.
+    * Number of eligible audit rules
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Details of eligible accounts.
+    * Audit rule details
+Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("Items")
     @Expose
-    private AccountInfo [] Items;
-
-    /**
-    * The maximum number of instance connections (set by the MySQL parameter `max_connections`)
-    */
-    @SerializedName("MaxUserConnections")
-    @Expose
-    private Long MaxUserConnections;
+    private AuditRule [] Items;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -51,51 +45,39 @@ public class DescribeAccountsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Number of eligible accounts. 
-     * @return TotalCount Number of eligible accounts.
+     * Get Number of eligible audit rules 
+     * @return TotalCount Number of eligible audit rules
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of eligible accounts.
-     * @param TotalCount Number of eligible accounts.
+     * Set Number of eligible audit rules
+     * @param TotalCount Number of eligible audit rules
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Details of eligible accounts. 
-     * @return Items Details of eligible accounts.
+     * Get Audit rule details
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return Items Audit rule details
+Note: This field may return `null`, indicating that no valid value was found.
      */
-    public AccountInfo [] getItems() {
+    public AuditRule [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set Details of eligible accounts.
-     * @param Items Details of eligible accounts.
+     * Set Audit rule details
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param Items Audit rule details
+Note: This field may return `null`, indicating that no valid value was found.
      */
-    public void setItems(AccountInfo [] Items) {
+    public void setItems(AuditRule [] Items) {
         this.Items = Items;
-    }
-
-    /**
-     * Get The maximum number of instance connections (set by the MySQL parameter `max_connections`) 
-     * @return MaxUserConnections The maximum number of instance connections (set by the MySQL parameter `max_connections`)
-     */
-    public Long getMaxUserConnections() {
-        return this.MaxUserConnections;
-    }
-
-    /**
-     * Set The maximum number of instance connections (set by the MySQL parameter `max_connections`)
-     * @param MaxUserConnections The maximum number of instance connections (set by the MySQL parameter `max_connections`)
-     */
-    public void setMaxUserConnections(Long MaxUserConnections) {
-        this.MaxUserConnections = MaxUserConnections;
     }
 
     /**
@@ -114,25 +96,22 @@ public class DescribeAccountsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeAccountsResponse() {
+    public DescribeAuditRulesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAccountsResponse(DescribeAccountsResponse source) {
+    public DescribeAuditRulesResponse(DescribeAuditRulesResponse source) {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
         if (source.Items != null) {
-            this.Items = new AccountInfo[source.Items.length];
+            this.Items = new AuditRule[source.Items.length];
             for (int i = 0; i < source.Items.length; i++) {
-                this.Items[i] = new AccountInfo(source.Items[i]);
+                this.Items[i] = new AuditRule(source.Items[i]);
             }
-        }
-        if (source.MaxUserConnections != null) {
-            this.MaxUserConnections = new Long(source.MaxUserConnections);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -146,7 +125,6 @@ public class DescribeAccountsResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
-        this.setParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

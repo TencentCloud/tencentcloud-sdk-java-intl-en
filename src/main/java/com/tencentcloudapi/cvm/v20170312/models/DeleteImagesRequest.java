@@ -30,6 +30,20 @@ public class DeleteImagesRequest extends AbstractModel{
     private String [] ImageIds;
 
     /**
+    * Whether to delete the snapshot associated with the image
+    */
+    @SerializedName("DeleteBindedSnap")
+    @Expose
+    private Boolean DeleteBindedSnap;
+
+    /**
+    * Check whether deleting an image is supported
+    */
+    @SerializedName("DryRun")
+    @Expose
+    private Boolean DryRun;
+
+    /**
      * Get List of the IDs of the instances to be deleted. 
      * @return ImageIds List of the IDs of the instances to be deleted.
      */
@@ -43,6 +57,38 @@ public class DeleteImagesRequest extends AbstractModel{
      */
     public void setImageIds(String [] ImageIds) {
         this.ImageIds = ImageIds;
+    }
+
+    /**
+     * Get Whether to delete the snapshot associated with the image 
+     * @return DeleteBindedSnap Whether to delete the snapshot associated with the image
+     */
+    public Boolean getDeleteBindedSnap() {
+        return this.DeleteBindedSnap;
+    }
+
+    /**
+     * Set Whether to delete the snapshot associated with the image
+     * @param DeleteBindedSnap Whether to delete the snapshot associated with the image
+     */
+    public void setDeleteBindedSnap(Boolean DeleteBindedSnap) {
+        this.DeleteBindedSnap = DeleteBindedSnap;
+    }
+
+    /**
+     * Get Check whether deleting an image is supported 
+     * @return DryRun Check whether deleting an image is supported
+     */
+    public Boolean getDryRun() {
+        return this.DryRun;
+    }
+
+    /**
+     * Set Check whether deleting an image is supported
+     * @param DryRun Check whether deleting an image is supported
+     */
+    public void setDryRun(Boolean DryRun) {
+        this.DryRun = DryRun;
     }
 
     public DeleteImagesRequest() {
@@ -59,6 +105,12 @@ public class DeleteImagesRequest extends AbstractModel{
                 this.ImageIds[i] = new String(source.ImageIds[i]);
             }
         }
+        if (source.DeleteBindedSnap != null) {
+            this.DeleteBindedSnap = new Boolean(source.DeleteBindedSnap);
+        }
+        if (source.DryRun != null) {
+            this.DryRun = new Boolean(source.DryRun);
+        }
     }
 
 
@@ -67,6 +119,8 @@ public class DeleteImagesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "ImageIds.", this.ImageIds);
+        this.setParamSimple(map, prefix + "DeleteBindedSnap", this.DeleteBindedSnap);
+        this.setParamSimple(map, prefix + "DryRun", this.DryRun);
 
     }
 }

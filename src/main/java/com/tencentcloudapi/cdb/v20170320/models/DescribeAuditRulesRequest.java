@@ -20,113 +20,113 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDeployGroupListRequest extends AbstractModel{
+public class DescribeAuditRulesRequest extends AbstractModel{
 
     /**
-    * ID of a placement group.
+    * Audit rule ID.
     */
-    @SerializedName("DeployGroupId")
+    @SerializedName("RuleId")
     @Expose
-    private String DeployGroupId;
+    private String RuleId;
 
     /**
-    * Name of a placement group.
+    * Audit rule name. Fuzzy match query is supported.
     */
-    @SerializedName("DeployGroupName")
+    @SerializedName("RuleName")
     @Expose
-    private String DeployGroupName;
+    private String RuleName;
 
     /**
-    * Number of returned results. Default value: 20. Maximum value: 100.
+    * Number of entries per page. Value range: 1-100. Default value: 20.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset. Default value: 0.
+    * Pagination offset. Default value: 0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get ID of a placement group. 
-     * @return DeployGroupId ID of a placement group.
+     * Get Audit rule ID. 
+     * @return RuleId Audit rule ID.
      */
-    public String getDeployGroupId() {
-        return this.DeployGroupId;
+    public String getRuleId() {
+        return this.RuleId;
     }
 
     /**
-     * Set ID of a placement group.
-     * @param DeployGroupId ID of a placement group.
+     * Set Audit rule ID.
+     * @param RuleId Audit rule ID.
      */
-    public void setDeployGroupId(String DeployGroupId) {
-        this.DeployGroupId = DeployGroupId;
+    public void setRuleId(String RuleId) {
+        this.RuleId = RuleId;
     }
 
     /**
-     * Get Name of a placement group. 
-     * @return DeployGroupName Name of a placement group.
+     * Get Audit rule name. Fuzzy match query is supported. 
+     * @return RuleName Audit rule name. Fuzzy match query is supported.
      */
-    public String getDeployGroupName() {
-        return this.DeployGroupName;
+    public String getRuleName() {
+        return this.RuleName;
     }
 
     /**
-     * Set Name of a placement group.
-     * @param DeployGroupName Name of a placement group.
+     * Set Audit rule name. Fuzzy match query is supported.
+     * @param RuleName Audit rule name. Fuzzy match query is supported.
      */
-    public void setDeployGroupName(String DeployGroupName) {
-        this.DeployGroupName = DeployGroupName;
+    public void setRuleName(String RuleName) {
+        this.RuleName = RuleName;
     }
 
     /**
-     * Get Number of returned results. Default value: 20. Maximum value: 100. 
-     * @return Limit Number of returned results. Default value: 20. Maximum value: 100.
+     * Get Number of entries per page. Value range: 1-100. Default value: 20. 
+     * @return Limit Number of entries per page. Value range: 1-100. Default value: 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned results. Default value: 20. Maximum value: 100.
-     * @param Limit Number of returned results. Default value: 20. Maximum value: 100.
+     * Set Number of entries per page. Value range: 1-100. Default value: 20.
+     * @param Limit Number of entries per page. Value range: 1-100. Default value: 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset. Default value: 0. 
-     * @return Offset Offset. Default value: 0.
+     * Get Pagination offset. Default value: 0 
+     * @return Offset Pagination offset. Default value: 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. Default value: 0.
-     * @param Offset Offset. Default value: 0.
+     * Set Pagination offset. Default value: 0
+     * @param Offset Pagination offset. Default value: 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
-    public DescribeDeployGroupListRequest() {
+    public DescribeAuditRulesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDeployGroupListRequest(DescribeDeployGroupListRequest source) {
-        if (source.DeployGroupId != null) {
-            this.DeployGroupId = new String(source.DeployGroupId);
+    public DescribeAuditRulesRequest(DescribeAuditRulesRequest source) {
+        if (source.RuleId != null) {
+            this.RuleId = new String(source.RuleId);
         }
-        if (source.DeployGroupName != null) {
-            this.DeployGroupName = new String(source.DeployGroupName);
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
         }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
@@ -141,8 +141,8 @@ public class DescribeDeployGroupListRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
-        this.setParamSimple(map, prefix + "DeployGroupName", this.DeployGroupName);
+        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamSimple(map, prefix + "RuleName", this.RuleName);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
 

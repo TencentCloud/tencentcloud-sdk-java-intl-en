@@ -13,51 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteDeployGroupsRequest extends AbstractModel{
+public class DescribeResourceUsageRequest extends AbstractModel{
 
     /**
-    * List of IDs of placement groups to be deleted.
+    * Cluster ID
     */
-    @SerializedName("DeployGroupIds")
+    @SerializedName("ClusterId")
     @Expose
-    private String [] DeployGroupIds;
+    private String ClusterId;
 
     /**
-     * Get List of IDs of placement groups to be deleted. 
-     * @return DeployGroupIds List of IDs of placement groups to be deleted.
+     * Get Cluster ID 
+     * @return ClusterId Cluster ID
      */
-    public String [] getDeployGroupIds() {
-        return this.DeployGroupIds;
+    public String getClusterId() {
+        return this.ClusterId;
     }
 
     /**
-     * Set List of IDs of placement groups to be deleted.
-     * @param DeployGroupIds List of IDs of placement groups to be deleted.
+     * Set Cluster ID
+     * @param ClusterId Cluster ID
      */
-    public void setDeployGroupIds(String [] DeployGroupIds) {
-        this.DeployGroupIds = DeployGroupIds;
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
-    public DeleteDeployGroupsRequest() {
+    public DescribeResourceUsageRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteDeployGroupsRequest(DeleteDeployGroupsRequest source) {
-        if (source.DeployGroupIds != null) {
-            this.DeployGroupIds = new String[source.DeployGroupIds.length];
-            for (int i = 0; i < source.DeployGroupIds.length; i++) {
-                this.DeployGroupIds[i] = new String(source.DeployGroupIds[i]);
-            }
+    public DescribeResourceUsageRequest(DescribeResourceUsageRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
         }
     }
 
@@ -66,7 +63,7 @@ public class DeleteDeployGroupsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "DeployGroupIds.", this.DeployGroupIds);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

@@ -30,14 +30,14 @@ public class DescribeInstanceParamRecordsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Pagination offset.
+    * Pagination offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of entries per page.
+    * Number of entries per page. Default value: 20.
     */
     @SerializedName("Limit")
     @Expose
@@ -60,32 +60,32 @@ public class DescribeInstanceParamRecordsRequest extends AbstractModel{
     }
 
     /**
-     * Get Pagination offset. 
-     * @return Offset Pagination offset.
+     * Get Pagination offset. Default value: 0. 
+     * @return Offset Pagination offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset.
-     * @param Offset Pagination offset.
+     * Set Pagination offset. Default value: 0.
+     * @param Offset Pagination offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of entries per page. 
-     * @return Limit Number of entries per page.
+     * Get Number of entries per page. Default value: 20. 
+     * @return Limit Number of entries per page. Default value: 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries per page.
-     * @param Limit Number of entries per page.
+     * Set Number of entries per page. Default value: 20.
+     * @param Limit Number of entries per page. Default value: 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

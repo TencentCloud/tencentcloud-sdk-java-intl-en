@@ -679,6 +679,46 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain the cluster model.
+     * @param req DescribeClusterLevelAttributeRequest
+     * @return DescribeClusterLevelAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterLevelAttributeResponse DescribeClusterLevelAttribute(DescribeClusterLevelAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterLevelAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterLevelAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterLevelAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the cluster model adjustment history.
+     * @param req DescribeClusterLevelChangeRecordsRequest
+     * @return DescribeClusterLevelChangeRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterLevelChangeRecordsResponse DescribeClusterLevelChangeRecords(DescribeClusterLevelChangeRecordsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterLevelChangeRecordsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterLevelChangeRecordsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterLevelChangeRecords");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query detailed information of a node pool.
      * @param req DescribeClusterNodePoolDetailRequest
      * @return DescribeClusterNodePoolDetailResponse
@@ -919,6 +959,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the cluster resource usage.
+     * @param req DescribeResourceUsageRequest
+     * @return DescribeResourceUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceUsageResponse DescribeResourceUsage(DescribeResourceUsageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeResourceUsageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeResourceUsageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeResourceUsage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the list of route table conflicts.
      * @param req DescribeRouteTableConflictsRequest
      * @return DescribeRouteTableConflictsResponse
@@ -1051,6 +1111,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<EnableVpcCniNetworkTypeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "EnableVpcCniNetworkType");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *Obtaining the price of specified cluster model
+     * @param req GetClusterLevelPriceRequest
+     * @return GetClusterLevelPriceResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetClusterLevelPriceResponse GetClusterLevelPrice(GetClusterLevelPriceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetClusterLevelPriceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetClusterLevelPriceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetClusterLevelPrice");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

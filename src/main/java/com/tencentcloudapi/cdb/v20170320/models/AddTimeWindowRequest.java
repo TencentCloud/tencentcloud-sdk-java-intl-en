@@ -79,6 +79,13 @@ public class AddTimeWindowRequest extends AbstractModel{
     private String [] Sunday;
 
     /**
+    * Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
+    */
+    @SerializedName("MaxDelayTime")
+    @Expose
+    private Long MaxDelayTime;
+
+    /**
      * Get Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. 
      * @return InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      */
@@ -206,6 +213,22 @@ public class AddTimeWindowRequest extends AbstractModel{
         this.Sunday = Sunday;
     }
 
+    /**
+     * Get Maximum delay threshold, which takes effect only for source instances and disaster recovery instances. 
+     * @return MaxDelayTime Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
+     */
+    public Long getMaxDelayTime() {
+        return this.MaxDelayTime;
+    }
+
+    /**
+     * Set Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
+     * @param MaxDelayTime Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
+     */
+    public void setMaxDelayTime(Long MaxDelayTime) {
+        this.MaxDelayTime = MaxDelayTime;
+    }
+
     public AddTimeWindowRequest() {
     }
 
@@ -259,6 +282,9 @@ public class AddTimeWindowRequest extends AbstractModel{
                 this.Sunday[i] = new String(source.Sunday[i]);
             }
         }
+        if (source.MaxDelayTime != null) {
+            this.MaxDelayTime = new Long(source.MaxDelayTime);
+        }
     }
 
 
@@ -274,6 +300,7 @@ public class AddTimeWindowRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Friday.", this.Friday);
         this.setParamArraySimple(map, prefix + "Saturday.", this.Saturday);
         this.setParamArraySimple(map, prefix + "Sunday.", this.Sunday);
+        this.setParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
 
     }
 }

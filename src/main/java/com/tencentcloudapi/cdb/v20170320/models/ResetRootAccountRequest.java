@@ -20,67 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCDBProxyRequest extends AbstractModel{
+public class ResetRootAccountRequest extends AbstractModel{
 
     /**
-    * Instance ID
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Proxy group ID
-    */
-    @SerializedName("ProxyGroupId")
-    @Expose
-    private String ProxyGroupId;
-
-    /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
-    /**
-     * Get Proxy group ID 
-     * @return ProxyGroupId Proxy group ID
-     */
-    public String getProxyGroupId() {
-        return this.ProxyGroupId;
-    }
-
-    /**
-     * Set Proxy group ID
-     * @param ProxyGroupId Proxy group ID
-     */
-    public void setProxyGroupId(String ProxyGroupId) {
-        this.ProxyGroupId = ProxyGroupId;
-    }
-
-    public DescribeCDBProxyRequest() {
+    public ResetRootAccountRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeCDBProxyRequest(DescribeCDBProxyRequest source) {
+    public ResetRootAccountRequest(ResetRootAccountRequest source) {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
-        }
-        if (source.ProxyGroupId != null) {
-            this.ProxyGroupId = new String(source.ProxyGroupId);
         }
     }
 
@@ -90,7 +64,6 @@ public class DescribeCDBProxyRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "ProxyGroupId", this.ProxyGroupId);
 
     }
 }

@@ -144,6 +144,34 @@ Default value: Non-zero.
     private String CloudAttachId;
 
     /**
+    * Whether to enable BFD
+    */
+    @SerializedName("BfdEnable")
+    @Expose
+    private Long BfdEnable;
+
+    /**
+    * Whether to enable NQA
+    */
+    @SerializedName("NqaEnable")
+    @Expose
+    private Long NqaEnable;
+
+    /**
+    * BFD configuration information
+    */
+    @SerializedName("BfdInfo")
+    @Expose
+    private BFDInfo BfdInfo;
+
+    /**
+    * NQA configuration information
+    */
+    @SerializedName("NqaInfo")
+    @Expose
+    private NQAInfo NqaInfo;
+
+    /**
      * Get Direct Connect ID, such as `dc-kd7d06of`. 
      * @return DirectConnectId Direct Connect ID, such as `dc-kd7d06of`.
      */
@@ -435,6 +463,70 @@ Default value: Non-zero.
         this.CloudAttachId = CloudAttachId;
     }
 
+    /**
+     * Get Whether to enable BFD 
+     * @return BfdEnable Whether to enable BFD
+     */
+    public Long getBfdEnable() {
+        return this.BfdEnable;
+    }
+
+    /**
+     * Set Whether to enable BFD
+     * @param BfdEnable Whether to enable BFD
+     */
+    public void setBfdEnable(Long BfdEnable) {
+        this.BfdEnable = BfdEnable;
+    }
+
+    /**
+     * Get Whether to enable NQA 
+     * @return NqaEnable Whether to enable NQA
+     */
+    public Long getNqaEnable() {
+        return this.NqaEnable;
+    }
+
+    /**
+     * Set Whether to enable NQA
+     * @param NqaEnable Whether to enable NQA
+     */
+    public void setNqaEnable(Long NqaEnable) {
+        this.NqaEnable = NqaEnable;
+    }
+
+    /**
+     * Get BFD configuration information 
+     * @return BfdInfo BFD configuration information
+     */
+    public BFDInfo getBfdInfo() {
+        return this.BfdInfo;
+    }
+
+    /**
+     * Set BFD configuration information
+     * @param BfdInfo BFD configuration information
+     */
+    public void setBfdInfo(BFDInfo BfdInfo) {
+        this.BfdInfo = BfdInfo;
+    }
+
+    /**
+     * Get NQA configuration information 
+     * @return NqaInfo NQA configuration information
+     */
+    public NQAInfo getNqaInfo() {
+        return this.NqaInfo;
+    }
+
+    /**
+     * Set NQA configuration information
+     * @param NqaInfo NQA configuration information
+     */
+    public void setNqaInfo(NQAInfo NqaInfo) {
+        this.NqaInfo = NqaInfo;
+    }
+
     public CreateDirectConnectTunnelRequest() {
     }
 
@@ -494,6 +586,18 @@ Default value: Non-zero.
         if (source.CloudAttachId != null) {
             this.CloudAttachId = new String(source.CloudAttachId);
         }
+        if (source.BfdEnable != null) {
+            this.BfdEnable = new Long(source.BfdEnable);
+        }
+        if (source.NqaEnable != null) {
+            this.NqaEnable = new Long(source.NqaEnable);
+        }
+        if (source.BfdInfo != null) {
+            this.BfdInfo = new BFDInfo(source.BfdInfo);
+        }
+        if (source.NqaInfo != null) {
+            this.NqaInfo = new NQAInfo(source.NqaInfo);
+        }
     }
 
 
@@ -517,6 +621,10 @@ Default value: Non-zero.
         this.setParamSimple(map, prefix + "CustomerAddress", this.CustomerAddress);
         this.setParamSimple(map, prefix + "TencentBackupAddress", this.TencentBackupAddress);
         this.setParamSimple(map, prefix + "CloudAttachId", this.CloudAttachId);
+        this.setParamSimple(map, prefix + "BfdEnable", this.BfdEnable);
+        this.setParamSimple(map, prefix + "NqaEnable", this.NqaEnable);
+        this.setParamObj(map, prefix + "BfdInfo.", this.BfdInfo);
+        this.setParamObj(map, prefix + "NqaInfo.", this.NqaInfo);
 
     }
 }

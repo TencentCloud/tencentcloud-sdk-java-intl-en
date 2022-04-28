@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAccountsResponse extends AbstractModel{
+public class GetClusterLevelPriceResponse extends AbstractModel{
 
     /**
-    * Async task request ID, which can be used to query the execution result of an async task.
+    * Discount price (unit: US cent)
     */
-    @SerializedName("AsyncRequestId")
+    @SerializedName("Cost")
     @Expose
-    private String AsyncRequestId;
+    private Long Cost;
+
+    /**
+    * Original price (unit: US cent)
+    */
+    @SerializedName("TotalCost")
+    @Expose
+    private Long TotalCost;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +44,35 @@ public class CreateAccountsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Async task request ID, which can be used to query the execution result of an async task. 
-     * @return AsyncRequestId Async task request ID, which can be used to query the execution result of an async task.
+     * Get Discount price (unit: US cent) 
+     * @return Cost Discount price (unit: US cent)
      */
-    public String getAsyncRequestId() {
-        return this.AsyncRequestId;
+    public Long getCost() {
+        return this.Cost;
     }
 
     /**
-     * Set Async task request ID, which can be used to query the execution result of an async task.
-     * @param AsyncRequestId Async task request ID, which can be used to query the execution result of an async task.
+     * Set Discount price (unit: US cent)
+     * @param Cost Discount price (unit: US cent)
      */
-    public void setAsyncRequestId(String AsyncRequestId) {
-        this.AsyncRequestId = AsyncRequestId;
+    public void setCost(Long Cost) {
+        this.Cost = Cost;
+    }
+
+    /**
+     * Get Original price (unit: US cent) 
+     * @return TotalCost Original price (unit: US cent)
+     */
+    public Long getTotalCost() {
+        return this.TotalCost;
+    }
+
+    /**
+     * Set Original price (unit: US cent)
+     * @param TotalCost Original price (unit: US cent)
+     */
+    public void setTotalCost(Long TotalCost) {
+        this.TotalCost = TotalCost;
     }
 
     /**
@@ -68,16 +91,19 @@ public class CreateAccountsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateAccountsResponse() {
+    public GetClusterLevelPriceResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateAccountsResponse(CreateAccountsResponse source) {
-        if (source.AsyncRequestId != null) {
-            this.AsyncRequestId = new String(source.AsyncRequestId);
+    public GetClusterLevelPriceResponse(GetClusterLevelPriceResponse source) {
+        if (source.Cost != null) {
+            this.Cost = new Long(source.Cost);
+        }
+        if (source.TotalCost != null) {
+            this.TotalCost = new Long(source.TotalCost);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +115,8 @@ public class CreateAccountsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+        this.setParamSimple(map, prefix + "Cost", this.Cost);
+        this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

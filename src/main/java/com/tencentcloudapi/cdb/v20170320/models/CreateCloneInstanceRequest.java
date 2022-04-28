@@ -164,6 +164,13 @@ which is left empty by default. Specify this parameter when cloning a strong syn
     private String CageId;
 
     /**
+    * Project ID. Default value: 0.
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Long ProjectId;
+
+    /**
      * Get ID of the instance to be cloned from 
      * @return InstanceId ID of the instance to be cloned from
      */
@@ -487,6 +494,22 @@ which is left empty by default. Specify this parameter when cloning a strong syn
         this.CageId = CageId;
     }
 
+    /**
+     * Get Project ID. Default value: 0. 
+     * @return ProjectId Project ID. Default value: 0.
+     */
+    public Long getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set Project ID. Default value: 0.
+     * @param ProjectId Project ID. Default value: 0.
+     */
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
     public CreateCloneInstanceRequest() {
     }
 
@@ -561,6 +584,9 @@ which is left empty by default. Specify this parameter when cloning a strong syn
         if (source.CageId != null) {
             this.CageId = new String(source.CageId);
         }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
     }
 
 
@@ -588,6 +614,7 @@ which is left empty by default. Specify this parameter when cloning a strong syn
         this.setParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
         this.setParamSimple(map, prefix + "CageId", this.CageId);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

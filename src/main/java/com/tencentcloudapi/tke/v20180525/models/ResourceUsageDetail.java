@@ -13,74 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCDBProxyRequest extends AbstractModel{
+public class ResourceUsageDetail extends AbstractModel{
 
     /**
-    * Instance ID
+    * Resource name
     */
-    @SerializedName("InstanceId")
+    @SerializedName("Name")
     @Expose
-    private String InstanceId;
+    private String Name;
 
     /**
-    * Proxy group ID
+    * Resource usage
     */
-    @SerializedName("ProxyGroupId")
+    @SerializedName("Usage")
     @Expose
-    private String ProxyGroupId;
+    private Long Usage;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Resource name 
+     * @return Name Resource name
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Resource name
+     * @param Name Resource name
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
-     * Get Proxy group ID 
-     * @return ProxyGroupId Proxy group ID
+     * Get Resource usage 
+     * @return Usage Resource usage
      */
-    public String getProxyGroupId() {
-        return this.ProxyGroupId;
+    public Long getUsage() {
+        return this.Usage;
     }
 
     /**
-     * Set Proxy group ID
-     * @param ProxyGroupId Proxy group ID
+     * Set Resource usage
+     * @param Usage Resource usage
      */
-    public void setProxyGroupId(String ProxyGroupId) {
-        this.ProxyGroupId = ProxyGroupId;
+    public void setUsage(Long Usage) {
+        this.Usage = Usage;
     }
 
-    public DescribeCDBProxyRequest() {
+    public ResourceUsageDetail() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeCDBProxyRequest(DescribeCDBProxyRequest source) {
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
+    public ResourceUsageDetail(ResourceUsageDetail source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
-        if (source.ProxyGroupId != null) {
-            this.ProxyGroupId = new String(source.ProxyGroupId);
+        if (source.Usage != null) {
+            this.Usage = new Long(source.Usage);
         }
     }
 
@@ -89,8 +89,8 @@ public class DescribeCDBProxyRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "ProxyGroupId", this.ProxyGroupId);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Usage", this.Usage);
 
     }
 }

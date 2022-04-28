@@ -59,6 +59,88 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query billing data details.
+     * @param req DescribeBillingDataRequest
+     * @return DescribeBillingDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillingDataResponse DescribeBillingData(DescribeBillingDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBillingDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBillingDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBillingData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API (DescribeCdnData) is used to query CDN real-time access monitoring data and supports the following metrics:
+
++ Traffic (in bytes)
++ Bandwidth (in bps)
++ Number of requests
++ Number of hit requests
++ Request hit rate (in %)
++ Hit traffic (in bytes)
++ Traffic hit rate (in %)
++ Aggregate list of 2xx status codes and the details of status codes starting with 2 (in entries)
++ Aggregate list of 3xx status codes and the details of status codes starting with 3 (in entries)
++ Aggregate list of 4xx status codes and the details of status codes starting with 4 (in entries)
++ Aggregate list of 5xx status codes and the details of status codes starting with 5 (in entries)
+     * @param req DescribeCdnDataRequest
+     * @return DescribeCdnDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCdnDataResponse DescribeCdnData(DescribeCdnDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCdnDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCdnDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCdnData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API (DescribeOriginData) is used to query CDN real-time origin-pull monitoring data and supports the following metrics:
+
++ Origin-pull traffic (in bytes)
++ Origin-pull bandwidth (in bps)
++ Number of origin-pull requests
++ Number of failed origin-pull requests
++ Origin-pull failure rate (in % with two decimal digits)
++ Aggregate list of 2xx origin-pull status codes and the details of origin-pull status codes starting with 2 (in entries)
++ Aggregate list of 3xx origin-pull status codes and the details of origin-pull status codes starting with 3 (in entries)
++ Aggregate list of 4xx origin-pull status codes and the details of origin-pull status codes starting with 4 (in entries)
++ Aggregate list of 5xx origin-pull status codes and the details of origin-pull status codes starting with 5 (in entries)
+     * @param req DescribeOriginDataRequest
+     * @return DescribeOriginDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOriginDataResponse DescribeOriginData(DescribeOriginDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOriginDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOriginDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOriginData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to submit multiple directory purge tasks, which are carried out according to the acceleration region of the domain names.
 By default, a maximum of 100 directories can be purged per day for acceleration regions either within or outside the Chinese mainland, and up to 500 tasks can be submitted at a time.
      * @param req PurgePathCacheRequest

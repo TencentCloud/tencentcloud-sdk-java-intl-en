@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.cdn.v20180606.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDeployGroupResponse extends AbstractModel{
+public class DescribeOriginDataResponse extends AbstractModel{
 
     /**
-    * Placement group ID.
+    * Time granularity of data statistics, which supports min (1 minute), 5min (5 minutes), hour (1 hour), and day (1 day).
     */
-    @SerializedName("DeployGroupId")
+    @SerializedName("Interval")
     @Expose
-    private String DeployGroupId;
+    private String Interval;
+
+    /**
+    * Origin-pull data details of each resource.
+    */
+    @SerializedName("Data")
+    @Expose
+    private ResourceOriginData [] Data;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +44,35 @@ public class CreateDeployGroupResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Placement group ID. 
-     * @return DeployGroupId Placement group ID.
+     * Get Time granularity of data statistics, which supports min (1 minute), 5min (5 minutes), hour (1 hour), and day (1 day). 
+     * @return Interval Time granularity of data statistics, which supports min (1 minute), 5min (5 minutes), hour (1 hour), and day (1 day).
      */
-    public String getDeployGroupId() {
-        return this.DeployGroupId;
+    public String getInterval() {
+        return this.Interval;
     }
 
     /**
-     * Set Placement group ID.
-     * @param DeployGroupId Placement group ID.
+     * Set Time granularity of data statistics, which supports min (1 minute), 5min (5 minutes), hour (1 hour), and day (1 day).
+     * @param Interval Time granularity of data statistics, which supports min (1 minute), 5min (5 minutes), hour (1 hour), and day (1 day).
      */
-    public void setDeployGroupId(String DeployGroupId) {
-        this.DeployGroupId = DeployGroupId;
+    public void setInterval(String Interval) {
+        this.Interval = Interval;
+    }
+
+    /**
+     * Get Origin-pull data details of each resource. 
+     * @return Data Origin-pull data details of each resource.
+     */
+    public ResourceOriginData [] getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set Origin-pull data details of each resource.
+     * @param Data Origin-pull data details of each resource.
+     */
+    public void setData(ResourceOriginData [] Data) {
+        this.Data = Data;
     }
 
     /**
@@ -68,16 +91,22 @@ public class CreateDeployGroupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateDeployGroupResponse() {
+    public DescribeOriginDataResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateDeployGroupResponse(CreateDeployGroupResponse source) {
-        if (source.DeployGroupId != null) {
-            this.DeployGroupId = new String(source.DeployGroupId);
+    public DescribeOriginDataResponse(DescribeOriginDataResponse source) {
+        if (source.Interval != null) {
+            this.Interval = new String(source.Interval);
+        }
+        if (source.Data != null) {
+            this.Data = new ResourceOriginData[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new ResourceOriginData(source.Data[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +118,8 @@ public class CreateDeployGroupResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
+        this.setParamSimple(map, prefix + "Interval", this.Interval);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -44,6 +44,13 @@ public class ModifyTimeWindowRequest extends AbstractModel{
     private String [] Weekdays;
 
     /**
+    * Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
+    */
+    @SerializedName("MaxDelayTime")
+    @Expose
+    private Long MaxDelayTime;
+
+    /**
      * Get Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. 
      * @return InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      */
@@ -91,6 +98,22 @@ public class ModifyTimeWindowRequest extends AbstractModel{
         this.Weekdays = Weekdays;
     }
 
+    /**
+     * Get Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10. 
+     * @return MaxDelayTime Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
+     */
+    public Long getMaxDelayTime() {
+        return this.MaxDelayTime;
+    }
+
+    /**
+     * Set Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
+     * @param MaxDelayTime Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
+     */
+    public void setMaxDelayTime(Long MaxDelayTime) {
+        this.MaxDelayTime = MaxDelayTime;
+    }
+
     public ModifyTimeWindowRequest() {
     }
 
@@ -114,6 +137,9 @@ public class ModifyTimeWindowRequest extends AbstractModel{
                 this.Weekdays[i] = new String(source.Weekdays[i]);
             }
         }
+        if (source.MaxDelayTime != null) {
+            this.MaxDelayTime = new Long(source.MaxDelayTime);
+        }
     }
 
 
@@ -124,6 +150,7 @@ public class ModifyTimeWindowRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArraySimple(map, prefix + "TimeRanges.", this.TimeRanges);
         this.setParamArraySimple(map, prefix + "Weekdays.", this.Weekdays);
+        this.setParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
 
     }
 }

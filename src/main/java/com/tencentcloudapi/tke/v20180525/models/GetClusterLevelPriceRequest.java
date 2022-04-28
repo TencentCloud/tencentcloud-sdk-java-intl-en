@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyNameOrDescByDpIdResponse extends AbstractModel{
+public class GetClusterLevelPriceRequest extends AbstractModel{
 
     /**
-    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+    * The cluster model. It’s used for price query.
     */
-    @SerializedName("RequestId")
+    @SerializedName("ClusterLevel")
     @Expose
-    private String RequestId;
+    private String ClusterLevel;
 
     /**
-     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
-     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * Get The cluster model. It’s used for price query. 
+     * @return ClusterLevel The cluster model. It’s used for price query.
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getClusterLevel() {
+        return this.ClusterLevel;
     }
 
     /**
-     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * Set The cluster model. It’s used for price query.
+     * @param ClusterLevel The cluster model. It’s used for price query.
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setClusterLevel(String ClusterLevel) {
+        this.ClusterLevel = ClusterLevel;
     }
 
-    public ModifyNameOrDescByDpIdResponse() {
+    public GetClusterLevelPriceRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyNameOrDescByDpIdResponse(ModifyNameOrDescByDpIdResponse source) {
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+    public GetClusterLevelPriceRequest(GetClusterLevelPriceRequest source) {
+        if (source.ClusterLevel != null) {
+            this.ClusterLevel = new String(source.ClusterLevel);
         }
     }
 
@@ -63,7 +63,7 @@ public class ModifyNameOrDescByDpIdResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
 
     }
 }

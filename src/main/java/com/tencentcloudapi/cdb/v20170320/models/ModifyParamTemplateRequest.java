@@ -30,14 +30,14 @@ public class ModifyParamTemplateRequest extends AbstractModel{
     private Long TemplateId;
 
     /**
-    * Template name.
+    * Template name (up to 64 characters)
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Template description.
+    * Template description (up to 255 characters)
     */
     @SerializedName("Description")
     @Expose
@@ -67,32 +67,32 @@ public class ModifyParamTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get Template name. 
-     * @return Name Template name.
+     * Get Template name (up to 64 characters) 
+     * @return Name Template name (up to 64 characters)
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Template name.
-     * @param Name Template name.
+     * Set Template name (up to 64 characters)
+     * @param Name Template name (up to 64 characters)
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Template description. 
-     * @return Description Template description.
+     * Get Template description (up to 255 characters) 
+     * @return Description Template description (up to 255 characters)
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Template description.
-     * @param Description Template description.
+     * Set Template description (up to 255 characters)
+     * @param Description Template description (up to 255 characters)
      */
     public void setDescription(String Description) {
         this.Description = Description;

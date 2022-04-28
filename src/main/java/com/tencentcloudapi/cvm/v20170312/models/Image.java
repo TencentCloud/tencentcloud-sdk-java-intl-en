@@ -131,6 +131,14 @@ Note: This field may return null, indicating that no valid value is found.
     private Snapshot [] SnapshotSet;
 
     /**
+    * The list of tags bound to the image.
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Image ID 
      * @return ImageId Image ID
      */
@@ -382,6 +390,26 @@ Note: This field may return null, indicating that no valid value is found.
         this.SnapshotSet = SnapshotSet;
     }
 
+    /**
+     * Get The list of tags bound to the image.
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return Tags The list of tags bound to the image.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set The list of tags bound to the image.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param Tags The list of tags bound to the image.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public Image() {
     }
 
@@ -438,6 +466,12 @@ Note: This field may return null, indicating that no valid value is found.
                 this.SnapshotSet[i] = new Snapshot(source.SnapshotSet[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -460,6 +494,7 @@ Note: This field may return null, indicating that no valid value is found.
         this.setParamSimple(map, prefix + "SyncPercent", this.SyncPercent);
         this.setParamSimple(map, prefix + "IsSupportCloudinit", this.IsSupportCloudinit);
         this.setParamArrayObj(map, prefix + "SnapshotSet.", this.SnapshotSet);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

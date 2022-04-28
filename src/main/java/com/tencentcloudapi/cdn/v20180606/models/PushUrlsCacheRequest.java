@@ -68,6 +68,15 @@ Notes:
     private Boolean ParseM3U8;
 
     /**
+    * Specifies whether to disable Range GETs.
+Notes:
+This feature is in beta test.
+    */
+    @SerializedName("DisableRange")
+    @Expose
+    private Boolean DisableRange;
+
+    /**
      * Get List of URLs. The protocol header such as "http://" or "https://" needs to be included. 
      * @return Urls List of URLs. The protocol header such as "http://" or "https://" needs to be included.
      */
@@ -187,6 +196,30 @@ Notes:
         this.ParseM3U8 = ParseM3U8;
     }
 
+    /**
+     * Get Specifies whether to disable Range GETs.
+Notes:
+This feature is in beta test. 
+     * @return DisableRange Specifies whether to disable Range GETs.
+Notes:
+This feature is in beta test.
+     */
+    public Boolean getDisableRange() {
+        return this.DisableRange;
+    }
+
+    /**
+     * Set Specifies whether to disable Range GETs.
+Notes:
+This feature is in beta test.
+     * @param DisableRange Specifies whether to disable Range GETs.
+Notes:
+This feature is in beta test.
+     */
+    public void setDisableRange(Boolean DisableRange) {
+        this.DisableRange = DisableRange;
+    }
+
     public PushUrlsCacheRequest() {
     }
 
@@ -213,6 +246,9 @@ Notes:
         if (source.ParseM3U8 != null) {
             this.ParseM3U8 = new Boolean(source.ParseM3U8);
         }
+        if (source.DisableRange != null) {
+            this.DisableRange = new Boolean(source.DisableRange);
+        }
     }
 
 
@@ -225,6 +261,7 @@ Notes:
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "Layer", this.Layer);
         this.setParamSimple(map, prefix + "ParseM3U8", this.ParseM3U8);
+        this.setParamSimple(map, prefix + "DisableRange", this.DisableRange);
 
     }
 }
