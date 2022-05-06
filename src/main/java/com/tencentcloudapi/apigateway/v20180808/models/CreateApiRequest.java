@@ -387,6 +387,13 @@ public class CreateApiRequest extends AbstractModel{
     private String EIAMAppId;
 
     /**
+    * Owner of the resource
+    */
+    @SerializedName("Owner")
+    @Expose
+    private String Owner;
+
+    /**
      * Get Unique service ID of API. 
      * @return ServiceId Unique service ID of API.
      */
@@ -1218,6 +1225,22 @@ public class CreateApiRequest extends AbstractModel{
         this.EIAMAppId = EIAMAppId;
     }
 
+    /**
+     * Get Owner of the resource 
+     * @return Owner Owner of the resource
+     */
+    public String getOwner() {
+        return this.Owner;
+    }
+
+    /**
+     * Set Owner of the resource
+     * @param Owner Owner of the resource
+     */
+    public void setOwner(String Owner) {
+        this.Owner = Owner;
+    }
+
     public CreateApiRequest() {
     }
 
@@ -1400,6 +1423,9 @@ public class CreateApiRequest extends AbstractModel{
         if (source.EIAMAppId != null) {
             this.EIAMAppId = new String(source.EIAMAppId);
         }
+        if (source.Owner != null) {
+            this.Owner = new String(source.Owner);
+        }
     }
 
 
@@ -1459,6 +1485,7 @@ public class CreateApiRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EIAMAuthType", this.EIAMAuthType);
         this.setParamSimple(map, prefix + "TokenTimeout", this.TokenTimeout);
         this.setParamSimple(map, prefix + "EIAMAppId", this.EIAMAppId);
+        this.setParamSimple(map, prefix + "Owner", this.Owner);
 
     }
 }

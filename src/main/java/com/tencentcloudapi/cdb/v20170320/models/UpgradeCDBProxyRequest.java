@@ -37,14 +37,14 @@ public class UpgradeCDBProxyRequest extends AbstractModel{
     private String ProxyGroupId;
 
     /**
-    * The number of proxy nodes
+    * Number of proxy nodes
     */
     @SerializedName("ProxyCount")
     @Expose
     private Long ProxyCount;
 
     /**
-    * The number of CPU cores per proxy node
+    * Number of CPU cores per proxy node
     */
     @SerializedName("Cpu")
     @Expose
@@ -104,32 +104,32 @@ public class UpgradeCDBProxyRequest extends AbstractModel{
     }
 
     /**
-     * Get The number of proxy nodes 
-     * @return ProxyCount The number of proxy nodes
+     * Get Number of proxy nodes 
+     * @return ProxyCount Number of proxy nodes
      */
     public Long getProxyCount() {
         return this.ProxyCount;
     }
 
     /**
-     * Set The number of proxy nodes
-     * @param ProxyCount The number of proxy nodes
+     * Set Number of proxy nodes
+     * @param ProxyCount Number of proxy nodes
      */
     public void setProxyCount(Long ProxyCount) {
         this.ProxyCount = ProxyCount;
     }
 
     /**
-     * Get The number of CPU cores per proxy node 
-     * @return Cpu The number of CPU cores per proxy node
+     * Get Number of CPU cores per proxy node 
+     * @return Cpu Number of CPU cores per proxy node
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set The number of CPU cores per proxy node
-     * @param Cpu The number of CPU cores per proxy node
+     * Set Number of CPU cores per proxy node
+     * @param Cpu Number of CPU cores per proxy node
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;

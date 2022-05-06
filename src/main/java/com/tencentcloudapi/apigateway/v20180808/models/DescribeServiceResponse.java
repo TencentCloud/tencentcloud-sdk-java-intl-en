@@ -209,8 +209,8 @@ Note: this field may return null, indicating that no valid values found.
     private String DeploymentType;
 
     /**
-    * Whether it’s for special usage
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Whether the service if for special usage. Valid values: `DEFAULT` (general usage), `HTTP_DNS`.
+Note: This field may return `NULL`, indicating that no valid value was found.
     */
     @SerializedName("SpecialUse")
     @Expose
@@ -668,20 +668,20 @@ Note: this field may return null, indicating that no valid values found.
     }
 
     /**
-     * Get Whether it’s for special usage
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return SpecialUse Whether it’s for special usage
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Whether the service if for special usage. Valid values: `DEFAULT` (general usage), `HTTP_DNS`.
+Note: This field may return `NULL`, indicating that no valid value was found. 
+     * @return SpecialUse Whether the service if for special usage. Valid values: `DEFAULT` (general usage), `HTTP_DNS`.
+Note: This field may return `NULL`, indicating that no valid value was found.
      */
     public String getSpecialUse() {
         return this.SpecialUse;
     }
 
     /**
-     * Set Whether it’s for special usage
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param SpecialUse Whether it’s for special usage
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Whether the service if for special usage. Valid values: `DEFAULT` (general usage), `HTTP_DNS`.
+Note: This field may return `NULL`, indicating that no valid value was found.
+     * @param SpecialUse Whether the service if for special usage. Valid values: `DEFAULT` (general usage), `HTTP_DNS`.
+Note: This field may return `NULL`, indicating that no valid value was found.
      */
     public void setSpecialUse(String SpecialUse) {
         this.SpecialUse = SpecialUse;

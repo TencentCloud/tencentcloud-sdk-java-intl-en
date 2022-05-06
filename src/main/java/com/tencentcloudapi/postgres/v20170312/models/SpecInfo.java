@@ -44,6 +44,14 @@ public class SpecInfo extends AbstractModel{
     private SpecItemInfo [] SpecItemInfoList;
 
     /**
+    * Regions where KMS is supported
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("SupportKMSRegions")
+    @Expose
+    private String [] SupportKMSRegions;
+
+    /**
      * Get Region abbreviation, which corresponds to the `Region` field of `RegionSet` 
      * @return Region Region abbreviation, which corresponds to the `Region` field of `RegionSet`
      */
@@ -91,6 +99,26 @@ public class SpecInfo extends AbstractModel{
         this.SpecItemInfoList = SpecItemInfoList;
     }
 
+    /**
+     * Get Regions where KMS is supported
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return SupportKMSRegions Regions where KMS is supported
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String [] getSupportKMSRegions() {
+        return this.SupportKMSRegions;
+    }
+
+    /**
+     * Set Regions where KMS is supported
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param SupportKMSRegions Regions where KMS is supported
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setSupportKMSRegions(String [] SupportKMSRegions) {
+        this.SupportKMSRegions = SupportKMSRegions;
+    }
+
     public SpecInfo() {
     }
 
@@ -111,6 +139,12 @@ public class SpecInfo extends AbstractModel{
                 this.SpecItemInfoList[i] = new SpecItemInfo(source.SpecItemInfoList[i]);
             }
         }
+        if (source.SupportKMSRegions != null) {
+            this.SupportKMSRegions = new String[source.SupportKMSRegions.length];
+            for (int i = 0; i < source.SupportKMSRegions.length; i++) {
+                this.SupportKMSRegions[i] = new String(source.SupportKMSRegions[i]);
+            }
+        }
     }
 
 
@@ -121,6 +155,7 @@ public class SpecInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamArrayObj(map, prefix + "SpecItemInfoList.", this.SpecItemInfoList);
+        this.setParamArraySimple(map, prefix + "SupportKMSRegions.", this.SupportKMSRegions);
 
     }
 }

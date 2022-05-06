@@ -526,7 +526,7 @@ You can use this API if you use a custom domain name and custom mapping. Please 
     }
 
     /**
-     *This API is used to delete an upstream. Note that you can only delete an upstream when it’s not bound with an API.
+     *This API is used to delete an upstream. Note that you can only delete an upstream when it’s not bound with any APIs.
      * @param req DeleteUpstreamRequest
      * @return DeleteUpstreamResponse
      * @throws TencentCloudSDKException
@@ -1196,7 +1196,7 @@ To make authentication and throttling for a service take effect, you need to bin
     }
 
     /**
-     *This API is used to query the list of APIs bound with an upstream.
+     *This API is used to query APIs bound with an upstream.
      * @param req DescribeUpstreamBindApisRequest
      * @return DescribeUpstreamBindApisResponse
      * @throws TencentCloudSDKException
@@ -1216,7 +1216,7 @@ To make authentication and throttling for a service take effect, you need to bin
     }
 
     /**
-     *This API is used to query the list of upstreams.
+     *This API is used to query details of upstreams under the current account.
      * @param req DescribeUpstreamsRequest
      * @return DescribeUpstreamsResponse
      * @throws TencentCloudSDKException

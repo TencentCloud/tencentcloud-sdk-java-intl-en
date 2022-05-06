@@ -284,6 +284,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private DBNode [] DBNodeSet;
 
     /**
+    * Whether the instance supports TDE data encryption. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsSupportTDE")
+    @Expose
+    private Long IsSupportTDE;
+
+    /**
      * Get Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet` 
      * @return Region Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet`
      */
@@ -895,6 +903,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.DBNodeSet = DBNodeSet;
     }
 
+    /**
+     * Get Whether the instance supports TDE data encryption. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return IsSupportTDE Whether the instance supports TDE data encryption. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getIsSupportTDE() {
+        return this.IsSupportTDE;
+    }
+
+    /**
+     * Set Whether the instance supports TDE data encryption. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param IsSupportTDE Whether the instance supports TDE data encryption. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setIsSupportTDE(Long IsSupportTDE) {
+        this.IsSupportTDE = IsSupportTDE;
+    }
+
     public DBInstance() {
     }
 
@@ -1023,6 +1051,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.DBNodeSet[i] = new DBNode(source.DBNodeSet[i]);
             }
         }
+        if (source.IsSupportTDE != null) {
+            this.IsSupportTDE = new Long(source.IsSupportTDE);
+        }
     }
 
 
@@ -1066,6 +1097,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamArrayObj(map, prefix + "NetworkAccessList.", this.NetworkAccessList);
         this.setParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
         this.setParamArrayObj(map, prefix + "DBNodeSet.", this.DBNodeSet);
+        this.setParamSimple(map, prefix + "IsSupportTDE", this.IsSupportTDE);
 
     }
 }

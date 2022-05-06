@@ -44,14 +44,14 @@ public class ModifyIndexRequest extends AbstractModel{
     private RuleInfo Rule;
 
     /**
-    * 
+    * Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
     */
     @SerializedName("IncludeInternalFields")
     @Expose
     private Boolean IncludeInternalFields;
 
     /**
-    * 
+    * Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
     */
     @SerializedName("MetadataFlag")
     @Expose
@@ -106,32 +106,32 @@ public class ModifyIndexRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return IncludeInternalFields 
+     * Get Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields 
+     * @return IncludeInternalFields Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
      */
     public Boolean getIncludeInternalFields() {
         return this.IncludeInternalFields;
     }
 
     /**
-     * Set 
-     * @param IncludeInternalFields 
+     * Set Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+     * @param IncludeInternalFields Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
      */
     public void setIncludeInternalFields(Boolean IncludeInternalFields) {
         this.IncludeInternalFields = IncludeInternalFields;
     }
 
     /**
-     * Get  
-     * @return MetadataFlag 
+     * Get Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields). 
+     * @return MetadataFlag Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
      */
     public Long getMetadataFlag() {
         return this.MetadataFlag;
     }
 
     /**
-     * Set 
-     * @param MetadataFlag 
+     * Set Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+     * @param MetadataFlag Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
      */
     public void setMetadataFlag(Long MetadataFlag) {
         this.MetadataFlag = MetadataFlag;

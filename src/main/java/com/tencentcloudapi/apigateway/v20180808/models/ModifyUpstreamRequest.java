@@ -23,35 +23,42 @@ import java.util.HashMap;
 public class ModifyUpstreamRequest extends AbstractModel{
 
     /**
-    * Unique ID of the upstream
+    * Unique upstream ID
     */
     @SerializedName("UpstreamId")
     @Expose
     private String UpstreamId;
 
     /**
-    * Name of the upstream 
+    * Upstream name
     */
     @SerializedName("UpstreamName")
     @Expose
     private String UpstreamName;
 
     /**
-    * Description of the upstream
+    * Upstream description
     */
     @SerializedName("UpstreamDescription")
     @Expose
     private String UpstreamDescription;
 
     /**
-    * Backend protocol. Values: `HTTP`, `HTTPS`
+    * Backend protocol. Valid values: `HTTP`, `HTTPS`
     */
     @SerializedName("Scheme")
     @Expose
     private String Scheme;
 
     /**
-    * The balancing method can only be `ROUND_ROBIN`.
+    * Upstream access type. Valid values: `IP_PORT`, `K8S`
+    */
+    @SerializedName("UpstreamType")
+    @Expose
+    private String UpstreamType;
+
+    /**
+    * Load balancing algorithm. Valid value: `ROUND_ROBIN`
     */
     @SerializedName("Algorithm")
     @Expose
@@ -72,7 +79,7 @@ public class ModifyUpstreamRequest extends AbstractModel{
     private Long Retries;
 
     /**
-    * The host header in the request sending to the backend
+    * Gateway forwarding to the upstream Host request header
     */
     @SerializedName("UpstreamHost")
     @Expose
@@ -86,87 +93,110 @@ public class ModifyUpstreamRequest extends AbstractModel{
     private UpstreamNode [] Nodes;
 
     /**
-    * Configuration of K8s service
+    * Health check configuration
+    */
+    @SerializedName("HealthChecker")
+    @Expose
+    private UpstreamHealthChecker HealthChecker;
+
+    /**
+    * Configuration of TKE service
     */
     @SerializedName("K8sService")
     @Expose
     private K8sService [] K8sService;
 
     /**
-     * Get Unique ID of the upstream 
-     * @return UpstreamId Unique ID of the upstream
+     * Get Unique upstream ID 
+     * @return UpstreamId Unique upstream ID
      */
     public String getUpstreamId() {
         return this.UpstreamId;
     }
 
     /**
-     * Set Unique ID of the upstream
-     * @param UpstreamId Unique ID of the upstream
+     * Set Unique upstream ID
+     * @param UpstreamId Unique upstream ID
      */
     public void setUpstreamId(String UpstreamId) {
         this.UpstreamId = UpstreamId;
     }
 
     /**
-     * Get Name of the upstream  
-     * @return UpstreamName Name of the upstream 
+     * Get Upstream name 
+     * @return UpstreamName Upstream name
      */
     public String getUpstreamName() {
         return this.UpstreamName;
     }
 
     /**
-     * Set Name of the upstream 
-     * @param UpstreamName Name of the upstream 
+     * Set Upstream name
+     * @param UpstreamName Upstream name
      */
     public void setUpstreamName(String UpstreamName) {
         this.UpstreamName = UpstreamName;
     }
 
     /**
-     * Get Description of the upstream 
-     * @return UpstreamDescription Description of the upstream
+     * Get Upstream description 
+     * @return UpstreamDescription Upstream description
      */
     public String getUpstreamDescription() {
         return this.UpstreamDescription;
     }
 
     /**
-     * Set Description of the upstream
-     * @param UpstreamDescription Description of the upstream
+     * Set Upstream description
+     * @param UpstreamDescription Upstream description
      */
     public void setUpstreamDescription(String UpstreamDescription) {
         this.UpstreamDescription = UpstreamDescription;
     }
 
     /**
-     * Get Backend protocol. Values: `HTTP`, `HTTPS` 
-     * @return Scheme Backend protocol. Values: `HTTP`, `HTTPS`
+     * Get Backend protocol. Valid values: `HTTP`, `HTTPS` 
+     * @return Scheme Backend protocol. Valid values: `HTTP`, `HTTPS`
      */
     public String getScheme() {
         return this.Scheme;
     }
 
     /**
-     * Set Backend protocol. Values: `HTTP`, `HTTPS`
-     * @param Scheme Backend protocol. Values: `HTTP`, `HTTPS`
+     * Set Backend protocol. Valid values: `HTTP`, `HTTPS`
+     * @param Scheme Backend protocol. Valid values: `HTTP`, `HTTPS`
      */
     public void setScheme(String Scheme) {
         this.Scheme = Scheme;
     }
 
     /**
-     * Get The balancing method can only be `ROUND_ROBIN`. 
-     * @return Algorithm The balancing method can only be `ROUND_ROBIN`.
+     * Get Upstream access type. Valid values: `IP_PORT`, `K8S` 
+     * @return UpstreamType Upstream access type. Valid values: `IP_PORT`, `K8S`
+     */
+    public String getUpstreamType() {
+        return this.UpstreamType;
+    }
+
+    /**
+     * Set Upstream access type. Valid values: `IP_PORT`, `K8S`
+     * @param UpstreamType Upstream access type. Valid values: `IP_PORT`, `K8S`
+     */
+    public void setUpstreamType(String UpstreamType) {
+        this.UpstreamType = UpstreamType;
+    }
+
+    /**
+     * Get Load balancing algorithm. Valid value: `ROUND_ROBIN` 
+     * @return Algorithm Load balancing algorithm. Valid value: `ROUND_ROBIN`
      */
     public String getAlgorithm() {
         return this.Algorithm;
     }
 
     /**
-     * Set The balancing method can only be `ROUND_ROBIN`.
-     * @param Algorithm The balancing method can only be `ROUND_ROBIN`.
+     * Set Load balancing algorithm. Valid value: `ROUND_ROBIN`
+     * @param Algorithm Load balancing algorithm. Valid value: `ROUND_ROBIN`
      */
     public void setAlgorithm(String Algorithm) {
         this.Algorithm = Algorithm;
@@ -205,16 +235,16 @@ public class ModifyUpstreamRequest extends AbstractModel{
     }
 
     /**
-     * Get The host header in the request sending to the backend 
-     * @return UpstreamHost The host header in the request sending to the backend
+     * Get Gateway forwarding to the upstream Host request header 
+     * @return UpstreamHost Gateway forwarding to the upstream Host request header
      */
     public String getUpstreamHost() {
         return this.UpstreamHost;
     }
 
     /**
-     * Set The host header in the request sending to the backend
-     * @param UpstreamHost The host header in the request sending to the backend
+     * Set Gateway forwarding to the upstream Host request header
+     * @param UpstreamHost Gateway forwarding to the upstream Host request header
      */
     public void setUpstreamHost(String UpstreamHost) {
         this.UpstreamHost = UpstreamHost;
@@ -237,16 +267,32 @@ public class ModifyUpstreamRequest extends AbstractModel{
     }
 
     /**
-     * Get Configuration of K8s service 
-     * @return K8sService Configuration of K8s service
+     * Get Health check configuration 
+     * @return HealthChecker Health check configuration
+     */
+    public UpstreamHealthChecker getHealthChecker() {
+        return this.HealthChecker;
+    }
+
+    /**
+     * Set Health check configuration
+     * @param HealthChecker Health check configuration
+     */
+    public void setHealthChecker(UpstreamHealthChecker HealthChecker) {
+        this.HealthChecker = HealthChecker;
+    }
+
+    /**
+     * Get Configuration of TKE service 
+     * @return K8sService Configuration of TKE service
      */
     public K8sService [] getK8sService() {
         return this.K8sService;
     }
 
     /**
-     * Set Configuration of K8s service
-     * @param K8sService Configuration of K8s service
+     * Set Configuration of TKE service
+     * @param K8sService Configuration of TKE service
      */
     public void setK8sService(K8sService [] K8sService) {
         this.K8sService = K8sService;
@@ -272,6 +318,9 @@ public class ModifyUpstreamRequest extends AbstractModel{
         if (source.Scheme != null) {
             this.Scheme = new String(source.Scheme);
         }
+        if (source.UpstreamType != null) {
+            this.UpstreamType = new String(source.UpstreamType);
+        }
         if (source.Algorithm != null) {
             this.Algorithm = new String(source.Algorithm);
         }
@@ -290,6 +339,9 @@ public class ModifyUpstreamRequest extends AbstractModel{
                 this.Nodes[i] = new UpstreamNode(source.Nodes[i]);
             }
         }
+        if (source.HealthChecker != null) {
+            this.HealthChecker = new UpstreamHealthChecker(source.HealthChecker);
+        }
         if (source.K8sService != null) {
             this.K8sService = new K8sService[source.K8sService.length];
             for (int i = 0; i < source.K8sService.length; i++) {
@@ -307,11 +359,13 @@ public class ModifyUpstreamRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UpstreamName", this.UpstreamName);
         this.setParamSimple(map, prefix + "UpstreamDescription", this.UpstreamDescription);
         this.setParamSimple(map, prefix + "Scheme", this.Scheme);
+        this.setParamSimple(map, prefix + "UpstreamType", this.UpstreamType);
         this.setParamSimple(map, prefix + "Algorithm", this.Algorithm);
         this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
         this.setParamSimple(map, prefix + "Retries", this.Retries);
         this.setParamSimple(map, prefix + "UpstreamHost", this.UpstreamHost);
         this.setParamArrayObj(map, prefix + "Nodes.", this.Nodes);
+        this.setParamObj(map, prefix + "HealthChecker.", this.HealthChecker);
         this.setParamArrayObj(map, prefix + "K8sService.", this.K8sService);
 
     }

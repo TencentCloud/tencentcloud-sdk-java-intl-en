@@ -59,6 +59,26 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to disable Kafka consumption.
+     * @param req CloseKafkaConsumerRequest
+     * @return CloseKafkaConsumerResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseKafkaConsumerResponse CloseKafkaConsumer(CloseKafkaConsumerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloseKafkaConsumerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloseKafkaConsumerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CloseKafkaConsumer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create an alarm policy.
      * @param req CreateAlarmRequest
      * @return CreateAlarmResponse
@@ -211,6 +231,26 @@ public class ClsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateMachineGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateMachineGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a shipping rule. Note: To use this API, you need to check whether you have configured the role and permission for COS shipping tasks. If not, see **Viewing and Configuring Shipping Authorization** at https://intl.cloud.tencent.com/document/product/614/71623.?from_cn_redirect=1
+     * @param req CreateShipperRequest
+     * @return CreateShipperResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateShipperResponse CreateShipper(CreateShipperRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateShipperResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateShipperResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateShipper");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -992,6 +1032,46 @@ public class ClsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyShipperResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyShipper");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a log topic.
+     * @param req ModifyTopicRequest
+     * @return ModifyTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTopicResponse ModifyTopic(ModifyTopicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyTopicResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyTopicResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyTopic");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to enable the Kafka consumption feature.
+     * @param req OpenKafkaConsumerRequest
+     * @return OpenKafkaConsumerResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenKafkaConsumerResponse OpenKafkaConsumer(OpenKafkaConsumerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OpenKafkaConsumerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<OpenKafkaConsumerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "OpenKafkaConsumer");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

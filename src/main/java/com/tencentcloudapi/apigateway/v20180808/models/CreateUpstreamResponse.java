@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class CreateUpstreamResponse extends AbstractModel{
 
     /**
-    * The unique upstream IP returned
-Note: This field may return `null`, indicating that no valid value was found.
+    * The unique upstream ID returned
+Note: This field may return `NULL`, indicating that no valid value was found.
     */
     @SerializedName("UpstreamId")
     @Expose
@@ -38,20 +38,20 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String RequestId;
 
     /**
-     * Get The unique upstream IP returned
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return UpstreamId The unique upstream IP returned
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get The unique upstream ID returned
+Note: This field may return `NULL`, indicating that no valid value was found. 
+     * @return UpstreamId The unique upstream ID returned
+Note: This field may return `NULL`, indicating that no valid value was found.
      */
     public String getUpstreamId() {
         return this.UpstreamId;
     }
 
     /**
-     * Set The unique upstream IP returned
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param UpstreamId The unique upstream IP returned
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set The unique upstream ID returned
+Note: This field may return `NULL`, indicating that no valid value was found.
+     * @param UpstreamId The unique upstream ID returned
+Note: This field may return `NULL`, indicating that no valid value was found.
      */
     public void setUpstreamId(String UpstreamId) {
         this.UpstreamId = UpstreamId;

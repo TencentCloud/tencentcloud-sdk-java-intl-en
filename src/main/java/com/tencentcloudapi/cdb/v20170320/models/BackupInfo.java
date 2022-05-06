@@ -121,6 +121,13 @@ public class BackupInfo extends AbstractModel{
     private String ManualBackupName;
 
     /**
+    * Backup retention type. Valid values: `save_mode_regular` (non-archive backup), save_mode_period`(archive backup).
+    */
+    @SerializedName("SaveMode")
+    @Expose
+    private String SaveMode;
+
+    /**
      * Get Backup filename 
      * @return Name Backup filename
      */
@@ -344,6 +351,22 @@ public class BackupInfo extends AbstractModel{
         this.ManualBackupName = ManualBackupName;
     }
 
+    /**
+     * Get Backup retention type. Valid values: `save_mode_regular` (non-archive backup), save_mode_period`(archive backup). 
+     * @return SaveMode Backup retention type. Valid values: `save_mode_regular` (non-archive backup), save_mode_period`(archive backup).
+     */
+    public String getSaveMode() {
+        return this.SaveMode;
+    }
+
+    /**
+     * Set Backup retention type. Valid values: `save_mode_regular` (non-archive backup), save_mode_period`(archive backup).
+     * @param SaveMode Backup retention type. Valid values: `save_mode_regular` (non-archive backup), save_mode_period`(archive backup).
+     */
+    public void setSaveMode(String SaveMode) {
+        this.SaveMode = SaveMode;
+    }
+
     public BackupInfo() {
     }
 
@@ -394,6 +417,9 @@ public class BackupInfo extends AbstractModel{
         if (source.ManualBackupName != null) {
             this.ManualBackupName = new String(source.ManualBackupName);
         }
+        if (source.SaveMode != null) {
+            this.SaveMode = new String(source.SaveMode);
+        }
     }
 
 
@@ -415,6 +441,7 @@ public class BackupInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Method", this.Method);
         this.setParamSimple(map, prefix + "Way", this.Way);
         this.setParamSimple(map, prefix + "ManualBackupName", this.ManualBackupName);
+        this.setParamSimple(map, prefix + "SaveMode", this.SaveMode);
 
     }
 }

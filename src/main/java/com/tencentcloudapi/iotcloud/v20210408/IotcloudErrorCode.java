@@ -1,5 +1,8 @@
 package com.tencentcloudapi.iotcloud.v20210408;
 public enum IotcloudErrorCode {
+    // This device has been transferred and cannot be created again.
+     FAILEDOPERATION_ALREADYDISTRIBUTIONDEVICE("FailedOperation.AlreadyDistributionDevice"),
+     
     // You cannot create devices as allowlist authentication is not enabled. IoT Hub will create devices automatically by the names carried during authentication.
      FAILEDOPERATION_TIDWHITELISTNOTOPEN("FailedOperation.TidWhiteListNotOpen"),
      
@@ -65,6 +68,9 @@ public enum IotcloudErrorCode {
      
     // You can create only LoRa devices under this product type.
      UNAUTHORIZEDOPERATION_PRODUCTCANTHAVENOTLORADEVICE("UnauthorizedOperation.ProductCantHaveNotLoRaDevice"),
+     
+    // This feature has been disabled for the product.
+     UNAUTHORIZEDOPERATION_PRODUCTISFORBIDDEN("UnauthorizedOperation.ProductIsForbidden"),
      
     // The product does not support key authentication.
      UNAUTHORIZEDOPERATION_PRODUCTNOTSUPPORTPSK("UnauthorizedOperation.ProductNotSupportPSK"),

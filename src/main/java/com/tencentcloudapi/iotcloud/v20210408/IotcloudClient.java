@@ -358,4 +358,24 @@ public class IotcloudClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *This API is used to update the configuration of product dynamic registration. 
+     * @param req UpdateProductDynamicRegisterRequest
+     * @return UpdateProductDynamicRegisterResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateProductDynamicRegisterResponse UpdateProductDynamicRegister(UpdateProductDynamicRegisterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateProductDynamicRegisterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateProductDynamicRegisterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateProductDynamicRegister");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

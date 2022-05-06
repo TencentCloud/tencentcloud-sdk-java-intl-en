@@ -94,8 +94,8 @@ public class SearchMediaRequest extends AbstractModel{
     private String [] SourceTypes;
 
     /**
-    * [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
+    * The live stream code array. A media file will be returned if it matches any element in the array.
+<li>Array length limit: 10</li>
     */
     @SerializedName("StreamIds")
     @Expose
@@ -211,8 +211,8 @@ Media file source. For valid values, please see [SourceType](https://intl.cloud.
     private String SourceType;
 
     /**
-    * (This is not recommended. `StreamIds` should be used instead)
-[Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1).
+    * (Not recommended. Consider using `StreamIds` instead.)
+The live stream code.
     */
     @SerializedName("StreamId")
     @Expose
@@ -437,20 +437,20 @@ End time in the creation time range.
     }
 
     /**
-     * Get [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
-<li>Array length limit: 10.</li> 
-     * @return StreamIds [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
+     * Get The live stream code array. A media file will be returned if it matches any element in the array.
+<li>Array length limit: 10</li> 
+     * @return StreamIds The live stream code array. A media file will be returned if it matches any element in the array.
+<li>Array length limit: 10</li>
      */
     public String [] getStreamIds() {
         return this.StreamIds;
     }
 
     /**
-     * Set [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
-     * @param StreamIds [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
+     * Set The live stream code array. A media file will be returned if it matches any element in the array.
+<li>Array length limit: 10</li>
+     * @param StreamIds The live stream code array. A media file will be returned if it matches any element in the array.
+<li>Array length limit: 10</li>
      */
     public void setStreamIds(String [] StreamIds) {
         this.StreamIds = StreamIds;
@@ -749,20 +749,20 @@ Media file source. For valid values, please see [SourceType](https://intl.cloud.
     }
 
     /**
-     * Get (This is not recommended. `StreamIds` should be used instead)
-[Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1). 
-     * @return StreamId (This is not recommended. `StreamIds` should be used instead)
-[Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1).
+     * Get (Not recommended. Consider using `StreamIds` instead.)
+The live stream code. 
+     * @return StreamId (Not recommended. Consider using `StreamIds` instead.)
+The live stream code.
      */
     public String getStreamId() {
         return this.StreamId;
     }
 
     /**
-     * Set (This is not recommended. `StreamIds` should be used instead)
-[Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1).
-     * @param StreamId (This is not recommended. `StreamIds` should be used instead)
-[Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1).
+     * Set (Not recommended. Consider using `StreamIds` instead.)
+The live stream code.
+     * @param StreamId (Not recommended. Consider using `StreamIds` instead.)
+The live stream code.
      */
     public void setStreamId(String StreamId) {
         this.StreamId = StreamId;

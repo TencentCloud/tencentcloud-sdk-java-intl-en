@@ -13,22 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.apigateway.v20180808.models;
+package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteUpstreamResponse extends AbstractModel{
-
-    /**
-    * ID of the deleted upstream
-Note: This field may return `NULL`, indicating that no valid value was found.
-    */
-    @SerializedName("UpstreamId")
-    @Expose
-    private String UpstreamId;
+public class CloseKafkaConsumerResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -36,26 +28,6 @@ Note: This field may return `NULL`, indicating that no valid value was found.
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get ID of the deleted upstream
-Note: This field may return `NULL`, indicating that no valid value was found. 
-     * @return UpstreamId ID of the deleted upstream
-Note: This field may return `NULL`, indicating that no valid value was found.
-     */
-    public String getUpstreamId() {
-        return this.UpstreamId;
-    }
-
-    /**
-     * Set ID of the deleted upstream
-Note: This field may return `NULL`, indicating that no valid value was found.
-     * @param UpstreamId ID of the deleted upstream
-Note: This field may return `NULL`, indicating that no valid value was found.
-     */
-    public void setUpstreamId(String UpstreamId) {
-        this.UpstreamId = UpstreamId;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -73,17 +45,14 @@ Note: This field may return `NULL`, indicating that no valid value was found.
         this.RequestId = RequestId;
     }
 
-    public DeleteUpstreamResponse() {
+    public CloseKafkaConsumerResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteUpstreamResponse(DeleteUpstreamResponse source) {
-        if (source.UpstreamId != null) {
-            this.UpstreamId = new String(source.UpstreamId);
-        }
+    public CloseKafkaConsumerResponse(CloseKafkaConsumerResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,7 +63,6 @@ Note: This field may return `NULL`, indicating that no valid value was found.
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "UpstreamId", this.UpstreamId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -149,7 +149,7 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     private String ReadOnlyGroupId;
 
     /**
-    * The information of tags to be associated with instances. This parameter is left empty by default.
+    * The information of tags to be bound with the purchased instance, which is left empty by default (type: tag array).
     */
     @SerializedName("TagList")
     @Expose
@@ -451,16 +451,16 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get The information of tags to be associated with instances. This parameter is left empty by default. 
-     * @return TagList The information of tags to be associated with instances. This parameter is left empty by default.
+     * Get The information of tags to be bound with the purchased instance, which is left empty by default (type: tag array). 
+     * @return TagList The information of tags to be bound with the purchased instance, which is left empty by default (type: tag array).
      */
     public Tag getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set The information of tags to be associated with instances. This parameter is left empty by default.
-     * @param TagList The information of tags to be associated with instances. This parameter is left empty by default.
+     * Set The information of tags to be bound with the purchased instance, which is left empty by default (type: tag array).
+     * @param TagList The information of tags to be bound with the purchased instance, which is left empty by default (type: tag array).
      */
     public void setTagList(Tag TagList) {
         this.TagList = TagList;

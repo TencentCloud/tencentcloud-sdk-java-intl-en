@@ -39,6 +39,26 @@ public class SesClient extends AbstractClient{
     }
 
     /**
+     *This API is used to send a TEXT or HTML email to multiple recipients at a time for marketing or notification purposes. By default, you can send emails using a template only. To send custom content, please contact your sales rep to enable this feature. You need to create a recipient group with email addresses first and then send emails by group ID. SES supports scheduled and recurring email sending tasks. You need to pass in `TimedParam` for a scheduled task and `CycleParam` for a recurring one.
+     * @param req BatchSendEmailRequest
+     * @return BatchSendEmailResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchSendEmailResponse BatchSendEmail(BatchSendEmailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchSendEmailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchSendEmailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchSendEmail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *After the sender domain is verified, you need a sender address to send emails. For example, if your sender domain is mail.qcloud.com, your sender address can be service@mail.qcloud.com. If you want to display your name (such as "Tencent Cloud") in the inbox list of the recipients, the sender address should be in the format of `Tencent Cloud <email address>`. Please note that there must be a space between your name and the first angle bracket.
      * @param req CreateEmailAddressRequest
      * @return CreateEmailAddressResponse
@@ -71,6 +91,27 @@ public class SesClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateEmailIdentityResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateEmailIdentity");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a TEXT or HTML email template. To create an HTML template, ensure that it does not include external CSS files. You can use {{variable name}} to specify a variable in the template.
+Note: Only an approved template can be used to send emails.
+     * @param req CreateEmailTemplateRequest
+     * @return CreateEmailTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEmailTemplateResponse CreateEmailTemplate(CreateEmailTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateEmailTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateEmailTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateEmailTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -431,6 +472,26 @@ public class SesClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdateEmailIdentityResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdateEmailIdentity");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to update an email template. An updated template must be approved again before it can be used.
+     * @param req UpdateEmailTemplateRequest
+     * @return UpdateEmailTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateEmailTemplateResponse UpdateEmailTemplate(UpdateEmailTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateEmailTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateEmailTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateEmailTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

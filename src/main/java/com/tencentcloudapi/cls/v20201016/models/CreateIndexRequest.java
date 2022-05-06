@@ -44,6 +44,20 @@ public class CreateIndexRequest extends AbstractModel{
     private Boolean Status;
 
     /**
+    * Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+    */
+    @SerializedName("IncludeInternalFields")
+    @Expose
+    private Boolean IncludeInternalFields;
+
+    /**
+    * Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+    */
+    @SerializedName("MetadataFlag")
+    @Expose
+    private Long MetadataFlag;
+
+    /**
      * Get Log topic ID 
      * @return TopicId Log topic ID
      */
@@ -91,6 +105,38 @@ public class CreateIndexRequest extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields 
+     * @return IncludeInternalFields Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+     */
+    public Boolean getIncludeInternalFields() {
+        return this.IncludeInternalFields;
+    }
+
+    /**
+     * Set Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+     * @param IncludeInternalFields Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+     */
+    public void setIncludeInternalFields(Boolean IncludeInternalFields) {
+        this.IncludeInternalFields = IncludeInternalFields;
+    }
+
+    /**
+     * Get Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields). 
+     * @return MetadataFlag Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+     */
+    public Long getMetadataFlag() {
+        return this.MetadataFlag;
+    }
+
+    /**
+     * Set Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+     * @param MetadataFlag Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+     */
+    public void setMetadataFlag(Long MetadataFlag) {
+        this.MetadataFlag = MetadataFlag;
+    }
+
     public CreateIndexRequest() {
     }
 
@@ -108,6 +154,12 @@ public class CreateIndexRequest extends AbstractModel{
         if (source.Status != null) {
             this.Status = new Boolean(source.Status);
         }
+        if (source.IncludeInternalFields != null) {
+            this.IncludeInternalFields = new Boolean(source.IncludeInternalFields);
+        }
+        if (source.MetadataFlag != null) {
+            this.MetadataFlag = new Long(source.MetadataFlag);
+        }
     }
 
 
@@ -118,6 +170,8 @@ public class CreateIndexRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamObj(map, prefix + "Rule.", this.Rule);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "IncludeInternalFields", this.IncludeInternalFields);
+        this.setParamSimple(map, prefix + "MetadataFlag", this.MetadataFlag);
 
     }
 }

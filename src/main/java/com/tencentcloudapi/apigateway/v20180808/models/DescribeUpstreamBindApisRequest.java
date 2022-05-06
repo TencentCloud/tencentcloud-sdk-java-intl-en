@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeUpstreamBindApisRequest extends AbstractModel{
 
     /**
-    * Number of results returned in a page
+    * Number of entries per page
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Page offset
+    * The starting position of paging
     */
     @SerializedName("Offset")
     @Expose
@@ -51,32 +51,32 @@ public class DescribeUpstreamBindApisRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-     * Get Number of results returned in a page 
-     * @return Limit Number of results returned in a page
+     * Get Number of entries per page 
+     * @return Limit Number of entries per page
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results returned in a page
-     * @param Limit Number of results returned in a page
+     * Set Number of entries per page
+     * @param Limit Number of entries per page
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Page offset 
-     * @return Offset Page offset
+     * Get The starting position of paging 
+     * @return Offset The starting position of paging
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Page offset
-     * @param Offset Page offset
+     * Set The starting position of paging
+     * @param Offset The starting position of paging
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

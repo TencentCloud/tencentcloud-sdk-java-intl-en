@@ -80,6 +80,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String LogJson;
 
     /**
+    * Source host name of logs
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("HostName")
+    @Expose
+    private String HostName;
+
+    /**
      * Get Log time in milliseconds 
      * @return Time Log time in milliseconds
      */
@@ -211,6 +219,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.LogJson = LogJson;
     }
 
+    /**
+     * Get Source host name of logs
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return HostName Source host name of logs
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getHostName() {
+        return this.HostName;
+    }
+
+    /**
+     * Set Source host name of logs
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param HostName Source host name of logs
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setHostName(String HostName) {
+        this.HostName = HostName;
+    }
+
     public LogInfo() {
     }
 
@@ -243,6 +271,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.LogJson != null) {
             this.LogJson = new String(source.LogJson);
         }
+        if (source.HostName != null) {
+            this.HostName = new String(source.HostName);
+        }
     }
 
 
@@ -258,6 +289,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "PkgId", this.PkgId);
         this.setParamSimple(map, prefix + "PkgLogId", this.PkgLogId);
         this.setParamSimple(map, prefix + "LogJson", this.LogJson);
+        this.setParamSimple(map, prefix + "HostName", this.HostName);
 
     }
 }

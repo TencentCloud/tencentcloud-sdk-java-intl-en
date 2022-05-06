@@ -58,6 +58,14 @@ public class ServiceConfig extends AbstractModel{
     private String Method;
 
     /**
+    * It’s required for `upstream`.
+Note: This field may return `NULL`, indicating that no valid value was found.
+    */
+    @SerializedName("UpstreamId")
+    @Expose
+    private String UpstreamId;
+
+    /**
     * API backend COS configuration. It’s required if the `ServiceType` is ·`COS`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
@@ -146,6 +154,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get It’s required for `upstream`.
+Note: This field may return `NULL`, indicating that no valid value was found. 
+     * @return UpstreamId It’s required for `upstream`.
+Note: This field may return `NULL`, indicating that no valid value was found.
+     */
+    public String getUpstreamId() {
+        return this.UpstreamId;
+    }
+
+    /**
+     * Set It’s required for `upstream`.
+Note: This field may return `NULL`, indicating that no valid value was found.
+     * @param UpstreamId It’s required for `upstream`.
+Note: This field may return `NULL`, indicating that no valid value was found.
+     */
+    public void setUpstreamId(String UpstreamId) {
+        this.UpstreamId = UpstreamId;
+    }
+
+    /**
      * Get API backend COS configuration. It’s required if the `ServiceType` is ·`COS`.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return CosConfig API backend COS configuration. It’s required if the `ServiceType` is ·`COS`.
@@ -188,6 +216,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.Method != null) {
             this.Method = new String(source.Method);
         }
+        if (source.UpstreamId != null) {
+            this.UpstreamId = new String(source.UpstreamId);
+        }
         if (source.CosConfig != null) {
             this.CosConfig = new CosConfig(source.CosConfig);
         }
@@ -203,6 +234,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "Method", this.Method);
+        this.setParamSimple(map, prefix + "UpstreamId", this.UpstreamId);
         this.setParamObj(map, prefix + "CosConfig.", this.CosConfig);
 
     }

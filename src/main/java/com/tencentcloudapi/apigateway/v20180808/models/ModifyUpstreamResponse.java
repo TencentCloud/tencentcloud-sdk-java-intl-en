@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class ModifyUpstreamResponse extends AbstractModel{
 
     /**
-    * Information of the upstream after the modification
-Note: This field may return `null`, indicating that no valid value was found.
+    * Return modified upstream information
+Note: This field may return `NULL`, indicating that no valid value was found.
     */
     @SerializedName("Result")
     @Expose
@@ -38,20 +38,20 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String RequestId;
 
     /**
-     * Get Information of the upstream after the modification
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return Result Information of the upstream after the modification
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Return modified upstream information
+Note: This field may return `NULL`, indicating that no valid value was found. 
+     * @return Result Return modified upstream information
+Note: This field may return `NULL`, indicating that no valid value was found.
      */
     public UpstreamInfo getResult() {
         return this.Result;
     }
 
     /**
-     * Set Information of the upstream after the modification
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param Result Information of the upstream after the modification
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Return modified upstream information
+Note: This field may return `NULL`, indicating that no valid value was found.
+     * @param Result Return modified upstream information
+Note: This field may return `NULL`, indicating that no valid value was found.
      */
     public void setResult(UpstreamInfo Result) {
         this.Result = Result;

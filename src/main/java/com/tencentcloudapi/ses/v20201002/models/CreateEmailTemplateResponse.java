@@ -13,22 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.apigateway.v20180808.models;
+package com.tencentcloudapi.ses.v20201002.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteUpstreamResponse extends AbstractModel{
+public class CreateEmailTemplateResponse extends AbstractModel{
 
     /**
-    * ID of the deleted upstream
-Note: This field may return `NULL`, indicating that no valid value was found.
+    * Template ID
     */
-    @SerializedName("UpstreamId")
+    @SerializedName("TemplateID")
     @Expose
-    private String UpstreamId;
+    private Long TemplateID;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,23 +37,19 @@ Note: This field may return `NULL`, indicating that no valid value was found.
     private String RequestId;
 
     /**
-     * Get ID of the deleted upstream
-Note: This field may return `NULL`, indicating that no valid value was found. 
-     * @return UpstreamId ID of the deleted upstream
-Note: This field may return `NULL`, indicating that no valid value was found.
+     * Get Template ID 
+     * @return TemplateID Template ID
      */
-    public String getUpstreamId() {
-        return this.UpstreamId;
+    public Long getTemplateID() {
+        return this.TemplateID;
     }
 
     /**
-     * Set ID of the deleted upstream
-Note: This field may return `NULL`, indicating that no valid value was found.
-     * @param UpstreamId ID of the deleted upstream
-Note: This field may return `NULL`, indicating that no valid value was found.
+     * Set Template ID
+     * @param TemplateID Template ID
      */
-    public void setUpstreamId(String UpstreamId) {
-        this.UpstreamId = UpstreamId;
+    public void setTemplateID(Long TemplateID) {
+        this.TemplateID = TemplateID;
     }
 
     /**
@@ -73,16 +68,16 @@ Note: This field may return `NULL`, indicating that no valid value was found.
         this.RequestId = RequestId;
     }
 
-    public DeleteUpstreamResponse() {
+    public CreateEmailTemplateResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteUpstreamResponse(DeleteUpstreamResponse source) {
-        if (source.UpstreamId != null) {
-            this.UpstreamId = new String(source.UpstreamId);
+    public CreateEmailTemplateResponse(CreateEmailTemplateResponse source) {
+        if (source.TemplateID != null) {
+            this.TemplateID = new Long(source.TemplateID);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +89,7 @@ Note: This field may return `NULL`, indicating that no valid value was found.
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "UpstreamId", this.UpstreamId);
+        this.setParamSimple(map, prefix + "TemplateID", this.TemplateID);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

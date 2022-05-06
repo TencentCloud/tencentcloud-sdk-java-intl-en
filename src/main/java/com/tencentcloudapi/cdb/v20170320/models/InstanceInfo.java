@@ -245,7 +245,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Vport;
 
     /**
-    * Lock flag
+    * Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
     */
     @SerializedName("CdbError")
     @Expose
@@ -849,16 +849,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Lock flag 
-     * @return CdbError Lock flag
+     * Get Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked). 
+     * @return CdbError Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
      */
     public Long getCdbError() {
         return this.CdbError;
     }
 
     /**
-     * Set Lock flag
-     * @param CdbError Lock flag
+     * Set Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
+     * @param CdbError Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
      */
     public void setCdbError(Long CdbError) {
         this.CdbError = CdbError;

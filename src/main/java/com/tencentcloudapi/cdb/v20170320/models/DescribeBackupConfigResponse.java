@@ -65,6 +65,41 @@ public class DescribeBackupConfigResponse extends AbstractModel{
     private CommonTimeWindow BackupTimeWindow;
 
     /**
+    * Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`.
+    */
+    @SerializedName("EnableBackupPeriodSave")
+    @Expose
+    private String EnableBackupPeriodSave;
+
+    /**
+    * Maximum days of archive backup retention. Valid range: 90-3650. Default value: 1080.
+    */
+    @SerializedName("BackupPeriodSaveDays")
+    @Expose
+    private Long BackupPeriodSaveDays;
+
+    /**
+    * Archive backup retention period. Valid values: `weekly` (a week), `monthly` (a month), `quarterly` (a quarter), `yearly` (a year). Default value: `monthly`.
+    */
+    @SerializedName("BackupPeriodSaveInterval")
+    @Expose
+    private String BackupPeriodSaveInterval;
+
+    /**
+    * Number of archive backups. Minimum value: `1`, Maximum value: Number of non-archive backups in archive backup retention period. Default value: `1`.
+    */
+    @SerializedName("BackupPeriodSaveCount")
+    @Expose
+    private Long BackupPeriodSaveCount;
+
+    /**
+    * The start time in the format: yyyy-mm-dd HH:MM:SS, which is used to enable archive backup retention policy.
+    */
+    @SerializedName("StartBackupPeriodSaveDate")
+    @Expose
+    private String StartBackupPeriodSaveDate;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -168,6 +203,86 @@ public class DescribeBackupConfigResponse extends AbstractModel{
     }
 
     /**
+     * Get Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`. 
+     * @return EnableBackupPeriodSave Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`.
+     */
+    public String getEnableBackupPeriodSave() {
+        return this.EnableBackupPeriodSave;
+    }
+
+    /**
+     * Set Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`.
+     * @param EnableBackupPeriodSave Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`.
+     */
+    public void setEnableBackupPeriodSave(String EnableBackupPeriodSave) {
+        this.EnableBackupPeriodSave = EnableBackupPeriodSave;
+    }
+
+    /**
+     * Get Maximum days of archive backup retention. Valid range: 90-3650. Default value: 1080. 
+     * @return BackupPeriodSaveDays Maximum days of archive backup retention. Valid range: 90-3650. Default value: 1080.
+     */
+    public Long getBackupPeriodSaveDays() {
+        return this.BackupPeriodSaveDays;
+    }
+
+    /**
+     * Set Maximum days of archive backup retention. Valid range: 90-3650. Default value: 1080.
+     * @param BackupPeriodSaveDays Maximum days of archive backup retention. Valid range: 90-3650. Default value: 1080.
+     */
+    public void setBackupPeriodSaveDays(Long BackupPeriodSaveDays) {
+        this.BackupPeriodSaveDays = BackupPeriodSaveDays;
+    }
+
+    /**
+     * Get Archive backup retention period. Valid values: `weekly` (a week), `monthly` (a month), `quarterly` (a quarter), `yearly` (a year). Default value: `monthly`. 
+     * @return BackupPeriodSaveInterval Archive backup retention period. Valid values: `weekly` (a week), `monthly` (a month), `quarterly` (a quarter), `yearly` (a year). Default value: `monthly`.
+     */
+    public String getBackupPeriodSaveInterval() {
+        return this.BackupPeriodSaveInterval;
+    }
+
+    /**
+     * Set Archive backup retention period. Valid values: `weekly` (a week), `monthly` (a month), `quarterly` (a quarter), `yearly` (a year). Default value: `monthly`.
+     * @param BackupPeriodSaveInterval Archive backup retention period. Valid values: `weekly` (a week), `monthly` (a month), `quarterly` (a quarter), `yearly` (a year). Default value: `monthly`.
+     */
+    public void setBackupPeriodSaveInterval(String BackupPeriodSaveInterval) {
+        this.BackupPeriodSaveInterval = BackupPeriodSaveInterval;
+    }
+
+    /**
+     * Get Number of archive backups. Minimum value: `1`, Maximum value: Number of non-archive backups in archive backup retention period. Default value: `1`. 
+     * @return BackupPeriodSaveCount Number of archive backups. Minimum value: `1`, Maximum value: Number of non-archive backups in archive backup retention period. Default value: `1`.
+     */
+    public Long getBackupPeriodSaveCount() {
+        return this.BackupPeriodSaveCount;
+    }
+
+    /**
+     * Set Number of archive backups. Minimum value: `1`, Maximum value: Number of non-archive backups in archive backup retention period. Default value: `1`.
+     * @param BackupPeriodSaveCount Number of archive backups. Minimum value: `1`, Maximum value: Number of non-archive backups in archive backup retention period. Default value: `1`.
+     */
+    public void setBackupPeriodSaveCount(Long BackupPeriodSaveCount) {
+        this.BackupPeriodSaveCount = BackupPeriodSaveCount;
+    }
+
+    /**
+     * Get The start time in the format: yyyy-mm-dd HH:MM:SS, which is used to enable archive backup retention policy. 
+     * @return StartBackupPeriodSaveDate The start time in the format: yyyy-mm-dd HH:MM:SS, which is used to enable archive backup retention policy.
+     */
+    public String getStartBackupPeriodSaveDate() {
+        return this.StartBackupPeriodSaveDate;
+    }
+
+    /**
+     * Set The start time in the format: yyyy-mm-dd HH:MM:SS, which is used to enable archive backup retention policy.
+     * @param StartBackupPeriodSaveDate The start time in the format: yyyy-mm-dd HH:MM:SS, which is used to enable archive backup retention policy.
+     */
+    public void setStartBackupPeriodSaveDate(String StartBackupPeriodSaveDate) {
+        this.StartBackupPeriodSaveDate = StartBackupPeriodSaveDate;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -209,6 +324,21 @@ public class DescribeBackupConfigResponse extends AbstractModel{
         if (source.BackupTimeWindow != null) {
             this.BackupTimeWindow = new CommonTimeWindow(source.BackupTimeWindow);
         }
+        if (source.EnableBackupPeriodSave != null) {
+            this.EnableBackupPeriodSave = new String(source.EnableBackupPeriodSave);
+        }
+        if (source.BackupPeriodSaveDays != null) {
+            this.BackupPeriodSaveDays = new Long(source.BackupPeriodSaveDays);
+        }
+        if (source.BackupPeriodSaveInterval != null) {
+            this.BackupPeriodSaveInterval = new String(source.BackupPeriodSaveInterval);
+        }
+        if (source.BackupPeriodSaveCount != null) {
+            this.BackupPeriodSaveCount = new Long(source.BackupPeriodSaveCount);
+        }
+        if (source.StartBackupPeriodSaveDate != null) {
+            this.StartBackupPeriodSaveDate = new String(source.StartBackupPeriodSaveDate);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -225,6 +355,11 @@ public class DescribeBackupConfigResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
         this.setParamSimple(map, prefix + "BinlogExpireDays", this.BinlogExpireDays);
         this.setParamObj(map, prefix + "BackupTimeWindow.", this.BackupTimeWindow);
+        this.setParamSimple(map, prefix + "EnableBackupPeriodSave", this.EnableBackupPeriodSave);
+        this.setParamSimple(map, prefix + "BackupPeriodSaveDays", this.BackupPeriodSaveDays);
+        this.setParamSimple(map, prefix + "BackupPeriodSaveInterval", this.BackupPeriodSaveInterval);
+        this.setParamSimple(map, prefix + "BackupPeriodSaveCount", this.BackupPeriodSaveCount);
+        this.setParamSimple(map, prefix + "StartBackupPeriodSaveDate", this.StartBackupPeriodSaveDate);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

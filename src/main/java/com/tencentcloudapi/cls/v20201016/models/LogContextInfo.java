@@ -65,6 +65,14 @@ public class LogContextInfo extends AbstractModel{
     private Long BTime;
 
     /**
+    * Source host name of logs
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("HostName")
+    @Expose
+    private String HostName;
+
+    /**
      * Get Log source device 
      * @return Source Log source device
      */
@@ -160,6 +168,26 @@ public class LogContextInfo extends AbstractModel{
         this.BTime = BTime;
     }
 
+    /**
+     * Get Source host name of logs
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return HostName Source host name of logs
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getHostName() {
+        return this.HostName;
+    }
+
+    /**
+     * Set Source host name of logs
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param HostName Source host name of logs
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setHostName(String HostName) {
+        this.HostName = HostName;
+    }
+
     public LogContextInfo() {
     }
 
@@ -186,6 +214,9 @@ public class LogContextInfo extends AbstractModel{
         if (source.BTime != null) {
             this.BTime = new Long(source.BTime);
         }
+        if (source.HostName != null) {
+            this.HostName = new String(source.HostName);
+        }
     }
 
 
@@ -199,6 +230,7 @@ public class LogContextInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "PkgId", this.PkgId);
         this.setParamSimple(map, prefix + "PkgLogId", this.PkgLogId);
         this.setParamSimple(map, prefix + "BTime", this.BTime);
+        this.setParamSimple(map, prefix + "HostName", this.HostName);
 
     }
 }

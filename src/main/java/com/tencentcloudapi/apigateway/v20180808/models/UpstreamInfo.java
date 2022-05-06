@@ -23,49 +23,49 @@ import java.util.HashMap;
 public class UpstreamInfo extends AbstractModel{
 
     /**
-    * Unique ID of the upstream
+    * Unique upstream ID
     */
     @SerializedName("UpstreamId")
     @Expose
     private String UpstreamId;
 
     /**
-    * Name of the upstream 
+    * Upstream name
     */
     @SerializedName("UpstreamName")
     @Expose
     private String UpstreamName;
 
     /**
-    * Description of the upstream
+    * Upstream description
     */
     @SerializedName("UpstreamDescription")
     @Expose
     private String UpstreamDescription;
 
     /**
-    * Protocol
+    * Backend protocol. Valid values: `HTTP`, `HTTPS`
     */
     @SerializedName("Scheme")
     @Expose
     private String Scheme;
 
     /**
-    * Load balancing algorithm
+    * Load balancing algorithm. Valid value: `ROUND_ROBIN`
     */
     @SerializedName("Algorithm")
     @Expose
     private String Algorithm;
 
     /**
-    * Unique VPC ID.
+    * Unique VPC ID
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * Number of retried attempts
+    * Number of retry attempts
     */
     @SerializedName("Retries")
     @Expose
@@ -102,135 +102,135 @@ Note: This field may return `null`, indicating that no valid value was found.
     private UpstreamHealthChecker HealthChecker;
 
     /**
-    * Type of the upstream
+    * Upstream type. Valid values: `IP_PORT`, `K8S`
     */
     @SerializedName("UpstreamType")
     @Expose
     private String UpstreamType;
 
     /**
-    * Configuration of K8s service
-Note: This field may return `null`, indicating that no valid value was found.
+    * Configuration of TKE service
+Note: This field may return `NULL`, indicating that no valid value was found.
     */
     @SerializedName("K8sServices")
     @Expose
     private K8sService [] K8sServices;
 
     /**
-    * Host of the upstream
-Note: This field may return `null`, indicating that no valid value was found.
+    * The Host header that the gateway forwards to the upstream
+Note: This field may return `NULL`, indicating that no valid value was found.
     */
     @SerializedName("UpstreamHost")
     @Expose
     private String UpstreamHost;
 
     /**
-     * Get Unique ID of the upstream 
-     * @return UpstreamId Unique ID of the upstream
+     * Get Unique upstream ID 
+     * @return UpstreamId Unique upstream ID
      */
     public String getUpstreamId() {
         return this.UpstreamId;
     }
 
     /**
-     * Set Unique ID of the upstream
-     * @param UpstreamId Unique ID of the upstream
+     * Set Unique upstream ID
+     * @param UpstreamId Unique upstream ID
      */
     public void setUpstreamId(String UpstreamId) {
         this.UpstreamId = UpstreamId;
     }
 
     /**
-     * Get Name of the upstream  
-     * @return UpstreamName Name of the upstream 
+     * Get Upstream name 
+     * @return UpstreamName Upstream name
      */
     public String getUpstreamName() {
         return this.UpstreamName;
     }
 
     /**
-     * Set Name of the upstream 
-     * @param UpstreamName Name of the upstream 
+     * Set Upstream name
+     * @param UpstreamName Upstream name
      */
     public void setUpstreamName(String UpstreamName) {
         this.UpstreamName = UpstreamName;
     }
 
     /**
-     * Get Description of the upstream 
-     * @return UpstreamDescription Description of the upstream
+     * Get Upstream description 
+     * @return UpstreamDescription Upstream description
      */
     public String getUpstreamDescription() {
         return this.UpstreamDescription;
     }
 
     /**
-     * Set Description of the upstream
-     * @param UpstreamDescription Description of the upstream
+     * Set Upstream description
+     * @param UpstreamDescription Upstream description
      */
     public void setUpstreamDescription(String UpstreamDescription) {
         this.UpstreamDescription = UpstreamDescription;
     }
 
     /**
-     * Get Protocol 
-     * @return Scheme Protocol
+     * Get Backend protocol. Valid values: `HTTP`, `HTTPS` 
+     * @return Scheme Backend protocol. Valid values: `HTTP`, `HTTPS`
      */
     public String getScheme() {
         return this.Scheme;
     }
 
     /**
-     * Set Protocol
-     * @param Scheme Protocol
+     * Set Backend protocol. Valid values: `HTTP`, `HTTPS`
+     * @param Scheme Backend protocol. Valid values: `HTTP`, `HTTPS`
      */
     public void setScheme(String Scheme) {
         this.Scheme = Scheme;
     }
 
     /**
-     * Get Load balancing algorithm 
-     * @return Algorithm Load balancing algorithm
+     * Get Load balancing algorithm. Valid value: `ROUND_ROBIN` 
+     * @return Algorithm Load balancing algorithm. Valid value: `ROUND_ROBIN`
      */
     public String getAlgorithm() {
         return this.Algorithm;
     }
 
     /**
-     * Set Load balancing algorithm
-     * @param Algorithm Load balancing algorithm
+     * Set Load balancing algorithm. Valid value: `ROUND_ROBIN`
+     * @param Algorithm Load balancing algorithm. Valid value: `ROUND_ROBIN`
      */
     public void setAlgorithm(String Algorithm) {
         this.Algorithm = Algorithm;
     }
 
     /**
-     * Get Unique VPC ID. 
-     * @return UniqVpcId Unique VPC ID.
+     * Get Unique VPC ID 
+     * @return UniqVpcId Unique VPC ID
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set Unique VPC ID.
-     * @param UniqVpcId Unique VPC ID.
+     * Set Unique VPC ID
+     * @param UniqVpcId Unique VPC ID
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get Number of retried attempts 
-     * @return Retries Number of retried attempts
+     * Get Number of retry attempts 
+     * @return Retries Number of retry attempts
      */
     public Long getRetries() {
         return this.Retries;
     }
 
     /**
-     * Set Number of retried attempts
-     * @param Retries Number of retried attempts
+     * Set Number of retry attempts
+     * @param Retries Number of retry attempts
      */
     public void setRetries(Long Retries) {
         this.Retries = Retries;
@@ -309,56 +309,56 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Type of the upstream 
-     * @return UpstreamType Type of the upstream
+     * Get Upstream type. Valid values: `IP_PORT`, `K8S` 
+     * @return UpstreamType Upstream type. Valid values: `IP_PORT`, `K8S`
      */
     public String getUpstreamType() {
         return this.UpstreamType;
     }
 
     /**
-     * Set Type of the upstream
-     * @param UpstreamType Type of the upstream
+     * Set Upstream type. Valid values: `IP_PORT`, `K8S`
+     * @param UpstreamType Upstream type. Valid values: `IP_PORT`, `K8S`
      */
     public void setUpstreamType(String UpstreamType) {
         this.UpstreamType = UpstreamType;
     }
 
     /**
-     * Get Configuration of K8s service
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return K8sServices Configuration of K8s service
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Configuration of TKE service
+Note: This field may return `NULL`, indicating that no valid value was found. 
+     * @return K8sServices Configuration of TKE service
+Note: This field may return `NULL`, indicating that no valid value was found.
      */
     public K8sService [] getK8sServices() {
         return this.K8sServices;
     }
 
     /**
-     * Set Configuration of K8s service
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param K8sServices Configuration of K8s service
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Configuration of TKE service
+Note: This field may return `NULL`, indicating that no valid value was found.
+     * @param K8sServices Configuration of TKE service
+Note: This field may return `NULL`, indicating that no valid value was found.
      */
     public void setK8sServices(K8sService [] K8sServices) {
         this.K8sServices = K8sServices;
     }
 
     /**
-     * Get Host of the upstream
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return UpstreamHost Host of the upstream
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get The Host header that the gateway forwards to the upstream
+Note: This field may return `NULL`, indicating that no valid value was found. 
+     * @return UpstreamHost The Host header that the gateway forwards to the upstream
+Note: This field may return `NULL`, indicating that no valid value was found.
      */
     public String getUpstreamHost() {
         return this.UpstreamHost;
     }
 
     /**
-     * Set Host of the upstream
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param UpstreamHost Host of the upstream
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set The Host header that the gateway forwards to the upstream
+Note: This field may return `NULL`, indicating that no valid value was found.
+     * @param UpstreamHost The Host header that the gateway forwards to the upstream
+Note: This field may return `NULL`, indicating that no valid value was found.
      */
     public void setUpstreamHost(String UpstreamHost) {
         this.UpstreamHost = UpstreamHost;

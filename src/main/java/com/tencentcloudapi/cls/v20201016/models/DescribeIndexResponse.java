@@ -52,6 +52,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String ModifyTime;
 
     /**
+    * Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("IncludeInternalFields")
+    @Expose
+    private Boolean IncludeInternalFields;
+
+    /**
+    * Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("MetadataFlag")
+    @Expose
+    private Long MetadataFlag;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -127,6 +143,46 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return IncludeInternalFields Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public Boolean getIncludeInternalFields() {
+        return this.IncludeInternalFields;
+    }
+
+    /**
+     * Set Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param IncludeInternalFields Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setIncludeInternalFields(Boolean IncludeInternalFields) {
+        this.IncludeInternalFields = IncludeInternalFields;
+    }
+
+    /**
+     * Get Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return MetadataFlag Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public Long getMetadataFlag() {
+        return this.MetadataFlag;
+    }
+
+    /**
+     * Set Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param MetadataFlag Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setMetadataFlag(Long MetadataFlag) {
+        this.MetadataFlag = MetadataFlag;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -162,6 +218,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.ModifyTime != null) {
             this.ModifyTime = new String(source.ModifyTime);
         }
+        if (source.IncludeInternalFields != null) {
+            this.IncludeInternalFields = new Boolean(source.IncludeInternalFields);
+        }
+        if (source.MetadataFlag != null) {
+            this.MetadataFlag = new Long(source.MetadataFlag);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -176,6 +238,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamObj(map, prefix + "Rule.", this.Rule);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamSimple(map, prefix + "IncludeInternalFields", this.IncludeInternalFields);
+        this.setParamSimple(map, prefix + "MetadataFlag", this.MetadataFlag);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

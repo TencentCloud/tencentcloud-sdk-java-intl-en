@@ -63,6 +63,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long EndTime;
 
     /**
+    * Notification cycle. The values 1-7 indicate Monday to Sunday.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Weekday")
+    @Expose
+    private Long [] Weekday;
+
+    /**
      * Get Callback URL, which can contain up to 256 characters
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return URL Callback URL, which can contain up to 256 characters
@@ -162,6 +170,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get Notification cycle. The values 1-7 indicate Monday to Sunday.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Weekday Notification cycle. The values 1-7 indicate Monday to Sunday.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long [] getWeekday() {
+        return this.Weekday;
+    }
+
+    /**
+     * Set Notification cycle. The values 1-7 indicate Monday to Sunday.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Weekday Notification cycle. The values 1-7 indicate Monday to Sunday.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setWeekday(Long [] Weekday) {
+        this.Weekday = Weekday;
+    }
+
     public URLNotice() {
     }
 
@@ -185,6 +213,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.EndTime != null) {
             this.EndTime = new Long(source.EndTime);
         }
+        if (source.Weekday != null) {
+            this.Weekday = new Long[source.Weekday.length];
+            for (int i = 0; i < source.Weekday.length; i++) {
+                this.Weekday[i] = new Long(source.Weekday[i]);
+            }
+        }
     }
 
 
@@ -197,6 +231,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "ValidationCode", this.ValidationCode);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamArraySimple(map, prefix + "Weekday.", this.Weekday);
 
     }
 }

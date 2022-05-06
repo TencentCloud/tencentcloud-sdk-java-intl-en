@@ -119,6 +119,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String PhoneCallType;
 
     /**
+    * Notification cycle. The values 1-7 indicate Monday to Sunday.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Weekday")
+    @Expose
+    private Long [] Weekday;
+
+    /**
      * Get Recipient type. Valid values: USER (user), GROUP (user group)
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return ReceiverType Recipient type. Valid values: USER (user), GROUP (user group)
@@ -358,6 +366,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.PhoneCallType = PhoneCallType;
     }
 
+    /**
+     * Get Notification cycle. The values 1-7 indicate Monday to Sunday.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Weekday Notification cycle. The values 1-7 indicate Monday to Sunday.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long [] getWeekday() {
+        return this.Weekday;
+    }
+
+    /**
+     * Set Notification cycle. The values 1-7 indicate Monday to Sunday.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Weekday Notification cycle. The values 1-7 indicate Monday to Sunday.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setWeekday(Long [] Weekday) {
+        this.Weekday = Weekday;
+    }
+
     public UserNotice() {
     }
 
@@ -414,6 +442,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.PhoneCallType != null) {
             this.PhoneCallType = new String(source.PhoneCallType);
         }
+        if (source.Weekday != null) {
+            this.Weekday = new Long[source.Weekday.length];
+            for (int i = 0; i < source.Weekday.length; i++) {
+                this.Weekday[i] = new Long(source.Weekday[i]);
+            }
+        }
     }
 
 
@@ -433,6 +467,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "PhoneCircleInterval", this.PhoneCircleInterval);
         this.setParamSimple(map, prefix + "NeedPhoneArriveNotice", this.NeedPhoneArriveNotice);
         this.setParamSimple(map, prefix + "PhoneCallType", this.PhoneCallType);
+        this.setParamArraySimple(map, prefix + "Weekday.", this.Weekday);
 
     }
 }

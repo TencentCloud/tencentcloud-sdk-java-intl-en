@@ -109,6 +109,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String KernelVersion;
 
     /**
+    * Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("IsSupportTDE")
+    @Expose
+    private Long IsSupportTDE;
+
+    /**
      * Get Specification ID 
      * @return SpecCode Specification ID
      */
@@ -308,6 +316,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.KernelVersion = KernelVersion;
     }
 
+    /**
+     * Get Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return IsSupportTDE Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public Long getIsSupportTDE() {
+        return this.IsSupportTDE;
+    }
+
+    /**
+     * Set Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param IsSupportTDE Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setIsSupportTDE(Long IsSupportTDE) {
+        this.IsSupportTDE = IsSupportTDE;
+    }
+
     public SpecItemInfo() {
     }
 
@@ -352,6 +380,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.KernelVersion != null) {
             this.KernelVersion = new String(source.KernelVersion);
         }
+        if (source.IsSupportTDE != null) {
+            this.IsSupportTDE = new Long(source.IsSupportTDE);
+        }
     }
 
 
@@ -371,6 +402,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "MajorVersion", this.MajorVersion);
         this.setParamSimple(map, prefix + "KernelVersion", this.KernelVersion);
+        this.setParamSimple(map, prefix + "IsSupportTDE", this.IsSupportTDE);
 
     }
 }

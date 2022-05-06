@@ -609,7 +609,7 @@ This is an asynchronous API. You can also use the [DescribeDBInstances](https://
     }
 
     /**
-     *This API is used to query the information of database proxy.
+     *This API is used to query database proxy. It will be deprecated and replaced by the `QueryCDBProxy` API.
      * @param req DescribeCDBProxyRequest
      * @return DescribeCDBProxyResponse
      * @throws TencentCloudSDKException

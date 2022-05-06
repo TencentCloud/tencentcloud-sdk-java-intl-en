@@ -13,22 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.apigateway.v20180808.models;
+package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteUpstreamResponse extends AbstractModel{
+public class CreateShipperResponse extends AbstractModel{
 
     /**
-    * ID of the deleted upstream
-Note: This field may return `NULL`, indicating that no valid value was found.
+    * Shipping rule ID
     */
-    @SerializedName("UpstreamId")
+    @SerializedName("ShipperId")
     @Expose
-    private String UpstreamId;
+    private String ShipperId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,23 +37,19 @@ Note: This field may return `NULL`, indicating that no valid value was found.
     private String RequestId;
 
     /**
-     * Get ID of the deleted upstream
-Note: This field may return `NULL`, indicating that no valid value was found. 
-     * @return UpstreamId ID of the deleted upstream
-Note: This field may return `NULL`, indicating that no valid value was found.
+     * Get Shipping rule ID 
+     * @return ShipperId Shipping rule ID
      */
-    public String getUpstreamId() {
-        return this.UpstreamId;
+    public String getShipperId() {
+        return this.ShipperId;
     }
 
     /**
-     * Set ID of the deleted upstream
-Note: This field may return `NULL`, indicating that no valid value was found.
-     * @param UpstreamId ID of the deleted upstream
-Note: This field may return `NULL`, indicating that no valid value was found.
+     * Set Shipping rule ID
+     * @param ShipperId Shipping rule ID
      */
-    public void setUpstreamId(String UpstreamId) {
-        this.UpstreamId = UpstreamId;
+    public void setShipperId(String ShipperId) {
+        this.ShipperId = ShipperId;
     }
 
     /**
@@ -73,16 +68,16 @@ Note: This field may return `NULL`, indicating that no valid value was found.
         this.RequestId = RequestId;
     }
 
-    public DeleteUpstreamResponse() {
+    public CreateShipperResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteUpstreamResponse(DeleteUpstreamResponse source) {
-        if (source.UpstreamId != null) {
-            this.UpstreamId = new String(source.UpstreamId);
+    public CreateShipperResponse(CreateShipperResponse source) {
+        if (source.ShipperId != null) {
+            this.ShipperId = new String(source.ShipperId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +89,7 @@ Note: This field may return `NULL`, indicating that no valid value was found.
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "UpstreamId", this.UpstreamId);
+        this.setParamSimple(map, prefix + "ShipperId", this.ShipperId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

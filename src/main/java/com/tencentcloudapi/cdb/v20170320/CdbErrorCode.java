@@ -363,6 +363,9 @@ public enum CdbErrorCode {
     // There are other orders being submitted. Please try again later.
      OPERATIONDENIED_OTHERODERINPROCESS("OperationDenied.OtherOderInProcess"),
      
+    // 
+     OPERATIONDENIED_PROXYUPGRADETASKSTATUSERROR("OperationDenied.ProxyUpgradeTaskStatusError"),
+     
     // The maximum number of results has been reached. Please narrow down your query.
      OPERATIONDENIED_RESULTOVERLIMIT("OperationDenied.ResultOverLimit"),
      

@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.apigateway.v20180808.models;
+package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteUpstreamRequest extends AbstractModel{
+public class OpenKafkaConsumerRequest extends AbstractModel{
 
     /**
-    * ID of the upstream to be deleted
+    * `TopicId` created by the CLS console
     */
-    @SerializedName("UpstreamId")
+    @SerializedName("FromTopicId")
     @Expose
-    private String UpstreamId;
+    private String FromTopicId;
 
     /**
-     * Get ID of the upstream to be deleted 
-     * @return UpstreamId ID of the upstream to be deleted
+     * Get `TopicId` created by the CLS console 
+     * @return FromTopicId `TopicId` created by the CLS console
      */
-    public String getUpstreamId() {
-        return this.UpstreamId;
+    public String getFromTopicId() {
+        return this.FromTopicId;
     }
 
     /**
-     * Set ID of the upstream to be deleted
-     * @param UpstreamId ID of the upstream to be deleted
+     * Set `TopicId` created by the CLS console
+     * @param FromTopicId `TopicId` created by the CLS console
      */
-    public void setUpstreamId(String UpstreamId) {
-        this.UpstreamId = UpstreamId;
+    public void setFromTopicId(String FromTopicId) {
+        this.FromTopicId = FromTopicId;
     }
 
-    public DeleteUpstreamRequest() {
+    public OpenKafkaConsumerRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteUpstreamRequest(DeleteUpstreamRequest source) {
-        if (source.UpstreamId != null) {
-            this.UpstreamId = new String(source.UpstreamId);
+    public OpenKafkaConsumerRequest(OpenKafkaConsumerRequest source) {
+        if (source.FromTopicId != null) {
+            this.FromTopicId = new String(source.FromTopicId);
         }
     }
 
@@ -63,7 +63,7 @@ public class DeleteUpstreamRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "UpstreamId", this.UpstreamId);
+        this.setParamSimple(map, prefix + "FromTopicId", this.FromTopicId);
 
     }
 }

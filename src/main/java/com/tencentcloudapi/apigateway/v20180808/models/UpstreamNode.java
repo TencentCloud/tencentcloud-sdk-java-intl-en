@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UpstreamNode extends AbstractModel{
 
     /**
-    * IP or domain name of the host
+    * IP or domain name
     */
     @SerializedName("Host")
     @Expose
@@ -44,8 +44,8 @@ public class UpstreamNode extends AbstractModel{
     private Long Weight;
 
     /**
-    * VM instance ID
-Note: This field may return `null`, indicating that no valid value was found.
+    * CVM Instance ID
+Note: This field may return `NULL`, indicating that no valid value was found.
     */
     @SerializedName("VmInstanceId")
     @Expose
@@ -60,24 +60,24 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String [] Tags;
 
     /**
-    * Health status of the node. Value: `OFF`, `HEALTHY`, `UNHEALTHY` and `NO_DATA`. It’s not required for creating and editing actions.
-Note: This field may return `null`, indicating that no valid value was found.
+    * Health status of the node. Values: `OFF`, `HEALTHY`, `UNHEALTHY` and `NO_DATA`. It’s not required for creating and editing actions. It only supports VPC upstreams.
+Note: This field may return `NULL`, indicating that no valid value was found.
     */
     @SerializedName("Healthy")
     @Expose
     private String Healthy;
 
     /**
-    * The K8s service name
-Note: This field may return `null`, indicating that no valid value was found.
+    * TKE container name
+Note: This field may return `NULL`, indicating that no valid value was found.
     */
     @SerializedName("ServiceName")
     @Expose
     private String ServiceName;
 
     /**
-    * K8s namespace
-Note: This field may return `null`, indicating that no valid value was found.
+    * TKE namespace
+Note: This field may return `NULL`, indicating that no valid value was found.
     */
     @SerializedName("NameSpace")
     @Expose
@@ -92,8 +92,8 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String ClusterId;
 
     /**
-    * Source of the node
-Note: This field may return `null`, indicating that no valid value was found.
+    * Node source. Valid value: `K8S`
+Note: This field may return `NULL`, indicating that no valid value was found.
     */
     @SerializedName("Source")
     @Expose
@@ -108,16 +108,16 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String UniqueServiceName;
 
     /**
-     * Get IP or domain name of the host 
-     * @return Host IP or domain name of the host
+     * Get IP or domain name 
+     * @return Host IP or domain name
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set IP or domain name of the host
-     * @param Host IP or domain name of the host
+     * Set IP or domain name
+     * @param Host IP or domain name
      */
     public void setHost(String Host) {
         this.Host = Host;
@@ -156,20 +156,20 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get VM instance ID
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return VmInstanceId VM instance ID
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get CVM Instance ID
+Note: This field may return `NULL`, indicating that no valid value was found. 
+     * @return VmInstanceId CVM Instance ID
+Note: This field may return `NULL`, indicating that no valid value was found.
      */
     public String getVmInstanceId() {
         return this.VmInstanceId;
     }
 
     /**
-     * Set VM instance ID
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param VmInstanceId VM instance ID
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set CVM Instance ID
+Note: This field may return `NULL`, indicating that no valid value was found.
+     * @param VmInstanceId CVM Instance ID
+Note: This field may return `NULL`, indicating that no valid value was found.
      */
     public void setVmInstanceId(String VmInstanceId) {
         this.VmInstanceId = VmInstanceId;
@@ -196,60 +196,60 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Health status of the node. Value: `OFF`, `HEALTHY`, `UNHEALTHY` and `NO_DATA`. It’s not required for creating and editing actions.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return Healthy Health status of the node. Value: `OFF`, `HEALTHY`, `UNHEALTHY` and `NO_DATA`. It’s not required for creating and editing actions.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Health status of the node. Values: `OFF`, `HEALTHY`, `UNHEALTHY` and `NO_DATA`. It’s not required for creating and editing actions. It only supports VPC upstreams.
+Note: This field may return `NULL`, indicating that no valid value was found. 
+     * @return Healthy Health status of the node. Values: `OFF`, `HEALTHY`, `UNHEALTHY` and `NO_DATA`. It’s not required for creating and editing actions. It only supports VPC upstreams.
+Note: This field may return `NULL`, indicating that no valid value was found.
      */
     public String getHealthy() {
         return this.Healthy;
     }
 
     /**
-     * Set Health status of the node. Value: `OFF`, `HEALTHY`, `UNHEALTHY` and `NO_DATA`. It’s not required for creating and editing actions.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param Healthy Health status of the node. Value: `OFF`, `HEALTHY`, `UNHEALTHY` and `NO_DATA`. It’s not required for creating and editing actions.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Health status of the node. Values: `OFF`, `HEALTHY`, `UNHEALTHY` and `NO_DATA`. It’s not required for creating and editing actions. It only supports VPC upstreams.
+Note: This field may return `NULL`, indicating that no valid value was found.
+     * @param Healthy Health status of the node. Values: `OFF`, `HEALTHY`, `UNHEALTHY` and `NO_DATA`. It’s not required for creating and editing actions. It only supports VPC upstreams.
+Note: This field may return `NULL`, indicating that no valid value was found.
      */
     public void setHealthy(String Healthy) {
         this.Healthy = Healthy;
     }
 
     /**
-     * Get The K8s service name
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return ServiceName The K8s service name
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get TKE container name
+Note: This field may return `NULL`, indicating that no valid value was found. 
+     * @return ServiceName TKE container name
+Note: This field may return `NULL`, indicating that no valid value was found.
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set The K8s service name
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param ServiceName The K8s service name
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set TKE container name
+Note: This field may return `NULL`, indicating that no valid value was found.
+     * @param ServiceName TKE container name
+Note: This field may return `NULL`, indicating that no valid value was found.
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get K8s namespace
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return NameSpace K8s namespace
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get TKE namespace
+Note: This field may return `NULL`, indicating that no valid value was found. 
+     * @return NameSpace TKE namespace
+Note: This field may return `NULL`, indicating that no valid value was found.
      */
     public String getNameSpace() {
         return this.NameSpace;
     }
 
     /**
-     * Set K8s namespace
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param NameSpace K8s namespace
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set TKE namespace
+Note: This field may return `NULL`, indicating that no valid value was found.
+     * @param NameSpace TKE namespace
+Note: This field may return `NULL`, indicating that no valid value was found.
      */
     public void setNameSpace(String NameSpace) {
         this.NameSpace = NameSpace;
@@ -276,20 +276,20 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Source of the node
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return Source Source of the node
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Node source. Valid value: `K8S`
+Note: This field may return `NULL`, indicating that no valid value was found. 
+     * @return Source Node source. Valid value: `K8S`
+Note: This field may return `NULL`, indicating that no valid value was found.
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set Source of the node
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param Source Source of the node
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Node source. Valid value: `K8S`
+Note: This field may return `NULL`, indicating that no valid value was found.
+     * @param Source Node source. Valid value: `K8S`
+Note: This field may return `NULL`, indicating that no valid value was found.
      */
     public void setSource(String Source) {
         this.Source = Source;

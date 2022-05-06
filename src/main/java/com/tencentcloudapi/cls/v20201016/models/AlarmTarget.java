@@ -44,14 +44,14 @@ public class AlarmTarget extends AbstractModel{
     private Long Number;
 
     /**
-    * Offset of the query start time from the current time in minutes. The value cannot be positive. Value range: -1440–0.
+    * Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Long StartTimeOffset;
 
     /**
-    * Offset of the query end time from the current time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
+    * Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
     */
     @SerializedName("EndTimeOffset")
     @Expose
@@ -113,32 +113,32 @@ public class AlarmTarget extends AbstractModel{
     }
 
     /**
-     * Get Offset of the query start time from the current time in minutes. The value cannot be positive. Value range: -1440–0. 
-     * @return StartTimeOffset Offset of the query start time from the current time in minutes. The value cannot be positive. Value range: -1440–0.
+     * Get Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0. 
+     * @return StartTimeOffset Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
      */
     public Long getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Offset of the query start time from the current time in minutes. The value cannot be positive. Value range: -1440–0.
-     * @param StartTimeOffset Offset of the query start time from the current time in minutes. The value cannot be positive. Value range: -1440–0.
+     * Set Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
+     * @param StartTimeOffset Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
      */
     public void setStartTimeOffset(Long StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get Offset of the query end time from the current time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0. 
-     * @return EndTimeOffset Offset of the query end time from the current time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
+     * Get Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0. 
+     * @return EndTimeOffset Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
      */
     public Long getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set Offset of the query end time from the current time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
-     * @param EndTimeOffset Offset of the query end time from the current time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
+     * Set Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
+     * @param EndTimeOffset Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
      */
     public void setEndTimeOffset(Long EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

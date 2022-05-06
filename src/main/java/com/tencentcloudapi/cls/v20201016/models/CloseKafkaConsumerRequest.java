@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.apigateway.v20180808.models;
+package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteUpstreamRequest extends AbstractModel{
+public class CloseKafkaConsumerRequest extends AbstractModel{
 
     /**
-    * ID of the upstream to be deleted
+    * CLS topic identifier
     */
-    @SerializedName("UpstreamId")
+    @SerializedName("FromTopicId")
     @Expose
-    private String UpstreamId;
+    private String FromTopicId;
 
     /**
-     * Get ID of the upstream to be deleted 
-     * @return UpstreamId ID of the upstream to be deleted
+     * Get CLS topic identifier 
+     * @return FromTopicId CLS topic identifier
      */
-    public String getUpstreamId() {
-        return this.UpstreamId;
+    public String getFromTopicId() {
+        return this.FromTopicId;
     }
 
     /**
-     * Set ID of the upstream to be deleted
-     * @param UpstreamId ID of the upstream to be deleted
+     * Set CLS topic identifier
+     * @param FromTopicId CLS topic identifier
      */
-    public void setUpstreamId(String UpstreamId) {
-        this.UpstreamId = UpstreamId;
+    public void setFromTopicId(String FromTopicId) {
+        this.FromTopicId = FromTopicId;
     }
 
-    public DeleteUpstreamRequest() {
+    public CloseKafkaConsumerRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteUpstreamRequest(DeleteUpstreamRequest source) {
-        if (source.UpstreamId != null) {
-            this.UpstreamId = new String(source.UpstreamId);
+    public CloseKafkaConsumerRequest(CloseKafkaConsumerRequest source) {
+        if (source.FromTopicId != null) {
+            this.FromTopicId = new String(source.FromTopicId);
         }
     }
 
@@ -63,7 +63,7 @@ public class DeleteUpstreamRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "UpstreamId", this.UpstreamId);
+        this.setParamSimple(map, prefix + "FromTopicId", this.FromTopicId);
 
     }
 }

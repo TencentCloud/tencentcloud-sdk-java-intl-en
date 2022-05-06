@@ -86,7 +86,7 @@ public class CreateInstancesRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
+    * PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
     */
     @SerializedName("DBVersion")
     @Expose
@@ -170,14 +170,14 @@ public class CreateInstancesRequest extends AbstractModel{
     private String [] SecurityGroupIds;
 
     /**
-    * PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
+    * PostgreSQL major version. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
     */
     @SerializedName("DBMajorVersion")
     @Expose
     private String DBMajorVersion;
 
     /**
-    * PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
+    * PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
     */
     @SerializedName("DBKernelVersion")
     @Expose
@@ -189,6 +189,27 @@ public class CreateInstancesRequest extends AbstractModel{
     @SerializedName("DBNodeSet")
     @Expose
     private DBNode [] DBNodeSet;
+
+    /**
+    * Whether to support transparent data encryption. Valid values: 1 (yes), 0 (no). Default value: 0.
+    */
+    @SerializedName("NeedSupportTDE")
+    @Expose
+    private Long NeedSupportTDE;
+
+    /**
+    * KeyId of custom key, which is required if you select custom key encryption. It is also the unique CMK identifier.
+    */
+    @SerializedName("KMSKeyId")
+    @Expose
+    private String KMSKeyId;
+
+    /**
+    * The region where the KMS service is enabled. When “KMSRegion” is left empty, the “KMS” of the local domain will be enabled by default. If the local domain is not supported, you need to select another region supported by KMS.
+    */
+    @SerializedName("KMSRegion")
+    @Expose
+    private String KMSRegion;
 
     /**
      * Get Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API. 
@@ -335,16 +356,16 @@ public class CreateInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. 
-     * @return DBVersion PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
+     * Get PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion. 
+     * @return DBVersion PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
      */
     public String getDBVersion() {
         return this.DBVersion;
     }
 
     /**
-     * Set PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
-     * @param DBVersion PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
+     * Set PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
+     * @param DBVersion PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
      */
     public void setDBVersion(String DBVersion) {
         this.DBVersion = DBVersion;
@@ -527,32 +548,32 @@ public class CreateInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. 
-     * @return DBMajorVersion PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
+     * Get PostgreSQL major version. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion. 
+     * @return DBMajorVersion PostgreSQL major version. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
      */
     public String getDBMajorVersion() {
         return this.DBMajorVersion;
     }
 
     /**
-     * Set PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
-     * @param DBMajorVersion PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
+     * Set PostgreSQL major version. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
+     * @param DBMajorVersion PostgreSQL major version. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
      */
     public void setDBMajorVersion(String DBMajorVersion) {
         this.DBMajorVersion = DBMajorVersion;
     }
 
     /**
-     * Get PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created. 
-     * @return DBKernelVersion PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
+     * Get PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion. 
+     * @return DBKernelVersion PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
      */
     public String getDBKernelVersion() {
         return this.DBKernelVersion;
     }
 
     /**
-     * Set PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
-     * @param DBKernelVersion PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
+     * Set PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
+     * @param DBKernelVersion PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
      */
     public void setDBKernelVersion(String DBKernelVersion) {
         this.DBKernelVersion = DBKernelVersion;
@@ -572,6 +593,54 @@ public class CreateInstancesRequest extends AbstractModel{
      */
     public void setDBNodeSet(DBNode [] DBNodeSet) {
         this.DBNodeSet = DBNodeSet;
+    }
+
+    /**
+     * Get Whether to support transparent data encryption. Valid values: 1 (yes), 0 (no). Default value: 0. 
+     * @return NeedSupportTDE Whether to support transparent data encryption. Valid values: 1 (yes), 0 (no). Default value: 0.
+     */
+    public Long getNeedSupportTDE() {
+        return this.NeedSupportTDE;
+    }
+
+    /**
+     * Set Whether to support transparent data encryption. Valid values: 1 (yes), 0 (no). Default value: 0.
+     * @param NeedSupportTDE Whether to support transparent data encryption. Valid values: 1 (yes), 0 (no). Default value: 0.
+     */
+    public void setNeedSupportTDE(Long NeedSupportTDE) {
+        this.NeedSupportTDE = NeedSupportTDE;
+    }
+
+    /**
+     * Get KeyId of custom key, which is required if you select custom key encryption. It is also the unique CMK identifier. 
+     * @return KMSKeyId KeyId of custom key, which is required if you select custom key encryption. It is also the unique CMK identifier.
+     */
+    public String getKMSKeyId() {
+        return this.KMSKeyId;
+    }
+
+    /**
+     * Set KeyId of custom key, which is required if you select custom key encryption. It is also the unique CMK identifier.
+     * @param KMSKeyId KeyId of custom key, which is required if you select custom key encryption. It is also the unique CMK identifier.
+     */
+    public void setKMSKeyId(String KMSKeyId) {
+        this.KMSKeyId = KMSKeyId;
+    }
+
+    /**
+     * Get The region where the KMS service is enabled. When “KMSRegion” is left empty, the “KMS” of the local domain will be enabled by default. If the local domain is not supported, you need to select another region supported by KMS. 
+     * @return KMSRegion The region where the KMS service is enabled. When “KMSRegion” is left empty, the “KMS” of the local domain will be enabled by default. If the local domain is not supported, you need to select another region supported by KMS.
+     */
+    public String getKMSRegion() {
+        return this.KMSRegion;
+    }
+
+    /**
+     * Set The region where the KMS service is enabled. When “KMSRegion” is left empty, the “KMS” of the local domain will be enabled by default. If the local domain is not supported, you need to select another region supported by KMS.
+     * @param KMSRegion The region where the KMS service is enabled. When “KMSRegion” is left empty, the “KMS” of the local domain will be enabled by default. If the local domain is not supported, you need to select another region supported by KMS.
+     */
+    public void setKMSRegion(String KMSRegion) {
+        this.KMSRegion = KMSRegion;
     }
 
     public CreateInstancesRequest() {
@@ -666,6 +735,15 @@ public class CreateInstancesRequest extends AbstractModel{
                 this.DBNodeSet[i] = new DBNode(source.DBNodeSet[i]);
             }
         }
+        if (source.NeedSupportTDE != null) {
+            this.NeedSupportTDE = new Long(source.NeedSupportTDE);
+        }
+        if (source.KMSKeyId != null) {
+            this.KMSKeyId = new String(source.KMSKeyId);
+        }
+        if (source.KMSRegion != null) {
+            this.KMSRegion = new String(source.KMSRegion);
+        }
     }
 
 
@@ -697,6 +775,9 @@ public class CreateInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
         this.setParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
         this.setParamArrayObj(map, prefix + "DBNodeSet.", this.DBNodeSet);
+        this.setParamSimple(map, prefix + "NeedSupportTDE", this.NeedSupportTDE);
+        this.setParamSimple(map, prefix + "KMSKeyId", this.KMSKeyId);
+        this.setParamSimple(map, prefix + "KMSRegion", this.KMSRegion);
 
     }
 }
