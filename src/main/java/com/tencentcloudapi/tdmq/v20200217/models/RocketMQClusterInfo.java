@@ -73,6 +73,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String VpcEndPoint;
 
     /**
+    * Whether the namespace access point is supported.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SupportNamespaceEndpoint")
+    @Expose
+    private Boolean SupportNamespaceEndpoint;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -188,6 +196,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.VpcEndPoint = VpcEndPoint;
     }
 
+    /**
+     * Get Whether the namespace access point is supported.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return SupportNamespaceEndpoint Whether the namespace access point is supported.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Boolean getSupportNamespaceEndpoint() {
+        return this.SupportNamespaceEndpoint;
+    }
+
+    /**
+     * Set Whether the namespace access point is supported.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param SupportNamespaceEndpoint Whether the namespace access point is supported.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setSupportNamespaceEndpoint(Boolean SupportNamespaceEndpoint) {
+        this.SupportNamespaceEndpoint = SupportNamespaceEndpoint;
+    }
+
     public RocketMQClusterInfo() {
     }
 
@@ -217,6 +245,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.VpcEndPoint != null) {
             this.VpcEndPoint = new String(source.VpcEndPoint);
         }
+        if (source.SupportNamespaceEndpoint != null) {
+            this.SupportNamespaceEndpoint = new Boolean(source.SupportNamespaceEndpoint);
+        }
     }
 
 
@@ -231,6 +262,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "PublicEndPoint", this.PublicEndPoint);
         this.setParamSimple(map, prefix + "VpcEndPoint", this.VpcEndPoint);
+        this.setParamSimple(map, prefix + "SupportNamespaceEndpoint", this.SupportNamespaceEndpoint);
 
     }
 }

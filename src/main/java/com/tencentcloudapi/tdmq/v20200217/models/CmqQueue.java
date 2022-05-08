@@ -260,6 +260,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long MaxMsgBacklogSize;
 
     /**
+    * Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RetentionSizeInMB")
+    @Expose
+    private Long RetentionSizeInMB;
+
+    /**
      * Get Message queue ID. 
      * @return QueueId Message queue ID.
      */
@@ -847,6 +855,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.MaxMsgBacklogSize = MaxMsgBacklogSize;
     }
 
+    /**
+     * Get Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return RetentionSizeInMB Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getRetentionSizeInMB() {
+        return this.RetentionSizeInMB;
+    }
+
+    /**
+     * Set Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param RetentionSizeInMB Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setRetentionSizeInMB(Long RetentionSizeInMB) {
+        this.RetentionSizeInMB = RetentionSizeInMB;
+    }
+
     public CmqQueue() {
     }
 
@@ -951,6 +979,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.MaxMsgBacklogSize != null) {
             this.MaxMsgBacklogSize = new Long(source.MaxMsgBacklogSize);
         }
+        if (source.RetentionSizeInMB != null) {
+            this.RetentionSizeInMB = new Long(source.RetentionSizeInMB);
+        }
     }
 
 
@@ -988,6 +1019,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "MaxUnackedMsgNum", this.MaxUnackedMsgNum);
         this.setParamSimple(map, prefix + "MaxMsgBacklogSize", this.MaxMsgBacklogSize);
+        this.setParamSimple(map, prefix + "RetentionSizeInMB", this.RetentionSizeInMB);
 
     }
 }

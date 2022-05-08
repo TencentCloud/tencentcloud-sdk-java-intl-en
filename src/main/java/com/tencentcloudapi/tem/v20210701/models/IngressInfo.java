@@ -106,6 +106,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Boolean Mixed;
 
     /**
+    * Redirection mode. Values:
+- `AUTO` (automatically redirect HTTP to HTTPS)
+- `NONE` (no redirection)
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("RewriteType")
+    @Expose
+    private String RewriteType;
+
+    /**
      * Get Environment ID
 Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return EnvironmentId Environment ID
@@ -305,6 +315,34 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.Mixed = Mixed;
     }
 
+    /**
+     * Get Redirection mode. Values:
+- `AUTO` (automatically redirect HTTP to HTTPS)
+- `NONE` (no redirection)
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return RewriteType Redirection mode. Values:
+- `AUTO` (automatically redirect HTTP to HTTPS)
+- `NONE` (no redirection)
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getRewriteType() {
+        return this.RewriteType;
+    }
+
+    /**
+     * Set Redirection mode. Values:
+- `AUTO` (automatically redirect HTTP to HTTPS)
+- `NONE` (no redirection)
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param RewriteType Redirection mode. Values:
+- `AUTO` (automatically redirect HTTP to HTTPS)
+- `NONE` (no redirection)
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setRewriteType(String RewriteType) {
+        this.RewriteType = RewriteType;
+    }
+
     public IngressInfo() {
     }
 
@@ -352,6 +390,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.Mixed != null) {
             this.Mixed = new Boolean(source.Mixed);
         }
+        if (source.RewriteType != null) {
+            this.RewriteType = new String(source.RewriteType);
+        }
     }
 
 
@@ -370,6 +411,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Mixed", this.Mixed);
+        this.setParamSimple(map, prefix + "RewriteType", this.RewriteType);
 
     }
 }

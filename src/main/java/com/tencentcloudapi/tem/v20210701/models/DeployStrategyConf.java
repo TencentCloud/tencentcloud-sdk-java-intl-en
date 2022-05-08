@@ -37,7 +37,7 @@ public class DeployStrategyConf extends AbstractModel{
     private Long BetaBatchNum;
 
     /**
-    * Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual)
+    * Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual), `3`: initial release
     */
     @SerializedName("DeployStrategyType")
     @Expose
@@ -97,16 +97,16 @@ public class DeployStrategyConf extends AbstractModel{
     }
 
     /**
-     * Get Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual) 
-     * @return DeployStrategyType Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual)
+     * Get Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual), `3`: initial release 
+     * @return DeployStrategyType Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual), `3`: initial release
      */
     public Long getDeployStrategyType() {
         return this.DeployStrategyType;
     }
 
     /**
-     * Set Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual)
-     * @param DeployStrategyType Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual)
+     * Set Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual), `3`: initial release
+     * @param DeployStrategyType Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual), `3`: initial release
      */
     public void setDeployStrategyType(Long DeployStrategyType) {
         this.DeployStrategyType = DeployStrategyType;

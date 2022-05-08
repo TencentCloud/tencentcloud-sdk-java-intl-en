@@ -51,6 +51,20 @@ public class CreateResourceRequest extends AbstractModel{
     private Long SourceChannel;
 
     /**
+    * Source of the resource. Values: `existing` (choose an existing resource), `creating` (create a new resource)
+    */
+    @SerializedName("ResourceFrom")
+    @Expose
+    private String ResourceFrom;
+
+    /**
+    * Resource extra configuration
+    */
+    @SerializedName("ResourceConfig")
+    @Expose
+    private String ResourceConfig;
+
+    /**
      * Get Environment ID 
      * @return EnvironmentId Environment ID
      */
@@ -114,6 +128,38 @@ public class CreateResourceRequest extends AbstractModel{
         this.SourceChannel = SourceChannel;
     }
 
+    /**
+     * Get Source of the resource. Values: `existing` (choose an existing resource), `creating` (create a new resource) 
+     * @return ResourceFrom Source of the resource. Values: `existing` (choose an existing resource), `creating` (create a new resource)
+     */
+    public String getResourceFrom() {
+        return this.ResourceFrom;
+    }
+
+    /**
+     * Set Source of the resource. Values: `existing` (choose an existing resource), `creating` (create a new resource)
+     * @param ResourceFrom Source of the resource. Values: `existing` (choose an existing resource), `creating` (create a new resource)
+     */
+    public void setResourceFrom(String ResourceFrom) {
+        this.ResourceFrom = ResourceFrom;
+    }
+
+    /**
+     * Get Resource extra configuration 
+     * @return ResourceConfig Resource extra configuration
+     */
+    public String getResourceConfig() {
+        return this.ResourceConfig;
+    }
+
+    /**
+     * Set Resource extra configuration
+     * @param ResourceConfig Resource extra configuration
+     */
+    public void setResourceConfig(String ResourceConfig) {
+        this.ResourceConfig = ResourceConfig;
+    }
+
     public CreateResourceRequest() {
     }
 
@@ -134,6 +180,12 @@ public class CreateResourceRequest extends AbstractModel{
         if (source.SourceChannel != null) {
             this.SourceChannel = new Long(source.SourceChannel);
         }
+        if (source.ResourceFrom != null) {
+            this.ResourceFrom = new String(source.ResourceFrom);
+        }
+        if (source.ResourceConfig != null) {
+            this.ResourceConfig = new String(source.ResourceConfig);
+        }
     }
 
 
@@ -145,6 +197,8 @@ public class CreateResourceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
+        this.setParamSimple(map, prefix + "ResourceFrom", this.ResourceFrom);
+        this.setParamSimple(map, prefix + "ResourceConfig", this.ResourceConfig);
 
     }
 }

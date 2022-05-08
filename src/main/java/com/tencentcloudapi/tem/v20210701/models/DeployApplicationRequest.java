@@ -310,6 +310,13 @@ If `konajdk` is selected, the value can be:
     private String OsFlavour;
 
     /**
+    * Specifies whether to enable Prometheus metric
+    */
+    @SerializedName("EnablePrometheusConf")
+    @Expose
+    private EnablePrometheusConf EnablePrometheusConf;
+
+    /**
      * Get Application ID 
      * @return ApplicationId Application ID
      */
@@ -989,6 +996,22 @@ If `konajdk` is selected, the value can be:
         this.OsFlavour = OsFlavour;
     }
 
+    /**
+     * Get Specifies whether to enable Prometheus metric 
+     * @return EnablePrometheusConf Specifies whether to enable Prometheus metric
+     */
+    public EnablePrometheusConf getEnablePrometheusConf() {
+        return this.EnablePrometheusConf;
+    }
+
+    /**
+     * Set Specifies whether to enable Prometheus metric
+     * @param EnablePrometheusConf Specifies whether to enable Prometheus metric
+     */
+    public void setEnablePrometheusConf(EnablePrometheusConf EnablePrometheusConf) {
+        this.EnablePrometheusConf = EnablePrometheusConf;
+    }
+
     public DeployApplicationRequest() {
     }
 
@@ -1141,6 +1164,9 @@ If `konajdk` is selected, the value can be:
         if (source.OsFlavour != null) {
             this.OsFlavour = new String(source.OsFlavour);
         }
+        if (source.EnablePrometheusConf != null) {
+            this.EnablePrometheusConf = new EnablePrometheusConf(source.EnablePrometheusConf);
+        }
     }
 
 
@@ -1187,6 +1213,7 @@ If `konajdk` is selected, the value can be:
         this.setParamSimple(map, prefix + "SpeedUp", this.SpeedUp);
         this.setParamObj(map, prefix + "StartupProbe.", this.StartupProbe);
         this.setParamSimple(map, prefix + "OsFlavour", this.OsFlavour);
+        this.setParamObj(map, prefix + "EnablePrometheusConf.", this.EnablePrometheusConf);
 
     }
 }

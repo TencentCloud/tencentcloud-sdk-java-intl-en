@@ -60,9 +60,6 @@ public enum TdmqErrorCode {
     // Failed to delete the topic.
      FAILEDOPERATION_DELETETOPICS("FailedOperation.DeleteTopics"),
      
-    // Failed to query the subscription data.
-     FAILEDOPERATION_DESCRIBESUBSCRIPTION("FailedOperation.DescribeSubscription"),
-     
     // Failed to get the environment attributes.
      FAILEDOPERATION_GETENVIRONMENTATTRIBUTESFAILED("FailedOperation.GetEnvironmentAttributesFailed"),
      
@@ -98,6 +95,9 @@ public enum TdmqErrorCode {
      
     // Failed to send the message.
      FAILEDOPERATION_SENDMSGFAILED("FailedOperation.SendMsgFailed"),
+     
+    // 
+     FAILEDOPERATION_SETRETENTIONPOLICY("FailedOperation.SetRetentionPolicy"),
      
     // Failed to configure the message TTL.
      FAILEDOPERATION_SETTTL("FailedOperation.SetTTL"),
@@ -192,9 +192,6 @@ public enum TdmqErrorCode {
     // A required parameter is missing.
      MISSINGPARAMETER_NEEDMOREPARAMS("MissingParameter.NeedMoreParams"),
      
-    // The subscription is still being consumed.
-     OPERATIONDENIED_CONSUMERRUNNING("OperationDenied.ConsumerRunning"),
-     
     // Operations on the default environment are not allowed.
      OPERATIONDENIED_DEFAULTENVIRONMENT("OperationDenied.DefaultEnvironment"),
      
@@ -259,22 +256,7 @@ public enum TdmqErrorCode {
      RESOURCEUNAVAILABLE_CREATEFAILED("ResourceUnavailable.CreateFailed"),
      
     // You must top up before proceeding.
-     RESOURCEUNAVAILABLE_FUNDREQUIRED("ResourceUnavailable.FundRequired"),
-     
-    // The system is being upgraded.
-     RESOURCEUNAVAILABLE_SYSTEMUPGRADE("ResourceUnavailable.SystemUpgrade"),
-     
-    // The resources have been sold out.
-     RESOURCESSOLDOUT("ResourcesSoldOut"),
-     
-    // Unauthorized operation.
-     UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
-     
-    // Unknown parameter.
-     UNKNOWNPARAMETER("UnknownParameter"),
-     
-    // Unsupported operation.
-     UNSUPPORTEDOPERATION("UnsupportedOperation");
+     RESOURCEUNAVAILABLE_FUNDREQUIRED("ResourceUnavailable.FundRequired");
      
     private String value;
     private TdmqErrorCode (String value){

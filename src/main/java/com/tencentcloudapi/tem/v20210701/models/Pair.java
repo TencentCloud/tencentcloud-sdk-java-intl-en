@@ -53,6 +53,14 @@ Note: This field may return `null`, indicating that no valid value can be found.
     private String Config;
 
     /**
+    * Encrypt configuration name
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("Secret")
+    @Expose
+    private String Secret;
+
+    /**
      * Get Key 
      * @return Key Key
      */
@@ -124,6 +132,26 @@ Note: This field may return `null`, indicating that no valid value can be found.
         this.Config = Config;
     }
 
+    /**
+     * Get Encrypt configuration name
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return Secret Encrypt configuration name
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getSecret() {
+        return this.Secret;
+    }
+
+    /**
+     * Set Encrypt configuration name
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param Secret Encrypt configuration name
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setSecret(String Secret) {
+        this.Secret = Secret;
+    }
+
     public Pair() {
     }
 
@@ -144,6 +172,9 @@ Note: This field may return `null`, indicating that no valid value can be found.
         if (source.Config != null) {
             this.Config = new String(source.Config);
         }
+        if (source.Secret != null) {
+            this.Secret = new String(source.Secret);
+        }
     }
 
 
@@ -155,6 +186,7 @@ Note: This field may return `null`, indicating that no valid value can be found.
         this.setParamSimple(map, prefix + "Value", this.Value);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Config", this.Config);
+        this.setParamSimple(map, prefix + "Secret", this.Secret);
 
     }
 }

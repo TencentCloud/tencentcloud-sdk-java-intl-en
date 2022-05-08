@@ -20,22 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeCmqTopicsResponse extends AbstractModel{
-
-    /**
-    * List of topics
-Note: this field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("TopicList")
-    @Expose
-    private CmqTopic [] TopicList;
-
-    /**
-    * Total number of topics
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+public class ResetRocketMQConsumerOffSetResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -43,42 +28,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get List of topics
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TopicList List of topics
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public CmqTopic [] getTopicList() {
-        return this.TopicList;
-    }
-
-    /**
-     * Set List of topics
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TopicList List of topics
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public void setTopicList(CmqTopic [] TopicList) {
-        this.TopicList = TopicList;
-    }
-
-    /**
-     * Get Total number of topics 
-     * @return TotalCount Total number of topics
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set Total number of topics
-     * @param TotalCount Total number of topics
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -96,23 +45,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public DescribeCmqTopicsResponse() {
+    public ResetRocketMQConsumerOffSetResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeCmqTopicsResponse(DescribeCmqTopicsResponse source) {
-        if (source.TopicList != null) {
-            this.TopicList = new CmqTopic[source.TopicList.length];
-            for (int i = 0; i < source.TopicList.length; i++) {
-                this.TopicList[i] = new CmqTopic(source.TopicList[i]);
-            }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
+    public ResetRocketMQConsumerOffSetResponse(ResetRocketMQConsumerOffSetResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -123,8 +63,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "TopicList.", this.TopicList);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

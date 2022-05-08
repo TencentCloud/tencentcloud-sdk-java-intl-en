@@ -65,7 +65,7 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
     private String TagKey;
 
     /**
-    * Filter.
+    * Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
     */
     @SerializedName("Filters")
     @Expose
@@ -77,6 +77,13 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
     @SerializedName("InstanceIds")
     @Expose
     private String InstanceIds;
+
+    /**
+    * Filter by instance ID.
+    */
+    @SerializedName("InstanceIdList")
+    @Expose
+    private String [] InstanceIdList;
 
     /**
      * Get (Filter) filter by instance ID 
@@ -175,16 +182,16 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
     }
 
     /**
-     * Get Filter. 
-     * @return Filters Filter.
+     * Get Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`. 
+     * @return Filters Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter.
-     * @param Filters Filter.
+     * Set Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
+     * @param Filters Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -204,6 +211,22 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
      */
     public void setInstanceIds(String InstanceIds) {
         this.InstanceIds = InstanceIds;
+    }
+
+    /**
+     * Get Filter by instance ID. 
+     * @return InstanceIdList Filter by instance ID.
+     */
+    public String [] getInstanceIdList() {
+        return this.InstanceIdList;
+    }
+
+    /**
+     * Set Filter by instance ID.
+     * @param InstanceIdList Filter by instance ID.
+     */
+    public void setInstanceIdList(String [] InstanceIdList) {
+        this.InstanceIdList = InstanceIdList;
     }
 
     public DescribeInstancesDetailRequest() {
@@ -244,6 +267,12 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
         if (source.InstanceIds != null) {
             this.InstanceIds = new String(source.InstanceIds);
         }
+        if (source.InstanceIdList != null) {
+            this.InstanceIdList = new String[source.InstanceIdList.length];
+            for (int i = 0; i < source.InstanceIdList.length; i++) {
+                this.InstanceIdList[i] = new String(source.InstanceIdList[i]);
+            }
+        }
     }
 
 
@@ -259,6 +288,7 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TagKey", this.TagKey);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "InstanceIds", this.InstanceIds);
+        this.setParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
 
     }
 }

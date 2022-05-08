@@ -79,7 +79,7 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
     private Long SegmentMs;
 
     /**
-    * Maximum topic message length in bytes. The maximum value is 8,388,608 bytes (i.e., 8 MB).
+    * Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
     */
     @SerializedName("MaxMessageBytes")
     @Expose
@@ -270,16 +270,16 @@ public class ModifyTopicAttributesRequest extends AbstractModel{
     }
 
     /**
-     * Get Maximum topic message length in bytes. The maximum value is 8,388,608 bytes (i.e., 8 MB). 
-     * @return MaxMessageBytes Maximum topic message length in bytes. The maximum value is 8,388,608 bytes (i.e., 8 MB).
+     * Get Max message size in bytes. Max value: 8,388,608 bytes (8 MB). 
+     * @return MaxMessageBytes Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
      */
     public Long getMaxMessageBytes() {
         return this.MaxMessageBytes;
     }
 
     /**
-     * Set Maximum topic message length in bytes. The maximum value is 8,388,608 bytes (i.e., 8 MB).
-     * @param MaxMessageBytes Maximum topic message length in bytes. The maximum value is 8,388,608 bytes (i.e., 8 MB).
+     * Set Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
+     * @param MaxMessageBytes Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
      */
     public void setMaxMessageBytes(Long MaxMessageBytes) {
         this.MaxMessageBytes = MaxMessageBytes;

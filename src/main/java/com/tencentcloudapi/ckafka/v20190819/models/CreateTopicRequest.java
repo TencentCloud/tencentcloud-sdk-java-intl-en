@@ -93,7 +93,7 @@ public class CreateTopicRequest extends AbstractModel{
     private Long UncleanLeaderElectionEnable;
 
     /**
-    * Message retention period in ms, which is optional. The current minimum value is 60,000 ms
+    * Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
     */
     @SerializedName("RetentionMs")
     @Expose
@@ -105,6 +105,13 @@ public class CreateTopicRequest extends AbstractModel{
     @SerializedName("SegmentMs")
     @Expose
     private Long SegmentMs;
+
+    /**
+    * Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
+    */
+    @SerializedName("MaxMessageBytes")
+    @Expose
+    private Long MaxMessageBytes;
 
     /**
     * Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
@@ -295,16 +302,16 @@ public class CreateTopicRequest extends AbstractModel{
     }
 
     /**
-     * Get Message retention period in ms, which is optional. The current minimum value is 60,000 ms 
-     * @return RetentionMs Message retention period in ms, which is optional. The current minimum value is 60,000 ms
+     * Get Message retention period in milliseconds, which is optional. Min value: 60,000 ms. 
+     * @return RetentionMs Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
      */
     public Long getRetentionMs() {
         return this.RetentionMs;
     }
 
     /**
-     * Set Message retention period in ms, which is optional. The current minimum value is 60,000 ms
-     * @param RetentionMs Message retention period in ms, which is optional. The current minimum value is 60,000 ms
+     * Set Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
+     * @param RetentionMs Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
      */
     public void setRetentionMs(Long RetentionMs) {
         this.RetentionMs = RetentionMs;
@@ -324,6 +331,22 @@ public class CreateTopicRequest extends AbstractModel{
      */
     public void setSegmentMs(Long SegmentMs) {
         this.SegmentMs = SegmentMs;
+    }
+
+    /**
+     * Get Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB). 
+     * @return MaxMessageBytes Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
+     */
+    public Long getMaxMessageBytes() {
+        return this.MaxMessageBytes;
+    }
+
+    /**
+     * Set Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
+     * @param MaxMessageBytes Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
+     */
+    public void setMaxMessageBytes(Long MaxMessageBytes) {
+        this.MaxMessageBytes = MaxMessageBytes;
     }
 
     /**
@@ -437,6 +460,9 @@ public class CreateTopicRequest extends AbstractModel{
         if (source.SegmentMs != null) {
             this.SegmentMs = new Long(source.SegmentMs);
         }
+        if (source.MaxMessageBytes != null) {
+            this.MaxMessageBytes = new Long(source.MaxMessageBytes);
+        }
         if (source.EnableAclRule != null) {
             this.EnableAclRule = new Long(source.EnableAclRule);
         }
@@ -471,6 +497,7 @@ public class CreateTopicRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
         this.setParamSimple(map, prefix + "RetentionMs", this.RetentionMs);
         this.setParamSimple(map, prefix + "SegmentMs", this.SegmentMs);
+        this.setParamSimple(map, prefix + "MaxMessageBytes", this.MaxMessageBytes);
         this.setParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);
         this.setParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
         this.setParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);

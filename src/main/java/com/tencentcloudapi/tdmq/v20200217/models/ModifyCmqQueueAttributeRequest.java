@@ -51,21 +51,21 @@ public class ModifyCmqQueueAttributeRequest extends AbstractModel{
     private Long VisibilityTimeout;
 
     /**
-    * Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+    * Max message size, which defaults to 1,024 KB for the queue of TDMQ for CMQ and cannot be modified.
     */
     @SerializedName("MaxMsgSize")
     @Expose
     private Long MaxMsgSize;
 
     /**
-    * Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
+    * The max period during which a message is retained before it is automatically acknowledged. Value range: 30-43,200 seconds (30 seconds to 12 hours). Default value: 3600 seconds (1 hour).
     */
     @SerializedName("MsgRetentionSeconds")
     @Expose
     private Long MsgRetentionSeconds;
 
     /**
-    * Maximum message rewindable period. Value range: 0–msgRetentionSeconds (maximum message retention period of the queue). 0 indicates not to enable message rewinding.
+    * Rewindable time of messages in the queue. Value range: 0-1,296,000s (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
     */
     @SerializedName("RewindSeconds")
     @Expose
@@ -126,6 +126,13 @@ public class ModifyCmqQueueAttributeRequest extends AbstractModel{
     @SerializedName("Transaction")
     @Expose
     private Long Transaction;
+
+    /**
+    * Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+    */
+    @SerializedName("RetentionSizeInMB")
+    @Expose
+    private Long RetentionSizeInMB;
 
     /**
      * Get Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter. 
@@ -192,48 +199,48 @@ public class ModifyCmqQueueAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536. 
-     * @return MaxMsgSize Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+     * Get Max message size, which defaults to 1,024 KB for the queue of TDMQ for CMQ and cannot be modified. 
+     * @return MaxMsgSize Max message size, which defaults to 1,024 KB for the queue of TDMQ for CMQ and cannot be modified.
      */
     public Long getMaxMsgSize() {
         return this.MaxMsgSize;
     }
 
     /**
-     * Set Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
-     * @param MaxMsgSize Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
+     * Set Max message size, which defaults to 1,024 KB for the queue of TDMQ for CMQ and cannot be modified.
+     * @param MaxMsgSize Max message size, which defaults to 1,024 KB for the queue of TDMQ for CMQ and cannot be modified.
      */
     public void setMaxMsgSize(Long MaxMsgSize) {
         this.MaxMsgSize = MaxMsgSize;
     }
 
     /**
-     * Get Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days). 
-     * @return MsgRetentionSeconds Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
+     * Get The max period during which a message is retained before it is automatically acknowledged. Value range: 30-43,200 seconds (30 seconds to 12 hours). Default value: 3600 seconds (1 hour). 
+     * @return MsgRetentionSeconds The max period during which a message is retained before it is automatically acknowledged. Value range: 30-43,200 seconds (30 seconds to 12 hours). Default value: 3600 seconds (1 hour).
      */
     public Long getMsgRetentionSeconds() {
         return this.MsgRetentionSeconds;
     }
 
     /**
-     * Set Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
-     * @param MsgRetentionSeconds Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
+     * Set The max period during which a message is retained before it is automatically acknowledged. Value range: 30-43,200 seconds (30 seconds to 12 hours). Default value: 3600 seconds (1 hour).
+     * @param MsgRetentionSeconds The max period during which a message is retained before it is automatically acknowledged. Value range: 30-43,200 seconds (30 seconds to 12 hours). Default value: 3600 seconds (1 hour).
      */
     public void setMsgRetentionSeconds(Long MsgRetentionSeconds) {
         this.MsgRetentionSeconds = MsgRetentionSeconds;
     }
 
     /**
-     * Get Maximum message rewindable period. Value range: 0–msgRetentionSeconds (maximum message retention period of the queue). 0 indicates not to enable message rewinding. 
-     * @return RewindSeconds Maximum message rewindable period. Value range: 0–msgRetentionSeconds (maximum message retention period of the queue). 0 indicates not to enable message rewinding.
+     * Get Rewindable time of messages in the queue. Value range: 0-1,296,000s (if message rewind is enabled). The value “0” indicates that message rewind is not enabled. 
+     * @return RewindSeconds Rewindable time of messages in the queue. Value range: 0-1,296,000s (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
      */
     public Long getRewindSeconds() {
         return this.RewindSeconds;
     }
 
     /**
-     * Set Maximum message rewindable period. Value range: 0–msgRetentionSeconds (maximum message retention period of the queue). 0 indicates not to enable message rewinding.
-     * @param RewindSeconds Maximum message rewindable period. Value range: 0–msgRetentionSeconds (maximum message retention period of the queue). 0 indicates not to enable message rewinding.
+     * Set Rewindable time of messages in the queue. Value range: 0-1,296,000s (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+     * @param RewindSeconds Rewindable time of messages in the queue. Value range: 0-1,296,000s (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
      */
     public void setRewindSeconds(Long RewindSeconds) {
         this.RewindSeconds = RewindSeconds;
@@ -367,6 +374,22 @@ public class ModifyCmqQueueAttributeRequest extends AbstractModel{
         this.Transaction = Transaction;
     }
 
+    /**
+     * Get Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled. 
+     * @return RetentionSizeInMB Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+     */
+    public Long getRetentionSizeInMB() {
+        return this.RetentionSizeInMB;
+    }
+
+    /**
+     * Set Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+     * @param RetentionSizeInMB Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+     */
+    public void setRetentionSizeInMB(Long RetentionSizeInMB) {
+        this.RetentionSizeInMB = RetentionSizeInMB;
+    }
+
     public ModifyCmqQueueAttributeRequest() {
     }
 
@@ -420,6 +443,9 @@ public class ModifyCmqQueueAttributeRequest extends AbstractModel{
         if (source.Transaction != null) {
             this.Transaction = new Long(source.Transaction);
         }
+        if (source.RetentionSizeInMB != null) {
+            this.RetentionSizeInMB = new Long(source.RetentionSizeInMB);
+        }
     }
 
 
@@ -442,6 +468,7 @@ public class ModifyCmqQueueAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Policy", this.Policy);
         this.setParamSimple(map, prefix + "Trace", this.Trace);
         this.setParamSimple(map, prefix + "Transaction", this.Transaction);
+        this.setParamSimple(map, prefix + "RetentionSizeInMB", this.RetentionSizeInMB);
 
     }
 }
