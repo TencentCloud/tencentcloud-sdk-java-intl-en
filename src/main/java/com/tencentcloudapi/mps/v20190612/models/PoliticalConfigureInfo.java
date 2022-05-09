@@ -23,84 +23,69 @@ import java.util.HashMap;
 public class PoliticalConfigureInfo extends AbstractModel{
 
     /**
-    * Control parameter of politically sensitive information detection in image.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The parameters for detecting sensitive information in images.
     */
     @SerializedName("ImgReviewInfo")
     @Expose
     private PoliticalImgReviewTemplateInfo ImgReviewInfo;
 
     /**
-    * Control parameter of politically sensitive information detection in speech.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The parameters for detecting sensitive information based on ASR.
     */
     @SerializedName("AsrReviewInfo")
     @Expose
     private PoliticalAsrReviewTemplateInfo AsrReviewInfo;
 
     /**
-    * Control parameter of politically sensitive information detection in text.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The parameters for detecting sensitive information based on OCR.
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private PoliticalOcrReviewTemplateInfo OcrReviewInfo;
 
     /**
-     * Get Control parameter of politically sensitive information detection in image.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ImgReviewInfo Control parameter of politically sensitive information detection in image.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The parameters for detecting sensitive information in images. 
+     * @return ImgReviewInfo The parameters for detecting sensitive information in images.
      */
     public PoliticalImgReviewTemplateInfo getImgReviewInfo() {
         return this.ImgReviewInfo;
     }
 
     /**
-     * Set Control parameter of politically sensitive information detection in image.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ImgReviewInfo Control parameter of politically sensitive information detection in image.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The parameters for detecting sensitive information in images.
+     * @param ImgReviewInfo The parameters for detecting sensitive information in images.
      */
     public void setImgReviewInfo(PoliticalImgReviewTemplateInfo ImgReviewInfo) {
         this.ImgReviewInfo = ImgReviewInfo;
     }
 
     /**
-     * Get Control parameter of politically sensitive information detection in speech.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AsrReviewInfo Control parameter of politically sensitive information detection in speech.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The parameters for detecting sensitive information based on ASR. 
+     * @return AsrReviewInfo The parameters for detecting sensitive information based on ASR.
      */
     public PoliticalAsrReviewTemplateInfo getAsrReviewInfo() {
         return this.AsrReviewInfo;
     }
 
     /**
-     * Set Control parameter of politically sensitive information detection in speech.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AsrReviewInfo Control parameter of politically sensitive information detection in speech.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The parameters for detecting sensitive information based on ASR.
+     * @param AsrReviewInfo The parameters for detecting sensitive information based on ASR.
      */
     public void setAsrReviewInfo(PoliticalAsrReviewTemplateInfo AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
     }
 
     /**
-     * Get Control parameter of politically sensitive information detection in text.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OcrReviewInfo Control parameter of politically sensitive information detection in text.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The parameters for detecting sensitive information based on OCR. 
+     * @return OcrReviewInfo The parameters for detecting sensitive information based on OCR.
      */
     public PoliticalOcrReviewTemplateInfo getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set Control parameter of politically sensitive information detection in text.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OcrReviewInfo Control parameter of politically sensitive information detection in text.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The parameters for detecting sensitive information based on OCR.
+     * @param OcrReviewInfo The parameters for detecting sensitive information based on OCR.
      */
     public void setOcrReviewInfo(PoliticalOcrReviewTemplateInfo OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

@@ -102,6 +102,16 @@ It is not recommended to specify this parameter if there are no special requirem
     private Long Vcrf;
 
     /**
+    * Whether to enable adaptive encoding. Valid values:
+<li>0: Disable</li>
+<li>1: Enable</li>
+Default value: 0. If this parameter is set to `1`, multiple streams with different resolutions and bitrates will be generated automatically. The highest resolution, bitrate, and quality of the streams are determined by the values of `width` and `height`, `Bitrate`, and `Vcrf` in `VideoTemplate` respectively. If these parameters are not set in `VideoTemplate`, the highest resolution generated will be the same as that of the source video, and the highest video quality will be close to VMAF 95. To use this parameter or learn about the billing details of adaptive encoding, please contact your sales rep.
+    */
+    @SerializedName("ContentAdaptStream")
+    @Expose
+    private Long ContentAdaptStream;
+
+    /**
      * Get Video stream codec. Valid values:
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
@@ -309,6 +319,34 @@ It is not recommended to specify this parameter if there are no special requirem
         this.Vcrf = Vcrf;
     }
 
+    /**
+     * Get Whether to enable adaptive encoding. Valid values:
+<li>0: Disable</li>
+<li>1: Enable</li>
+Default value: 0. If this parameter is set to `1`, multiple streams with different resolutions and bitrates will be generated automatically. The highest resolution, bitrate, and quality of the streams are determined by the values of `width` and `height`, `Bitrate`, and `Vcrf` in `VideoTemplate` respectively. If these parameters are not set in `VideoTemplate`, the highest resolution generated will be the same as that of the source video, and the highest video quality will be close to VMAF 95. To use this parameter or learn about the billing details of adaptive encoding, please contact your sales rep. 
+     * @return ContentAdaptStream Whether to enable adaptive encoding. Valid values:
+<li>0: Disable</li>
+<li>1: Enable</li>
+Default value: 0. If this parameter is set to `1`, multiple streams with different resolutions and bitrates will be generated automatically. The highest resolution, bitrate, and quality of the streams are determined by the values of `width` and `height`, `Bitrate`, and `Vcrf` in `VideoTemplate` respectively. If these parameters are not set in `VideoTemplate`, the highest resolution generated will be the same as that of the source video, and the highest video quality will be close to VMAF 95. To use this parameter or learn about the billing details of adaptive encoding, please contact your sales rep.
+     */
+    public Long getContentAdaptStream() {
+        return this.ContentAdaptStream;
+    }
+
+    /**
+     * Set Whether to enable adaptive encoding. Valid values:
+<li>0: Disable</li>
+<li>1: Enable</li>
+Default value: 0. If this parameter is set to `1`, multiple streams with different resolutions and bitrates will be generated automatically. The highest resolution, bitrate, and quality of the streams are determined by the values of `width` and `height`, `Bitrate`, and `Vcrf` in `VideoTemplate` respectively. If these parameters are not set in `VideoTemplate`, the highest resolution generated will be the same as that of the source video, and the highest video quality will be close to VMAF 95. To use this parameter or learn about the billing details of adaptive encoding, please contact your sales rep.
+     * @param ContentAdaptStream Whether to enable adaptive encoding. Valid values:
+<li>0: Disable</li>
+<li>1: Enable</li>
+Default value: 0. If this parameter is set to `1`, multiple streams with different resolutions and bitrates will be generated automatically. The highest resolution, bitrate, and quality of the streams are determined by the values of `width` and `height`, `Bitrate`, and `Vcrf` in `VideoTemplate` respectively. If these parameters are not set in `VideoTemplate`, the highest resolution generated will be the same as that of the source video, and the highest video quality will be close to VMAF 95. To use this parameter or learn about the billing details of adaptive encoding, please contact your sales rep.
+     */
+    public void setContentAdaptStream(Long ContentAdaptStream) {
+        this.ContentAdaptStream = ContentAdaptStream;
+    }
+
     public VideoTemplateInfoForUpdate() {
     }
 
@@ -344,6 +382,9 @@ It is not recommended to specify this parameter if there are no special requirem
         if (source.Vcrf != null) {
             this.Vcrf = new Long(source.Vcrf);
         }
+        if (source.ContentAdaptStream != null) {
+            this.ContentAdaptStream = new Long(source.ContentAdaptStream);
+        }
     }
 
 
@@ -360,6 +401,7 @@ It is not recommended to specify this parameter if there are no special requirem
         this.setParamSimple(map, prefix + "Gop", this.Gop);
         this.setParamSimple(map, prefix + "FillType", this.FillType);
         this.setParamSimple(map, prefix + "Vcrf", this.Vcrf);
+        this.setParamSimple(map, prefix + "ContentAdaptStream", this.ContentAdaptStream);
 
     }
 }

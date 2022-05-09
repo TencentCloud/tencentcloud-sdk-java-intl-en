@@ -23,25 +23,25 @@ import java.util.HashMap;
 public class TerrorismImgReviewTemplateInfo extends AbstractModel{
 
     /**
-    * Switch of a terrorism information detection in image task. Valid values:
-<li>ON: Enables a terrorism information detection in image task;</li>
-<li>OFF: Disables a terrorism information detection in image task.</li>
+    * Whether to detect sensitive information in images. Valid values:
+<li>ON</li>
+<li>OFF</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Filter tags for terrorism information detection in images. If a specified tag is detected, the tag is returned. If no filter tag is specified, all detected tags are returned. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`bloody`: bloodiness</li>
-<li>`police`: police forces</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
+    * The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>bloody</li>
+<li>police</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
+<li>scenario (sensitive scenes) </li>
     */
     @SerializedName("LabelSet")
     @Expose
@@ -62,76 +62,76 @@ public class TerrorismImgReviewTemplateInfo extends AbstractModel{
     private Long ReviewConfidence;
 
     /**
-     * Get Switch of a terrorism information detection in image task. Valid values:
-<li>ON: Enables a terrorism information detection in image task;</li>
-<li>OFF: Disables a terrorism information detection in image task.</li> 
-     * @return Switch Switch of a terrorism information detection in image task. Valid values:
-<li>ON: Enables a terrorism information detection in image task;</li>
-<li>OFF: Disables a terrorism information detection in image task.</li>
+     * Get Whether to detect sensitive information in images. Valid values:
+<li>ON</li>
+<li>OFF</li> 
+     * @return Switch Whether to detect sensitive information in images. Valid values:
+<li>ON</li>
+<li>OFF</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch of a terrorism information detection in image task. Valid values:
-<li>ON: Enables a terrorism information detection in image task;</li>
-<li>OFF: Disables a terrorism information detection in image task.</li>
-     * @param Switch Switch of a terrorism information detection in image task. Valid values:
-<li>ON: Enables a terrorism information detection in image task;</li>
-<li>OFF: Disables a terrorism information detection in image task.</li>
+     * Set Whether to detect sensitive information in images. Valid values:
+<li>ON</li>
+<li>OFF</li>
+     * @param Switch Whether to detect sensitive information in images. Valid values:
+<li>ON</li>
+<li>OFF</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Filter tags for terrorism information detection in images. If a specified tag is detected, the tag is returned. If no filter tag is specified, all detected tags are returned. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`bloody`: bloodiness</li>
-<li>`police`: police forces</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li> 
-     * @return LabelSet Filter tags for terrorism information detection in images. If a specified tag is detected, the tag is returned. If no filter tag is specified, all detected tags are returned. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`bloody`: bloodiness</li>
-<li>`police`: police forces</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
+     * Get The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>bloody</li>
+<li>police</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
+<li>scenario (sensitive scenes) </li> 
+     * @return LabelSet The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>bloody</li>
+<li>police</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
+<li>scenario (sensitive scenes) </li>
      */
     public String [] getLabelSet() {
         return this.LabelSet;
     }
 
     /**
-     * Set Filter tags for terrorism information detection in images. If a specified tag is detected, the tag is returned. If no filter tag is specified, all detected tags are returned. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`bloody`: bloodiness</li>
-<li>`police`: police forces</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
-     * @param LabelSet Filter tags for terrorism information detection in images. If a specified tag is detected, the tag is returned. If no filter tag is specified, all detected tags are returned. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`bloody`: bloodiness</li>
-<li>`police`: police forces</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
+     * Set The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>bloody</li>
+<li>police</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
+<li>scenario (sensitive scenes) </li>
+     * @param LabelSet The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>bloody</li>
+<li>police</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
+<li>scenario (sensitive scenes) </li>
      */
     public void setLabelSet(String [] LabelSet) {
         this.LabelSet = LabelSet;

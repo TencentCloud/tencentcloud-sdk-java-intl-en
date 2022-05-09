@@ -52,15 +52,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Message;
 
     /**
-    * Input for an OCR-based politically sensitive information detection in text task during content audit.
+    * The input parameter for OCR-based detection of politically sensitive information.
     */
     @SerializedName("Input")
     @Expose
     private AiReviewPoliticalOcrTaskInput Input;
 
     /**
-    * Output of an OCR-based politically sensitive information detection in text task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The output of OCR-based detection of politically sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Output")
     @Expose
@@ -135,36 +135,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Input for an OCR-based politically sensitive information detection in text task during content audit. 
-     * @return Input Input for an OCR-based politically sensitive information detection in text task during content audit.
+     * Get The input parameter for OCR-based detection of politically sensitive information. 
+     * @return Input The input parameter for OCR-based detection of politically sensitive information.
      */
     public AiReviewPoliticalOcrTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input for an OCR-based politically sensitive information detection in text task during content audit.
-     * @param Input Input for an OCR-based politically sensitive information detection in text task during content audit.
+     * Set The input parameter for OCR-based detection of politically sensitive information.
+     * @param Input The input parameter for OCR-based detection of politically sensitive information.
      */
     public void setInput(AiReviewPoliticalOcrTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of an OCR-based politically sensitive information detection in text task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output of an OCR-based politically sensitive information detection in text task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The output of OCR-based detection of politically sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Output The output of OCR-based detection of politically sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public AiReviewPoliticalOcrTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of an OCR-based politically sensitive information detection in text task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Output Output of an OCR-based politically sensitive information detection in text task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The output of OCR-based detection of politically sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Output The output of OCR-based detection of politically sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setOutput(AiReviewPoliticalOcrTaskOutput Output) {
         this.Output = Output;

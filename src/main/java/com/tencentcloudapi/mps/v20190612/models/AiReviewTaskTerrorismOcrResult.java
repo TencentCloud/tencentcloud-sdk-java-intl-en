@@ -54,14 +54,15 @@ public class AiReviewTaskTerrorismOcrResult extends AbstractModel{
     private String Message;
 
     /**
-    * Input of OCR-based terrorism information detection in text task in content audit.
+    * The input parameter for OCR-based detection of terrorism content.
     */
     @SerializedName("Input")
     @Expose
     private AiReviewTerrorismOcrTaskInput Input;
 
     /**
-    * Output of OCR-based terrorism information detection in text task in content audit.
+    * The output of OCR-based detection of terrorism content.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Output")
     @Expose
@@ -144,32 +145,36 @@ public class AiReviewTaskTerrorismOcrResult extends AbstractModel{
     }
 
     /**
-     * Get Input of OCR-based terrorism information detection in text task in content audit. 
-     * @return Input Input of OCR-based terrorism information detection in text task in content audit.
+     * Get The input parameter for OCR-based detection of terrorism content. 
+     * @return Input The input parameter for OCR-based detection of terrorism content.
      */
     public AiReviewTerrorismOcrTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of OCR-based terrorism information detection in text task in content audit.
-     * @param Input Input of OCR-based terrorism information detection in text task in content audit.
+     * Set The input parameter for OCR-based detection of terrorism content.
+     * @param Input The input parameter for OCR-based detection of terrorism content.
      */
     public void setInput(AiReviewTerrorismOcrTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of OCR-based terrorism information detection in text task in content audit. 
-     * @return Output Output of OCR-based terrorism information detection in text task in content audit.
+     * Get The output of OCR-based detection of terrorism content.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Output The output of OCR-based detection of terrorism content.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public AiReviewTerrorismOcrTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of OCR-based terrorism information detection in text task in content audit.
-     * @param Output Output of OCR-based terrorism information detection in text task in content audit.
+     * Set The output of OCR-based detection of terrorism content.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Output The output of OCR-based detection of terrorism content.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setOutput(AiReviewTerrorismOcrTaskOutput Output) {
         this.Output = Output;

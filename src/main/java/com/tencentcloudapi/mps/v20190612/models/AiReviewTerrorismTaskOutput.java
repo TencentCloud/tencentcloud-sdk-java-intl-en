@@ -23,152 +23,152 @@ import java.util.HashMap;
 public class AiReviewTerrorismTaskOutput extends AbstractModel{
 
     /**
-    * Score of the detected terrorism information in a video from 0 to 100.
+    * The confidence score for the detection of sensitive information. Value range: 0-100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Suggestion for the detected terrorism information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+    * The suggestion for handling the sensitive information detected. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * Tags for detected terrorism information in a video. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`police`: police forces</li>
-<li>`bloody`: bloodiness</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
+    * The labels for the detected sensitive content. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>police</li>
+<li>bloody</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
+<li>scenario (sensitive scenes) </li>
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * List of video segments that contain the detected terrorism information.
+    * The video segments that contain sensitive information.
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaContentReviewSegmentItem [] SegmentSet;
 
     /**
-     * Get Score of the detected terrorism information in a video from 0 to 100. 
-     * @return Confidence Score of the detected terrorism information in a video from 0 to 100.
+     * Get The confidence score for the detection of sensitive information. Value range: 0-100. 
+     * @return Confidence The confidence score for the detection of sensitive information. Value range: 0-100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Score of the detected terrorism information in a video from 0 to 100.
-     * @param Confidence Score of the detected terrorism information in a video from 0 to 100.
+     * Set The confidence score for the detection of sensitive information. Value range: 0-100.
+     * @param Confidence The confidence score for the detection of sensitive information. Value range: 0-100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Suggestion for the detected terrorism information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li> 
-     * @return Suggestion Suggestion for the detected terrorism information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+     * Get The suggestion for handling the sensitive information detected. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li> 
+     * @return Suggestion The suggestion for handling the sensitive information detected. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set Suggestion for the detected terrorism information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-     * @param Suggestion Suggestion for the detected terrorism information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+     * Set The suggestion for handling the sensitive information detected. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+     * @param Suggestion The suggestion for handling the sensitive information detected. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get Tags for detected terrorism information in a video. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`police`: police forces</li>
-<li>`bloody`: bloodiness</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li> 
-     * @return Label Tags for detected terrorism information in a video. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`police`: police forces</li>
-<li>`bloody`: bloodiness</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
+     * Get The labels for the detected sensitive content. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>police</li>
+<li>bloody</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
+<li>scenario (sensitive scenes) </li> 
+     * @return Label The labels for the detected sensitive content. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>police</li>
+<li>bloody</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
+<li>scenario (sensitive scenes) </li>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set Tags for detected terrorism information in a video. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`police`: police forces</li>
-<li>`bloody`: bloodiness</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
-     * @param Label Tags for detected terrorism information in a video. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`police`: police forces</li>
-<li>`bloody`: bloodiness</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
+     * Set The labels for the detected sensitive content. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>police</li>
+<li>bloody</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
+<li>scenario (sensitive scenes) </li>
+     * @param Label The labels for the detected sensitive content. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>police</li>
+<li>bloody</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
+<li>scenario (sensitive scenes) </li>
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get List of video segments that contain the detected terrorism information. 
-     * @return SegmentSet List of video segments that contain the detected terrorism information.
+     * Get The video segments that contain sensitive information. 
+     * @return SegmentSet The video segments that contain sensitive information.
      */
     public MediaContentReviewSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set List of video segments that contain the detected terrorism information.
-     * @param SegmentSet List of video segments that contain the detected terrorism information.
+     * Set The video segments that contain sensitive information.
+     * @param SegmentSet The video segments that contain sensitive information.
      */
     public void setSegmentSet(MediaContentReviewSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

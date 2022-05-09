@@ -51,15 +51,15 @@ public class AiReviewTaskTerrorismResult extends AbstractModel{
     private String Message;
 
     /**
-    * Input for a terrorism information detection task during content audit.
+    * The input parameter for sensitive information detection.
     */
     @SerializedName("Input")
     @Expose
     private AiReviewTerrorismTaskInput Input;
 
     /**
-    * Output of a terrorism information detection task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The output of sensitive information detection.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Output")
     @Expose
@@ -130,36 +130,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Input for a terrorism information detection task during content audit. 
-     * @return Input Input for a terrorism information detection task during content audit.
+     * Get The input parameter for sensitive information detection. 
+     * @return Input The input parameter for sensitive information detection.
      */
     public AiReviewTerrorismTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input for a terrorism information detection task during content audit.
-     * @param Input Input for a terrorism information detection task during content audit.
+     * Set The input parameter for sensitive information detection.
+     * @param Input The input parameter for sensitive information detection.
      */
     public void setInput(AiReviewTerrorismTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of a terrorism information detection task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output of a terrorism information detection task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The output of sensitive information detection.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Output The output of sensitive information detection.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public AiReviewTerrorismTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of a terrorism information detection task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Output Output of a terrorism information detection task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The output of sensitive information detection.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Output The output of sensitive information detection.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setOutput(AiReviewTerrorismTaskOutput Output) {
         this.Output = Output;

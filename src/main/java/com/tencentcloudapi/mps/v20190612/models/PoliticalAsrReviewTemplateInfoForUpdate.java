@@ -23,9 +23,9 @@ import java.util.HashMap;
 public class PoliticalAsrReviewTemplateInfoForUpdate extends AbstractModel{
 
     /**
-    * Switch of a politically sensitive information detection in speech task. Valid values:
-<li>ON: Enables a politically sensitive information detection in speech task;</li>
-<li>OFF: Disables a politically sensitive information detection in speech task.</li>
+    * Whether to detect sensitive information based on ASR. Valid values:
+<li>ON</li>
+<li>OFF</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -46,24 +46,24 @@ public class PoliticalAsrReviewTemplateInfoForUpdate extends AbstractModel{
     private Long ReviewConfidence;
 
     /**
-     * Get Switch of a politically sensitive information detection in speech task. Valid values:
-<li>ON: Enables a politically sensitive information detection in speech task;</li>
-<li>OFF: Disables a politically sensitive information detection in speech task.</li> 
-     * @return Switch Switch of a politically sensitive information detection in speech task. Valid values:
-<li>ON: Enables a politically sensitive information detection in speech task;</li>
-<li>OFF: Disables a politically sensitive information detection in speech task.</li>
+     * Get Whether to detect sensitive information based on ASR. Valid values:
+<li>ON</li>
+<li>OFF</li> 
+     * @return Switch Whether to detect sensitive information based on ASR. Valid values:
+<li>ON</li>
+<li>OFF</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch of a politically sensitive information detection in speech task. Valid values:
-<li>ON: Enables a politically sensitive information detection in speech task;</li>
-<li>OFF: Disables a politically sensitive information detection in speech task.</li>
-     * @param Switch Switch of a politically sensitive information detection in speech task. Valid values:
-<li>ON: Enables a politically sensitive information detection in speech task;</li>
-<li>OFF: Disables a politically sensitive information detection in speech task.</li>
+     * Set Whether to detect sensitive information based on ASR. Valid values:
+<li>ON</li>
+<li>OFF</li>
+     * @param Switch Whether to detect sensitive information based on ASR. Valid values:
+<li>ON</li>
+<li>OFF</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

@@ -23,11 +23,11 @@ import java.util.HashMap;
 public class LiveStreamAiReviewResultItem extends AbstractModel{
 
     /**
-    * Content audit type. Valid values:
-<li>ImagePorn: Porn information detection in image</li>
-<li>ImageTerrorism: Terrorism information detection in image</li>
-<li>ImagePolitical: Politically sensitive information detection in image</li>
-<li>PornVoice: Porn information detection in speech</li>
+    * The type of the moderation result. Valid values:
+<li>ImagePorn</li>
+<li>ImageTerrorism</li>
+<li>ImagePolitical</li>
+<li>PornVoice (pornographic content in speech)</li>
     */
     @SerializedName("Type")
     @Expose
@@ -41,14 +41,14 @@ public class LiveStreamAiReviewResultItem extends AbstractModel{
     private LiveStreamAiReviewImagePornResult [] ImagePornResultSet;
 
     /**
-    * Result of terrorism information detection in image, which is valid when `Type` is `ImageTerrorism`.
+    * The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`.
     */
     @SerializedName("ImageTerrorismResultSet")
     @Expose
     private LiveStreamAiReviewImageTerrorismResult [] ImageTerrorismResultSet;
 
     /**
-    * Result of politically sensitive information detection in image, which is valid when `Type` is `ImagePolitical`.
+    * The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`.
     */
     @SerializedName("ImagePoliticalResultSet")
     @Expose
@@ -62,32 +62,32 @@ public class LiveStreamAiReviewResultItem extends AbstractModel{
     private LiveStreamAiReviewVoicePornResult [] VoicePornResultSet;
 
     /**
-     * Get Content audit type. Valid values:
-<li>ImagePorn: Porn information detection in image</li>
-<li>ImageTerrorism: Terrorism information detection in image</li>
-<li>ImagePolitical: Politically sensitive information detection in image</li>
-<li>PornVoice: Porn information detection in speech</li> 
-     * @return Type Content audit type. Valid values:
-<li>ImagePorn: Porn information detection in image</li>
-<li>ImageTerrorism: Terrorism information detection in image</li>
-<li>ImagePolitical: Politically sensitive information detection in image</li>
-<li>PornVoice: Porn information detection in speech</li>
+     * Get The type of the moderation result. Valid values:
+<li>ImagePorn</li>
+<li>ImageTerrorism</li>
+<li>ImagePolitical</li>
+<li>PornVoice (pornographic content in speech)</li> 
+     * @return Type The type of the moderation result. Valid values:
+<li>ImagePorn</li>
+<li>ImageTerrorism</li>
+<li>ImagePolitical</li>
+<li>PornVoice (pornographic content in speech)</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Content audit type. Valid values:
-<li>ImagePorn: Porn information detection in image</li>
-<li>ImageTerrorism: Terrorism information detection in image</li>
-<li>ImagePolitical: Politically sensitive information detection in image</li>
-<li>PornVoice: Porn information detection in speech</li>
-     * @param Type Content audit type. Valid values:
-<li>ImagePorn: Porn information detection in image</li>
-<li>ImageTerrorism: Terrorism information detection in image</li>
-<li>ImagePolitical: Politically sensitive information detection in image</li>
-<li>PornVoice: Porn information detection in speech</li>
+     * Set The type of the moderation result. Valid values:
+<li>ImagePorn</li>
+<li>ImageTerrorism</li>
+<li>ImagePolitical</li>
+<li>PornVoice (pornographic content in speech)</li>
+     * @param Type The type of the moderation result. Valid values:
+<li>ImagePorn</li>
+<li>ImageTerrorism</li>
+<li>ImagePolitical</li>
+<li>PornVoice (pornographic content in speech)</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -110,32 +110,32 @@ public class LiveStreamAiReviewResultItem extends AbstractModel{
     }
 
     /**
-     * Get Result of terrorism information detection in image, which is valid when `Type` is `ImageTerrorism`. 
-     * @return ImageTerrorismResultSet Result of terrorism information detection in image, which is valid when `Type` is `ImageTerrorism`.
+     * Get The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`. 
+     * @return ImageTerrorismResultSet The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`.
      */
     public LiveStreamAiReviewImageTerrorismResult [] getImageTerrorismResultSet() {
         return this.ImageTerrorismResultSet;
     }
 
     /**
-     * Set Result of terrorism information detection in image, which is valid when `Type` is `ImageTerrorism`.
-     * @param ImageTerrorismResultSet Result of terrorism information detection in image, which is valid when `Type` is `ImageTerrorism`.
+     * Set The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`.
+     * @param ImageTerrorismResultSet The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`.
      */
     public void setImageTerrorismResultSet(LiveStreamAiReviewImageTerrorismResult [] ImageTerrorismResultSet) {
         this.ImageTerrorismResultSet = ImageTerrorismResultSet;
     }
 
     /**
-     * Get Result of politically sensitive information detection in image, which is valid when `Type` is `ImagePolitical`. 
-     * @return ImagePoliticalResultSet Result of politically sensitive information detection in image, which is valid when `Type` is `ImagePolitical`.
+     * Get The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`. 
+     * @return ImagePoliticalResultSet The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`.
      */
     public LiveStreamAiReviewImagePoliticalResult [] getImagePoliticalResultSet() {
         return this.ImagePoliticalResultSet;
     }
 
     /**
-     * Set Result of politically sensitive information detection in image, which is valid when `Type` is `ImagePolitical`.
-     * @param ImagePoliticalResultSet Result of politically sensitive information detection in image, which is valid when `Type` is `ImagePolitical`.
+     * Set The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`.
+     * @param ImagePoliticalResultSet The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`.
      */
     public void setImagePoliticalResultSet(LiveStreamAiReviewImagePoliticalResult [] ImagePoliticalResultSet) {
         this.ImagePoliticalResultSet = ImagePoliticalResultSet;

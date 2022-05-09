@@ -37,54 +37,54 @@ public class MediaContentReviewPoliticalSegmentItem extends AbstractModel{
     private Float EndTimeOffset;
 
     /**
-    * Score of a suspected politically sensitive segment.
+    * The confidence score for the detected sensitive segments.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Suggestion for politically sensitive information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+    * The suggestion for handling the sensitive segments. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * Name of a politically sensitive figure or violating photo.
+    * The name of a sensitive person or banned icon.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+    * The labels for the detected sensitive segments. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
 violation_photo:
-<li>violation_photo: violating photo.</li>
+<li>violation_photo (banned icons)</li>
 politician:
-<li>nation_politician: head of state/government;</li>
-<li>province_politician: province/state leader;</li>
-<li>bureau_politician: ministry leader;</li>
-<li>county_politician: county/city leader;</li>
-<li>rural_politician: town leader;</li>
-<li>sensitive_politician: politically sensitive figure.</li>
-<li>foreign_politician: head of a foreign country/government.</li>
+<li>nation_politician (state leader)</li>
+<li>province_politician (provincial officials)</li>
+<li>bureau_politician (bureau-level officials)</li>
+<li>county_politician (county-level officials)</li>
+<li>rural_politician (township-level officials)</li>
+<li>sensitive_politician (sensitive people)</li>
+<li>foreign_politician (state leaders of other countries)</li>
 entertainment:
-<li>sensitive_entertainment: sensitive entertainment celebrity.</li>
+<li>sensitive_entertainment (sensitive people in the entertainment industry</li>
 sport:
-<li>sensitive_sport: sensitive sports figure.</li>
+<li>sensitive_sport (sensitive sports celebrities)</li>
 entrepreneur:
-<li>sensitive_entrepreneur: sensitive business figure.</li>
+<li>sensitive_entrepreneur</li>
 scholar:
-<li>sensitive_scholar: sensitive educator.</li>
+<li>sensitive_scholar</li>
 celebrity:
-<li>sensitive_celebrity: sensitive well-known figure;</li>
-<li>historical_celebrity: well-known historical figure.</li>
+<li>sensitive_celebrity</li>
+<li>historical_celebrity (sensitive historical figures)</li>
 military:
-<li>sensitive_military: militarily sensitive figure.</li>
+<li>sensitive_military (sensitive people in military)</li>
     */
     @SerializedName("Label")
     @Expose
@@ -99,7 +99,7 @@ military:
     private String Url;
 
     /**
-    * Zone coordinates (at the pixel level) of a politically sensitive figure or violating photo: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
+    * The coordinates (pixel) of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
     */
     @SerializedName("AreaCoordSet")
     @Expose
@@ -145,168 +145,168 @@ military:
     }
 
     /**
-     * Get Score of a suspected politically sensitive segment. 
-     * @return Confidence Score of a suspected politically sensitive segment.
+     * Get The confidence score for the detected sensitive segments. 
+     * @return Confidence The confidence score for the detected sensitive segments.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Score of a suspected politically sensitive segment.
-     * @param Confidence Score of a suspected politically sensitive segment.
+     * Set The confidence score for the detected sensitive segments.
+     * @param Confidence The confidence score for the detected sensitive segments.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Suggestion for politically sensitive information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li> 
-     * @return Suggestion Suggestion for politically sensitive information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+     * Get The suggestion for handling the sensitive segments. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li> 
+     * @return Suggestion The suggestion for handling the sensitive segments. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set Suggestion for politically sensitive information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-     * @param Suggestion Suggestion for politically sensitive information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+     * Set The suggestion for handling the sensitive segments. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+     * @param Suggestion The suggestion for handling the sensitive segments. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get Name of a politically sensitive figure or violating photo. 
-     * @return Name Name of a politically sensitive figure or violating photo.
+     * Get The name of a sensitive person or banned icon. 
+     * @return Name The name of a sensitive person or banned icon.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of a politically sensitive figure or violating photo.
-     * @param Name Name of a politically sensitive figure or violating photo.
+     * Set The name of a sensitive person or banned icon.
+     * @param Name The name of a sensitive person or banned icon.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+     * Get The labels for the detected sensitive segments. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
 violation_photo:
-<li>violation_photo: violating photo.</li>
+<li>violation_photo (banned icons)</li>
 politician:
-<li>nation_politician: head of state/government;</li>
-<li>province_politician: province/state leader;</li>
-<li>bureau_politician: ministry leader;</li>
-<li>county_politician: county/city leader;</li>
-<li>rural_politician: town leader;</li>
-<li>sensitive_politician: politically sensitive figure.</li>
-<li>foreign_politician: head of a foreign country/government.</li>
+<li>nation_politician (state leader)</li>
+<li>province_politician (provincial officials)</li>
+<li>bureau_politician (bureau-level officials)</li>
+<li>county_politician (county-level officials)</li>
+<li>rural_politician (township-level officials)</li>
+<li>sensitive_politician (sensitive people)</li>
+<li>foreign_politician (state leaders of other countries)</li>
 entertainment:
-<li>sensitive_entertainment: sensitive entertainment celebrity.</li>
+<li>sensitive_entertainment (sensitive people in the entertainment industry</li>
 sport:
-<li>sensitive_sport: sensitive sports figure.</li>
+<li>sensitive_sport (sensitive sports celebrities)</li>
 entrepreneur:
-<li>sensitive_entrepreneur: sensitive business figure.</li>
+<li>sensitive_entrepreneur</li>
 scholar:
-<li>sensitive_scholar: sensitive educator.</li>
+<li>sensitive_scholar</li>
 celebrity:
-<li>sensitive_celebrity: sensitive well-known figure;</li>
-<li>historical_celebrity: well-known historical figure.</li>
+<li>sensitive_celebrity</li>
+<li>historical_celebrity (sensitive historical figures)</li>
 military:
-<li>sensitive_military: militarily sensitive figure.</li> 
-     * @return Label Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+<li>sensitive_military (sensitive people in military)</li> 
+     * @return Label The labels for the detected sensitive segments. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
 violation_photo:
-<li>violation_photo: violating photo.</li>
+<li>violation_photo (banned icons)</li>
 politician:
-<li>nation_politician: head of state/government;</li>
-<li>province_politician: province/state leader;</li>
-<li>bureau_politician: ministry leader;</li>
-<li>county_politician: county/city leader;</li>
-<li>rural_politician: town leader;</li>
-<li>sensitive_politician: politically sensitive figure.</li>
-<li>foreign_politician: head of a foreign country/government.</li>
+<li>nation_politician (state leader)</li>
+<li>province_politician (provincial officials)</li>
+<li>bureau_politician (bureau-level officials)</li>
+<li>county_politician (county-level officials)</li>
+<li>rural_politician (township-level officials)</li>
+<li>sensitive_politician (sensitive people)</li>
+<li>foreign_politician (state leaders of other countries)</li>
 entertainment:
-<li>sensitive_entertainment: sensitive entertainment celebrity.</li>
+<li>sensitive_entertainment (sensitive people in the entertainment industry</li>
 sport:
-<li>sensitive_sport: sensitive sports figure.</li>
+<li>sensitive_sport (sensitive sports celebrities)</li>
 entrepreneur:
-<li>sensitive_entrepreneur: sensitive business figure.</li>
+<li>sensitive_entrepreneur</li>
 scholar:
-<li>sensitive_scholar: sensitive educator.</li>
+<li>sensitive_scholar</li>
 celebrity:
-<li>sensitive_celebrity: sensitive well-known figure;</li>
-<li>historical_celebrity: well-known historical figure.</li>
+<li>sensitive_celebrity</li>
+<li>historical_celebrity (sensitive historical figures)</li>
 military:
-<li>sensitive_military: militarily sensitive figure.</li>
+<li>sensitive_military (sensitive people in military)</li>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+     * Set The labels for the detected sensitive segments. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
 violation_photo:
-<li>violation_photo: violating photo.</li>
+<li>violation_photo (banned icons)</li>
 politician:
-<li>nation_politician: head of state/government;</li>
-<li>province_politician: province/state leader;</li>
-<li>bureau_politician: ministry leader;</li>
-<li>county_politician: county/city leader;</li>
-<li>rural_politician: town leader;</li>
-<li>sensitive_politician: politically sensitive figure.</li>
-<li>foreign_politician: head of a foreign country/government.</li>
+<li>nation_politician (state leader)</li>
+<li>province_politician (provincial officials)</li>
+<li>bureau_politician (bureau-level officials)</li>
+<li>county_politician (county-level officials)</li>
+<li>rural_politician (township-level officials)</li>
+<li>sensitive_politician (sensitive people)</li>
+<li>foreign_politician (state leaders of other countries)</li>
 entertainment:
-<li>sensitive_entertainment: sensitive entertainment celebrity.</li>
+<li>sensitive_entertainment (sensitive people in the entertainment industry</li>
 sport:
-<li>sensitive_sport: sensitive sports figure.</li>
+<li>sensitive_sport (sensitive sports celebrities)</li>
 entrepreneur:
-<li>sensitive_entrepreneur: sensitive business figure.</li>
+<li>sensitive_entrepreneur</li>
 scholar:
-<li>sensitive_scholar: sensitive educator.</li>
+<li>sensitive_scholar</li>
 celebrity:
-<li>sensitive_celebrity: sensitive well-known figure;</li>
-<li>historical_celebrity: well-known historical figure.</li>
+<li>sensitive_celebrity</li>
+<li>historical_celebrity (sensitive historical figures)</li>
 military:
-<li>sensitive_military: militarily sensitive figure.</li>
-     * @param Label Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+<li>sensitive_military (sensitive people in military)</li>
+     * @param Label The labels for the detected sensitive segments. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
 violation_photo:
-<li>violation_photo: violating photo.</li>
+<li>violation_photo (banned icons)</li>
 politician:
-<li>nation_politician: head of state/government;</li>
-<li>province_politician: province/state leader;</li>
-<li>bureau_politician: ministry leader;</li>
-<li>county_politician: county/city leader;</li>
-<li>rural_politician: town leader;</li>
-<li>sensitive_politician: politically sensitive figure.</li>
-<li>foreign_politician: head of a foreign country/government.</li>
+<li>nation_politician (state leader)</li>
+<li>province_politician (provincial officials)</li>
+<li>bureau_politician (bureau-level officials)</li>
+<li>county_politician (county-level officials)</li>
+<li>rural_politician (township-level officials)</li>
+<li>sensitive_politician (sensitive people)</li>
+<li>foreign_politician (state leaders of other countries)</li>
 entertainment:
-<li>sensitive_entertainment: sensitive entertainment celebrity.</li>
+<li>sensitive_entertainment (sensitive people in the entertainment industry</li>
 sport:
-<li>sensitive_sport: sensitive sports figure.</li>
+<li>sensitive_sport (sensitive sports celebrities)</li>
 entrepreneur:
-<li>sensitive_entrepreneur: sensitive business figure.</li>
+<li>sensitive_entrepreneur</li>
 scholar:
-<li>sensitive_scholar: sensitive educator.</li>
+<li>sensitive_scholar</li>
 celebrity:
-<li>sensitive_celebrity: sensitive well-known figure;</li>
-<li>historical_celebrity: well-known historical figure.</li>
+<li>sensitive_celebrity</li>
+<li>historical_celebrity (sensitive historical figures)</li>
 military:
-<li>sensitive_military: militarily sensitive figure.</li>
+<li>sensitive_military (sensitive people in military)</li>
      */
     public void setLabel(String Label) {
         this.Label = Label;
@@ -333,16 +333,16 @@ military:
     }
 
     /**
-     * Get Zone coordinates (at the pixel level) of a politically sensitive figure or violating photo: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners. 
-     * @return AreaCoordSet Zone coordinates (at the pixel level) of a politically sensitive figure or violating photo: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
+     * Get The coordinates (pixel) of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners. 
+     * @return AreaCoordSet The coordinates (pixel) of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set Zone coordinates (at the pixel level) of a politically sensitive figure or violating photo: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
-     * @param AreaCoordSet Zone coordinates (at the pixel level) of a politically sensitive figure or violating photo: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
+     * Set The coordinates (pixel) of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
+     * @param AreaCoordSet The coordinates (pixel) of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;

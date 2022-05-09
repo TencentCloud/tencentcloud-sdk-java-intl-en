@@ -51,15 +51,15 @@ public class AiReviewTaskPoliticalAsrResult extends AbstractModel{
     private String Message;
 
     /**
-    * Input for an ASR-based politically sensitive information detection in text task during content audit.
+    * The input parameter for ASR-based detection of politically sensitive information.
     */
     @SerializedName("Input")
     @Expose
     private AiReviewPoliticalAsrTaskInput Input;
 
     /**
-    * Output of an ASR-based politically sensitive information detection in text task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The output of ASR-based detection of politically sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Output")
     @Expose
@@ -130,36 +130,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Input for an ASR-based politically sensitive information detection in text task during content audit. 
-     * @return Input Input for an ASR-based politically sensitive information detection in text task during content audit.
+     * Get The input parameter for ASR-based detection of politically sensitive information. 
+     * @return Input The input parameter for ASR-based detection of politically sensitive information.
      */
     public AiReviewPoliticalAsrTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input for an ASR-based politically sensitive information detection in text task during content audit.
-     * @param Input Input for an ASR-based politically sensitive information detection in text task during content audit.
+     * Set The input parameter for ASR-based detection of politically sensitive information.
+     * @param Input The input parameter for ASR-based detection of politically sensitive information.
      */
     public void setInput(AiReviewPoliticalAsrTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of an ASR-based politically sensitive information detection in text task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output of an ASR-based politically sensitive information detection in text task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The output of ASR-based detection of politically sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Output The output of ASR-based detection of politically sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public AiReviewPoliticalAsrTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of an ASR-based politically sensitive information detection in text task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Output Output of an ASR-based politically sensitive information detection in text task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The output of ASR-based detection of politically sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Output The output of ASR-based detection of politically sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setOutput(AiReviewPoliticalAsrTaskOutput Output) {
         this.Output = Output;

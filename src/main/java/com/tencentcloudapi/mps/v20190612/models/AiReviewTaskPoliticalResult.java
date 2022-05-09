@@ -51,15 +51,15 @@ public class AiReviewTaskPoliticalResult extends AbstractModel{
     private String Message;
 
     /**
-    * Input for a politically sensitive information detection task during content audit.
+    * The input parameter for sensitive information detection.
     */
     @SerializedName("Input")
     @Expose
     private AiReviewPoliticalTaskInput Input;
 
     /**
-    * Output of a politically sensitive information detection task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The output of sensitive information detection.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Output")
     @Expose
@@ -130,36 +130,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Input for a politically sensitive information detection task during content audit. 
-     * @return Input Input for a politically sensitive information detection task during content audit.
+     * Get The input parameter for sensitive information detection. 
+     * @return Input The input parameter for sensitive information detection.
      */
     public AiReviewPoliticalTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input for a politically sensitive information detection task during content audit.
-     * @param Input Input for a politically sensitive information detection task during content audit.
+     * Set The input parameter for sensitive information detection.
+     * @param Input The input parameter for sensitive information detection.
      */
     public void setInput(AiReviewPoliticalTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of a politically sensitive information detection task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output of a politically sensitive information detection task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The output of sensitive information detection.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Output The output of sensitive information detection.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public AiReviewPoliticalTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of a politically sensitive information detection task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Output Output of a politically sensitive information detection task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The output of sensitive information detection.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Output The output of sensitive information detection.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setOutput(AiReviewPoliticalTaskOutput Output) {
         this.Output = Output;

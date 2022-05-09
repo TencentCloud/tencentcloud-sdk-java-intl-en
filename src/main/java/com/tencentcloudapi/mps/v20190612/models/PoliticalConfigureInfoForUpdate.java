@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class PoliticalConfigureInfoForUpdate extends AbstractModel{
 
     /**
-    * Control parameter of politically sensitive information detection in image.
+    * The parameters for detecting sensitive information in images.
     */
     @SerializedName("ImgReviewInfo")
     @Expose
     private PoliticalImgReviewTemplateInfoForUpdate ImgReviewInfo;
 
     /**
-    * Control parameter of politically sensitive information detection in speech.
+    * The parameters for detecting sensitive information based on ASR.
     */
     @SerializedName("AsrReviewInfo")
     @Expose
     private PoliticalAsrReviewTemplateInfoForUpdate AsrReviewInfo;
 
     /**
-    * Control parameter of politically sensitive information detection in text.
+    * The parameters for detecting sensitive information based on OCR.
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private PoliticalOcrReviewTemplateInfoForUpdate OcrReviewInfo;
 
     /**
-     * Get Control parameter of politically sensitive information detection in image. 
-     * @return ImgReviewInfo Control parameter of politically sensitive information detection in image.
+     * Get The parameters for detecting sensitive information in images. 
+     * @return ImgReviewInfo The parameters for detecting sensitive information in images.
      */
     public PoliticalImgReviewTemplateInfoForUpdate getImgReviewInfo() {
         return this.ImgReviewInfo;
     }
 
     /**
-     * Set Control parameter of politically sensitive information detection in image.
-     * @param ImgReviewInfo Control parameter of politically sensitive information detection in image.
+     * Set The parameters for detecting sensitive information in images.
+     * @param ImgReviewInfo The parameters for detecting sensitive information in images.
      */
     public void setImgReviewInfo(PoliticalImgReviewTemplateInfoForUpdate ImgReviewInfo) {
         this.ImgReviewInfo = ImgReviewInfo;
     }
 
     /**
-     * Get Control parameter of politically sensitive information detection in speech. 
-     * @return AsrReviewInfo Control parameter of politically sensitive information detection in speech.
+     * Get The parameters for detecting sensitive information based on ASR. 
+     * @return AsrReviewInfo The parameters for detecting sensitive information based on ASR.
      */
     public PoliticalAsrReviewTemplateInfoForUpdate getAsrReviewInfo() {
         return this.AsrReviewInfo;
     }
 
     /**
-     * Set Control parameter of politically sensitive information detection in speech.
-     * @param AsrReviewInfo Control parameter of politically sensitive information detection in speech.
+     * Set The parameters for detecting sensitive information based on ASR.
+     * @param AsrReviewInfo The parameters for detecting sensitive information based on ASR.
      */
     public void setAsrReviewInfo(PoliticalAsrReviewTemplateInfoForUpdate AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
     }
 
     /**
-     * Get Control parameter of politically sensitive information detection in text. 
-     * @return OcrReviewInfo Control parameter of politically sensitive information detection in text.
+     * Get The parameters for detecting sensitive information based on OCR. 
+     * @return OcrReviewInfo The parameters for detecting sensitive information based on OCR.
      */
     public PoliticalOcrReviewTemplateInfoForUpdate getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set Control parameter of politically sensitive information detection in text.
-     * @param OcrReviewInfo Control parameter of politically sensitive information detection in text.
+     * Set The parameters for detecting sensitive information based on OCR.
+     * @param OcrReviewInfo The parameters for detecting sensitive information based on OCR.
      */
     public void setOcrReviewInfo(PoliticalOcrReviewTemplateInfoForUpdate OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

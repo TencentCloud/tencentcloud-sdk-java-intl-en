@@ -37,7 +37,7 @@ public class LiveStreamAiReviewImagePoliticalResult extends AbstractModel{
     private Float EndPtsTime;
 
     /**
-    * Score of a suspected politically sensitive segment.
+    * The confidence score for the detected sensitive segments.
     */
     @SerializedName("Confidence")
     @Expose
@@ -54,23 +54,23 @@ public class LiveStreamAiReviewImagePoliticalResult extends AbstractModel{
     private String Suggestion;
 
     /**
-    * Tag of the detected politically sensitive information in video. Valid values:
-<li>politician: Politically sensitive figure.</li>
-<li>violation_photo: Violating photo.</li>
+    * The labels for the detected sensitive information. Valid values:
+<li>politician</li>
+<li>violation_photo (banned icons)</li>
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * Name of a politically sensitive figure or violating photo.
+    * The name of a sensitive person or banned icon.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Zone coordinates (at the pixel level) of a politically sensitive figure or violating photo: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
+    * The coordinates (pixel) of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
     */
     @SerializedName("AreaCoordSet")
     @Expose
@@ -124,16 +124,16 @@ and will be deleted after `PicUrlExpireTime`).
     }
 
     /**
-     * Get Score of a suspected politically sensitive segment. 
-     * @return Confidence Score of a suspected politically sensitive segment.
+     * Get The confidence score for the detected sensitive segments. 
+     * @return Confidence The confidence score for the detected sensitive segments.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Score of a suspected politically sensitive segment.
-     * @param Confidence Score of a suspected politically sensitive segment.
+     * Set The confidence score for the detected sensitive segments.
+     * @param Confidence The confidence score for the detected sensitive segments.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
@@ -168,56 +168,56 @@ and will be deleted after `PicUrlExpireTime`).
     }
 
     /**
-     * Get Tag of the detected politically sensitive information in video. Valid values:
-<li>politician: Politically sensitive figure.</li>
-<li>violation_photo: Violating photo.</li> 
-     * @return Label Tag of the detected politically sensitive information in video. Valid values:
-<li>politician: Politically sensitive figure.</li>
-<li>violation_photo: Violating photo.</li>
+     * Get The labels for the detected sensitive information. Valid values:
+<li>politician</li>
+<li>violation_photo (banned icons)</li> 
+     * @return Label The labels for the detected sensitive information. Valid values:
+<li>politician</li>
+<li>violation_photo (banned icons)</li>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set Tag of the detected politically sensitive information in video. Valid values:
-<li>politician: Politically sensitive figure.</li>
-<li>violation_photo: Violating photo.</li>
-     * @param Label Tag of the detected politically sensitive information in video. Valid values:
-<li>politician: Politically sensitive figure.</li>
-<li>violation_photo: Violating photo.</li>
+     * Set The labels for the detected sensitive information. Valid values:
+<li>politician</li>
+<li>violation_photo (banned icons)</li>
+     * @param Label The labels for the detected sensitive information. Valid values:
+<li>politician</li>
+<li>violation_photo (banned icons)</li>
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get Name of a politically sensitive figure or violating photo. 
-     * @return Name Name of a politically sensitive figure or violating photo.
+     * Get The name of a sensitive person or banned icon. 
+     * @return Name The name of a sensitive person or banned icon.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of a politically sensitive figure or violating photo.
-     * @param Name Name of a politically sensitive figure or violating photo.
+     * Set The name of a sensitive person or banned icon.
+     * @param Name The name of a sensitive person or banned icon.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Zone coordinates (at the pixel level) of a politically sensitive figure or violating photo: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners. 
-     * @return AreaCoordSet Zone coordinates (at the pixel level) of a politically sensitive figure or violating photo: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
+     * Get The coordinates (pixel) of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners. 
+     * @return AreaCoordSet The coordinates (pixel) of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set Zone coordinates (at the pixel level) of a politically sensitive figure or violating photo: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
-     * @param AreaCoordSet Zone coordinates (at the pixel level) of a politically sensitive figure or violating photo: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
+     * Set The coordinates (pixel) of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
+     * @param AreaCoordSet The coordinates (pixel) of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;

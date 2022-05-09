@@ -23,9 +23,9 @@ import java.util.HashMap;
 public class TerrorismOcrReviewTemplateInfo extends AbstractModel{
 
     /**
-    * Switch of terrorism information detection in text task. Valid values:
-<li>ON: enables terrorism information detection in text task;</li>
-<li>OFF: disables terrorism information detection in text task.</li>
+    * Whether to detect sensitive information based on OCR. Valid values:
+<li>ON</li>
+<li>OFF</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -46,24 +46,24 @@ public class TerrorismOcrReviewTemplateInfo extends AbstractModel{
     private Long ReviewConfidence;
 
     /**
-     * Get Switch of terrorism information detection in text task. Valid values:
-<li>ON: enables terrorism information detection in text task;</li>
-<li>OFF: disables terrorism information detection in text task.</li> 
-     * @return Switch Switch of terrorism information detection in text task. Valid values:
-<li>ON: enables terrorism information detection in text task;</li>
-<li>OFF: disables terrorism information detection in text task.</li>
+     * Get Whether to detect sensitive information based on OCR. Valid values:
+<li>ON</li>
+<li>OFF</li> 
+     * @return Switch Whether to detect sensitive information based on OCR. Valid values:
+<li>ON</li>
+<li>OFF</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch of terrorism information detection in text task. Valid values:
-<li>ON: enables terrorism information detection in text task;</li>
-<li>OFF: disables terrorism information detection in text task.</li>
-     * @param Switch Switch of terrorism information detection in text task. Valid values:
-<li>ON: enables terrorism information detection in text task;</li>
-<li>OFF: disables terrorism information detection in text task.</li>
+     * Set Whether to detect sensitive information based on OCR. Valid values:
+<li>ON</li>
+<li>OFF</li>
+     * @param Switch Whether to detect sensitive information based on OCR. Valid values:
+<li>ON</li>
+<li>OFF</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

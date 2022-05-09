@@ -23,84 +23,84 @@ import java.util.HashMap;
 public class AiReviewPoliticalAsrTaskOutput extends AbstractModel{
 
     /**
-    * Score of the ASR-detected politically sensitive information in text from 0 to 100.
+    * The confidence score for the ASR-based detection of sensitive information. Value range: 0-100.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Suggestion for the ASR-detected politically sensitive information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+    * The suggestion for handling the sensitive information detected based on ASR. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-    * List of video segments that contain ASR-detected politically sensitive information in text.
+    * The video segments that contain sensitive information detected based on ASR.
     */
     @SerializedName("SegmentSet")
     @Expose
     private MediaContentReviewAsrTextSegmentItem [] SegmentSet;
 
     /**
-     * Get Score of the ASR-detected politically sensitive information in text from 0 to 100. 
-     * @return Confidence Score of the ASR-detected politically sensitive information in text from 0 to 100.
+     * Get The confidence score for the ASR-based detection of sensitive information. Value range: 0-100. 
+     * @return Confidence The confidence score for the ASR-based detection of sensitive information. Value range: 0-100.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Score of the ASR-detected politically sensitive information in text from 0 to 100.
-     * @param Confidence Score of the ASR-detected politically sensitive information in text from 0 to 100.
+     * Set The confidence score for the ASR-based detection of sensitive information. Value range: 0-100.
+     * @param Confidence The confidence score for the ASR-based detection of sensitive information. Value range: 0-100.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Suggestion for the ASR-detected politically sensitive information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li> 
-     * @return Suggestion Suggestion for the ASR-detected politically sensitive information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+     * Get The suggestion for handling the sensitive information detected based on ASR. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li> 
+     * @return Suggestion The suggestion for handling the sensitive information detected based on ASR. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set Suggestion for the ASR-detected politically sensitive information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-     * @param Suggestion Suggestion for the ASR-detected politically sensitive information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+     * Set The suggestion for handling the sensitive information detected based on ASR. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+     * @param Suggestion The suggestion for handling the sensitive information detected based on ASR. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
     }
 
     /**
-     * Get List of video segments that contain ASR-detected politically sensitive information in text. 
-     * @return SegmentSet List of video segments that contain ASR-detected politically sensitive information in text.
+     * Get The video segments that contain sensitive information detected based on ASR. 
+     * @return SegmentSet The video segments that contain sensitive information detected based on ASR.
      */
     public MediaContentReviewAsrTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set List of video segments that contain ASR-detected politically sensitive information in text.
-     * @param SegmentSet List of video segments that contain ASR-detected politically sensitive information in text.
+     * Set The video segments that contain sensitive information detected based on ASR.
+     * @param SegmentSet The video segments that contain sensitive information detected based on ASR.
      */
     public void setSegmentSet(MediaContentReviewAsrTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;

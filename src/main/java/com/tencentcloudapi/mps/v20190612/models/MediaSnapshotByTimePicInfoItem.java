@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class MediaSnapshotByTimePicInfoItem extends AbstractModel{
 
     /**
-    * Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
+    * The timestamp (seconds) of the screenshot.
     */
     @SerializedName("TimeOffset")
     @Expose
@@ -44,16 +44,16 @@ public class MediaSnapshotByTimePicInfoItem extends AbstractModel{
     private Long [] WaterMarkDefinition;
 
     /**
-     * Get Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>. 
-     * @return TimeOffset Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
+     * Get The timestamp (seconds) of the screenshot. 
+     * @return TimeOffset The timestamp (seconds) of the screenshot.
      */
     public Float getTimeOffset() {
         return this.TimeOffset;
     }
 
     /**
-     * Set Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
-     * @param TimeOffset Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
+     * Set The timestamp (seconds) of the screenshot.
+     * @param TimeOffset The timestamp (seconds) of the screenshot.
      */
     public void setTimeOffset(Float TimeOffset) {
         this.TimeOffset = TimeOffset;

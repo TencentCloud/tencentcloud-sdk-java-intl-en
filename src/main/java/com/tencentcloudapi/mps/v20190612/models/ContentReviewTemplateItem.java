@@ -52,16 +52,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private PornConfigureInfo PornConfigure;
 
     /**
-    * Terrorism information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("TerrorismConfigure")
     @Expose
     private TerrorismConfigureInfo TerrorismConfigure;
 
     /**
-    * Politically sensitive information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("PoliticalConfigure")
     @Expose
@@ -168,40 +168,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Terrorism information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TerrorismConfigure Terrorism information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return TerrorismConfigure The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public TerrorismConfigureInfo getTerrorismConfigure() {
         return this.TerrorismConfigure;
     }
 
     /**
-     * Set Terrorism information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TerrorismConfigure Terrorism information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param TerrorismConfigure The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setTerrorismConfigure(TerrorismConfigureInfo TerrorismConfigure) {
         this.TerrorismConfigure = TerrorismConfigure;
     }
 
     /**
-     * Get Politically sensitive information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PoliticalConfigure Politically sensitive information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return PoliticalConfigure The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public PoliticalConfigureInfo getPoliticalConfigure() {
         return this.PoliticalConfigure;
     }
 
     /**
-     * Set Politically sensitive information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PoliticalConfigure Politically sensitive information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param PoliticalConfigure The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setPoliticalConfigure(PoliticalConfigureInfo PoliticalConfigure) {
         this.PoliticalConfigure = PoliticalConfigure;

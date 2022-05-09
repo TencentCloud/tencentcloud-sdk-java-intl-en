@@ -37,14 +37,14 @@ public class LiveStreamAiReviewImageTerrorismResult extends AbstractModel{
     private Float EndPtsTime;
 
     /**
-    * Score of a suspected terrorism segment.
+    * The confidence score for the detected sensitive segments.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Suggestion for terrorism information detection of a suspected segment. Valid values:
+    * The suggestion for handling the sensitive segments. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -54,15 +54,15 @@ public class LiveStreamAiReviewImageTerrorismResult extends AbstractModel{
     private String Suggestion;
 
     /**
-    * Tag of the detected terrorism information in a video. Valid values:
-<li>guns: Weapons and guns.</li>
-<li>crowd: Crowd.</li>
-<li>police: Police force.</li>
-<li>bloody: Bloody scenes.</li>
-<li>banners: Terrorism flags.</li>
-<li>militant: Militants.</li>
-<li>explosion: Explosions and fires.</li>
-<li>terrorists: Terrorists.</li>
+    * The labels for the detected sensitive content. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>police</li>
+<li>bloody</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
     */
     @SerializedName("Label")
     @Expose
@@ -116,27 +116,27 @@ and will be deleted after `PicUrlExpireTime`).
     }
 
     /**
-     * Get Score of a suspected terrorism segment. 
-     * @return Confidence Score of a suspected terrorism segment.
+     * Get The confidence score for the detected sensitive segments. 
+     * @return Confidence The confidence score for the detected sensitive segments.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Score of a suspected terrorism segment.
-     * @param Confidence Score of a suspected terrorism segment.
+     * Set The confidence score for the detected sensitive segments.
+     * @param Confidence The confidence score for the detected sensitive segments.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Suggestion for terrorism information detection of a suspected segment. Valid values:
+     * Get The suggestion for handling the sensitive segments. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li> 
-     * @return Suggestion Suggestion for terrorism information detection of a suspected segment. Valid values:
+     * @return Suggestion The suggestion for handling the sensitive segments. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -146,11 +146,11 @@ and will be deleted after `PicUrlExpireTime`).
     }
 
     /**
-     * Set Suggestion for terrorism information detection of a suspected segment. Valid values:
+     * Set The suggestion for handling the sensitive segments. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-     * @param Suggestion Suggestion for terrorism information detection of a suspected segment. Valid values:
+     * @param Suggestion The suggestion for handling the sensitive segments. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -160,48 +160,48 @@ and will be deleted after `PicUrlExpireTime`).
     }
 
     /**
-     * Get Tag of the detected terrorism information in a video. Valid values:
-<li>guns: Weapons and guns.</li>
-<li>crowd: Crowd.</li>
-<li>police: Police force.</li>
-<li>bloody: Bloody scenes.</li>
-<li>banners: Terrorism flags.</li>
-<li>militant: Militants.</li>
-<li>explosion: Explosions and fires.</li>
-<li>terrorists: Terrorists.</li> 
-     * @return Label Tag of the detected terrorism information in a video. Valid values:
-<li>guns: Weapons and guns.</li>
-<li>crowd: Crowd.</li>
-<li>police: Police force.</li>
-<li>bloody: Bloody scenes.</li>
-<li>banners: Terrorism flags.</li>
-<li>militant: Militants.</li>
-<li>explosion: Explosions and fires.</li>
-<li>terrorists: Terrorists.</li>
+     * Get The labels for the detected sensitive content. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>police</li>
+<li>bloody</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li> 
+     * @return Label The labels for the detected sensitive content. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>police</li>
+<li>bloody</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set Tag of the detected terrorism information in a video. Valid values:
-<li>guns: Weapons and guns.</li>
-<li>crowd: Crowd.</li>
-<li>police: Police force.</li>
-<li>bloody: Bloody scenes.</li>
-<li>banners: Terrorism flags.</li>
-<li>militant: Militants.</li>
-<li>explosion: Explosions and fires.</li>
-<li>terrorists: Terrorists.</li>
-     * @param Label Tag of the detected terrorism information in a video. Valid values:
-<li>guns: Weapons and guns.</li>
-<li>crowd: Crowd.</li>
-<li>police: Police force.</li>
-<li>bloody: Bloody scenes.</li>
-<li>banners: Terrorism flags.</li>
-<li>militant: Militants.</li>
-<li>explosion: Explosions and fires.</li>
-<li>terrorists: Terrorists.</li>
+     * Set The labels for the detected sensitive content. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>police</li>
+<li>bloody</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
+     * @param Label The labels for the detected sensitive content. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>police</li>
+<li>bloody</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
      */
     public void setLabel(String Label) {
         this.Label = Label;
