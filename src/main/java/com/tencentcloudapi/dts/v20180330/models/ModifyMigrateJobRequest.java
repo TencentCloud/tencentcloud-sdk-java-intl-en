@@ -86,6 +86,20 @@ This field does not need to be set when the entire instance is to be migrated
     private String DatabaseInfo;
 
     /**
+    * Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+    */
+    @SerializedName("SrcNodeType")
+    @Expose
+    private String SrcNodeType;
+
+    /**
+    * Source instance information, which is correlated with the migration task type.
+    */
+    @SerializedName("SrcInfoMulti")
+    @Expose
+    private SrcInfo [] SrcInfoMulti;
+
+    /**
      * Get ID of the data migration task to be modified 
      * @return JobId ID of the data migration task to be modified
      */
@@ -241,6 +255,38 @@ This field does not need to be set when the entire instance is to be migrated
         this.DatabaseInfo = DatabaseInfo;
     }
 
+    /**
+     * Get Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node. 
+     * @return SrcNodeType Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+     */
+    public String getSrcNodeType() {
+        return this.SrcNodeType;
+    }
+
+    /**
+     * Set Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+     * @param SrcNodeType Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+     */
+    public void setSrcNodeType(String SrcNodeType) {
+        this.SrcNodeType = SrcNodeType;
+    }
+
+    /**
+     * Get Source instance information, which is correlated with the migration task type. 
+     * @return SrcInfoMulti Source instance information, which is correlated with the migration task type.
+     */
+    public SrcInfo [] getSrcInfoMulti() {
+        return this.SrcInfoMulti;
+    }
+
+    /**
+     * Set Source instance information, which is correlated with the migration task type.
+     * @param SrcInfoMulti Source instance information, which is correlated with the migration task type.
+     */
+    public void setSrcInfoMulti(SrcInfo [] SrcInfoMulti) {
+        this.SrcInfoMulti = SrcInfoMulti;
+    }
+
     public ModifyMigrateJobRequest() {
     }
 
@@ -273,6 +319,15 @@ This field does not need to be set when the entire instance is to be migrated
         if (source.DatabaseInfo != null) {
             this.DatabaseInfo = new String(source.DatabaseInfo);
         }
+        if (source.SrcNodeType != null) {
+            this.SrcNodeType = new String(source.SrcNodeType);
+        }
+        if (source.SrcInfoMulti != null) {
+            this.SrcInfoMulti = new SrcInfo[source.SrcInfoMulti.length];
+            for (int i = 0; i < source.SrcInfoMulti.length; i++) {
+                this.SrcInfoMulti[i] = new SrcInfo(source.SrcInfoMulti[i]);
+            }
+        }
     }
 
 
@@ -288,6 +343,8 @@ This field does not need to be set when the entire instance is to be migrated
         this.setParamSimple(map, prefix + "DstAccessType", this.DstAccessType);
         this.setParamObj(map, prefix + "DstInfo.", this.DstInfo);
         this.setParamSimple(map, prefix + "DatabaseInfo", this.DatabaseInfo);
+        this.setParamSimple(map, prefix + "SrcNodeType", this.SrcNodeType);
+        this.setParamArrayObj(map, prefix + "SrcInfoMulti.", this.SrcInfoMulti);
 
     }
 }

@@ -100,6 +100,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String UpdateTime;
 
     /**
+    * 
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get Unique ID of a content audit template. 
      * @return Definition Unique ID of a content audit template.
      */
@@ -287,6 +294,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get  
+     * @return Type 
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 
+     * @param Type 
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public ContentReviewTemplateItem() {
     }
 
@@ -325,6 +348,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -342,6 +368,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "UserDefineConfigure.", this.UserDefineConfigure);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

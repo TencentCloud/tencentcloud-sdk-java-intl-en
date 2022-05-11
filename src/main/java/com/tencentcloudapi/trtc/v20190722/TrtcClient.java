@@ -39,18 +39,29 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to add custom background or watermark images during [On-Cloud MixTranscoding](https://intl.cloud.tencent.com/document/product/647/16827?from_cn_redirect=1). If you do not need to add such images frequently, we recommend you add them in the console via **Application Management** > **[Material Management](https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1)**.
-     * @param req CreatePictureRequest
-     * @return CreatePictureResponse
+     *### API description
+This API is used to start an on-cloud recording task. It records the audio and video streams in a room and saves them to the specified cloud storage. You can use this API to record the streams in a room separately, or you can mix the streams first and then record the mixed stream.
+
+### You can use this API to perform the following operations:
+* Specify the anchors whose streams you want or do not want to record by using the `RecordParams` parameter
+* Specify the storage service you want to save recording files to by using the `StorageParams` parameter
+* Specify transcoding settings for mixed-stream recording, including video resolution, video bitrate, frame rate, and audio quality, by using `MixTranscodeParams`
+* Specify the layout of different videos in mixed-stream recording mode or select an auto-arranged layout template
+
+### Key concepts
+* Single-stream recording: Record the audio and video of each subscribed user (`UserId`) in a room and save the recording files (M3U8/TS) to the cloud
+* Mixed-stream recording: Mix the audios and videos of subscribed users (`UserId`) in a room, record the mixed stream, and save the recording files (M3U8/TS) to the cloud
+     * @param req CreateCloudRecordingRequest
+     * @return CreateCloudRecordingResponse
      * @throws TencentCloudSDKException
      */
-    public CreatePictureResponse CreatePicture(CreatePictureRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreatePictureResponse> rsp = null;
+    public CreateCloudRecordingResponse CreateCloudRecording(CreateCloudRecordingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCloudRecordingResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<CreatePictureResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<CreateCloudRecordingResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "CreatePicture");
+                rspStr = this.internalRequest(req, "CreateCloudRecording");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -59,18 +70,18 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create exception information.
-     * @param req CreateTroubleInfoRequest
-     * @return CreateTroubleInfoResponse
+     *This API is used to stop a recording task. It works only when a task is in progress. If the task has already ended when this API is called, an error will be returned. If a task is stopped successfully, but the uploading of recording files has not completed, the backend will continue to upload the files and will notify you via a callback when the upload is completed.
+     * @param req DeleteCloudRecordingRequest
+     * @return DeleteCloudRecordingResponse
      * @throws TencentCloudSDKException
      */
-    public CreateTroubleInfoResponse CreateTroubleInfo(CreateTroubleInfoRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateTroubleInfoResponse> rsp = null;
+    public DeleteCloudRecordingResponse DeleteCloudRecording(DeleteCloudRecordingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCloudRecordingResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<CreateTroubleInfoResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DeleteCloudRecordingResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "CreateTroubleInfo");
+                rspStr = this.internalRequest(req, "DeleteCloudRecording");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -79,234 +90,18 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete custom background or watermark images during [On-Cloud MixTranscoding](https://intl.cloud.tencent.com/document/product/647/16827?from_cn_redirect=1). If you do not need to delete such images frequently, we recommend you delete them in the console via **Application Management** > **[Material Management](https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1)**.
-     * @param req DeletePictureRequest
-     * @return DeletePictureResponse
+     *This API is used to query the status of a recording task after it starts. It works only when a task is in progress. If the task has already ended when this API is called, an error will be returned.
+     * @param req DescribeCloudRecordingRequest
+     * @return DescribeCloudRecordingResponse
      * @throws TencentCloudSDKException
      */
-    public DeletePictureResponse DeletePicture(DeletePictureRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeletePictureResponse> rsp = null;
+    public DescribeCloudRecordingResponse DescribeCloudRecording(DescribeCloudRecordingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCloudRecordingResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<DeletePictureResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<DescribeCloudRecordingResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "DeletePicture");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query exception occurrences under a specified `SDKAppID` and return the exception IDs and possible causes. It queries data in last 15 days, and the query period is up to 1 hour, which can start and end on different days. For more information about exceptions, please see the exception event ID mapping table: https://intl.cloud.tencent.com/document/product/647/37906.
-     * @param req DescribeAbnormalEventRequest
-     * @return DescribeAbnormalEventResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAbnormalEventResponse DescribeAbnormalEvent(DescribeAbnormalEventRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAbnormalEventResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAbnormalEventResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAbnormalEvent");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query the user list and call quality data of a specified time range in the last 14 days. When `DataType` is not null, data of up to 6 users during a period of up to 1 hour can be queried each time, and the period can start on one day and end on the next. When `DataType` and `UserIds` are null, 6 users are queried by default, and data of up to 100 users can be displayed on each page (`PageSize` set to 100 or smaller). This API is used to query call quality and is not recommended for billing.
-**Note**: You can use this API to query or check historical data, but not for real-time key business logic.
-     * @param req DescribeCallDetailRequest
-     * @return DescribeCallDetailResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCallDetailResponse DescribeCallDetail(DescribeCallDetailRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeCallDetailResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeCallDetailResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeCallDetail");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query a user’s activity details such as room entry/exit and video enablement/disablement during a call. It can query data for the last 14 days.
-     * @param req DescribeDetailEventRequest
-     * @return DescribeDetailEventResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDetailEventResponse DescribeDetailEvent(DescribeDetailEventRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDetailEventResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDetailEventResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDetailEvent");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query the daily numbers of rooms and users under a specified `SDKAppID`. It can query data once per minute for the last 14 days. If a day has not ended, the numbers of rooms and users on the day cannot be queried. 
-     * @param req DescribeHistoryScaleRequest
-     * @return DescribeHistoryScaleResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeHistoryScaleResponse DescribeHistoryScale(DescribeHistoryScaleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeHistoryScaleResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeHistoryScaleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeHistoryScale");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query the information of custom background or watermark images during [On-Cloud MixTranscoding](https://intl.cloud.tencent.com/document/product/647/16827?from_cn_redirect=1). If you do not need to query such information frequently, we recommend you query it in the console via **Application Management** > **[Material Management](https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1)**.
-     * @param req DescribePictureRequest
-     * @return DescribePictureResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribePictureResponse DescribePicture(DescribePictureRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribePictureResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribePictureResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribePicture");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query billable on-cloud recording durations.
-
-- If the period queried is 1 day or shorter, the statistics returned are on a 5-minute basis. If the period queried is longer than 1 day, the statistics returned are on a daily basis.
-- The period queried in a request cannot be longer than 31 days.
-- If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
-- In the daily pay-as-you-go mode, bills for a day are generated the next morning. Therefore, we recommend you query the statistics after 9 AM the next day.
-     * @param req DescribeRecordStatisticRequest
-     * @return DescribeRecordStatisticResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeRecordStatisticResponse DescribeRecordStatistic(DescribeRecordStatisticRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRecordStatisticResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRecordStatisticResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRecordStatistic");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query the room list of an `SDKAppID` in the last 14 days. It returns 10 calls by default and can return up to 100 calls per query.
-**Note**: You can use this API to query or check historical data, but not for real-time key business logic.
-     * @param req DescribeRoomInformationRequest
-     * @return DescribeRoomInformationResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeRoomInformationResponse DescribeRoomInformation(DescribeRoomInformationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeRoomInformationResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeRoomInformationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeRoomInformation");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query billable audio/video interaction durations.
-- If the period queried is 1 day or shorter, the statistics returned are on a 5-minute basis. If the period queried is longer than 1 day, the statistics returned are on a daily basis.
-- The period queried in a request cannot be longer than 31 days.
-- If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
-- In the daily pay-as-you-go mode, bills for a day are generated the next morning. Therefore, we recommend you query the statistics after 9 AM the next day.
-     * @param req DescribeTrtcInteractiveTimeRequest
-     * @return DescribeTrtcInteractiveTimeResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTrtcInteractiveTimeResponse DescribeTrtcInteractiveTime(DescribeTrtcInteractiveTimeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTrtcInteractiveTimeResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTrtcInteractiveTimeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTrtcInteractiveTime");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query billable relaying and transcoding durations.
-- If the period queried is 1 day or shorter, the statistics returned are on a 5-minute basis. If the period queried is longer than 1 day, the statistics returned are on a daily basis.
-- The period queried in a request cannot be longer than 31 days.
-- If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
-- In the daily pay-as-you-go mode, bills for a day are generated the next morning. Therefore, we recommend you query the statistics after 9 AM the next day.
-     * @param req DescribeTrtcMcuTranscodeTimeRequest
-     * @return DescribeTrtcMcuTranscodeTimeResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTrtcMcuTranscodeTimeResponse DescribeTrtcMcuTranscodeTime(DescribeTrtcMcuTranscodeTimeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTrtcMcuTranscodeTimeResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTrtcMcuTranscodeTimeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTrtcMcuTranscodeTime");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query the user list of a specified time range (up to 4 hours) in the last 14 days. Data of 6 users is displayed on each page by default, and data of up to 100 users can be displayed on each page (`PageSize` set to 100 or smaller).
-**Note**: You can use this API to query or check historical data, but not for real-time key business logic.
-     * @param req DescribeUserInformationRequest
-     * @return DescribeUserInformationResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeUserInformationResponse DescribeUserInformation(DescribeUserInformationRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeUserInformationResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeUserInformationResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeUserInformation");
+                rspStr = this.internalRequest(req, "DescribeCloudRecording");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -355,18 +150,18 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify custom background or watermark images during [On-Cloud MixTranscoding](https://intl.cloud.tencent.com/document/product/647/16827?from_cn_redirect=1). If you do not need to modify such images frequently, we recommend you modify them in the console via **Application Management** > **[Material Management](https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1)**.
-     * @param req ModifyPictureRequest
-     * @return ModifyPictureResponse
+     *This API is used to modify a recording task. It works only when a task is in progress. If the task has already ended when this API is called, an error will be returned. You need to specify all the parameters for each request instead of just the ones you want to modify.
+     * @param req ModifyCloudRecordingRequest
+     * @return ModifyCloudRecordingResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyPictureResponse ModifyPicture(ModifyPictureRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyPictureResponse> rsp = null;
+    public ModifyCloudRecordingResponse ModifyCloudRecording(ModifyCloudRecordingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCloudRecordingResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyPictureResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<ModifyCloudRecordingResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "ModifyPicture");
+                rspStr = this.internalRequest(req, "ModifyCloudRecording");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -407,126 +202,6 @@ public class TrtcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<RemoveUserByStrRoomIdResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RemoveUserByStrRoomId");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to enable On-Cloud MixTranscoding and specify the position of each channel of image in stream mixing.
-
-There may be multiple audio/video streams in a TRTC room. You can call this API to request the Tencent Cloud server to mix the audio and video and specify the position of each image to produce just one audio/video stream for recording and playback. The mixing stops automatically after a room is terminated.
-
-You can use this API to perform the following operations:
-- Set image and audio quality parameters of the final live stream, including video resolution, video bitrate, video frame rate, and audio quality.
-- Set the layout, i.e., the position of each image. You only need to set it once when enabling On-Cloud MixTranscoding, and the layout engine will automatically arrange images as configured.
-- Set the names of recording files for future playback.
-- Set the stream ID for CDN live streaming.
-
-Currently, On-Cloud MixTranscoding supports the following layout templates:
-- Floating: The entire screen is covered by the video image of the first user who enters the room, and the images of other users are displayed as small images in rows in the bottom-left corner in room entry sequence. The screen allows up to 4 rows of 4 small images, which float over the big image. Up to 1 big image and 15 small images can be displayed. A user sending audio only will still occupy an image spot.
-- Grid: The images of all users split the entire screen evenly. The more users, the smaller the image dimensions. Up to 16 images can be displayed. A user sending audio only will still occupy an image spot.
-- Screen sharing: This is designed for video conferencing and online education. The shared screen (or camera image of the anchor) is always displayed as the big image, which occupies the left half of the screen, and the images of other users occupy the right half in up to 2 columns of up to 8 small images each. Up to 1 big image and 15 small images can be displayed. If the upstream aspect ratio does not match the output, the big image on the left will be scaled and displayed in whole, while the small images on the right will be cropped.
-- Picture-in-picture: This template mixes the big and small images or big image of a user with the audio of other users. The small image floats over the big image. You can specify the user whose small and big images are displayed, as well as the position of the small image. This template can display at most 2 images.
-- Custom: This is designed for cases where you want to specify the image positions of users in the mixed stream or preset image positions. If users are assigned to preset positions, the layout engine will reserve the positions for the users; if not, users will occupy the positions in room entry sequence. Once all preset positions are occupied, TRTC will stop mixing the audio and video of other users. If the place-holding feature is enabled for a custom template (by setting `PlaceHolderMode` in `LayoutParams` to `1`) and a user for whom a place is held is not sending video, the position will show the specified placeholder image (`PlaceImageId`).
-
-Notes:
-1. **As On-Cloud MixTranscoding is a paid feature, you will be charged for calling this API. For details, see [Billing of On-Cloud MixTranscoding](https://intl.cloud.tencent.com/document/product/647/49446?from_cn_redirect=1).**
-2. You can call this API only if your application is created on or after January 9, 2020. Applications created before use the stream mixing service of CSS by default. If you want to switch to MCU On-Cloud MixTranscoding, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).
-3. You cannot use the server and client stream mixing APIs at the same time.
-     * @param req StartMCUMixTranscodeRequest
-     * @return StartMCUMixTranscodeResponse
-     * @throws TencentCloudSDKException
-     */
-    public StartMCUMixTranscodeResponse StartMCUMixTranscode(StartMCUMixTranscodeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StartMCUMixTranscodeResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<StartMCUMixTranscodeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StartMCUMixTranscode");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to enable On-Cloud MixTranscoding and specify the position of each channel of image in stream mixing.
-
-There may be multiple channels of audio/video streams in a TRTC room. You can call this API to request the Tencent Cloud server to mix multiple channels of video images and audio into one channel and specify the position of each image so as to produce only one channel of audio/video stream for recording and live streaming.
-
-You can use this API to perform the following operations:
-- Set image and audio quality parameters of the mixed stream, including video resolution, bitrate, frame rate, and audio quality.
-- Set the layout, i.e., the position of each channel of image. You only need to set it once when enabling On-Cloud MixTranscoding, and the layout engine will automatically arrange images as configured.
-- Set the names of recording files for future playback.
-- Set the stream ID for CDN live streaming.
-
-Currently, On-Cloud MixTranscoding supports the following layout templates:
-- Floating: the entire screen is covered by the video image of the first user who enters the room, and the images of other users are displayed as small images in horizontal rows in the bottom-left corner in room entry sequence. The screen can accommodate up to 4 rows of 4 small images, which float over the big image. Up to 1 big image and 15 small images can be displayed. A user sending audio only will still occupy an image spot.
-- Grid: the images of all users split the screen evenly. The more the users, the smaller the image dimensions. Up to 16 images can be displayed. A user sending audio only will still occupy an image spot.
-- Screen sharing: this template is designed for video conferencing and online classes. The shared screen (or camera image of the anchor) is always displayed as the big image, which occupies the left half of the screen, and the images of other users occupy the right half in up to 2 columns of a maximum of 8 small images each. Up to 1 big image and 15 small images can be displayed. If the aspect ratio of upstream images does not match that of output images, the big image on the left will be scaled and displayed in whole, while the small images on the right will be cropped.
-- Picture-in-picture: this template mixes the big and small images or big image of a user with the audio of other users. The small image floats over the big image. You can specify the user whose big and small images are displayed and the position of the small image.
-- Custom: you can use custom templates to specify the image positions of users in mixed streams or preset image positions. If users are assigned to preset positions, the layout engine will reserve the positions for the users; if not, users will occupy the positions in room entry sequence. Once all preset positions are occupied, TRTC will stop mixing the audio and images of other users. If the placeholding feature is enabled for a custom template (`PlaceHolderMode` in `LayoutParams` is set to 1), but a user for whom a place is reserved is not sending video data, the position will show the corresponding placeholder image (`PlaceImageId`).
-
-Notes:
-1. **As On-Cloud MixTranscoding is a paid feature, you will be charged for calling this API. For details, see [Billing of On-Cloud MixTranscoding](https://intl.cloud.tencent.com/document/product/647/49446?from_cn_redirect=1).**
-2. You can call this API only if your application is created on or after January 9, 2020. Applications created before use the stream mixing service of CSS by default. If you want to switch to MCU On-Cloud MixTranscoding, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).
-3. You cannot use the server and client stream mixing APIs at the same time.
-     * @param req StartMCUMixTranscodeByStrRoomIdRequest
-     * @return StartMCUMixTranscodeByStrRoomIdResponse
-     * @throws TencentCloudSDKException
-     */
-    public StartMCUMixTranscodeByStrRoomIdResponse StartMCUMixTranscodeByStrRoomId(StartMCUMixTranscodeByStrRoomIdRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StartMCUMixTranscodeByStrRoomIdResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<StartMCUMixTranscodeByStrRoomIdResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StartMCUMixTranscodeByStrRoomId");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to end On-Cloud MixTranscoding.
-     * @param req StopMCUMixTranscodeRequest
-     * @return StopMCUMixTranscodeResponse
-     * @throws TencentCloudSDKException
-     */
-    public StopMCUMixTranscodeResponse StopMCUMixTranscode(StopMCUMixTranscodeRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StopMCUMixTranscodeResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<StopMCUMixTranscodeResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StopMCUMixTranscode");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to stop On-Cloud MixTranscoding.
-     * @param req StopMCUMixTranscodeByStrRoomIdRequest
-     * @return StopMCUMixTranscodeByStrRoomIdResponse
-     * @throws TencentCloudSDKException
-     */
-    public StopMCUMixTranscodeByStrRoomIdResponse StopMCUMixTranscodeByStrRoomId(StopMCUMixTranscodeByStrRoomIdRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<StopMCUMixTranscodeByStrRoomIdResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<StopMCUMixTranscodeByStrRoomIdResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "StopMCUMixTranscodeByStrRoomId");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

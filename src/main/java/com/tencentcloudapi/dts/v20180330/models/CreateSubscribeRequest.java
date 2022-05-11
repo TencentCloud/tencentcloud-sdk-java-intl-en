@@ -65,6 +65,13 @@ public class CreateSubscribeRequest extends AbstractModel{
     private TagItem [] Tags;
 
     /**
+    * A custom instance name.
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get Subscribed database type. Currently, MySQL is supported 
      * @return Product Subscribed database type. Currently, MySQL is supported
      */
@@ -160,6 +167,22 @@ public class CreateSubscribeRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get A custom instance name. 
+     * @return Name A custom instance name.
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set A custom instance name.
+     * @param Name A custom instance name.
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public CreateSubscribeRequest() {
     }
 
@@ -189,6 +212,9 @@ public class CreateSubscribeRequest extends AbstractModel{
                 this.Tags[i] = new TagItem(source.Tags[i]);
             }
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -202,6 +228,7 @@ public class CreateSubscribeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

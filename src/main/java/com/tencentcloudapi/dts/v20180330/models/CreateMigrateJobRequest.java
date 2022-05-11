@@ -97,6 +97,20 @@ For databases with a database-schema-table structure:
     private TagItem [] Tags;
 
     /**
+    * Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+    */
+    @SerializedName("SrcNodeType")
+    @Expose
+    private String SrcNodeType;
+
+    /**
+    * Source instance information, which is correlated with the migration task type.
+    */
+    @SerializedName("SrcInfoMulti")
+    @Expose
+    private SrcInfo [] SrcInfoMulti;
+
+    /**
      * Get Data migration task name 
      * @return JobName Data migration task name
      */
@@ -272,6 +286,38 @@ For databases with a database-schema-table structure:
         this.Tags = Tags;
     }
 
+    /**
+     * Get Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node. 
+     * @return SrcNodeType Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+     */
+    public String getSrcNodeType() {
+        return this.SrcNodeType;
+    }
+
+    /**
+     * Set Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+     * @param SrcNodeType Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+     */
+    public void setSrcNodeType(String SrcNodeType) {
+        this.SrcNodeType = SrcNodeType;
+    }
+
+    /**
+     * Get Source instance information, which is correlated with the migration task type. 
+     * @return SrcInfoMulti Source instance information, which is correlated with the migration task type.
+     */
+    public SrcInfo [] getSrcInfoMulti() {
+        return this.SrcInfoMulti;
+    }
+
+    /**
+     * Set Source instance information, which is correlated with the migration task type.
+     * @param SrcInfoMulti Source instance information, which is correlated with the migration task type.
+     */
+    public void setSrcInfoMulti(SrcInfo [] SrcInfoMulti) {
+        this.SrcInfoMulti = SrcInfoMulti;
+    }
+
     public CreateMigrateJobRequest() {
     }
 
@@ -313,6 +359,15 @@ For databases with a database-schema-table structure:
                 this.Tags[i] = new TagItem(source.Tags[i]);
             }
         }
+        if (source.SrcNodeType != null) {
+            this.SrcNodeType = new String(source.SrcNodeType);
+        }
+        if (source.SrcInfoMulti != null) {
+            this.SrcInfoMulti = new SrcInfo[source.SrcInfoMulti.length];
+            for (int i = 0; i < source.SrcInfoMulti.length; i++) {
+                this.SrcInfoMulti[i] = new SrcInfo(source.SrcInfoMulti[i]);
+            }
+        }
     }
 
 
@@ -330,6 +385,8 @@ For databases with a database-schema-table structure:
         this.setParamObj(map, prefix + "DstInfo.", this.DstInfo);
         this.setParamSimple(map, prefix + "DatabaseInfo", this.DatabaseInfo);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "SrcNodeType", this.SrcNodeType);
+        this.setParamArrayObj(map, prefix + "SrcInfoMulti.", this.SrcInfoMulti);
 
     }
 }

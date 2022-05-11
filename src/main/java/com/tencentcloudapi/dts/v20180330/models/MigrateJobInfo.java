@@ -143,6 +143,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private TagItem [] Tags;
 
     /**
+    * Information of the source instance, a cluster edition instance whose access type is not `cdb`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SrcInfoMulti")
+    @Expose
+    private SrcInfo [] SrcInfoMulti;
+
+    /**
      * Get Data migration task ID 
      * @return JobId Data migration task ID
      */
@@ -418,6 +426,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.Tags = Tags;
     }
 
+    /**
+     * Get Information of the source instance, a cluster edition instance whose access type is not `cdb`.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return SrcInfoMulti Information of the source instance, a cluster edition instance whose access type is not `cdb`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public SrcInfo [] getSrcInfoMulti() {
+        return this.SrcInfoMulti;
+    }
+
+    /**
+     * Set Information of the source instance, a cluster edition instance whose access type is not `cdb`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param SrcInfoMulti Information of the source instance, a cluster edition instance whose access type is not `cdb`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setSrcInfoMulti(SrcInfo [] SrcInfoMulti) {
+        this.SrcInfoMulti = SrcInfoMulti;
+    }
+
     public MigrateJobInfo() {
     }
 
@@ -483,6 +511,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.Tags[i] = new TagItem(source.Tags[i]);
             }
         }
+        if (source.SrcInfoMulti != null) {
+            this.SrcInfoMulti = new SrcInfo[source.SrcInfoMulti.length];
+            for (int i = 0; i < source.SrcInfoMulti.length; i++) {
+                this.SrcInfoMulti[i] = new SrcInfo(source.SrcInfoMulti[i]);
+            }
+        }
     }
 
 
@@ -507,6 +541,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamObj(map, prefix + "Detail.", this.Detail);
         this.setParamArrayObj(map, prefix + "ErrorInfo.", this.ErrorInfo);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArrayObj(map, prefix + "SrcInfoMulti.", this.SrcInfoMulti);
 
     }
 }

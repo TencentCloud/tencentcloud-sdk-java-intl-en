@@ -207,6 +207,21 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long AutoRenewFlag;
 
     /**
+    * Data subscription edition. `txdts`: Legacy edition; `kafka`: Kafka edition.
+    */
+    @SerializedName("SubscribeVersion")
+    @Expose
+    private String SubscribeVersion;
+
+    /**
+    * Error message.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Errors")
+    @Expose
+    private SubsErr [] Errors;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -638,6 +653,42 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get Data subscription edition. `txdts`: Legacy edition; `kafka`: Kafka edition. 
+     * @return SubscribeVersion Data subscription edition. `txdts`: Legacy edition; `kafka`: Kafka edition.
+     */
+    public String getSubscribeVersion() {
+        return this.SubscribeVersion;
+    }
+
+    /**
+     * Set Data subscription edition. `txdts`: Legacy edition; `kafka`: Kafka edition.
+     * @param SubscribeVersion Data subscription edition. `txdts`: Legacy edition; `kafka`: Kafka edition.
+     */
+    public void setSubscribeVersion(String SubscribeVersion) {
+        this.SubscribeVersion = SubscribeVersion;
+    }
+
+    /**
+     * Get Error message.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Errors Error message.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public SubsErr [] getErrors() {
+        return this.Errors;
+    }
+
+    /**
+     * Set Error message.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Errors Error message.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setErrors(SubsErr [] Errors) {
+        this.Errors = Errors;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -745,6 +796,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.AutoRenewFlag != null) {
             this.AutoRenewFlag = new Long(source.AutoRenewFlag);
         }
+        if (source.SubscribeVersion != null) {
+            this.SubscribeVersion = new String(source.SubscribeVersion);
+        }
+        if (source.Errors != null) {
+            this.Errors = new SubsErr[source.Errors.length];
+            for (int i = 0; i < source.Errors.length; i++) {
+                this.Errors[i] = new SubsErr(source.Errors[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -781,6 +841,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+        this.setParamSimple(map, prefix + "SubscribeVersion", this.SubscribeVersion);
+        this.setParamArrayObj(map, prefix + "Errors.", this.Errors);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
