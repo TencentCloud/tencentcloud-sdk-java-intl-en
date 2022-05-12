@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.as.v20180419.models;
+package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScaleInInstancesResponse extends AbstractModel{
+public class ChangeReplicaToMasterResponse extends AbstractModel{
 
     /**
-    * Scaling activity ID
+    * Async task ID
     */
-    @SerializedName("ActivityId")
+    @SerializedName("TaskId")
     @Expose
-    private String ActivityId;
+    private Long TaskId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +37,19 @@ public class ScaleInInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Scaling activity ID 
-     * @return ActivityId Scaling activity ID
+     * Get Async task ID 
+     * @return TaskId Async task ID
      */
-    public String getActivityId() {
-        return this.ActivityId;
+    public Long getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set Scaling activity ID
-     * @param ActivityId Scaling activity ID
+     * Set Async task ID
+     * @param TaskId Async task ID
      */
-    public void setActivityId(String ActivityId) {
-        this.ActivityId = ActivityId;
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -68,16 +68,16 @@ public class ScaleInInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ScaleInInstancesResponse() {
+    public ChangeReplicaToMasterResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ScaleInInstancesResponse(ScaleInInstancesResponse source) {
-        if (source.ActivityId != null) {
-            this.ActivityId = new String(source.ActivityId);
+    public ChangeReplicaToMasterResponse(ChangeReplicaToMasterResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +89,7 @@ public class ScaleInInstancesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ActivityId", this.ActivityId);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

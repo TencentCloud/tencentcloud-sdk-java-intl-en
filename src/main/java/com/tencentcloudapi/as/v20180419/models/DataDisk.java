@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class DataDisk extends AbstractModel{
 
     /**
-    * Data disk type. For more information on limits of data disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: local disk <br><li>`LOCAL_SSD`: local SSD disk <br><li>`CLOUD_BASIC`: HDD cloud disk <br><li>`CLOUD_PREMIUM`: premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk <br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+    * Data disk type. See [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: Local disk<br><li>`LOCAL_SSD`: Local SSD disk<br><li>`CLOUD_BASIC`: HDD cloud disk<br><li>`CLOUD_PREMIUM`: Premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk<br><li>`CLOUD_HSSD`: Enhanced SSD<br><li>`CLOUD_TSSD`: Tremendous SSD<br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("DiskType")
     @Expose
@@ -55,20 +55,37 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     private Boolean DeleteWithInstance;
 
     /**
-     * Get Data disk type. For more information on limits of data disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: local disk <br><li>`LOCAL_SSD`: local SSD disk <br><li>`CLOUD_BASIC`: HDD cloud disk <br><li>`CLOUD_PREMIUM`: premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk <br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
-Note: this field may return `null`, indicating that no valid value can be obtained. 
-     * @return DiskType Data disk type. For more information on limits of data disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: local disk <br><li>`LOCAL_SSD`: local SSD disk <br><li>`CLOUD_BASIC`: HDD cloud disk <br><li>`CLOUD_PREMIUM`: premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk <br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+    * Data disk encryption. Valid values: <br><li>`TRUE`: Encrypted<br><li>`FALSE`: Not encrypted
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Encrypt")
+    @Expose
+    private Boolean Encrypt;
+
+    /**
+    * Cloud disk performance (MB/s). This parameter is used to purchase extra performance for the cloud disk. For details on the feature and limits, see [Enhanced SSD Performance](https://intl.cloud.tencent.com/document/product/362/51896?from_cn_redirect=1#. E5.A2.9E.E5.BC.BA.E5.9E.8B-ssd-.E4.BA.91.E7.A1.AC.E7.9B.98.E9.A2.9D.E5.A4.96 .E6.80.A7.E8.83.BD).
+This feature is only available to enhanced SSD (`CLOUD_HSSD`) and tremendous SSD (`CLOUD_TSSD`) disks with a capacity greater than 460 GB.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("ThroughputPerformance")
+    @Expose
+    private Long ThroughputPerformance;
+
+    /**
+     * Get Data disk type. See [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: Local disk<br><li>`LOCAL_SSD`: Local SSD disk<br><li>`CLOUD_BASIC`: HDD cloud disk<br><li>`CLOUD_PREMIUM`: Premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk<br><li>`CLOUD_HSSD`: Enhanced SSD<br><li>`CLOUD_TSSD`: Tremendous SSD<br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return DiskType Data disk type. See [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: Local disk<br><li>`LOCAL_SSD`: Local SSD disk<br><li>`CLOUD_BASIC`: HDD cloud disk<br><li>`CLOUD_PREMIUM`: Premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk<br><li>`CLOUD_HSSD`: Enhanced SSD<br><li>`CLOUD_TSSD`: Tremendous SSD<br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Data disk type. For more information on limits of data disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: local disk <br><li>`LOCAL_SSD`: local SSD disk <br><li>`CLOUD_BASIC`: HDD cloud disk <br><li>`CLOUD_PREMIUM`: premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk <br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
-     * @param DiskType Data disk type. For more information on limits of data disk types, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: local disk <br><li>`LOCAL_SSD`: local SSD disk <br><li>`CLOUD_BASIC`: HDD cloud disk <br><li>`CLOUD_PREMIUM`: premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk <br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * Set Data disk type. See [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: Local disk<br><li>`LOCAL_SSD`: Local SSD disk<br><li>`CLOUD_BASIC`: HDD cloud disk<br><li>`CLOUD_PREMIUM`: Premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk<br><li>`CLOUD_HSSD`: Enhanced SSD<br><li>`CLOUD_TSSD`: Tremendous SSD<br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param DiskType Data disk type. See [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/31636). Valid values:<br><li>`LOCAL_BASIC`: Local disk<br><li>`LOCAL_SSD`: Local SSD disk<br><li>`CLOUD_BASIC`: HDD cloud disk<br><li>`CLOUD_PREMIUM`: Premium cloud storage<br><li>`CLOUD_SSD`: SSD cloud disk<br><li>`CLOUD_HSSD`: Enhanced SSD<br><li>`CLOUD_TSSD`: Tremendous SSD<br><br>The default value should be the same as the `DiskType` field under `SystemDisk`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
@@ -134,6 +151,50 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         this.DeleteWithInstance = DeleteWithInstance;
     }
 
+    /**
+     * Get Data disk encryption. Valid values: <br><li>`TRUE`: Encrypted<br><li>`FALSE`: Not encrypted
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Encrypt Data disk encryption. Valid values: <br><li>`TRUE`: Encrypted<br><li>`FALSE`: Not encrypted
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Boolean getEncrypt() {
+        return this.Encrypt;
+    }
+
+    /**
+     * Set Data disk encryption. Valid values: <br><li>`TRUE`: Encrypted<br><li>`FALSE`: Not encrypted
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Encrypt Data disk encryption. Valid values: <br><li>`TRUE`: Encrypted<br><li>`FALSE`: Not encrypted
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setEncrypt(Boolean Encrypt) {
+        this.Encrypt = Encrypt;
+    }
+
+    /**
+     * Get Cloud disk performance (MB/s). This parameter is used to purchase extra performance for the cloud disk. For details on the feature and limits, see [Enhanced SSD Performance](https://intl.cloud.tencent.com/document/product/362/51896?from_cn_redirect=1#. E5.A2.9E.E5.BC.BA.E5.9E.8B-ssd-.E4.BA.91.E7.A1.AC.E7.9B.98.E9.A2.9D.E5.A4.96 .E6.80.A7.E8.83.BD).
+This feature is only available to enhanced SSD (`CLOUD_HSSD`) and tremendous SSD (`CLOUD_TSSD`) disks with a capacity greater than 460 GB.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return ThroughputPerformance Cloud disk performance (MB/s). This parameter is used to purchase extra performance for the cloud disk. For details on the feature and limits, see [Enhanced SSD Performance](https://intl.cloud.tencent.com/document/product/362/51896?from_cn_redirect=1#. E5.A2.9E.E5.BC.BA.E5.9E.8B-ssd-.E4.BA.91.E7.A1.AC.E7.9B.98.E9.A2.9D.E5.A4.96 .E6.80.A7.E8.83.BD).
+This feature is only available to enhanced SSD (`CLOUD_HSSD`) and tremendous SSD (`CLOUD_TSSD`) disks with a capacity greater than 460 GB.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Long getThroughputPerformance() {
+        return this.ThroughputPerformance;
+    }
+
+    /**
+     * Set Cloud disk performance (MB/s). This parameter is used to purchase extra performance for the cloud disk. For details on the feature and limits, see [Enhanced SSD Performance](https://intl.cloud.tencent.com/document/product/362/51896?from_cn_redirect=1#. E5.A2.9E.E5.BC.BA.E5.9E.8B-ssd-.E4.BA.91.E7.A1.AC.E7.9B.98.E9.A2.9D.E5.A4.96 .E6.80.A7.E8.83.BD).
+This feature is only available to enhanced SSD (`CLOUD_HSSD`) and tremendous SSD (`CLOUD_TSSD`) disks with a capacity greater than 460 GB.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param ThroughputPerformance Cloud disk performance (MB/s). This parameter is used to purchase extra performance for the cloud disk. For details on the feature and limits, see [Enhanced SSD Performance](https://intl.cloud.tencent.com/document/product/362/51896?from_cn_redirect=1#. E5.A2.9E.E5.BC.BA.E5.9E.8B-ssd-.E4.BA.91.E7.A1.AC.E7.9B.98.E9.A2.9D.E5.A4.96 .E6.80.A7.E8.83.BD).
+This feature is only available to enhanced SSD (`CLOUD_HSSD`) and tremendous SSD (`CLOUD_TSSD`) disks with a capacity greater than 460 GB.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setThroughputPerformance(Long ThroughputPerformance) {
+        this.ThroughputPerformance = ThroughputPerformance;
+    }
+
     public DataDisk() {
     }
 
@@ -154,6 +215,12 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         if (source.DeleteWithInstance != null) {
             this.DeleteWithInstance = new Boolean(source.DeleteWithInstance);
         }
+        if (source.Encrypt != null) {
+            this.Encrypt = new Boolean(source.Encrypt);
+        }
+        if (source.ThroughputPerformance != null) {
+            this.ThroughputPerformance = new Long(source.ThroughputPerformance);
+        }
     }
 
 
@@ -165,6 +232,8 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
         this.setParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
+        this.setParamSimple(map, prefix + "Encrypt", this.Encrypt);
+        this.setParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
 
     }
 }

@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.as.v20180419.models;
+package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DisableAutoScalingGroupResponse extends AbstractModel{
+public class ReleaseWanAddressRequest extends AbstractModel{
 
     /**
-    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+    * Instance ID.
     */
-    @SerializedName("RequestId")
+    @SerializedName("InstanceId")
     @Expose
-    private String RequestId;
+    private String InstanceId;
 
     /**
-     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
-     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
-    public DisableAutoScalingGroupResponse() {
+    public ReleaseWanAddressRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DisableAutoScalingGroupResponse(DisableAutoScalingGroupResponse source) {
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+    public ReleaseWanAddressRequest(ReleaseWanAddressRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
     }
 
@@ -63,7 +63,7 @@ public class DisableAutoScalingGroupResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

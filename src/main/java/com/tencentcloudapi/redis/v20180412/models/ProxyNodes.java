@@ -13,48 +13,53 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.as.v20180419.models;
+package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpgradeLaunchConfigurationResponse extends AbstractModel{
+public class ProxyNodes extends AbstractModel{
 
     /**
-    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+    * Node ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
-    @SerializedName("RequestId")
+    @SerializedName("NodeId")
     @Expose
-    private String RequestId;
+    private String NodeId;
 
     /**
-     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
-     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * Get Node ID
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return NodeId Node ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getNodeId() {
+        return this.NodeId;
     }
 
     /**
-     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * Set Node ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param NodeId Node ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setNodeId(String NodeId) {
+        this.NodeId = NodeId;
     }
 
-    public UpgradeLaunchConfigurationResponse() {
+    public ProxyNodes() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public UpgradeLaunchConfigurationResponse(UpgradeLaunchConfigurationResponse source) {
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+    public ProxyNodes(ProxyNodes source) {
+        if (source.NodeId != null) {
+            this.NodeId = new String(source.NodeId);
         }
     }
 
@@ -63,7 +68,7 @@ public class UpgradeLaunchConfigurationResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "NodeId", this.NodeId);
 
     }
 }

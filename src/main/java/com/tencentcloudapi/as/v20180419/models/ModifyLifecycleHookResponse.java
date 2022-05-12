@@ -20,41 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DisableAutoScalingGroupRequest extends AbstractModel{
+public class ModifyLifecycleHookResponse extends AbstractModel{
 
     /**
-    * Auto scaling group ID
+    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
-    @SerializedName("AutoScalingGroupId")
+    @SerializedName("RequestId")
     @Expose
-    private String AutoScalingGroupId;
+    private String RequestId;
 
     /**
-     * Get Auto scaling group ID 
-     * @return AutoScalingGroupId Auto scaling group ID
+     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
+     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public String getAutoScalingGroupId() {
-        return this.AutoScalingGroupId;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set Auto scaling group ID
-     * @param AutoScalingGroupId Auto scaling group ID
+     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public void setAutoScalingGroupId(String AutoScalingGroupId) {
-        this.AutoScalingGroupId = AutoScalingGroupId;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public DisableAutoScalingGroupRequest() {
+    public ModifyLifecycleHookResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DisableAutoScalingGroupRequest(DisableAutoScalingGroupRequest source) {
-        if (source.AutoScalingGroupId != null) {
-            this.AutoScalingGroupId = new String(source.AutoScalingGroupId);
+    public ModifyLifecycleHookResponse(ModifyLifecycleHookResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -63,7 +63,7 @@ public class DisableAutoScalingGroupRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

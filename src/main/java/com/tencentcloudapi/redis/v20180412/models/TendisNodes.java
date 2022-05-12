@@ -13,51 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.as.v20180419.models;
+package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class LimitedLoginSettings extends AbstractModel{
+public class TendisNodes extends AbstractModel{
 
     /**
-    * List of key IDs.
+    * Node ID
     */
-    @SerializedName("KeyIds")
+    @SerializedName("NodeId")
     @Expose
-    private String [] KeyIds;
+    private String NodeId;
 
     /**
-     * Get List of key IDs. 
-     * @return KeyIds List of key IDs.
+    * Node role
+    */
+    @SerializedName("NodeRole")
+    @Expose
+    private String NodeRole;
+
+    /**
+     * Get Node ID 
+     * @return NodeId Node ID
      */
-    public String [] getKeyIds() {
-        return this.KeyIds;
+    public String getNodeId() {
+        return this.NodeId;
     }
 
     /**
-     * Set List of key IDs.
-     * @param KeyIds List of key IDs.
+     * Set Node ID
+     * @param NodeId Node ID
      */
-    public void setKeyIds(String [] KeyIds) {
-        this.KeyIds = KeyIds;
+    public void setNodeId(String NodeId) {
+        this.NodeId = NodeId;
     }
 
-    public LimitedLoginSettings() {
+    /**
+     * Get Node role 
+     * @return NodeRole Node role
+     */
+    public String getNodeRole() {
+        return this.NodeRole;
+    }
+
+    /**
+     * Set Node role
+     * @param NodeRole Node role
+     */
+    public void setNodeRole(String NodeRole) {
+        this.NodeRole = NodeRole;
+    }
+
+    public TendisNodes() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public LimitedLoginSettings(LimitedLoginSettings source) {
-        if (source.KeyIds != null) {
-            this.KeyIds = new String[source.KeyIds.length];
-            for (int i = 0; i < source.KeyIds.length; i++) {
-                this.KeyIds[i] = new String(source.KeyIds[i]);
-            }
+    public TendisNodes(TendisNodes source) {
+        if (source.NodeId != null) {
+            this.NodeId = new String(source.NodeId);
+        }
+        if (source.NodeRole != null) {
+            this.NodeRole = new String(source.NodeRole);
         }
     }
 
@@ -66,7 +89,8 @@ public class LimitedLoginSettings extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
+        this.setParamSimple(map, prefix + "NodeId", this.NodeId);
+        this.setParamSimple(map, prefix + "NodeRole", this.NodeRole);
 
     }
 }

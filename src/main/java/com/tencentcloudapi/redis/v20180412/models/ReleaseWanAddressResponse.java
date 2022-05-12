@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.as.v20180419.models;
+package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLaunchConfigurationsResponse extends AbstractModel{
+public class ReleaseWanAddressResponse extends AbstractModel{
 
     /**
-    * Number of eligible launch configurations.
+    * Async task ID
     */
-    @SerializedName("TotalCount")
+    @SerializedName("FlowId")
     @Expose
-    private Long TotalCount;
+    private Long FlowId;
 
     /**
-    * List of launch configuration details.
+    * Status of disabling public network access
     */
-    @SerializedName("LaunchConfigurationSet")
+    @SerializedName("WanStatus")
     @Expose
-    private LaunchConfiguration [] LaunchConfigurationSet;
+    private String WanStatus;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +44,35 @@ public class DescribeLaunchConfigurationsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Number of eligible launch configurations. 
-     * @return TotalCount Number of eligible launch configurations.
+     * Get Async task ID 
+     * @return FlowId Async task ID
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public Long getFlowId() {
+        return this.FlowId;
     }
 
     /**
-     * Set Number of eligible launch configurations.
-     * @param TotalCount Number of eligible launch configurations.
+     * Set Async task ID
+     * @param FlowId Async task ID
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setFlowId(Long FlowId) {
+        this.FlowId = FlowId;
     }
 
     /**
-     * Get List of launch configuration details. 
-     * @return LaunchConfigurationSet List of launch configuration details.
+     * Get Status of disabling public network access 
+     * @return WanStatus Status of disabling public network access
      */
-    public LaunchConfiguration [] getLaunchConfigurationSet() {
-        return this.LaunchConfigurationSet;
+    public String getWanStatus() {
+        return this.WanStatus;
     }
 
     /**
-     * Set List of launch configuration details.
-     * @param LaunchConfigurationSet List of launch configuration details.
+     * Set Status of disabling public network access
+     * @param WanStatus Status of disabling public network access
      */
-    public void setLaunchConfigurationSet(LaunchConfiguration [] LaunchConfigurationSet) {
-        this.LaunchConfigurationSet = LaunchConfigurationSet;
+    public void setWanStatus(String WanStatus) {
+        this.WanStatus = WanStatus;
     }
 
     /**
@@ -91,22 +91,19 @@ public class DescribeLaunchConfigurationsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeLaunchConfigurationsResponse() {
+    public ReleaseWanAddressResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeLaunchConfigurationsResponse(DescribeLaunchConfigurationsResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
+    public ReleaseWanAddressResponse(ReleaseWanAddressResponse source) {
+        if (source.FlowId != null) {
+            this.FlowId = new Long(source.FlowId);
         }
-        if (source.LaunchConfigurationSet != null) {
-            this.LaunchConfigurationSet = new LaunchConfiguration[source.LaunchConfigurationSet.length];
-            for (int i = 0; i < source.LaunchConfigurationSet.length; i++) {
-                this.LaunchConfigurationSet[i] = new LaunchConfiguration(source.LaunchConfigurationSet[i]);
-            }
+        if (source.WanStatus != null) {
+            this.WanStatus = new String(source.WanStatus);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +115,8 @@ public class DescribeLaunchConfigurationsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "LaunchConfigurationSet.", this.LaunchConfigurationSet);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamSimple(map, prefix + "WanStatus", this.WanStatus);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

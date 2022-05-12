@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.as.v20180419.models;
+package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLaunchConfigurationResponse extends AbstractModel{
+public class AllocateWanAddressResponse extends AbstractModel{
 
     /**
-    * This parameter is returned when a launch configuration is created through this API, indicating the launch configuration ID.
+    * Async task ID
     */
-    @SerializedName("LaunchConfigurationId")
+    @SerializedName("FlowId")
     @Expose
-    private String LaunchConfigurationId;
+    private Long FlowId;
+
+    /**
+    * Status of enabling public network access
+    */
+    @SerializedName("WanStatus")
+    @Expose
+    private String WanStatus;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +44,35 @@ public class CreateLaunchConfigurationResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get This parameter is returned when a launch configuration is created through this API, indicating the launch configuration ID. 
-     * @return LaunchConfigurationId This parameter is returned when a launch configuration is created through this API, indicating the launch configuration ID.
+     * Get Async task ID 
+     * @return FlowId Async task ID
      */
-    public String getLaunchConfigurationId() {
-        return this.LaunchConfigurationId;
+    public Long getFlowId() {
+        return this.FlowId;
     }
 
     /**
-     * Set This parameter is returned when a launch configuration is created through this API, indicating the launch configuration ID.
-     * @param LaunchConfigurationId This parameter is returned when a launch configuration is created through this API, indicating the launch configuration ID.
+     * Set Async task ID
+     * @param FlowId Async task ID
      */
-    public void setLaunchConfigurationId(String LaunchConfigurationId) {
-        this.LaunchConfigurationId = LaunchConfigurationId;
+    public void setFlowId(Long FlowId) {
+        this.FlowId = FlowId;
+    }
+
+    /**
+     * Get Status of enabling public network access 
+     * @return WanStatus Status of enabling public network access
+     */
+    public String getWanStatus() {
+        return this.WanStatus;
+    }
+
+    /**
+     * Set Status of enabling public network access
+     * @param WanStatus Status of enabling public network access
+     */
+    public void setWanStatus(String WanStatus) {
+        this.WanStatus = WanStatus;
     }
 
     /**
@@ -68,16 +91,19 @@ public class CreateLaunchConfigurationResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateLaunchConfigurationResponse() {
+    public AllocateWanAddressResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateLaunchConfigurationResponse(CreateLaunchConfigurationResponse source) {
-        if (source.LaunchConfigurationId != null) {
-            this.LaunchConfigurationId = new String(source.LaunchConfigurationId);
+    public AllocateWanAddressResponse(AllocateWanAddressResponse source) {
+        if (source.FlowId != null) {
+            this.FlowId = new Long(source.FlowId);
+        }
+        if (source.WanStatus != null) {
+            this.WanStatus = new String(source.WanStatus);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +115,8 @@ public class CreateLaunchConfigurationResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "LaunchConfigurationId", this.LaunchConfigurationId);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamSimple(map, prefix + "WanStatus", this.WanStatus);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

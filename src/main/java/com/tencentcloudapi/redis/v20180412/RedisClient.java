@@ -39,6 +39,46 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to enable public network access.
+     * @param req AllocateWanAddressRequest
+     * @return AllocateWanAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public AllocateWanAddressResponse AllocateWanAddress(AllocateWanAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AllocateWanAddressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AllocateWanAddressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AllocateWanAddress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to promote a replica node group of a multi-AZ deployed instance to master node group or a replica node of a single-AZ deployed instance to master node.
+     * @param req ChangeReplicaToMasterRequest
+     * @return ChangeReplicaToMasterResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChangeReplicaToMasterResponse ChangeReplicaToMaster(ChangeReplicaToMasterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChangeReplicaToMasterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChangeReplicaToMasterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChangeReplicaToMaster");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to view instance sub-account information.
      * @param req DescribeInstanceAccountRequest
      * @return DescribeInstanceAccountResponse
@@ -219,6 +259,26 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query instance node information.
+     * @param req DescribeInstanceNodeInfoRequest
+     * @return DescribeInstanceNodeInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceNodeInfoResponse DescribeInstanceNodeInfo(DescribeInstanceNodeInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceNodeInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceNodeInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceNodeInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query instance maintenance window. The maintenance window specifies a time period during which compatible version upgrade, architecture upgrade, backend maintenance, and other operations can be performed to avoid affecting business.
      * @param req DescribeMaintenanceWindowRequest
      * @return DescribeMaintenanceWindowResponse
@@ -351,6 +411,26 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModfiyInstancePasswordResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModfiyInstancePassword");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to disable public network access.
+     * @param req ReleaseWanAddressRequest
+     * @return ReleaseWanAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReleaseWanAddressResponse ReleaseWanAddress(ReleaseWanAddressRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReleaseWanAddressResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReleaseWanAddressResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReleaseWanAddress");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
