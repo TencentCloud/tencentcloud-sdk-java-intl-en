@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class DescribeOutputSRTSettings extends AbstractModel{
 
     /**
-    * Push destination address information list.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Destinations")
     @Expose
@@ -87,20 +87,36 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long PbKeyLen;
 
     /**
-     * Get Push destination address information list.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Destinations Push destination address information list.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Mode")
+    @Expose
+    private String Mode;
+
+    /**
+    * The server’s listen address, which is valid if `Mode` is `LISTENER`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("SourceAddresses")
+    @Expose
+    private OutputSRTSourceAddressResp [] SourceAddresses;
+
+    /**
+     * Get A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Destinations A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public SRTAddressDestination [] getDestinations() {
         return this.Destinations;
     }
 
     /**
-     * Set Push destination address information list.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Destinations Push destination address information list.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Destinations A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setDestinations(SRTAddressDestination [] Destinations) {
         this.Destinations = Destinations;
@@ -246,6 +262,46 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.PbKeyLen = PbKeyLen;
     }
 
+    /**
+     * Get The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Mode The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Mode The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setMode(String Mode) {
+        this.Mode = Mode;
+    }
+
+    /**
+     * Get The server’s listen address, which is valid if `Mode` is `LISTENER`.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return SourceAddresses The server’s listen address, which is valid if `Mode` is `LISTENER`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public OutputSRTSourceAddressResp [] getSourceAddresses() {
+        return this.SourceAddresses;
+    }
+
+    /**
+     * Set The server’s listen address, which is valid if `Mode` is `LISTENER`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param SourceAddresses The server’s listen address, which is valid if `Mode` is `LISTENER`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setSourceAddresses(OutputSRTSourceAddressResp [] SourceAddresses) {
+        this.SourceAddresses = SourceAddresses;
+    }
+
     public DescribeOutputSRTSettings() {
     }
 
@@ -281,6 +337,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.PbKeyLen != null) {
             this.PbKeyLen = new Long(source.PbKeyLen);
         }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
+        if (source.SourceAddresses != null) {
+            this.SourceAddresses = new OutputSRTSourceAddressResp[source.SourceAddresses.length];
+            for (int i = 0; i < source.SourceAddresses.length; i++) {
+                this.SourceAddresses[i] = new OutputSRTSourceAddressResp(source.SourceAddresses[i]);
+            }
+        }
     }
 
 
@@ -296,6 +361,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "PeerIdleTimeout", this.PeerIdleTimeout);
         this.setParamSimple(map, prefix + "Passphrase", this.Passphrase);
         this.setParamSimple(map, prefix + "PbKeyLen", this.PbKeyLen);
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
+        this.setParamArrayObj(map, prefix + "SourceAddresses.", this.SourceAddresses);
 
     }
 }

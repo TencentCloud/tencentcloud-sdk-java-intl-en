@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class CreateInputSRTSettings extends AbstractModel{
 
     /**
+    * The SRT mode. Valid values: LISTENER (default), CALLER.
+    */
+    @SerializedName("Mode")
+    @Expose
+    private String Mode;
+
+    /**
     * Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
     */
     @SerializedName("StreamId")
@@ -70,6 +77,29 @@ public class CreateInputSRTSettings extends AbstractModel{
     @SerializedName("PbKeyLen")
     @Expose
     private Long PbKeyLen;
+
+    /**
+    * The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+    */
+    @SerializedName("SourceAddresses")
+    @Expose
+    private SRTSourceAddressReq [] SourceAddresses;
+
+    /**
+     * Get The SRT mode. Valid values: LISTENER (default), CALLER. 
+     * @return Mode The SRT mode. Valid values: LISTENER (default), CALLER.
+     */
+    public String getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set The SRT mode. Valid values: LISTENER (default), CALLER.
+     * @param Mode The SRT mode. Valid values: LISTENER (default), CALLER.
+     */
+    public void setMode(String Mode) {
+        this.Mode = Mode;
+    }
 
     /**
      * Get Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-). 
@@ -183,6 +213,22 @@ public class CreateInputSRTSettings extends AbstractModel{
         this.PbKeyLen = PbKeyLen;
     }
 
+    /**
+     * Get The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed. 
+     * @return SourceAddresses The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+     */
+    public SRTSourceAddressReq [] getSourceAddresses() {
+        return this.SourceAddresses;
+    }
+
+    /**
+     * Set The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+     * @param SourceAddresses The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+     */
+    public void setSourceAddresses(SRTSourceAddressReq [] SourceAddresses) {
+        this.SourceAddresses = SourceAddresses;
+    }
+
     public CreateInputSRTSettings() {
     }
 
@@ -191,6 +237,9 @@ public class CreateInputSRTSettings extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateInputSRTSettings(CreateInputSRTSettings source) {
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
         if (source.StreamId != null) {
             this.StreamId = new String(source.StreamId);
         }
@@ -212,6 +261,12 @@ public class CreateInputSRTSettings extends AbstractModel{
         if (source.PbKeyLen != null) {
             this.PbKeyLen = new Long(source.PbKeyLen);
         }
+        if (source.SourceAddresses != null) {
+            this.SourceAddresses = new SRTSourceAddressReq[source.SourceAddresses.length];
+            for (int i = 0; i < source.SourceAddresses.length; i++) {
+                this.SourceAddresses[i] = new SRTSourceAddressReq(source.SourceAddresses[i]);
+            }
+        }
     }
 
 
@@ -219,6 +274,7 @@ public class CreateInputSRTSettings extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamSimple(map, prefix + "StreamId", this.StreamId);
         this.setParamSimple(map, prefix + "Latency", this.Latency);
         this.setParamSimple(map, prefix + "RecvLatency", this.RecvLatency);
@@ -226,6 +282,7 @@ public class CreateInputSRTSettings extends AbstractModel{
         this.setParamSimple(map, prefix + "PeerIdleTimeout", this.PeerIdleTimeout);
         this.setParamSimple(map, prefix + "Passphrase", this.Passphrase);
         this.setParamSimple(map, prefix + "PbKeyLen", this.PbKeyLen);
+        this.setParamArrayObj(map, prefix + "SourceAddresses.", this.SourceAddresses);
 
     }
 }

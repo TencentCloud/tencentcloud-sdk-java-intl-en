@@ -59,6 +59,26 @@ public class MdcClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a StreamLink output.
+     * @param req CreateStreamLinkOutputInfoRequest
+     * @return CreateStreamLinkOutputInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateStreamLinkOutputInfoResponse CreateStreamLinkOutputInfo(CreateStreamLinkOutputInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateStreamLinkOutputInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateStreamLinkOutputInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateStreamLinkOutputInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a StreamLink flow.
      * @param req DeleteStreamLinkFlowRequest
      * @return DeleteStreamLinkFlowResponse
@@ -119,6 +139,108 @@ public class MdcClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the logs of a StreamLink flow.
+     * @param req DescribeStreamLinkFlowLogsRequest
+     * @return DescribeStreamLinkFlowLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamLinkFlowLogsResponse DescribeStreamLinkFlowLogs(DescribeStreamLinkFlowLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLinkFlowLogsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLinkFlowLogsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStreamLinkFlowLogs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the media quality of a StreamLink flow.
+
+     * @param req DescribeStreamLinkFlowMediaStatisticsRequest
+     * @return DescribeStreamLinkFlowMediaStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamLinkFlowMediaStatisticsResponse DescribeStreamLinkFlowMediaStatistics(DescribeStreamLinkFlowMediaStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLinkFlowMediaStatisticsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLinkFlowMediaStatisticsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStreamLinkFlowMediaStatistics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the current status of a flow.
+     * @param req DescribeStreamLinkFlowRealtimeStatusRequest
+     * @return DescribeStreamLinkFlowRealtimeStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamLinkFlowRealtimeStatusResponse DescribeStreamLinkFlowRealtimeStatus(DescribeStreamLinkFlowRealtimeStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLinkFlowRealtimeStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLinkFlowRealtimeStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStreamLinkFlowRealtimeStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the SRT streaming performance of a StreamLink flow.
+     * @param req DescribeStreamLinkFlowSRTStatisticsRequest
+     * @return DescribeStreamLinkFlowSRTStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamLinkFlowSRTStatisticsResponse DescribeStreamLinkFlowSRTStatistics(DescribeStreamLinkFlowSRTStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLinkFlowSRTStatisticsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLinkFlowSRTStatisticsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStreamLinkFlowSRTStatistics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the media quality of a StreamLink flow.
+
+     * @param req DescribeStreamLinkFlowStatisticsRequest
+     * @return DescribeStreamLinkFlowStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamLinkFlowStatisticsResponse DescribeStreamLinkFlowStatistics(DescribeStreamLinkFlowStatisticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamLinkFlowStatisticsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamLinkFlowStatisticsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStreamLinkFlowStatistics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the configuration information of multiple StreamLink flows in batches.
      * @param req DescribeStreamLinkFlowsRequest
      * @return DescribeStreamLinkFlowsResponse
@@ -171,6 +293,46 @@ public class MdcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyStreamLinkFlowResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyStreamLinkFlow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify an input of a StreamLink flow.
+     * @param req ModifyStreamLinkInputRequest
+     * @return ModifyStreamLinkInputResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyStreamLinkInputResponse ModifyStreamLinkInput(ModifyStreamLinkInputRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyStreamLinkInputResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyStreamLinkInputResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyStreamLinkInput");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify an output of a StreamLink flow.
+     * @param req ModifyStreamLinkOutputInfoRequest
+     * @return ModifyStreamLinkOutputInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyStreamLinkOutputInfoResponse ModifyStreamLinkOutputInfo(ModifyStreamLinkOutputInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyStreamLinkOutputInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyStreamLinkOutputInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyStreamLinkOutputInfo");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

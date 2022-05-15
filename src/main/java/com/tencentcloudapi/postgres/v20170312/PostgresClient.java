@@ -579,6 +579,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get instance key list.
+     * @param req DescribeEncryptionKeysRequest
+     * @return DescribeEncryptionKeysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEncryptionKeysResponse DescribeEncryptionKeys(DescribeEncryptionKeysRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEncryptionKeysResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEncryptionKeysResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEncryptionKeys");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get order information.
      * @param req DescribeOrdersRequest
      * @return DescribeOrdersResponse

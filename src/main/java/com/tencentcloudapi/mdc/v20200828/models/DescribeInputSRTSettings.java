@@ -23,6 +23,14 @@ import java.util.HashMap;
 public class DescribeInputSRTSettings extends AbstractModel{
 
     /**
+    * The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Mode")
+    @Expose
+    private String Mode;
+
+    /**
     * Stream ID.
     */
     @SerializedName("StreamId")
@@ -70,6 +78,34 @@ public class DescribeInputSRTSettings extends AbstractModel{
     @SerializedName("PbKeyLen")
     @Expose
     private Long PbKeyLen;
+
+    /**
+    * The SRT peer address.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("SourceAddresses")
+    @Expose
+    private SRTSourceAddressResp [] SourceAddresses;
+
+    /**
+     * Get The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Mode The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Mode The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setMode(String Mode) {
+        this.Mode = Mode;
+    }
 
     /**
      * Get Stream ID. 
@@ -183,6 +219,26 @@ public class DescribeInputSRTSettings extends AbstractModel{
         this.PbKeyLen = PbKeyLen;
     }
 
+    /**
+     * Get The SRT peer address.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return SourceAddresses The SRT peer address.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public SRTSourceAddressResp [] getSourceAddresses() {
+        return this.SourceAddresses;
+    }
+
+    /**
+     * Set The SRT peer address.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param SourceAddresses The SRT peer address.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setSourceAddresses(SRTSourceAddressResp [] SourceAddresses) {
+        this.SourceAddresses = SourceAddresses;
+    }
+
     public DescribeInputSRTSettings() {
     }
 
@@ -191,6 +247,9 @@ public class DescribeInputSRTSettings extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeInputSRTSettings(DescribeInputSRTSettings source) {
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
         if (source.StreamId != null) {
             this.StreamId = new String(source.StreamId);
         }
@@ -212,6 +271,12 @@ public class DescribeInputSRTSettings extends AbstractModel{
         if (source.PbKeyLen != null) {
             this.PbKeyLen = new Long(source.PbKeyLen);
         }
+        if (source.SourceAddresses != null) {
+            this.SourceAddresses = new SRTSourceAddressResp[source.SourceAddresses.length];
+            for (int i = 0; i < source.SourceAddresses.length; i++) {
+                this.SourceAddresses[i] = new SRTSourceAddressResp(source.SourceAddresses[i]);
+            }
+        }
     }
 
 
@@ -219,6 +284,7 @@ public class DescribeInputSRTSettings extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamSimple(map, prefix + "StreamId", this.StreamId);
         this.setParamSimple(map, prefix + "Latency", this.Latency);
         this.setParamSimple(map, prefix + "RecvLatency", this.RecvLatency);
@@ -226,6 +292,7 @@ public class DescribeInputSRTSettings extends AbstractModel{
         this.setParamSimple(map, prefix + "PeerIdleTimeout", this.PeerIdleTimeout);
         this.setParamSimple(map, prefix + "Passphrase", this.Passphrase);
         this.setParamSimple(map, prefix + "PbKeyLen", this.PbKeyLen);
+        this.setParamArrayObj(map, prefix + "SourceAddresses.", this.SourceAddresses);
 
     }
 }
