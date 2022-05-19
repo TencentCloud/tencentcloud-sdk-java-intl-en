@@ -20,70 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TerminateInstanceRequest extends AbstractModel{
+public class DescribeResourceScheduleRequest extends AbstractModel{
 
     /**
-    * Instance ID.
+    * EMR cluster ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * ID of terminated node. This parameter is reserved and does not need to be configured.
-    */
-    @SerializedName("ResourceIds")
-    @Expose
-    private String [] ResourceIds;
-
-    /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+     * Get EMR cluster ID 
+     * @return InstanceId EMR cluster ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set EMR cluster ID
+     * @param InstanceId EMR cluster ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
-    /**
-     * Get ID of terminated node. This parameter is reserved and does not need to be configured. 
-     * @return ResourceIds ID of terminated node. This parameter is reserved and does not need to be configured.
-     */
-    public String [] getResourceIds() {
-        return this.ResourceIds;
-    }
-
-    /**
-     * Set ID of terminated node. This parameter is reserved and does not need to be configured.
-     * @param ResourceIds ID of terminated node. This parameter is reserved and does not need to be configured.
-     */
-    public void setResourceIds(String [] ResourceIds) {
-        this.ResourceIds = ResourceIds;
-    }
-
-    public TerminateInstanceRequest() {
+    public DescribeResourceScheduleRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TerminateInstanceRequest(TerminateInstanceRequest source) {
+    public DescribeResourceScheduleRequest(DescribeResourceScheduleRequest source) {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
-        }
-        if (source.ResourceIds != null) {
-            this.ResourceIds = new String[source.ResourceIds.length];
-            for (int i = 0; i < source.ResourceIds.length; i++) {
-                this.ResourceIds[i] = new String(source.ResourceIds[i]);
-            }
         }
     }
 
@@ -93,7 +64,6 @@ public class TerminateInstanceRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
 
     }
 }

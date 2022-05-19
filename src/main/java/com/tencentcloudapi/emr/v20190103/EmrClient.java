@@ -99,6 +99,26 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get data from the YARN Resource Scheduling page.
+     * @param req DescribeResourceScheduleRequest
+     * @return DescribeResourceScheduleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceScheduleResponse DescribeResourceSchedule(DescribeResourceScheduleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeResourceScheduleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeResourceScheduleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeResourceSchedule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query price of instance creation.
      * @param req InquiryPriceCreateInstanceRequest
      * @return InquiryPriceCreateInstanceResponse
@@ -139,26 +159,6 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query price of scale-out.
-     * @param req InquiryPriceScaleOutInstanceRequest
-     * @return InquiryPriceScaleOutInstanceResponse
-     * @throws TencentCloudSDKException
-     */
-    public InquiryPriceScaleOutInstanceResponse InquiryPriceScaleOutInstance(InquiryPriceScaleOutInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<InquiryPriceScaleOutInstanceResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<InquiryPriceScaleOutInstanceResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "InquiryPriceScaleOutInstance");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to query price of scaling.
      * @param req InquiryPriceUpdateInstanceRequest
      * @return InquiryPriceUpdateInstanceResponse
@@ -179,18 +179,18 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *This API is used to scale out instance.
-     * @param req ScaleOutInstanceRequest
-     * @return ScaleOutInstanceResponse
+     *This API is used to modify the resource configuration of YARN Resource Scheduling.
+     * @param req ModifyResourceScheduleConfigRequest
+     * @return ModifyResourceScheduleConfigResponse
      * @throws TencentCloudSDKException
      */
-    public ScaleOutInstanceResponse ScaleOutInstance(ScaleOutInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ScaleOutInstanceResponse> rsp = null;
+    public ModifyResourceScheduleConfigResponse ModifyResourceScheduleConfig(ModifyResourceScheduleConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyResourceScheduleConfigResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<ScaleOutInstanceResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<ModifyResourceScheduleConfigResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "ScaleOutInstance");
+                rspStr = this.internalRequest(req, "ModifyResourceScheduleConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -199,18 +199,18 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *This API is used to terminate an EMR instance. It is only supported in the official paid edition of EMR.
-     * @param req TerminateInstanceRequest
-     * @return TerminateInstanceResponse
+     *This API is used to modify the YARN resource scheduler (the change will take effect after you click Apply).
+     * @param req ModifyResourceSchedulerRequest
+     * @return ModifyResourceSchedulerResponse
      * @throws TencentCloudSDKException
      */
-    public TerminateInstanceResponse TerminateInstance(TerminateInstanceRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<TerminateInstanceResponse> rsp = null;
+    public ModifyResourceSchedulerResponse ModifyResourceScheduler(ModifyResourceSchedulerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyResourceSchedulerResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<TerminateInstanceResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<ModifyResourceSchedulerResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "TerminateInstance");
+                rspStr = this.internalRequest(req, "ModifyResourceScheduler");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
