@@ -68,6 +68,13 @@ It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-
     private String ExternalId;
 
     /**
+    * List of session tags. Up to 50 tags are allowed. The tag keys can not duplicate.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Resource descriptions of a role, which can be obtained by clicking the role name in the [CAM console](https://console.cloud.tencent.com/cam/role).
 General role:
 qcs::cam::uin/12345678:role/4611686018427397919, qcs::cam::uin/12345678:roleName/testRoleName
@@ -187,6 +194,22 @@ It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-
         this.ExternalId = ExternalId;
     }
 
+    /**
+     * Get List of session tags. Up to 50 tags are allowed. The tag keys can not duplicate. 
+     * @return Tags List of session tags. Up to 50 tags are allowed. The tag keys can not duplicate.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set List of session tags. Up to 50 tags are allowed. The tag keys can not duplicate.
+     * @param Tags List of session tags. Up to 50 tags are allowed. The tag keys can not duplicate.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public AssumeRoleRequest() {
     }
 
@@ -210,6 +233,12 @@ It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-
         if (source.ExternalId != null) {
             this.ExternalId = new String(source.ExternalId);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -222,6 +251,7 @@ It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-
         this.setParamSimple(map, prefix + "DurationSeconds", this.DurationSeconds);
         this.setParamSimple(map, prefix + "Policy", this.Policy);
         this.setParamSimple(map, prefix + "ExternalId", this.ExternalId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -143,12 +143,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String HttpVersion;
 
     /**
-    * Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+    * Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
 Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("SourceIpType")
     @Expose
     private Long SourceIpType;
+
+    /**
+    * GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ExtendedCode")
+    @Expose
+    private String ExtendedCode;
 
     /**
      * Get Whether to enable health check. 1: enable; 0: disable. 
@@ -451,9 +459,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+     * Get Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
 Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return SourceIpType Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+     * @return SourceIpType Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getSourceIpType() {
@@ -461,13 +469,33 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+     * Set Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param SourceIpType Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+     * @param SourceIpType Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSourceIpType(Long SourceIpType) {
         this.SourceIpType = SourceIpType;
+    }
+
+    /**
+     * Get GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ExtendedCode GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getExtendedCode() {
+        return this.ExtendedCode;
+    }
+
+    /**
+     * Set GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ExtendedCode GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setExtendedCode(String ExtendedCode) {
+        this.ExtendedCode = ExtendedCode;
     }
 
     public HealthCheck() {
@@ -526,6 +554,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.SourceIpType != null) {
             this.SourceIpType = new Long(source.SourceIpType);
         }
+        if (source.ExtendedCode != null) {
+            this.ExtendedCode = new String(source.ExtendedCode);
+        }
     }
 
 
@@ -549,6 +580,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "CheckType", this.CheckType);
         this.setParamSimple(map, prefix + "HttpVersion", this.HttpVersion);
         this.setParamSimple(map, prefix + "SourceIpType", this.SourceIpType);
+        this.setParamSimple(map, prefix + "ExtendedCode", this.ExtendedCode);
 
     }
 }

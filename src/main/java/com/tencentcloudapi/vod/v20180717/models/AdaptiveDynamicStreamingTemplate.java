@@ -61,11 +61,11 @@ public class AdaptiveDynamicStreamingTemplate extends AbstractModel{
     private String Format;
 
     /**
-    * DRM type. Valid values:
-<li>FairPlay;</li>
-<li>SimpleAES;</li>
-<li>Widevine.</li>
-If this field is a blank string, DRM will not be performed on the video.
+    * The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM.
     */
     @SerializedName("DrmType")
     @Expose
@@ -203,32 +203,32 @@ If this field is a blank string, DRM will not be performed on the video.
     }
 
     /**
-     * Get DRM type. Valid values:
-<li>FairPlay;</li>
-<li>SimpleAES;</li>
-<li>Widevine.</li>
-If this field is a blank string, DRM will not be performed on the video. 
-     * @return DrmType DRM type. Valid values:
-<li>FairPlay;</li>
-<li>SimpleAES;</li>
-<li>Widevine.</li>
-If this field is a blank string, DRM will not be performed on the video.
+     * Get The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM. 
+     * @return DrmType The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM.
      */
     public String getDrmType() {
         return this.DrmType;
     }
 
     /**
-     * Set DRM type. Valid values:
-<li>FairPlay;</li>
-<li>SimpleAES;</li>
-<li>Widevine.</li>
-If this field is a blank string, DRM will not be performed on the video.
-     * @param DrmType DRM type. Valid values:
-<li>FairPlay;</li>
-<li>SimpleAES;</li>
-<li>Widevine.</li>
-If this field is a blank string, DRM will not be performed on the video.
+     * Set The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM.
+     * @param DrmType The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM.
      */
     public void setDrmType(String DrmType) {
         this.DrmType = DrmType;

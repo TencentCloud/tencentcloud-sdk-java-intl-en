@@ -1076,6 +1076,30 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *This API is used to query your daily usage of the image recognition feature in a specified time period.
+   1. You can query statistics from the last 365 days.
+   2. The maximum query period is 90 days.
+   3. If the period specified is longer than one day, the statistics returned will be on a daily basis; otherwise, they will be on a 5-minute basis.
+
+     * @param req DescribeImageReviewUsageDataRequest
+     * @return DescribeImageReviewUsageDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageReviewUsageDataResponse DescribeImageReviewUsageData(DescribeImageReviewUsageDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeImageReviewUsageDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeImageReviewUsageDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeImageReviewUsageData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the list of image sprite generating templates and supports paged queries by filters.
      * @param req DescribeImageSpriteTemplatesRequest
      * @return DescribeImageSpriteTemplatesResponse
@@ -1088,6 +1112,30 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 Type type = new TypeToken<JsonResponseModel<DescribeImageSpriteTemplatesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeImageSpriteTemplates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query daily playback license requests in a specified time period.
+   1. You can query statistics from the last 365 days.
+   2. The maximum query period is 90 days.
+   3. If the period specified is longer than one day, the statistics returned will be on a daily basis; otherwise, they will be on a 5-minute basis.
+
+     * @param req DescribeLicenseUsageDataRequest
+     * @return DescribeLicenseUsageDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLicenseUsageDataResponse DescribeLicenseUsageData(DescribeLicenseUsageDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLicenseUsageDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLicenseUsageDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLicenseUsageData");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2064,9 +2112,11 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
     }
 
     /**
-     *This API is used to initiate an image processing task. Image processing operations include the following:
+     *This API is <font color='red'>no longer used</font>. To initiate image recognition tasks, please use [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1).
 
-1. Intelligent recognition of pornographic, terrorism, and politically sensitive content
+This API is used to initiate an image processing task. Image processing operations include the following:
+
+1. Intelligent recognition of pornographic, terroristic, and politically sensitive content
 
 ><li>File size: < 5 MB</li>
 ><li>Resolution: Preferably higher than 256 x 256. Resolution lower than this may compromise the recognition performance.</li>
@@ -2245,6 +2295,31 @@ There are two ways to create a task flow template:
                 Type type = new TypeToken<JsonResponseModel<ResetProcedureTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ResetProcedureTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to initiate an image recognition task to identify pornographic, terroristic, and politically sensitive content in images saved in VOD.
+
+><li>File size: < 5 MB</li>
+><li>Resolution: Preferably higher than 256 x 256. Resolution lower than this may compromise the recognition performance.</li>
+><li>Supported image formats: PNG, JPG, JPEG, BMP, GIF, WEBP</li>
+
+     * @param req ReviewImageRequest
+     * @return ReviewImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReviewImageResponse ReviewImage(ReviewImageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReviewImageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReviewImageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReviewImage");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

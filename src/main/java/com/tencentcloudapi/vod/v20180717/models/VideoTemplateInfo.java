@@ -23,11 +23,14 @@ import java.util.HashMap;
 public class VideoTemplateInfo extends AbstractModel{
 
     /**
-    * Video stream encoder. Valid values:
+    * The video codec. Valid values:
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
 <li>av1: AOMedia Video 1</li>
-Currently, a resolution within 640x480 must be specified for H.265. and the `av1` container only supports mp4.
+<li>H.266: H.266</li>
+<font color=red>Notes:</font>
+<li>The AOMedia Video 1 and H.266 codecs can only be used for MP4 files.</li>
+<li> Only CRF is supported for H.266 currently.</li>
     */
     @SerializedName("Codec")
     @Expose
@@ -99,9 +102,12 @@ Default value: black
     private String FillType;
 
     /**
-    * Video Constant Rate Factor (CRF). Value range: 1-51.
-If this parameter is specified, CRF will be used to control video bitrate for transcoding and the original video bitrate will not be used.
-We don’t recommend specifying this parameter unless you have special requirements.
+    * The video constant rate factor (CRF). Value range: 1-51.
+
+<font color=red>Notes:</font>
+<li>If this parameter is specified, CRF encoding will be used and the bitrate parameter will be ignored.</li>
+<li>If `Codec` is `H.266`, this parameter is required (`28` is recommended).</li>
+<li>We don’t recommend using this parameter unless you have special requirements.</li>
     */
     @SerializedName("Vcrf")
     @Expose
@@ -116,32 +122,44 @@ When this parameter is set to 0 or left empty, `Gop` will be automatically set.
     private Long Gop;
 
     /**
-     * Get Video stream encoder. Valid values:
+     * Get The video codec. Valid values:
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
 <li>av1: AOMedia Video 1</li>
-Currently, a resolution within 640x480 must be specified for H.265. and the `av1` container only supports mp4. 
-     * @return Codec Video stream encoder. Valid values:
+<li>H.266: H.266</li>
+<font color=red>Notes:</font>
+<li>The AOMedia Video 1 and H.266 codecs can only be used for MP4 files.</li>
+<li> Only CRF is supported for H.266 currently.</li> 
+     * @return Codec The video codec. Valid values:
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
 <li>av1: AOMedia Video 1</li>
-Currently, a resolution within 640x480 must be specified for H.265. and the `av1` container only supports mp4.
+<li>H.266: H.266</li>
+<font color=red>Notes:</font>
+<li>The AOMedia Video 1 and H.266 codecs can only be used for MP4 files.</li>
+<li> Only CRF is supported for H.266 currently.</li>
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set Video stream encoder. Valid values:
+     * Set The video codec. Valid values:
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
 <li>av1: AOMedia Video 1</li>
-Currently, a resolution within 640x480 must be specified for H.265. and the `av1` container only supports mp4.
-     * @param Codec Video stream encoder. Valid values:
+<li>H.266: H.266</li>
+<font color=red>Notes:</font>
+<li>The AOMedia Video 1 and H.266 codecs can only be used for MP4 files.</li>
+<li> Only CRF is supported for H.266 currently.</li>
+     * @param Codec The video codec. Valid values:
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
 <li>av1: AOMedia Video 1</li>
-Currently, a resolution within 640x480 must be specified for H.265. and the `av1` container only supports mp4.
+<li>H.266: H.266</li>
+<font color=red>Notes:</font>
+<li>The AOMedia Video 1 and H.266 codecs can only be used for MP4 files.</li>
+<li> Only CRF is supported for H.266 currently.</li>
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
@@ -336,24 +354,36 @@ Default value: black
     }
 
     /**
-     * Get Video Constant Rate Factor (CRF). Value range: 1-51.
-If this parameter is specified, CRF will be used to control video bitrate for transcoding and the original video bitrate will not be used.
-We don’t recommend specifying this parameter unless you have special requirements. 
-     * @return Vcrf Video Constant Rate Factor (CRF). Value range: 1-51.
-If this parameter is specified, CRF will be used to control video bitrate for transcoding and the original video bitrate will not be used.
-We don’t recommend specifying this parameter unless you have special requirements.
+     * Get The video constant rate factor (CRF). Value range: 1-51.
+
+<font color=red>Notes:</font>
+<li>If this parameter is specified, CRF encoding will be used and the bitrate parameter will be ignored.</li>
+<li>If `Codec` is `H.266`, this parameter is required (`28` is recommended).</li>
+<li>We don’t recommend using this parameter unless you have special requirements.</li> 
+     * @return Vcrf The video constant rate factor (CRF). Value range: 1-51.
+
+<font color=red>Notes:</font>
+<li>If this parameter is specified, CRF encoding will be used and the bitrate parameter will be ignored.</li>
+<li>If `Codec` is `H.266`, this parameter is required (`28` is recommended).</li>
+<li>We don’t recommend using this parameter unless you have special requirements.</li>
      */
     public Long getVcrf() {
         return this.Vcrf;
     }
 
     /**
-     * Set Video Constant Rate Factor (CRF). Value range: 1-51.
-If this parameter is specified, CRF will be used to control video bitrate for transcoding and the original video bitrate will not be used.
-We don’t recommend specifying this parameter unless you have special requirements.
-     * @param Vcrf Video Constant Rate Factor (CRF). Value range: 1-51.
-If this parameter is specified, CRF will be used to control video bitrate for transcoding and the original video bitrate will not be used.
-We don’t recommend specifying this parameter unless you have special requirements.
+     * Set The video constant rate factor (CRF). Value range: 1-51.
+
+<font color=red>Notes:</font>
+<li>If this parameter is specified, CRF encoding will be used and the bitrate parameter will be ignored.</li>
+<li>If `Codec` is `H.266`, this parameter is required (`28` is recommended).</li>
+<li>We don’t recommend using this parameter unless you have special requirements.</li>
+     * @param Vcrf The video constant rate factor (CRF). Value range: 1-51.
+
+<font color=red>Notes:</font>
+<li>If this parameter is specified, CRF encoding will be used and the bitrate parameter will be ignored.</li>
+<li>If `Codec` is `H.266`, this parameter is required (`28` is recommended).</li>
+<li>We don’t recommend using this parameter unless you have special requirements.</li>
      */
     public void setVcrf(Long Vcrf) {
         this.Vcrf = Vcrf;

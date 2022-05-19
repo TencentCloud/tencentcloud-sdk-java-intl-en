@@ -179,6 +179,26 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create role OIDC configurations.
+     * @param req CreateOIDCConfigRequest
+     * @return CreateOIDCConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOIDCConfigResponse CreateOIDCConfig(CreateOIDCConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateOIDCConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateOIDCConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateOIDCConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (CreatePolicy) is used to create a policy.
      * @param req CreatePolicyRequest
      * @return CreatePolicyResponse
@@ -339,6 +359,26 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete OIDC IdPs.
+     * @param req DeleteOIDCConfigRequest
+     * @return DeleteOIDCConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteOIDCConfigResponse DeleteOIDCConfig(DeleteOIDCConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteOIDCConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteOIDCConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteOIDCConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DeletePolicy) is used to delete a policy.
      * @param req DeletePolicyRequest
      * @return DeletePolicyResponse
@@ -491,6 +531,26 @@ public class CamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteUserPermissionsBoundaryResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteUserPermissionsBoundary");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query role OIDC configurations.
+     * @param req DescribeOIDCConfigRequest
+     * @return DescribeOIDCConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOIDCConfigResponse DescribeOIDCConfig(DescribeOIDCConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOIDCConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOIDCConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOIDCConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1331,6 +1391,26 @@ public class CamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdateGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdateGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify role OIDC configurations.
+     * @param req UpdateOIDCConfigRequest
+     * @return UpdateOIDCConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateOIDCConfigResponse UpdateOIDCConfig(UpdateOIDCConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateOIDCConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateOIDCConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateOIDCConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

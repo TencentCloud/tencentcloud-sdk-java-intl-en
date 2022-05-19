@@ -100,7 +100,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String UpdateTime;
 
     /**
-    * 
+    * The template type. Valid values:
+* Preset
+* Custom
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
     @Expose
@@ -295,16 +298,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get The template type. Valid values:
+* Preset
+* Custom
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Type The template type. Valid values:
+* Preset
+* Custom
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set The template type. Valid values:
+* Preset
+* Custom
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Type The template type. Valid values:
+* Preset
+* Custom
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setType(String Type) {
         this.Type = Type;

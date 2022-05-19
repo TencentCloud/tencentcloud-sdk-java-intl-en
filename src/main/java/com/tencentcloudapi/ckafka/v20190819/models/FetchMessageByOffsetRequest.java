@@ -44,7 +44,7 @@ public class FetchMessageByOffsetRequest extends AbstractModel{
     private Long Partition;
 
     /**
-    * Offset information
+    * Offset information, which is required.
     */
     @SerializedName("Offset")
     @Expose
@@ -99,16 +99,16 @@ public class FetchMessageByOffsetRequest extends AbstractModel{
     }
 
     /**
-     * Get Offset information 
-     * @return Offset Offset information
+     * Get Offset information, which is required. 
+     * @return Offset Offset information, which is required.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset information
-     * @param Offset Offset information
+     * Set Offset information, which is required.
+     * @param Offset Offset information, which is required.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

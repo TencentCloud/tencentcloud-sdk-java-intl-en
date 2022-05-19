@@ -44,6 +44,15 @@ public class DescribeAIAnalysisTemplatesRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * The filter for querying templates. If this parameter is left empty, both preset and custom templates are returned. Valid values:
+* Preset
+* Custom
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get Unique ID filter of video content analysis templates. Array length limit: 10. 
      * @return Definitions Unique ID filter of video content analysis templates. Array length limit: 10.
      */
@@ -91,6 +100,30 @@ public class DescribeAIAnalysisTemplatesRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get The filter for querying templates. If this parameter is left empty, both preset and custom templates are returned. Valid values:
+* Preset
+* Custom 
+     * @return Type The filter for querying templates. If this parameter is left empty, both preset and custom templates are returned. Valid values:
+* Preset
+* Custom
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set The filter for querying templates. If this parameter is left empty, both preset and custom templates are returned. Valid values:
+* Preset
+* Custom
+     * @param Type The filter for querying templates. If this parameter is left empty, both preset and custom templates are returned. Valid values:
+* Preset
+* Custom
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public DescribeAIAnalysisTemplatesRequest() {
     }
 
@@ -111,6 +144,9 @@ public class DescribeAIAnalysisTemplatesRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -121,6 +157,7 @@ public class DescribeAIAnalysisTemplatesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Definitions.", this.Definitions);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

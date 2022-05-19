@@ -46,6 +46,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private JsonInfo Json;
 
     /**
+    * `Parquet` format description
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Parquet")
+    @Expose
+    private ParquetInfo Parquet;
+
+    /**
      * Get Content format. Valid values: `json`, `csv` 
      * @return Format Content format. Valid values: `json`, `csv`
      */
@@ -101,6 +109,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.Json = Json;
     }
 
+    /**
+     * Get `Parquet` format description
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Parquet `Parquet` format description
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public ParquetInfo getParquet() {
+        return this.Parquet;
+    }
+
+    /**
+     * Set `Parquet` format description
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Parquet `Parquet` format description
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setParquet(ParquetInfo Parquet) {
+        this.Parquet = Parquet;
+    }
+
     public ContentInfo() {
     }
 
@@ -118,6 +146,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.Json != null) {
             this.Json = new JsonInfo(source.Json);
         }
+        if (source.Parquet != null) {
+            this.Parquet = new ParquetInfo(source.Parquet);
+        }
     }
 
 
@@ -128,6 +159,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Format", this.Format);
         this.setParamObj(map, prefix + "Csv.", this.Csv);
         this.setParamObj(map, prefix + "Json.", this.Json);
+        this.setParamObj(map, prefix + "Parquet.", this.Parquet);
 
     }
 }

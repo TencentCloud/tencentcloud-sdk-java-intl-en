@@ -46,9 +46,11 @@ Note: the frame rate of all substreams must be the same; otherwise, the frame ra
     private String Name;
 
     /**
-    * DRM scheme type. Valid values:
-<li>SimpleAES.</li>
-If this field is an empty string, DRM will not be performed on the video.
+    * The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM.
     */
     @SerializedName("DrmType")
     @Expose
@@ -145,24 +147,32 @@ Note: the frame rate of all substreams must be the same; otherwise, the frame ra
     }
 
     /**
-     * Get DRM scheme type. Valid values:
-<li>SimpleAES.</li>
-If this field is an empty string, DRM will not be performed on the video. 
-     * @return DrmType DRM scheme type. Valid values:
-<li>SimpleAES.</li>
-If this field is an empty string, DRM will not be performed on the video.
+     * Get The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM. 
+     * @return DrmType The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM.
      */
     public String getDrmType() {
         return this.DrmType;
     }
 
     /**
-     * Set DRM scheme type. Valid values:
-<li>SimpleAES.</li>
-If this field is an empty string, DRM will not be performed on the video.
-     * @param DrmType DRM scheme type. Valid values:
-<li>SimpleAES.</li>
-If this field is an empty string, DRM will not be performed on the video.
+     * Set The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM.
+     * @param DrmType The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM.
      */
     public void setDrmType(String DrmType) {
         this.DrmType = DrmType;

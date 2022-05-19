@@ -24,6 +24,8 @@ public class CreateLoadBalancerResponse extends AbstractModel{
 
     /**
     * Array of unique CLB instance IDs.
+This field may return `null` in some cases, such as there is delay during instance creation. You can query the IDs of the created instances by invoking `DescribeTaskStatus` with the `RequestId` or `DealName` returned by this API.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("LoadBalancerIds")
     @Expose
@@ -45,8 +47,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get Array of unique CLB instance IDs. 
+     * Get Array of unique CLB instance IDs.
+This field may return `null` in some cases, such as there is delay during instance creation. You can query the IDs of the created instances by invoking `DescribeTaskStatus` with the `RequestId` or `DealName` returned by this API.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return LoadBalancerIds Array of unique CLB instance IDs.
+This field may return `null` in some cases, such as there is delay during instance creation. You can query the IDs of the created instances by invoking `DescribeTaskStatus` with the `RequestId` or `DealName` returned by this API.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String [] getLoadBalancerIds() {
         return this.LoadBalancerIds;
@@ -54,7 +60,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Array of unique CLB instance IDs.
+This field may return `null` in some cases, such as there is delay during instance creation. You can query the IDs of the created instances by invoking `DescribeTaskStatus` with the `RequestId` or `DealName` returned by this API.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param LoadBalancerIds Array of unique CLB instance IDs.
+This field may return `null` in some cases, such as there is delay during instance creation. You can query the IDs of the created instances by invoking `DescribeTaskStatus` with the `RequestId` or `DealName` returned by this API.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;

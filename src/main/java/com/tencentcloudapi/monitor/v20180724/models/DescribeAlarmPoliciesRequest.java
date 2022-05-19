@@ -172,6 +172,13 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
     private AlarmPolicyTriggerTask [] TriggerTasks;
 
     /**
+    * Filter by quick alarm policy. If this parameter is left empty, all policies are displayed. `ONECLICK`: Display quick alarm policies; `NOT_ONECLICK`: Display non-quick alarm policies.
+    */
+    @SerializedName("OneClickPolicyType")
+    @Expose
+    private String [] OneClickPolicyType;
+
+    /**
      * Get Value fixed at "monitor" 
      * @return Module Value fixed at "monitor"
      */
@@ -527,6 +534,22 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
         this.TriggerTasks = TriggerTasks;
     }
 
+    /**
+     * Get Filter by quick alarm policy. If this parameter is left empty, all policies are displayed. `ONECLICK`: Display quick alarm policies; `NOT_ONECLICK`: Display non-quick alarm policies. 
+     * @return OneClickPolicyType Filter by quick alarm policy. If this parameter is left empty, all policies are displayed. `ONECLICK`: Display quick alarm policies; `NOT_ONECLICK`: Display non-quick alarm policies.
+     */
+    public String [] getOneClickPolicyType() {
+        return this.OneClickPolicyType;
+    }
+
+    /**
+     * Set Filter by quick alarm policy. If this parameter is left empty, all policies are displayed. `ONECLICK`: Display quick alarm policies; `NOT_ONECLICK`: Display non-quick alarm policies.
+     * @param OneClickPolicyType Filter by quick alarm policy. If this parameter is left empty, all policies are displayed. `ONECLICK`: Display quick alarm policies; `NOT_ONECLICK`: Display non-quick alarm policies.
+     */
+    public void setOneClickPolicyType(String [] OneClickPolicyType) {
+        this.OneClickPolicyType = OneClickPolicyType;
+    }
+
     public DescribeAlarmPoliciesRequest() {
     }
 
@@ -625,6 +648,12 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
                 this.TriggerTasks[i] = new AlarmPolicyTriggerTask(source.TriggerTasks[i]);
             }
         }
+        if (source.OneClickPolicyType != null) {
+            this.OneClickPolicyType = new String[source.OneClickPolicyType.length];
+            for (int i = 0; i < source.OneClickPolicyType.length; i++) {
+                this.OneClickPolicyType[i] = new String(source.OneClickPolicyType[i]);
+            }
+        }
     }
 
 
@@ -652,6 +681,7 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
         this.setParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
         this.setParamSimple(map, prefix + "NeedCorrespondence", this.NeedCorrespondence);
         this.setParamArrayObj(map, prefix + "TriggerTasks.", this.TriggerTasks);
+        this.setParamArraySimple(map, prefix + "OneClickPolicyType.", this.OneClickPolicyType);
 
     }
 }

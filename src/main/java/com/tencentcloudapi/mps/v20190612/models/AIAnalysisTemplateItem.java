@@ -86,6 +86,16 @@ public class AIAnalysisTemplateItem extends AbstractModel{
     private String UpdateTime;
 
     /**
+    * The template type. Valid values:
+* Preset
+* Custom
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get Unique ID of intelligent analysis template. 
      * @return Definition Unique ID of intelligent analysis template.
      */
@@ -229,6 +239,34 @@ public class AIAnalysisTemplateItem extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get The template type. Valid values:
+* Preset
+* Custom
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Type The template type. Valid values:
+* Preset
+* Custom
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set The template type. Valid values:
+* Preset
+* Custom
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Type The template type. Valid values:
+* Preset
+* Custom
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public AIAnalysisTemplateItem() {
     }
 
@@ -264,6 +302,9 @@ public class AIAnalysisTemplateItem extends AbstractModel{
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -280,6 +321,7 @@ public class AIAnalysisTemplateItem extends AbstractModel{
         this.setParamObj(map, prefix + "FrameTagConfigure.", this.FrameTagConfigure);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

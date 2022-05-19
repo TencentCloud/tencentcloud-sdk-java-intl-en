@@ -65,7 +65,7 @@ public class CreateTopicRequest extends AbstractModel{
     private Long MaxSplitPartitions;
 
     /**
-    * Log topic storage type. Valid values: `hot` (real-time storage); `cold` (IA storage). Default value: `hot`.
+    * Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
     */
     @SerializedName("StorageType")
     @Expose
@@ -175,16 +175,16 @@ public class CreateTopicRequest extends AbstractModel{
     }
 
     /**
-     * Get Log topic storage type. Valid values: `hot` (real-time storage); `cold` (IA storage). Default value: `hot`. 
-     * @return StorageType Log topic storage type. Valid values: `hot` (real-time storage); `cold` (IA storage). Default value: `hot`.
+     * Get Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`. 
+     * @return StorageType Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set Log topic storage type. Valid values: `hot` (real-time storage); `cold` (IA storage). Default value: `hot`.
-     * @param StorageType Log topic storage type. Valid values: `hot` (real-time storage); `cold` (IA storage). Default value: `hot`.
+     * Set Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
+     * @param StorageType Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;

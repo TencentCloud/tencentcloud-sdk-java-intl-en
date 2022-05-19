@@ -268,6 +268,13 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private Boolean DryRun;
 
     /**
+    * Instance engine type. Valid values: `InnoDB` (default); `RocksDB`.
+    */
+    @SerializedName("EngineType")
+    @Expose
+    private String EngineType;
+
+    /**
     * The list of IPs for sources instances. Only one IP address can be assigned to a single source instance. If all IPs are used up, the system will automatically assign IPs to the remaining source instances that do not have one.
     */
     @SerializedName("Vips")
@@ -835,6 +842,22 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
+     * Get Instance engine type. Valid values: `InnoDB` (default); `RocksDB`. 
+     * @return EngineType Instance engine type. Valid values: `InnoDB` (default); `RocksDB`.
+     */
+    public String getEngineType() {
+        return this.EngineType;
+    }
+
+    /**
+     * Set Instance engine type. Valid values: `InnoDB` (default); `RocksDB`.
+     * @param EngineType Instance engine type. Valid values: `InnoDB` (default); `RocksDB`.
+     */
+    public void setEngineType(String EngineType) {
+        this.EngineType = EngineType;
+    }
+
+    /**
      * Get The list of IPs for sources instances. Only one IP address can be assigned to a single source instance. If all IPs are used up, the system will automatically assign IPs to the remaining source instances that do not have one. 
      * @return Vips The list of IPs for sources instances. Only one IP address can be assigned to a single source instance. If all IPs are used up, the system will automatically assign IPs to the remaining source instances that do not have one.
      */
@@ -978,6 +1001,9 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
         if (source.DryRun != null) {
             this.DryRun = new Boolean(source.DryRun);
         }
+        if (source.EngineType != null) {
+            this.EngineType = new String(source.EngineType);
+        }
         if (source.Vips != null) {
             this.Vips = new String[source.Vips.length];
             for (int i = 0; i < source.Vips.length; i++) {
@@ -1026,6 +1052,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ParamTemplateType", this.ParamTemplateType);
         this.setParamArraySimple(map, prefix + "AlarmPolicyIdList.", this.AlarmPolicyIdList);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
+        this.setParamSimple(map, prefix + "EngineType", this.EngineType);
         this.setParamArraySimple(map, prefix + "Vips.", this.Vips);
 
     }

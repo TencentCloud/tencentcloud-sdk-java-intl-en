@@ -266,6 +266,22 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String FilterDimensionsParam;
 
     /**
+    * Whether it is a quick alarm policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsOneClick")
+    @Expose
+    private Long IsOneClick;
+
+    /**
+    * Whether the quick alarm policy is enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OneClickStatus")
+    @Expose
+    private Long OneClickStatus;
+
+    /**
      * Get Alarm policy ID
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return PolicyId Alarm policy ID
@@ -877,6 +893,46 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.FilterDimensionsParam = FilterDimensionsParam;
     }
 
+    /**
+     * Get Whether it is a quick alarm policy.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return IsOneClick Whether it is a quick alarm policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getIsOneClick() {
+        return this.IsOneClick;
+    }
+
+    /**
+     * Set Whether it is a quick alarm policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param IsOneClick Whether it is a quick alarm policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setIsOneClick(Long IsOneClick) {
+        this.IsOneClick = IsOneClick;
+    }
+
+    /**
+     * Get Whether the quick alarm policy is enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return OneClickStatus Whether the quick alarm policy is enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getOneClickStatus() {
+        return this.OneClickStatus;
+    }
+
+    /**
+     * Set Whether the quick alarm policy is enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param OneClickStatus Whether the quick alarm policy is enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setOneClickStatus(Long OneClickStatus) {
+        this.OneClickStatus = OneClickStatus;
+    }
+
     public AlarmPolicy() {
     }
 
@@ -990,6 +1046,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.FilterDimensionsParam != null) {
             this.FilterDimensionsParam = new String(source.FilterDimensionsParam);
         }
+        if (source.IsOneClick != null) {
+            this.IsOneClick = new Long(source.IsOneClick);
+        }
+        if (source.OneClickStatus != null) {
+            this.OneClickStatus = new Long(source.OneClickStatus);
+        }
     }
 
 
@@ -1027,6 +1089,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "OriginId", this.OriginId);
         this.setParamArrayObj(map, prefix + "TagInstances.", this.TagInstances);
         this.setParamSimple(map, prefix + "FilterDimensionsParam", this.FilterDimensionsParam);
+        this.setParamSimple(map, prefix + "IsOneClick", this.IsOneClick);
+        this.setParamSimple(map, prefix + "OneClickStatus", this.OneClickStatus);
 
     }
 }
