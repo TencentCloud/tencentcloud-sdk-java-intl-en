@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class LiveRealTimeClipRequest extends AbstractModel{
 
     /**
-    * [LVB code](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) of a stream.
+    * The live stream code.
     */
     @SerializedName("StreamId")
     @Expose
@@ -93,16 +93,16 @@ public class LiveRealTimeClipRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * Get [LVB code](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) of a stream. 
-     * @return StreamId [LVB code](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) of a stream.
+     * Get The live stream code. 
+     * @return StreamId The live stream code.
      */
     public String getStreamId() {
         return this.StreamId;
     }
 
     /**
-     * Set [LVB code](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) of a stream.
-     * @param StreamId [LVB code](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) of a stream.
+     * Set The live stream code.
+     * @param StreamId The live stream code.
      */
     public void setStreamId(String StreamId) {
         this.StreamId = StreamId;

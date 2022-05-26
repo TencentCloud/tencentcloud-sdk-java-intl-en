@@ -30,6 +30,13 @@ public class FileDeleteTask extends AbstractModel{
     private String [] FileIdSet;
 
     /**
+    * The information of the files deleted.
+    */
+    @SerializedName("FileDeleteResultInfo")
+    @Expose
+    private FileDeleteResultItem [] FileDeleteResultInfo;
+
+    /**
      * Get List of IDs of deleted files. 
      * @return FileIdSet List of IDs of deleted files.
      */
@@ -43,6 +50,22 @@ public class FileDeleteTask extends AbstractModel{
      */
     public void setFileIdSet(String [] FileIdSet) {
         this.FileIdSet = FileIdSet;
+    }
+
+    /**
+     * Get The information of the files deleted. 
+     * @return FileDeleteResultInfo The information of the files deleted.
+     */
+    public FileDeleteResultItem [] getFileDeleteResultInfo() {
+        return this.FileDeleteResultInfo;
+    }
+
+    /**
+     * Set The information of the files deleted.
+     * @param FileDeleteResultInfo The information of the files deleted.
+     */
+    public void setFileDeleteResultInfo(FileDeleteResultItem [] FileDeleteResultInfo) {
+        this.FileDeleteResultInfo = FileDeleteResultInfo;
     }
 
     public FileDeleteTask() {
@@ -59,6 +82,12 @@ public class FileDeleteTask extends AbstractModel{
                 this.FileIdSet[i] = new String(source.FileIdSet[i]);
             }
         }
+        if (source.FileDeleteResultInfo != null) {
+            this.FileDeleteResultInfo = new FileDeleteResultItem[source.FileDeleteResultInfo.length];
+            for (int i = 0; i < source.FileDeleteResultInfo.length; i++) {
+                this.FileDeleteResultInfo[i] = new FileDeleteResultItem(source.FileDeleteResultInfo[i]);
+            }
+        }
     }
 
 
@@ -67,6 +96,7 @@ public class FileDeleteTask extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "FileIdSet.", this.FileIdSet);
+        this.setParamArrayObj(map, prefix + "FileDeleteResultInfo.", this.FileDeleteResultInfo);
 
     }
 }

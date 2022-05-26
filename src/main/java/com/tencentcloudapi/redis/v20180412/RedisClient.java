@@ -419,6 +419,26 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to set instance input mode.
+     * @param req ModifyInstanceReadOnlyRequest
+     * @return ModifyInstanceReadOnlyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceReadOnlyResponse ModifyInstanceReadOnly(ModifyInstanceReadOnlyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceReadOnlyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceReadOnlyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstanceReadOnly");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to disable public network access.
      * @param req ReleaseWanAddressRequest
      * @return ReleaseWanAddressResponse
