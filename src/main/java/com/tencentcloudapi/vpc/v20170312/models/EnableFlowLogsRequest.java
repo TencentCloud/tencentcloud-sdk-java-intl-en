@@ -20,41 +20,44 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateNatGatewayDestinationIpPortTranslationNatRuleResponse extends AbstractModel{
+public class EnableFlowLogsRequest extends AbstractModel{
 
     /**
-    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+    * Flow log ID.
     */
-    @SerializedName("RequestId")
+    @SerializedName("FlowLogIds")
     @Expose
-    private String RequestId;
+    private String [] FlowLogIds;
 
     /**
-     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
-     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * Get Flow log ID. 
+     * @return FlowLogIds Flow log ID.
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String [] getFlowLogIds() {
+        return this.FlowLogIds;
     }
 
     /**
-     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * Set Flow log ID.
+     * @param FlowLogIds Flow log ID.
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setFlowLogIds(String [] FlowLogIds) {
+        this.FlowLogIds = FlowLogIds;
     }
 
-    public CreateNatGatewayDestinationIpPortTranslationNatRuleResponse() {
+    public EnableFlowLogsRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateNatGatewayDestinationIpPortTranslationNatRuleResponse(CreateNatGatewayDestinationIpPortTranslationNatRuleResponse source) {
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+    public EnableFlowLogsRequest(EnableFlowLogsRequest source) {
+        if (source.FlowLogIds != null) {
+            this.FlowLogIds = new String[source.FlowLogIds.length];
+            for (int i = 0; i < source.FlowLogIds.length; i++) {
+                this.FlowLogIds[i] = new String(source.FlowLogIds[i]);
+            }
         }
     }
 
@@ -63,7 +66,7 @@ public class CreateNatGatewayDestinationIpPortTranslationNatRuleResponse extends
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamArraySimple(map, prefix + "FlowLogIds.", this.FlowLogIds);
 
     }
 }

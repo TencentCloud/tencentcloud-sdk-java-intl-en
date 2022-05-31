@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateNatGatewaySourceIpTranslationNatRuleResponse extends AbstractModel{
+public class DisableFlowLogsResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,14 +45,14 @@ public class CreateNatGatewaySourceIpTranslationNatRuleResponse extends Abstract
         this.RequestId = RequestId;
     }
 
-    public CreateNatGatewaySourceIpTranslationNatRuleResponse() {
+    public DisableFlowLogsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateNatGatewaySourceIpTranslationNatRuleResponse(CreateNatGatewaySourceIpTranslationNatRuleResponse source) {
+    public DisableFlowLogsResponse(DisableFlowLogsResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }

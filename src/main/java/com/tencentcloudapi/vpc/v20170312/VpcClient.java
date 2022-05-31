@@ -308,8 +308,9 @@ The number of network instances that each CCN can be associated with is limited.
 
     /**
      *This API is used to bind an ENI to a CVM.
-* One CVM can be bound with multiple ENIs, but only one primary ENI. * For more information about the limits, see <a href="https://intl.cloud.tencent.com/document/product/576/18527?from_cn_redirect=1">ENI Use Limits</a>.
-* An ENI can only be bound to one CVM at a time.
+* An ENI must be bound with one security group at least. To bind it, see <a href="https://intl.cloud.tencent.com/document/product/215/43132?from_cn_redirect=1">AssociateNetworkInterfaceSecurityGroups</a>.
+* One CVM can be bound with multiple ENIs, but only one can be the primary ENI. For more information about the limits, see <a href="https://intl.cloud.tencent.com/document/product/576/18527?from_cn_redirect=1">ENI Use Limits</a>.
+* An ENI can only be bound to one CVM.
 * Only the running or shutdown CVMs can be bound with ENIs. For more information about the CVM status, see <a href="https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#InstanceStatus">InstanceStatus</a> in the Data Types.
 * An ENI can only be bound to a VPC-based CVM under the same availability zone as the ENI subnet.
 
@@ -667,46 +668,6 @@ You can also use the Force parameter to forcibly return a default VPC.
                 Type type = new TypeToken<JsonResponseModel<CreateLocalGatewayResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateLocalGateway");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API (CreateNatGatewayDestinationIpPortTranslationNatRule) is used to create a port forwarding rule for a NAT gateway.
-     * @param req CreateNatGatewayDestinationIpPortTranslationNatRuleRequest
-     * @return CreateNatGatewayDestinationIpPortTranslationNatRuleResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateNatGatewayDestinationIpPortTranslationNatRuleResponse CreateNatGatewayDestinationIpPortTranslationNatRule(CreateNatGatewayDestinationIpPortTranslationNatRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateNatGatewayDestinationIpPortTranslationNatRuleResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateNatGatewayDestinationIpPortTranslationNatRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateNatGatewayDestinationIpPortTranslationNatRule");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to create a SNAT rule for the NAT Gateway.
-     * @param req CreateNatGatewaySourceIpTranslationNatRuleRequest
-     * @return CreateNatGatewaySourceIpTranslationNatRuleResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateNatGatewaySourceIpTranslationNatRuleResponse CreateNatGatewaySourceIpTranslationNatRule(CreateNatGatewaySourceIpTranslationNatRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateNatGatewaySourceIpTranslationNatRuleResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateNatGatewaySourceIpTranslationNatRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateNatGatewaySourceIpTranslationNatRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2824,6 +2785,26 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
+     *This API is used to disable flow log.
+     * @param req DisableFlowLogsRequest
+     * @return DisableFlowLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableFlowLogsResponse DisableFlowLogs(DisableFlowLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableFlowLogsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableFlowLogsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableFlowLogs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to unbind an [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) (EIP for short).
 * This API supports unbinding an EIP from CVM instances and ENIs.
 * This API does not support unbinding an EIP from a NAT Gateway. To unbind an EIP from a NAT Gateway, use the [`DisassociateNatGatewayAddress`](https://intl.cloud.tencent.com/document/api/215/36716?from_cn_redirect=1) API.
@@ -2941,6 +2922,26 @@ This API is used to verify whether there will be conflict with an existing route
                 Type type = new TypeToken<JsonResponseModel<EnableCcnRoutesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "EnableCcnRoutes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to enable flow log.
+     * @param req EnableFlowLogsRequest
+     * @return EnableFlowLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableFlowLogsResponse EnableFlowLogs(EnableFlowLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableFlowLogsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableFlowLogsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableFlowLogs");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

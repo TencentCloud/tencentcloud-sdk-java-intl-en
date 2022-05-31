@@ -204,9 +204,6 @@ public enum VpcErrorCode {
     // A request cannot contain IP addresses with different cluster types.
      INVALIDPARAMETERVALUE_MIXEDADDRESSIPSETTYPE("InvalidParameterValue.MixedAddressIpSetType"),
      
-    // The NAT Gateway already has an identical SNAT rule.
-     INVALIDPARAMETERVALUE_NATSNATRULEEXISTS("InvalidParameterValue.NatSnatRuleExists"),
-     
     // The probe destination IP and network probe are in the same VPC.
      INVALIDPARAMETERVALUE_NETDETECTINVPC("InvalidParameterValue.NetDetectInVpc"),
      
@@ -420,6 +417,9 @@ public enum VpcErrorCode {
     // The instance is not associated with a CCN.
      UNSUPPORTEDOPERATION_CCNNOTATTACHED("UnsupportedOperation.CcnNotAttached"),
      
+    // In cross-account association, instances under an Auto-Driving Cloud account cannot be associated with CCNs created under an ordinary account.
+     UNSUPPORTEDOPERATION_CCNORDINARYACCOUNTREFUSEATTACH("UnsupportedOperation.CcnOrdinaryAccountRefuseAttach"),
+     
     // The specified route table does not exist.
      UNSUPPORTEDOPERATION_CCNROUTETABLENOTEXIST("UnsupportedOperation.CcnRouteTableNotExist"),
      
@@ -471,6 +471,9 @@ public enum VpcErrorCode {
     // The configured instance does not match with the route table.
      UNSUPPORTEDOPERATION_INSTANCEANDRTBNOTMATCH("UnsupportedOperation.InstanceAndRtbNotMatch"),
      
+    // In cross-account association, instances under an ordinary account cannot be associated with CCNs created under an Auto-Driving Cloud account.
+     UNSUPPORTEDOPERATION_INSTANCEORDINARYACCOUNTREFUSEATTACH("UnsupportedOperation.InstanceOrdinaryAccountRefuseAttach"),
+     
     // This operation is not supported by the status of the instance bound with the IP address.
      UNSUPPORTEDOPERATION_INSTANCESTATENOTSUPPORTED("UnsupportedOperation.InstanceStateNotSupported"),
      
@@ -510,12 +513,6 @@ public enum VpcErrorCode {
     // The resource mutual exclusion operation is being executed.
      UNSUPPORTEDOPERATION_MUTEXOPERATIONTASKRUNNING("UnsupportedOperation.MutexOperationTaskRunning"),
      
-    // The private IP specified in the SNAT/DNAT forwarding rule has been bound with another rule.
-     UNSUPPORTEDOPERATION_NATGATEWAYRULEPIPEXISTS("UnsupportedOperation.NatGatewayRulePipExists"),
-     
-    // The specified NAT Gateway type does not support configuring a SNAT rule.
-     UNSUPPORTEDOPERATION_NATGATEWAYTYPENOTSUPPORTSNAT("UnsupportedOperation.NatGatewayTypeNotSupportSNAT"),
-     
     // The NAT instance does not support this operation.
      UNSUPPORTEDOPERATION_NATNOTSUPPORTED("UnsupportedOperation.NatNotSupported"),
      
@@ -548,6 +545,9 @@ public enum VpcErrorCode {
      
     // The endpoint created by the specified endpoint service cannot be bound to a security group.
      UNSUPPORTEDOPERATION_SPECIALENDPOINTSERVICE("UnsupportedOperation.SpecialEndPointService"),
+     
+    // 
+     UNSUPPORTEDOPERATION_SUBENINOTSUPPORTTRUNKING("UnsupportedOperation.SubEniNotSupportTrunking"),
      
     // System route. Operation is prohibited.
      UNSUPPORTEDOPERATION_SYSTEMROUTE("UnsupportedOperation.SystemRoute"),
