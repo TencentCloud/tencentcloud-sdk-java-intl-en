@@ -346,6 +346,38 @@ Note: This field may return `null`, indicating that no valid value was found.
     private ClusterExternalServiceInfo [] ClusterExternalServiceInfo;
 
     /**
+    * The VPC ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("UniqVpcId")
+    @Expose
+    private String UniqVpcId;
+
+    /**
+    * The subnet ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("UniqSubnetId")
+    @Expose
+    private String UniqSubnetId;
+
+    /**
+    * Node information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TopologyInfoList")
+    @Expose
+    private TopologyInfo [] TopologyInfoList;
+
+    /**
+    * Multi-AZ cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsMultiZoneCluster")
+    @Expose
+    private Boolean IsMultiZoneCluster;
+
+    /**
      * Get ID
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Id ID
@@ -1193,6 +1225,86 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.ClusterExternalServiceInfo = ClusterExternalServiceInfo;
     }
 
+    /**
+     * Get The VPC ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return UniqVpcId The VPC ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getUniqVpcId() {
+        return this.UniqVpcId;
+    }
+
+    /**
+     * Set The VPC ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param UniqVpcId The VPC ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setUniqVpcId(String UniqVpcId) {
+        this.UniqVpcId = UniqVpcId;
+    }
+
+    /**
+     * Get The subnet ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return UniqSubnetId The subnet ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getUniqSubnetId() {
+        return this.UniqSubnetId;
+    }
+
+    /**
+     * Set The subnet ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param UniqSubnetId The subnet ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setUniqSubnetId(String UniqSubnetId) {
+        this.UniqSubnetId = UniqSubnetId;
+    }
+
+    /**
+     * Get Node information
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return TopologyInfoList Node information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public TopologyInfo [] getTopologyInfoList() {
+        return this.TopologyInfoList;
+    }
+
+    /**
+     * Set Node information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param TopologyInfoList Node information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTopologyInfoList(TopologyInfo [] TopologyInfoList) {
+        this.TopologyInfoList = TopologyInfoList;
+    }
+
+    /**
+     * Get Multi-AZ cluster
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return IsMultiZoneCluster Multi-AZ cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Boolean getIsMultiZoneCluster() {
+        return this.IsMultiZoneCluster;
+    }
+
+    /**
+     * Set Multi-AZ cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param IsMultiZoneCluster Multi-AZ cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setIsMultiZoneCluster(Boolean IsMultiZoneCluster) {
+        this.IsMultiZoneCluster = IsMultiZoneCluster;
+    }
+
     public ClusterInstancesInfo() {
     }
 
@@ -1318,6 +1430,21 @@ Note: This field may return `null`, indicating that no valid value was found.
                 this.ClusterExternalServiceInfo[i] = new ClusterExternalServiceInfo(source.ClusterExternalServiceInfo[i]);
             }
         }
+        if (source.UniqVpcId != null) {
+            this.UniqVpcId = new String(source.UniqVpcId);
+        }
+        if (source.UniqSubnetId != null) {
+            this.UniqSubnetId = new String(source.UniqSubnetId);
+        }
+        if (source.TopologyInfoList != null) {
+            this.TopologyInfoList = new TopologyInfo[source.TopologyInfoList.length];
+            for (int i = 0; i < source.TopologyInfoList.length; i++) {
+                this.TopologyInfoList[i] = new TopologyInfo(source.TopologyInfoList[i]);
+            }
+        }
+        if (source.IsMultiZoneCluster != null) {
+            this.IsMultiZoneCluster = new Boolean(source.IsMultiZoneCluster);
+        }
     }
 
 
@@ -1362,6 +1489,10 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "VpcName", this.VpcName);
         this.setParamSimple(map, prefix + "SubnetName", this.SubnetName);
         this.setParamArrayObj(map, prefix + "ClusterExternalServiceInfo.", this.ClusterExternalServiceInfo);
+        this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+        this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+        this.setParamArrayObj(map, prefix + "TopologyInfoList.", this.TopologyInfoList);
+        this.setParamSimple(map, prefix + "IsMultiZoneCluster", this.IsMultiZoneCluster);
 
     }
 }

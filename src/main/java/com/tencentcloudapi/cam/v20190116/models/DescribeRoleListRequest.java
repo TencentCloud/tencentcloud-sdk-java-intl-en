@@ -37,6 +37,13 @@ public class DescribeRoleListRequest extends AbstractModel{
     private Long Rp;
 
     /**
+    * A parameter used to filter the list of roles under a tag.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private RoleTags [] Tags;
+
+    /**
      * Get Page number, beginning from 1 
      * @return Page Page number, beginning from 1
      */
@@ -68,6 +75,22 @@ public class DescribeRoleListRequest extends AbstractModel{
         this.Rp = Rp;
     }
 
+    /**
+     * Get A parameter used to filter the list of roles under a tag. 
+     * @return Tags A parameter used to filter the list of roles under a tag.
+     */
+    public RoleTags [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set A parameter used to filter the list of roles under a tag.
+     * @param Tags A parameter used to filter the list of roles under a tag.
+     */
+    public void setTags(RoleTags [] Tags) {
+        this.Tags = Tags;
+    }
+
     public DescribeRoleListRequest() {
     }
 
@@ -82,6 +105,12 @@ public class DescribeRoleListRequest extends AbstractModel{
         if (source.Rp != null) {
             this.Rp = new Long(source.Rp);
         }
+        if (source.Tags != null) {
+            this.Tags = new RoleTags[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new RoleTags(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -91,6 +120,7 @@ public class DescribeRoleListRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Page", this.Page);
         this.setParamSimple(map, prefix + "Rp", this.Rp);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

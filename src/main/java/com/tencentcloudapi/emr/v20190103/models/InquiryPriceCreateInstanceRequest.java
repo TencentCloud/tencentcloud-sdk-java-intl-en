@@ -40,13 +40,6 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
     private Long TimeSpan;
 
     /**
-    * Node specification queried for price.
-    */
-    @SerializedName("ResourceSpec")
-    @Expose
-    private NewResourceSpec ResourceSpec;
-
-    /**
     * Currency.
     */
     @SerializedName("Currency")
@@ -80,6 +73,13 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel{
     @SerializedName("Software")
     @Expose
     private String [] Software;
+
+    /**
+    * Node specification queried for price.
+    */
+    @SerializedName("ResourceSpec")
+    @Expose
+    private NewResourceSpec ResourceSpec;
 
     /**
     * Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
@@ -149,6 +149,20 @@ Hadoop-Hbase
     private ExternalService [] ExternalService;
 
     /**
+    * 
+    */
+    @SerializedName("VersionID")
+    @Expose
+    private Long VersionID;
+
+    /**
+    * AZ specs
+    */
+    @SerializedName("MultiZoneSettings")
+    @Expose
+    private MultiZoneSetting [] MultiZoneSettings;
+
+    /**
      * Get Time unit of instance purchase duration. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li> 
      * @return TimeUnit Time unit of instance purchase duration. Valid values:
@@ -190,22 +204,6 @@ Hadoop-Hbase
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
-    }
-
-    /**
-     * Get Node specification queried for price. 
-     * @return ResourceSpec Node specification queried for price.
-     */
-    public NewResourceSpec getResourceSpec() {
-        return this.ResourceSpec;
-    }
-
-    /**
-     * Set Node specification queried for price.
-     * @param ResourceSpec Node specification queried for price.
-     */
-    public void setResourceSpec(NewResourceSpec ResourceSpec) {
-        this.ResourceSpec = ResourceSpec;
     }
 
     /**
@@ -298,6 +296,22 @@ Hadoop-Hbase
      */
     public void setSoftware(String [] Software) {
         this.Software = Software;
+    }
+
+    /**
+     * Get Node specification queried for price. 
+     * @return ResourceSpec Node specification queried for price.
+     */
+    public NewResourceSpec getResourceSpec() {
+        return this.ResourceSpec;
+    }
+
+    /**
+     * Set Node specification queried for price.
+     * @param ResourceSpec Node specification queried for price.
+     */
+    public void setResourceSpec(NewResourceSpec ResourceSpec) {
+        this.ResourceSpec = ResourceSpec;
     }
 
     /**
@@ -472,6 +486,38 @@ Hadoop-Hbase
         this.ExternalService = ExternalService;
     }
 
+    /**
+     * Get  
+     * @return VersionID 
+     */
+    public Long getVersionID() {
+        return this.VersionID;
+    }
+
+    /**
+     * Set 
+     * @param VersionID 
+     */
+    public void setVersionID(Long VersionID) {
+        this.VersionID = VersionID;
+    }
+
+    /**
+     * Get AZ specs 
+     * @return MultiZoneSettings AZ specs
+     */
+    public MultiZoneSetting [] getMultiZoneSettings() {
+        return this.MultiZoneSettings;
+    }
+
+    /**
+     * Set AZ specs
+     * @param MultiZoneSettings AZ specs
+     */
+    public void setMultiZoneSettings(MultiZoneSetting [] MultiZoneSettings) {
+        this.MultiZoneSettings = MultiZoneSettings;
+    }
+
     public InquiryPriceCreateInstanceRequest() {
     }
 
@@ -485,9 +531,6 @@ Hadoop-Hbase
         }
         if (source.TimeSpan != null) {
             this.TimeSpan = new Long(source.TimeSpan);
-        }
-        if (source.ResourceSpec != null) {
-            this.ResourceSpec = new NewResourceSpec(source.ResourceSpec);
         }
         if (source.Currency != null) {
             this.Currency = new String(source.Currency);
@@ -503,6 +546,9 @@ Hadoop-Hbase
             for (int i = 0; i < source.Software.length; i++) {
                 this.Software[i] = new String(source.Software[i]);
             }
+        }
+        if (source.ResourceSpec != null) {
+            this.ResourceSpec = new NewResourceSpec(source.ResourceSpec);
         }
         if (source.Placement != null) {
             this.Placement = new Placement(source.Placement);
@@ -531,6 +577,15 @@ Hadoop-Hbase
                 this.ExternalService[i] = new ExternalService(source.ExternalService[i]);
             }
         }
+        if (source.VersionID != null) {
+            this.VersionID = new Long(source.VersionID);
+        }
+        if (source.MultiZoneSettings != null) {
+            this.MultiZoneSettings = new MultiZoneSetting[source.MultiZoneSettings.length];
+            for (int i = 0; i < source.MultiZoneSettings.length; i++) {
+                this.MultiZoneSettings[i] = new MultiZoneSetting(source.MultiZoneSettings[i]);
+            }
+        }
     }
 
 
@@ -540,11 +595,11 @@ Hadoop-Hbase
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
-        this.setParamObj(map, prefix + "ResourceSpec.", this.ResourceSpec);
         this.setParamSimple(map, prefix + "Currency", this.Currency);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "SupportHA", this.SupportHA);
         this.setParamArraySimple(map, prefix + "Software.", this.Software);
+        this.setParamObj(map, prefix + "ResourceSpec.", this.ResourceSpec);
         this.setParamObj(map, prefix + "Placement.", this.Placement);
         this.setParamObj(map, prefix + "VPCSettings.", this.VPCSettings);
         this.setParamSimple(map, prefix + "MetaType", this.MetaType);
@@ -553,6 +608,8 @@ Hadoop-Hbase
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "SceneName", this.SceneName);
         this.setParamArrayObj(map, prefix + "ExternalService.", this.ExternalService);
+        this.setParamSimple(map, prefix + "VersionID", this.VersionID);
+        this.setParamArrayObj(map, prefix + "MultiZoneSettings.", this.MultiZoneSettings);
 
     }
 }

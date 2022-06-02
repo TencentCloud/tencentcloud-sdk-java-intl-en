@@ -58,6 +58,13 @@ public class CreateRoleRequest extends AbstractModel{
     private Long SessionDuration;
 
     /**
+    * Tags bound to the role.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private RoleTags [] Tags;
+
+    /**
      * Get Role name 
      * @return RoleName Role name
      */
@@ -137,6 +144,22 @@ public class CreateRoleRequest extends AbstractModel{
         this.SessionDuration = SessionDuration;
     }
 
+    /**
+     * Get Tags bound to the role. 
+     * @return Tags Tags bound to the role.
+     */
+    public RoleTags [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tags bound to the role.
+     * @param Tags Tags bound to the role.
+     */
+    public void setTags(RoleTags [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateRoleRequest() {
     }
 
@@ -160,6 +183,12 @@ public class CreateRoleRequest extends AbstractModel{
         if (source.SessionDuration != null) {
             this.SessionDuration = new Long(source.SessionDuration);
         }
+        if (source.Tags != null) {
+            this.Tags = new RoleTags[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new RoleTags(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -172,6 +201,7 @@ public class CreateRoleRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "ConsoleLogin", this.ConsoleLogin);
         this.setParamSimple(map, prefix + "SessionDuration", this.SessionDuration);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

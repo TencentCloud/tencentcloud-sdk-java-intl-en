@@ -39,6 +39,26 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add user lists (user management).
+     * @param req AddUsersForUserManagerRequest
+     * @return AddUsersForUserManagerResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddUsersForUserManagerResponse AddUsersForUserManager(AddUsersForUserManagerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddUsersForUserManagerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddUsersForUserManagerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddUsersForUserManager");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create an EMR cluster instance.
      * @param req CreateInstanceRequest
      * @return CreateInstanceResponse
@@ -99,6 +119,26 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query EMR cluster instances.
+     * @param req DescribeInstancesListRequest
+     * @return DescribeInstancesListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancesListResponse DescribeInstancesList(DescribeInstancesListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstancesListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstancesListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstancesList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get data from the YARN Resource Scheduling page.
      * @param req DescribeResourceScheduleRequest
      * @return DescribeResourceScheduleResponse
@@ -111,6 +151,26 @@ public class EmrClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeResourceScheduleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeResourceSchedule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to export users in batches.
+     * @param req DescribeUsersForUserManagerRequest
+     * @return DescribeUsersForUserManagerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUsersForUserManagerResponse DescribeUsersForUserManager(DescribeUsersForUserManagerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUsersForUserManagerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUsersForUserManagerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUsersForUserManager");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

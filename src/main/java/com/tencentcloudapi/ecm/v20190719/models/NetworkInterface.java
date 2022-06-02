@@ -153,6 +153,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String EcmRegion;
 
     /**
+    * Type of the resource bound with an ENI. Valid values: `cvm` and `eks`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Business")
+    @Expose
+    private String Business;
+
+    /**
      * Get ENI instance ID, such as `eni-f1xjkw1b`. 
      * @return NetworkInterfaceId ENI instance ID, such as `eni-f1xjkw1b`.
      */
@@ -468,6 +476,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.EcmRegion = EcmRegion;
     }
 
+    /**
+     * Get Type of the resource bound with an ENI. Valid values: `cvm` and `eks`.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Business Type of the resource bound with an ENI. Valid values: `cvm` and `eks`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getBusiness() {
+        return this.Business;
+    }
+
+    /**
+     * Set Type of the resource bound with an ENI. Valid values: `cvm` and `eks`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Business Type of the resource bound with an ENI. Valid values: `cvm` and `eks`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setBusiness(String Business) {
+        this.Business = Business;
+    }
+
     public NetworkInterface() {
     }
 
@@ -539,6 +567,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.EcmRegion != null) {
             this.EcmRegion = new String(source.EcmRegion);
         }
+        if (source.Business != null) {
+            this.Business = new String(source.Business);
+        }
     }
 
 
@@ -563,6 +594,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "EniType", this.EniType);
         this.setParamSimple(map, prefix + "EcmRegion", this.EcmRegion);
+        this.setParamSimple(map, prefix + "Business", this.Business);
 
     }
 }

@@ -761,6 +761,26 @@ This API is used to get the list of topics in a CKafka instance of a user.
     }
 
     /**
+     *This API is used to change the configurations of a prepaid instance, such as disk capacity and bandwidth.
+     * @param req ModifyInstancePreRequest
+     * @return ModifyInstancePreResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstancePreResponse ModifyInstancePre(ModifyInstancePreRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstancePreResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstancePreResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstancePre");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to change the password.
      * @param req ModifyPasswordRequest
      * @return ModifyPasswordResponse

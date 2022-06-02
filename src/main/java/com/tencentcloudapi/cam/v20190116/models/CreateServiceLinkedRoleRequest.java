@@ -44,6 +44,13 @@ public class CreateServiceLinkedRoleRequest extends AbstractModel{
     private String Description;
 
     /**
+    * Tags bound to the role.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private RoleTags [] Tags;
+
+    /**
      * Get Authorized service, i.e., Tencent Cloud service entity with this role attached. 
      * @return QCSServiceName Authorized service, i.e., Tencent Cloud service entity with this role attached.
      */
@@ -91,6 +98,22 @@ public class CreateServiceLinkedRoleRequest extends AbstractModel{
         this.Description = Description;
     }
 
+    /**
+     * Get Tags bound to the role. 
+     * @return Tags Tags bound to the role.
+     */
+    public RoleTags [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tags bound to the role.
+     * @param Tags Tags bound to the role.
+     */
+    public void setTags(RoleTags [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateServiceLinkedRoleRequest() {
     }
 
@@ -111,6 +134,12 @@ public class CreateServiceLinkedRoleRequest extends AbstractModel{
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.Tags != null) {
+            this.Tags = new RoleTags[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new RoleTags(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -121,6 +150,7 @@ public class CreateServiceLinkedRoleRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "QCSServiceName.", this.QCSServiceName);
         this.setParamSimple(map, prefix + "CustomSuffix", this.CustomSuffix);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

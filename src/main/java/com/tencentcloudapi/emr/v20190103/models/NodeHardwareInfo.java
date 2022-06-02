@@ -343,6 +343,38 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long SupportModifyPayMode;
 
     /**
+    * System disk type
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RootStorageType")
+    @Expose
+    private Long RootStorageType;
+
+    /**
+    * AZ information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
+    * Subnet
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("SubnetInfo")
+    @Expose
+    private SubnetInfo SubnetInfo;
+
+    /**
+    * Client
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Clients")
+    @Expose
+    private String Clients;
+
+    /**
      * Get User `APPID`
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return AppId User `APPID`
@@ -1142,6 +1174,86 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.SupportModifyPayMode = SupportModifyPayMode;
     }
 
+    /**
+     * Get System disk type
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return RootStorageType System disk type
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getRootStorageType() {
+        return this.RootStorageType;
+    }
+
+    /**
+     * Set System disk type
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param RootStorageType System disk type
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setRootStorageType(Long RootStorageType) {
+        this.RootStorageType = RootStorageType;
+    }
+
+    /**
+     * Get AZ information
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Zone AZ information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set AZ information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Zone AZ information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
+    /**
+     * Get Subnet
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return SubnetInfo Subnet
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public SubnetInfo getSubnetInfo() {
+        return this.SubnetInfo;
+    }
+
+    /**
+     * Set Subnet
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param SubnetInfo Subnet
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setSubnetInfo(SubnetInfo SubnetInfo) {
+        this.SubnetInfo = SubnetInfo;
+    }
+
+    /**
+     * Get Client
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Clients Client
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getClients() {
+        return this.Clients;
+    }
+
+    /**
+     * Set Client
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Clients Client
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setClients(String Clients) {
+        this.Clients = Clients;
+    }
+
     public NodeHardwareInfo() {
     }
 
@@ -1276,6 +1388,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.SupportModifyPayMode != null) {
             this.SupportModifyPayMode = new Long(source.SupportModifyPayMode);
         }
+        if (source.RootStorageType != null) {
+            this.RootStorageType = new Long(source.RootStorageType);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
+        if (source.SubnetInfo != null) {
+            this.SubnetInfo = new SubnetInfo(source.SubnetInfo);
+        }
+        if (source.Clients != null) {
+            this.Clients = new String(source.Clients);
+        }
     }
 
 
@@ -1323,6 +1447,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "IsDynamicSpec", this.IsDynamicSpec);
         this.setParamSimple(map, prefix + "DynamicPodSpec", this.DynamicPodSpec);
         this.setParamSimple(map, prefix + "SupportModifyPayMode", this.SupportModifyPayMode);
+        this.setParamSimple(map, prefix + "RootStorageType", this.RootStorageType);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamObj(map, prefix + "SubnetInfo.", this.SubnetInfo);
+        this.setParamSimple(map, prefix + "Clients", this.Clients);
 
     }
 }

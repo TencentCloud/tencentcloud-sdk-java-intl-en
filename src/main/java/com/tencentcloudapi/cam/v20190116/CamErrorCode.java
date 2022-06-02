@@ -21,7 +21,7 @@ public enum CamErrorCode {
     // The number of policy versions has reached the upper limit.
      FAILEDOPERATION_POLICYVERSIONFULL("FailedOperation.PolicyVersionFull"),
      
-    // 
+    // Failed to bind the tag.
      FAILEDOPERATION_TAGRESOURCEFAILED("FailedOperation.TagResourceFailed"),
      
     // No mobile number is bound to the account
@@ -198,10 +198,10 @@ public enum CamErrorCode {
     // Sub-user name repeated.
      INVALIDPARAMETER_SUBUSERNAMEINUSE("InvalidParameter.SubUserNameInUse"),
      
-    // 
+    // The tag limit has been exceeded.
      INVALIDPARAMETER_TAGLIMITEXCEEDED("InvalidParameter.TagLimitExceeded"),
      
-    // 
+    // Incorrect tag parameter.
      INVALIDPARAMETER_TAGPARAMERROR("InvalidParameter.TagParamError"),
      
     // `Uin` field invalid.

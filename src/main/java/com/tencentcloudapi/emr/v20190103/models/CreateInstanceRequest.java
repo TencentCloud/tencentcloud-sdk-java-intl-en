@@ -50,26 +50,12 @@ public class CreateInstanceRequest extends AbstractModel{
     private Long ProductId;
 
     /**
-    * Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
-    */
-    @SerializedName("VPCSettings")
-    @Expose
-    private VPCSettings VPCSettings;
-
-    /**
     * List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
 Enter an instance value: `hive` or `flink`.
     */
     @SerializedName("Software")
     @Expose
     private String [] Software;
-
-    /**
-    * Node resource specification.
-    */
-    @SerializedName("ResourceSpec")
-    @Expose
-    private NewResourceSpec ResourceSpec;
 
     /**
     * Whether to enable high node availability. Valid values:
@@ -96,13 +82,6 @@ Enter an instance value: `hive` or `flink`.
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
-
-    /**
-    * Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-    */
-    @SerializedName("Placement")
-    @Expose
-    private Placement Placement;
 
     /**
     * Purchase duration of instance, which needs to be used together with `TimeUnit`.
@@ -132,11 +111,32 @@ Enter an instance value: `hive` or `flink`.
     private LoginSettings LoginSettings;
 
     /**
+    * Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
+    */
+    @SerializedName("VPCSettings")
+    @Expose
+    private VPCSettings VPCSettings;
+
+    /**
+    * Node resource specification.
+    */
+    @SerializedName("ResourceSpec")
+    @Expose
+    private NewResourceSpec ResourceSpec;
+
+    /**
     * Parameter required for enabling COS access.
     */
     @SerializedName("COSSettings")
     @Expose
     private COSSettings COSSettings;
+
+    /**
+    * Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+    */
+    @SerializedName("Placement")
+    @Expose
+    private Placement Placement;
 
     /**
     * Security group to which an instance belongs in the format of `sg-xxxxxxxx`. This parameter can be obtained from the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) API.
@@ -270,6 +270,27 @@ Hadoop-Hbase
     private ExternalService [] ExternalService;
 
     /**
+    * 
+    */
+    @SerializedName("VersionID")
+    @Expose
+    private Long VersionID;
+
+    /**
+    * `true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
+    */
+    @SerializedName("MultiZone")
+    @Expose
+    private Boolean MultiZone;
+
+    /**
+    * Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
+    */
+    @SerializedName("MultiZoneSettings")
+    @Expose
+    private MultiZoneSetting [] MultiZoneSettings;
+
+    /**
      * Get Product ID. Different product IDs represent different EMR product versions. Valid values:
 <li>1: EMR v1.3.1</li>
 <li>2: EMR v2.0.1</li>
@@ -366,22 +387,6 @@ Hadoop-Hbase
     }
 
     /**
-     * Get Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc. 
-     * @return VPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
-     */
-    public VPCSettings getVPCSettings() {
-        return this.VPCSettings;
-    }
-
-    /**
-     * Set Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
-     * @param VPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
-     */
-    public void setVPCSettings(VPCSettings VPCSettings) {
-        this.VPCSettings = VPCSettings;
-    }
-
-    /**
      * Get List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
 Enter an instance value: `hive` or `flink`. 
      * @return Software List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
@@ -399,22 +404,6 @@ Enter an instance value: `hive` or `flink`.
      */
     public void setSoftware(String [] Software) {
         this.Software = Software;
-    }
-
-    /**
-     * Get Node resource specification. 
-     * @return ResourceSpec Node resource specification.
-     */
-    public NewResourceSpec getResourceSpec() {
-        return this.ResourceSpec;
-    }
-
-    /**
-     * Set Node resource specification.
-     * @param ResourceSpec Node resource specification.
-     */
-    public void setResourceSpec(NewResourceSpec ResourceSpec) {
-        this.ResourceSpec = ResourceSpec;
     }
 
     /**
@@ -483,22 +472,6 @@ Enter an instance value: `hive` or `flink`.
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
-    }
-
-    /**
-     * Get Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance. 
-     * @return Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-     */
-    public Placement getPlacement() {
-        return this.Placement;
-    }
-
-    /**
-     * Set Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-     * @param Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-     */
-    public void setPlacement(Placement Placement) {
-        this.Placement = Placement;
     }
 
     /**
@@ -574,6 +547,38 @@ Enter an instance value: `hive` or `flink`.
     }
 
     /**
+     * Get Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc. 
+     * @return VPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
+     */
+    public VPCSettings getVPCSettings() {
+        return this.VPCSettings;
+    }
+
+    /**
+     * Set Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
+     * @param VPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
+     */
+    public void setVPCSettings(VPCSettings VPCSettings) {
+        this.VPCSettings = VPCSettings;
+    }
+
+    /**
+     * Get Node resource specification. 
+     * @return ResourceSpec Node resource specification.
+     */
+    public NewResourceSpec getResourceSpec() {
+        return this.ResourceSpec;
+    }
+
+    /**
+     * Set Node resource specification.
+     * @param ResourceSpec Node resource specification.
+     */
+    public void setResourceSpec(NewResourceSpec ResourceSpec) {
+        this.ResourceSpec = ResourceSpec;
+    }
+
+    /**
      * Get Parameter required for enabling COS access. 
      * @return COSSettings Parameter required for enabling COS access.
      */
@@ -587,6 +592,22 @@ Enter an instance value: `hive` or `flink`.
      */
     public void setCOSSettings(COSSettings COSSettings) {
         this.COSSettings = COSSettings;
+    }
+
+    /**
+     * Get Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance. 
+     * @return Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+     */
+    public Placement getPlacement() {
+        return this.Placement;
+    }
+
+    /**
+     * Set Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+     * @param Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+     */
+    public void setPlacement(Placement Placement) {
+        this.Placement = Placement;
     }
 
     /**
@@ -909,6 +930,54 @@ Hadoop-Hbase
         this.ExternalService = ExternalService;
     }
 
+    /**
+     * Get  
+     * @return VersionID 
+     */
+    public Long getVersionID() {
+        return this.VersionID;
+    }
+
+    /**
+     * Set 
+     * @param VersionID 
+     */
+    public void setVersionID(Long VersionID) {
+        this.VersionID = VersionID;
+    }
+
+    /**
+     * Get `true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting. 
+     * @return MultiZone `true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
+     */
+    public Boolean getMultiZone() {
+        return this.MultiZone;
+    }
+
+    /**
+     * Set `true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
+     * @param MultiZone `true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
+     */
+    public void setMultiZone(Boolean MultiZone) {
+        this.MultiZone = MultiZone;
+    }
+
+    /**
+     * Get Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`. 
+     * @return MultiZoneSettings Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
+     */
+    public MultiZoneSetting [] getMultiZoneSettings() {
+        return this.MultiZoneSettings;
+    }
+
+    /**
+     * Set Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
+     * @param MultiZoneSettings Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
+     */
+    public void setMultiZoneSettings(MultiZoneSetting [] MultiZoneSettings) {
+        this.MultiZoneSettings = MultiZoneSettings;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -920,17 +989,11 @@ Hadoop-Hbase
         if (source.ProductId != null) {
             this.ProductId = new Long(source.ProductId);
         }
-        if (source.VPCSettings != null) {
-            this.VPCSettings = new VPCSettings(source.VPCSettings);
-        }
         if (source.Software != null) {
             this.Software = new String[source.Software.length];
             for (int i = 0; i < source.Software.length; i++) {
                 this.Software[i] = new String(source.Software[i]);
             }
-        }
-        if (source.ResourceSpec != null) {
-            this.ResourceSpec = new NewResourceSpec(source.ResourceSpec);
         }
         if (source.SupportHA != null) {
             this.SupportHA = new Long(source.SupportHA);
@@ -941,9 +1004,6 @@ Hadoop-Hbase
         if (source.PayMode != null) {
             this.PayMode = new Long(source.PayMode);
         }
-        if (source.Placement != null) {
-            this.Placement = new Placement(source.Placement);
-        }
         if (source.TimeSpan != null) {
             this.TimeSpan = new Long(source.TimeSpan);
         }
@@ -953,8 +1013,17 @@ Hadoop-Hbase
         if (source.LoginSettings != null) {
             this.LoginSettings = new LoginSettings(source.LoginSettings);
         }
+        if (source.VPCSettings != null) {
+            this.VPCSettings = new VPCSettings(source.VPCSettings);
+        }
+        if (source.ResourceSpec != null) {
+            this.ResourceSpec = new NewResourceSpec(source.ResourceSpec);
+        }
         if (source.COSSettings != null) {
             this.COSSettings = new COSSettings(source.COSSettings);
+        }
+        if (source.Placement != null) {
+            this.Placement = new Placement(source.Placement);
         }
         if (source.SgId != null) {
             this.SgId = new String(source.SgId);
@@ -1019,6 +1088,18 @@ Hadoop-Hbase
                 this.ExternalService[i] = new ExternalService(source.ExternalService[i]);
             }
         }
+        if (source.VersionID != null) {
+            this.VersionID = new Long(source.VersionID);
+        }
+        if (source.MultiZone != null) {
+            this.MultiZone = new Boolean(source.MultiZone);
+        }
+        if (source.MultiZoneSettings != null) {
+            this.MultiZoneSettings = new MultiZoneSetting[source.MultiZoneSettings.length];
+            for (int i = 0; i < source.MultiZoneSettings.length; i++) {
+                this.MultiZoneSettings[i] = new MultiZoneSetting(source.MultiZoneSettings[i]);
+            }
+        }
     }
 
 
@@ -1027,17 +1108,17 @@ Hadoop-Hbase
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
-        this.setParamObj(map, prefix + "VPCSettings.", this.VPCSettings);
         this.setParamArraySimple(map, prefix + "Software.", this.Software);
-        this.setParamObj(map, prefix + "ResourceSpec.", this.ResourceSpec);
         this.setParamSimple(map, prefix + "SupportHA", this.SupportHA);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
-        this.setParamObj(map, prefix + "Placement.", this.Placement);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
+        this.setParamObj(map, prefix + "VPCSettings.", this.VPCSettings);
+        this.setParamObj(map, prefix + "ResourceSpec.", this.ResourceSpec);
         this.setParamObj(map, prefix + "COSSettings.", this.COSSettings);
+        this.setParamObj(map, prefix + "Placement.", this.Placement);
         this.setParamSimple(map, prefix + "SgId", this.SgId);
         this.setParamArrayObj(map, prefix + "PreExecutedFileSettings.", this.PreExecutedFileSettings);
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
@@ -1055,6 +1136,9 @@ Hadoop-Hbase
         this.setParamSimple(map, prefix + "ApplicationRole", this.ApplicationRole);
         this.setParamSimple(map, prefix + "SceneName", this.SceneName);
         this.setParamArrayObj(map, prefix + "ExternalService.", this.ExternalService);
+        this.setParamSimple(map, prefix + "VersionID", this.VersionID);
+        this.setParamSimple(map, prefix + "MultiZone", this.MultiZone);
+        this.setParamArrayObj(map, prefix + "MultiZoneSettings.", this.MultiZoneSettings);
 
     }
 }

@@ -96,6 +96,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String DeletionTaskId;
 
     /**
+    * Tags.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private RoleTags [] Tags;
+
+    /**
      * Get Role ID 
      * @return RoleId Role ID
      */
@@ -267,6 +275,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.DeletionTaskId = DeletionTaskId;
     }
 
+    /**
+     * Get Tags.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Tags Tags.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public RoleTags [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tags.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Tags Tags.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTags(RoleTags [] Tags) {
+        this.Tags = Tags;
+    }
+
     public RoleInfo() {
     }
 
@@ -305,6 +333,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.DeletionTaskId != null) {
             this.DeletionTaskId = new String(source.DeletionTaskId);
         }
+        if (source.Tags != null) {
+            this.Tags = new RoleTags[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new RoleTags(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -322,6 +356,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "RoleType", this.RoleType);
         this.setParamSimple(map, prefix + "SessionDuration", this.SessionDuration);
         this.setParamSimple(map, prefix + "DeletionTaskId", this.DeletionTaskId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }
