@@ -37,6 +37,13 @@ public class AccountPrivilegeModifyInfo extends AbstractModel{
     private DBPrivilegeModifyInfo [] DBPrivileges;
 
     /**
+    * Whether it is an admin account
+    */
+    @SerializedName("IsAdmin")
+    @Expose
+    private Boolean IsAdmin;
+
+    /**
      * Get Database username 
      * @return UserName Database username
      */
@@ -68,6 +75,22 @@ public class AccountPrivilegeModifyInfo extends AbstractModel{
         this.DBPrivileges = DBPrivileges;
     }
 
+    /**
+     * Get Whether it is an admin account 
+     * @return IsAdmin Whether it is an admin account
+     */
+    public Boolean getIsAdmin() {
+        return this.IsAdmin;
+    }
+
+    /**
+     * Set Whether it is an admin account
+     * @param IsAdmin Whether it is an admin account
+     */
+    public void setIsAdmin(Boolean IsAdmin) {
+        this.IsAdmin = IsAdmin;
+    }
+
     public AccountPrivilegeModifyInfo() {
     }
 
@@ -85,6 +108,9 @@ public class AccountPrivilegeModifyInfo extends AbstractModel{
                 this.DBPrivileges[i] = new DBPrivilegeModifyInfo(source.DBPrivileges[i]);
             }
         }
+        if (source.IsAdmin != null) {
+            this.IsAdmin = new Boolean(source.IsAdmin);
+        }
     }
 
 
@@ -94,6 +120,7 @@ public class AccountPrivilegeModifyInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamArrayObj(map, prefix + "DBPrivileges.", this.DBPrivileges);
+        this.setParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
 
     }
 }

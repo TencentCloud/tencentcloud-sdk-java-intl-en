@@ -295,6 +295,42 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String BackupModel;
 
     /**
+    * Instance backup info
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("InstanceNote")
+    @Expose
+    private String InstanceNote;
+
+    /**
+    * Backup cycle
+    */
+    @SerializedName("BackupCycle")
+    @Expose
+    private Long [] BackupCycle;
+
+    /**
+    * Backup cycle type. Valid values: `daily`, `weekly`, `monthly`.
+    */
+    @SerializedName("BackupCycleType")
+    @Expose
+    private String BackupCycleType;
+
+    /**
+    * Data (log) backup retention period
+    */
+    @SerializedName("BackupSaveDays")
+    @Expose
+    private Long BackupSaveDays;
+
+    /**
+    * Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -926,6 +962,90 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.BackupModel = BackupModel;
     }
 
+    /**
+     * Get Instance backup info
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return InstanceNote Instance backup info
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getInstanceNote() {
+        return this.InstanceNote;
+    }
+
+    /**
+     * Set Instance backup info
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param InstanceNote Instance backup info
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setInstanceNote(String InstanceNote) {
+        this.InstanceNote = InstanceNote;
+    }
+
+    /**
+     * Get Backup cycle 
+     * @return BackupCycle Backup cycle
+     */
+    public Long [] getBackupCycle() {
+        return this.BackupCycle;
+    }
+
+    /**
+     * Set Backup cycle
+     * @param BackupCycle Backup cycle
+     */
+    public void setBackupCycle(Long [] BackupCycle) {
+        this.BackupCycle = BackupCycle;
+    }
+
+    /**
+     * Get Backup cycle type. Valid values: `daily`, `weekly`, `monthly`. 
+     * @return BackupCycleType Backup cycle type. Valid values: `daily`, `weekly`, `monthly`.
+     */
+    public String getBackupCycleType() {
+        return this.BackupCycleType;
+    }
+
+    /**
+     * Set Backup cycle type. Valid values: `daily`, `weekly`, `monthly`.
+     * @param BackupCycleType Backup cycle type. Valid values: `daily`, `weekly`, `monthly`.
+     */
+    public void setBackupCycleType(String BackupCycleType) {
+        this.BackupCycleType = BackupCycleType;
+    }
+
+    /**
+     * Get Data (log) backup retention period 
+     * @return BackupSaveDays Data (log) backup retention period
+     */
+    public Long getBackupSaveDays() {
+        return this.BackupSaveDays;
+    }
+
+    /**
+     * Set Data (log) backup retention period
+     * @param BackupSaveDays Data (log) backup retention period
+     */
+    public void setBackupSaveDays(Long BackupSaveDays) {
+        this.BackupSaveDays = BackupSaveDays;
+    }
+
+    /**
+     * Get Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service). 
+     * @return InstanceType Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+     * @param InstanceType Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
     public DBInstance() {
     }
 
@@ -1051,6 +1171,24 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.BackupModel != null) {
             this.BackupModel = new String(source.BackupModel);
         }
+        if (source.InstanceNote != null) {
+            this.InstanceNote = new String(source.InstanceNote);
+        }
+        if (source.BackupCycle != null) {
+            this.BackupCycle = new Long[source.BackupCycle.length];
+            for (int i = 0; i < source.BackupCycle.length; i++) {
+                this.BackupCycle[i] = new Long(source.BackupCycle[i]);
+            }
+        }
+        if (source.BackupCycleType != null) {
+            this.BackupCycleType = new String(source.BackupCycleType);
+        }
+        if (source.BackupSaveDays != null) {
+            this.BackupSaveDays = new Long(source.BackupSaveDays);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
     }
 
 
@@ -1096,6 +1234,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "HAFlag", this.HAFlag);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "BackupModel", this.BackupModel);
+        this.setParamSimple(map, prefix + "InstanceNote", this.InstanceNote);
+        this.setParamArraySimple(map, prefix + "BackupCycle.", this.BackupCycle);
+        this.setParamSimple(map, prefix + "BackupCycleType", this.BackupCycleType);
+        this.setParamSimple(map, prefix + "BackupSaveDays", this.BackupSaveDays);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

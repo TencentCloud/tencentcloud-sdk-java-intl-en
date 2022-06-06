@@ -30,7 +30,7 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Backup mode, which supports daily backup only. Valid value: daily.
+    * Backup type. Valid values: `weekly` (when length(BackupDay) <=7 && length(BackupDay) >=2), `daily` (when length(BackupDay)=1). Default value: `daily`.
     */
     @SerializedName("BackupType")
     @Expose
@@ -58,6 +58,20 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
     private String BackupModel;
 
     /**
+    * The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+    */
+    @SerializedName("BackupCycle")
+    @Expose
+    private Long [] BackupCycle;
+
+    /**
+    * Data (log) backup retention period. Value range: 3-1830 days, default value: 7 days.
+    */
+    @SerializedName("BackupSaveDays")
+    @Expose
+    private Long BackupSaveDays;
+
+    /**
      * Get Instance ID. 
      * @return InstanceId Instance ID.
      */
@@ -74,16 +88,16 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
     }
 
     /**
-     * Get Backup mode, which supports daily backup only. Valid value: daily. 
-     * @return BackupType Backup mode, which supports daily backup only. Valid value: daily.
+     * Get Backup type. Valid values: `weekly` (when length(BackupDay) <=7 && length(BackupDay) >=2), `daily` (when length(BackupDay)=1). Default value: `daily`. 
+     * @return BackupType Backup type. Valid values: `weekly` (when length(BackupDay) <=7 && length(BackupDay) >=2), `daily` (when length(BackupDay)=1). Default value: `daily`.
      */
     public String getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set Backup mode, which supports daily backup only. Valid value: daily.
-     * @param BackupType Backup mode, which supports daily backup only. Valid value: daily.
+     * Set Backup type. Valid values: `weekly` (when length(BackupDay) <=7 && length(BackupDay) >=2), `daily` (when length(BackupDay)=1). Default value: `daily`.
+     * @param BackupType Backup type. Valid values: `weekly` (when length(BackupDay) <=7 && length(BackupDay) >=2), `daily` (when length(BackupDay)=1). Default value: `daily`.
      */
     public void setBackupType(String BackupType) {
         this.BackupType = BackupType;
@@ -137,6 +151,38 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
         this.BackupModel = BackupModel;
     }
 
+    /**
+     * Get The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default. 
+     * @return BackupCycle The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+     */
+    public Long [] getBackupCycle() {
+        return this.BackupCycle;
+    }
+
+    /**
+     * Set The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+     * @param BackupCycle The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+     */
+    public void setBackupCycle(Long [] BackupCycle) {
+        this.BackupCycle = BackupCycle;
+    }
+
+    /**
+     * Get Data (log) backup retention period. Value range: 3-1830 days, default value: 7 days. 
+     * @return BackupSaveDays Data (log) backup retention period. Value range: 3-1830 days, default value: 7 days.
+     */
+    public Long getBackupSaveDays() {
+        return this.BackupSaveDays;
+    }
+
+    /**
+     * Set Data (log) backup retention period. Value range: 3-1830 days, default value: 7 days.
+     * @param BackupSaveDays Data (log) backup retention period. Value range: 3-1830 days, default value: 7 days.
+     */
+    public void setBackupSaveDays(Long BackupSaveDays) {
+        this.BackupSaveDays = BackupSaveDays;
+    }
+
     public ModifyBackupStrategyRequest() {
     }
 
@@ -160,6 +206,15 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
         if (source.BackupModel != null) {
             this.BackupModel = new String(source.BackupModel);
         }
+        if (source.BackupCycle != null) {
+            this.BackupCycle = new Long[source.BackupCycle.length];
+            for (int i = 0; i < source.BackupCycle.length; i++) {
+                this.BackupCycle[i] = new Long(source.BackupCycle[i]);
+            }
+        }
+        if (source.BackupSaveDays != null) {
+            this.BackupSaveDays = new Long(source.BackupSaveDays);
+        }
     }
 
 
@@ -172,6 +227,8 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupTime", this.BackupTime);
         this.setParamSimple(map, prefix + "BackupDay", this.BackupDay);
         this.setParamSimple(map, prefix + "BackupModel", this.BackupModel);
+        this.setParamArraySimple(map, prefix + "BackupCycle.", this.BackupCycle);
+        this.setParamSimple(map, prefix + "BackupSaveDays", this.BackupSaveDays);
 
     }
 }

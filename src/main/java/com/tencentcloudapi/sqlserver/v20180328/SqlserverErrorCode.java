@@ -30,6 +30,9 @@ public enum SqlserverErrorCode {
     // Billing error. Failed to query price.
      FAILEDOPERATION_QUERYPRICEFAILED("FailedOperation.QueryPriceFailed"),
      
+    // Failed to operate the network or the session timed out.
+     FAILEDOPERATION_VPCERROR("FailedOperation.VPCError"),
+     
     // Internal error.
      INTERNALERROR("InternalError"),
      
@@ -197,6 +200,9 @@ public enum SqlserverErrorCode {
      
     // The instance does not exist.
      RESOURCENOTFOUND_INSTANCENOTFOUND("ResourceNotFound.InstanceNotFound"),
+     
+    // Parameter not found.
+     RESOURCENOTFOUND_PARAMSNOTFOUND("ResourceNotFound.ParamsNotFound"),
      
     // The VPC does not exist.
      RESOURCENOTFOUND_VPCNOTEXIST("ResourceNotFound.VpcNotExist"),

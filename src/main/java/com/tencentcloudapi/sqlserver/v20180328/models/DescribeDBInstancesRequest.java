@@ -140,6 +140,13 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private String [] UidSet;
 
     /**
+    * Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
      * Get Project ID 
      * @return ProjectId Project ID
      */
@@ -427,6 +434,22 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.UidSet = UidSet;
     }
 
+    /**
+     * Get Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service). 
+     * @return InstanceType Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+     * @param InstanceType Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
     public DescribeDBInstancesRequest() {
     }
 
@@ -498,6 +521,9 @@ public class DescribeDBInstancesRequest extends AbstractModel{
                 this.UidSet[i] = new String(source.UidSet[i]);
             }
         }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
     }
 
 
@@ -520,6 +546,7 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
         this.setParamSimple(map, prefix + "SearchKey", this.SearchKey);
         this.setParamArraySimple(map, prefix + "UidSet.", this.UidSet);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

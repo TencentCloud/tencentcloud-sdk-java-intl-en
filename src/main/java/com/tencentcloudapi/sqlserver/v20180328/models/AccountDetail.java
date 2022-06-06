@@ -86,6 +86,20 @@ public class AccountDetail extends AbstractModel{
     private Boolean IsAdmin;
 
     /**
+    * Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
+    */
+    @SerializedName("Authentication")
+    @Expose
+    private String Authentication;
+
+    /**
+    * The host required for `win-windows authentication` account
+    */
+    @SerializedName("Host")
+    @Expose
+    private String Host;
+
+    /**
      * Get Account name 
      * @return Name Account name
      */
@@ -229,6 +243,38 @@ public class AccountDetail extends AbstractModel{
         this.IsAdmin = IsAdmin;
     }
 
+    /**
+     * Get Valid values: `win-windows authentication`, `sql-sqlserver authentication`. 
+     * @return Authentication Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
+     */
+    public String getAuthentication() {
+        return this.Authentication;
+    }
+
+    /**
+     * Set Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
+     * @param Authentication Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
+     */
+    public void setAuthentication(String Authentication) {
+        this.Authentication = Authentication;
+    }
+
+    /**
+     * Get The host required for `win-windows authentication` account 
+     * @return Host The host required for `win-windows authentication` account
+     */
+    public String getHost() {
+        return this.Host;
+    }
+
+    /**
+     * Set The host required for `win-windows authentication` account
+     * @param Host The host required for `win-windows authentication` account
+     */
+    public void setHost(String Host) {
+        this.Host = Host;
+    }
+
     public AccountDetail() {
     }
 
@@ -267,6 +313,12 @@ public class AccountDetail extends AbstractModel{
         if (source.IsAdmin != null) {
             this.IsAdmin = new Boolean(source.IsAdmin);
         }
+        if (source.Authentication != null) {
+            this.Authentication = new String(source.Authentication);
+        }
+        if (source.Host != null) {
+            this.Host = new String(source.Host);
+        }
     }
 
 
@@ -283,6 +335,8 @@ public class AccountDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "InternalStatus", this.InternalStatus);
         this.setParamArrayObj(map, prefix + "Dbs.", this.Dbs);
         this.setParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
+        this.setParamSimple(map, prefix + "Authentication", this.Authentication);
+        this.setParamSimple(map, prefix + "Host", this.Host);
 
     }
 }

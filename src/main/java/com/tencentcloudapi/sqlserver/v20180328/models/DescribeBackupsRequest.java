@@ -100,6 +100,20 @@ public class DescribeBackupsRequest extends AbstractModel{
     private Long Group;
 
     /**
+    * Backup type. Valid values: `1` (data backup), `2` (log backup). Default value: `1`.
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
+    * Filter by backup file format. Valid values: `pkg` (archive file), `single` (Unarchived files).
+    */
+    @SerializedName("BackupFormat")
+    @Expose
+    private String BackupFormat;
+
+    /**
      * Get Start name (yyyy-MM-dd HH:mm:ss) 
      * @return StartTime Start name (yyyy-MM-dd HH:mm:ss)
      */
@@ -275,6 +289,38 @@ public class DescribeBackupsRequest extends AbstractModel{
         this.Group = Group;
     }
 
+    /**
+     * Get Backup type. Valid values: `1` (data backup), `2` (log backup). Default value: `1`. 
+     * @return Type Backup type. Valid values: `1` (data backup), `2` (log backup). Default value: `1`.
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set Backup type. Valid values: `1` (data backup), `2` (log backup). Default value: `1`.
+     * @param Type Backup type. Valid values: `1` (data backup), `2` (log backup). Default value: `1`.
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get Filter by backup file format. Valid values: `pkg` (archive file), `single` (Unarchived files). 
+     * @return BackupFormat Filter by backup file format. Valid values: `pkg` (archive file), `single` (Unarchived files).
+     */
+    public String getBackupFormat() {
+        return this.BackupFormat;
+    }
+
+    /**
+     * Set Filter by backup file format. Valid values: `pkg` (archive file), `single` (Unarchived files).
+     * @param BackupFormat Filter by backup file format. Valid values: `pkg` (archive file), `single` (Unarchived files).
+     */
+    public void setBackupFormat(String BackupFormat) {
+        this.BackupFormat = BackupFormat;
+    }
+
     public DescribeBackupsRequest() {
     }
 
@@ -316,6 +362,12 @@ public class DescribeBackupsRequest extends AbstractModel{
         if (source.Group != null) {
             this.Group = new Long(source.Group);
         }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.BackupFormat != null) {
+            this.BackupFormat = new String(source.BackupFormat);
+        }
     }
 
 
@@ -334,6 +386,8 @@ public class DescribeBackupsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupId", this.BackupId);
         this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
         this.setParamSimple(map, prefix + "Group", this.Group);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "BackupFormat", this.BackupFormat);
 
     }
 }

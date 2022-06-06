@@ -58,6 +58,13 @@ public class AccountCreateInfo extends AbstractModel{
     private Boolean IsAdmin;
 
     /**
+    * Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`.
+    */
+    @SerializedName("Authentication")
+    @Expose
+    private String Authentication;
+
+    /**
      * Get Instance username 
      * @return UserName Instance username
      */
@@ -137,6 +144,22 @@ public class AccountCreateInfo extends AbstractModel{
         this.IsAdmin = IsAdmin;
     }
 
+    /**
+     * Get Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`. 
+     * @return Authentication Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`.
+     */
+    public String getAuthentication() {
+        return this.Authentication;
+    }
+
+    /**
+     * Set Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`.
+     * @param Authentication Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`.
+     */
+    public void setAuthentication(String Authentication) {
+        this.Authentication = Authentication;
+    }
+
     public AccountCreateInfo() {
     }
 
@@ -163,6 +186,9 @@ public class AccountCreateInfo extends AbstractModel{
         if (source.IsAdmin != null) {
             this.IsAdmin = new Boolean(source.IsAdmin);
         }
+        if (source.Authentication != null) {
+            this.Authentication = new String(source.Authentication);
+        }
     }
 
 
@@ -175,6 +201,7 @@ public class AccountCreateInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "DBPrivileges.", this.DBPrivileges);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
+        this.setParamSimple(map, prefix + "Authentication", this.Authentication);
 
     }
 }

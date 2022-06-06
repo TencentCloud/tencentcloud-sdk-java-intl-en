@@ -86,6 +86,13 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
     private String MultiZones;
 
     /**
+    * The time when configuration adjustment task is performed. Valid values: `0` (execute immediately), `1` (execute during maintenance time). Default value: `1`.
+    */
+    @SerializedName("WaitSwitch")
+    @Expose
+    private Long WaitSwitch;
+
+    /**
      * Get Instance ID in the format of mssql-j8kv137v 
      * @return InstanceId Instance ID in the format of mssql-j8kv137v
      */
@@ -229,6 +236,22 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         this.MultiZones = MultiZones;
     }
 
+    /**
+     * Get The time when configuration adjustment task is performed. Valid values: `0` (execute immediately), `1` (execute during maintenance time). Default value: `1`. 
+     * @return WaitSwitch The time when configuration adjustment task is performed. Valid values: `0` (execute immediately), `1` (execute during maintenance time). Default value: `1`.
+     */
+    public Long getWaitSwitch() {
+        return this.WaitSwitch;
+    }
+
+    /**
+     * Set The time when configuration adjustment task is performed. Valid values: `0` (execute immediately), `1` (execute during maintenance time). Default value: `1`.
+     * @param WaitSwitch The time when configuration adjustment task is performed. Valid values: `0` (execute immediately), `1` (execute during maintenance time). Default value: `1`.
+     */
+    public void setWaitSwitch(Long WaitSwitch) {
+        this.WaitSwitch = WaitSwitch;
+    }
+
     public UpgradeDBInstanceRequest() {
     }
 
@@ -267,6 +290,9 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         if (source.MultiZones != null) {
             this.MultiZones = new String(source.MultiZones);
         }
+        if (source.WaitSwitch != null) {
+            this.WaitSwitch = new Long(source.WaitSwitch);
+        }
     }
 
 
@@ -283,6 +309,7 @@ public class UpgradeDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
         this.setParamSimple(map, prefix + "HAType", this.HAType);
         this.setParamSimple(map, prefix + "MultiZones", this.MultiZones);
+        this.setParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
 
     }
 }

@@ -114,6 +114,13 @@ public class Backup extends AbstractModel{
     private String GroupId;
 
     /**
+    * Backup file format. Valid values:`pkg` (archive file), `single` (unarchived files).
+    */
+    @SerializedName("BackupFormat")
+    @Expose
+    private String BackupFormat;
+
+    /**
      * Get File name. The name of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter. 
      * @return FileName File name. The name of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
      */
@@ -321,6 +328,22 @@ public class Backup extends AbstractModel{
         this.GroupId = GroupId;
     }
 
+    /**
+     * Get Backup file format. Valid values:`pkg` (archive file), `single` (unarchived files). 
+     * @return BackupFormat Backup file format. Valid values:`pkg` (archive file), `single` (unarchived files).
+     */
+    public String getBackupFormat() {
+        return this.BackupFormat;
+    }
+
+    /**
+     * Set Backup file format. Valid values:`pkg` (archive file), `single` (unarchived files).
+     * @param BackupFormat Backup file format. Valid values:`pkg` (archive file), `single` (unarchived files).
+     */
+    public void setBackupFormat(String BackupFormat) {
+        this.BackupFormat = BackupFormat;
+    }
+
     public Backup() {
     }
 
@@ -371,6 +394,9 @@ public class Backup extends AbstractModel{
         if (source.GroupId != null) {
             this.GroupId = new String(source.GroupId);
         }
+        if (source.BackupFormat != null) {
+            this.BackupFormat = new String(source.BackupFormat);
+        }
     }
 
 
@@ -391,6 +417,7 @@ public class Backup extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupWay", this.BackupWay);
         this.setParamSimple(map, prefix + "BackupName", this.BackupName);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "BackupFormat", this.BackupFormat);
 
     }
 }
