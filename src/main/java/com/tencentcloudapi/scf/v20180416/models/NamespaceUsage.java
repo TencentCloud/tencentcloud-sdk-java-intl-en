@@ -52,12 +52,20 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long TotalConcurrencyMem;
 
     /**
-    * Memory usage of the namespace
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Concurrency usage of the namespace
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("TotalAllocatedConcurrencyMem")
     @Expose
     private Long TotalAllocatedConcurrencyMem;
+
+    /**
+    * Provisioned concurrency usage of the namespace
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("TotalAllocatedProvisionedMem")
+    @Expose
+    private Long TotalAllocatedProvisionedMem;
 
     /**
      * Get Function array 
@@ -128,23 +136,43 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Memory usage of the namespace
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return TotalAllocatedConcurrencyMem Memory usage of the namespace
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Concurrency usage of the namespace
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return TotalAllocatedConcurrencyMem Concurrency usage of the namespace
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Long getTotalAllocatedConcurrencyMem() {
         return this.TotalAllocatedConcurrencyMem;
     }
 
     /**
-     * Set Memory usage of the namespace
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param TotalAllocatedConcurrencyMem Memory usage of the namespace
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Concurrency usage of the namespace
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param TotalAllocatedConcurrencyMem Concurrency usage of the namespace
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setTotalAllocatedConcurrencyMem(Long TotalAllocatedConcurrencyMem) {
         this.TotalAllocatedConcurrencyMem = TotalAllocatedConcurrencyMem;
+    }
+
+    /**
+     * Get Provisioned concurrency usage of the namespace
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return TotalAllocatedProvisionedMem Provisioned concurrency usage of the namespace
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Long getTotalAllocatedProvisionedMem() {
+        return this.TotalAllocatedProvisionedMem;
+    }
+
+    /**
+     * Set Provisioned concurrency usage of the namespace
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param TotalAllocatedProvisionedMem Provisioned concurrency usage of the namespace
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setTotalAllocatedProvisionedMem(Long TotalAllocatedProvisionedMem) {
+        this.TotalAllocatedProvisionedMem = TotalAllocatedProvisionedMem;
     }
 
     public NamespaceUsage() {
@@ -173,6 +201,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.TotalAllocatedConcurrencyMem != null) {
             this.TotalAllocatedConcurrencyMem = new Long(source.TotalAllocatedConcurrencyMem);
         }
+        if (source.TotalAllocatedProvisionedMem != null) {
+            this.TotalAllocatedProvisionedMem = new Long(source.TotalAllocatedProvisionedMem);
+        }
     }
 
 
@@ -185,6 +216,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "FunctionsCount", this.FunctionsCount);
         this.setParamSimple(map, prefix + "TotalConcurrencyMem", this.TotalConcurrencyMem);
         this.setParamSimple(map, prefix + "TotalAllocatedConcurrencyMem", this.TotalAllocatedConcurrencyMem);
+        this.setParamSimple(map, prefix + "TotalAllocatedProvisionedMem", this.TotalAllocatedProvisionedMem);
 
     }
 }

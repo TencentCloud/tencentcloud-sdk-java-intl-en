@@ -12,6 +12,15 @@ public enum ScfErrorCode {
     // This operation is not supported by the current async event status. Please try again later.
      FAILEDOPERATION_ASYNCEVENTSTATUS("FailedOperation.AsyncEventStatus"),
      
+    // Login information verification failed and token verification failed.
+     FAILEDOPERATION_AUTHFAILURE("FailedOperation.AuthFailure"),
+     
+    // Failed to query the role information.
+     FAILEDOPERATION_CALLROLEFAILED("FailedOperation.CallRoleFailed"),
+     
+    // 
+     FAILEDOPERATION_COPYASYNCRUN("FailedOperation.CopyAsyncRun"),
+     
     // Failed to replicate the function.
      FAILEDOPERATION_COPYFAILED("FailedOperation.CopyFailed"),
      
@@ -78,6 +87,12 @@ public enum ScfErrorCode {
     // Failed to delete the scheduled provisioned concurrency scaling action
      FAILEDOPERATION_PROVISIONDELETETIMER("FailedOperation.ProvisionDeleteTimer"),
      
+    // 
+     FAILEDOPERATION_PROVISIONEDEXCEEDAVAILABLE("FailedOperation.ProvisionedExceedAvailable"),
+     
+    // 
+     FAILEDOPERATION_PROVISIONEDEXCEEDRESERVED("FailedOperation.ProvisionedExceedReserved"),
+     
     // The function version already has a provisioned concurrency setting task in progress. Please try again later.
      FAILEDOPERATION_PROVISIONEDINPROGRESS("FailedOperation.ProvisionedInProgress"),
      
@@ -87,8 +102,14 @@ public enum ScfErrorCode {
     // You cannot publish a version in the current function state. Please try again when the state is normal.
      FAILEDOPERATION_PUBLISHVERSION("FailedOperation.PublishVersion"),
      
+    // 
+     FAILEDOPERATION_RESERVEDEXCEEDTOTAL("FailedOperation.ReservedExceedTotal"),
+     
     // The function already has a reserved concurrency setting task in progress. Please try again later.
      FAILEDOPERATION_RESERVEDINPROGRESS("FailedOperation.ReservedInProgress"),
+     
+    // 
+     FAILEDOPERATION_SERVICECLOSED("FailedOperation.ServiceClosed"),
      
     // This topic does not exsit.
      FAILEDOPERATION_TOPICNOTEXIST("FailedOperation.TopicNotExist"),
@@ -132,8 +153,14 @@ public enum ScfErrorCode {
     // The value of `FunctionName` does not conform to the specification. Please fix it and try again. For more information, please visit https://tencentcs.com/5jXKFnBW.
      INVALIDPARAMETER_FUNCTIONNAME("InvalidParameter.FunctionName"),
      
+    // Function creation parameter error.
+     INVALIDPARAMETER_PARAMERROR("InvalidParameter.ParamError"),
+     
     // Invalid request parameter.
      INVALIDPARAMETER_PAYLOAD("InvalidParameter.Payload"),
+     
+    // 
+     INVALIDPARAMETER_ROLECHECK("InvalidParameter.RoleCheck"),
      
     // Incorrect `RoutingConfig` parameter.
      INVALIDPARAMETER_ROUTINGCONFIG("InvalidParameter.RoutingConfig"),
@@ -207,8 +234,17 @@ public enum ScfErrorCode {
     // Failed to create the default namespace.
      INVALIDPARAMETERVALUE_DEFAULTNAMESPACE("InvalidParameterValue.DefaultNamespace"),
      
+    // The code parameter of the function template corresponding with the DemoID is error.
+     INVALIDPARAMETERVALUE_DEMO("InvalidParameterValue.Demo"),
+     
+    // The DemoId does not exist.
+     INVALIDPARAMETERVALUE_DEMOID("InvalidParameterValue.DemoId"),
+     
     // Description error.
      INVALIDPARAMETERVALUE_DESCRIPTION("InvalidParameterValue.Description"),
+     
+    // The configuration of the environment variable DNS[OS_NAMESERVER] is incorrect.
+     INVALIDPARAMETERVALUE_DNSINFO("InvalidParameterValue.DnsInfo"),
      
     // The value of `Enable` does not conform to the specification. Please fix it and try again. For more information, please visit https://tencentcs.com/5jXKFnBW.
      INVALIDPARAMETERVALUE_ENABLE("InvalidParameterValue.Enable"),
@@ -224,6 +260,12 @@ public enum ScfErrorCode {
      
     // The function does not exist.
      INVALIDPARAMETERVALUE_FUNCTIONNAME("InvalidParameterValue.FunctionName"),
+     
+    // Request ID error
+     INVALIDPARAMETERVALUE_FUNCTIONREQUESTID("InvalidParameterValue.FunctionRequestId"),
+     
+    // FunctionType error
+     INVALIDPARAMETERVALUE_FUNCTIONTYPE("InvalidParameterValue.FunctionType"),
      
     // The format of GitBranch is incorrect. 
      INVALIDPARAMETERVALUE_GITBRANCH("InvalidParameterValue.GitBranch"),
@@ -242,6 +284,9 @@ public enum ScfErrorCode {
      
     // Handler error.
      INVALIDPARAMETERVALUE_HANDLER("InvalidParameterValue.Handler"),
+     
+    // ImageType error
+     INVALIDPARAMETERVALUE_IMAGETYPE("InvalidParameterValue.ImageType"),
      
     // The input of imageUri is incorrect.
      INVALIDPARAMETERVALUE_IMAGEURI("InvalidParameterValue.ImageUri"),
@@ -299,6 +344,9 @@ public enum ScfErrorCode {
      
     // Unsupported function version.
      INVALIDPARAMETERVALUE_QUALIFIER("InvalidParameterValue.Qualifier"),
+     
+    // Version parameter error
+     INVALIDPARAMETERVALUE_QUERYVERSION("InvalidParameterValue.QueryVersion"),
      
     // The value Enterprise Edition image ID [RegistryId] is incorrect.
      INVALIDPARAMETERVALUE_REGISTRYID("InvalidParameterValue.RegistryId"),
@@ -392,6 +440,9 @@ public enum ScfErrorCode {
      
     // 
      LIMITEXCEEDED_LAYERS("LimitExceeded.Layers"),
+     
+    // Reached the upper limit of dynamic scaling.
+     LIMITEXCEEDED_MAXCAPACITY("LimitExceeded.MaxCapacity"),
      
     // The memory exceeds the upper limit.
      LIMITEXCEEDED_MEMORY("LimitExceeded.Memory"),
@@ -494,6 +545,9 @@ public enum ScfErrorCode {
      
     // The function version does not exist.
      RESOURCENOTFOUND_FUNCTIONVERSION("ResourceNotFound.FunctionVersion"),
+     
+    // Failed to find the specified `ImageConfig`. Please create it first.
+     RESOURCENOTFOUND_IMAGECONFIG("ResourceNotFound.ImageConfig"),
      
     // The layer does not exist.
      RESOURCENOTFOUND_LAYER("ResourceNotFound.Layer"),
