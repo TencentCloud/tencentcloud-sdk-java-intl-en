@@ -129,6 +129,30 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private String RuleType;
 
     /**
+    * Whether it is an advanced metric. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsAdvanced")
+    @Expose
+    private Long IsAdvanced;
+
+    /**
+    * Whether the advanced metric feature is enabled. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsOpen")
+    @Expose
+    private Long IsOpen;
+
+    /**
+    * Integration center product ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ProductId")
+    @Expose
+    private String ProductId;
+
+    /**
      * Get Metric name or event name. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1) and the supported events via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
 Note: this field may return `null`, indicating that no valid value is obtained. 
      * @return MetricName Metric name or event name. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1) and the supported events via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
@@ -420,6 +444,66 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.RuleType = RuleType;
     }
 
+    /**
+     * Get Whether it is an advanced metric. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return IsAdvanced Whether it is an advanced metric. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getIsAdvanced() {
+        return this.IsAdvanced;
+    }
+
+    /**
+     * Set Whether it is an advanced metric. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param IsAdvanced Whether it is an advanced metric. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setIsAdvanced(Long IsAdvanced) {
+        this.IsAdvanced = IsAdvanced;
+    }
+
+    /**
+     * Get Whether the advanced metric feature is enabled. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return IsOpen Whether the advanced metric feature is enabled. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getIsOpen() {
+        return this.IsOpen;
+    }
+
+    /**
+     * Set Whether the advanced metric feature is enabled. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param IsOpen Whether the advanced metric feature is enabled. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setIsOpen(Long IsOpen) {
+        this.IsOpen = IsOpen;
+    }
+
+    /**
+     * Get Integration center product ID.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ProductId Integration center product ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getProductId() {
+        return this.ProductId;
+    }
+
+    /**
+     * Set Integration center product ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ProductId Integration center product ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setProductId(String ProductId) {
+        this.ProductId = ProductId;
+    }
+
     public AlarmPolicyRule() {
     }
 
@@ -461,6 +545,15 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         if (source.RuleType != null) {
             this.RuleType = new String(source.RuleType);
         }
+        if (source.IsAdvanced != null) {
+            this.IsAdvanced = new Long(source.IsAdvanced);
+        }
+        if (source.IsOpen != null) {
+            this.IsOpen = new Long(source.IsOpen);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
     }
 
 
@@ -479,6 +572,9 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Unit", this.Unit);
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
+        this.setParamSimple(map, prefix + "IsAdvanced", this.IsAdvanced);
+        this.setParamSimple(map, prefix + "IsOpen", this.IsOpen);
+        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
 
     }
 }

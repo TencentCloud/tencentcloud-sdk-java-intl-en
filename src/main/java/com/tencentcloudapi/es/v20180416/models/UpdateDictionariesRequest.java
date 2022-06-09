@@ -58,14 +58,14 @@ public class UpdateDictionariesRequest extends AbstractModel{
     private String [] QQDict;
 
     /**
-    * 0: Install; 1: Delete
+    * `0` (default): Install, `1`: Delete
     */
     @SerializedName("UpdateType")
     @Expose
     private Long UpdateType;
 
     /**
-    * Whether to force restart the cluster
+    * Whether to force restart the cluster. The default value is `false`.
     */
     @SerializedName("ForceRestart")
     @Expose
@@ -152,32 +152,32 @@ public class UpdateDictionariesRequest extends AbstractModel{
     }
 
     /**
-     * Get 0: Install; 1: Delete 
-     * @return UpdateType 0: Install; 1: Delete
+     * Get `0` (default): Install, `1`: Delete 
+     * @return UpdateType `0` (default): Install, `1`: Delete
      */
     public Long getUpdateType() {
         return this.UpdateType;
     }
 
     /**
-     * Set 0: Install; 1: Delete
-     * @param UpdateType 0: Install; 1: Delete
+     * Set `0` (default): Install, `1`: Delete
+     * @param UpdateType `0` (default): Install, `1`: Delete
      */
     public void setUpdateType(Long UpdateType) {
         this.UpdateType = UpdateType;
     }
 
     /**
-     * Get Whether to force restart the cluster 
-     * @return ForceRestart Whether to force restart the cluster
+     * Get Whether to force restart the cluster. The default value is `false`. 
+     * @return ForceRestart Whether to force restart the cluster. The default value is `false`.
      */
     public Boolean getForceRestart() {
         return this.ForceRestart;
     }
 
     /**
-     * Set Whether to force restart the cluster
-     * @param ForceRestart Whether to force restart the cluster
+     * Set Whether to force restart the cluster. The default value is `false`.
+     * @param ForceRestart Whether to force restart the cluster. The default value is `false`.
      */
     public void setForceRestart(Boolean ForceRestart) {
         this.ForceRestart = ForceRestart;

@@ -13,28 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lighthouse.v20200324.models;
+package com.tencentcloudapi.es.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstancesResponse extends AbstractModel{
+public class DescribeIndexMetaResponse extends AbstractModel{
 
     /**
-    * Number of eligible instances.
+    * Index metadata field
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
-    @SerializedName("TotalCount")
+    @SerializedName("IndexMetaField")
     @Expose
-    private Long TotalCount;
-
-    /**
-    * List of instance details.
-    */
-    @SerializedName("InstanceSet")
-    @Expose
-    private Instance [] InstanceSet;
+    private IndexMetaField IndexMetaField;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +38,23 @@ public class DescribeInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Number of eligible instances. 
-     * @return TotalCount Number of eligible instances.
+     * Get Index metadata field
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return IndexMetaField Index metadata field
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public IndexMetaField getIndexMetaField() {
+        return this.IndexMetaField;
     }
 
     /**
-     * Set Number of eligible instances.
-     * @param TotalCount Number of eligible instances.
+     * Set Index metadata field
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param IndexMetaField Index metadata field
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get List of instance details. 
-     * @return InstanceSet List of instance details.
-     */
-    public Instance [] getInstanceSet() {
-        return this.InstanceSet;
-    }
-
-    /**
-     * Set List of instance details.
-     * @param InstanceSet List of instance details.
-     */
-    public void setInstanceSet(Instance [] InstanceSet) {
-        this.InstanceSet = InstanceSet;
+    public void setIndexMetaField(IndexMetaField IndexMetaField) {
+        this.IndexMetaField = IndexMetaField;
     }
 
     /**
@@ -91,22 +73,16 @@ public class DescribeInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeInstancesResponse() {
+    public DescribeIndexMetaResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeInstancesResponse(DescribeInstancesResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.InstanceSet != null) {
-            this.InstanceSet = new Instance[source.InstanceSet.length];
-            for (int i = 0; i < source.InstanceSet.length; i++) {
-                this.InstanceSet[i] = new Instance(source.InstanceSet[i]);
-            }
+    public DescribeIndexMetaResponse(DescribeIndexMetaResponse source) {
+        if (source.IndexMetaField != null) {
+            this.IndexMetaField = new IndexMetaField(source.IndexMetaField);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +94,7 @@ public class DescribeInstancesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "InstanceSet.", this.InstanceSet);
+        this.setParamObj(map, prefix + "IndexMetaField.", this.IndexMetaField);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

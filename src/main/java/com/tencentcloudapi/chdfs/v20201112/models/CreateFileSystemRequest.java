@@ -86,6 +86,13 @@ public class CreateFileSystemRequest extends AbstractModel{
     private String [] RangerServiceAddresses;
 
     /**
+    * Multiple resource tags, which can be an empty array
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get File system name 
      * @return FileSystemName File system name
      */
@@ -229,6 +236,22 @@ public class CreateFileSystemRequest extends AbstractModel{
         this.RangerServiceAddresses = RangerServiceAddresses;
     }
 
+    /**
+     * Get Multiple resource tags, which can be an empty array 
+     * @return Tags Multiple resource tags, which can be an empty array
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Multiple resource tags, which can be an empty array
+     * @param Tags Multiple resource tags, which can be an empty array
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateFileSystemRequest() {
     }
 
@@ -270,6 +293,12 @@ public class CreateFileSystemRequest extends AbstractModel{
                 this.RangerServiceAddresses[i] = new String(source.RangerServiceAddresses[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -286,6 +315,7 @@ public class CreateFileSystemRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RootInodeGroup", this.RootInodeGroup);
         this.setParamSimple(map, prefix + "EnableRanger", this.EnableRanger);
         this.setParamArraySimple(map, prefix + "RangerServiceAddresses.", this.RangerServiceAddresses);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

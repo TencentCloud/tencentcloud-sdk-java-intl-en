@@ -44,14 +44,14 @@ public class UpdatePluginsRequest extends AbstractModel{
     private String [] RemovePluginList;
 
     /**
-    * Whether to force restart
+    * Whether to force restart the cluster. The default value is `false`.
     */
     @SerializedName("ForceRestart")
     @Expose
     private Boolean ForceRestart;
 
     /**
-    * Whether to reinstall
+    * Whether to reinstall the cluster. The default value is `false`.
     */
     @SerializedName("ForceUpdate")
     @Expose
@@ -113,32 +113,32 @@ public class UpdatePluginsRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to force restart 
-     * @return ForceRestart Whether to force restart
+     * Get Whether to force restart the cluster. The default value is `false`. 
+     * @return ForceRestart Whether to force restart the cluster. The default value is `false`.
      */
     public Boolean getForceRestart() {
         return this.ForceRestart;
     }
 
     /**
-     * Set Whether to force restart
-     * @param ForceRestart Whether to force restart
+     * Set Whether to force restart the cluster. The default value is `false`.
+     * @param ForceRestart Whether to force restart the cluster. The default value is `false`.
      */
     public void setForceRestart(Boolean ForceRestart) {
         this.ForceRestart = ForceRestart;
     }
 
     /**
-     * Get Whether to reinstall 
-     * @return ForceUpdate Whether to reinstall
+     * Get Whether to reinstall the cluster. The default value is `false`. 
+     * @return ForceUpdate Whether to reinstall the cluster. The default value is `false`.
      */
     public Boolean getForceUpdate() {
         return this.ForceUpdate;
     }
 
     /**
-     * Set Whether to reinstall
-     * @param ForceUpdate Whether to reinstall
+     * Set Whether to reinstall the cluster. The default value is `false`.
+     * @param ForceUpdate Whether to reinstall the cluster. The default value is `false`.
      */
     public void setForceUpdate(Boolean ForceUpdate) {
         this.ForceUpdate = ForceUpdate;

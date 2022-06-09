@@ -39,6 +39,26 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create indices.
+     * @param req CreateIndexRequest
+     * @return CreateIndexResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateIndexResponse CreateIndex(CreateIndexRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateIndexResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateIndexResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateIndex");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create an ES cluster instance with the specified specification.
      * @param req CreateInstanceRequest
      * @return CreateInstanceResponse
@@ -59,6 +79,26 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete indices.
+     * @param req DeleteIndexRequest
+     * @return DeleteIndexResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteIndexResponse DeleteIndex(DeleteIndexRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteIndexResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteIndexResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteIndex");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to terminate a cluster instance. 
      * @param req DeleteInstanceRequest
      * @return DeleteInstanceResponse
@@ -71,6 +111,46 @@ public class EsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain the index list.
+     * @param req DescribeIndexListRequest
+     * @return DescribeIndexListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIndexListResponse DescribeIndexList(DescribeIndexListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIndexListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIndexListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeIndexList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain index metadata.
+     * @param req DescribeIndexMetaRequest
+     * @return DescribeIndexMetaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIndexMetaResponse DescribeIndexMeta(DescribeIndexMetaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIndexMetaResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIndexMetaResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeIndexMeta");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -251,6 +331,26 @@ public class EsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdateDictionariesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdateDictionaries");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to update indices.
+     * @param req UpdateIndexRequest
+     * @return UpdateIndexResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateIndexResponse UpdateIndex(UpdateIndexRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateIndexResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateIndexResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateIndex");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

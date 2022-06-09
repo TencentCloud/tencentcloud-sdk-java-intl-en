@@ -6,6 +6,9 @@ public enum EsErrorCode {
     // Unauthorized operation.
      AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnAuthorizedOperation"),
      
+    // Operation failed.
+     FAILEDOPERATION("FailedOperation"),
+     
     // An error occurred with the cluster resource quota limit.
      FAILEDOPERATION_CLUSTERRESOURCELIMITERROR("FailedOperation.ClusterResourceLimitError"),
      
@@ -42,6 +45,15 @@ public enum EsErrorCode {
     // Invalid parameter.
      INVALIDPARAMETER("InvalidParameter"),
      
+    // Incorrect parameter value.
+     INVALIDPARAMETERVALUE("InvalidParameterValue"),
+     
+    // Missing parameter.
+     MISSINGPARAMETER("MissingParameter"),
+     
+    // The number of requests exceeds the frequency limit.
+     REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
+     
     // Resource is in use.
      RESOURCEINUSE("ResourceInUse"),
      
@@ -59,6 +71,12 @@ public enum EsErrorCode {
      
     // The resource does not exist.
      RESOURCENOTFOUND("ResourceNotFound"),
+     
+    // Unauthorized operation.
+     UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
+     
+    // Unknown parameter error.
+     UNKNOWNPARAMETER("UnknownParameter"),
      
     // Unsupported operation.
      UNSUPPORTEDOPERATION("UnsupportedOperation");

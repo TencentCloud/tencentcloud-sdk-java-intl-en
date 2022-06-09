@@ -282,6 +282,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long OneClickStatus;
 
     /**
+    * The number of advanced metrics.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AdvancedMetricNumber")
+    @Expose
+    private Long AdvancedMetricNumber;
+
+    /**
      * Get Alarm policy ID
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return PolicyId Alarm policy ID
@@ -933,6 +941,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.OneClickStatus = OneClickStatus;
     }
 
+    /**
+     * Get The number of advanced metrics.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return AdvancedMetricNumber The number of advanced metrics.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getAdvancedMetricNumber() {
+        return this.AdvancedMetricNumber;
+    }
+
+    /**
+     * Set The number of advanced metrics.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param AdvancedMetricNumber The number of advanced metrics.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setAdvancedMetricNumber(Long AdvancedMetricNumber) {
+        this.AdvancedMetricNumber = AdvancedMetricNumber;
+    }
+
     public AlarmPolicy() {
     }
 
@@ -1052,6 +1080,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.OneClickStatus != null) {
             this.OneClickStatus = new Long(source.OneClickStatus);
         }
+        if (source.AdvancedMetricNumber != null) {
+            this.AdvancedMetricNumber = new Long(source.AdvancedMetricNumber);
+        }
     }
 
 
@@ -1091,6 +1122,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "FilterDimensionsParam", this.FilterDimensionsParam);
         this.setParamSimple(map, prefix + "IsOneClick", this.IsOneClick);
         this.setParamSimple(map, prefix + "OneClickStatus", this.OneClickStatus);
+        this.setParamSimple(map, prefix + "AdvancedMetricNumber", this.AdvancedMetricNumber);
 
     }
 }

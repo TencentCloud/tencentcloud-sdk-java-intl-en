@@ -232,6 +232,13 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     private String CerebroPrivateAccess;
 
     /**
+    * Added or modified configuration set information
+    */
+    @SerializedName("EsConfigSet")
+    @Expose
+    private EsConfigSetInfo EsConfigSet;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -719,6 +726,22 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
         this.CerebroPrivateAccess = CerebroPrivateAccess;
     }
 
+    /**
+     * Get Added or modified configuration set information 
+     * @return EsConfigSet Added or modified configuration set information
+     */
+    public EsConfigSetInfo getEsConfigSet() {
+        return this.EsConfigSet;
+    }
+
+    /**
+     * Set Added or modified configuration set information
+     * @param EsConfigSet Added or modified configuration set information
+     */
+    public void setEsConfigSet(EsConfigSetInfo EsConfigSet) {
+        this.EsConfigSet = EsConfigSet;
+    }
+
     public UpdateInstanceRequest() {
     }
 
@@ -820,6 +843,9 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
         if (source.CerebroPrivateAccess != null) {
             this.CerebroPrivateAccess = new String(source.CerebroPrivateAccess);
         }
+        if (source.EsConfigSet != null) {
+            this.EsConfigSet = new EsConfigSetInfo(source.EsConfigSet);
+        }
     }
 
 
@@ -856,6 +882,7 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
         this.setParamSimple(map, prefix + "EnableCerebro", this.EnableCerebro);
         this.setParamSimple(map, prefix + "CerebroPublicAccess", this.CerebroPublicAccess);
         this.setParamSimple(map, prefix + "CerebroPrivateAccess", this.CerebroPrivateAccess);
+        this.setParamObj(map, prefix + "EsConfigSet.", this.EsConfigSet);
 
     }
 }

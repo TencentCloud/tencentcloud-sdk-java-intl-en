@@ -13,74 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lighthouse.v20200324.models;
+package com.tencentcloudapi.es.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Tag extends AbstractModel{
+public class CreateIndexResponse extends AbstractModel{
 
     /**
-    * Tag key.
+    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
-    @SerializedName("Key")
+    @SerializedName("RequestId")
     @Expose
-    private String Key;
+    private String RequestId;
 
     /**
-    * Tag value.
-    */
-    @SerializedName("Value")
-    @Expose
-    private String Value;
-
-    /**
-     * Get Tag key. 
-     * @return Key Tag key.
+     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
+     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public String getKey() {
-        return this.Key;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set Tag key.
-     * @param Key Tag key.
+     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public void setKey(String Key) {
-        this.Key = Key;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    /**
-     * Get Tag value. 
-     * @return Value Tag value.
-     */
-    public String getValue() {
-        return this.Value;
-    }
-
-    /**
-     * Set Tag value.
-     * @param Value Tag value.
-     */
-    public void setValue(String Value) {
-        this.Value = Value;
-    }
-
-    public Tag() {
+    public CreateIndexResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Tag(Tag source) {
-        if (source.Key != null) {
-            this.Key = new String(source.Key);
-        }
-        if (source.Value != null) {
-            this.Value = new String(source.Value);
+    public CreateIndexResponse(CreateIndexResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -89,8 +63,7 @@ public class Tag extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Key", this.Key);
-        this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

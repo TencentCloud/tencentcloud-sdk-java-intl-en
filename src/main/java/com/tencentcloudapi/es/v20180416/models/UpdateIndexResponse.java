@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lighthouse.v20200324.models;
+package com.tencentcloudapi.es.v20180416.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGeneralResourceQuotasResponse extends AbstractModel{
-
-    /**
-    * List of general resource quota details.
-    */
-    @SerializedName("GeneralResourceQuotaSet")
-    @Expose
-    private GeneralResourceQuota [] GeneralResourceQuotaSet;
+public class UpdateIndexResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -35,22 +28,6 @@ public class DescribeGeneralResourceQuotasResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get List of general resource quota details. 
-     * @return GeneralResourceQuotaSet List of general resource quota details.
-     */
-    public GeneralResourceQuota [] getGeneralResourceQuotaSet() {
-        return this.GeneralResourceQuotaSet;
-    }
-
-    /**
-     * Set List of general resource quota details.
-     * @param GeneralResourceQuotaSet List of general resource quota details.
-     */
-    public void setGeneralResourceQuotaSet(GeneralResourceQuota [] GeneralResourceQuotaSet) {
-        this.GeneralResourceQuotaSet = GeneralResourceQuotaSet;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -68,20 +45,14 @@ public class DescribeGeneralResourceQuotasResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeGeneralResourceQuotasResponse() {
+    public UpdateIndexResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeGeneralResourceQuotasResponse(DescribeGeneralResourceQuotasResponse source) {
-        if (source.GeneralResourceQuotaSet != null) {
-            this.GeneralResourceQuotaSet = new GeneralResourceQuota[source.GeneralResourceQuotaSet.length];
-            for (int i = 0; i < source.GeneralResourceQuotaSet.length; i++) {
-                this.GeneralResourceQuotaSet[i] = new GeneralResourceQuota(source.GeneralResourceQuotaSet[i]);
-            }
-        }
+    public UpdateIndexResponse(UpdateIndexResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -92,7 +63,6 @@ public class DescribeGeneralResourceQuotasResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "GeneralResourceQuotaSet.", this.GeneralResourceQuotaSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

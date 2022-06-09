@@ -79,6 +79,26 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a new IoT communication product. 
+     * @param req CreateProductRequest
+     * @return CreateProductResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateProductResponse CreateProduct(CreateProductRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateProductResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateProductResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateProduct");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete an IoT Hub device. 
      * @param req DeleteDeviceRequest
      * @return DeleteDeviceResponse
@@ -271,6 +291,26 @@ public class IotcloudClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeProductCAResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeProductCA");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain the product list. 
+     * @param req DescribeProductsRequest
+     * @return DescribeProductsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProductsResponse DescribeProducts(DescribeProductsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProductsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProductsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeProducts");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

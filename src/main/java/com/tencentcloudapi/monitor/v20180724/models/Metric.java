@@ -80,6 +80,30 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private MetricConfig MetricConfig;
 
     /**
+    * Whether it is an advanced metric. 1: Yes; 0: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsAdvanced")
+    @Expose
+    private Long IsAdvanced;
+
+    /**
+    * Whether the advanced metric feature is enabled. 1: Yes; 0: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsOpen")
+    @Expose
+    private Long IsOpen;
+
+    /**
+    * Integration center product ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ProductId")
+    @Expose
+    private Long ProductId;
+
+    /**
      * Get Alarm policy type 
      * @return Namespace Alarm policy type
      */
@@ -211,6 +235,66 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.MetricConfig = MetricConfig;
     }
 
+    /**
+     * Get Whether it is an advanced metric. 1: Yes; 0: No.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return IsAdvanced Whether it is an advanced metric. 1: Yes; 0: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getIsAdvanced() {
+        return this.IsAdvanced;
+    }
+
+    /**
+     * Set Whether it is an advanced metric. 1: Yes; 0: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param IsAdvanced Whether it is an advanced metric. 1: Yes; 0: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setIsAdvanced(Long IsAdvanced) {
+        this.IsAdvanced = IsAdvanced;
+    }
+
+    /**
+     * Get Whether the advanced metric feature is enabled. 1: Yes; 0: No.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return IsOpen Whether the advanced metric feature is enabled. 1: Yes; 0: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getIsOpen() {
+        return this.IsOpen;
+    }
+
+    /**
+     * Set Whether the advanced metric feature is enabled. 1: Yes; 0: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param IsOpen Whether the advanced metric feature is enabled. 1: Yes; 0: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setIsOpen(Long IsOpen) {
+        this.IsOpen = IsOpen;
+    }
+
+    /**
+     * Get Integration center product ID.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ProductId Integration center product ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getProductId() {
+        return this.ProductId;
+    }
+
+    /**
+     * Set Integration center product ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ProductId Integration center product ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setProductId(Long ProductId) {
+        this.ProductId = ProductId;
+    }
+
     public Metric() {
     }
 
@@ -246,6 +330,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.MetricConfig != null) {
             this.MetricConfig = new MetricConfig(source.MetricConfig);
         }
+        if (source.IsAdvanced != null) {
+            this.IsAdvanced = new Long(source.IsAdvanced);
+        }
+        if (source.IsOpen != null) {
+            this.IsOpen = new Long(source.IsOpen);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new Long(source.ProductId);
+        }
     }
 
 
@@ -261,6 +354,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamArraySimple(map, prefix + "Dimensions.", this.Dimensions);
         this.setParamSimple(map, prefix + "Unit", this.Unit);
         this.setParamObj(map, prefix + "MetricConfig.", this.MetricConfig);
+        this.setParamSimple(map, prefix + "IsAdvanced", this.IsAdvanced);
+        this.setParamSimple(map, prefix + "IsOpen", this.IsOpen);
+        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
 
     }
 }

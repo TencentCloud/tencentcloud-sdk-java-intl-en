@@ -22,6 +22,82 @@ import java.util.HashMap;
 
 public class DescribeZonesRequest extends AbstractModel{
 
+    /**
+    * Sorting field. Valid values:
+<li>`ZONE`: Sort by the availability zone.
+<li>`INSTANCE_DISPLAY_LABEL`: Sort by the labels of availability zones. Labels include `HIDDEN`, `NORMAL` and `SELECTED`.
+The default value is `ZONE`.
+    */
+    @SerializedName("OrderField")
+    @Expose
+    private String OrderField;
+
+    /**
+    * Specifies how availability zones are listed. Valid values:
+<li>ASC: Ascending sort. 
+<li>DESC: Descending sort.
+The default value is `ASC`.
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
+
+    /**
+     * Get Sorting field. Valid values:
+<li>`ZONE`: Sort by the availability zone.
+<li>`INSTANCE_DISPLAY_LABEL`: Sort by the labels of availability zones. Labels include `HIDDEN`, `NORMAL` and `SELECTED`.
+The default value is `ZONE`. 
+     * @return OrderField Sorting field. Valid values:
+<li>`ZONE`: Sort by the availability zone.
+<li>`INSTANCE_DISPLAY_LABEL`: Sort by the labels of availability zones. Labels include `HIDDEN`, `NORMAL` and `SELECTED`.
+The default value is `ZONE`.
+     */
+    public String getOrderField() {
+        return this.OrderField;
+    }
+
+    /**
+     * Set Sorting field. Valid values:
+<li>`ZONE`: Sort by the availability zone.
+<li>`INSTANCE_DISPLAY_LABEL`: Sort by the labels of availability zones. Labels include `HIDDEN`, `NORMAL` and `SELECTED`.
+The default value is `ZONE`.
+     * @param OrderField Sorting field. Valid values:
+<li>`ZONE`: Sort by the availability zone.
+<li>`INSTANCE_DISPLAY_LABEL`: Sort by the labels of availability zones. Labels include `HIDDEN`, `NORMAL` and `SELECTED`.
+The default value is `ZONE`.
+     */
+    public void setOrderField(String OrderField) {
+        this.OrderField = OrderField;
+    }
+
+    /**
+     * Get Specifies how availability zones are listed. Valid values:
+<li>ASC: Ascending sort. 
+<li>DESC: Descending sort.
+The default value is `ASC`. 
+     * @return Order Specifies how availability zones are listed. Valid values:
+<li>ASC: Ascending sort. 
+<li>DESC: Descending sort.
+The default value is `ASC`.
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set Specifies how availability zones are listed. Valid values:
+<li>ASC: Ascending sort. 
+<li>DESC: Descending sort.
+The default value is `ASC`.
+     * @param Order Specifies how availability zones are listed. Valid values:
+<li>ASC: Ascending sort. 
+<li>DESC: Descending sort.
+The default value is `ASC`.
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
     public DescribeZonesRequest() {
     }
 
@@ -30,6 +106,12 @@ public class DescribeZonesRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeZonesRequest(DescribeZonesRequest source) {
+        if (source.OrderField != null) {
+            this.OrderField = new String(source.OrderField);
+        }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
     }
 
 
@@ -37,6 +119,8 @@ public class DescribeZonesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "OrderField", this.OrderField);
+        this.setParamSimple(map, prefix + "Order", this.Order);
 
     }
 }

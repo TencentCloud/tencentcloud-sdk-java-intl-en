@@ -13,29 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lighthouse.v20200324.models;
+package com.tencentcloudapi.iotcloud.v20210408.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquirePriceRenewInstancesResponse extends AbstractModel{
+public class CreateProductResponse extends AbstractModel{
 
     /**
-    * Price query information.
+    * Product name
     */
-    @SerializedName("Price")
+    @SerializedName("ProductName")
     @Expose
-    private Price Price;
+    private String ProductName;
 
     /**
-    * List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Product ID, the globally unique ID assigned by Tencent Cloud.
     */
-    @SerializedName("DataDiskPriceSet")
+    @SerializedName("ProductId")
     @Expose
-    private DataDiskPrice [] DataDiskPriceSet;
+    private String ProductId;
+
+    /**
+    * Product properties
+    */
+    @SerializedName("ProductProperties")
+    @Expose
+    private ProductProperties ProductProperties;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,39 +51,51 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Price query information. 
-     * @return Price Price query information.
+     * Get Product name 
+     * @return ProductName Product name
      */
-    public Price getPrice() {
-        return this.Price;
+    public String getProductName() {
+        return this.ProductName;
     }
 
     /**
-     * Set Price query information.
-     * @param Price Price query information.
+     * Set Product name
+     * @param ProductName Product name
      */
-    public void setPrice(Price Price) {
-        this.Price = Price;
+    public void setProductName(String ProductName) {
+        this.ProductName = ProductName;
     }
 
     /**
-     * Get List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DataDiskPriceSet List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Product ID, the globally unique ID assigned by Tencent Cloud. 
+     * @return ProductId Product ID, the globally unique ID assigned by Tencent Cloud.
      */
-    public DataDiskPrice [] getDataDiskPriceSet() {
-        return this.DataDiskPriceSet;
+    public String getProductId() {
+        return this.ProductId;
     }
 
     /**
-     * Set List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DataDiskPriceSet List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Product ID, the globally unique ID assigned by Tencent Cloud.
+     * @param ProductId Product ID, the globally unique ID assigned by Tencent Cloud.
      */
-    public void setDataDiskPriceSet(DataDiskPrice [] DataDiskPriceSet) {
-        this.DataDiskPriceSet = DataDiskPriceSet;
+    public void setProductId(String ProductId) {
+        this.ProductId = ProductId;
+    }
+
+    /**
+     * Get Product properties 
+     * @return ProductProperties Product properties
+     */
+    public ProductProperties getProductProperties() {
+        return this.ProductProperties;
+    }
+
+    /**
+     * Set Product properties
+     * @param ProductProperties Product properties
+     */
+    public void setProductProperties(ProductProperties ProductProperties) {
+        this.ProductProperties = ProductProperties;
     }
 
     /**
@@ -96,22 +114,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public InquirePriceRenewInstancesResponse() {
+    public CreateProductResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InquirePriceRenewInstancesResponse(InquirePriceRenewInstancesResponse source) {
-        if (source.Price != null) {
-            this.Price = new Price(source.Price);
+    public CreateProductResponse(CreateProductResponse source) {
+        if (source.ProductName != null) {
+            this.ProductName = new String(source.ProductName);
         }
-        if (source.DataDiskPriceSet != null) {
-            this.DataDiskPriceSet = new DataDiskPrice[source.DataDiskPriceSet.length];
-            for (int i = 0; i < source.DataDiskPriceSet.length; i++) {
-                this.DataDiskPriceSet[i] = new DataDiskPrice(source.DataDiskPriceSet[i]);
-            }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
+        if (source.ProductProperties != null) {
+            this.ProductProperties = new ProductProperties(source.ProductProperties);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -123,8 +141,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Price.", this.Price);
-        this.setParamArrayObj(map, prefix + "DataDiskPriceSet.", this.DataDiskPriceSet);
+        this.setParamSimple(map, prefix + "ProductName", this.ProductName);
+        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
+        this.setParamObj(map, prefix + "ProductProperties.", this.ProductProperties);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -1359,6 +1359,46 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *This API is used to bind tags to a role.
+     * @param req TagRoleRequest
+     * @return TagRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public TagRoleResponse TagRole(TagRoleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TagRoleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TagRoleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TagRole");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to unbind tags from a role.
+     * @param req UntagRoleRequest
+     * @return UntagRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public UntagRoleResponse UntagRole(UntagRoleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UntagRoleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UntagRoleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UntagRole");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (UpdateAssumeRolePolicy) is used to modify the trust policy of a role.
      * @param req UpdateAssumeRolePolicyRequest
      * @return UpdateAssumeRolePolicyResponse
