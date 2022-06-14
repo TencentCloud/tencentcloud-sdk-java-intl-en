@@ -137,6 +137,14 @@ Note: `null` may be returned for this field, indicating that no valid values can
     private String DeviceTypeName;
 
     /**
+    * Engine type. Valid values: `Innodb`,`RocksDB`.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("EngineType")
+    @Expose
+    private String EngineType;
+
+    /**
      * Get (Disused) Device type 
      * @return Device (Disused) Device type
      */
@@ -400,6 +408,26 @@ Note: `null` may be returned for this field, indicating that no valid values can
         this.DeviceTypeName = DeviceTypeName;
     }
 
+    /**
+     * Get Engine type. Valid values: `Innodb`,`RocksDB`.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return EngineType Engine type. Valid values: `Innodb`,`RocksDB`.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getEngineType() {
+        return this.EngineType;
+    }
+
+    /**
+     * Set Engine type. Valid values: `Innodb`,`RocksDB`.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param EngineType Engine type. Valid values: `Innodb`,`RocksDB`.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setEngineType(String EngineType) {
+        this.EngineType = EngineType;
+    }
+
     public SellConfig() {
     }
 
@@ -456,6 +484,9 @@ Note: `null` may be returned for this field, indicating that no valid values can
         if (source.DeviceTypeName != null) {
             this.DeviceTypeName = new String(source.DeviceTypeName);
         }
+        if (source.EngineType != null) {
+            this.EngineType = new String(source.EngineType);
+        }
     }
 
 
@@ -479,6 +510,7 @@ Note: `null` may be returned for this field, indicating that no valid values can
         this.setParamSimple(map, prefix + "Tag", this.Tag);
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "DeviceTypeName", this.DeviceTypeName);
+        this.setParamSimple(map, prefix + "EngineType", this.EngineType);
 
     }
 }
