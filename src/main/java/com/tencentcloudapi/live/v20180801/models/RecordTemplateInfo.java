@@ -80,7 +80,7 @@ public class RecordTemplateInfo extends AbstractModel{
     private Long IsDelayLive;
 
     /**
-    * Custom HLS recording parameter
+    * A special parameter for HLS recording.
     */
     @SerializedName("HlsSpecialParam")
     @Expose
@@ -100,6 +100,14 @@ Note: This field may return `null`, indicating that no valid value was found.
     @SerializedName("RemoveWatermark")
     @Expose
     private Boolean RemoveWatermark;
+
+    /**
+    * A special parameter for FLV recording.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("FlvSpecialParam")
+    @Expose
+    private FlvSpecialParam FlvSpecialParam;
 
     /**
      * Get Template ID. 
@@ -234,16 +242,16 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Custom HLS recording parameter 
-     * @return HlsSpecialParam Custom HLS recording parameter
+     * Get A special parameter for HLS recording. 
+     * @return HlsSpecialParam A special parameter for HLS recording.
      */
     public HlsSpecialParam getHlsSpecialParam() {
         return this.HlsSpecialParam;
     }
 
     /**
-     * Set Custom HLS recording parameter
-     * @param HlsSpecialParam Custom HLS recording parameter
+     * Set A special parameter for HLS recording.
+     * @param HlsSpecialParam A special parameter for HLS recording.
      */
     public void setHlsSpecialParam(HlsSpecialParam HlsSpecialParam) {
         this.HlsSpecialParam = HlsSpecialParam;
@@ -283,6 +291,26 @@ Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setRemoveWatermark(Boolean RemoveWatermark) {
         this.RemoveWatermark = RemoveWatermark;
+    }
+
+    /**
+     * Get A special parameter for FLV recording.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return FlvSpecialParam A special parameter for FLV recording.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public FlvSpecialParam getFlvSpecialParam() {
+        return this.FlvSpecialParam;
+    }
+
+    /**
+     * Set A special parameter for FLV recording.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param FlvSpecialParam A special parameter for FLV recording.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setFlvSpecialParam(FlvSpecialParam FlvSpecialParam) {
+        this.FlvSpecialParam = FlvSpecialParam;
     }
 
     public RecordTemplateInfo() {
@@ -326,6 +354,9 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.RemoveWatermark != null) {
             this.RemoveWatermark = new Boolean(source.RemoveWatermark);
         }
+        if (source.FlvSpecialParam != null) {
+            this.FlvSpecialParam = new FlvSpecialParam(source.FlvSpecialParam);
+        }
     }
 
 
@@ -344,6 +375,7 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamObj(map, prefix + "HlsSpecialParam.", this.HlsSpecialParam);
         this.setParamObj(map, prefix + "Mp3Param.", this.Mp3Param);
         this.setParamSimple(map, prefix + "RemoveWatermark", this.RemoveWatermark);
+        this.setParamObj(map, prefix + "FlvSpecialParam.", this.FlvSpecialParam);
 
     }
 }

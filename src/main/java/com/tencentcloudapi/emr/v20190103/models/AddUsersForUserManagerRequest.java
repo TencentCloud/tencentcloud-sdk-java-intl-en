@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class AddUsersForUserManagerRequest extends AbstractModel{
 
     /**
+    * Cluster string ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
     * User information list
     */
     @SerializedName("UserManagerUserList")
     @Expose
     private UserInfoForUserManager [] UserManagerUserList;
+
+    /**
+     * Get Cluster string ID 
+     * @return InstanceId Cluster string ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set Cluster string ID
+     * @param InstanceId Cluster string ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
 
     /**
      * Get User information list 
@@ -53,6 +76,9 @@ public class AddUsersForUserManagerRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AddUsersForUserManagerRequest(AddUsersForUserManagerRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
         if (source.UserManagerUserList != null) {
             this.UserManagerUserList = new UserInfoForUserManager[source.UserManagerUserList.length];
             for (int i = 0; i < source.UserManagerUserList.length; i++) {
@@ -66,6 +92,7 @@ public class AddUsersForUserManagerRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArrayObj(map, prefix + "UserManagerUserList.", this.UserManagerUserList);
 
     }

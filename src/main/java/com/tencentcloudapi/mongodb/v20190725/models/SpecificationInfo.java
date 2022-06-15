@@ -44,6 +44,13 @@ public class SpecificationInfo extends AbstractModel{
     private SpecItem [] SpecItems;
 
     /**
+    * Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
+    */
+    @SerializedName("SupportMultiAZ")
+    @Expose
+    private Long SupportMultiAZ;
+
+    /**
      * Get Region information 
      * @return Region Region information
      */
@@ -91,6 +98,22 @@ public class SpecificationInfo extends AbstractModel{
         this.SpecItems = SpecItems;
     }
 
+    /**
+     * Get Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no). 
+     * @return SupportMultiAZ Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
+     */
+    public Long getSupportMultiAZ() {
+        return this.SupportMultiAZ;
+    }
+
+    /**
+     * Set Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
+     * @param SupportMultiAZ Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
+     */
+    public void setSupportMultiAZ(Long SupportMultiAZ) {
+        this.SupportMultiAZ = SupportMultiAZ;
+    }
+
     public SpecificationInfo() {
     }
 
@@ -111,6 +134,9 @@ public class SpecificationInfo extends AbstractModel{
                 this.SpecItems[i] = new SpecItem(source.SpecItems[i]);
             }
         }
+        if (source.SupportMultiAZ != null) {
+            this.SupportMultiAZ = new Long(source.SupportMultiAZ);
+        }
     }
 
 
@@ -121,6 +147,7 @@ public class SpecificationInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamArrayObj(map, prefix + "SpecItems.", this.SpecItems);
+        this.setParamSimple(map, prefix + "SupportMultiAZ", this.SupportMultiAZ);
 
     }
 }

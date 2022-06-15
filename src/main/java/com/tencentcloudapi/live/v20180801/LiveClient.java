@@ -720,46 +720,6 @@ Note: only one screencapturing template can be associated with one domain name.
     }
 
     /**
-     *This API is used to query the downstream information of all streams at a specified point in time (at a 1-minute granularity).
-     * @param req DescribeAllStreamPlayInfoListRequest
-     * @return DescribeAllStreamPlayInfoListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAllStreamPlayInfoListResponse DescribeAllStreamPlayInfoList(DescribeAllStreamPlayInfoListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAllStreamPlayInfoListResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAllStreamPlayInfoListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAllStreamPlayInfoList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query the billable LVB bandwidth and traffic data outside Chinese mainland.
-     * @param req DescribeAreaBillBandwidthAndFluxListRequest
-     * @return DescribeAreaBillBandwidthAndFluxListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAreaBillBandwidthAndFluxListResponse DescribeAreaBillBandwidthAndFluxList(DescribeAreaBillBandwidthAndFluxListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeAreaBillBandwidthAndFluxListResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeAreaBillBandwidthAndFluxListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeAreaBillBandwidthAndFluxList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to query the number of concurrent recording channels, which is applicable to LCB and LVB.
      * @param req DescribeConcurrentRecordStreamNumRequest
      * @return DescribeConcurrentRecordStreamNumResponse
@@ -993,26 +953,6 @@ Note: data can be queried one hour after it is generated. For example, data betw
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainCertResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeLiveDomainCert");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query the real-time downstream playback data at the domain name level. As it takes certain time to process data, the API queries quasi-real-time data generated 4 minutes ago by default.
-     * @param req DescribeLiveDomainPlayInfoListRequest
-     * @return DescribeLiveDomainPlayInfoListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeLiveDomainPlayInfoListResponse DescribeLiveDomainPlayInfoList(DescribeLiveDomainPlayInfoListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLiveDomainPlayInfoListResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainPlayInfoListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLiveDomainPlayInfoList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1568,26 +1508,6 @@ If not or if the data of specified domains is queried, the data returned will be
     }
 
     /**
-     *This API is used to query the average traffic per second, total traffic, and number of total requests by country/region, district, and ISP in a certain period of time.
-     * @param req DescribeProIspPlaySumInfoListRequest
-     * @return DescribeProIspPlaySumInfoListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeProIspPlaySumInfoListResponse DescribeProIspPlaySumInfoList(DescribeProIspPlaySumInfoListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeProIspPlaySumInfoListResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeProIspPlaySumInfoListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeProIspPlaySumInfoList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to query the downstream playback data of a specified ISP in a specified district, including bandwidth, traffic, number of requests, and number of concurrent connections.
      * @param req DescribeProvinceIspPlayInfoListRequest
      * @return DescribeProvinceIspPlayInfoListResponse
@@ -1721,26 +1641,6 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
                 Type type = new TypeToken<JsonResponseModel<DescribeVisitTopSumInfoListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeVisitTopSumInfoList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to disconnect the push connection, which can be resumed.
-     * @param req DropLiveStreamRequest
-     * @return DropLiveStreamResponse
-     * @throws TencentCloudSDKException
-     */
-    public DropLiveStreamResponse DropLiveStream(DropLiveStreamRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DropLiveStreamResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DropLiveStreamResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DropLiveStream");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

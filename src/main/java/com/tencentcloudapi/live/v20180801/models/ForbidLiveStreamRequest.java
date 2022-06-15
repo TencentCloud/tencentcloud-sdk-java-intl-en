@@ -44,10 +44,10 @@ public class ForbidLiveStreamRequest extends AbstractModel{
     private String StreamName;
 
     /**
-    * Time to resume the stream in UTC format, such as 2018-11-29T19:00:00Z.
+    * The time (in UTC format) to resume the stream, such as 2018-11-29T19:00:00Z.
 Notes:
-1. The duration of forbidding is 7 days by default and can be up to 90 days.
-2. The Beijing time is in UTC+8. This value should be in the format as required by ISO 8601. For more information, please see [ISO Date and Time Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+1. The default stream disabling period is seven days. A stream can be disabled for up to 90 days.
+2. Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
     */
     @SerializedName("ResumeTime")
     @Expose
@@ -111,28 +111,28 @@ Length limit: 2,048 bytes.
     }
 
     /**
-     * Get Time to resume the stream in UTC format, such as 2018-11-29T19:00:00Z.
+     * Get The time (in UTC format) to resume the stream, such as 2018-11-29T19:00:00Z.
 Notes:
-1. The duration of forbidding is 7 days by default and can be up to 90 days.
-2. The Beijing time is in UTC+8. This value should be in the format as required by ISO 8601. For more information, please see [ISO Date and Time Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). 
-     * @return ResumeTime Time to resume the stream in UTC format, such as 2018-11-29T19:00:00Z.
+1. The default stream disabling period is seven days. A stream can be disabled for up to 90 days.
+2. Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used. 
+     * @return ResumeTime The time (in UTC format) to resume the stream, such as 2018-11-29T19:00:00Z.
 Notes:
-1. The duration of forbidding is 7 days by default and can be up to 90 days.
-2. The Beijing time is in UTC+8. This value should be in the format as required by ISO 8601. For more information, please see [ISO Date and Time Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+1. The default stream disabling period is seven days. A stream can be disabled for up to 90 days.
+2. Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
      */
     public String getResumeTime() {
         return this.ResumeTime;
     }
 
     /**
-     * Set Time to resume the stream in UTC format, such as 2018-11-29T19:00:00Z.
+     * Set The time (in UTC format) to resume the stream, such as 2018-11-29T19:00:00Z.
 Notes:
-1. The duration of forbidding is 7 days by default and can be up to 90 days.
-2. The Beijing time is in UTC+8. This value should be in the format as required by ISO 8601. For more information, please see [ISO Date and Time Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param ResumeTime Time to resume the stream in UTC format, such as 2018-11-29T19:00:00Z.
+1. The default stream disabling period is seven days. A stream can be disabled for up to 90 days.
+2. Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
+     * @param ResumeTime The time (in UTC format) to resume the stream, such as 2018-11-29T19:00:00Z.
 Notes:
-1. The duration of forbidding is 7 days by default and can be up to 90 days.
-2. The Beijing time is in UTC+8. This value should be in the format as required by ISO 8601. For more information, please see [ISO Date and Time Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+1. The default stream disabling period is seven days. A stream can be disabled for up to 90 days.
+2. Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
      */
     public void setResumeTime(String ResumeTime) {
         this.ResumeTime = ResumeTime;

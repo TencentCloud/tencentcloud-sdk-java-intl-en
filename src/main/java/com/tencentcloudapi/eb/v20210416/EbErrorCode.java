@@ -12,23 +12,23 @@ public enum EbErrorCode {
     // Failed to delete the connector. Please check the resource status.
      FAILEDOPERATION_DELETECONNECTION("FailedOperation.DeleteConnection"),
      
-    // 
-     FAILEDOPERATION_ERRORFILTER("FailedOperation.ErrorFilter"),
+    // Failed to delete the rule. Please make sure the resource exists, and the status is normal.
+     FAILEDOPERATION_DELETERULE("FailedOperation.DeleteRule"),
      
     // ServiceError: operation failed. Please check the resource information.
      FAILEDOPERATION_SERVICEERROR("FailedOperation.ServiceError"),
+     
+    // Failed to update the connector. Please make sure the resource exists, and the status is normal.
+     FAILEDOPERATION_UPDATECONNECTION("FailedOperation.UpdateConnection"),
+     
+    // Failed to update the rule. Please make sure the resource exists, and the status is normal.
+     FAILEDOPERATION_UPDATERULE("FailedOperation.UpdateRule"),
      
     // Internal error.
      INTERNALERROR("InternalError"),
      
     // An error occurred while processing the service. Please try again later. If the problem persists, please contact the smart customer service or submit a ticket.
      INTERNALERROR_OSSEXCEPTION("InternalError.OssException"),
-     
-    // An error occurred while processing the service. Please try again later. If the problem persists, please contact the smart customer service or submit a ticket.
-     INTERNALERROR_SYSTEM("InternalError.System"),
-     
-    // Incorrect parameter.
-     INVALIDPARAMETER("InvalidParameter"),
      
     // `Payload` does not conform to the specification. Please fix it and try again.
      INVALIDPARAMETER_PAYLOAD("InvalidParameter.Payload"),
@@ -42,6 +42,9 @@ public enum EbErrorCode {
     // The `BatchTimeout` value does not conform to the specification. Please fix it and try again.
      INVALIDPARAMETERVALUE_BATCHTIMEOUT("InvalidParameterValue.BatchTimeout"),
      
+    // The CKafka parameter is invalid. Please check and try again. 
+     INVALIDPARAMETERVALUE_CKAFKATARGETPARAMS("InvalidParameterValue.CKafkaTargetParams"),
+     
     // The `CallbackType` value does not conform to the specification. Please fix it and try again.
      INVALIDPARAMETERVALUE_CALLBACKTYPE("InvalidParameterValue.CallbackType"),
      
@@ -54,8 +57,8 @@ public enum EbErrorCode {
     // The `ConnectionId` value does not conform to the specification. Please fix it and try again.
      INVALIDPARAMETERVALUE_CONNECTIONID("InvalidParameterValue.ConnectionId"),
      
-    // The `ConnectionName` value does not conform to the specification. Please fix it and try again.
-     INVALIDPARAMETERVALUE_CONNECTIONNAME("InvalidParameterValue.ConnectionName"),
+    // The dead letter queue parameter is invalid. Please check and try again.
+     INVALIDPARAMETERVALUE_DEADLETTERCONFIG("InvalidParameterValue.DeadLetterConfig"),
      
     // The `Description` value does not conform to the specification. Please fix it and try again.
      INVALIDPARAMETERVALUE_DESCRIPTION("InvalidParameterValue.Description"),
@@ -63,17 +66,11 @@ public enum EbErrorCode {
     // The `EventBusId` value does not conform to the specification. Please fix it and try again.
      INVALIDPARAMETERVALUE_EVENTBUSID("InvalidParameterValue.EventBusId"),
      
-    // The `EventBusName` value does not conform to the specification. Please fix it and try again.
-     INVALIDPARAMETERVALUE_EVENTBUSNAME("InvalidParameterValue.EventBusName"),
-     
     // The `EventPattern` value does not conform to the specification. Please fix it and try again.
      INVALIDPARAMETERVALUE_EVENTPATTERN("InvalidParameterValue.EventPattern"),
      
     // The `Filters` value does not conform to the specification. Please fix it and try again.
      INVALIDPARAMETERVALUE_FILTERS("InvalidParameterValue.Filters"),
-     
-    // The `InvalidApiRequestConfig` value does not conform to the specification. Please fix it and try again.
-     INVALIDPARAMETERVALUE_INVALIDAPIREQUESTCONFIG("InvalidParameterValue.InvalidApiRequestConfig"),
      
     // The `Limit` value does not conform to the specification. Please fix it and try again.
      INVALIDPARAMETERVALUE_LIMIT("InvalidParameterValue.Limit"),
@@ -114,20 +111,17 @@ public enum EbErrorCode {
     // The `TargetId` value does not conform to the specification. Please fix it and try again.
      INVALIDPARAMETERVALUE_TARGETID("InvalidParameterValue.TargetId"),
      
+    // The data transformation parameter is invalid. Please check and try again.
+     INVALIDPARAMETERVALUE_TRANSFORMATIONID("InvalidParameterValue.TransformationID"),
+     
+    // Failed to create the data transformation task: The parameter is invalid. Please check and try again.
+     INVALIDPARAMETERVALUE_TRANSFORMATIONS("InvalidParameterValue.Transformations"),
+     
     // The `Type` value does not conform to the specification. Please fix it and try again.
      INVALIDPARAMETERVALUE_TYPE("InvalidParameterValue.Type"),
      
-    // The `Connection` quantity has reached the upper limit. You can submit a ticket to increase it.
-     LIMITEXCEEDED_CONNECTION("LimitExceeded.Connection"),
-     
-    // The `EventBus` quantity has reached the upper limit. You can submit a ticket to increase it.
-     LIMITEXCEEDED_EVENTBUS("LimitExceeded.EventBus"),
-     
     // The `Logset` quantity has reached the upper limit. You can submit a ticket to increase it.
      LIMITEXCEEDED_LOGSET("LimitExceeded.Logset"),
-     
-    // The `RouteOverLimit` quantity has reached the upper limit. You can submit a ticket to increase it.
-     LIMITEXCEEDED_ROUTEOVERLIMIT("LimitExceeded.RouteOverLimit"),
      
     // The `Rule` quantity has reached the upper limit. You can submit a ticket to increase it.
      LIMITEXCEEDED_RULE("LimitExceeded.Rule"),
@@ -141,14 +135,14 @@ public enum EbErrorCode {
     // Failed to create the delivery target, as it was detected that the current account did not exist. Please check your account status.
      OPERATIONDENIED_ACCOUNTNOTEXISTS("OperationDenied.AccountNotExists"),
      
-    // 
+    // You cannot create a CLS event target based on the default EventBridge logset in the custom event bus.
      OPERATIONDENIED_DEFAULTCLSRESOURCEUNSUPPORTED("OperationDenied.DefaultCLSResourceUnsupported"),
      
     // The operation failed, as the resource could not be modified or deleted.
      OPERATIONDENIED_RESOURCEIMMUTABLE("OperationDenied.ResourceImmutable"),
      
-    // The default Tencent Cloud service event bus cannot be created repeatedly in the same region.
-     RESOURCEINUSE_DEFAULTEVENTBUS("ResourceInUse.DefaultEventBus"),
+    // The current user account type does not support this operation. Please submit a ticket. 
+     OPERATIONDENIED_UNSUPPORTEDOPERATION("OperationDenied.UnsupportedOperation"),
      
     // There are rules or connectors under the event bus, so it cannot be deleted. Please delete all rules and connectors and try again.
      RESOURCEINUSE_EVENTBUS("ResourceInUse.EventBus"),
@@ -186,11 +180,11 @@ public enum EbErrorCode {
     // The specified `Target` was not found. Please create it and try again.
      RESOURCENOTFOUND_TARGET("ResourceNotFound.Target"),
      
+    // The specified task is not found. Please check and try again.
+     RESOURCENOTFOUND_TRANSFORMATION("ResourceNotFound.Transformation"),
+     
     // Failed to create the delivery target, as the specified service version was not found. Please create it and try again.
      RESOURCENOTFOUND_VERSION("ResourceNotFound.Version"),
-     
-    // Failed to create the connector, as the current resource was unavailable.
-     RESOURCEUNAVAILABLE_CONNECTION("ResourceUnavailable.Connection"),
      
     // Failed to create the delivery target, as the current resource was unavailable.
      RESOURCEUNAVAILABLE_TARGET("ResourceUnavailable.Target"),
@@ -198,14 +192,8 @@ public enum EbErrorCode {
     // The current account does not have permissions to use EB. Please log in to the CAM console for authorization.
      UNAUTHORIZEDOPERATION_CAM("UnauthorizedOperation.CAM"),
      
-    // Unsupported operation.
-     UNSUPPORTEDOPERATION("UnsupportedOperation"),
-     
     // The connector operation failed, as the API did not support the current operation.
-     UNSUPPORTEDOPERATION_INVALIDACTION("UnsupportedOperation.InvalidAction"),
-     
-    // Failed to create the connector, as the current backend service type was not supported.
-     UNSUPPORTEDOPERATION_INVALIDENDPOINTTYPE("UnsupportedOperation.InvalidEndpointType");
+     UNSUPPORTEDOPERATION_INVALIDACTION("UnsupportedOperation.InvalidAction");
      
     private String value;
     private EbErrorCode (String value){

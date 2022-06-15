@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAreaBillBandwidthAndFluxListResponse extends AbstractModel{
+public class DescribeOrdersResponse extends AbstractModel{
 
     /**
-    * Detailed data information.
+    * Returned number of orders
     */
-    @SerializedName("DataInfoList")
+    @SerializedName("TotalCount")
     @Expose
-    private BillAreaInfo [] DataInfoList;
+    private Long TotalCount;
+
+    /**
+    * Order information list
+    */
+    @SerializedName("Deals")
+    @Expose
+    private Deal [] Deals;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +44,35 @@ public class DescribeAreaBillBandwidthAndFluxListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Detailed data information. 
-     * @return DataInfoList Detailed data information.
+     * Get Returned number of orders 
+     * @return TotalCount Returned number of orders
      */
-    public BillAreaInfo [] getDataInfoList() {
-        return this.DataInfoList;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set Detailed data information.
-     * @param DataInfoList Detailed data information.
+     * Set Returned number of orders
+     * @param TotalCount Returned number of orders
      */
-    public void setDataInfoList(BillAreaInfo [] DataInfoList) {
-        this.DataInfoList = DataInfoList;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get Order information list 
+     * @return Deals Order information list
+     */
+    public Deal [] getDeals() {
+        return this.Deals;
+    }
+
+    /**
+     * Set Order information list
+     * @param Deals Order information list
+     */
+    public void setDeals(Deal [] Deals) {
+        this.Deals = Deals;
     }
 
     /**
@@ -68,18 +91,21 @@ public class DescribeAreaBillBandwidthAndFluxListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeAreaBillBandwidthAndFluxListResponse() {
+    public DescribeOrdersResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAreaBillBandwidthAndFluxListResponse(DescribeAreaBillBandwidthAndFluxListResponse source) {
-        if (source.DataInfoList != null) {
-            this.DataInfoList = new BillAreaInfo[source.DataInfoList.length];
-            for (int i = 0; i < source.DataInfoList.length; i++) {
-                this.DataInfoList[i] = new BillAreaInfo(source.DataInfoList[i]);
+    public DescribeOrdersResponse(DescribeOrdersResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Deals != null) {
+            this.Deals = new Deal[source.Deals.length];
+            for (int i = 0; i < source.Deals.length; i++) {
+                this.Deals[i] = new Deal(source.Deals[i]);
             }
         }
         if (source.RequestId != null) {
@@ -92,7 +118,8 @@ public class DescribeAreaBillBandwidthAndFluxListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "DataInfoList.", this.DataInfoList);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Deals.", this.Deals);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -13,29 +13,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.emr.v20190103.models;
+package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeUsersForUserManagerResponse extends AbstractModel{
+public class DescribeDBSecurityGroupsResponse extends AbstractModel{
 
     /**
-    * Total number
+    * Security group details
     */
-    @SerializedName("TotalCnt")
+    @SerializedName("Groups")
     @Expose
-    private Long TotalCnt;
+    private SecurityGroup [] Groups;
 
     /**
-    * User information list
+    * Instance VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("VIP")
+    @Expose
+    private String VIP;
+
+    /**
+    * Instance Port
 Note: This field may return null, indicating that no valid value can be obtained.
     */
-    @SerializedName("UserManagerUserList")
+    @SerializedName("VPort")
     @Expose
-    private UserManagerUserBriefInfo [] UserManagerUserList;
+    private String VPort;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,39 +53,59 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String RequestId;
 
     /**
-     * Get Total number 
-     * @return TotalCnt Total number
+     * Get Security group details 
+     * @return Groups Security group details
      */
-    public Long getTotalCnt() {
-        return this.TotalCnt;
+    public SecurityGroup [] getGroups() {
+        return this.Groups;
     }
 
     /**
-     * Set Total number
-     * @param TotalCnt Total number
+     * Set Security group details
+     * @param Groups Security group details
      */
-    public void setTotalCnt(Long TotalCnt) {
-        this.TotalCnt = TotalCnt;
+    public void setGroups(SecurityGroup [] Groups) {
+        this.Groups = Groups;
     }
 
     /**
-     * Get User information list
+     * Get Instance VIP
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return VIP Instance VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getVIP() {
+        return this.VIP;
+    }
+
+    /**
+     * Set Instance VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param VIP Instance VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setVIP(String VIP) {
+        this.VIP = VIP;
+    }
+
+    /**
+     * Get Instance Port
 Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return UserManagerUserList User information list
+     * @return VPort Instance Port
 Note: This field may return null, indicating that no valid value can be obtained.
      */
-    public UserManagerUserBriefInfo [] getUserManagerUserList() {
-        return this.UserManagerUserList;
+    public String getVPort() {
+        return this.VPort;
     }
 
     /**
-     * Set User information list
+     * Set Instance Port
 Note: This field may return null, indicating that no valid value can be obtained.
-     * @param UserManagerUserList User information list
+     * @param VPort Instance Port
 Note: This field may return null, indicating that no valid value can be obtained.
      */
-    public void setUserManagerUserList(UserManagerUserBriefInfo [] UserManagerUserList) {
-        this.UserManagerUserList = UserManagerUserList;
+    public void setVPort(String VPort) {
+        this.VPort = VPort;
     }
 
     /**
@@ -96,22 +124,25 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.RequestId = RequestId;
     }
 
-    public DescribeUsersForUserManagerResponse() {
+    public DescribeDBSecurityGroupsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeUsersForUserManagerResponse(DescribeUsersForUserManagerResponse source) {
-        if (source.TotalCnt != null) {
-            this.TotalCnt = new Long(source.TotalCnt);
-        }
-        if (source.UserManagerUserList != null) {
-            this.UserManagerUserList = new UserManagerUserBriefInfo[source.UserManagerUserList.length];
-            for (int i = 0; i < source.UserManagerUserList.length; i++) {
-                this.UserManagerUserList[i] = new UserManagerUserBriefInfo(source.UserManagerUserList[i]);
+    public DescribeDBSecurityGroupsResponse(DescribeDBSecurityGroupsResponse source) {
+        if (source.Groups != null) {
+            this.Groups = new SecurityGroup[source.Groups.length];
+            for (int i = 0; i < source.Groups.length; i++) {
+                this.Groups[i] = new SecurityGroup(source.Groups[i]);
             }
+        }
+        if (source.VIP != null) {
+            this.VIP = new String(source.VIP);
+        }
+        if (source.VPort != null) {
+            this.VPort = new String(source.VPort);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -123,8 +154,9 @@ Note: This field may return null, indicating that no valid value can be obtained
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCnt", this.TotalCnt);
-        this.setParamArrayObj(map, prefix + "UserManagerUserList.", this.UserManagerUserList);
+        this.setParamArrayObj(map, prefix + "Groups.", this.Groups);
+        this.setParamSimple(map, prefix + "VIP", this.VIP);
+        this.setParamSimple(map, prefix + "VPort", this.VPort);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -39,26 +39,6 @@ public class EbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to check a rule.
-     * @param req CheckRuleRequest
-     * @return CheckRuleResponse
-     * @throws TencentCloudSDKException
-     */
-    public CheckRuleResponse CheckRule(CheckRuleRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CheckRuleResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CheckRuleResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CheckRule");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to test rules and data on the ETL configuration page.
      * @param req CheckTransformationRequest
      * @return CheckTransformationResponse
@@ -71,46 +51,6 @@ public class EbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CheckTransformationResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CheckTransformation");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to create an event connector.
-     * @param req CreateConnectionRequest
-     * @return CreateConnectionResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateConnectionResponse CreateConnection(CreateConnectionRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateConnectionResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateConnectionResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateConnection");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to create an event bus.
-     * @param req CreateEventBusRequest
-     * @return CreateEventBusResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateEventBusResponse CreateEventBus(CreateEventBusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateEventBusResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateEventBusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateEventBus");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -279,26 +219,6 @@ public class EbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the details of an event bus.
-     * @param req GetEventBusRequest
-     * @return GetEventBusResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetEventBusResponse GetEventBus(GetEventBusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<GetEventBusResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<GetEventBusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "GetEventBus");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to get the details of an event rule.
      * @param req GetRuleRequest
      * @return GetRuleResponse
@@ -431,26 +351,6 @@ public class EbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdateConnectionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdateConnection");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to update an event bus.
-     * @param req UpdateEventBusRequest
-     * @return UpdateEventBusResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpdateEventBusResponse UpdateEventBus(UpdateEventBusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpdateEventBusResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<UpdateEventBusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpdateEventBus");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -23,11 +23,67 @@ import java.util.HashMap;
 public class AddUsersForUserManagerResponse extends AbstractModel{
 
     /**
+    * The user list that is successfully added
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("SuccessUserList")
+    @Expose
+    private String [] SuccessUserList;
+
+    /**
+    * The user list that is not successfully added
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("FailedUserList")
+    @Expose
+    private String [] FailedUserList;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get The user list that is successfully added
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return SuccessUserList The user list that is successfully added
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String [] getSuccessUserList() {
+        return this.SuccessUserList;
+    }
+
+    /**
+     * Set The user list that is successfully added
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param SuccessUserList The user list that is successfully added
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setSuccessUserList(String [] SuccessUserList) {
+        this.SuccessUserList = SuccessUserList;
+    }
+
+    /**
+     * Get The user list that is not successfully added
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return FailedUserList The user list that is not successfully added
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String [] getFailedUserList() {
+        return this.FailedUserList;
+    }
+
+    /**
+     * Set The user list that is not successfully added
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param FailedUserList The user list that is not successfully added
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setFailedUserList(String [] FailedUserList) {
+        this.FailedUserList = FailedUserList;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -53,6 +109,18 @@ public class AddUsersForUserManagerResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AddUsersForUserManagerResponse(AddUsersForUserManagerResponse source) {
+        if (source.SuccessUserList != null) {
+            this.SuccessUserList = new String[source.SuccessUserList.length];
+            for (int i = 0; i < source.SuccessUserList.length; i++) {
+                this.SuccessUserList[i] = new String(source.SuccessUserList[i]);
+            }
+        }
+        if (source.FailedUserList != null) {
+            this.FailedUserList = new String[source.FailedUserList.length];
+            for (int i = 0; i < source.FailedUserList.length; i++) {
+                this.FailedUserList[i] = new String(source.FailedUserList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +131,8 @@ public class AddUsersForUserManagerResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "SuccessUserList.", this.SuccessUserList);
+        this.setParamArraySimple(map, prefix + "FailedUserList.", this.FailedUserList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -13,48 +13,53 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DropLiveStreamResponse extends AbstractModel{
+public class UserManagerFilter extends AbstractModel{
 
     /**
-    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+    * Username
+Note: This field may return null, indicating that no valid value can be obtained.
     */
-    @SerializedName("RequestId")
+    @SerializedName("UserName")
     @Expose
-    private String RequestId;
+    private String UserName;
 
     /**
-     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
-     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * Get Username
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return UserName Username
+Note: This field may return null, indicating that no valid value can be obtained.
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getUserName() {
+        return this.UserName;
     }
 
     /**
-     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * Set Username
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param UserName Username
+Note: This field may return null, indicating that no valid value can be obtained.
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
     }
 
-    public DropLiveStreamResponse() {
+    public UserManagerFilter() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DropLiveStreamResponse(DropLiveStreamResponse source) {
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+    public UserManagerFilter(UserManagerFilter source) {
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
         }
     }
 
@@ -63,7 +68,7 @@ public class DropLiveStreamResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "UserName", this.UserName);
 
     }
 }
