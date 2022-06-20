@@ -23,51 +23,51 @@ import java.util.HashMap;
 public class TaskOutputStorage extends AbstractModel{
 
     /**
-    * Storage location type of a video processing output object. Only COS is supported currently.
+    * The type of storage location for the media processing output object. Only COS is supported currently.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * This parameter is valid and required when `Type` is COS, indicating the location of an output COS object after video processing.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("CosOutputStorage")
     @Expose
     private CosOutputStorage CosOutputStorage;
 
     /**
-     * Get Storage location type of a video processing output object. Only COS is supported currently. 
-     * @return Type Storage location type of a video processing output object. Only COS is supported currently.
+     * Get The type of storage location for the media processing output object. Only COS is supported currently. 
+     * @return Type The type of storage location for the media processing output object. Only COS is supported currently.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Storage location type of a video processing output object. Only COS is supported currently.
-     * @param Type Storage location type of a video processing output object. Only COS is supported currently.
+     * Set The type of storage location for the media processing output object. Only COS is supported currently.
+     * @param Type The type of storage location for the media processing output object. Only COS is supported currently.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get This parameter is valid and required when `Type` is COS, indicating the location of an output COS object after video processing.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CosOutputStorage This parameter is valid and required when `Type` is COS, indicating the location of an output COS object after video processing.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return CosOutputStorage The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public CosOutputStorage getCosOutputStorage() {
         return this.CosOutputStorage;
     }
 
     /**
-     * Set This parameter is valid and required when `Type` is COS, indicating the location of an output COS object after video processing.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CosOutputStorage This parameter is valid and required when `Type` is COS, indicating the location of an output COS object after video processing.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param CosOutputStorage The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setCosOutputStorage(CosOutputStorage CosOutputStorage) {
         this.CosOutputStorage = CosOutputStorage;

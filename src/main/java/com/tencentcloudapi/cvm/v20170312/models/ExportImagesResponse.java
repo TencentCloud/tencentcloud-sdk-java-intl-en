@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mps.v20190612.models;
+package com.tencentcloudapi.cvm.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateContentReviewTemplateResponse extends AbstractModel{
+public class ExportImagesResponse extends AbstractModel{
 
     /**
-    * The unique ID of the content moderation template.
+    * ID of the image export task
     */
-    @SerializedName("Definition")
+    @SerializedName("TaskId")
     @Expose
-    private Long Definition;
+    private Long TaskId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +37,19 @@ public class CreateContentReviewTemplateResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The unique ID of the content moderation template. 
-     * @return Definition The unique ID of the content moderation template.
+     * Get ID of the image export task 
+     * @return TaskId ID of the image export task
      */
-    public Long getDefinition() {
-        return this.Definition;
+    public Long getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set The unique ID of the content moderation template.
-     * @param Definition The unique ID of the content moderation template.
+     * Set ID of the image export task
+     * @param TaskId ID of the image export task
      */
-    public void setDefinition(Long Definition) {
-        this.Definition = Definition;
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -68,16 +68,16 @@ public class CreateContentReviewTemplateResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateContentReviewTemplateResponse() {
+    public ExportImagesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateContentReviewTemplateResponse(CreateContentReviewTemplateResponse source) {
-        if (source.Definition != null) {
-            this.Definition = new Long(source.Definition);
+    public ExportImagesResponse(ExportImagesResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +89,7 @@ public class CreateContentReviewTemplateResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

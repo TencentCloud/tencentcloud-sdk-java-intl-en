@@ -30,15 +30,15 @@ public class MediaInputInfo extends AbstractModel{
     private String Type;
 
     /**
-    * This parameter is required and valid when `Type` is `COS`, indicating the information of a COS object for video processing.
+    * The information of the COS object to process. This parameter is valid and required when `Type` is `COS`.
     */
     @SerializedName("CosInputInfo")
     @Expose
     private CosInputInfo CosInputInfo;
 
     /**
-    * This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
-Note: this field may return `null`, indicating that no valid value is obtained.
+    * The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("UrlInputInfo")
     @Expose
@@ -61,36 +61,36 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     }
 
     /**
-     * Get This parameter is required and valid when `Type` is `COS`, indicating the information of a COS object for video processing. 
-     * @return CosInputInfo This parameter is required and valid when `Type` is `COS`, indicating the information of a COS object for video processing.
+     * Get The information of the COS object to process. This parameter is valid and required when `Type` is `COS`. 
+     * @return CosInputInfo The information of the COS object to process. This parameter is valid and required when `Type` is `COS`.
      */
     public CosInputInfo getCosInputInfo() {
         return this.CosInputInfo;
     }
 
     /**
-     * Set This parameter is required and valid when `Type` is `COS`, indicating the information of a COS object for video processing.
-     * @param CosInputInfo This parameter is required and valid when `Type` is `COS`, indicating the information of a COS object for video processing.
+     * Set The information of the COS object to process. This parameter is valid and required when `Type` is `COS`.
+     * @param CosInputInfo The information of the COS object to process. This parameter is valid and required when `Type` is `COS`.
      */
     public void setCosInputInfo(CosInputInfo CosInputInfo) {
         this.CosInputInfo = CosInputInfo;
     }
 
     /**
-     * Get This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
-Note: this field may return `null`, indicating that no valid value is obtained. 
-     * @return UrlInputInfo This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Get The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return UrlInputInfo The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public UrlInputInfo getUrlInputInfo() {
         return this.UrlInputInfo;
     }
 
     /**
-     * Set This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param UrlInputInfo This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Set The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param UrlInputInfo The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setUrlInputInfo(UrlInputInfo UrlInputInfo) {
         this.UrlInputInfo = UrlInputInfo;

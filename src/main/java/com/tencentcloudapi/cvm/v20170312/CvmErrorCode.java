@@ -15,6 +15,9 @@ public enum CvmErrorCode {
     // You cannot share images with yourself.
      FAILEDOPERATION_ACCOUNTISYOURSELF("FailedOperation.AccountIsYourSelf"),
      
+    // 
+     FAILEDOPERATION_BYOLIMAGESHAREFAILED("FailedOperation.BYOLImageShareFailed"),
+     
     // The specified spread placement group does not exist.
      FAILEDOPERATION_DISASTERRECOVERGROUPNOTFOUND("FailedOperation.DisasterRecoverGroupNotFound"),
      
@@ -201,6 +204,9 @@ public enum CvmErrorCode {
     // The specified HostName is invalid.
      INVALIDPARAMETER_HOSTNAMEILLEGAL("InvalidParameter.HostNameIllegal"),
      
+    // Either `ImageIds` or `SnapshotIds` must be specified.
+     INVALIDPARAMETER_IMAGEIDSSNAPSHOTIDSMUSTONE("InvalidParameter.ImageIdsSnapshotIdsMustOne"),
+     
     // This API does not support instance images.
      INVALIDPARAMETER_INSTANCEIMAGENOTSUPPORT("InvalidParameter.InstanceImageNotSupport"),
      
@@ -258,23 +264,29 @@ public enum CvmErrorCode {
     // The specified bandwidth package does not exist.
      INVALIDPARAMETERVALUE_BANDWIDTHPACKAGEIDNOTFOUND("InvalidParameterValue.BandwidthPackageIdNotFound"),
      
-    // 
+    // The bucket does not exist.
+     INVALIDPARAMETERVALUE_BUCKETNOTFOUND("InvalidParameterValue.BucketNotFound"),
+     
+    // Invalid `CamRoleName`. This parameter must contain only letters, numbers and symbols (`+`, `=`, `,`, `.`, `@`, `_`, `-`).
      INVALIDPARAMETERVALUE_CAMROLENAMEMALFORMED("InvalidParameterValue.CamRoleNameMalformed"),
      
-    // Corresponding CHC hosts not found
+    // Corresponding CHC hosts not found.
      INVALIDPARAMETERVALUE_CHCHOSTSNOTFOUND("InvalidParameterValue.ChcHostsNotFound"),
      
     // The minimum capacity of a SSD data disk is 100 GB.
      INVALIDPARAMETERVALUE_CLOUDSSDDATADISKSIZETOOSMALL("InvalidParameterValue.CloudSsdDataDiskSizeTooSmall"),
      
-    // Illegal core count.
+    // Invalid number of cores.
      INVALIDPARAMETERVALUE_CORECOUNTVALUE("InvalidParameterValue.CoreCountValue"),
      
     // Incorrect placement group ID format.
      INVALIDPARAMETERVALUE_DISASTERRECOVERGROUPIDMALFORMED("InvalidParameterValue.DisasterRecoverGroupIdMalformed"),
      
-    // Duplicate parameter value
+    // Duplicate parameter value.
      INVALIDPARAMETERVALUE_DUPLICATE("InvalidParameterValue.Duplicate"),
+     
+    // 
+     INVALIDPARAMETERVALUE_DUPLICATETAGS("InvalidParameterValue.DuplicateTags"),
      
     // Non-GPU instances cannot be changed to the GPU instance.
      INVALIDPARAMETERVALUE_GPUINSTANCEFAMILY("InvalidParameterValue.GPUInstanceFamily"),
@@ -297,7 +309,7 @@ public enum CvmErrorCode {
     // The HPC cluster needs to be specified for the high-performance computing instance.
      INVALIDPARAMETERVALUE_INSTANCETYPEREQUIREDHPCCLUSTER("InvalidParameterValue.InstanceTypeRequiredHpcCluster"),
      
-    // The spot instance is out of stock.
+    // The spot instances are out of stock.
      INVALIDPARAMETERVALUE_INSUFFICIENTOFFERING("InvalidParameterValue.InsufficientOffering"),
      
     // The bid is lower than the market price.
@@ -305,6 +317,12 @@ public enum CvmErrorCode {
      
     // Invalid AppID
      INVALIDPARAMETERVALUE_INVALIDAPPIDFORMAT("InvalidParameterValue.InvalidAppIdFormat"),
+     
+    // You don’t have the write permission to the bucket.
+     INVALIDPARAMETERVALUE_INVALIDBUCKETPERMISSIONFOREXPORT("InvalidParameterValue.InvalidBucketPermissionForExport"),
+     
+    // The length of `FileNamePrefixList` does not match `ImageIds` or `SnapshotIds`.
+     INVALIDPARAMETERVALUE_INVALIDFILENAMEPREFIXLIST("InvalidParameterValue.InvalidFileNamePrefixList"),
      
     // Converting to a non-GPU or other type of GPU instance is not supported.
      INVALIDPARAMETERVALUE_INVALIDGPUFAMILYCHANGE("InvalidParameterValue.InvalidGPUFamilyChange"),
@@ -339,7 +357,7 @@ public enum CvmErrorCode {
     // Incorrect format of instance launch template version description.
      INVALIDPARAMETERVALUE_INVALIDLAUNCHTEMPLATEVERSIONDESCRIPTION("InvalidParameterValue.InvalidLaunchTemplateVersionDescription"),
      
-    // 
+    // Invalid license type.
      INVALIDPARAMETERVALUE_INVALIDLICENSETYPE("InvalidParameterValue.InvalidLicenseType"),
      
     // Invalid parameter value.
@@ -393,7 +411,7 @@ public enum CvmErrorCode {
     // The parameter value must be a DHCP-enabled VPC.
      INVALIDPARAMETERVALUE_MUSTDHCPENABLEDVPC("InvalidParameterValue.MustDhcpEnabledVpc"),
      
-    // 
+    // The subnet is not in the CDC cluster.
      INVALIDPARAMETERVALUE_NOTCDCSUBNET("InvalidParameterValue.NotCdcSubnet"),
      
     // Unsupported operation.
@@ -413,6 +431,9 @@ public enum CvmErrorCode {
      
     // The specified tag does not exist
      INVALIDPARAMETERVALUE_TAGKEYNOTFOUND("InvalidParameterValue.TagKeyNotFound"),
+     
+    // 
+     INVALIDPARAMETERVALUE_TAGQUOTALIMITEXCEEDED("InvalidParameterValue.TagQuotaLimitExceeded"),
      
     // Invalid thread count per core.
      INVALIDPARAMETERVALUE_THREADPERCOREVALUE("InvalidParameterValue.ThreadPerCoreValue"),
@@ -489,7 +510,10 @@ public enum CvmErrorCode {
     // The number of ENIs on a specified instance exceeds the maximum ENIs allowed for the target instance type. Delete some ENIs and try again.
      LIMITEXCEEDED_ENINUMLIMIT("LimitExceeded.EniNumLimit"),
      
-    // Number of IPs on this ENI reached the upper limit
+    // The number of image export tasks in progress reached the upper limit. Please try again after the running tasks are completed.
+     LIMITEXCEEDED_EXPORTIMAGETASKLIMITEXCEEDED("LimitExceeded.ExportImageTaskLimitExceeded"),
+     
+    // Number of IPs on this ENI reached the upper limit.
      LIMITEXCEEDED_IPV6ADDRESSNUM("LimitExceeded.IPv6AddressNum"),
      
     // Reached the upper limit of the ENIs for the instance.
@@ -507,7 +531,7 @@ public enum CvmErrorCode {
     // The number of instance launch template versions exceeds the limit.
      LIMITEXCEEDED_LAUNCHTEMPLATEVERSIONQUOTA("LimitExceeded.LaunchTemplateVersionQuota"),
      
-    // Your quota for monthly-subscribed instances is full. Increase your quota and try again.
+    // Your quota for monthly-subscribed instances is used up. Increase your quota and try again.
      LIMITEXCEEDED_PREPAYQUOTA("LimitExceeded.PrepayQuota"),
      
     // The number of security groups exceeds the quota limit.
@@ -515,6 +539,9 @@ public enum CvmErrorCode {
      
     // The spot instance offerings are out of stock.
      LIMITEXCEEDED_SPOTQUOTA("LimitExceeded.SpotQuota"),
+     
+    // 
+     LIMITEXCEEDED_TAGRESOURCEQUOTA("LimitExceeded.TagResourceQuota"),
      
     // Failed to return instances because of the quota limit.
      LIMITEXCEEDED_USERRETURNQUOTA("LimitExceeded.UserReturnQuota"),
@@ -579,6 +606,9 @@ public enum CvmErrorCode {
     // The specified placement group does not exist.
      RESOURCENOTFOUND_INVALIDPLACEMENTSET("ResourceNotFound.InvalidPlacementSet"),
      
+    // 
+     RESOURCENOTFOUND_INVALIDZONEINSTANCETYPE("ResourceNotFound.InvalidZoneInstanceType"),
+     
     // No default CBS resources are available.
      RESOURCENOTFOUND_NODEFAULTCBS("ResourceNotFound.NoDefaultCbs"),
      
@@ -635,6 +665,9 @@ public enum CvmErrorCode {
      
     // IPv6 instances cannot be migrated from Classiclink to VPC.
      UNSUPPORTEDOPERATION_IPV6NOTSUPPORTVPCMIGRATE("UnsupportedOperation.IPv6NotSupportVpcMigrate"),
+     
+    // Failed to export the image: The image is too large.
+     UNSUPPORTEDOPERATION_IMAGETOOLARGEEXPORTUNSUPPORTED("UnsupportedOperation.ImageTooLargeExportUnsupported"),
      
     // This instance billing mode does not support the operation.
      UNSUPPORTEDOPERATION_INSTANCECHARGETYPE("UnsupportedOperation.InstanceChargeType"),
@@ -711,6 +744,9 @@ public enum CvmErrorCode {
     // The specified disk is not supported.
      UNSUPPORTEDOPERATION_INVALIDDISK("UnsupportedOperation.InvalidDisk"),
      
+    // 
+     UNSUPPORTEDOPERATION_INVALIDIMAGELICENSETYPEFORRESET("UnsupportedOperation.InvalidImageLicenseTypeForReset"),
+     
     // This operation is not supported for the instance with a termination schedule. Please cancel the scheduled termination time in the instance details page and try again.
      UNSUPPORTEDOPERATION_INVALIDINSTANCENOTSUPPORTEDPROTECTEDINSTANCE("UnsupportedOperation.InvalidInstanceNotSupportedProtectedInstance"),
      
@@ -729,6 +765,9 @@ public enum CvmErrorCode {
     // The specified disk is converting to a cloud disk. Try again later.
      UNSUPPORTEDOPERATION_LOCALDISKMIGRATINGTOCLOUDDISK("UnsupportedOperation.LocalDiskMigratingToCloudDisk"),
      
+    // The custom images created with the market images cannot be exported.
+     UNSUPPORTEDOPERATION_MARKETIMAGEEXPORTUNSUPPORTED("UnsupportedOperation.MarketImageExportUnsupported"),
+     
     // An instance bound with CLB does not support modifying its VPC attributes.
      UNSUPPORTEDOPERATION_MODIFYVPCWITHCLB("UnsupportedOperation.ModifyVPCWithCLB"),
      
@@ -744,8 +783,11 @@ public enum CvmErrorCode {
     // Only a prepaid account supports this operation.
      UNSUPPORTEDOPERATION_ONLYFORPREPAIDACCOUNT("UnsupportedOperation.OnlyForPrepaidAccount"),
      
-    // 
+    // The original instance type is invalid.
      UNSUPPORTEDOPERATION_ORIGINALINSTANCETYPEINVALID("UnsupportedOperation.OriginalInstanceTypeInvalid"),
+     
+    // Public images and market images cannot be exported.
+     UNSUPPORTEDOPERATION_PUBLICIMAGEEXPORTUNSUPPORTED("UnsupportedOperation.PublicImageExportUnsupported"),
      
     // This image does not support instance reinstallation.
      UNSUPPORTEDOPERATION_RAWLOCALDISKINSREINSTALLTOQCOW2("UnsupportedOperation.RawLocalDiskInsReinstalltoQcow2"),
@@ -758,6 +800,9 @@ public enum CvmErrorCode {
      
     // You’ve used up your quota for Reserved Instances.
      UNSUPPORTEDOPERATION_RESERVEDINSTANCEOUTOFQUATA("UnsupportedOperation.ReservedInstanceOutofQuata"),
+     
+    // Shared images cannot be exported.
+     UNSUPPORTEDOPERATION_SHAREDIMAGEEXPORTUNSUPPORTED("UnsupportedOperation.SharedImageExportUnsupported"),
      
     // This special instance type does not support the operation.
      UNSUPPORTEDOPERATION_SPECIALINSTANCETYPE("UnsupportedOperation.SpecialInstanceType"),
@@ -777,11 +822,14 @@ public enum CvmErrorCode {
     // Changing to this model type for this instance is not allowed.
      UNSUPPORTEDOPERATION_UNSUPPORTEDCHANGEINSTANCETOTHISINSTANCEFAMILY("UnsupportedOperation.UnsupportedChangeInstanceToThisInstanceFamily"),
      
-    // A Tencent Cloud International account does not support this operation.
+    // This operation is not available for Tencent Cloud International users.
      UNSUPPORTEDOPERATION_UNSUPPORTEDINTERNATIONALUSER("UnsupportedOperation.UnsupportedInternationalUser"),
      
     // The quota of user limit operations is insufficient.
      UNSUPPORTEDOPERATION_USERLIMITOPERATIONEXCEEDQUOTA("UnsupportedOperation.UserLimitOperationExceedQuota"),
+     
+    // Windows images cannot be exported.
+     UNSUPPORTEDOPERATION_WINDOWSIMAGEEXPORTUNSUPPORTED("UnsupportedOperation.WindowsImageExportUnsupported"),
      
     // The VPC IP address is not in the subnet.
      VPCADDRNOTINSUBNET("VpcAddrNotInSubNet"),

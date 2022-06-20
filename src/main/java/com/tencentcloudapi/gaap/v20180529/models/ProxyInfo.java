@@ -81,16 +81,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Connection status. Valid values:
-`RUNNING`: running
-`CREATING`: creating
-`DESTROYING`: terminating
-`OPENING`: enabling
-`CLOSING`: disabling
-`CLOSED`: disabled
-`ADJUSTING`: adjusting configuration
-`ISOLATING`: isolating
-`ISOLATED`: isolated
-`CLONING`: copying
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`OPENING`: Enabling
+`CLOSING`: Disabling
+`CLOSED`: Disabled
+`ADJUSTING`: Adjusting configuration
+`ISOLATING`: Isolating
+`ISOLATED`: Isolated
+`CLONING`: Copying
+`RECOVERING`: Maintaining
     */
     @SerializedName("Status")
     @Expose
@@ -243,8 +244,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String IPAddressVersion;
 
     /**
-    * Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
-Note: this field may return `null`, indicating that no valid value can be obtained.
+    * Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: custom security EIP.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("NetworkType")
     @Expose
@@ -426,27 +427,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Connection status. Valid values:
-`RUNNING`: running
-`CREATING`: creating
-`DESTROYING`: terminating
-`OPENING`: enabling
-`CLOSING`: disabling
-`CLOSED`: disabled
-`ADJUSTING`: adjusting configuration
-`ISOLATING`: isolating
-`ISOLATED`: isolated
-`CLONING`: copying 
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`OPENING`: Enabling
+`CLOSING`: Disabling
+`CLOSED`: Disabled
+`ADJUSTING`: Adjusting configuration
+`ISOLATING`: Isolating
+`ISOLATED`: Isolated
+`CLONING`: Copying
+`RECOVERING`: Maintaining 
      * @return Status Connection status. Valid values:
-`RUNNING`: running
-`CREATING`: creating
-`DESTROYING`: terminating
-`OPENING`: enabling
-`CLOSING`: disabling
-`CLOSED`: disabled
-`ADJUSTING`: adjusting configuration
-`ISOLATING`: isolating
-`ISOLATED`: isolated
-`CLONING`: copying
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`OPENING`: Enabling
+`CLOSING`: Disabling
+`CLOSED`: Disabled
+`ADJUSTING`: Adjusting configuration
+`ISOLATING`: Isolating
+`ISOLATED`: Isolated
+`CLONING`: Copying
+`RECOVERING`: Maintaining
      */
     public String getStatus() {
         return this.Status;
@@ -454,27 +457,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Connection status. Valid values:
-`RUNNING`: running
-`CREATING`: creating
-`DESTROYING`: terminating
-`OPENING`: enabling
-`CLOSING`: disabling
-`CLOSED`: disabled
-`ADJUSTING`: adjusting configuration
-`ISOLATING`: isolating
-`ISOLATED`: isolated
-`CLONING`: copying
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`OPENING`: Enabling
+`CLOSING`: Disabling
+`CLOSED`: Disabled
+`ADJUSTING`: Adjusting configuration
+`ISOLATING`: Isolating
+`ISOLATED`: Isolated
+`CLONING`: Copying
+`RECOVERING`: Maintaining
      * @param Status Connection status. Valid values:
-`RUNNING`: running
-`CREATING`: creating
-`DESTROYING`: terminating
-`OPENING`: enabling
-`CLOSING`: disabling
-`CLOSED`: disabled
-`ADJUSTING`: adjusting configuration
-`ISOLATING`: isolating
-`ISOLATED`: isolated
-`CLONING`: copying
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`OPENING`: Enabling
+`CLOSING`: Disabling
+`CLOSED`: Disabled
+`ADJUSTING`: Adjusting configuration
+`ISOLATING`: Isolating
+`ISOLATED`: Isolated
+`CLONING`: Copying
+`RECOVERING`: Maintaining
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -837,20 +842,20 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
-Note: this field may return `null`, indicating that no valid value can be obtained. 
-     * @return NetworkType Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * Get Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: custom security EIP.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return NetworkType Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: custom security EIP.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
-Note: this field may return `null`, indicating that no valid value can be obtained.
-     * @param NetworkType Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * Set Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: custom security EIP.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param NetworkType Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: custom security EIP.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;

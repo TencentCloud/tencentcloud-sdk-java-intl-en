@@ -53,16 +53,16 @@ public class WorkflowInfo extends AbstractModel{
     private WorkflowTrigger Trigger;
 
     /**
-    * Target storage of a video processing output file.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The location to save the media processing output file.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-    * Parameter of a video processing task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The media processing parameters to use.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("MediaProcessTask")
     @Expose
@@ -107,7 +107,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long TaskPriority;
 
     /**
-    * Target directory of a video processing output file, such as `/movie/201907/`.
+    * The directory to save the media processing output file, such as `/movie/201907/`.
     */
     @SerializedName("OutputDir")
     @Expose
@@ -200,40 +200,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Target storage of a video processing output file.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OutputStorage Target storage of a video processing output file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The location to save the media processing output file.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return OutputStorage The location to save the media processing output file.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set Target storage of a video processing output file.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OutputStorage Target storage of a video processing output file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The location to save the media processing output file.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param OutputStorage The location to save the media processing output file.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }
 
     /**
-     * Get Parameter of a video processing task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MediaProcessTask Parameter of a video processing task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The media processing parameters to use.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return MediaProcessTask The media processing parameters to use.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public MediaProcessTaskInput getMediaProcessTask() {
         return this.MediaProcessTask;
     }
 
     /**
-     * Set Parameter of a video processing task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MediaProcessTask Parameter of a video processing task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The media processing parameters to use.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param MediaProcessTask The media processing parameters to use.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setMediaProcessTask(MediaProcessTaskInput MediaProcessTask) {
         this.MediaProcessTask = MediaProcessTask;
@@ -332,16 +332,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Target directory of a video processing output file, such as `/movie/201907/`. 
-     * @return OutputDir Target directory of a video processing output file, such as `/movie/201907/`.
+     * Get The directory to save the media processing output file, such as `/movie/201907/`. 
+     * @return OutputDir The directory to save the media processing output file, such as `/movie/201907/`.
      */
     public String getOutputDir() {
         return this.OutputDir;
     }
 
     /**
-     * Set Target directory of a video processing output file, such as `/movie/201907/`.
-     * @param OutputDir Target directory of a video processing output file, such as `/movie/201907/`.
+     * Set The directory to save the media processing output file, such as `/movie/201907/`.
+     * @param OutputDir The directory to save the media processing output file, such as `/movie/201907/`.
      */
     public void setOutputDir(String OutputDir) {
         this.OutputDir = OutputDir;

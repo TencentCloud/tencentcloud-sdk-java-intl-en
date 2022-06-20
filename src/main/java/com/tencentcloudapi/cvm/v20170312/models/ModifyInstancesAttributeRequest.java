@@ -45,11 +45,27 @@ public class ModifyInstancesAttributeRequest extends AbstractModel{
     private String [] SecurityGroups;
 
     /**
+    * The role bound with the instance. If it is not specified, it indicates to unbind the current role of the CVM.
+    */
+    @SerializedName("CamRoleName")
+    @Expose
+    private String CamRoleName;
+
+    /**
     * Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
     */
     @SerializedName("DisableApiTermination")
     @Expose
     private Boolean DisableApiTermination;
+
+    /**
+    * The role type, which is used in conjunction with `CamRoleName`. The value is obtained in `RoleType` field, returning by `CAM DescribeRoleList` and `GetRole` APIs. Valid value: `user`, `system` and `service_linked`.
+For example, when `LinkedRoleIn` is contained in `CamRoleName` (such as `TKE_QCSLinkedRoleInPrometheusService`), the returned `RoleType` of `DescribeRoleList` and `GetRoleis` is `service_linked`, and the `CamRoleType` `service_linked`.
+When the value obtained in `RoleType` is `user` (default) or `system`, `CamRoleType` can be left empty.
+    */
+    @SerializedName("CamRoleType")
+    @Expose
+    private String CamRoleType;
 
     /**
      * Get Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100. 
@@ -104,6 +120,22 @@ public class ModifyInstancesAttributeRequest extends AbstractModel{
     }
 
     /**
+     * Get The role bound with the instance. If it is not specified, it indicates to unbind the current role of the CVM. 
+     * @return CamRoleName The role bound with the instance. If it is not specified, it indicates to unbind the current role of the CVM.
+     */
+    public String getCamRoleName() {
+        return this.CamRoleName;
+    }
+
+    /**
+     * Set The role bound with the instance. If it is not specified, it indicates to unbind the current role of the CVM.
+     * @param CamRoleName The role bound with the instance. If it is not specified, it indicates to unbind the current role of the CVM.
+     */
+    public void setCamRoleName(String CamRoleName) {
+        this.CamRoleName = CamRoleName;
+    }
+
+    /**
      * Get Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`. 
      * @return DisableApiTermination Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
      */
@@ -117,6 +149,30 @@ public class ModifyInstancesAttributeRequest extends AbstractModel{
      */
     public void setDisableApiTermination(Boolean DisableApiTermination) {
         this.DisableApiTermination = DisableApiTermination;
+    }
+
+    /**
+     * Get The role type, which is used in conjunction with `CamRoleName`. The value is obtained in `RoleType` field, returning by `CAM DescribeRoleList` and `GetRole` APIs. Valid value: `user`, `system` and `service_linked`.
+For example, when `LinkedRoleIn` is contained in `CamRoleName` (such as `TKE_QCSLinkedRoleInPrometheusService`), the returned `RoleType` of `DescribeRoleList` and `GetRoleis` is `service_linked`, and the `CamRoleType` `service_linked`.
+When the value obtained in `RoleType` is `user` (default) or `system`, `CamRoleType` can be left empty. 
+     * @return CamRoleType The role type, which is used in conjunction with `CamRoleName`. The value is obtained in `RoleType` field, returning by `CAM DescribeRoleList` and `GetRole` APIs. Valid value: `user`, `system` and `service_linked`.
+For example, when `LinkedRoleIn` is contained in `CamRoleName` (such as `TKE_QCSLinkedRoleInPrometheusService`), the returned `RoleType` of `DescribeRoleList` and `GetRoleis` is `service_linked`, and the `CamRoleType` `service_linked`.
+When the value obtained in `RoleType` is `user` (default) or `system`, `CamRoleType` can be left empty.
+     */
+    public String getCamRoleType() {
+        return this.CamRoleType;
+    }
+
+    /**
+     * Set The role type, which is used in conjunction with `CamRoleName`. The value is obtained in `RoleType` field, returning by `CAM DescribeRoleList` and `GetRole` APIs. Valid value: `user`, `system` and `service_linked`.
+For example, when `LinkedRoleIn` is contained in `CamRoleName` (such as `TKE_QCSLinkedRoleInPrometheusService`), the returned `RoleType` of `DescribeRoleList` and `GetRoleis` is `service_linked`, and the `CamRoleType` `service_linked`.
+When the value obtained in `RoleType` is `user` (default) or `system`, `CamRoleType` can be left empty.
+     * @param CamRoleType The role type, which is used in conjunction with `CamRoleName`. The value is obtained in `RoleType` field, returning by `CAM DescribeRoleList` and `GetRole` APIs. Valid value: `user`, `system` and `service_linked`.
+For example, when `LinkedRoleIn` is contained in `CamRoleName` (such as `TKE_QCSLinkedRoleInPrometheusService`), the returned `RoleType` of `DescribeRoleList` and `GetRoleis` is `service_linked`, and the `CamRoleType` `service_linked`.
+When the value obtained in `RoleType` is `user` (default) or `system`, `CamRoleType` can be left empty.
+     */
+    public void setCamRoleType(String CamRoleType) {
+        this.CamRoleType = CamRoleType;
     }
 
     public ModifyInstancesAttributeRequest() {
@@ -142,8 +198,14 @@ public class ModifyInstancesAttributeRequest extends AbstractModel{
                 this.SecurityGroups[i] = new String(source.SecurityGroups[i]);
             }
         }
+        if (source.CamRoleName != null) {
+            this.CamRoleName = new String(source.CamRoleName);
+        }
         if (source.DisableApiTermination != null) {
             this.DisableApiTermination = new Boolean(source.DisableApiTermination);
+        }
+        if (source.CamRoleType != null) {
+            this.CamRoleType = new String(source.CamRoleType);
         }
     }
 
@@ -155,7 +217,9 @@ public class ModifyInstancesAttributeRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
+        this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
         this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
+        this.setParamSimple(map, prefix + "CamRoleType", this.CamRoleType);
 
     }
 }

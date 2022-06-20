@@ -23,32 +23,32 @@ import java.util.HashMap;
 public class TaskNotifyConfig extends AbstractModel{
 
     /**
-    * CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
+    * The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
     */
     @SerializedName("CmqModel")
     @Expose
     private String CmqModel;
 
     /**
-    * CMQ region, such as `sh` and `bj`.
+    * The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
     */
     @SerializedName("CmqRegion")
     @Expose
     private String CmqRegion;
 
     /**
-    * This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
-    */
-    @SerializedName("QueueName")
-    @Expose
-    private String QueueName;
-
-    /**
-    * This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
+    * The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
+
+    /**
+    * The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
+    */
+    @SerializedName("QueueName")
+    @Expose
+    private String QueueName;
 
     /**
     * Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
@@ -58,7 +58,11 @@ public class TaskNotifyConfig extends AbstractModel{
     private String NotifyMode;
 
     /**
-    * Notification type, `CMQ` by default. If `URL` is passed in, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+    * The notification type. Valid values:
+<li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
+<li>TDMQ-CMQ: Message queue</li>
+<li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+Default value: `TDMQ-CMQ`.
     */
     @SerializedName("NotifyType")
     @Expose
@@ -72,67 +76,67 @@ public class TaskNotifyConfig extends AbstractModel{
     private String NotifyUrl;
 
     /**
-     * Get CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported. 
-     * @return CmqModel CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
+     * Get The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic. 
+     * @return CmqModel The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
      */
     public String getCmqModel() {
         return this.CmqModel;
     }
 
     /**
-     * Set CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
-     * @param CmqModel CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
+     * Set The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
+     * @param CmqModel The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
      */
     public void setCmqModel(String CmqModel) {
         this.CmqModel = CmqModel;
     }
 
     /**
-     * Get CMQ region, such as `sh` and `bj`. 
-     * @return CmqRegion CMQ region, such as `sh` and `bj`.
+     * Get The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing). 
+     * @return CmqRegion The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
      */
     public String getCmqRegion() {
         return this.CmqRegion;
     }
 
     /**
-     * Set CMQ region, such as `sh` and `bj`.
-     * @param CmqRegion CMQ region, such as `sh` and `bj`.
+     * Set The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
+     * @param CmqRegion The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
      */
     public void setCmqRegion(String CmqRegion) {
         this.CmqRegion = CmqRegion;
     }
 
     /**
-     * Get This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications. 
-     * @return QueueName This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
-     */
-    public String getQueueName() {
-        return this.QueueName;
-    }
-
-    /**
-     * Set This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
-     * @param QueueName This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
-     */
-    public void setQueueName(String QueueName) {
-        this.QueueName = QueueName;
-    }
-
-    /**
-     * Get This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications. 
-     * @return TopicName This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
+     * Get The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`. 
+     * @return TopicName The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
-     * @param TopicName This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
+     * Set The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
+     * @param TopicName The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
+    }
+
+    /**
+     * Get The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`. 
+     * @return QueueName The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
+     */
+    public String getQueueName() {
+        return this.QueueName;
+    }
+
+    /**
+     * Set The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
+     * @param QueueName The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
+     */
+    public void setQueueName(String QueueName) {
+        this.QueueName = QueueName;
     }
 
     /**
@@ -152,16 +156,32 @@ public class TaskNotifyConfig extends AbstractModel{
     }
 
     /**
-     * Get Notification type, `CMQ` by default. If `URL` is passed in, HTTP callbacks are sent to the URL specified by `NotifyUrl`. 
-     * @return NotifyType Notification type, `CMQ` by default. If `URL` is passed in, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+     * Get The notification type. Valid values:
+<li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
+<li>TDMQ-CMQ: Message queue</li>
+<li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+Default value: `TDMQ-CMQ`. 
+     * @return NotifyType The notification type. Valid values:
+<li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
+<li>TDMQ-CMQ: Message queue</li>
+<li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+Default value: `TDMQ-CMQ`.
      */
     public String getNotifyType() {
         return this.NotifyType;
     }
 
     /**
-     * Set Notification type, `CMQ` by default. If `URL` is passed in, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
-     * @param NotifyType Notification type, `CMQ` by default. If `URL` is passed in, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+     * Set The notification type. Valid values:
+<li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
+<li>TDMQ-CMQ: Message queue</li>
+<li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+Default value: `TDMQ-CMQ`.
+     * @param NotifyType The notification type. Valid values:
+<li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
+<li>TDMQ-CMQ: Message queue</li>
+<li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+Default value: `TDMQ-CMQ`.
      */
     public void setNotifyType(String NotifyType) {
         this.NotifyType = NotifyType;
@@ -197,11 +217,11 @@ public class TaskNotifyConfig extends AbstractModel{
         if (source.CmqRegion != null) {
             this.CmqRegion = new String(source.CmqRegion);
         }
-        if (source.QueueName != null) {
-            this.QueueName = new String(source.QueueName);
-        }
         if (source.TopicName != null) {
             this.TopicName = new String(source.TopicName);
+        }
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
         }
         if (source.NotifyMode != null) {
             this.NotifyMode = new String(source.NotifyMode);
@@ -221,8 +241,8 @@ public class TaskNotifyConfig extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CmqModel", this.CmqModel);
         this.setParamSimple(map, prefix + "CmqRegion", this.CmqRegion);
-        this.setParamSimple(map, prefix + "QueueName", this.QueueName);
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
+        this.setParamSimple(map, prefix + "QueueName", this.QueueName);
         this.setParamSimple(map, prefix + "NotifyMode", this.NotifyMode);
         this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);
         this.setParamSimple(map, prefix + "NotifyUrl", this.NotifyUrl);

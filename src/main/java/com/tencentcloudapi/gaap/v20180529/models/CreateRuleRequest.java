@@ -80,7 +80,7 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
     private String ForwardProtocol;
 
     /**
-    * The forwarding host. If it’s not specified, the default host is used, that is the host with which the client initiates HTTP requests.
+    * The host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
     */
     @SerializedName("ForwardHost")
     @Expose
@@ -233,16 +233,16 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
     }
 
     /**
-     * Get The forwarding host. If it’s not specified, the default host is used, that is the host with which the client initiates HTTP requests. 
-     * @return ForwardHost The forwarding host. If it’s not specified, the default host is used, that is the host with which the client initiates HTTP requests.
+     * Get The host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests. 
+     * @return ForwardHost The host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
      */
     public String getForwardHost() {
         return this.ForwardHost;
     }
 
     /**
-     * Set The forwarding host. If it’s not specified, the default host is used, that is the host with which the client initiates HTTP requests.
-     * @param ForwardHost The forwarding host. If it’s not specified, the default host is used, that is the host with which the client initiates HTTP requests.
+     * Set The host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
+     * @param ForwardHost The host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
      */
     public void setForwardHost(String ForwardHost) {
         this.ForwardHost = ForwardHost;

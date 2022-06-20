@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TagSpecification extends AbstractModel{
 
     /**
-    * The type of resource that bound with the tag. Valid values: `instance` (for CVM) and `host` (for CDH).
+    * The type of resource that the tag is bound to. Valid values: `instance` (for CVM), `host` (for CDH) and `image` (for image).
     */
     @SerializedName("ResourceType")
     @Expose
@@ -37,16 +37,16 @@ public class TagSpecification extends AbstractModel{
     private Tag [] Tags;
 
     /**
-     * Get The type of resource that bound with the tag. Valid values: `instance` (for CVM) and `host` (for CDH). 
-     * @return ResourceType The type of resource that bound with the tag. Valid values: `instance` (for CVM) and `host` (for CDH).
+     * Get The type of resource that the tag is bound to. Valid values: `instance` (for CVM), `host` (for CDH) and `image` (for image). 
+     * @return ResourceType The type of resource that the tag is bound to. Valid values: `instance` (for CVM), `host` (for CDH) and `image` (for image).
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set The type of resource that bound with the tag. Valid values: `instance` (for CVM) and `host` (for CDH).
-     * @param ResourceType The type of resource that bound with the tag. Valid values: `instance` (for CVM) and `host` (for CDH).
+     * Set The type of resource that the tag is bound to. Valid values: `instance` (for CVM), `host` (for CDH) and `image` (for image).
+     * @param ResourceType The type of resource that the tag is bound to. Valid values: `instance` (for CVM), `host` (for CDH) and `image` (for image).
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;

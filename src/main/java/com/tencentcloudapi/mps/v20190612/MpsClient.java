@@ -119,7 +119,7 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a custom template for intelligent content recognition. Up to 50 templates can be created.
+     *This API is used to create a custom content moderation template. Up to 50 templates can be created in total.
      * @param req CreateContentReviewTemplateRequest
      * @return CreateContentReviewTemplateResponse
      * @throws TencentCloudSDKException
@@ -392,7 +392,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *This API is used to delete a custom intelligent content recognition template.
+     *This API is used to delete a custom content moderation template.
      * @param req DeleteContentReviewTemplateRequest
      * @return DeleteContentReviewTemplateResponse
      * @throws TencentCloudSDKException
@@ -652,7 +652,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *This API is used to get the list of intelligent content recognition templates using their unique ID. The returned result includes all custom templates that meet the conditions as well as preset intelligent content recognition templates.
+     *This API is used to query content moderation templates by template ID. Both custom and preset templates that match the template IDs passed in will be returned.
      * @param req DescribeContentReviewTemplatesRequest
      * @return DescribeContentReviewTemplatesResponse
      * @throws TencentCloudSDKException
@@ -958,7 +958,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *This API is only used in unique custom development scenarios. Unless requested by Media Processing Service customer service, please do not call it.
+     *This API is reserved for special circumstances. Do not use it unless you are directed to use it by technical support.
      * @param req ExecuteFunctionRequest
      * @return ExecuteFunctionResponse
      * @throws TencentCloudSDKException
@@ -1080,7 +1080,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     }
 
     /**
-     *This API is used to modify a custom intelligent content recognition template.
+     *This API is used to modify a custom content moderation template.
      * @param req ModifyContentReviewTemplateRequest
      * @return ModifyContentReviewTemplateResponse
      * @throws TencentCloudSDKException

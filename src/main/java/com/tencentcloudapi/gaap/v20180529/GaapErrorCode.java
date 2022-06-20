@@ -1,7 +1,13 @@
 package com.tencentcloudapi.gaap.v20180529;
 public enum GaapErrorCode {
+    // CAM signature/authentication error.
+     AUTHFAILURE("AuthFailure"),
+     
     // Not an organizational customer.
      AUTHFAILURE_NOTENTERPRISEAUTHORIZATION("AuthFailure.NotEnterpriseAuthorization"),
+     
+    // The sub-account is not authorized for this operation.
+     AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnauthorizedOperation"),
      
     // Operation failed.
      FAILEDOPERATION("FailedOperation"),
@@ -60,6 +66,12 @@ public enum GaapErrorCode {
     // The listener does not support this operation in current status.
      FAILEDOPERATION_LISTENERSTATUSERROR("FailedOperation.ListenerStatusError"),
      
+    // The acceleration connection is being upgraded. To change the configuration, please submit a ticket.
+     FAILEDOPERATION_MIGRATION("FailedOperation.Migration"),
+     
+    // This connection is non-standard and write operations are not allowed.
+     FAILEDOPERATION_NONSTANDARDPROXY("FailedOperation.NonStandardProxy"),
+     
     // Only connections of Version 2.0 are supported.
      FAILEDOPERATION_NOTSUPPORTOLDVERSIONPROXY("FailedOperation.NotSupportOldVersionProxy"),
      
@@ -86,6 +98,9 @@ public enum GaapErrorCode {
      
     // The security policy already exists. Do not create it again.
      FAILEDOPERATION_PROXYSECURITYPOLICYEXISTED("FailedOperation.ProxySecurityPolicyExisted"),
+     
+    // There are ongoing operations related to the connection security policy.
+     FAILEDOPERATION_PROXYSECURITYPOLICYOPERATING("FailedOperation.ProxySecurityPolicyOperating"),
      
     // The line is sold out or the resource is insufficient. Please submit a ticket.
      FAILEDOPERATION_PROXYSELLOUT("FailedOperation.ProxySellOut"),

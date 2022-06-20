@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class WorkflowTask extends AbstractModel{
 
     /**
-    * Video processing task ID.
+    * The media processing task ID.
     */
     @SerializedName("TaskId")
     @Expose
@@ -53,8 +53,8 @@ public class WorkflowTask extends AbstractModel{
     private String Message;
 
     /**
-    * Information of a target file of video processing.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The information of the file processed.
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("InputInfo")
     @Expose
@@ -69,7 +69,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private MediaMetaData MetaData;
 
     /**
-    * Execution status and result of a video processing task.
+    * The execution status and result of the media processing task.
     */
     @SerializedName("MediaProcessResultSet")
     @Expose
@@ -97,16 +97,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AiRecognitionResult [] AiRecognitionResultSet;
 
     /**
-     * Get Video processing task ID. 
-     * @return TaskId Video processing task ID.
+     * Get The media processing task ID. 
+     * @return TaskId The media processing task ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Video processing task ID.
-     * @param TaskId Video processing task ID.
+     * Set The media processing task ID.
+     * @param TaskId The media processing task ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
@@ -169,20 +169,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Information of a target file of video processing.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InputInfo Information of a target file of video processing.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The information of the file processed.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return InputInfo The information of the file processed.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public MediaInputInfo getInputInfo() {
         return this.InputInfo;
     }
 
     /**
-     * Set Information of a target file of video processing.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InputInfo Information of a target file of video processing.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The information of the file processed.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param InputInfo The information of the file processed.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setInputInfo(MediaInputInfo InputInfo) {
         this.InputInfo = InputInfo;
@@ -209,16 +209,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Execution status and result of a video processing task. 
-     * @return MediaProcessResultSet Execution status and result of a video processing task.
+     * Get The execution status and result of the media processing task. 
+     * @return MediaProcessResultSet The execution status and result of the media processing task.
      */
     public MediaProcessTaskResult [] getMediaProcessResultSet() {
         return this.MediaProcessResultSet;
     }
 
     /**
-     * Set Execution status and result of a video processing task.
-     * @param MediaProcessResultSet Execution status and result of a video processing task.
+     * Set The execution status and result of the media processing task.
+     * @param MediaProcessResultSet The execution status and result of the media processing task.
      */
     public void setMediaProcessResultSet(MediaProcessTaskResult [] MediaProcessResultSet) {
         this.MediaProcessResultSet = MediaProcessResultSet;

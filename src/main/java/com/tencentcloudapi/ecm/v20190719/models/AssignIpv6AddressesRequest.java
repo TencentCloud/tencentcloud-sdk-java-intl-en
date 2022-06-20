@@ -51,6 +51,16 @@ public class AssignIpv6AddressesRequest extends AbstractModel{
     private Long Ipv6AddressCount;
 
     /**
+    * Ipv6 ISP. Valid values:
+`CTCC`: China Telecom
+`CUCC`: China Unicom
+`CMCC`: China Mobile
+    */
+    @SerializedName("Ipv6ISP")
+    @Expose
+    private String Ipv6ISP;
+
+    /**
      * Get ECM region 
      * @return EcmRegion ECM region
      */
@@ -114,6 +124,34 @@ public class AssignIpv6AddressesRequest extends AbstractModel{
         this.Ipv6AddressCount = Ipv6AddressCount;
     }
 
+    /**
+     * Get Ipv6 ISP. Valid values:
+`CTCC`: China Telecom
+`CUCC`: China Unicom
+`CMCC`: China Mobile 
+     * @return Ipv6ISP Ipv6 ISP. Valid values:
+`CTCC`: China Telecom
+`CUCC`: China Unicom
+`CMCC`: China Mobile
+     */
+    public String getIpv6ISP() {
+        return this.Ipv6ISP;
+    }
+
+    /**
+     * Set Ipv6 ISP. Valid values:
+`CTCC`: China Telecom
+`CUCC`: China Unicom
+`CMCC`: China Mobile
+     * @param Ipv6ISP Ipv6 ISP. Valid values:
+`CTCC`: China Telecom
+`CUCC`: China Unicom
+`CMCC`: China Mobile
+     */
+    public void setIpv6ISP(String Ipv6ISP) {
+        this.Ipv6ISP = Ipv6ISP;
+    }
+
     public AssignIpv6AddressesRequest() {
     }
 
@@ -137,6 +175,9 @@ public class AssignIpv6AddressesRequest extends AbstractModel{
         if (source.Ipv6AddressCount != null) {
             this.Ipv6AddressCount = new Long(source.Ipv6AddressCount);
         }
+        if (source.Ipv6ISP != null) {
+            this.Ipv6ISP = new String(source.Ipv6ISP);
+        }
     }
 
 
@@ -148,6 +189,7 @@ public class AssignIpv6AddressesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
         this.setParamArrayObj(map, prefix + "Ipv6Addresses.", this.Ipv6Addresses);
         this.setParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
+        this.setParamSimple(map, prefix + "Ipv6ISP", this.Ipv6ISP);
 
     }
 }

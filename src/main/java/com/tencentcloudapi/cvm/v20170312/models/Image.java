@@ -139,6 +139,13 @@ Note: This field may return `null`, indicating that no valid value was found.
     private Tag [] Tags;
 
     /**
+    * Image license type
+    */
+    @SerializedName("LicenseType")
+    @Expose
+    private String LicenseType;
+
+    /**
      * Get Image ID 
      * @return ImageId Image ID
      */
@@ -410,6 +417,22 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.Tags = Tags;
     }
 
+    /**
+     * Get Image license type 
+     * @return LicenseType Image license type
+     */
+    public String getLicenseType() {
+        return this.LicenseType;
+    }
+
+    /**
+     * Set Image license type
+     * @param LicenseType Image license type
+     */
+    public void setLicenseType(String LicenseType) {
+        this.LicenseType = LicenseType;
+    }
+
     public Image() {
     }
 
@@ -472,6 +495,9 @@ Note: This field may return `null`, indicating that no valid value was found.
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.LicenseType != null) {
+            this.LicenseType = new String(source.LicenseType);
+        }
     }
 
 
@@ -495,6 +521,7 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "IsSupportCloudinit", this.IsSupportCloudinit);
         this.setParamArrayObj(map, prefix + "SnapshotSet.", this.SnapshotSet);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
 
     }
 }

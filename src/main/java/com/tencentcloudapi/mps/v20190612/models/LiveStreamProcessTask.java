@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class LiveStreamProcessTask extends AbstractModel{
 
     /**
-    * Video processing task ID.
+    * The media processing task ID.
     */
     @SerializedName("TaskId")
     @Expose
@@ -60,16 +60,16 @@ public class LiveStreamProcessTask extends AbstractModel{
     private String Url;
 
     /**
-     * Get Video processing task ID. 
-     * @return TaskId Video processing task ID.
+     * Get The media processing task ID. 
+     * @return TaskId The media processing task ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Video processing task ID.
-     * @param TaskId Video processing task ID.
+     * Set The media processing task ID.
+     * @param TaskId The media processing task ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

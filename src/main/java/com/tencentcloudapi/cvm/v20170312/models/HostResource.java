@@ -37,39 +37,53 @@ public class HostResource extends AbstractModel{
     private Long CpuAvailable;
 
     /**
-    * Total memory of the CDH instance; unit: GiB
+    * Total memory size of the CDH instance (unit: GiB)
     */
     @SerializedName("MemTotal")
     @Expose
     private Float MemTotal;
 
     /**
-    * Available memory of the CDH instance; unit: GiB
+    * Available memory size of the CDH instance (unit: GiB)
     */
     @SerializedName("MemAvailable")
     @Expose
     private Float MemAvailable;
 
     /**
-    * Total disk size of the CDH instance; unit: GiB
+    * Total disk size of the CDH instance (unit: GiB)
     */
     @SerializedName("DiskTotal")
     @Expose
     private Long DiskTotal;
 
     /**
-    * Avilable disk size of the CDH instance; unit: GiB
+    * Available disk size of the CDH instance (unit: GiB)
     */
     @SerializedName("DiskAvailable")
     @Expose
     private Long DiskAvailable;
 
     /**
-    * CDH instance disk type.
+    * Disk type of the CDH instance
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
+
+    /**
+    * Total number of GPU cards in the CDH instance
+    */
+    @SerializedName("GpuTotal")
+    @Expose
+    private Long GpuTotal;
+
+    /**
+    * Number of available GPU cards in the CDH instance
+    */
+    @SerializedName("GpuAvailable")
+    @Expose
+    private Long GpuAvailable;
 
     /**
      * Get Total number of CPU cores in the CDH instance 
@@ -104,83 +118,115 @@ public class HostResource extends AbstractModel{
     }
 
     /**
-     * Get Total memory of the CDH instance; unit: GiB 
-     * @return MemTotal Total memory of the CDH instance; unit: GiB
+     * Get Total memory size of the CDH instance (unit: GiB) 
+     * @return MemTotal Total memory size of the CDH instance (unit: GiB)
      */
     public Float getMemTotal() {
         return this.MemTotal;
     }
 
     /**
-     * Set Total memory of the CDH instance; unit: GiB
-     * @param MemTotal Total memory of the CDH instance; unit: GiB
+     * Set Total memory size of the CDH instance (unit: GiB)
+     * @param MemTotal Total memory size of the CDH instance (unit: GiB)
      */
     public void setMemTotal(Float MemTotal) {
         this.MemTotal = MemTotal;
     }
 
     /**
-     * Get Available memory of the CDH instance; unit: GiB 
-     * @return MemAvailable Available memory of the CDH instance; unit: GiB
+     * Get Available memory size of the CDH instance (unit: GiB) 
+     * @return MemAvailable Available memory size of the CDH instance (unit: GiB)
      */
     public Float getMemAvailable() {
         return this.MemAvailable;
     }
 
     /**
-     * Set Available memory of the CDH instance; unit: GiB
-     * @param MemAvailable Available memory of the CDH instance; unit: GiB
+     * Set Available memory size of the CDH instance (unit: GiB)
+     * @param MemAvailable Available memory size of the CDH instance (unit: GiB)
      */
     public void setMemAvailable(Float MemAvailable) {
         this.MemAvailable = MemAvailable;
     }
 
     /**
-     * Get Total disk size of the CDH instance; unit: GiB 
-     * @return DiskTotal Total disk size of the CDH instance; unit: GiB
+     * Get Total disk size of the CDH instance (unit: GiB) 
+     * @return DiskTotal Total disk size of the CDH instance (unit: GiB)
      */
     public Long getDiskTotal() {
         return this.DiskTotal;
     }
 
     /**
-     * Set Total disk size of the CDH instance; unit: GiB
-     * @param DiskTotal Total disk size of the CDH instance; unit: GiB
+     * Set Total disk size of the CDH instance (unit: GiB)
+     * @param DiskTotal Total disk size of the CDH instance (unit: GiB)
      */
     public void setDiskTotal(Long DiskTotal) {
         this.DiskTotal = DiskTotal;
     }
 
     /**
-     * Get Avilable disk size of the CDH instance; unit: GiB 
-     * @return DiskAvailable Avilable disk size of the CDH instance; unit: GiB
+     * Get Available disk size of the CDH instance (unit: GiB) 
+     * @return DiskAvailable Available disk size of the CDH instance (unit: GiB)
      */
     public Long getDiskAvailable() {
         return this.DiskAvailable;
     }
 
     /**
-     * Set Avilable disk size of the CDH instance; unit: GiB
-     * @param DiskAvailable Avilable disk size of the CDH instance; unit: GiB
+     * Set Available disk size of the CDH instance (unit: GiB)
+     * @param DiskAvailable Available disk size of the CDH instance (unit: GiB)
      */
     public void setDiskAvailable(Long DiskAvailable) {
         this.DiskAvailable = DiskAvailable;
     }
 
     /**
-     * Get CDH instance disk type. 
-     * @return DiskType CDH instance disk type.
+     * Get Disk type of the CDH instance 
+     * @return DiskType Disk type of the CDH instance
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set CDH instance disk type.
-     * @param DiskType CDH instance disk type.
+     * Set Disk type of the CDH instance
+     * @param DiskType Disk type of the CDH instance
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
+    }
+
+    /**
+     * Get Total number of GPU cards in the CDH instance 
+     * @return GpuTotal Total number of GPU cards in the CDH instance
+     */
+    public Long getGpuTotal() {
+        return this.GpuTotal;
+    }
+
+    /**
+     * Set Total number of GPU cards in the CDH instance
+     * @param GpuTotal Total number of GPU cards in the CDH instance
+     */
+    public void setGpuTotal(Long GpuTotal) {
+        this.GpuTotal = GpuTotal;
+    }
+
+    /**
+     * Get Number of available GPU cards in the CDH instance 
+     * @return GpuAvailable Number of available GPU cards in the CDH instance
+     */
+    public Long getGpuAvailable() {
+        return this.GpuAvailable;
+    }
+
+    /**
+     * Set Number of available GPU cards in the CDH instance
+     * @param GpuAvailable Number of available GPU cards in the CDH instance
+     */
+    public void setGpuAvailable(Long GpuAvailable) {
+        this.GpuAvailable = GpuAvailable;
     }
 
     public HostResource() {
@@ -212,6 +258,12 @@ public class HostResource extends AbstractModel{
         if (source.DiskType != null) {
             this.DiskType = new String(source.DiskType);
         }
+        if (source.GpuTotal != null) {
+            this.GpuTotal = new Long(source.GpuTotal);
+        }
+        if (source.GpuAvailable != null) {
+            this.GpuAvailable = new Long(source.GpuAvailable);
+        }
     }
 
 
@@ -226,6 +278,8 @@ public class HostResource extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskTotal", this.DiskTotal);
         this.setParamSimple(map, prefix + "DiskAvailable", this.DiskAvailable);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
+        this.setParamSimple(map, prefix + "GpuTotal", this.GpuTotal);
+        this.setParamSimple(map, prefix + "GpuAvailable", this.GpuAvailable);
 
     }
 }

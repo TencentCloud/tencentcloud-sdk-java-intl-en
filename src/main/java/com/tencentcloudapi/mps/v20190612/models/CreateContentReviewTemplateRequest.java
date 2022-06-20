@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateContentReviewTemplateRequest extends AbstractModel{
 
     /**
-    * Name of an intelligent content recognition template. Length limit: 64 characters
+    * The name of the content moderation template. Length limit: 64 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Description of an intelligent content recognition template. Length limit: 256 characters
+    * The template description. Length limit: 256 characters.
     */
     @SerializedName("Comment")
     @Expose
@@ -68,39 +68,39 @@ Note: this parameter is not supported yet.
     private ProhibitedConfigureInfo ProhibitedConfigure;
 
     /**
-    * Control parameter for custom intelligent content recognition tasks
+    * Custom content moderation parameters.
     */
     @SerializedName("UserDefineConfigure")
     @Expose
     private UserDefineConfigureInfo UserDefineConfigure;
 
     /**
-     * Get Name of an intelligent content recognition template. Length limit: 64 characters 
-     * @return Name Name of an intelligent content recognition template. Length limit: 64 characters
+     * Get The name of the content moderation template. Length limit: 64 characters. 
+     * @return Name The name of the content moderation template. Length limit: 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of an intelligent content recognition template. Length limit: 64 characters
-     * @param Name Name of an intelligent content recognition template. Length limit: 64 characters
+     * Set The name of the content moderation template. Length limit: 64 characters.
+     * @param Name The name of the content moderation template. Length limit: 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Description of an intelligent content recognition template. Length limit: 256 characters 
-     * @return Comment Description of an intelligent content recognition template. Length limit: 256 characters
+     * Get The template description. Length limit: 256 characters. 
+     * @return Comment The template description. Length limit: 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Description of an intelligent content recognition template. Length limit: 256 characters
-     * @param Comment Description of an intelligent content recognition template. Length limit: 256 characters
+     * Set The template description. Length limit: 256 characters.
+     * @param Comment The template description. Length limit: 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
@@ -183,16 +183,16 @@ Note: this parameter is not supported yet.
     }
 
     /**
-     * Get Control parameter for custom intelligent content recognition tasks 
-     * @return UserDefineConfigure Control parameter for custom intelligent content recognition tasks
+     * Get Custom content moderation parameters. 
+     * @return UserDefineConfigure Custom content moderation parameters.
      */
     public UserDefineConfigureInfo getUserDefineConfigure() {
         return this.UserDefineConfigure;
     }
 
     /**
-     * Set Control parameter for custom intelligent content recognition tasks
-     * @param UserDefineConfigure Control parameter for custom intelligent content recognition tasks
+     * Set Custom content moderation parameters.
+     * @param UserDefineConfigure Custom content moderation parameters.
      */
     public void setUserDefineConfigure(UserDefineConfigureInfo UserDefineConfigure) {
         this.UserDefineConfigure = UserDefineConfigure;

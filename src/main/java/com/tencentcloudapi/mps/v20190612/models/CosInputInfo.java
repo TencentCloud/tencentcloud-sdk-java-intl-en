@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class CosInputInfo extends AbstractModel{
 
     /**
-    * Name of the COS bucket where a video processing object file is located, such as `TopRankVideo-125xxx88`.
+    * The COS bucket of the object to process, such as `TopRankVideo-125xxx88`.
     */
     @SerializedName("Bucket")
     @Expose
     private String Bucket;
 
     /**
-    * Region of the COS bucket where a video processing object file is located, such as `ap-chongqing`.
+    * The region of the COS bucket, such as `ap-chongqing`.
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * Path to an input object file for video processing, such as `/movie/201907/WildAnimal.mov`.
+    * The path of the object to process, such as `/movie/201907/WildAnimal.mov`.
     */
     @SerializedName("Object")
     @Expose
     private String Object;
 
     /**
-     * Get Name of the COS bucket where a video processing object file is located, such as `TopRankVideo-125xxx88`. 
-     * @return Bucket Name of the COS bucket where a video processing object file is located, such as `TopRankVideo-125xxx88`.
+     * Get The COS bucket of the object to process, such as `TopRankVideo-125xxx88`. 
+     * @return Bucket The COS bucket of the object to process, such as `TopRankVideo-125xxx88`.
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * Set Name of the COS bucket where a video processing object file is located, such as `TopRankVideo-125xxx88`.
-     * @param Bucket Name of the COS bucket where a video processing object file is located, such as `TopRankVideo-125xxx88`.
+     * Set The COS bucket of the object to process, such as `TopRankVideo-125xxx88`.
+     * @param Bucket The COS bucket of the object to process, such as `TopRankVideo-125xxx88`.
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
     }
 
     /**
-     * Get Region of the COS bucket where a video processing object file is located, such as `ap-chongqing`. 
-     * @return Region Region of the COS bucket where a video processing object file is located, such as `ap-chongqing`.
+     * Get The region of the COS bucket, such as `ap-chongqing`. 
+     * @return Region The region of the COS bucket, such as `ap-chongqing`.
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region of the COS bucket where a video processing object file is located, such as `ap-chongqing`.
-     * @param Region Region of the COS bucket where a video processing object file is located, such as `ap-chongqing`.
+     * Set The region of the COS bucket, such as `ap-chongqing`.
+     * @param Region The region of the COS bucket, such as `ap-chongqing`.
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Path to an input object file for video processing, such as `/movie/201907/WildAnimal.mov`. 
-     * @return Object Path to an input object file for video processing, such as `/movie/201907/WildAnimal.mov`.
+     * Get The path of the object to process, such as `/movie/201907/WildAnimal.mov`. 
+     * @return Object The path of the object to process, such as `/movie/201907/WildAnimal.mov`.
      */
     public String getObject() {
         return this.Object;
     }
 
     /**
-     * Set Path to an input object file for video processing, such as `/movie/201907/WildAnimal.mov`.
-     * @param Object Path to an input object file for video processing, such as `/movie/201907/WildAnimal.mov`.
+     * Set The path of the object to process, such as `/movie/201907/WildAnimal.mov`.
+     * @param Object The path of the object to process, such as `/movie/201907/WildAnimal.mov`.
      */
     public void setObject(String Object) {
         this.Object = Object;

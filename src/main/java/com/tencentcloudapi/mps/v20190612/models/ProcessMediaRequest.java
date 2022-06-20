@@ -23,28 +23,28 @@ import java.util.HashMap;
 public class ProcessMediaRequest extends AbstractModel{
 
     /**
-    * Input information of a file for video processing.
+    * The information of the file to process.
     */
     @SerializedName("InputInfo")
     @Expose
     private MediaInputInfo InputInfo;
 
     /**
-    * Target bucket of a video processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
+    * The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-    * Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory as that in `InputInfo`.
+    * The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`.
     */
     @SerializedName("OutputDir")
     @Expose
     private String OutputDir;
 
     /**
-    * Parameter of a video processing task.
+    * The media processing parameters to use.
     */
     @SerializedName("MediaProcessTask")
     @Expose
@@ -100,64 +100,64 @@ public class ProcessMediaRequest extends AbstractModel{
     private String SessionContext;
 
     /**
-     * Get Input information of a file for video processing. 
-     * @return InputInfo Input information of a file for video processing.
+     * Get The information of the file to process. 
+     * @return InputInfo The information of the file to process.
      */
     public MediaInputInfo getInputInfo() {
         return this.InputInfo;
     }
 
     /**
-     * Set Input information of a file for video processing.
-     * @param InputInfo Input information of a file for video processing.
+     * Set The information of the file to process.
+     * @param InputInfo The information of the file to process.
      */
     public void setInputInfo(MediaInputInfo InputInfo) {
         this.InputInfo = InputInfo;
     }
 
     /**
-     * Get Target bucket of a video processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited. 
-     * @return OutputStorage Target bucket of a video processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
+     * Get The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited. 
+     * @return OutputStorage The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set Target bucket of a video processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
-     * @param OutputStorage Target bucket of a video processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
+     * Set The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
+     * @param OutputStorage The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }
 
     /**
-     * Get Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory as that in `InputInfo`. 
-     * @return OutputDir Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory as that in `InputInfo`.
+     * Get The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`. 
+     * @return OutputDir The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`.
      */
     public String getOutputDir() {
         return this.OutputDir;
     }
 
     /**
-     * Set Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory as that in `InputInfo`.
-     * @param OutputDir Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory as that in `InputInfo`.
+     * Set The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`.
+     * @param OutputDir The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`.
      */
     public void setOutputDir(String OutputDir) {
         this.OutputDir = OutputDir;
     }
 
     /**
-     * Get Parameter of a video processing task. 
-     * @return MediaProcessTask Parameter of a video processing task.
+     * Get The media processing parameters to use. 
+     * @return MediaProcessTask The media processing parameters to use.
      */
     public MediaProcessTaskInput getMediaProcessTask() {
         return this.MediaProcessTask;
     }
 
     /**
-     * Set Parameter of a video processing task.
-     * @param MediaProcessTask Parameter of a video processing task.
+     * Set The media processing parameters to use.
+     * @param MediaProcessTask The media processing parameters to use.
      */
     public void setMediaProcessTask(MediaProcessTaskInput MediaProcessTask) {
         this.MediaProcessTask = MediaProcessTask;

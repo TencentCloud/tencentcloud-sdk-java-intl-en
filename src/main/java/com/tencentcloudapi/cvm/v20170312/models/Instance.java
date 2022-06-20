@@ -278,6 +278,13 @@ Note: this field may return null, indicating that no valid value was found.
     private GPUInfo GPUInfo;
 
     /**
+    * Instance OS license type. Default value: `TencentCloud`
+    */
+    @SerializedName("LicenseType")
+    @Expose
+    private String LicenseType;
+
+    /**
      * Get Location of the instance 
      * @return Placement Location of the instance
      */
@@ -877,6 +884,22 @@ Note: this field may return null, indicating that no valid value was found.
         this.GPUInfo = GPUInfo;
     }
 
+    /**
+     * Get Instance OS license type. Default value: `TencentCloud` 
+     * @return LicenseType Instance OS license type. Default value: `TencentCloud`
+     */
+    public String getLicenseType() {
+        return this.LicenseType;
+    }
+
+    /**
+     * Set Instance OS license type. Default value: `TencentCloud`
+     * @param LicenseType Instance OS license type. Default value: `TencentCloud`
+     */
+    public void setLicenseType(String LicenseType) {
+        this.LicenseType = LicenseType;
+    }
+
     public Instance() {
     }
 
@@ -1011,6 +1034,9 @@ Note: this field may return null, indicating that no valid value was found.
         if (source.GPUInfo != null) {
             this.GPUInfo = new GPUInfo(source.GPUInfo);
         }
+        if (source.LicenseType != null) {
+            this.LicenseType = new String(source.LicenseType);
+        }
     }
 
 
@@ -1053,6 +1079,7 @@ Note: this field may return null, indicating that no valid value was found.
         this.setParamArraySimple(map, prefix + "RdmaIpAddresses.", this.RdmaIpAddresses);
         this.setParamSimple(map, prefix + "IsolatedSource", this.IsolatedSource);
         this.setParamObj(map, prefix + "GPUInfo.", this.GPUInfo);
+        this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
 
     }
 }

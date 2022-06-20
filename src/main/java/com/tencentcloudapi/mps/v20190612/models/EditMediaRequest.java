@@ -30,14 +30,14 @@ public class EditMediaRequest extends AbstractModel{
     private EditMediaFileInfo [] FileInfos;
 
     /**
-    * Target storage of video processing output file.
+    * The storage location of the media processing output file.
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-    * Target path of video processing output file.
+    * The path to save the media processing output file.
     */
     @SerializedName("OutputObjectPath")
     @Expose
@@ -95,32 +95,32 @@ public class EditMediaRequest extends AbstractModel{
     }
 
     /**
-     * Get Target storage of video processing output file. 
-     * @return OutputStorage Target storage of video processing output file.
+     * Get The storage location of the media processing output file. 
+     * @return OutputStorage The storage location of the media processing output file.
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set Target storage of video processing output file.
-     * @param OutputStorage Target storage of video processing output file.
+     * Set The storage location of the media processing output file.
+     * @param OutputStorage The storage location of the media processing output file.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }
 
     /**
-     * Get Target path of video processing output file. 
-     * @return OutputObjectPath Target path of video processing output file.
+     * Get The path to save the media processing output file. 
+     * @return OutputObjectPath The path to save the media processing output file.
      */
     public String getOutputObjectPath() {
         return this.OutputObjectPath;
     }
 
     /**
-     * Set Target path of video processing output file.
-     * @param OutputObjectPath Target path of video processing output file.
+     * Set The path to save the media processing output file.
+     * @param OutputObjectPath The path to save the media processing output file.
      */
     public void setOutputObjectPath(String OutputObjectPath) {
         this.OutputObjectPath = OutputObjectPath;

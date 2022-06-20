@@ -217,6 +217,13 @@ If the dry run succeeds, the RequestId will be returned.
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
+    * Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+    */
+    @SerializedName("DisableApiTermination")
+    @Expose
+    private Boolean DisableApiTermination;
+
+    /**
      * Get Location of the instance. You can use this parameter to specify the attributes of the instance, such as its availability zone, project, and CDH (for dedicated CVMs) 
      * @return Placement Location of the instance. You can use this parameter to specify the attributes of the instance, such as its availability zone, project, and CDH (for dedicated CVMs)
      */
@@ -668,6 +675,22 @@ If the dry run succeeds, the RequestId will be returned.
         this.InstanceChargePrepaid = InstanceChargePrepaid;
     }
 
+    /**
+     * Get Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`. 
+     * @return DisableApiTermination Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+     */
+    public Boolean getDisableApiTermination() {
+        return this.DisableApiTermination;
+    }
+
+    /**
+     * Set Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+     * @param DisableApiTermination Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+     */
+    public void setDisableApiTermination(Boolean DisableApiTermination) {
+        this.DisableApiTermination = DisableApiTermination;
+    }
+
     public CreateLaunchTemplateVersionRequest() {
     }
 
@@ -769,6 +792,9 @@ If the dry run succeeds, the RequestId will be returned.
         if (source.InstanceChargePrepaid != null) {
             this.InstanceChargePrepaid = new InstanceChargePrepaid(source.InstanceChargePrepaid);
         }
+        if (source.DisableApiTermination != null) {
+            this.DisableApiTermination = new Boolean(source.DisableApiTermination);
+        }
     }
 
 
@@ -803,6 +829,7 @@ If the dry run succeeds, the RequestId will be returned.
         this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
+        this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
 
     }
 }

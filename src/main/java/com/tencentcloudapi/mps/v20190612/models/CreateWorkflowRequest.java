@@ -37,21 +37,21 @@ public class CreateWorkflowRequest extends AbstractModel{
     private WorkflowTrigger Trigger;
 
     /**
-    * Storage location of a video processing output file. If this parameter is left empty, the storage location in `Trigger` will be inherited.
+    * The location to save the output file of media processing. If this parameter is left empty, the storage location in `Trigger` will be inherited.
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-    * Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory where the source file is located.
+    * The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the output file will be saved to the same directory where the source file is located.
     */
     @SerializedName("OutputDir")
     @Expose
     private String OutputDir;
 
     /**
-    * Parameter of a video processing task.
+    * The media processing parameters to use.
     */
     @SerializedName("MediaProcessTask")
     @Expose
@@ -125,48 +125,48 @@ public class CreateWorkflowRequest extends AbstractModel{
     }
 
     /**
-     * Get Storage location of a video processing output file. If this parameter is left empty, the storage location in `Trigger` will be inherited. 
-     * @return OutputStorage Storage location of a video processing output file. If this parameter is left empty, the storage location in `Trigger` will be inherited.
+     * Get The location to save the output file of media processing. If this parameter is left empty, the storage location in `Trigger` will be inherited. 
+     * @return OutputStorage The location to save the output file of media processing. If this parameter is left empty, the storage location in `Trigger` will be inherited.
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set Storage location of a video processing output file. If this parameter is left empty, the storage location in `Trigger` will be inherited.
-     * @param OutputStorage Storage location of a video processing output file. If this parameter is left empty, the storage location in `Trigger` will be inherited.
+     * Set The location to save the output file of media processing. If this parameter is left empty, the storage location in `Trigger` will be inherited.
+     * @param OutputStorage The location to save the output file of media processing. If this parameter is left empty, the storage location in `Trigger` will be inherited.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }
 
     /**
-     * Get Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory where the source file is located. 
-     * @return OutputDir Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory where the source file is located.
+     * Get The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the output file will be saved to the same directory where the source file is located. 
+     * @return OutputDir The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the output file will be saved to the same directory where the source file is located.
      */
     public String getOutputDir() {
         return this.OutputDir;
     }
 
     /**
-     * Set Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory where the source file is located.
-     * @param OutputDir Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory where the source file is located.
+     * Set The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the output file will be saved to the same directory where the source file is located.
+     * @param OutputDir The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the output file will be saved to the same directory where the source file is located.
      */
     public void setOutputDir(String OutputDir) {
         this.OutputDir = OutputDir;
     }
 
     /**
-     * Get Parameter of a video processing task. 
-     * @return MediaProcessTask Parameter of a video processing task.
+     * Get The media processing parameters to use. 
+     * @return MediaProcessTask The media processing parameters to use.
      */
     public MediaProcessTaskInput getMediaProcessTask() {
         return this.MediaProcessTask;
     }
 
     /**
-     * Set Parameter of a video processing task.
-     * @param MediaProcessTask Parameter of a video processing task.
+     * Set The media processing parameters to use.
+     * @param MediaProcessTask The media processing parameters to use.
      */
     public void setMediaProcessTask(MediaProcessTaskInput MediaProcessTask) {
         this.MediaProcessTask = MediaProcessTask;
