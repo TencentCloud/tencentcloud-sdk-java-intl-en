@@ -79,6 +79,20 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
     private Taint [] Taints;
 
     /**
+    * Node pool runtime type and version
+    */
+    @SerializedName("ContainerRuntime")
+    @Expose
+    private String ContainerRuntime;
+
+    /**
+    * Runtime version
+    */
+    @SerializedName("RuntimeVersion")
+    @Expose
+    private String RuntimeVersion;
+
+    /**
     * Operating system of the node pool
     */
     @SerializedName("NodePoolOs")
@@ -228,6 +242,38 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
     }
 
     /**
+     * Get Node pool runtime type and version 
+     * @return ContainerRuntime Node pool runtime type and version
+     */
+    public String getContainerRuntime() {
+        return this.ContainerRuntime;
+    }
+
+    /**
+     * Set Node pool runtime type and version
+     * @param ContainerRuntime Node pool runtime type and version
+     */
+    public void setContainerRuntime(String ContainerRuntime) {
+        this.ContainerRuntime = ContainerRuntime;
+    }
+
+    /**
+     * Get Runtime version 
+     * @return RuntimeVersion Runtime version
+     */
+    public String getRuntimeVersion() {
+        return this.RuntimeVersion;
+    }
+
+    /**
+     * Set Runtime version
+     * @param RuntimeVersion Runtime version
+     */
+    public void setRuntimeVersion(String RuntimeVersion) {
+        this.RuntimeVersion = RuntimeVersion;
+    }
+
+    /**
      * Get Operating system of the node pool 
      * @return NodePoolOs Operating system of the node pool
      */
@@ -313,6 +359,12 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
                 this.Taints[i] = new Taint(source.Taints[i]);
             }
         }
+        if (source.ContainerRuntime != null) {
+            this.ContainerRuntime = new String(source.ContainerRuntime);
+        }
+        if (source.RuntimeVersion != null) {
+            this.RuntimeVersion = new String(source.RuntimeVersion);
+        }
         if (source.NodePoolOs != null) {
             this.NodePoolOs = new String(source.NodePoolOs);
         }
@@ -340,6 +392,8 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
+        this.setParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
+        this.setParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
         this.setParamSimple(map, prefix + "NodePoolOs", this.NodePoolOs);
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);

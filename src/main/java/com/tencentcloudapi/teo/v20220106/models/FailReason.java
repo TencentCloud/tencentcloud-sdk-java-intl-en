@@ -30,7 +30,8 @@ public class FailReason extends AbstractModel{
     private String Reason;
 
     /**
-    * List of resources failed to be purged
+    * List of resources failed to be processed. 
+ 
     */
     @SerializedName("Targets")
     @Expose
@@ -53,16 +54,20 @@ public class FailReason extends AbstractModel{
     }
 
     /**
-     * Get List of resources failed to be purged 
-     * @return Targets List of resources failed to be purged
+     * Get List of resources failed to be processed. 
+  
+     * @return Targets List of resources failed to be processed. 
+ 
      */
     public String [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set List of resources failed to be purged
-     * @param Targets List of resources failed to be purged
+     * Set List of resources failed to be processed. 
+ 
+     * @param Targets List of resources failed to be processed. 
+ 
      */
     public void setTargets(String [] Targets) {
         this.Targets = Targets;

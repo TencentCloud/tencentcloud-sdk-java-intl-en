@@ -79,7 +79,7 @@ public class ClusterBasicSettings extends AbstractModel{
     private String OsCustomizeType;
 
     /**
-    * Whether to enable the node’s default security group (default: `No`, Aphla feature)
+    * Whether to enable the node’s default security group (default: `No`, Alpha feature)
     */
     @SerializedName("NeedWorkSecurityGroup")
     @Expose
@@ -235,16 +235,16 @@ public class ClusterBasicSettings extends AbstractModel{
     }
 
     /**
-     * Get Whether to enable the node’s default security group (default: `No`, Aphla feature) 
-     * @return NeedWorkSecurityGroup Whether to enable the node’s default security group (default: `No`, Aphla feature)
+     * Get Whether to enable the node’s default security group (default: `No`, Alpha feature) 
+     * @return NeedWorkSecurityGroup Whether to enable the node’s default security group (default: `No`, Alpha feature)
      */
     public Boolean getNeedWorkSecurityGroup() {
         return this.NeedWorkSecurityGroup;
     }
 
     /**
-     * Set Whether to enable the node’s default security group (default: `No`, Aphla feature)
-     * @param NeedWorkSecurityGroup Whether to enable the node’s default security group (default: `No`, Aphla feature)
+     * Set Whether to enable the node’s default security group (default: `No`, Alpha feature)
+     * @param NeedWorkSecurityGroup Whether to enable the node’s default security group (default: `No`, Alpha feature)
      */
     public void setNeedWorkSecurityGroup(Boolean NeedWorkSecurityGroup) {
         this.NeedWorkSecurityGroup = NeedWorkSecurityGroup;

@@ -13,28 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tke.v20180525.models;
+package com.tencentcloudapi.teo.v20220106.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateClusterAsGroupResponse extends AbstractModel{
+public class CreatePrefetchTaskResponse extends AbstractModel{
 
     /**
-    * Launch configuration ID
+    * Task ID
     */
-    @SerializedName("LaunchConfigurationId")
+    @SerializedName("JobId")
     @Expose
-    private String LaunchConfigurationId;
+    private String JobId;
 
     /**
-    * Scaling group ID
+    * List of failed tasks
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
-    @SerializedName("AutoScalingGroupId")
+    @SerializedName("FailedList")
     @Expose
-    private String AutoScalingGroupId;
+    private FailReason [] FailedList;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +45,39 @@ public class CreateClusterAsGroupResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Launch configuration ID 
-     * @return LaunchConfigurationId Launch configuration ID
+     * Get Task ID 
+     * @return JobId Task ID
      */
-    public String getLaunchConfigurationId() {
-        return this.LaunchConfigurationId;
+    public String getJobId() {
+        return this.JobId;
     }
 
     /**
-     * Set Launch configuration ID
-     * @param LaunchConfigurationId Launch configuration ID
+     * Set Task ID
+     * @param JobId Task ID
      */
-    public void setLaunchConfigurationId(String LaunchConfigurationId) {
-        this.LaunchConfigurationId = LaunchConfigurationId;
+    public void setJobId(String JobId) {
+        this.JobId = JobId;
     }
 
     /**
-     * Get Scaling group ID 
-     * @return AutoScalingGroupId Scaling group ID
+     * Get List of failed tasks
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return FailedList List of failed tasks
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
-    public String getAutoScalingGroupId() {
-        return this.AutoScalingGroupId;
+    public FailReason [] getFailedList() {
+        return this.FailedList;
     }
 
     /**
-     * Set Scaling group ID
-     * @param AutoScalingGroupId Scaling group ID
+     * Set List of failed tasks
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param FailedList List of failed tasks
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
-    public void setAutoScalingGroupId(String AutoScalingGroupId) {
-        this.AutoScalingGroupId = AutoScalingGroupId;
+    public void setFailedList(FailReason [] FailedList) {
+        this.FailedList = FailedList;
     }
 
     /**
@@ -91,19 +96,22 @@ public class CreateClusterAsGroupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateClusterAsGroupResponse() {
+    public CreatePrefetchTaskResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateClusterAsGroupResponse(CreateClusterAsGroupResponse source) {
-        if (source.LaunchConfigurationId != null) {
-            this.LaunchConfigurationId = new String(source.LaunchConfigurationId);
+    public CreatePrefetchTaskResponse(CreatePrefetchTaskResponse source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
         }
-        if (source.AutoScalingGroupId != null) {
-            this.AutoScalingGroupId = new String(source.AutoScalingGroupId);
+        if (source.FailedList != null) {
+            this.FailedList = new FailReason[source.FailedList.length];
+            for (int i = 0; i < source.FailedList.length; i++) {
+                this.FailedList[i] = new FailReason(source.FailedList[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -115,8 +123,8 @@ public class CreateClusterAsGroupResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "LaunchConfigurationId", this.LaunchConfigurationId);
-        this.setParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
+        this.setParamArrayObj(map, prefix + "FailedList.", this.FailedList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

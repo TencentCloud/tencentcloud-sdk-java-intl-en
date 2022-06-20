@@ -41,7 +41,15 @@ public class CreatePurgeTaskRequest extends AbstractModel{
     private String Type;
 
     /**
-    * The target resource to be purged. One target per line.
+    * Target resource to be purged, which depends on the `Type` field.
+1. When `Type = purge_host`:
+Hostnames are purged, such as www.example.com and foo.bar.example.com.
+2. When `Type = purge_prefix`:
+Prefixes are purged, such as http://www.example.com/example.
+3. When `Type = purge_url`:
+URLs are purged, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`: All types of resources are purged.
+`Targets` is not a required field.
     */
     @SerializedName("Targets")
     @Expose
@@ -104,16 +112,48 @@ Note that if it’s enabled, the purging is based on the converted URLs.
     }
 
     /**
-     * Get The target resource to be purged. One target per line. 
-     * @return Targets The target resource to be purged. One target per line.
+     * Get Target resource to be purged, which depends on the `Type` field.
+1. When `Type = purge_host`:
+Hostnames are purged, such as www.example.com and foo.bar.example.com.
+2. When `Type = purge_prefix`:
+Prefixes are purged, such as http://www.example.com/example.
+3. When `Type = purge_url`:
+URLs are purged, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`: All types of resources are purged.
+`Targets` is not a required field. 
+     * @return Targets Target resource to be purged, which depends on the `Type` field.
+1. When `Type = purge_host`:
+Hostnames are purged, such as www.example.com and foo.bar.example.com.
+2. When `Type = purge_prefix`:
+Prefixes are purged, such as http://www.example.com/example.
+3. When `Type = purge_url`:
+URLs are purged, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`: All types of resources are purged.
+`Targets` is not a required field.
      */
     public String [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set The target resource to be purged. One target per line.
-     * @param Targets The target resource to be purged. One target per line.
+     * Set Target resource to be purged, which depends on the `Type` field.
+1. When `Type = purge_host`:
+Hostnames are purged, such as www.example.com and foo.bar.example.com.
+2. When `Type = purge_prefix`:
+Prefixes are purged, such as http://www.example.com/example.
+3. When `Type = purge_url`:
+URLs are purged, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`: All types of resources are purged.
+`Targets` is not a required field.
+     * @param Targets Target resource to be purged, which depends on the `Type` field.
+1. When `Type = purge_host`:
+Hostnames are purged, such as www.example.com and foo.bar.example.com.
+2. When `Type = purge_prefix`:
+Prefixes are purged, such as http://www.example.com/example.
+3. When `Type = purge_url`:
+URLs are purged, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`: All types of resources are purged.
+`Targets` is not a required field.
      */
     public void setTargets(String [] Targets) {
         this.Targets = Targets;

@@ -159,26 +159,6 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *Create a scaling group for an existing cluster
-     * @param req CreateClusterAsGroupRequest
-     * @return CreateClusterAsGroupResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateClusterAsGroupResponse CreateClusterAsGroup(CreateClusterAsGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateClusterAsGroupResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateClusterAsGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateClusterAsGroup");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *Create a cluster access port (intranet / extranet access is enabled for independent clusters, and intranet access is supported for managed clusters)
      * @param req CreateClusterEndpointRequest
      * @return CreateClusterEndpointResponse

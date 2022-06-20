@@ -96,6 +96,14 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     private String [] Subnets;
 
     /**
+    * Whether to ignore ServiceCIDR conflict errors. It is only valid in VPC-CNI mode. Default value: `false`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("IgnoreServiceCIDRConflict")
+    @Expose
+    private Boolean IgnoreServiceCIDRConflict;
+
+    /**
      * Get CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC. 
      * @return ClusterCIDR CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC.
      */
@@ -267,6 +275,26 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         this.Subnets = Subnets;
     }
 
+    /**
+     * Get Whether to ignore ServiceCIDR conflict errors. It is only valid in VPC-CNI mode. Default value: `false`.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return IgnoreServiceCIDRConflict Whether to ignore ServiceCIDR conflict errors. It is only valid in VPC-CNI mode. Default value: `false`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Boolean getIgnoreServiceCIDRConflict() {
+        return this.IgnoreServiceCIDRConflict;
+    }
+
+    /**
+     * Set Whether to ignore ServiceCIDR conflict errors. It is only valid in VPC-CNI mode. Default value: `false`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param IgnoreServiceCIDRConflict Whether to ignore ServiceCIDR conflict errors. It is only valid in VPC-CNI mode. Default value: `false`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setIgnoreServiceCIDRConflict(Boolean IgnoreServiceCIDRConflict) {
+        this.IgnoreServiceCIDRConflict = IgnoreServiceCIDRConflict;
+    }
+
     public ClusterNetworkSettings() {
     }
 
@@ -308,6 +336,9 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                 this.Subnets[i] = new String(source.Subnets[i]);
             }
         }
+        if (source.IgnoreServiceCIDRConflict != null) {
+            this.IgnoreServiceCIDRConflict = new Boolean(source.IgnoreServiceCIDRConflict);
+        }
     }
 
 
@@ -325,6 +356,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "KubeProxyMode", this.KubeProxyMode);
         this.setParamSimple(map, prefix + "ServiceCIDR", this.ServiceCIDR);
         this.setParamArraySimple(map, prefix + "Subnets.", this.Subnets);
+        this.setParamSimple(map, prefix + "IgnoreServiceCIDRConflict", this.IgnoreServiceCIDRConflict);
 
     }
 }

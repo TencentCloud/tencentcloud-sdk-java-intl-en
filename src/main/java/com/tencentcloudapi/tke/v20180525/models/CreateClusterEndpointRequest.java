@@ -44,6 +44,27 @@ public class CreateClusterEndpointRequest extends AbstractModel{
     private Boolean IsExtranet;
 
     /**
+    * The domain name
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
+    * The security group in use. Required only for public network access.
+    */
+    @SerializedName("SecurityGroup")
+    @Expose
+    private String SecurityGroup;
+
+    /**
+    * The LB parameter. Required only for public network access.
+    */
+    @SerializedName("ExtensiveParameters")
+    @Expose
+    private String ExtensiveParameters;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -91,6 +112,54 @@ public class CreateClusterEndpointRequest extends AbstractModel{
         this.IsExtranet = IsExtranet;
     }
 
+    /**
+     * Get The domain name 
+     * @return Domain The domain name
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set The domain name
+     * @param Domain The domain name
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
+    /**
+     * Get The security group in use. Required only for public network access. 
+     * @return SecurityGroup The security group in use. Required only for public network access.
+     */
+    public String getSecurityGroup() {
+        return this.SecurityGroup;
+    }
+
+    /**
+     * Set The security group in use. Required only for public network access.
+     * @param SecurityGroup The security group in use. Required only for public network access.
+     */
+    public void setSecurityGroup(String SecurityGroup) {
+        this.SecurityGroup = SecurityGroup;
+    }
+
+    /**
+     * Get The LB parameter. Required only for public network access. 
+     * @return ExtensiveParameters The LB parameter. Required only for public network access.
+     */
+    public String getExtensiveParameters() {
+        return this.ExtensiveParameters;
+    }
+
+    /**
+     * Set The LB parameter. Required only for public network access.
+     * @param ExtensiveParameters The LB parameter. Required only for public network access.
+     */
+    public void setExtensiveParameters(String ExtensiveParameters) {
+        this.ExtensiveParameters = ExtensiveParameters;
+    }
+
     public CreateClusterEndpointRequest() {
     }
 
@@ -108,6 +177,15 @@ public class CreateClusterEndpointRequest extends AbstractModel{
         if (source.IsExtranet != null) {
             this.IsExtranet = new Boolean(source.IsExtranet);
         }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.SecurityGroup != null) {
+            this.SecurityGroup = new String(source.SecurityGroup);
+        }
+        if (source.ExtensiveParameters != null) {
+            this.ExtensiveParameters = new String(source.ExtensiveParameters);
+        }
     }
 
 
@@ -118,6 +196,9 @@ public class CreateClusterEndpointRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "IsExtranet", this.IsExtranet);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
+        this.setParamSimple(map, prefix + "ExtensiveParameters", this.ExtensiveParameters);
 
     }
 }

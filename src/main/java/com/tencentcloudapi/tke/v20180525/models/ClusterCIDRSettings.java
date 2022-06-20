@@ -72,6 +72,13 @@ public class ClusterCIDRSettings extends AbstractModel{
     private Long ClaimExpiredSeconds;
 
     /**
+    * Whether to ignore ServiceCIDR conflict errors. It is only valid in VPC-CNI mode. Default value: `false`.
+    */
+    @SerializedName("IgnoreServiceCIDRConflict")
+    @Expose
+    private Boolean IgnoreServiceCIDRConflict;
+
+    /**
      * Get CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC 
      * @return ClusterCIDR CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC
      */
@@ -183,6 +190,22 @@ public class ClusterCIDRSettings extends AbstractModel{
         this.ClaimExpiredSeconds = ClaimExpiredSeconds;
     }
 
+    /**
+     * Get Whether to ignore ServiceCIDR conflict errors. It is only valid in VPC-CNI mode. Default value: `false`. 
+     * @return IgnoreServiceCIDRConflict Whether to ignore ServiceCIDR conflict errors. It is only valid in VPC-CNI mode. Default value: `false`.
+     */
+    public Boolean getIgnoreServiceCIDRConflict() {
+        return this.IgnoreServiceCIDRConflict;
+    }
+
+    /**
+     * Set Whether to ignore ServiceCIDR conflict errors. It is only valid in VPC-CNI mode. Default value: `false`.
+     * @param IgnoreServiceCIDRConflict Whether to ignore ServiceCIDR conflict errors. It is only valid in VPC-CNI mode. Default value: `false`.
+     */
+    public void setIgnoreServiceCIDRConflict(Boolean IgnoreServiceCIDRConflict) {
+        this.IgnoreServiceCIDRConflict = IgnoreServiceCIDRConflict;
+    }
+
     public ClusterCIDRSettings() {
     }
 
@@ -215,6 +238,9 @@ public class ClusterCIDRSettings extends AbstractModel{
         if (source.ClaimExpiredSeconds != null) {
             this.ClaimExpiredSeconds = new Long(source.ClaimExpiredSeconds);
         }
+        if (source.IgnoreServiceCIDRConflict != null) {
+            this.IgnoreServiceCIDRConflict = new Boolean(source.IgnoreServiceCIDRConflict);
+        }
     }
 
 
@@ -229,6 +255,7 @@ public class ClusterCIDRSettings extends AbstractModel{
         this.setParamSimple(map, prefix + "ServiceCIDR", this.ServiceCIDR);
         this.setParamArraySimple(map, prefix + "EniSubnetIds.", this.EniSubnetIds);
         this.setParamSimple(map, prefix + "ClaimExpiredSeconds", this.ClaimExpiredSeconds);
+        this.setParamSimple(map, prefix + "IgnoreServiceCIDRConflict", this.IgnoreServiceCIDRConflict);
 
     }
 }

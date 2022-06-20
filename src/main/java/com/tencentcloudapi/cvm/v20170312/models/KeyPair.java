@@ -79,6 +79,14 @@ public class KeyPair extends AbstractModel{
     private String CreatedTime;
 
     /**
+    * The list of tags bound to the key.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Key pair `ID`, the unique identifier of a key pair. 
      * @return KeyId Key pair `ID`, the unique identifier of a key pair.
      */
@@ -206,6 +214,26 @@ public class KeyPair extends AbstractModel{
         this.CreatedTime = CreatedTime;
     }
 
+    /**
+     * Get The list of tags bound to the key.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Tags The list of tags bound to the key.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set The list of tags bound to the key.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Tags The list of tags bound to the key.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public KeyPair() {
     }
 
@@ -241,6 +269,12 @@ public class KeyPair extends AbstractModel{
         if (source.CreatedTime != null) {
             this.CreatedTime = new String(source.CreatedTime);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -256,6 +290,7 @@ public class KeyPair extends AbstractModel{
         this.setParamSimple(map, prefix + "PrivateKey", this.PrivateKey);
         this.setParamArraySimple(map, prefix + "AssociatedInstanceIds.", this.AssociatedInstanceIds);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

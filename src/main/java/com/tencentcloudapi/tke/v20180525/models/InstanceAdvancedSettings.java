@@ -95,6 +95,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String PreStartUserScript;
 
     /**
+    * Node taint
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Taints")
+    @Expose
+    private Taint [] Taints;
+
+    /**
      * Get Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 (xfs for tlinux system) and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
 Note: in multi-disk scenarios, use the DataDisks data structure below to set the corresponding information, such as cloud disk type, cloud disk size, mount path, and whether to perform formatting.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
@@ -274,6 +282,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.PreStartUserScript = PreStartUserScript;
     }
 
+    /**
+     * Get Node taint
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Taints Node taint
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Taint [] getTaints() {
+        return this.Taints;
+    }
+
+    /**
+     * Set Node taint
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Taints Node taint
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setTaints(Taint [] Taints) {
+        this.Taints = Taints;
+    }
+
     public InstanceAdvancedSettings() {
     }
 
@@ -315,6 +343,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.PreStartUserScript != null) {
             this.PreStartUserScript = new String(source.PreStartUserScript);
         }
+        if (source.Taints != null) {
+            this.Taints = new Taint[source.Taints.length];
+            for (int i = 0; i < source.Taints.length; i++) {
+                this.Taints[i] = new Taint(source.Taints[i]);
+            }
+        }
     }
 
 
@@ -331,6 +365,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
         this.setParamSimple(map, prefix + "DesiredPodNumber", this.DesiredPodNumber);
         this.setParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
+        this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
 
     }
 }

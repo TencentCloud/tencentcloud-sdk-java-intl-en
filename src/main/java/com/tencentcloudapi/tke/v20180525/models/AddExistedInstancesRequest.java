@@ -95,6 +95,13 @@ The array length of `InstanceAdvancedSettingsOverride` should be the same as the
     private InstanceAdvancedSettings [] InstanceAdvancedSettingsOverrides;
 
     /**
+    * Node image (it is required when creating a node)
+    */
+    @SerializedName("ImageId")
+    @Expose
+    private String ImageId;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -262,6 +269,22 @@ The array length of `InstanceAdvancedSettingsOverride` should be the same as the
         this.InstanceAdvancedSettingsOverrides = InstanceAdvancedSettingsOverrides;
     }
 
+    /**
+     * Get Node image (it is required when creating a node) 
+     * @return ImageId Node image (it is required when creating a node)
+     */
+    public String getImageId() {
+        return this.ImageId;
+    }
+
+    /**
+     * Set Node image (it is required when creating a node)
+     * @param ImageId Node image (it is required when creating a node)
+     */
+    public void setImageId(String ImageId) {
+        this.ImageId = ImageId;
+    }
+
     public AddExistedInstancesRequest() {
     }
 
@@ -312,6 +335,9 @@ The array length of `InstanceAdvancedSettingsOverride` should be the same as the
                 this.InstanceAdvancedSettingsOverrides[i] = new InstanceAdvancedSettings(source.InstanceAdvancedSettingsOverrides[i]);
             }
         }
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
+        }
     }
 
 
@@ -329,6 +355,7 @@ The array length of `InstanceAdvancedSettingsOverride` should be the same as the
         this.setParamObj(map, prefix + "NodePool.", this.NodePool);
         this.setParamArraySimple(map, prefix + "SkipValidateOptions.", this.SkipValidateOptions);
         this.setParamArrayObj(map, prefix + "InstanceAdvancedSettingsOverrides.", this.InstanceAdvancedSettingsOverrides);
+        this.setParamSimple(map, prefix + "ImageId", this.ImageId);
 
     }
 }
