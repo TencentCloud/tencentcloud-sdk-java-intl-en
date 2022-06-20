@@ -256,6 +256,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long RegionId;
 
     /**
+    * The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+
+ri=Standard RI
+
+svp=Savings Plan
+
+si=Spot Instances
+
+rp=Resource Pack
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * The amount deducted by a reserved instance based on the original component cost.
+    */
+    @SerializedName("OriginalCostWithRI")
+    @Expose
+    private String OriginalCostWithRI;
+
+    /**
+    * The savings plan deduction amount.
+    */
+    @SerializedName("SPDeduction")
+    @Expose
+    private String SPDeduction;
+
+    /**
+    * The amount deducted by a savings plan based on the original component cost.
+    */
+    @SerializedName("OriginalCostWithSP")
+    @Expose
+    private String OriginalCostWithSP;
+
+    /**
      * Get Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL 
      * @return BusinessCodeName Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
      */
@@ -791,6 +827,102 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RegionId = RegionId;
     }
 
+    /**
+     * Get The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+
+ri=Standard RI
+
+svp=Savings Plan
+
+si=Spot Instances
+
+rp=Resource Pack 
+     * @return InstanceType The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+
+ri=Standard RI
+
+svp=Savings Plan
+
+si=Spot Instances
+
+rp=Resource Pack
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+
+ri=Standard RI
+
+svp=Savings Plan
+
+si=Spot Instances
+
+rp=Resource Pack
+     * @param InstanceType The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+
+ri=Standard RI
+
+svp=Savings Plan
+
+si=Spot Instances
+
+rp=Resource Pack
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get The amount deducted by a reserved instance based on the original component cost. 
+     * @return OriginalCostWithRI The amount deducted by a reserved instance based on the original component cost.
+     */
+    public String getOriginalCostWithRI() {
+        return this.OriginalCostWithRI;
+    }
+
+    /**
+     * Set The amount deducted by a reserved instance based on the original component cost.
+     * @param OriginalCostWithRI The amount deducted by a reserved instance based on the original component cost.
+     */
+    public void setOriginalCostWithRI(String OriginalCostWithRI) {
+        this.OriginalCostWithRI = OriginalCostWithRI;
+    }
+
+    /**
+     * Get The savings plan deduction amount. 
+     * @return SPDeduction The savings plan deduction amount.
+     */
+    public String getSPDeduction() {
+        return this.SPDeduction;
+    }
+
+    /**
+     * Set The savings plan deduction amount.
+     * @param SPDeduction The savings plan deduction amount.
+     */
+    public void setSPDeduction(String SPDeduction) {
+        this.SPDeduction = SPDeduction;
+    }
+
+    /**
+     * Get The amount deducted by a savings plan based on the original component cost. 
+     * @return OriginalCostWithSP The amount deducted by a savings plan based on the original component cost.
+     */
+    public String getOriginalCostWithSP() {
+        return this.OriginalCostWithSP;
+    }
+
+    /**
+     * Set The amount deducted by a savings plan based on the original component cost.
+     * @param OriginalCostWithSP The amount deducted by a savings plan based on the original component cost.
+     */
+    public void setOriginalCostWithSP(String OriginalCostWithSP) {
+        this.OriginalCostWithSP = OriginalCostWithSP;
+    }
+
     public BillResourceSummary() {
     }
 
@@ -901,6 +1033,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RegionId != null) {
             this.RegionId = new Long(source.RegionId);
         }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.OriginalCostWithRI != null) {
+            this.OriginalCostWithRI = new String(source.OriginalCostWithRI);
+        }
+        if (source.SPDeduction != null) {
+            this.SPDeduction = new String(source.SPDeduction);
+        }
+        if (source.OriginalCostWithSP != null) {
+            this.OriginalCostWithSP = new String(source.OriginalCostWithSP);
+        }
     }
 
 
@@ -941,6 +1085,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
         this.setParamSimple(map, prefix + "ProductCode", this.ProductCode);
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "OriginalCostWithRI", this.OriginalCostWithRI);
+        this.setParamSimple(map, prefix + "SPDeduction", this.SPDeduction);
+        this.setParamSimple(map, prefix + "OriginalCostWithSP", this.OriginalCostWithSP);
 
     }
 }

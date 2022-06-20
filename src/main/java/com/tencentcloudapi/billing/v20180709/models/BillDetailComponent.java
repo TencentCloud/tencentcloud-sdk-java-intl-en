@@ -158,6 +158,62 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String ContractPrice;
 
     /**
+    * The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * The usage duration deducted by a reserved instance. The unit of measurement for deduction is the same as that for usage duration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("RiTimeSpan")
+    @Expose
+    private String RiTimeSpan;
+
+    /**
+    * The amount deducted by a reserved instance based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("OriginalCostWithRI")
+    @Expose
+    private String OriginalCostWithRI;
+
+    /**
+    * The discount multiplier that applies to the component based on the remaining commitment of the savings plan.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("SPDeductionRate")
+    @Expose
+    private String SPDeductionRate;
+
+    /**
+    * The savings plan deduction amount.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("SPDeduction")
+    @Expose
+    private String SPDeduction;
+
+    /**
+    * The amount deducted by a savings plan based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("OriginalCostWithSP")
+    @Expose
+    private String OriginalCostWithSP;
+
+    /**
+    * The blended discount multiplier that combines the official website discount, reserved instance discount, and savings plan discount. If no reserved instance and savings plan discounts are available, the blended discount multiplier equals the discount multiplier.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("BlendedDiscount")
+    @Expose
+    private String BlendedDiscount;
+
+    /**
      * Get Component type: type of a resource component, e.g. memory, disk, etc. 
      * @return ComponentCodeName Component type: type of a resource component, e.g. memory, disk, etc.
      */
@@ -469,6 +525,146 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.ContractPrice = ContractPrice;
     }
 
+    /**
+     * Get The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return InstanceType The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param InstanceType The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get The usage duration deducted by a reserved instance. The unit of measurement for deduction is the same as that for usage duration.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return RiTimeSpan The usage duration deducted by a reserved instance. The unit of measurement for deduction is the same as that for usage duration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getRiTimeSpan() {
+        return this.RiTimeSpan;
+    }
+
+    /**
+     * Set The usage duration deducted by a reserved instance. The unit of measurement for deduction is the same as that for usage duration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param RiTimeSpan The usage duration deducted by a reserved instance. The unit of measurement for deduction is the same as that for usage duration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setRiTimeSpan(String RiTimeSpan) {
+        this.RiTimeSpan = RiTimeSpan;
+    }
+
+    /**
+     * Get The amount deducted by a reserved instance based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return OriginalCostWithRI The amount deducted by a reserved instance based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getOriginalCostWithRI() {
+        return this.OriginalCostWithRI;
+    }
+
+    /**
+     * Set The amount deducted by a reserved instance based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param OriginalCostWithRI The amount deducted by a reserved instance based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setOriginalCostWithRI(String OriginalCostWithRI) {
+        this.OriginalCostWithRI = OriginalCostWithRI;
+    }
+
+    /**
+     * Get The discount multiplier that applies to the component based on the remaining commitment of the savings plan.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return SPDeductionRate The discount multiplier that applies to the component based on the remaining commitment of the savings plan.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getSPDeductionRate() {
+        return this.SPDeductionRate;
+    }
+
+    /**
+     * Set The discount multiplier that applies to the component based on the remaining commitment of the savings plan.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param SPDeductionRate The discount multiplier that applies to the component based on the remaining commitment of the savings plan.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setSPDeductionRate(String SPDeductionRate) {
+        this.SPDeductionRate = SPDeductionRate;
+    }
+
+    /**
+     * Get The savings plan deduction amount.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return SPDeduction The savings plan deduction amount.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getSPDeduction() {
+        return this.SPDeduction;
+    }
+
+    /**
+     * Set The savings plan deduction amount.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param SPDeduction The savings plan deduction amount.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setSPDeduction(String SPDeduction) {
+        this.SPDeduction = SPDeduction;
+    }
+
+    /**
+     * Get The amount deducted by a savings plan based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return OriginalCostWithSP The amount deducted by a savings plan based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getOriginalCostWithSP() {
+        return this.OriginalCostWithSP;
+    }
+
+    /**
+     * Set The amount deducted by a savings plan based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param OriginalCostWithSP The amount deducted by a savings plan based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setOriginalCostWithSP(String OriginalCostWithSP) {
+        this.OriginalCostWithSP = OriginalCostWithSP;
+    }
+
+    /**
+     * Get The blended discount multiplier that combines the official website discount, reserved instance discount, and savings plan discount. If no reserved instance and savings plan discounts are available, the blended discount multiplier equals the discount multiplier.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return BlendedDiscount The blended discount multiplier that combines the official website discount, reserved instance discount, and savings plan discount. If no reserved instance and savings plan discounts are available, the blended discount multiplier equals the discount multiplier.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getBlendedDiscount() {
+        return this.BlendedDiscount;
+    }
+
+    /**
+     * Set The blended discount multiplier that combines the official website discount, reserved instance discount, and savings plan discount. If no reserved instance and savings plan discounts are available, the blended discount multiplier equals the discount multiplier.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param BlendedDiscount The blended discount multiplier that combines the official website discount, reserved instance discount, and savings plan discount. If no reserved instance and savings plan discounts are available, the blended discount multiplier equals the discount multiplier.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setBlendedDiscount(String BlendedDiscount) {
+        this.BlendedDiscount = BlendedDiscount;
+    }
+
     public BillDetailComponent() {
     }
 
@@ -534,6 +730,27 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.ContractPrice != null) {
             this.ContractPrice = new String(source.ContractPrice);
         }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.RiTimeSpan != null) {
+            this.RiTimeSpan = new String(source.RiTimeSpan);
+        }
+        if (source.OriginalCostWithRI != null) {
+            this.OriginalCostWithRI = new String(source.OriginalCostWithRI);
+        }
+        if (source.SPDeductionRate != null) {
+            this.SPDeductionRate = new String(source.SPDeductionRate);
+        }
+        if (source.SPDeduction != null) {
+            this.SPDeduction = new String(source.SPDeduction);
+        }
+        if (source.OriginalCostWithSP != null) {
+            this.OriginalCostWithSP = new String(source.OriginalCostWithSP);
+        }
+        if (source.BlendedDiscount != null) {
+            this.BlendedDiscount = new String(source.BlendedDiscount);
+        }
     }
 
 
@@ -560,6 +777,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "ItemCode", this.ItemCode);
         this.setParamSimple(map, prefix + "ComponentCode", this.ComponentCode);
         this.setParamSimple(map, prefix + "ContractPrice", this.ContractPrice);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "RiTimeSpan", this.RiTimeSpan);
+        this.setParamSimple(map, prefix + "OriginalCostWithRI", this.OriginalCostWithRI);
+        this.setParamSimple(map, prefix + "SPDeductionRate", this.SPDeductionRate);
+        this.setParamSimple(map, prefix + "SPDeduction", this.SPDeduction);
+        this.setParamSimple(map, prefix + "OriginalCostWithSP", this.OriginalCostWithSP);
+        this.setParamSimple(map, prefix + "BlendedDiscount", this.BlendedDiscount);
 
     }
 }
