@@ -59,6 +59,46 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to apply a parameter template to instances.
+     * @param req ApplyParamsTemplateRequest
+     * @return ApplyParamsTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyParamsTemplateResponse ApplyParamsTemplate(ApplyParamsTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplyParamsTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplyParamsTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ApplyParamsTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to associate a security group with instances in batches.
+     * @param req AssociateSecurityGroupsRequest
+     * @return AssociateSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateSecurityGroupsResponse AssociateSecurityGroups(AssociateSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AssociateSecurityGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AssociateSecurityGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AssociateSecurityGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to promote a replica node group of a multi-AZ deployed instance to master node group or a replica node of a single-AZ deployed instance to master node.
      * @param req ChangeReplicaToMasterRequest
      * @return ChangeReplicaToMasterResponse
@@ -79,6 +119,226 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to deactivate an instance in the recycle bin immediately.
+     * @param req CleanUpInstanceRequest
+     * @return CleanUpInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CleanUpInstanceResponse CleanUpInstance(CleanUpInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CleanUpInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CleanUpInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CleanUpInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to clear the data of a Redis instance.
+     * @param req ClearInstanceRequest
+     * @return ClearInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ClearInstanceResponse ClearInstance(ClearInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ClearInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ClearInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ClearInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create an instance sub-account.
+     * @param req CreateInstanceAccountRequest
+     * @return CreateInstanceAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInstanceAccountResponse CreateInstanceAccount(CreateInstanceAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateInstanceAccountResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateInstanceAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateInstanceAccount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create Redis instances.
+     * @param req CreateInstancesRequest
+     * @return CreateInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInstancesResponse CreateInstances(CreateInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a parameter template.
+     * @param req CreateParamTemplateRequest
+     * @return CreateParamTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateParamTemplateResponse CreateParamTemplate(CreateParamTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateParamTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateParamTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateParamTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete an instance sub-account.
+     * @param req DeleteInstanceAccountRequest
+     * @return DeleteInstanceAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteInstanceAccountResponse DeleteInstanceAccount(DeleteInstanceAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteInstanceAccountResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteInstanceAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteInstanceAccount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a parameter template.
+     * @param req DeleteParamTemplateRequest
+     * @return DeleteParamTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteParamTemplateResponse DeleteParamTemplate(DeleteParamTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteParamTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteParamTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteParamTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the backup configuration.
+     * @param req DescribeAutoBackupConfigRequest
+     * @return DescribeAutoBackupConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAutoBackupConfigResponse DescribeAutoBackupConfig(DescribeAutoBackupConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAutoBackupConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAutoBackupConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAutoBackupConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the download address of a backup RDB (it is during beta test and can be used only after you apply for the eligibility).
+     * @param req DescribeBackupUrlRequest
+     * @return DescribeBackupUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupUrlResponse DescribeBackupUrl(DescribeBackupUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *(Disused) Queries the list of instances
+     * @param req DescribeCommonDBInstancesRequest
+     * @return DescribeCommonDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCommonDBInstancesResponse DescribeCommonDBInstances(DescribeCommonDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCommonDBInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCommonDBInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCommonDBInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the security group details of an instance.
+     * @param req DescribeDBSecurityGroupsRequest
+     * @return DescribeDBSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(DescribeDBSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBSecurityGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBSecurityGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBSecurityGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to view instance sub-account information.
      * @param req DescribeInstanceAccountRequest
      * @return DescribeInstanceAccountResponse
@@ -91,6 +351,66 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceAccountResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeInstanceAccount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of Redis instance backups.
+     * @param req DescribeInstanceBackupsRequest
+     * @return DescribeInstanceBackupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceBackupsResponse DescribeInstanceBackups(DescribeInstanceBackupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceBackupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceBackupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceBackups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the DTS task details of an instance.
+     * @param req DescribeInstanceDTSInfoRequest
+     * @return DescribeInstanceDTSInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceDTSInfoResponse DescribeInstanceDTSInfo(DescribeInstanceDTSInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceDTSInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceDTSInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceDTSInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the order information.
+     * @param req DescribeInstanceDealDetailRequest
+     * @return DescribeInstanceDealDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceDealDetailResponse DescribeInstanceDealDetail(DescribeInstanceDealDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceDealDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceDealDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceDealDetail");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -279,6 +599,126 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the list of parameter modifications.
+     * @param req DescribeInstanceParamRecordsRequest
+     * @return DescribeInstanceParamRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceParamRecordsResponse DescribeInstanceParamRecords(DescribeInstanceParamRecordsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceParamRecordsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceParamRecordsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceParamRecords");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of instance parameters.
+     * @param req DescribeInstanceParamsRequest
+     * @return DescribeInstanceParamsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceParamsResponse DescribeInstanceParams(DescribeInstanceParamsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceParamsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceParamsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceParams");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the security group information of an instance.
+     * @param req DescribeInstanceSecurityGroupRequest
+     * @return DescribeInstanceSecurityGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceSecurityGroupResponse DescribeInstanceSecurityGroup(DescribeInstanceSecurityGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceSecurityGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceSecurityGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceSecurityGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the information of cluster edition instance shards.
+     * @param req DescribeInstanceShardsRequest
+     * @return DescribeInstanceShardsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceShardsResponse DescribeInstanceShards(DescribeInstanceShardsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceShardsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceShardsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceShards");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query Redis node information.
+     * @param req DescribeInstanceZoneInfoRequest
+     * @return DescribeInstanceZoneInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceZoneInfoResponse DescribeInstanceZoneInfo(DescribeInstanceZoneInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceZoneInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceZoneInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceZoneInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of Redis instances.
+     * @param req DescribeInstancesRequest
+     * @return DescribeInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query instance maintenance window. The maintenance window specifies a time period during which compatible version upgrade, architecture upgrade, backend maintenance, and other operations can be performed to avoid affecting business.
      * @param req DescribeMaintenanceWindowRequest
      * @return DescribeMaintenanceWindowResponse
@@ -299,6 +739,46 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query parameter template details.
+     * @param req DescribeParamTemplateInfoRequest
+     * @return DescribeParamTemplateInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeParamTemplateInfoResponse DescribeParamTemplateInfo(DescribeParamTemplateInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeParamTemplateInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeParamTemplateInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeParamTemplateInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of parameter templates.
+     * @param req DescribeParamTemplatesRequest
+     * @return DescribeParamTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeParamTemplatesResponse DescribeParamTemplates(DescribeParamTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeParamTemplatesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeParamTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeParamTemplates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the purchasable capacity specifications of Redis instances in the specified AZ and instance type. If you are not in the allowlist for the AZ or instance type, you cannot view the details of the capacity specifications. To apply for the eligibility, please submit a ticket.
      * @param req DescribeProductInfoRequest
      * @return DescribeProductInfoResponse
@@ -311,6 +791,66 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeProductInfoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeProductInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the security group information of a project.
+     * @param req DescribeProjectSecurityGroupRequest
+     * @return DescribeProjectSecurityGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProjectSecurityGroupResponse DescribeProjectSecurityGroup(DescribeProjectSecurityGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProjectSecurityGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProjectSecurityGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeProjectSecurityGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the security group details of a project.
+     * @param req DescribeProjectSecurityGroupsRequest
+     * @return DescribeProjectSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(DescribeProjectSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProjectSecurityGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProjectSecurityGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeProjectSecurityGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query proxy slow logs.
+     * @param req DescribeProxySlowLogRequest
+     * @return DescribeProxySlowLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProxySlowLogResponse DescribeProxySlowLog(DescribeProxySlowLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProxySlowLogResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProxySlowLogResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeProxySlowLog");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -359,6 +899,166 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query a task result.
+     * @param req DescribeTaskInfoRequest
+     * @return DescribeTaskInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskInfoResponse DescribeTaskInfo(DescribeTaskInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTaskInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTaskInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTaskInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of tasks.
+     * @param req DescribeTaskListRequest
+     * @return DescribeTaskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskListResponse DescribeTaskList(DescribeTaskListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTaskListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTaskListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTaskList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query slow queries of a TencentDB for Tendis instance.
+     * @param req DescribeTendisSlowLogRequest
+     * @return DescribeTendisSlowLogResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTendisSlowLogResponse DescribeTendisSlowLog(DescribeTendisSlowLogRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTendisSlowLogResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTendisSlowLogResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTendisSlowLog");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to terminate a pay-as-you-go instance.
+     * @param req DestroyPostpaidInstanceRequest
+     * @return DestroyPostpaidInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyPostpaidInstanceResponse DestroyPostpaidInstance(DestroyPostpaidInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DestroyPostpaidInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DestroyPostpaidInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DestroyPostpaidInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to return a monthly subscribed instance.
+     * @param req DestroyPrepaidInstanceRequest
+     * @return DestroyPrepaidInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyPrepaidInstanceResponse DestroyPrepaidInstance(DestroyPrepaidInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DestroyPrepaidInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DestroyPrepaidInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DestroyPrepaidInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to disable read/write separation.
+     * @param req DisableReplicaReadonlyRequest
+     * @return DisableReplicaReadonlyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableReplicaReadonlyResponse DisableReplicaReadonly(DisableReplicaReadonlyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableReplicaReadonlyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableReplicaReadonlyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableReplicaReadonly");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to unassociate security groups from instances in batches.
+     * @param req DisassociateSecurityGroupsRequest
+     * @return DisassociateSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateSecurityGroupsResponse DisassociateSecurityGroups(DisassociateSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisassociateSecurityGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisassociateSecurityGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisassociateSecurityGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to enable read/write separation.
+     * @param req EnableReplicaReadonlyRequest
+     * @return EnableReplicaReadonlyResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableReplicaReadonlyResponse EnableReplicaReadonly(EnableReplicaReadonlyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableReplicaReadonlyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableReplicaReadonlyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableReplicaReadonly");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the price for purchasing an instance.
      * @param req InquiryPriceCreateInstanceRequest
      * @return InquiryPriceCreateInstanceResponse
@@ -399,6 +1099,46 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to perform a failure simulation.
+     * @param req KillMasterGroupRequest
+     * @return KillMasterGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public KillMasterGroupResponse KillMasterGroup(KillMasterGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<KillMasterGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<KillMasterGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "KillMasterGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to manually back up a Redis instance.
+     * @param req ManualBackupInstanceRequest
+     * @return ManualBackupInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ManualBackupInstanceResponse ManualBackupInstance(ManualBackupInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ManualBackupInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ManualBackupInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ManualBackupInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to change the Redis password.
      * @param req ModfiyInstancePasswordRequest
      * @return ModfiyInstancePasswordResponse
@@ -411,6 +1151,106 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModfiyInstancePasswordResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModfiyInstancePassword");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to set an auto-backup schedule.
+     * @param req ModifyAutoBackupConfigRequest
+     * @return ModifyAutoBackupConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAutoBackupConfigResponse ModifyAutoBackupConfig(ModifyAutoBackupConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAutoBackupConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAutoBackupConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAutoBackupConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the security groups associated with an instance.
+     * @param req ModifyDBInstanceSecurityGroupsRequest
+     * @return ModifyDBInstanceSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(ModifyDBInstanceSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDBInstanceSecurityGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify instance information.
+     * @param req ModifyInstanceRequest
+     * @return ModifyInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceResponse ModifyInstance(ModifyInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify an instance sub-account.
+     * @param req ModifyInstanceAccountRequest
+     * @return ModifyInstanceAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceAccountResponse ModifyInstanceAccount(ModifyInstanceAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceAccountResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstanceAccount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify instance parameters.
+     * @param req ModifyInstanceParamsRequest
+     * @return ModifyInstanceParamsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceParamsResponse ModifyInstanceParams(ModifyInstanceParamsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceParamsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceParamsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstanceParams");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -439,6 +1279,66 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify instance maintenance window. The maintenance window specifies a time period during which compatible version upgrade, architecture upgrade, backend maintenance, and other operations can be performed to avoid affecting business. Note: if the compatible version upgrade or architecture upgrade task has been initiated for an instance, its maintenance window cannot be modified.
+     * @param req ModifyMaintenanceWindowRequest
+     * @return ModifyMaintenanceWindowResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyMaintenanceWindowResponse ModifyMaintenanceWindow(ModifyMaintenanceWindowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyMaintenanceWindowResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyMaintenanceWindowResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyMaintenanceWindow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the network configuration of an instance.
+     * @param req ModifyNetworkConfigRequest
+     * @return ModifyNetworkConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNetworkConfigResponse ModifyNetworkConfig(ModifyNetworkConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNetworkConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNetworkConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyNetworkConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a parameter template.
+     * @param req ModifyParamTemplateRequest
+     * @return ModifyParamTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyParamTemplateResponse ModifyParamTemplate(ModifyParamTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyParamTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyParamTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyParamTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to disable public network access.
      * @param req ReleaseWanAddressRequest
      * @return ReleaseWanAddressResponse
@@ -451,6 +1351,146 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ReleaseWanAddressResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ReleaseWanAddress");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to renew an instance.
+     * @param req RenewInstanceRequest
+     * @return RenewInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewInstanceResponse RenewInstance(RenewInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RenewInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RenewInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RenewInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to reset a password.
+     * @param req ResetPasswordRequest
+     * @return ResetPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetPasswordResponse ResetPassword(ResetPasswordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResetPasswordResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResetPasswordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ResetPassword");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to restore a Redis instance.
+     * @param req RestoreInstanceRequest
+     * @return RestoreInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestoreInstanceResponse RestoreInstance(RestoreInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RestoreInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RestoreInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RestoreInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to deisolate an instance.
+     * @param req StartupInstanceRequest
+     * @return StartupInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartupInstanceResponse StartupInstance(StartupInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartupInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartupInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartupInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to swap the VIPs of instances for instance disaster recovery switch in scenarios where cross-AZ disaster recovery is supported through DTS. After the VIPs of the source and target instances are swapped, the target instance can be written into and the DTS sync task between them will be disconnected.
+     * @param req SwitchInstanceVipRequest
+     * @return SwitchInstanceVipResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchInstanceVipResponse SwitchInstanceVip(SwitchInstanceVipRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SwitchInstanceVipResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SwitchInstanceVipResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SwitchInstanceVip");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to upgrade an instance.
+     * @param req UpgradeInstanceRequest
+     * @return UpgradeInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeInstanceResponse UpgradeInstance(UpgradeInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpgradeInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to upgrade compatible instance version (for example, from Redis 2.8 to 4.0), or upgrade instance architecture (for example, from standard architecture to cluster architecture).
+     * @param req UpgradeInstanceVersionRequest
+     * @return UpgradeInstanceVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeInstanceVersionResponse UpgradeInstanceVersion(UpgradeInstanceVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeInstanceVersionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeInstanceVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpgradeInstanceVersion");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -491,6 +1531,26 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpgradeSmallVersionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpgradeSmallVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to upgrade an instance to support multi-AZ deployment.
+     * @param req UpgradeVersionToMultiAvailabilityZonesRequest
+     * @return UpgradeVersionToMultiAvailabilityZonesResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeVersionToMultiAvailabilityZonesResponse UpgradeVersionToMultiAvailabilityZones(UpgradeVersionToMultiAvailabilityZonesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeVersionToMultiAvailabilityZonesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeVersionToMultiAvailabilityZonesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpgradeVersionToMultiAvailabilityZones");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
