@@ -54,11 +54,17 @@ public enum SesErrorCode {
     // Unable to send because the sender is not verified.
      FAILEDOPERATION_NOTAUTHENTICATEDSENDER("FailedOperation.NotAuthenticatedSender"),
      
+    // Cannot query email records for this date. Only data within 90 days can be queried.
+     FAILEDOPERATION_NOTSUPPORTDATE("FailedOperation.NotSupportDate"),
+     
     // Incorrect protocol. Make sure the protocol is correct.
      FAILEDOPERATION_PROTOCOLCHECKERR("FailedOperation.ProtocolCheckErr"),
      
     // The recipient has unsubscribed.
      FAILEDOPERATION_RECEIVERHASUNSUBSCRIBED("FailedOperation.ReceiverHasUnsubscribed"),
+     
+    // 
+     FAILEDOPERATION_REJECTEDBYRECIPIENTS("FailedOperation.RejectedByRecipients"),
      
     // Email sending error. Please submit a ticket to us for troubleshooting.
      FAILEDOPERATION_SENDEMAILERR("FailedOperation.SendEmailErr"),
@@ -158,6 +164,9 @@ public enum SesErrorCode {
      
     // The template does not exist. Please create a template.
      INVALIDPARAMETERVALUE_TEMPLATENOTEXIST("InvalidParameterValue.TemplateNotExist"),
+     
+    // 
+     INVALIDPARAMETERVALUE_TEMPLATENOTMATCHDATA("InvalidParameterValue.TemplateNotMatchData"),
      
     // Incorrect search date. Make sure the date and its format are valid.
      INVALIDPARAMETERVALUE_WRONGDATE("InvalidParameterValue.WrongDate"),

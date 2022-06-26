@@ -39,6 +39,26 @@ public class TemClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create an application.
+     * @param req CreateApplicationRequest
+     * @return CreateApplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateApplicationResponse CreateApplication(CreateApplicationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateApplicationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateApplicationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateApplication");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to generate a COS temporary key.
      * @param req CreateCosTokenRequest
      * @return CreateCosTokenResponse
@@ -91,6 +111,29 @@ public class TemClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateResourceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateResource");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete an application.
+  - Stop the application if it’s running
+  - Delete resources associated with this application
+  - Delele the application
+     * @param req DeleteApplicationRequest
+     * @return DeleteApplicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteApplicationResponse DeleteApplication(DeleteApplicationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteApplicationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteApplicationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteApplication");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

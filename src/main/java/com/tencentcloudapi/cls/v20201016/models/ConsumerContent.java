@@ -31,8 +31,8 @@ Note: This field may return `null`, indicating that no valid value was found.
     private Boolean EnableTag;
 
     /**
-    * List of metadata to ship. Currently, only __SOURCE__, __FILENAME__, and __TIMESTAMP__ are supported.
-Note: This field may return `null`, indicating that no valid value was found.
+    * List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MetaFields")
     @Expose
@@ -45,6 +45,14 @@ Note: This field may return `null`, indicating that no valid value was found.
     @SerializedName("TagJsonNotTiled")
     @Expose
     private Boolean TagJsonNotTiled;
+
+    /**
+    * Shipping timestamp precision in seconds (default) or milliseconds
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TimestampAccuracy")
+    @Expose
+    private Long TimestampAccuracy;
 
     /**
      * Get Whether to ship tag information
@@ -67,20 +75,20 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get List of metadata to ship. Currently, only __SOURCE__, __FILENAME__, and __TIMESTAMP__ are supported.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return MetaFields List of metadata to ship. Currently, only __SOURCE__, __FILENAME__, and __TIMESTAMP__ are supported.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MetaFields List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getMetaFields() {
         return this.MetaFields;
     }
 
     /**
-     * Set List of metadata to ship. Currently, only __SOURCE__, __FILENAME__, and __TIMESTAMP__ are supported.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param MetaFields List of metadata to ship. Currently, only __SOURCE__, __FILENAME__, and __TIMESTAMP__ are supported.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MetaFields List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMetaFields(String [] MetaFields) {
         this.MetaFields = MetaFields;
@@ -106,6 +114,26 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.TagJsonNotTiled = TagJsonNotTiled;
     }
 
+    /**
+     * Get Shipping timestamp precision in seconds (default) or milliseconds
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TimestampAccuracy Shipping timestamp precision in seconds (default) or milliseconds
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getTimestampAccuracy() {
+        return this.TimestampAccuracy;
+    }
+
+    /**
+     * Set Shipping timestamp precision in seconds (default) or milliseconds
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TimestampAccuracy Shipping timestamp precision in seconds (default) or milliseconds
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTimestampAccuracy(Long TimestampAccuracy) {
+        this.TimestampAccuracy = TimestampAccuracy;
+    }
+
     public ConsumerContent() {
     }
 
@@ -126,6 +154,9 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.TagJsonNotTiled != null) {
             this.TagJsonNotTiled = new Boolean(source.TagJsonNotTiled);
         }
+        if (source.TimestampAccuracy != null) {
+            this.TimestampAccuracy = new Long(source.TimestampAccuracy);
+        }
     }
 
 
@@ -136,6 +167,7 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "EnableTag", this.EnableTag);
         this.setParamArraySimple(map, prefix + "MetaFields.", this.MetaFields);
         this.setParamSimple(map, prefix + "TagJsonNotTiled", this.TagJsonNotTiled);
+        this.setParamSimple(map, prefix + "TimestampAccuracy", this.TimestampAccuracy);
 
     }
 }

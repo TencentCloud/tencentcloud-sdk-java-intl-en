@@ -410,16 +410,16 @@ Note: only one screencapturing template can be associated with one domain name.
     }
 
     /**
-     *This API is used to create a recording task that starts and ends at specified times and records by using the configuration corresponding to a specified recording template ID.
+     *This API is used to create a recording task that starts and ends at specific times and records videos according to a specific recording template.
 - Prerequisites
-1. Recording files are stored on the VOD platform, so if you need to use the recording feature, you must first activate the VOD service.
-2. After the recording files are stored, applicable fees (including storage fees and downstream playback traffic fees) are charged according to the VOD billing method. For details, see the [corresponding document](https://intl.cloud.tencent.com/document/product/266/2837?from_cn_redirect=1).
-- Precautions
-1. An interruption will end the current recording and generate a recording file. The task will still be valid before the end time expires, and the stream will be recorded within this period as long as it is pushed, regardless of whether the push is interrupted or restarted multiple times.
+1. Because recording files are saved in VOD, you must first activate VOD.
+2. Storage and playback traffic fees are charged for storing and playing the videos recorded. For details, see [Purchase Guide](https://intl.cloud.tencent.com/document/product/266/2837).
+- Notes
+1. If streaming is interrupted, the current recording will stop and a recording file will be generated. When streaming resumes, as long as it’s before the end time of the task, recording will start again.
 2. Avoid creating recording tasks with overlapping time periods. If there are multiple tasks with overlapping time periods for the same stream, the system will start three recording tasks at most to avoid repeated recording.
-3. The record of a created recording task will be retained for 3 months on the platform.
-4. The current recording task management APIs (CreateRecordTask/StopRecordTask/DeleteRecordTask) are not compatible with the legacy APIs (CreateLiveRecord/StopLiveRecord/DeleteLiveRecord), and they cannot be used together.
-5. Do not create recording tasks and push streams at the same time, or recording tasks might not take effect and be delayed. Wait at least 3 seconds between each action.
+3. Task records are kept for three months by the platform.
+4. Do not use the new [CreateRecordTask](https://intl.cloud.tencent.com/document/product/267/45983?from_cn_redirect=1), [StopRecordTask](https://intl.cloud.tencent.com/document/product/267/45981?from_cn_redirect=1), and [DeleteRecordTask] APIs together with the old `CreateLiveRecord`, `StopLiveRecord`, and `DeleteLiveRecord` APIs.
+5. Do not create recording tasks and push streams at the same time. After creating a recording task, we recommend you wait at least three seconds before pushing streams.
      * @param req CreateRecordTaskRequest
      * @return CreateRecordTaskResponse
      * @throws TencentCloudSDKException
@@ -1295,6 +1295,26 @@ This API allows you to query the status of a stream in real time. Given external
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveStreamStateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeLiveStreamState");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the time-shift video length, time-shift days, and total time-shift period of push domains. The data returned is on a five-minute basis. You can use it for reconciliation.
+     * @param req DescribeLiveTimeShiftBillInfoListRequest
+     * @return DescribeLiveTimeShiftBillInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveTimeShiftBillInfoListResponse DescribeLiveTimeShiftBillInfoList(DescribeLiveTimeShiftBillInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveTimeShiftBillInfoListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveTimeShiftBillInfoListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLiveTimeShiftBillInfoList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -30,7 +30,9 @@ public class FullTextInfo extends AbstractModel{
     private Boolean CaseSensitive;
 
     /**
-    * Full-Text index delimiter. Each character in the string represents a delimiter.
+    * Separator of the full-text index. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
     */
     @SerializedName("Tokenizer")
     @Expose
@@ -61,16 +63,24 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Full-Text index delimiter. Each character in the string represents a delimiter. 
-     * @return Tokenizer Full-Text index delimiter. Each character in the string represents a delimiter.
+     * Get Separator of the full-text index. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators; 
+     * @return Tokenizer Separator of the full-text index. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
      */
     public String getTokenizer() {
         return this.Tokenizer;
     }
 
     /**
-     * Set Full-Text index delimiter. Each character in the string represents a delimiter.
-     * @param Tokenizer Full-Text index delimiter. Each character in the string represents a delimiter.
+     * Set Separator of the full-text index. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
+     * @param Tokenizer Separator of the full-text index. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
      */
     public void setTokenizer(String Tokenizer) {
         this.Tokenizer = Tokenizer;

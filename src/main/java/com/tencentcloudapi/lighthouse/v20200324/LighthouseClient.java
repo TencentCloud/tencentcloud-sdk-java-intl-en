@@ -198,6 +198,26 @@ In the `FirewallRules` parameter:
     }
 
     /**
+     *This API is used to create one or more Lighthouse instances.
+     * @param req CreateInstancesRequest
+     * @return CreateInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInstancesResponse CreateInstances(CreateInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a key pair.
      * @param req CreateKeyPairRequest
      * @return CreateKeyPairResponse
@@ -548,6 +568,26 @@ The snapshot must be in `NORMAL` status. To query the status of a snapshot, you 
     }
 
     /**
+     *This API is used to query the quota information of general resources.
+     * @param req DescribeGeneralResourceQuotasRequest
+     * @return DescribeGeneralResourceQuotasResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGeneralResourceQuotasResponse DescribeGeneralResourceQuotas(DescribeGeneralResourceQuotasRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGeneralResourceQuotasResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGeneralResourceQuotasResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGeneralResourceQuotas");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the attributes of the default login key of an instance.
      * @param req DescribeInstanceLoginKeyPairAttributeRequest
      * @return DescribeInstanceLoginKeyPairAttributeResponse
@@ -595,6 +635,31 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceVncUrlResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeInstanceVncUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the details of one or multiple instances.
+
+* You can query the details of an instance according to its ID, name, or private IP.
+* For more information on filters, please see [Filters](https://intl.cloud.tencent.com/document/product/1207/47576?from_cn_redirect=1#Filter).
+* If no parameter is defined, the status of a certain number of instances under the current account will be returned. The number is specified by `Limit` and is 20 by default.
+* The latest operation (LatestOperation) and the latest operation status (LatestOperationState) of the instance can be queried.
+     * @param req DescribeInstancesRequest
+     * @return DescribeInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstances");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -981,6 +1046,26 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 Type type = new TypeToken<JsonResponseModel<InquirePriceRenewDisksResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "InquirePriceRenewDisks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the price of renewed instance.
+     * @param req InquirePriceRenewInstancesRequest
+     * @return InquirePriceRenewInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceRenewInstancesResponse InquirePriceRenewInstances(InquirePriceRenewInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquirePriceRenewInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquirePriceRenewInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InquirePriceRenewInstances");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

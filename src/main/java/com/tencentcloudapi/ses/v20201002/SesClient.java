@@ -300,6 +300,26 @@ Note: Only an approved template can be used to send emails.
     }
 
     /**
+     *This API is used to get email sending status. Only data within 30 days can be queried.
+     * @param req GetSendEmailStatusRequest
+     * @return GetSendEmailStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetSendEmailStatusResponse GetSendEmailStatus(GetSendEmailStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetSendEmailStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetSendEmailStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetSendEmailStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the email sending statistics over a recent period, including data on sent emails, delivery success rate, open rate, bounce rate, and so on.
      * @param req GetStatisticsReportRequest
      * @return GetStatisticsReportResponse

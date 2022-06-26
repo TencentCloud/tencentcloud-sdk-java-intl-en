@@ -84,6 +84,9 @@ public enum ClsErrorCode {
     // Invalid `Content`.
      INVALIDPARAMETER_CONTENT("InvalidParameter.Content"),
      
+    // The unique key of database conflicts.
+     INVALIDPARAMETER_DBDUPLICATION("InvalidParameter.DbDuplication"),
+     
     // IA storage does not support key-value or tag index configuration.
      INVALIDPARAMETER_INVALIDINDEXRULEFORSEARCHLOW("InvalidParameter.InValidIndexRuleForSearchLow"),
      
@@ -130,7 +133,7 @@ public enum ClsErrorCode {
      LIMITEXCEEDED_MACHINEGROUPIP("LimitExceeded.MachineGroupIp"),
      
     // The number of machine group labels exceeds the limit.
-     LIMITEXCEEDED_MACHINEGROUPLABELS("LimitExceeded.MachineGroupLabels"),
+     LIMITEXCEEDED_MACHINEGROUPIPLABELS("LimitExceeded.MachineGroupIpLabels"),
      
     // The number of partitions exceeds the limit.
      LIMITEXCEEDED_PARTITION("LimitExceeded.Partition"),

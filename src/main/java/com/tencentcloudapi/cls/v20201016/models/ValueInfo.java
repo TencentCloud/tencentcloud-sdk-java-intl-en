@@ -30,7 +30,10 @@ public class ValueInfo extends AbstractModel{
     private String Type;
 
     /**
-    * Field delimiter, which is meaningful only if the field type is `text`. Each character in the entered string represents a delimiter.
+    * Separator of fields. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+`long` and `double` fields need to be null;
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\\) as separators for `text` fields;
     */
     @SerializedName("Tokenizer")
     @Expose
@@ -68,16 +71,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Field delimiter, which is meaningful only if the field type is `text`. Each character in the entered string represents a delimiter. 
-     * @return Tokenizer Field delimiter, which is meaningful only if the field type is `text`. Each character in the entered string represents a delimiter.
+     * Get Separator of fields. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+`long` and `double` fields need to be null;
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\\) as separators for `text` fields; 
+     * @return Tokenizer Separator of fields. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+`long` and `double` fields need to be null;
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\\) as separators for `text` fields;
      */
     public String getTokenizer() {
         return this.Tokenizer;
     }
 
     /**
-     * Set Field delimiter, which is meaningful only if the field type is `text`. Each character in the entered string represents a delimiter.
-     * @param Tokenizer Field delimiter, which is meaningful only if the field type is `text`. Each character in the entered string represents a delimiter.
+     * Set Separator of fields. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+`long` and `double` fields need to be null;
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\\) as separators for `text` fields;
+     * @param Tokenizer Separator of fields. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+`long` and `double` fields need to be null;
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\\) as separators for `text` fields;
      */
     public void setTokenizer(String Tokenizer) {
         this.Tokenizer = Tokenizer;
