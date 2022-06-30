@@ -51,7 +51,7 @@ public class TimeShiftBillData extends AbstractModel{
     private String Time;
 
     /**
-    * 
+    * The total time-shift duration (minutes).
     */
     @SerializedName("TotalDuration")
     @Expose
@@ -122,16 +122,16 @@ public class TimeShiftBillData extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return TotalDuration 
+     * Get The total time-shift duration (minutes). 
+     * @return TotalDuration The total time-shift duration (minutes).
      */
     public Float getTotalDuration() {
         return this.TotalDuration;
     }
 
     /**
-     * Set 
-     * @param TotalDuration 
+     * Set The total time-shift duration (minutes).
+     * @param TotalDuration The total time-shift duration (minutes).
      */
     public void setTotalDuration(Float TotalDuration) {
         this.TotalDuration = TotalDuration;

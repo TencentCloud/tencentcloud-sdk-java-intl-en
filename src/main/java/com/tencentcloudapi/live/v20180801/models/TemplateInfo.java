@@ -195,6 +195,22 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private Long ShortEdgeAsHeight;
 
     /**
+    * The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DRMType")
+    @Expose
+    private String DRMType;
+
+    /**
+    * The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. Separate multiple tracks with “|”. You can choose only one video track (SD, HD, UHD1, or UHD2).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DRMTracks")
+    @Expose
+    private String DRMTracks;
+
+    /**
      * Get Codec: h264/h265/origin. Default value: h264.
 
 origin: keep the original codec. 
@@ -630,6 +646,46 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.ShortEdgeAsHeight = ShortEdgeAsHeight;
     }
 
+    /**
+     * Get The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DRMType The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDRMType() {
+        return this.DRMType;
+    }
+
+    /**
+     * Set The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DRMType The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDRMType(String DRMType) {
+        this.DRMType = DRMType;
+    }
+
+    /**
+     * Get The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. Separate multiple tracks with “|”. You can choose only one video track (SD, HD, UHD1, or UHD2).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DRMTracks The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. Separate multiple tracks with “|”. You can choose only one video track (SD, HD, UHD1, or UHD2).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDRMTracks() {
+        return this.DRMTracks;
+    }
+
+    /**
+     * Set The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. Separate multiple tracks with “|”. You can choose only one video track (SD, HD, UHD1, or UHD2).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DRMTracks The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. Separate multiple tracks with “|”. You can choose only one video track (SD, HD, UHD1, or UHD2).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDRMTracks(String DRMTracks) {
+        this.DRMTracks = DRMTracks;
+    }
+
     public TemplateInfo() {
     }
 
@@ -701,6 +757,12 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         if (source.ShortEdgeAsHeight != null) {
             this.ShortEdgeAsHeight = new Long(source.ShortEdgeAsHeight);
         }
+        if (source.DRMType != null) {
+            this.DRMType = new String(source.DRMType);
+        }
+        if (source.DRMTracks != null) {
+            this.DRMTracks = new String(source.DRMTracks);
+        }
     }
 
 
@@ -729,6 +791,8 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.setParamSimple(map, prefix + "AiTransCode", this.AiTransCode);
         this.setParamSimple(map, prefix + "AdaptBitratePercent", this.AdaptBitratePercent);
         this.setParamSimple(map, prefix + "ShortEdgeAsHeight", this.ShortEdgeAsHeight);
+        this.setParamSimple(map, prefix + "DRMType", this.DRMType);
+        this.setParamSimple(map, prefix + "DRMTracks", this.DRMTracks);
 
     }
 }

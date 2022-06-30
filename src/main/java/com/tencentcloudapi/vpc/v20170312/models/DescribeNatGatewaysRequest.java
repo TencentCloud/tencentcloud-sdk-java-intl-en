@@ -30,25 +30,25 @@ public class DescribeNatGatewaysRequest extends AbstractModel{
     private String [] NatGatewayIds;
 
     /**
-    * Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
-<li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
-<li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
-<li>nat-gateway-name - String - (Filter condition) The name of the protocol port template instance, such as `test_nat`.</li>
-<li>tag-key - String - (Filter condition) The tag key, such as `test-key`.</li>
+    * Filters. `NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li>nat-gateway-id - String - (Filter) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
+<li>vpc-id - String - (Filter) The unique ID of the VPC, such as `vpc-123xx454`.</li>
+<li>nat-gateway-name - String - (Filter) The ID of the protocol port template instance, such as `test_nat`.</li>
+<li>tag-key - String - (Filter) The tag key, such as `test-key`.</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * Offset. The default value is 0.
+    * Offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of values to be returned. The default value is 20. Maximum is 100.
+    * Number of returned results. Default value: 20. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
@@ -71,64 +71,64 @@ public class DescribeNatGatewaysRequest extends AbstractModel{
     }
 
     /**
-     * Get Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
-<li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
-<li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
-<li>nat-gateway-name - String - (Filter condition) The name of the protocol port template instance, such as `test_nat`.</li>
-<li>tag-key - String - (Filter condition) The tag key, such as `test-key`.</li> 
-     * @return Filters Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
-<li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
-<li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
-<li>nat-gateway-name - String - (Filter condition) The name of the protocol port template instance, such as `test_nat`.</li>
-<li>tag-key - String - (Filter condition) The tag key, such as `test-key`.</li>
+     * Get Filters. `NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li>nat-gateway-id - String - (Filter) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
+<li>vpc-id - String - (Filter) The unique ID of the VPC, such as `vpc-123xx454`.</li>
+<li>nat-gateway-name - String - (Filter) The ID of the protocol port template instance, such as `test_nat`.</li>
+<li>tag-key - String - (Filter) The tag key, such as `test-key`.</li> 
+     * @return Filters Filters. `NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li>nat-gateway-id - String - (Filter) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
+<li>vpc-id - String - (Filter) The unique ID of the VPC, such as `vpc-123xx454`.</li>
+<li>nat-gateway-name - String - (Filter) The ID of the protocol port template instance, such as `test_nat`.</li>
+<li>tag-key - String - (Filter) The tag key, such as `test-key`.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
-<li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
-<li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
-<li>nat-gateway-name - String - (Filter condition) The name of the protocol port template instance, such as `test_nat`.</li>
-<li>tag-key - String - (Filter condition) The tag key, such as `test-key`.</li>
-     * @param Filters Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
-<li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
-<li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
-<li>nat-gateway-name - String - (Filter condition) The name of the protocol port template instance, such as `test_nat`.</li>
-<li>tag-key - String - (Filter condition) The tag key, such as `test-key`.</li>
+     * Set Filters. `NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li>nat-gateway-id - String - (Filter) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
+<li>vpc-id - String - (Filter) The unique ID of the VPC, such as `vpc-123xx454`.</li>
+<li>nat-gateway-name - String - (Filter) The ID of the protocol port template instance, such as `test_nat`.</li>
+<li>tag-key - String - (Filter) The tag key, such as `test-key`.</li>
+     * @param Filters Filters. `NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li>nat-gateway-id - String - (Filter) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
+<li>vpc-id - String - (Filter) The unique ID of the VPC, such as `vpc-123xx454`.</li>
+<li>nat-gateway-name - String - (Filter) The ID of the protocol port template instance, such as `test_nat`.</li>
+<li>tag-key - String - (Filter) The tag key, such as `test-key`.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Offset. The default value is 0. 
-     * @return Offset Offset. The default value is 0.
+     * Get Offset. Default value: 0. 
+     * @return Offset Offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. The default value is 0.
-     * @param Offset Offset. The default value is 0.
+     * Set Offset. Default value: 0.
+     * @param Offset Offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of values to be returned. The default value is 20. Maximum is 100. 
-     * @return Limit Number of values to be returned. The default value is 20. Maximum is 100.
+     * Get Number of returned results. Default value: 20. Maximum value: 100. 
+     * @return Limit Number of returned results. Default value: 20. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of values to be returned. The default value is 20. Maximum is 100.
-     * @param Limit Number of values to be returned. The default value is 20. Maximum is 100.
+     * Set Number of returned results. Default value: 20. Maximum value: 100.
+     * @param Limit Number of returned results. Default value: 20. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

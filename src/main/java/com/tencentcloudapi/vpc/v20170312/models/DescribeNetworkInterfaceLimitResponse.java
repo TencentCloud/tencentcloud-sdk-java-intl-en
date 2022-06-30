@@ -53,6 +53,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long ExtendEniPrivateIpAddressQuantity;
 
     /**
+    * The quota of relayed ENIs
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SubEniQuantity")
+    @Expose
+    private Long SubEniQuantity;
+
+    /**
+    * The quota of IPs that can be assigned to each relayed ENI.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SubEniPrivateIpAddressQuantity")
+    @Expose
+    private Long SubEniPrivateIpAddressQuantity;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -132,6 +148,46 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get The quota of relayed ENIs
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return SubEniQuantity The quota of relayed ENIs
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getSubEniQuantity() {
+        return this.SubEniQuantity;
+    }
+
+    /**
+     * Set The quota of relayed ENIs
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param SubEniQuantity The quota of relayed ENIs
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setSubEniQuantity(Long SubEniQuantity) {
+        this.SubEniQuantity = SubEniQuantity;
+    }
+
+    /**
+     * Get The quota of IPs that can be assigned to each relayed ENI.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return SubEniPrivateIpAddressQuantity The quota of IPs that can be assigned to each relayed ENI.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getSubEniPrivateIpAddressQuantity() {
+        return this.SubEniPrivateIpAddressQuantity;
+    }
+
+    /**
+     * Set The quota of IPs that can be assigned to each relayed ENI.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param SubEniPrivateIpAddressQuantity The quota of IPs that can be assigned to each relayed ENI.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setSubEniPrivateIpAddressQuantity(Long SubEniPrivateIpAddressQuantity) {
+        this.SubEniPrivateIpAddressQuantity = SubEniPrivateIpAddressQuantity;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -167,6 +223,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.ExtendEniPrivateIpAddressQuantity != null) {
             this.ExtendEniPrivateIpAddressQuantity = new Long(source.ExtendEniPrivateIpAddressQuantity);
         }
+        if (source.SubEniQuantity != null) {
+            this.SubEniQuantity = new Long(source.SubEniQuantity);
+        }
+        if (source.SubEniPrivateIpAddressQuantity != null) {
+            this.SubEniPrivateIpAddressQuantity = new Long(source.SubEniPrivateIpAddressQuantity);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -181,6 +243,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "EniPrivateIpAddressQuantity", this.EniPrivateIpAddressQuantity);
         this.setParamSimple(map, prefix + "ExtendEniQuantity", this.ExtendEniQuantity);
         this.setParamSimple(map, prefix + "ExtendEniPrivateIpAddressQuantity", this.ExtendEniPrivateIpAddressQuantity);
+        this.setParamSimple(map, prefix + "SubEniQuantity", this.SubEniQuantity);
+        this.setParamSimple(map, prefix + "SubEniPrivateIpAddressQuantity", this.SubEniPrivateIpAddressQuantity);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

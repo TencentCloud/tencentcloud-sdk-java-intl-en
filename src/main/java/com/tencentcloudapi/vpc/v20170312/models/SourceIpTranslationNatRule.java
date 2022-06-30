@@ -31,7 +31,7 @@ public class SourceIpTranslationNatRule extends AbstractModel{
 
     /**
     * Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ResourceType")
     @Expose
@@ -66,24 +66,24 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String NatGatewaySnatId;
 
     /**
-    * NAT Gateway ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * NAT gateway ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("NatGatewayId")
     @Expose
     private String NatGatewayId;
 
     /**
-    * VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * VPC ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Creation time of a SNAT rule for a NAT Gateway
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * The creation time of a NAT gateway's SNAT rule.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -107,9 +107,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return ResourceType Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getResourceType() {
         return this.ResourceType;
@@ -117,9 +117,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param ResourceType Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
@@ -190,60 +190,60 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get NAT Gateway ID
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return NatGatewayId NAT Gateway ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get NAT gateway ID.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return NatGatewayId NAT gateway ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getNatGatewayId() {
         return this.NatGatewayId;
     }
 
     /**
-     * Set NAT Gateway ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param NatGatewayId NAT Gateway ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set NAT gateway ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param NatGatewayId NAT gateway ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setNatGatewayId(String NatGatewayId) {
         this.NatGatewayId = NatGatewayId;
     }
 
     /**
-     * Get VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return VpcId VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get VPC ID.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return VpcId VPC ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param VpcId VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set VPC ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param VpcId VPC ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Creation time of a SNAT rule for a NAT Gateway
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return CreatedTime Creation time of a SNAT rule for a NAT Gateway
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get The creation time of a NAT gateway's SNAT rule.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return CreatedTime The creation time of a NAT gateway's SNAT rule.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set Creation time of a SNAT rule for a NAT Gateway
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param CreatedTime Creation time of a SNAT rule for a NAT Gateway
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set The creation time of a NAT gateway's SNAT rule.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param CreatedTime The creation time of a NAT gateway's SNAT rule.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

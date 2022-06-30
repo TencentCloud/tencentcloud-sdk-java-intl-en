@@ -176,6 +176,22 @@ Value range: 0.0-0.5.
     private Long ShortEdgeAsHeight;
 
     /**
+    * The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
+    */
+    @SerializedName("DRMType")
+    @Expose
+    private String DRMType;
+
+    /**
+    * The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. You can choose only one video track (SD, HD, UHD1, or UHD2).
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
+    */
+    @SerializedName("DRMTracks")
+    @Expose
+    private String DRMTracks;
+
+    /**
      * Get Template ID. 
      * @return TemplateId Template ID.
      */
@@ -559,6 +575,46 @@ Value range: 0.0-0.5.
         this.ShortEdgeAsHeight = ShortEdgeAsHeight;
     }
 
+    /**
+     * Get The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset. 
+     * @return DRMType The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
+     */
+    public String getDRMType() {
+        return this.DRMType;
+    }
+
+    /**
+     * Set The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
+     * @param DRMType The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
+     */
+    public void setDRMType(String DRMType) {
+        this.DRMType = DRMType;
+    }
+
+    /**
+     * Get The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. You can choose only one video track (SD, HD, UHD1, or UHD2).
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset. 
+     * @return DRMTracks The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. You can choose only one video track (SD, HD, UHD1, or UHD2).
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
+     */
+    public String getDRMTracks() {
+        return this.DRMTracks;
+    }
+
+    /**
+     * Set The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. You can choose only one video track (SD, HD, UHD1, or UHD2).
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
+     * @param DRMTracks The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. You can choose only one video track (SD, HD, UHD1, or UHD2).
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
+     */
+    public void setDRMTracks(String DRMTracks) {
+        this.DRMTracks = DRMTracks;
+    }
+
     public ModifyLiveTranscodeTemplateRequest() {
     }
 
@@ -624,6 +680,12 @@ Value range: 0.0-0.5.
         if (source.ShortEdgeAsHeight != null) {
             this.ShortEdgeAsHeight = new Long(source.ShortEdgeAsHeight);
         }
+        if (source.DRMType != null) {
+            this.DRMType = new String(source.DRMType);
+        }
+        if (source.DRMTracks != null) {
+            this.DRMTracks = new String(source.DRMTracks);
+        }
     }
 
 
@@ -650,6 +712,8 @@ Value range: 0.0-0.5.
         this.setParamSimple(map, prefix + "FpsToOrig", this.FpsToOrig);
         this.setParamSimple(map, prefix + "AdaptBitratePercent", this.AdaptBitratePercent);
         this.setParamSimple(map, prefix + "ShortEdgeAsHeight", this.ShortEdgeAsHeight);
+        this.setParamSimple(map, prefix + "DRMType", this.DRMType);
+        this.setParamSimple(map, prefix + "DRMTracks", this.DRMTracks);
 
     }
 }

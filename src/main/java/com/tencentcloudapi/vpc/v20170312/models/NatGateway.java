@@ -45,8 +45,8 @@ public class NatGateway extends AbstractModel{
 
     /**
     * The status of the NAT gateway.
- 'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
-‘FAILED’: Failed.
+ `PENDING`: Being created, `DELETING`: Being deleted, `AVAILABLE`: Running, `UPDATING`: Being upgraded,
+`FAILED`: Failed.
     */
     @SerializedName("State")
     @Expose
@@ -74,7 +74,7 @@ public class NatGateway extends AbstractModel{
     private NatGatewayAddress [] PublicIpAddressSet;
 
     /**
-    * The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Account is in arrears and the service is suspended.
+    * The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Service suspended due to account overdue.
     */
     @SerializedName("NetworkState")
     @Expose
@@ -102,7 +102,8 @@ public class NatGateway extends AbstractModel{
     private String Zone;
 
     /**
-    * IDs of direct connect gateway associated.
+    * ID of the direct connect gateway bound.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("DirectConnectGatewayIds")
     @Expose
@@ -110,13 +111,14 @@ public class NatGateway extends AbstractModel{
 
     /**
     * Subnet ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Tag key-value pair.
+    * Tag key-value pairs.
     */
     @SerializedName("TagSet")
     @Expose
@@ -124,23 +126,23 @@ public class NatGateway extends AbstractModel{
 
     /**
     * The list of the security groups bound to the NAT Gateway
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("SecurityGroupSet")
     @Expose
     private String [] SecurityGroupSet;
 
     /**
-    * SNAT forwarding rule of the NAT Gateway.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+    * SNAT forwarding rule of the NAT gateway.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("SourceIpTranslationNatRuleSet")
     @Expose
     private SourceIpTranslationNatRule [] SourceIpTranslationNatRuleSet;
 
     /**
-    * Whether the NAT Gateway is dedicated.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+    * Whether the NAT gateway is dedicated.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("IsExclusive")
     @Expose
@@ -148,7 +150,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 
     /**
     * Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ExclusiveGatewayBandwidth")
     @Expose
@@ -204,11 +206,11 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Get The status of the NAT gateway.
- 'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
-‘FAILED’: Failed. 
+ `PENDING`: Being created, `DELETING`: Being deleted, `AVAILABLE`: Running, `UPDATING`: Being upgraded,
+`FAILED`: Failed. 
      * @return State The status of the NAT gateway.
- 'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
-‘FAILED’: Failed.
+ `PENDING`: Being created, `DELETING`: Being deleted, `AVAILABLE`: Running, `UPDATING`: Being upgraded,
+`FAILED`: Failed.
      */
     public String getState() {
         return this.State;
@@ -216,11 +218,11 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Set The status of the NAT gateway.
- 'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
-‘FAILED’: Failed.
+ `PENDING`: Being created, `DELETING`: Being deleted, `AVAILABLE`: Running, `UPDATING`: Being upgraded,
+`FAILED`: Failed.
      * @param State The status of the NAT gateway.
- 'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
-‘FAILED’: Failed.
+ `PENDING`: Being created, `DELETING`: Being deleted, `AVAILABLE`: Running, `UPDATING`: Being upgraded,
+`FAILED`: Failed.
      */
     public void setState(String State) {
         this.State = State;
@@ -275,16 +277,16 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Account is in arrears and the service is suspended. 
-     * @return NetworkState The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Account is in arrears and the service is suspended.
+     * Get The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Service suspended due to account overdue. 
+     * @return NetworkState The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Service suspended due to account overdue.
      */
     public String getNetworkState() {
         return this.NetworkState;
     }
 
     /**
-     * Set The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Account is in arrears and the service is suspended.
-     * @param NetworkState The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Account is in arrears and the service is suspended.
+     * Set The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Service suspended due to account overdue.
+     * @param NetworkState The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Service suspended due to account overdue.
      */
     public void setNetworkState(String NetworkState) {
         this.NetworkState = NetworkState;
@@ -339,24 +341,30 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get IDs of direct connect gateway associated. 
-     * @return DirectConnectGatewayIds IDs of direct connect gateway associated.
+     * Get ID of the direct connect gateway bound.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return DirectConnectGatewayIds ID of the direct connect gateway bound.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String [] getDirectConnectGatewayIds() {
         return this.DirectConnectGatewayIds;
     }
 
     /**
-     * Set IDs of direct connect gateway associated.
-     * @param DirectConnectGatewayIds IDs of direct connect gateway associated.
+     * Set ID of the direct connect gateway bound.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param DirectConnectGatewayIds ID of the direct connect gateway bound.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setDirectConnectGatewayIds(String [] DirectConnectGatewayIds) {
         this.DirectConnectGatewayIds = DirectConnectGatewayIds;
     }
 
     /**
-     * Get Subnet ID. 
+     * Get Subnet ID.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return SubnetId Subnet ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -364,23 +372,25 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Set Subnet ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param SubnetId Subnet ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Tag key-value pair. 
-     * @return TagSet Tag key-value pair.
+     * Get Tag key-value pairs. 
+     * @return TagSet Tag key-value pairs.
      */
     public Tag [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set Tag key-value pair.
-     * @param TagSet Tag key-value pair.
+     * Set Tag key-value pairs.
+     * @param TagSet Tag key-value pairs.
      */
     public void setTagSet(Tag [] TagSet) {
         this.TagSet = TagSet;
@@ -388,9 +398,9 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Get The list of the security groups bound to the NAT Gateway
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return SecurityGroupSet The list of the security groups bound to the NAT Gateway
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String [] getSecurityGroupSet() {
         return this.SecurityGroupSet;
@@ -398,49 +408,49 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set The list of the security groups bound to the NAT Gateway
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param SecurityGroupSet The list of the security groups bound to the NAT Gateway
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSecurityGroupSet(String [] SecurityGroupSet) {
         this.SecurityGroupSet = SecurityGroupSet;
     }
 
     /**
-     * Get SNAT forwarding rule of the NAT Gateway.
-Note: this field may return `null`, indicating that no valid value can be obtained. 
-     * @return SourceIpTranslationNatRuleSet SNAT forwarding rule of the NAT Gateway.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * Get SNAT forwarding rule of the NAT gateway.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return SourceIpTranslationNatRuleSet SNAT forwarding rule of the NAT gateway.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public SourceIpTranslationNatRule [] getSourceIpTranslationNatRuleSet() {
         return this.SourceIpTranslationNatRuleSet;
     }
 
     /**
-     * Set SNAT forwarding rule of the NAT Gateway.
-Note: this field may return `null`, indicating that no valid value can be obtained.
-     * @param SourceIpTranslationNatRuleSet SNAT forwarding rule of the NAT Gateway.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * Set SNAT forwarding rule of the NAT gateway.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param SourceIpTranslationNatRuleSet SNAT forwarding rule of the NAT gateway.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSourceIpTranslationNatRuleSet(SourceIpTranslationNatRule [] SourceIpTranslationNatRuleSet) {
         this.SourceIpTranslationNatRuleSet = SourceIpTranslationNatRuleSet;
     }
 
     /**
-     * Get Whether the NAT Gateway is dedicated.
-Note: this field may return `null`, indicating that no valid value can be obtained. 
-     * @return IsExclusive Whether the NAT Gateway is dedicated.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * Get Whether the NAT gateway is dedicated.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return IsExclusive Whether the NAT gateway is dedicated.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public Boolean getIsExclusive() {
         return this.IsExclusive;
     }
 
     /**
-     * Set Whether the NAT Gateway is dedicated.
-Note: this field may return `null`, indicating that no valid value can be obtained.
-     * @param IsExclusive Whether the NAT Gateway is dedicated.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * Set Whether the NAT gateway is dedicated.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param IsExclusive Whether the NAT gateway is dedicated.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setIsExclusive(Boolean IsExclusive) {
         this.IsExclusive = IsExclusive;
@@ -448,9 +458,9 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Get Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
-Note: this field may return `null`, indicating that no valid value can be obtained. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return ExclusiveGatewayBandwidth Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getExclusiveGatewayBandwidth() {
         return this.ExclusiveGatewayBandwidth;
@@ -458,9 +468,9 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Set Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param ExclusiveGatewayBandwidth Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setExclusiveGatewayBandwidth(Long ExclusiveGatewayBandwidth) {
         this.ExclusiveGatewayBandwidth = ExclusiveGatewayBandwidth;

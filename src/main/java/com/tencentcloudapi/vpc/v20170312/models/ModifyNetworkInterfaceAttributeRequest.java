@@ -51,6 +51,13 @@ public class ModifyNetworkInterfaceAttributeRequest extends AbstractModel{
     private String [] SecurityGroupIds;
 
     /**
+    * Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
+    */
+    @SerializedName("TrunkingFlag")
+    @Expose
+    private String TrunkingFlag;
+
+    /**
      * Get The ID of the ENI instance, such as `eni-pxir56ns`. 
      * @return NetworkInterfaceId The ID of the ENI instance, such as `eni-pxir56ns`.
      */
@@ -114,6 +121,22 @@ public class ModifyNetworkInterfaceAttributeRequest extends AbstractModel{
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
+    /**
+     * Get Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`. 
+     * @return TrunkingFlag Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
+     */
+    public String getTrunkingFlag() {
+        return this.TrunkingFlag;
+    }
+
+    /**
+     * Set Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
+     * @param TrunkingFlag Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
+     */
+    public void setTrunkingFlag(String TrunkingFlag) {
+        this.TrunkingFlag = TrunkingFlag;
+    }
+
     public ModifyNetworkInterfaceAttributeRequest() {
     }
 
@@ -137,6 +160,9 @@ public class ModifyNetworkInterfaceAttributeRequest extends AbstractModel{
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
             }
         }
+        if (source.TrunkingFlag != null) {
+            this.TrunkingFlag = new String(source.TrunkingFlag);
+        }
     }
 
 
@@ -148,6 +174,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NetworkInterfaceName", this.NetworkInterfaceName);
         this.setParamSimple(map, prefix + "NetworkInterfaceDescription", this.NetworkInterfaceDescription);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamSimple(map, prefix + "TrunkingFlag", this.TrunkingFlag);
 
     }
 }

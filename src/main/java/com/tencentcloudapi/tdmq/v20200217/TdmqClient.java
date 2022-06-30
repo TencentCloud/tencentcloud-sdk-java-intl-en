@@ -579,6 +579,66 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete a subscription.
+     * @param req DeleteSubscriptionsRequest
+     * @return DeleteSubscriptionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSubscriptionsResponse DeleteSubscriptions(DeleteSubscriptionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteSubscriptionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteSubscriptionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteSubscriptions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to batch delete topics.
+     * @param req DeleteTopicsRequest
+     * @return DeleteTopicsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTopicsResponse DeleteTopics(DeleteTopicsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteTopicsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteTopicsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteTopics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the list of dedicated clusters bound to a user.
+     * @param req DescribeBindClustersRequest
+     * @return DescribeBindClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBindClustersResponse DescribeBindClusters(DescribeBindClustersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBindClustersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBindClustersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBindClusters");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the tenant-VPC binding relationship.
      * @param req DescribeBindVpcsRequest
      * @return DescribeBindVpcsResponse
@@ -611,6 +671,26 @@ public class TdmqClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeClusterDetailResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeClusterDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the list of clusters.
+     * @param req DescribeClustersRequest
+     * @return DescribeClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClustersResponse DescribeClusters(DescribeClustersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClustersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClustersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusters");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -659,6 +739,26 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query all CMQ queues.
+     * @param req DescribeCmqQueuesRequest
+     * @return DescribeCmqQueuesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCmqQueuesResponse DescribeCmqQueues(DescribeCmqQueuesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCmqQueuesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCmqQueuesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCmqQueues");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the CMQ subscription details.
      * @param req DescribeCmqSubscriptionDetailRequest
      * @return DescribeCmqSubscriptionDetailResponse
@@ -699,6 +799,26 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *This API is used to enumerate all CMQ topics.
+     * @param req DescribeCmqTopicsRequest
+     * @return DescribeCmqTopicsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCmqTopicsResponse DescribeCmqTopics(DescribeCmqTopicsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCmqTopicsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCmqTopicsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCmqTopics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the attributes of the specified namespace.
      * @param req DescribeEnvironmentAttributesRequest
      * @return DescribeEnvironmentAttributesResponse
@@ -711,6 +831,46 @@ public class TdmqClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeEnvironmentAttributesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeEnvironmentAttributes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the list of namespace roles.
+     * @param req DescribeEnvironmentRolesRequest
+     * @return DescribeEnvironmentRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEnvironmentRolesResponse DescribeEnvironmentRoles(DescribeEnvironmentRolesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEnvironmentRolesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEnvironmentRolesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEnvironmentRoles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the list of namespaces under a tenant.
+     * @param req DescribeEnvironmentsRequest
+     * @return DescribeEnvironmentsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEnvironmentsResponse DescribeEnvironments(DescribeEnvironmentsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEnvironmentsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEnvironmentsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEnvironments");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -779,6 +939,86 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get the list of RocketMQ clusters.
+     * @param req DescribeRocketMQClustersRequest
+     * @return DescribeRocketMQClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQClustersResponse DescribeRocketMQClusters(DescribeRocketMQClustersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRocketMQClustersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRocketMQClustersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRocketMQClusters");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the list of RocketMQ consumer groups.
+     * @param req DescribeRocketMQGroupsRequest
+     * @return DescribeRocketMQGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQGroupsResponse DescribeRocketMQGroups(DescribeRocketMQGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRocketMQGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRocketMQGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRocketMQGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the list of RocketMQ namespaces.
+     * @param req DescribeRocketMQNamespacesRequest
+     * @return DescribeRocketMQNamespacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQNamespacesResponse DescribeRocketMQNamespaces(DescribeRocketMQNamespacesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRocketMQNamespacesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRocketMQNamespacesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRocketMQNamespaces");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the list of RocketMQ topics.
+     * @param req DescribeRocketMQTopicsRequest
+     * @return DescribeRocketMQTopicsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQTopicsResponse DescribeRocketMQTopics(DescribeRocketMQTopicsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRocketMQTopicsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRocketMQTopicsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRocketMQTopics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the list of roles.
      * @param req DescribeRolesRequest
      * @return DescribeRolesResponse
@@ -791,6 +1031,46 @@ public class TdmqClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeRolesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRoles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of subscribers under the specified environment and topic.
+     * @param req DescribeSubscriptionsRequest
+     * @return DescribeSubscriptionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSubscriptionsResponse DescribeSubscriptions(DescribeSubscriptionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSubscriptionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSubscriptionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSubscriptions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the list of topics under an environment.
+     * @param req DescribeTopicsRequest
+     * @return DescribeTopicsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopicsResponse DescribeTopics(DescribeTopicsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTopicsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTopicsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTopics");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

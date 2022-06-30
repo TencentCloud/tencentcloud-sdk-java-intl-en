@@ -30,35 +30,35 @@ public class CreateNatGatewayRequest extends AbstractModel{
     private String NatGatewayName;
 
     /**
-    * The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+    * The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100Mbps`.
+    * The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100`.
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
     private Long InternetMaxBandwidthOut;
 
     /**
-    * The concurrent connection cap of the NAT gateway. Supported parameter values: `1000000, 3000000, 10000000`. The default value is `100000`.
+    * The concurrent connection cap of the NAT gateway. Values: `1000000, 3000000, 10000000`. The default value is `1000000`.
     */
     @SerializedName("MaxConcurrentConnection")
     @Expose
     private Long MaxConcurrentConnection;
 
     /**
-    * The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
+    * The number of EIPs that you want to apply for. Either `AddressCount` or `PublicIpAddresses` must be passed in.
     */
     @SerializedName("AddressCount")
     @Expose
     private Long AddressCount;
 
     /**
-    * The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
+    * The EIP array bound to the NAT gateway. Either AddressCount or PublicIpAddresses must be passed in.
     */
     @SerializedName("PublicIpAddresses")
     @Expose
@@ -72,7 +72,7 @@ public class CreateNatGatewayRequest extends AbstractModel{
     private String Zone;
 
     /**
-    * Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+    * Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
     */
     @SerializedName("Tags")
     @Expose
@@ -93,14 +93,14 @@ public class CreateNatGatewayRequest extends AbstractModel{
     private Long StockPublicIpAddressesBandwidthOut;
 
     /**
-    * The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
+    * The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
     */
     @SerializedName("PublicIpAddressesBandwidthOut")
     @Expose
     private Long PublicIpAddressesBandwidthOut;
 
     /**
-    * 
+    * Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
     */
     @SerializedName("PublicIpFromSameZone")
     @Expose
@@ -123,80 +123,80 @@ public class CreateNatGatewayRequest extends AbstractModel{
     }
 
     /**
-     * Get The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API. 
-     * @return VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+     * Get The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API. 
+     * @return VpcId The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
-     * @param VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+     * Set The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
+     * @param VpcId The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100Mbps`. 
-     * @return InternetMaxBandwidthOut The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100Mbps`.
+     * Get The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100`. 
+     * @return InternetMaxBandwidthOut The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100`.
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100Mbps`.
-     * @param InternetMaxBandwidthOut The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100Mbps`.
+     * Set The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100`.
+     * @param InternetMaxBandwidthOut The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100`.
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 
     /**
-     * Get The concurrent connection cap of the NAT gateway. Supported parameter values: `1000000, 3000000, 10000000`. The default value is `100000`. 
-     * @return MaxConcurrentConnection The concurrent connection cap of the NAT gateway. Supported parameter values: `1000000, 3000000, 10000000`. The default value is `100000`.
+     * Get The concurrent connection cap of the NAT gateway. Values: `1000000, 3000000, 10000000`. The default value is `1000000`. 
+     * @return MaxConcurrentConnection The concurrent connection cap of the NAT gateway. Values: `1000000, 3000000, 10000000`. The default value is `1000000`.
      */
     public Long getMaxConcurrentConnection() {
         return this.MaxConcurrentConnection;
     }
 
     /**
-     * Set The concurrent connection cap of the NAT gateway. Supported parameter values: `1000000, 3000000, 10000000`. The default value is `100000`.
-     * @param MaxConcurrentConnection The concurrent connection cap of the NAT gateway. Supported parameter values: `1000000, 3000000, 10000000`. The default value is `100000`.
+     * Set The concurrent connection cap of the NAT gateway. Values: `1000000, 3000000, 10000000`. The default value is `1000000`.
+     * @param MaxConcurrentConnection The concurrent connection cap of the NAT gateway. Values: `1000000, 3000000, 10000000`. The default value is `1000000`.
      */
     public void setMaxConcurrentConnection(Long MaxConcurrentConnection) {
         this.MaxConcurrentConnection = MaxConcurrentConnection;
     }
 
     /**
-     * Get The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in. 
-     * @return AddressCount The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
+     * Get The number of EIPs that you want to apply for. Either `AddressCount` or `PublicIpAddresses` must be passed in. 
+     * @return AddressCount The number of EIPs that you want to apply for. Either `AddressCount` or `PublicIpAddresses` must be passed in.
      */
     public Long getAddressCount() {
         return this.AddressCount;
     }
 
     /**
-     * Set The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
-     * @param AddressCount The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
+     * Set The number of EIPs that you want to apply for. Either `AddressCount` or `PublicIpAddresses` must be passed in.
+     * @param AddressCount The number of EIPs that you want to apply for. Either `AddressCount` or `PublicIpAddresses` must be passed in.
      */
     public void setAddressCount(Long AddressCount) {
         this.AddressCount = AddressCount;
     }
 
     /**
-     * Get The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in. 
-     * @return PublicIpAddresses The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
+     * Get The EIP array bound to the NAT gateway. Either AddressCount or PublicIpAddresses must be passed in. 
+     * @return PublicIpAddresses The EIP array bound to the NAT gateway. Either AddressCount or PublicIpAddresses must be passed in.
      */
     public String [] getPublicIpAddresses() {
         return this.PublicIpAddresses;
     }
 
     /**
-     * Set The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
-     * @param PublicIpAddresses The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
+     * Set The EIP array bound to the NAT gateway. Either AddressCount or PublicIpAddresses must be passed in.
+     * @param PublicIpAddresses The EIP array bound to the NAT gateway. Either AddressCount or PublicIpAddresses must be passed in.
      */
     public void setPublicIpAddresses(String [] PublicIpAddresses) {
         this.PublicIpAddresses = PublicIpAddresses;
@@ -219,16 +219,16 @@ public class CreateNatGatewayRequest extends AbstractModel{
     }
 
     /**
-     * Get Bound tags, such as [{"Key": "city", "Value": "shanghai"}]. 
-     * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     * Get Bound tags, such as [{"Key": "city", "Value": "shanghai"}] 
+     * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
-     * @param Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     * Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+     * @param Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
@@ -267,32 +267,32 @@ public class CreateNatGatewayRequest extends AbstractModel{
     }
 
     /**
-     * Get The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type. 
-     * @return PublicIpAddressesBandwidthOut The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
+     * Get The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type. 
+     * @return PublicIpAddressesBandwidthOut The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
      */
     public Long getPublicIpAddressesBandwidthOut() {
         return this.PublicIpAddressesBandwidthOut;
     }
 
     /**
-     * Set The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
-     * @param PublicIpAddressesBandwidthOut The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
+     * Set The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
+     * @param PublicIpAddressesBandwidthOut The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
      */
     public void setPublicIpAddressesBandwidthOut(Long PublicIpAddressesBandwidthOut) {
         this.PublicIpAddressesBandwidthOut = PublicIpAddressesBandwidthOut;
     }
 
     /**
-     * Get  
-     * @return PublicIpFromSameZone 
+     * Get Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified. 
+     * @return PublicIpFromSameZone Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
      */
     public Boolean getPublicIpFromSameZone() {
         return this.PublicIpFromSameZone;
     }
 
     /**
-     * Set 
-     * @param PublicIpFromSameZone 
+     * Set Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
+     * @param PublicIpFromSameZone Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
      */
     public void setPublicIpFromSameZone(Boolean PublicIpFromSameZone) {
         this.PublicIpFromSameZone = PublicIpFromSameZone;

@@ -30,7 +30,7 @@ public class CreateNatGatewayResponse extends AbstractModel{
     private NatGateway [] NatGatewaySet;
 
     /**
-    * The number of NAT gateway objects meeting the conditions.
+    * The number of eligible NAT gateway objects.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -60,16 +60,16 @@ public class CreateNatGatewayResponse extends AbstractModel{
     }
 
     /**
-     * Get The number of NAT gateway objects meeting the conditions. 
-     * @return TotalCount The number of NAT gateway objects meeting the conditions.
+     * Get The number of eligible NAT gateway objects. 
+     * @return TotalCount The number of eligible NAT gateway objects.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set The number of NAT gateway objects meeting the conditions.
-     * @param TotalCount The number of NAT gateway objects meeting the conditions.
+     * Set The number of eligible NAT gateway objects.
+     * @param TotalCount The number of eligible NAT gateway objects.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

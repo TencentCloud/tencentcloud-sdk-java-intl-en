@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ResetNatGatewayConnectionRequest extends AbstractModel{
 
     /**
-    * NAT gateway ID.
+    * The NAT gateway ID.
     */
     @SerializedName("NatGatewayId")
     @Expose
@@ -37,16 +37,16 @@ public class ResetNatGatewayConnectionRequest extends AbstractModel{
     private Long MaxConcurrentConnection;
 
     /**
-     * Get NAT gateway ID. 
-     * @return NatGatewayId NAT gateway ID.
+     * Get The NAT gateway ID. 
+     * @return NatGatewayId The NAT gateway ID.
      */
     public String getNatGatewayId() {
         return this.NatGatewayId;
     }
 
     /**
-     * Set NAT gateway ID.
-     * @param NatGatewayId NAT gateway ID.
+     * Set The NAT gateway ID.
+     * @param NatGatewayId The NAT gateway ID.
      */
     public void setNatGatewayId(String NatGatewayId) {
         this.NatGatewayId = NatGatewayId;

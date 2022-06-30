@@ -44,14 +44,14 @@ public class NatGatewayDestinationIpPortTranslationNatRule extends AbstractModel
     private Long PublicPort;
 
     /**
-    * Private network address.
+    * Private IP.
     */
     @SerializedName("PrivateIpAddress")
     @Expose
     private String PrivateIpAddress;
 
     /**
-    * Private network port.
+    * Private port.
     */
     @SerializedName("PrivatePort")
     @Expose
@@ -66,7 +66,7 @@ public class NatGatewayDestinationIpPortTranslationNatRule extends AbstractModel
 
     /**
     * NAT gateway ID.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("NatGatewayId")
     @Expose
@@ -74,7 +74,7 @@ Note: This field may return null, indicating no valid value.
 
     /**
     * VPC ID.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("VpcId")
     @Expose
@@ -82,7 +82,7 @@ Note: This field may return null, indicating no valid value.
 
     /**
     * The creation time of the NAT gateway forwarding rule.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -137,32 +137,32 @@ Note: This field may return null, indicating no valid value.
     }
 
     /**
-     * Get Private network address. 
-     * @return PrivateIpAddress Private network address.
+     * Get Private IP. 
+     * @return PrivateIpAddress Private IP.
      */
     public String getPrivateIpAddress() {
         return this.PrivateIpAddress;
     }
 
     /**
-     * Set Private network address.
-     * @param PrivateIpAddress Private network address.
+     * Set Private IP.
+     * @param PrivateIpAddress Private IP.
      */
     public void setPrivateIpAddress(String PrivateIpAddress) {
         this.PrivateIpAddress = PrivateIpAddress;
     }
 
     /**
-     * Get Private network port. 
-     * @return PrivatePort Private network port.
+     * Get Private port. 
+     * @return PrivatePort Private port.
      */
     public Long getPrivatePort() {
         return this.PrivatePort;
     }
 
     /**
-     * Set Private network port.
-     * @param PrivatePort Private network port.
+     * Set Private port.
+     * @param PrivatePort Private port.
      */
     public void setPrivatePort(Long PrivatePort) {
         this.PrivatePort = PrivatePort;
@@ -186,9 +186,9 @@ Note: This field may return null, indicating no valid value.
 
     /**
      * Get NAT gateway ID.
-Note: This field may return null, indicating no valid value. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return NatGatewayId NAT gateway ID.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getNatGatewayId() {
         return this.NatGatewayId;
@@ -196,9 +196,9 @@ Note: This field may return null, indicating no valid value.
 
     /**
      * Set NAT gateway ID.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param NatGatewayId NAT gateway ID.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setNatGatewayId(String NatGatewayId) {
         this.NatGatewayId = NatGatewayId;
@@ -206,9 +206,9 @@ Note: This field may return null, indicating no valid value.
 
     /**
      * Get VPC ID.
-Note: This field may return null, indicating no valid value. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return VpcId VPC ID.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getVpcId() {
         return this.VpcId;
@@ -216,9 +216,9 @@ Note: This field may return null, indicating no valid value.
 
     /**
      * Set VPC ID.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param VpcId VPC ID.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -226,9 +226,9 @@ Note: This field may return null, indicating no valid value.
 
     /**
      * Get The creation time of the NAT gateway forwarding rule.
-Note: This field may return null, indicating no valid value. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return CreatedTime The creation time of the NAT gateway forwarding rule.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
@@ -236,9 +236,9 @@ Note: This field may return null, indicating no valid value.
 
     /**
      * Set The creation time of the NAT gateway forwarding rule.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param CreatedTime The creation time of the NAT gateway forwarding rule.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

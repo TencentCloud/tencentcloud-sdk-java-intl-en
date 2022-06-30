@@ -79,6 +79,13 @@ public class CreateNetworkInterfaceRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
+    */
+    @SerializedName("TrunkingFlag")
+    @Expose
+    private String TrunkingFlag;
+
+    /**
      * Get The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API. 
      * @return VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      */
@@ -206,6 +213,22 @@ public class CreateNetworkInterfaceRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`. 
+     * @return TrunkingFlag Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
+     */
+    public String getTrunkingFlag() {
+        return this.TrunkingFlag;
+    }
+
+    /**
+     * Set Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
+     * @param TrunkingFlag Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
+     */
+    public void setTrunkingFlag(String TrunkingFlag) {
+        this.TrunkingFlag = TrunkingFlag;
+    }
+
     public CreateNetworkInterfaceRequest() {
     }
 
@@ -247,6 +270,9 @@ public class CreateNetworkInterfaceRequest extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.TrunkingFlag != null) {
+            this.TrunkingFlag = new String(source.TrunkingFlag);
+        }
     }
 
 
@@ -262,6 +288,7 @@ public class CreateNetworkInterfaceRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamArrayObj(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "TrunkingFlag", this.TrunkingFlag);
 
     }
 }

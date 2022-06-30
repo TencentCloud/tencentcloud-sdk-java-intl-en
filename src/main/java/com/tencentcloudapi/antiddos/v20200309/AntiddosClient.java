@@ -1161,6 +1161,26 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain the list of DDoS attacks.
+     * @param req DescribeOverviewDDoSEventListRequest
+     * @return DescribeOverviewDDoSEventListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOverviewDDoSEventListResponse DescribeOverviewDDoSEventList(DescribeOverviewDDoSEventListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOverviewDDoSEventListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOverviewDDoSEventListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOverviewDDoSEventList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to unbind an Anti-DDoS EIP.
      * @param req DisassociateDDoSEipAddressRequest
      * @return DisassociateDDoSEipAddressResponse

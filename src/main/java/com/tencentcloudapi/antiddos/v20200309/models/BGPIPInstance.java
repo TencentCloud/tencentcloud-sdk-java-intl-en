@@ -176,6 +176,21 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long V6Flag;
 
     /**
+    * Whether it’s an Anti-DDoS Advanced instance from Tencent Cloud channels. `1`: Yes; `0`: No.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("BGPIPChannelFlag")
+    @Expose
+    private Long BGPIPChannelFlag;
+
+    /**
+    * 
+    */
+    @SerializedName("TagInfoList")
+    @Expose
+    private TagInfo [] TagInfoList;
+
+    /**
      * Get Anti-DDoS instance details 
      * @return InstanceDetail Anti-DDoS instance details
      */
@@ -559,6 +574,42 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.V6Flag = V6Flag;
     }
 
+    /**
+     * Get Whether it’s an Anti-DDoS Advanced instance from Tencent Cloud channels. `1`: Yes; `0`: No.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return BGPIPChannelFlag Whether it’s an Anti-DDoS Advanced instance from Tencent Cloud channels. `1`: Yes; `0`: No.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Long getBGPIPChannelFlag() {
+        return this.BGPIPChannelFlag;
+    }
+
+    /**
+     * Set Whether it’s an Anti-DDoS Advanced instance from Tencent Cloud channels. `1`: Yes; `0`: No.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param BGPIPChannelFlag Whether it’s an Anti-DDoS Advanced instance from Tencent Cloud channels. `1`: Yes; `0`: No.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setBGPIPChannelFlag(Long BGPIPChannelFlag) {
+        this.BGPIPChannelFlag = BGPIPChannelFlag;
+    }
+
+    /**
+     * Get  
+     * @return TagInfoList 
+     */
+    public TagInfo [] getTagInfoList() {
+        return this.TagInfoList;
+    }
+
+    /**
+     * Set 
+     * @param TagInfoList 
+     */
+    public void setTagInfoList(TagInfo [] TagInfoList) {
+        this.TagInfoList = TagInfoList;
+    }
+
     public BGPIPInstance() {
     }
 
@@ -624,6 +675,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.V6Flag != null) {
             this.V6Flag = new Long(source.V6Flag);
         }
+        if (source.BGPIPChannelFlag != null) {
+            this.BGPIPChannelFlag = new Long(source.BGPIPChannelFlag);
+        }
+        if (source.TagInfoList != null) {
+            this.TagInfoList = new TagInfo[source.TagInfoList.length];
+            for (int i = 0; i < source.TagInfoList.length; i++) {
+                this.TagInfoList[i] = new TagInfo(source.TagInfoList[i]);
+            }
+        }
     }
 
 
@@ -650,6 +710,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "DamDDoSStatus", this.DamDDoSStatus);
         this.setParamSimple(map, prefix + "V6Flag", this.V6Flag);
+        this.setParamSimple(map, prefix + "BGPIPChannelFlag", this.BGPIPChannelFlag);
+        this.setParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
 
     }
 }

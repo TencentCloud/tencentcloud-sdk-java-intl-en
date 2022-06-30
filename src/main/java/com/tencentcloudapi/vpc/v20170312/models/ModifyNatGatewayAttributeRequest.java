@@ -44,7 +44,7 @@ public class ModifyNatGatewayAttributeRequest extends AbstractModel{
     private Long InternetMaxBandwidthOut;
 
     /**
-    * Whether to modify the security group bound to the NAT Gateway
+    * Whether to modify the security group bound to the NAT gateway
     */
     @SerializedName("ModifySecurityGroup")
     @Expose
@@ -106,16 +106,16 @@ public class ModifyNatGatewayAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to modify the security group bound to the NAT Gateway 
-     * @return ModifySecurityGroup Whether to modify the security group bound to the NAT Gateway
+     * Get Whether to modify the security group bound to the NAT gateway 
+     * @return ModifySecurityGroup Whether to modify the security group bound to the NAT gateway
      */
     public Boolean getModifySecurityGroup() {
         return this.ModifySecurityGroup;
     }
 
     /**
-     * Set Whether to modify the security group bound to the NAT Gateway
-     * @param ModifySecurityGroup Whether to modify the security group bound to the NAT Gateway
+     * Set Whether to modify the security group bound to the NAT gateway
+     * @param ModifySecurityGroup Whether to modify the security group bound to the NAT gateway
      */
     public void setModifySecurityGroup(Boolean ModifySecurityGroup) {
         this.ModifySecurityGroup = ModifySecurityGroup;

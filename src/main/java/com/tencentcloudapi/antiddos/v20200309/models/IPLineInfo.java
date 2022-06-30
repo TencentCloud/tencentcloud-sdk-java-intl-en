@@ -43,6 +43,20 @@ public class IPLineInfo extends AbstractModel{
     private String Eip;
 
     /**
+    * CNAME of the instance
+    */
+    @SerializedName("Cname")
+    @Expose
+    private String Cname;
+
+    /**
+    * Flag of the instance. `0`: Anti-DDoS Pro instance; `1`: Anti-DDoS Advanced instance; `2`: Non-Anti-DDoS Advanced instance.
+    */
+    @SerializedName("ResourceFlag")
+    @Expose
+    private Long ResourceFlag;
+
+    /**
      * Get IP line type. Valid values:
 `bgp`: BGP IP
 `ctcc`: CTCC IP
@@ -98,6 +112,38 @@ public class IPLineInfo extends AbstractModel{
         this.Eip = Eip;
     }
 
+    /**
+     * Get CNAME of the instance 
+     * @return Cname CNAME of the instance
+     */
+    public String getCname() {
+        return this.Cname;
+    }
+
+    /**
+     * Set CNAME of the instance
+     * @param Cname CNAME of the instance
+     */
+    public void setCname(String Cname) {
+        this.Cname = Cname;
+    }
+
+    /**
+     * Get Flag of the instance. `0`: Anti-DDoS Pro instance; `1`: Anti-DDoS Advanced instance; `2`: Non-Anti-DDoS Advanced instance. 
+     * @return ResourceFlag Flag of the instance. `0`: Anti-DDoS Pro instance; `1`: Anti-DDoS Advanced instance; `2`: Non-Anti-DDoS Advanced instance.
+     */
+    public Long getResourceFlag() {
+        return this.ResourceFlag;
+    }
+
+    /**
+     * Set Flag of the instance. `0`: Anti-DDoS Pro instance; `1`: Anti-DDoS Advanced instance; `2`: Non-Anti-DDoS Advanced instance.
+     * @param ResourceFlag Flag of the instance. `0`: Anti-DDoS Pro instance; `1`: Anti-DDoS Advanced instance; `2`: Non-Anti-DDoS Advanced instance.
+     */
+    public void setResourceFlag(Long ResourceFlag) {
+        this.ResourceFlag = ResourceFlag;
+    }
+
     public IPLineInfo() {
     }
 
@@ -112,6 +158,12 @@ public class IPLineInfo extends AbstractModel{
         if (source.Eip != null) {
             this.Eip = new String(source.Eip);
         }
+        if (source.Cname != null) {
+            this.Cname = new String(source.Cname);
+        }
+        if (source.ResourceFlag != null) {
+            this.ResourceFlag = new Long(source.ResourceFlag);
+        }
     }
 
 
@@ -121,6 +173,8 @@ public class IPLineInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Eip", this.Eip);
+        this.setParamSimple(map, prefix + "Cname", this.Cname);
+        this.setParamSimple(map, prefix + "ResourceFlag", this.ResourceFlag);
 
     }
 }

@@ -30,7 +30,7 @@ public class AssociateNatGatewayAddressRequest extends AbstractModel{
     private String NatGatewayId;
 
     /**
-    * The number of EIPs you want to apply for. The system will create the same number of EIPs as you require. Either `AddressCount` or `PublicAddresses` must be passed in.
+    * The number of EIPs you want to apply for. Either `AddressCount` or `PublicAddresses` must be passed in.
     */
     @SerializedName("AddressCount")
     @Expose
@@ -58,14 +58,14 @@ public class AssociateNatGatewayAddressRequest extends AbstractModel{
     private Long StockPublicIpAddressesBandwidthOut;
 
     /**
-    * The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
+    * The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
     */
     @SerializedName("PublicIpAddressesBandwidthOut")
     @Expose
     private Long PublicIpAddressesBandwidthOut;
 
     /**
-    * 
+    * Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
     */
     @SerializedName("PublicIpFromSameZone")
     @Expose
@@ -88,16 +88,16 @@ public class AssociateNatGatewayAddressRequest extends AbstractModel{
     }
 
     /**
-     * Get The number of EIPs you want to apply for. The system will create the same number of EIPs as you require. Either `AddressCount` or `PublicAddresses` must be passed in. 
-     * @return AddressCount The number of EIPs you want to apply for. The system will create the same number of EIPs as you require. Either `AddressCount` or `PublicAddresses` must be passed in.
+     * Get The number of EIPs you want to apply for. Either `AddressCount` or `PublicAddresses` must be passed in. 
+     * @return AddressCount The number of EIPs you want to apply for. Either `AddressCount` or `PublicAddresses` must be passed in.
      */
     public Long getAddressCount() {
         return this.AddressCount;
     }
 
     /**
-     * Set The number of EIPs you want to apply for. The system will create the same number of EIPs as you require. Either `AddressCount` or `PublicAddresses` must be passed in.
-     * @param AddressCount The number of EIPs you want to apply for. The system will create the same number of EIPs as you require. Either `AddressCount` or `PublicAddresses` must be passed in.
+     * Set The number of EIPs you want to apply for. Either `AddressCount` or `PublicAddresses` must be passed in.
+     * @param AddressCount The number of EIPs you want to apply for. Either `AddressCount` or `PublicAddresses` must be passed in.
      */
     public void setAddressCount(Long AddressCount) {
         this.AddressCount = AddressCount;
@@ -152,32 +152,32 @@ public class AssociateNatGatewayAddressRequest extends AbstractModel{
     }
 
     /**
-     * Get The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type. 
-     * @return PublicIpAddressesBandwidthOut The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
+     * Get The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type. 
+     * @return PublicIpAddressesBandwidthOut The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
      */
     public Long getPublicIpAddressesBandwidthOut() {
         return this.PublicIpAddressesBandwidthOut;
     }
 
     /**
-     * Set The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
-     * @param PublicIpAddressesBandwidthOut The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
+     * Set The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
+     * @param PublicIpAddressesBandwidthOut The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
      */
     public void setPublicIpAddressesBandwidthOut(Long PublicIpAddressesBandwidthOut) {
         this.PublicIpAddressesBandwidthOut = PublicIpAddressesBandwidthOut;
     }
 
     /**
-     * Get  
-     * @return PublicIpFromSameZone 
+     * Get Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified. 
+     * @return PublicIpFromSameZone Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
      */
     public Boolean getPublicIpFromSameZone() {
         return this.PublicIpFromSameZone;
     }
 
     /**
-     * Set 
-     * @param PublicIpFromSameZone 
+     * Set Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
+     * @param PublicIpFromSameZone Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
      */
     public void setPublicIpFromSameZone(Boolean PublicIpFromSameZone) {
         this.PublicIpFromSameZone = PublicIpFromSameZone;

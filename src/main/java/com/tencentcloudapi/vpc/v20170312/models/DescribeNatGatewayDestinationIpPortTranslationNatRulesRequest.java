@@ -30,29 +30,29 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest exten
     private String [] NatGatewayIds;
 
     /**
-    * Filter conditions:
+    * Filters:
 `NatGatewayIds` and `Filters` cannot be specified at the same time.
-<li> nat-gateway-id, the NAT gateway ID, such as `nat-0yi4hekt`.</li>
-<li> vpc-id, the VPC ID, such as `vpc-0yi4hekt`.</li>
-<li> public-ip-address, the EIP, such as `139.199.232.238`.</li>
-<li>public-port, the public network port.</li>
-<li>private-ip-address, the private IP, such as `10.0.0.1`.</li>
-<li>private-port, the private network port.</li>
-<li>description, the rule description.</li>
+<li> `nat-gateway-id`: The NAT gateway ID, such as `nat-0yi4hekt`.</li>
+<li> `vpc-id`: The VPC ID, such as `vpc-0yi4hekt`.</li>
+<li> `public-ip-address`: The EIP, such as `139.199.232.238`.</li>
+<li>`public-port`: The public network port.</li>
+<li>`private-ip-address`: The private IP, such as `10.0.0.1`.</li>
+<li>`private-port`. The private network port.</li>
+<li>`description`. The rule description.</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * Offset. The default value is 0.
+    * Offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of values to be returned. The default value is 20. Maximum is 100.
+    * Number of returned results. Default value: 20. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
@@ -75,80 +75,80 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest exten
     }
 
     /**
-     * Get Filter conditions:
+     * Get Filters:
 `NatGatewayIds` and `Filters` cannot be specified at the same time.
-<li> nat-gateway-id, the NAT gateway ID, such as `nat-0yi4hekt`.</li>
-<li> vpc-id, the VPC ID, such as `vpc-0yi4hekt`.</li>
-<li> public-ip-address, the EIP, such as `139.199.232.238`.</li>
-<li>public-port, the public network port.</li>
-<li>private-ip-address, the private IP, such as `10.0.0.1`.</li>
-<li>private-port, the private network port.</li>
-<li>description, the rule description.</li> 
-     * @return Filters Filter conditions:
+<li> `nat-gateway-id`: The NAT gateway ID, such as `nat-0yi4hekt`.</li>
+<li> `vpc-id`: The VPC ID, such as `vpc-0yi4hekt`.</li>
+<li> `public-ip-address`: The EIP, such as `139.199.232.238`.</li>
+<li>`public-port`: The public network port.</li>
+<li>`private-ip-address`: The private IP, such as `10.0.0.1`.</li>
+<li>`private-port`. The private network port.</li>
+<li>`description`. The rule description.</li> 
+     * @return Filters Filters:
 `NatGatewayIds` and `Filters` cannot be specified at the same time.
-<li> nat-gateway-id, the NAT gateway ID, such as `nat-0yi4hekt`.</li>
-<li> vpc-id, the VPC ID, such as `vpc-0yi4hekt`.</li>
-<li> public-ip-address, the EIP, such as `139.199.232.238`.</li>
-<li>public-port, the public network port.</li>
-<li>private-ip-address, the private IP, such as `10.0.0.1`.</li>
-<li>private-port, the private network port.</li>
-<li>description, the rule description.</li>
+<li> `nat-gateway-id`: The NAT gateway ID, such as `nat-0yi4hekt`.</li>
+<li> `vpc-id`: The VPC ID, such as `vpc-0yi4hekt`.</li>
+<li> `public-ip-address`: The EIP, such as `139.199.232.238`.</li>
+<li>`public-port`: The public network port.</li>
+<li>`private-ip-address`: The private IP, such as `10.0.0.1`.</li>
+<li>`private-port`. The private network port.</li>
+<li>`description`. The rule description.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter conditions:
+     * Set Filters:
 `NatGatewayIds` and `Filters` cannot be specified at the same time.
-<li> nat-gateway-id, the NAT gateway ID, such as `nat-0yi4hekt`.</li>
-<li> vpc-id, the VPC ID, such as `vpc-0yi4hekt`.</li>
-<li> public-ip-address, the EIP, such as `139.199.232.238`.</li>
-<li>public-port, the public network port.</li>
-<li>private-ip-address, the private IP, such as `10.0.0.1`.</li>
-<li>private-port, the private network port.</li>
-<li>description, the rule description.</li>
-     * @param Filters Filter conditions:
+<li> `nat-gateway-id`: The NAT gateway ID, such as `nat-0yi4hekt`.</li>
+<li> `vpc-id`: The VPC ID, such as `vpc-0yi4hekt`.</li>
+<li> `public-ip-address`: The EIP, such as `139.199.232.238`.</li>
+<li>`public-port`: The public network port.</li>
+<li>`private-ip-address`: The private IP, such as `10.0.0.1`.</li>
+<li>`private-port`. The private network port.</li>
+<li>`description`. The rule description.</li>
+     * @param Filters Filters:
 `NatGatewayIds` and `Filters` cannot be specified at the same time.
-<li> nat-gateway-id, the NAT gateway ID, such as `nat-0yi4hekt`.</li>
-<li> vpc-id, the VPC ID, such as `vpc-0yi4hekt`.</li>
-<li> public-ip-address, the EIP, such as `139.199.232.238`.</li>
-<li>public-port, the public network port.</li>
-<li>private-ip-address, the private IP, such as `10.0.0.1`.</li>
-<li>private-port, the private network port.</li>
-<li>description, the rule description.</li>
+<li> `nat-gateway-id`: The NAT gateway ID, such as `nat-0yi4hekt`.</li>
+<li> `vpc-id`: The VPC ID, such as `vpc-0yi4hekt`.</li>
+<li> `public-ip-address`: The EIP, such as `139.199.232.238`.</li>
+<li>`public-port`: The public network port.</li>
+<li>`private-ip-address`: The private IP, such as `10.0.0.1`.</li>
+<li>`private-port`. The private network port.</li>
+<li>`description`. The rule description.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Offset. The default value is 0. 
-     * @return Offset Offset. The default value is 0.
+     * Get Offset. Default value: 0. 
+     * @return Offset Offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. The default value is 0.
-     * @param Offset Offset. The default value is 0.
+     * Set Offset. Default value: 0.
+     * @param Offset Offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of values to be returned. The default value is 20. Maximum is 100. 
-     * @return Limit Number of values to be returned. The default value is 20. Maximum is 100.
+     * Get Number of returned results. Default value: 20. Maximum value: 100. 
+     * @return Limit Number of returned results. Default value: 20. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of values to be returned. The default value is 20. Maximum is 100.
-     * @param Limit Number of values to be returned. The default value is 20. Maximum is 100.
+     * Set Number of returned results. Default value: 20. Maximum value: 100.
+     * @param Limit Number of returned results. Default value: 20. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

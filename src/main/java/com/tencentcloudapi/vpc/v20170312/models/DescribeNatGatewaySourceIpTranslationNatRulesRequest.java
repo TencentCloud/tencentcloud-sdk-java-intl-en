@@ -30,17 +30,17 @@ public class DescribeNatGatewaySourceIpTranslationNatRulesRequest extends Abstra
     private String NatGatewayId;
 
     /**
-    * Filter conditions:
-<li> resource-id, the subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
-<li> public-ip-address, the EIP, such as `139.199.232.238`</li>
-<li>description, the rule description</li>
+    * Filter:
+<li>`resource-id`: The subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
+<li>`public-ip-address`: The EIP, such as `139.199.232.238`</li>
+<li>`description` The rule description</li>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * Offset. Default is 0.
+    * Offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
@@ -70,44 +70,44 @@ public class DescribeNatGatewaySourceIpTranslationNatRulesRequest extends Abstra
     }
 
     /**
-     * Get Filter conditions:
-<li> resource-id, the subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
-<li> public-ip-address, the EIP, such as `139.199.232.238`</li>
-<li>description, the rule description</li> 
-     * @return Filters Filter conditions:
-<li> resource-id, the subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
-<li> public-ip-address, the EIP, such as `139.199.232.238`</li>
-<li>description, the rule description</li>
+     * Get Filter:
+<li>`resource-id`: The subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
+<li>`public-ip-address`: The EIP, such as `139.199.232.238`</li>
+<li>`description` The rule description</li> 
+     * @return Filters Filter:
+<li>`resource-id`: The subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
+<li>`public-ip-address`: The EIP, such as `139.199.232.238`</li>
+<li>`description` The rule description</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter conditions:
-<li> resource-id, the subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
-<li> public-ip-address, the EIP, such as `139.199.232.238`</li>
-<li>description, the rule description</li>
-     * @param Filters Filter conditions:
-<li> resource-id, the subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
-<li> public-ip-address, the EIP, such as `139.199.232.238`</li>
-<li>description, the rule description</li>
+     * Set Filter:
+<li>`resource-id`: The subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
+<li>`public-ip-address`: The EIP, such as `139.199.232.238`</li>
+<li>`description` The rule description</li>
+     * @param Filters Filter:
+<li>`resource-id`: The subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
+<li>`public-ip-address`: The EIP, such as `139.199.232.238`</li>
+<li>`description` The rule description</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Offset. Default is 0. 
-     * @return Offset Offset. Default is 0.
+     * Get Offset. Default value: 0. 
+     * @return Offset Offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. Default is 0.
-     * @param Offset Offset. Default is 0.
+     * Set Offset. Default value: 0.
+     * @param Offset Offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

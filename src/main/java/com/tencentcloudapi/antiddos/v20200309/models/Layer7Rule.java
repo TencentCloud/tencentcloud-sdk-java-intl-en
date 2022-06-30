@@ -44,11 +44,18 @@ public class Layer7Rule extends AbstractModel{
     private SourceServer [] RealServers;
 
     /**
-    * Anti-DDoS instance configured
+    * Information of the Anti-DDoS instance
     */
     @SerializedName("InstanceDetails")
     @Expose
     private InstanceRelation [] InstanceDetails;
+
+    /**
+    * Information of the Anti-DDoS instance configured
+    */
+    @SerializedName("InstanceDetailRule")
+    @Expose
+    private RuleInstanceRelation [] InstanceDetailRule;
 
     /**
      * Get Domain name 
@@ -99,19 +106,35 @@ public class Layer7Rule extends AbstractModel{
     }
 
     /**
-     * Get Anti-DDoS instance configured 
-     * @return InstanceDetails Anti-DDoS instance configured
+     * Get Information of the Anti-DDoS instance 
+     * @return InstanceDetails Information of the Anti-DDoS instance
      */
     public InstanceRelation [] getInstanceDetails() {
         return this.InstanceDetails;
     }
 
     /**
-     * Set Anti-DDoS instance configured
-     * @param InstanceDetails Anti-DDoS instance configured
+     * Set Information of the Anti-DDoS instance
+     * @param InstanceDetails Information of the Anti-DDoS instance
      */
     public void setInstanceDetails(InstanceRelation [] InstanceDetails) {
         this.InstanceDetails = InstanceDetails;
+    }
+
+    /**
+     * Get Information of the Anti-DDoS instance configured 
+     * @return InstanceDetailRule Information of the Anti-DDoS instance configured
+     */
+    public RuleInstanceRelation [] getInstanceDetailRule() {
+        return this.InstanceDetailRule;
+    }
+
+    /**
+     * Set Information of the Anti-DDoS instance configured
+     * @param InstanceDetailRule Information of the Anti-DDoS instance configured
+     */
+    public void setInstanceDetailRule(RuleInstanceRelation [] InstanceDetailRule) {
+        this.InstanceDetailRule = InstanceDetailRule;
     }
 
     public Layer7Rule() {
@@ -143,6 +166,12 @@ public class Layer7Rule extends AbstractModel{
                 this.InstanceDetails[i] = new InstanceRelation(source.InstanceDetails[i]);
             }
         }
+        if (source.InstanceDetailRule != null) {
+            this.InstanceDetailRule = new RuleInstanceRelation[source.InstanceDetailRule.length];
+            for (int i = 0; i < source.InstanceDetailRule.length; i++) {
+                this.InstanceDetailRule[i] = new RuleInstanceRelation(source.InstanceDetailRule[i]);
+            }
+        }
     }
 
 
@@ -154,6 +183,7 @@ public class Layer7Rule extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ProxyTypeList.", this.ProxyTypeList);
         this.setParamArrayObj(map, prefix + "RealServers.", this.RealServers);
         this.setParamArrayObj(map, prefix + "InstanceDetails.", this.InstanceDetails);
+        this.setParamArrayObj(map, prefix + "InstanceDetailRule.", this.InstanceDetailRule);
 
     }
 }

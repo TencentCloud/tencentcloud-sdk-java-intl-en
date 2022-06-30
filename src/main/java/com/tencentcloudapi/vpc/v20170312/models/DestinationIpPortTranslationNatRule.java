@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DestinationIpPortTranslationNatRule extends AbstractModel{
 
     /**
-    * Network protocol. Available choices: `TCP`, `UDP`.
+    * Network protocol. Valid values: `TCP`, `UDP`.
     */
     @SerializedName("IpProtocol")
     @Expose
@@ -37,7 +37,7 @@ public class DestinationIpPortTranslationNatRule extends AbstractModel{
     private String PublicIpAddress;
 
     /**
-    * Public port.
+    * Public network port.
     */
     @SerializedName("PublicPort")
     @Expose
@@ -58,23 +58,23 @@ public class DestinationIpPortTranslationNatRule extends AbstractModel{
     private Long PrivatePort;
 
     /**
-    * NAT gateway forwarding rule description.
+    * Description of NAT gateway forwarding rules.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get Network protocol. Available choices: `TCP`, `UDP`. 
-     * @return IpProtocol Network protocol. Available choices: `TCP`, `UDP`.
+     * Get Network protocol. Valid values: `TCP`, `UDP`. 
+     * @return IpProtocol Network protocol. Valid values: `TCP`, `UDP`.
      */
     public String getIpProtocol() {
         return this.IpProtocol;
     }
 
     /**
-     * Set Network protocol. Available choices: `TCP`, `UDP`.
-     * @param IpProtocol Network protocol. Available choices: `TCP`, `UDP`.
+     * Set Network protocol. Valid values: `TCP`, `UDP`.
+     * @param IpProtocol Network protocol. Valid values: `TCP`, `UDP`.
      */
     public void setIpProtocol(String IpProtocol) {
         this.IpProtocol = IpProtocol;
@@ -97,16 +97,16 @@ public class DestinationIpPortTranslationNatRule extends AbstractModel{
     }
 
     /**
-     * Get Public port. 
-     * @return PublicPort Public port.
+     * Get Public network port. 
+     * @return PublicPort Public network port.
      */
     public Long getPublicPort() {
         return this.PublicPort;
     }
 
     /**
-     * Set Public port.
-     * @param PublicPort Public port.
+     * Set Public network port.
+     * @param PublicPort Public network port.
      */
     public void setPublicPort(Long PublicPort) {
         this.PublicPort = PublicPort;
@@ -145,16 +145,16 @@ public class DestinationIpPortTranslationNatRule extends AbstractModel{
     }
 
     /**
-     * Get NAT gateway forwarding rule description. 
-     * @return Description NAT gateway forwarding rule description.
+     * Get Description of NAT gateway forwarding rules. 
+     * @return Description Description of NAT gateway forwarding rules.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set NAT gateway forwarding rule description.
-     * @param Description NAT gateway forwarding rule description.
+     * Set Description of NAT gateway forwarding rules.
+     * @param Description Description of NAT gateway forwarding rules.
      */
     public void setDescription(String Description) {
         this.Description = Description;

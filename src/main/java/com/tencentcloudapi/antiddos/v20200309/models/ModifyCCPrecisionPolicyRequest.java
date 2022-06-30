@@ -37,7 +37,7 @@ public class ModifyCCPrecisionPolicyRequest extends AbstractModel{
     private String PolicyId;
 
     /**
-    * Action of limiting request frequency. Valid values: `alg` (limit request frequency via verification codes) and `drop`(drop requests).
+    * Specifies the action. `alg`: Verify the access request via CAPTCHA; `drop`: Drop the access request.
     */
     @SerializedName("PolicyAction")
     @Expose
@@ -83,16 +83,16 @@ public class ModifyCCPrecisionPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get Action of limiting request frequency. Valid values: `alg` (limit request frequency via verification codes) and `drop`(drop requests). 
-     * @return PolicyAction Action of limiting request frequency. Valid values: `alg` (limit request frequency via verification codes) and `drop`(drop requests).
+     * Get Specifies the action. `alg`: Verify the access request via CAPTCHA; `drop`: Drop the access request. 
+     * @return PolicyAction Specifies the action. `alg`: Verify the access request via CAPTCHA; `drop`: Drop the access request.
      */
     public String getPolicyAction() {
         return this.PolicyAction;
     }
 
     /**
-     * Set Action of limiting request frequency. Valid values: `alg` (limit request frequency via verification codes) and `drop`(drop requests).
-     * @param PolicyAction Action of limiting request frequency. Valid values: `alg` (limit request frequency via verification codes) and `drop`(drop requests).
+     * Set Specifies the action. `alg`: Verify the access request via CAPTCHA; `drop`: Drop the access request.
+     * @param PolicyAction Specifies the action. `alg`: Verify the access request via CAPTCHA; `drop`: Drop the access request.
      */
     public void setPolicyAction(String PolicyAction) {
         this.PolicyAction = PolicyAction;

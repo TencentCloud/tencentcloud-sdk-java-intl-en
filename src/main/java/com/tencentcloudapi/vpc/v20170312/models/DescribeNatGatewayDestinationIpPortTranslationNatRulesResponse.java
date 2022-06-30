@@ -30,7 +30,7 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse exte
     private NatGatewayDestinationIpPortTranslationNatRule [] NatGatewayDestinationIpPortTranslationNatRuleSet;
 
     /**
-    * The number of object arrays of NAT port forwarding rules meeting the conditions.
+    * The number of eligible object arrays of NAT port forwarding rules.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse exte
     }
 
     /**
-     * Get The number of object arrays of NAT port forwarding rules meeting the conditions. 
-     * @return TotalCount The number of object arrays of NAT port forwarding rules meeting the conditions.
+     * Get The number of eligible object arrays of NAT port forwarding rules. 
+     * @return TotalCount The number of eligible object arrays of NAT port forwarding rules.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set The number of object arrays of NAT port forwarding rules meeting the conditions.
-     * @param TotalCount The number of object arrays of NAT port forwarding rules meeting the conditions.
+     * Set The number of eligible object arrays of NAT port forwarding rules.
+     * @param TotalCount The number of eligible object arrays of NAT port forwarding rules.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

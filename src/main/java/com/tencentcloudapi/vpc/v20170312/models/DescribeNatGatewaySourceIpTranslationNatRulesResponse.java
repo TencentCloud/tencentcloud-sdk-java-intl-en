@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeNatGatewaySourceIpTranslationNatRulesResponse extends AbstractModel{
 
     /**
-    * Object array of the SNAT rule for a NAT Gateway.
+    * Array of objects of a NAT gateway's SNAT rules.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("SourceIpTranslationNatRuleSet")
@@ -31,7 +31,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private SourceIpTranslationNatRule [] SourceIpTranslationNatRuleSet;
 
     /**
-    * The number of object arrays of eligible forwarding rules for a NAT Gateway
+    * The number of eligible object arrays of a NAT gateway's forwarding rules.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,9 +45,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get Object array of the SNAT rule for a NAT Gateway.
+     * Get Array of objects of a NAT gateway's SNAT rules.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return SourceIpTranslationNatRuleSet Object array of the SNAT rule for a NAT Gateway.
+     * @return SourceIpTranslationNatRuleSet Array of objects of a NAT gateway's SNAT rules.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public SourceIpTranslationNatRule [] getSourceIpTranslationNatRuleSet() {
@@ -55,9 +55,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Object array of the SNAT rule for a NAT Gateway.
+     * Set Array of objects of a NAT gateway's SNAT rules.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param SourceIpTranslationNatRuleSet Object array of the SNAT rule for a NAT Gateway.
+     * @param SourceIpTranslationNatRuleSet Array of objects of a NAT gateway's SNAT rules.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSourceIpTranslationNatRuleSet(SourceIpTranslationNatRule [] SourceIpTranslationNatRuleSet) {
@@ -65,16 +65,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get The number of object arrays of eligible forwarding rules for a NAT Gateway 
-     * @return TotalCount The number of object arrays of eligible forwarding rules for a NAT Gateway
+     * Get The number of eligible object arrays of a NAT gateway's forwarding rules. 
+     * @return TotalCount The number of eligible object arrays of a NAT gateway's forwarding rules.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set The number of object arrays of eligible forwarding rules for a NAT Gateway
-     * @param TotalCount The number of object arrays of eligible forwarding rules for a NAT Gateway
+     * Set The number of eligible object arrays of a NAT gateway's forwarding rules.
+     * @param TotalCount The number of eligible object arrays of a NAT gateway's forwarding rules.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

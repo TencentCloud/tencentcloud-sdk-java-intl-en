@@ -106,6 +106,27 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
     private String FilterStatus;
 
     /**
+    * Filters by the instance CNAME
+    */
+    @SerializedName("FilterCname")
+    @Expose
+    private String FilterCname;
+
+    /**
+    * Filters by the instance ID
+    */
+    @SerializedName("FilterInstanceIdList")
+    @Expose
+    private String [] FilterInstanceIdList;
+
+    /**
+    * 
+    */
+    @SerializedName("FilterTag")
+    @Expose
+    private TagFilter FilterTag;
+
+    /**
      * Get Starting offset of the page. Value: (number of pages – 1) * items per page. 
      * @return Offset Starting offset of the page. Value: (number of pages – 1) * items per page.
      */
@@ -305,6 +326,54 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
         this.FilterStatus = FilterStatus;
     }
 
+    /**
+     * Get Filters by the instance CNAME 
+     * @return FilterCname Filters by the instance CNAME
+     */
+    public String getFilterCname() {
+        return this.FilterCname;
+    }
+
+    /**
+     * Set Filters by the instance CNAME
+     * @param FilterCname Filters by the instance CNAME
+     */
+    public void setFilterCname(String FilterCname) {
+        this.FilterCname = FilterCname;
+    }
+
+    /**
+     * Get Filters by the instance ID 
+     * @return FilterInstanceIdList Filters by the instance ID
+     */
+    public String [] getFilterInstanceIdList() {
+        return this.FilterInstanceIdList;
+    }
+
+    /**
+     * Set Filters by the instance ID
+     * @param FilterInstanceIdList Filters by the instance ID
+     */
+    public void setFilterInstanceIdList(String [] FilterInstanceIdList) {
+        this.FilterInstanceIdList = FilterInstanceIdList;
+    }
+
+    /**
+     * Get  
+     * @return FilterTag 
+     */
+    public TagFilter getFilterTag() {
+        return this.FilterTag;
+    }
+
+    /**
+     * Set 
+     * @param FilterTag 
+     */
+    public void setFilterTag(TagFilter FilterTag) {
+        this.FilterTag = FilterTag;
+    }
+
     public DescribeListBGPIPInstancesRequest() {
     }
 
@@ -349,6 +418,18 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
         if (source.FilterStatus != null) {
             this.FilterStatus = new String(source.FilterStatus);
         }
+        if (source.FilterCname != null) {
+            this.FilterCname = new String(source.FilterCname);
+        }
+        if (source.FilterInstanceIdList != null) {
+            this.FilterInstanceIdList = new String[source.FilterInstanceIdList.length];
+            for (int i = 0; i < source.FilterInstanceIdList.length; i++) {
+                this.FilterInstanceIdList[i] = new String(source.FilterInstanceIdList[i]);
+            }
+        }
+        if (source.FilterTag != null) {
+            this.FilterTag = new TagFilter(source.FilterTag);
+        }
     }
 
 
@@ -367,6 +448,9 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "FilterEipEipAddressStatus.", this.FilterEipEipAddressStatus);
         this.setParamSimple(map, prefix + "FilterDamDDoSStatus", this.FilterDamDDoSStatus);
         this.setParamSimple(map, prefix + "FilterStatus", this.FilterStatus);
+        this.setParamSimple(map, prefix + "FilterCname", this.FilterCname);
+        this.setParamArraySimple(map, prefix + "FilterInstanceIdList.", this.FilterInstanceIdList);
+        this.setParamObj(map, prefix + "FilterTag.", this.FilterTag);
 
     }
 }

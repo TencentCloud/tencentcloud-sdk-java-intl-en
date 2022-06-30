@@ -61,6 +61,13 @@ public class DescribeListIPAlarmConfigRequest extends AbstractModel{
     private String FilterIp;
 
     /**
+    * CNAME of the Anti-DDoS Advanced instance
+    */
+    @SerializedName("FilterCname")
+    @Expose
+    private String FilterCname;
+
+    /**
      * Get Starting offset of the page. Value: (number of pages – 1) * items per page. 
      * @return Offset Starting offset of the page. Value: (number of pages – 1) * items per page.
      */
@@ -152,6 +159,22 @@ public class DescribeListIPAlarmConfigRequest extends AbstractModel{
         this.FilterIp = FilterIp;
     }
 
+    /**
+     * Get CNAME of the Anti-DDoS Advanced instance 
+     * @return FilterCname CNAME of the Anti-DDoS Advanced instance
+     */
+    public String getFilterCname() {
+        return this.FilterCname;
+    }
+
+    /**
+     * Set CNAME of the Anti-DDoS Advanced instance
+     * @param FilterCname CNAME of the Anti-DDoS Advanced instance
+     */
+    public void setFilterCname(String FilterCname) {
+        this.FilterCname = FilterCname;
+    }
+
     public DescribeListIPAlarmConfigRequest() {
     }
 
@@ -175,6 +198,9 @@ public class DescribeListIPAlarmConfigRequest extends AbstractModel{
         if (source.FilterIp != null) {
             this.FilterIp = new String(source.FilterIp);
         }
+        if (source.FilterCname != null) {
+            this.FilterCname = new String(source.FilterCname);
+        }
     }
 
 
@@ -187,6 +213,7 @@ public class DescribeListIPAlarmConfigRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FilterInstanceId", this.FilterInstanceId);
         this.setParamSimple(map, prefix + "FilterAlarmType", this.FilterAlarmType);
         this.setParamSimple(map, prefix + "FilterIp", this.FilterIp);
+        this.setParamSimple(map, prefix + "FilterCname", this.FilterCname);
 
     }
 }
