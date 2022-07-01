@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Zone extends AbstractModel{
+public class DescribeZoneDetailsResponse extends AbstractModel{
 
     /**
     * Site ID
@@ -37,14 +37,16 @@ public class Zone extends AbstractModel{
     private String Name;
 
     /**
-    * List of name servers used by the site
+    * List of name servers used
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("OriginalNameServers")
     @Expose
     private String [] OriginalNameServers;
 
     /**
-    * List of name servers assigned by Tencent Cloud
+    * List of name servers assigned to users by Tencent Cloud
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("NameServers")
     @Expose
@@ -62,7 +64,7 @@ public class Zone extends AbstractModel{
     private String Status;
 
     /**
-    * How the site is connected to EdgeOne.
+    * Specifies how the site is connected to EdgeOne.
 - `full`: The site is connected via name server.
 - `partial`: The site is connected via CNAME.
     */
@@ -92,14 +94,46 @@ public class Zone extends AbstractModel{
     private String ModifiedOn;
 
     /**
-    * Ownership verification status of the site when it is connected to EdgeOne via CNAME.
+    * User-defined name server information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("VanityNameServers")
+    @Expose
+    private VanityNameServers VanityNameServers;
+
+    /**
+    * User-defined name server IP information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("VanityNameServersIps")
+    @Expose
+    private VanityNameServersIps [] VanityNameServersIps;
+
+    /**
+    * Specifies whether to enable CNAME acceleration
+- `enabled`: Enable
+- `disabled`: Disable
+    */
+    @SerializedName("CnameSpeedUp")
+    @Expose
+    private String CnameSpeedUp;
+
+    /**
+    * Ownership verification status of the site when it accesses via CNAME.
 - `finished`: The site is verified.
-- `pending`: Verifying the ownership of the site.
+- `pending`: The site is waiting for verification.
 Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("CnameStatus")
     @Expose
     private String CnameStatus;
+
+    /**
+    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+    */
+    @SerializedName("RequestId")
+    @Expose
+    private String RequestId;
 
     /**
      * Get Site ID 
@@ -134,32 +168,40 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get List of name servers used by the site 
-     * @return OriginalNameServers List of name servers used by the site
+     * Get List of name servers used
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return OriginalNameServers List of name servers used
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String [] getOriginalNameServers() {
         return this.OriginalNameServers;
     }
 
     /**
-     * Set List of name servers used by the site
-     * @param OriginalNameServers List of name servers used by the site
+     * Set List of name servers used
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param OriginalNameServers List of name servers used
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setOriginalNameServers(String [] OriginalNameServers) {
         this.OriginalNameServers = OriginalNameServers;
     }
 
     /**
-     * Get List of name servers assigned by Tencent Cloud 
-     * @return NameServers List of name servers assigned by Tencent Cloud
+     * Get List of name servers assigned to users by Tencent Cloud
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return NameServers List of name servers assigned to users by Tencent Cloud
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String [] getNameServers() {
         return this.NameServers;
     }
 
     /**
-     * Set List of name servers assigned by Tencent Cloud
-     * @param NameServers List of name servers assigned by Tencent Cloud
+     * Set List of name servers assigned to users by Tencent Cloud
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param NameServers List of name servers assigned to users by Tencent Cloud
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setNameServers(String [] NameServers) {
         this.NameServers = NameServers;
@@ -198,10 +240,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get How the site is connected to EdgeOne.
+     * Get Specifies how the site is connected to EdgeOne.
 - `full`: The site is connected via name server.
 - `partial`: The site is connected via CNAME. 
-     * @return Type How the site is connected to EdgeOne.
+     * @return Type Specifies how the site is connected to EdgeOne.
 - `full`: The site is connected via name server.
 - `partial`: The site is connected via CNAME.
      */
@@ -210,10 +252,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Set How the site is connected to EdgeOne.
+     * Set Specifies how the site is connected to EdgeOne.
 - `full`: The site is connected via name server.
 - `partial`: The site is connected via CNAME.
-     * @param Type How the site is connected to EdgeOne.
+     * @param Type Specifies how the site is connected to EdgeOne.
 - `full`: The site is connected via name server.
 - `partial`: The site is connected via CNAME.
      */
@@ -270,13 +312,77 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Ownership verification status of the site when it is connected to EdgeOne via CNAME.
-- `finished`: The site is verified.
-- `pending`: Verifying the ownership of the site.
+     * Get User-defined name server information
 Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return CnameStatus Ownership verification status of the site when it is connected to EdgeOne via CNAME.
+     * @return VanityNameServers User-defined name server information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public VanityNameServers getVanityNameServers() {
+        return this.VanityNameServers;
+    }
+
+    /**
+     * Set User-defined name server information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param VanityNameServers User-defined name server information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setVanityNameServers(VanityNameServers VanityNameServers) {
+        this.VanityNameServers = VanityNameServers;
+    }
+
+    /**
+     * Get User-defined name server IP information
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return VanityNameServersIps User-defined name server IP information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public VanityNameServersIps [] getVanityNameServersIps() {
+        return this.VanityNameServersIps;
+    }
+
+    /**
+     * Set User-defined name server IP information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param VanityNameServersIps User-defined name server IP information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setVanityNameServersIps(VanityNameServersIps [] VanityNameServersIps) {
+        this.VanityNameServersIps = VanityNameServersIps;
+    }
+
+    /**
+     * Get Specifies whether to enable CNAME acceleration
+- `enabled`: Enable
+- `disabled`: Disable 
+     * @return CnameSpeedUp Specifies whether to enable CNAME acceleration
+- `enabled`: Enable
+- `disabled`: Disable
+     */
+    public String getCnameSpeedUp() {
+        return this.CnameSpeedUp;
+    }
+
+    /**
+     * Set Specifies whether to enable CNAME acceleration
+- `enabled`: Enable
+- `disabled`: Disable
+     * @param CnameSpeedUp Specifies whether to enable CNAME acceleration
+- `enabled`: Enable
+- `disabled`: Disable
+     */
+    public void setCnameSpeedUp(String CnameSpeedUp) {
+        this.CnameSpeedUp = CnameSpeedUp;
+    }
+
+    /**
+     * Get Ownership verification status of the site when it accesses via CNAME.
 - `finished`: The site is verified.
-- `pending`: Verifying the ownership of the site.
+- `pending`: The site is waiting for verification.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return CnameStatus Ownership verification status of the site when it accesses via CNAME.
+- `finished`: The site is verified.
+- `pending`: The site is waiting for verification.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getCnameStatus() {
@@ -284,27 +390,43 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Set Ownership verification status of the site when it is connected to EdgeOne via CNAME.
+     * Set Ownership verification status of the site when it accesses via CNAME.
 - `finished`: The site is verified.
-- `pending`: Verifying the ownership of the site.
+- `pending`: The site is waiting for verification.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param CnameStatus Ownership verification status of the site when it is connected to EdgeOne via CNAME.
+     * @param CnameStatus Ownership verification status of the site when it accesses via CNAME.
 - `finished`: The site is verified.
-- `pending`: Verifying the ownership of the site.
+- `pending`: The site is waiting for verification.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCnameStatus(String CnameStatus) {
         this.CnameStatus = CnameStatus;
     }
 
-    public Zone() {
+    /**
+     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
+     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     */
+    public String getRequestId() {
+        return this.RequestId;
+    }
+
+    /**
+     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     */
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
+    }
+
+    public DescribeZoneDetailsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Zone(Zone source) {
+    public DescribeZoneDetailsResponse(DescribeZoneDetailsResponse source) {
         if (source.Id != null) {
             this.Id = new String(source.Id);
         }
@@ -338,8 +460,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.ModifiedOn != null) {
             this.ModifiedOn = new String(source.ModifiedOn);
         }
+        if (source.VanityNameServers != null) {
+            this.VanityNameServers = new VanityNameServers(source.VanityNameServers);
+        }
+        if (source.VanityNameServersIps != null) {
+            this.VanityNameServersIps = new VanityNameServersIps[source.VanityNameServersIps.length];
+            for (int i = 0; i < source.VanityNameServersIps.length; i++) {
+                this.VanityNameServersIps[i] = new VanityNameServersIps(source.VanityNameServersIps[i]);
+            }
+        }
+        if (source.CnameSpeedUp != null) {
+            this.CnameSpeedUp = new String(source.CnameSpeedUp);
+        }
         if (source.CnameStatus != null) {
             this.CnameStatus = new String(source.CnameStatus);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -357,7 +494,11 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "Paused", this.Paused);
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
+        this.setParamObj(map, prefix + "VanityNameServers.", this.VanityNameServers);
+        this.setParamArrayObj(map, prefix + "VanityNameServersIps.", this.VanityNameServersIps);
+        this.setParamSimple(map, prefix + "CnameSpeedUp", this.CnameSpeedUp);
         this.setParamSimple(map, prefix + "CnameStatus", this.CnameStatus);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

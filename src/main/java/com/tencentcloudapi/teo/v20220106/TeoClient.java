@@ -39,6 +39,126 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *This API is used to verify a certificate.
+     * @param req CheckCertificateRequest
+     * @return CheckCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckCertificateResponse CheckCertificate(CheckCertificateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CheckCertificateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CheckCertificateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CheckCertificate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create an application proxy.
+     * @param req CreateApplicationProxyRequest
+     * @return CreateApplicationProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateApplicationProxyResponse CreateApplicationProxy(CreateApplicationProxyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateApplicationProxyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateApplicationProxyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateApplicationProxy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create an application proxy rule.
+     * @param req CreateApplicationProxyRuleRequest
+     * @return CreateApplicationProxyRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateApplicationProxyRuleResponse CreateApplicationProxyRule(CreateApplicationProxyRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateApplicationProxyRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateApplicationProxyRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateApplicationProxyRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to batch create application proxy rules.
+     * @param req CreateApplicationProxyRulesRequest
+     * @return CreateApplicationProxyRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateApplicationProxyRulesResponse CreateApplicationProxyRules(CreateApplicationProxyRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateApplicationProxyRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateApplicationProxyRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateApplicationProxyRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a DNS record.
+     * @param req CreateDnsRecordRequest
+     * @return CreateDnsRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDnsRecordResponse CreateDnsRecord(CreateDnsRecordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDnsRecordResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDnsRecordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDnsRecord");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a CLB instance.
+     * @param req CreateLoadBalancingRequest
+     * @return CreateLoadBalancingResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLoadBalancingResponse CreateLoadBalancing(CreateLoadBalancingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLoadBalancingResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLoadBalancingResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateLoadBalancing");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a pre-warming task.
      * @param req CreatePrefetchTaskRequest
      * @return CreatePrefetchTaskResponse
@@ -71,6 +191,366 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreatePurgeTaskResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreatePurgeTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to access a new site.
+     * @param req CreateZoneRequest
+     * @return CreateZoneResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateZoneResponse CreateZone(CreateZoneRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateZoneResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateZoneResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateZone");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete an application proxy.
+     * @param req DeleteApplicationProxyRequest
+     * @return DeleteApplicationProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteApplicationProxyResponse DeleteApplicationProxy(DeleteApplicationProxyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteApplicationProxyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteApplicationProxyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteApplicationProxy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete an application proxy rule.
+     * @param req DeleteApplicationProxyRuleRequest
+     * @return DeleteApplicationProxyRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteApplicationProxyRuleResponse DeleteApplicationProxyRule(DeleteApplicationProxyRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteApplicationProxyRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteApplicationProxyRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteApplicationProxyRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to batch delete DNS records.
+     * @param req DeleteDnsRecordsRequest
+     * @return DeleteDnsRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDnsRecordsResponse DeleteDnsRecords(DeleteDnsRecordsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDnsRecordsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDnsRecordsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteDnsRecords");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a CLB instance.
+     * @param req DeleteLoadBalancingRequest
+     * @return DeleteLoadBalancingResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLoadBalancingResponse DeleteLoadBalancing(DeleteLoadBalancingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLoadBalancingResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLoadBalancingResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteLoadBalancing");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a site.
+     * @param req DeleteZoneRequest
+     * @return DeleteZoneResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteZoneResponse DeleteZone(DeleteZoneRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteZoneResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteZoneResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteZone");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain a list of application proxies.
+     * @param req DescribeApplicationProxyRequest
+     * @return DescribeApplicationProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApplicationProxyResponse DescribeApplicationProxy(DescribeApplicationProxyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApplicationProxyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApplicationProxyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeApplicationProxy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain the details of an application proxy.
+     * @param req DescribeApplicationProxyDetailRequest
+     * @return DescribeApplicationProxyDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApplicationProxyDetailResponse DescribeApplicationProxyDetail(DescribeApplicationProxyDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApplicationProxyDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApplicationProxyDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeApplicationProxyDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the CNAME status of a domain name.
+     * @param req DescribeCnameStatusRequest
+     * @return DescribeCnameStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCnameStatusResponse DescribeCnameStatus(DescribeCnameStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCnameStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCnameStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCnameStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query a list of default certificates.
+     * @param req DescribeDefaultCertificatesRequest
+     * @return DescribeDefaultCertificatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDefaultCertificatesResponse DescribeDefaultCertificates(DescribeDefaultCertificatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDefaultCertificatesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDefaultCertificatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDefaultCertificates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain collected DNS requests.
+     * @param req DescribeDnsDataRequest
+     * @return DescribeDnsDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDnsDataResponse DescribeDnsData(DescribeDnsDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDnsDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDnsDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDnsData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query DNS records. Paging, sorting and filtering are supported.
+     * @param req DescribeDnsRecordsRequest
+     * @return DescribeDnsRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDnsRecordsResponse DescribeDnsRecords(DescribeDnsRecordsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDnsRecordsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDnsRecordsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDnsRecords");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query DNSSEC information.
+     * @param req DescribeDnssecRequest
+     * @return DescribeDnssecResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDnssecResponse DescribeDnssec(DescribeDnssecRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDnssecResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDnssecResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDnssec");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query certificates of domain names. Paging, sorting and filtering are supported.
+     * @param req DescribeHostsCertificateRequest
+     * @return DescribeHostsCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostsCertificateResponse DescribeHostsCertificate(DescribeHostsCertificateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHostsCertificateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHostsCertificateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHostsCertificate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query detailed domain name configuration.
+     * @param req DescribeHostsSettingRequest
+     * @return DescribeHostsSettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHostsSettingResponse DescribeHostsSetting(DescribeHostsSettingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeHostsSettingResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeHostsSettingResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeHostsSetting");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query verification results.
+     * @param req DescribeIdentificationRequest
+     * @return DescribeIdentificationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIdentificationResponse DescribeIdentification(DescribeIdentificationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIdentificationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIdentificationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeIdentification");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain a list of CLB instances.
+     * @param req DescribeLoadBalancingRequest
+     * @return DescribeLoadBalancingResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLoadBalancingResponse DescribeLoadBalancing(DescribeLoadBalancingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLoadBalancingResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLoadBalancingResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLoadBalancing");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the details of a CLB instance.
+     * @param req DescribeLoadBalancingDetailRequest
+     * @return DescribeLoadBalancingDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLoadBalancingDetailResponse DescribeLoadBalancingDetail(DescribeLoadBalancingDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLoadBalancingDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLoadBalancingDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLoadBalancingDetail");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -119,6 +599,46 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the details of a site by site ID.
+     * @param req DescribeZoneDetailsRequest
+     * @return DescribeZoneDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeZoneDetailsResponse DescribeZoneDetails(DescribeZoneDetailsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeZoneDetailsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeZoneDetailsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeZoneDetails");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the site configuration.
+     * @param req DescribeZoneSettingRequest
+     * @return DescribeZoneSettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeZoneSettingResponse DescribeZoneSetting(DescribeZoneSettingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeZoneSettingResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeZoneSettingResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeZoneSetting");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the list of user sites.
      * @param req DescribeZonesRequest
      * @return DescribeZonesResponse
@@ -151,6 +671,366 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DownloadL7LogsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DownloadL7Logs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to verify ownership of the site.
+     * @param req IdentifyZoneRequest
+     * @return IdentifyZoneResponse
+     * @throws TencentCloudSDKException
+     */
+    public IdentifyZoneResponse IdentifyZone(IdentifyZoneRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<IdentifyZoneResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<IdentifyZoneResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "IdentifyZone");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to import DNS records.
+     * @param req ImportDnsRecordsRequest
+     * @return ImportDnsRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportDnsRecordsResponse ImportDnsRecords(ImportDnsRecordsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ImportDnsRecordsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ImportDnsRecordsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ImportDnsRecords");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify an application proxy.
+     * @param req ModifyApplicationProxyRequest
+     * @return ModifyApplicationProxyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApplicationProxyResponse ModifyApplicationProxy(ModifyApplicationProxyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyApplicationProxyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyApplicationProxyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyApplicationProxy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify an application proxy rule.
+     * @param req ModifyApplicationProxyRuleRequest
+     * @return ModifyApplicationProxyRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApplicationProxyRuleResponse ModifyApplicationProxyRule(ModifyApplicationProxyRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyApplicationProxyRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyApplicationProxyRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyApplicationProxyRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the status of an application proxy rule.
+     * @param req ModifyApplicationProxyRuleStatusRequest
+     * @return ModifyApplicationProxyRuleStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApplicationProxyRuleStatusResponse ModifyApplicationProxyRuleStatus(ModifyApplicationProxyRuleStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyApplicationProxyRuleStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyApplicationProxyRuleStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyApplicationProxyRuleStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the status of an application proxy.
+     * @param req ModifyApplicationProxyStatusRequest
+     * @return ModifyApplicationProxyStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApplicationProxyStatusResponse ModifyApplicationProxyStatus(ModifyApplicationProxyStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyApplicationProxyStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyApplicationProxyStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyApplicationProxyStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the status of a default certificate.
+     * @param req ModifyDefaultCertificateRequest
+     * @return ModifyDefaultCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDefaultCertificateResponse ModifyDefaultCertificate(ModifyDefaultCertificateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDefaultCertificateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDefaultCertificateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDefaultCertificate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify DNS records.
+     * @param req ModifyDnsRecordRequest
+     * @return ModifyDnsRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDnsRecordResponse ModifyDnsRecord(ModifyDnsRecordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDnsRecordResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDnsRecordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDnsRecord");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the DNSSEC status.
+     * @param req ModifyDnssecRequest
+     * @return ModifyDnssecResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDnssecResponse ModifyDnssec(ModifyDnssecRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDnssecResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDnssecResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDnssec");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the certificate of a domain name.
+     * @param req ModifyHostsCertificateRequest
+     * @return ModifyHostsCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyHostsCertificateResponse ModifyHostsCertificate(ModifyHostsCertificateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyHostsCertificateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyHostsCertificateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyHostsCertificate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a CLB instance.
+     * @param req ModifyLoadBalancingRequest
+     * @return ModifyLoadBalancingResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLoadBalancingResponse ModifyLoadBalancing(ModifyLoadBalancingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLoadBalancingResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLoadBalancingResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLoadBalancing");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the status of a CLB instance.
+     * @param req ModifyLoadBalancingStatusRequest
+     * @return ModifyLoadBalancingStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLoadBalancingStatusResponse ModifyLoadBalancingStatus(ModifyLoadBalancingStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLoadBalancingStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLoadBalancingStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLoadBalancingStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the site information.
+     * @param req ModifyZoneRequest
+     * @return ModifyZoneResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyZoneResponse ModifyZone(ModifyZoneRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyZoneResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyZoneResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyZone");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the CNAME acceleration status.
+     * @param req ModifyZoneCnameSpeedUpRequest
+     * @return ModifyZoneCnameSpeedUpResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyZoneCnameSpeedUpResponse ModifyZoneCnameSpeedUp(ModifyZoneCnameSpeedUpRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyZoneCnameSpeedUpResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyZoneCnameSpeedUpResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyZoneCnameSpeedUp");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the site configuration.
+     * @param req ModifyZoneSettingRequest
+     * @return ModifyZoneSettingResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyZoneSettingResponse ModifyZoneSetting(ModifyZoneSettingRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyZoneSettingResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyZoneSettingResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyZoneSetting");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to change the site status.
+     * @param req ModifyZoneStatusRequest
+     * @return ModifyZoneStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyZoneStatusResponse ModifyZoneStatus(ModifyZoneStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyZoneStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyZoneStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyZoneStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to reclaim a site from other users after its ownership is verified.
+     * @param req ReclaimZoneRequest
+     * @return ReclaimZoneResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReclaimZoneResponse ReclaimZone(ReclaimZoneRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReclaimZoneResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReclaimZoneResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReclaimZone");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to scan resolution records.
+     * @param req ScanDnsRecordsRequest
+     * @return ScanDnsRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScanDnsRecordsResponse ScanDnsRecords(ScanDnsRecordsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ScanDnsRecordsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ScanDnsRecordsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ScanDnsRecords");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
