@@ -24,10 +24,10 @@ public class DescribeBillingDataResponse extends AbstractModel{
 
     /**
     * Time granularity, which is specified by the parameter passed in during the query:
-min: 1-minute
-5min: 5-minute
-hour: 1-hour
-day: 1-day
+`min`: 1 minute
+`5min`: 5 minutes
+`hour`: 1 hour
+`day`: 1 day
     */
     @SerializedName("Interval")
     @Expose
@@ -49,15 +49,15 @@ day: 1-day
 
     /**
      * Get Time granularity, which is specified by the parameter passed in during the query:
-min: 1-minute
-5min: 5-minute
-hour: 1-hour
-day: 1-day 
+`min`: 1 minute
+`5min`: 5 minutes
+`hour`: 1 hour
+`day`: 1 day 
      * @return Interval Time granularity, which is specified by the parameter passed in during the query:
-min: 1-minute
-5min: 5-minute
-hour: 1-hour
-day: 1-day
+`min`: 1 minute
+`5min`: 5 minutes
+`hour`: 1 hour
+`day`: 1 day
      */
     public String getInterval() {
         return this.Interval;
@@ -65,15 +65,15 @@ day: 1-day
 
     /**
      * Set Time granularity, which is specified by the parameter passed in during the query:
-min: 1-minute
-5min: 5-minute
-hour: 1-hour
-day: 1-day
+`min`: 1 minute
+`5min`: 5 minutes
+`hour`: 1 hour
+`day`: 1 day
      * @param Interval Time granularity, which is specified by the parameter passed in during the query:
-min: 1-minute
-5min: 5-minute
-hour: 1-hour
-day: 1-day
+`min`: 1 minute
+`5min`: 5 minutes
+`hour`: 1 hour
+`day`: 1 day
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;

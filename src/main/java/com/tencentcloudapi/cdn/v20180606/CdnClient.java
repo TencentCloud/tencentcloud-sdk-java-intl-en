@@ -39,18 +39,18 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *This API is used to add a CDN acceleration domain name.
-     * @param req AddCdnDomainRequest
-     * @return AddCdnDomainResponse
+     *This API is used to add one or more domains to a specified log topic.
+     * @param req AddCLSTopicDomainsRequest
+     * @return AddCLSTopicDomainsResponse
      * @throws TencentCloudSDKException
      */
-    public AddCdnDomainResponse AddCdnDomain(AddCdnDomainRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<AddCdnDomainResponse> rsp = null;
+    public AddCLSTopicDomainsResponse AddCLSTopicDomains(AddCLSTopicDomainsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddCLSTopicDomainsResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<AddCdnDomainResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<AddCLSTopicDomainsResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "AddCdnDomain");
+                rspStr = this.internalRequest(req, "AddCLSTopicDomains");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -159,7 +159,7 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *This API (DescribeCdnData) is used to query CDN real-time access monitoring data and supports the following metrics:
+     *This API is used to query CDN real-time access monitoring data and supports the following metrics:
 
 + Traffic (in bytes)
 + Bandwidth (in bps)
@@ -377,7 +377,7 @@ public class CdnClient extends AbstractClient{
     }
 
     /**
-     *This API (DescribeOriginData) is used to query CDN real-time origin-pull monitoring data and supports the following metrics:
+     *This API is used to query CDN real-time origin-pull monitoring data and supports the following metrics:
 
 + Origin-pull traffic (in bytes)
 + Origin-pull bandwidth (in bps)

@@ -23,18 +23,18 @@ import java.util.HashMap;
 public class DescribeCdnDataRequest extends AbstractModel{
 
     /**
-    * Queries start time, such as 2018-09-04 10:40:00; the returned result is later than or equal to the specified time.
-According to the specified time granularity, forward rounding is applied; for example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the first returned entry will be 2018-09-04 10:00:00.
-The gap between the start time and end time should be less than or equal to 90 days.
+    * Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Queries end time, such as 2018-09-04 10:40:00; the returned result is earlier than or equal to the specified time.
-According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the last returned entry will be 2018-09-04 10:00:00.
-The gap between the start time and end time should be less than or equal to 90 days.
+    * End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
     */
     @SerializedName("EndTime")
     @Expose
@@ -42,22 +42,22 @@ The gap between the start time and end time should be less than or equal to 90 d
 
     /**
     * Specifies the metric to query, which can be:
-`flux`: traffic (in bytes)
-`fluxIn`: upstream traffic (in bytes), only used for the `ecdn` product
-`fluxOut`: downstream traffic (in bytes), only used for the `ecdn` product
-`bandwidth`: bandwidth (in bps)
-`bandwidthIn`: upstream bandwidth (in bps), only used for the `ecdn` product
-`bandwidthOut`: downstream bandwidth (in bps), only used for the `ecdn` product
-`request`: number of requests
-`hitRequest`: number of hit requests
-`requestHitRate`: request hit rate (in % with two decimal digits)
-`hitFlux`: hit traffic (in bytes)
-`fluxHitRate`: traffic hit rate (in % with two decimal digits)
-`statusCode`: status code. Number of 2xx, 3xx, 4xx, and 5xx status codes returned during the queried period.
-`2xx`: lists the number of all status codes starting with **2** returned during the queried period based on the specified interval (if any)
-`3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
-`4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
-`5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
+`flux`: Traffic (in bytes)
+`fluxIn`: Upstream traffic (in bytes), only used for the `ecdn` product
+`fluxOut`: Downstream traffic (in bytes), only used for the `ecdn` product
+`bandwidth`: Bandwidth (in bps)
+`bandwidthIn`: Upstream bandwidth (in bps), only used for the `ecdn` product
+`bandwidthOut`: Downstream bandwidth (in bps), only used for the `ecdn` product
+`request`: Number of requests
+`hitRequest`: Number of hit requests
+`requestHitRate`: Request hit rate (in % with two decimal digits)
+`hitFlux`: Hit traffic (in bytes)
+`fluxHitRate`: Traffic hit rate (in % with two decimal digits)
+`statusCode`: Status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
+`2xx`: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
+`3xx`: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
+`4xx`: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
+`5xx`: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
 Specifies the status code to query. The return will be empty if the status code has never been generated.
     */
     @SerializedName("Metric")
@@ -65,29 +65,29 @@ Specifies the status code to query. The return will be empty if the status code 
     private String Metric;
 
     /**
-    * Queries the information of specified domain names
-Specifies a domain name to query
-Specifies multiple domain names to query (30 at most at a time)
-Queries all Specifies an account to query all domain names
+    * Specifies the list of domain names to be queried
+You can specify one or more domain names.
+Up to 30 domain names can be queried in one request.
+If this parameter is not specified, it means to query all domain names under the current account.
     */
     @SerializedName("Domains")
     @Expose
     private String [] Domains;
 
     /**
-    * Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
-Please note that if domain names are specified, this parameter will be ignored.
+    * Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+Note that `Project` will be ignored if `Domains` is specified.
     */
     @SerializedName("Project")
     @Expose
     private Long Project;
 
     /**
-    * Time granularity; valid values:
-`min`: data with 1-minute granularity is returned when the queried period is no longer than 24 hours. This value is not supported if the service region you want to query is outside Mainland China;
-`5min`: data with 5-minute granularity is returned when the queried period is no longer than 31 days;
-`hour`: data with 1-hour granularity is returned when the queried period is no longer than 31 days;
-`day`: data with 1-day granularity is returned when the queried period is longer than 31 days.
+    * Sampling interval. The available options vary for different query period. See below: 
+`min`: Return data with 1-minute granularity. It’s available when the query period is  within 24 hours and `Area` is `mainland`.
+`5min`: Return data with 5-minute granularity. It’s available when the query period is within 31 days.
+`hour`: Return data with 1-hour granularity. It’s available when the query period is within 31 days.
+`day`: Return data with 1-day granularity. It’s available when the query period is longer than 31 days.
     */
     @SerializedName("Interval")
     @Expose
@@ -95,26 +95,26 @@ Please note that if domain names are specified, this parameter will be ignored.
 
     /**
     * The aggregate data for multiple domain names is returned by default (false) during a multi-domain-name query.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
+You can set it to true to return the details for each Domain (the statusCode metric is currently not supported).
     */
     @SerializedName("Detail")
     @Expose
     private Boolean Detail;
 
     /**
-    * Specifies an ISP when you query the CDN data within Mainland China. If this is left blank, all ISPs will be queried.
+    * Specifies an ISP when you query the CDN data within the Chinese mainland. If this is left blank, all ISPs will be queried.
 To view ISP codes, see [ISP Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
-If you have specified an ISP, you cannot specify a province or an IP protocol for the same query.
+Note that only one of `District`, `Isp` and `IpProtocol` can be specified.
     */
     @SerializedName("Isp")
     @Expose
     private Long Isp;
 
     /**
-    * Specifies a province when you query the CDN data within Mainland China. If this is left blank, all provinces will be queried.
-Specifies a country/region when you query the CDN data outside Mainland China. If this is left blank, all countries/regions will be queried.
-To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
-If you have specified a province for your query on CDN data within mainland China, you cannot specify an ISP or an IP protocol for the same query.
+    * Specifies a province when you query the CDN data within the Chinese mainland. If this is left blank, all provinces will be queried.
+Specifies a country/region when you query the CDN data outside the Chinese mainland. If this is left blank, all countries/regions will be queried.
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8).
+When `Area` is `mainland`, you can query by the province. Note that only one of `District`, `Isp` and `IpProtocol` can be specified.
     */
     @SerializedName("District")
     @Expose
@@ -122,46 +122,46 @@ If you have specified a province for your query on CDN data within mainland Chin
 
     /**
     * Specifies the protocol to be queried; if you leave it blank, all protocols will be queried.
-all: All protocols
-http: specifies the HTTP metric to be queried
-https: specifies the HTTPS metric to be queried
+`all`: All protocols
+`http`: Query HTTP data
+`https`: Query HTTPS data
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * Specifies the data source to be queried, which can be seen as the allowlist function.
+    * Specifies the data source to be queried. It’s only open to beta users now. 
     */
     @SerializedName("DataSource")
     @Expose
     private String DataSource;
 
     /**
-    * Specified IP protocol to be queried. If this parameter is left empty, all protocols will be queried
-all: all protocols
-ipv4: specifies to query IPv4 metrics
-ipv6: specifies to query IPv6 metrics
-If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
-Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
+    * Specifies the IP protocol to be queried. If it’s not specified, data of all IP protocols are returned.
+`all`: All protocols
+`ipv4`: Query IPv4 data
+`ipv6`: Query IPv6 data
+If `IpProtocol` is specified, `District` parameter can not be specified at the same time.
+Note: `ipv4` and `ipv6` are only available to beta users. 
     */
     @SerializedName("IpProtocol")
     @Expose
     private String IpProtocol;
 
     /**
-    * Specifies a service region. If this value is left blank, CDN data within Mainland China will be queried.
-`mainland`: specifies to query CDN data within Mainland China;
-`overseas`: specifies to query CDN data outside Mainland China.
+    * Specifies the service area. If it’s not specified, CDN data of the Chinese mainland are returned.
+`mainland`: Query CDN data in the Chinese mainland.
+`overseas`: Query CDN data outside the Chinese mainland.
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * Specifies a region type for your query on CDN data outside Mainland China. If this parameter is left blank, data on the service region will be queried. This parameter is valid only when `Area` is `overseas`.
-`server`: specifies to query data on the service region where Tencent Cloud CDN nodes are located;
-`client`: specifies to query data on the client region where the request devices are located.
+    * Specify whether to query by the region of the server or client. This parameter is valid only when `Area` is `overseas`.
+`server`: Query by the location of server (Tencent Cloud CDN nodes)
+`client`: Query by the location of the client (where the request devices are located)
     */
     @SerializedName("AreaType")
     @Expose
@@ -175,48 +175,55 @@ Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
     private String Product;
 
     /**
-     * Get Queries start time, such as 2018-09-04 10:40:00; the returned result is later than or equal to the specified time.
-According to the specified time granularity, forward rounding is applied; for example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the first returned entry will be 2018-09-04 10:00:00.
-The gap between the start time and end time should be less than or equal to 90 days. 
-     * @return StartTime Queries start time, such as 2018-09-04 10:40:00; the returned result is later than or equal to the specified time.
-According to the specified time granularity, forward rounding is applied; for example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the first returned entry will be 2018-09-04 10:00:00.
-The gap between the start time and end time should be less than or equal to 90 days.
+    * Specifies a time zone to query. The default time zone is UTC+08:00.
+    */
+    @SerializedName("TimeZone")
+    @Expose
+    private String TimeZone;
+
+    /**
+     * Get Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days. 
+     * @return StartTime Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Queries start time, such as 2018-09-04 10:40:00; the returned result is later than or equal to the specified time.
-According to the specified time granularity, forward rounding is applied; for example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the first returned entry will be 2018-09-04 10:00:00.
-The gap between the start time and end time should be less than or equal to 90 days.
-     * @param StartTime Queries start time, such as 2018-09-04 10:40:00; the returned result is later than or equal to the specified time.
-According to the specified time granularity, forward rounding is applied; for example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the first returned entry will be 2018-09-04 10:00:00.
-The gap between the start time and end time should be less than or equal to 90 days.
+     * Set Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
+     * @param StartTime Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Queries end time, such as 2018-09-04 10:40:00; the returned result is earlier than or equal to the specified time.
-According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the last returned entry will be 2018-09-04 10:00:00.
-The gap between the start time and end time should be less than or equal to 90 days. 
-     * @return EndTime Queries end time, such as 2018-09-04 10:40:00; the returned result is earlier than or equal to the specified time.
-According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the last returned entry will be 2018-09-04 10:00:00.
-The gap between the start time and end time should be less than or equal to 90 days.
+     * Get End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days. 
+     * @return EndTime End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Queries end time, such as 2018-09-04 10:40:00; the returned result is earlier than or equal to the specified time.
-According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the last returned entry will be 2018-09-04 10:00:00.
-The gap between the start time and end time should be less than or equal to 90 days.
-     * @param EndTime Queries end time, such as 2018-09-04 10:40:00; the returned result is earlier than or equal to the specified time.
-According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the last returned entry will be 2018-09-04 10:00:00.
-The gap between the start time and end time should be less than or equal to 90 days.
+     * Set End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
+     * @param EndTime End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -224,40 +231,40 @@ The gap between the start time and end time should be less than or equal to 90 d
 
     /**
      * Get Specifies the metric to query, which can be:
-`flux`: traffic (in bytes)
-`fluxIn`: upstream traffic (in bytes), only used for the `ecdn` product
-`fluxOut`: downstream traffic (in bytes), only used for the `ecdn` product
-`bandwidth`: bandwidth (in bps)
-`bandwidthIn`: upstream bandwidth (in bps), only used for the `ecdn` product
-`bandwidthOut`: downstream bandwidth (in bps), only used for the `ecdn` product
-`request`: number of requests
-`hitRequest`: number of hit requests
-`requestHitRate`: request hit rate (in % with two decimal digits)
-`hitFlux`: hit traffic (in bytes)
-`fluxHitRate`: traffic hit rate (in % with two decimal digits)
-`statusCode`: status code. Number of 2xx, 3xx, 4xx, and 5xx status codes returned during the queried period.
-`2xx`: lists the number of all status codes starting with **2** returned during the queried period based on the specified interval (if any)
-`3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
-`4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
-`5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
+`flux`: Traffic (in bytes)
+`fluxIn`: Upstream traffic (in bytes), only used for the `ecdn` product
+`fluxOut`: Downstream traffic (in bytes), only used for the `ecdn` product
+`bandwidth`: Bandwidth (in bps)
+`bandwidthIn`: Upstream bandwidth (in bps), only used for the `ecdn` product
+`bandwidthOut`: Downstream bandwidth (in bps), only used for the `ecdn` product
+`request`: Number of requests
+`hitRequest`: Number of hit requests
+`requestHitRate`: Request hit rate (in % with two decimal digits)
+`hitFlux`: Hit traffic (in bytes)
+`fluxHitRate`: Traffic hit rate (in % with two decimal digits)
+`statusCode`: Status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
+`2xx`: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
+`3xx`: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
+`4xx`: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
+`5xx`: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
 Specifies the status code to query. The return will be empty if the status code has never been generated. 
      * @return Metric Specifies the metric to query, which can be:
-`flux`: traffic (in bytes)
-`fluxIn`: upstream traffic (in bytes), only used for the `ecdn` product
-`fluxOut`: downstream traffic (in bytes), only used for the `ecdn` product
-`bandwidth`: bandwidth (in bps)
-`bandwidthIn`: upstream bandwidth (in bps), only used for the `ecdn` product
-`bandwidthOut`: downstream bandwidth (in bps), only used for the `ecdn` product
-`request`: number of requests
-`hitRequest`: number of hit requests
-`requestHitRate`: request hit rate (in % with two decimal digits)
-`hitFlux`: hit traffic (in bytes)
-`fluxHitRate`: traffic hit rate (in % with two decimal digits)
-`statusCode`: status code. Number of 2xx, 3xx, 4xx, and 5xx status codes returned during the queried period.
-`2xx`: lists the number of all status codes starting with **2** returned during the queried period based on the specified interval (if any)
-`3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
-`4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
-`5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
+`flux`: Traffic (in bytes)
+`fluxIn`: Upstream traffic (in bytes), only used for the `ecdn` product
+`fluxOut`: Downstream traffic (in bytes), only used for the `ecdn` product
+`bandwidth`: Bandwidth (in bps)
+`bandwidthIn`: Upstream bandwidth (in bps), only used for the `ecdn` product
+`bandwidthOut`: Downstream bandwidth (in bps), only used for the `ecdn` product
+`request`: Number of requests
+`hitRequest`: Number of hit requests
+`requestHitRate`: Request hit rate (in % with two decimal digits)
+`hitFlux`: Hit traffic (in bytes)
+`fluxHitRate`: Traffic hit rate (in % with two decimal digits)
+`statusCode`: Status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
+`2xx`: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
+`3xx`: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
+`4xx`: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
+`5xx`: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
 Specifies the status code to query. The return will be empty if the status code has never been generated.
      */
     public String getMetric() {
@@ -266,40 +273,40 @@ Specifies the status code to query. The return will be empty if the status code 
 
     /**
      * Set Specifies the metric to query, which can be:
-`flux`: traffic (in bytes)
-`fluxIn`: upstream traffic (in bytes), only used for the `ecdn` product
-`fluxOut`: downstream traffic (in bytes), only used for the `ecdn` product
-`bandwidth`: bandwidth (in bps)
-`bandwidthIn`: upstream bandwidth (in bps), only used for the `ecdn` product
-`bandwidthOut`: downstream bandwidth (in bps), only used for the `ecdn` product
-`request`: number of requests
-`hitRequest`: number of hit requests
-`requestHitRate`: request hit rate (in % with two decimal digits)
-`hitFlux`: hit traffic (in bytes)
-`fluxHitRate`: traffic hit rate (in % with two decimal digits)
-`statusCode`: status code. Number of 2xx, 3xx, 4xx, and 5xx status codes returned during the queried period.
-`2xx`: lists the number of all status codes starting with **2** returned during the queried period based on the specified interval (if any)
-`3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
-`4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
-`5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
+`flux`: Traffic (in bytes)
+`fluxIn`: Upstream traffic (in bytes), only used for the `ecdn` product
+`fluxOut`: Downstream traffic (in bytes), only used for the `ecdn` product
+`bandwidth`: Bandwidth (in bps)
+`bandwidthIn`: Upstream bandwidth (in bps), only used for the `ecdn` product
+`bandwidthOut`: Downstream bandwidth (in bps), only used for the `ecdn` product
+`request`: Number of requests
+`hitRequest`: Number of hit requests
+`requestHitRate`: Request hit rate (in % with two decimal digits)
+`hitFlux`: Hit traffic (in bytes)
+`fluxHitRate`: Traffic hit rate (in % with two decimal digits)
+`statusCode`: Status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
+`2xx`: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
+`3xx`: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
+`4xx`: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
+`5xx`: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
 Specifies the status code to query. The return will be empty if the status code has never been generated.
      * @param Metric Specifies the metric to query, which can be:
-`flux`: traffic (in bytes)
-`fluxIn`: upstream traffic (in bytes), only used for the `ecdn` product
-`fluxOut`: downstream traffic (in bytes), only used for the `ecdn` product
-`bandwidth`: bandwidth (in bps)
-`bandwidthIn`: upstream bandwidth (in bps), only used for the `ecdn` product
-`bandwidthOut`: downstream bandwidth (in bps), only used for the `ecdn` product
-`request`: number of requests
-`hitRequest`: number of hit requests
-`requestHitRate`: request hit rate (in % with two decimal digits)
-`hitFlux`: hit traffic (in bytes)
-`fluxHitRate`: traffic hit rate (in % with two decimal digits)
-`statusCode`: status code. Number of 2xx, 3xx, 4xx, and 5xx status codes returned during the queried period.
-`2xx`: lists the number of all status codes starting with **2** returned during the queried period based on the specified interval (if any)
-`3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
-`4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
-`5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
+`flux`: Traffic (in bytes)
+`fluxIn`: Upstream traffic (in bytes), only used for the `ecdn` product
+`fluxOut`: Downstream traffic (in bytes), only used for the `ecdn` product
+`bandwidth`: Bandwidth (in bps)
+`bandwidthIn`: Upstream bandwidth (in bps), only used for the `ecdn` product
+`bandwidthOut`: Downstream bandwidth (in bps), only used for the `ecdn` product
+`request`: Number of requests
+`hitRequest`: Number of hit requests
+`requestHitRate`: Request hit rate (in % with two decimal digits)
+`hitFlux`: Hit traffic (in bytes)
+`fluxHitRate`: Traffic hit rate (in % with two decimal digits)
+`statusCode`: Status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
+`2xx`: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
+`3xx`: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
+`4xx`: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
+`5xx`: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
 Specifies the status code to query. The return will be empty if the status code has never been generated.
      */
     public void setMetric(String Metric) {
@@ -307,80 +314,80 @@ Specifies the status code to query. The return will be empty if the status code 
     }
 
     /**
-     * Get Queries the information of specified domain names
-Specifies a domain name to query
-Specifies multiple domain names to query (30 at most at a time)
-Queries all Specifies an account to query all domain names 
-     * @return Domains Queries the information of specified domain names
-Specifies a domain name to query
-Specifies multiple domain names to query (30 at most at a time)
-Queries all Specifies an account to query all domain names
+     * Get Specifies the list of domain names to be queried
+You can specify one or more domain names.
+Up to 30 domain names can be queried in one request.
+If this parameter is not specified, it means to query all domain names under the current account. 
+     * @return Domains Specifies the list of domain names to be queried
+You can specify one or more domain names.
+Up to 30 domain names can be queried in one request.
+If this parameter is not specified, it means to query all domain names under the current account.
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set Queries the information of specified domain names
-Specifies a domain name to query
-Specifies multiple domain names to query (30 at most at a time)
-Queries all Specifies an account to query all domain names
-     * @param Domains Queries the information of specified domain names
-Specifies a domain name to query
-Specifies multiple domain names to query (30 at most at a time)
-Queries all Specifies an account to query all domain names
+     * Set Specifies the list of domain names to be queried
+You can specify one or more domain names.
+Up to 30 domain names can be queried in one request.
+If this parameter is not specified, it means to query all domain names under the current account.
+     * @param Domains Specifies the list of domain names to be queried
+You can specify one or more domain names.
+Up to 30 domain names can be queried in one request.
+If this parameter is not specified, it means to query all domain names under the current account.
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;
     }
 
     /**
-     * Get Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
-Please note that if domain names are specified, this parameter will be ignored. 
-     * @return Project Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
-Please note that if domain names are specified, this parameter will be ignored.
+     * Get Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+Note that `Project` will be ignored if `Domains` is specified. 
+     * @return Project Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+Note that `Project` will be ignored if `Domains` is specified.
      */
     public Long getProject() {
         return this.Project;
     }
 
     /**
-     * Set Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
-Please note that if domain names are specified, this parameter will be ignored.
-     * @param Project Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
-Please note that if domain names are specified, this parameter will be ignored.
+     * Set Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+Note that `Project` will be ignored if `Domains` is specified.
+     * @param Project Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+Note that `Project` will be ignored if `Domains` is specified.
      */
     public void setProject(Long Project) {
         this.Project = Project;
     }
 
     /**
-     * Get Time granularity; valid values:
-`min`: data with 1-minute granularity is returned when the queried period is no longer than 24 hours. This value is not supported if the service region you want to query is outside Mainland China;
-`5min`: data with 5-minute granularity is returned when the queried period is no longer than 31 days;
-`hour`: data with 1-hour granularity is returned when the queried period is no longer than 31 days;
-`day`: data with 1-day granularity is returned when the queried period is longer than 31 days. 
-     * @return Interval Time granularity; valid values:
-`min`: data with 1-minute granularity is returned when the queried period is no longer than 24 hours. This value is not supported if the service region you want to query is outside Mainland China;
-`5min`: data with 5-minute granularity is returned when the queried period is no longer than 31 days;
-`hour`: data with 1-hour granularity is returned when the queried period is no longer than 31 days;
-`day`: data with 1-day granularity is returned when the queried period is longer than 31 days.
+     * Get Sampling interval. The available options vary for different query period. See below: 
+`min`: Return data with 1-minute granularity. It’s available when the query period is  within 24 hours and `Area` is `mainland`.
+`5min`: Return data with 5-minute granularity. It’s available when the query period is within 31 days.
+`hour`: Return data with 1-hour granularity. It’s available when the query period is within 31 days.
+`day`: Return data with 1-day granularity. It’s available when the query period is longer than 31 days. 
+     * @return Interval Sampling interval. The available options vary for different query period. See below: 
+`min`: Return data with 1-minute granularity. It’s available when the query period is  within 24 hours and `Area` is `mainland`.
+`5min`: Return data with 5-minute granularity. It’s available when the query period is within 31 days.
+`hour`: Return data with 1-hour granularity. It’s available when the query period is within 31 days.
+`day`: Return data with 1-day granularity. It’s available when the query period is longer than 31 days.
      */
     public String getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set Time granularity; valid values:
-`min`: data with 1-minute granularity is returned when the queried period is no longer than 24 hours. This value is not supported if the service region you want to query is outside Mainland China;
-`5min`: data with 5-minute granularity is returned when the queried period is no longer than 31 days;
-`hour`: data with 1-hour granularity is returned when the queried period is no longer than 31 days;
-`day`: data with 1-day granularity is returned when the queried period is longer than 31 days.
-     * @param Interval Time granularity; valid values:
-`min`: data with 1-minute granularity is returned when the queried period is no longer than 24 hours. This value is not supported if the service region you want to query is outside Mainland China;
-`5min`: data with 5-minute granularity is returned when the queried period is no longer than 31 days;
-`hour`: data with 1-hour granularity is returned when the queried period is no longer than 31 days;
-`day`: data with 1-day granularity is returned when the queried period is longer than 31 days.
+     * Set Sampling interval. The available options vary for different query period. See below: 
+`min`: Return data with 1-minute granularity. It’s available when the query period is  within 24 hours and `Area` is `mainland`.
+`5min`: Return data with 5-minute granularity. It’s available when the query period is within 31 days.
+`hour`: Return data with 1-hour granularity. It’s available when the query period is within 31 days.
+`day`: Return data with 1-day granularity. It’s available when the query period is longer than 31 days.
+     * @param Interval Sampling interval. The available options vary for different query period. See below: 
+`min`: Return data with 1-minute granularity. It’s available when the query period is  within 24 hours and `Area` is `mainland`.
+`5min`: Return data with 5-minute granularity. It’s available when the query period is within 31 days.
+`hour`: Return data with 1-hour granularity. It’s available when the query period is within 31 days.
+`day`: Return data with 1-day granularity. It’s available when the query period is longer than 31 days.
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;
@@ -388,9 +395,9 @@ Please note that if domain names are specified, this parameter will be ignored.
 
     /**
      * Get The aggregate data for multiple domain names is returned by default (false) during a multi-domain-name query.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported) 
+You can set it to true to return the details for each Domain (the statusCode metric is currently not supported). 
      * @return Detail The aggregate data for multiple domain names is returned by default (false) during a multi-domain-name query.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
+You can set it to true to return the details for each Domain (the statusCode metric is currently not supported).
      */
     public Boolean getDetail() {
         return this.Detail;
@@ -398,61 +405,61 @@ You can set it to true to return the details for each Domain (the statusCode met
 
     /**
      * Set The aggregate data for multiple domain names is returned by default (false) during a multi-domain-name query.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
+You can set it to true to return the details for each Domain (the statusCode metric is currently not supported).
      * @param Detail The aggregate data for multiple domain names is returned by default (false) during a multi-domain-name query.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
+You can set it to true to return the details for each Domain (the statusCode metric is currently not supported).
      */
     public void setDetail(Boolean Detail) {
         this.Detail = Detail;
     }
 
     /**
-     * Get Specifies an ISP when you query the CDN data within Mainland China. If this is left blank, all ISPs will be queried.
+     * Get Specifies an ISP when you query the CDN data within the Chinese mainland. If this is left blank, all ISPs will be queried.
 To view ISP codes, see [ISP Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
-If you have specified an ISP, you cannot specify a province or an IP protocol for the same query. 
-     * @return Isp Specifies an ISP when you query the CDN data within Mainland China. If this is left blank, all ISPs will be queried.
+Note that only one of `District`, `Isp` and `IpProtocol` can be specified. 
+     * @return Isp Specifies an ISP when you query the CDN data within the Chinese mainland. If this is left blank, all ISPs will be queried.
 To view ISP codes, see [ISP Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
-If you have specified an ISP, you cannot specify a province or an IP protocol for the same query.
+Note that only one of `District`, `Isp` and `IpProtocol` can be specified.
      */
     public Long getIsp() {
         return this.Isp;
     }
 
     /**
-     * Set Specifies an ISP when you query the CDN data within Mainland China. If this is left blank, all ISPs will be queried.
+     * Set Specifies an ISP when you query the CDN data within the Chinese mainland. If this is left blank, all ISPs will be queried.
 To view ISP codes, see [ISP Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
-If you have specified an ISP, you cannot specify a province or an IP protocol for the same query.
-     * @param Isp Specifies an ISP when you query the CDN data within Mainland China. If this is left blank, all ISPs will be queried.
+Note that only one of `District`, `Isp` and `IpProtocol` can be specified.
+     * @param Isp Specifies an ISP when you query the CDN data within the Chinese mainland. If this is left blank, all ISPs will be queried.
 To view ISP codes, see [ISP Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
-If you have specified an ISP, you cannot specify a province or an IP protocol for the same query.
+Note that only one of `District`, `Isp` and `IpProtocol` can be specified.
      */
     public void setIsp(Long Isp) {
         this.Isp = Isp;
     }
 
     /**
-     * Get Specifies a province when you query the CDN data within Mainland China. If this is left blank, all provinces will be queried.
-Specifies a country/region when you query the CDN data outside Mainland China. If this is left blank, all countries/regions will be queried.
-To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
-If you have specified a province for your query on CDN data within mainland China, you cannot specify an ISP or an IP protocol for the same query. 
-     * @return District Specifies a province when you query the CDN data within Mainland China. If this is left blank, all provinces will be queried.
-Specifies a country/region when you query the CDN data outside Mainland China. If this is left blank, all countries/regions will be queried.
-To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
-If you have specified a province for your query on CDN data within mainland China, you cannot specify an ISP or an IP protocol for the same query.
+     * Get Specifies a province when you query the CDN data within the Chinese mainland. If this is left blank, all provinces will be queried.
+Specifies a country/region when you query the CDN data outside the Chinese mainland. If this is left blank, all countries/regions will be queried.
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8).
+When `Area` is `mainland`, you can query by the province. Note that only one of `District`, `Isp` and `IpProtocol` can be specified. 
+     * @return District Specifies a province when you query the CDN data within the Chinese mainland. If this is left blank, all provinces will be queried.
+Specifies a country/region when you query the CDN data outside the Chinese mainland. If this is left blank, all countries/regions will be queried.
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8).
+When `Area` is `mainland`, you can query by the province. Note that only one of `District`, `Isp` and `IpProtocol` can be specified.
      */
     public Long getDistrict() {
         return this.District;
     }
 
     /**
-     * Set Specifies a province when you query the CDN data within Mainland China. If this is left blank, all provinces will be queried.
-Specifies a country/region when you query the CDN data outside Mainland China. If this is left blank, all countries/regions will be queried.
-To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
-If you have specified a province for your query on CDN data within mainland China, you cannot specify an ISP or an IP protocol for the same query.
-     * @param District Specifies a province when you query the CDN data within Mainland China. If this is left blank, all provinces will be queried.
-Specifies a country/region when you query the CDN data outside Mainland China. If this is left blank, all countries/regions will be queried.
-To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
-If you have specified a province for your query on CDN data within mainland China, you cannot specify an ISP or an IP protocol for the same query.
+     * Set Specifies a province when you query the CDN data within the Chinese mainland. If this is left blank, all provinces will be queried.
+Specifies a country/region when you query the CDN data outside the Chinese mainland. If this is left blank, all countries/regions will be queried.
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8).
+When `Area` is `mainland`, you can query by the province. Note that only one of `District`, `Isp` and `IpProtocol` can be specified.
+     * @param District Specifies a province when you query the CDN data within the Chinese mainland. If this is left blank, all provinces will be queried.
+Specifies a country/region when you query the CDN data outside the Chinese mainland. If this is left blank, all countries/regions will be queried.
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8).
+When `Area` is `mainland`, you can query by the province. Note that only one of `District`, `Isp` and `IpProtocol` can be specified.
      */
     public void setDistrict(Long District) {
         this.District = District;
@@ -460,13 +467,13 @@ If you have specified a province for your query on CDN data within mainland Chin
 
     /**
      * Get Specifies the protocol to be queried; if you leave it blank, all protocols will be queried.
-all: All protocols
-http: specifies the HTTP metric to be queried
-https: specifies the HTTPS metric to be queried 
+`all`: All protocols
+`http`: Query HTTP data
+`https`: Query HTTPS data 
      * @return Protocol Specifies the protocol to be queried; if you leave it blank, all protocols will be queried.
-all: All protocols
-http: specifies the HTTP metric to be queried
-https: specifies the HTTPS metric to be queried
+`all`: All protocols
+`http`: Query HTTP data
+`https`: Query HTTPS data
      */
     public String getProtocol() {
         return this.Protocol;
@@ -474,113 +481,113 @@ https: specifies the HTTPS metric to be queried
 
     /**
      * Set Specifies the protocol to be queried; if you leave it blank, all protocols will be queried.
-all: All protocols
-http: specifies the HTTP metric to be queried
-https: specifies the HTTPS metric to be queried
+`all`: All protocols
+`http`: Query HTTP data
+`https`: Query HTTPS data
      * @param Protocol Specifies the protocol to be queried; if you leave it blank, all protocols will be queried.
-all: All protocols
-http: specifies the HTTP metric to be queried
-https: specifies the HTTPS metric to be queried
+`all`: All protocols
+`http`: Query HTTP data
+`https`: Query HTTPS data
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get Specifies the data source to be queried, which can be seen as the allowlist function. 
-     * @return DataSource Specifies the data source to be queried, which can be seen as the allowlist function.
+     * Get Specifies the data source to be queried. It’s only open to beta users now.  
+     * @return DataSource Specifies the data source to be queried. It’s only open to beta users now. 
      */
     public String getDataSource() {
         return this.DataSource;
     }
 
     /**
-     * Set Specifies the data source to be queried, which can be seen as the allowlist function.
-     * @param DataSource Specifies the data source to be queried, which can be seen as the allowlist function.
+     * Set Specifies the data source to be queried. It’s only open to beta users now. 
+     * @param DataSource Specifies the data source to be queried. It’s only open to beta users now. 
      */
     public void setDataSource(String DataSource) {
         this.DataSource = DataSource;
     }
 
     /**
-     * Get Specified IP protocol to be queried. If this parameter is left empty, all protocols will be queried
-all: all protocols
-ipv4: specifies to query IPv4 metrics
-ipv6: specifies to query IPv6 metrics
-If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
-Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query 
-     * @return IpProtocol Specified IP protocol to be queried. If this parameter is left empty, all protocols will be queried
-all: all protocols
-ipv4: specifies to query IPv4 metrics
-ipv6: specifies to query IPv6 metrics
-If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
-Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
+     * Get Specifies the IP protocol to be queried. If it’s not specified, data of all IP protocols are returned.
+`all`: All protocols
+`ipv4`: Query IPv4 data
+`ipv6`: Query IPv6 data
+If `IpProtocol` is specified, `District` parameter can not be specified at the same time.
+Note: `ipv4` and `ipv6` are only available to beta users.  
+     * @return IpProtocol Specifies the IP protocol to be queried. If it’s not specified, data of all IP protocols are returned.
+`all`: All protocols
+`ipv4`: Query IPv4 data
+`ipv6`: Query IPv6 data
+If `IpProtocol` is specified, `District` parameter can not be specified at the same time.
+Note: `ipv4` and `ipv6` are only available to beta users. 
      */
     public String getIpProtocol() {
         return this.IpProtocol;
     }
 
     /**
-     * Set Specified IP protocol to be queried. If this parameter is left empty, all protocols will be queried
-all: all protocols
-ipv4: specifies to query IPv4 metrics
-ipv6: specifies to query IPv6 metrics
-If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
-Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
-     * @param IpProtocol Specified IP protocol to be queried. If this parameter is left empty, all protocols will be queried
-all: all protocols
-ipv4: specifies to query IPv4 metrics
-ipv6: specifies to query IPv6 metrics
-If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
-Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
+     * Set Specifies the IP protocol to be queried. If it’s not specified, data of all IP protocols are returned.
+`all`: All protocols
+`ipv4`: Query IPv4 data
+`ipv6`: Query IPv6 data
+If `IpProtocol` is specified, `District` parameter can not be specified at the same time.
+Note: `ipv4` and `ipv6` are only available to beta users. 
+     * @param IpProtocol Specifies the IP protocol to be queried. If it’s not specified, data of all IP protocols are returned.
+`all`: All protocols
+`ipv4`: Query IPv4 data
+`ipv6`: Query IPv6 data
+If `IpProtocol` is specified, `District` parameter can not be specified at the same time.
+Note: `ipv4` and `ipv6` are only available to beta users. 
      */
     public void setIpProtocol(String IpProtocol) {
         this.IpProtocol = IpProtocol;
     }
 
     /**
-     * Get Specifies a service region. If this value is left blank, CDN data within Mainland China will be queried.
-`mainland`: specifies to query CDN data within Mainland China;
-`overseas`: specifies to query CDN data outside Mainland China. 
-     * @return Area Specifies a service region. If this value is left blank, CDN data within Mainland China will be queried.
-`mainland`: specifies to query CDN data within Mainland China;
-`overseas`: specifies to query CDN data outside Mainland China.
+     * Get Specifies the service area. If it’s not specified, CDN data of the Chinese mainland are returned.
+`mainland`: Query CDN data in the Chinese mainland.
+`overseas`: Query CDN data outside the Chinese mainland. 
+     * @return Area Specifies the service area. If it’s not specified, CDN data of the Chinese mainland are returned.
+`mainland`: Query CDN data in the Chinese mainland.
+`overseas`: Query CDN data outside the Chinese mainland.
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Specifies a service region. If this value is left blank, CDN data within Mainland China will be queried.
-`mainland`: specifies to query CDN data within Mainland China;
-`overseas`: specifies to query CDN data outside Mainland China.
-     * @param Area Specifies a service region. If this value is left blank, CDN data within Mainland China will be queried.
-`mainland`: specifies to query CDN data within Mainland China;
-`overseas`: specifies to query CDN data outside Mainland China.
+     * Set Specifies the service area. If it’s not specified, CDN data of the Chinese mainland are returned.
+`mainland`: Query CDN data in the Chinese mainland.
+`overseas`: Query CDN data outside the Chinese mainland.
+     * @param Area Specifies the service area. If it’s not specified, CDN data of the Chinese mainland are returned.
+`mainland`: Query CDN data in the Chinese mainland.
+`overseas`: Query CDN data outside the Chinese mainland.
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get Specifies a region type for your query on CDN data outside Mainland China. If this parameter is left blank, data on the service region will be queried. This parameter is valid only when `Area` is `overseas`.
-`server`: specifies to query data on the service region where Tencent Cloud CDN nodes are located;
-`client`: specifies to query data on the client region where the request devices are located. 
-     * @return AreaType Specifies a region type for your query on CDN data outside Mainland China. If this parameter is left blank, data on the service region will be queried. This parameter is valid only when `Area` is `overseas`.
-`server`: specifies to query data on the service region where Tencent Cloud CDN nodes are located;
-`client`: specifies to query data on the client region where the request devices are located.
+     * Get Specify whether to query by the region of the server or client. This parameter is valid only when `Area` is `overseas`.
+`server`: Query by the location of server (Tencent Cloud CDN nodes)
+`client`: Query by the location of the client (where the request devices are located) 
+     * @return AreaType Specify whether to query by the region of the server or client. This parameter is valid only when `Area` is `overseas`.
+`server`: Query by the location of server (Tencent Cloud CDN nodes)
+`client`: Query by the location of the client (where the request devices are located)
      */
     public String getAreaType() {
         return this.AreaType;
     }
 
     /**
-     * Set Specifies a region type for your query on CDN data outside Mainland China. If this parameter is left blank, data on the service region will be queried. This parameter is valid only when `Area` is `overseas`.
-`server`: specifies to query data on the service region where Tencent Cloud CDN nodes are located;
-`client`: specifies to query data on the client region where the request devices are located.
-     * @param AreaType Specifies a region type for your query on CDN data outside Mainland China. If this parameter is left blank, data on the service region will be queried. This parameter is valid only when `Area` is `overseas`.
-`server`: specifies to query data on the service region where Tencent Cloud CDN nodes are located;
-`client`: specifies to query data on the client region where the request devices are located.
+     * Set Specify whether to query by the region of the server or client. This parameter is valid only when `Area` is `overseas`.
+`server`: Query by the location of server (Tencent Cloud CDN nodes)
+`client`: Query by the location of the client (where the request devices are located)
+     * @param AreaType Specify whether to query by the region of the server or client. This parameter is valid only when `Area` is `overseas`.
+`server`: Query by the location of server (Tencent Cloud CDN nodes)
+`client`: Query by the location of the client (where the request devices are located)
      */
     public void setAreaType(String AreaType) {
         this.AreaType = AreaType;
@@ -600,6 +607,22 @@ Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
      */
     public void setProduct(String Product) {
         this.Product = Product;
+    }
+
+    /**
+     * Get Specifies a time zone to query. The default time zone is UTC+08:00. 
+     * @return TimeZone Specifies a time zone to query. The default time zone is UTC+08:00.
+     */
+    public String getTimeZone() {
+        return this.TimeZone;
+    }
+
+    /**
+     * Set Specifies a time zone to query. The default time zone is UTC+08:00.
+     * @param TimeZone Specifies a time zone to query. The default time zone is UTC+08:00.
+     */
+    public void setTimeZone(String TimeZone) {
+        this.TimeZone = TimeZone;
     }
 
     public DescribeCdnDataRequest() {
@@ -658,6 +681,9 @@ Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
         if (source.Product != null) {
             this.Product = new String(source.Product);
         }
+        if (source.TimeZone != null) {
+            this.TimeZone = new String(source.TimeZone);
+        }
     }
 
 
@@ -680,6 +706,7 @@ Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "AreaType", this.AreaType);
         this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
 
     }
 }

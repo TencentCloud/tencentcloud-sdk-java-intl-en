@@ -49,8 +49,8 @@ Default value: `mainland`. You can prefetch a URL to nodes in a region provided 
     private String Area;
 
     /**
-    * If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
-Note: resources prefetched outside the Chinese mainland will be cached to CDN nodes outside the Chinese mainland and the traffic generated will incur costs.
+    * By default, prefetch for regions in the Chinese mainland is performed onto the intermediate nodes, while prefetch for regions outside the Chinese mainland is performed onto the edge nodes and the traffic generated will be billed.
+If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
     */
     @SerializedName("Layer")
     @Expose
@@ -145,20 +145,20 @@ Default value: `mainland`. You can prefetch a URL to nodes in a region provided 
     }
 
     /**
-     * Get If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
-Note: resources prefetched outside the Chinese mainland will be cached to CDN nodes outside the Chinese mainland and the traffic generated will incur costs. 
-     * @return Layer If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
-Note: resources prefetched outside the Chinese mainland will be cached to CDN nodes outside the Chinese mainland and the traffic generated will incur costs.
+     * Get By default, prefetch for regions in the Chinese mainland is performed onto the intermediate nodes, while prefetch for regions outside the Chinese mainland is performed onto the edge nodes and the traffic generated will be billed.
+If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node. 
+     * @return Layer By default, prefetch for regions in the Chinese mainland is performed onto the intermediate nodes, while prefetch for regions outside the Chinese mainland is performed onto the edge nodes and the traffic generated will be billed.
+If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
      */
     public String getLayer() {
         return this.Layer;
     }
 
     /**
-     * Set If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
-Note: resources prefetched outside the Chinese mainland will be cached to CDN nodes outside the Chinese mainland and the traffic generated will incur costs.
-     * @param Layer If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
-Note: resources prefetched outside the Chinese mainland will be cached to CDN nodes outside the Chinese mainland and the traffic generated will incur costs.
+     * Set By default, prefetch for regions in the Chinese mainland is performed onto the intermediate nodes, while prefetch for regions outside the Chinese mainland is performed onto the edge nodes and the traffic generated will be billed.
+If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
+     * @param Layer By default, prefetch for regions in the Chinese mainland is performed onto the intermediate nodes, while prefetch for regions outside the Chinese mainland is performed onto the edge nodes and the traffic generated will be billed.
+If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
      */
     public void setLayer(String Layer) {
         this.Layer = Layer;

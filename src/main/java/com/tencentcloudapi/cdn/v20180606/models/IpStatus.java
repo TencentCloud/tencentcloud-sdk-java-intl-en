@@ -30,30 +30,30 @@ public class IpStatus extends AbstractModel{
     private String Ip;
 
     /**
-    * Node region
+    * Region of the node
     */
     @SerializedName("District")
     @Expose
     private String District;
 
     /**
-    * Node ISP
+    * ISP of the node
     */
     @SerializedName("Isp")
     @Expose
     private String Isp;
 
     /**
-    * Node city
+    * City of the node
     */
     @SerializedName("City")
     @Expose
     private String City;
 
     /**
-    * Node status
-online: the node is online; scheduling service running
-offline: the node is offline
+    * Status of the node
+`online`: The node is active and scheduling normally.
+`offline`: The node is inactive.
     */
     @SerializedName("Status")
     @Expose
@@ -76,72 +76,72 @@ offline: the node is offline
     }
 
     /**
-     * Get Node region 
-     * @return District Node region
+     * Get Region of the node 
+     * @return District Region of the node
      */
     public String getDistrict() {
         return this.District;
     }
 
     /**
-     * Set Node region
-     * @param District Node region
+     * Set Region of the node
+     * @param District Region of the node
      */
     public void setDistrict(String District) {
         this.District = District;
     }
 
     /**
-     * Get Node ISP 
-     * @return Isp Node ISP
+     * Get ISP of the node 
+     * @return Isp ISP of the node
      */
     public String getIsp() {
         return this.Isp;
     }
 
     /**
-     * Set Node ISP
-     * @param Isp Node ISP
+     * Set ISP of the node
+     * @param Isp ISP of the node
      */
     public void setIsp(String Isp) {
         this.Isp = Isp;
     }
 
     /**
-     * Get Node city 
-     * @return City Node city
+     * Get City of the node 
+     * @return City City of the node
      */
     public String getCity() {
         return this.City;
     }
 
     /**
-     * Set Node city
-     * @param City Node city
+     * Set City of the node
+     * @param City City of the node
      */
     public void setCity(String City) {
         this.City = City;
     }
 
     /**
-     * Get Node status
-online: the node is online; scheduling service running
-offline: the node is offline 
-     * @return Status Node status
-online: the node is online; scheduling service running
-offline: the node is offline
+     * Get Status of the node
+`online`: The node is active and scheduling normally.
+`offline`: The node is inactive. 
+     * @return Status Status of the node
+`online`: The node is active and scheduling normally.
+`offline`: The node is inactive.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Node status
-online: the node is online; scheduling service running
-offline: the node is offline
-     * @param Status Node status
-online: the node is online; scheduling service running
-offline: the node is offline
+     * Set Status of the node
+`online`: The node is active and scheduling normally.
+`offline`: The node is inactive.
+     * @param Status Status of the node
+`online`: The node is active and scheduling normally.
+`offline`: The node is inactive.
      */
     public void setStatus(String Status) {
         this.Status = Status;

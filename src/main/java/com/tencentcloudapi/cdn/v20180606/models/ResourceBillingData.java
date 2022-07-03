@@ -23,11 +23,11 @@ import java.util.HashMap;
 public class ResourceBillingData extends AbstractModel{
 
     /**
-    * Resource name, which is categorized as follows based on different query conditions:
-Specific domain name: domain name details
-multiDomains: aggregated details of multiple domain names
-Project ID: displays the ID of the specified project to be queried
-all: the details at the account level
+    * Resource name, which is classified as follows based on different query filters:
+When a domain name is specified: Details of the domain name
+`multiDomains`: Aggregated details of multiple domain names
+A specific project ID: ID of the specifically queried project
+`all`: Details at the account level
     */
     @SerializedName("Resource")
     @Expose
@@ -41,32 +41,32 @@ all: the details at the account level
     private CdnData [] BillingData;
 
     /**
-     * Get Resource name, which is categorized as follows based on different query conditions:
-Specific domain name: domain name details
-multiDomains: aggregated details of multiple domain names
-Project ID: displays the ID of the specified project to be queried
-all: the details at the account level 
-     * @return Resource Resource name, which is categorized as follows based on different query conditions:
-Specific domain name: domain name details
-multiDomains: aggregated details of multiple domain names
-Project ID: displays the ID of the specified project to be queried
-all: the details at the account level
+     * Get Resource name, which is classified as follows based on different query filters:
+When a domain name is specified: Details of the domain name
+`multiDomains`: Aggregated details of multiple domain names
+A specific project ID: ID of the specifically queried project
+`all`: Details at the account level 
+     * @return Resource Resource name, which is classified as follows based on different query filters:
+When a domain name is specified: Details of the domain name
+`multiDomains`: Aggregated details of multiple domain names
+A specific project ID: ID of the specifically queried project
+`all`: Details at the account level
      */
     public String getResource() {
         return this.Resource;
     }
 
     /**
-     * Set Resource name, which is categorized as follows based on different query conditions:
-Specific domain name: domain name details
-multiDomains: aggregated details of multiple domain names
-Project ID: displays the ID of the specified project to be queried
-all: the details at the account level
-     * @param Resource Resource name, which is categorized as follows based on different query conditions:
-Specific domain name: domain name details
-multiDomains: aggregated details of multiple domain names
-Project ID: displays the ID of the specified project to be queried
-all: the details at the account level
+     * Set Resource name, which is classified as follows based on different query filters:
+When a domain name is specified: Details of the domain name
+`multiDomains`: Aggregated details of multiple domain names
+A specific project ID: ID of the specifically queried project
+`all`: Details at the account level
+     * @param Resource Resource name, which is classified as follows based on different query filters:
+When a domain name is specified: Details of the domain name
+`multiDomains`: Aggregated details of multiple domain names
+A specific project ID: ID of the specifically queried project
+`all`: Details at the account level
      */
     public void setResource(String Resource) {
         this.Resource = Resource;

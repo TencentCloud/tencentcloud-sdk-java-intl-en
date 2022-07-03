@@ -23,17 +23,17 @@ import java.util.HashMap;
 public class CdnData extends AbstractModel{
 
     /**
-    * Queries the specified metric:
-flux: traffic (in bytes)
-bandwidth: bandwidth (in bps)
-request: number of requests
-fluxHitRate: traffic hit rate (in %)
-statusCode: status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
-2XX: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
-3XX: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
-4XX: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
-5XX: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
-Alternatively, you can specify a status code for querying.
+    * Queries by the specified metric:
+`flux`: Traffic (in bytes)
+`bandwidth`: Bandwidth (in bps)
+`request`: Number of requests
+`fluxHitRate`: Traffic hit rate (in %)
+`statusCode`: Status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
+`2XX`: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
+`3XX`: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
+`4XX`: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
+`5XX`: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
+You can also specify a status code for querying.
     */
     @SerializedName("Metric")
     @Expose
@@ -54,56 +54,56 @@ Alternatively, you can specify a status code for querying.
     private SummarizedData SummarizedData;
 
     /**
-     * Get Queries the specified metric:
-flux: traffic (in bytes)
-bandwidth: bandwidth (in bps)
-request: number of requests
-fluxHitRate: traffic hit rate (in %)
-statusCode: status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
-2XX: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
-3XX: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
-4XX: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
-5XX: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
-Alternatively, you can specify a status code for querying. 
-     * @return Metric Queries the specified metric:
-flux: traffic (in bytes)
-bandwidth: bandwidth (in bps)
-request: number of requests
-fluxHitRate: traffic hit rate (in %)
-statusCode: status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
-2XX: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
-3XX: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
-4XX: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
-5XX: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
-Alternatively, you can specify a status code for querying.
+     * Get Queries by the specified metric:
+`flux`: Traffic (in bytes)
+`bandwidth`: Bandwidth (in bps)
+`request`: Number of requests
+`fluxHitRate`: Traffic hit rate (in %)
+`statusCode`: Status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
+`2XX`: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
+`3XX`: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
+`4XX`: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
+`5XX`: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
+You can also specify a status code for querying. 
+     * @return Metric Queries by the specified metric:
+`flux`: Traffic (in bytes)
+`bandwidth`: Bandwidth (in bps)
+`request`: Number of requests
+`fluxHitRate`: Traffic hit rate (in %)
+`statusCode`: Status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
+`2XX`: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
+`3XX`: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
+`4XX`: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
+`5XX`: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
+You can also specify a status code for querying.
      */
     public String getMetric() {
         return this.Metric;
     }
 
     /**
-     * Set Queries the specified metric:
-flux: traffic (in bytes)
-bandwidth: bandwidth (in bps)
-request: number of requests
-fluxHitRate: traffic hit rate (in %)
-statusCode: status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
-2XX: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
-3XX: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
-4XX: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
-5XX: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
-Alternatively, you can specify a status code for querying.
-     * @param Metric Queries the specified metric:
-flux: traffic (in bytes)
-bandwidth: bandwidth (in bps)
-request: number of requests
-fluxHitRate: traffic hit rate (in %)
-statusCode: status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
-2XX: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
-3XX: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
-4XX: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
-5XX: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
-Alternatively, you can specify a status code for querying.
+     * Set Queries by the specified metric:
+`flux`: Traffic (in bytes)
+`bandwidth`: Bandwidth (in bps)
+`request`: Number of requests
+`fluxHitRate`: Traffic hit rate (in %)
+`statusCode`: Status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
+`2XX`: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
+`3XX`: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
+`4XX`: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
+`5XX`: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
+You can also specify a status code for querying.
+     * @param Metric Queries by the specified metric:
+`flux`: Traffic (in bytes)
+`bandwidth`: Bandwidth (in bps)
+`request`: Number of requests
+`fluxHitRate`: Traffic hit rate (in %)
+`statusCode`: Status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
+`2XX`: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
+`3XX`: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
+`4XX`: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
+`5XX`: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
+You can also specify a status code for querying.
      */
     public void setMetric(String Metric) {
         this.Metric = Metric;

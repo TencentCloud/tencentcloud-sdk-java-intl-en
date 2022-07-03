@@ -31,8 +31,8 @@ public class DescribeIpStatusRequest extends AbstractModel{
 
     /**
     * Node type.
-edge: edge server
-last: intermediate server
+`edge`: Edge server
+`last`: Intermediate server
 If this parameter is left empty, edge server information will be returned by default
     */
     @SerializedName("Layer")
@@ -40,10 +40,10 @@ If this parameter is left empty, edge server information will be returned by def
     private String Layer;
 
     /**
-    * Region to be queried.
-mainland: domestic nodes
-overseas: overseas nodes
-global: global nodes
+    * Specifies a region to query.
+`mainland`: Nodes in the Chinese mainland
+`overseas`: Nodes outside the Chinese mainland
+`global`: Global nodes
     */
     @SerializedName("Area")
     @Expose
@@ -74,12 +74,12 @@ global: global nodes
 
     /**
      * Get Node type.
-edge: edge server
-last: intermediate server
+`edge`: Edge server
+`last`: Intermediate server
 If this parameter is left empty, edge server information will be returned by default 
      * @return Layer Node type.
-edge: edge server
-last: intermediate server
+`edge`: Edge server
+`last`: Intermediate server
 If this parameter is left empty, edge server information will be returned by default
      */
     public String getLayer() {
@@ -88,12 +88,12 @@ If this parameter is left empty, edge server information will be returned by def
 
     /**
      * Set Node type.
-edge: edge server
-last: intermediate server
+`edge`: Edge server
+`last`: Intermediate server
 If this parameter is left empty, edge server information will be returned by default
      * @param Layer Node type.
-edge: edge server
-last: intermediate server
+`edge`: Edge server
+`last`: Intermediate server
 If this parameter is left empty, edge server information will be returned by default
      */
     public void setLayer(String Layer) {
@@ -101,28 +101,28 @@ If this parameter is left empty, edge server information will be returned by def
     }
 
     /**
-     * Get Region to be queried.
-mainland: domestic nodes
-overseas: overseas nodes
-global: global nodes 
-     * @return Area Region to be queried.
-mainland: domestic nodes
-overseas: overseas nodes
-global: global nodes
+     * Get Specifies a region to query.
+`mainland`: Nodes in the Chinese mainland
+`overseas`: Nodes outside the Chinese mainland
+`global`: Global nodes 
+     * @return Area Specifies a region to query.
+`mainland`: Nodes in the Chinese mainland
+`overseas`: Nodes outside the Chinese mainland
+`global`: Global nodes
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Region to be queried.
-mainland: domestic nodes
-overseas: overseas nodes
-global: global nodes
-     * @param Area Region to be queried.
-mainland: domestic nodes
-overseas: overseas nodes
-global: global nodes
+     * Set Specifies a region to query.
+`mainland`: Nodes in the Chinese mainland
+`overseas`: Nodes outside the Chinese mainland
+`global`: Global nodes
+     * @param Area Specifies a region to query.
+`mainland`: Nodes in the Chinese mainland
+`overseas`: Nodes outside the Chinese mainland
+`global`: Global nodes
      */
     public void setArea(String Area) {
         this.Area = Area;

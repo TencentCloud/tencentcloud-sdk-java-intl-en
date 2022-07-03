@@ -23,11 +23,11 @@ import java.util.HashMap;
 public class ResourceData extends AbstractModel{
 
     /**
-    * Resource name, which is classified as follows based on different query filters:
-A single domain name: queries domain name details by a domain name. The details of the domain name will be displayed when the passed parameter `detail` is `true` (the `detail` parameter defaults to `false`).
-Multiple domain names: queries domain name details by multiple domain names. The aggregated details of the domain names will be displayed.
-Project ID: queries domain name details by a project ID. The aggregated details of the domain names of the project will be displayed.
-`all`: account-level data, which is aggregated details of all domain names of an account.
+    * Resource name. 
+A single domain name: Queries domain name details by a domain name. The details of the domain name will be displayed when the passed parameter `detail` is `true`.
+Multiple domain names: Queries domain name details by multiple domain names. The aggregated details of the domain names will be displayed.
+Project ID: Queries domain name details by a project ID. The aggregated details of the domain names of the project will be displayed.
+`all`: Account-level data, which is aggregated details of all domain names of an account.
     */
     @SerializedName("Resource")
     @Expose
@@ -41,32 +41,32 @@ Project ID: queries domain name details by a project ID. The aggregated details 
     private CdnData [] CdnData;
 
     /**
-     * Get Resource name, which is classified as follows based on different query filters:
-A single domain name: queries domain name details by a domain name. The details of the domain name will be displayed when the passed parameter `detail` is `true` (the `detail` parameter defaults to `false`).
-Multiple domain names: queries domain name details by multiple domain names. The aggregated details of the domain names will be displayed.
-Project ID: queries domain name details by a project ID. The aggregated details of the domain names of the project will be displayed.
-`all`: account-level data, which is aggregated details of all domain names of an account. 
-     * @return Resource Resource name, which is classified as follows based on different query filters:
-A single domain name: queries domain name details by a domain name. The details of the domain name will be displayed when the passed parameter `detail` is `true` (the `detail` parameter defaults to `false`).
-Multiple domain names: queries domain name details by multiple domain names. The aggregated details of the domain names will be displayed.
-Project ID: queries domain name details by a project ID. The aggregated details of the domain names of the project will be displayed.
-`all`: account-level data, which is aggregated details of all domain names of an account.
+     * Get Resource name. 
+A single domain name: Queries domain name details by a domain name. The details of the domain name will be displayed when the passed parameter `detail` is `true`.
+Multiple domain names: Queries domain name details by multiple domain names. The aggregated details of the domain names will be displayed.
+Project ID: Queries domain name details by a project ID. The aggregated details of the domain names of the project will be displayed.
+`all`: Account-level data, which is aggregated details of all domain names of an account. 
+     * @return Resource Resource name. 
+A single domain name: Queries domain name details by a domain name. The details of the domain name will be displayed when the passed parameter `detail` is `true`.
+Multiple domain names: Queries domain name details by multiple domain names. The aggregated details of the domain names will be displayed.
+Project ID: Queries domain name details by a project ID. The aggregated details of the domain names of the project will be displayed.
+`all`: Account-level data, which is aggregated details of all domain names of an account.
      */
     public String getResource() {
         return this.Resource;
     }
 
     /**
-     * Set Resource name, which is classified as follows based on different query filters:
-A single domain name: queries domain name details by a domain name. The details of the domain name will be displayed when the passed parameter `detail` is `true` (the `detail` parameter defaults to `false`).
-Multiple domain names: queries domain name details by multiple domain names. The aggregated details of the domain names will be displayed.
-Project ID: queries domain name details by a project ID. The aggregated details of the domain names of the project will be displayed.
-`all`: account-level data, which is aggregated details of all domain names of an account.
-     * @param Resource Resource name, which is classified as follows based on different query filters:
-A single domain name: queries domain name details by a domain name. The details of the domain name will be displayed when the passed parameter `detail` is `true` (the `detail` parameter defaults to `false`).
-Multiple domain names: queries domain name details by multiple domain names. The aggregated details of the domain names will be displayed.
-Project ID: queries domain name details by a project ID. The aggregated details of the domain names of the project will be displayed.
-`all`: account-level data, which is aggregated details of all domain names of an account.
+     * Set Resource name. 
+A single domain name: Queries domain name details by a domain name. The details of the domain name will be displayed when the passed parameter `detail` is `true`.
+Multiple domain names: Queries domain name details by multiple domain names. The aggregated details of the domain names will be displayed.
+Project ID: Queries domain name details by a project ID. The aggregated details of the domain names of the project will be displayed.
+`all`: Account-level data, which is aggregated details of all domain names of an account.
+     * @param Resource Resource name. 
+A single domain name: Queries domain name details by a domain name. The details of the domain name will be displayed when the passed parameter `detail` is `true`.
+Multiple domain names: Queries domain name details by multiple domain names. The aggregated details of the domain names will be displayed.
+Project ID: Queries domain name details by a project ID. The aggregated details of the domain names of the project will be displayed.
+`all`: Account-level data, which is aggregated details of all domain names of an account.
      */
     public void setResource(String Resource) {
         this.Resource = Resource;

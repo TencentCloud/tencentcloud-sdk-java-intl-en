@@ -24,16 +24,16 @@ public class SummarizedData extends AbstractModel{
 
     /**
     * Aggregation method, which can be:
-sum: aggregate summation
-max: maximum value; in bandwidth mode, the peak bandwidth is calculated based on the aggregate data with 5-minute granularity.
-avg: average value
+`sum`: Aggregate summation
+`max`: Maximum value. In bandwidth mode, the peak bandwidth is calculated based on the data aggregated in 5 minutes.
+`avg`: Average value
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Aggregate data value
+    * Aggregated value
     */
     @SerializedName("Value")
     @Expose
@@ -41,13 +41,13 @@ avg: average value
 
     /**
      * Get Aggregation method, which can be:
-sum: aggregate summation
-max: maximum value; in bandwidth mode, the peak bandwidth is calculated based on the aggregate data with 5-minute granularity.
-avg: average value 
+`sum`: Aggregate summation
+`max`: Maximum value. In bandwidth mode, the peak bandwidth is calculated based on the data aggregated in 5 minutes.
+`avg`: Average value 
      * @return Name Aggregation method, which can be:
-sum: aggregate summation
-max: maximum value; in bandwidth mode, the peak bandwidth is calculated based on the aggregate data with 5-minute granularity.
-avg: average value
+`sum`: Aggregate summation
+`max`: Maximum value. In bandwidth mode, the peak bandwidth is calculated based on the data aggregated in 5 minutes.
+`avg`: Average value
      */
     public String getName() {
         return this.Name;
@@ -55,29 +55,29 @@ avg: average value
 
     /**
      * Set Aggregation method, which can be:
-sum: aggregate summation
-max: maximum value; in bandwidth mode, the peak bandwidth is calculated based on the aggregate data with 5-minute granularity.
-avg: average value
+`sum`: Aggregate summation
+`max`: Maximum value. In bandwidth mode, the peak bandwidth is calculated based on the data aggregated in 5 minutes.
+`avg`: Average value
      * @param Name Aggregation method, which can be:
-sum: aggregate summation
-max: maximum value; in bandwidth mode, the peak bandwidth is calculated based on the aggregate data with 5-minute granularity.
-avg: average value
+`sum`: Aggregate summation
+`max`: Maximum value. In bandwidth mode, the peak bandwidth is calculated based on the data aggregated in 5 minutes.
+`avg`: Average value
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Aggregate data value 
-     * @return Value Aggregate data value
+     * Get Aggregated value 
+     * @return Value Aggregated value
      */
     public Float getValue() {
         return this.Value;
     }
 
     /**
-     * Set Aggregate data value
-     * @param Value Aggregate data value
+     * Set Aggregated value
+     * @param Value Aggregated value
      */
     public void setValue(Float Value) {
         this.Value = Value;

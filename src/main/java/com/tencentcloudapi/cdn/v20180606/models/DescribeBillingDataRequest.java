@@ -23,18 +23,18 @@ import java.util.HashMap;
 public class DescribeBillingDataRequest extends AbstractModel{
 
     /**
-    * Query start time, e.g., 2018-09-04 10:40:00. The returned result will be later than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the first returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days
+    * Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Query end time, e.g. 2018-09-04 10:40:00. The returned result will be earlier than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the last returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days
+    * End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
     */
     @SerializedName("EndTime")
     @Expose
@@ -47,7 +47,7 @@ The range between the start time and end time should be less than or equal to 90
 `hour`: 1-hour granularity. The query period cannot exceed 31 days.
 `day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
+`min` is not supported if the `Area` field is `overseas`.
     */
     @SerializedName("Interval")
     @Expose
@@ -61,8 +61,8 @@ Querying 1-minute granularity data is not supported if the `Area` field is `over
     private String Domain;
 
     /**
-    * Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
-If the `Domain` parameter is populated with specific domain name information, then the billing data of this domain name instead of the specified project will be returned
+    * Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+If the `Domain` parameter is passed in, the `Proejct` parameter is ignored. Only the billing data of the specified domain name is returned. 
     */
     @SerializedName("Project")
     @Expose
@@ -70,8 +70,8 @@ If the `Domain` parameter is populated with specific domain name information, th
 
     /**
     * Acceleration region whose billing data is to be queried:
-mainland: in the mainland of China
-overseas: outside the mainland of China
+`mainland`: Regions within the Chinese mainland
+`overseas`: Regions outside the Chinese mainland
 If this parameter is left empty, `mainland` will be used by default
     */
     @SerializedName("Area")
@@ -80,7 +80,7 @@ If this parameter is left empty, `mainland` will be used by default
 
     /**
     * Country/region to be queried if `Area` is `overseas`
-For district or country/region codes, please see [District Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
 If this parameter is left empty, all countries/regions will be queried
     */
     @SerializedName("District")
@@ -89,8 +89,8 @@ If this parameter is left empty, all countries/regions will be queried
 
     /**
     * Billing statistics type
-flux: bill-by-traffic
-bandwidth: bill-by-bandwidth
+`flux`: Bill by traffic
+`bandwidth`: Bill by bandwidth
 Default value: `bandwidth`
     */
     @SerializedName("Metric")
@@ -105,48 +105,55 @@ Default value: `bandwidth`
     private String Product;
 
     /**
-     * Get Query start time, e.g., 2018-09-04 10:40:00. The returned result will be later than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the first returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days 
-     * @return StartTime Query start time, e.g., 2018-09-04 10:40:00. The returned result will be later than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the first returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days
+    * 
+    */
+    @SerializedName("TimeZone")
+    @Expose
+    private String TimeZone;
+
+    /**
+     * Get Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days. 
+     * @return StartTime Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Query start time, e.g., 2018-09-04 10:40:00. The returned result will be later than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the first returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days
-     * @param StartTime Query start time, e.g., 2018-09-04 10:40:00. The returned result will be later than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the first returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days
+     * Set Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
+     * @param StartTime Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Query end time, e.g. 2018-09-04 10:40:00. The returned result will be earlier than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the last returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days 
-     * @return EndTime Query end time, e.g. 2018-09-04 10:40:00. The returned result will be earlier than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the last returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days
+     * Get End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days. 
+     * @return EndTime End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Query end time, e.g. 2018-09-04 10:40:00. The returned result will be earlier than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the last returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days
-     * @param EndTime Query end time, e.g. 2018-09-04 10:40:00. The returned result will be earlier than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the last returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days
+     * Set End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
+     * @param EndTime End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -159,14 +166,14 @@ The range between the start time and end time should be less than or equal to 90
 `hour`: 1-hour granularity. The query period cannot exceed 31 days.
 `day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Querying 1-minute granularity data is not supported if the `Area` field is `overseas`. 
+`min` is not supported if the `Area` field is `overseas`. 
      * @return Interval Time granularity, which can be:
 `min`: 1-minute granularity. The query period cannot exceed 24 hours.
 `5min`: 5-minute granularity. The query range cannot exceed 31 days.
 `hour`: 1-hour granularity. The query period cannot exceed 31 days.
 `day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
+`min` is not supported if the `Area` field is `overseas`.
      */
     public String getInterval() {
         return this.Interval;
@@ -179,14 +186,14 @@ Querying 1-minute granularity data is not supported if the `Area` field is `over
 `hour`: 1-hour granularity. The query period cannot exceed 31 days.
 `day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
+`min` is not supported if the `Area` field is `overseas`.
      * @param Interval Time granularity, which can be:
 `min`: 1-minute granularity. The query period cannot exceed 24 hours.
 `5min`: 5-minute granularity. The query range cannot exceed 31 days.
 `hour`: 1-hour granularity. The query period cannot exceed 31 days.
 `day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
+`min` is not supported if the `Area` field is `overseas`.
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;
@@ -209,20 +216,20 @@ Querying 1-minute granularity data is not supported if the `Area` field is `over
     }
 
     /**
-     * Get Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
-If the `Domain` parameter is populated with specific domain name information, then the billing data of this domain name instead of the specified project will be returned 
-     * @return Project Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
-If the `Domain` parameter is populated with specific domain name information, then the billing data of this domain name instead of the specified project will be returned
+     * Get Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+If the `Domain` parameter is passed in, the `Proejct` parameter is ignored. Only the billing data of the specified domain name is returned.  
+     * @return Project Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+If the `Domain` parameter is passed in, the `Proejct` parameter is ignored. Only the billing data of the specified domain name is returned. 
      */
     public Long getProject() {
         return this.Project;
     }
 
     /**
-     * Set Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
-If the `Domain` parameter is populated with specific domain name information, then the billing data of this domain name instead of the specified project will be returned
-     * @param Project Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
-If the `Domain` parameter is populated with specific domain name information, then the billing data of this domain name instead of the specified project will be returned
+     * Set Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+If the `Domain` parameter is passed in, the `Proejct` parameter is ignored. Only the billing data of the specified domain name is returned. 
+     * @param Project Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+If the `Domain` parameter is passed in, the `Proejct` parameter is ignored. Only the billing data of the specified domain name is returned. 
      */
     public void setProject(Long Project) {
         this.Project = Project;
@@ -230,12 +237,12 @@ If the `Domain` parameter is populated with specific domain name information, th
 
     /**
      * Get Acceleration region whose billing data is to be queried:
-mainland: in the mainland of China
-overseas: outside the mainland of China
+`mainland`: Regions within the Chinese mainland
+`overseas`: Regions outside the Chinese mainland
 If this parameter is left empty, `mainland` will be used by default 
      * @return Area Acceleration region whose billing data is to be queried:
-mainland: in the mainland of China
-overseas: outside the mainland of China
+`mainland`: Regions within the Chinese mainland
+`overseas`: Regions outside the Chinese mainland
 If this parameter is left empty, `mainland` will be used by default
      */
     public String getArea() {
@@ -244,12 +251,12 @@ If this parameter is left empty, `mainland` will be used by default
 
     /**
      * Set Acceleration region whose billing data is to be queried:
-mainland: in the mainland of China
-overseas: outside the mainland of China
+`mainland`: Regions within the Chinese mainland
+`overseas`: Regions outside the Chinese mainland
 If this parameter is left empty, `mainland` will be used by default
      * @param Area Acceleration region whose billing data is to be queried:
-mainland: in the mainland of China
-overseas: outside the mainland of China
+`mainland`: Regions within the Chinese mainland
+`overseas`: Regions outside the Chinese mainland
 If this parameter is left empty, `mainland` will be used by default
      */
     public void setArea(String Area) {
@@ -258,10 +265,10 @@ If this parameter is left empty, `mainland` will be used by default
 
     /**
      * Get Country/region to be queried if `Area` is `overseas`
-For district or country/region codes, please see [District Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
 If this parameter is left empty, all countries/regions will be queried 
      * @return District Country/region to be queried if `Area` is `overseas`
-For district or country/region codes, please see [District Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
 If this parameter is left empty, all countries/regions will be queried
      */
     public Long getDistrict() {
@@ -270,10 +277,10 @@ If this parameter is left empty, all countries/regions will be queried
 
     /**
      * Set Country/region to be queried if `Area` is `overseas`
-For district or country/region codes, please see [District Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
 If this parameter is left empty, all countries/regions will be queried
      * @param District Country/region to be queried if `Area` is `overseas`
-For district or country/region codes, please see [District Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
 If this parameter is left empty, all countries/regions will be queried
      */
     public void setDistrict(Long District) {
@@ -282,12 +289,12 @@ If this parameter is left empty, all countries/regions will be queried
 
     /**
      * Get Billing statistics type
-flux: bill-by-traffic
-bandwidth: bill-by-bandwidth
+`flux`: Bill by traffic
+`bandwidth`: Bill by bandwidth
 Default value: `bandwidth` 
      * @return Metric Billing statistics type
-flux: bill-by-traffic
-bandwidth: bill-by-bandwidth
+`flux`: Bill by traffic
+`bandwidth`: Bill by bandwidth
 Default value: `bandwidth`
      */
     public String getMetric() {
@@ -296,12 +303,12 @@ Default value: `bandwidth`
 
     /**
      * Set Billing statistics type
-flux: bill-by-traffic
-bandwidth: bill-by-bandwidth
+`flux`: Bill by traffic
+`bandwidth`: Bill by bandwidth
 Default value: `bandwidth`
      * @param Metric Billing statistics type
-flux: bill-by-traffic
-bandwidth: bill-by-bandwidth
+`flux`: Bill by traffic
+`bandwidth`: Bill by bandwidth
 Default value: `bandwidth`
      */
     public void setMetric(String Metric) {
@@ -322,6 +329,22 @@ Default value: `bandwidth`
      */
     public void setProduct(String Product) {
         this.Product = Product;
+    }
+
+    /**
+     * Get  
+     * @return TimeZone 
+     */
+    public String getTimeZone() {
+        return this.TimeZone;
+    }
+
+    /**
+     * Set 
+     * @param TimeZone 
+     */
+    public void setTimeZone(String TimeZone) {
+        this.TimeZone = TimeZone;
     }
 
     public DescribeBillingDataRequest() {
@@ -359,6 +382,9 @@ Default value: `bandwidth`
         if (source.Product != null) {
             this.Product = new String(source.Product);
         }
+        if (source.TimeZone != null) {
+            this.TimeZone = new String(source.TimeZone);
+        }
     }
 
 
@@ -375,6 +401,7 @@ Default value: `bandwidth`
         this.setParamSimple(map, prefix + "District", this.District);
         this.setParamSimple(map, prefix + "Metric", this.Metric);
         this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
 
     }
 }

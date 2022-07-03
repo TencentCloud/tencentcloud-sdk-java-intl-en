@@ -30,7 +30,7 @@ public class DomainAreaConfig extends AbstractModel{
     private String Domain;
 
     /**
-    * Region list, where the element can be `mainland/overseas`
+    * Region list, where the element can be `mainland`/`overseas`
     */
     @SerializedName("Area")
     @Expose
@@ -53,16 +53,16 @@ public class DomainAreaConfig extends AbstractModel{
     }
 
     /**
-     * Get Region list, where the element can be `mainland/overseas` 
-     * @return Area Region list, where the element can be `mainland/overseas`
+     * Get Region list, where the element can be `mainland`/`overseas` 
+     * @return Area Region list, where the element can be `mainland`/`overseas`
      */
     public String [] getArea() {
         return this.Area;
     }
 
     /**
-     * Set Region list, where the element can be `mainland/overseas`
-     * @param Area Region list, where the element can be `mainland/overseas`
+     * Set Region list, where the element can be `mainland`/`overseas`
+     * @param Area Region list, where the element can be `mainland`/`overseas`
      */
     public void setArea(String [] Area) {
         this.Area = Area;

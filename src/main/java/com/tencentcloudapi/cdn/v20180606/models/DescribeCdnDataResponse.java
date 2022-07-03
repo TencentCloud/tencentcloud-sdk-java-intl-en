@@ -23,11 +23,11 @@ import java.util.HashMap;
 public class DescribeCdnDataResponse extends AbstractModel{
 
     /**
-    * Time granularity of the returned data. Specify one of the following during querying:
-min: 1 minute
-5min: 5 minutes
-hour: 1 hour
-day: 1 day
+    * Time granularity of the returned data. 
+`min`: 1 minute
+`5min`: 5 minutes
+`hour`: 1 hour
+`day`: 1 day
     */
     @SerializedName("Interval")
     @Expose
@@ -48,32 +48,32 @@ day: 1 day
     private String RequestId;
 
     /**
-     * Get Time granularity of the returned data. Specify one of the following during querying:
-min: 1 minute
-5min: 5 minutes
-hour: 1 hour
-day: 1 day 
-     * @return Interval Time granularity of the returned data. Specify one of the following during querying:
-min: 1 minute
-5min: 5 minutes
-hour: 1 hour
-day: 1 day
+     * Get Time granularity of the returned data. 
+`min`: 1 minute
+`5min`: 5 minutes
+`hour`: 1 hour
+`day`: 1 day 
+     * @return Interval Time granularity of the returned data. 
+`min`: 1 minute
+`5min`: 5 minutes
+`hour`: 1 hour
+`day`: 1 day
      */
     public String getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set Time granularity of the returned data. Specify one of the following during querying:
-min: 1 minute
-5min: 5 minutes
-hour: 1 hour
-day: 1 day
-     * @param Interval Time granularity of the returned data. Specify one of the following during querying:
-min: 1 minute
-5min: 5 minutes
-hour: 1 hour
-day: 1 day
+     * Set Time granularity of the returned data. 
+`min`: 1 minute
+`5min`: 5 minutes
+`hour`: 1 hour
+`day`: 1 day
+     * @param Interval Time granularity of the returned data. 
+`min`: 1 minute
+`5min`: 5 minutes
+`hour`: 1 hour
+`day`: 1 day
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;

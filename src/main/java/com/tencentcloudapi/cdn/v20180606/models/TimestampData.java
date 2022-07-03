@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class TimestampData extends AbstractModel{
 
     /**
-    * Statistical point in time in forward rounding mode
-Taking the 5-minute granularity as an example, 13:35:00 indicates that the statistical interval is between 13:35:00 and 13:39:59.
+    * The start point of the sampling period. 
+For example, if the time is set to 13:35:00, and `interval` is `5min`, the data returned is collected between 13:35:00 and 13:39:59
     */
     @SerializedName("Time")
     @Expose
@@ -38,20 +38,20 @@ Taking the 5-minute granularity as an example, 13:35:00 indicates that the stati
     private Float Value;
 
     /**
-     * Get Statistical point in time in forward rounding mode
-Taking the 5-minute granularity as an example, 13:35:00 indicates that the statistical interval is between 13:35:00 and 13:39:59. 
-     * @return Time Statistical point in time in forward rounding mode
-Taking the 5-minute granularity as an example, 13:35:00 indicates that the statistical interval is between 13:35:00 and 13:39:59.
+     * Get The start point of the sampling period. 
+For example, if the time is set to 13:35:00, and `interval` is `5min`, the data returned is collected between 13:35:00 and 13:39:59 
+     * @return Time The start point of the sampling period. 
+For example, if the time is set to 13:35:00, and `interval` is `5min`, the data returned is collected between 13:35:00 and 13:39:59
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set Statistical point in time in forward rounding mode
-Taking the 5-minute granularity as an example, 13:35:00 indicates that the statistical interval is between 13:35:00 and 13:39:59.
-     * @param Time Statistical point in time in forward rounding mode
-Taking the 5-minute granularity as an example, 13:35:00 indicates that the statistical interval is between 13:35:00 and 13:39:59.
+     * Set The start point of the sampling period. 
+For example, if the time is set to 13:35:00, and `interval` is `5min`, the data returned is collected between 13:35:00 and 13:39:59
+     * @param Time The start point of the sampling period. 
+For example, if the time is set to 13:35:00, and `interval` is `5min`, the data returned is collected between 13:35:00 and 13:39:59
      */
     public void setTime(String Time) {
         this.Time = Time;

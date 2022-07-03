@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AddCdnDomainResponse extends AbstractModel{
+public class AddCLSTopicDomainsResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,14 +45,14 @@ public class AddCdnDomainResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public AddCdnDomainResponse() {
+    public AddCLSTopicDomainsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AddCdnDomainResponse(AddCdnDomainResponse source) {
+    public AddCLSTopicDomainsResponse(AddCLSTopicDomainsResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
