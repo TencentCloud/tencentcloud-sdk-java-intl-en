@@ -44,6 +44,13 @@ public class ListKeysRequest extends AbstractModel{
     private Long Role;
 
     /**
+    * ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+    */
+    @SerializedName("HsmClusterId")
+    @Expose
+    private String HsmClusterId;
+
+    /**
      * Get This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0 
      * @return Offset This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0
      */
@@ -91,6 +98,22 @@ public class ListKeysRequest extends AbstractModel{
         this.Role = Role;
     }
 
+    /**
+     * Get ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances. 
+     * @return HsmClusterId ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+     */
+    public String getHsmClusterId() {
+        return this.HsmClusterId;
+    }
+
+    /**
+     * Set ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+     * @param HsmClusterId ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+     */
+    public void setHsmClusterId(String HsmClusterId) {
+        this.HsmClusterId = HsmClusterId;
+    }
+
     public ListKeysRequest() {
     }
 
@@ -108,6 +131,9 @@ public class ListKeysRequest extends AbstractModel{
         if (source.Role != null) {
             this.Role = new Long(source.Role);
         }
+        if (source.HsmClusterId != null) {
+            this.HsmClusterId = new String(source.HsmClusterId);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class ListKeysRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Role", this.Role);
+        this.setParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
 
     }
 }

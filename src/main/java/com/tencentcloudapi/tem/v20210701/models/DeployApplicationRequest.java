@@ -255,14 +255,14 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
     private DeployStrategyConf DeployStrategyConf;
 
     /**
-    * Auto scaling policy
+    * Auto scaling policy. (Disused. Please use APIs for auto scaling policy combinations)
     */
     @SerializedName("HorizontalAutoscaler")
     @Expose
     private HorizontalAutoscaler [] HorizontalAutoscaler;
 
     /**
-    * Scheduled auto scaling policy
+    * Scheduled scaling policy (Disused. Please use APIs for auto scaling policy combinations)
     */
     @SerializedName("CronHorizontalAutoscaler")
     @Expose
@@ -315,6 +315,13 @@ If `konajdk` is selected, the value can be:
     @SerializedName("EnablePrometheusConf")
     @Expose
     private EnablePrometheusConf EnablePrometheusConf;
+
+    /**
+    * `1`: Enable APM collection; `0`: Disable APM collection
+    */
+    @SerializedName("EnableTracing")
+    @Expose
+    private Long EnableTracing;
 
     /**
      * Get Application ID 
@@ -861,32 +868,32 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
     }
 
     /**
-     * Get Auto scaling policy 
-     * @return HorizontalAutoscaler Auto scaling policy
+     * Get Auto scaling policy. (Disused. Please use APIs for auto scaling policy combinations) 
+     * @return HorizontalAutoscaler Auto scaling policy. (Disused. Please use APIs for auto scaling policy combinations)
      */
     public HorizontalAutoscaler [] getHorizontalAutoscaler() {
         return this.HorizontalAutoscaler;
     }
 
     /**
-     * Set Auto scaling policy
-     * @param HorizontalAutoscaler Auto scaling policy
+     * Set Auto scaling policy. (Disused. Please use APIs for auto scaling policy combinations)
+     * @param HorizontalAutoscaler Auto scaling policy. (Disused. Please use APIs for auto scaling policy combinations)
      */
     public void setHorizontalAutoscaler(HorizontalAutoscaler [] HorizontalAutoscaler) {
         this.HorizontalAutoscaler = HorizontalAutoscaler;
     }
 
     /**
-     * Get Scheduled auto scaling policy 
-     * @return CronHorizontalAutoscaler Scheduled auto scaling policy
+     * Get Scheduled scaling policy (Disused. Please use APIs for auto scaling policy combinations) 
+     * @return CronHorizontalAutoscaler Scheduled scaling policy (Disused. Please use APIs for auto scaling policy combinations)
      */
     public CronHorizontalAutoscaler [] getCronHorizontalAutoscaler() {
         return this.CronHorizontalAutoscaler;
     }
 
     /**
-     * Set Scheduled auto scaling policy
-     * @param CronHorizontalAutoscaler Scheduled auto scaling policy
+     * Set Scheduled scaling policy (Disused. Please use APIs for auto scaling policy combinations)
+     * @param CronHorizontalAutoscaler Scheduled scaling policy (Disused. Please use APIs for auto scaling policy combinations)
      */
     public void setCronHorizontalAutoscaler(CronHorizontalAutoscaler [] CronHorizontalAutoscaler) {
         this.CronHorizontalAutoscaler = CronHorizontalAutoscaler;
@@ -1010,6 +1017,22 @@ If `konajdk` is selected, the value can be:
      */
     public void setEnablePrometheusConf(EnablePrometheusConf EnablePrometheusConf) {
         this.EnablePrometheusConf = EnablePrometheusConf;
+    }
+
+    /**
+     * Get `1`: Enable APM collection; `0`: Disable APM collection 
+     * @return EnableTracing `1`: Enable APM collection; `0`: Disable APM collection
+     */
+    public Long getEnableTracing() {
+        return this.EnableTracing;
+    }
+
+    /**
+     * Set `1`: Enable APM collection; `0`: Disable APM collection
+     * @param EnableTracing `1`: Enable APM collection; `0`: Disable APM collection
+     */
+    public void setEnableTracing(Long EnableTracing) {
+        this.EnableTracing = EnableTracing;
     }
 
     public DeployApplicationRequest() {
@@ -1167,6 +1190,9 @@ If `konajdk` is selected, the value can be:
         if (source.EnablePrometheusConf != null) {
             this.EnablePrometheusConf = new EnablePrometheusConf(source.EnablePrometheusConf);
         }
+        if (source.EnableTracing != null) {
+            this.EnableTracing = new Long(source.EnableTracing);
+        }
     }
 
 
@@ -1214,6 +1240,7 @@ If `konajdk` is selected, the value can be:
         this.setParamObj(map, prefix + "StartupProbe.", this.StartupProbe);
         this.setParamSimple(map, prefix + "OsFlavour", this.OsFlavour);
         this.setParamObj(map, prefix + "EnablePrometheusConf.", this.EnablePrometheusConf);
+        this.setParamSimple(map, prefix + "EnableTracing", this.EnableTracing);
 
     }
 }

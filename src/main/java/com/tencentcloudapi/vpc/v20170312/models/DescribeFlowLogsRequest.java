@@ -116,6 +116,13 @@ public class DescribeFlowLogsRequest extends AbstractModel{
     private Filter Filters;
 
     /**
+    * The region corresponding to the flow log storage ID.
+    */
+    @SerializedName("CloudLogRegion")
+    @Expose
+    private String CloudLogRegion;
+
+    /**
      * Get ID of the VPC instance 
      * @return VpcId ID of the VPC instance
      */
@@ -331,6 +338,22 @@ public class DescribeFlowLogsRequest extends AbstractModel{
         this.Filters = Filters;
     }
 
+    /**
+     * Get The region corresponding to the flow log storage ID. 
+     * @return CloudLogRegion The region corresponding to the flow log storage ID.
+     */
+    public String getCloudLogRegion() {
+        return this.CloudLogRegion;
+    }
+
+    /**
+     * Set The region corresponding to the flow log storage ID.
+     * @param CloudLogRegion The region corresponding to the flow log storage ID.
+     */
+    public void setCloudLogRegion(String CloudLogRegion) {
+        this.CloudLogRegion = CloudLogRegion;
+    }
+
     public DescribeFlowLogsRequest() {
     }
 
@@ -378,6 +401,9 @@ public class DescribeFlowLogsRequest extends AbstractModel{
         if (source.Filters != null) {
             this.Filters = new Filter(source.Filters);
         }
+        if (source.CloudLogRegion != null) {
+            this.CloudLogRegion = new String(source.CloudLogRegion);
+        }
     }
 
 
@@ -398,6 +424,7 @@ public class DescribeFlowLogsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "CloudLogRegion", this.CloudLogRegion);
 
     }
 }

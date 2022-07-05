@@ -93,6 +93,13 @@ public class CreateFlowLogRequest extends AbstractModel{
     private FlowLogStorage FlowLogStorage;
 
     /**
+    * The region corresponding to the flow log storage ID. If not passed in, this field defaults to the current region.
+    */
+    @SerializedName("CloudLogRegion")
+    @Expose
+    private String CloudLogRegion;
+
+    /**
      * Get The name of the flow log instance. 
      * @return FlowLogName The name of the flow log instance.
      */
@@ -252,6 +259,22 @@ public class CreateFlowLogRequest extends AbstractModel{
         this.FlowLogStorage = FlowLogStorage;
     }
 
+    /**
+     * Get The region corresponding to the flow log storage ID. If not passed in, this field defaults to the current region. 
+     * @return CloudLogRegion The region corresponding to the flow log storage ID. If not passed in, this field defaults to the current region.
+     */
+    public String getCloudLogRegion() {
+        return this.CloudLogRegion;
+    }
+
+    /**
+     * Set The region corresponding to the flow log storage ID. If not passed in, this field defaults to the current region.
+     * @param CloudLogRegion The region corresponding to the flow log storage ID. If not passed in, this field defaults to the current region.
+     */
+    public void setCloudLogRegion(String CloudLogRegion) {
+        this.CloudLogRegion = CloudLogRegion;
+    }
+
     public CreateFlowLogRequest() {
     }
 
@@ -293,6 +316,9 @@ public class CreateFlowLogRequest extends AbstractModel{
         if (source.FlowLogStorage != null) {
             this.FlowLogStorage = new FlowLogStorage(source.FlowLogStorage);
         }
+        if (source.CloudLogRegion != null) {
+            this.CloudLogRegion = new String(source.CloudLogRegion);
+        }
     }
 
 
@@ -310,6 +336,7 @@ public class CreateFlowLogRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
         this.setParamObj(map, prefix + "FlowLogStorage.", this.FlowLogStorage);
+        this.setParamSimple(map, prefix + "CloudLogRegion", this.CloudLogRegion);
 
     }
 }

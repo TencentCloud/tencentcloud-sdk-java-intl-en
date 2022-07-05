@@ -3,7 +3,7 @@ public enum TemErrorCode {
     // Request timed out
      INTERNALERROR_ACTIONREADTIMEOUT("InternalError.ActionReadTimeout"),
      
-    // 
+    // Exception occurs while adding the subnet/virtual node
      INTERNALERROR_ADDNEWNODEERROR("InternalError.AddNewNodeError"),
      
     // Failed to create the APM resource
@@ -18,7 +18,7 @@ public enum TemErrorCode {
     // The server is busy. Retry later.
      INTERNALERROR_DEFAULTINTERNALERROR("InternalError.DefaultInternalError"),
      
-    // 
+    // Failed to delete the ingress
      INTERNALERROR_DELETEINGRESSERROR("InternalError.DeleteIngressError"),
      
     // Failed to delete the application
@@ -33,7 +33,7 @@ public enum TemErrorCode {
     // Failed to query the list of ingress associated with the service.
      INTERNALERROR_DESCRIBESERVICEINGRESSERROR("InternalError.DescribeServiceIngressError"),
      
-    // 
+    // Failed to query the service list
      INTERNALERROR_DESCRIBESERVICELISTERROR("InternalError.DescribeServiceListError"),
      
     // Failed to restart
@@ -78,7 +78,7 @@ public enum TemErrorCode {
     // This application name already exists.
      INVALIDPARAMETERVALUE_SERVICENAMEDUPLICATEERROR("InvalidParameterValue.ServiceNameDuplicateError"),
      
-    // 
+    // Failed to create the instance. The upper limit is reached.
      INVALIDPARAMETERVALUE_SERVICEPODREACHMAXIMUM("InvalidParameterValue.ServicePodReachMaximum"),
      
     // 
@@ -105,7 +105,7 @@ public enum TemErrorCode {
     // The service ID cannot be empty.
      MISSINGPARAMETER_SERVICEIDNULL("MissingParameter.ServiceIdNull"),
      
-    // 
+    // The image repository is not ready.
      MISSINGPARAMETER_SVCREPONOTREADY("MissingParameter.SvcRepoNotReady"),
      
     // 

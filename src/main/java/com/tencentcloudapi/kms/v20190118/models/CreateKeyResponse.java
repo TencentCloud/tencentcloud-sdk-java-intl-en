@@ -79,6 +79,14 @@ public class CreateKeyResponse extends AbstractModel{
     private String TagMsg;
 
     /**
+    * ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("HsmClusterId")
+    @Expose
+    private String HsmClusterId;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -214,6 +222,26 @@ public class CreateKeyResponse extends AbstractModel{
     }
 
     /**
+     * Get ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return HsmClusterId ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getHsmClusterId() {
+        return this.HsmClusterId;
+    }
+
+    /**
+     * Set ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param HsmClusterId ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setHsmClusterId(String HsmClusterId) {
+        this.HsmClusterId = HsmClusterId;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -261,6 +289,9 @@ public class CreateKeyResponse extends AbstractModel{
         if (source.TagMsg != null) {
             this.TagMsg = new String(source.TagMsg);
         }
+        if (source.HsmClusterId != null) {
+            this.HsmClusterId = new String(source.HsmClusterId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -279,6 +310,7 @@ public class CreateKeyResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "KeyUsage", this.KeyUsage);
         this.setParamSimple(map, prefix + "TagCode", this.TagCode);
         this.setParamSimple(map, prefix + "TagMsg", this.TagMsg);
+        this.setParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

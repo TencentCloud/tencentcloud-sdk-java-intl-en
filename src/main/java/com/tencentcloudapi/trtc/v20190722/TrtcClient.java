@@ -209,4 +209,83 @@ This API is used to start an on-cloud recording task. It records the audio and v
         return rsp.response;
     }
 
+    /**
+     *This API is used to start a relaying task.
+1. To ensure the stability of relaying, you cannot switch between relaying audio only, relaying audio and video, and relaying video only for the same task.
+2. To ensure the stability of relaying, you cannot change the video codec, audio codec, sample rate, or number of sound channels during relay.
+3. The `StartPublishCdnStream` API will return a task ID, which uniquely identifies a relaying task. You need to pass this task ID when making a request to change the relaying parameters or stop the relaying task.
+4. When you relay a single stream, specify both `AudioParams` and `VideoParams` to publish both audio and video, and specify only `AudioParams` to publish audio only. You cannot switch between the two modes during the relaying process. For `VideoParams`, set `Width`, `Height`, `Fps`, `Bitrate`, and `Gop` according to the actual settings used for publishing.
+5. When you make a request to change the relaying parameters, set `AudioParams.SubscribeAudioList` to specify the audios to mix and set `VideoParams.LayoutParams` to specify the video layout.
+6. The `SequenceNumber` parameter is required when you make a request to change the relaying parameters. It ensures that multiple requests for the same relaying task are in the correct order. The value of `SequenceNumber` increases each time a new request is made for the same task. If `InternalError` is returned, try again using the same `SequenceNumber`. You don’t need to handle the `FailedOperation.OutdateRequest` error.
+7. In a request to change the relaying parameters, it is OK to pass only the parameters you want to change, but the value of each parameter you pass must be complete.
+For example, to change the destination URLs, you only need to pass `PublishCdnParams` plus the required parameters of the `UpdatePublishCdnStream` API, but make sure `PublishCdnParams` includes all the URLs you want to relay to.
+Pass the following parameters to change different relaying parameters:
+    a. WithTranscoding: Pass this parameter to switch from not transcoding to transcoding (this parameter is required).
+    b. AudioParams.UserInfoList: Pass this parameter to change the users whose audios you want to mix.
+    c. VideoParams.VideoEncode: Pass this parameter to change video parameters other than the codec, including the output resolution, bitrate, frame rate, and GOP. This parameter is valid only if streams are transcoded.
+    d. LayoutParams: Pass this parameter to change the video layout. This parameter is valid only if streams are transcoded.
+    e. BackGroundColor and BackgroundImageUrl: Pass these two parameters to change the background image and color. They are valid only when streams are transcoded.
+    f. WaterMarkList: Pass this parameter to change the watermarks. This parameter is valid only if streams are transcoded.
+    g. PublishCdnParams: Pass this parameter to change the destination URLs.
+8. You can create a relaying task even when there are no anchors in the room, but make sure you manually stop the task when relaying is finished. If you don’t, after all the users whose streams are mixed leave the room, the TRTC backend will wait for the timeout period to elapse before stopping the relaying task.
+9. You can specify at most 10 destination URLs for each relaying task.
+10. When making a request to switch from not transcoding to transcoding, you need to specify all the parameters of the relaying task.
+     * @param req StartPublishCdnStreamRequest
+     * @return StartPublishCdnStreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartPublishCdnStreamResponse StartPublishCdnStream(StartPublishCdnStreamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartPublishCdnStreamResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartPublishCdnStreamResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartPublishCdnStream");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to stop a relaying task.
+     * @param req StopPublishCdnStreamRequest
+     * @return StopPublishCdnStreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopPublishCdnStreamResponse StopPublishCdnStream(StopPublishCdnStreamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopPublishCdnStreamResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopPublishCdnStreamResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopPublishCdnStream");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to change the parameters of a relaying task.
+     * @param req UpdatePublishCdnStreamRequest
+     * @return UpdatePublishCdnStreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdatePublishCdnStreamResponse UpdatePublishCdnStream(UpdatePublishCdnStreamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdatePublishCdnStreamResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdatePublishCdnStreamResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdatePublishCdnStream");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

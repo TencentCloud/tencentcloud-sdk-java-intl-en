@@ -130,6 +130,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ResourceId;
 
     /**
+    * ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("HsmClusterId")
+    @Expose
+    private String HsmClusterId;
+
+    /**
      * Get Globally unique CMK ID 
      * @return KeyId Globally unique CMK ID
      */
@@ -377,6 +385,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ResourceId = ResourceId;
     }
 
+    /**
+     * Get ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return HsmClusterId ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getHsmClusterId() {
+        return this.HsmClusterId;
+    }
+
+    /**
+     * Set ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param HsmClusterId ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setHsmClusterId(String HsmClusterId) {
+        this.HsmClusterId = HsmClusterId;
+    }
+
     public KeyMetadata() {
     }
 
@@ -430,6 +458,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ResourceId != null) {
             this.ResourceId = new String(source.ResourceId);
         }
+        if (source.HsmClusterId != null) {
+            this.HsmClusterId = new String(source.HsmClusterId);
+        }
     }
 
 
@@ -452,6 +483,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Origin", this.Origin);
         this.setParamSimple(map, prefix + "ValidTo", this.ValidTo);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
 
     }
 }

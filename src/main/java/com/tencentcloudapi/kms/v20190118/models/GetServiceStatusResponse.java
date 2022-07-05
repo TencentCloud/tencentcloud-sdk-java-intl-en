@@ -68,6 +68,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ProResourceId;
 
     /**
+    * Whether to activate Managed KMS
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("ExclusiveVSMEnabled")
+    @Expose
+    private Boolean ExclusiveVSMEnabled;
+
+    /**
+    * Whether to activate Exclusive KMS
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("ExclusiveHSMEnabled")
+    @Expose
+    private Boolean ExclusiveHSMEnabled;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -183,6 +199,46 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Whether to activate Managed KMS
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return ExclusiveVSMEnabled Whether to activate Managed KMS
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Boolean getExclusiveVSMEnabled() {
+        return this.ExclusiveVSMEnabled;
+    }
+
+    /**
+     * Set Whether to activate Managed KMS
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param ExclusiveVSMEnabled Whether to activate Managed KMS
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setExclusiveVSMEnabled(Boolean ExclusiveVSMEnabled) {
+        this.ExclusiveVSMEnabled = ExclusiveVSMEnabled;
+    }
+
+    /**
+     * Get Whether to activate Exclusive KMS
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return ExclusiveHSMEnabled Whether to activate Exclusive KMS
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Boolean getExclusiveHSMEnabled() {
+        return this.ExclusiveHSMEnabled;
+    }
+
+    /**
+     * Set Whether to activate Exclusive KMS
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param ExclusiveHSMEnabled Whether to activate Exclusive KMS
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setExclusiveHSMEnabled(Boolean ExclusiveHSMEnabled) {
+        this.ExclusiveHSMEnabled = ExclusiveHSMEnabled;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -224,6 +280,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.ProResourceId != null) {
             this.ProResourceId = new String(source.ProResourceId);
         }
+        if (source.ExclusiveVSMEnabled != null) {
+            this.ExclusiveVSMEnabled = new Boolean(source.ExclusiveVSMEnabled);
+        }
+        if (source.ExclusiveHSMEnabled != null) {
+            this.ExclusiveHSMEnabled = new Boolean(source.ExclusiveHSMEnabled);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -240,6 +302,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ProExpireTime", this.ProExpireTime);
         this.setParamSimple(map, prefix + "ProRenewFlag", this.ProRenewFlag);
         this.setParamSimple(map, prefix + "ProResourceId", this.ProResourceId);
+        this.setParamSimple(map, prefix + "ExclusiveVSMEnabled", this.ExclusiveVSMEnabled);
+        this.setParamSimple(map, prefix + "ExclusiveHSMEnabled", this.ExclusiveHSMEnabled);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

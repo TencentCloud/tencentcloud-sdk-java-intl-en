@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class HorizontalAutoscaler extends AbstractModel{
 
     /**
-    * Minimum number of instances
+    * (Optional) Minimum number of instances
     */
     @SerializedName("MinReplicas")
     @Expose
     private Long MinReplicas;
 
     /**
-    * Maximum number of instances
+    * (Optional) Maximum number of instances
     */
     @SerializedName("MaxReplicas")
     @Expose
@@ -51,32 +51,39 @@ public class HorizontalAutoscaler extends AbstractModel{
     private Long Threshold;
 
     /**
-     * Get Minimum number of instances 
-     * @return MinReplicas Minimum number of instances
+    * Whether it is enabled
+    */
+    @SerializedName("Enabled")
+    @Expose
+    private Boolean Enabled;
+
+    /**
+     * Get (Optional) Minimum number of instances 
+     * @return MinReplicas (Optional) Minimum number of instances
      */
     public Long getMinReplicas() {
         return this.MinReplicas;
     }
 
     /**
-     * Set Minimum number of instances
-     * @param MinReplicas Minimum number of instances
+     * Set (Optional) Minimum number of instances
+     * @param MinReplicas (Optional) Minimum number of instances
      */
     public void setMinReplicas(Long MinReplicas) {
         this.MinReplicas = MinReplicas;
     }
 
     /**
-     * Get Maximum number of instances 
-     * @return MaxReplicas Maximum number of instances
+     * Get (Optional) Maximum number of instances 
+     * @return MaxReplicas (Optional) Maximum number of instances
      */
     public Long getMaxReplicas() {
         return this.MaxReplicas;
     }
 
     /**
-     * Set Maximum number of instances
-     * @param MaxReplicas Maximum number of instances
+     * Set (Optional) Maximum number of instances
+     * @param MaxReplicas (Optional) Maximum number of instances
      */
     public void setMaxReplicas(Long MaxReplicas) {
         this.MaxReplicas = MaxReplicas;
@@ -114,6 +121,22 @@ public class HorizontalAutoscaler extends AbstractModel{
         this.Threshold = Threshold;
     }
 
+    /**
+     * Get Whether it is enabled 
+     * @return Enabled Whether it is enabled
+     */
+    public Boolean getEnabled() {
+        return this.Enabled;
+    }
+
+    /**
+     * Set Whether it is enabled
+     * @param Enabled Whether it is enabled
+     */
+    public void setEnabled(Boolean Enabled) {
+        this.Enabled = Enabled;
+    }
+
     public HorizontalAutoscaler() {
     }
 
@@ -134,6 +157,9 @@ public class HorizontalAutoscaler extends AbstractModel{
         if (source.Threshold != null) {
             this.Threshold = new Long(source.Threshold);
         }
+        if (source.Enabled != null) {
+            this.Enabled = new Boolean(source.Enabled);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class HorizontalAutoscaler extends AbstractModel{
         this.setParamSimple(map, prefix + "MaxReplicas", this.MaxReplicas);
         this.setParamSimple(map, prefix + "Metrics", this.Metrics);
         this.setParamSimple(map, prefix + "Threshold", this.Threshold);
+        this.setParamSimple(map, prefix + "Enabled", this.Enabled);
 
     }
 }

@@ -86,6 +86,13 @@ public class ListKeyDetailRequest extends AbstractModel{
     private TagFilter [] TagFilters;
 
     /**
+    * ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+    */
+    @SerializedName("HsmClusterId")
+    @Expose
+    private String HsmClusterId;
+
+    /**
      * Get This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0. 
      * @return Offset This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0.
      */
@@ -229,6 +236,22 @@ public class ListKeyDetailRequest extends AbstractModel{
         this.TagFilters = TagFilters;
     }
 
+    /**
+     * Get ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances. 
+     * @return HsmClusterId ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+     */
+    public String getHsmClusterId() {
+        return this.HsmClusterId;
+    }
+
+    /**
+     * Set ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+     * @param HsmClusterId ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+     */
+    public void setHsmClusterId(String HsmClusterId) {
+        this.HsmClusterId = HsmClusterId;
+    }
+
     public ListKeyDetailRequest() {
     }
 
@@ -267,6 +290,9 @@ public class ListKeyDetailRequest extends AbstractModel{
                 this.TagFilters[i] = new TagFilter(source.TagFilters[i]);
             }
         }
+        if (source.HsmClusterId != null) {
+            this.HsmClusterId = new String(source.HsmClusterId);
+        }
     }
 
 
@@ -283,6 +309,7 @@ public class ListKeyDetailRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Origin", this.Origin);
         this.setParamSimple(map, prefix + "KeyUsage", this.KeyUsage);
         this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
+        this.setParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
 
     }
 }

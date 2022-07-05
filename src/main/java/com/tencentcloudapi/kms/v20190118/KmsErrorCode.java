@@ -15,6 +15,9 @@ public enum KmsErrorCode {
     // Encryption failed.
      FAILEDOPERATION_ENCRYPTIONERROR("FailedOperation.EncryptionError"),
      
+    // 
+     FAILEDOPERATION_TAGGINGERROR("FailedOperation.TaggingError"),
+     
     // Internal error.
      INTERNALERROR("InternalError"),
      
@@ -41,6 +44,9 @@ public enum KmsErrorCode {
      
     // Incorrect ciphertext format
      INVALIDPARAMETERVALUE_INVALIDCIPHERTEXT("InvalidParameterValue.InvalidCiphertext"),
+     
+    // Invalid HSM cluster ID.
+     INVALIDPARAMETERVALUE_INVALIDHSMCLUSTERID("InvalidParameterValue.InvalidHsmClusterId"),
      
     // Invalid `KeyId`.
      INVALIDPARAMETERVALUE_INVALIDKEYID("InvalidParameterValue.InvalidKeyId"),

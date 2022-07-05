@@ -58,6 +58,13 @@ public class CreateKeyRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+    */
+    @SerializedName("HsmClusterId")
+    @Expose
+    private String HsmClusterId;
+
+    /**
      * Get Unique alias that makes a key more recognizable and understandable. This parameter cannot be empty, can contain 1-60 letters, digits, `-`, and `_`, and must begin with a letter or digit. The `kms-` prefix is used for Tencent Cloud products. 
      * @return Alias Unique alias that makes a key more recognizable and understandable. This parameter cannot be empty, can contain 1-60 letters, digits, `-`, and `_`, and must begin with a letter or digit. The `kms-` prefix is used for Tencent Cloud products.
      */
@@ -137,6 +144,22 @@ public class CreateKeyRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances. 
+     * @return HsmClusterId ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+     */
+    public String getHsmClusterId() {
+        return this.HsmClusterId;
+    }
+
+    /**
+     * Set ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+     * @param HsmClusterId ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+     */
+    public void setHsmClusterId(String HsmClusterId) {
+        this.HsmClusterId = HsmClusterId;
+    }
+
     public CreateKeyRequest() {
     }
 
@@ -163,6 +186,9 @@ public class CreateKeyRequest extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.HsmClusterId != null) {
+            this.HsmClusterId = new String(source.HsmClusterId);
+        }
     }
 
 
@@ -175,6 +201,7 @@ public class CreateKeyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "KeyUsage", this.KeyUsage);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
 
     }
 }

@@ -123,6 +123,14 @@ Note: this field may return `null`, indicating that no valid value can be found.
     private FlowLogStorage FlowLogStorage;
 
     /**
+    * The region corresponding to the flow log storage ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CloudLogRegion")
+    @Expose
+    private String CloudLogRegion;
+
+    /**
      * Get ID of the VPC instance. 
      * @return VpcId ID of the VPC instance.
      */
@@ -354,6 +362,26 @@ Note: this field may return `null`, indicating that no valid value can be found.
         this.FlowLogStorage = FlowLogStorage;
     }
 
+    /**
+     * Get The region corresponding to the flow log storage ID.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return CloudLogRegion The region corresponding to the flow log storage ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getCloudLogRegion() {
+        return this.CloudLogRegion;
+    }
+
+    /**
+     * Set The region corresponding to the flow log storage ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param CloudLogRegion The region corresponding to the flow log storage ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setCloudLogRegion(String CloudLogRegion) {
+        this.CloudLogRegion = CloudLogRegion;
+    }
+
     public FlowLog() {
     }
 
@@ -407,6 +435,9 @@ Note: this field may return `null`, indicating that no valid value can be found.
         if (source.FlowLogStorage != null) {
             this.FlowLogStorage = new FlowLogStorage(source.FlowLogStorage);
         }
+        if (source.CloudLogRegion != null) {
+            this.CloudLogRegion = new String(source.CloudLogRegion);
+        }
     }
 
 
@@ -428,6 +459,7 @@ Note: this field may return `null`, indicating that no valid value can be found.
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
         this.setParamObj(map, prefix + "FlowLogStorage.", this.FlowLogStorage);
+        this.setParamSimple(map, prefix + "CloudLogRegion", this.CloudLogRegion);
 
     }
 }
