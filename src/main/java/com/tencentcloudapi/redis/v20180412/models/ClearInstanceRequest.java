@@ -30,7 +30,7 @@ public class ClearInstanceRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Redis instance password (this parameter is not required for password-free instances but for password-enabled instances)
+    * Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
     */
     @SerializedName("Password")
     @Expose
@@ -53,16 +53,16 @@ public class ClearInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Redis instance password (this parameter is not required for password-free instances but for password-enabled instances) 
-     * @return Password Redis instance password (this parameter is not required for password-free instances but for password-enabled instances)
+     * Get Redis instance password (this parameter is required for password-enabled instances but not for password-free instances) 
+     * @return Password Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Redis instance password (this parameter is not required for password-free instances but for password-enabled instances)
-     * @param Password Redis instance password (this parameter is not required for password-free instances but for password-enabled instances)
+     * Set Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
+     * @param Password Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
      */
     public void setPassword(String Password) {
         this.Password = Password;

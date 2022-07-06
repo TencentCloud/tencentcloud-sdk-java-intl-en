@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.redis.v20180412.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceSecurityGroupResponse extends AbstractModel{
+public class AdjustPublicAddressResponse extends AbstractModel{
 
     /**
-    * Security group information of the instance
+    * The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
     */
-    @SerializedName("InstanceSecurityGroupsDetail")
+    @SerializedName("TaskId")
     @Expose
-    private InstanceSecurityGroupDetail [] InstanceSecurityGroupsDetail;
+    private Long TaskId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +37,19 @@ public class DescribeInstanceSecurityGroupResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Security group information of the instance 
-     * @return InstanceSecurityGroupsDetail Security group information of the instance
+     * Get The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status. 
+     * @return TaskId The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
      */
-    public InstanceSecurityGroupDetail [] getInstanceSecurityGroupsDetail() {
-        return this.InstanceSecurityGroupsDetail;
+    public Long getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set Security group information of the instance
-     * @param InstanceSecurityGroupsDetail Security group information of the instance
+     * Set The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
+     * @param TaskId The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
      */
-    public void setInstanceSecurityGroupsDetail(InstanceSecurityGroupDetail [] InstanceSecurityGroupsDetail) {
-        this.InstanceSecurityGroupsDetail = InstanceSecurityGroupsDetail;
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -68,19 +68,16 @@ public class DescribeInstanceSecurityGroupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeInstanceSecurityGroupResponse() {
+    public AdjustPublicAddressResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeInstanceSecurityGroupResponse(DescribeInstanceSecurityGroupResponse source) {
-        if (source.InstanceSecurityGroupsDetail != null) {
-            this.InstanceSecurityGroupsDetail = new InstanceSecurityGroupDetail[source.InstanceSecurityGroupsDetail.length];
-            for (int i = 0; i < source.InstanceSecurityGroupsDetail.length; i++) {
-                this.InstanceSecurityGroupsDetail[i] = new InstanceSecurityGroupDetail(source.InstanceSecurityGroupsDetail[i]);
-            }
+    public AdjustPublicAddressResponse(AdjustPublicAddressResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -92,7 +89,7 @@ public class DescribeInstanceSecurityGroupResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "InstanceSecurityGroupsDetail.", this.InstanceSecurityGroupsDetail);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

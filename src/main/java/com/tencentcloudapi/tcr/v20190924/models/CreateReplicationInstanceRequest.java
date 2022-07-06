@@ -44,6 +44,13 @@ public class CreateReplicationInstanceRequest extends AbstractModel{
     private String ReplicationRegionName;
 
     /**
+    * Whether to sync TCR cloud tags to the COS Bucket
+    */
+    @SerializedName("SyncTag")
+    @Expose
+    private Boolean SyncTag;
+
+    /**
      * Get Master instance ID 
      * @return RegistryId Master instance ID
      */
@@ -91,6 +98,22 @@ public class CreateReplicationInstanceRequest extends AbstractModel{
         this.ReplicationRegionName = ReplicationRegionName;
     }
 
+    /**
+     * Get Whether to sync TCR cloud tags to the COS Bucket 
+     * @return SyncTag Whether to sync TCR cloud tags to the COS Bucket
+     */
+    public Boolean getSyncTag() {
+        return this.SyncTag;
+    }
+
+    /**
+     * Set Whether to sync TCR cloud tags to the COS Bucket
+     * @param SyncTag Whether to sync TCR cloud tags to the COS Bucket
+     */
+    public void setSyncTag(Boolean SyncTag) {
+        this.SyncTag = SyncTag;
+    }
+
     public CreateReplicationInstanceRequest() {
     }
 
@@ -108,6 +131,9 @@ public class CreateReplicationInstanceRequest extends AbstractModel{
         if (source.ReplicationRegionName != null) {
             this.ReplicationRegionName = new String(source.ReplicationRegionName);
         }
+        if (source.SyncTag != null) {
+            this.SyncTag = new Boolean(source.SyncTag);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class CreateReplicationInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
         this.setParamSimple(map, prefix + "ReplicationRegionId", this.ReplicationRegionId);
         this.setParamSimple(map, prefix + "ReplicationRegionName", this.ReplicationRegionName);
+        this.setParamSimple(map, prefix + "SyncTag", this.SyncTag);
 
     }
 }

@@ -30,14 +30,14 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel{
     private String Product;
 
     /**
-    * The ID list of the security groups to be modified, which is an array of one or more security group IDs.
+    * ID list of the security groups to be modified, which is an array of one or more security group IDs.
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB Console.
+    * Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -60,32 +60,32 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel{
     }
 
     /**
-     * Get The ID list of the security groups to be modified, which is an array of one or more security group IDs. 
-     * @return SecurityGroupIds The ID list of the security groups to be modified, which is an array of one or more security group IDs.
+     * Get ID list of the security groups to be modified, which is an array of one or more security group IDs. 
+     * @return SecurityGroupIds ID list of the security groups to be modified, which is an array of one or more security group IDs.
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set The ID list of the security groups to be modified, which is an array of one or more security group IDs.
-     * @param SecurityGroupIds The ID list of the security groups to be modified, which is an array of one or more security group IDs.
+     * Set ID list of the security groups to be modified, which is an array of one or more security group IDs.
+     * @param SecurityGroupIds ID list of the security groups to be modified, which is an array of one or more security group IDs.
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB Console. 
-     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB Console.
+     * Get Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console. 
+     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB Console.
-     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB Console.
+     * Set Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

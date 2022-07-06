@@ -51,7 +51,7 @@ public class Outbound extends AbstractModel{
     private String Desc;
 
     /**
-    * Network protocol, such as UDP and TCP, etc.
+    * Network protocol, such as UDP and TCP.
     */
     @SerializedName("IpProtocol")
     @Expose
@@ -143,16 +143,16 @@ public class Outbound extends AbstractModel{
     }
 
     /**
-     * Get Network protocol, such as UDP and TCP, etc. 
-     * @return IpProtocol Network protocol, such as UDP and TCP, etc.
+     * Get Network protocol, such as UDP and TCP. 
+     * @return IpProtocol Network protocol, such as UDP and TCP.
      */
     public String getIpProtocol() {
         return this.IpProtocol;
     }
 
     /**
-     * Set Network protocol, such as UDP and TCP, etc.
-     * @param IpProtocol Network protocol, such as UDP and TCP, etc.
+     * Set Network protocol, such as UDP and TCP.
+     * @param IpProtocol Network protocol, such as UDP and TCP.
      */
     public void setIpProtocol(String IpProtocol) {
         this.IpProtocol = IpProtocol;

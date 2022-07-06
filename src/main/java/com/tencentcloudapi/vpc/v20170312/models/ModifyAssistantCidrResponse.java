@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class ModifyAssistantCidrResponse extends AbstractModel{
 
     /**
-    * A set of secondary CIDR blocks.
-Note: This field may return null, indicating that no valid value was found.
+    * Array of secondary CIDR blocks.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AssistantCidrSet")
     @Expose
@@ -38,20 +38,20 @@ Note: This field may return null, indicating that no valid value was found.
     private String RequestId;
 
     /**
-     * Get A set of secondary CIDR blocks.
-Note: This field may return null, indicating that no valid value was found. 
-     * @return AssistantCidrSet A set of secondary CIDR blocks.
-Note: This field may return null, indicating that no valid value was found.
+     * Get Array of secondary CIDR blocks.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AssistantCidrSet Array of secondary CIDR blocks.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AssistantCidr [] getAssistantCidrSet() {
         return this.AssistantCidrSet;
     }
 
     /**
-     * Set A set of secondary CIDR blocks.
-Note: This field may return null, indicating that no valid value was found.
-     * @param AssistantCidrSet A set of secondary CIDR blocks.
-Note: This field may return null, indicating that no valid value was found.
+     * Set Array of secondary CIDR blocks.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AssistantCidrSet Array of secondary CIDR blocks.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAssistantCidrSet(AssistantCidr [] AssistantCidrSet) {
         this.AssistantCidrSet = AssistantCidrSet;

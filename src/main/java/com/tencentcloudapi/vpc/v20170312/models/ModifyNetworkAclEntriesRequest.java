@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ModifyNetworkAclEntriesRequest extends AbstractModel{
 
     /**
-    * Network ACL instance ID. Example: acl-12345678.
+    * Network ACL instance ID, such as `acl-12345678`.
     */
     @SerializedName("NetworkAclId")
     @Expose
     private String NetworkAclId;
 
     /**
-    * Network ACL rule set.
+    * Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
     */
     @SerializedName("NetworkAclEntrySet")
     @Expose
     private NetworkAclEntrySet NetworkAclEntrySet;
 
     /**
-     * Get Network ACL instance ID. Example: acl-12345678. 
-     * @return NetworkAclId Network ACL instance ID. Example: acl-12345678.
+     * Get Network ACL instance ID, such as `acl-12345678`. 
+     * @return NetworkAclId Network ACL instance ID, such as `acl-12345678`.
      */
     public String getNetworkAclId() {
         return this.NetworkAclId;
     }
 
     /**
-     * Set Network ACL instance ID. Example: acl-12345678.
-     * @param NetworkAclId Network ACL instance ID. Example: acl-12345678.
+     * Set Network ACL instance ID, such as `acl-12345678`.
+     * @param NetworkAclId Network ACL instance ID, such as `acl-12345678`.
      */
     public void setNetworkAclId(String NetworkAclId) {
         this.NetworkAclId = NetworkAclId;
     }
 
     /**
-     * Get Network ACL rule set. 
-     * @return NetworkAclEntrySet Network ACL rule set.
+     * Get Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time. 
+     * @return NetworkAclEntrySet Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
      */
     public NetworkAclEntrySet getNetworkAclEntrySet() {
         return this.NetworkAclEntrySet;
     }
 
     /**
-     * Set Network ACL rule set.
-     * @param NetworkAclEntrySet Network ACL rule set.
+     * Set Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
+     * @param NetworkAclEntrySet Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
      */
     public void setNetworkAclEntrySet(NetworkAclEntrySet NetworkAclEntrySet) {
         this.NetworkAclEntrySet = NetworkAclEntrySet;

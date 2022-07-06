@@ -37,7 +37,7 @@ public class DisassociateSecurityGroupsRequest extends AbstractModel{
     private String SecurityGroupId;
 
     /**
-    * Instance ID list, which is an array of one or more instance IDs.
+    * List of instance IDs, which is an array of one or more instance IDs.
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -76,16 +76,16 @@ public class DisassociateSecurityGroupsRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance ID list, which is an array of one or more instance IDs. 
-     * @return InstanceIds Instance ID list, which is an array of one or more instance IDs.
+     * Get List of instance IDs, which is an array of one or more instance IDs. 
+     * @return InstanceIds List of instance IDs, which is an array of one or more instance IDs.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Instance ID list, which is an array of one or more instance IDs.
-     * @param InstanceIds Instance ID list, which is an array of one or more instance IDs.
+     * Set List of instance IDs, which is an array of one or more instance IDs.
+     * @param InstanceIds List of instance IDs, which is an array of one or more instance IDs.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

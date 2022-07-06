@@ -44,7 +44,7 @@ public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * The number of security groups to be pulled.
+    * Number of results to be pulled. Default value: 20
     */
     @SerializedName("Limit")
     @Expose
@@ -106,16 +106,16 @@ public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
     }
 
     /**
-     * Get The number of security groups to be pulled. 
-     * @return Limit The number of security groups to be pulled.
+     * Get Number of results to be pulled. Default value: 20 
+     * @return Limit Number of results to be pulled. Default value: 20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The number of security groups to be pulled.
-     * @param Limit The number of security groups to be pulled.
+     * Set Number of results to be pulled. Default value: 20
+     * @param Limit Number of results to be pulled. Default value: 20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

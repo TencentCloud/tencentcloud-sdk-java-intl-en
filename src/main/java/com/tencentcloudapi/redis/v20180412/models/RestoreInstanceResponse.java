@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class RestoreInstanceResponse extends AbstractModel{
 
     /**
-    * Task ID, which can be used to query the task execution status through the DescribeTaskInfo API
+    * Task ID, which can be used to query the task execution status through the `DescribeTaskInfo` API.
     */
     @SerializedName("TaskId")
     @Expose
@@ -37,16 +37,16 @@ public class RestoreInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Task ID, which can be used to query the task execution status through the DescribeTaskInfo API 
-     * @return TaskId Task ID, which can be used to query the task execution status through the DescribeTaskInfo API
+     * Get Task ID, which can be used to query the task execution status through the `DescribeTaskInfo` API. 
+     * @return TaskId Task ID, which can be used to query the task execution status through the `DescribeTaskInfo` API.
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID, which can be used to query the task execution status through the DescribeTaskInfo API
-     * @param TaskId Task ID, which can be used to query the task execution status through the DescribeTaskInfo API
+     * Set Task ID, which can be used to query the task execution status through the `DescribeTaskInfo` API.
+     * @param TaskId Task ID, which can be used to query the task execution status through the `DescribeTaskInfo` API.
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.redis.v20180412.models;
+package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskListResponse extends AbstractModel{
+public class CreateLivePullStreamTaskResponse extends AbstractModel{
 
     /**
-    * Total number of tasks
+    * The task ID.
     */
-    @SerializedName("TotalCount")
+    @SerializedName("TaskId")
     @Expose
-    private Long TotalCount;
-
-    /**
-    * Task details
-    */
-    @SerializedName("Tasks")
-    @Expose
-    private TaskInfoDetail [] Tasks;
+    private String TaskId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +37,19 @@ public class DescribeTaskListResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Total number of tasks 
-     * @return TotalCount Total number of tasks
+     * Get The task ID. 
+     * @return TaskId The task ID.
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public String getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set Total number of tasks
-     * @param TotalCount Total number of tasks
+     * Set The task ID.
+     * @param TaskId The task ID.
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get Task details 
-     * @return Tasks Task details
-     */
-    public TaskInfoDetail [] getTasks() {
-        return this.Tasks;
-    }
-
-    /**
-     * Set Task details
-     * @param Tasks Task details
-     */
-    public void setTasks(TaskInfoDetail [] Tasks) {
-        this.Tasks = Tasks;
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -91,22 +68,16 @@ public class DescribeTaskListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeTaskListResponse() {
+    public CreateLivePullStreamTaskResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTaskListResponse(DescribeTaskListResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.Tasks != null) {
-            this.Tasks = new TaskInfoDetail[source.Tasks.length];
-            for (int i = 0; i < source.Tasks.length; i++) {
-                this.Tasks[i] = new TaskInfoDetail(source.Tasks[i]);
-            }
+    public CreateLivePullStreamTaskResponse(CreateLivePullStreamTaskResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +89,7 @@ public class DescribeTaskListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

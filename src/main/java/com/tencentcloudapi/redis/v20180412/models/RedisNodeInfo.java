@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class RedisNodeInfo extends AbstractModel{
 
     /**
-    * Node type. Valid values: `0` (master node), `1` (replica node)
+    * Node type. 0: master node; 1: replica node
     */
     @SerializedName("NodeType")
     @Expose
     private Long NodeType;
 
     /**
-    * ID of the master or replica node, which is not required upon creation of the instance
+    * ID of the master or replica node, which is not required during instance creation
     */
     @SerializedName("NodeId")
     @Expose
     private Long NodeId;
 
     /**
-    * ID of the availability zone of the master or replica node
+    * AZ ID of the master or replica node
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * ID of the availability zone of the master or replica node
+    * AZ name of the master or replica node
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-     * Get Node type. Valid values: `0` (master node), `1` (replica node) 
-     * @return NodeType Node type. Valid values: `0` (master node), `1` (replica node)
+     * Get Node type. 0: master node; 1: replica node 
+     * @return NodeType Node type. 0: master node; 1: replica node
      */
     public Long getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set Node type. Valid values: `0` (master node), `1` (replica node)
-     * @param NodeType Node type. Valid values: `0` (master node), `1` (replica node)
+     * Set Node type. 0: master node; 1: replica node
+     * @param NodeType Node type. 0: master node; 1: replica node
      */
     public void setNodeType(Long NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get ID of the master or replica node, which is not required upon creation of the instance 
-     * @return NodeId ID of the master or replica node, which is not required upon creation of the instance
+     * Get ID of the master or replica node, which is not required during instance creation 
+     * @return NodeId ID of the master or replica node, which is not required during instance creation
      */
     public Long getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set ID of the master or replica node, which is not required upon creation of the instance
-     * @param NodeId ID of the master or replica node, which is not required upon creation of the instance
+     * Set ID of the master or replica node, which is not required during instance creation
+     * @param NodeId ID of the master or replica node, which is not required during instance creation
      */
     public void setNodeId(Long NodeId) {
         this.NodeId = NodeId;
     }
 
     /**
-     * Get ID of the availability zone of the master or replica node 
-     * @return ZoneId ID of the availability zone of the master or replica node
+     * Get AZ ID of the master or replica node 
+     * @return ZoneId AZ ID of the master or replica node
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set ID of the availability zone of the master or replica node
-     * @param ZoneId ID of the availability zone of the master or replica node
+     * Set AZ ID of the master or replica node
+     * @param ZoneId AZ ID of the master or replica node
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get ID of the availability zone of the master or replica node 
-     * @return ZoneName ID of the availability zone of the master or replica node
+     * Get AZ name of the master or replica node 
+     * @return ZoneName AZ name of the master or replica node
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set ID of the availability zone of the master or replica node
-     * @param ZoneName ID of the availability zone of the master or replica node
+     * Set AZ name of the master or replica node
+     * @param ZoneName AZ name of the master or replica node
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;

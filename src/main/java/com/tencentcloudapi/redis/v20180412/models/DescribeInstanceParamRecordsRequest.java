@@ -30,14 +30,14 @@ public class DescribeInstanceParamRecordsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Number of entries per page
+    * Maximum number of results returned per page
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset, which is an integral multiple of `Limit`
+    * Offset, which is an integral multiple of `Limit`.
     */
     @SerializedName("Offset")
     @Expose
@@ -60,32 +60,32 @@ public class DescribeInstanceParamRecordsRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of entries per page 
-     * @return Limit Number of entries per page
+     * Get Maximum number of results returned per page 
+     * @return Limit Maximum number of results returned per page
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries per page
-     * @param Limit Number of entries per page
+     * Set Maximum number of results returned per page
+     * @param Limit Maximum number of results returned per page
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset, which is an integral multiple of `Limit` 
-     * @return Offset Offset, which is an integral multiple of `Limit`
+     * Get Offset, which is an integral multiple of `Limit`. 
+     * @return Offset Offset, which is an integral multiple of `Limit`.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset, which is an integral multiple of `Limit`
-     * @param Offset Offset, which is an integral multiple of `Limit`
+     * Set Offset, which is an integral multiple of `Limit`.
+     * @param Offset Offset, which is an integral multiple of `Limit`.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.redis.v20180412.models;
+package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceSecurityGroupResponse extends AbstractModel{
-
-    /**
-    * Security group information of the instance
-    */
-    @SerializedName("InstanceSecurityGroupsDetail")
-    @Expose
-    private InstanceSecurityGroupDetail [] InstanceSecurityGroupsDetail;
+public class ModifyLivePullStreamTaskResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -35,22 +28,6 @@ public class DescribeInstanceSecurityGroupResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get Security group information of the instance 
-     * @return InstanceSecurityGroupsDetail Security group information of the instance
-     */
-    public InstanceSecurityGroupDetail [] getInstanceSecurityGroupsDetail() {
-        return this.InstanceSecurityGroupsDetail;
-    }
-
-    /**
-     * Set Security group information of the instance
-     * @param InstanceSecurityGroupsDetail Security group information of the instance
-     */
-    public void setInstanceSecurityGroupsDetail(InstanceSecurityGroupDetail [] InstanceSecurityGroupsDetail) {
-        this.InstanceSecurityGroupsDetail = InstanceSecurityGroupsDetail;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -68,20 +45,14 @@ public class DescribeInstanceSecurityGroupResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeInstanceSecurityGroupResponse() {
+    public ModifyLivePullStreamTaskResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeInstanceSecurityGroupResponse(DescribeInstanceSecurityGroupResponse source) {
-        if (source.InstanceSecurityGroupsDetail != null) {
-            this.InstanceSecurityGroupsDetail = new InstanceSecurityGroupDetail[source.InstanceSecurityGroupsDetail.length];
-            for (int i = 0; i < source.InstanceSecurityGroupsDetail.length; i++) {
-                this.InstanceSecurityGroupsDetail[i] = new InstanceSecurityGroupDetail(source.InstanceSecurityGroupsDetail[i]);
-            }
-        }
+    public ModifyLivePullStreamTaskResponse(ModifyLivePullStreamTaskResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -92,7 +63,6 @@ public class DescribeInstanceSecurityGroupResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "InstanceSecurityGroupsDetail.", this.InstanceSecurityGroupsDetail);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

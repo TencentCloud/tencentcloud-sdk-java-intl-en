@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeCommonDBInstancesResponse extends AbstractModel{
 
     /**
-    * Instance quantity
+    * Number of instances
     */
     @SerializedName("TotalCount")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeCommonDBInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Instance quantity 
-     * @return TotalCount Instance quantity
+     * Get Number of instances 
+     * @return TotalCount Number of instances
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Instance quantity
-     * @param TotalCount Instance quantity
+     * Set Number of instances
+     * @param TotalCount Number of instances
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

@@ -37,14 +37,14 @@ public class BackupDownloadInfo extends AbstractModel{
     private Long FileSize;
 
     /**
-    * Address (valid for 6 hours) used to download the backup file over a public network
+    * Address (valid for six hours) used to download the backup file over the public network
     */
     @SerializedName("DownloadUrl")
     @Expose
     private String DownloadUrl;
 
     /**
-    * Address (valid for 6 hours) used to download the backup file over a private network
+    * Address (valid for six hours) used to download the backup file over the private network
     */
     @SerializedName("InnerDownloadUrl")
     @Expose
@@ -83,32 +83,32 @@ public class BackupDownloadInfo extends AbstractModel{
     }
 
     /**
-     * Get Address (valid for 6 hours) used to download the backup file over a public network 
-     * @return DownloadUrl Address (valid for 6 hours) used to download the backup file over a public network
+     * Get Address (valid for six hours) used to download the backup file over the public network 
+     * @return DownloadUrl Address (valid for six hours) used to download the backup file over the public network
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
     }
 
     /**
-     * Set Address (valid for 6 hours) used to download the backup file over a public network
-     * @param DownloadUrl Address (valid for 6 hours) used to download the backup file over a public network
+     * Set Address (valid for six hours) used to download the backup file over the public network
+     * @param DownloadUrl Address (valid for six hours) used to download the backup file over the public network
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;
     }
 
     /**
-     * Get Address (valid for 6 hours) used to download the backup file over a private network 
-     * @return InnerDownloadUrl Address (valid for 6 hours) used to download the backup file over a private network
+     * Get Address (valid for six hours) used to download the backup file over the private network 
+     * @return InnerDownloadUrl Address (valid for six hours) used to download the backup file over the private network
      */
     public String getInnerDownloadUrl() {
         return this.InnerDownloadUrl;
     }
 
     /**
-     * Set Address (valid for 6 hours) used to download the backup file over a private network
-     * @param InnerDownloadUrl Address (valid for 6 hours) used to download the backup file over a private network
+     * Set Address (valid for six hours) used to download the backup file over the private network
+     * @param InnerDownloadUrl Address (valid for six hours) used to download the backup file over the private network
      */
     public void setInnerDownloadUrl(String InnerDownloadUrl) {
         this.InnerDownloadUrl = InnerDownloadUrl;

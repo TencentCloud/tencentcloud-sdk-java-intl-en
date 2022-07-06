@@ -51,7 +51,7 @@ public class DescribeTaskInfoResponse extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded
+    * Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded.
     */
     @SerializedName("TaskMessage")
     @Expose
@@ -129,16 +129,16 @@ public class DescribeTaskInfoResponse extends AbstractModel{
     }
 
     /**
-     * Get Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded 
-     * @return TaskMessage Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded
+     * Get Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded. 
+     * @return TaskMessage Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded.
      */
     public String getTaskMessage() {
         return this.TaskMessage;
     }
 
     /**
-     * Set Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded
-     * @param TaskMessage Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded
+     * Set Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded.
+     * @param TaskMessage Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded.
      */
     public void setTaskMessage(String TaskMessage) {
         this.TaskMessage = TaskMessage;

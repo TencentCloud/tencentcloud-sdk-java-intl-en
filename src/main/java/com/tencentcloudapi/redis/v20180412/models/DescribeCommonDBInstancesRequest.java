@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeCommonDBInstancesRequest extends AbstractModel{
 
     /**
-    * List of instance VIPs
+    * List of VPC IDs
     */
     @SerializedName("VpcIds")
     @Expose
@@ -37,7 +37,7 @@ public class DescribeCommonDBInstancesRequest extends AbstractModel{
     private Long [] SubnetIds;
 
     /**
-    * List of billing modes. Valid values: `0` (monthly subscription), `1` (pay-as-you-go)
+    * List of billing modes. 0: monthly subscription; 1: pay-as-you-go
     */
     @SerializedName("PayMode")
     @Expose
@@ -65,14 +65,14 @@ public class DescribeCommonDBInstancesRequest extends AbstractModel{
     private String [] Status;
 
     /**
-    * Sort field
+    * Sorting field
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Sort order
+    * Sorting order
     */
     @SerializedName("OrderByType")
     @Expose
@@ -100,7 +100,7 @@ public class DescribeCommonDBInstancesRequest extends AbstractModel{
     private String [] UniqSubnetIds;
 
     /**
-    * Quantity limit. The default value `100` is recommended.
+    * Quantity limit. Recommended default value: 100.
     */
     @SerializedName("Limit")
     @Expose
@@ -114,16 +114,16 @@ public class DescribeCommonDBInstancesRequest extends AbstractModel{
     private Long Offset;
 
     /**
-     * Get List of instance VIPs 
-     * @return VpcIds List of instance VIPs
+     * Get List of VPC IDs 
+     * @return VpcIds List of VPC IDs
      */
     public Long [] getVpcIds() {
         return this.VpcIds;
     }
 
     /**
-     * Set List of instance VIPs
-     * @param VpcIds List of instance VIPs
+     * Set List of VPC IDs
+     * @param VpcIds List of VPC IDs
      */
     public void setVpcIds(Long [] VpcIds) {
         this.VpcIds = VpcIds;
@@ -146,16 +146,16 @@ public class DescribeCommonDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get List of billing modes. Valid values: `0` (monthly subscription), `1` (pay-as-you-go) 
-     * @return PayMode List of billing modes. Valid values: `0` (monthly subscription), `1` (pay-as-you-go)
+     * Get List of billing modes. 0: monthly subscription; 1: pay-as-you-go 
+     * @return PayMode List of billing modes. 0: monthly subscription; 1: pay-as-you-go
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set List of billing modes. Valid values: `0` (monthly subscription), `1` (pay-as-you-go)
-     * @param PayMode List of billing modes. Valid values: `0` (monthly subscription), `1` (pay-as-you-go)
+     * Set List of billing modes. 0: monthly subscription; 1: pay-as-you-go
+     * @param PayMode List of billing modes. 0: monthly subscription; 1: pay-as-you-go
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
@@ -210,32 +210,32 @@ public class DescribeCommonDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Sort field 
-     * @return OrderBy Sort field
+     * Get Sorting field 
+     * @return OrderBy Sorting field
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sort field
-     * @param OrderBy Sort field
+     * Set Sorting field
+     * @param OrderBy Sorting field
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Sort order 
-     * @return OrderByType Sort order
+     * Get Sorting order 
+     * @return OrderByType Sorting order
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set Sort order
-     * @param OrderByType Sort order
+     * Set Sorting order
+     * @param OrderByType Sorting order
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;
@@ -290,16 +290,16 @@ public class DescribeCommonDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Quantity limit. The default value `100` is recommended. 
-     * @return Limit Quantity limit. The default value `100` is recommended.
+     * Get Quantity limit. Recommended default value: 100. 
+     * @return Limit Quantity limit. Recommended default value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Quantity limit. The default value `100` is recommended.
-     * @param Limit Quantity limit. The default value `100` is recommended.
+     * Set Quantity limit. Recommended default value: 100.
+     * @param Limit Quantity limit. Recommended default value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

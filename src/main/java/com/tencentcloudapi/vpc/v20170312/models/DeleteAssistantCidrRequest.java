@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DeleteAssistantCidrRequest extends AbstractModel{
 
     /**
-    * `VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
+    * `VPC` instance `ID`, such as `vpc-6v2ht8q5`.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * CIDR set, e.g. ["10.0.0.0/16", "172.16.0.0/16"]
+    * Array of CIDR blocks, such as ["10.0.0.0/16", "172.16.0.0/16"]
     */
     @SerializedName("CidrBlocks")
     @Expose
     private String [] CidrBlocks;
 
     /**
-     * Get `VPC` instance `ID`, e.g. `vpc-6v2ht8q5`. 
-     * @return VpcId `VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
+     * Get `VPC` instance `ID`, such as `vpc-6v2ht8q5`. 
+     * @return VpcId `VPC` instance `ID`, such as `vpc-6v2ht8q5`.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set `VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
-     * @param VpcId `VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
+     * Set `VPC` instance `ID`, such as `vpc-6v2ht8q5`.
+     * @param VpcId `VPC` instance `ID`, such as `vpc-6v2ht8q5`.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get CIDR set, e.g. ["10.0.0.0/16", "172.16.0.0/16"] 
-     * @return CidrBlocks CIDR set, e.g. ["10.0.0.0/16", "172.16.0.0/16"]
+     * Get Array of CIDR blocks, such as ["10.0.0.0/16", "172.16.0.0/16"] 
+     * @return CidrBlocks Array of CIDR blocks, such as ["10.0.0.0/16", "172.16.0.0/16"]
      */
     public String [] getCidrBlocks() {
         return this.CidrBlocks;
     }
 
     /**
-     * Set CIDR set, e.g. ["10.0.0.0/16", "172.16.0.0/16"]
-     * @param CidrBlocks CIDR set, e.g. ["10.0.0.0/16", "172.16.0.0/16"]
+     * Set Array of CIDR blocks, such as ["10.0.0.0/16", "172.16.0.0/16"]
+     * @param CidrBlocks Array of CIDR blocks, such as ["10.0.0.0/16", "172.16.0.0/16"]
      */
     public void setCidrBlocks(String [] CidrBlocks) {
         this.CidrBlocks = CidrBlocks;

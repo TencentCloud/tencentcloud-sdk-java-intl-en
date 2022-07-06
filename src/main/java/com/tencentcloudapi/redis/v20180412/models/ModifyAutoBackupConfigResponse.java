@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyAutoBackupConfigResponse extends AbstractModel{
 
     /**
-    * Auto backup type: 1 "scheduled rollback"
+    * Automatic backup type: 1 (scheduled rollback)
     */
     @SerializedName("AutoBackupType")
     @Expose
@@ -44,6 +44,13 @@ public class ModifyAutoBackupConfigResponse extends AbstractModel{
     private String TimePeriod;
 
     /**
+    * Retention time of full backup files in days
+    */
+    @SerializedName("BackupStorageDays")
+    @Expose
+    private Long BackupStorageDays;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -51,16 +58,16 @@ public class ModifyAutoBackupConfigResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Auto backup type: 1 "scheduled rollback" 
-     * @return AutoBackupType Auto backup type: 1 "scheduled rollback"
+     * Get Automatic backup type: 1 (scheduled rollback) 
+     * @return AutoBackupType Automatic backup type: 1 (scheduled rollback)
      */
     public Long getAutoBackupType() {
         return this.AutoBackupType;
     }
 
     /**
-     * Set Auto backup type: 1 "scheduled rollback"
-     * @param AutoBackupType Auto backup type: 1 "scheduled rollback"
+     * Set Automatic backup type: 1 (scheduled rollback)
+     * @param AutoBackupType Automatic backup type: 1 (scheduled rollback)
      */
     public void setAutoBackupType(Long AutoBackupType) {
         this.AutoBackupType = AutoBackupType;
@@ -99,6 +106,22 @@ public class ModifyAutoBackupConfigResponse extends AbstractModel{
     }
 
     /**
+     * Get Retention time of full backup files in days 
+     * @return BackupStorageDays Retention time of full backup files in days
+     */
+    public Long getBackupStorageDays() {
+        return this.BackupStorageDays;
+    }
+
+    /**
+     * Set Retention time of full backup files in days
+     * @param BackupStorageDays Retention time of full backup files in days
+     */
+    public void setBackupStorageDays(Long BackupStorageDays) {
+        this.BackupStorageDays = BackupStorageDays;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -134,6 +157,9 @@ public class ModifyAutoBackupConfigResponse extends AbstractModel{
         if (source.TimePeriod != null) {
             this.TimePeriod = new String(source.TimePeriod);
         }
+        if (source.BackupStorageDays != null) {
+            this.BackupStorageDays = new Long(source.BackupStorageDays);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -147,6 +173,7 @@ public class ModifyAutoBackupConfigResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoBackupType", this.AutoBackupType);
         this.setParamArraySimple(map, prefix + "WeekDays.", this.WeekDays);
         this.setParamSimple(map, prefix + "TimePeriod", this.TimePeriod);
+        this.setParamSimple(map, prefix + "BackupStorageDays", this.BackupStorageDays);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

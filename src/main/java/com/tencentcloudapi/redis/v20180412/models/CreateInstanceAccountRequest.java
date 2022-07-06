@@ -37,12 +37,12 @@ public class CreateInstanceAccountRequest extends AbstractModel{
     private String AccountName;
 
     /**
-    * 1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
-2. The password cannot start with a slash (/).
-3. The password must contain at least two of the following four types:
-    a. Lowercase letters (a-z)
-    b. Uppercase letters (A-Z)
-    c. Digits (0-9)
+    * 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
+2. It cannot start with a slash (/).
+3. It must contain characters in at least two of the following types:
+    a. Lowercase letters (a–z)
+    b. Uppercase letters (A–Z)
+    c. Digits (0–9)
     d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
     */
     @SerializedName("AccountPassword")
@@ -50,14 +50,14 @@ public class CreateInstanceAccountRequest extends AbstractModel{
     private String AccountPassword;
 
     /**
-    * Routing policy. Enter `master` for primary node or `replication` for secondary node
+    * Routing policy. Valid values: master (master node); replication (replica node)
     */
     @SerializedName("ReadonlyPolicy")
     @Expose
     private String [] ReadonlyPolicy;
 
     /**
-    * Read/write policy. Valid values: r (read-only), rw (read/write).
+    * Read/Write policy. Valid values: r (read-only); rw (read/write).
     */
     @SerializedName("Privilege")
     @Expose
@@ -103,19 +103,19 @@ public class CreateInstanceAccountRequest extends AbstractModel{
     }
 
     /**
-     * Get 1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
-2. The password cannot start with a slash (/).
-3. The password must contain at least two of the following four types:
-    a. Lowercase letters (a-z)
-    b. Uppercase letters (A-Z)
-    c. Digits (0-9)
+     * Get 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
+2. It cannot start with a slash (/).
+3. It must contain characters in at least two of the following types:
+    a. Lowercase letters (a–z)
+    b. Uppercase letters (A–Z)
+    c. Digits (0–9)
     d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 
-     * @return AccountPassword 1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
-2. The password cannot start with a slash (/).
-3. The password must contain at least two of the following four types:
-    a. Lowercase letters (a-z)
-    b. Uppercase letters (A-Z)
-    c. Digits (0-9)
+     * @return AccountPassword 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
+2. It cannot start with a slash (/).
+3. It must contain characters in at least two of the following types:
+    a. Lowercase letters (a–z)
+    b. Uppercase letters (A–Z)
+    c. Digits (0–9)
     d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
      */
     public String getAccountPassword() {
@@ -123,19 +123,19 @@ public class CreateInstanceAccountRequest extends AbstractModel{
     }
 
     /**
-     * Set 1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
-2. The password cannot start with a slash (/).
-3. The password must contain at least two of the following four types:
-    a. Lowercase letters (a-z)
-    b. Uppercase letters (A-Z)
-    c. Digits (0-9)
+     * Set 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
+2. It cannot start with a slash (/).
+3. It must contain characters in at least two of the following types:
+    a. Lowercase letters (a–z)
+    b. Uppercase letters (A–Z)
+    c. Digits (0–9)
     d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
-     * @param AccountPassword 1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
-2. The password cannot start with a slash (/).
-3. The password must contain at least two of the following four types:
-    a. Lowercase letters (a-z)
-    b. Uppercase letters (A-Z)
-    c. Digits (0-9)
+     * @param AccountPassword 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
+2. It cannot start with a slash (/).
+3. It must contain characters in at least two of the following types:
+    a. Lowercase letters (a–z)
+    b. Uppercase letters (A–Z)
+    c. Digits (0–9)
     d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
      */
     public void setAccountPassword(String AccountPassword) {
@@ -143,32 +143,32 @@ public class CreateInstanceAccountRequest extends AbstractModel{
     }
 
     /**
-     * Get Routing policy. Enter `master` for primary node or `replication` for secondary node 
-     * @return ReadonlyPolicy Routing policy. Enter `master` for primary node or `replication` for secondary node
+     * Get Routing policy. Valid values: master (master node); replication (replica node) 
+     * @return ReadonlyPolicy Routing policy. Valid values: master (master node); replication (replica node)
      */
     public String [] getReadonlyPolicy() {
         return this.ReadonlyPolicy;
     }
 
     /**
-     * Set Routing policy. Enter `master` for primary node or `replication` for secondary node
-     * @param ReadonlyPolicy Routing policy. Enter `master` for primary node or `replication` for secondary node
+     * Set Routing policy. Valid values: master (master node); replication (replica node)
+     * @param ReadonlyPolicy Routing policy. Valid values: master (master node); replication (replica node)
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {
         this.ReadonlyPolicy = ReadonlyPolicy;
     }
 
     /**
-     * Get Read/write policy. Valid values: r (read-only), rw (read/write). 
-     * @return Privilege Read/write policy. Valid values: r (read-only), rw (read/write).
+     * Get Read/Write policy. Valid values: r (read-only); rw (read/write). 
+     * @return Privilege Read/Write policy. Valid values: r (read-only); rw (read/write).
      */
     public String getPrivilege() {
         return this.Privilege;
     }
 
     /**
-     * Set Read/write policy. Valid values: r (read-only), rw (read/write).
-     * @param Privilege Read/write policy. Valid values: r (read-only), rw (read/write).
+     * Set Read/Write policy. Valid values: r (read-only); rw (read/write).
+     * @param Privilege Read/Write policy. Valid values: r (read-only); rw (read/write).
      */
     public void setPrivilege(String Privilege) {
         this.Privilege = Privilege;

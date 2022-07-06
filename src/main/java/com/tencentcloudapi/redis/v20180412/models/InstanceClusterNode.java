@@ -30,14 +30,14 @@ public class InstanceClusterNode extends AbstractModel{
     private String Name;
 
     /**
-    * ID of the runtime node of an instance
+    * ID of the runtime node of the instance
     */
     @SerializedName("RunId")
     @Expose
     private String RunId;
 
     /**
-    * Cluster role. 0: primary; 1: secondary
+    * Cluster role. 0: master; 1: replica
     */
     @SerializedName("Role")
     @Expose
@@ -65,7 +65,7 @@ public class InstanceClusterNode extends AbstractModel{
     private String CreateTime;
 
     /**
-    * Node deactivation time
+    * Node elimination time
     */
     @SerializedName("DownTime")
     @Expose
@@ -93,7 +93,7 @@ public class InstanceClusterNode extends AbstractModel{
     private Long Qps;
 
     /**
-    * QPS slope of a node
+    * Node QPS slope
     */
     @SerializedName("QpsSlope")
     @Expose
@@ -107,7 +107,7 @@ public class InstanceClusterNode extends AbstractModel{
     private Long Storage;
 
     /**
-    * Storage slope of a node
+    * Node storage slope
     */
     @SerializedName("StorageSlope")
     @Expose
@@ -130,32 +130,32 @@ public class InstanceClusterNode extends AbstractModel{
     }
 
     /**
-     * Get ID of the runtime node of an instance 
-     * @return RunId ID of the runtime node of an instance
+     * Get ID of the runtime node of the instance 
+     * @return RunId ID of the runtime node of the instance
      */
     public String getRunId() {
         return this.RunId;
     }
 
     /**
-     * Set ID of the runtime node of an instance
-     * @param RunId ID of the runtime node of an instance
+     * Set ID of the runtime node of the instance
+     * @param RunId ID of the runtime node of the instance
      */
     public void setRunId(String RunId) {
         this.RunId = RunId;
     }
 
     /**
-     * Get Cluster role. 0: primary; 1: secondary 
-     * @return Role Cluster role. 0: primary; 1: secondary
+     * Get Cluster role. 0: master; 1: replica 
+     * @return Role Cluster role. 0: master; 1: replica
      */
     public Long getRole() {
         return this.Role;
     }
 
     /**
-     * Set Cluster role. 0: primary; 1: secondary
-     * @param Role Cluster role. 0: primary; 1: secondary
+     * Set Cluster role. 0: master; 1: replica
+     * @param Role Cluster role. 0: master; 1: replica
      */
     public void setRole(Long Role) {
         this.Role = Role;
@@ -210,16 +210,16 @@ public class InstanceClusterNode extends AbstractModel{
     }
 
     /**
-     * Get Node deactivation time 
-     * @return DownTime Node deactivation time
+     * Get Node elimination time 
+     * @return DownTime Node elimination time
      */
     public String getDownTime() {
         return this.DownTime;
     }
 
     /**
-     * Set Node deactivation time
-     * @param DownTime Node deactivation time
+     * Set Node elimination time
+     * @param DownTime Node elimination time
      */
     public void setDownTime(String DownTime) {
         this.DownTime = DownTime;
@@ -274,16 +274,16 @@ public class InstanceClusterNode extends AbstractModel{
     }
 
     /**
-     * Get QPS slope of a node 
-     * @return QpsSlope QPS slope of a node
+     * Get Node QPS slope 
+     * @return QpsSlope Node QPS slope
      */
     public Float getQpsSlope() {
         return this.QpsSlope;
     }
 
     /**
-     * Set QPS slope of a node
-     * @param QpsSlope QPS slope of a node
+     * Set Node QPS slope
+     * @param QpsSlope Node QPS slope
      */
     public void setQpsSlope(Float QpsSlope) {
         this.QpsSlope = QpsSlope;
@@ -306,16 +306,16 @@ public class InstanceClusterNode extends AbstractModel{
     }
 
     /**
-     * Get Storage slope of a node 
-     * @return StorageSlope Storage slope of a node
+     * Get Node storage slope 
+     * @return StorageSlope Node storage slope
      */
     public Float getStorageSlope() {
         return this.StorageSlope;
     }
 
     /**
-     * Set Storage slope of a node
-     * @param StorageSlope Storage slope of a node
+     * Set Node storage slope
+     * @param StorageSlope Node storage slope
      */
     public void setStorageSlope(Float StorageSlope) {
         this.StorageSlope = StorageSlope;

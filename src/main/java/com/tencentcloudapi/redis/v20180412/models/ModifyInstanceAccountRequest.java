@@ -30,7 +30,7 @@ public class ModifyInstanceAccountRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Sub-account name. If the root account is to be modified, enter `root`
+    * Sub-account name. If the root account is to be modified, enter `root`.
     */
     @SerializedName("AccountName")
     @Expose
@@ -51,21 +51,21 @@ public class ModifyInstanceAccountRequest extends AbstractModel{
     private String Remark;
 
     /**
-    * Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
+    * Routing policy. Valid values: master (master node); replication (replica node)
     */
     @SerializedName("ReadonlyPolicy")
     @Expose
     private String [] ReadonlyPolicy;
 
     /**
-    * Sub-account read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
+    * Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
     */
     @SerializedName("Privilege")
     @Expose
     private String Privilege;
 
     /**
-    * true: make the root account password-free. This is applicable to root accounts only; sub-accounts cannot be made password-free
+    * true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
     */
     @SerializedName("NoAuth")
     @Expose
@@ -88,16 +88,16 @@ public class ModifyInstanceAccountRequest extends AbstractModel{
     }
 
     /**
-     * Get Sub-account name. If the root account is to be modified, enter `root` 
-     * @return AccountName Sub-account name. If the root account is to be modified, enter `root`
+     * Get Sub-account name. If the root account is to be modified, enter `root`. 
+     * @return AccountName Sub-account name. If the root account is to be modified, enter `root`.
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set Sub-account name. If the root account is to be modified, enter `root`
-     * @param AccountName Sub-account name. If the root account is to be modified, enter `root`
+     * Set Sub-account name. If the root account is to be modified, enter `root`.
+     * @param AccountName Sub-account name. If the root account is to be modified, enter `root`.
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
@@ -136,48 +136,48 @@ public class ModifyInstanceAccountRequest extends AbstractModel{
     }
 
     /**
-     * Get Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node 
-     * @return ReadonlyPolicy Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
+     * Get Routing policy. Valid values: master (master node); replication (replica node) 
+     * @return ReadonlyPolicy Routing policy. Valid values: master (master node); replication (replica node)
      */
     public String [] getReadonlyPolicy() {
         return this.ReadonlyPolicy;
     }
 
     /**
-     * Set Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
-     * @param ReadonlyPolicy Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
+     * Set Routing policy. Valid values: master (master node); replication (replica node)
+     * @param ReadonlyPolicy Routing policy. Valid values: master (master node); replication (replica node)
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {
         this.ReadonlyPolicy = ReadonlyPolicy;
     }
 
     /**
-     * Get Sub-account read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write 
-     * @return Privilege Sub-account read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
+     * Get Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write). 
+     * @return Privilege Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
      */
     public String getPrivilege() {
         return this.Privilege;
     }
 
     /**
-     * Set Sub-account read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
-     * @param Privilege Sub-account read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
+     * Set Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
+     * @param Privilege Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
      */
     public void setPrivilege(String Privilege) {
         this.Privilege = Privilege;
     }
 
     /**
-     * Get true: make the root account password-free. This is applicable to root accounts only; sub-accounts cannot be made password-free 
-     * @return NoAuth true: make the root account password-free. This is applicable to root accounts only; sub-accounts cannot be made password-free
+     * Get true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free. 
+     * @return NoAuth true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
      */
     public Boolean getNoAuth() {
         return this.NoAuth;
     }
 
     /**
-     * Set true: make the root account password-free. This is applicable to root accounts only; sub-accounts cannot be made password-free
-     * @param NoAuth true: make the root account password-free. This is applicable to root accounts only; sub-accounts cannot be made password-free
+     * Set true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
+     * @param NoAuth true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
      */
     public void setNoAuth(Boolean NoAuth) {
         this.NoAuth = NoAuth;

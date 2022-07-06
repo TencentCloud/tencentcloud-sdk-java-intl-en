@@ -44,7 +44,7 @@ public class InstanceParamHistory extends AbstractModel{
     private String NewValue;
 
     /**
-    * Status. 1: modifying parameter configuration; 2: parameter configuration modified successfully; 3: failed to modify parameter configuration
+    * Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
     */
     @SerializedName("Status")
     @Expose
@@ -106,16 +106,16 @@ public class InstanceParamHistory extends AbstractModel{
     }
 
     /**
-     * Get Status. 1: modifying parameter configuration; 2: parameter configuration modified successfully; 3: failed to modify parameter configuration 
-     * @return Status Status. 1: modifying parameter configuration; 2: parameter configuration modified successfully; 3: failed to modify parameter configuration
+     * Get Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration 
+     * @return Status Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status. 1: modifying parameter configuration; 2: parameter configuration modified successfully; 3: failed to modify parameter configuration
-     * @param Status Status. 1: modifying parameter configuration; 2: parameter configuration modified successfully; 3: failed to modify parameter configuration
+     * Set Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
+     * @param Status Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
      */
     public void setStatus(Long Status) {
         this.Status = Status;

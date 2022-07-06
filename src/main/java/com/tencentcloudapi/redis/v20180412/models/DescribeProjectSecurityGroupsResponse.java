@@ -30,7 +30,7 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
     private SecurityGroup [] Groups;
 
     /**
-    * Total number of the security groups meeting the condition.
+    * Total number of eligible security groups.
     */
     @SerializedName("Total")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
     }
 
     /**
-     * Get Total number of the security groups meeting the condition. 
-     * @return Total Total number of the security groups meeting the condition.
+     * Get Total number of eligible security groups. 
+     * @return Total Total number of eligible security groups.
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set Total number of the security groups meeting the condition.
-     * @param Total Total number of the security groups meeting the condition.
+     * Set Total number of eligible security groups.
+     * @param Total Total number of eligible security groups.
      */
     public void setTotal(Long Total) {
         this.Total = Total;

@@ -30,14 +30,14 @@ public class ModifyMaintenanceWindowRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Start time of the maintenance window, such as 17:00
+    * Maintenance start time, such as 17:00
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time of the maintenance window, such as 19:00
+    * Maintenance end time, such as 19:00
     */
     @SerializedName("EndTime")
     @Expose
@@ -60,32 +60,32 @@ public class ModifyMaintenanceWindowRequest extends AbstractModel{
     }
 
     /**
-     * Get Start time of the maintenance window, such as 17:00 
-     * @return StartTime Start time of the maintenance window, such as 17:00
+     * Get Maintenance start time, such as 17:00 
+     * @return StartTime Maintenance start time, such as 17:00
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time of the maintenance window, such as 17:00
-     * @param StartTime Start time of the maintenance window, such as 17:00
+     * Set Maintenance start time, such as 17:00
+     * @param StartTime Maintenance start time, such as 17:00
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time of the maintenance window, such as 19:00 
-     * @return EndTime End time of the maintenance window, such as 19:00
+     * Get Maintenance end time, such as 19:00 
+     * @return EndTime Maintenance end time, such as 19:00
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time of the maintenance window, such as 19:00
-     * @param EndTime End time of the maintenance window, such as 19:00
+     * Set Maintenance end time, such as 19:00
+     * @param EndTime Maintenance end time, such as 19:00
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

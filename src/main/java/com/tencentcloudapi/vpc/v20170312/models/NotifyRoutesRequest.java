@@ -30,7 +30,7 @@ public class NotifyRoutesRequest extends AbstractModel{
     private String RouteTableId;
 
     /**
-    * The unique ID of the routing policy
+    * The unique ID of the route
     */
     @SerializedName("RouteItemIds")
     @Expose
@@ -53,16 +53,16 @@ public class NotifyRoutesRequest extends AbstractModel{
     }
 
     /**
-     * Get The unique ID of the routing policy 
-     * @return RouteItemIds The unique ID of the routing policy
+     * Get The unique ID of the route 
+     * @return RouteItemIds The unique ID of the route
      */
     public String [] getRouteItemIds() {
         return this.RouteItemIds;
     }
 
     /**
-     * Set The unique ID of the routing policy
-     * @param RouteItemIds The unique ID of the routing policy
+     * Set The unique ID of the route
+     * @param RouteItemIds The unique ID of the route
      */
     public void setRouteItemIds(String [] RouteItemIds) {
         this.RouteItemIds = RouteItemIds;

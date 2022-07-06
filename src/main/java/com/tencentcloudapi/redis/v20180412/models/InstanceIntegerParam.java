@@ -37,7 +37,7 @@ public class InstanceIntegerParam extends AbstractModel{
     private String ValueType;
 
     /**
-    * Whether restart is required after a modification is made. Value range: true, false
+    * Whether restart is required after a modification is made. Valid values: true, false
     */
     @SerializedName("NeedRestart")
     @Expose
@@ -51,7 +51,7 @@ public class InstanceIntegerParam extends AbstractModel{
     private String DefaultValue;
 
     /**
-    * Current value of a parameter
+    * Current value
     */
     @SerializedName("CurrentValue")
     @Expose
@@ -65,14 +65,14 @@ public class InstanceIntegerParam extends AbstractModel{
     private String Tips;
 
     /**
-    * Minimum value of a parameter
+    * Minimum value of the parameter
     */
     @SerializedName("Min")
     @Expose
     private String Min;
 
     /**
-    * Maximum value of a parameter
+    * Maximum value of the parameter
     */
     @SerializedName("Max")
     @Expose
@@ -87,7 +87,7 @@ public class InstanceIntegerParam extends AbstractModel{
 
     /**
     * Parameter unit
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Unit")
     @Expose
@@ -126,16 +126,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Whether restart is required after a modification is made. Value range: true, false 
-     * @return NeedRestart Whether restart is required after a modification is made. Value range: true, false
+     * Get Whether restart is required after a modification is made. Valid values: true, false 
+     * @return NeedRestart Whether restart is required after a modification is made. Valid values: true, false
      */
     public String getNeedRestart() {
         return this.NeedRestart;
     }
 
     /**
-     * Set Whether restart is required after a modification is made. Value range: true, false
-     * @param NeedRestart Whether restart is required after a modification is made. Value range: true, false
+     * Set Whether restart is required after a modification is made. Valid values: true, false
+     * @param NeedRestart Whether restart is required after a modification is made. Valid values: true, false
      */
     public void setNeedRestart(String NeedRestart) {
         this.NeedRestart = NeedRestart;
@@ -158,16 +158,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Current value of a parameter 
-     * @return CurrentValue Current value of a parameter
+     * Get Current value 
+     * @return CurrentValue Current value
      */
     public String getCurrentValue() {
         return this.CurrentValue;
     }
 
     /**
-     * Set Current value of a parameter
-     * @param CurrentValue Current value of a parameter
+     * Set Current value
+     * @param CurrentValue Current value
      */
     public void setCurrentValue(String CurrentValue) {
         this.CurrentValue = CurrentValue;
@@ -190,32 +190,32 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Minimum value of a parameter 
-     * @return Min Minimum value of a parameter
+     * Get Minimum value of the parameter 
+     * @return Min Minimum value of the parameter
      */
     public String getMin() {
         return this.Min;
     }
 
     /**
-     * Set Minimum value of a parameter
-     * @param Min Minimum value of a parameter
+     * Set Minimum value of the parameter
+     * @param Min Minimum value of the parameter
      */
     public void setMin(String Min) {
         this.Min = Min;
     }
 
     /**
-     * Get Maximum value of a parameter 
-     * @return Max Maximum value of a parameter
+     * Get Maximum value of the parameter 
+     * @return Max Maximum value of the parameter
      */
     public String getMax() {
         return this.Max;
     }
 
     /**
-     * Set Maximum value of a parameter
-     * @param Max Maximum value of a parameter
+     * Set Maximum value of the parameter
+     * @param Max Maximum value of the parameter
      */
     public void setMax(String Max) {
         this.Max = Max;
@@ -239,9 +239,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Parameter unit
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Unit Parameter unit
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUnit() {
         return this.Unit;
@@ -249,9 +249,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Parameter unit
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Unit Parameter unit
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;

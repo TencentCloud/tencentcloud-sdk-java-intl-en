@@ -23,11 +23,25 @@ import java.util.HashMap;
 public class DescribeDBSecurityGroupsResponse extends AbstractModel{
 
     /**
-    * Security group rules.
+    * Security group rules
     */
     @SerializedName("Groups")
     @Expose
     private SecurityGroup [] Groups;
+
+    /**
+    * Private IP for which the security group takes effect
+    */
+    @SerializedName("VIP")
+    @Expose
+    private String VIP;
+
+    /**
+    * Private port for which the security group takes effect
+    */
+    @SerializedName("VPort")
+    @Expose
+    private String VPort;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +51,51 @@ public class DescribeDBSecurityGroupsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Security group rules. 
-     * @return Groups Security group rules.
+     * Get Security group rules 
+     * @return Groups Security group rules
      */
     public SecurityGroup [] getGroups() {
         return this.Groups;
     }
 
     /**
-     * Set Security group rules.
-     * @param Groups Security group rules.
+     * Set Security group rules
+     * @param Groups Security group rules
      */
     public void setGroups(SecurityGroup [] Groups) {
         this.Groups = Groups;
+    }
+
+    /**
+     * Get Private IP for which the security group takes effect 
+     * @return VIP Private IP for which the security group takes effect
+     */
+    public String getVIP() {
+        return this.VIP;
+    }
+
+    /**
+     * Set Private IP for which the security group takes effect
+     * @param VIP Private IP for which the security group takes effect
+     */
+    public void setVIP(String VIP) {
+        this.VIP = VIP;
+    }
+
+    /**
+     * Get Private port for which the security group takes effect 
+     * @return VPort Private port for which the security group takes effect
+     */
+    public String getVPort() {
+        return this.VPort;
+    }
+
+    /**
+     * Set Private port for which the security group takes effect
+     * @param VPort Private port for which the security group takes effect
+     */
+    public void setVPort(String VPort) {
+        this.VPort = VPort;
     }
 
     /**
@@ -82,6 +128,12 @@ public class DescribeDBSecurityGroupsResponse extends AbstractModel{
                 this.Groups[i] = new SecurityGroup(source.Groups[i]);
             }
         }
+        if (source.VIP != null) {
+            this.VIP = new String(source.VIP);
+        }
+        if (source.VPort != null) {
+            this.VPort = new String(source.VPort);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -93,6 +145,8 @@ public class DescribeDBSecurityGroupsResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Groups.", this.Groups);
+        this.setParamSimple(map, prefix + "VIP", this.VIP);
+        this.setParamSimple(map, prefix + "VPort", this.VPort);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

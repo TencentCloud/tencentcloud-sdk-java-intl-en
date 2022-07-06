@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeInstanceZoneInfoResponse extends AbstractModel{
 
     /**
-    * The number of instance node groups
+    * Number of instance node groups
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * The list of instance node groups
+    * List of instance node groups
     */
     @SerializedName("ReplicaGroups")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeInstanceZoneInfoResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The number of instance node groups 
-     * @return TotalCount The number of instance node groups
+     * Get Number of instance node groups 
+     * @return TotalCount Number of instance node groups
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set The number of instance node groups
-     * @param TotalCount The number of instance node groups
+     * Set Number of instance node groups
+     * @param TotalCount Number of instance node groups
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get The list of instance node groups 
-     * @return ReplicaGroups The list of instance node groups
+     * Get List of instance node groups 
+     * @return ReplicaGroups List of instance node groups
      */
     public ReplicaGroup [] getReplicaGroups() {
         return this.ReplicaGroups;
     }
 
     /**
-     * Set The list of instance node groups
-     * @param ReplicaGroups The list of instance node groups
+     * Set List of instance node groups
+     * @param ReplicaGroups List of instance node groups
      */
     public void setReplicaGroups(ReplicaGroup [] ReplicaGroups) {
         this.ReplicaGroups = ReplicaGroups;

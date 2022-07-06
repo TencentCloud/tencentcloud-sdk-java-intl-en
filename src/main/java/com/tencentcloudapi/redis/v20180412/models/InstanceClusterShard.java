@@ -72,7 +72,7 @@ public class InstanceClusterShard extends AbstractModel{
     private Float StorageSlope;
 
     /**
-    * ID of the runtime node of an instance
+    * ID of the runtime node of the instance
     */
     @SerializedName("Runid")
     @Expose
@@ -198,16 +198,16 @@ public class InstanceClusterShard extends AbstractModel{
     }
 
     /**
-     * Get ID of the runtime node of an instance 
-     * @return Runid ID of the runtime node of an instance
+     * Get ID of the runtime node of the instance 
+     * @return Runid ID of the runtime node of the instance
      */
     public String getRunid() {
         return this.Runid;
     }
 
     /**
-     * Set ID of the runtime node of an instance
-     * @param Runid ID of the runtime node of an instance
+     * Set ID of the runtime node of the instance
+     * @param Runid ID of the runtime node of the instance
      */
     public void setRunid(String Runid) {
         this.Runid = Runid;

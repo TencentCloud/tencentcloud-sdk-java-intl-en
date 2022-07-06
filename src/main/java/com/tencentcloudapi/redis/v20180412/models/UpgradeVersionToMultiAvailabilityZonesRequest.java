@@ -30,6 +30,13 @@ public class UpgradeVersionToMultiAvailabilityZonesRequest extends AbstractModel
     private String InstanceId;
 
     /**
+    * Whether to upgrade the proxy and Redis kernel. After the upgrade, the "Read Local Nodes Only" feature can be supported.
+    */
+    @SerializedName("UpgradeProxyAndRedisServer")
+    @Expose
+    private Boolean UpgradeProxyAndRedisServer;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -45,6 +52,22 @@ public class UpgradeVersionToMultiAvailabilityZonesRequest extends AbstractModel
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get Whether to upgrade the proxy and Redis kernel. After the upgrade, the "Read Local Nodes Only" feature can be supported. 
+     * @return UpgradeProxyAndRedisServer Whether to upgrade the proxy and Redis kernel. After the upgrade, the "Read Local Nodes Only" feature can be supported.
+     */
+    public Boolean getUpgradeProxyAndRedisServer() {
+        return this.UpgradeProxyAndRedisServer;
+    }
+
+    /**
+     * Set Whether to upgrade the proxy and Redis kernel. After the upgrade, the "Read Local Nodes Only" feature can be supported.
+     * @param UpgradeProxyAndRedisServer Whether to upgrade the proxy and Redis kernel. After the upgrade, the "Read Local Nodes Only" feature can be supported.
+     */
+    public void setUpgradeProxyAndRedisServer(Boolean UpgradeProxyAndRedisServer) {
+        this.UpgradeProxyAndRedisServer = UpgradeProxyAndRedisServer;
+    }
+
     public UpgradeVersionToMultiAvailabilityZonesRequest() {
     }
 
@@ -56,6 +79,9 @@ public class UpgradeVersionToMultiAvailabilityZonesRequest extends AbstractModel
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.UpgradeProxyAndRedisServer != null) {
+            this.UpgradeProxyAndRedisServer = new Boolean(source.UpgradeProxyAndRedisServer);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class UpgradeVersionToMultiAvailabilityZonesRequest extends AbstractModel
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "UpgradeProxyAndRedisServer", this.UpgradeProxyAndRedisServer);
 
     }
 }

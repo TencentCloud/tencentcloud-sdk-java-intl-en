@@ -13,74 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.redis.v20180412.models;
+package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class KillMasterGroupResponse extends AbstractModel{
+public class DeleteLivePullStreamTaskRequest extends AbstractModel{
 
     /**
-    * Async task ID
+    * The task ID.
     */
     @SerializedName("TaskId")
     @Expose
-    private Long TaskId;
+    private String TaskId;
 
     /**
-    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+    * The operator.
     */
-    @SerializedName("RequestId")
+    @SerializedName("Operator")
     @Expose
-    private String RequestId;
+    private String Operator;
 
     /**
-     * Get Async task ID 
-     * @return TaskId Async task ID
+     * Get The task ID. 
+     * @return TaskId The task ID.
      */
-    public Long getTaskId() {
+    public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Async task ID
-     * @param TaskId Async task ID
+     * Set The task ID.
+     * @param TaskId The task ID.
      */
-    public void setTaskId(Long TaskId) {
+    public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
-     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * Get The operator. 
+     * @return Operator The operator.
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getOperator() {
+        return this.Operator;
     }
 
     /**
-     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * Set The operator.
+     * @param Operator The operator.
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setOperator(String Operator) {
+        this.Operator = Operator;
     }
 
-    public KillMasterGroupResponse() {
+    public DeleteLivePullStreamTaskRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public KillMasterGroupResponse(KillMasterGroupResponse source) {
+    public DeleteLivePullStreamTaskRequest(DeleteLivePullStreamTaskRequest source) {
         if (source.TaskId != null) {
-            this.TaskId = new Long(source.TaskId);
+            this.TaskId = new String(source.TaskId);
         }
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
         }
     }
 
@@ -90,7 +90,7 @@ public class KillMasterGroupResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "Operator", this.Operator);
 
     }
 }

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class CreateNetworkAclRequest extends AbstractModel{
 
     /**
-    * ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of the DescribeVpcs API.
+    * VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Name of the network ACL. The maximum length is 60 bytes.
+    * Network ACL name, which can contain up to 60 bytes.
     */
     @SerializedName("NetworkAclName")
     @Expose
     private String NetworkAclName;
 
     /**
-     * Get ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of the DescribeVpcs API. 
-     * @return VpcId ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of the DescribeVpcs API.
+     * Get VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API. 
+     * @return VpcId VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of the DescribeVpcs API.
-     * @param VpcId ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of the DescribeVpcs API.
+     * Set VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
+     * @param VpcId VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Name of the network ACL. The maximum length is 60 bytes. 
-     * @return NetworkAclName Name of the network ACL. The maximum length is 60 bytes.
+     * Get Network ACL name, which can contain up to 60 bytes. 
+     * @return NetworkAclName Network ACL name, which can contain up to 60 bytes.
      */
     public String getNetworkAclName() {
         return this.NetworkAclName;
     }
 
     /**
-     * Set Name of the network ACL. The maximum length is 60 bytes.
-     * @param NetworkAclName Name of the network ACL. The maximum length is 60 bytes.
+     * Set Network ACL name, which can contain up to 60 bytes.
+     * @param NetworkAclName Network ACL name, which can contain up to 60 bytes.
      */
     public void setNetworkAclName(String NetworkAclName) {
         this.NetworkAclName = NetworkAclName;

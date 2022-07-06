@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeInstancesRequest extends AbstractModel{
 
     /**
-    * Instance list size. Default value: 20
+    * Size of the instance list. If no value is specified for this parameter, it will be 20 by default. If the specified value is greater than the `DescribeInstancesPageLimit` configuration item in the specific configuration file `etc/conf/component.properties` (which is 1,000 by default if the configuration cannot be read), then the configuration item shall prevail.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset, which is an integral multiple of `Limit`
+    * Offset, which is an integral multiple of `Limit`.
     */
     @SerializedName("Offset")
     @Expose
@@ -58,21 +58,21 @@ public class DescribeInstancesRequest extends AbstractModel{
     private Long OrderType;
 
     /**
-    * Array of VPC IDs such as 47525. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
+    * Array of VPC IDs such as 47525. The array subscript starts from 0. If this parameter is not passed in, the classic network will be selected by default
     */
     @SerializedName("VpcIds")
     @Expose
     private String [] VpcIds;
 
     /**
-    * Array of subnet IDs such as 56854. The array subscript starts from 0
+    * Array of subnet IDs such as 56854. The array subscript starts from 0.
     */
     @SerializedName("SubnetIds")
     @Expose
     private String [] SubnetIds;
 
     /**
-    * Array of project IDs. The array subscript starts from 0
+    * Array of project IDs. The array subscript starts from 0.
     */
     @SerializedName("ProjectIds")
     @Expose
@@ -93,21 +93,21 @@ public class DescribeInstancesRequest extends AbstractModel{
     private String InstanceName;
 
     /**
-    * Array of VPC IDs such as vpc-sad23jfdfk. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
+    * Array of VPC IDs such as vpc-sad23jfdfk. The array subscript starts from 0. If this parameter is not passed in, the classic network will be selected by default
     */
     @SerializedName("UniqVpcIds")
     @Expose
     private String [] UniqVpcIds;
 
     /**
-    * Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0
+    * Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0.
     */
     @SerializedName("UniqSubnetIds")
     @Expose
     private String [] UniqSubnetIds;
 
     /**
-    * Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`
+    * Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`.
     */
     @SerializedName("RegionIds")
     @Expose
@@ -121,7 +121,7 @@ public class DescribeInstancesRequest extends AbstractModel{
     private Long [] Status;
 
     /**
-    * Type edition. 1: standalone edition; 2: primary-secondary edition; 3: cluster edition
+    * Type edition. 1: Standalone Edition; 2: Master-Replica Edition; 3: Cluster Edition
     */
     @SerializedName("TypeVersion")
     @Expose
@@ -142,67 +142,81 @@ public class DescribeInstancesRequest extends AbstractModel{
     private Long [] AutoRenew;
 
     /**
-    * Billing method. postpaid: pay-as-you-go; prepaid: monthly subscription
+    * Billing mode. postpaid: pay-as-you-go; prepaid: monthly subscription
     */
     @SerializedName("BillingMode")
     @Expose
     private String BillingMode;
 
     /**
-    * Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Slave Edition, 3: CKV Master-Slave Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
+    * Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Replica Edition, 3: CKV Master-Replica Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Replica Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Replica Edition, 9: Redis 5.0 Cluster Edition
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * Search keywords, which can be instance ID, instance name, or complete IP
+    * Search keywords, which can be instance ID, instance name, or complete IP.
     */
     @SerializedName("SearchKeys")
     @Expose
     private String [] SearchKeys;
 
     /**
-    * Internal parameter, which can be ignored
+    * Internal parameter, which can be ignored.
     */
     @SerializedName("TypeList")
     @Expose
     private Long [] TypeList;
 
     /**
-    * Internal parameter, which can be ignored
+    * Internal parameter, which can be ignored.
     */
     @SerializedName("MonitorVersion")
     @Expose
     private String MonitorVersion;
 
     /**
-     * Get Instance list size. Default value: 20 
-     * @return Limit Instance list size. Default value: 20
+    * Filters resources by tag key and value. If this parameter is not specified or is an empty array, resources will not be filtered.
+    */
+    @SerializedName("InstanceTags")
+    @Expose
+    private InstanceTagInfo [] InstanceTags;
+
+    /**
+    * Filters resources by tag key. If this parameter is not specified or is an empty array, resources will not be filtered.
+    */
+    @SerializedName("TagKeys")
+    @Expose
+    private String [] TagKeys;
+
+    /**
+     * Get Size of the instance list. If no value is specified for this parameter, it will be 20 by default. If the specified value is greater than the `DescribeInstancesPageLimit` configuration item in the specific configuration file `etc/conf/component.properties` (which is 1,000 by default if the configuration cannot be read), then the configuration item shall prevail. 
+     * @return Limit Size of the instance list. If no value is specified for this parameter, it will be 20 by default. If the specified value is greater than the `DescribeInstancesPageLimit` configuration item in the specific configuration file `etc/conf/component.properties` (which is 1,000 by default if the configuration cannot be read), then the configuration item shall prevail.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Instance list size. Default value: 20
-     * @param Limit Instance list size. Default value: 20
+     * Set Size of the instance list. If no value is specified for this parameter, it will be 20 by default. If the specified value is greater than the `DescribeInstancesPageLimit` configuration item in the specific configuration file `etc/conf/component.properties` (which is 1,000 by default if the configuration cannot be read), then the configuration item shall prevail.
+     * @param Limit Size of the instance list. If no value is specified for this parameter, it will be 20 by default. If the specified value is greater than the `DescribeInstancesPageLimit` configuration item in the specific configuration file `etc/conf/component.properties` (which is 1,000 by default if the configuration cannot be read), then the configuration item shall prevail.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset, which is an integral multiple of `Limit` 
-     * @return Offset Offset, which is an integral multiple of `Limit`
+     * Get Offset, which is an integral multiple of `Limit`. 
+     * @return Offset Offset, which is an integral multiple of `Limit`.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset, which is an integral multiple of `Limit`
-     * @param Offset Offset, which is an integral multiple of `Limit`
+     * Set Offset, which is an integral multiple of `Limit`.
+     * @param Offset Offset, which is an integral multiple of `Limit`.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -257,48 +271,48 @@ public class DescribeInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Array of VPC IDs such as 47525. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default 
-     * @return VpcIds Array of VPC IDs such as 47525. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
+     * Get Array of VPC IDs such as 47525. The array subscript starts from 0. If this parameter is not passed in, the classic network will be selected by default 
+     * @return VpcIds Array of VPC IDs such as 47525. The array subscript starts from 0. If this parameter is not passed in, the classic network will be selected by default
      */
     public String [] getVpcIds() {
         return this.VpcIds;
     }
 
     /**
-     * Set Array of VPC IDs such as 47525. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
-     * @param VpcIds Array of VPC IDs such as 47525. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
+     * Set Array of VPC IDs such as 47525. The array subscript starts from 0. If this parameter is not passed in, the classic network will be selected by default
+     * @param VpcIds Array of VPC IDs such as 47525. The array subscript starts from 0. If this parameter is not passed in, the classic network will be selected by default
      */
     public void setVpcIds(String [] VpcIds) {
         this.VpcIds = VpcIds;
     }
 
     /**
-     * Get Array of subnet IDs such as 56854. The array subscript starts from 0 
-     * @return SubnetIds Array of subnet IDs such as 56854. The array subscript starts from 0
+     * Get Array of subnet IDs such as 56854. The array subscript starts from 0. 
+     * @return SubnetIds Array of subnet IDs such as 56854. The array subscript starts from 0.
      */
     public String [] getSubnetIds() {
         return this.SubnetIds;
     }
 
     /**
-     * Set Array of subnet IDs such as 56854. The array subscript starts from 0
-     * @param SubnetIds Array of subnet IDs such as 56854. The array subscript starts from 0
+     * Set Array of subnet IDs such as 56854. The array subscript starts from 0.
+     * @param SubnetIds Array of subnet IDs such as 56854. The array subscript starts from 0.
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;
     }
 
     /**
-     * Get Array of project IDs. The array subscript starts from 0 
-     * @return ProjectIds Array of project IDs. The array subscript starts from 0
+     * Get Array of project IDs. The array subscript starts from 0. 
+     * @return ProjectIds Array of project IDs. The array subscript starts from 0.
      */
     public Long [] getProjectIds() {
         return this.ProjectIds;
     }
 
     /**
-     * Set Array of project IDs. The array subscript starts from 0
-     * @param ProjectIds Array of project IDs. The array subscript starts from 0
+     * Set Array of project IDs. The array subscript starts from 0.
+     * @param ProjectIds Array of project IDs. The array subscript starts from 0.
      */
     public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;
@@ -337,48 +351,48 @@ public class DescribeInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Array of VPC IDs such as vpc-sad23jfdfk. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default 
-     * @return UniqVpcIds Array of VPC IDs such as vpc-sad23jfdfk. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
+     * Get Array of VPC IDs such as vpc-sad23jfdfk. The array subscript starts from 0. If this parameter is not passed in, the classic network will be selected by default 
+     * @return UniqVpcIds Array of VPC IDs such as vpc-sad23jfdfk. The array subscript starts from 0. If this parameter is not passed in, the classic network will be selected by default
      */
     public String [] getUniqVpcIds() {
         return this.UniqVpcIds;
     }
 
     /**
-     * Set Array of VPC IDs such as vpc-sad23jfdfk. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
-     * @param UniqVpcIds Array of VPC IDs such as vpc-sad23jfdfk. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
+     * Set Array of VPC IDs such as vpc-sad23jfdfk. The array subscript starts from 0. If this parameter is not passed in, the classic network will be selected by default
+     * @param UniqVpcIds Array of VPC IDs such as vpc-sad23jfdfk. The array subscript starts from 0. If this parameter is not passed in, the classic network will be selected by default
      */
     public void setUniqVpcIds(String [] UniqVpcIds) {
         this.UniqVpcIds = UniqVpcIds;
     }
 
     /**
-     * Get Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0 
-     * @return UniqSubnetIds Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0
+     * Get Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0. 
+     * @return UniqSubnetIds Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0.
      */
     public String [] getUniqSubnetIds() {
         return this.UniqSubnetIds;
     }
 
     /**
-     * Set Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0
-     * @param UniqSubnetIds Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0
+     * Set Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0.
+     * @param UniqSubnetIds Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0.
      */
     public void setUniqSubnetIds(String [] UniqSubnetIds) {
         this.UniqSubnetIds = UniqSubnetIds;
     }
 
     /**
-     * Get Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region` 
-     * @return RegionIds Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`
+     * Get Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`. 
+     * @return RegionIds Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`.
      */
     public Long [] getRegionIds() {
         return this.RegionIds;
     }
 
     /**
-     * Set Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`
-     * @param RegionIds Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`
+     * Set Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`.
+     * @param RegionIds Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`.
      */
     public void setRegionIds(Long [] RegionIds) {
         this.RegionIds = RegionIds;
@@ -401,16 +415,16 @@ public class DescribeInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Type edition. 1: standalone edition; 2: primary-secondary edition; 3: cluster edition 
-     * @return TypeVersion Type edition. 1: standalone edition; 2: primary-secondary edition; 3: cluster edition
+     * Get Type edition. 1: Standalone Edition; 2: Master-Replica Edition; 3: Cluster Edition 
+     * @return TypeVersion Type edition. 1: Standalone Edition; 2: Master-Replica Edition; 3: Cluster Edition
      */
     public Long getTypeVersion() {
         return this.TypeVersion;
     }
 
     /**
-     * Set Type edition. 1: standalone edition; 2: primary-secondary edition; 3: cluster edition
-     * @param TypeVersion Type edition. 1: standalone edition; 2: primary-secondary edition; 3: cluster edition
+     * Set Type edition. 1: Standalone Edition; 2: Master-Replica Edition; 3: Cluster Edition
+     * @param TypeVersion Type edition. 1: Standalone Edition; 2: Master-Replica Edition; 3: Cluster Edition
      */
     public void setTypeVersion(Long TypeVersion) {
         this.TypeVersion = TypeVersion;
@@ -449,83 +463,115 @@ public class DescribeInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Billing method. postpaid: pay-as-you-go; prepaid: monthly subscription 
-     * @return BillingMode Billing method. postpaid: pay-as-you-go; prepaid: monthly subscription
+     * Get Billing mode. postpaid: pay-as-you-go; prepaid: monthly subscription 
+     * @return BillingMode Billing mode. postpaid: pay-as-you-go; prepaid: monthly subscription
      */
     public String getBillingMode() {
         return this.BillingMode;
     }
 
     /**
-     * Set Billing method. postpaid: pay-as-you-go; prepaid: monthly subscription
-     * @param BillingMode Billing method. postpaid: pay-as-you-go; prepaid: monthly subscription
+     * Set Billing mode. postpaid: pay-as-you-go; prepaid: monthly subscription
+     * @param BillingMode Billing mode. postpaid: pay-as-you-go; prepaid: monthly subscription
      */
     public void setBillingMode(String BillingMode) {
         this.BillingMode = BillingMode;
     }
 
     /**
-     * Get Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Slave Edition, 3: CKV Master-Slave Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition, 
-     * @return Type Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Slave Edition, 3: CKV Master-Slave Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
+     * Get Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Replica Edition, 3: CKV Master-Replica Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Replica Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Replica Edition, 9: Redis 5.0 Cluster Edition 
+     * @return Type Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Replica Edition, 3: CKV Master-Replica Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Replica Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Replica Edition, 9: Redis 5.0 Cluster Edition
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Slave Edition, 3: CKV Master-Slave Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
-     * @param Type Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Slave Edition, 3: CKV Master-Slave Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
+     * Set Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Replica Edition, 3: CKV Master-Replica Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Replica Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Replica Edition, 9: Redis 5.0 Cluster Edition
+     * @param Type Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Replica Edition, 3: CKV Master-Replica Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Replica Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Replica Edition, 9: Redis 5.0 Cluster Edition
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Search keywords, which can be instance ID, instance name, or complete IP 
-     * @return SearchKeys Search keywords, which can be instance ID, instance name, or complete IP
+     * Get Search keywords, which can be instance ID, instance name, or complete IP. 
+     * @return SearchKeys Search keywords, which can be instance ID, instance name, or complete IP.
      */
     public String [] getSearchKeys() {
         return this.SearchKeys;
     }
 
     /**
-     * Set Search keywords, which can be instance ID, instance name, or complete IP
-     * @param SearchKeys Search keywords, which can be instance ID, instance name, or complete IP
+     * Set Search keywords, which can be instance ID, instance name, or complete IP.
+     * @param SearchKeys Search keywords, which can be instance ID, instance name, or complete IP.
      */
     public void setSearchKeys(String [] SearchKeys) {
         this.SearchKeys = SearchKeys;
     }
 
     /**
-     * Get Internal parameter, which can be ignored 
-     * @return TypeList Internal parameter, which can be ignored
+     * Get Internal parameter, which can be ignored. 
+     * @return TypeList Internal parameter, which can be ignored.
      */
     public Long [] getTypeList() {
         return this.TypeList;
     }
 
     /**
-     * Set Internal parameter, which can be ignored
-     * @param TypeList Internal parameter, which can be ignored
+     * Set Internal parameter, which can be ignored.
+     * @param TypeList Internal parameter, which can be ignored.
      */
     public void setTypeList(Long [] TypeList) {
         this.TypeList = TypeList;
     }
 
     /**
-     * Get Internal parameter, which can be ignored 
-     * @return MonitorVersion Internal parameter, which can be ignored
+     * Get Internal parameter, which can be ignored. 
+     * @return MonitorVersion Internal parameter, which can be ignored.
      */
     public String getMonitorVersion() {
         return this.MonitorVersion;
     }
 
     /**
-     * Set Internal parameter, which can be ignored
-     * @param MonitorVersion Internal parameter, which can be ignored
+     * Set Internal parameter, which can be ignored.
+     * @param MonitorVersion Internal parameter, which can be ignored.
      */
     public void setMonitorVersion(String MonitorVersion) {
         this.MonitorVersion = MonitorVersion;
+    }
+
+    /**
+     * Get Filters resources by tag key and value. If this parameter is not specified or is an empty array, resources will not be filtered. 
+     * @return InstanceTags Filters resources by tag key and value. If this parameter is not specified or is an empty array, resources will not be filtered.
+     */
+    public InstanceTagInfo [] getInstanceTags() {
+        return this.InstanceTags;
+    }
+
+    /**
+     * Set Filters resources by tag key and value. If this parameter is not specified or is an empty array, resources will not be filtered.
+     * @param InstanceTags Filters resources by tag key and value. If this parameter is not specified or is an empty array, resources will not be filtered.
+     */
+    public void setInstanceTags(InstanceTagInfo [] InstanceTags) {
+        this.InstanceTags = InstanceTags;
+    }
+
+    /**
+     * Get Filters resources by tag key. If this parameter is not specified or is an empty array, resources will not be filtered. 
+     * @return TagKeys Filters resources by tag key. If this parameter is not specified or is an empty array, resources will not be filtered.
+     */
+    public String [] getTagKeys() {
+        return this.TagKeys;
+    }
+
+    /**
+     * Set Filters resources by tag key. If this parameter is not specified or is an empty array, resources will not be filtered.
+     * @param TagKeys Filters resources by tag key. If this parameter is not specified or is an empty array, resources will not be filtered.
+     */
+    public void setTagKeys(String [] TagKeys) {
+        this.TagKeys = TagKeys;
     }
 
     public DescribeInstancesRequest() {
@@ -632,6 +678,18 @@ public class DescribeInstancesRequest extends AbstractModel{
         if (source.MonitorVersion != null) {
             this.MonitorVersion = new String(source.MonitorVersion);
         }
+        if (source.InstanceTags != null) {
+            this.InstanceTags = new InstanceTagInfo[source.InstanceTags.length];
+            for (int i = 0; i < source.InstanceTags.length; i++) {
+                this.InstanceTags[i] = new InstanceTagInfo(source.InstanceTags[i]);
+            }
+        }
+        if (source.TagKeys != null) {
+            this.TagKeys = new String[source.TagKeys.length];
+            for (int i = 0; i < source.TagKeys.length; i++) {
+                this.TagKeys[i] = new String(source.TagKeys[i]);
+            }
+        }
     }
 
 
@@ -661,6 +719,8 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "SearchKeys.", this.SearchKeys);
         this.setParamArraySimple(map, prefix + "TypeList.", this.TypeList);
         this.setParamSimple(map, prefix + "MonitorVersion", this.MonitorVersion);
+        this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
+        this.setParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
 
     }
 }

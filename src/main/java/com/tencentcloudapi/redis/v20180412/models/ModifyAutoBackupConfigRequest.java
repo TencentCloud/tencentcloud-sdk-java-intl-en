@@ -30,7 +30,7 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. However, this parameter is now invalid.
+    * Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter cannot be modified for now.
     */
     @SerializedName("WeekDays")
     @Expose
@@ -44,7 +44,7 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel{
     private String TimePeriod;
 
     /**
-    * Auto backup type: 1 "scheduled rollback"
+    * Automatic backup type: 1 (scheduled rollback)
     */
     @SerializedName("AutoBackupType")
     @Expose
@@ -67,16 +67,16 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. However, this parameter is now invalid. 
-     * @return WeekDays Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. However, this parameter is now invalid.
+     * Get Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter cannot be modified for now. 
+     * @return WeekDays Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter cannot be modified for now.
      */
     public String [] getWeekDays() {
         return this.WeekDays;
     }
 
     /**
-     * Set Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. However, this parameter is now invalid.
-     * @param WeekDays Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. However, this parameter is now invalid.
+     * Set Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter cannot be modified for now.
+     * @param WeekDays Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter cannot be modified for now.
      */
     public void setWeekDays(String [] WeekDays) {
         this.WeekDays = WeekDays;
@@ -99,16 +99,16 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get Auto backup type: 1 "scheduled rollback" 
-     * @return AutoBackupType Auto backup type: 1 "scheduled rollback"
+     * Get Automatic backup type: 1 (scheduled rollback) 
+     * @return AutoBackupType Automatic backup type: 1 (scheduled rollback)
      */
     public Long getAutoBackupType() {
         return this.AutoBackupType;
     }
 
     /**
-     * Set Auto backup type: 1 "scheduled rollback"
-     * @param AutoBackupType Auto backup type: 1 "scheduled rollback"
+     * Set Automatic backup type: 1 (scheduled rollback)
+     * @param AutoBackupType Automatic backup type: 1 (scheduled rollback)
      */
     public void setAutoBackupType(Long AutoBackupType) {
         this.AutoBackupType = AutoBackupType;

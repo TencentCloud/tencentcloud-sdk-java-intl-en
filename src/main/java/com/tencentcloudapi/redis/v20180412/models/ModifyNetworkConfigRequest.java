@@ -30,21 +30,21 @@ public class ModifyNetworkConfigRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from basic network to VPC
+    * Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from classic network to VPC
     */
     @SerializedName("Operation")
     @Expose
     private String Operation;
 
     /**
-    * VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default
+    * VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default.
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations
+    * VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations.
     */
     @SerializedName("VpcId")
     @Expose
@@ -56,6 +56,13 @@ public class ModifyNetworkConfigRequest extends AbstractModel{
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
+
+    /**
+    * Retention time of the original VIP in days. Note that this parameter works only in the latest SDK. In earlier SDKs, the original VIP is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
+    */
+    @SerializedName("Recycle")
+    @Expose
+    private Long Recycle;
 
     /**
      * Get Instance ID 
@@ -74,48 +81,48 @@ public class ModifyNetworkConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from basic network to VPC 
-     * @return Operation Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from basic network to VPC
+     * Get Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from classic network to VPC 
+     * @return Operation Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from classic network to VPC
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from basic network to VPC
-     * @param Operation Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from basic network to VPC
+     * Set Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from classic network to VPC
+     * @param Operation Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from classic network to VPC
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
     }
 
     /**
-     * Get VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default 
-     * @return Vip VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default
+     * Get VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default. 
+     * @return Vip VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default.
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default
-     * @param Vip VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default
+     * Set VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default.
+     * @param Vip VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default.
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations 
-     * @return VpcId VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations
+     * Get VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations. 
+     * @return VpcId VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations
-     * @param VpcId VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations
+     * Set VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations.
+     * @param VpcId VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -135,6 +142,22 @@ public class ModifyNetworkConfigRequest extends AbstractModel{
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
+    }
+
+    /**
+     * Get Retention time of the original VIP in days. Note that this parameter works only in the latest SDK. In earlier SDKs, the original VIP is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1). 
+     * @return Recycle Retention time of the original VIP in days. Note that this parameter works only in the latest SDK. In earlier SDKs, the original VIP is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
+     */
+    public Long getRecycle() {
+        return this.Recycle;
+    }
+
+    /**
+     * Set Retention time of the original VIP in days. Note that this parameter works only in the latest SDK. In earlier SDKs, the original VIP is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
+     * @param Recycle Retention time of the original VIP in days. Note that this parameter works only in the latest SDK. In earlier SDKs, the original VIP is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
+     */
+    public void setRecycle(Long Recycle) {
+        this.Recycle = Recycle;
     }
 
     public ModifyNetworkConfigRequest() {
@@ -160,6 +183,9 @@ public class ModifyNetworkConfigRequest extends AbstractModel{
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
+        if (source.Recycle != null) {
+            this.Recycle = new Long(source.Recycle);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class ModifyNetworkConfigRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "Recycle", this.Recycle);
 
     }
 }

@@ -24,7 +24,7 @@ public class DescribeInstanceDTSInfoResponse extends AbstractModel{
 
     /**
     * DTS task ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("JobId")
     @Expose
@@ -32,7 +32,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * DTS task name
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("JobName")
     @Expose
@@ -40,7 +40,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Task status. Valid values: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
     @Expose
@@ -48,15 +48,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Status description
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StatusDesc")
     @Expose
     private String StatusDesc;
 
     /**
-    * Synchronization latency in bytes
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Sync latency in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Offset")
     @Expose
@@ -64,7 +64,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Disconnection time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CutDownTime")
     @Expose
@@ -72,7 +72,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Source instance information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SrcInfo")
     @Expose
@@ -80,7 +80,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Target instance information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DstInfo")
     @Expose
@@ -95,9 +95,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get DTS task ID
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return JobId DTS task ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getJobId() {
         return this.JobId;
@@ -105,9 +105,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set DTS task ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param JobId DTS task ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
@@ -115,9 +115,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get DTS task name
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return JobName DTS task name
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getJobName() {
         return this.JobName;
@@ -125,9 +125,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set DTS task name
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param JobName DTS task name
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setJobName(String JobName) {
         this.JobName = JobName;
@@ -135,9 +135,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Task status. Valid values: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Status Task status. Valid values: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getStatus() {
         return this.Status;
@@ -145,9 +145,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Task status. Valid values: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Status Task status. Valid values: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -155,9 +155,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Status description
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return StatusDesc Status description
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStatusDesc() {
         return this.StatusDesc;
@@ -165,29 +165,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Status description
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param StatusDesc Status description
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
     }
 
     /**
-     * Get Synchronization latency in bytes
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Offset Synchronization latency in bytes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Sync latency in bytes
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Offset Sync latency in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Synchronization latency in bytes
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Offset Synchronization latency in bytes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Sync latency in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Offset Sync latency in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -195,9 +195,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Disconnection time
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return CutDownTime Disconnection time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCutDownTime() {
         return this.CutDownTime;
@@ -205,9 +205,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Disconnection time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param CutDownTime Disconnection time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCutDownTime(String CutDownTime) {
         this.CutDownTime = CutDownTime;
@@ -215,9 +215,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Source instance information
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return SrcInfo Source instance information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DescribeInstanceDTSInstanceInfo getSrcInfo() {
         return this.SrcInfo;
@@ -225,9 +225,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Source instance information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param SrcInfo Source instance information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSrcInfo(DescribeInstanceDTSInstanceInfo SrcInfo) {
         this.SrcInfo = SrcInfo;
@@ -235,9 +235,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Target instance information
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return DstInfo Target instance information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DescribeInstanceDTSInstanceInfo getDstInfo() {
         return this.DstInfo;
@@ -245,9 +245,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Target instance information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param DstInfo Target instance information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDstInfo(DescribeInstanceDTSInstanceInfo DstInfo) {
         this.DstInfo = DstInfo;

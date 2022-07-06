@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeGatewayFlowQosResponse extends AbstractModel{
 
     /**
-    * List of instance details.
+    * List of instance details
     */
     @SerializedName("GatewayQosSet")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeGatewayFlowQosResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get List of instance details. 
-     * @return GatewayQosSet List of instance details.
+     * Get List of instance details 
+     * @return GatewayQosSet List of instance details
      */
     public GatewayQos [] getGatewayQosSet() {
         return this.GatewayQosSet;
     }
 
     /**
-     * Set List of instance details.
-     * @param GatewayQosSet List of instance details.
+     * Set List of instance details
+     * @param GatewayQosSet List of instance details
      */
     public void setGatewayQosSet(GatewayQos [] GatewayQosSet) {
         this.GatewayQosSet = GatewayQosSet;

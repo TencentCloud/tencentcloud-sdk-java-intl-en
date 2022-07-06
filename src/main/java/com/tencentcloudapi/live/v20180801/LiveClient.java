@@ -228,6 +228,33 @@ Note: at least enter one callback URL.
     }
 
     /**
+     *This API is used to create a task to pull streams from video files or an external live streaming source and publish them to a specified destination URL.
+Notes:
+1. By default, you can have at most 20 stream pulling tasks at a time. You can submit a ticket to raise the limit.
+2. Only H.264 and H.265 are supported for video. If the source video is in a different format, please transcode it first.
+3. Only AAC is supported for audio. If the source audio is in a different format, please transcode it first.
+4. You can enable auto deletion in the console to delete expired tasks automatically.
+5. The pull and relay feature is a paid feature. For its billing details, see [Relay](https://intl.cloud.tencent.com/document/product/267/53308?from_cn_redirect=1).
+6. CSS is only responsible for pulling and relaying content. Please make sure that your content is authorized and complies with relevant laws and regulations. In case of copyright infringement or violation of laws or regulations, CSS will suspend its service for you and reserves the right to seek legal remedies.
+     * @param req CreateLivePullStreamTaskRequest
+     * @return CreateLivePullStreamTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLivePullStreamTaskResponse CreateLivePullStreamTask(CreateLivePullStreamTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLivePullStreamTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLivePullStreamTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateLivePullStreamTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *- Prerequisites
   1. Recording files are stored on the VOD platform, so if you need to use the recording feature, you must first activate the VOD service.
   2. After the recording files are stored, applicable fees (including storage fees and downstream playback traffic fees) will be charged according to the VOD billing mode. For more information, please see the [corresponding document](https://intl.cloud.tencent.com/document/product/266/2838?from_cn_redirect=1).
@@ -511,6 +538,29 @@ Note: only one screencapturing template can be associated with one domain name.
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveDomainResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteLiveDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a task created by `CreateLivePullStreamTask`.
+Notes:
+1. For the `TaskId` request parameter, pass in the task ID returned by the `CreateLivePullStreamTask` API.
+2. You can query the ID of a task using the `DescribeLivePullStreamTasks` API.
+     * @param req DeleteLivePullStreamTaskRequest
+     * @return DeleteLivePullStreamTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLivePullStreamTaskResponse DeleteLivePullStreamTask(DeleteLivePullStreamTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLivePullStreamTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLivePullStreamTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteLivePullStreamTask");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1036,6 +1086,27 @@ Note: this API is used for query only and should not be relied too much upon in 
                 Type type = new TypeToken<JsonResponseModel<DescribeLivePlayAuthKeyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeLivePlayAuthKey");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the stream pulling tasks created by `CreateLivePullStreamTask`.
+The tasks returned are sorted by last updated time in descending order.
+     * @param req DescribeLivePullStreamTasksRequest
+     * @return DescribeLivePullStreamTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLivePullStreamTasksResponse DescribeLivePullStreamTasks(DescribeLivePullStreamTasksRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLivePullStreamTasksResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLivePullStreamTasksResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLivePullStreamTasks");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1842,6 +1913,28 @@ Referer information is included in HTTP requests. After you enable referer confi
                 Type type = new TypeToken<JsonResponseModel<ModifyLivePlayDomainResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyLivePlayDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a stream pulling task. 
+1. You cannot modify the destination URL. To publish to a new destination, please create a new task.
+2. You cannot modify the source type. To use a different source type, please create a new task.
+     * @param req ModifyLivePullStreamTaskRequest
+     * @return ModifyLivePullStreamTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLivePullStreamTaskResponse ModifyLivePullStreamTask(ModifyLivePullStreamTaskRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLivePullStreamTaskResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLivePullStreamTaskResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLivePullStreamTask");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

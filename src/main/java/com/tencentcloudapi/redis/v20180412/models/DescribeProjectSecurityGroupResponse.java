@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeProjectSecurityGroupResponse extends AbstractModel{
 
     /**
-    * Security group of a project
+    * Security group of the project
     */
     @SerializedName("SecurityGroupDetails")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeProjectSecurityGroupResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Security group of a project 
-     * @return SecurityGroupDetails Security group of a project
+     * Get Security group of the project 
+     * @return SecurityGroupDetails Security group of the project
      */
     public SecurityGroupDetail [] getSecurityGroupDetails() {
         return this.SecurityGroupDetails;
     }
 
     /**
-     * Set Security group of a project
-     * @param SecurityGroupDetails Security group of a project
+     * Set Security group of the project
+     * @param SecurityGroupDetails Security group of the project
      */
     public void setSecurityGroupDetails(SecurityGroupDetail [] SecurityGroupDetails) {
         this.SecurityGroupDetails = SecurityGroupDetails;

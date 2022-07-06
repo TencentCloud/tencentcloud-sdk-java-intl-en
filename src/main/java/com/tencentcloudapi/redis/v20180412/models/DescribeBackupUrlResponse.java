@@ -23,22 +23,22 @@ import java.util.HashMap;
 public class DescribeBackupUrlResponse extends AbstractModel{
 
     /**
-    * Public network download address (valid for six hours). This field will be deprecated soon.
+    * Public network download address (valid for six hours). This field will be disused soon.
     */
     @SerializedName("DownloadUrl")
     @Expose
     private String [] DownloadUrl;
 
     /**
-    * Private network download address (valid for six hours). This field will be deprecated soon.
+    * Private network download address (valid for six hours). This field will be disused soon.
     */
     @SerializedName("InnerDownloadUrl")
     @Expose
     private String [] InnerDownloadUrl;
 
     /**
-    * Filename. This field will be deprecated soon.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Filename. This field will be disused soon.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Filenames")
     @Expose
@@ -46,7 +46,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * List of backup file information
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BackupInfos")
     @Expose
@@ -60,52 +60,52 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get Public network download address (valid for six hours). This field will be deprecated soon. 
-     * @return DownloadUrl Public network download address (valid for six hours). This field will be deprecated soon.
+     * Get Public network download address (valid for six hours). This field will be disused soon. 
+     * @return DownloadUrl Public network download address (valid for six hours). This field will be disused soon.
      */
     public String [] getDownloadUrl() {
         return this.DownloadUrl;
     }
 
     /**
-     * Set Public network download address (valid for six hours). This field will be deprecated soon.
-     * @param DownloadUrl Public network download address (valid for six hours). This field will be deprecated soon.
+     * Set Public network download address (valid for six hours). This field will be disused soon.
+     * @param DownloadUrl Public network download address (valid for six hours). This field will be disused soon.
      */
     public void setDownloadUrl(String [] DownloadUrl) {
         this.DownloadUrl = DownloadUrl;
     }
 
     /**
-     * Get Private network download address (valid for six hours). This field will be deprecated soon. 
-     * @return InnerDownloadUrl Private network download address (valid for six hours). This field will be deprecated soon.
+     * Get Private network download address (valid for six hours). This field will be disused soon. 
+     * @return InnerDownloadUrl Private network download address (valid for six hours). This field will be disused soon.
      */
     public String [] getInnerDownloadUrl() {
         return this.InnerDownloadUrl;
     }
 
     /**
-     * Set Private network download address (valid for six hours). This field will be deprecated soon.
-     * @param InnerDownloadUrl Private network download address (valid for six hours). This field will be deprecated soon.
+     * Set Private network download address (valid for six hours). This field will be disused soon.
+     * @param InnerDownloadUrl Private network download address (valid for six hours). This field will be disused soon.
      */
     public void setInnerDownloadUrl(String [] InnerDownloadUrl) {
         this.InnerDownloadUrl = InnerDownloadUrl;
     }
 
     /**
-     * Get Filename. This field will be deprecated soon.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Filenames Filename. This field will be deprecated soon.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Filename. This field will be disused soon.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Filenames Filename. This field will be disused soon.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getFilenames() {
         return this.Filenames;
     }
 
     /**
-     * Set Filename. This field will be deprecated soon.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Filenames Filename. This field will be deprecated soon.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Filename. This field will be disused soon.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Filenames Filename. This field will be disused soon.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFilenames(String [] Filenames) {
         this.Filenames = Filenames;
@@ -113,9 +113,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get List of backup file information
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return BackupInfos List of backup file information
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public BackupDownloadInfo [] getBackupInfos() {
         return this.BackupInfos;
@@ -123,9 +123,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set List of backup file information
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param BackupInfos List of backup file information
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBackupInfos(BackupDownloadInfo [] BackupInfos) {
         this.BackupInfos = BackupInfos;

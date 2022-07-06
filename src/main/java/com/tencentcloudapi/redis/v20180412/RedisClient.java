@@ -79,7 +79,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to associate a security group with instances in batches.
+     *This API is used to bind a security group to instances in batches.
      * @param req AssociateSecurityGroupsRequest
      * @return AssociateSecurityGroupsResponse
      * @throws TencentCloudSDKException
@@ -119,7 +119,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to deactivate an instance in the recycle bin immediately.
+     *This API is used to eliminate an instance in the recycle bin immediately.
      * @param req CleanUpInstanceRequest
      * @return CleanUpInstanceResponse
      * @throws TencentCloudSDKException
@@ -179,7 +179,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create Redis instances.
+     *This API is used to create a Redis instance.
      * @param req CreateInstancesRequest
      * @return CreateInstancesResponse
      * @throws TencentCloudSDKException
@@ -279,7 +279,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the download address of a backup RDB (it is during beta test and can be used only after you apply for the eligibility).
+     *This API is used to query the download address of a backup RDB (it is in beta test and can be used only after you apply for the eligibility).
      * @param req DescribeBackupUrlRequest
      * @return DescribeBackupUrlResponse
      * @throws TencentCloudSDKException
@@ -299,7 +299,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *(Disused) Queries the list of instances
+     *This API has been disused. It was used to query the list of Redis instance information.
      * @param req DescribeCommonDBInstancesRequest
      * @return DescribeCommonDBInstancesResponse
      * @throws TencentCloudSDKException
@@ -659,7 +659,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the information of cluster edition instance shards.
+     *This API is used to get the information of Cluster Edition instance shards.
      * @param req DescribeInstanceShardsRequest
      * @return DescribeInstanceShardsResponse
      * @throws TencentCloudSDKException
@@ -679,7 +679,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query Redis node information.
+     *This API is used to query the Redis node details.
      * @param req DescribeInstanceZoneInfoRequest
      * @return DescribeInstanceZoneInfoResponse
      * @throws TencentCloudSDKException
@@ -739,7 +739,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query parameter template details.
+     *This API is used to query the parameter template details.
      * @param req DescribeParamTemplateInfoRequest
      * @return DescribeParamTemplateInfoResponse
      * @throws TencentCloudSDKException
@@ -839,7 +839,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query proxy slow logs.
+     *This API is used to query the slow queries of the proxy.
      * @param req DescribeProxySlowLogRequest
      * @return DescribeProxySlowLogResponse
      * @throws TencentCloudSDKException
@@ -899,7 +899,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query a task result.
+     *This API is used to query the task result.
      * @param req DescribeTaskInfoRequest
      * @return DescribeTaskInfoResponse
      * @throws TencentCloudSDKException
@@ -919,27 +919,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the list of tasks.
-     * @param req DescribeTaskListRequest
-     * @return DescribeTaskListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTaskListResponse DescribeTaskList(DescribeTaskListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeTaskListResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeTaskListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeTaskList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query slow queries of a TencentDB for Tendis instance.
+     *This API is used to query slow queries of a Tendis instance.
      * @param req DescribeTendisSlowLogRequest
      * @return DescribeTendisSlowLogResponse
      * @throws TencentCloudSDKException
@@ -1019,7 +999,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to unassociate security groups from instances in batches.
+     *This API is used to unbind a security group from instances in batches.
      * @param req DisassociateSecurityGroupsRequest
      * @return DisassociateSecurityGroupsResponse
      * @throws TencentCloudSDKException
@@ -1099,26 +1079,6 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to perform a failure simulation.
-     * @param req KillMasterGroupRequest
-     * @return KillMasterGroupResponse
-     * @throws TencentCloudSDKException
-     */
-    public KillMasterGroupResponse KillMasterGroup(KillMasterGroupRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<KillMasterGroupResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<KillMasterGroupResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "KillMasterGroup");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to manually back up a Redis instance.
      * @param req ManualBackupInstanceRequest
      * @return ManualBackupInstanceResponse
@@ -1159,7 +1119,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to set an auto-backup schedule.
+     *This API is used to configure automatic backup.
      * @param req ModifyAutoBackupConfigRequest
      * @return ModifyAutoBackupConfigResponse
      * @throws TencentCloudSDKException
@@ -1179,7 +1139,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the security groups associated with an instance.
+     *This API is used to modify the security groups bound to an instance.
      * @param req ModifyDBInstanceSecurityGroupsRequest
      * @return ModifyDBInstanceSecurityGroupsResponse
      * @throws TencentCloudSDKException
@@ -1279,7 +1239,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify instance maintenance window. The maintenance window specifies a time period during which compatible version upgrade, architecture upgrade, backend maintenance, and other operations can be performed to avoid affecting business. Note: if the compatible version upgrade or architecture upgrade task has been initiated for an instance, its maintenance window cannot be modified.
+     *This API is used to modify the instance maintenance time. The maintenance time specifies a time period during which compatible version upgrade, architecture upgrade, backend maintenance, and other operations can be performed to avoid affecting business. Note: if the compatible version upgrade or architecture upgrade task has been initiated for an instance, its maintenance time cannot be modified.
      * @param req ModifyMaintenanceWindowRequest
      * @return ModifyMaintenanceWindowResponse
      * @throws TencentCloudSDKException

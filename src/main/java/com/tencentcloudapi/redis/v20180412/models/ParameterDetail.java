@@ -51,14 +51,14 @@ public class ParameterDetail extends AbstractModel{
     private String Description;
 
     /**
-    * Current value of the parameter
+    * Current value
     */
     @SerializedName("CurrentValue")
     @Expose
     private String CurrentValue;
 
     /**
-    * Whether the database needs to be restarted for the modified parameter to take effect. Valid values: `0` (no),`1` (yes)
+    * Whether the database needs to be restarted for the modified parameter to take effect. Valid values: 0 (no); 1 (yes).
     */
     @SerializedName("NeedReboot")
     @Expose
@@ -66,7 +66,7 @@ public class ParameterDetail extends AbstractModel{
 
     /**
     * Maximum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Max")
     @Expose
@@ -74,15 +74,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Minimum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Min")
     @Expose
     private String Min;
 
     /**
-    * Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Enumerated values of the parameter. It is null if the parameter is non-enumerated.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EnumValue")
     @Expose
@@ -153,32 +153,32 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Current value of the parameter 
-     * @return CurrentValue Current value of the parameter
+     * Get Current value 
+     * @return CurrentValue Current value
      */
     public String getCurrentValue() {
         return this.CurrentValue;
     }
 
     /**
-     * Set Current value of the parameter
-     * @param CurrentValue Current value of the parameter
+     * Set Current value
+     * @param CurrentValue Current value
      */
     public void setCurrentValue(String CurrentValue) {
         this.CurrentValue = CurrentValue;
     }
 
     /**
-     * Get Whether the database needs to be restarted for the modified parameter to take effect. Valid values: `0` (no),`1` (yes) 
-     * @return NeedReboot Whether the database needs to be restarted for the modified parameter to take effect. Valid values: `0` (no),`1` (yes)
+     * Get Whether the database needs to be restarted for the modified parameter to take effect. Valid values: 0 (no); 1 (yes). 
+     * @return NeedReboot Whether the database needs to be restarted for the modified parameter to take effect. Valid values: 0 (no); 1 (yes).
      */
     public Long getNeedReboot() {
         return this.NeedReboot;
     }
 
     /**
-     * Set Whether the database needs to be restarted for the modified parameter to take effect. Valid values: `0` (no),`1` (yes)
-     * @param NeedReboot Whether the database needs to be restarted for the modified parameter to take effect. Valid values: `0` (no),`1` (yes)
+     * Set Whether the database needs to be restarted for the modified parameter to take effect. Valid values: 0 (no); 1 (yes).
+     * @param NeedReboot Whether the database needs to be restarted for the modified parameter to take effect. Valid values: 0 (no); 1 (yes).
      */
     public void setNeedReboot(Long NeedReboot) {
         this.NeedReboot = NeedReboot;
@@ -186,9 +186,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Maximum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Max Maximum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMax() {
         return this.Max;
@@ -196,9 +196,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Maximum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Max Maximum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMax(String Max) {
         this.Max = Max;
@@ -206,9 +206,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Minimum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Min Minimum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMin() {
         return this.Min;
@@ -216,29 +216,29 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Minimum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Min Minimum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMin(String Min) {
         this.Min = Min;
     }
 
     /**
-     * Get Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Enumerated values of the parameter. It is null if the parameter is non-enumerated.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getEnumValue() {
         return this.EnumValue;
     }
 
     /**
-     * Set Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Enumerated values of the parameter. It is null if the parameter is non-enumerated.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEnumValue(String [] EnumValue) {
         this.EnumValue = EnumValue;

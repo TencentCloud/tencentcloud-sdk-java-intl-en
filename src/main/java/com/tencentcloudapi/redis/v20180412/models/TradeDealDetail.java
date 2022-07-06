@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class TradeDealDetail extends AbstractModel{
 
     /**
-    * Order ID, which is used when a TencentCloud API is called
+    * Order ID, which is used when a TencentCloud API is called.
     */
     @SerializedName("DealId")
     @Expose
     private String DealId;
 
     /**
-    * Long order ID, which is used when an order issue is submitted for assistance
+    * Long order ID, which is used when an order issue is submitted for assistance.
     */
     @SerializedName("DealName")
     @Expose
@@ -44,14 +44,14 @@ public class TradeDealDetail extends AbstractModel{
     private Long ZoneId;
 
     /**
-    * Number of instances associated with an order
+    * Number of instances associated with the order
     */
     @SerializedName("GoodsNum")
     @Expose
     private Long GoodsNum;
 
     /**
-    * Creates a user uin
+    * Creator UIN
     */
     @SerializedName("Creater")
     @Expose
@@ -93,7 +93,7 @@ public class TradeDealDetail extends AbstractModel{
     private String Description;
 
     /**
-    * Actual total price of an order in 0.01 CNY
+    * Actual total price of the order in 0.01 CNY
     */
     @SerializedName("Price")
     @Expose
@@ -107,32 +107,32 @@ public class TradeDealDetail extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-     * Get Order ID, which is used when a TencentCloud API is called 
-     * @return DealId Order ID, which is used when a TencentCloud API is called
+     * Get Order ID, which is used when a TencentCloud API is called. 
+     * @return DealId Order ID, which is used when a TencentCloud API is called.
      */
     public String getDealId() {
         return this.DealId;
     }
 
     /**
-     * Set Order ID, which is used when a TencentCloud API is called
-     * @param DealId Order ID, which is used when a TencentCloud API is called
+     * Set Order ID, which is used when a TencentCloud API is called.
+     * @param DealId Order ID, which is used when a TencentCloud API is called.
      */
     public void setDealId(String DealId) {
         this.DealId = DealId;
     }
 
     /**
-     * Get Long order ID, which is used when an order issue is submitted for assistance 
-     * @return DealName Long order ID, which is used when an order issue is submitted for assistance
+     * Get Long order ID, which is used when an order issue is submitted for assistance. 
+     * @return DealName Long order ID, which is used when an order issue is submitted for assistance.
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set Long order ID, which is used when an order issue is submitted for assistance
-     * @param DealName Long order ID, which is used when an order issue is submitted for assistance
+     * Set Long order ID, which is used when an order issue is submitted for assistance.
+     * @param DealName Long order ID, which is used when an order issue is submitted for assistance.
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;
@@ -155,32 +155,32 @@ public class TradeDealDetail extends AbstractModel{
     }
 
     /**
-     * Get Number of instances associated with an order 
-     * @return GoodsNum Number of instances associated with an order
+     * Get Number of instances associated with the order 
+     * @return GoodsNum Number of instances associated with the order
      */
     public Long getGoodsNum() {
         return this.GoodsNum;
     }
 
     /**
-     * Set Number of instances associated with an order
-     * @param GoodsNum Number of instances associated with an order
+     * Set Number of instances associated with the order
+     * @param GoodsNum Number of instances associated with the order
      */
     public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
     /**
-     * Get Creates a user uin 
-     * @return Creater Creates a user uin
+     * Get Creator UIN 
+     * @return Creater Creator UIN
      */
     public String getCreater() {
         return this.Creater;
     }
 
     /**
-     * Set Creates a user uin
-     * @param Creater Creates a user uin
+     * Set Creator UIN
+     * @param Creater Creator UIN
      */
     public void setCreater(String Creater) {
         this.Creater = Creater;
@@ -267,16 +267,16 @@ public class TradeDealDetail extends AbstractModel{
     }
 
     /**
-     * Get Actual total price of an order in 0.01 CNY 
-     * @return Price Actual total price of an order in 0.01 CNY
+     * Get Actual total price of the order in 0.01 CNY 
+     * @return Price Actual total price of the order in 0.01 CNY
      */
     public Long getPrice() {
         return this.Price;
     }
 
     /**
-     * Set Actual total price of an order in 0.01 CNY
-     * @param Price Actual total price of an order in 0.01 CNY
+     * Set Actual total price of the order in 0.01 CNY
+     * @param Price Actual total price of the order in 0.01 CNY
      */
     public void setPrice(Long Price) {
         this.Price = Price;

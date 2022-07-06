@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DisassociateNetworkAclSubnetsRequest extends AbstractModel{
 
     /**
-    * Network ACL instance ID. Example: acl-12345678.
+    * Network ACL instance ID, such as `acl-12345678`.
     */
     @SerializedName("NetworkAclId")
     @Expose
     private String NetworkAclId;
 
     /**
-    * Array of subnet instance IDs. Example: [subnet-12345678].
+    * Array of subnet instance IDs, such as [subnet-12345678].
     */
     @SerializedName("SubnetIds")
     @Expose
     private String [] SubnetIds;
 
     /**
-     * Get Network ACL instance ID. Example: acl-12345678. 
-     * @return NetworkAclId Network ACL instance ID. Example: acl-12345678.
+     * Get Network ACL instance ID, such as `acl-12345678`. 
+     * @return NetworkAclId Network ACL instance ID, such as `acl-12345678`.
      */
     public String getNetworkAclId() {
         return this.NetworkAclId;
     }
 
     /**
-     * Set Network ACL instance ID. Example: acl-12345678.
-     * @param NetworkAclId Network ACL instance ID. Example: acl-12345678.
+     * Set Network ACL instance ID, such as `acl-12345678`.
+     * @param NetworkAclId Network ACL instance ID, such as `acl-12345678`.
      */
     public void setNetworkAclId(String NetworkAclId) {
         this.NetworkAclId = NetworkAclId;
     }
 
     /**
-     * Get Array of subnet instance IDs. Example: [subnet-12345678]. 
-     * @return SubnetIds Array of subnet instance IDs. Example: [subnet-12345678].
+     * Get Array of subnet instance IDs, such as [subnet-12345678]. 
+     * @return SubnetIds Array of subnet instance IDs, such as [subnet-12345678].
      */
     public String [] getSubnetIds() {
         return this.SubnetIds;
     }
 
     /**
-     * Set Array of subnet instance IDs. Example: [subnet-12345678].
-     * @param SubnetIds Array of subnet instance IDs. Example: [subnet-12345678].
+     * Set Array of subnet instance IDs, such as [subnet-12345678].
+     * @param SubnetIds Array of subnet instance IDs, such as [subnet-12345678].
      */
     public void setSubnetIds(String [] SubnetIds) {
         this.SubnetIds = SubnetIds;

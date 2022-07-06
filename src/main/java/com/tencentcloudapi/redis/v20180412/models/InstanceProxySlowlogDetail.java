@@ -51,7 +51,7 @@ public class InstanceProxySlowlogDetail extends AbstractModel{
     private String CommandLine;
 
     /**
-    * Execution duration
+    * Execution time
     */
     @SerializedName("ExecuteTime")
     @Expose
@@ -122,16 +122,16 @@ public class InstanceProxySlowlogDetail extends AbstractModel{
     }
 
     /**
-     * Get Execution duration 
-     * @return ExecuteTime Execution duration
+     * Get Execution time 
+     * @return ExecuteTime Execution time
      */
     public String getExecuteTime() {
         return this.ExecuteTime;
     }
 
     /**
-     * Set Execution duration
-     * @param ExecuteTime Execution duration
+     * Set Execution time
+     * @param ExecuteTime Execution time
      */
     public void setExecuteTime(String ExecuteTime) {
         this.ExecuteTime = ExecuteTime;

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class RestoreInstanceRequest extends AbstractModel{
 
     /**
-    * ID of the instance to be operated on, which can be obtained through the `redisId` field in the return value of the DescribeRedis API.
+    * ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstances` API.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Backup ID, which can be obtained through the `backupId` field in the return value of the GetRedisBackupList API
+    * Backup ID, which can be obtained through the `backupId` field in the return value of the `GetRedisBackupList` API.
     */
     @SerializedName("BackupId")
     @Expose
@@ -44,32 +44,32 @@ public class RestoreInstanceRequest extends AbstractModel{
     private String Password;
 
     /**
-     * Get ID of the instance to be operated on, which can be obtained through the `redisId` field in the return value of the DescribeRedis API. 
-     * @return InstanceId ID of the instance to be operated on, which can be obtained through the `redisId` field in the return value of the DescribeRedis API.
+     * Get ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstances` API. 
+     * @return InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstances` API.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ID of the instance to be operated on, which can be obtained through the `redisId` field in the return value of the DescribeRedis API.
-     * @param InstanceId ID of the instance to be operated on, which can be obtained through the `redisId` field in the return value of the DescribeRedis API.
+     * Set ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstances` API.
+     * @param InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstances` API.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Backup ID, which can be obtained through the `backupId` field in the return value of the GetRedisBackupList API 
-     * @return BackupId Backup ID, which can be obtained through the `backupId` field in the return value of the GetRedisBackupList API
+     * Get Backup ID, which can be obtained through the `backupId` field in the return value of the `GetRedisBackupList` API. 
+     * @return BackupId Backup ID, which can be obtained through the `backupId` field in the return value of the `GetRedisBackupList` API.
      */
     public String getBackupId() {
         return this.BackupId;
     }
 
     /**
-     * Set Backup ID, which can be obtained through the `backupId` field in the return value of the GetRedisBackupList API
-     * @param BackupId Backup ID, which can be obtained through the `backupId` field in the return value of the GetRedisBackupList API
+     * Set Backup ID, which can be obtained through the `backupId` field in the return value of the `GetRedisBackupList` API.
+     * @param BackupId Backup ID, which can be obtained through the `backupId` field in the return value of the `GetRedisBackupList` API.
      */
     public void setBackupId(String BackupId) {
         this.BackupId = BackupId;

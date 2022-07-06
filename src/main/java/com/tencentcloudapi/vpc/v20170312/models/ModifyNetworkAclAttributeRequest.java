@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ModifyNetworkAclAttributeRequest extends AbstractModel{
 
     /**
-    * Network ACL instance ID. Example: acl-12345678.
+    * Network ACL instance ID, such as `acl-12345678`.
     */
     @SerializedName("NetworkAclId")
     @Expose
     private String NetworkAclId;
 
     /**
-    * Name of the network ACL. The maximum length is 60 bytes.
+    * Network ACL name, which can contain up to 60 bytes.
     */
     @SerializedName("NetworkAclName")
     @Expose
     private String NetworkAclName;
 
     /**
-     * Get Network ACL instance ID. Example: acl-12345678. 
-     * @return NetworkAclId Network ACL instance ID. Example: acl-12345678.
+     * Get Network ACL instance ID, such as `acl-12345678`. 
+     * @return NetworkAclId Network ACL instance ID, such as `acl-12345678`.
      */
     public String getNetworkAclId() {
         return this.NetworkAclId;
     }
 
     /**
-     * Set Network ACL instance ID. Example: acl-12345678.
-     * @param NetworkAclId Network ACL instance ID. Example: acl-12345678.
+     * Set Network ACL instance ID, such as `acl-12345678`.
+     * @param NetworkAclId Network ACL instance ID, such as `acl-12345678`.
      */
     public void setNetworkAclId(String NetworkAclId) {
         this.NetworkAclId = NetworkAclId;
     }
 
     /**
-     * Get Name of the network ACL. The maximum length is 60 bytes. 
-     * @return NetworkAclName Name of the network ACL. The maximum length is 60 bytes.
+     * Get Network ACL name, which can contain up to 60 bytes. 
+     * @return NetworkAclName Network ACL name, which can contain up to 60 bytes.
      */
     public String getNetworkAclName() {
         return this.NetworkAclName;
     }
 
     /**
-     * Set Name of the network ACL. The maximum length is 60 bytes.
-     * @param NetworkAclName Name of the network ACL. The maximum length is 60 bytes.
+     * Set Network ACL name, which can contain up to 60 bytes.
+     * @param NetworkAclName Network ACL name, which can contain up to 60 bytes.
      */
     public void setNetworkAclName(String NetworkAclName) {
         this.NetworkAclName = NetworkAclName;

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ApplyParamsTemplateRequest extends AbstractModel{
 
     /**
-    * Instance ID list
+    * List of instance IDs
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * The ID of the parameter template to be applied
+    * ID of the parameter template to be applied
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-     * Get Instance ID list 
-     * @return InstanceIds Instance ID list
+     * Get List of instance IDs 
+     * @return InstanceIds List of instance IDs
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Instance ID list
-     * @param InstanceIds Instance ID list
+     * Set List of instance IDs
+     * @param InstanceIds List of instance IDs
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get The ID of the parameter template to be applied 
-     * @return TemplateId The ID of the parameter template to be applied
+     * Get ID of the parameter template to be applied 
+     * @return TemplateId ID of the parameter template to be applied
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set The ID of the parameter template to be applied
-     * @param TemplateId The ID of the parameter template to be applied
+     * Set ID of the parameter template to be applied
+     * @param TemplateId ID of the parameter template to be applied
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

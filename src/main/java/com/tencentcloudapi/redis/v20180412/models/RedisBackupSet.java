@@ -37,7 +37,7 @@ public class RedisBackupSet extends AbstractModel{
     private String BackupId;
 
     /**
-    * Backup type. manualBackupInstance: manual backup initiated by user; systemBackupInstance: midnight backup initiated by system
+    * Backup type. 1: manual backup initiated by the user; 0: automatic backup in the early morning initiated by the system
     */
     @SerializedName("BackupType")
     @Expose
@@ -58,11 +58,35 @@ public class RedisBackupSet extends AbstractModel{
     private String Remark;
 
     /**
-    * Whether a backup is locked. 0: no; 1: yes
+    * Whether a backup is locked. 0: no; 1: yes.
     */
     @SerializedName("Locked")
     @Expose
     private Long Locked;
+
+    /**
+    * Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BackupSize")
+    @Expose
+    private Long BackupSize;
+
+    /**
+    * Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("FullBackup")
+    @Expose
+    private Long FullBackup;
+
+    /**
+    * Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private Long InstanceType;
 
     /**
      * Get Backup start time 
@@ -97,16 +121,16 @@ public class RedisBackupSet extends AbstractModel{
     }
 
     /**
-     * Get Backup type. manualBackupInstance: manual backup initiated by user; systemBackupInstance: midnight backup initiated by system 
-     * @return BackupType Backup type. manualBackupInstance: manual backup initiated by user; systemBackupInstance: midnight backup initiated by system
+     * Get Backup type. 1: manual backup initiated by the user; 0: automatic backup in the early morning initiated by the system 
+     * @return BackupType Backup type. 1: manual backup initiated by the user; 0: automatic backup in the early morning initiated by the system
      */
     public String getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set Backup type. manualBackupInstance: manual backup initiated by user; systemBackupInstance: midnight backup initiated by system
-     * @param BackupType Backup type. manualBackupInstance: manual backup initiated by user; systemBackupInstance: midnight backup initiated by system
+     * Set Backup type. 1: manual backup initiated by the user; 0: automatic backup in the early morning initiated by the system
+     * @param BackupType Backup type. 1: manual backup initiated by the user; 0: automatic backup in the early morning initiated by the system
      */
     public void setBackupType(String BackupType) {
         this.BackupType = BackupType;
@@ -145,19 +169,79 @@ public class RedisBackupSet extends AbstractModel{
     }
 
     /**
-     * Get Whether a backup is locked. 0: no; 1: yes 
-     * @return Locked Whether a backup is locked. 0: no; 1: yes
+     * Get Whether a backup is locked. 0: no; 1: yes. 
+     * @return Locked Whether a backup is locked. 0: no; 1: yes.
      */
     public Long getLocked() {
         return this.Locked;
     }
 
     /**
-     * Set Whether a backup is locked. 0: no; 1: yes
-     * @param Locked Whether a backup is locked. 0: no; 1: yes
+     * Set Whether a backup is locked. 0: no; 1: yes.
+     * @param Locked Whether a backup is locked. 0: no; 1: yes.
      */
     public void setLocked(Long Locked) {
         this.Locked = Locked;
+    }
+
+    /**
+     * Get Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BackupSize Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getBackupSize() {
+        return this.BackupSize;
+    }
+
+    /**
+     * Set Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BackupSize Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBackupSize(Long BackupSize) {
+        this.BackupSize = BackupSize;
+    }
+
+    /**
+     * Get Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return FullBackup Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getFullBackup() {
+        return this.FullBackup;
+    }
+
+    /**
+     * Set Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param FullBackup Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setFullBackup(Long FullBackup) {
+        this.FullBackup = FullBackup;
+    }
+
+    /**
+     * Get Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return InstanceType Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param InstanceType Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setInstanceType(Long InstanceType) {
+        this.InstanceType = InstanceType;
     }
 
     public RedisBackupSet() {
@@ -186,6 +270,15 @@ public class RedisBackupSet extends AbstractModel{
         if (source.Locked != null) {
             this.Locked = new Long(source.Locked);
         }
+        if (source.BackupSize != null) {
+            this.BackupSize = new Long(source.BackupSize);
+        }
+        if (source.FullBackup != null) {
+            this.FullBackup = new Long(source.FullBackup);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new Long(source.InstanceType);
+        }
     }
 
 
@@ -199,6 +292,9 @@ public class RedisBackupSet extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "Locked", this.Locked);
+        this.setParamSimple(map, prefix + "BackupSize", this.BackupSize);
+        this.setParamSimple(map, prefix + "FullBackup", this.FullBackup);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

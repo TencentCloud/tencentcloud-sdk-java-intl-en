@@ -44,7 +44,7 @@ public class RedisCommonInstanceList extends AbstractModel{
     private Long AppId;
 
     /**
-    * Project ID of the instance
+    * Instance project ID
     */
     @SerializedName("ProjectId")
     @Expose
@@ -58,7 +58,7 @@ public class RedisCommonInstanceList extends AbstractModel{
     private String Region;
 
     /**
-    * Instance availability zone
+    * Instance AZ
     */
     @SerializedName("Zone")
     @Expose
@@ -79,7 +79,7 @@ public class RedisCommonInstanceList extends AbstractModel{
     private String SubnetId;
 
     /**
-    * Instance status. Valid values: `1` (task running), `2` (instance running), `-2` (instance isolated), `-3` (instance being eliminated), `-4` (instance eliminated)
+    * Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
     */
     @SerializedName("Status")
     @Expose
@@ -107,14 +107,14 @@ public class RedisCommonInstanceList extends AbstractModel{
     private String Createtime;
 
     /**
-    * Billing mode. Valid values: `0` (pay-as-you-go), `1` (monthly subscription)
+    * Billing mode. 0: pay-as-you-go; 1: monthly subscription
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * Network type. Valid values: `0` (classic network), `1` (VPC)
+    * Network type. Valid values: 0 (classic network); 1 (VPC).
     */
     @SerializedName("NetType")
     @Expose
@@ -169,16 +169,16 @@ public class RedisCommonInstanceList extends AbstractModel{
     }
 
     /**
-     * Get Project ID of the instance 
-     * @return ProjectId Project ID of the instance
+     * Get Instance project ID 
+     * @return ProjectId Instance project ID
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID of the instance
-     * @param ProjectId Project ID of the instance
+     * Set Instance project ID
+     * @param ProjectId Instance project ID
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
@@ -201,16 +201,16 @@ public class RedisCommonInstanceList extends AbstractModel{
     }
 
     /**
-     * Get Instance availability zone 
-     * @return Zone Instance availability zone
+     * Get Instance AZ 
+     * @return Zone Instance AZ
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Instance availability zone
-     * @param Zone Instance availability zone
+     * Set Instance AZ
+     * @param Zone Instance AZ
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
@@ -249,16 +249,16 @@ public class RedisCommonInstanceList extends AbstractModel{
     }
 
     /**
-     * Get Instance status. Valid values: `1` (task running), `2` (instance running), `-2` (instance isolated), `-3` (instance being eliminated), `-4` (instance eliminated) 
-     * @return Status Instance status. Valid values: `1` (task running), `2` (instance running), `-2` (instance isolated), `-3` (instance being eliminated), `-4` (instance eliminated)
+     * Get Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated 
+     * @return Status Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status. Valid values: `1` (task running), `2` (instance running), `-2` (instance isolated), `-3` (instance being eliminated), `-4` (instance eliminated)
-     * @param Status Instance status. Valid values: `1` (task running), `2` (instance running), `-2` (instance isolated), `-3` (instance being eliminated), `-4` (instance eliminated)
+     * Set Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
+     * @param Status Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -313,32 +313,32 @@ public class RedisCommonInstanceList extends AbstractModel{
     }
 
     /**
-     * Get Billing mode. Valid values: `0` (pay-as-you-go), `1` (monthly subscription) 
-     * @return PayMode Billing mode. Valid values: `0` (pay-as-you-go), `1` (monthly subscription)
+     * Get Billing mode. 0: pay-as-you-go; 1: monthly subscription 
+     * @return PayMode Billing mode. 0: pay-as-you-go; 1: monthly subscription
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Billing mode. Valid values: `0` (pay-as-you-go), `1` (monthly subscription)
-     * @param PayMode Billing mode. Valid values: `0` (pay-as-you-go), `1` (monthly subscription)
+     * Set Billing mode. 0: pay-as-you-go; 1: monthly subscription
+     * @param PayMode Billing mode. 0: pay-as-you-go; 1: monthly subscription
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get Network type. Valid values: `0` (classic network), `1` (VPC) 
-     * @return NetType Network type. Valid values: `0` (classic network), `1` (VPC)
+     * Get Network type. Valid values: 0 (classic network); 1 (VPC). 
+     * @return NetType Network type. Valid values: 0 (classic network); 1 (VPC).
      */
     public Long getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set Network type. Valid values: `0` (classic network), `1` (VPC)
-     * @param NetType Network type. Valid values: `0` (classic network), `1` (VPC)
+     * Set Network type. Valid values: 0 (classic network); 1 (VPC).
+     * @param NetType Network type. Valid values: 0 (classic network); 1 (VPC).
      */
     public void setNetType(Long NetType) {
         this.NetType = NetType;

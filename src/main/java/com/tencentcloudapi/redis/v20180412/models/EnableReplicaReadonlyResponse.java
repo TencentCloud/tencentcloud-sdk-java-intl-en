@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class EnableReplicaReadonlyResponse extends AbstractModel{
 
     /**
-    * Valid values: `ERROR`, `OK`. This field has been deprecated.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Valid values: `ERROR`, `OK`. This field has been disused.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
     @Expose
@@ -32,7 +32,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TaskId")
     @Expose
@@ -46,20 +46,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get Valid values: `ERROR`, `OK`. This field has been deprecated.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Status Valid values: `ERROR`, `OK`. This field has been deprecated.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Valid values: `ERROR`, `OK`. This field has been disused.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Status Valid values: `ERROR`, `OK`. This field has been disused.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Valid values: `ERROR`, `OK`. This field has been deprecated.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Status Valid values: `ERROR`, `OK`. This field has been deprecated.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Valid values: `ERROR`, `OK`. This field has been disused.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Status Valid values: `ERROR`, `OK`. This field has been disused.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -67,9 +67,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return TaskId Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTaskId() {
         return this.TaskId;
@@ -77,9 +77,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param TaskId Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

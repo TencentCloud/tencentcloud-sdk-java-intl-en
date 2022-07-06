@@ -37,7 +37,7 @@ public class InstanceEnumParam extends AbstractModel{
     private String ValueType;
 
     /**
-    * Whether restart is required after a modification is made. Value range: true, false
+    * Whether restart is required after a modification is made. Valid values: true, false
     */
     @SerializedName("NeedRestart")
     @Expose
@@ -51,7 +51,7 @@ public class InstanceEnumParam extends AbstractModel{
     private String DefaultValue;
 
     /**
-    * Current value of a parameter
+    * Current value
     */
     @SerializedName("CurrentValue")
     @Expose
@@ -65,7 +65,7 @@ public class InstanceEnumParam extends AbstractModel{
     private String Tips;
 
     /**
-    * Value range of a parameter
+    * Valid values of the parameter
     */
     @SerializedName("EnumValue")
     @Expose
@@ -111,16 +111,16 @@ public class InstanceEnumParam extends AbstractModel{
     }
 
     /**
-     * Get Whether restart is required after a modification is made. Value range: true, false 
-     * @return NeedRestart Whether restart is required after a modification is made. Value range: true, false
+     * Get Whether restart is required after a modification is made. Valid values: true, false 
+     * @return NeedRestart Whether restart is required after a modification is made. Valid values: true, false
      */
     public String getNeedRestart() {
         return this.NeedRestart;
     }
 
     /**
-     * Set Whether restart is required after a modification is made. Value range: true, false
-     * @param NeedRestart Whether restart is required after a modification is made. Value range: true, false
+     * Set Whether restart is required after a modification is made. Valid values: true, false
+     * @param NeedRestart Whether restart is required after a modification is made. Valid values: true, false
      */
     public void setNeedRestart(String NeedRestart) {
         this.NeedRestart = NeedRestart;
@@ -143,16 +143,16 @@ public class InstanceEnumParam extends AbstractModel{
     }
 
     /**
-     * Get Current value of a parameter 
-     * @return CurrentValue Current value of a parameter
+     * Get Current value 
+     * @return CurrentValue Current value
      */
     public String getCurrentValue() {
         return this.CurrentValue;
     }
 
     /**
-     * Set Current value of a parameter
-     * @param CurrentValue Current value of a parameter
+     * Set Current value
+     * @param CurrentValue Current value
      */
     public void setCurrentValue(String CurrentValue) {
         this.CurrentValue = CurrentValue;
@@ -175,16 +175,16 @@ public class InstanceEnumParam extends AbstractModel{
     }
 
     /**
-     * Get Value range of a parameter 
-     * @return EnumValue Value range of a parameter
+     * Get Valid values of the parameter 
+     * @return EnumValue Valid values of the parameter
      */
     public String [] getEnumValue() {
         return this.EnumValue;
     }
 
     /**
-     * Set Value range of a parameter
-     * @param EnumValue Value range of a parameter
+     * Set Valid values of the parameter
+     * @param EnumValue Valid values of the parameter
      */
     public void setEnumValue(String [] EnumValue) {
         this.EnumValue = EnumValue;

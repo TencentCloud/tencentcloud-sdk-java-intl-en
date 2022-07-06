@@ -44,7 +44,7 @@ public class GatewayQos extends AbstractModel{
     private Long Bandwidth;
 
     /**
-    * The creation time.
+    * Creation time.
     */
     @SerializedName("CreateTime")
     @Expose
@@ -99,16 +99,16 @@ public class GatewayQos extends AbstractModel{
     }
 
     /**
-     * Get The creation time. 
-     * @return CreateTime The creation time.
+     * Get Creation time. 
+     * @return CreateTime Creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set The creation time.
-     * @param CreateTime The creation time.
+     * Set Creation time.
+     * @param CreateTime Creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

@@ -30,7 +30,7 @@ public class SecurityGroupsInboundAndOutbound extends AbstractModel{
     private String Action;
 
     /**
-    * IP address
+    * IP addresses
     */
     @SerializedName("Ip")
     @Expose
@@ -67,16 +67,16 @@ public class SecurityGroupsInboundAndOutbound extends AbstractModel{
     }
 
     /**
-     * Get IP address 
-     * @return Ip IP address
+     * Get IP addresses 
+     * @return Ip IP addresses
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set IP address
-     * @param Ip IP address
+     * Set IP addresses
+     * @param Ip IP addresses
      */
     public void setIp(String Ip) {
         this.Ip = Ip;

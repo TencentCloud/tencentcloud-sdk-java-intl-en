@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DescribeDBSecurityGroupsRequest extends AbstractModel{
 
     /**
-    * Database engine name. For this API, its value is `redis`.
+    * Database engine name, which is `redis` for this API.
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-    * Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB Console.
+    * Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Database engine name. For this API, its value is `redis`. 
-     * @return Product Database engine name. For this API, its value is `redis`.
+     * Get Database engine name, which is `redis` for this API. 
+     * @return Product Database engine name, which is `redis` for this API.
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set Database engine name. For this API, its value is `redis`.
-     * @param Product Database engine name. For this API, its value is `redis`.
+     * Set Database engine name, which is `redis` for this API.
+     * @param Product Database engine name, which is `redis` for this API.
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB Console. 
-     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB Console.
+     * Get Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console. 
+     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB Console.
-     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB Console.
+     * Set Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

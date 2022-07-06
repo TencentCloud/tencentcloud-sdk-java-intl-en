@@ -23,115 +23,115 @@ import java.util.HashMap;
 public class SwitchInstanceVipRequest extends AbstractModel{
 
     /**
-    * Source instance ID.
+    * Source instance ID
     */
     @SerializedName("SrcInstanceId")
     @Expose
     private String SrcInstanceId;
 
     /**
-    * Target instance ID.
+    * Target instance ID
     */
     @SerializedName("DstInstanceId")
     @Expose
     private String DstInstanceId;
 
     /**
-    * The time that lapses in seconds since DTS is disconnected between the source instance and the target instance. If the DTS disconnection time period is greater than `TimeDelay`, the VIP will not be switched. We recommend setting an acceptable value based on the actual business conditions.
+    * The time that lapses in seconds since DTS is disconnected between the source instance and the target instance. If the DTS disconnection time period is greater than TimeDelay, the VIP will not be switched. We recommend you set an acceptable value based on the actual business conditions.
     */
     @SerializedName("TimeDelay")
     @Expose
     private Long TimeDelay;
 
     /**
-    * Whether to force the switch when DTS is disconnected. Valid values: 1 (yes), 0 (no).
+    * Whether to force the switch when DTS is disconnected. 1: yes; 0: no.
     */
     @SerializedName("ForceSwitch")
     @Expose
     private Long ForceSwitch;
 
     /**
-    * Valid values: now (switch now), syncComplete (switch after sync is completed).
+    * now: switch now; syncComplete: switch after sync is completed
     */
     @SerializedName("SwitchTime")
     @Expose
     private String SwitchTime;
 
     /**
-     * Get Source instance ID. 
-     * @return SrcInstanceId Source instance ID.
+     * Get Source instance ID 
+     * @return SrcInstanceId Source instance ID
      */
     public String getSrcInstanceId() {
         return this.SrcInstanceId;
     }
 
     /**
-     * Set Source instance ID.
-     * @param SrcInstanceId Source instance ID.
+     * Set Source instance ID
+     * @param SrcInstanceId Source instance ID
      */
     public void setSrcInstanceId(String SrcInstanceId) {
         this.SrcInstanceId = SrcInstanceId;
     }
 
     /**
-     * Get Target instance ID. 
-     * @return DstInstanceId Target instance ID.
+     * Get Target instance ID 
+     * @return DstInstanceId Target instance ID
      */
     public String getDstInstanceId() {
         return this.DstInstanceId;
     }
 
     /**
-     * Set Target instance ID.
-     * @param DstInstanceId Target instance ID.
+     * Set Target instance ID
+     * @param DstInstanceId Target instance ID
      */
     public void setDstInstanceId(String DstInstanceId) {
         this.DstInstanceId = DstInstanceId;
     }
 
     /**
-     * Get The time that lapses in seconds since DTS is disconnected between the source instance and the target instance. If the DTS disconnection time period is greater than `TimeDelay`, the VIP will not be switched. We recommend setting an acceptable value based on the actual business conditions. 
-     * @return TimeDelay The time that lapses in seconds since DTS is disconnected between the source instance and the target instance. If the DTS disconnection time period is greater than `TimeDelay`, the VIP will not be switched. We recommend setting an acceptable value based on the actual business conditions.
+     * Get The time that lapses in seconds since DTS is disconnected between the source instance and the target instance. If the DTS disconnection time period is greater than TimeDelay, the VIP will not be switched. We recommend you set an acceptable value based on the actual business conditions. 
+     * @return TimeDelay The time that lapses in seconds since DTS is disconnected between the source instance and the target instance. If the DTS disconnection time period is greater than TimeDelay, the VIP will not be switched. We recommend you set an acceptable value based on the actual business conditions.
      */
     public Long getTimeDelay() {
         return this.TimeDelay;
     }
 
     /**
-     * Set The time that lapses in seconds since DTS is disconnected between the source instance and the target instance. If the DTS disconnection time period is greater than `TimeDelay`, the VIP will not be switched. We recommend setting an acceptable value based on the actual business conditions.
-     * @param TimeDelay The time that lapses in seconds since DTS is disconnected between the source instance and the target instance. If the DTS disconnection time period is greater than `TimeDelay`, the VIP will not be switched. We recommend setting an acceptable value based on the actual business conditions.
+     * Set The time that lapses in seconds since DTS is disconnected between the source instance and the target instance. If the DTS disconnection time period is greater than TimeDelay, the VIP will not be switched. We recommend you set an acceptable value based on the actual business conditions.
+     * @param TimeDelay The time that lapses in seconds since DTS is disconnected between the source instance and the target instance. If the DTS disconnection time period is greater than TimeDelay, the VIP will not be switched. We recommend you set an acceptable value based on the actual business conditions.
      */
     public void setTimeDelay(Long TimeDelay) {
         this.TimeDelay = TimeDelay;
     }
 
     /**
-     * Get Whether to force the switch when DTS is disconnected. Valid values: 1 (yes), 0 (no). 
-     * @return ForceSwitch Whether to force the switch when DTS is disconnected. Valid values: 1 (yes), 0 (no).
+     * Get Whether to force the switch when DTS is disconnected. 1: yes; 0: no. 
+     * @return ForceSwitch Whether to force the switch when DTS is disconnected. 1: yes; 0: no.
      */
     public Long getForceSwitch() {
         return this.ForceSwitch;
     }
 
     /**
-     * Set Whether to force the switch when DTS is disconnected. Valid values: 1 (yes), 0 (no).
-     * @param ForceSwitch Whether to force the switch when DTS is disconnected. Valid values: 1 (yes), 0 (no).
+     * Set Whether to force the switch when DTS is disconnected. 1: yes; 0: no.
+     * @param ForceSwitch Whether to force the switch when DTS is disconnected. 1: yes; 0: no.
      */
     public void setForceSwitch(Long ForceSwitch) {
         this.ForceSwitch = ForceSwitch;
     }
 
     /**
-     * Get Valid values: now (switch now), syncComplete (switch after sync is completed). 
-     * @return SwitchTime Valid values: now (switch now), syncComplete (switch after sync is completed).
+     * Get now: switch now; syncComplete: switch after sync is completed 
+     * @return SwitchTime now: switch now; syncComplete: switch after sync is completed
      */
     public String getSwitchTime() {
         return this.SwitchTime;
     }
 
     /**
-     * Set Valid values: now (switch now), syncComplete (switch after sync is completed).
-     * @param SwitchTime Valid values: now (switch now), syncComplete (switch after sync is completed).
+     * Set now: switch now; syncComplete: switch after sync is completed
+     * @param SwitchTime now: switch now; syncComplete: switch after sync is completed
      */
     public void setSwitchTime(String SwitchTime) {
         this.SwitchTime = SwitchTime;

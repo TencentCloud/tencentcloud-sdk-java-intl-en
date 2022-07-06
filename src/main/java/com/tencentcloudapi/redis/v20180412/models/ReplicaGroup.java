@@ -30,28 +30,28 @@ public class ReplicaGroup extends AbstractModel{
     private Long GroupId;
 
     /**
-    * Node group name
+    * Node group name, which is empty for the master node
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * Node availability zone ID, such as ap-guangzhou-1
+    * Node AZ ID, such as ap-guangzhou-1
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Node group type. Valid values: `master` (master node group), `replica` (replica node group)
+    * Node group type. Valid values: master (master node group); replica (replica node group)
     */
     @SerializedName("Role")
     @Expose
     private String Role;
 
     /**
-    * The list of nodes in a node group
+    * List of nodes in the node group
     */
     @SerializedName("RedisNodes")
     @Expose
@@ -74,64 +74,64 @@ public class ReplicaGroup extends AbstractModel{
     }
 
     /**
-     * Get Node group name 
-     * @return GroupName Node group name
+     * Get Node group name, which is empty for the master node 
+     * @return GroupName Node group name, which is empty for the master node
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set Node group name
-     * @param GroupName Node group name
+     * Set Node group name, which is empty for the master node
+     * @param GroupName Node group name, which is empty for the master node
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get Node availability zone ID, such as ap-guangzhou-1 
-     * @return ZoneId Node availability zone ID, such as ap-guangzhou-1
+     * Get Node AZ ID, such as ap-guangzhou-1 
+     * @return ZoneId Node AZ ID, such as ap-guangzhou-1
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Node availability zone ID, such as ap-guangzhou-1
-     * @param ZoneId Node availability zone ID, such as ap-guangzhou-1
+     * Set Node AZ ID, such as ap-guangzhou-1
+     * @param ZoneId Node AZ ID, such as ap-guangzhou-1
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Node group type. Valid values: `master` (master node group), `replica` (replica node group) 
-     * @return Role Node group type. Valid values: `master` (master node group), `replica` (replica node group)
+     * Get Node group type. Valid values: master (master node group); replica (replica node group) 
+     * @return Role Node group type. Valid values: master (master node group); replica (replica node group)
      */
     public String getRole() {
         return this.Role;
     }
 
     /**
-     * Set Node group type. Valid values: `master` (master node group), `replica` (replica node group)
-     * @param Role Node group type. Valid values: `master` (master node group), `replica` (replica node group)
+     * Set Node group type. Valid values: master (master node group); replica (replica node group)
+     * @param Role Node group type. Valid values: master (master node group); replica (replica node group)
      */
     public void setRole(String Role) {
         this.Role = Role;
     }
 
     /**
-     * Get The list of nodes in a node group 
-     * @return RedisNodes The list of nodes in a node group
+     * Get List of nodes in the node group 
+     * @return RedisNodes List of nodes in the node group
      */
     public RedisNode [] getRedisNodes() {
         return this.RedisNodes;
     }
 
     /**
-     * Set The list of nodes in a node group
-     * @param RedisNodes The list of nodes in a node group
+     * Set List of nodes in the node group
+     * @param RedisNodes List of nodes in the node group
      */
     public void setRedisNodes(RedisNode [] RedisNodes) {
         this.RedisNodes = RedisNodes;

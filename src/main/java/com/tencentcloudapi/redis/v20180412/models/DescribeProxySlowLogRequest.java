@@ -44,21 +44,21 @@ public class DescribeProxySlowLogRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * Slow query threshold in microseconds
+    * Slow query threshold in milliseconds
     */
     @SerializedName("MinQueryTime")
     @Expose
     private Long MinQueryTime;
 
     /**
-    * Page size
+    * Maximum number of results returned per page
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset, which is an integral multiple of `Limit`
+    * Offset, which is an integral multiple of `Limit`.
     */
     @SerializedName("Offset")
     @Expose
@@ -113,48 +113,48 @@ public class DescribeProxySlowLogRequest extends AbstractModel{
     }
 
     /**
-     * Get Slow query threshold in microseconds 
-     * @return MinQueryTime Slow query threshold in microseconds
+     * Get Slow query threshold in milliseconds 
+     * @return MinQueryTime Slow query threshold in milliseconds
      */
     public Long getMinQueryTime() {
         return this.MinQueryTime;
     }
 
     /**
-     * Set Slow query threshold in microseconds
-     * @param MinQueryTime Slow query threshold in microseconds
+     * Set Slow query threshold in milliseconds
+     * @param MinQueryTime Slow query threshold in milliseconds
      */
     public void setMinQueryTime(Long MinQueryTime) {
         this.MinQueryTime = MinQueryTime;
     }
 
     /**
-     * Get Page size 
-     * @return Limit Page size
+     * Get Maximum number of results returned per page 
+     * @return Limit Maximum number of results returned per page
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Page size
-     * @param Limit Page size
+     * Set Maximum number of results returned per page
+     * @param Limit Maximum number of results returned per page
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset, which is an integral multiple of `Limit` 
-     * @return Offset Offset, which is an integral multiple of `Limit`
+     * Get Offset, which is an integral multiple of `Limit`. 
+     * @return Offset Offset, which is an integral multiple of `Limit`.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset, which is an integral multiple of `Limit`
-     * @param Offset Offset, which is an integral multiple of `Limit`
+     * Set Offset, which is an integral multiple of `Limit`.
+     * @param Offset Offset, which is an integral multiple of `Limit`.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class UpgradeInstanceVersionRequest extends AbstractModel{
 
     /**
-    * The target instance type to which the instance will change. It is the same as the `TypeId` parameter in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+    * Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
     */
     @SerializedName("TargetInstanceType")
     @Expose
     private String TargetInstanceType;
 
     /**
-    * Switch mode. Valid values: 1 (switch during the maintenance window), 2 (switch immediately).
+    * Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
     */
     @SerializedName("SwitchOption")
     @Expose
@@ -44,32 +44,32 @@ public class UpgradeInstanceVersionRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-     * Get The target instance type to which the instance will change. It is the same as the `TypeId` parameter in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API. 
-     * @return TargetInstanceType The target instance type to which the instance will change. It is the same as the `TypeId` parameter in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+     * Get Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API. 
+     * @return TargetInstanceType Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
      */
     public String getTargetInstanceType() {
         return this.TargetInstanceType;
     }
 
     /**
-     * Set The target instance type to which the instance will change. It is the same as the `TypeId` parameter in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
-     * @param TargetInstanceType The target instance type to which the instance will change. It is the same as the `TypeId` parameter in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+     * Set Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+     * @param TargetInstanceType Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
      */
     public void setTargetInstanceType(String TargetInstanceType) {
         this.TargetInstanceType = TargetInstanceType;
     }
 
     /**
-     * Get Switch mode. Valid values: 1 (switch during the maintenance window), 2 (switch immediately). 
-     * @return SwitchOption Switch mode. Valid values: 1 (switch during the maintenance window), 2 (switch immediately).
+     * Get Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now). 
+     * @return SwitchOption Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
      */
     public Long getSwitchOption() {
         return this.SwitchOption;
     }
 
     /**
-     * Set Switch mode. Valid values: 1 (switch during the maintenance window), 2 (switch immediately).
-     * @param SwitchOption Switch mode. Valid values: 1 (switch during the maintenance window), 2 (switch immediately).
+     * Set Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
+     * @param SwitchOption Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
      */
     public void setSwitchOption(Long SwitchOption) {
         this.SwitchOption = SwitchOption;

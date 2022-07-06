@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyInstanceRequest extends AbstractModel{
 
     /**
-    * Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance
+    * Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance.
     */
     @SerializedName("Operation")
     @Expose
@@ -37,7 +37,7 @@ public class ModifyInstanceRequest extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-    * New name of instance
+    * New name of the instance
     */
     @SerializedName("InstanceNames")
     @Expose
@@ -51,7 +51,7 @@ public class ModifyInstanceRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * Auto-renewal flag. 0: default status (manual renewal), 1: auto-renewal enabled, 2: auto-renewal disabled
+    * Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
     */
     @SerializedName("AutoRenews")
     @Expose
@@ -79,16 +79,16 @@ public class ModifyInstanceRequest extends AbstractModel{
     private Long AutoRenew;
 
     /**
-     * Get Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance 
-     * @return Operation Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance
+     * Get Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance. 
+     * @return Operation Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance.
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance
-     * @param Operation Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance
+     * Set Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance.
+     * @param Operation Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance.
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
@@ -111,16 +111,16 @@ public class ModifyInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get New name of instance 
-     * @return InstanceNames New name of instance
+     * Get New name of the instance 
+     * @return InstanceNames New name of the instance
      */
     public String [] getInstanceNames() {
         return this.InstanceNames;
     }
 
     /**
-     * Set New name of instance
-     * @param InstanceNames New name of instance
+     * Set New name of the instance
+     * @param InstanceNames New name of the instance
      */
     public void setInstanceNames(String [] InstanceNames) {
         this.InstanceNames = InstanceNames;
@@ -143,16 +143,16 @@ public class ModifyInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Auto-renewal flag. 0: default status (manual renewal), 1: auto-renewal enabled, 2: auto-renewal disabled 
-     * @return AutoRenews Auto-renewal flag. 0: default status (manual renewal), 1: auto-renewal enabled, 2: auto-renewal disabled
+     * Get Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled 
+     * @return AutoRenews Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
      */
     public Long [] getAutoRenews() {
         return this.AutoRenews;
     }
 
     /**
-     * Set Auto-renewal flag. 0: default status (manual renewal), 1: auto-renewal enabled, 2: auto-renewal disabled
-     * @param AutoRenews Auto-renewal flag. 0: default status (manual renewal), 1: auto-renewal enabled, 2: auto-renewal disabled
+     * Set Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+     * @param AutoRenews Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
      */
     public void setAutoRenews(Long [] AutoRenews) {
         this.AutoRenews = AutoRenews;

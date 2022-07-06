@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeInstanceBackupsRequest extends AbstractModel{
 
     /**
-    * ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
+    * ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -37,7 +37,7 @@ public class DescribeInstanceBackupsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Offset, which is an integral multiple of `Limit`
+    * Offset, which is an integral multiple of `Limit`.
     */
     @SerializedName("Offset")
     @Expose
@@ -65,16 +65,16 @@ public class DescribeInstanceBackupsRequest extends AbstractModel{
     private Long [] Status;
 
     /**
-     * Get ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API. 
-     * @return InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
+     * Get ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API. 
+     * @return InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
-     * @param InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
+     * Set ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
+     * @param InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -97,16 +97,16 @@ public class DescribeInstanceBackupsRequest extends AbstractModel{
     }
 
     /**
-     * Get Offset, which is an integral multiple of `Limit` 
-     * @return Offset Offset, which is an integral multiple of `Limit`
+     * Get Offset, which is an integral multiple of `Limit`. 
+     * @return Offset Offset, which is an integral multiple of `Limit`.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset, which is an integral multiple of `Limit`
-     * @param Offset Offset, which is an integral multiple of `Limit`
+     * Set Offset, which is an integral multiple of `Limit`.
+     * @param Offset Offset, which is an integral multiple of `Limit`.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class RedisNode extends AbstractModel{
 
     /**
-    * The number of keys on a node
+    * Number of keys on the node
     */
     @SerializedName("Keys")
     @Expose
@@ -58,16 +58,16 @@ public class RedisNode extends AbstractModel{
     private String Role;
 
     /**
-     * Get The number of keys on a node 
-     * @return Keys The number of keys on a node
+     * Get Number of keys on the node 
+     * @return Keys Number of keys on the node
      */
     public Long getKeys() {
         return this.Keys;
     }
 
     /**
-     * Set The number of keys on a node
-     * @param Keys The number of keys on a node
+     * Set Number of keys on the node
+     * @param Keys Number of keys on the node
      */
     public void setKeys(Long Keys) {
         this.Keys = Keys;
