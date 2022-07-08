@@ -86,6 +86,13 @@ public class InstanceInfo extends AbstractModel{
     private Long Status;
 
     /**
+    * This parameter is not used on the global website
+    */
+    @SerializedName("RenewFlag")
+    @Expose
+    private String RenewFlag;
+
+    /**
     * Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
     */
     @SerializedName("ChargeType")
@@ -98,13 +105,6 @@ public class InstanceInfo extends AbstractModel{
     @SerializedName("ChargePeriod")
     @Expose
     private Long ChargePeriod;
-
-    /**
-    * This parameter is not used on the global website
-    */
-    @SerializedName("RenewFlag")
-    @Expose
-    private String RenewFlag;
 
     /**
     * Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
@@ -579,6 +579,14 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String EsPrivateDomain;
 
     /**
+    * Configuration set info of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EsConfigSets")
+    @Expose
+    private EsConfigSetInfo [] EsConfigSets;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -723,6 +731,22 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
+     * Get This parameter is not used on the global website 
+     * @return RenewFlag This parameter is not used on the global website
+     */
+    public String getRenewFlag() {
+        return this.RenewFlag;
+    }
+
+    /**
+     * Set This parameter is not used on the global website
+     * @param RenewFlag This parameter is not used on the global website
+     */
+    public void setRenewFlag(String RenewFlag) {
+        this.RenewFlag = RenewFlag;
+    }
+
+    /**
      * Get Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH) 
      * @return ChargeType Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
      */
@@ -752,22 +776,6 @@ Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setChargePeriod(Long ChargePeriod) {
         this.ChargePeriod = ChargePeriod;
-    }
-
-    /**
-     * Get This parameter is not used on the global website 
-     * @return RenewFlag This parameter is not used on the global website
-     */
-    public String getRenewFlag() {
-        return this.RenewFlag;
-    }
-
-    /**
-     * Set This parameter is not used on the global website
-     * @param RenewFlag This parameter is not used on the global website
-     */
-    public void setRenewFlag(String RenewFlag) {
-        this.RenewFlag = RenewFlag;
     }
 
     /**
@@ -1914,6 +1922,26 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.EsPrivateDomain = EsPrivateDomain;
     }
 
+    /**
+     * Get Configuration set info of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EsConfigSets Configuration set info of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public EsConfigSetInfo [] getEsConfigSets() {
+        return this.EsConfigSets;
+    }
+
+    /**
+     * Set Configuration set info of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EsConfigSets Configuration set info of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEsConfigSets(EsConfigSetInfo [] EsConfigSets) {
+        this.EsConfigSets = EsConfigSets;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1949,14 +1977,14 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new String(source.RenewFlag);
+        }
         if (source.ChargeType != null) {
             this.ChargeType = new String(source.ChargeType);
         }
         if (source.ChargePeriod != null) {
             this.ChargePeriod = new Long(source.ChargePeriod);
-        }
-        if (source.RenewFlag != null) {
-            this.RenewFlag = new String(source.RenewFlag);
         }
         if (source.NodeType != null) {
             this.NodeType = new String(source.NodeType);
@@ -2156,6 +2184,12 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.EsPrivateDomain != null) {
             this.EsPrivateDomain = new String(source.EsPrivateDomain);
         }
+        if (source.EsConfigSets != null) {
+            this.EsConfigSets = new EsConfigSetInfo[source.EsConfigSets.length];
+            for (int i = 0; i < source.EsConfigSets.length; i++) {
+                this.EsConfigSets[i] = new EsConfigSetInfo(source.EsConfigSets[i]);
+            }
+        }
     }
 
 
@@ -2172,9 +2206,9 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "VpcUid", this.VpcUid);
         this.setParamSimple(map, prefix + "SubnetUid", this.SubnetUid);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
         this.setParamSimple(map, prefix + "ChargePeriod", this.ChargePeriod);
-        this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "NodeType", this.NodeType);
         this.setParamSimple(map, prefix + "NodeNum", this.NodeNum);
         this.setParamSimple(map, prefix + "CpuNum", this.CpuNum);
@@ -2237,6 +2271,7 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
         this.setParamSimple(map, prefix + "EsPrivateUrl", this.EsPrivateUrl);
         this.setParamSimple(map, prefix + "EsPrivateDomain", this.EsPrivateDomain);
+        this.setParamArrayObj(map, prefix + "EsConfigSets.", this.EsConfigSets);
 
     }
 }

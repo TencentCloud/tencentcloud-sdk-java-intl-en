@@ -225,6 +225,9 @@ public enum RedisErrorCode {
     // The order does not exist.
      RESOURCEUNAVAILABLE_INSTANCENODEAL("ResourceUnavailable.InstanceNoDeal"),
      
+    // Instances in this status do not support the operation.
+     RESOURCEUNAVAILABLE_INSTANCENOTSUPPORTOPERATION("ResourceUnavailable.InstanceNotSupportOperation"),
+     
     // Instance status error.
      RESOURCEUNAVAILABLE_INSTANCESTATEERROR("ResourceUnavailable.InstanceStateError"),
      

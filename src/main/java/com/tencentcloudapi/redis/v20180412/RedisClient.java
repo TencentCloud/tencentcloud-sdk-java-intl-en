@@ -919,6 +919,26 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the list of tasks.
+     * @param req DescribeTaskListRequest
+     * @return DescribeTaskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskListResponse DescribeTaskList(DescribeTaskListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTaskListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTaskListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTaskList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query slow queries of a Tendis instance.
      * @param req DescribeTendisSlowLogRequest
      * @return DescribeTendisSlowLogResponse
@@ -1071,6 +1091,26 @@ public class RedisClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<InquiryPriceUpgradeInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "InquiryPriceUpgradeInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to perform a failure simulation.
+     * @param req KillMasterGroupRequest
+     * @return KillMasterGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public KillMasterGroupResponse KillMasterGroup(KillMasterGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<KillMasterGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<KillMasterGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "KillMasterGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
