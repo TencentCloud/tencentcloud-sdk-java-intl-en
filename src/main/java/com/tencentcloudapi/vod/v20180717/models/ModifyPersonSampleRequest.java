@@ -30,6 +30,13 @@ public class ModifyPersonSampleRequest extends AbstractModel{
     private String PersonId;
 
     /**
+    * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * Name. Length limit: 128 characters.
     */
     @SerializedName("Name")
@@ -68,13 +75,6 @@ public class ModifyPersonSampleRequest extends AbstractModel{
     private AiSampleTagOperation TagOperationInfo;
 
     /**
-    * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
-
-    /**
      * Get ID of a sample. 
      * @return PersonId ID of a sample.
      */
@@ -88,6 +88,22 @@ public class ModifyPersonSampleRequest extends AbstractModel{
      */
     public void setPersonId(String PersonId) {
         this.PersonId = PersonId;
+    }
+
+    /**
+     * Get <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b> 
+     * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -182,22 +198,6 @@ public class ModifyPersonSampleRequest extends AbstractModel{
         this.TagOperationInfo = TagOperationInfo;
     }
 
-    /**
-     * Get [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty. 
-     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
     public ModifyPersonSampleRequest() {
     }
 
@@ -208,6 +208,9 @@ public class ModifyPersonSampleRequest extends AbstractModel{
     public ModifyPersonSampleRequest(ModifyPersonSampleRequest source) {
         if (source.PersonId != null) {
             this.PersonId = new String(source.PersonId);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
         }
         if (source.Name != null) {
             this.Name = new String(source.Name);
@@ -227,9 +230,6 @@ public class ModifyPersonSampleRequest extends AbstractModel{
         if (source.TagOperationInfo != null) {
             this.TagOperationInfo = new AiSampleTagOperation(source.TagOperationInfo);
         }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
-        }
     }
 
 
@@ -238,12 +238,12 @@ public class ModifyPersonSampleRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PersonId", this.PersonId);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamArraySimple(map, prefix + "Usages.", this.Usages);
         this.setParamObj(map, prefix + "FaceOperationInfo.", this.FaceOperationInfo);
         this.setParamObj(map, prefix + "TagOperationInfo.", this.TagOperationInfo);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }

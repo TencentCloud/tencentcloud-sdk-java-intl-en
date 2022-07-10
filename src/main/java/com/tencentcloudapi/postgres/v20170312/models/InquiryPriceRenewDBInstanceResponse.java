@@ -37,6 +37,13 @@ public class InquiryPriceRenewDBInstanceResponse extends AbstractModel{
     private Long Price;
 
     /**
+    * Currency, such as USD for US dollar.
+    */
+    @SerializedName("Currency")
+    @Expose
+    private String Currency;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class InquiryPriceRenewDBInstanceResponse extends AbstractModel{
     }
 
     /**
+     * Get Currency, such as USD for US dollar. 
+     * @return Currency Currency, such as USD for US dollar.
+     */
+    public String getCurrency() {
+        return this.Currency;
+    }
+
+    /**
+     * Set Currency, such as USD for US dollar.
+     * @param Currency Currency, such as USD for US dollar.
+     */
+    public void setCurrency(String Currency) {
+        this.Currency = Currency;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -105,6 +128,9 @@ public class InquiryPriceRenewDBInstanceResponse extends AbstractModel{
         if (source.Price != null) {
             this.Price = new Long(source.Price);
         }
+        if (source.Currency != null) {
+            this.Currency = new String(source.Currency);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +143,7 @@ public class InquiryPriceRenewDBInstanceResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
         this.setParamSimple(map, prefix + "Price", this.Price);
+        this.setParamSimple(map, prefix + "Currency", this.Currency);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -30,6 +30,13 @@ public class ModifyWatermarkTemplateRequest extends AbstractModel{
     private Long Definition;
 
     /**
+    * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * Watermarking template name. Length limit: 64 characters.
     */
     @SerializedName("Name")
@@ -94,13 +101,6 @@ public class ModifyWatermarkTemplateRequest extends AbstractModel{
     private SvgWatermarkInputForUpdate SvgTemplate;
 
     /**
-    * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
-
-    /**
      * Get Unique ID of watermarking template. 
      * @return Definition Unique ID of watermarking template.
      */
@@ -114,6 +114,22 @@ public class ModifyWatermarkTemplateRequest extends AbstractModel{
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
+    }
+
+    /**
+     * Get <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b> 
+     * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -276,22 +292,6 @@ public class ModifyWatermarkTemplateRequest extends AbstractModel{
         this.SvgTemplate = SvgTemplate;
     }
 
-    /**
-     * Get [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty. 
-     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
     public ModifyWatermarkTemplateRequest() {
     }
 
@@ -302,6 +302,9 @@ public class ModifyWatermarkTemplateRequest extends AbstractModel{
     public ModifyWatermarkTemplateRequest(ModifyWatermarkTemplateRequest source) {
         if (source.Definition != null) {
             this.Definition = new Long(source.Definition);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
         }
         if (source.Name != null) {
             this.Name = new String(source.Name);
@@ -327,9 +330,6 @@ public class ModifyWatermarkTemplateRequest extends AbstractModel{
         if (source.SvgTemplate != null) {
             this.SvgTemplate = new SvgWatermarkInputForUpdate(source.SvgTemplate);
         }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
-        }
     }
 
 
@@ -338,6 +338,7 @@ public class ModifyWatermarkTemplateRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "CoordinateOrigin", this.CoordinateOrigin);
@@ -346,7 +347,6 @@ public class ModifyWatermarkTemplateRequest extends AbstractModel{
         this.setParamObj(map, prefix + "ImageTemplate.", this.ImageTemplate);
         this.setParamObj(map, prefix + "TextTemplate.", this.TextTemplate);
         this.setParamObj(map, prefix + "SvgTemplate.", this.SvgTemplate);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }

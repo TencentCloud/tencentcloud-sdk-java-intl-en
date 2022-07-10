@@ -65,7 +65,7 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
+    * PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
     */
     @SerializedName("DBVersion")
     @Expose
@@ -149,14 +149,14 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private String [] SecurityGroupIds;
 
     /**
-    * PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
+    * PostgreSQL major version. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
     */
     @SerializedName("DBMajorVersion")
     @Expose
     private String DBMajorVersion;
 
     /**
-    * PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
+    * PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
     */
     @SerializedName("DBKernelVersion")
     @Expose
@@ -259,16 +259,16 @@ public class CreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. 
-     * @return DBVersion PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
+     * Get PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion. 
+     * @return DBVersion PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
      */
     public String getDBVersion() {
         return this.DBVersion;
     }
 
     /**
-     * Set PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
-     * @param DBVersion PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
+     * Set PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
+     * @param DBVersion PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
      */
     public void setDBVersion(String DBVersion) {
         this.DBVersion = DBVersion;
@@ -451,32 +451,32 @@ public class CreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. 
-     * @return DBMajorVersion PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
+     * Get PostgreSQL major version. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion. 
+     * @return DBMajorVersion PostgreSQL major version. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
      */
     public String getDBMajorVersion() {
         return this.DBMajorVersion;
     }
 
     /**
-     * Set PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
-     * @param DBMajorVersion PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
+     * Set PostgreSQL major version. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
+     * @param DBMajorVersion PostgreSQL major version. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
      */
     public void setDBMajorVersion(String DBMajorVersion) {
         this.DBMajorVersion = DBMajorVersion;
     }
 
     /**
-     * Get PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created. 
-     * @return DBKernelVersion PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
+     * Get PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion. 
+     * @return DBKernelVersion PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
      */
     public String getDBKernelVersion() {
         return this.DBKernelVersion;
     }
 
     /**
-     * Set PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
-     * @param DBKernelVersion PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
+     * Set PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
+     * @param DBKernelVersion PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
      */
     public void setDBKernelVersion(String DBKernelVersion) {
         this.DBKernelVersion = DBKernelVersion;

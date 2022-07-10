@@ -205,7 +205,7 @@ public class CreateInstancesRequest extends AbstractModel{
     private String KMSKeyId;
 
     /**
-    * The region where the KMS service is enabled. When “KMSRegion” is left empty, the “KMS” of the local domain will be enabled by default. If the local domain is not supported, you need to select another region supported by KMS.
+    * The region where the KMS service is enabled. When `KMSRegion` is left empty, the KMS of the current region will be enabled by default. If the current region is not supported, you need to select another region supported by KMS.
     */
     @SerializedName("KMSRegion")
     @Expose
@@ -628,16 +628,16 @@ public class CreateInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get The region where the KMS service is enabled. When “KMSRegion” is left empty, the “KMS” of the local domain will be enabled by default. If the local domain is not supported, you need to select another region supported by KMS. 
-     * @return KMSRegion The region where the KMS service is enabled. When “KMSRegion” is left empty, the “KMS” of the local domain will be enabled by default. If the local domain is not supported, you need to select another region supported by KMS.
+     * Get The region where the KMS service is enabled. When `KMSRegion` is left empty, the KMS of the current region will be enabled by default. If the current region is not supported, you need to select another region supported by KMS. 
+     * @return KMSRegion The region where the KMS service is enabled. When `KMSRegion` is left empty, the KMS of the current region will be enabled by default. If the current region is not supported, you need to select another region supported by KMS.
      */
     public String getKMSRegion() {
         return this.KMSRegion;
     }
 
     /**
-     * Set The region where the KMS service is enabled. When “KMSRegion” is left empty, the “KMS” of the local domain will be enabled by default. If the local domain is not supported, you need to select another region supported by KMS.
-     * @param KMSRegion The region where the KMS service is enabled. When “KMSRegion” is left empty, the “KMS” of the local domain will be enabled by default. If the local domain is not supported, you need to select another region supported by KMS.
+     * Set The region where the KMS service is enabled. When `KMSRegion` is left empty, the KMS of the current region will be enabled by default. If the current region is not supported, you need to select another region supported by KMS.
+     * @param KMSRegion The region where the KMS service is enabled. When `KMSRegion` is left empty, the KMS of the current region will be enabled by default. If the current region is not supported, you need to select another region supported by KMS.
      */
     public void setKMSRegion(String KMSRegion) {
         this.KMSRegion = KMSRegion;

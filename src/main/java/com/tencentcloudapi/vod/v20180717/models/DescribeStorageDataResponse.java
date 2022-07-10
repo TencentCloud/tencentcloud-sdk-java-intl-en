@@ -37,6 +37,13 @@ public class DescribeStorageDataResponse extends AbstractModel{
     private Long TotalStorage;
 
     /**
+    * Current Standard storage capacity in bytes.
+    */
+    @SerializedName("StandardStorage")
+    @Expose
+    private Long StandardStorage;
+
+    /**
     * Current Standard_IA storage capacity in bytes.
     */
     @SerializedName("InfrequentStorage")
@@ -44,11 +51,18 @@ public class DescribeStorageDataResponse extends AbstractModel{
     private Long InfrequentStorage;
 
     /**
-    * Current Standard storage capacity in bytes.
+    * The current ARCHIVE storage usage in bytes.
     */
-    @SerializedName("StandardStorage")
+    @SerializedName("ArchiveStorage")
     @Expose
-    private Long StandardStorage;
+    private Long ArchiveStorage;
+
+    /**
+    * The current DEEP ARCHIVE storage usage in bytes.
+    */
+    @SerializedName("DeepArchiveStorage")
+    @Expose
+    private Long DeepArchiveStorage;
 
     /**
     * Storage usage by billing region.
@@ -97,6 +111,22 @@ public class DescribeStorageDataResponse extends AbstractModel{
     }
 
     /**
+     * Get Current Standard storage capacity in bytes. 
+     * @return StandardStorage Current Standard storage capacity in bytes.
+     */
+    public Long getStandardStorage() {
+        return this.StandardStorage;
+    }
+
+    /**
+     * Set Current Standard storage capacity in bytes.
+     * @param StandardStorage Current Standard storage capacity in bytes.
+     */
+    public void setStandardStorage(Long StandardStorage) {
+        this.StandardStorage = StandardStorage;
+    }
+
+    /**
      * Get Current Standard_IA storage capacity in bytes. 
      * @return InfrequentStorage Current Standard_IA storage capacity in bytes.
      */
@@ -113,19 +143,35 @@ public class DescribeStorageDataResponse extends AbstractModel{
     }
 
     /**
-     * Get Current Standard storage capacity in bytes. 
-     * @return StandardStorage Current Standard storage capacity in bytes.
+     * Get The current ARCHIVE storage usage in bytes. 
+     * @return ArchiveStorage The current ARCHIVE storage usage in bytes.
      */
-    public Long getStandardStorage() {
-        return this.StandardStorage;
+    public Long getArchiveStorage() {
+        return this.ArchiveStorage;
     }
 
     /**
-     * Set Current Standard storage capacity in bytes.
-     * @param StandardStorage Current Standard storage capacity in bytes.
+     * Set The current ARCHIVE storage usage in bytes.
+     * @param ArchiveStorage The current ARCHIVE storage usage in bytes.
      */
-    public void setStandardStorage(Long StandardStorage) {
-        this.StandardStorage = StandardStorage;
+    public void setArchiveStorage(Long ArchiveStorage) {
+        this.ArchiveStorage = ArchiveStorage;
+    }
+
+    /**
+     * Get The current DEEP ARCHIVE storage usage in bytes. 
+     * @return DeepArchiveStorage The current DEEP ARCHIVE storage usage in bytes.
+     */
+    public Long getDeepArchiveStorage() {
+        return this.DeepArchiveStorage;
+    }
+
+    /**
+     * Set The current DEEP ARCHIVE storage usage in bytes.
+     * @param DeepArchiveStorage The current DEEP ARCHIVE storage usage in bytes.
+     */
+    public void setDeepArchiveStorage(Long DeepArchiveStorage) {
+        this.DeepArchiveStorage = DeepArchiveStorage;
     }
 
     /**
@@ -174,11 +220,17 @@ public class DescribeStorageDataResponse extends AbstractModel{
         if (source.TotalStorage != null) {
             this.TotalStorage = new Long(source.TotalStorage);
         }
+        if (source.StandardStorage != null) {
+            this.StandardStorage = new Long(source.StandardStorage);
+        }
         if (source.InfrequentStorage != null) {
             this.InfrequentStorage = new Long(source.InfrequentStorage);
         }
-        if (source.StandardStorage != null) {
-            this.StandardStorage = new Long(source.StandardStorage);
+        if (source.ArchiveStorage != null) {
+            this.ArchiveStorage = new Long(source.ArchiveStorage);
+        }
+        if (source.DeepArchiveStorage != null) {
+            this.DeepArchiveStorage = new Long(source.DeepArchiveStorage);
         }
         if (source.StorageStat != null) {
             this.StorageStat = new StorageStatData[source.StorageStat.length];
@@ -198,8 +250,10 @@ public class DescribeStorageDataResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MediaCount", this.MediaCount);
         this.setParamSimple(map, prefix + "TotalStorage", this.TotalStorage);
-        this.setParamSimple(map, prefix + "InfrequentStorage", this.InfrequentStorage);
         this.setParamSimple(map, prefix + "StandardStorage", this.StandardStorage);
+        this.setParamSimple(map, prefix + "InfrequentStorage", this.InfrequentStorage);
+        this.setParamSimple(map, prefix + "ArchiveStorage", this.ArchiveStorage);
+        this.setParamSimple(map, prefix + "DeepArchiveStorage", this.DeepArchiveStorage);
         this.setParamArrayObj(map, prefix + "StorageStat.", this.StorageStat);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

@@ -15,6 +15,9 @@ public enum PostgresErrorCode {
     // Operation failed.
      FAILEDOPERATION("FailedOperation"),
      
+    // Failed to request a quota for resource tags.
+     FAILEDOPERATION_ALLOCATEQUOTASERROR("FailedOperation.AllocateQuotasError"),
+     
     // Failed to access classic network. Please try again later. If the problem persists, please contact customer service.
      FAILEDOPERATION_BASENETWORKACCESSERROR("FailedOperation.BaseNetworkAccessError"),
      
@@ -101,6 +104,9 @@ public enum PostgresErrorCode {
      
     // The number of networks does not meet resource requirements.
      FAILEDOPERATION_NETWORKNUMLIMITERROR("FailedOperation.NetworkNumLimitError"),
+     
+    // The operation frequency limit is exceeded. Try again later. If the problem persists, contact customer service.
+     FAILEDOPERATION_OPERATEFREQUENCYLIMITEDERROR("FailedOperation.OperateFrequencyLimitedError"),
      
     // Failed to access database management service. Please try again later. If the problem persists, please contact customer service.
      FAILEDOPERATION_OSSACCESSERROR("FailedOperation.OssAccessError"),
@@ -225,6 +231,9 @@ public enum PostgresErrorCode {
     // Failed to access database management service. Please contact customer service.
      INTERNALERROR_INSTANCEDATAERROR("InternalError.InstanceDataError"),
      
+    // An exception occurred while executing the request.
+     INTERNALERROR_INTERNALHTTPSERVERERROR("InternalError.InternalHttpServerError"),
+     
     // Failed to parse background data. Please contact customer service.
      INTERNALERROR_MARSHALERROR("InternalError.MarshalError"),
      
@@ -245,9 +254,6 @@ public enum PostgresErrorCode {
      
     // Incorrect instance status.
      INVALIDINSTANCESTATUS("InvalidInstanceStatus"),
-     
-    // Billing error: invalid order type ID.
-     INVALIDORDERNUM("InvalidOrderNum"),
      
     // Parameter error.
      INVALIDPARAMETER("InvalidParameter"),
@@ -390,12 +396,6 @@ public enum PostgresErrorCode {
     // Incorrect `PID` parameter.
      INVALIDPID("InvalidPid"),
      
-    // Billing error: such operations as purchase, renewal, and configuration change are not allowed for the instance.
-     INVALIDTRADEOPERATE("InvalidTradeOperate"),
-     
-    // Billing error: the specified voucher is invalid.
-     INVALIDVOUCHERID("InvalidVoucherId"),
-     
     // Quota limit exceeded.
      LIMITEXCEEDED("LimitExceeded"),
      
@@ -441,6 +441,9 @@ public enum PostgresErrorCode {
     // Read-only instances do not support IPv6.
      OPERATIONDENIED_ROINSTANCEIPV6NOTSUPPORTEDERROR("OperationDenied.ROInstanceIpv6NotSupportedError"),
      
+    // This operation cannot be performed on a read-only instance in this status.
+     OPERATIONDENIED_ROINSTANCESTATUSLIMITOPERROR("OperationDenied.ROInstanceStatusLimitOpError"),
+     
     // The total number of read-only nodes should not exceed the upper limit.
      OPERATIONDENIED_ROINSTANCECOUNTEXEEDERROR("OperationDenied.RoInstanceCountExeedError"),
      
@@ -461,9 +464,6 @@ public enum PostgresErrorCode {
      
     // There are not enough resources to purchase instances of this specification in the current region.
      RESOURCEINSUFFICIENT_RESOURCENOTENOUGH("ResourceInsufficient.ResourceNotEnough"),
-     
-    // Resource not found.
-     RESOURCENOTFOUND("ResourceNotFound"),
      
     // The instance does not exist.
      RESOURCENOTFOUND_INSTANCENOTFOUNDERROR("ResourceNotFound.InstanceNotFoundError"),
@@ -491,6 +491,9 @@ public enum PostgresErrorCode {
      
     // Unknown parameter error.
      UNKNOWNPARAMETER("UnknownParameter"),
+     
+    // The operation is not supported.
+     UNSUPPORTEDOPERATION("UnsupportedOperation"),
      
     // VPC error
      VPCERROR("VpcError");

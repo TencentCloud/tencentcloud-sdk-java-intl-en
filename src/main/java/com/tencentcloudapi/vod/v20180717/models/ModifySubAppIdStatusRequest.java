@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifySubAppIdStatusRequest extends AbstractModel{
 
     /**
-    * Subapplication ID.
+    * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -41,16 +41,16 @@ You cannot enable a subapplication whose status is “Destroying”. You can ena
     private String Status;
 
     /**
-     * Get Subapplication ID. 
-     * @return SubAppId Subapplication ID.
+     * Get <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b> 
+     * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set Subapplication ID.
-     * @param SubAppId Subapplication ID.
+     * Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

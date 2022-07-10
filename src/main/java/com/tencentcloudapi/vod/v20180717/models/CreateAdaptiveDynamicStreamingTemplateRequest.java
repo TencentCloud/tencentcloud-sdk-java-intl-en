@@ -23,8 +23,9 @@ import java.util.HashMap;
 public class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel{
 
     /**
-    * Adaptive bitstream format. Valid values:
-<li>HLS.</li>
+    * The adaptive bitrate streaming format. Valid values:
+<li>HLS</li>
+<li>MPEG-DASH</li>
     */
     @SerializedName("Format")
     @Expose
@@ -37,6 +38,13 @@ Note: the frame rate of all substreams must be the same; otherwise, the frame ra
     @SerializedName("StreamInfos")
     @Expose
     private AdaptiveStreamTemplate [] StreamInfos;
+
+    /**
+    * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
 
     /**
     * Template name. Length limit: 64 characters.
@@ -84,27 +92,24 @@ Default value: no.
     private String Comment;
 
     /**
-    * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
-
-    /**
-     * Get Adaptive bitstream format. Valid values:
-<li>HLS.</li> 
-     * @return Format Adaptive bitstream format. Valid values:
-<li>HLS.</li>
+     * Get The adaptive bitrate streaming format. Valid values:
+<li>HLS</li>
+<li>MPEG-DASH</li> 
+     * @return Format The adaptive bitrate streaming format. Valid values:
+<li>HLS</li>
+<li>MPEG-DASH</li>
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set Adaptive bitstream format. Valid values:
-<li>HLS.</li>
-     * @param Format Adaptive bitstream format. Valid values:
-<li>HLS.</li>
+     * Set The adaptive bitrate streaming format. Valid values:
+<li>HLS</li>
+<li>MPEG-DASH</li>
+     * @param Format The adaptive bitrate streaming format. Valid values:
+<li>HLS</li>
+<li>MPEG-DASH</li>
      */
     public void setFormat(String Format) {
         this.Format = Format;
@@ -128,6 +133,22 @@ Note: the frame rate of all substreams must be the same; otherwise, the frame ra
      */
     public void setStreamInfos(AdaptiveStreamTemplate [] StreamInfos) {
         this.StreamInfos = StreamInfos;
+    }
+
+    /**
+     * Get <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b> 
+     * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -250,22 +271,6 @@ Default value: no.
         this.Comment = Comment;
     }
 
-    /**
-     * Get [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty. 
-     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
     public CreateAdaptiveDynamicStreamingTemplateRequest() {
     }
 
@@ -283,6 +288,9 @@ Default value: no.
                 this.StreamInfos[i] = new AdaptiveStreamTemplate(source.StreamInfos[i]);
             }
         }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
@@ -298,9 +306,6 @@ Default value: no.
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
-        }
     }
 
 
@@ -310,12 +315,12 @@ Default value: no.
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Format", this.Format);
         this.setParamArrayObj(map, prefix + "StreamInfos.", this.StreamInfos);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "DrmType", this.DrmType);
         this.setParamSimple(map, prefix + "DisableHigherVideoBitrate", this.DisableHigherVideoBitrate);
         this.setParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }

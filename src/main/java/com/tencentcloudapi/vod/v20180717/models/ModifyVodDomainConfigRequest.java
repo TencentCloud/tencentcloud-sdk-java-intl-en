@@ -30,6 +30,13 @@ public class ModifyVodDomainConfigRequest extends AbstractModel{
     private String Domain;
 
     /**
+    * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/14046?from_cn_redirect=1) policy
     */
     @SerializedName("RefererAuthPolicy")
@@ -42,13 +49,6 @@ public class ModifyVodDomainConfigRequest extends AbstractModel{
     @SerializedName("UrlSignatureAuthPolicy")
     @Expose
     private UrlSignatureAuthPolicy UrlSignatureAuthPolicy;
-
-    /**
-    * VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
 
     /**
      * Get Domain name 
@@ -64,6 +64,22 @@ public class ModifyVodDomainConfigRequest extends AbstractModel{
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
+    }
+
+    /**
+     * Get <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b> 
+     * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -98,22 +114,6 @@ public class ModifyVodDomainConfigRequest extends AbstractModel{
         this.UrlSignatureAuthPolicy = UrlSignatureAuthPolicy;
     }
 
-    /**
-     * Get VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty. 
-     * @return SubAppId VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
-     * @param SubAppId VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
     public ModifyVodDomainConfigRequest() {
     }
 
@@ -125,14 +125,14 @@ public class ModifyVodDomainConfigRequest extends AbstractModel{
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
         if (source.RefererAuthPolicy != null) {
             this.RefererAuthPolicy = new RefererAuthPolicy(source.RefererAuthPolicy);
         }
         if (source.UrlSignatureAuthPolicy != null) {
             this.UrlSignatureAuthPolicy = new UrlSignatureAuthPolicy(source.UrlSignatureAuthPolicy);
-        }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
         }
     }
 
@@ -142,9 +142,9 @@ public class ModifyVodDomainConfigRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamObj(map, prefix + "RefererAuthPolicy.", this.RefererAuthPolicy);
         this.setParamObj(map, prefix + "UrlSignatureAuthPolicy.", this.UrlSignatureAuthPolicy);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }

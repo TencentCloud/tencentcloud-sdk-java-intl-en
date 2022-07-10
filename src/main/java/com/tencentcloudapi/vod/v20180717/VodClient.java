@@ -2112,35 +2112,6 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
     }
 
     /**
-     *This API is <font color='red'>no longer used</font>. To initiate image recognition tasks, please use [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1).
-
-This API is used to initiate an image processing task. Image processing operations include the following:
-
-1. Intelligent recognition of pornographic, terroristic, and politically sensitive content
-
-><li>File size: < 5 MB</li>
-><li>Resolution: Preferably higher than 256 x 256. Resolution lower than this may compromise the recognition performance.</li>
-><li>Supported image formats: PNG, JPG, JPEG, BMP, GIF, WEBP</li>
-
-     * @param req ProcessImageRequest
-     * @return ProcessImageResponse
-     * @throws TencentCloudSDKException
-     */
-    public ProcessImageResponse ProcessImage(ProcessImageRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ProcessImageResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ProcessImageResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ProcessImage");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to initiate a media processing task on a VOD file. The task may include:
 1. Video transcoding (with watermark)
 2. Animated image generating
@@ -2154,6 +2125,12 @@ This API is used to initiate an image processing task. Image processing operatio
 10. Recognition of opening and closing credits, faces, full text, text keywords, full speech, speech keywords, and objects
 
 If event notifications are used, the event type is [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1).
+
+A digital watermark has the following restrictions:
+<li>Digital watermarks can only be image watermarks.</li>
+<li>Digital watermarks must be looped.</li>
+<li>If you use digital watermarks, the output video must be in HLS format.</li>
+<li>Digital watermarks can only be displayed in the upper half of a video.</li>
      * @param req ProcessMediaRequest
      * @return ProcessMediaResponse
      * @throws TencentCloudSDKException
@@ -2264,6 +2241,7 @@ There are two ways to create a task flow template:
      *1. This API is used to prefetch a list of specified URLs.
 2. The URL domain names must have already been registered with VOD.
 3. Up to 20 URLs can be specified in one request.
+4. By default, the maximum number of URLs that can be refreshed per day is 10,000.
      * @param req PushUrlCacheRequest
      * @return PushUrlCacheResponse
      * @throws TencentCloudSDKException
@@ -2275,6 +2253,29 @@ There are two ways to create a task flow template:
                 Type type = new TypeToken<JsonResponseModel<PushUrlCacheResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "PushUrlCache");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *1. This API is used to purge URLs.
+2. The URL domain names must have already been registered with VOD.
+3. Up to 20 URLs can be specified in one request.
+4. By default, the maximum number of URLs allowed for purge per day is 100,000.
+     * @param req RefreshUrlCacheRequest
+     * @return RefreshUrlCacheResponse
+     * @throws TencentCloudSDKException
+     */
+    public RefreshUrlCacheResponse RefreshUrlCache(RefreshUrlCacheRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RefreshUrlCacheResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RefreshUrlCacheResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RefreshUrlCache");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2303,23 +2304,18 @@ There are two ways to create a task flow template:
     }
 
     /**
-     *This API is used to initiate an image recognition task to identify pornographic, terroristic, and politically sensitive content in images saved in VOD.
-
-><li>File size: < 5 MB</li>
-><li>Resolution: Preferably higher than 256 x 256. Resolution lower than this may compromise the recognition performance.</li>
-><li>Supported image formats: PNG, JPG, JPEG, BMP, GIF, WEBP</li>
-
-     * @param req ReviewImageRequest
-     * @return ReviewImageResponse
+     *This API is used to restore files from ARCHIVE or DEEP ARCHIVE. Files stored in ARCHIVE or DEEP ARCHIVE must be restored before they can be accessed. Restored files are available for a limited period of time.
+     * @param req RestoreMediaRequest
+     * @return RestoreMediaResponse
      * @throws TencentCloudSDKException
      */
-    public ReviewImageResponse ReviewImage(ReviewImageRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ReviewImageResponse> rsp = null;
+    public RestoreMediaResponse RestoreMedia(RestoreMediaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RestoreMediaResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<ReviewImageResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<RestoreMediaResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "ReviewImage");
+                rspStr = this.internalRequest(req, "RestoreMedia");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteWordSamplesRequest extends AbstractModel{
+public class RefreshUrlCacheRequest extends AbstractModel{
 
     /**
-    * Keyword. Array length limit: 100 words.
+    * The URLs to purge. You can specify up to 20 URLs per request.
     */
-    @SerializedName("Keywords")
+    @SerializedName("Urls")
     @Expose
-    private String [] Keywords;
+    private String [] Urls;
 
     /**
     * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
@@ -37,19 +37,19 @@ public class DeleteWordSamplesRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * Get Keyword. Array length limit: 100 words. 
-     * @return Keywords Keyword. Array length limit: 100 words.
+     * Get The URLs to purge. You can specify up to 20 URLs per request. 
+     * @return Urls The URLs to purge. You can specify up to 20 URLs per request.
      */
-    public String [] getKeywords() {
-        return this.Keywords;
+    public String [] getUrls() {
+        return this.Urls;
     }
 
     /**
-     * Set Keyword. Array length limit: 100 words.
-     * @param Keywords Keyword. Array length limit: 100 words.
+     * Set The URLs to purge. You can specify up to 20 URLs per request.
+     * @param Urls The URLs to purge. You can specify up to 20 URLs per request.
      */
-    public void setKeywords(String [] Keywords) {
-        this.Keywords = Keywords;
+    public void setUrls(String [] Urls) {
+        this.Urls = Urls;
     }
 
     /**
@@ -68,18 +68,18 @@ public class DeleteWordSamplesRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
-    public DeleteWordSamplesRequest() {
+    public RefreshUrlCacheRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteWordSamplesRequest(DeleteWordSamplesRequest source) {
-        if (source.Keywords != null) {
-            this.Keywords = new String[source.Keywords.length];
-            for (int i = 0; i < source.Keywords.length; i++) {
-                this.Keywords[i] = new String(source.Keywords[i]);
+    public RefreshUrlCacheRequest(RefreshUrlCacheRequest source) {
+        if (source.Urls != null) {
+            this.Urls = new String[source.Urls.length];
+            for (int i = 0; i < source.Urls.length; i++) {
+                this.Urls[i] = new String(source.Urls[i]);
             }
         }
         if (source.SubAppId != null) {
@@ -92,7 +92,7 @@ public class DeleteWordSamplesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
+        this.setParamArraySimple(map, prefix + "Urls.", this.Urls);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }

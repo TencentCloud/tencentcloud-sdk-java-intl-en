@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SetAutoRenewFlagRequest extends AbstractModel{
 
     /**
-    * Instance ID array
+    * List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
     */
     @SerializedName("DBInstanceIdSet")
     @Expose
@@ -37,16 +37,16 @@ public class SetAutoRenewFlagRequest extends AbstractModel{
     private Long AutoRenewFlag;
 
     /**
-     * Get Instance ID array 
-     * @return DBInstanceIdSet Instance ID array
+     * Get List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here. 
+     * @return DBInstanceIdSet List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
      */
     public String [] getDBInstanceIdSet() {
         return this.DBInstanceIdSet;
     }
 
     /**
-     * Set Instance ID array
-     * @param DBInstanceIdSet Instance ID array
+     * Set List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
+     * @param DBInstanceIdSet List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
      */
     public void setDBInstanceIdSet(String [] DBInstanceIdSet) {
         this.DBInstanceIdSet = DBInstanceIdSet;

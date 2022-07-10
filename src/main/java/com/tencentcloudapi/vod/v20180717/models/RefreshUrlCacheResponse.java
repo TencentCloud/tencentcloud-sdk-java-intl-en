@@ -20,46 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageContentReviewInput extends AbstractModel{
+public class RefreshUrlCacheResponse extends AbstractModel{
 
     /**
-    * The ID of the image recognition template to use. Valid values:
-<li>10: All recognition types enabled</li>
+    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
-    @SerializedName("Definition")
+    @SerializedName("RequestId")
     @Expose
-    private Long Definition;
+    private String RequestId;
 
     /**
-     * Get The ID of the image recognition template to use. Valid values:
-<li>10: All recognition types enabled</li> 
-     * @return Definition The ID of the image recognition template to use. Valid values:
-<li>10: All recognition types enabled</li>
+     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
+     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public Long getDefinition() {
-        return this.Definition;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set The ID of the image recognition template to use. Valid values:
-<li>10: All recognition types enabled</li>
-     * @param Definition The ID of the image recognition template to use. Valid values:
-<li>10: All recognition types enabled</li>
+     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public void setDefinition(Long Definition) {
-        this.Definition = Definition;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public ImageContentReviewInput() {
+    public RefreshUrlCacheResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ImageContentReviewInput(ImageContentReviewInput source) {
-        if (source.Definition != null) {
-            this.Definition = new Long(source.Definition);
+    public RefreshUrlCacheResponse(RefreshUrlCacheResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -68,7 +63,7 @@ public class ImageContentReviewInput extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DisIsolateDBInstancesRequest extends AbstractModel{
 
     /**
-    * Resource ID list
+    * List of resource IDs. Note that currently you cannot remove multiple instances from isolation at the same time. Only one instance ID can be passed in here.
     */
     @SerializedName("DBInstanceIdSet")
     @Expose
@@ -51,16 +51,16 @@ public class DisIsolateDBInstancesRequest extends AbstractModel{
     private String [] VoucherIds;
 
     /**
-     * Get Resource ID list 
-     * @return DBInstanceIdSet Resource ID list
+     * Get List of resource IDs. Note that currently you cannot remove multiple instances from isolation at the same time. Only one instance ID can be passed in here. 
+     * @return DBInstanceIdSet List of resource IDs. Note that currently you cannot remove multiple instances from isolation at the same time. Only one instance ID can be passed in here.
      */
     public String [] getDBInstanceIdSet() {
         return this.DBInstanceIdSet;
     }
 
     /**
-     * Set Resource ID list
-     * @param DBInstanceIdSet Resource ID list
+     * Set List of resource IDs. Note that currently you cannot remove multiple instances from isolation at the same time. Only one instance ID can be passed in here.
+     * @param DBInstanceIdSet List of resource IDs. Note that currently you cannot remove multiple instances from isolation at the same time. Only one instance ID can be passed in here.
      */
     public void setDBInstanceIdSet(String [] DBInstanceIdSet) {
         this.DBInstanceIdSet = DBInstanceIdSet;

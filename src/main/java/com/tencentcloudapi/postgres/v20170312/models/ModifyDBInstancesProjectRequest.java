@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ModifyDBInstancesProjectRequest extends AbstractModel{
 
     /**
-    * TencentDB for PostgreSQL instance ID array
+    * List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
     */
     @SerializedName("DBInstanceIdSet")
     @Expose
     private String [] DBInstanceIdSet;
 
     /**
-    * New project ID of TencentDB for PostgreSQL instance
+    * ID of the new project
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-     * Get TencentDB for PostgreSQL instance ID array 
-     * @return DBInstanceIdSet TencentDB for PostgreSQL instance ID array
+     * Get List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here. 
+     * @return DBInstanceIdSet List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
      */
     public String [] getDBInstanceIdSet() {
         return this.DBInstanceIdSet;
     }
 
     /**
-     * Set TencentDB for PostgreSQL instance ID array
-     * @param DBInstanceIdSet TencentDB for PostgreSQL instance ID array
+     * Set List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
+     * @param DBInstanceIdSet List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
      */
     public void setDBInstanceIdSet(String [] DBInstanceIdSet) {
         this.DBInstanceIdSet = DBInstanceIdSet;
     }
 
     /**
-     * Get New project ID of TencentDB for PostgreSQL instance 
-     * @return ProjectId New project ID of TencentDB for PostgreSQL instance
+     * Get ID of the new project 
+     * @return ProjectId ID of the new project
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set New project ID of TencentDB for PostgreSQL instance
-     * @param ProjectId New project ID of TencentDB for PostgreSQL instance
+     * Set ID of the new project
+     * @param ProjectId ID of the new project
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;

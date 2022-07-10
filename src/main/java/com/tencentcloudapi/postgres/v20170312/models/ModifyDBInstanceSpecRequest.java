@@ -65,21 +65,21 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel{
     private Long ActivityId;
 
     /**
-    * Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (switch at a specified time). Default value: `0`.
+    * Switch time after instance configurations are modified. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
     */
     @SerializedName("SwitchTag")
     @Expose
     private Long SwitchTag;
 
     /**
-    * The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00".
+    * Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
     */
     @SerializedName("SwitchStartTime")
     @Expose
     private String SwitchStartTime;
 
     /**
-    * The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00".
+    * Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
     */
     @SerializedName("SwitchEndTime")
     @Expose
@@ -182,48 +182,48 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel{
     }
 
     /**
-     * Get Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (switch at a specified time). Default value: `0`. 
-     * @return SwitchTag Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (switch at a specified time). Default value: `0`.
+     * Get Switch time after instance configurations are modified. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`. 
+     * @return SwitchTag Switch time after instance configurations are modified. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
      */
     public Long getSwitchTag() {
         return this.SwitchTag;
     }
 
     /**
-     * Set Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (switch at a specified time). Default value: `0`.
-     * @param SwitchTag Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (switch at a specified time). Default value: `0`.
+     * Set Switch time after instance configurations are modified. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
+     * @param SwitchTag Switch time after instance configurations are modified. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
      */
     public void setSwitchTag(Long SwitchTag) {
         this.SwitchTag = SwitchTag;
     }
 
     /**
-     * Get The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00". 
-     * @return SwitchStartTime The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00".
+     * Get Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid. 
+     * @return SwitchStartTime Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
      */
     public String getSwitchStartTime() {
         return this.SwitchStartTime;
     }
 
     /**
-     * Set The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00".
-     * @param SwitchStartTime The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00".
+     * Set Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+     * @param SwitchStartTime Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
      */
     public void setSwitchStartTime(String SwitchStartTime) {
         this.SwitchStartTime = SwitchStartTime;
     }
 
     /**
-     * Get The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00". 
-     * @return SwitchEndTime The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00".
+     * Get Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid. 
+     * @return SwitchEndTime Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
      */
     public String getSwitchEndTime() {
         return this.SwitchEndTime;
     }
 
     /**
-     * Set The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00".
-     * @param SwitchEndTime The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00".
+     * Set Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+     * @param SwitchEndTime Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
      */
     public void setSwitchEndTime(String SwitchEndTime) {
         this.SwitchEndTime = SwitchEndTime;

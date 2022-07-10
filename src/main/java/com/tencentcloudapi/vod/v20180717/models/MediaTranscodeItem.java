@@ -63,8 +63,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long Width;
 
     /**
-    * Total size of a media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The file size (bytes).
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
     */
     @SerializedName("Size")
     @Expose
@@ -79,14 +79,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Float Duration;
 
     /**
-    * Container, such as m4a and mp4.
-Note: this field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("Container")
-    @Expose
-    private String Container;
-
-    /**
     * MD5 value of video.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
@@ -95,12 +87,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Md5;
 
     /**
-    * Audio stream information.
+    * Container, such as m4a and mp4.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("AudioStreamSet")
+    @SerializedName("Container")
     @Expose
-    private MediaAudioStreamItem [] AudioStreamSet;
+    private String Container;
 
     /**
     * Video stream information.
@@ -109,6 +101,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     @SerializedName("VideoStreamSet")
     @Expose
     private MediaVideoStreamItem [] VideoStreamSet;
+
+    /**
+    * Audio stream information.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AudioStreamSet")
+    @Expose
+    private MediaAudioStreamItem [] AudioStreamSet;
 
     /**
      * Get Address of output video file.
@@ -211,20 +211,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Total size of a media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Size Total size of a media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The file size (bytes).
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li> 
+     * @return Size The file size (bytes).
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set Total size of a media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Size Total size of a media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The file size (bytes).
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+     * @param Size The file size (bytes).
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
      */
     public void setSize(Long Size) {
         this.Size = Size;
@@ -251,26 +251,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Container, such as m4a and mp4.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Container Container, such as m4a and mp4.
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public String getContainer() {
-        return this.Container;
-    }
-
-    /**
-     * Set Container, such as m4a and mp4.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Container Container, such as m4a and mp4.
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public void setContainer(String Container) {
-        this.Container = Container;
-    }
-
-    /**
      * Get MD5 value of video.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Md5 MD5 value of video.
@@ -291,23 +271,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Audio stream information.
+     * Get Container, such as m4a and mp4.
 Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AudioStreamSet Audio stream information.
+     * @return Container Container, such as m4a and mp4.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
-    public MediaAudioStreamItem [] getAudioStreamSet() {
-        return this.AudioStreamSet;
+    public String getContainer() {
+        return this.Container;
     }
 
     /**
-     * Set Audio stream information.
+     * Set Container, such as m4a and mp4.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AudioStreamSet Audio stream information.
+     * @param Container Container, such as m4a and mp4.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
-    public void setAudioStreamSet(MediaAudioStreamItem [] AudioStreamSet) {
-        this.AudioStreamSet = AudioStreamSet;
+    public void setContainer(String Container) {
+        this.Container = Container;
     }
 
     /**
@@ -328,6 +308,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
      */
     public void setVideoStreamSet(MediaVideoStreamItem [] VideoStreamSet) {
         this.VideoStreamSet = VideoStreamSet;
+    }
+
+    /**
+     * Get Audio stream information.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return AudioStreamSet Audio stream information.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public MediaAudioStreamItem [] getAudioStreamSet() {
+        return this.AudioStreamSet;
+    }
+
+    /**
+     * Set Audio stream information.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AudioStreamSet Audio stream information.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAudioStreamSet(MediaAudioStreamItem [] AudioStreamSet) {
+        this.AudioStreamSet = AudioStreamSet;
     }
 
     public MediaTranscodeItem() {
@@ -359,22 +359,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.Duration != null) {
             this.Duration = new Float(source.Duration);
         }
-        if (source.Container != null) {
-            this.Container = new String(source.Container);
-        }
         if (source.Md5 != null) {
             this.Md5 = new String(source.Md5);
         }
-        if (source.AudioStreamSet != null) {
-            this.AudioStreamSet = new MediaAudioStreamItem[source.AudioStreamSet.length];
-            for (int i = 0; i < source.AudioStreamSet.length; i++) {
-                this.AudioStreamSet[i] = new MediaAudioStreamItem(source.AudioStreamSet[i]);
-            }
+        if (source.Container != null) {
+            this.Container = new String(source.Container);
         }
         if (source.VideoStreamSet != null) {
             this.VideoStreamSet = new MediaVideoStreamItem[source.VideoStreamSet.length];
             for (int i = 0; i < source.VideoStreamSet.length; i++) {
                 this.VideoStreamSet[i] = new MediaVideoStreamItem(source.VideoStreamSet[i]);
+            }
+        }
+        if (source.AudioStreamSet != null) {
+            this.AudioStreamSet = new MediaAudioStreamItem[source.AudioStreamSet.length];
+            for (int i = 0; i < source.AudioStreamSet.length; i++) {
+                this.AudioStreamSet[i] = new MediaAudioStreamItem(source.AudioStreamSet[i]);
             }
         }
     }
@@ -391,10 +391,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
-        this.setParamSimple(map, prefix + "Container", this.Container);
         this.setParamSimple(map, prefix + "Md5", this.Md5);
-        this.setParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
+        this.setParamSimple(map, prefix + "Container", this.Container);
         this.setParamArrayObj(map, prefix + "VideoStreamSet.", this.VideoStreamSet);
+        this.setParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
 
     }
 }

@@ -44,6 +44,13 @@ public class LiveRealTimeClipRequest extends AbstractModel{
     private String EndTime;
 
     /**
+    * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * Whether to clip persistently. 0: no, 1: yes. Default: no.
     */
     @SerializedName("IsPersistence")
@@ -84,13 +91,6 @@ public class LiveRealTimeClipRequest extends AbstractModel{
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
-
-    /**
-    * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
 
     /**
      * Get The live stream code. 
@@ -138,6 +138,22 @@ public class LiveRealTimeClipRequest extends AbstractModel{
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
+    }
+
+    /**
+     * Get <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b> 
+     * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -236,22 +252,6 @@ public class LiveRealTimeClipRequest extends AbstractModel{
         this.ExtInfo = ExtInfo;
     }
 
-    /**
-     * Get [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty. 
-     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
     public LiveRealTimeClipRequest() {
     }
 
@@ -268,6 +268,9 @@ public class LiveRealTimeClipRequest extends AbstractModel{
         }
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
         }
         if (source.IsPersistence != null) {
             this.IsPersistence = new Long(source.IsPersistence);
@@ -287,9 +290,6 @@ public class LiveRealTimeClipRequest extends AbstractModel{
         if (source.ExtInfo != null) {
             this.ExtInfo = new String(source.ExtInfo);
         }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
-        }
     }
 
 
@@ -300,13 +300,13 @@ public class LiveRealTimeClipRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "StreamId", this.StreamId);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "IsPersistence", this.IsPersistence);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "Procedure", this.Procedure);
         this.setParamSimple(map, prefix + "MetaDataRequired", this.MetaDataRequired);
         this.setParamSimple(map, prefix + "Host", this.Host);
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }

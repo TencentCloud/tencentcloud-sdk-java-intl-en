@@ -30,6 +30,13 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
     private Long Definition;
 
     /**
+    * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * Name of an intelligent content recognition template. Length limit: 64 characters.
     */
     @SerializedName("Name")
@@ -97,13 +104,6 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
     private String ReviewWallSwitch;
 
     /**
-    * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
-
-    /**
      * Get Unique ID of an intelligent content recognition template. 
      * @return Definition Unique ID of an intelligent content recognition template.
      */
@@ -117,6 +117,22 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
+    }
+
+    /**
+     * Get <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b> 
+     * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -279,22 +295,6 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
         this.ReviewWallSwitch = ReviewWallSwitch;
     }
 
-    /**
-     * Get [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty. 
-     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
     public ModifyContentReviewTemplateRequest() {
     }
 
@@ -305,6 +305,9 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
     public ModifyContentReviewTemplateRequest(ModifyContentReviewTemplateRequest source) {
         if (source.Definition != null) {
             this.Definition = new Long(source.Definition);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
         }
         if (source.Name != null) {
             this.Name = new String(source.Name);
@@ -333,9 +336,6 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
         if (source.ReviewWallSwitch != null) {
             this.ReviewWallSwitch = new String(source.ReviewWallSwitch);
         }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
-        }
     }
 
 
@@ -344,6 +344,7 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamObj(map, prefix + "TerrorismConfigure.", this.TerrorismConfigure);
@@ -353,7 +354,6 @@ public class ModifyContentReviewTemplateRequest extends AbstractModel{
         this.setParamObj(map, prefix + "UserDefineConfigure.", this.UserDefineConfigure);
         this.setParamSimple(map, prefix + "ScreenshotInterval", this.ScreenshotInterval);
         this.setParamSimple(map, prefix + "ReviewWallSwitch", this.ReviewWallSwitch);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }

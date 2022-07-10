@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class IsolateDBInstancesRequest extends AbstractModel{
 
     /**
-    * Instance ID set
+    * List of instance IDs. Note that currently you cannot isolate multiple instances at the same time. Only one instance ID can be passed in here.
     */
     @SerializedName("DBInstanceIdSet")
     @Expose
     private String [] DBInstanceIdSet;
 
     /**
-     * Get Instance ID set 
-     * @return DBInstanceIdSet Instance ID set
+     * Get List of instance IDs. Note that currently you cannot isolate multiple instances at the same time. Only one instance ID can be passed in here. 
+     * @return DBInstanceIdSet List of instance IDs. Note that currently you cannot isolate multiple instances at the same time. Only one instance ID can be passed in here.
      */
     public String [] getDBInstanceIdSet() {
         return this.DBInstanceIdSet;
     }
 
     /**
-     * Set Instance ID set
-     * @param DBInstanceIdSet Instance ID set
+     * Set List of instance IDs. Note that currently you cannot isolate multiple instances at the same time. Only one instance ID can be passed in here.
+     * @param DBInstanceIdSet List of instance IDs. Note that currently you cannot isolate multiple instances at the same time. Only one instance ID can be passed in here.
      */
     public void setDBInstanceIdSet(String [] DBInstanceIdSet) {
         this.DBInstanceIdSet = DBInstanceIdSet;

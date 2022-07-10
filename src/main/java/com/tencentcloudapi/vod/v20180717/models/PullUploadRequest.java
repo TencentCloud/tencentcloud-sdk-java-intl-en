@@ -23,12 +23,19 @@ import java.util.HashMap;
 public class PullUploadRequest extends AbstractModel{
 
     /**
-    * URL of the media to be pulled. Supported media format: HLS; unsupported media format: DASH.
-For more information about supported extensions, please see [Media Types](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+    * The URL of the media to pull, which can be in HLS format, but not DASH format.
+For more information about supported extensions, see [Media types](https://intl.cloud.tencent.com/document/product/266/9760#media-types). Please make sure the URL is accessible.
     */
     @SerializedName("MediaUrl")
     @Expose
     private String MediaUrl;
+
+    /**
+    * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
 
     /**
     * Media name.
@@ -96,13 +103,6 @@ For more information about supported extensions, please see [Media Types](https:
     private String ExtInfo;
 
     /**
-    * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
-
-    /**
     * Source context, which is used to pass through the user request information. The [upload callback](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) API will return the value of this field. It can contain up to 250 characters.
     */
     @SerializedName("SourceContext")
@@ -110,23 +110,39 @@ For more information about supported extensions, please see [Media Types](https:
     private String SourceContext;
 
     /**
-     * Get URL of the media to be pulled. Supported media format: HLS; unsupported media format: DASH.
-For more information about supported extensions, please see [Media Types](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B). 
-     * @return MediaUrl URL of the media to be pulled. Supported media format: HLS; unsupported media format: DASH.
-For more information about supported extensions, please see [Media Types](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+     * Get The URL of the media to pull, which can be in HLS format, but not DASH format.
+For more information about supported extensions, see [Media types](https://intl.cloud.tencent.com/document/product/266/9760#media-types). Please make sure the URL is accessible. 
+     * @return MediaUrl The URL of the media to pull, which can be in HLS format, but not DASH format.
+For more information about supported extensions, see [Media types](https://intl.cloud.tencent.com/document/product/266/9760#media-types). Please make sure the URL is accessible.
      */
     public String getMediaUrl() {
         return this.MediaUrl;
     }
 
     /**
-     * Set URL of the media to be pulled. Supported media format: HLS; unsupported media format: DASH.
-For more information about supported extensions, please see [Media Types](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
-     * @param MediaUrl URL of the media to be pulled. Supported media format: HLS; unsupported media format: DASH.
-For more information about supported extensions, please see [Media Types](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+     * Set The URL of the media to pull, which can be in HLS format, but not DASH format.
+For more information about supported extensions, see [Media types](https://intl.cloud.tencent.com/document/product/266/9760#media-types). Please make sure the URL is accessible.
+     * @param MediaUrl The URL of the media to pull, which can be in HLS format, but not DASH format.
+For more information about supported extensions, see [Media types](https://intl.cloud.tencent.com/document/product/266/9760#media-types). Please make sure the URL is accessible.
      */
     public void setMediaUrl(String MediaUrl) {
         this.MediaUrl = MediaUrl;
+    }
+
+    /**
+     * Get <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b> 
+     * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -282,22 +298,6 @@ For more information about supported extensions, please see [Media Types](https:
     }
 
     /**
-     * Get [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty. 
-     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
-    /**
      * Get Source context, which is used to pass through the user request information. The [upload callback](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) API will return the value of this field. It can contain up to 250 characters. 
      * @return SourceContext Source context, which is used to pass through the user request information. The [upload callback](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) API will return the value of this field. It can contain up to 250 characters.
      */
@@ -323,6 +323,9 @@ For more information about supported extensions, please see [Media Types](https:
     public PullUploadRequest(PullUploadRequest source) {
         if (source.MediaUrl != null) {
             this.MediaUrl = new String(source.MediaUrl);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
         }
         if (source.MediaName != null) {
             this.MediaName = new String(source.MediaName);
@@ -351,9 +354,6 @@ For more information about supported extensions, please see [Media Types](https:
         if (source.ExtInfo != null) {
             this.ExtInfo = new String(source.ExtInfo);
         }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
-        }
         if (source.SourceContext != null) {
             this.SourceContext = new String(source.SourceContext);
         }
@@ -365,6 +365,7 @@ For more information about supported extensions, please see [Media Types](https:
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MediaUrl", this.MediaUrl);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "MediaName", this.MediaName);
         this.setParamSimple(map, prefix + "CoverUrl", this.CoverUrl);
         this.setParamSimple(map, prefix + "Procedure", this.Procedure);
@@ -374,7 +375,6 @@ For more information about supported extensions, please see [Media Types](https:
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "SourceContext", this.SourceContext);
 
     }

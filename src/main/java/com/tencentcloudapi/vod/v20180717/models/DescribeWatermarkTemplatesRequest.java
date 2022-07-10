@@ -23,11 +23,11 @@ import java.util.HashMap;
 public class DescribeWatermarkTemplatesRequest extends AbstractModel{
 
     /**
-    * Unique ID filter of watermarking templates. Array length limit: 100.
+    * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
     */
-    @SerializedName("Definitions")
+    @SerializedName("SubAppId")
     @Expose
-    private Long [] Definitions;
+    private Long SubAppId;
 
     /**
     * Watermark type filter. Valid values:
@@ -46,6 +46,13 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel{
     private Long Offset;
 
     /**
+    * Unique ID filter of watermarking templates. Array length limit: 100.
+    */
+    @SerializedName("Definitions")
+    @Expose
+    private Long [] Definitions;
+
+    /**
     * Number of returned entries
 <li>Default value: 10;</li>
 <li>Maximum value: 100.</li>
@@ -55,26 +62,19 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
-
-    /**
-     * Get Unique ID filter of watermarking templates. Array length limit: 100. 
-     * @return Definitions Unique ID filter of watermarking templates. Array length limit: 100.
+     * Get <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b> 
+     * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      */
-    public Long [] getDefinitions() {
-        return this.Definitions;
+    public Long getSubAppId() {
+        return this.SubAppId;
     }
 
     /**
-     * Set Unique ID filter of watermarking templates. Array length limit: 100.
-     * @param Definitions Unique ID filter of watermarking templates. Array length limit: 100.
+     * Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      */
-    public void setDefinitions(Long [] Definitions) {
-        this.Definitions = Definitions;
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -118,6 +118,22 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel{
     }
 
     /**
+     * Get Unique ID filter of watermarking templates. Array length limit: 100. 
+     * @return Definitions Unique ID filter of watermarking templates. Array length limit: 100.
+     */
+    public Long [] getDefinitions() {
+        return this.Definitions;
+    }
+
+    /**
+     * Set Unique ID filter of watermarking templates. Array length limit: 100.
+     * @param Definitions Unique ID filter of watermarking templates. Array length limit: 100.
+     */
+    public void setDefinitions(Long [] Definitions) {
+        this.Definitions = Definitions;
+    }
+
+    /**
      * Get Number of returned entries
 <li>Default value: 10;</li>
 <li>Maximum value: 100.</li> 
@@ -141,22 +157,6 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
-    /**
-     * Get [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty. 
-     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
     public DescribeWatermarkTemplatesRequest() {
     }
 
@@ -165,11 +165,8 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeWatermarkTemplatesRequest(DescribeWatermarkTemplatesRequest source) {
-        if (source.Definitions != null) {
-            this.Definitions = new Long[source.Definitions.length];
-            for (int i = 0; i < source.Definitions.length; i++) {
-                this.Definitions[i] = new Long(source.Definitions[i]);
-            }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
         }
         if (source.Type != null) {
             this.Type = new String(source.Type);
@@ -177,11 +174,14 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel{
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.Definitions != null) {
+            this.Definitions = new Long[source.Definitions.length];
+            for (int i = 0; i < source.Definitions.length; i++) {
+                this.Definitions[i] = new Long(source.Definitions[i]);
+            }
+        }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
-        }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
         }
     }
 
@@ -190,11 +190,11 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "Definitions.", this.Definitions);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamArraySimple(map, prefix + "Definitions.", this.Definitions);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }

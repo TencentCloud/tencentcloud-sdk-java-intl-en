@@ -345,6 +345,9 @@ public enum VodErrorCode {
     // Too many elements in the `Names` array.
      INVALIDPARAMETERVALUE_NAMES("InvalidParameterValue.Names"),
      
+    // Parameter error: The file cannot be restored.
+     INVALIDPARAMETERVALUE_NOTRESTORABLE("InvalidParameterValue.NotRestorable"),
+     
     // Incorrect parameter value: the value of the object library parameter is invalid.
      INVALIDPARAMETERVALUE_OBJECTLIBRARY("InvalidParameterValue.ObjectLibrary"),
      
@@ -386,6 +389,12 @@ public enum VodErrorCode {
      
     // Invalid `ResolutionAdaptive`.
      INVALIDPARAMETERVALUE_RESOLUTIONADAPTIVE("InvalidParameterValue.ResolutionAdaptive"),
+     
+    // Parameter error: Invalid `RestoreDay`.
+     INVALIDPARAMETERVALUE_RESTOREDAY("InvalidParameterValue.RestoreDay"),
+     
+    // Parameter error: Unsupported retrieval mode.
+     INVALIDPARAMETERVALUE_RESTORETIER("InvalidParameterValue.RestoreTier"),
      
     // Incorrect parameter value: the value of the `ReviewConfidence` parameter is invalid.
      INVALIDPARAMETERVALUE_REVIEWCONFIDENCE("InvalidParameterValue.ReviewConfidence"),

@@ -30,14 +30,14 @@ public class DescribeAccountsRequest extends AbstractModel{
     private String DBInstanceId;
 
     /**
-    * Number of entries returned per page. Default value: 20. Value range: 1-100.
+    * Number of entries returned per page. Default value: 10. Value range: 1–100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Page number for data return in paged query. Pagination starts from 0
+    * Data offset, which starts from 0.
     */
     @SerializedName("Offset")
     @Expose
@@ -74,32 +74,32 @@ public class DescribeAccountsRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of entries returned per page. Default value: 20. Value range: 1-100. 
-     * @return Limit Number of entries returned per page. Default value: 20. Value range: 1-100.
+     * Get Number of entries returned per page. Default value: 10. Value range: 1–100. 
+     * @return Limit Number of entries returned per page. Default value: 10. Value range: 1–100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries returned per page. Default value: 20. Value range: 1-100.
-     * @param Limit Number of entries returned per page. Default value: 20. Value range: 1-100.
+     * Set Number of entries returned per page. Default value: 10. Value range: 1–100.
+     * @param Limit Number of entries returned per page. Default value: 10. Value range: 1–100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Page number for data return in paged query. Pagination starts from 0 
-     * @return Offset Page number for data return in paged query. Pagination starts from 0
+     * Get Data offset, which starts from 0. 
+     * @return Offset Data offset, which starts from 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Page number for data return in paged query. Pagination starts from 0
-     * @param Offset Page number for data return in paged query. Pagination starts from 0
+     * Set Data offset, which starts from 0.
+     * @param Offset Data offset, which starts from 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

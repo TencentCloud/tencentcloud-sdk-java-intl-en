@@ -38,6 +38,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private WatermarkInput [] WatermarkSet;
 
     /**
+    * Digital watermark.
+    */
+    @SerializedName("TraceWatermark")
+    @Expose
+    private TraceWatermarkInput TraceWatermark;
+
+    /**
     * List of subtitle IDs (maximum: 16)
     */
     @SerializedName("SubtitleSet")
@@ -81,6 +88,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Digital watermark. 
+     * @return TraceWatermark Digital watermark.
+     */
+    public TraceWatermarkInput getTraceWatermark() {
+        return this.TraceWatermark;
+    }
+
+    /**
+     * Set Digital watermark.
+     * @param TraceWatermark Digital watermark.
+     */
+    public void setTraceWatermark(TraceWatermarkInput TraceWatermark) {
+        this.TraceWatermark = TraceWatermark;
+    }
+
+    /**
      * Get List of subtitle IDs (maximum: 16) 
      * @return SubtitleSet List of subtitle IDs (maximum: 16)
      */
@@ -113,6 +136,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 this.WatermarkSet[i] = new WatermarkInput(source.WatermarkSet[i]);
             }
         }
+        if (source.TraceWatermark != null) {
+            this.TraceWatermark = new TraceWatermarkInput(source.TraceWatermark);
+        }
         if (source.SubtitleSet != null) {
             this.SubtitleSet = new String[source.SubtitleSet.length];
             for (int i = 0; i < source.SubtitleSet.length; i++) {
@@ -128,6 +154,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
+        this.setParamObj(map, prefix + "TraceWatermark.", this.TraceWatermark);
         this.setParamArraySimple(map, prefix + "SubtitleSet.", this.SubtitleSet);
 
     }

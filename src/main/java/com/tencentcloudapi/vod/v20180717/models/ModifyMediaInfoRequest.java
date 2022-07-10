@@ -30,6 +30,13 @@ public class ModifyMediaInfoRequest extends AbstractModel{
     private String FileId;
 
     /**
+    * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * Media filename, which can contain up to 64 characters.
     */
     @SerializedName("Name")
@@ -131,13 +138,6 @@ In the same request, `ClearTags` and `AddTags` cannot be present at the same tim
     private Long ClearSubtitles;
 
     /**
-    * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
-
-    /**
      * Get Unique media file ID. 
      * @return FileId Unique media file ID.
      */
@@ -151,6 +151,22 @@ In the same request, `ClearTags` and `AddTags` cannot be present at the same tim
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
+    }
+
+    /**
+     * Get <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b> 
+     * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -389,22 +405,6 @@ In the same request, `ClearTags` and `AddTags` cannot be present at the same tim
         this.ClearSubtitles = ClearSubtitles;
     }
 
-    /**
-     * Get [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty. 
-     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
     public ModifyMediaInfoRequest() {
     }
 
@@ -415,6 +415,9 @@ In the same request, `ClearTags` and `AddTags` cannot be present at the same tim
     public ModifyMediaInfoRequest(ModifyMediaInfoRequest source) {
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
         }
         if (source.Name != null) {
             this.Name = new String(source.Name);
@@ -476,9 +479,6 @@ In the same request, `ClearTags` and `AddTags` cannot be present at the same tim
         if (source.ClearSubtitles != null) {
             this.ClearSubtitles = new Long(source.ClearSubtitles);
         }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
-        }
     }
 
 
@@ -487,6 +487,7 @@ In the same request, `ClearTags` and `AddTags` cannot be present at the same tim
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "ClassId", this.ClassId);
@@ -501,7 +502,6 @@ In the same request, `ClearTags` and `AddTags` cannot be present at the same tim
         this.setParamArrayObj(map, prefix + "AddSubtitles.", this.AddSubtitles);
         this.setParamArraySimple(map, prefix + "DeleteSubtitleIds.", this.DeleteSubtitleIds);
         this.setParamSimple(map, prefix + "ClearSubtitles", this.ClearSubtitles);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }

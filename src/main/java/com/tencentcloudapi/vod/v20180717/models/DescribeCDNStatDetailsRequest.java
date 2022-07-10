@@ -47,6 +47,13 @@ public class DescribeCDNStatDetailsRequest extends AbstractModel{
     private String EndTime;
 
     /**
+    * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * List of domain names. The usage data of up to 20 domain names can be queried at a time. The usage data of all domain names is returned by default.
     */
     @SerializedName("DomainNames")
@@ -137,13 +144,6 @@ If the difference between `StartTime` and `EndTime` is larger than 24 hours, the
     private Long DataInterval;
 
     /**
-    * VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
-
-    /**
      * Get Metrics to query. Valid values:
 <li>`Traffic`: traffic in bytes</li>
 <li>`Bandwidth`: bandwidth in bps</li>
@@ -201,6 +201,22 @@ If the difference between `StartTime` and `EndTime` is larger than 24 hours, the
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
+    }
+
+    /**
+     * Get <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b> 
+     * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -503,22 +519,6 @@ If the difference between `StartTime` and `EndTime` is larger than 24 hours, the
         this.DataInterval = DataInterval;
     }
 
-    /**
-     * Get VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty. 
-     * @return SubAppId VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     * @param SubAppId VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
     public DescribeCDNStatDetailsRequest() {
     }
 
@@ -535,6 +535,9 @@ If the difference between `StartTime` and `EndTime` is larger than 24 hours, the
         }
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
         }
         if (source.DomainNames != null) {
             this.DomainNames = new String[source.DomainNames.length];
@@ -560,9 +563,6 @@ If the difference between `StartTime` and `EndTime` is larger than 24 hours, the
         if (source.DataInterval != null) {
             this.DataInterval = new Long(source.DataInterval);
         }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
-        }
     }
 
 
@@ -573,12 +573,12 @@ If the difference between `StartTime` and `EndTime` is larger than 24 hours, the
         this.setParamSimple(map, prefix + "Metric", this.Metric);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamArraySimple(map, prefix + "DomainNames.", this.DomainNames);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamArraySimple(map, prefix + "Districts.", this.Districts);
         this.setParamArraySimple(map, prefix + "Isps.", this.Isps);
         this.setParamSimple(map, prefix + "DataInterval", this.DataInterval);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }

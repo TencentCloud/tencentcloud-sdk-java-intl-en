@@ -30,16 +30,14 @@ public class CommitUploadResponse extends AbstractModel{
     private String FileId;
 
     /**
-    * Media playback address.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The media playback URL.
     */
     @SerializedName("MediaUrl")
     @Expose
     private String MediaUrl;
 
     /**
-    * Media cover address.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The thumbnail URL.
     */
     @SerializedName("CoverUrl")
     @Expose
@@ -69,40 +67,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Media playback address.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MediaUrl Media playback address.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The media playback URL. 
+     * @return MediaUrl The media playback URL.
      */
     public String getMediaUrl() {
         return this.MediaUrl;
     }
 
     /**
-     * Set Media playback address.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MediaUrl Media playback address.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The media playback URL.
+     * @param MediaUrl The media playback URL.
      */
     public void setMediaUrl(String MediaUrl) {
         this.MediaUrl = MediaUrl;
     }
 
     /**
-     * Get Media cover address.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CoverUrl Media cover address.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The thumbnail URL. 
+     * @return CoverUrl The thumbnail URL.
      */
     public String getCoverUrl() {
         return this.CoverUrl;
     }
 
     /**
-     * Set Media cover address.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CoverUrl Media cover address.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The thumbnail URL.
+     * @param CoverUrl The thumbnail URL.
      */
     public void setCoverUrl(String CoverUrl) {
         this.CoverUrl = CoverUrl;

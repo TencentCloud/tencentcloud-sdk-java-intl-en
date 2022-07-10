@@ -30,6 +30,13 @@ public class ModifyAIAnalysisTemplateRequest extends AbstractModel{
     private Long Definition;
 
     /**
+    * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * Video content analysis template name. Length limit: 64 characters.
     */
     @SerializedName("Name")
@@ -79,13 +86,6 @@ public class ModifyAIAnalysisTemplateRequest extends AbstractModel{
     private HighlightsConfigureInfoForUpdate HighlightConfigure;
 
     /**
-    * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
-
-    /**
      * Get Unique ID of video content analysis template. 
      * @return Definition Unique ID of video content analysis template.
      */
@@ -99,6 +99,22 @@ public class ModifyAIAnalysisTemplateRequest extends AbstractModel{
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
+    }
+
+    /**
+     * Get <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b> 
+     * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -213,22 +229,6 @@ public class ModifyAIAnalysisTemplateRequest extends AbstractModel{
         this.HighlightConfigure = HighlightConfigure;
     }
 
-    /**
-     * Get [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty. 
-     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
     public ModifyAIAnalysisTemplateRequest() {
     }
 
@@ -239,6 +239,9 @@ public class ModifyAIAnalysisTemplateRequest extends AbstractModel{
     public ModifyAIAnalysisTemplateRequest(ModifyAIAnalysisTemplateRequest source) {
         if (source.Definition != null) {
             this.Definition = new Long(source.Definition);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
         }
         if (source.Name != null) {
             this.Name = new String(source.Name);
@@ -261,9 +264,6 @@ public class ModifyAIAnalysisTemplateRequest extends AbstractModel{
         if (source.HighlightConfigure != null) {
             this.HighlightConfigure = new HighlightsConfigureInfoForUpdate(source.HighlightConfigure);
         }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
-        }
     }
 
 
@@ -272,6 +272,7 @@ public class ModifyAIAnalysisTemplateRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamObj(map, prefix + "ClassificationConfigure.", this.ClassificationConfigure);
@@ -279,7 +280,6 @@ public class ModifyAIAnalysisTemplateRequest extends AbstractModel{
         this.setParamObj(map, prefix + "CoverConfigure.", this.CoverConfigure);
         this.setParamObj(map, prefix + "FrameTagConfigure.", this.FrameTagConfigure);
         this.setParamObj(map, prefix + "HighlightConfigure.", this.HighlightConfigure);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }

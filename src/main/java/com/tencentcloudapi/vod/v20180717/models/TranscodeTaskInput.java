@@ -38,11 +38,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private WatermarkInput [] WatermarkSet;
 
     /**
-    * List of blurs. Up to 10 ones can be supported.
+    * Digital watermark.
     */
-    @SerializedName("MosaicSet")
+    @SerializedName("TraceWatermark")
     @Expose
-    private MosaicInput [] MosaicSet;
+    private TraceWatermarkInput TraceWatermark;
 
     /**
     * List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
@@ -52,14 +52,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private HeadTailTaskInput [] HeadTailSet;
 
     /**
-    * Start time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+    * List of blurs. Up to 10 ones can be supported.
     */
-    @SerializedName("StartTimeOffset")
+    @SerializedName("MosaicSet")
     @Expose
-    private Float StartTimeOffset;
+    private MosaicInput [] MosaicSet;
 
     /**
     * End time offset of a transcoded video, in seconds.
@@ -70,6 +67,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
+
+    /**
+    * Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+    */
+    @SerializedName("StartTimeOffset")
+    @Expose
+    private Float StartTimeOffset;
 
     /**
      * Get Video transcoding template ID. 
@@ -108,19 +115,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of blurs. Up to 10 ones can be supported. 
-     * @return MosaicSet List of blurs. Up to 10 ones can be supported.
+     * Get Digital watermark. 
+     * @return TraceWatermark Digital watermark.
      */
-    public MosaicInput [] getMosaicSet() {
-        return this.MosaicSet;
+    public TraceWatermarkInput getTraceWatermark() {
+        return this.TraceWatermark;
     }
 
     /**
-     * Set List of blurs. Up to 10 ones can be supported.
-     * @param MosaicSet List of blurs. Up to 10 ones can be supported.
+     * Set Digital watermark.
+     * @param TraceWatermark Digital watermark.
      */
-    public void setMosaicSet(MosaicInput [] MosaicSet) {
-        this.MosaicSet = MosaicSet;
+    public void setTraceWatermark(TraceWatermarkInput TraceWatermark) {
+        this.TraceWatermark = TraceWatermark;
     }
 
     /**
@@ -140,31 +147,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Start time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li> 
-     * @return StartTimeOffset Start time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+     * Get List of blurs. Up to 10 ones can be supported. 
+     * @return MosaicSet List of blurs. Up to 10 ones can be supported.
      */
-    public Float getStartTimeOffset() {
-        return this.StartTimeOffset;
+    public MosaicInput [] getMosaicSet() {
+        return this.MosaicSet;
     }
 
     /**
-     * Set Start time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
-     * @param StartTimeOffset Start time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+     * Set List of blurs. Up to 10 ones can be supported.
+     * @param MosaicSet List of blurs. Up to 10 ones can be supported.
      */
-    public void setStartTimeOffset(Float StartTimeOffset) {
-        this.StartTimeOffset = StartTimeOffset;
+    public void setMosaicSet(MosaicInput [] MosaicSet) {
+        this.MosaicSet = MosaicSet;
     }
 
     /**
@@ -195,6 +190,34 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.EndTimeOffset = EndTimeOffset;
     }
 
+    /**
+     * Get Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li> 
+     * @return StartTimeOffset Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+     */
+    public Float getStartTimeOffset() {
+        return this.StartTimeOffset;
+    }
+
+    /**
+     * Set Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+     * @param StartTimeOffset Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+     */
+    public void setStartTimeOffset(Float StartTimeOffset) {
+        this.StartTimeOffset = StartTimeOffset;
+    }
+
     public TranscodeTaskInput() {
     }
 
@@ -212,11 +235,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 this.WatermarkSet[i] = new WatermarkInput(source.WatermarkSet[i]);
             }
         }
-        if (source.MosaicSet != null) {
-            this.MosaicSet = new MosaicInput[source.MosaicSet.length];
-            for (int i = 0; i < source.MosaicSet.length; i++) {
-                this.MosaicSet[i] = new MosaicInput(source.MosaicSet[i]);
-            }
+        if (source.TraceWatermark != null) {
+            this.TraceWatermark = new TraceWatermarkInput(source.TraceWatermark);
         }
         if (source.HeadTailSet != null) {
             this.HeadTailSet = new HeadTailTaskInput[source.HeadTailSet.length];
@@ -224,11 +244,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 this.HeadTailSet[i] = new HeadTailTaskInput(source.HeadTailSet[i]);
             }
         }
-        if (source.StartTimeOffset != null) {
-            this.StartTimeOffset = new Float(source.StartTimeOffset);
+        if (source.MosaicSet != null) {
+            this.MosaicSet = new MosaicInput[source.MosaicSet.length];
+            for (int i = 0; i < source.MosaicSet.length; i++) {
+                this.MosaicSet[i] = new MosaicInput(source.MosaicSet[i]);
+            }
         }
         if (source.EndTimeOffset != null) {
             this.EndTimeOffset = new Float(source.EndTimeOffset);
+        }
+        if (source.StartTimeOffset != null) {
+            this.StartTimeOffset = new Float(source.StartTimeOffset);
         }
     }
 
@@ -239,10 +265,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
-        this.setParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
+        this.setParamObj(map, prefix + "TraceWatermark.", this.TraceWatermark);
         this.setParamArrayObj(map, prefix + "HeadTailSet.", this.HeadTailSet);
-        this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
+        this.setParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
+        this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
 
     }
 }

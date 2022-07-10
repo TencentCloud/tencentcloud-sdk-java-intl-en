@@ -42,18 +42,18 @@ db-tag-key: filter by tag key (in string format)
     private Long Limit;
 
     /**
+    * Data offset, which starts from 0.
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
     * Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
-
-    /**
-    * Pagination offset, starting from 0
-    */
-    @SerializedName("Offset")
-    @Expose
-    private Long Offset;
 
     /**
     * Sorting order. Valid values: `asc` (ascending), `desc` (descending)
@@ -115,6 +115,22 @@ db-tag-key: filter by tag key (in string format)
     }
 
     /**
+     * Get Data offset, which starts from 0. 
+     * @return Offset Data offset, which starts from 0.
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set Data offset, which starts from 0.
+     * @param Offset Data offset, which starts from 0.
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
      * Get Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime 
      * @return OrderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
      */
@@ -128,22 +144,6 @@ db-tag-key: filter by tag key (in string format)
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
-    }
-
-    /**
-     * Get Pagination offset, starting from 0 
-     * @return Offset Pagination offset, starting from 0
-     */
-    public Long getOffset() {
-        return this.Offset;
-    }
-
-    /**
-     * Set Pagination offset, starting from 0
-     * @param Offset Pagination offset, starting from 0
-     */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
     }
 
     /**
@@ -179,11 +179,11 @@ db-tag-key: filter by tag key (in string format)
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
-        if (source.OrderBy != null) {
-            this.OrderBy = new String(source.OrderBy);
-        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
+        }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
         }
         if (source.OrderByType != null) {
             this.OrderByType = new String(source.OrderByType);
@@ -197,8 +197,8 @@ db-tag-key: filter by tag key (in string format)
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
         this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
 
     }

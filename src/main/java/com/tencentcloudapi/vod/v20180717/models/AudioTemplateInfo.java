@@ -23,22 +23,23 @@ import java.util.HashMap;
 public class AudioTemplateInfo extends AbstractModel{
 
     /**
-    * Audio stream encoder.
-When the outer `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame.</li>
-When the outer `Container` parameter is `ogg` or `flac`, the valid value is:
-<li>flac.</li>
-When the outer `Container` parameter is `m4a`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame;</li>
-<li>ac3.</li>
-When the outer `Container` parameter is `mp4` or `flv`, the valid values include:
-<li>libfdk_aac: more suitable for mp4;</li>
-<li>libmp3lame: More suitable for flv;</li>
-<li>mp2.</li>
-When the outer `Container` parameter is `hls`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame.</li>
+    * The audio codec.
+If `Container` parameter is `mp3`, the valid value is:
+<li>libmp3lame</li>
+If `Container` is `ogg` or `flac`, the valid value is:
+<li>flac</li>
+If `Container` is `m4a`, the valid values are:
+<li>libfdk_aac</li>
+<li>libmp3lame</li>
+<li>ac3</li>
+If `Container` is `mp4` or `flv`, the valid values are:
+<li>libfdk_aac: more suitable for mp4</li>
+<li>libmp3lame: More suitable for flv</li>
+<li>mp2</li>
+If `Container` is `hls`, the valid values are:
+<li>libfdk_aac</li>
+If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
+<li>libfdk_aac</li>
     */
     @SerializedName("Codec")
     @Expose
@@ -76,76 +77,80 @@ Default value: 2
     private Long AudioChannel;
 
     /**
-     * Get Audio stream encoder.
-When the outer `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame.</li>
-When the outer `Container` parameter is `ogg` or `flac`, the valid value is:
-<li>flac.</li>
-When the outer `Container` parameter is `m4a`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame;</li>
-<li>ac3.</li>
-When the outer `Container` parameter is `mp4` or `flv`, the valid values include:
-<li>libfdk_aac: more suitable for mp4;</li>
-<li>libmp3lame: More suitable for flv;</li>
-<li>mp2.</li>
-When the outer `Container` parameter is `hls`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame.</li> 
-     * @return Codec Audio stream encoder.
-When the outer `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame.</li>
-When the outer `Container` parameter is `ogg` or `flac`, the valid value is:
-<li>flac.</li>
-When the outer `Container` parameter is `m4a`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame;</li>
-<li>ac3.</li>
-When the outer `Container` parameter is `mp4` or `flv`, the valid values include:
-<li>libfdk_aac: more suitable for mp4;</li>
-<li>libmp3lame: More suitable for flv;</li>
-<li>mp2.</li>
-When the outer `Container` parameter is `hls`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame.</li>
+     * Get The audio codec.
+If `Container` parameter is `mp3`, the valid value is:
+<li>libmp3lame</li>
+If `Container` is `ogg` or `flac`, the valid value is:
+<li>flac</li>
+If `Container` is `m4a`, the valid values are:
+<li>libfdk_aac</li>
+<li>libmp3lame</li>
+<li>ac3</li>
+If `Container` is `mp4` or `flv`, the valid values are:
+<li>libfdk_aac: more suitable for mp4</li>
+<li>libmp3lame: More suitable for flv</li>
+<li>mp2</li>
+If `Container` is `hls`, the valid values are:
+<li>libfdk_aac</li>
+If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
+<li>libfdk_aac</li> 
+     * @return Codec The audio codec.
+If `Container` parameter is `mp3`, the valid value is:
+<li>libmp3lame</li>
+If `Container` is `ogg` or `flac`, the valid value is:
+<li>flac</li>
+If `Container` is `m4a`, the valid values are:
+<li>libfdk_aac</li>
+<li>libmp3lame</li>
+<li>ac3</li>
+If `Container` is `mp4` or `flv`, the valid values are:
+<li>libfdk_aac: more suitable for mp4</li>
+<li>libmp3lame: More suitable for flv</li>
+<li>mp2</li>
+If `Container` is `hls`, the valid values are:
+<li>libfdk_aac</li>
+If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
+<li>libfdk_aac</li>
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set Audio stream encoder.
-When the outer `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame.</li>
-When the outer `Container` parameter is `ogg` or `flac`, the valid value is:
-<li>flac.</li>
-When the outer `Container` parameter is `m4a`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame;</li>
-<li>ac3.</li>
-When the outer `Container` parameter is `mp4` or `flv`, the valid values include:
-<li>libfdk_aac: more suitable for mp4;</li>
-<li>libmp3lame: More suitable for flv;</li>
-<li>mp2.</li>
-When the outer `Container` parameter is `hls`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame.</li>
-     * @param Codec Audio stream encoder.
-When the outer `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame.</li>
-When the outer `Container` parameter is `ogg` or `flac`, the valid value is:
-<li>flac.</li>
-When the outer `Container` parameter is `m4a`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame;</li>
-<li>ac3.</li>
-When the outer `Container` parameter is `mp4` or `flv`, the valid values include:
-<li>libfdk_aac: more suitable for mp4;</li>
-<li>libmp3lame: More suitable for flv;</li>
-<li>mp2.</li>
-When the outer `Container` parameter is `hls`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame.</li>
+     * Set The audio codec.
+If `Container` parameter is `mp3`, the valid value is:
+<li>libmp3lame</li>
+If `Container` is `ogg` or `flac`, the valid value is:
+<li>flac</li>
+If `Container` is `m4a`, the valid values are:
+<li>libfdk_aac</li>
+<li>libmp3lame</li>
+<li>ac3</li>
+If `Container` is `mp4` or `flv`, the valid values are:
+<li>libfdk_aac: more suitable for mp4</li>
+<li>libmp3lame: More suitable for flv</li>
+<li>mp2</li>
+If `Container` is `hls`, the valid values are:
+<li>libfdk_aac</li>
+If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
+<li>libfdk_aac</li>
+     * @param Codec The audio codec.
+If `Container` parameter is `mp3`, the valid value is:
+<li>libmp3lame</li>
+If `Container` is `ogg` or `flac`, the valid value is:
+<li>flac</li>
+If `Container` is `m4a`, the valid values are:
+<li>libfdk_aac</li>
+<li>libmp3lame</li>
+<li>ac3</li>
+If `Container` is `mp4` or `flv`, the valid values are:
+<li>libfdk_aac: more suitable for mp4</li>
+<li>libmp3lame: More suitable for flv</li>
+<li>mp2</li>
+If `Container` is `hls`, the valid values are:
+<li>libfdk_aac</li>
+If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
+<li>libfdk_aac</li>
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;

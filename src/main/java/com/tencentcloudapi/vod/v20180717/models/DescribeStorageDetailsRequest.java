@@ -37,6 +37,14 @@ public class DescribeStorageDetailsRequest extends AbstractModel{
     private String EndTime;
 
     /**
+    * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+You can set this parameter to 1 to query the total usage of all applications (including the primary application) as an admin.</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * Time granularity. Valid values:
 <li>Minute: 5-minute granularity</li>
 <li>Day: 1-day granularity</li>
@@ -66,14 +74,6 @@ Default value: `TotalStorage`
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
-
-    /**
-    * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin.
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
 
     /**
     * Storage region to query. Valid values:
@@ -115,6 +115,26 @@ Default value: Chinese Mainland
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
+    }
+
+    /**
+     * Get <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+You can set this parameter to 1 to query the total usage of all applications (including the primary application) as an admin.</b> 
+     * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+You can set this parameter to 1 to query the total usage of all applications (including the primary application) as an admin.</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+You can set this parameter to 1 to query the total usage of all applications (including the primary application) as an admin.</b>
+     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+You can set this parameter to 1 to query the total usage of all applications (including the primary application) as an admin.</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -218,26 +238,6 @@ Default value: `TotalStorage`
     }
 
     /**
-     * Get [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin. 
-     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin.
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin.
-     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin.
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
-    /**
      * Get Storage region to query. Valid values:
 <li>Chinese Mainland</li>
 <li>Outside Chinese Mainland</li>
@@ -279,14 +279,14 @@ Default value: Chinese Mainland
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
         if (source.Interval != null) {
             this.Interval = new String(source.Interval);
         }
         if (source.StorageType != null) {
             this.StorageType = new String(source.StorageType);
-        }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
         }
         if (source.Area != null) {
             this.Area = new String(source.Area);
@@ -300,9 +300,9 @@ Default value: Chinese Mainland
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Interval", this.Interval);
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
