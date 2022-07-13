@@ -237,7 +237,7 @@ public enum RedisErrorCode {
     // Operation unsupported: the instance is exceptional.
      RESOURCEUNAVAILABLE_INSTANCESTATUSERROR("ResourceUnavailable.InstanceStatusError"),
      
-    // 
+    // The instance has been locked by another process.
      RESOURCEUNAVAILABLE_INSTANCEUNLOCKEDERROR("ResourceUnavailable.InstanceUnLockedError"),
      
     // The IP resources in the VPC are insufficient.
@@ -270,7 +270,7 @@ public enum RedisErrorCode {
     // The Redis cluster edition is not allowed to connect to a security group.
      UNSUPPORTEDOPERATION_CLUSTERINSTANCEACCESSEDDENY("UnsupportedOperation.ClusterInstanceAccessedDeny"),
      
-    // 
+    // Unsupported operation
      UNSUPPORTEDOPERATION_INSTANCENOTOPERATION("UnsupportedOperation.InstanceNotOperation"),
      
     // There is an error with the auto-renewal flag.

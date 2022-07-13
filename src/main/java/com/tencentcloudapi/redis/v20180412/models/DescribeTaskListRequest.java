@@ -93,14 +93,14 @@ public class DescribeTaskListRequest extends AbstractModel{
     private Long [] Result;
 
     /**
-    * Operator UIN
+    * The field `OperatorUin` has been disused and replaced by `OperateUin`.
     */
     @SerializedName("OperatorUin")
     @Expose
     private Long [] OperatorUin;
 
     /**
-    * 
+    * Operator Uin
     */
     @SerializedName("OperateUin")
     @Expose
@@ -267,32 +267,32 @@ public class DescribeTaskListRequest extends AbstractModel{
     }
 
     /**
-     * Get Operator UIN 
-     * @return OperatorUin Operator UIN
+     * Get The field `OperatorUin` has been disused and replaced by `OperateUin`. 
+     * @return OperatorUin The field `OperatorUin` has been disused and replaced by `OperateUin`.
      */
     public Long [] getOperatorUin() {
         return this.OperatorUin;
     }
 
     /**
-     * Set Operator UIN
-     * @param OperatorUin Operator UIN
+     * Set The field `OperatorUin` has been disused and replaced by `OperateUin`.
+     * @param OperatorUin The field `OperatorUin` has been disused and replaced by `OperateUin`.
      */
     public void setOperatorUin(Long [] OperatorUin) {
         this.OperatorUin = OperatorUin;
     }
 
     /**
-     * Get  
-     * @return OperateUin 
+     * Get Operator Uin 
+     * @return OperateUin Operator Uin
      */
     public String [] getOperateUin() {
         return this.OperateUin;
     }
 
     /**
-     * Set 
-     * @param OperateUin 
+     * Set Operator Uin
+     * @param OperateUin Operator Uin
      */
     public void setOperateUin(String [] OperateUin) {
         this.OperateUin = OperateUin;
