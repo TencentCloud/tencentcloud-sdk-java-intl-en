@@ -202,6 +202,26 @@ public class TemClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the status of all applications in an envrionment.
+     * @param req DescribeApplicationsStatusRequest
+     * @return DescribeApplicationsStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApplicationsStatusResponse DescribeApplicationsStatus(DescribeApplicationsStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeApplicationsStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeApplicationsStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeApplicationsStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the list of tenant environments.
      * @param req DescribeEnvironmentsRequest
      * @return DescribeEnvironmentsResponse

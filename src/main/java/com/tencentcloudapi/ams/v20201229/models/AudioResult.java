@@ -115,6 +115,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String SubLabel;
 
     /**
+    * List of audio recognition results 
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("RecognitionResults")
+    @Expose
+    private RecognitionResult [] RecognitionResults;
+
+    /**
      * Get This field is used to return whether the moderated content hit the moderation model. Valid values: 0 (**no**), 1 (**yes**).
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return HitFlag This field is used to return whether the moderated content hit the moderation model. Valid values: 0 (**no**), 1 (**yes**).
@@ -338,6 +346,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.SubLabel = SubLabel;
     }
 
+    /**
+     * Get List of audio recognition results 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return RecognitionResults List of audio recognition results 
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public RecognitionResult [] getRecognitionResults() {
+        return this.RecognitionResults;
+    }
+
+    /**
+     * Set List of audio recognition results 
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param RecognitionResults List of audio recognition results 
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setRecognitionResults(RecognitionResult [] RecognitionResults) {
+        this.RecognitionResults = RecognitionResults;
+    }
+
     public AudioResult() {
     }
 
@@ -391,6 +419,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.SubLabel != null) {
             this.SubLabel = new String(source.SubLabel);
         }
+        if (source.RecognitionResults != null) {
+            this.RecognitionResults = new RecognitionResult[source.RecognitionResults.length];
+            for (int i = 0; i < source.RecognitionResults.length; i++) {
+                this.RecognitionResults[i] = new RecognitionResult(source.RecognitionResults[i]);
+            }
+        }
     }
 
 
@@ -410,6 +444,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "MoanResults.", this.MoanResults);
         this.setParamArrayObj(map, prefix + "LanguageResults.", this.LanguageResults);
         this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
+        this.setParamArrayObj(map, prefix + "RecognitionResults.", this.RecognitionResults);
 
     }
 }
