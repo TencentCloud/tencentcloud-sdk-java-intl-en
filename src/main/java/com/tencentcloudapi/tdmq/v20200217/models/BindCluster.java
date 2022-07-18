@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class BindCluster extends AbstractModel{
 
     /**
-    * Physical cluster name
+    * Name of a physical cluster.
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-     * Get Physical cluster name 
-     * @return ClusterName Physical cluster name
+     * Get Name of a physical cluster. 
+     * @return ClusterName Name of a physical cluster.
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Physical cluster name
-     * @param ClusterName Physical cluster name
+     * Set Name of a physical cluster.
+     * @param ClusterName Name of a physical cluster.
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;

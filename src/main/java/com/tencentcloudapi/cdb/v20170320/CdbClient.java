@@ -1838,6 +1838,26 @@ Note that once an instance is deactivated, its resources and data will not be re
     }
 
     /**
+     *This API is used to enable the audit service.
+     * @param req OpenAuditServiceRequest
+     * @return OpenAuditServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenAuditServiceResponse OpenAuditService(OpenAuditServiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OpenAuditServiceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<OpenAuditServiceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "OpenAuditService");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (OpenDBInstanceGTID) is used to enable GTID for a TencentDB instance. Only instances on or above version 5.6 are supported.
      * @param req OpenDBInstanceGTIDRequest
      * @return OpenDBInstanceGTIDResponse

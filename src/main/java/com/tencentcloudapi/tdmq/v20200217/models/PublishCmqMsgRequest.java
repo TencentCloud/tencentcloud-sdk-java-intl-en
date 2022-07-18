@@ -30,14 +30,14 @@ public class PublishCmqMsgRequest extends AbstractModel{
     private String TopicName;
 
     /**
-    * Message content
+    * Message content. The total message size is up to 1,024 KB.
     */
     @SerializedName("MsgContent")
     @Expose
     private String MsgContent;
 
     /**
-    * Message tag
+    * Message tag. You can pass in multiple tags or a single route. Each tag or route can contain up to 64 characters.
     */
     @SerializedName("MsgTag")
     @Expose
@@ -60,32 +60,32 @@ public class PublishCmqMsgRequest extends AbstractModel{
     }
 
     /**
-     * Get Message content 
-     * @return MsgContent Message content
+     * Get Message content. The total message size is up to 1,024 KB. 
+     * @return MsgContent Message content. The total message size is up to 1,024 KB.
      */
     public String getMsgContent() {
         return this.MsgContent;
     }
 
     /**
-     * Set Message content
-     * @param MsgContent Message content
+     * Set Message content. The total message size is up to 1,024 KB.
+     * @param MsgContent Message content. The total message size is up to 1,024 KB.
      */
     public void setMsgContent(String MsgContent) {
         this.MsgContent = MsgContent;
     }
 
     /**
-     * Get Message tag 
-     * @return MsgTag Message tag
+     * Get Message tag. You can pass in multiple tags or a single route. Each tag or route can contain up to 64 characters. 
+     * @return MsgTag Message tag. You can pass in multiple tags or a single route. Each tag or route can contain up to 64 characters.
      */
     public String [] getMsgTag() {
         return this.MsgTag;
     }
 
     /**
-     * Set Message tag
-     * @param MsgTag Message tag
+     * Set Message tag. You can pass in multiple tags or a single route. Each tag or route can contain up to 64 characters.
+     * @param MsgTag Message tag. You can pass in multiple tags or a single route. Each tag or route can contain up to 64 characters.
      */
     public void setMsgTag(String [] MsgTag) {
         this.MsgTag = MsgTag;

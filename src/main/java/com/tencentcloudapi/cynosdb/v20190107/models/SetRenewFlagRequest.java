@@ -30,7 +30,7 @@ public class SetRenewFlagRequest extends AbstractModel{
     private String [] ResourceIds;
 
     /**
-    * Auto-Renewal flag
+    * Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -53,16 +53,16 @@ public class SetRenewFlagRequest extends AbstractModel{
     }
 
     /**
-     * Get Auto-Renewal flag 
-     * @return AutoRenewFlag Auto-Renewal flag
+     * Get Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal. 
+     * @return AutoRenewFlag Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set Auto-Renewal flag
-     * @param AutoRenewFlag Auto-Renewal flag
+     * Set Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
+     * @param AutoRenewFlag Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;

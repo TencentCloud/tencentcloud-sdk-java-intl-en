@@ -23,115 +23,115 @@ import java.util.HashMap;
 public class DescribeClustersRequest extends AbstractModel{
 
     /**
-    * Offset. If this parameter is left empty, 0 will be used by default.
+    * Start offset, which defaults to 0 if left empty.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+    * The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Filter by list of cluster IDs
+    * Filter by cluster ID.
     */
     @SerializedName("ClusterIdList")
     @Expose
     private String [] ClusterIdList;
 
     /**
-    * Whether to filter by tag
+    * Whether to filter by tag.
     */
     @SerializedName("IsTagFilter")
     @Expose
     private Boolean IsTagFilter;
 
     /**
-    * Filter. Currently, you can filter only by tag.
+    * Filter. Currently, you can filter by tag.
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get Offset. If this parameter is left empty, 0 will be used by default. 
-     * @return Offset Offset. If this parameter is left empty, 0 will be used by default.
+     * Get Start offset, which defaults to 0 if left empty. 
+     * @return Offset Start offset, which defaults to 0 if left empty.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. If this parameter is left empty, 0 will be used by default.
-     * @param Offset Offset. If this parameter is left empty, 0 will be used by default.
+     * Set Start offset, which defaults to 0 if left empty.
+     * @param Offset Start offset, which defaults to 0 if left empty.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. 
-     * @return Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+     * Get The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20. 
+     * @return Limit The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
-     * @param Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+     * Set The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
+     * @param Limit The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Filter by list of cluster IDs 
-     * @return ClusterIdList Filter by list of cluster IDs
+     * Get Filter by cluster ID. 
+     * @return ClusterIdList Filter by cluster ID.
      */
     public String [] getClusterIdList() {
         return this.ClusterIdList;
     }
 
     /**
-     * Set Filter by list of cluster IDs
-     * @param ClusterIdList Filter by list of cluster IDs
+     * Set Filter by cluster ID.
+     * @param ClusterIdList Filter by cluster ID.
      */
     public void setClusterIdList(String [] ClusterIdList) {
         this.ClusterIdList = ClusterIdList;
     }
 
     /**
-     * Get Whether to filter by tag 
-     * @return IsTagFilter Whether to filter by tag
+     * Get Whether to filter by tag. 
+     * @return IsTagFilter Whether to filter by tag.
      */
     public Boolean getIsTagFilter() {
         return this.IsTagFilter;
     }
 
     /**
-     * Set Whether to filter by tag
-     * @param IsTagFilter Whether to filter by tag
+     * Set Whether to filter by tag.
+     * @param IsTagFilter Whether to filter by tag.
      */
     public void setIsTagFilter(Boolean IsTagFilter) {
         this.IsTagFilter = IsTagFilter;
     }
 
     /**
-     * Get Filter. Currently, you can filter only by tag. 
-     * @return Filters Filter. Currently, you can filter only by tag.
+     * Get Filter. Currently, you can filter by tag. 
+     * @return Filters Filter. Currently, you can filter by tag.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter. Currently, you can filter only by tag.
-     * @param Filters Filter. Currently, you can filter only by tag.
+     * Set Filter. Currently, you can filter by tag.
+     * @param Filters Filter. Currently, you can filter by tag.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

@@ -129,6 +129,9 @@ public enum CdbErrorCode {
     // SQL statement error
      INTERNALERROR_EXESQLERROR("InternalError.ExeSqlError"),
      
+    // 
+     INTERNALERROR_EXECUTESQLERROR("InternalError.ExecuteSQLError"),
+     
     // File transfer exception
      INTERNALERROR_FTPERROR("InternalError.FtpError"),
      
@@ -341,6 +344,9 @@ public enum CdbErrorCode {
      
     // This instance needs permissions to use this feature.
      OPERATIONDENIED_FUNCTIONDENIED("OperationDenied.FunctionDenied"),
+     
+    // 
+     OPERATIONDENIED_INSTTYPENOTSUPPORT("OperationDenied.InstTypeNotSupport"),
      
     // Instance locks are in conflict. Please try again later.
      OPERATIONDENIED_INSTANCELOCKERCONFLICT("OperationDenied.InstanceLockerConflict"),

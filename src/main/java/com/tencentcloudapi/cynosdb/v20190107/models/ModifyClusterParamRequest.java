@@ -30,7 +30,7 @@ public class ModifyClusterParamRequest extends AbstractModel{
     private String ClusterId;
 
     /**
-    * The list of parameters to be modified
+    * List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`.
     */
     @SerializedName("ParamList")
     @Expose
@@ -60,16 +60,16 @@ public class ModifyClusterParamRequest extends AbstractModel{
     }
 
     /**
-     * Get The list of parameters to be modified 
-     * @return ParamList The list of parameters to be modified
+     * Get List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`. 
+     * @return ParamList List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`.
      */
     public ParamItem [] getParamList() {
         return this.ParamList;
     }
 
     /**
-     * Set The list of parameters to be modified
-     * @param ParamList The list of parameters to be modified
+     * Set List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`.
+     * @param ParamList List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`.
      */
     public void setParamList(ParamItem [] ParamList) {
         this.ParamList = ParamList;

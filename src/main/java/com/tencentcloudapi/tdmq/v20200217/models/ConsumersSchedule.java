@@ -23,38 +23,38 @@ import java.util.HashMap;
 public class ConsumersSchedule extends AbstractModel{
 
     /**
-    * Current partition ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * ID of the current partition.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Partitions")
     @Expose
     private Long Partitions;
 
     /**
-    * Number of messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The number of messages.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NumberOfEntries")
     @Expose
     private Long NumberOfEntries;
 
     /**
-    * Number of retained messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The number of heaped messages.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MsgBacklog")
     @Expose
     private Long MsgBacklog;
 
     /**
-    * Sum of the numbers of messages delivered by the consumer per second.
+    * The total number of messages delivered by the consumer per second.
     */
     @SerializedName("MsgRateOut")
     @Expose
     private String MsgRateOut;
 
     /**
-    * Number of bytes of messages consumed by the consumer per second.
+    * The size (in bytes) of messages consumed by the consumer per second.
     */
     @SerializedName("MsgThroughputOut")
     @Expose
@@ -62,99 +62,99 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Percentage of messages discarded due to timeout.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MsgRateExpired")
     @Expose
     private String MsgRateExpired;
 
     /**
-     * Get Current partition ID.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Partitions Current partition ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get ID of the current partition.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Partitions ID of the current partition.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getPartitions() {
         return this.Partitions;
     }
 
     /**
-     * Set Current partition ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Partitions Current partition ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set ID of the current partition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Partitions ID of the current partition.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPartitions(Long Partitions) {
         this.Partitions = Partitions;
     }
 
     /**
-     * Get Number of messages.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return NumberOfEntries Number of messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The number of messages.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return NumberOfEntries The number of messages.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getNumberOfEntries() {
         return this.NumberOfEntries;
     }
 
     /**
-     * Set Number of messages.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param NumberOfEntries Number of messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The number of messages.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param NumberOfEntries The number of messages.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNumberOfEntries(Long NumberOfEntries) {
         this.NumberOfEntries = NumberOfEntries;
     }
 
     /**
-     * Get Number of retained messages.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MsgBacklog Number of retained messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The number of heaped messages.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MsgBacklog The number of heaped messages.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMsgBacklog() {
         return this.MsgBacklog;
     }
 
     /**
-     * Set Number of retained messages.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MsgBacklog Number of retained messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The number of heaped messages.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MsgBacklog The number of heaped messages.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMsgBacklog(Long MsgBacklog) {
         this.MsgBacklog = MsgBacklog;
     }
 
     /**
-     * Get Sum of the numbers of messages delivered by the consumer per second. 
-     * @return MsgRateOut Sum of the numbers of messages delivered by the consumer per second.
+     * Get The total number of messages delivered by the consumer per second. 
+     * @return MsgRateOut The total number of messages delivered by the consumer per second.
      */
     public String getMsgRateOut() {
         return this.MsgRateOut;
     }
 
     /**
-     * Set Sum of the numbers of messages delivered by the consumer per second.
-     * @param MsgRateOut Sum of the numbers of messages delivered by the consumer per second.
+     * Set The total number of messages delivered by the consumer per second.
+     * @param MsgRateOut The total number of messages delivered by the consumer per second.
      */
     public void setMsgRateOut(String MsgRateOut) {
         this.MsgRateOut = MsgRateOut;
     }
 
     /**
-     * Get Number of bytes of messages consumed by the consumer per second. 
-     * @return MsgThroughputOut Number of bytes of messages consumed by the consumer per second.
+     * Get The size (in bytes) of messages consumed by the consumer per second. 
+     * @return MsgThroughputOut The size (in bytes) of messages consumed by the consumer per second.
      */
     public String getMsgThroughputOut() {
         return this.MsgThroughputOut;
     }
 
     /**
-     * Set Number of bytes of messages consumed by the consumer per second.
-     * @param MsgThroughputOut Number of bytes of messages consumed by the consumer per second.
+     * Set The size (in bytes) of messages consumed by the consumer per second.
+     * @param MsgThroughputOut The size (in bytes) of messages consumed by the consumer per second.
      */
     public void setMsgThroughputOut(String MsgThroughputOut) {
         this.MsgThroughputOut = MsgThroughputOut;
@@ -162,9 +162,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Percentage of messages discarded due to timeout.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return MsgRateExpired Percentage of messages discarded due to timeout.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMsgRateExpired() {
         return this.MsgRateExpired;
@@ -172,9 +172,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Percentage of messages discarded due to timeout.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param MsgRateExpired Percentage of messages discarded due to timeout.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMsgRateExpired(String MsgRateExpired) {
         this.MsgRateExpired = MsgRateExpired;

@@ -37,14 +37,14 @@ public class DescribeTopicsRequest extends AbstractModel{
     private String TopicName;
 
     /**
-    * Offset. If this parameter is left empty, 0 will be used by default.
+    * Offset, which defaults to 0 if left empty.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+    * The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
     */
     @SerializedName("Limit")
     @Expose
@@ -52,19 +52,17 @@ public class DescribeTopicsRequest extends AbstractModel{
 
     /**
     * Topic type description:
-0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue;
-5: transaction message.
+0: Non-persistent and non-partitioned topic;
+1: Non-persistent and partitioned topic;
+2: Persistent and non-partitioned topic;
+3: Persistent and partitioned topic.
     */
     @SerializedName("TopicType")
     @Expose
     private Long TopicType;
 
     /**
-    * Pulsar cluster ID
+    * Pulsar cluster ID.
     */
     @SerializedName("ClusterId")
     @Expose
@@ -74,11 +72,20 @@ public class DescribeTopicsRequest extends AbstractModel{
     * * TopicName
 Query by topic name for exact search.
 Type: String
-Required: no
+Required: No
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
+
+    /**
+    * Topic creator:
+1: User
+2: System
+    */
+    @SerializedName("TopicCreator")
+    @Expose
+    private Long TopicCreator;
 
     /**
      * Get Environment (namespace) name. 
@@ -113,32 +120,32 @@ Required: no
     }
 
     /**
-     * Get Offset. If this parameter is left empty, 0 will be used by default. 
-     * @return Offset Offset. If this parameter is left empty, 0 will be used by default.
+     * Get Offset, which defaults to 0 if left empty. 
+     * @return Offset Offset, which defaults to 0 if left empty.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. If this parameter is left empty, 0 will be used by default.
-     * @param Offset Offset. If this parameter is left empty, 0 will be used by default.
+     * Set Offset, which defaults to 0 if left empty.
+     * @param Offset Offset, which defaults to 0 if left empty.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. 
-     * @return Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+     * Get The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20. 
+     * @return Limit The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
-     * @param Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+     * Set The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
+     * @param Limit The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -146,19 +153,15 @@ Required: no
 
     /**
      * Get Topic type description:
-0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue;
-5: transaction message. 
+0: Non-persistent and non-partitioned topic;
+1: Non-persistent and partitioned topic;
+2: Persistent and non-partitioned topic;
+3: Persistent and partitioned topic. 
      * @return TopicType Topic type description:
-0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue;
-5: transaction message.
+0: Non-persistent and non-partitioned topic;
+1: Non-persistent and partitioned topic;
+2: Persistent and non-partitioned topic;
+3: Persistent and partitioned topic.
      */
     public Long getTopicType() {
         return this.TopicType;
@@ -166,35 +169,31 @@ Required: no
 
     /**
      * Set Topic type description:
-0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue;
-5: transaction message.
+0: Non-persistent and non-partitioned topic;
+1: Non-persistent and partitioned topic;
+2: Persistent and non-partitioned topic;
+3: Persistent and partitioned topic.
      * @param TopicType Topic type description:
-0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue;
-5: transaction message.
+0: Non-persistent and non-partitioned topic;
+1: Non-persistent and partitioned topic;
+2: Persistent and non-partitioned topic;
+3: Persistent and partitioned topic.
      */
     public void setTopicType(Long TopicType) {
         this.TopicType = TopicType;
     }
 
     /**
-     * Get Pulsar cluster ID 
-     * @return ClusterId Pulsar cluster ID
+     * Get Pulsar cluster ID. 
+     * @return ClusterId Pulsar cluster ID.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Pulsar cluster ID
-     * @param ClusterId Pulsar cluster ID
+     * Set Pulsar cluster ID.
+     * @param ClusterId Pulsar cluster ID.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -204,11 +203,11 @@ Required: no
      * Get * TopicName
 Query by topic name for exact search.
 Type: String
-Required: no 
+Required: No 
      * @return Filters * TopicName
 Query by topic name for exact search.
 Type: String
-Required: no
+Required: No
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -218,14 +217,38 @@ Required: no
      * Set * TopicName
 Query by topic name for exact search.
 Type: String
-Required: no
+Required: No
      * @param Filters * TopicName
 Query by topic name for exact search.
 Type: String
-Required: no
+Required: No
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
+    }
+
+    /**
+     * Get Topic creator:
+1: User
+2: System 
+     * @return TopicCreator Topic creator:
+1: User
+2: System
+     */
+    public Long getTopicCreator() {
+        return this.TopicCreator;
+    }
+
+    /**
+     * Set Topic creator:
+1: User
+2: System
+     * @param TopicCreator Topic creator:
+1: User
+2: System
+     */
+    public void setTopicCreator(Long TopicCreator) {
+        this.TopicCreator = TopicCreator;
     }
 
     public DescribeTopicsRequest() {
@@ -260,6 +283,9 @@ Required: no
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.TopicCreator != null) {
+            this.TopicCreator = new Long(source.TopicCreator);
+        }
     }
 
 
@@ -274,6 +300,7 @@ Required: no
         this.setParamSimple(map, prefix + "TopicType", this.TopicType);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "TopicCreator", this.TopicCreator);
 
     }
 }

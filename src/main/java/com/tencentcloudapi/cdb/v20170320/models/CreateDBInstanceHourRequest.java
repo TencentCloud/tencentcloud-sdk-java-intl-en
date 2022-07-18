@@ -170,7 +170,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private Long AutoRenewFlag;
 
     /**
-    * Instance name.
+    * Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
     */
     @SerializedName("InstanceName")
     @Expose
@@ -618,16 +618,16 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance name. 
-     * @return InstanceName Instance name.
+     * Get Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively. 
+     * @return InstanceName Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name.
-     * @param InstanceName Instance name.
+     * Set Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
+     * @param InstanceName Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

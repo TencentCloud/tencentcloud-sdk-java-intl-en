@@ -23,28 +23,28 @@ import java.util.HashMap;
 public class DescribeRocketMQGroupsRequest extends AbstractModel{
 
     /**
-    * Cluster ID
+    * Cluster ID.
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Namespace
+    * Namespace.
     */
     @SerializedName("NamespaceId")
     @Expose
     private String NamespaceId;
 
     /**
-    * Offset
+    * Offset.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Maximum number
+    * The max number of returned results.
     */
     @SerializedName("Limit")
     @Expose
@@ -65,85 +65,85 @@ public class DescribeRocketMQGroupsRequest extends AbstractModel{
     private String FilterGroup;
 
     /**
-    * Sort by specified field. Valid values: tps, accumulative.
+    * Sort by specified field. Valid values: `tps`, `accumulative`.
     */
     @SerializedName("SortedBy")
     @Expose
     private String SortedBy;
 
     /**
-    * Sort in ascending or descending order. Valid values: asc, desc.
+    * Sort in ascending or descending order. Valid values: `asc`, `desc`.
     */
     @SerializedName("SortOrder")
     @Expose
     private String SortOrder;
 
     /**
-    * Subscription group name. After it is specified, only the information of the corresponding subscription group will be returned.
+    * Subscription group name. After it is specified, the information of only this subscription group will be returned.
     */
     @SerializedName("FilterOneGroup")
     @Expose
     private String FilterOneGroup;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get Cluster ID. 
+     * @return ClusterId Cluster ID.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set Cluster ID.
+     * @param ClusterId Cluster ID.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Namespace 
-     * @return NamespaceId Namespace
+     * Get Namespace. 
+     * @return NamespaceId Namespace.
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set Namespace
-     * @param NamespaceId Namespace
+     * Set Namespace.
+     * @param NamespaceId Namespace.
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
     }
 
     /**
-     * Get Offset 
-     * @return Offset Offset
+     * Get Offset. 
+     * @return Offset Offset.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset
-     * @param Offset Offset
+     * Set Offset.
+     * @param Offset Offset.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Maximum number 
-     * @return Limit Maximum number
+     * Get The max number of returned results. 
+     * @return Limit The max number of returned results.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Maximum number
-     * @param Limit Maximum number
+     * Set The max number of returned results.
+     * @param Limit The max number of returned results.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -182,48 +182,48 @@ public class DescribeRocketMQGroupsRequest extends AbstractModel{
     }
 
     /**
-     * Get Sort by specified field. Valid values: tps, accumulative. 
-     * @return SortedBy Sort by specified field. Valid values: tps, accumulative.
+     * Get Sort by specified field. Valid values: `tps`, `accumulative`. 
+     * @return SortedBy Sort by specified field. Valid values: `tps`, `accumulative`.
      */
     public String getSortedBy() {
         return this.SortedBy;
     }
 
     /**
-     * Set Sort by specified field. Valid values: tps, accumulative.
-     * @param SortedBy Sort by specified field. Valid values: tps, accumulative.
+     * Set Sort by specified field. Valid values: `tps`, `accumulative`.
+     * @param SortedBy Sort by specified field. Valid values: `tps`, `accumulative`.
      */
     public void setSortedBy(String SortedBy) {
         this.SortedBy = SortedBy;
     }
 
     /**
-     * Get Sort in ascending or descending order. Valid values: asc, desc. 
-     * @return SortOrder Sort in ascending or descending order. Valid values: asc, desc.
+     * Get Sort in ascending or descending order. Valid values: `asc`, `desc`. 
+     * @return SortOrder Sort in ascending or descending order. Valid values: `asc`, `desc`.
      */
     public String getSortOrder() {
         return this.SortOrder;
     }
 
     /**
-     * Set Sort in ascending or descending order. Valid values: asc, desc.
-     * @param SortOrder Sort in ascending or descending order. Valid values: asc, desc.
+     * Set Sort in ascending or descending order. Valid values: `asc`, `desc`.
+     * @param SortOrder Sort in ascending or descending order. Valid values: `asc`, `desc`.
      */
     public void setSortOrder(String SortOrder) {
         this.SortOrder = SortOrder;
     }
 
     /**
-     * Get Subscription group name. After it is specified, only the information of the corresponding subscription group will be returned. 
-     * @return FilterOneGroup Subscription group name. After it is specified, only the information of the corresponding subscription group will be returned.
+     * Get Subscription group name. After it is specified, the information of only this subscription group will be returned. 
+     * @return FilterOneGroup Subscription group name. After it is specified, the information of only this subscription group will be returned.
      */
     public String getFilterOneGroup() {
         return this.FilterOneGroup;
     }
 
     /**
-     * Set Subscription group name. After it is specified, only the information of the corresponding subscription group will be returned.
-     * @param FilterOneGroup Subscription group name. After it is specified, only the information of the corresponding subscription group will be returned.
+     * Set Subscription group name. After it is specified, the information of only this subscription group will be returned.
+     * @param FilterOneGroup Subscription group name. After it is specified, the information of only this subscription group will be returned.
      */
     public void setFilterOneGroup(String FilterOneGroup) {
         this.FilterOneGroup = FilterOneGroup;

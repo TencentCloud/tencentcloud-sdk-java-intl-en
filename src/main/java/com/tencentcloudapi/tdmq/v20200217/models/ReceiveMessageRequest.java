@@ -51,6 +51,27 @@ public class ReceiveMessageRequest extends AbstractModel{
     private String SubInitialPosition;
 
     /**
+    * This parameter is used to specify the maximum number of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+    */
+    @SerializedName("MaxNumMessages")
+    @Expose
+    private Long MaxNumMessages;
+
+    /**
+    * This parameter is used to specify the maximum body size (in bytes) of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+    */
+    @SerializedName("MaxNumBytes")
+    @Expose
+    private Long MaxNumBytes;
+
+    /**
+    * This parameter is used to specify the maximum wait timeout (in milliseconds) for receiving a batch of messages for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+    */
+    @SerializedName("Timeout")
+    @Expose
+    private Long Timeout;
+
+    /**
      * Get Name of the topic which receives the message. It is better to be the full path of the topic, such as `tenant/namespace/topic`. If it is not specified, `public/default` will be used by default. 
      * @return Topic Name of the topic which receives the message. It is better to be the full path of the topic, such as `tenant/namespace/topic`. If it is not specified, `public/default` will be used by default.
      */
@@ -114,6 +135,54 @@ public class ReceiveMessageRequest extends AbstractModel{
         this.SubInitialPosition = SubInitialPosition;
     }
 
+    /**
+     * Get This parameter is used to specify the maximum number of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled. 
+     * @return MaxNumMessages This parameter is used to specify the maximum number of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+     */
+    public Long getMaxNumMessages() {
+        return this.MaxNumMessages;
+    }
+
+    /**
+     * Set This parameter is used to specify the maximum number of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+     * @param MaxNumMessages This parameter is used to specify the maximum number of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+     */
+    public void setMaxNumMessages(Long MaxNumMessages) {
+        this.MaxNumMessages = MaxNumMessages;
+    }
+
+    /**
+     * Get This parameter is used to specify the maximum body size (in bytes) of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled. 
+     * @return MaxNumBytes This parameter is used to specify the maximum body size (in bytes) of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+     */
+    public Long getMaxNumBytes() {
+        return this.MaxNumBytes;
+    }
+
+    /**
+     * Set This parameter is used to specify the maximum body size (in bytes) of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+     * @param MaxNumBytes This parameter is used to specify the maximum body size (in bytes) of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+     */
+    public void setMaxNumBytes(Long MaxNumBytes) {
+        this.MaxNumBytes = MaxNumBytes;
+    }
+
+    /**
+     * Get This parameter is used to specify the maximum wait timeout (in milliseconds) for receiving a batch of messages for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled. 
+     * @return Timeout This parameter is used to specify the maximum wait timeout (in milliseconds) for receiving a batch of messages for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+     */
+    public Long getTimeout() {
+        return this.Timeout;
+    }
+
+    /**
+     * Set This parameter is used to specify the maximum wait timeout (in milliseconds) for receiving a batch of messages for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+     * @param Timeout This parameter is used to specify the maximum wait timeout (in milliseconds) for receiving a batch of messages for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+     */
+    public void setTimeout(Long Timeout) {
+        this.Timeout = Timeout;
+    }
+
     public ReceiveMessageRequest() {
     }
 
@@ -134,6 +203,15 @@ public class ReceiveMessageRequest extends AbstractModel{
         if (source.SubInitialPosition != null) {
             this.SubInitialPosition = new String(source.SubInitialPosition);
         }
+        if (source.MaxNumMessages != null) {
+            this.MaxNumMessages = new Long(source.MaxNumMessages);
+        }
+        if (source.MaxNumBytes != null) {
+            this.MaxNumBytes = new Long(source.MaxNumBytes);
+        }
+        if (source.Timeout != null) {
+            this.Timeout = new Long(source.Timeout);
+        }
     }
 
 
@@ -145,6 +223,9 @@ public class ReceiveMessageRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SubscriptionName", this.SubscriptionName);
         this.setParamSimple(map, prefix + "ReceiverQueueSize", this.ReceiverQueueSize);
         this.setParamSimple(map, prefix + "SubInitialPosition", this.SubInitialPosition);
+        this.setParamSimple(map, prefix + "MaxNumMessages", this.MaxNumMessages);
+        this.setParamSimple(map, prefix + "MaxNumBytes", this.MaxNumBytes);
+        this.setParamSimple(map, prefix + "Timeout", this.Timeout);
 
     }
 }

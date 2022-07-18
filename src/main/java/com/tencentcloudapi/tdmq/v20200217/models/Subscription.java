@@ -38,7 +38,7 @@ public class Subscription extends AbstractModel{
 
     /**
     * The time when the consumer started connecting.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ConnectedSince")
     @Expose
@@ -46,15 +46,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Consumer address.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ConsumerAddr")
     @Expose
     private String ConsumerAddr;
 
     /**
-    * Number of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The number of consumers.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ConsumerCount")
     @Expose
@@ -62,39 +62,39 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Consumer name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ConsumerName")
     @Expose
     private String ConsumerName;
 
     /**
-    * Number of retained messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The number of heaped messages.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MsgBacklog")
     @Expose
     private String MsgBacklog;
 
     /**
-    * Proportion of messages under this subscription that were discarded but not sent after TTL.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Percentage of messages under this subscription that were discarded but not sent after TTL.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MsgRateExpired")
     @Expose
     private String MsgRateExpired;
 
     /**
-    * Sum of the numbers of messages delivered by the consumer per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The total number of messages delivered by the consumer per second.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MsgRateOut")
     @Expose
     private String MsgRateOut;
 
     /**
-    * Number of bytes of messages consumed by the consumer per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The size (in bytes) of messages consumed by the consumer per second.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MsgThroughputOut")
     @Expose
@@ -102,7 +102,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Subscription name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SubscriptionName")
     @Expose
@@ -110,15 +110,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Set of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ConsumerSets")
     @Expose
     private Consumer [] ConsumerSets;
 
     /**
-    * Whether it is online.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Whether the consumer is online.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsOnline")
     @Expose
@@ -126,7 +126,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Set of consumption progress information.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ConsumersScheduleSets")
     @Expose
@@ -134,7 +134,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Remarks.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Remark")
     @Expose
@@ -142,15 +142,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Creation time.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Last modified.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -158,7 +158,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Subscription type. Valid values: `Exclusive`, `Shared`, `Failover`, and `Key_Shared`. An empty string or `NULL`: Unknown.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SubType")
     @Expose
@@ -166,15 +166,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Whether messages are blocked as the limit of unacknowledged messages has been reached.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BlockedSubscriptionOnUnackedMsgs")
     @Expose
     private Boolean BlockedSubscriptionOnUnackedMsgs;
 
     /**
-    * Maximum number of unacknowledged messages.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * The maximum number of unacknowledged messages.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MaxUnackedMsgNum")
     @Expose
@@ -214,9 +214,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get The time when the consumer started connecting.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return ConnectedSince The time when the consumer started connecting.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getConnectedSince() {
         return this.ConnectedSince;
@@ -224,9 +224,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set The time when the consumer started connecting.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param ConnectedSince The time when the consumer started connecting.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setConnectedSince(String ConnectedSince) {
         this.ConnectedSince = ConnectedSince;
@@ -234,9 +234,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Consumer address.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ConsumerAddr Consumer address.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getConsumerAddr() {
         return this.ConsumerAddr;
@@ -244,29 +244,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Consumer address.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ConsumerAddr Consumer address.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setConsumerAddr(String ConsumerAddr) {
         this.ConsumerAddr = ConsumerAddr;
     }
 
     /**
-     * Get Number of consumers.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ConsumerCount Number of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The number of consumers.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ConsumerCount The number of consumers.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getConsumerCount() {
         return this.ConsumerCount;
     }
 
     /**
-     * Set Number of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ConsumerCount Number of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The number of consumers.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ConsumerCount The number of consumers.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setConsumerCount(String ConsumerCount) {
         this.ConsumerCount = ConsumerCount;
@@ -274,9 +274,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Consumer name.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ConsumerName Consumer name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getConsumerName() {
         return this.ConsumerName;
@@ -284,89 +284,89 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Consumer name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ConsumerName Consumer name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setConsumerName(String ConsumerName) {
         this.ConsumerName = ConsumerName;
     }
 
     /**
-     * Get Number of retained messages.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MsgBacklog Number of retained messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The number of heaped messages.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MsgBacklog The number of heaped messages.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMsgBacklog() {
         return this.MsgBacklog;
     }
 
     /**
-     * Set Number of retained messages.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MsgBacklog Number of retained messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The number of heaped messages.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MsgBacklog The number of heaped messages.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMsgBacklog(String MsgBacklog) {
         this.MsgBacklog = MsgBacklog;
     }
 
     /**
-     * Get Proportion of messages under this subscription that were discarded but not sent after TTL.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MsgRateExpired Proportion of messages under this subscription that were discarded but not sent after TTL.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Percentage of messages under this subscription that were discarded but not sent after TTL.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MsgRateExpired Percentage of messages under this subscription that were discarded but not sent after TTL.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMsgRateExpired() {
         return this.MsgRateExpired;
     }
 
     /**
-     * Set Proportion of messages under this subscription that were discarded but not sent after TTL.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MsgRateExpired Proportion of messages under this subscription that were discarded but not sent after TTL.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Percentage of messages under this subscription that were discarded but not sent after TTL.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MsgRateExpired Percentage of messages under this subscription that were discarded but not sent after TTL.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMsgRateExpired(String MsgRateExpired) {
         this.MsgRateExpired = MsgRateExpired;
     }
 
     /**
-     * Get Sum of the numbers of messages delivered by the consumer per second.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MsgRateOut Sum of the numbers of messages delivered by the consumer per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The total number of messages delivered by the consumer per second.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MsgRateOut The total number of messages delivered by the consumer per second.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMsgRateOut() {
         return this.MsgRateOut;
     }
 
     /**
-     * Set Sum of the numbers of messages delivered by the consumer per second.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MsgRateOut Sum of the numbers of messages delivered by the consumer per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The total number of messages delivered by the consumer per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MsgRateOut The total number of messages delivered by the consumer per second.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMsgRateOut(String MsgRateOut) {
         this.MsgRateOut = MsgRateOut;
     }
 
     /**
-     * Get Number of bytes of messages consumed by the consumer per second.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MsgThroughputOut Number of bytes of messages consumed by the consumer per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The size (in bytes) of messages consumed by the consumer per second.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MsgThroughputOut The size (in bytes) of messages consumed by the consumer per second.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMsgThroughputOut() {
         return this.MsgThroughputOut;
     }
 
     /**
-     * Set Number of bytes of messages consumed by the consumer per second.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MsgThroughputOut Number of bytes of messages consumed by the consumer per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The size (in bytes) of messages consumed by the consumer per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MsgThroughputOut The size (in bytes) of messages consumed by the consumer per second.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMsgThroughputOut(String MsgThroughputOut) {
         this.MsgThroughputOut = MsgThroughputOut;
@@ -374,9 +374,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Subscription name.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return SubscriptionName Subscription name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSubscriptionName() {
         return this.SubscriptionName;
@@ -384,9 +384,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Subscription name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param SubscriptionName Subscription name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSubscriptionName(String SubscriptionName) {
         this.SubscriptionName = SubscriptionName;
@@ -394,9 +394,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Set of consumers.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ConsumerSets Set of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Consumer [] getConsumerSets() {
         return this.ConsumerSets;
@@ -404,29 +404,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Set of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ConsumerSets Set of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setConsumerSets(Consumer [] ConsumerSets) {
         this.ConsumerSets = ConsumerSets;
     }
 
     /**
-     * Get Whether it is online.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IsOnline Whether it is online.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Whether the consumer is online.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsOnline Whether the consumer is online.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getIsOnline() {
         return this.IsOnline;
     }
 
     /**
-     * Set Whether it is online.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IsOnline Whether it is online.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Whether the consumer is online.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsOnline Whether the consumer is online.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsOnline(Boolean IsOnline) {
         this.IsOnline = IsOnline;
@@ -434,9 +434,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Set of consumption progress information.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ConsumersScheduleSets Set of consumption progress information.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ConsumersSchedule [] getConsumersScheduleSets() {
         return this.ConsumersScheduleSets;
@@ -444,9 +444,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Set of consumption progress information.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ConsumersScheduleSets Set of consumption progress information.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setConsumersScheduleSets(ConsumersSchedule [] ConsumersScheduleSets) {
         this.ConsumersScheduleSets = ConsumersScheduleSets;
@@ -454,9 +454,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Remarks.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Remark Remarks.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRemark() {
         return this.Remark;
@@ -464,9 +464,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Remarks.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Remark Remarks.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
@@ -474,9 +474,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Creation time.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return CreateTime Creation time.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -484,29 +484,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Creation time.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateTime Creation time.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Modification time.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return UpdateTime Modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Last modified.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return UpdateTime Last modified.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param UpdateTime Modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Last modified.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param UpdateTime Last modified.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -514,9 +514,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Subscription type. Valid values: `Exclusive`, `Shared`, `Failover`, and `Key_Shared`. An empty string or `NULL`: Unknown.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return SubType Subscription type. Valid values: `Exclusive`, `Shared`, `Failover`, and `Key_Shared`. An empty string or `NULL`: Unknown.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSubType() {
         return this.SubType;
@@ -524,9 +524,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Subscription type. Valid values: `Exclusive`, `Shared`, `Failover`, and `Key_Shared`. An empty string or `NULL`: Unknown.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param SubType Subscription type. Valid values: `Exclusive`, `Shared`, `Failover`, and `Key_Shared`. An empty string or `NULL`: Unknown.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSubType(String SubType) {
         this.SubType = SubType;
@@ -534,9 +534,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Whether messages are blocked as the limit of unacknowledged messages has been reached.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return BlockedSubscriptionOnUnackedMsgs Whether messages are blocked as the limit of unacknowledged messages has been reached.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getBlockedSubscriptionOnUnackedMsgs() {
         return this.BlockedSubscriptionOnUnackedMsgs;
@@ -544,29 +544,29 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Whether messages are blocked as the limit of unacknowledged messages has been reached.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param BlockedSubscriptionOnUnackedMsgs Whether messages are blocked as the limit of unacknowledged messages has been reached.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBlockedSubscriptionOnUnackedMsgs(Boolean BlockedSubscriptionOnUnackedMsgs) {
         this.BlockedSubscriptionOnUnackedMsgs = BlockedSubscriptionOnUnackedMsgs;
     }
 
     /**
-     * Get Maximum number of unacknowledged messages.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return MaxUnackedMsgNum Maximum number of unacknowledged messages.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get The maximum number of unacknowledged messages.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MaxUnackedMsgNum The maximum number of unacknowledged messages.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMaxUnackedMsgNum() {
         return this.MaxUnackedMsgNum;
     }
 
     /**
-     * Set Maximum number of unacknowledged messages.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param MaxUnackedMsgNum Maximum number of unacknowledged messages.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set The maximum number of unacknowledged messages.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MaxUnackedMsgNum The maximum number of unacknowledged messages.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMaxUnackedMsgNum(Long MaxUnackedMsgNum) {
         this.MaxUnackedMsgNum = MaxUnackedMsgNum;

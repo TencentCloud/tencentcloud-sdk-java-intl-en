@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class DescribeRocketMQNamespacesRequest extends AbstractModel{
 
     /**
-    * Cluster ID
+    * Cluster ID.
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Offset
+    * Offset.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Maximum number
+    * The max number of returned results.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Search by name
+    * Search by name.
     */
     @SerializedName("NameKeyword")
     @Expose
     private String NameKeyword;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get Cluster ID. 
+     * @return ClusterId Cluster ID.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set Cluster ID.
+     * @param ClusterId Cluster ID.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Offset 
-     * @return Offset Offset
+     * Get Offset. 
+     * @return Offset Offset.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset
-     * @param Offset Offset
+     * Set Offset.
+     * @param Offset Offset.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Maximum number 
-     * @return Limit Maximum number
+     * Get The max number of returned results. 
+     * @return Limit The max number of returned results.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Maximum number
-     * @param Limit Maximum number
+     * Set The max number of returned results.
+     * @param Limit The max number of returned results.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Search by name 
-     * @return NameKeyword Search by name
+     * Get Search by name. 
+     * @return NameKeyword Search by name.
      */
     public String getNameKeyword() {
         return this.NameKeyword;
     }
 
     /**
-     * Set Search by name
-     * @param NameKeyword Search by name
+     * Set Search by name.
+     * @param NameKeyword Search by name.
      */
     public void setNameKeyword(String NameKeyword) {
         this.NameKeyword = NameKeyword;

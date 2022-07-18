@@ -37,7 +37,7 @@ public class UpgradeInstanceRequest extends AbstractModel{
     private Long Cpu;
 
     /**
-    * Database memory
+    * Database memory in GB
     */
     @SerializedName("Memory")
     @Expose
@@ -51,7 +51,7 @@ public class UpgradeInstanceRequest extends AbstractModel{
     private String UpgradeType;
 
     /**
-    * Storage upper limit. 0 indicates to use the standard configuration
+    * This parameter has been disused.
     */
     @SerializedName("StorageLimit")
     @Expose
@@ -65,8 +65,7 @@ public class UpgradeInstanceRequest extends AbstractModel{
     private Long AutoVoucher;
 
     /**
-    * Database type. Valid values: 
-<li> MYSQL </li>
+    * This parameter has been disused.
     */
     @SerializedName("DbType")
     @Expose
@@ -112,16 +111,16 @@ public class UpgradeInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Database memory 
-     * @return Memory Database memory
+     * Get Database memory in GB 
+     * @return Memory Database memory in GB
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Database memory
-     * @param Memory Database memory
+     * Set Database memory in GB
+     * @param Memory Database memory in GB
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
@@ -144,16 +143,16 @@ public class UpgradeInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Storage upper limit. 0 indicates to use the standard configuration 
-     * @return StorageLimit Storage upper limit. 0 indicates to use the standard configuration
+     * Get This parameter has been disused. 
+     * @return StorageLimit This parameter has been disused.
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set Storage upper limit. 0 indicates to use the standard configuration
-     * @param StorageLimit Storage upper limit. 0 indicates to use the standard configuration
+     * Set This parameter has been disused.
+     * @param StorageLimit This parameter has been disused.
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
@@ -176,20 +175,16 @@ public class UpgradeInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Database type. Valid values: 
-<li> MYSQL </li> 
-     * @return DbType Database type. Valid values: 
-<li> MYSQL </li>
+     * Get This parameter has been disused. 
+     * @return DbType This parameter has been disused.
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set Database type. Valid values: 
-<li> MYSQL </li>
-     * @param DbType Database type. Valid values: 
-<li> MYSQL </li>
+     * Set This parameter has been disused.
+     * @param DbType This parameter has been disused.
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;

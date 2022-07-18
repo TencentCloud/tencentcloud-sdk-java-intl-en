@@ -23,35 +23,35 @@ import java.util.HashMap;
 public class DescribeEnvironmentRolesRequest extends AbstractModel{
 
     /**
-    * Environment (namespace) name (required).
+    * Environment/namespace name (required).
     */
     @SerializedName("EnvironmentId")
     @Expose
     private String EnvironmentId;
 
     /**
-    * Offset. If this parameter is left empty, 0 will be used by default.
+    * Offset, which defaults to 0 if left empty.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+    * The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Pulsar cluster ID (required)
+    * Pulsar cluster ID (required).
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Role name
+    * Role name.
     */
     @SerializedName("RoleName")
     @Expose
@@ -61,87 +61,87 @@ public class DescribeEnvironmentRolesRequest extends AbstractModel{
     * * RoleName
 Filter by role name for exact query.
 Type: String
-Required: no
+Required: No
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get Environment (namespace) name (required). 
-     * @return EnvironmentId Environment (namespace) name (required).
+     * Get Environment/namespace name (required). 
+     * @return EnvironmentId Environment/namespace name (required).
      */
     public String getEnvironmentId() {
         return this.EnvironmentId;
     }
 
     /**
-     * Set Environment (namespace) name (required).
-     * @param EnvironmentId Environment (namespace) name (required).
+     * Set Environment/namespace name (required).
+     * @param EnvironmentId Environment/namespace name (required).
      */
     public void setEnvironmentId(String EnvironmentId) {
         this.EnvironmentId = EnvironmentId;
     }
 
     /**
-     * Get Offset. If this parameter is left empty, 0 will be used by default. 
-     * @return Offset Offset. If this parameter is left empty, 0 will be used by default.
+     * Get Offset, which defaults to 0 if left empty. 
+     * @return Offset Offset, which defaults to 0 if left empty.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. If this parameter is left empty, 0 will be used by default.
-     * @param Offset Offset. If this parameter is left empty, 0 will be used by default.
+     * Set Offset, which defaults to 0 if left empty.
+     * @param Offset Offset, which defaults to 0 if left empty.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20. 
-     * @return Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+     * Get The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20. 
+     * @return Limit The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
-     * @param Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+     * Set The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
+     * @param Limit The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Pulsar cluster ID (required) 
-     * @return ClusterId Pulsar cluster ID (required)
+     * Get Pulsar cluster ID (required). 
+     * @return ClusterId Pulsar cluster ID (required).
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Pulsar cluster ID (required)
-     * @param ClusterId Pulsar cluster ID (required)
+     * Set Pulsar cluster ID (required).
+     * @param ClusterId Pulsar cluster ID (required).
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Role name 
-     * @return RoleName Role name
+     * Get Role name. 
+     * @return RoleName Role name.
      */
     public String getRoleName() {
         return this.RoleName;
     }
 
     /**
-     * Set Role name
-     * @param RoleName Role name
+     * Set Role name.
+     * @param RoleName Role name.
      */
     public void setRoleName(String RoleName) {
         this.RoleName = RoleName;
@@ -151,11 +151,11 @@ Required: no
      * Get * RoleName
 Filter by role name for exact query.
 Type: String
-Required: no 
+Required: No 
      * @return Filters * RoleName
 Filter by role name for exact query.
 Type: String
-Required: no
+Required: No
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -165,11 +165,11 @@ Required: no
      * Set * RoleName
 Filter by role name for exact query.
 Type: String
-Required: no
+Required: No
      * @param Filters * RoleName
 Filter by role name for exact query.
 Type: String
-Required: no
+Required: No
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

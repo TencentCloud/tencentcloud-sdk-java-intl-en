@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeSubscriptionsResponse extends AbstractModel{
 
     /**
-    * Array set of subscribers.
+    * Array of subscriber sets.
     */
     @SerializedName("SubscriptionSets")
     @Expose
     private Subscription [] SubscriptionSets;
 
     /**
-    * Quantity.
+    * The total number of returned results.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeSubscriptionsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Array set of subscribers. 
-     * @return SubscriptionSets Array set of subscribers.
+     * Get Array of subscriber sets. 
+     * @return SubscriptionSets Array of subscriber sets.
      */
     public Subscription [] getSubscriptionSets() {
         return this.SubscriptionSets;
     }
 
     /**
-     * Set Array set of subscribers.
-     * @param SubscriptionSets Array set of subscribers.
+     * Set Array of subscriber sets.
+     * @param SubscriptionSets Array of subscriber sets.
      */
     public void setSubscriptionSets(Subscription [] SubscriptionSets) {
         this.SubscriptionSets = SubscriptionSets;
     }
 
     /**
-     * Get Quantity. 
-     * @return TotalCount Quantity.
+     * Get The total number of returned results. 
+     * @return TotalCount The total number of returned results.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Quantity.
-     * @param TotalCount Quantity.
+     * Set The total number of returned results.
+     * @param TotalCount The total number of returned results.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

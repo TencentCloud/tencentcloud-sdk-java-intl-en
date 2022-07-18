@@ -23,120 +23,120 @@ import java.util.HashMap;
 public class RocketMQTopic extends AbstractModel{
 
     /**
-    * Topic name
+    * Topic name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Description.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * Number of read/write partitions
+    * The number of read/write partitions.
     */
     @SerializedName("PartitionNum")
     @Expose
     private Long PartitionNum;
 
     /**
-    * Creation time in milliseconds
+    * Creation time in milliseconds.
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * Creation time in milliseconds
+    * Creation time in milliseconds.
     */
     @SerializedName("UpdateTime")
     @Expose
     private Long UpdateTime;
 
     /**
-     * Get Topic name 
-     * @return Name Topic name
+     * Get Topic name. 
+     * @return Name Topic name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Topic name
-     * @param Name Topic name
+     * Set Topic name.
+     * @param Name Topic name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Remarks
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Remark Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Description.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Remark Description.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Remark Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Description.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Remark Description.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Number of read/write partitions 
-     * @return PartitionNum Number of read/write partitions
+     * Get The number of read/write partitions. 
+     * @return PartitionNum The number of read/write partitions.
      */
     public Long getPartitionNum() {
         return this.PartitionNum;
     }
 
     /**
-     * Set Number of read/write partitions
-     * @param PartitionNum Number of read/write partitions
+     * Set The number of read/write partitions.
+     * @param PartitionNum The number of read/write partitions.
      */
     public void setPartitionNum(Long PartitionNum) {
         this.PartitionNum = PartitionNum;
     }
 
     /**
-     * Get Creation time in milliseconds 
-     * @return CreateTime Creation time in milliseconds
+     * Get Creation time in milliseconds. 
+     * @return CreateTime Creation time in milliseconds.
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time in milliseconds
-     * @param CreateTime Creation time in milliseconds
+     * Set Creation time in milliseconds.
+     * @param CreateTime Creation time in milliseconds.
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Creation time in milliseconds 
-     * @return UpdateTime Creation time in milliseconds
+     * Get Creation time in milliseconds. 
+     * @return UpdateTime Creation time in milliseconds.
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Creation time in milliseconds
-     * @param UpdateTime Creation time in milliseconds
+     * Set Creation time in milliseconds.
+     * @param UpdateTime Creation time in milliseconds.
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;

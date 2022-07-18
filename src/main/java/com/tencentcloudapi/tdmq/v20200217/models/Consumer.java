@@ -24,7 +24,7 @@ public class Consumer extends AbstractModel{
 
     /**
     * The time when the consumer started connecting.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ConnectedSince")
     @Expose
@@ -32,7 +32,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Consumer address.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ConsumerAddr")
     @Expose
@@ -40,7 +40,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Consumer name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ConsumerName")
     @Expose
@@ -48,7 +48,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Consumer version.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ClientVersion")
     @Expose
@@ -56,7 +56,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Serial number of the topic partition connected to the consumer.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Partition")
     @Expose
@@ -64,9 +64,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get The time when the consumer started connecting.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ConnectedSince The time when the consumer started connecting.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getConnectedSince() {
         return this.ConnectedSince;
@@ -74,9 +74,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set The time when the consumer started connecting.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ConnectedSince The time when the consumer started connecting.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setConnectedSince(String ConnectedSince) {
         this.ConnectedSince = ConnectedSince;
@@ -84,9 +84,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Consumer address.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ConsumerAddr Consumer address.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getConsumerAddr() {
         return this.ConsumerAddr;
@@ -94,9 +94,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Consumer address.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ConsumerAddr Consumer address.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setConsumerAddr(String ConsumerAddr) {
         this.ConsumerAddr = ConsumerAddr;
@@ -104,9 +104,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Consumer name.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ConsumerName Consumer name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getConsumerName() {
         return this.ConsumerName;
@@ -114,9 +114,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Consumer name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ConsumerName Consumer name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setConsumerName(String ConsumerName) {
         this.ConsumerName = ConsumerName;
@@ -124,9 +124,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Consumer version.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ClientVersion Consumer version.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getClientVersion() {
         return this.ClientVersion;
@@ -134,9 +134,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Consumer version.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ClientVersion Consumer version.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setClientVersion(String ClientVersion) {
         this.ClientVersion = ClientVersion;
@@ -144,9 +144,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Serial number of the topic partition connected to the consumer.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Partition Serial number of the topic partition connected to the consumer.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getPartition() {
         return this.Partition;
@@ -154,9 +154,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Serial number of the topic partition connected to the consumer.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Partition Serial number of the topic partition connected to the consumer.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPartition(Long Partition) {
         this.Partition = Partition;

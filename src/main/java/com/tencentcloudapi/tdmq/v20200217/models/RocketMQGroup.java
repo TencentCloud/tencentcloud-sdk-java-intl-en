@@ -23,314 +23,314 @@ import java.util.HashMap;
 public class RocketMQGroup extends AbstractModel{
 
     /**
-    * Consumer group name
+    * Consumer group name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Number of online consumers
+    * The number of online consumers.
     */
     @SerializedName("ConsumerNum")
     @Expose
     private Long ConsumerNum;
 
     /**
-    * Consumption TPS
+    * Consumption TPS.
     */
     @SerializedName("TPS")
     @Expose
     private Long TPS;
 
     /**
-    * Total number of retained messages
+    * The total number of heaped messages.
     */
     @SerializedName("TotalAccumulative")
     @Expose
     private Long TotalAccumulative;
 
     /**
-    * 0: cluster consumption mode; 1: broadcast consumption mode; -1: unknown
+    * 0: Cluster consumption mode; 1: Broadcast consumption mode; -1: Unknown.
     */
     @SerializedName("ConsumptionMode")
     @Expose
     private Long ConsumptionMode;
 
     /**
-    * Whether to allow consumption
+    * Whether to allow consumption.
     */
     @SerializedName("ReadEnabled")
     @Expose
     private Boolean ReadEnabled;
 
     /**
-    * Number of partitions in the retry letter topic
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The number of partitions in a retry topic.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RetryPartitionNum")
     @Expose
     private Long RetryPartitionNum;
 
     /**
-    * Creation time in milliseconds
+    * Creation time in milliseconds.
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * Modification time in milliseconds
+    * Modification time in milliseconds.
     */
     @SerializedName("UpdateTime")
     @Expose
     private Long UpdateTime;
 
     /**
-    * Client protocol
+    * Client protocol.
     */
     @SerializedName("ClientProtocol")
     @Expose
     private String ClientProtocol;
 
     /**
-    * Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Description.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * Consumer type. Enumerated values: ACTIVELY, PASSIVELY
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Consumer type. Enumerated values: `ACTIVELY` or `PASSIVELY`.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ConsumerType")
     @Expose
     private String ConsumerType;
 
     /**
-    * Whether to enable broadcast consumption
+    * Whether to enable broadcast consumption.
     */
     @SerializedName("BroadcastEnabled")
     @Expose
     private Boolean BroadcastEnabled;
 
     /**
-     * Get Consumer group name 
-     * @return Name Consumer group name
+     * Get Consumer group name. 
+     * @return Name Consumer group name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Consumer group name
-     * @param Name Consumer group name
+     * Set Consumer group name.
+     * @param Name Consumer group name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Number of online consumers 
-     * @return ConsumerNum Number of online consumers
+     * Get The number of online consumers. 
+     * @return ConsumerNum The number of online consumers.
      */
     public Long getConsumerNum() {
         return this.ConsumerNum;
     }
 
     /**
-     * Set Number of online consumers
-     * @param ConsumerNum Number of online consumers
+     * Set The number of online consumers.
+     * @param ConsumerNum The number of online consumers.
      */
     public void setConsumerNum(Long ConsumerNum) {
         this.ConsumerNum = ConsumerNum;
     }
 
     /**
-     * Get Consumption TPS 
-     * @return TPS Consumption TPS
+     * Get Consumption TPS. 
+     * @return TPS Consumption TPS.
      */
     public Long getTPS() {
         return this.TPS;
     }
 
     /**
-     * Set Consumption TPS
-     * @param TPS Consumption TPS
+     * Set Consumption TPS.
+     * @param TPS Consumption TPS.
      */
     public void setTPS(Long TPS) {
         this.TPS = TPS;
     }
 
     /**
-     * Get Total number of retained messages 
-     * @return TotalAccumulative Total number of retained messages
+     * Get The total number of heaped messages. 
+     * @return TotalAccumulative The total number of heaped messages.
      */
     public Long getTotalAccumulative() {
         return this.TotalAccumulative;
     }
 
     /**
-     * Set Total number of retained messages
-     * @param TotalAccumulative Total number of retained messages
+     * Set The total number of heaped messages.
+     * @param TotalAccumulative The total number of heaped messages.
      */
     public void setTotalAccumulative(Long TotalAccumulative) {
         this.TotalAccumulative = TotalAccumulative;
     }
 
     /**
-     * Get 0: cluster consumption mode; 1: broadcast consumption mode; -1: unknown 
-     * @return ConsumptionMode 0: cluster consumption mode; 1: broadcast consumption mode; -1: unknown
+     * Get 0: Cluster consumption mode; 1: Broadcast consumption mode; -1: Unknown. 
+     * @return ConsumptionMode 0: Cluster consumption mode; 1: Broadcast consumption mode; -1: Unknown.
      */
     public Long getConsumptionMode() {
         return this.ConsumptionMode;
     }
 
     /**
-     * Set 0: cluster consumption mode; 1: broadcast consumption mode; -1: unknown
-     * @param ConsumptionMode 0: cluster consumption mode; 1: broadcast consumption mode; -1: unknown
+     * Set 0: Cluster consumption mode; 1: Broadcast consumption mode; -1: Unknown.
+     * @param ConsumptionMode 0: Cluster consumption mode; 1: Broadcast consumption mode; -1: Unknown.
      */
     public void setConsumptionMode(Long ConsumptionMode) {
         this.ConsumptionMode = ConsumptionMode;
     }
 
     /**
-     * Get Whether to allow consumption 
-     * @return ReadEnabled Whether to allow consumption
+     * Get Whether to allow consumption. 
+     * @return ReadEnabled Whether to allow consumption.
      */
     public Boolean getReadEnabled() {
         return this.ReadEnabled;
     }
 
     /**
-     * Set Whether to allow consumption
-     * @param ReadEnabled Whether to allow consumption
+     * Set Whether to allow consumption.
+     * @param ReadEnabled Whether to allow consumption.
      */
     public void setReadEnabled(Boolean ReadEnabled) {
         this.ReadEnabled = ReadEnabled;
     }
 
     /**
-     * Get Number of partitions in the retry letter topic
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RetryPartitionNum Number of partitions in the retry letter topic
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The number of partitions in a retry topic.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RetryPartitionNum The number of partitions in a retry topic.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getRetryPartitionNum() {
         return this.RetryPartitionNum;
     }
 
     /**
-     * Set Number of partitions in the retry letter topic
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RetryPartitionNum Number of partitions in the retry letter topic
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The number of partitions in a retry topic.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RetryPartitionNum The number of partitions in a retry topic.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRetryPartitionNum(Long RetryPartitionNum) {
         this.RetryPartitionNum = RetryPartitionNum;
     }
 
     /**
-     * Get Creation time in milliseconds 
-     * @return CreateTime Creation time in milliseconds
+     * Get Creation time in milliseconds. 
+     * @return CreateTime Creation time in milliseconds.
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time in milliseconds
-     * @param CreateTime Creation time in milliseconds
+     * Set Creation time in milliseconds.
+     * @param CreateTime Creation time in milliseconds.
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Modification time in milliseconds 
-     * @return UpdateTime Modification time in milliseconds
+     * Get Modification time in milliseconds. 
+     * @return UpdateTime Modification time in milliseconds.
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Modification time in milliseconds
-     * @param UpdateTime Modification time in milliseconds
+     * Set Modification time in milliseconds.
+     * @param UpdateTime Modification time in milliseconds.
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Client protocol 
-     * @return ClientProtocol Client protocol
+     * Get Client protocol. 
+     * @return ClientProtocol Client protocol.
      */
     public String getClientProtocol() {
         return this.ClientProtocol;
     }
 
     /**
-     * Set Client protocol
-     * @param ClientProtocol Client protocol
+     * Set Client protocol.
+     * @param ClientProtocol Client protocol.
      */
     public void setClientProtocol(String ClientProtocol) {
         this.ClientProtocol = ClientProtocol;
     }
 
     /**
-     * Get Remarks
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Remark Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Description.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Remark Description.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Remark Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Description.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Remark Description.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Consumer type. Enumerated values: ACTIVELY, PASSIVELY
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ConsumerType Consumer type. Enumerated values: ACTIVELY, PASSIVELY
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Consumer type. Enumerated values: `ACTIVELY` or `PASSIVELY`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ConsumerType Consumer type. Enumerated values: `ACTIVELY` or `PASSIVELY`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getConsumerType() {
         return this.ConsumerType;
     }
 
     /**
-     * Set Consumer type. Enumerated values: ACTIVELY, PASSIVELY
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ConsumerType Consumer type. Enumerated values: ACTIVELY, PASSIVELY
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Consumer type. Enumerated values: `ACTIVELY` or `PASSIVELY`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ConsumerType Consumer type. Enumerated values: `ACTIVELY` or `PASSIVELY`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setConsumerType(String ConsumerType) {
         this.ConsumerType = ConsumerType;
     }
 
     /**
-     * Get Whether to enable broadcast consumption 
-     * @return BroadcastEnabled Whether to enable broadcast consumption
+     * Get Whether to enable broadcast consumption. 
+     * @return BroadcastEnabled Whether to enable broadcast consumption.
      */
     public Boolean getBroadcastEnabled() {
         return this.BroadcastEnabled;
     }
 
     /**
-     * Set Whether to enable broadcast consumption
-     * @param BroadcastEnabled Whether to enable broadcast consumption
+     * Set Whether to enable broadcast consumption.
+     * @param BroadcastEnabled Whether to enable broadcast consumption.
      */
     public void setBroadcastEnabled(Boolean BroadcastEnabled) {
         this.BroadcastEnabled = BroadcastEnabled;

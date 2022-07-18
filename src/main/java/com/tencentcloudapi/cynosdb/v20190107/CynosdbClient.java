@@ -99,6 +99,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a cluster.
+     * @param req CreateClustersRequest
+     * @return CreateClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClustersResponse CreateClusters(CreateClustersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateClustersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateClustersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateClusters");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query database management accounts.
      * @param req DescribeAccountsRequest
      * @return DescribeAccountsResponse
@@ -139,6 +159,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the download address of a cluster backup file.
+     * @param req DescribeBackupDownloadUrlRequest
+     * @return DescribeBackupDownloadUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupDownloadUrlResponse DescribeBackupDownloadUrl(DescribeBackupDownloadUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupDownloadUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupDownloadUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupDownloadUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the list of backup files.
      * @param req DescribeBackupListRequest
      * @return DescribeBackupListResponse
@@ -151,6 +191,66 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeBackupList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the download address of a binlog.
+     * @param req DescribeBinlogDownloadUrlRequest
+     * @return DescribeBinlogDownloadUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBinlogDownloadUrlResponse DescribeBinlogDownloadUrl(DescribeBinlogDownloadUrlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBinlogDownloadUrlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBinlogDownloadUrlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBinlogDownloadUrl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the binlog retention period of a cluster in days.
+     * @param req DescribeBinlogSaveDaysRequest
+     * @return DescribeBinlogSaveDaysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBinlogSaveDaysResponse DescribeBinlogSaveDays(DescribeBinlogSaveDaysRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBinlogSaveDaysResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBinlogSaveDaysResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBinlogSaveDays");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of binlogs in a cluster.
+     * @param req DescribeBinlogsRequest
+     * @return DescribeBinlogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBinlogsResponse DescribeBinlogs(DescribeBinlogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBinlogsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBinlogsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBinlogs");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -251,6 +351,26 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeInstanceDetailResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeInstanceDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the slow query logs of an instance.
+     * @param req DescribeInstanceSlowQueriesRequest
+     * @return DescribeInstanceSlowQueriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceSlowQueriesResponse DescribeInstanceSlowQueries(DescribeInstanceSlowQueriesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstanceSlowQueriesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstanceSlowQueriesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstanceSlowQueries");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -399,6 +519,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to export the slow logs of an instance.
+     * @param req ExportInstanceSlowQueriesRequest
+     * @return ExportInstanceSlowQueriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportInstanceSlowQueriesResponse ExportInstanceSlowQueries(ExportInstanceSlowQueriesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ExportInstanceSlowQueriesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ExportInstanceSlowQueriesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ExportInstanceSlowQueries");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to isolate a cluster.
      * @param req IsolateClusterRequest
      * @return IsolateClusterResponse
@@ -451,6 +591,26 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyBackupConfigResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyBackupConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to rename a backup file.
+     * @param req ModifyBackupNameRequest
+     * @return ModifyBackupNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBackupNameResponse ModifyBackupName(ModifyBackupNameRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyBackupNameResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyBackupNameResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyBackupName");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -37,7 +37,7 @@ public class CreateTopicResponse extends AbstractModel{
     private String TopicName;
 
     /**
-    * 0: non-partitioned topic; other values: number of partitions in the partitioned topic.
+    * Valid value: 0 or 1. Non-partitioned topic: No partitions. A value greater than 1: The partition count of a partitioned topic. `0` is returned for existing non-partitioned topics, and `1` is returned for incremental non-partitioned topics.
     */
     @SerializedName("Partitions")
     @Expose
@@ -52,13 +52,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Remark;
 
     /**
-    * 0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue;
-5: transaction message.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * 0: General message;
+1: Globally sequential message;
+2: Partitionally sequential message;
+3: Retry letter topic;
+4: Dead letter topic.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TopicType")
     @Expose
@@ -104,16 +103,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get 0: non-partitioned topic; other values: number of partitions in the partitioned topic. 
-     * @return Partitions 0: non-partitioned topic; other values: number of partitions in the partitioned topic.
+     * Get Valid value: 0 or 1. Non-partitioned topic: No partitions. A value greater than 1: The partition count of a partitioned topic. `0` is returned for existing non-partitioned topics, and `1` is returned for incremental non-partitioned topics. 
+     * @return Partitions Valid value: 0 or 1. Non-partitioned topic: No partitions. A value greater than 1: The partition count of a partitioned topic. `0` is returned for existing non-partitioned topics, and `1` is returned for incremental non-partitioned topics.
      */
     public Long getPartitions() {
         return this.Partitions;
     }
 
     /**
-     * Set 0: non-partitioned topic; other values: number of partitions in the partitioned topic.
-     * @param Partitions 0: non-partitioned topic; other values: number of partitions in the partitioned topic.
+     * Set Valid value: 0 or 1. Non-partitioned topic: No partitions. A value greater than 1: The partition count of a partitioned topic. `0` is returned for existing non-partitioned topics, and `1` is returned for incremental non-partitioned topics.
+     * @param Partitions Valid value: 0 or 1. Non-partitioned topic: No partitions. A value greater than 1: The partition count of a partitioned topic. `0` is returned for existing non-partitioned topics, and `1` is returned for incremental non-partitioned topics.
      */
     public void setPartitions(Long Partitions) {
         this.Partitions = Partitions;
@@ -140,40 +139,36 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get 0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue;
-5: transaction message.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TopicType 0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue;
-5: transaction message.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get 0: General message;
+1: Globally sequential message;
+2: Partitionally sequential message;
+3: Retry letter topic;
+4: Dead letter topic.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TopicType 0: General message;
+1: Globally sequential message;
+2: Partitionally sequential message;
+3: Retry letter topic;
+4: Dead letter topic.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTopicType() {
         return this.TopicType;
     }
 
     /**
-     * Set 0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue;
-5: transaction message.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TopicType 0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue;
-5: transaction message.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set 0: General message;
+1: Globally sequential message;
+2: Partitionally sequential message;
+3: Retry letter topic;
+4: Dead letter topic.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TopicType 0: General message;
+1: Globally sequential message;
+2: Partitionally sequential message;
+3: Retry letter topic;
+4: Dead letter topic.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTopicType(Long TopicType) {
         this.TopicType = TopicType;

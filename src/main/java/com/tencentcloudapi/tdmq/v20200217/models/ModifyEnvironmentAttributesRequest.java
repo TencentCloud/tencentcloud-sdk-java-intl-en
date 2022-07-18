@@ -30,7 +30,7 @@ public class ModifyEnvironmentAttributesRequest extends AbstractModel{
     private String EnvironmentId;
 
     /**
-    * TTL for unconsumed messages in seconds. Maximum value: 1296000 seconds.
+    * Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s.
     */
     @SerializedName("MsgTTL")
     @Expose
@@ -74,16 +74,16 @@ public class ModifyEnvironmentAttributesRequest extends AbstractModel{
     }
 
     /**
-     * Get TTL for unconsumed messages in seconds. Maximum value: 1296000 seconds. 
-     * @return MsgTTL TTL for unconsumed messages in seconds. Maximum value: 1296000 seconds.
+     * Get Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s. 
+     * @return MsgTTL Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s.
      */
     public Long getMsgTTL() {
         return this.MsgTTL;
     }
 
     /**
-     * Set TTL for unconsumed messages in seconds. Maximum value: 1296000 seconds.
-     * @param MsgTTL TTL for unconsumed messages in seconds. Maximum value: 1296000 seconds.
+     * Set Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s.
+     * @param MsgTTL Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s.
      */
     public void setMsgTTL(Long MsgTTL) {
         this.MsgTTL = MsgTTL;

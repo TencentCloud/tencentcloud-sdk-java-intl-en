@@ -23,35 +23,35 @@ import java.util.HashMap;
 public class DescribeRocketMQTopicsRequest extends AbstractModel{
 
     /**
-    * Query offset
+    * Offset for query.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Query limit
+    * Query limit.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Cluster ID
+    * Cluster ID.
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Namespace
+    * Namespace.
     */
     @SerializedName("NamespaceId")
     @Expose
     private String NamespaceId;
 
     /**
-    * Filter by topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction.
+    * Filter by topic type. Valid values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`.
     */
     @SerializedName("FilterType")
     @Expose
@@ -65,80 +65,80 @@ public class DescribeRocketMQTopicsRequest extends AbstractModel{
     private String FilterName;
 
     /**
-     * Get Query offset 
-     * @return Offset Query offset
+     * Get Offset for query. 
+     * @return Offset Offset for query.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Query offset
-     * @param Offset Query offset
+     * Set Offset for query.
+     * @param Offset Offset for query.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Query limit 
-     * @return Limit Query limit
+     * Get Query limit. 
+     * @return Limit Query limit.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Query limit
-     * @param Limit Query limit
+     * Set Query limit.
+     * @param Limit Query limit.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get Cluster ID. 
+     * @return ClusterId Cluster ID.
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set Cluster ID.
+     * @param ClusterId Cluster ID.
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Namespace 
-     * @return NamespaceId Namespace
+     * Get Namespace. 
+     * @return NamespaceId Namespace.
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set Namespace
-     * @param NamespaceId Namespace
+     * Set Namespace.
+     * @param NamespaceId Namespace.
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
     }
 
     /**
-     * Get Filter by topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction. 
-     * @return FilterType Filter by topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction.
+     * Get Filter by topic type. Valid values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`. 
+     * @return FilterType Filter by topic type. Valid values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`.
      */
     public String [] getFilterType() {
         return this.FilterType;
     }
 
     /**
-     * Set Filter by topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction.
-     * @param FilterType Filter by topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction.
+     * Set Filter by topic type. Valid values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`.
+     * @param FilterType Filter by topic type. Valid values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`.
      */
     public void setFilterType(String [] FilterType) {
         this.FilterType = FilterType;

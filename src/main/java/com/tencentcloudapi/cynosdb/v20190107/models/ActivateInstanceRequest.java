@@ -30,7 +30,7 @@ public class ActivateInstanceRequest extends AbstractModel{
     private String ClusterId;
 
     /**
-    * Array of instance IDs
+    * List of instance IDs in the format of `cynosdbmysql-ins-n7ocdslw` as displayed in the TDSQL-C for MySQL console. You can use the instance list querying API to query the ID, i.e., the `InstanceId` value in the output parameters.
     */
     @SerializedName("InstanceIdList")
     @Expose
@@ -53,16 +53,16 @@ public class ActivateInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Array of instance IDs 
-     * @return InstanceIdList Array of instance IDs
+     * Get List of instance IDs in the format of `cynosdbmysql-ins-n7ocdslw` as displayed in the TDSQL-C for MySQL console. You can use the instance list querying API to query the ID, i.e., the `InstanceId` value in the output parameters. 
+     * @return InstanceIdList List of instance IDs in the format of `cynosdbmysql-ins-n7ocdslw` as displayed in the TDSQL-C for MySQL console. You can use the instance list querying API to query the ID, i.e., the `InstanceId` value in the output parameters.
      */
     public String [] getInstanceIdList() {
         return this.InstanceIdList;
     }
 
     /**
-     * Set Array of instance IDs
-     * @param InstanceIdList Array of instance IDs
+     * Set List of instance IDs in the format of `cynosdbmysql-ins-n7ocdslw` as displayed in the TDSQL-C for MySQL console. You can use the instance list querying API to query the ID, i.e., the `InstanceId` value in the output parameters.
+     * @param InstanceIdList List of instance IDs in the format of `cynosdbmysql-ins-n7ocdslw` as displayed in the TDSQL-C for MySQL console. You can use the instance list querying API to query the ID, i.e., the `InstanceId` value in the output parameters.
      */
     public void setInstanceIdList(String [] InstanceIdList) {
         this.InstanceIdList = InstanceIdList;

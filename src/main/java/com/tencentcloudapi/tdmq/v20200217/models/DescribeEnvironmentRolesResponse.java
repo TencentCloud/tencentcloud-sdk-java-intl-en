@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeEnvironmentRolesResponse extends AbstractModel{
 
     /**
-    * Number of records.
+    * The number of records.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Set of namespace roles.
+    * Namespace role set.
     */
     @SerializedName("EnvironmentRoleSets")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeEnvironmentRolesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Number of records. 
-     * @return TotalCount Number of records.
+     * Get The number of records. 
+     * @return TotalCount The number of records.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of records.
-     * @param TotalCount Number of records.
+     * Set The number of records.
+     * @param TotalCount The number of records.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Set of namespace roles. 
-     * @return EnvironmentRoleSets Set of namespace roles.
+     * Get Namespace role set. 
+     * @return EnvironmentRoleSets Namespace role set.
      */
     public EnvironmentRole [] getEnvironmentRoleSets() {
         return this.EnvironmentRoleSets;
     }
 
     /**
-     * Set Set of namespace roles.
-     * @param EnvironmentRoleSets Set of namespace roles.
+     * Set Namespace role set.
+     * @param EnvironmentRoleSets Namespace role set.
      */
     public void setEnvironmentRoleSets(EnvironmentRole [] EnvironmentRoleSets) {
         this.EnvironmentRoleSets = EnvironmentRoleSets;

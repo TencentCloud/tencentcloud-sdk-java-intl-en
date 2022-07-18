@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class FilterSubscription extends AbstractModel{
 
     /**
-    * Whether to display only subscriptions that include real consumers.
+    * Whether to only display subscriptions that include real consumers.
     */
     @SerializedName("ConsumerHasCount")
     @Expose
     private Boolean ConsumerHasCount;
 
     /**
-    * Whether to display only subscriptions with retained messages.
+    * Whether to only display subscriptions with heaped messages.
     */
     @SerializedName("ConsumerHasBacklog")
     @Expose
     private Boolean ConsumerHasBacklog;
 
     /**
-    * Whether to display only subscriptions with messages discarded after expiration.
+    * Whether to only display subscriptions with messages discarded after expiration.
     */
     @SerializedName("ConsumerHasExpired")
     @Expose
     private Boolean ConsumerHasExpired;
 
     /**
-    * Filter by subscription name for exact search.
+    * Filter by subscription name for exact query.
     */
     @SerializedName("SubscriptionNames")
     @Expose
     private String [] SubscriptionNames;
 
     /**
-     * Get Whether to display only subscriptions that include real consumers. 
-     * @return ConsumerHasCount Whether to display only subscriptions that include real consumers.
+     * Get Whether to only display subscriptions that include real consumers. 
+     * @return ConsumerHasCount Whether to only display subscriptions that include real consumers.
      */
     public Boolean getConsumerHasCount() {
         return this.ConsumerHasCount;
     }
 
     /**
-     * Set Whether to display only subscriptions that include real consumers.
-     * @param ConsumerHasCount Whether to display only subscriptions that include real consumers.
+     * Set Whether to only display subscriptions that include real consumers.
+     * @param ConsumerHasCount Whether to only display subscriptions that include real consumers.
      */
     public void setConsumerHasCount(Boolean ConsumerHasCount) {
         this.ConsumerHasCount = ConsumerHasCount;
     }
 
     /**
-     * Get Whether to display only subscriptions with retained messages. 
-     * @return ConsumerHasBacklog Whether to display only subscriptions with retained messages.
+     * Get Whether to only display subscriptions with heaped messages. 
+     * @return ConsumerHasBacklog Whether to only display subscriptions with heaped messages.
      */
     public Boolean getConsumerHasBacklog() {
         return this.ConsumerHasBacklog;
     }
 
     /**
-     * Set Whether to display only subscriptions with retained messages.
-     * @param ConsumerHasBacklog Whether to display only subscriptions with retained messages.
+     * Set Whether to only display subscriptions with heaped messages.
+     * @param ConsumerHasBacklog Whether to only display subscriptions with heaped messages.
      */
     public void setConsumerHasBacklog(Boolean ConsumerHasBacklog) {
         this.ConsumerHasBacklog = ConsumerHasBacklog;
     }
 
     /**
-     * Get Whether to display only subscriptions with messages discarded after expiration. 
-     * @return ConsumerHasExpired Whether to display only subscriptions with messages discarded after expiration.
+     * Get Whether to only display subscriptions with messages discarded after expiration. 
+     * @return ConsumerHasExpired Whether to only display subscriptions with messages discarded after expiration.
      */
     public Boolean getConsumerHasExpired() {
         return this.ConsumerHasExpired;
     }
 
     /**
-     * Set Whether to display only subscriptions with messages discarded after expiration.
-     * @param ConsumerHasExpired Whether to display only subscriptions with messages discarded after expiration.
+     * Set Whether to only display subscriptions with messages discarded after expiration.
+     * @param ConsumerHasExpired Whether to only display subscriptions with messages discarded after expiration.
      */
     public void setConsumerHasExpired(Boolean ConsumerHasExpired) {
         this.ConsumerHasExpired = ConsumerHasExpired;
     }
 
     /**
-     * Get Filter by subscription name for exact search. 
-     * @return SubscriptionNames Filter by subscription name for exact search.
+     * Get Filter by subscription name for exact query. 
+     * @return SubscriptionNames Filter by subscription name for exact query.
      */
     public String [] getSubscriptionNames() {
         return this.SubscriptionNames;
     }
 
     /**
-     * Set Filter by subscription name for exact search.
-     * @param SubscriptionNames Filter by subscription name for exact search.
+     * Set Filter by subscription name for exact query.
+     * @param SubscriptionNames Filter by subscription name for exact query.
      */
     public void setSubscriptionNames(String [] SubscriptionNames) {
         this.SubscriptionNames = SubscriptionNames;

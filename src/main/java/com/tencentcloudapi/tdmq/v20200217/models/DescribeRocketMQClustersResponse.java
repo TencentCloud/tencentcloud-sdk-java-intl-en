@@ -23,15 +23,15 @@ import java.util.HashMap;
 public class DescribeRocketMQClustersResponse extends AbstractModel{
 
     /**
-    * Cluster information
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Cluster information.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ClusterList")
     @Expose
     private RocketMQClusterDetail [] ClusterList;
 
     /**
-    * Total number
+    * The total number of returned results.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,36 +45,36 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Cluster information
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ClusterList Cluster information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Cluster information.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ClusterList Cluster information.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public RocketMQClusterDetail [] getClusterList() {
         return this.ClusterList;
     }
 
     /**
-     * Set Cluster information
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ClusterList Cluster information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Cluster information.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ClusterList Cluster information.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setClusterList(RocketMQClusterDetail [] ClusterList) {
         this.ClusterList = ClusterList;
     }
 
     /**
-     * Get Total number 
-     * @return TotalCount Total number
+     * Get The total number of returned results. 
+     * @return TotalCount The total number of returned results.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number
-     * @param TotalCount Total number
+     * Set The total number of returned results.
+     * @param TotalCount The total number of returned results.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

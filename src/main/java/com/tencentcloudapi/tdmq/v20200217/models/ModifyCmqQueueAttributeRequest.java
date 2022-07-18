@@ -128,7 +128,7 @@ public class ModifyCmqQueueAttributeRequest extends AbstractModel{
     private Long Transaction;
 
     /**
-    * Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+    * Queue storage space configured for message rewind. Value range: 10,240-512,000 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
     */
     @SerializedName("RetentionSizeInMB")
     @Expose
@@ -375,16 +375,16 @@ public class ModifyCmqQueueAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled. 
-     * @return RetentionSizeInMB Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+     * Get Queue storage space configured for message rewind. Value range: 10,240-512,000 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled. 
+     * @return RetentionSizeInMB Queue storage space configured for message rewind. Value range: 10,240-512,000 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
      */
     public Long getRetentionSizeInMB() {
         return this.RetentionSizeInMB;
     }
 
     /**
-     * Set Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
-     * @param RetentionSizeInMB Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+     * Set Queue storage space configured for message rewind. Value range: 10,240-512,000 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+     * @param RetentionSizeInMB Queue storage space configured for message rewind. Value range: 10,240-512,000 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
      */
     public void setRetentionSizeInMB(Long RetentionSizeInMB) {
         this.RetentionSizeInMB = RetentionSizeInMB;

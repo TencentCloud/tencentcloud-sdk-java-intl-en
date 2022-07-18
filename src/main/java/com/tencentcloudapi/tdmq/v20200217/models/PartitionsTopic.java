@@ -24,23 +24,23 @@ public class PartitionsTopic extends AbstractModel{
 
     /**
     * Average size of the messages published in the last interval in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AverageMsgSize")
     @Expose
     private String AverageMsgSize;
 
     /**
-    * Number of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The number of consumers.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ConsumerCount")
     @Expose
     private String ConsumerCount;
 
     /**
-    * Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LastConfirmedEntry")
     @Expose
@@ -48,47 +48,47 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Time when the last ledger was created.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LastLedgerCreatedTimestamp")
     @Expose
     private String LastLedgerCreatedTimestamp;
 
     /**
-    * Number of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The number of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MsgRateIn")
     @Expose
     private String MsgRateIn;
 
     /**
-    * Sum of the numbers of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The total number of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MsgRateOut")
     @Expose
     private String MsgRateOut;
 
     /**
-    * Number of bytes of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The size (in bytes) of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MsgThroughputIn")
     @Expose
     private String MsgThroughputIn;
 
     /**
-    * Number of bytes of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The size (in bytes) of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MsgThroughputOut")
     @Expose
     private String MsgThroughputOut;
 
     /**
-    * Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NumberOfEntries")
     @Expose
@@ -96,23 +96,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Subpartition ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Partitions")
     @Expose
     private Long Partitions;
 
     /**
-    * Number of producers.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The number of producers.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProducerCount")
     @Expose
     private String ProducerCount;
 
     /**
-    * Total amount of all stored messages in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Total size of all stored messages in bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalSize")
     @Expose
@@ -120,7 +120,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Topic type description.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TopicType")
     @Expose
@@ -128,9 +128,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Average size of the messages published in the last interval in bytes.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return AverageMsgSize Average size of the messages published in the last interval in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAverageMsgSize() {
         return this.AverageMsgSize;
@@ -138,49 +138,49 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Average size of the messages published in the last interval in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param AverageMsgSize Average size of the messages published in the last interval in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAverageMsgSize(String AverageMsgSize) {
         this.AverageMsgSize = AverageMsgSize;
     }
 
     /**
-     * Get Number of consumers.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ConsumerCount Number of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The number of consumers.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ConsumerCount The number of consumers.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getConsumerCount() {
         return this.ConsumerCount;
     }
 
     /**
-     * Set Number of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ConsumerCount Number of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The number of consumers.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ConsumerCount The number of consumers.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setConsumerCount(String ConsumerCount) {
         this.ConsumerCount = ConsumerCount;
     }
 
     /**
-     * Get Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return LastConfirmedEntry Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LastConfirmedEntry The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLastConfirmedEntry() {
         return this.LastConfirmedEntry;
     }
 
     /**
-     * Set Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param LastConfirmedEntry Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LastConfirmedEntry The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLastConfirmedEntry(String LastConfirmedEntry) {
         this.LastConfirmedEntry = LastConfirmedEntry;
@@ -188,9 +188,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Time when the last ledger was created.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return LastLedgerCreatedTimestamp Time when the last ledger was created.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLastLedgerCreatedTimestamp() {
         return this.LastLedgerCreatedTimestamp;
@@ -198,109 +198,109 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Time when the last ledger was created.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param LastLedgerCreatedTimestamp Time when the last ledger was created.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLastLedgerCreatedTimestamp(String LastLedgerCreatedTimestamp) {
         this.LastLedgerCreatedTimestamp = LastLedgerCreatedTimestamp;
     }
 
     /**
-     * Get Number of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MsgRateIn Number of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The number of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MsgRateIn The number of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMsgRateIn() {
         return this.MsgRateIn;
     }
 
     /**
-     * Set Number of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MsgRateIn Number of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The number of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MsgRateIn The number of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMsgRateIn(String MsgRateIn) {
         this.MsgRateIn = MsgRateIn;
     }
 
     /**
-     * Get Sum of the numbers of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MsgRateOut Sum of the numbers of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The total number of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MsgRateOut The total number of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMsgRateOut() {
         return this.MsgRateOut;
     }
 
     /**
-     * Set Sum of the numbers of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MsgRateOut Sum of the numbers of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The total number of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MsgRateOut The total number of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMsgRateOut(String MsgRateOut) {
         this.MsgRateOut = MsgRateOut;
     }
 
     /**
-     * Get Number of bytes of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MsgThroughputIn Number of bytes of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The size (in bytes) of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MsgThroughputIn The size (in bytes) of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMsgThroughputIn() {
         return this.MsgThroughputIn;
     }
 
     /**
-     * Set Number of bytes of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MsgThroughputIn Number of bytes of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The size (in bytes) of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MsgThroughputIn The size (in bytes) of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMsgThroughputIn(String MsgThroughputIn) {
         this.MsgThroughputIn = MsgThroughputIn;
     }
 
     /**
-     * Get Number of bytes of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MsgThroughputOut Number of bytes of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The size (in bytes) of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MsgThroughputOut The size (in bytes) of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMsgThroughputOut() {
         return this.MsgThroughputOut;
     }
 
     /**
-     * Set Number of bytes of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MsgThroughputOut Number of bytes of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The size (in bytes) of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MsgThroughputOut The size (in bytes) of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMsgThroughputOut(String MsgThroughputOut) {
         this.MsgThroughputOut = MsgThroughputOut;
     }
 
     /**
-     * Get Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return NumberOfEntries Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return NumberOfEntries The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getNumberOfEntries() {
         return this.NumberOfEntries;
     }
 
     /**
-     * Set Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param NumberOfEntries Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param NumberOfEntries The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNumberOfEntries(String NumberOfEntries) {
         this.NumberOfEntries = NumberOfEntries;
@@ -308,9 +308,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Subpartition ID.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Partitions Subpartition ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getPartitions() {
         return this.Partitions;
@@ -318,49 +318,49 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Subpartition ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Partitions Subpartition ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPartitions(Long Partitions) {
         this.Partitions = Partitions;
     }
 
     /**
-     * Get Number of producers.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ProducerCount Number of producers.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The number of producers.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ProducerCount The number of producers.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProducerCount() {
         return this.ProducerCount;
     }
 
     /**
-     * Set Number of producers.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ProducerCount Number of producers.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The number of producers.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ProducerCount The number of producers.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProducerCount(String ProducerCount) {
         this.ProducerCount = ProducerCount;
     }
 
     /**
-     * Get Total amount of all stored messages in bytes.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TotalSize Total amount of all stored messages in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Total size of all stored messages in bytes.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TotalSize Total size of all stored messages in bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTotalSize() {
         return this.TotalSize;
     }
 
     /**
-     * Set Total amount of all stored messages in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TotalSize Total amount of all stored messages in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Total size of all stored messages in bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TotalSize Total size of all stored messages in bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalSize(String TotalSize) {
         this.TotalSize = TotalSize;
@@ -368,9 +368,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Topic type description.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return TopicType Topic type description.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTopicType() {
         return this.TopicType;
@@ -378,9 +378,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Topic type description.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param TopicType Topic type description.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTopicType(Long TopicType) {
         this.TopicType = TopicType;

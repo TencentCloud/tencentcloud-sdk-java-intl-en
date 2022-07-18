@@ -30,7 +30,7 @@ public class DescribeRocketMQNamespacesResponse extends AbstractModel{
     private RocketMQNamespace [] Namespaces;
 
     /**
-    * Total number
+    * The total number of returned results.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeRocketMQNamespacesResponse extends AbstractModel{
     }
 
     /**
-     * Get Total number 
-     * @return TotalCount Total number
+     * Get The total number of returned results. 
+     * @return TotalCount The total number of returned results.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number
-     * @param TotalCount Total number
+     * Set The total number of returned results.
+     * @param TotalCount The total number of returned results.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

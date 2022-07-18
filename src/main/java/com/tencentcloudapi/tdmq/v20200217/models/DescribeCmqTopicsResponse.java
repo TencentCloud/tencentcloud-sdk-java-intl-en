@@ -23,15 +23,15 @@ import java.util.HashMap;
 public class DescribeCmqTopicsResponse extends AbstractModel{
 
     /**
-    * List of topics
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Topic list.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TopicList")
     @Expose
     private CmqTopic [] TopicList;
 
     /**
-    * Total number of topics
+    * The total number of topics.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,36 +45,36 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List of topics
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TopicList List of topics
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Topic list.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TopicList Topic list.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public CmqTopic [] getTopicList() {
         return this.TopicList;
     }
 
     /**
-     * Set List of topics
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TopicList List of topics
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Topic list.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TopicList Topic list.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTopicList(CmqTopic [] TopicList) {
         this.TopicList = TopicList;
     }
 
     /**
-     * Get Total number of topics 
-     * @return TotalCount Total number of topics
+     * Get The total number of topics. 
+     * @return TotalCount The total number of topics.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of topics
-     * @param TotalCount Total number of topics
+     * Set The total number of topics.
+     * @param TotalCount The total number of topics.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

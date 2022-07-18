@@ -60,6 +60,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String SubName;
 
     /**
+    * MessageIDs returned by `BatchReceivePolicy` at a time, which are separated by “###”.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MessageIDList")
+    @Expose
+    private String MessageIDList;
+
+    /**
+    * Message contents returned by `BatchReceivePolicy` at a time, which are separated by “###”.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MessagesPayload")
+    @Expose
+    private String MessagesPayload;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -155,6 +171,46 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get MessageIDs returned by `BatchReceivePolicy` at a time, which are separated by “###”.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MessageIDList MessageIDs returned by `BatchReceivePolicy` at a time, which are separated by “###”.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getMessageIDList() {
+        return this.MessageIDList;
+    }
+
+    /**
+     * Set MessageIDs returned by `BatchReceivePolicy` at a time, which are separated by “###”.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MessageIDList MessageIDs returned by `BatchReceivePolicy` at a time, which are separated by “###”.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMessageIDList(String MessageIDList) {
+        this.MessageIDList = MessageIDList;
+    }
+
+    /**
+     * Get Message contents returned by `BatchReceivePolicy` at a time, which are separated by “###”.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MessagesPayload Message contents returned by `BatchReceivePolicy` at a time, which are separated by “###”.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getMessagesPayload() {
+        return this.MessagesPayload;
+    }
+
+    /**
+     * Set Message contents returned by `BatchReceivePolicy` at a time, which are separated by “###”.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MessagesPayload Message contents returned by `BatchReceivePolicy` at a time, which are separated by “###”.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMessagesPayload(String MessagesPayload) {
+        this.MessagesPayload = MessagesPayload;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -193,6 +249,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.SubName != null) {
             this.SubName = new String(source.SubName);
         }
+        if (source.MessageIDList != null) {
+            this.MessageIDList = new String(source.MessageIDList);
+        }
+        if (source.MessagesPayload != null) {
+            this.MessagesPayload = new String(source.MessagesPayload);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -208,6 +270,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "AckTopic", this.AckTopic);
         this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         this.setParamSimple(map, prefix + "SubName", this.SubName);
+        this.setParamSimple(map, prefix + "MessageIDList", this.MessageIDList);
+        this.setParamSimple(map, prefix + "MessagesPayload", this.MessagesPayload);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

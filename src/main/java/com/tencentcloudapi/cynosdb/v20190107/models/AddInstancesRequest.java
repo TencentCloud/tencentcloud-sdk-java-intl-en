@@ -37,49 +37,49 @@ public class AddInstancesRequest extends AbstractModel{
     private Long Cpu;
 
     /**
-    * Memory
+    * Memory in GB
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Number of added read-only instances
+    * Number of added read-only instances. Value range: (0,16].
     */
     @SerializedName("ReadOnlyCount")
     @Expose
     private Long ReadOnlyCount;
 
     /**
-    * Instance group ID, which is used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created.
+    * Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
     */
     @SerializedName("InstanceGrpId")
     @Expose
     private String InstanceGrpId;
 
     /**
-    * VPC ID
+    * VPC ID. This parameter has been disused.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Subnet ID
+    * Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Port used when adding RO group
+    * The port used when adding an RO group. Value range: [0,65535).
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * Instance name
+    * Instance name. String length range: [0,64).
     */
     @SerializedName("InstanceName")
     @Expose
@@ -101,7 +101,7 @@ public class AddInstancesRequest extends AbstractModel{
     private String DbType;
 
     /**
-    * Order source
+    * Order source. String length range: [0,64).
     */
     @SerializedName("OrderSource")
     @Expose
@@ -147,112 +147,112 @@ public class AddInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Memory 
-     * @return Memory Memory
+     * Get Memory in GB 
+     * @return Memory Memory in GB
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Memory
-     * @param Memory Memory
+     * Set Memory in GB
+     * @param Memory Memory in GB
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Number of added read-only instances 
-     * @return ReadOnlyCount Number of added read-only instances
+     * Get Number of added read-only instances. Value range: (0,16]. 
+     * @return ReadOnlyCount Number of added read-only instances. Value range: (0,16].
      */
     public Long getReadOnlyCount() {
         return this.ReadOnlyCount;
     }
 
     /**
-     * Set Number of added read-only instances
-     * @param ReadOnlyCount Number of added read-only instances
+     * Set Number of added read-only instances. Value range: (0,16].
+     * @param ReadOnlyCount Number of added read-only instances. Value range: (0,16].
      */
     public void setReadOnlyCount(Long ReadOnlyCount) {
         this.ReadOnlyCount = ReadOnlyCount;
     }
 
     /**
-     * Get Instance group ID, which is used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. 
-     * @return InstanceGrpId Instance group ID, which is used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created.
+     * Get Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version. 
+     * @return InstanceGrpId Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
      */
     public String getInstanceGrpId() {
         return this.InstanceGrpId;
     }
 
     /**
-     * Set Instance group ID, which is used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created.
-     * @param InstanceGrpId Instance group ID, which is used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created.
+     * Set Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
+     * @param InstanceGrpId Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
      */
     public void setInstanceGrpId(String InstanceGrpId) {
         this.InstanceGrpId = InstanceGrpId;
     }
 
     /**
-     * Get VPC ID 
-     * @return VpcId VPC ID
+     * Get VPC ID. This parameter has been disused. 
+     * @return VpcId VPC ID. This parameter has been disused.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID
-     * @param VpcId VPC ID
+     * Set VPC ID. This parameter has been disused.
+     * @param VpcId VPC ID. This parameter has been disused.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet ID 
-     * @return SubnetId Subnet ID
+     * Get Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused. 
+     * @return SubnetId Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID
-     * @param SubnetId Subnet ID
+     * Set Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
+     * @param SubnetId Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Port used when adding RO group 
-     * @return Port Port used when adding RO group
+     * Get The port used when adding an RO group. Value range: [0,65535). 
+     * @return Port The port used when adding an RO group. Value range: [0,65535).
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Port used when adding RO group
-     * @param Port Port used when adding RO group
+     * Set The port used when adding an RO group. Value range: [0,65535).
+     * @param Port The port used when adding an RO group. Value range: [0,65535).
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get Instance name. String length range: [0,64). 
+     * @return InstanceName Instance name. String length range: [0,64).
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set Instance name. String length range: [0,64).
+     * @param InstanceName Instance name. String length range: [0,64).
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -295,16 +295,16 @@ public class AddInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Order source 
-     * @return OrderSource Order source
+     * Get Order source. String length range: [0,64). 
+     * @return OrderSource Order source. String length range: [0,64).
      */
     public String getOrderSource() {
         return this.OrderSource;
     }
 
     /**
-     * Set Order source
-     * @param OrderSource Order source
+     * Set Order source. String length range: [0,64).
+     * @param OrderSource Order source. String length range: [0,64).
      */
     public void setOrderSource(String OrderSource) {
         this.OrderSource = OrderSource;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteTopicsRequest extends AbstractModel{
 
     /**
-    * Set of topics. Up to 20 topics can be deleted at a time.
+    * Topic set. Up to 20 topics can be deleted at a time.
     */
     @SerializedName("TopicSets")
     @Expose
@@ -44,23 +44,23 @@ public class DeleteTopicsRequest extends AbstractModel{
     private String EnvironmentId;
 
     /**
-    * Whether to force deletion. Default value: false
+    * Whether to forcibly delete a topic. Default value: `false`.
     */
     @SerializedName("Force")
     @Expose
     private Boolean Force;
 
     /**
-     * Get Set of topics. Up to 20 topics can be deleted at a time. 
-     * @return TopicSets Set of topics. Up to 20 topics can be deleted at a time.
+     * Get Topic set. Up to 20 topics can be deleted at a time. 
+     * @return TopicSets Topic set. Up to 20 topics can be deleted at a time.
      */
     public TopicRecord [] getTopicSets() {
         return this.TopicSets;
     }
 
     /**
-     * Set Set of topics. Up to 20 topics can be deleted at a time.
-     * @param TopicSets Set of topics. Up to 20 topics can be deleted at a time.
+     * Set Topic set. Up to 20 topics can be deleted at a time.
+     * @param TopicSets Topic set. Up to 20 topics can be deleted at a time.
      */
     public void setTopicSets(TopicRecord [] TopicSets) {
         this.TopicSets = TopicSets;
@@ -99,16 +99,16 @@ public class DeleteTopicsRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to force deletion. Default value: false 
-     * @return Force Whether to force deletion. Default value: false
+     * Get Whether to forcibly delete a topic. Default value: `false`. 
+     * @return Force Whether to forcibly delete a topic. Default value: `false`.
      */
     public Boolean getForce() {
         return this.Force;
     }
 
     /**
-     * Set Whether to force deletion. Default value: false
-     * @param Force Whether to force deletion. Default value: false
+     * Set Whether to forcibly delete a topic. Default value: `false`.
+     * @param Force Whether to forcibly delete a topic. Default value: `false`.
      */
     public void setForce(Boolean Force) {
         this.Force = Force;

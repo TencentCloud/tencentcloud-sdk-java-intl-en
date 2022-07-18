@@ -23,42 +23,42 @@ import java.util.HashMap;
 public class DescribeRocketMQClustersRequest extends AbstractModel{
 
     /**
-    * Offset
+    * Offset.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Maximum number
+    * The max number of returned results.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Search by cluster ID
+    * Search by cluster ID.
     */
     @SerializedName("IdKeyword")
     @Expose
     private String IdKeyword;
 
     /**
-    * Search by cluster name
+    * Search by cluster name.
     */
     @SerializedName("NameKeyword")
     @Expose
     private String NameKeyword;
 
     /**
-    * Filter by list of cluster IDs
+    * Filter by cluster ID.
     */
     @SerializedName("ClusterIdList")
     @Expose
     private String [] ClusterIdList;
 
     /**
-    * For filtering by tag, this must be configured to `true`
+    * For filtering by tag, this parameter must be set to `true`.
     */
     @SerializedName("IsTagFilter")
     @Expose
@@ -72,96 +72,96 @@ public class DescribeRocketMQClustersRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-     * Get Offset 
-     * @return Offset Offset
+     * Get Offset. 
+     * @return Offset Offset.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset
-     * @param Offset Offset
+     * Set Offset.
+     * @param Offset Offset.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Maximum number 
-     * @return Limit Maximum number
+     * Get The max number of returned results. 
+     * @return Limit The max number of returned results.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Maximum number
-     * @param Limit Maximum number
+     * Set The max number of returned results.
+     * @param Limit The max number of returned results.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Search by cluster ID 
-     * @return IdKeyword Search by cluster ID
+     * Get Search by cluster ID. 
+     * @return IdKeyword Search by cluster ID.
      */
     public String getIdKeyword() {
         return this.IdKeyword;
     }
 
     /**
-     * Set Search by cluster ID
-     * @param IdKeyword Search by cluster ID
+     * Set Search by cluster ID.
+     * @param IdKeyword Search by cluster ID.
      */
     public void setIdKeyword(String IdKeyword) {
         this.IdKeyword = IdKeyword;
     }
 
     /**
-     * Get Search by cluster name 
-     * @return NameKeyword Search by cluster name
+     * Get Search by cluster name. 
+     * @return NameKeyword Search by cluster name.
      */
     public String getNameKeyword() {
         return this.NameKeyword;
     }
 
     /**
-     * Set Search by cluster name
-     * @param NameKeyword Search by cluster name
+     * Set Search by cluster name.
+     * @param NameKeyword Search by cluster name.
      */
     public void setNameKeyword(String NameKeyword) {
         this.NameKeyword = NameKeyword;
     }
 
     /**
-     * Get Filter by list of cluster IDs 
-     * @return ClusterIdList Filter by list of cluster IDs
+     * Get Filter by cluster ID. 
+     * @return ClusterIdList Filter by cluster ID.
      */
     public String [] getClusterIdList() {
         return this.ClusterIdList;
     }
 
     /**
-     * Set Filter by list of cluster IDs
-     * @param ClusterIdList Filter by list of cluster IDs
+     * Set Filter by cluster ID.
+     * @param ClusterIdList Filter by cluster ID.
      */
     public void setClusterIdList(String [] ClusterIdList) {
         this.ClusterIdList = ClusterIdList;
     }
 
     /**
-     * Get For filtering by tag, this must be configured to `true` 
-     * @return IsTagFilter For filtering by tag, this must be configured to `true`
+     * Get For filtering by tag, this parameter must be set to `true`. 
+     * @return IsTagFilter For filtering by tag, this parameter must be set to `true`.
      */
     public Boolean getIsTagFilter() {
         return this.IsTagFilter;
     }
 
     /**
-     * Set For filtering by tag, this must be configured to `true`
-     * @param IsTagFilter For filtering by tag, this must be configured to `true`
+     * Set For filtering by tag, this parameter must be set to `true`.
+     * @param IsTagFilter For filtering by tag, this parameter must be set to `true`.
      */
     public void setIsTagFilter(Boolean IsTagFilter) {
         this.IsTagFilter = IsTagFilter;

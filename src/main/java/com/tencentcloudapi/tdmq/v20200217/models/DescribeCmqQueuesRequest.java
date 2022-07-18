@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeCmqQueuesRequest extends AbstractModel{
 
     /**
-    * Starting position of the list of queues to be returned on the current page in case of paginated return. If a value is entered, `limit` is required. If this parameter is left empty, 0 will be used by default
+    * Starting position of a queue list to be returned on the current page in case of paginated return. If a value is entered, `limit` must be specified. If this parameter is left empty, 0 will be used by default.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
+    * The number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
     */
     @SerializedName("Limit")
     @Expose
@@ -44,53 +44,53 @@ public class DescribeCmqQueuesRequest extends AbstractModel{
     private String QueueName;
 
     /**
-    * List of CMQ queue names
+    * Filter by CMQ queue name.
     */
     @SerializedName("QueueNameList")
     @Expose
     private String [] QueueNameList;
 
     /**
-    * For filtering by tag, this must be configured to `true`.
+    * For filtering by tag, this parameter must be set to `true`.
     */
     @SerializedName("IsTagFilter")
     @Expose
     private Boolean IsTagFilter;
 
     /**
-    * Filter. Currently, you can filter only by tag.
+    * Filter. Currently, you can filter by tag. The tag name must be prefixed with “tag:”, such as “tag: owner”, “tag: environment”, or “tag: business”.
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get Starting position of the list of queues to be returned on the current page in case of paginated return. If a value is entered, `limit` is required. If this parameter is left empty, 0 will be used by default 
-     * @return Offset Starting position of the list of queues to be returned on the current page in case of paginated return. If a value is entered, `limit` is required. If this parameter is left empty, 0 will be used by default
+     * Get Starting position of a queue list to be returned on the current page in case of paginated return. If a value is entered, `limit` must be specified. If this parameter is left empty, 0 will be used by default. 
+     * @return Offset Starting position of a queue list to be returned on the current page in case of paginated return. If a value is entered, `limit` must be specified. If this parameter is left empty, 0 will be used by default.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Starting position of the list of queues to be returned on the current page in case of paginated return. If a value is entered, `limit` is required. If this parameter is left empty, 0 will be used by default
-     * @param Offset Starting position of the list of queues to be returned on the current page in case of paginated return. If a value is entered, `limit` is required. If this parameter is left empty, 0 will be used by default
+     * Set Starting position of a queue list to be returned on the current page in case of paginated return. If a value is entered, `limit` must be specified. If this parameter is left empty, 0 will be used by default.
+     * @param Offset Starting position of a queue list to be returned on the current page in case of paginated return. If a value is entered, `limit` must be specified. If this parameter is left empty, 0 will be used by default.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50. 
-     * @return Limit Number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
+     * Get The number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50. 
+     * @return Limit The number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
-     * @param Limit Number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
+     * Set The number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
+     * @param Limit The number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -113,48 +113,48 @@ public class DescribeCmqQueuesRequest extends AbstractModel{
     }
 
     /**
-     * Get List of CMQ queue names 
-     * @return QueueNameList List of CMQ queue names
+     * Get Filter by CMQ queue name. 
+     * @return QueueNameList Filter by CMQ queue name.
      */
     public String [] getQueueNameList() {
         return this.QueueNameList;
     }
 
     /**
-     * Set List of CMQ queue names
-     * @param QueueNameList List of CMQ queue names
+     * Set Filter by CMQ queue name.
+     * @param QueueNameList Filter by CMQ queue name.
      */
     public void setQueueNameList(String [] QueueNameList) {
         this.QueueNameList = QueueNameList;
     }
 
     /**
-     * Get For filtering by tag, this must be configured to `true`. 
-     * @return IsTagFilter For filtering by tag, this must be configured to `true`.
+     * Get For filtering by tag, this parameter must be set to `true`. 
+     * @return IsTagFilter For filtering by tag, this parameter must be set to `true`.
      */
     public Boolean getIsTagFilter() {
         return this.IsTagFilter;
     }
 
     /**
-     * Set For filtering by tag, this must be configured to `true`.
-     * @param IsTagFilter For filtering by tag, this must be configured to `true`.
+     * Set For filtering by tag, this parameter must be set to `true`.
+     * @param IsTagFilter For filtering by tag, this parameter must be set to `true`.
      */
     public void setIsTagFilter(Boolean IsTagFilter) {
         this.IsTagFilter = IsTagFilter;
     }
 
     /**
-     * Get Filter. Currently, you can filter only by tag. 
-     * @return Filters Filter. Currently, you can filter only by tag.
+     * Get Filter. Currently, you can filter by tag. The tag name must be prefixed with “tag:”, such as “tag: owner”, “tag: environment”, or “tag: business”. 
+     * @return Filters Filter. Currently, you can filter by tag. The tag name must be prefixed with “tag:”, such as “tag: owner”, “tag: environment”, or “tag: business”.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter. Currently, you can filter only by tag.
-     * @param Filters Filter. Currently, you can filter only by tag.
+     * Set Filter. Currently, you can filter by tag. The tag name must be prefixed with “tag:”, such as “tag: owner”, “tag: environment”, or “tag: business”.
+     * @param Filters Filter. Currently, you can filter by tag. The tag name must be prefixed with “tag:”, such as “tag: owner”, “tag: environment”, or “tag: business”.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

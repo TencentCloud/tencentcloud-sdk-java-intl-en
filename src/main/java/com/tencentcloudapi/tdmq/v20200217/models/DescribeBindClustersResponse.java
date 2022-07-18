@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeBindClustersResponse extends AbstractModel{
 
     /**
-    * Number of dedicated clusters
+    * The number of dedicated clusters
     */
     @SerializedName("TotalCount")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeBindClustersResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Number of dedicated clusters 
-     * @return TotalCount Number of dedicated clusters
+     * Get The number of dedicated clusters 
+     * @return TotalCount The number of dedicated clusters
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of dedicated clusters
-     * @param TotalCount Number of dedicated clusters
+     * Set The number of dedicated clusters
+     * @param TotalCount The number of dedicated clusters
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

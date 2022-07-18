@@ -44,7 +44,7 @@ public class ModifyMaintainPeriodConfigRequest extends AbstractModel{
     private Long MaintainDuration;
 
     /**
-    * Maintenance days of the week
+    * Maintenance days of the week. Valid values: [Mon, Tue, Wed, Thu, Fri, Sat, Sun].
     */
     @SerializedName("MaintainWeekDays")
     @Expose
@@ -99,16 +99,16 @@ public class ModifyMaintainPeriodConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get Maintenance days of the week 
-     * @return MaintainWeekDays Maintenance days of the week
+     * Get Maintenance days of the week. Valid values: [Mon, Tue, Wed, Thu, Fri, Sat, Sun]. 
+     * @return MaintainWeekDays Maintenance days of the week. Valid values: [Mon, Tue, Wed, Thu, Fri, Sat, Sun].
      */
     public String [] getMaintainWeekDays() {
         return this.MaintainWeekDays;
     }
 
     /**
-     * Set Maintenance days of the week
-     * @param MaintainWeekDays Maintenance days of the week
+     * Set Maintenance days of the week. Valid values: [Mon, Tue, Wed, Thu, Fri, Sat, Sun].
+     * @param MaintainWeekDays Maintenance days of the week. Valid values: [Mon, Tue, Wed, Thu, Fri, Sat, Sun].
      */
     public void setMaintainWeekDays(String [] MaintainWeekDays) {
         this.MaintainWeekDays = MaintainWeekDays;

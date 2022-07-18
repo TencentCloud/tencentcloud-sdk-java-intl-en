@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteSubscriptionsRequest extends AbstractModel{
 
     /**
-    * Set of subscriptions. Up to 20 subscriptions can be deleted at a time.
+    * Subscription set. Up to 20 subscriptions can be deleted at a time.
     */
     @SerializedName("SubscriptionTopicSets")
     @Expose
@@ -44,23 +44,23 @@ public class DeleteSubscriptionsRequest extends AbstractModel{
     private String EnvironmentId;
 
     /**
-    * Whether to force deletion. Default value: false
+    * Whether to forcibly delete a subscription. Default value: `false`.
     */
     @SerializedName("Force")
     @Expose
     private Boolean Force;
 
     /**
-     * Get Set of subscriptions. Up to 20 subscriptions can be deleted at a time. 
-     * @return SubscriptionTopicSets Set of subscriptions. Up to 20 subscriptions can be deleted at a time.
+     * Get Subscription set. Up to 20 subscriptions can be deleted at a time. 
+     * @return SubscriptionTopicSets Subscription set. Up to 20 subscriptions can be deleted at a time.
      */
     public SubscriptionTopic [] getSubscriptionTopicSets() {
         return this.SubscriptionTopicSets;
     }
 
     /**
-     * Set Set of subscriptions. Up to 20 subscriptions can be deleted at a time.
-     * @param SubscriptionTopicSets Set of subscriptions. Up to 20 subscriptions can be deleted at a time.
+     * Set Subscription set. Up to 20 subscriptions can be deleted at a time.
+     * @param SubscriptionTopicSets Subscription set. Up to 20 subscriptions can be deleted at a time.
      */
     public void setSubscriptionTopicSets(SubscriptionTopic [] SubscriptionTopicSets) {
         this.SubscriptionTopicSets = SubscriptionTopicSets;
@@ -99,16 +99,16 @@ public class DeleteSubscriptionsRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to force deletion. Default value: false 
-     * @return Force Whether to force deletion. Default value: false
+     * Get Whether to forcibly delete a subscription. Default value: `false`. 
+     * @return Force Whether to forcibly delete a subscription. Default value: `false`.
      */
     public Boolean getForce() {
         return this.Force;
     }
 
     /**
-     * Set Whether to force deletion. Default value: false
-     * @param Force Whether to force deletion. Default value: false
+     * Set Whether to forcibly delete a subscription. Default value: `false`.
+     * @param Force Whether to forcibly delete a subscription. Default value: `false`.
      */
     public void setForce(Boolean Force) {
         this.Force = Force;

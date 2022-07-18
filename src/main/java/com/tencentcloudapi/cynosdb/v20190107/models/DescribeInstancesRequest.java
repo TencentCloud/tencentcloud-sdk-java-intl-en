@@ -62,7 +62,7 @@ public class DescribeInstancesRequest extends AbstractModel{
     private QueryFilter [] Filters;
 
     /**
-    * Engine type. Valid values: MYSQL, POSTGRESQL
+    * Engine type. Currently, `MYSQL` is supported.
     */
     @SerializedName("DbType")
     @Expose
@@ -186,16 +186,16 @@ offlined: Instance eliminated
     }
 
     /**
-     * Get Engine type. Valid values: MYSQL, POSTGRESQL 
-     * @return DbType Engine type. Valid values: MYSQL, POSTGRESQL
+     * Get Engine type. Currently, `MYSQL` is supported. 
+     * @return DbType Engine type. Currently, `MYSQL` is supported.
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set Engine type. Valid values: MYSQL, POSTGRESQL
-     * @param DbType Engine type. Valid values: MYSQL, POSTGRESQL
+     * Set Engine type. Currently, `MYSQL` is supported.
+     * @param DbType Engine type. Currently, `MYSQL` is supported.
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;

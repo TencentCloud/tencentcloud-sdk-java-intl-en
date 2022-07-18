@@ -30,8 +30,7 @@ public class IsolateClusterRequest extends AbstractModel{
     private String ClusterId;
 
     /**
-    * Database type. Valid values: 
-<li> MYSQL </li>
+    * This parameter has been disused.
     */
     @SerializedName("DbType")
     @Expose
@@ -54,20 +53,16 @@ public class IsolateClusterRequest extends AbstractModel{
     }
 
     /**
-     * Get Database type. Valid values: 
-<li> MYSQL </li> 
-     * @return DbType Database type. Valid values: 
-<li> MYSQL </li>
+     * Get This parameter has been disused. 
+     * @return DbType This parameter has been disused.
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set Database type. Valid values: 
-<li> MYSQL </li>
-     * @param DbType Database type. Valid values: 
-<li> MYSQL </li>
+     * Set This parameter has been disused.
+     * @param DbType This parameter has been disused.
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;

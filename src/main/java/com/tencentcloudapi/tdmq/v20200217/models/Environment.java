@@ -23,217 +23,217 @@ import java.util.HashMap;
 public class Environment extends AbstractModel{
 
     /**
-    * Namespace name
+    * Namespace name.
     */
     @SerializedName("EnvironmentId")
     @Expose
     private String EnvironmentId;
 
     /**
-    * Remarks
+    * Description.
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * TTL for unconsumed messages in seconds. Maximum value: 1296000 seconds (i.e., 15 days)
+    * Retention period for unconsumed messages in seconds. Maximum value: 1,296,000 seconds (15 days).
     */
     @SerializedName("MsgTTL")
     @Expose
     private Long MsgTTL;
 
     /**
-    * Creation time
+    * Creation time.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Modification time
+    * Last modified.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Namespace ID
+    * Namespace ID.
     */
     @SerializedName("NamespaceId")
     @Expose
     private String NamespaceId;
 
     /**
-    * Namespace name
+    * Namespace name.
     */
     @SerializedName("NamespaceName")
     @Expose
     private String NamespaceName;
 
     /**
-    * Number of topics
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The number of topics.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TopicNum")
     @Expose
     private Long TopicNum;
 
     /**
-    * Message retention policy
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Message retention policy.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RetentionPolicy")
     @Expose
     private RetentionPolicy RetentionPolicy;
 
     /**
-     * Get Namespace name 
-     * @return EnvironmentId Namespace name
+     * Get Namespace name. 
+     * @return EnvironmentId Namespace name.
      */
     public String getEnvironmentId() {
         return this.EnvironmentId;
     }
 
     /**
-     * Set Namespace name
-     * @param EnvironmentId Namespace name
+     * Set Namespace name.
+     * @param EnvironmentId Namespace name.
      */
     public void setEnvironmentId(String EnvironmentId) {
         this.EnvironmentId = EnvironmentId;
     }
 
     /**
-     * Get Remarks 
-     * @return Remark Remarks
+     * Get Description. 
+     * @return Remark Description.
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Remarks
-     * @param Remark Remarks
+     * Set Description.
+     * @param Remark Description.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get TTL for unconsumed messages in seconds. Maximum value: 1296000 seconds (i.e., 15 days) 
-     * @return MsgTTL TTL for unconsumed messages in seconds. Maximum value: 1296000 seconds (i.e., 15 days)
+     * Get Retention period for unconsumed messages in seconds. Maximum value: 1,296,000 seconds (15 days). 
+     * @return MsgTTL Retention period for unconsumed messages in seconds. Maximum value: 1,296,000 seconds (15 days).
      */
     public Long getMsgTTL() {
         return this.MsgTTL;
     }
 
     /**
-     * Set TTL for unconsumed messages in seconds. Maximum value: 1296000 seconds (i.e., 15 days)
-     * @param MsgTTL TTL for unconsumed messages in seconds. Maximum value: 1296000 seconds (i.e., 15 days)
+     * Set Retention period for unconsumed messages in seconds. Maximum value: 1,296,000 seconds (15 days).
+     * @param MsgTTL Retention period for unconsumed messages in seconds. Maximum value: 1,296,000 seconds (15 days).
      */
     public void setMsgTTL(Long MsgTTL) {
         this.MsgTTL = MsgTTL;
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get Creation time. 
+     * @return CreateTime Creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set Creation time.
+     * @param CreateTime Creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Modification time 
-     * @return UpdateTime Modification time
+     * Get Last modified. 
+     * @return UpdateTime Last modified.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Modification time
-     * @param UpdateTime Modification time
+     * Set Last modified.
+     * @param UpdateTime Last modified.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Namespace ID 
-     * @return NamespaceId Namespace ID
+     * Get Namespace ID. 
+     * @return NamespaceId Namespace ID.
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set Namespace ID
-     * @param NamespaceId Namespace ID
+     * Set Namespace ID.
+     * @param NamespaceId Namespace ID.
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
     }
 
     /**
-     * Get Namespace name 
-     * @return NamespaceName Namespace name
+     * Get Namespace name. 
+     * @return NamespaceName Namespace name.
      */
     public String getNamespaceName() {
         return this.NamespaceName;
     }
 
     /**
-     * Set Namespace name
-     * @param NamespaceName Namespace name
+     * Set Namespace name.
+     * @param NamespaceName Namespace name.
      */
     public void setNamespaceName(String NamespaceName) {
         this.NamespaceName = NamespaceName;
     }
 
     /**
-     * Get Number of topics
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TopicNum Number of topics
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The number of topics.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TopicNum The number of topics.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTopicNum() {
         return this.TopicNum;
     }
 
     /**
-     * Set Number of topics
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TopicNum Number of topics
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The number of topics.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TopicNum The number of topics.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTopicNum(Long TopicNum) {
         this.TopicNum = TopicNum;
     }
 
     /**
-     * Get Message retention policy
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RetentionPolicy Message retention policy
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Message retention policy.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RetentionPolicy Message retention policy.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public RetentionPolicy getRetentionPolicy() {
         return this.RetentionPolicy;
     }
 
     /**
-     * Set Message retention policy
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RetentionPolicy Message retention policy
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Message retention policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RetentionPolicy Message retention policy.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRetentionPolicy(RetentionPolicy RetentionPolicy) {
         this.RetentionPolicy = RetentionPolicy;

@@ -23,15 +23,15 @@ import java.util.HashMap;
 public class DescribeCmqQueuesResponse extends AbstractModel{
 
     /**
-    * Quantity
+    * The number of queues.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of queues
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Queue list.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("QueueList")
     @Expose
@@ -45,36 +45,36 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Quantity 
-     * @return TotalCount Quantity
+     * Get The number of queues. 
+     * @return TotalCount The number of queues.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Quantity
-     * @param TotalCount Quantity
+     * Set The number of queues.
+     * @param TotalCount The number of queues.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of queues
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return QueueList List of queues
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Queue list.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return QueueList Queue list.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public CmqQueue [] getQueueList() {
         return this.QueueList;
     }
 
     /**
-     * Set List of queues
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param QueueList List of queues
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Queue list.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param QueueList Queue list.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setQueueList(CmqQueue [] QueueList) {
         this.QueueList = QueueList;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeRocketMQTopicsResponse extends AbstractModel{
 
     /**
-    * Total number of records
+    * The total number of query records.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeRocketMQTopicsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Total number of records 
-     * @return TotalCount Total number of records
+     * Get The total number of query records. 
+     * @return TotalCount The total number of query records.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of records
-     * @param TotalCount Total number of records
+     * Set The total number of query records.
+     * @param TotalCount The total number of query records.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

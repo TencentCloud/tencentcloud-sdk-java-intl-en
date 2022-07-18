@@ -23,74 +23,74 @@ import java.util.HashMap;
 public class RocketMQClusterDetail extends AbstractModel{
 
     /**
-    * Cluster's basic information
+    * Basic cluster information.
     */
     @SerializedName("Info")
     @Expose
     private RocketMQClusterInfo Info;
 
     /**
-    * Cluster configuration information
+    * Cluster configuration information.
     */
     @SerializedName("Config")
     @Expose
     private RocketMQClusterConfig Config;
 
     /**
-    * Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Cluster status. 0: Creating; 1: Normal; 2: Terminating; 3: Deleted; 4. Isolated; 5. Creation failed; 6: Deletion failed.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get Cluster's basic information 
-     * @return Info Cluster's basic information
+     * Get Basic cluster information. 
+     * @return Info Basic cluster information.
      */
     public RocketMQClusterInfo getInfo() {
         return this.Info;
     }
 
     /**
-     * Set Cluster's basic information
-     * @param Info Cluster's basic information
+     * Set Basic cluster information.
+     * @param Info Basic cluster information.
      */
     public void setInfo(RocketMQClusterInfo Info) {
         this.Info = Info;
     }
 
     /**
-     * Get Cluster configuration information 
-     * @return Config Cluster configuration information
+     * Get Cluster configuration information. 
+     * @return Config Cluster configuration information.
      */
     public RocketMQClusterConfig getConfig() {
         return this.Config;
     }
 
     /**
-     * Set Cluster configuration information
-     * @param Config Cluster configuration information
+     * Set Cluster configuration information.
+     * @param Config Cluster configuration information.
      */
     public void setConfig(RocketMQClusterConfig Config) {
         this.Config = Config;
     }
 
     /**
-     * Get Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Status Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Cluster status. 0: Creating; 1: Normal; 2: Terminating; 3: Deleted; 4. Isolated; 5. Creation failed; 6: Deletion failed.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Status Cluster status. 0: Creating; 1: Normal; 2: Terminating; 3: Deleted; 4. Isolated; 5. Creation failed; 6: Deletion failed.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Status Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Cluster status. 0: Creating; 1: Normal; 2: Terminating; 3: Deleted; 4. Isolated; 5. Creation failed; 6: Deletion failed.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Status Cluster status. 0: Creating; 1: Normal; 2: Terminating; 3: Deleted; 4. Isolated; 5. Creation failed; 6: Deletion failed.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(Long Status) {
         this.Status = Status;

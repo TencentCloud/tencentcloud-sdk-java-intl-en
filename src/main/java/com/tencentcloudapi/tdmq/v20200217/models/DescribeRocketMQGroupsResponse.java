@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeRocketMQGroupsResponse extends AbstractModel{
 
     /**
-    * Total number
+    * The total number of subscription groups.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeRocketMQGroupsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Total number 
-     * @return TotalCount Total number
+     * Get The total number of subscription groups. 
+     * @return TotalCount The total number of subscription groups.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number
-     * @param TotalCount Total number
+     * Set The total number of subscription groups.
+     * @param TotalCount The total number of subscription groups.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

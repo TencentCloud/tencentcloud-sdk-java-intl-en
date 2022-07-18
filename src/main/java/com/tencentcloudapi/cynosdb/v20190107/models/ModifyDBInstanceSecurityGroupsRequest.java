@@ -30,7 +30,7 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * List of IDs of the security groups to be modified, which is an array of one or more security group IDs.
+    * List of IDs of security groups to be modified, which is an array of one or more security group IDs.
     */
     @SerializedName("SecurityGroupIds")
     @Expose
@@ -60,16 +60,16 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel{
     }
 
     /**
-     * Get List of IDs of the security groups to be modified, which is an array of one or more security group IDs. 
-     * @return SecurityGroupIds List of IDs of the security groups to be modified, which is an array of one or more security group IDs.
+     * Get List of IDs of security groups to be modified, which is an array of one or more security group IDs. 
+     * @return SecurityGroupIds List of IDs of security groups to be modified, which is an array of one or more security group IDs.
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set List of IDs of the security groups to be modified, which is an array of one or more security group IDs.
-     * @param SecurityGroupIds List of IDs of the security groups to be modified, which is an array of one or more security group IDs.
+     * Set List of IDs of security groups to be modified, which is an array of one or more security group IDs.
+     * @param SecurityGroupIds List of IDs of security groups to be modified, which is an array of one or more security group IDs.
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;

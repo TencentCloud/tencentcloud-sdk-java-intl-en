@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeEnvironmentsResponse extends AbstractModel{
 
     /**
-    * Number of namespaces.
+    * The number of namespaces.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Array set of namespaces.
+    * Array of namespace sets.
     */
     @SerializedName("EnvironmentSet")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeEnvironmentsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Number of namespaces. 
-     * @return TotalCount Number of namespaces.
+     * Get The number of namespaces. 
+     * @return TotalCount The number of namespaces.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of namespaces.
-     * @param TotalCount Number of namespaces.
+     * Set The number of namespaces.
+     * @param TotalCount The number of namespaces.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Array set of namespaces. 
-     * @return EnvironmentSet Array set of namespaces.
+     * Get Array of namespace sets. 
+     * @return EnvironmentSet Array of namespace sets.
      */
     public Environment [] getEnvironmentSet() {
         return this.EnvironmentSet;
     }
 
     /**
-     * Set Array set of namespaces.
-     * @param EnvironmentSet Array set of namespaces.
+     * Set Array of namespace sets.
+     * @param EnvironmentSet Array of namespace sets.
      */
     public void setEnvironmentSet(Environment [] EnvironmentSet) {
         this.EnvironmentSet = EnvironmentSet;
