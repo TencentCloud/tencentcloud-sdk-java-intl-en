@@ -83,6 +83,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long DiskEncrypt;
 
     /**
+    * CPU number
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CpuNum")
+    @Expose
+    private Long CpuNum;
+
+    /**
+    * Memory size in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MemSize")
+    @Expose
+    private Long MemSize;
+
+    /**
      * Get Number of nodes 
      * @return NodeNum Number of nodes
      */
@@ -226,6 +242,46 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.DiskEncrypt = DiskEncrypt;
     }
 
+    /**
+     * Get CPU number
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CpuNum CPU number
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getCpuNum() {
+        return this.CpuNum;
+    }
+
+    /**
+     * Set CPU number
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CpuNum CPU number
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCpuNum(Long CpuNum) {
+        this.CpuNum = CpuNum;
+    }
+
+    /**
+     * Get Memory size in GB
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MemSize Memory size in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getMemSize() {
+        return this.MemSize;
+    }
+
+    /**
+     * Set Memory size in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MemSize Memory size in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMemSize(Long MemSize) {
+        this.MemSize = MemSize;
+    }
+
     public NodeInfo() {
     }
 
@@ -258,6 +314,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.DiskEncrypt != null) {
             this.DiskEncrypt = new Long(source.DiskEncrypt);
         }
+        if (source.CpuNum != null) {
+            this.CpuNum = new Long(source.CpuNum);
+        }
+        if (source.MemSize != null) {
+            this.MemSize = new Long(source.MemSize);
+        }
     }
 
 
@@ -273,6 +335,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "LocalDiskInfo.", this.LocalDiskInfo);
         this.setParamSimple(map, prefix + "DiskCount", this.DiskCount);
         this.setParamSimple(map, prefix + "DiskEncrypt", this.DiskEncrypt);
+        this.setParamSimple(map, prefix + "CpuNum", this.CpuNum);
+        this.setParamSimple(map, prefix + "MemSize", this.MemSize);
 
     }
 }
