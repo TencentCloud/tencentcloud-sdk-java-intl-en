@@ -502,6 +502,26 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     }
 
     /**
+     *This API is used to terminate an isolated monthly subscribed instance.
+     * @param req DestroyDBInstanceRequest
+     * @return DestroyDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DestroyDBInstanceResponse DestroyDBInstance(DestroyDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DestroyDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DestroyDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DestroyDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to terminate a pay-as-you-go instance.
      * @param req DestroyHourDBInstanceRequest
      * @return DestroyHourDBInstanceResponse

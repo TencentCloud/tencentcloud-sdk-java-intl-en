@@ -44,6 +44,13 @@ public class DescribeRegionRequest extends AbstractModel{
     private String Business;
 
     /**
+    * CDC business field, which can be ignored.
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
      * Get The offset value 
      * @return Offset The offset value
      */
@@ -91,6 +98,22 @@ public class DescribeRegionRequest extends AbstractModel{
         this.Business = Business;
     }
 
+    /**
+     * Get CDC business field, which can be ignored. 
+     * @return CdcId CDC business field, which can be ignored.
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set CDC business field, which can be ignored.
+     * @param CdcId CDC business field, which can be ignored.
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
     public DescribeRegionRequest() {
     }
 
@@ -108,6 +131,9 @@ public class DescribeRegionRequest extends AbstractModel{
         if (source.Business != null) {
             this.Business = new String(source.Business);
         }
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class DescribeRegionRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Business", this.Business);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
 
     }
 }

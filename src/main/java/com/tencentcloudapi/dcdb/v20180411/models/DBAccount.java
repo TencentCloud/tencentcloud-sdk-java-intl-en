@@ -73,6 +73,13 @@ Set this parameter to a value above 10. This parameter takes effect when `ReadOn
     private Long DelayThresh;
 
     /**
+    * Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+    */
+    @SerializedName("SlaveConst")
+    @Expose
+    private Long SlaveConst;
+
+    /**
      * Get Username 
      * @return UserName Username
      */
@@ -188,6 +195,22 @@ Set this parameter to a value above 10. This parameter takes effect when `ReadOn
         this.DelayThresh = DelayThresh;
     }
 
+    /**
+     * Get Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.) 
+     * @return SlaveConst Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+     */
+    public Long getSlaveConst() {
+        return this.SlaveConst;
+    }
+
+    /**
+     * Set Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+     * @param SlaveConst Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+     */
+    public void setSlaveConst(Long SlaveConst) {
+        this.SlaveConst = SlaveConst;
+    }
+
     public DBAccount() {
     }
 
@@ -217,6 +240,9 @@ Set this parameter to a value above 10. This parameter takes effect when `ReadOn
         if (source.DelayThresh != null) {
             this.DelayThresh = new Long(source.DelayThresh);
         }
+        if (source.SlaveConst != null) {
+            this.SlaveConst = new Long(source.SlaveConst);
+        }
     }
 
 
@@ -231,6 +257,7 @@ Set this parameter to a value above 10. This parameter takes effect when `ReadOn
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
         this.setParamSimple(map, prefix + "DelayThresh", this.DelayThresh);
+        this.setParamSimple(map, prefix + "SlaveConst", this.SlaveConst);
 
     }
 }

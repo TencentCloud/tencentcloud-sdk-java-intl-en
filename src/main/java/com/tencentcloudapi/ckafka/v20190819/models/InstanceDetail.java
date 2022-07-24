@@ -244,6 +244,21 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long PublicNetwork;
 
     /**
+    * Instance type.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private String ClusterType;
+
+    /**
+    * 
+    */
+    @SerializedName("Features")
+    @Expose
+    private String [] Features;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -767,6 +782,42 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.PublicNetwork = PublicNetwork;
     }
 
+    /**
+     * Get Instance type.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ClusterType Instance type.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set Instance type.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ClusterType Instance type.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setClusterType(String ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
+    /**
+     * Get  
+     * @return Features 
+     */
+    public String [] getFeatures() {
+        return this.Features;
+    }
+
+    /**
+     * Set 
+     * @param Features 
+     */
+    public void setFeatures(String [] Features) {
+        this.Features = Features;
+    }
+
     public InstanceDetail() {
     }
 
@@ -874,6 +925,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.PublicNetwork != null) {
             this.PublicNetwork = new Long(source.PublicNetwork);
         }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
+        if (source.Features != null) {
+            this.Features = new String[source.Features.length];
+            for (int i = 0; i < source.Features.length; i++) {
+                this.Features[i] = new String(source.Features[i]);
+            }
+        }
     }
 
 
@@ -911,6 +971,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
         this.setParamSimple(map, prefix + "PublicNetworkChargeType", this.PublicNetworkChargeType);
         this.setParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
+        this.setParamArraySimple(map, prefix + "Features.", this.Features);
 
     }
 }

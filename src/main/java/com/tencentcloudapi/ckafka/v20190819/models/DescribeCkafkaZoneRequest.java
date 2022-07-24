@@ -22,6 +22,29 @@ import java.util.HashMap;
 
 public class DescribeCkafkaZoneRequest extends AbstractModel{
 
+    /**
+    * Cloud Dedicated Cluster (CDC) business parameter.
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
+     * Get Cloud Dedicated Cluster (CDC) business parameter. 
+     * @return CdcId Cloud Dedicated Cluster (CDC) business parameter.
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set Cloud Dedicated Cluster (CDC) business parameter.
+     * @param CdcId Cloud Dedicated Cluster (CDC) business parameter.
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
     public DescribeCkafkaZoneRequest() {
     }
 
@@ -30,6 +53,9 @@ public class DescribeCkafkaZoneRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeCkafkaZoneRequest(DescribeCkafkaZoneRequest source) {
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
     }
 
 
@@ -37,6 +63,7 @@ public class DescribeCkafkaZoneRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
 
     }
 }

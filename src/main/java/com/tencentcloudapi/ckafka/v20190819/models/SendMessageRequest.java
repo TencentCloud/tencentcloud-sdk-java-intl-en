@@ -30,7 +30,7 @@ public class SendMessageRequest extends AbstractModel{
     private String DataHubId;
 
     /**
-    * Message content that is sent.
+    * Content of the message that has been sent. Up to 500 messages can be sent in a single request.
     */
     @SerializedName("Message")
     @Expose
@@ -53,16 +53,16 @@ public class SendMessageRequest extends AbstractModel{
     }
 
     /**
-     * Get Message content that is sent. 
-     * @return Message Message content that is sent.
+     * Get Content of the message that has been sent. Up to 500 messages can be sent in a single request. 
+     * @return Message Content of the message that has been sent. Up to 500 messages can be sent in a single request.
      */
     public BatchContent [] getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Message content that is sent.
-     * @param Message Message content that is sent.
+     * Set Content of the message that has been sent. Up to 500 messages can be sent in a single request.
+     * @param Message Content of the message that has been sent. Up to 500 messages can be sent in a single request.
      */
     public void setMessage(BatchContent [] Message) {
         this.Message = Message;

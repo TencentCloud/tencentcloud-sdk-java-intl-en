@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeInstancesRequest extends AbstractModel{
 
     /**
-    * Size of the instance list. If no value is specified for this parameter, it will be 20 by default. If the specified value is greater than the `DescribeInstancesPageLimit` configuration item in the specific configuration file `etc/conf/component.properties` (which is 1,000 by default if the configuration cannot be read), then the configuration item shall prevail.
+    * Number of returned results. Default value: 20. Maximum value: 1000.
     */
     @SerializedName("Limit")
     @Expose
@@ -191,16 +191,23 @@ public class DescribeInstancesRequest extends AbstractModel{
     private String [] TagKeys;
 
     /**
-     * Get Size of the instance list. If no value is specified for this parameter, it will be 20 by default. If the specified value is greater than the `DescribeInstancesPageLimit` configuration item in the specific configuration file `etc/conf/component.properties` (which is 1,000 by default if the configuration cannot be read), then the configuration item shall prevail. 
-     * @return Limit Size of the instance list. If no value is specified for this parameter, it will be 20 by default. If the specified value is greater than the `DescribeInstancesPageLimit` configuration item in the specific configuration file `etc/conf/component.properties` (which is 1,000 by default if the configuration cannot be read), then the configuration item shall prevail.
+    * Product editions to be filtered. Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). If this parameter is not passed in, the product will not be filtered by default.
+    */
+    @SerializedName("ProductVersions")
+    @Expose
+    private String [] ProductVersions;
+
+    /**
+     * Get Number of returned results. Default value: 20. Maximum value: 1000. 
+     * @return Limit Number of returned results. Default value: 20. Maximum value: 1000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Size of the instance list. If no value is specified for this parameter, it will be 20 by default. If the specified value is greater than the `DescribeInstancesPageLimit` configuration item in the specific configuration file `etc/conf/component.properties` (which is 1,000 by default if the configuration cannot be read), then the configuration item shall prevail.
-     * @param Limit Size of the instance list. If no value is specified for this parameter, it will be 20 by default. If the specified value is greater than the `DescribeInstancesPageLimit` configuration item in the specific configuration file `etc/conf/component.properties` (which is 1,000 by default if the configuration cannot be read), then the configuration item shall prevail.
+     * Set Number of returned results. Default value: 20. Maximum value: 1000.
+     * @param Limit Number of returned results. Default value: 20. Maximum value: 1000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -574,6 +581,22 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.TagKeys = TagKeys;
     }
 
+    /**
+     * Get Product editions to be filtered. Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). If this parameter is not passed in, the product will not be filtered by default. 
+     * @return ProductVersions Product editions to be filtered. Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). If this parameter is not passed in, the product will not be filtered by default.
+     */
+    public String [] getProductVersions() {
+        return this.ProductVersions;
+    }
+
+    /**
+     * Set Product editions to be filtered. Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). If this parameter is not passed in, the product will not be filtered by default.
+     * @param ProductVersions Product editions to be filtered. Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). If this parameter is not passed in, the product will not be filtered by default.
+     */
+    public void setProductVersions(String [] ProductVersions) {
+        this.ProductVersions = ProductVersions;
+    }
+
     public DescribeInstancesRequest() {
     }
 
@@ -690,6 +713,12 @@ public class DescribeInstancesRequest extends AbstractModel{
                 this.TagKeys[i] = new String(source.TagKeys[i]);
             }
         }
+        if (source.ProductVersions != null) {
+            this.ProductVersions = new String[source.ProductVersions.length];
+            for (int i = 0; i < source.ProductVersions.length; i++) {
+                this.ProductVersions[i] = new String(source.ProductVersions[i]);
+            }
+        }
     }
 
 
@@ -721,6 +750,7 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MonitorVersion", this.MonitorVersion);
         this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
         this.setParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
+        this.setParamArraySimple(map, prefix + "ProductVersions.", this.ProductVersions);
 
     }
 }

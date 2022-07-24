@@ -72,6 +72,20 @@ public class CreateAccountRequest extends AbstractModel{
     private Long DelayThresh;
 
     /**
+    * Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+    */
+    @SerializedName("SlaveConst")
+    @Expose
+    private Long SlaveConst;
+
+    /**
+    * Maximum number of connections. If left empty or `0` is passed in, the connections will be unlimited. This parameter configuration is not supported for kernel version 10.1.
+    */
+    @SerializedName("MaxUserConnections")
+    @Expose
+    private Long MaxUserConnections;
+
+    /**
      * Get Instance ID, which is in the format of `tdsql-ow728lmc` and can be obtained through the `DescribeDBInstances` API. 
      * @return InstanceId Instance ID, which is in the format of `tdsql-ow728lmc` and can be obtained through the `DescribeDBInstances` API.
      */
@@ -183,6 +197,38 @@ public class CreateAccountRequest extends AbstractModel{
         this.DelayThresh = DelayThresh;
     }
 
+    /**
+     * Get Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.) 
+     * @return SlaveConst Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+     */
+    public Long getSlaveConst() {
+        return this.SlaveConst;
+    }
+
+    /**
+     * Set Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+     * @param SlaveConst Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+     */
+    public void setSlaveConst(Long SlaveConst) {
+        this.SlaveConst = SlaveConst;
+    }
+
+    /**
+     * Get Maximum number of connections. If left empty or `0` is passed in, the connections will be unlimited. This parameter configuration is not supported for kernel version 10.1. 
+     * @return MaxUserConnections Maximum number of connections. If left empty or `0` is passed in, the connections will be unlimited. This parameter configuration is not supported for kernel version 10.1.
+     */
+    public Long getMaxUserConnections() {
+        return this.MaxUserConnections;
+    }
+
+    /**
+     * Set Maximum number of connections. If left empty or `0` is passed in, the connections will be unlimited. This parameter configuration is not supported for kernel version 10.1.
+     * @param MaxUserConnections Maximum number of connections. If left empty or `0` is passed in, the connections will be unlimited. This parameter configuration is not supported for kernel version 10.1.
+     */
+    public void setMaxUserConnections(Long MaxUserConnections) {
+        this.MaxUserConnections = MaxUserConnections;
+    }
+
     public CreateAccountRequest() {
     }
 
@@ -212,6 +258,12 @@ public class CreateAccountRequest extends AbstractModel{
         if (source.DelayThresh != null) {
             this.DelayThresh = new Long(source.DelayThresh);
         }
+        if (source.SlaveConst != null) {
+            this.SlaveConst = new Long(source.SlaveConst);
+        }
+        if (source.MaxUserConnections != null) {
+            this.MaxUserConnections = new Long(source.MaxUserConnections);
+        }
     }
 
 
@@ -226,6 +278,8 @@ public class CreateAccountRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "DelayThresh", this.DelayThresh);
+        this.setParamSimple(map, prefix + "SlaveConst", this.SlaveConst);
+        this.setParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
 
     }
 }
