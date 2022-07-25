@@ -48,6 +48,9 @@ public enum VmErrorCode {
     // The operation is unauthorized.
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
+    // 
+     UNAUTHORIZEDOPERATION_UNAUTHORIZED("UnauthorizedOperation.Unauthorized"),
+     
     // The parameter is unknown.
      UNKNOWNPARAMETER("UnknownParameter"),
      

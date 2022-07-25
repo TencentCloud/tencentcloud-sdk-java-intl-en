@@ -51,7 +51,7 @@ public class BindRealServerInfo extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * Tag list
+    * Tag list.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TagSet")
@@ -123,9 +123,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Tag list
+     * Get Tag list.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TagSet Tag list
+     * @return TagSet Tag list.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public TagPair [] getTagSet() {
@@ -133,9 +133,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Tag list
+     * Set Tag list.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TagSet Tag list
+     * @param TagSet Tag list.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTagSet(TagPair [] TagSet) {

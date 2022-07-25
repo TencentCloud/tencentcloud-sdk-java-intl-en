@@ -62,10 +62,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
     * Connection group status.
 Where:
-0: running;
-1: creating;
-4: terminating;
-11: connection migrating.
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`MOVING`: Migrating
+`CHANGING`: Deploying
     */
     @SerializedName("Status")
     @Expose
@@ -104,9 +105,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Http3Supported")
     @Expose
@@ -203,16 +204,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get Connection group status.
 Where:
-0: running;
-1: creating;
-4: terminating;
-11: connection migrating. 
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`MOVING`: Migrating
+`CHANGING`: Deploying 
      * @return Status Connection group status.
 Where:
-0: running;
-1: creating;
-4: terminating;
-11: connection migrating.
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`MOVING`: Migrating
+`CHANGING`: Deploying
      */
     public String getStatus() {
         return this.Status;
@@ -221,16 +224,18 @@ Where:
     /**
      * Set Connection group status.
 Where:
-0: running;
-1: creating;
-4: terminating;
-11: connection migrating.
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`MOVING`: Migrating
+`CHANGING`: Deploying
      * @param Status Connection group status.
 Where:
-0: running;
-1: creating;
-4: terminating;
-11: connection migrating.
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`MOVING`: Migrating
+`CHANGING`: Deploying
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -314,13 +319,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Http3Supported Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getHttp3Supported() {
         return this.Http3Supported;
@@ -328,13 +333,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Http3Supported Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHttp3Supported(Long Http3Supported) {
         this.Http3Supported = Http3Supported;

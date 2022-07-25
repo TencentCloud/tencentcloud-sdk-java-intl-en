@@ -37,7 +37,7 @@ public class DescribeRuleRealServersRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * Number of values to be returned. The default value is 20. Maximum is 1000.
+    * Number of returned results. Default value: 20. Maximum value: 1000.
     */
     @SerializedName("Limit")
     @Expose
@@ -76,16 +76,16 @@ public class DescribeRuleRealServersRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of values to be returned. The default value is 20. Maximum is 1000. 
-     * @return Limit Number of values to be returned. The default value is 20. Maximum is 1000.
+     * Get Number of returned results. Default value: 20. Maximum value: 1000. 
+     * @return Limit Number of returned results. Default value: 20. Maximum value: 1000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of values to be returned. The default value is 20. Maximum is 1000.
-     * @param Limit Number of values to be returned. The default value is 20. Maximum is 1000.
+     * Set Number of returned results. Default value: 20. Maximum value: 1000.
+     * @param Limit Number of returned results. Default value: 20. Maximum value: 1000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

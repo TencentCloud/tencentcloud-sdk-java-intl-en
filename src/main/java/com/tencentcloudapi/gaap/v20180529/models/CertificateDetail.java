@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CertificateDetail extends AbstractModel{
 
     /**
-    * Certificate ID.
+    * Certificate ID
     */
     @SerializedName("CertificateId")
     @Expose
@@ -68,7 +68,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long CreateTime;
 
     /**
-    * Certificate effective time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+    * Time that the certificate takes effect. Using the UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (Midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BeginTime")
@@ -76,7 +76,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long BeginTime;
 
     /**
-    * Certificate expiration time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+    * Certificate expiration time. Using the UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (Midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EndTime")
@@ -84,7 +84,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long EndTime;
 
     /**
-    * Common name of the certificate's issuer.
+    * Common name of the certificate’s issuer.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IssuerCN")
@@ -100,16 +100,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String SubjectCN;
 
     /**
-     * Get Certificate ID. 
-     * @return CertificateId Certificate ID.
+     * Get Certificate ID 
+     * @return CertificateId Certificate ID
      */
     public String getCertificateId() {
         return this.CertificateId;
     }
 
     /**
-     * Set Certificate ID.
-     * @param CertificateId Certificate ID.
+     * Set Certificate ID
+     * @param CertificateId Certificate ID
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;
@@ -208,9 +208,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Certificate effective time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+     * Get Time that the certificate takes effect. Using the UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (Midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BeginTime Certificate effective time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+     * @return BeginTime Time that the certificate takes effect. Using the UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (Midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getBeginTime() {
@@ -218,9 +218,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Certificate effective time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+     * Set Time that the certificate takes effect. Using the UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (Midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BeginTime Certificate effective time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+     * @param BeginTime Time that the certificate takes effect. Using the UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (Midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBeginTime(Long BeginTime) {
@@ -228,9 +228,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Certificate expiration time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+     * Get Certificate expiration time. Using the UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (Midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EndTime Certificate expiration time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+     * @return EndTime Certificate expiration time. Using the UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (Midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getEndTime() {
@@ -238,9 +238,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Certificate expiration time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+     * Set Certificate expiration time. Using the UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (Midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EndTime Certificate expiration time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+     * @param EndTime Certificate expiration time. Using the UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (Midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEndTime(Long EndTime) {
@@ -248,9 +248,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Common name of the certificate's issuer.
+     * Get Common name of the certificate’s issuer.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IssuerCN Common name of the certificate's issuer.
+     * @return IssuerCN Common name of the certificate’s issuer.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIssuerCN() {
@@ -258,9 +258,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Common name of the certificate's issuer.
+     * Set Common name of the certificate’s issuer.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IssuerCN Common name of the certificate's issuer.
+     * @param IssuerCN Common name of the certificate’s issuer.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIssuerCN(String IssuerCN) {

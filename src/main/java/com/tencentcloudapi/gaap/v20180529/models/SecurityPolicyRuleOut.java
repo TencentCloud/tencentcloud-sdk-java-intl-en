@@ -68,6 +68,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Security policy ID
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PolicyId")
     @Expose
@@ -178,8 +179,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Security policy ID 
+     * Get Security policy ID
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return PolicyId Security policy ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPolicyId() {
         return this.PolicyId;
@@ -187,7 +190,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Security policy ID
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param PolicyId Security policy ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPolicyId(String PolicyId) {
         this.PolicyId = PolicyId;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeUDPListenersRequest extends AbstractModel{
 
     /**
-    * Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+    * Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
     */
     @SerializedName("ProxyId")
     @Expose
@@ -31,6 +31,8 @@ public class DescribeUDPListenersRequest extends AbstractModel{
 
     /**
     * Filter condition. Exact query by listener IDs.
+When ProxyId is specified, the listener will be checked whether it belongs to the connection.
+When GroupId is specified, the listener will be checked whether it belongs to the connection group.
     */
     @SerializedName("ListenerId")
     @Expose
@@ -65,7 +67,7 @@ public class DescribeUDPListenersRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+    * Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
     */
     @SerializedName("GroupId")
     @Expose
@@ -79,24 +81,28 @@ public class DescribeUDPListenersRequest extends AbstractModel{
     private String SearchValue;
 
     /**
-     * Get Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both. 
-     * @return ProxyId Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+     * Get Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time. 
+     * @return ProxyId Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
-     * @param ProxyId Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+     * Set Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
+     * @param ProxyId Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get Filter condition. Exact query by listener IDs. 
+     * Get Filter condition. Exact query by listener IDs.
+When ProxyId is specified, the listener will be checked whether it belongs to the connection.
+When GroupId is specified, the listener will be checked whether it belongs to the connection group. 
      * @return ListenerId Filter condition. Exact query by listener IDs.
+When ProxyId is specified, the listener will be checked whether it belongs to the connection.
+When GroupId is specified, the listener will be checked whether it belongs to the connection group.
      */
     public String getListenerId() {
         return this.ListenerId;
@@ -104,7 +110,11 @@ public class DescribeUDPListenersRequest extends AbstractModel{
 
     /**
      * Set Filter condition. Exact query by listener IDs.
+When ProxyId is specified, the listener will be checked whether it belongs to the connection.
+When GroupId is specified, the listener will be checked whether it belongs to the connection group.
      * @param ListenerId Filter condition. Exact query by listener IDs.
+When ProxyId is specified, the listener will be checked whether it belongs to the connection.
+When GroupId is specified, the listener will be checked whether it belongs to the connection group.
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
@@ -175,16 +185,16 @@ public class DescribeUDPListenersRequest extends AbstractModel{
     }
 
     /**
-     * Get Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both. 
-     * @return GroupId Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+     * Get Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time. 
+     * @return GroupId Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
-     * @param GroupId Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+     * Set Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
+     * @param GroupId Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

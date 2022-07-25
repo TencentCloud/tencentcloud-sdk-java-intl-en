@@ -160,7 +160,7 @@ Note: This API unbinds the previously bound origin servers, and binds the origin
     }
 
     /**
-     *This API is used to disable security policies.
+     *This API is used to disable a security policy.
      * @param req CloseSecurityPolicyRequest
      * @return CloseSecurityPolicyResponse
      * @throws TencentCloudSDKException
@@ -461,7 +461,7 @@ This API only supports connections of version 3.0.
     }
 
     /**
-     *This API (DeleteCertificate) is used to delete certificates.
+     *This API is used to delete a certificate.
      * @param req DeleteCertificateRequest
      * @return DeleteCertificateResponse
      * @throws TencentCloudSDKException
@@ -581,7 +581,7 @@ This API only supports connections of version 3.0.
     }
 
     /**
-     *This API is used to delete security policies.
+     *This API is used to delete a security policy.
      * @param req DeleteSecurityPolicyRequest
      * @return DeleteSecurityPolicyResponse
      * @throws TencentCloudSDKException
@@ -1722,7 +1722,7 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
     }
 
     /**
-     *This API is used to enable security policies.
+     *This API is used to enable a security policy.
      * @param req OpenSecurityPolicyRequest
      * @return OpenSecurityPolicyResponse
      * @throws TencentCloudSDKException

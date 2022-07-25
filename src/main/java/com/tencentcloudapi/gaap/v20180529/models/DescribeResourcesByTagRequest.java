@@ -37,7 +37,7 @@ public class DescribeResourcesByTagRequest extends AbstractModel{
     private String TagValue;
 
     /**
-    * Resource type, including:
+    * Resource types:
 Proxy (connection);
 ProxyGroup (connection group);
 RealServer (origin server).
@@ -80,12 +80,12 @@ If this field is not specified, all resources with the tag will be queried.
     }
 
     /**
-     * Get Resource type, including:
+     * Get Resource types:
 Proxy (connection);
 ProxyGroup (connection group);
 RealServer (origin server).
 If this field is not specified, all resources with the tag will be queried. 
-     * @return ResourceType Resource type, including:
+     * @return ResourceType Resource types:
 Proxy (connection);
 ProxyGroup (connection group);
 RealServer (origin server).
@@ -96,12 +96,12 @@ If this field is not specified, all resources with the tag will be queried.
     }
 
     /**
-     * Set Resource type, including:
+     * Set Resource types:
 Proxy (connection);
 ProxyGroup (connection group);
 RealServer (origin server).
 If this field is not specified, all resources with the tag will be queried.
-     * @param ResourceType Resource type, including:
+     * @param ResourceType Resource types:
 Proxy (connection);
 ProxyGroup (connection group);
 RealServer (origin server).

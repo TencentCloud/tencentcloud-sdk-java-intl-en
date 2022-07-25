@@ -31,16 +31,17 @@ public class ProxyStatus extends AbstractModel{
 
     /**
     * Connection status.
-Valid values:
-`RUNNING`: running
-`CREATING`: creating
-`DESTROYING`: terminating
-`OPENING`: enabling
-`CLOSING`: disabling
-`CLOSED`: disabled
-`ADJUSTING`: adjusting configuration
-`ISOLATING`: isolating
-`ISOLATED`: isolated
+Where:
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`OPENING`: Enabling
+`CLOSING`: Disabling
+`CLOSED`: Disabled
+`ADJUSTING`: Adjusting configuration
+`ISOLATING`: Isolating
+`ISOLATED`: Isolated
+`MOVING`: Migrating
     */
     @SerializedName("Status")
     @Expose
@@ -64,27 +65,29 @@ Valid values:
 
     /**
      * Get Connection status.
-Valid values:
-`RUNNING`: running
-`CREATING`: creating
-`DESTROYING`: terminating
-`OPENING`: enabling
-`CLOSING`: disabling
-`CLOSED`: disabled
-`ADJUSTING`: adjusting configuration
-`ISOLATING`: isolating
-`ISOLATED`: isolated 
+Where:
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`OPENING`: Enabling
+`CLOSING`: Disabling
+`CLOSED`: Disabled
+`ADJUSTING`: Adjusting configuration
+`ISOLATING`: Isolating
+`ISOLATED`: Isolated
+`MOVING`: Migrating 
      * @return Status Connection status.
-Valid values:
-`RUNNING`: running
-`CREATING`: creating
-`DESTROYING`: terminating
-`OPENING`: enabling
-`CLOSING`: disabling
-`CLOSED`: disabled
-`ADJUSTING`: adjusting configuration
-`ISOLATING`: isolating
-`ISOLATED`: isolated
+Where:
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`OPENING`: Enabling
+`CLOSING`: Disabling
+`CLOSED`: Disabled
+`ADJUSTING`: Adjusting configuration
+`ISOLATING`: Isolating
+`ISOLATED`: Isolated
+`MOVING`: Migrating
      */
     public String getStatus() {
         return this.Status;
@@ -92,27 +95,29 @@ Valid values:
 
     /**
      * Set Connection status.
-Valid values:
-`RUNNING`: running
-`CREATING`: creating
-`DESTROYING`: terminating
-`OPENING`: enabling
-`CLOSING`: disabling
-`CLOSED`: disabled
-`ADJUSTING`: adjusting configuration
-`ISOLATING`: isolating
-`ISOLATED`: isolated
+Where:
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`OPENING`: Enabling
+`CLOSING`: Disabling
+`CLOSED`: Disabled
+`ADJUSTING`: Adjusting configuration
+`ISOLATING`: Isolating
+`ISOLATED`: Isolated
+`MOVING`: Migrating
      * @param Status Connection status.
-Valid values:
-`RUNNING`: running
-`CREATING`: creating
-`DESTROYING`: terminating
-`OPENING`: enabling
-`CLOSING`: disabling
-`CLOSED`: disabled
-`ADJUSTING`: adjusting configuration
-`ISOLATING`: isolating
-`ISOLATED`: isolated
+Where:
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`OPENING`: Enabling
+`CLOSING`: Disabling
+`CLOSED`: Disabled
+`ADJUSTING`: Adjusting configuration
+`ISOLATING`: Isolating
+`ISOLATED`: Isolated
+`MOVING`: Migrating
      */
     public void setStatus(String Status) {
         this.Status = Status;

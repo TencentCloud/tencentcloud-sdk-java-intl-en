@@ -30,7 +30,7 @@ public class RealServerStatus extends AbstractModel{
     private String RealServerId;
 
     /**
-    * 0: not bound, 1: bound to rule or listener.
+    * `0`: Not bound; `1`: Bound to rule or listener.
     */
     @SerializedName("BindStatus")
     @Expose
@@ -45,7 +45,7 @@ public class RealServerStatus extends AbstractModel{
 
     /**
     * ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("GroupId")
     @Expose
@@ -68,16 +68,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get 0: not bound, 1: bound to rule or listener. 
-     * @return BindStatus 0: not bound, 1: bound to rule or listener.
+     * Get `0`: Not bound; `1`: Bound to rule or listener. 
+     * @return BindStatus `0`: Not bound; `1`: Bound to rule or listener.
      */
     public Long getBindStatus() {
         return this.BindStatus;
     }
 
     /**
-     * Set 0: not bound, 1: bound to rule or listener.
-     * @param BindStatus 0: not bound, 1: bound to rule or listener.
+     * Set `0`: Not bound; `1`: Bound to rule or listener.
+     * @param BindStatus `0`: Not bound; `1`: Bound to rule or listener.
      */
     public void setBindStatus(Long BindStatus) {
         this.BindStatus = BindStatus;
@@ -101,9 +101,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return GroupId ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getGroupId() {
         return this.GroupId;
@@ -111,9 +111,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param GroupId ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

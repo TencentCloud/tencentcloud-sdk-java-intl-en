@@ -23,33 +23,33 @@ import java.util.HashMap;
 public class DescribeProxiesRequest extends AbstractModel{
 
     /**
-    * Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's an old parameter, please switch to ProxyIds.
+    * Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s an old parameter, please switch to ProxyIds.
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * Offset. The default value is 0.
+    * Offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of results to be returned. The default value is 20, and the maximum value is 100.
+    * Number of returned results. Default value: 20. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Filter condition   
-The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
-ProjectId - String - Required: No - Filter by project ID.   
-AccessRegion - String - Required: No - Filter by access region.    
-RealServerRegion - String - Required: No - Filter by origin server region.
-GroupId - String - Required: No - Filter by connection group ID.
+    * Filters   
+The upper limit on Filters for each request is 10, and the upper limit on Filter.Values is 5. This parameter does not support specifying InstanceIds and Filters at the same time. 
+ProjectId - String - Required: No - Filter by a project ID.   
+AccessRegion - String - Required: No - Filter by an access region.    
+RealServerRegion - String - Required: No - Filter by an origin server region.
+GroupId - String - Required: No - Filter by a connection group ID.
 IPAddressVersion - String - Required: No - Filter by IP version.
 PackageType - String - Required: No - Filter by package type of connection groups.
     */
@@ -58,7 +58,7 @@ PackageType - String - Required: No - Filter by package type of connection group
     private Filter [] Filters;
 
     /**
-    * Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's a new parameter, and replaces InstanceIds.
+    * Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s a new parameter, and replaces InstanceIds.
     */
     @SerializedName("ProxyIds")
     @Expose
@@ -83,8 +83,8 @@ When this field does not exist, all connections are pulled, including both not-g
 
     /**
     * Specifies how connections are listed. Valid values:
-`asc`: ascending order
-`desc`: descending order
+`asc`: Ascending order
+`desc`: Descending order
 Default: `desc`
     */
     @SerializedName("Order")
@@ -93,10 +93,10 @@ Default: `desc`
 
     /**
     * Sorting field. Valid values:
-`create_time`: sort by the creation time
-`proxy_id`: sort by the connection ID
-`bandwidth`:sort by the bandwidth limit
-`concurrent_connections`: sort by the number of concurrent connections
+`create_time`: Sort by creation time
+`proxy_id`: Sort by connection ID
+`bandwidth`:Sort by bandwidth limit
+`concurrent_connections`: Sort by number of concurrent connections
 Default: `create_time`
     */
     @SerializedName("OrderField")
@@ -104,68 +104,68 @@ Default: `create_time`
     private String OrderField;
 
     /**
-     * Get Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's an old parameter, please switch to ProxyIds. 
-     * @return InstanceIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's an old parameter, please switch to ProxyIds.
+     * Get Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s an old parameter, please switch to ProxyIds. 
+     * @return InstanceIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s an old parameter, please switch to ProxyIds.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's an old parameter, please switch to ProxyIds.
-     * @param InstanceIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's an old parameter, please switch to ProxyIds.
+     * Set Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s an old parameter, please switch to ProxyIds.
+     * @param InstanceIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s an old parameter, please switch to ProxyIds.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get Offset. The default value is 0. 
-     * @return Offset Offset. The default value is 0.
+     * Get Offset. Default value: 0. 
+     * @return Offset Offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. The default value is 0.
-     * @param Offset Offset. The default value is 0.
+     * Set Offset. Default value: 0.
+     * @param Offset Offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of results to be returned. The default value is 20, and the maximum value is 100. 
-     * @return Limit Number of results to be returned. The default value is 20, and the maximum value is 100.
+     * Get Number of returned results. Default value: 20. Maximum value: 100. 
+     * @return Limit Number of returned results. Default value: 20. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results to be returned. The default value is 20, and the maximum value is 100.
-     * @param Limit Number of results to be returned. The default value is 20, and the maximum value is 100.
+     * Set Number of returned results. Default value: 20. Maximum value: 100.
+     * @param Limit Number of returned results. Default value: 20. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Filter condition   
-The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
-ProjectId - String - Required: No - Filter by project ID.   
-AccessRegion - String - Required: No - Filter by access region.    
-RealServerRegion - String - Required: No - Filter by origin server region.
-GroupId - String - Required: No - Filter by connection group ID.
+     * Get Filters   
+The upper limit on Filters for each request is 10, and the upper limit on Filter.Values is 5. This parameter does not support specifying InstanceIds and Filters at the same time. 
+ProjectId - String - Required: No - Filter by a project ID.   
+AccessRegion - String - Required: No - Filter by an access region.    
+RealServerRegion - String - Required: No - Filter by an origin server region.
+GroupId - String - Required: No - Filter by a connection group ID.
 IPAddressVersion - String - Required: No - Filter by IP version.
 PackageType - String - Required: No - Filter by package type of connection groups. 
-     * @return Filters Filter condition   
-The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
-ProjectId - String - Required: No - Filter by project ID.   
-AccessRegion - String - Required: No - Filter by access region.    
-RealServerRegion - String - Required: No - Filter by origin server region.
-GroupId - String - Required: No - Filter by connection group ID.
+     * @return Filters Filters   
+The upper limit on Filters for each request is 10, and the upper limit on Filter.Values is 5. This parameter does not support specifying InstanceIds and Filters at the same time. 
+ProjectId - String - Required: No - Filter by a project ID.   
+AccessRegion - String - Required: No - Filter by an access region.    
+RealServerRegion - String - Required: No - Filter by an origin server region.
+GroupId - String - Required: No - Filter by a connection group ID.
 IPAddressVersion - String - Required: No - Filter by IP version.
 PackageType - String - Required: No - Filter by package type of connection groups.
      */
@@ -174,20 +174,20 @@ PackageType - String - Required: No - Filter by package type of connection group
     }
 
     /**
-     * Set Filter condition   
-The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
-ProjectId - String - Required: No - Filter by project ID.   
-AccessRegion - String - Required: No - Filter by access region.    
-RealServerRegion - String - Required: No - Filter by origin server region.
-GroupId - String - Required: No - Filter by connection group ID.
+     * Set Filters   
+The upper limit on Filters for each request is 10, and the upper limit on Filter.Values is 5. This parameter does not support specifying InstanceIds and Filters at the same time. 
+ProjectId - String - Required: No - Filter by a project ID.   
+AccessRegion - String - Required: No - Filter by an access region.    
+RealServerRegion - String - Required: No - Filter by an origin server region.
+GroupId - String - Required: No - Filter by a connection group ID.
 IPAddressVersion - String - Required: No - Filter by IP version.
 PackageType - String - Required: No - Filter by package type of connection groups.
-     * @param Filters Filter condition   
-The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
-ProjectId - String - Required: No - Filter by project ID.   
-AccessRegion - String - Required: No - Filter by access region.    
-RealServerRegion - String - Required: No - Filter by origin server region.
-GroupId - String - Required: No - Filter by connection group ID.
+     * @param Filters Filters   
+The upper limit on Filters for each request is 10, and the upper limit on Filter.Values is 5. This parameter does not support specifying InstanceIds and Filters at the same time. 
+ProjectId - String - Required: No - Filter by a project ID.   
+AccessRegion - String - Required: No - Filter by an access region.    
+RealServerRegion - String - Required: No - Filter by an origin server region.
+GroupId - String - Required: No - Filter by a connection group ID.
 IPAddressVersion - String - Required: No - Filter by IP version.
 PackageType - String - Required: No - Filter by package type of connection groups.
      */
@@ -196,16 +196,16 @@ PackageType - String - Required: No - Filter by package type of connection group
     }
 
     /**
-     * Get Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's a new parameter, and replaces InstanceIds. 
-     * @return ProxyIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's a new parameter, and replaces InstanceIds.
+     * Get Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s a new parameter, and replaces InstanceIds. 
+     * @return ProxyIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s a new parameter, and replaces InstanceIds.
      */
     public String [] getProxyIds() {
         return this.ProxyIds;
     }
 
     /**
-     * Set Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's a new parameter, and replaces InstanceIds.
-     * @param ProxyIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's a new parameter, and replaces InstanceIds.
+     * Set Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s a new parameter, and replaces InstanceIds.
+     * @param ProxyIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s a new parameter, and replaces InstanceIds.
      */
     public void setProxyIds(String [] ProxyIds) {
         this.ProxyIds = ProxyIds;
@@ -257,12 +257,12 @@ When this field does not exist, all connections are pulled, including both not-g
 
     /**
      * Get Specifies how connections are listed. Valid values:
-`asc`: ascending order
-`desc`: descending order
+`asc`: Ascending order
+`desc`: Descending order
 Default: `desc` 
      * @return Order Specifies how connections are listed. Valid values:
-`asc`: ascending order
-`desc`: descending order
+`asc`: Ascending order
+`desc`: Descending order
 Default: `desc`
      */
     public String getOrder() {
@@ -271,12 +271,12 @@ Default: `desc`
 
     /**
      * Set Specifies how connections are listed. Valid values:
-`asc`: ascending order
-`desc`: descending order
+`asc`: Ascending order
+`desc`: Descending order
 Default: `desc`
      * @param Order Specifies how connections are listed. Valid values:
-`asc`: ascending order
-`desc`: descending order
+`asc`: Ascending order
+`desc`: Descending order
 Default: `desc`
      */
     public void setOrder(String Order) {
@@ -285,16 +285,16 @@ Default: `desc`
 
     /**
      * Get Sorting field. Valid values:
-`create_time`: sort by the creation time
-`proxy_id`: sort by the connection ID
-`bandwidth`:sort by the bandwidth limit
-`concurrent_connections`: sort by the number of concurrent connections
+`create_time`: Sort by creation time
+`proxy_id`: Sort by connection ID
+`bandwidth`:Sort by bandwidth limit
+`concurrent_connections`: Sort by number of concurrent connections
 Default: `create_time` 
      * @return OrderField Sorting field. Valid values:
-`create_time`: sort by the creation time
-`proxy_id`: sort by the connection ID
-`bandwidth`:sort by the bandwidth limit
-`concurrent_connections`: sort by the number of concurrent connections
+`create_time`: Sort by creation time
+`proxy_id`: Sort by connection ID
+`bandwidth`:Sort by bandwidth limit
+`concurrent_connections`: Sort by number of concurrent connections
 Default: `create_time`
      */
     public String getOrderField() {
@@ -303,16 +303,16 @@ Default: `create_time`
 
     /**
      * Set Sorting field. Valid values:
-`create_time`: sort by the creation time
-`proxy_id`: sort by the connection ID
-`bandwidth`:sort by the bandwidth limit
-`concurrent_connections`: sort by the number of concurrent connections
+`create_time`: Sort by creation time
+`proxy_id`: Sort by connection ID
+`bandwidth`:Sort by bandwidth limit
+`concurrent_connections`: Sort by number of concurrent connections
 Default: `create_time`
      * @param OrderField Sorting field. Valid values:
-`create_time`: sort by the creation time
-`proxy_id`: sort by the connection ID
-`bandwidth`:sort by the bandwidth limit
-`concurrent_connections`: sort by the number of concurrent connections
+`create_time`: Sort by creation time
+`proxy_id`: Sort by connection ID
+`bandwidth`:Sort by bandwidth limit
+`concurrent_connections`: Sort by number of concurrent connections
 Default: `create_time`
      */
     public void setOrderField(String OrderField) {

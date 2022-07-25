@@ -23,35 +23,37 @@ import java.util.HashMap;
 public class DescribeTCPListenersRequest extends AbstractModel{
 
     /**
-    * Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+    * Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * Filter condition. Exact query by listener IDs.
+    * Filter condition. Exact query by listener ID.
+When ProxyId is specified, the listener will be checked whether it belongs to the connection.
+When GroupId is specified, the listener will be checked whether it belongs to the connection group.
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * Filter condition. Exact query by listener names.
+    * Filter condition. Exact query by listener name.
     */
     @SerializedName("ListenerName")
     @Expose
     private String ListenerName;
 
     /**
-    * Filter condition. Exact query by listener ports.
+    * Filter condition. Exact query by listener port.
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * Offset. The default value is 0.
+    * Offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
@@ -65,94 +67,102 @@ public class DescribeTCPListenersRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+    * Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * Filter condition. It supports fuzzy query by ports or listener names. This parameter cannot be used with `ListenerName` or `Port`.
+    * Filter condition. It supports fuzzy query by port or listener name. This parameter cannot be used with `ListenerName` or `Port`.
     */
     @SerializedName("SearchValue")
     @Expose
     private String SearchValue;
 
     /**
-     * Get Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both. 
-     * @return ProxyId Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+     * Get Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time. 
+     * @return ProxyId Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
-     * @param ProxyId Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+     * Set Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
+     * @param ProxyId Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get Filter condition. Exact query by listener IDs. 
-     * @return ListenerId Filter condition. Exact query by listener IDs.
+     * Get Filter condition. Exact query by listener ID.
+When ProxyId is specified, the listener will be checked whether it belongs to the connection.
+When GroupId is specified, the listener will be checked whether it belongs to the connection group. 
+     * @return ListenerId Filter condition. Exact query by listener ID.
+When ProxyId is specified, the listener will be checked whether it belongs to the connection.
+When GroupId is specified, the listener will be checked whether it belongs to the connection group.
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set Filter condition. Exact query by listener IDs.
-     * @param ListenerId Filter condition. Exact query by listener IDs.
+     * Set Filter condition. Exact query by listener ID.
+When ProxyId is specified, the listener will be checked whether it belongs to the connection.
+When GroupId is specified, the listener will be checked whether it belongs to the connection group.
+     * @param ListenerId Filter condition. Exact query by listener ID.
+When ProxyId is specified, the listener will be checked whether it belongs to the connection.
+When GroupId is specified, the listener will be checked whether it belongs to the connection group.
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get Filter condition. Exact query by listener names. 
-     * @return ListenerName Filter condition. Exact query by listener names.
+     * Get Filter condition. Exact query by listener name. 
+     * @return ListenerName Filter condition. Exact query by listener name.
      */
     public String getListenerName() {
         return this.ListenerName;
     }
 
     /**
-     * Set Filter condition. Exact query by listener names.
-     * @param ListenerName Filter condition. Exact query by listener names.
+     * Set Filter condition. Exact query by listener name.
+     * @param ListenerName Filter condition. Exact query by listener name.
      */
     public void setListenerName(String ListenerName) {
         this.ListenerName = ListenerName;
     }
 
     /**
-     * Get Filter condition. Exact query by listener ports. 
-     * @return Port Filter condition. Exact query by listener ports.
+     * Get Filter condition. Exact query by listener port. 
+     * @return Port Filter condition. Exact query by listener port.
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Filter condition. Exact query by listener ports.
-     * @param Port Filter condition. Exact query by listener ports.
+     * Set Filter condition. Exact query by listener port.
+     * @param Port Filter condition. Exact query by listener port.
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Offset. The default value is 0. 
-     * @return Offset Offset. The default value is 0.
+     * Get Offset. Default value: 0. 
+     * @return Offset Offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. The default value is 0.
-     * @param Offset Offset. The default value is 0.
+     * Set Offset. Default value: 0.
+     * @param Offset Offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -175,32 +185,32 @@ public class DescribeTCPListenersRequest extends AbstractModel{
     }
 
     /**
-     * Get Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both. 
-     * @return GroupId Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+     * Get Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time. 
+     * @return GroupId Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
-     * @param GroupId Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+     * Set Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
+     * @param GroupId Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get Filter condition. It supports fuzzy query by ports or listener names. This parameter cannot be used with `ListenerName` or `Port`. 
-     * @return SearchValue Filter condition. It supports fuzzy query by ports or listener names. This parameter cannot be used with `ListenerName` or `Port`.
+     * Get Filter condition. It supports fuzzy query by port or listener name. This parameter cannot be used with `ListenerName` or `Port`. 
+     * @return SearchValue Filter condition. It supports fuzzy query by port or listener name. This parameter cannot be used with `ListenerName` or `Port`.
      */
     public String getSearchValue() {
         return this.SearchValue;
     }
 
     /**
-     * Set Filter condition. It supports fuzzy query by ports or listener names. This parameter cannot be used with `ListenerName` or `Port`.
-     * @param SearchValue Filter condition. It supports fuzzy query by ports or listener names. This parameter cannot be used with `ListenerName` or `Port`.
+     * Set Filter condition. It supports fuzzy query by port or listener name. This parameter cannot be used with `ListenerName` or `Port`.
+     * @param SearchValue Filter condition. It supports fuzzy query by port or listener name. This parameter cannot be used with `ListenerName` or `Port`.
      */
     public void setSearchValue(String SearchValue) {
         this.SearchValue = SearchValue;

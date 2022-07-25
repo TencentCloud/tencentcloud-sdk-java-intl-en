@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class OpenProxyGroupResponse extends AbstractModel{
 
     /**
-    * List of IDs of the connection instances that are not disabled, which cannot be enabled.
+    * The connection instance ID list cannot be enabled if it’s not disabled.
     */
     @SerializedName("InvalidStatusInstanceSet")
     @Expose
     private String [] InvalidStatusInstanceSet;
 
     /**
-    * List of IDs of the connection instances failed to be enabled.
+    * ID list of connection instances failed to be enabled.
     */
     @SerializedName("OperationFailedInstanceSet")
     @Expose
@@ -44,32 +44,32 @@ public class OpenProxyGroupResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get List of IDs of the connection instances that are not disabled, which cannot be enabled. 
-     * @return InvalidStatusInstanceSet List of IDs of the connection instances that are not disabled, which cannot be enabled.
+     * Get The connection instance ID list cannot be enabled if it’s not disabled. 
+     * @return InvalidStatusInstanceSet The connection instance ID list cannot be enabled if it’s not disabled.
      */
     public String [] getInvalidStatusInstanceSet() {
         return this.InvalidStatusInstanceSet;
     }
 
     /**
-     * Set List of IDs of the connection instances that are not disabled, which cannot be enabled.
-     * @param InvalidStatusInstanceSet List of IDs of the connection instances that are not disabled, which cannot be enabled.
+     * Set The connection instance ID list cannot be enabled if it’s not disabled.
+     * @param InvalidStatusInstanceSet The connection instance ID list cannot be enabled if it’s not disabled.
      */
     public void setInvalidStatusInstanceSet(String [] InvalidStatusInstanceSet) {
         this.InvalidStatusInstanceSet = InvalidStatusInstanceSet;
     }
 
     /**
-     * Get List of IDs of the connection instances failed to be enabled. 
-     * @return OperationFailedInstanceSet List of IDs of the connection instances failed to be enabled.
+     * Get ID list of connection instances failed to be enabled. 
+     * @return OperationFailedInstanceSet ID list of connection instances failed to be enabled.
      */
     public String [] getOperationFailedInstanceSet() {
         return this.OperationFailedInstanceSet;
     }
 
     /**
-     * Set List of IDs of the connection instances failed to be enabled.
-     * @param OperationFailedInstanceSet List of IDs of the connection instances failed to be enabled.
+     * Set ID list of connection instances failed to be enabled.
+     * @param OperationFailedInstanceSet ID list of connection instances failed to be enabled.
      */
     public void setOperationFailedInstanceSet(String [] OperationFailedInstanceSet) {
         this.OperationFailedInstanceSet = OperationFailedInstanceSet;

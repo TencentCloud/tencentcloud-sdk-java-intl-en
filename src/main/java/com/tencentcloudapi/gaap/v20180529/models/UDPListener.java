@@ -66,12 +66,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Protocol;
 
     /**
-    * Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration.
+    * Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration
     */
     @SerializedName("ListenerStatus")
     @Expose
@@ -85,7 +85,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Scheduler;
 
     /**
-    * Status of origin server bound to listener. 0: normal, 1: exceptional IP, 2: exceptional domain name resolution
+    * Origin server binding status of listeners. `0`: Normal; `1`: IP exception; `2`: Domain name resolution exception.
     */
     @SerializedName("BindStatus")
     @Expose
@@ -99,7 +99,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private BindRealServer [] RealServerSet;
 
     /**
-    * Listener creation time; using UNIX timestamp.
+    * Listener creation time in the format of UNIX timestamp
     */
     @SerializedName("CreateTime")
     @Expose
@@ -107,7 +107,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SessionPersist")
     @Expose
@@ -214,36 +214,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration. 
-     * @return ListenerStatus Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration.
+     * Get Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration 
+     * @return ListenerStatus Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration
      */
     public Long getListenerStatus() {
         return this.ListenerStatus;
     }
 
     /**
-     * Set Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration.
-     * @param ListenerStatus Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration.
+     * Set Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration
+     * @param ListenerStatus Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration
      */
     public void setListenerStatus(Long ListenerStatus) {
         this.ListenerStatus = ListenerStatus;
@@ -266,16 +266,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Status of origin server bound to listener. 0: normal, 1: exceptional IP, 2: exceptional domain name resolution 
-     * @return BindStatus Status of origin server bound to listener. 0: normal, 1: exceptional IP, 2: exceptional domain name resolution
+     * Get Origin server binding status of listeners. `0`: Normal; `1`: IP exception; `2`: Domain name resolution exception. 
+     * @return BindStatus Origin server binding status of listeners. `0`: Normal; `1`: IP exception; `2`: Domain name resolution exception.
      */
     public Long getBindStatus() {
         return this.BindStatus;
     }
 
     /**
-     * Set Status of origin server bound to listener. 0: normal, 1: exceptional IP, 2: exceptional domain name resolution
-     * @param BindStatus Status of origin server bound to listener. 0: normal, 1: exceptional IP, 2: exceptional domain name resolution
+     * Set Origin server binding status of listeners. `0`: Normal; `1`: IP exception; `2`: Domain name resolution exception.
+     * @param BindStatus Origin server binding status of listeners. `0`: Normal; `1`: IP exception; `2`: Domain name resolution exception.
      */
     public void setBindStatus(Long BindStatus) {
         this.BindStatus = BindStatus;
@@ -298,16 +298,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Listener creation time; using UNIX timestamp. 
-     * @return CreateTime Listener creation time; using UNIX timestamp.
+     * Get Listener creation time in the format of UNIX timestamp 
+     * @return CreateTime Listener creation time in the format of UNIX timestamp
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Listener creation time; using UNIX timestamp.
-     * @param CreateTime Listener creation time; using UNIX timestamp.
+     * Set Listener creation time in the format of UNIX timestamp
+     * @param CreateTime Listener creation time in the format of UNIX timestamp
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
@@ -315,9 +315,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return SessionPersist Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getSessionPersist() {
         return this.SessionPersist;
@@ -325,9 +325,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param SessionPersist Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSessionPersist(Long SessionPersist) {
         this.SessionPersist = SessionPersist;

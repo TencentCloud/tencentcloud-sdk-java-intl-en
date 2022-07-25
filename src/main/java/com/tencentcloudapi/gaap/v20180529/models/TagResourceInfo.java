@@ -24,16 +24,16 @@ public class TagResourceInfo extends AbstractModel{
 
     /**
     * Resource types:
-`Proxy`: connections;
-`ProxyGroup`: connection groups;
-`RealServer`: origin servers.
+`Proxy`: Connection
+`ProxyGroup`: Connection group
+`RealServer`: Origin server
     */
     @SerializedName("ResourceType")
     @Expose
     private String ResourceType;
 
     /**
-    * Resource ID
+    * Instance ID
     */
     @SerializedName("ResourceId")
     @Expose
@@ -41,13 +41,13 @@ public class TagResourceInfo extends AbstractModel{
 
     /**
      * Get Resource types:
-`Proxy`: connections;
-`ProxyGroup`: connection groups;
-`RealServer`: origin servers. 
+`Proxy`: Connection
+`ProxyGroup`: Connection group
+`RealServer`: Origin server 
      * @return ResourceType Resource types:
-`Proxy`: connections;
-`ProxyGroup`: connection groups;
-`RealServer`: origin servers.
+`Proxy`: Connection
+`ProxyGroup`: Connection group
+`RealServer`: Origin server
      */
     public String getResourceType() {
         return this.ResourceType;
@@ -55,29 +55,29 @@ public class TagResourceInfo extends AbstractModel{
 
     /**
      * Set Resource types:
-`Proxy`: connections;
-`ProxyGroup`: connection groups;
-`RealServer`: origin servers.
+`Proxy`: Connection
+`ProxyGroup`: Connection group
+`RealServer`: Origin server
      * @param ResourceType Resource types:
-`Proxy`: connections;
-`ProxyGroup`: connection groups;
-`RealServer`: origin servers.
+`Proxy`: Connection
+`ProxyGroup`: Connection group
+`RealServer`: Origin server
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get Resource ID 
-     * @return ResourceId Resource ID
+     * Get Instance ID 
+     * @return ResourceId Instance ID
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set Resource ID
-     * @param ResourceId Resource ID
+     * Set Instance ID
+     * @param ResourceId Instance ID
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

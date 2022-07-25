@@ -92,6 +92,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `ISOLATED`: Isolated
 `CLONING`: Copying
 `RECOVERING`: Maintaining
+`MOVING`: Migrating
     */
     @SerializedName("Status")
     @Expose
@@ -244,7 +245,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String IPAddressVersion;
 
     /**
-    * Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: custom security EIP.
+    * Network type. `normal`: general BGP; `cn2`: Dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: Custom security EIP.
 Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("NetworkType")
@@ -437,7 +438,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `ISOLATING`: Isolating
 `ISOLATED`: Isolated
 `CLONING`: Copying
-`RECOVERING`: Maintaining 
+`RECOVERING`: Maintaining
+`MOVING`: Migrating 
      * @return Status Connection status. Valid values:
 `RUNNING`: Running
 `CREATING`: Creating
@@ -450,6 +452,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `ISOLATED`: Isolated
 `CLONING`: Copying
 `RECOVERING`: Maintaining
+`MOVING`: Migrating
      */
     public String getStatus() {
         return this.Status;
@@ -468,6 +471,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `ISOLATED`: Isolated
 `CLONING`: Copying
 `RECOVERING`: Maintaining
+`MOVING`: Migrating
      * @param Status Connection status. Valid values:
 `RUNNING`: Running
 `CREATING`: Creating
@@ -480,6 +484,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `ISOLATED`: Isolated
 `CLONING`: Copying
 `RECOVERING`: Maintaining
+`MOVING`: Migrating
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -842,9 +847,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: custom security EIP.
+     * Get Network type. `normal`: general BGP; `cn2`: Dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: Custom security EIP.
 Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return NetworkType Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: custom security EIP.
+     * @return NetworkType Network type. `normal`: general BGP; `cn2`: Dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: Custom security EIP.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getNetworkType() {
@@ -852,9 +857,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Set Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: custom security EIP.
+     * Set Network type. `normal`: general BGP; `cn2`: Dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: Custom security EIP.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param NetworkType Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: custom security EIP.
+     * @param NetworkType Network type. `normal`: general BGP; `cn2`: Dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: Custom security EIP.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setNetworkType(String NetworkType) {

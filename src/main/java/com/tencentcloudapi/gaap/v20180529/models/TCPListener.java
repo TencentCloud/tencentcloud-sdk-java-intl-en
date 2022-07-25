@@ -66,22 +66,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Protocol;
 
     /**
-    * Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration.
+    * Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration
     */
     @SerializedName("ListenerStatus")
     @Expose
     private Long ListenerStatus;
 
     /**
-    * Origin server access policy of listener. Valid values:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connection.
+    * Origin server access policy of listeners:
+`rr`: Round robin
+`wrr`: Weighted round robin
+`lc`: Least connection
     */
     @SerializedName("Scheduler")
     @Expose
@@ -102,18 +102,18 @@ lc: least connection.
     private Long DelayLoop;
 
     /**
-    * Whether health check is enabled for listener. Valid values:
-0: disabled;
-1: enabled
+    * Whether to enable the listener health check:
+`0`: Disable
+`1`: Enable
     */
     @SerializedName("HealthCheck")
     @Expose
     private Long HealthCheck;
 
     /**
-    * Status of origin server bound to listener. Valid values:
-0: exceptional;
-1: normal.
+    * Status of the origin server bound to listeners:
+`0`: Abnormal
+`1`: Normal
     */
     @SerializedName("BindStatus")
     @Expose
@@ -128,15 +128,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private BindRealServer [] RealServerSet;
 
     /**
-    * Listener creation time; using UNIX timestamp.
+    * Listener creation time in the format of UNIX timestamp
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Describes how the listener obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ClientIPMethod")
     @Expose
@@ -144,7 +144,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HealthyThreshold")
     @Expose
@@ -152,7 +152,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UnhealthyThreshold")
     @Expose
@@ -160,7 +160,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
     * Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FailoverSwitch")
     @Expose
@@ -168,7 +168,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SessionPersist")
     @Expose
@@ -275,64 +275,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration. 
-     * @return ListenerStatus Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration.
+     * Get Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration 
+     * @return ListenerStatus Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration
      */
     public Long getListenerStatus() {
         return this.ListenerStatus;
     }
 
     /**
-     * Set Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration.
-     * @param ListenerStatus Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration.
+     * Set Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration
+     * @param ListenerStatus Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration
      */
     public void setListenerStatus(Long ListenerStatus) {
         this.ListenerStatus = ListenerStatus;
     }
 
     /**
-     * Get Origin server access policy of listener. Valid values:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connection. 
-     * @return Scheduler Origin server access policy of listener. Valid values:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connection.
+     * Get Origin server access policy of listeners:
+`rr`: Round robin
+`wrr`: Weighted round robin
+`lc`: Least connection 
+     * @return Scheduler Origin server access policy of listeners:
+`rr`: Round robin
+`wrr`: Weighted round robin
+`lc`: Least connection
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set Origin server access policy of listener. Valid values:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connection.
-     * @param Scheduler Origin server access policy of listener. Valid values:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connection.
+     * Set Origin server access policy of listeners:
+`rr`: Round robin
+`wrr`: Weighted round robin
+`lc`: Least connection
+     * @param Scheduler Origin server access policy of listeners:
+`rr`: Round robin
+`wrr`: Weighted round robin
+`lc`: Least connection
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;
@@ -371,48 +371,48 @@ lc: least connection.
     }
 
     /**
-     * Get Whether health check is enabled for listener. Valid values:
-0: disabled;
-1: enabled 
-     * @return HealthCheck Whether health check is enabled for listener. Valid values:
-0: disabled;
-1: enabled
+     * Get Whether to enable the listener health check:
+`0`: Disable
+`1`: Enable 
+     * @return HealthCheck Whether to enable the listener health check:
+`0`: Disable
+`1`: Enable
      */
     public Long getHealthCheck() {
         return this.HealthCheck;
     }
 
     /**
-     * Set Whether health check is enabled for listener. Valid values:
-0: disabled;
-1: enabled
-     * @param HealthCheck Whether health check is enabled for listener. Valid values:
-0: disabled;
-1: enabled
+     * Set Whether to enable the listener health check:
+`0`: Disable
+`1`: Enable
+     * @param HealthCheck Whether to enable the listener health check:
+`0`: Disable
+`1`: Enable
      */
     public void setHealthCheck(Long HealthCheck) {
         this.HealthCheck = HealthCheck;
     }
 
     /**
-     * Get Status of origin server bound to listener. Valid values:
-0: exceptional;
-1: normal. 
-     * @return BindStatus Status of origin server bound to listener. Valid values:
-0: exceptional;
-1: normal.
+     * Get Status of the origin server bound to listeners:
+`0`: Abnormal
+`1`: Normal 
+     * @return BindStatus Status of the origin server bound to listeners:
+`0`: Abnormal
+`1`: Normal
      */
     public Long getBindStatus() {
         return this.BindStatus;
     }
 
     /**
-     * Set Status of origin server bound to listener. Valid values:
-0: exceptional;
-1: normal.
-     * @param BindStatus Status of origin server bound to listener. Valid values:
-0: exceptional;
-1: normal.
+     * Set Status of the origin server bound to listeners:
+`0`: Abnormal
+`1`: Normal
+     * @param BindStatus Status of the origin server bound to listeners:
+`0`: Abnormal
+`1`: Normal
      */
     public void setBindStatus(Long BindStatus) {
         this.BindStatus = BindStatus;
@@ -439,36 +439,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Listener creation time; using UNIX timestamp. 
-     * @return CreateTime Listener creation time; using UNIX timestamp.
+     * Get Listener creation time in the format of UNIX timestamp 
+     * @return CreateTime Listener creation time in the format of UNIX timestamp
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Listener creation time; using UNIX timestamp.
-     * @param CreateTime Listener creation time; using UNIX timestamp.
+     * Set Listener creation time in the format of UNIX timestamp
+     * @param CreateTime Listener creation time in the format of UNIX timestamp
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ClientIPMethod Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Describes how the listener obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ClientIPMethod Describes how the listener obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getClientIPMethod() {
         return this.ClientIPMethod;
     }
 
     /**
-     * Set Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ClientIPMethod Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Describes how the listener obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ClientIPMethod Describes how the listener obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setClientIPMethod(Long ClientIPMethod) {
         this.ClientIPMethod = ClientIPMethod;
@@ -476,9 +476,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return HealthyThreshold Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getHealthyThreshold() {
         return this.HealthyThreshold;
@@ -486,9 +486,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param HealthyThreshold Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHealthyThreshold(Long HealthyThreshold) {
         this.HealthyThreshold = HealthyThreshold;
@@ -496,9 +496,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return UnhealthyThreshold Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getUnhealthyThreshold() {
         return this.UnhealthyThreshold;
@@ -506,9 +506,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Set Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param UnhealthyThreshold Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUnhealthyThreshold(Long UnhealthyThreshold) {
         this.UnhealthyThreshold = UnhealthyThreshold;
@@ -516,9 +516,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Get Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return FailoverSwitch Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getFailoverSwitch() {
         return this.FailoverSwitch;
@@ -526,9 +526,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param FailoverSwitch Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFailoverSwitch(Long FailoverSwitch) {
         this.FailoverSwitch = FailoverSwitch;
@@ -536,9 +536,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: This field may return `null`, indicating that no valid value can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return SessionPersist Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getSessionPersist() {
         return this.SessionPersist;
@@ -546,9 +546,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Set Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param SessionPersist Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSessionPersist(Long SessionPersist) {
         this.SessionPersist = SessionPersist;

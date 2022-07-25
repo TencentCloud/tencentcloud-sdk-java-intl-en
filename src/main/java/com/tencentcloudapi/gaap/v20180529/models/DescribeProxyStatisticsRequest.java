@@ -52,9 +52,9 @@ public class DescribeProxyStatisticsRequest extends AbstractModel{
 
     /**
     * Monitoring granularity. It currently supports: 60, 300, 3,600, and 86,400. Unit: seconds.
-Time range: <= 1 day, supported minimum granularity: 60 seconds;
-Time range: <= 7 days, supported minimum granularity: 3,600 seconds;
-Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
+Time range: ≤ 3 day. Supported minimum granularity: 60 seconds;
+Time range: ≤ 7 day. Supported minimum granularity: 300 seconds;
+Time range: ≤ 30 days. Supported minimum granularity: 36,00 seconds;
     */
     @SerializedName("Granularity")
     @Expose
@@ -133,13 +133,13 @@ Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
 
     /**
      * Get Monitoring granularity. It currently supports: 60, 300, 3,600, and 86,400. Unit: seconds.
-Time range: <= 1 day, supported minimum granularity: 60 seconds;
-Time range: <= 7 days, supported minimum granularity: 3,600 seconds;
-Time range: <= 30 days, supported minimum granularity: 86,400 seconds; 
+Time range: ≤ 3 day. Supported minimum granularity: 60 seconds;
+Time range: ≤ 7 day. Supported minimum granularity: 300 seconds;
+Time range: ≤ 30 days. Supported minimum granularity: 36,00 seconds; 
      * @return Granularity Monitoring granularity. It currently supports: 60, 300, 3,600, and 86,400. Unit: seconds.
-Time range: <= 1 day, supported minimum granularity: 60 seconds;
-Time range: <= 7 days, supported minimum granularity: 3,600 seconds;
-Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
+Time range: ≤ 3 day. Supported minimum granularity: 60 seconds;
+Time range: ≤ 7 day. Supported minimum granularity: 300 seconds;
+Time range: ≤ 30 days. Supported minimum granularity: 36,00 seconds;
      */
     public Long getGranularity() {
         return this.Granularity;
@@ -147,13 +147,13 @@ Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
 
     /**
      * Set Monitoring granularity. It currently supports: 60, 300, 3,600, and 86,400. Unit: seconds.
-Time range: <= 1 day, supported minimum granularity: 60 seconds;
-Time range: <= 7 days, supported minimum granularity: 3,600 seconds;
-Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
+Time range: ≤ 3 day. Supported minimum granularity: 60 seconds;
+Time range: ≤ 7 day. Supported minimum granularity: 300 seconds;
+Time range: ≤ 30 days. Supported minimum granularity: 36,00 seconds;
      * @param Granularity Monitoring granularity. It currently supports: 60, 300, 3,600, and 86,400. Unit: seconds.
-Time range: <= 1 day, supported minimum granularity: 60 seconds;
-Time range: <= 7 days, supported minimum granularity: 3,600 seconds;
-Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
+Time range: ≤ 3 day. Supported minimum granularity: 60 seconds;
+Time range: ≤ 7 day. Supported minimum granularity: 300 seconds;
+Time range: ≤ 30 days. Supported minimum granularity: 36,00 seconds;
      */
     public void setGranularity(Long Granularity) {
         this.Granularity = Granularity;

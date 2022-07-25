@@ -24,7 +24,7 @@ public class DescribeSecurityPolicyDetailResponse extends AbstractModel{
 
     /**
     * Connection ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProxyId")
     @Expose
@@ -71,9 +71,9 @@ UNBINDING (disabling security policies)
 
     /**
      * Get Connection ID
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ProxyId Connection ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProxyId() {
         return this.ProxyId;
@@ -81,9 +81,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Connection ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ProxyId Connection ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;

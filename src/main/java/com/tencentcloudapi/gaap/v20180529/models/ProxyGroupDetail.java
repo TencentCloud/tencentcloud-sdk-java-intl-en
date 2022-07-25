@@ -45,10 +45,11 @@ public class ProxyGroupDetail extends AbstractModel{
 
     /**
     * Connection group status:
-0: running normally;
-1: creating;
-4: terminating;
-11: migrating;
+`0`: Running normally
+`1`: Creating
+`4`: Terminating
+`11`: Migrating
+`12`: Deploying
     */
     @SerializedName("Status")
     @Expose
@@ -121,7 +122,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Security policy ID. This field exists if security policies are set.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PolicyId")
     @Expose
@@ -129,15 +130,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Connection group version
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Describes how the connection obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ClientIPMethod")
     @Expose
@@ -145,7 +146,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * IP version. Valid values: `IPv4` (default), `IPv6`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IPAddressVersion")
     @Expose
@@ -153,7 +154,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PackageType")
     @Expose
@@ -161,9 +162,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
     * Specifies whether to enable HTTP3. Valid values:
-`0`: disable;
-`1`: enable.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Http3Supported")
     @Expose
@@ -219,15 +220,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Connection group status:
-0: running normally;
-1: creating;
-4: terminating;
-11: migrating; 
+`0`: Running normally
+`1`: Creating
+`4`: Terminating
+`11`: Migrating
+`12`: Deploying 
      * @return Status Connection group status:
-0: running normally;
-1: creating;
-4: terminating;
-11: migrating;
+`0`: Running normally
+`1`: Creating
+`4`: Terminating
+`11`: Migrating
+`12`: Deploying
      */
     public Long getStatus() {
         return this.Status;
@@ -235,15 +238,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Connection group status:
-0: running normally;
-1: creating;
-4: terminating;
-11: migrating;
+`0`: Running normally
+`1`: Creating
+`4`: Terminating
+`11`: Migrating
+`12`: Deploying
      * @param Status Connection group status:
-0: running normally;
-1: creating;
-4: terminating;
-11: migrating;
+`0`: Running normally
+`1`: Creating
+`4`: Terminating
+`11`: Migrating
+`12`: Deploying
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -403,9 +408,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Security policy ID. This field exists if security policies are set.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return PolicyId Security policy ID. This field exists if security policies are set.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPolicyId() {
         return this.PolicyId;
@@ -413,9 +418,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Security policy ID. This field exists if security policies are set.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param PolicyId Security policy ID. This field exists if security policies are set.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPolicyId(String PolicyId) {
         this.PolicyId = PolicyId;
@@ -423,9 +428,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Connection group version
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Version Connection group version
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVersion() {
         return this.Version;
@@ -433,29 +438,29 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Connection group version
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Version Connection group version
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ClientIPMethod Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Describes how the connection obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ClientIPMethod Describes how the connection obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long [] getClientIPMethod() {
         return this.ClientIPMethod;
     }
 
     /**
-     * Set Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ClientIPMethod Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Describes how the connection obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ClientIPMethod Describes how the connection obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setClientIPMethod(Long [] ClientIPMethod) {
         this.ClientIPMethod = ClientIPMethod;
@@ -463,9 +468,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get IP version. Valid values: `IPv4` (default), `IPv6`.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIPAddressVersion() {
         return this.IPAddressVersion;
@@ -473,9 +478,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set IP version. Valid values: `IPv4` (default), `IPv6`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIPAddressVersion(String IPAddressVersion) {
         this.IPAddressVersion = IPAddressVersion;
@@ -483,9 +488,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid value can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return PackageType Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPackageType() {
         return this.PackageType;
@@ -493,9 +498,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Set Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param PackageType Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPackageType(String PackageType) {
         this.PackageType = PackageType;
@@ -503,13 +508,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Get Specifies whether to enable HTTP3. Valid values:
-`0`: disable;
-`1`: enable.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Http3Supported Specifies whether to enable HTTP3. Valid values:
-`0`: disable;
-`1`: enable.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getHttp3Supported() {
         return this.Http3Supported;
@@ -517,13 +522,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Specifies whether to enable HTTP3. Valid values:
-`0`: disable;
-`1`: enable.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Http3Supported Specifies whether to enable HTTP3. Valid values:
-`0`: disable;
-`1`: enable.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHttp3Supported(Long Http3Supported) {
         this.Http3Supported = Http3Supported;

@@ -24,11 +24,11 @@ public class CreateCertificateRequest extends AbstractModel{
 
     /**
     * Certificate type. Where:
-0: basic authentication configuration;
-1: indicates client CA certificate;
-2: server SSL certificate;
-3: origin server CA certificate;
-4: connection SSL certificate.
+`0`: Basic authentication configuration;
+`1`: Client CA certificate;
+`2`: Server SSL certificate;
+`3`: Origin server CA certificate;
+`4`: Connection SSL certificate.
     */
     @SerializedName("CertificateType")
     @Expose
@@ -36,8 +36,8 @@ public class CreateCertificateRequest extends AbstractModel{
 
     /**
     * Certificate content. URL encoding. Where:
-If the certificate type is basic authentication, enter username/password pair for this parameter. Format: 'username:password', for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
-When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of `pem`.
+If the certificate type is basic authentication, enter username/password pair for this parameter. Format: “username:password”, for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
+When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of ‘pem’.
     */
     @SerializedName("CertificateContent")
     @Expose
@@ -51,7 +51,7 @@ When the certificate type is CA/SSL certificate, enter the certificate content f
     private String CertificateAlias;
 
     /**
-    * Key content. URL encoding. This parameter is required only when the certificate type is SSL certificate. The format is `pem`.
+    * URL-encoded key content. This parameter is required only when the certificate type is SSL certificate. Its format is `PEM`.
     */
     @SerializedName("CertificateKey")
     @Expose
@@ -59,17 +59,17 @@ When the certificate type is CA/SSL certificate, enter the certificate content f
 
     /**
      * Get Certificate type. Where:
-0: basic authentication configuration;
-1: indicates client CA certificate;
-2: server SSL certificate;
-3: origin server CA certificate;
-4: connection SSL certificate. 
+`0`: Basic authentication configuration;
+`1`: Client CA certificate;
+`2`: Server SSL certificate;
+`3`: Origin server CA certificate;
+`4`: Connection SSL certificate. 
      * @return CertificateType Certificate type. Where:
-0: basic authentication configuration;
-1: indicates client CA certificate;
-2: server SSL certificate;
-3: origin server CA certificate;
-4: connection SSL certificate.
+`0`: Basic authentication configuration;
+`1`: Client CA certificate;
+`2`: Server SSL certificate;
+`3`: Origin server CA certificate;
+`4`: Connection SSL certificate.
      */
     public Long getCertificateType() {
         return this.CertificateType;
@@ -77,17 +77,17 @@ When the certificate type is CA/SSL certificate, enter the certificate content f
 
     /**
      * Set Certificate type. Where:
-0: basic authentication configuration;
-1: indicates client CA certificate;
-2: server SSL certificate;
-3: origin server CA certificate;
-4: connection SSL certificate.
+`0`: Basic authentication configuration;
+`1`: Client CA certificate;
+`2`: Server SSL certificate;
+`3`: Origin server CA certificate;
+`4`: Connection SSL certificate.
      * @param CertificateType Certificate type. Where:
-0: basic authentication configuration;
-1: indicates client CA certificate;
-2: server SSL certificate;
-3: origin server CA certificate;
-4: connection SSL certificate.
+`0`: Basic authentication configuration;
+`1`: Client CA certificate;
+`2`: Server SSL certificate;
+`3`: Origin server CA certificate;
+`4`: Connection SSL certificate.
      */
     public void setCertificateType(Long CertificateType) {
         this.CertificateType = CertificateType;
@@ -95,11 +95,11 @@ When the certificate type is CA/SSL certificate, enter the certificate content f
 
     /**
      * Get Certificate content. URL encoding. Where:
-If the certificate type is basic authentication, enter username/password pair for this parameter. Format: 'username:password', for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
-When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of `pem`. 
+If the certificate type is basic authentication, enter username/password pair for this parameter. Format: “username:password”, for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
+When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of ‘pem’. 
      * @return CertificateContent Certificate content. URL encoding. Where:
-If the certificate type is basic authentication, enter username/password pair for this parameter. Format: 'username:password', for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
-When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of `pem`.
+If the certificate type is basic authentication, enter username/password pair for this parameter. Format: “username:password”, for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
+When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of ‘pem’.
      */
     public String getCertificateContent() {
         return this.CertificateContent;
@@ -107,11 +107,11 @@ When the certificate type is CA/SSL certificate, enter the certificate content f
 
     /**
      * Set Certificate content. URL encoding. Where:
-If the certificate type is basic authentication, enter username/password pair for this parameter. Format: 'username:password', for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
-When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of `pem`.
+If the certificate type is basic authentication, enter username/password pair for this parameter. Format: “username:password”, for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
+When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of ‘pem’.
      * @param CertificateContent Certificate content. URL encoding. Where:
-If the certificate type is basic authentication, enter username/password pair for this parameter. Format: 'username:password', for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
-When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of `pem`.
+If the certificate type is basic authentication, enter username/password pair for this parameter. Format: “username:password”, for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
+When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of ‘pem’.
      */
     public void setCertificateContent(String CertificateContent) {
         this.CertificateContent = CertificateContent;
@@ -134,16 +134,16 @@ When the certificate type is CA/SSL certificate, enter the certificate content f
     }
 
     /**
-     * Get Key content. URL encoding. This parameter is required only when the certificate type is SSL certificate. The format is `pem`. 
-     * @return CertificateKey Key content. URL encoding. This parameter is required only when the certificate type is SSL certificate. The format is `pem`.
+     * Get URL-encoded key content. This parameter is required only when the certificate type is SSL certificate. Its format is `PEM`. 
+     * @return CertificateKey URL-encoded key content. This parameter is required only when the certificate type is SSL certificate. Its format is `PEM`.
      */
     public String getCertificateKey() {
         return this.CertificateKey;
     }
 
     /**
-     * Set Key content. URL encoding. This parameter is required only when the certificate type is SSL certificate. The format is `pem`.
-     * @param CertificateKey Key content. URL encoding. This parameter is required only when the certificate type is SSL certificate. The format is `pem`.
+     * Set URL-encoded key content. This parameter is required only when the certificate type is SSL certificate. Its format is `PEM`.
+     * @param CertificateKey URL-encoded key content. This parameter is required only when the certificate type is SSL certificate. Its format is `PEM`.
      */
     public void setCertificateKey(String CertificateKey) {
         this.CertificateKey = CertificateKey;
