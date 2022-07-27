@@ -20,28 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTKEEdgeScriptResponse extends AbstractModel{
+public class DescribeAvailableTKEEdgeVersionResponse extends AbstractModel{
 
     /**
-    * Whether to download the link
+    * Version list
     */
-    @SerializedName("Link")
+    @SerializedName("Versions")
     @Expose
-    private String Link;
-
-    /**
-    * Whether to download the desired token
-    */
-    @SerializedName("Token")
-    @Expose
-    private String Token;
-
-    /**
-    * Whether to download the command
-    */
-    @SerializedName("Command")
-    @Expose
-    private String Command;
+    private String [] Versions;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -51,51 +37,19 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Whether to download the link 
-     * @return Link Whether to download the link
+     * Get Version list 
+     * @return Versions Version list
      */
-    public String getLink() {
-        return this.Link;
+    public String [] getVersions() {
+        return this.Versions;
     }
 
     /**
-     * Set Whether to download the link
-     * @param Link Whether to download the link
+     * Set Version list
+     * @param Versions Version list
      */
-    public void setLink(String Link) {
-        this.Link = Link;
-    }
-
-    /**
-     * Get Whether to download the desired token 
-     * @return Token Whether to download the desired token
-     */
-    public String getToken() {
-        return this.Token;
-    }
-
-    /**
-     * Set Whether to download the desired token
-     * @param Token Whether to download the desired token
-     */
-    public void setToken(String Token) {
-        this.Token = Token;
-    }
-
-    /**
-     * Get Whether to download the command 
-     * @return Command Whether to download the command
-     */
-    public String getCommand() {
-        return this.Command;
-    }
-
-    /**
-     * Set Whether to download the command
-     * @param Command Whether to download the command
-     */
-    public void setCommand(String Command) {
-        this.Command = Command;
+    public void setVersions(String [] Versions) {
+        this.Versions = Versions;
     }
 
     /**
@@ -114,22 +68,19 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeTKEEdgeScriptResponse() {
+    public DescribeAvailableTKEEdgeVersionResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTKEEdgeScriptResponse(DescribeTKEEdgeScriptResponse source) {
-        if (source.Link != null) {
-            this.Link = new String(source.Link);
-        }
-        if (source.Token != null) {
-            this.Token = new String(source.Token);
-        }
-        if (source.Command != null) {
-            this.Command = new String(source.Command);
+    public DescribeAvailableTKEEdgeVersionResponse(DescribeAvailableTKEEdgeVersionResponse source) {
+        if (source.Versions != null) {
+            this.Versions = new String[source.Versions.length];
+            for (int i = 0; i < source.Versions.length; i++) {
+                this.Versions[i] = new String(source.Versions[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -141,9 +92,7 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Link", this.Link);
-        this.setParamSimple(map, prefix + "Token", this.Token);
-        this.setParamSimple(map, prefix + "Command", this.Command);
+        this.setParamArraySimple(map, prefix + "Versions.", this.Versions);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

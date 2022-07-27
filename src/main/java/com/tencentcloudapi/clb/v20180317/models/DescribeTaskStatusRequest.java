@@ -31,6 +31,7 @@ public class DescribeTaskStatusRequest extends AbstractModel{
 
     /**
     * Order ID.
+Note: Either `TaskId` or `DealName` is required.
     */
     @SerializedName("DealName")
     @Expose
@@ -53,8 +54,10 @@ public class DescribeTaskStatusRequest extends AbstractModel{
     }
 
     /**
-     * Get Order ID. 
+     * Get Order ID.
+Note: Either `TaskId` or `DealName` is required. 
      * @return DealName Order ID.
+Note: Either `TaskId` or `DealName` is required.
      */
     public String getDealName() {
         return this.DealName;
@@ -62,7 +65,9 @@ public class DescribeTaskStatusRequest extends AbstractModel{
 
     /**
      * Set Order ID.
+Note: Either `TaskId` or `DealName` is required.
      * @param DealName Order ID.
+Note: Either `TaskId` or `DealName` is required.
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;

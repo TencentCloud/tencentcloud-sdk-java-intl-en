@@ -104,6 +104,22 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Boolean IgnoreServiceCIDRConflict;
 
     /**
+    * Whether it is a dual-stack cluster in VPC-CNI mode. Default value: `false`, which indicates it is not a dual-stack cluster.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("IsDualStack")
+    @Expose
+    private Boolean IsDualStack;
+
+    /**
+    * It is used to automatically assign the IP ranges for the service.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Ipv6ServiceCIDR")
+    @Expose
+    private String Ipv6ServiceCIDR;
+
+    /**
      * Get CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC. 
      * @return ClusterCIDR CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC.
      */
@@ -295,6 +311,46 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.IgnoreServiceCIDRConflict = IgnoreServiceCIDRConflict;
     }
 
+    /**
+     * Get Whether it is a dual-stack cluster in VPC-CNI mode. Default value: `false`, which indicates it is not a dual-stack cluster.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return IsDualStack Whether it is a dual-stack cluster in VPC-CNI mode. Default value: `false`, which indicates it is not a dual-stack cluster.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Boolean getIsDualStack() {
+        return this.IsDualStack;
+    }
+
+    /**
+     * Set Whether it is a dual-stack cluster in VPC-CNI mode. Default value: `false`, which indicates it is not a dual-stack cluster.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param IsDualStack Whether it is a dual-stack cluster in VPC-CNI mode. Default value: `false`, which indicates it is not a dual-stack cluster.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setIsDualStack(Boolean IsDualStack) {
+        this.IsDualStack = IsDualStack;
+    }
+
+    /**
+     * Get It is used to automatically assign the IP ranges for the service.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Ipv6ServiceCIDR It is used to automatically assign the IP ranges for the service.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getIpv6ServiceCIDR() {
+        return this.Ipv6ServiceCIDR;
+    }
+
+    /**
+     * Set It is used to automatically assign the IP ranges for the service.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Ipv6ServiceCIDR It is used to automatically assign the IP ranges for the service.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setIpv6ServiceCIDR(String Ipv6ServiceCIDR) {
+        this.Ipv6ServiceCIDR = Ipv6ServiceCIDR;
+    }
+
     public ClusterNetworkSettings() {
     }
 
@@ -339,6 +395,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.IgnoreServiceCIDRConflict != null) {
             this.IgnoreServiceCIDRConflict = new Boolean(source.IgnoreServiceCIDRConflict);
         }
+        if (source.IsDualStack != null) {
+            this.IsDualStack = new Boolean(source.IsDualStack);
+        }
+        if (source.Ipv6ServiceCIDR != null) {
+            this.Ipv6ServiceCIDR = new String(source.Ipv6ServiceCIDR);
+        }
     }
 
 
@@ -357,6 +419,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "ServiceCIDR", this.ServiceCIDR);
         this.setParamArraySimple(map, prefix + "Subnets.", this.Subnets);
         this.setParamSimple(map, prefix + "IgnoreServiceCIDRConflict", this.IgnoreServiceCIDRConflict);
+        this.setParamSimple(map, prefix + "IsDualStack", this.IsDualStack);
+        this.setParamSimple(map, prefix + "Ipv6ServiceCIDR", this.Ipv6ServiceCIDR);
 
     }
 }

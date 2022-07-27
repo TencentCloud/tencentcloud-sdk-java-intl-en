@@ -165,6 +165,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Tag [] Tags;
 
     /**
+    * Whether Deletion Protection is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DeletionProtection")
+    @Expose
+    private Boolean DeletionProtection;
+
+    /**
      * Get Node pool ID 
      * @return NodePoolId Node pool ID
      */
@@ -504,6 +512,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.Tags = Tags;
     }
 
+    /**
+     * Get Whether Deletion Protection is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return DeletionProtection Whether Deletion Protection is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Boolean getDeletionProtection() {
+        return this.DeletionProtection;
+    }
+
+    /**
+     * Set Whether Deletion Protection is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param DeletionProtection Whether Deletion Protection is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDeletionProtection(Boolean DeletionProtection) {
+        this.DeletionProtection = DeletionProtection;
+    }
+
     public NodePool() {
     }
 
@@ -578,6 +606,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.DeletionProtection != null) {
+            this.DeletionProtection = new Boolean(source.DeletionProtection);
+        }
     }
 
 
@@ -604,6 +635,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "DesiredPodNum", this.DesiredPodNum);
         this.setParamSimple(map, prefix + "UserScript", this.UserScript);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
 
     }
 }

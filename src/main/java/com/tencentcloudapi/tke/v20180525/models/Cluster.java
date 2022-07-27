@@ -178,6 +178,14 @@ Note: this field may return null, indicating that no valid value is obtained.
     private Boolean AutoUpgradeClusterLevel;
 
     /**
+    * Whether to enable qGPU Sharing
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("QGPUShareEnable")
+    @Expose
+    private Boolean QGPUShareEnable;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -545,6 +553,26 @@ Note: this field may return null, indicating that no valid value is obtained.
         this.AutoUpgradeClusterLevel = AutoUpgradeClusterLevel;
     }
 
+    /**
+     * Get Whether to enable qGPU Sharing
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return QGPUShareEnable Whether to enable qGPU Sharing
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Boolean getQGPUShareEnable() {
+        return this.QGPUShareEnable;
+    }
+
+    /**
+     * Set Whether to enable qGPU Sharing
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param QGPUShareEnable Whether to enable qGPU Sharing
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setQGPUShareEnable(Boolean QGPUShareEnable) {
+        this.QGPUShareEnable = QGPUShareEnable;
+    }
+
     public Cluster() {
     }
 
@@ -619,6 +647,9 @@ Note: this field may return null, indicating that no valid value is obtained.
         if (source.AutoUpgradeClusterLevel != null) {
             this.AutoUpgradeClusterLevel = new Boolean(source.AutoUpgradeClusterLevel);
         }
+        if (source.QGPUShareEnable != null) {
+            this.QGPUShareEnable = new Boolean(source.QGPUShareEnable);
+        }
     }
 
 
@@ -647,6 +678,7 @@ Note: this field may return null, indicating that no valid value is obtained.
         this.setParamSimple(map, prefix + "EnableExternalNode", this.EnableExternalNode);
         this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
         this.setParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
+        this.setParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
 
     }
 }

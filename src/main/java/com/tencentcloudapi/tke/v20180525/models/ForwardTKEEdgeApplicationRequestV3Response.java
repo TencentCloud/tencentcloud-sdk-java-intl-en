@@ -20,28 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTKEEdgeScriptResponse extends AbstractModel{
+public class ForwardTKEEdgeApplicationRequestV3Response extends AbstractModel{
 
     /**
-    * Whether to download the link
+    * Data returned after requesting the cluster add-on
     */
-    @SerializedName("Link")
+    @SerializedName("ResponseBody")
     @Expose
-    private String Link;
-
-    /**
-    * Whether to download the desired token
-    */
-    @SerializedName("Token")
-    @Expose
-    private String Token;
-
-    /**
-    * Whether to download the command
-    */
-    @SerializedName("Command")
-    @Expose
-    private String Command;
+    private String ResponseBody;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -51,51 +37,19 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Whether to download the link 
-     * @return Link Whether to download the link
+     * Get Data returned after requesting the cluster add-on 
+     * @return ResponseBody Data returned after requesting the cluster add-on
      */
-    public String getLink() {
-        return this.Link;
+    public String getResponseBody() {
+        return this.ResponseBody;
     }
 
     /**
-     * Set Whether to download the link
-     * @param Link Whether to download the link
+     * Set Data returned after requesting the cluster add-on
+     * @param ResponseBody Data returned after requesting the cluster add-on
      */
-    public void setLink(String Link) {
-        this.Link = Link;
-    }
-
-    /**
-     * Get Whether to download the desired token 
-     * @return Token Whether to download the desired token
-     */
-    public String getToken() {
-        return this.Token;
-    }
-
-    /**
-     * Set Whether to download the desired token
-     * @param Token Whether to download the desired token
-     */
-    public void setToken(String Token) {
-        this.Token = Token;
-    }
-
-    /**
-     * Get Whether to download the command 
-     * @return Command Whether to download the command
-     */
-    public String getCommand() {
-        return this.Command;
-    }
-
-    /**
-     * Set Whether to download the command
-     * @param Command Whether to download the command
-     */
-    public void setCommand(String Command) {
-        this.Command = Command;
+    public void setResponseBody(String ResponseBody) {
+        this.ResponseBody = ResponseBody;
     }
 
     /**
@@ -114,22 +68,16 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeTKEEdgeScriptResponse() {
+    public ForwardTKEEdgeApplicationRequestV3Response() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTKEEdgeScriptResponse(DescribeTKEEdgeScriptResponse source) {
-        if (source.Link != null) {
-            this.Link = new String(source.Link);
-        }
-        if (source.Token != null) {
-            this.Token = new String(source.Token);
-        }
-        if (source.Command != null) {
-            this.Command = new String(source.Command);
+    public ForwardTKEEdgeApplicationRequestV3Response(ForwardTKEEdgeApplicationRequestV3Response source) {
+        if (source.ResponseBody != null) {
+            this.ResponseBody = new String(source.ResponseBody);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -141,9 +89,7 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Link", this.Link);
-        this.setParamSimple(map, prefix + "Token", this.Token);
-        this.setParamSimple(map, prefix + "Command", this.Command);
+        this.setParamSimple(map, prefix + "ResponseBody", this.ResponseBody);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

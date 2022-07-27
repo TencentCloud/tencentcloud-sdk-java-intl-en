@@ -164,6 +164,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Boolean DeregisterTargetRst;
 
     /**
+    * Attribute of listener
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AttrFlags")
+    @Expose
+    private String [] AttrFlags;
+
+    /**
      * Get CLB listener ID 
      * @return ListenerId CLB listener ID
      */
@@ -511,6 +519,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.DeregisterTargetRst = DeregisterTargetRst;
     }
 
+    /**
+     * Get Attribute of listener
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return AttrFlags Attribute of listener
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String [] getAttrFlags() {
+        return this.AttrFlags;
+    }
+
+    /**
+     * Set Attribute of listener
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param AttrFlags Attribute of listener
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setAttrFlags(String [] AttrFlags) {
+        this.AttrFlags = AttrFlags;
+    }
+
     public Listener() {
     }
 
@@ -576,6 +604,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.DeregisterTargetRst != null) {
             this.DeregisterTargetRst = new Boolean(source.DeregisterTargetRst);
         }
+        if (source.AttrFlags != null) {
+            this.AttrFlags = new String[source.AttrFlags.length];
+            for (int i = 0; i < source.AttrFlags.length; i++) {
+                this.AttrFlags[i] = new String(source.AttrFlags[i]);
+            }
+        }
     }
 
 
@@ -601,6 +635,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
         this.setParamSimple(map, prefix + "Toa", this.Toa);
         this.setParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
+        this.setParamArraySimple(map, prefix + "AttrFlags.", this.AttrFlags);
 
     }
 }

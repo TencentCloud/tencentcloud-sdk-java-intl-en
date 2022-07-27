@@ -148,6 +148,20 @@ The following conditions are required to use ipvs-bpf network mode:
     private String CiliumMode;
 
     /**
+    * Whether it is a dual-stack cluster in VPC-CNI mode. Default value: `false`, which indicates it is not a dual-stack cluster.
+    */
+    @SerializedName("IsDualStack")
+    @Expose
+    private Boolean IsDualStack;
+
+    /**
+    * Whether to enable qGPU Sharing
+    */
+    @SerializedName("QGPUShareEnable")
+    @Expose
+    private Boolean QGPUShareEnable;
+
+    /**
      * Get Whether IPVS is enabled 
      * @return IPVS Whether IPVS is enabled
      */
@@ -443,6 +457,38 @@ The following conditions are required to use ipvs-bpf network mode:
         this.CiliumMode = CiliumMode;
     }
 
+    /**
+     * Get Whether it is a dual-stack cluster in VPC-CNI mode. Default value: `false`, which indicates it is not a dual-stack cluster. 
+     * @return IsDualStack Whether it is a dual-stack cluster in VPC-CNI mode. Default value: `false`, which indicates it is not a dual-stack cluster.
+     */
+    public Boolean getIsDualStack() {
+        return this.IsDualStack;
+    }
+
+    /**
+     * Set Whether it is a dual-stack cluster in VPC-CNI mode. Default value: `false`, which indicates it is not a dual-stack cluster.
+     * @param IsDualStack Whether it is a dual-stack cluster in VPC-CNI mode. Default value: `false`, which indicates it is not a dual-stack cluster.
+     */
+    public void setIsDualStack(Boolean IsDualStack) {
+        this.IsDualStack = IsDualStack;
+    }
+
+    /**
+     * Get Whether to enable qGPU Sharing 
+     * @return QGPUShareEnable Whether to enable qGPU Sharing
+     */
+    public Boolean getQGPUShareEnable() {
+        return this.QGPUShareEnable;
+    }
+
+    /**
+     * Set Whether to enable qGPU Sharing
+     * @param QGPUShareEnable Whether to enable qGPU Sharing
+     */
+    public void setQGPUShareEnable(Boolean QGPUShareEnable) {
+        this.QGPUShareEnable = QGPUShareEnable;
+    }
+
     public ClusterAdvancedSettings() {
     }
 
@@ -502,6 +548,12 @@ The following conditions are required to use ipvs-bpf network mode:
         if (source.CiliumMode != null) {
             this.CiliumMode = new String(source.CiliumMode);
         }
+        if (source.IsDualStack != null) {
+            this.IsDualStack = new Boolean(source.IsDualStack);
+        }
+        if (source.QGPUShareEnable != null) {
+            this.QGPUShareEnable = new Boolean(source.QGPUShareEnable);
+        }
     }
 
 
@@ -526,6 +578,8 @@ The following conditions are required to use ipvs-bpf network mode:
         this.setParamSimple(map, prefix + "EnableCustomizedPodCIDR", this.EnableCustomizedPodCIDR);
         this.setParamSimple(map, prefix + "BasePodNumber", this.BasePodNumber);
         this.setParamSimple(map, prefix + "CiliumMode", this.CiliumMode);
+        this.setParamSimple(map, prefix + "IsDualStack", this.IsDualStack);
+        this.setParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
 
     }
 }

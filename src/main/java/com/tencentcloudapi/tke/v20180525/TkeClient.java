@@ -119,6 +119,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to check if the CIDR block of a TKE Edge cluster conflicts with other CIDR blocks.
+     * @param req CheckEdgeClusterCIDRRequest
+     * @return CheckEdgeClusterCIDRResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckEdgeClusterCIDRResponse CheckEdgeClusterCIDR(CheckEdgeClusterCIDRRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CheckEdgeClusterCIDRResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CheckEdgeClusterCIDRResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CheckEdgeClusterCIDR");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to check which nodes can be upgraded in the given node list. 
      * @param req CheckInstancesUpgradeAbleRequest
      * @return CheckInstancesUpgradeAbleResponse
@@ -279,6 +299,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create an ECM instance.
+     * @param req CreateECMInstancesRequest
+     * @return CreateECMInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateECMInstancesResponse CreateECMInstances(CreateECMInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateECMInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateECMInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateECMInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create an alarm rule.
      * @param req CreatePrometheusAlertRuleRequest
      * @return CreatePrometheusAlertRuleResponse
@@ -291,6 +331,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreatePrometheusAlertRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreatePrometheusAlertRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a TKE Edge cluster.
+     * @param req CreateTKEEdgeClusterRequest
+     * @return CreateTKEEdgeClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTKEEdgeClusterResponse CreateTKEEdgeCluster(CreateTKEEdgeClusterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateTKEEdgeClusterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateTKEEdgeClusterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateTKEEdgeCluster");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -459,6 +519,66 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete one or more ECM instances.
+     * @param req DeleteECMInstancesRequest
+     * @return DeleteECMInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteECMInstancesResponse DeleteECMInstances(DeleteECMInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteECMInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteECMInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteECMInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete one or more edge CVM instances.
+     * @param req DeleteEdgeCVMInstancesRequest
+     * @return DeleteEdgeCVMInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteEdgeCVMInstancesResponse DeleteEdgeCVMInstances(DeleteEdgeCVMInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteEdgeCVMInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteEdgeCVMInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteEdgeCVMInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete one or more edge compute instances.
+     * @param req DeleteEdgeClusterInstancesRequest
+     * @return DeleteEdgeClusterInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteEdgeClusterInstancesResponse DeleteEdgeClusterInstances(DeleteEdgeClusterInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteEdgeClusterInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteEdgeClusterInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteEdgeClusterInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete an alarm rule.
      * @param req DeletePrometheusAlertRuleRequest
      * @return DeletePrometheusAlertRuleResponse
@@ -479,6 +599,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete a TKE Edge cluster.
+     * @param req DeleteTKEEdgeClusterRequest
+     * @return DeleteTKEEdgeClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTKEEdgeClusterResponse DeleteTKEEdgeCluster(DeleteTKEEdgeClusterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteTKEEdgeClusterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteTKEEdgeClusterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteTKEEdgeCluster");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to obtain all versions that the cluster can upgrade to.
      * @param req DescribeAvailableClusterVersionRequest
      * @return DescribeAvailableClusterVersionResponse
@@ -491,6 +631,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAvailableClusterVersionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAvailableClusterVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the K8s versions supported by TKE Edge.
+     * @param req DescribeAvailableTKEEdgeVersionRequest
+     * @return DescribeAvailableTKEEdgeVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAvailableTKEEdgeVersionResponse DescribeAvailableTKEEdgeVersion(DescribeAvailableTKEEdgeVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAvailableTKEEdgeVersionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAvailableTKEEdgeVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAvailableTKEEdgeVersion");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -839,6 +999,106 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain the ECM instance information.
+     * @param req DescribeECMInstancesRequest
+     * @return DescribeECMInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeECMInstancesResponse DescribeECMInstances(DescribeECMInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeECMInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeECMInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeECMInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the custom parameters available for an edge cluster.
+     * @param req DescribeEdgeAvailableExtraArgsRequest
+     * @return DescribeEdgeAvailableExtraArgsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEdgeAvailableExtraArgsResponse DescribeEdgeAvailableExtraArgs(DescribeEdgeAvailableExtraArgsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEdgeAvailableExtraArgsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEdgeAvailableExtraArgsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEdgeAvailableExtraArgs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain the edge CVM instance information.
+     * @param req DescribeEdgeCVMInstancesRequest
+     * @return DescribeEdgeCVMInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEdgeCVMInstancesResponse DescribeEdgeCVMInstances(DescribeEdgeCVMInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEdgeCVMInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEdgeCVMInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEdgeCVMInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query custom parameters of an edge cluster.
+     * @param req DescribeEdgeClusterExtraArgsRequest
+     * @return DescribeEdgeClusterExtraArgsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEdgeClusterExtraArgsResponse DescribeEdgeClusterExtraArgs(DescribeEdgeClusterExtraArgsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEdgeClusterExtraArgsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEdgeClusterExtraArgsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEdgeClusterExtraArgs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the TKE Edge cluster node information.
+     * @param req DescribeEdgeClusterInstancesRequest
+     * @return DescribeEdgeClusterInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEdgeClusterInstancesResponse DescribeEdgeClusterInstances(DescribeEdgeClusterInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEdgeClusterInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEdgeClusterInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEdgeClusterInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the task progress of enabling VPC-CNI mode.
      * @param req DescribeEnableVpcCniProgressRequest
      * @return DescribeEnableVpcCniProgressResponse
@@ -979,7 +1239,87 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the URL of TKE edge script.
+     *This API is used to obtain the authentication information of a TKE Edge cluster.
+     * @param req DescribeTKEEdgeClusterCredentialRequest
+     * @return DescribeTKEEdgeClusterCredentialResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTKEEdgeClusterCredentialResponse DescribeTKEEdgeClusterCredential(DescribeTKEEdgeClusterCredentialRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTKEEdgeClusterCredentialResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTKEEdgeClusterCredentialResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTKEEdgeClusterCredential");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the current status and process information of a TKE Edge cluster.
+     * @param req DescribeTKEEdgeClusterStatusRequest
+     * @return DescribeTKEEdgeClusterStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTKEEdgeClusterStatusResponse DescribeTKEEdgeClusterStatus(DescribeTKEEdgeClusterStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTKEEdgeClusterStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTKEEdgeClusterStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTKEEdgeClusterStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of TKE Edge clusters.
+     * @param req DescribeTKEEdgeClustersRequest
+     * @return DescribeTKEEdgeClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTKEEdgeClustersResponse DescribeTKEEdgeClusters(DescribeTKEEdgeClustersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTKEEdgeClustersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTKEEdgeClustersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTKEEdgeClusters");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain the kubeconfig for access to a TKE Edge cluster through the public network.
+     * @param req DescribeTKEEdgeExternalKubeconfigRequest
+     * @return DescribeTKEEdgeExternalKubeconfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTKEEdgeExternalKubeconfigResponse DescribeTKEEdgeExternalKubeconfig(DescribeTKEEdgeExternalKubeconfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTKEEdgeExternalKubeconfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTKEEdgeExternalKubeconfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTKEEdgeExternalKubeconfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the URL of TKE edge script. You can add external nodes to a TKE Edge cluster by downloading the URL.
      * @param req DescribeTKEEdgeScriptRequest
      * @return DescribeTKEEdgeScriptResponse
      * @throws TencentCloudSDKException
@@ -1091,6 +1431,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<EnableVpcCniNetworkTypeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "EnableVpcCniNetworkType");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to work with the add-ons of a TKE Edge cluster.
+     * @param req ForwardTKEEdgeApplicationRequestV3Request
+     * @return ForwardTKEEdgeApplicationRequestV3Response
+     * @throws TencentCloudSDKException
+     */
+    public ForwardTKEEdgeApplicationRequestV3Response ForwardTKEEdgeApplicationRequestV3(ForwardTKEEdgeApplicationRequestV3Request req) throws TencentCloudSDKException{
+        JsonResponseModel<ForwardTKEEdgeApplicationRequestV3Response> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ForwardTKEEdgeApplicationRequestV3Response>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ForwardTKEEdgeApplicationRequestV3");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

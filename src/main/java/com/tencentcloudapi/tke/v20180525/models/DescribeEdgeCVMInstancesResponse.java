@@ -20,28 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTKEEdgeScriptResponse extends AbstractModel{
+public class DescribeEdgeCVMInstancesResponse extends AbstractModel{
 
     /**
-    * Whether to download the link
+    * Number of instances matched the condition
     */
-    @SerializedName("Link")
+    @SerializedName("TotalCount")
     @Expose
-    private String Link;
+    private Long TotalCount;
 
     /**
-    * Whether to download the desired token
+    * List of the returned instance information
     */
-    @SerializedName("Token")
+    @SerializedName("InstanceInfoSet")
     @Expose
-    private String Token;
-
-    /**
-    * Whether to download the command
-    */
-    @SerializedName("Command")
-    @Expose
-    private String Command;
+    private String [] InstanceInfoSet;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -51,51 +44,35 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Whether to download the link 
-     * @return Link Whether to download the link
+     * Get Number of instances matched the condition 
+     * @return TotalCount Number of instances matched the condition
      */
-    public String getLink() {
-        return this.Link;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set Whether to download the link
-     * @param Link Whether to download the link
+     * Set Number of instances matched the condition
+     * @param TotalCount Number of instances matched the condition
      */
-    public void setLink(String Link) {
-        this.Link = Link;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Whether to download the desired token 
-     * @return Token Whether to download the desired token
+     * Get List of the returned instance information 
+     * @return InstanceInfoSet List of the returned instance information
      */
-    public String getToken() {
-        return this.Token;
+    public String [] getInstanceInfoSet() {
+        return this.InstanceInfoSet;
     }
 
     /**
-     * Set Whether to download the desired token
-     * @param Token Whether to download the desired token
+     * Set List of the returned instance information
+     * @param InstanceInfoSet List of the returned instance information
      */
-    public void setToken(String Token) {
-        this.Token = Token;
-    }
-
-    /**
-     * Get Whether to download the command 
-     * @return Command Whether to download the command
-     */
-    public String getCommand() {
-        return this.Command;
-    }
-
-    /**
-     * Set Whether to download the command
-     * @param Command Whether to download the command
-     */
-    public void setCommand(String Command) {
-        this.Command = Command;
+    public void setInstanceInfoSet(String [] InstanceInfoSet) {
+        this.InstanceInfoSet = InstanceInfoSet;
     }
 
     /**
@@ -114,22 +91,22 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeTKEEdgeScriptResponse() {
+    public DescribeEdgeCVMInstancesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTKEEdgeScriptResponse(DescribeTKEEdgeScriptResponse source) {
-        if (source.Link != null) {
-            this.Link = new String(source.Link);
+    public DescribeEdgeCVMInstancesResponse(DescribeEdgeCVMInstancesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.Token != null) {
-            this.Token = new String(source.Token);
-        }
-        if (source.Command != null) {
-            this.Command = new String(source.Command);
+        if (source.InstanceInfoSet != null) {
+            this.InstanceInfoSet = new String[source.InstanceInfoSet.length];
+            for (int i = 0; i < source.InstanceInfoSet.length; i++) {
+                this.InstanceInfoSet[i] = new String(source.InstanceInfoSet[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -141,9 +118,8 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Link", this.Link);
-        this.setParamSimple(map, prefix + "Token", this.Token);
-        this.setParamSimple(map, prefix + "Command", this.Command);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArraySimple(map, prefix + "InstanceInfoSet.", this.InstanceInfoSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

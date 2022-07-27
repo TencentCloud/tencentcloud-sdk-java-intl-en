@@ -20,28 +20,15 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTKEEdgeScriptResponse extends AbstractModel{
+public class DescribeEdgeClusterExtraArgsResponse extends AbstractModel{
 
     /**
-    * Whether to download the link
+    * Custom parameters of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
-    @SerializedName("Link")
+    @SerializedName("ClusterExtraArgs")
     @Expose
-    private String Link;
-
-    /**
-    * Whether to download the desired token
-    */
-    @SerializedName("Token")
-    @Expose
-    private String Token;
-
-    /**
-    * Whether to download the command
-    */
-    @SerializedName("Command")
-    @Expose
-    private String Command;
+    private EdgeClusterExtraArgs ClusterExtraArgs;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -51,51 +38,23 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Whether to download the link 
-     * @return Link Whether to download the link
+     * Get Custom parameters of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ClusterExtraArgs Custom parameters of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
-    public String getLink() {
-        return this.Link;
+    public EdgeClusterExtraArgs getClusterExtraArgs() {
+        return this.ClusterExtraArgs;
     }
 
     /**
-     * Set Whether to download the link
-     * @param Link Whether to download the link
+     * Set Custom parameters of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ClusterExtraArgs Custom parameters of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
-    public void setLink(String Link) {
-        this.Link = Link;
-    }
-
-    /**
-     * Get Whether to download the desired token 
-     * @return Token Whether to download the desired token
-     */
-    public String getToken() {
-        return this.Token;
-    }
-
-    /**
-     * Set Whether to download the desired token
-     * @param Token Whether to download the desired token
-     */
-    public void setToken(String Token) {
-        this.Token = Token;
-    }
-
-    /**
-     * Get Whether to download the command 
-     * @return Command Whether to download the command
-     */
-    public String getCommand() {
-        return this.Command;
-    }
-
-    /**
-     * Set Whether to download the command
-     * @param Command Whether to download the command
-     */
-    public void setCommand(String Command) {
-        this.Command = Command;
+    public void setClusterExtraArgs(EdgeClusterExtraArgs ClusterExtraArgs) {
+        this.ClusterExtraArgs = ClusterExtraArgs;
     }
 
     /**
@@ -114,22 +73,16 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeTKEEdgeScriptResponse() {
+    public DescribeEdgeClusterExtraArgsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTKEEdgeScriptResponse(DescribeTKEEdgeScriptResponse source) {
-        if (source.Link != null) {
-            this.Link = new String(source.Link);
-        }
-        if (source.Token != null) {
-            this.Token = new String(source.Token);
-        }
-        if (source.Command != null) {
-            this.Command = new String(source.Command);
+    public DescribeEdgeClusterExtraArgsResponse(DescribeEdgeClusterExtraArgsResponse source) {
+        if (source.ClusterExtraArgs != null) {
+            this.ClusterExtraArgs = new EdgeClusterExtraArgs(source.ClusterExtraArgs);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -141,9 +94,7 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Link", this.Link);
-        this.setParamSimple(map, prefix + "Token", this.Token);
-        this.setParamSimple(map, prefix + "Command", this.Command);
+        this.setParamObj(map, prefix + "ClusterExtraArgs.", this.ClusterExtraArgs);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

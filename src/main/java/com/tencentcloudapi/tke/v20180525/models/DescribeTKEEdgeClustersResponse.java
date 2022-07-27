@@ -20,28 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTKEEdgeScriptResponse extends AbstractModel{
+public class DescribeTKEEdgeClustersResponse extends AbstractModel{
 
     /**
-    * Whether to download the link
+    * Total number of clusters
     */
-    @SerializedName("Link")
+    @SerializedName("TotalCount")
     @Expose
-    private String Link;
+    private Long TotalCount;
 
     /**
-    * Whether to download the desired token
+    * Cluster information list
     */
-    @SerializedName("Token")
+    @SerializedName("Clusters")
     @Expose
-    private String Token;
-
-    /**
-    * Whether to download the command
-    */
-    @SerializedName("Command")
-    @Expose
-    private String Command;
+    private EdgeCluster [] Clusters;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -51,51 +44,35 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Whether to download the link 
-     * @return Link Whether to download the link
+     * Get Total number of clusters 
+     * @return TotalCount Total number of clusters
      */
-    public String getLink() {
-        return this.Link;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set Whether to download the link
-     * @param Link Whether to download the link
+     * Set Total number of clusters
+     * @param TotalCount Total number of clusters
      */
-    public void setLink(String Link) {
-        this.Link = Link;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Whether to download the desired token 
-     * @return Token Whether to download the desired token
+     * Get Cluster information list 
+     * @return Clusters Cluster information list
      */
-    public String getToken() {
-        return this.Token;
+    public EdgeCluster [] getClusters() {
+        return this.Clusters;
     }
 
     /**
-     * Set Whether to download the desired token
-     * @param Token Whether to download the desired token
+     * Set Cluster information list
+     * @param Clusters Cluster information list
      */
-    public void setToken(String Token) {
-        this.Token = Token;
-    }
-
-    /**
-     * Get Whether to download the command 
-     * @return Command Whether to download the command
-     */
-    public String getCommand() {
-        return this.Command;
-    }
-
-    /**
-     * Set Whether to download the command
-     * @param Command Whether to download the command
-     */
-    public void setCommand(String Command) {
-        this.Command = Command;
+    public void setClusters(EdgeCluster [] Clusters) {
+        this.Clusters = Clusters;
     }
 
     /**
@@ -114,22 +91,22 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeTKEEdgeScriptResponse() {
+    public DescribeTKEEdgeClustersResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTKEEdgeScriptResponse(DescribeTKEEdgeScriptResponse source) {
-        if (source.Link != null) {
-            this.Link = new String(source.Link);
+    public DescribeTKEEdgeClustersResponse(DescribeTKEEdgeClustersResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.Token != null) {
-            this.Token = new String(source.Token);
-        }
-        if (source.Command != null) {
-            this.Command = new String(source.Command);
+        if (source.Clusters != null) {
+            this.Clusters = new EdgeCluster[source.Clusters.length];
+            for (int i = 0; i < source.Clusters.length; i++) {
+                this.Clusters[i] = new EdgeCluster(source.Clusters[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -141,9 +118,8 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Link", this.Link);
-        this.setParamSimple(map, prefix + "Token", this.Token);
-        this.setParamSimple(map, prefix + "Command", this.Command);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Clusters.", this.Clusters);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

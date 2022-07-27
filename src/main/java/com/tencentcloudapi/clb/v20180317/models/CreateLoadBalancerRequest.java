@@ -46,7 +46,7 @@ Note: if the name of the new CLB instance already exists, a default name will be
     private String LoadBalancerName;
 
     /**
-    * Network ID of the target CLB real server, such as `vpc-12345678`, which can be obtained through the [DescribeVpcEx](https://intl.cloud.tencent.com/document/product/215/1372?from_cn_redirect=1) API. If this parameter is not specified, it will default to `DefaultVPC`. This parameter is required for creating a CLB instance.
+    * Network ID of the target device on the CLB backend, such as `vpc-12345678`, which can be obtained through the `DescribeVpcEx` API. If this parameter is not entered, `DefaultVPC` is used by default. This parameter is required when creating a private network instance.
     */
     @SerializedName("VpcId")
     @Expose
@@ -60,7 +60,7 @@ Note: if the name of the new CLB instance already exists, a default name will be
     private String SubnetId;
 
     /**
-    * Project ID of the CLB instance, which can be obtained through the [DescribeProject](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this parameter is not specified, it will default to the default project.
+    * ID of the project to which a CLB instance belongs, which can be obtained through the `DescribeProject` API. If this parameter is not entered, the default project will be used.
     */
     @SerializedName("ProjectId")
     @Expose
@@ -110,7 +110,7 @@ Note: By default, the traffic goes to the primary AZ. The secondary AZs only car
     private String VipIsp;
 
     /**
-    * Tags a CLB instance when purchasing it.
+    * Tags the CLB instance when purchasing it. Up to 20 tag key value pairs are supported.
     */
     @SerializedName("Tags")
     @Expose
@@ -256,16 +256,16 @@ Note: if the name of the new CLB instance already exists, a default name will be
     }
 
     /**
-     * Get Network ID of the target CLB real server, such as `vpc-12345678`, which can be obtained through the [DescribeVpcEx](https://intl.cloud.tencent.com/document/product/215/1372?from_cn_redirect=1) API. If this parameter is not specified, it will default to `DefaultVPC`. This parameter is required for creating a CLB instance. 
-     * @return VpcId Network ID of the target CLB real server, such as `vpc-12345678`, which can be obtained through the [DescribeVpcEx](https://intl.cloud.tencent.com/document/product/215/1372?from_cn_redirect=1) API. If this parameter is not specified, it will default to `DefaultVPC`. This parameter is required for creating a CLB instance.
+     * Get Network ID of the target device on the CLB backend, such as `vpc-12345678`, which can be obtained through the `DescribeVpcEx` API. If this parameter is not entered, `DefaultVPC` is used by default. This parameter is required when creating a private network instance. 
+     * @return VpcId Network ID of the target device on the CLB backend, such as `vpc-12345678`, which can be obtained through the `DescribeVpcEx` API. If this parameter is not entered, `DefaultVPC` is used by default. This parameter is required when creating a private network instance.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set Network ID of the target CLB real server, such as `vpc-12345678`, which can be obtained through the [DescribeVpcEx](https://intl.cloud.tencent.com/document/product/215/1372?from_cn_redirect=1) API. If this parameter is not specified, it will default to `DefaultVPC`. This parameter is required for creating a CLB instance.
-     * @param VpcId Network ID of the target CLB real server, such as `vpc-12345678`, which can be obtained through the [DescribeVpcEx](https://intl.cloud.tencent.com/document/product/215/1372?from_cn_redirect=1) API. If this parameter is not specified, it will default to `DefaultVPC`. This parameter is required for creating a CLB instance.
+     * Set Network ID of the target device on the CLB backend, such as `vpc-12345678`, which can be obtained through the `DescribeVpcEx` API. If this parameter is not entered, `DefaultVPC` is used by default. This parameter is required when creating a private network instance.
+     * @param VpcId Network ID of the target device on the CLB backend, such as `vpc-12345678`, which can be obtained through the `DescribeVpcEx` API. If this parameter is not entered, `DefaultVPC` is used by default. This parameter is required when creating a private network instance.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -288,16 +288,16 @@ Note: if the name of the new CLB instance already exists, a default name will be
     }
 
     /**
-     * Get Project ID of the CLB instance, which can be obtained through the [DescribeProject](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this parameter is not specified, it will default to the default project. 
-     * @return ProjectId Project ID of the CLB instance, which can be obtained through the [DescribeProject](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this parameter is not specified, it will default to the default project.
+     * Get ID of the project to which a CLB instance belongs, which can be obtained through the `DescribeProject` API. If this parameter is not entered, the default project will be used. 
+     * @return ProjectId ID of the project to which a CLB instance belongs, which can be obtained through the `DescribeProject` API. If this parameter is not entered, the default project will be used.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID of the CLB instance, which can be obtained through the [DescribeProject](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this parameter is not specified, it will default to the default project.
-     * @param ProjectId Project ID of the CLB instance, which can be obtained through the [DescribeProject](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this parameter is not specified, it will default to the default project.
+     * Set ID of the project to which a CLB instance belongs, which can be obtained through the `DescribeProject` API. If this parameter is not entered, the default project will be used.
+     * @param ProjectId ID of the project to which a CLB instance belongs, which can be obtained through the `DescribeProject` API. If this parameter is not entered, the default project will be used.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
@@ -404,16 +404,16 @@ Note: By default, the traffic goes to the primary AZ. The secondary AZs only car
     }
 
     /**
-     * Get Tags a CLB instance when purchasing it. 
-     * @return Tags Tags a CLB instance when purchasing it.
+     * Get Tags the CLB instance when purchasing it. Up to 20 tag key value pairs are supported. 
+     * @return Tags Tags the CLB instance when purchasing it. Up to 20 tag key value pairs are supported.
      */
     public TagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tags a CLB instance when purchasing it.
-     * @param Tags Tags a CLB instance when purchasing it.
+     * Set Tags the CLB instance when purchasing it. Up to 20 tag key value pairs are supported.
+     * @param Tags Tags the CLB instance when purchasing it. Up to 20 tag key value pairs are supported.
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;

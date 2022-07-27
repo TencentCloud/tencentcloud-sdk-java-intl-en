@@ -20,28 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTKEEdgeScriptResponse extends AbstractModel{
+public class CreateTKEEdgeClusterResponse extends AbstractModel{
 
     /**
-    * Whether to download the link
+    * TKE Edge cluster ID
     */
-    @SerializedName("Link")
+    @SerializedName("ClusterId")
     @Expose
-    private String Link;
-
-    /**
-    * Whether to download the desired token
-    */
-    @SerializedName("Token")
-    @Expose
-    private String Token;
-
-    /**
-    * Whether to download the command
-    */
-    @SerializedName("Command")
-    @Expose
-    private String Command;
+    private String ClusterId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -51,51 +37,19 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Whether to download the link 
-     * @return Link Whether to download the link
+     * Get TKE Edge cluster ID 
+     * @return ClusterId TKE Edge cluster ID
      */
-    public String getLink() {
-        return this.Link;
+    public String getClusterId() {
+        return this.ClusterId;
     }
 
     /**
-     * Set Whether to download the link
-     * @param Link Whether to download the link
+     * Set TKE Edge cluster ID
+     * @param ClusterId TKE Edge cluster ID
      */
-    public void setLink(String Link) {
-        this.Link = Link;
-    }
-
-    /**
-     * Get Whether to download the desired token 
-     * @return Token Whether to download the desired token
-     */
-    public String getToken() {
-        return this.Token;
-    }
-
-    /**
-     * Set Whether to download the desired token
-     * @param Token Whether to download the desired token
-     */
-    public void setToken(String Token) {
-        this.Token = Token;
-    }
-
-    /**
-     * Get Whether to download the command 
-     * @return Command Whether to download the command
-     */
-    public String getCommand() {
-        return this.Command;
-    }
-
-    /**
-     * Set Whether to download the command
-     * @param Command Whether to download the command
-     */
-    public void setCommand(String Command) {
-        this.Command = Command;
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
     }
 
     /**
@@ -114,22 +68,16 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeTKEEdgeScriptResponse() {
+    public CreateTKEEdgeClusterResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTKEEdgeScriptResponse(DescribeTKEEdgeScriptResponse source) {
-        if (source.Link != null) {
-            this.Link = new String(source.Link);
-        }
-        if (source.Token != null) {
-            this.Token = new String(source.Token);
-        }
-        if (source.Command != null) {
-            this.Command = new String(source.Command);
+    public CreateTKEEdgeClusterResponse(CreateTKEEdgeClusterResponse source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -141,9 +89,7 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Link", this.Link);
-        this.setParamSimple(map, prefix + "Token", this.Token);
-        this.setParamSimple(map, prefix + "Command", this.Command);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

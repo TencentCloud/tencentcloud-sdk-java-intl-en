@@ -63,6 +63,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private AutoUpgradeClusterLevel AutoUpgradeClusterLevel;
 
     /**
+    * Whether to enable qGPU Sharing
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("QGPUShareEnable")
+    @Expose
+    private Boolean QGPUShareEnable;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -170,6 +178,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get Whether to enable qGPU Sharing
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return QGPUShareEnable Whether to enable qGPU Sharing
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Boolean getQGPUShareEnable() {
+        return this.QGPUShareEnable;
+    }
+
+    /**
+     * Set Whether to enable qGPU Sharing
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param QGPUShareEnable Whether to enable qGPU Sharing
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setQGPUShareEnable(Boolean QGPUShareEnable) {
+        this.QGPUShareEnable = QGPUShareEnable;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -208,6 +236,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.AutoUpgradeClusterLevel != null) {
             this.AutoUpgradeClusterLevel = new AutoUpgradeClusterLevel(source.AutoUpgradeClusterLevel);
         }
+        if (source.QGPUShareEnable != null) {
+            this.QGPUShareEnable = new Boolean(source.QGPUShareEnable);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -223,6 +254,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "ClusterDesc", this.ClusterDesc);
         this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
         this.setParamObj(map, prefix + "AutoUpgradeClusterLevel.", this.AutoUpgradeClusterLevel);
+        this.setParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

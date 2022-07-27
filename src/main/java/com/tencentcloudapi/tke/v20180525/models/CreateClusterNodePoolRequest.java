@@ -93,7 +93,7 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
     private String RuntimeVersion;
 
     /**
-    * Operating system of the node pool
+    * Node pool operating system (enter the image ID for a custom image, and enter the OS name for a public image)
     */
     @SerializedName("NodePoolOs")
     @Expose
@@ -112,6 +112,13 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
+
+    /**
+    * Whether Deletion Protection is enabled
+    */
+    @SerializedName("DeletionProtection")
+    @Expose
+    private Boolean DeletionProtection;
 
     /**
      * Get Cluster ID 
@@ -274,16 +281,16 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
     }
 
     /**
-     * Get Operating system of the node pool 
-     * @return NodePoolOs Operating system of the node pool
+     * Get Node pool operating system (enter the image ID for a custom image, and enter the OS name for a public image) 
+     * @return NodePoolOs Node pool operating system (enter the image ID for a custom image, and enter the OS name for a public image)
      */
     public String getNodePoolOs() {
         return this.NodePoolOs;
     }
 
     /**
-     * Set Operating system of the node pool
-     * @param NodePoolOs Operating system of the node pool
+     * Set Node pool operating system (enter the image ID for a custom image, and enter the OS name for a public image)
+     * @param NodePoolOs Node pool operating system (enter the image ID for a custom image, and enter the OS name for a public image)
      */
     public void setNodePoolOs(String NodePoolOs) {
         this.NodePoolOs = NodePoolOs;
@@ -319,6 +326,22 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
+    }
+
+    /**
+     * Get Whether Deletion Protection is enabled 
+     * @return DeletionProtection Whether Deletion Protection is enabled
+     */
+    public Boolean getDeletionProtection() {
+        return this.DeletionProtection;
+    }
+
+    /**
+     * Set Whether Deletion Protection is enabled
+     * @param DeletionProtection Whether Deletion Protection is enabled
+     */
+    public void setDeletionProtection(Boolean DeletionProtection) {
+        this.DeletionProtection = DeletionProtection;
     }
 
     public CreateClusterNodePoolRequest() {
@@ -377,6 +400,9 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.DeletionProtection != null) {
+            this.DeletionProtection = new Boolean(source.DeletionProtection);
+        }
     }
 
 
@@ -397,6 +423,7 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NodePoolOs", this.NodePoolOs);
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
 
     }
 }

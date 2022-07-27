@@ -18,6 +18,9 @@ public enum TkeErrorCode {
     // Not authorized to access this API
      FAILEDOPERATION_CAMNOAUTH("FailedOperation.CamNoAuth"),
      
+    // 
+     FAILEDOPERATION_CLUSTERFORBIDDENTODELETE("FailedOperation.ClusterForbiddenToDelete"),
+     
     // The cluster is not found.
      FAILEDOPERATION_CLUSTERNOTFOUND("FailedOperation.ClusterNotFound"),
      
@@ -54,17 +57,23 @@ public enum TkeErrorCode {
     // Failed to obtain security group quota.
      FAILEDOPERATION_DFWGETUSGQUOTA("FailedOperation.DfwGetUSGQuota"),
      
+    // 
+     FAILEDOPERATION_ENABLEVPCCNIFAILED("FailedOperation.EnableVPCCNIFailed"),
+     
     // Failed to connect to the customer Kubernetes cluster.
      FAILEDOPERATION_KUBECLIENTCONNECTION("FailedOperation.KubeClientConnection"),
      
     // Kubernetes API error.
      FAILEDOPERATION_KUBECOMMON("FailedOperation.KubeCommon"),
      
-    // 
+    // Failed to create the Kubernetes client.
      FAILEDOPERATION_KUBERNETESCLIENTBUILDERROR("FailedOperation.KubernetesClientBuildError"),
      
     // An error occurs while creating the cluster client.
      FAILEDOPERATION_KUBERNETESCREATEOPERATIONERROR("FailedOperation.KubernetesCreateOperationError"),
+     
+    // 
+     FAILEDOPERATION_KUBERNETESGETOPERATIONERROR("FailedOperation.KubernetesGetOperationError"),
      
     // Unknown Kubernetes error.
      FAILEDOPERATION_KUBERNETESINTERNAL("FailedOperation.KubernetesInternal"),
@@ -90,6 +99,9 @@ public enum TkeErrorCode {
     // Insufficient security group quota.
      FAILEDOPERATION_QUOTAUSGLIMIT("FailedOperation.QuotaUSGLimit"),
      
+    // The sub-account does not have the required RBAC permissions.
+     FAILEDOPERATION_RBACFORBIDDEN("FailedOperation.RBACForbidden"),
+     
     // A same task is in progress.
      FAILEDOPERATION_TASKALREADYRUNNING("FailedOperation.TaskAlreadyRunning"),
      
@@ -104,6 +116,9 @@ public enum TkeErrorCode {
      
     // VPC record not found.
      FAILEDOPERATION_VPCRECODRNOTFOUND("FailedOperation.VpcRecodrNotFound"),
+     
+    // Allowlist error.
+     FAILEDOPERATION_WHITELISTUNEXPECTEDERROR("FailedOperation.WhitelistUnexpectedError"),
      
     // Internal error.
      INTERNALERROR("InternalError"),
@@ -146,6 +161,9 @@ public enum TkeErrorCode {
      
     // The version of the cluster node is outdated.
      INTERNALERROR_CLUSTERUPGRADENODEVERSION("InternalError.ClusterUpgradeNodeVersion"),
+     
+    // Command execution timeout.
+     INTERNALERROR_CMDTIMEOUT("InternalError.CmdTimeout"),
      
     // Internal HTTP client error
      INTERNALERROR_COMPONENTCLIENTHTTP("InternalError.ComponentClientHttp"),
@@ -288,6 +306,9 @@ public enum TkeErrorCode {
     // VPC record not found
      INTERNALERROR_VPCRECODRNOTFOUND("InternalError.VpcRecodrNotFound"),
      
+    // VstationError.
+     INTERNALERROR_VSTATIONERROR("InternalError.VstationError"),
+     
     // Unknown allowlist error
      INTERNALERROR_WHITELISTUNEXPECTEDERROR("InternalError.WhitelistUnexpectedError"),
      
@@ -311,6 +332,9 @@ public enum TkeErrorCode {
      
     // The created route conflicts with the existing global route under the VPC.
      INVALIDPARAMETER_CIDRCONFLICTWITHVPCGLOBALROUTE("InvalidParameter.CidrConflictWithVpcGlobalRoute"),
+     
+    // Invalid CIDR block.
+     INVALIDPARAMETER_CIDRINVALI("InvalidParameter.CidrInvali"),
      
     // Parameter error. The CIDR block does not meet the specification.
      INVALIDPARAMETER_CIDRINVALID("InvalidParameter.CidrInvalid"),
@@ -392,6 +416,9 @@ public enum TkeErrorCode {
      
     // Failed to enable CA because AS is disabled.
      UNSUPPORTEDOPERATION_CAENABLEFAILED("UnsupportedOperation.CaEnableFailed"),
+     
+    // 
+     UNSUPPORTEDOPERATION_CLUSTERNOTSUITENABLEVPCCNI("UnsupportedOperation.ClusterNotSuitEnableVPCCNI"),
      
     // The user is not in the allowlist.
      UNSUPPORTEDOPERATION_NOTINWHITELIST("UnsupportedOperation.NotInWhitelist");
