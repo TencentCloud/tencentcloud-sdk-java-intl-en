@@ -331,6 +331,41 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String InstanceType;
 
     /**
+    * The target region of cross-region backup. If this parameter left empty, it indicates that cross-region backup is disabled.
+    */
+    @SerializedName("CrossRegions")
+    @Expose
+    private String [] CrossRegions;
+
+    /**
+    * Cross-region backup status. Valid values: `enable` (enabled), `disable` (disabed)
+    */
+    @SerializedName("CrossBackupEnabled")
+    @Expose
+    private String CrossBackupEnabled;
+
+    /**
+    * The retention period of cross-region backup. Default value: 7 days
+    */
+    @SerializedName("CrossBackupSaveDays")
+    @Expose
+    private Long CrossBackupSaveDays;
+
+    /**
+    * 
+    */
+    @SerializedName("DnsPodDomain")
+    @Expose
+    private String DnsPodDomain;
+
+    /**
+    * 
+    */
+    @SerializedName("TgwWanVPort")
+    @Expose
+    private Long TgwWanVPort;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -1046,6 +1081,86 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.InstanceType = InstanceType;
     }
 
+    /**
+     * Get The target region of cross-region backup. If this parameter left empty, it indicates that cross-region backup is disabled. 
+     * @return CrossRegions The target region of cross-region backup. If this parameter left empty, it indicates that cross-region backup is disabled.
+     */
+    public String [] getCrossRegions() {
+        return this.CrossRegions;
+    }
+
+    /**
+     * Set The target region of cross-region backup. If this parameter left empty, it indicates that cross-region backup is disabled.
+     * @param CrossRegions The target region of cross-region backup. If this parameter left empty, it indicates that cross-region backup is disabled.
+     */
+    public void setCrossRegions(String [] CrossRegions) {
+        this.CrossRegions = CrossRegions;
+    }
+
+    /**
+     * Get Cross-region backup status. Valid values: `enable` (enabled), `disable` (disabed) 
+     * @return CrossBackupEnabled Cross-region backup status. Valid values: `enable` (enabled), `disable` (disabed)
+     */
+    public String getCrossBackupEnabled() {
+        return this.CrossBackupEnabled;
+    }
+
+    /**
+     * Set Cross-region backup status. Valid values: `enable` (enabled), `disable` (disabed)
+     * @param CrossBackupEnabled Cross-region backup status. Valid values: `enable` (enabled), `disable` (disabed)
+     */
+    public void setCrossBackupEnabled(String CrossBackupEnabled) {
+        this.CrossBackupEnabled = CrossBackupEnabled;
+    }
+
+    /**
+     * Get The retention period of cross-region backup. Default value: 7 days 
+     * @return CrossBackupSaveDays The retention period of cross-region backup. Default value: 7 days
+     */
+    public Long getCrossBackupSaveDays() {
+        return this.CrossBackupSaveDays;
+    }
+
+    /**
+     * Set The retention period of cross-region backup. Default value: 7 days
+     * @param CrossBackupSaveDays The retention period of cross-region backup. Default value: 7 days
+     */
+    public void setCrossBackupSaveDays(Long CrossBackupSaveDays) {
+        this.CrossBackupSaveDays = CrossBackupSaveDays;
+    }
+
+    /**
+     * Get  
+     * @return DnsPodDomain 
+     */
+    public String getDnsPodDomain() {
+        return this.DnsPodDomain;
+    }
+
+    /**
+     * Set 
+     * @param DnsPodDomain 
+     */
+    public void setDnsPodDomain(String DnsPodDomain) {
+        this.DnsPodDomain = DnsPodDomain;
+    }
+
+    /**
+     * Get  
+     * @return TgwWanVPort 
+     */
+    public Long getTgwWanVPort() {
+        return this.TgwWanVPort;
+    }
+
+    /**
+     * Set 
+     * @param TgwWanVPort 
+     */
+    public void setTgwWanVPort(Long TgwWanVPort) {
+        this.TgwWanVPort = TgwWanVPort;
+    }
+
     public DBInstance() {
     }
 
@@ -1189,6 +1304,24 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.InstanceType != null) {
             this.InstanceType = new String(source.InstanceType);
         }
+        if (source.CrossRegions != null) {
+            this.CrossRegions = new String[source.CrossRegions.length];
+            for (int i = 0; i < source.CrossRegions.length; i++) {
+                this.CrossRegions[i] = new String(source.CrossRegions[i]);
+            }
+        }
+        if (source.CrossBackupEnabled != null) {
+            this.CrossBackupEnabled = new String(source.CrossBackupEnabled);
+        }
+        if (source.CrossBackupSaveDays != null) {
+            this.CrossBackupSaveDays = new Long(source.CrossBackupSaveDays);
+        }
+        if (source.DnsPodDomain != null) {
+            this.DnsPodDomain = new String(source.DnsPodDomain);
+        }
+        if (source.TgwWanVPort != null) {
+            this.TgwWanVPort = new Long(source.TgwWanVPort);
+        }
     }
 
 
@@ -1239,6 +1372,11 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "BackupCycleType", this.BackupCycleType);
         this.setParamSimple(map, prefix + "BackupSaveDays", this.BackupSaveDays);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamArraySimple(map, prefix + "CrossRegions.", this.CrossRegions);
+        this.setParamSimple(map, prefix + "CrossBackupEnabled", this.CrossBackupEnabled);
+        this.setParamSimple(map, prefix + "CrossBackupSaveDays", this.CrossBackupSaveDays);
+        this.setParamSimple(map, prefix + "DnsPodDomain", this.DnsPodDomain);
+        this.setParamSimple(map, prefix + "TgwWanVPort", this.TgwWanVPort);
 
     }
 }

@@ -24,11 +24,11 @@ public class KeyRule extends AbstractModel{
 
     /**
     * Content for each CacheType:
-For `file`, enter the suffix, such as jpg, txt.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a backslash (/).
-Note: this field may return null, indicating that no valid value is obtained.
+Note: this field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("RulePaths")
     @Expose
@@ -36,21 +36,21 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
     * Rule types:
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 `index`: home page
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("RuleType")
     @Expose
     private String RuleType;
 
     /**
-    * Whether full-path cache is enaled
-`on`: enables full-path cache (i.e., disables ignore query string)
-`off`: disables full-path cache (i.e., enables ignore query string)
-Note: this field may return `null`, indicating that no valid value can be obtained.
+    * Whether to enable full-path cache
+`on`: Enable full-path cache (i.e., disable Ignore Query String).
+`off`: Disable full-path cache (i.e., enable Ignore Query String).
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("FullUrlCache")
     @Expose
@@ -58,7 +58,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 
     /**
     * Whether caches are case insensitive
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("IgnoreCase")
     @Expose
@@ -66,7 +66,7 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
     * Request parameter contained in `CacheKey`
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("QueryString")
     @Expose
@@ -74,7 +74,7 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
     * Path cache key tag, the value "user" is passed.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("RuleTag")
     @Expose
@@ -82,17 +82,17 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Get Content for each CacheType:
-For `file`, enter the suffix, such as jpg, txt.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a backslash (/).
-Note: this field may return null, indicating that no valid value is obtained. 
+Note: this field may return `null`, indicating that no valid value can be obtained. 
      * @return RulePaths Content for each CacheType:
-For `file`, enter the suffix, such as jpg, txt.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a backslash (/).
-Note: this field may return null, indicating that no valid value is obtained.
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public String [] getRulePaths() {
         return this.RulePaths;
@@ -100,17 +100,17 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Set Content for each CacheType:
-For `file`, enter the suffix, such as jpg, txt.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a backslash (/).
-Note: this field may return null, indicating that no valid value is obtained.
+Note: this field may return `null`, indicating that no valid value can be obtained.
      * @param RulePaths Content for each CacheType:
-For `file`, enter the suffix, such as jpg, txt.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a backslash (/).
-Note: this field may return null, indicating that no valid value is obtained.
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRulePaths(String [] RulePaths) {
         this.RulePaths = RulePaths;
@@ -118,17 +118,17 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Get Rule types:
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 `index`: home page
-Note: this field may return null, indicating that no valid value is obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return RuleType Rule types:
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 `index`: home page
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getRuleType() {
         return this.RuleType;
@@ -136,45 +136,45 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Set Rule types:
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 `index`: home page
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param RuleType Rule types:
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 `index`: home page
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRuleType(String RuleType) {
         this.RuleType = RuleType;
     }
 
     /**
-     * Get Whether full-path cache is enaled
-`on`: enables full-path cache (i.e., disables ignore query string)
-`off`: disables full-path cache (i.e., enables ignore query string)
-Note: this field may return `null`, indicating that no valid value can be obtained. 
-     * @return FullUrlCache Whether full-path cache is enaled
-`on`: enables full-path cache (i.e., disables ignore query string)
-`off`: disables full-path cache (i.e., enables ignore query string)
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * Get Whether to enable full-path cache
+`on`: Enable full-path cache (i.e., disable Ignore Query String).
+`off`: Disable full-path cache (i.e., enable Ignore Query String).
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return FullUrlCache Whether to enable full-path cache
+`on`: Enable full-path cache (i.e., disable Ignore Query String).
+`off`: Disable full-path cache (i.e., enable Ignore Query String).
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getFullUrlCache() {
         return this.FullUrlCache;
     }
 
     /**
-     * Set Whether full-path cache is enaled
-`on`: enables full-path cache (i.e., disables ignore query string)
-`off`: disables full-path cache (i.e., enables ignore query string)
-Note: this field may return `null`, indicating that no valid value can be obtained.
-     * @param FullUrlCache Whether full-path cache is enaled
-`on`: enables full-path cache (i.e., disables ignore query string)
-`off`: disables full-path cache (i.e., enables ignore query string)
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * Set Whether to enable full-path cache
+`on`: Enable full-path cache (i.e., disable Ignore Query String).
+`off`: Disable full-path cache (i.e., enable Ignore Query String).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param FullUrlCache Whether to enable full-path cache
+`on`: Enable full-path cache (i.e., disable Ignore Query String).
+`off`: Disable full-path cache (i.e., enable Ignore Query String).
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setFullUrlCache(String FullUrlCache) {
         this.FullUrlCache = FullUrlCache;
@@ -182,9 +182,9 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Get Whether caches are case insensitive
-Note: this field may return null, indicating that no valid value is obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return IgnoreCase Whether caches are case insensitive
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getIgnoreCase() {
         return this.IgnoreCase;
@@ -192,9 +192,9 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Set Whether caches are case insensitive
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param IgnoreCase Whether caches are case insensitive
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setIgnoreCase(String IgnoreCase) {
         this.IgnoreCase = IgnoreCase;
@@ -202,9 +202,9 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Get Request parameter contained in `CacheKey`
-Note: this field may return null, indicating that no valid value is obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return QueryString Request parameter contained in `CacheKey`
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public RuleQueryString getQueryString() {
         return this.QueryString;
@@ -212,9 +212,9 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Set Request parameter contained in `CacheKey`
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param QueryString Request parameter contained in `CacheKey`
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setQueryString(RuleQueryString QueryString) {
         this.QueryString = QueryString;
@@ -222,9 +222,9 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Get Path cache key tag, the value "user" is passed.
-Note: this field may return null, indicating that no valid value is obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return RuleTag Path cache key tag, the value "user" is passed.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getRuleTag() {
         return this.RuleTag;
@@ -232,9 +232,9 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Set Path cache key tag, the value "user" is passed.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param RuleTag Path cache key tag, the value "user" is passed.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRuleTag(String RuleTag) {
         this.RuleTag = RuleTag;

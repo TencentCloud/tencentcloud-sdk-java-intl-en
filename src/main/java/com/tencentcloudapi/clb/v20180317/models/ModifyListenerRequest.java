@@ -80,6 +80,13 @@ They represent weighted round robin and least connections, respectively. Default
     private Long SniSwitch;
 
     /**
+    * Target backend type. `NODE`: A single node; `TARGETGROUP`: A target group.
+    */
+    @SerializedName("TargetType")
+    @Expose
+    private String TargetType;
+
+    /**
     * Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
     */
     @SerializedName("KeepaliveEnable")
@@ -233,6 +240,22 @@ They represent weighted round robin and least connections, respectively. Default
     }
 
     /**
+     * Get Target backend type. `NODE`: A single node; `TARGETGROUP`: A target group. 
+     * @return TargetType Target backend type. `NODE`: A single node; `TARGETGROUP`: A target group.
+     */
+    public String getTargetType() {
+        return this.TargetType;
+    }
+
+    /**
+     * Set Target backend type. `NODE`: A single node; `TARGETGROUP`: A target group.
+     * @param TargetType Target backend type. `NODE`: A single node; `TARGETGROUP`: A target group.
+     */
+    public void setTargetType(String TargetType) {
+        this.TargetType = TargetType;
+    }
+
+    /**
      * Get Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners. 
      * @return KeepaliveEnable Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
      */
@@ -312,6 +335,9 @@ They represent weighted round robin and least connections, respectively. Default
         if (source.SniSwitch != null) {
             this.SniSwitch = new Long(source.SniSwitch);
         }
+        if (source.TargetType != null) {
+            this.TargetType = new String(source.TargetType);
+        }
         if (source.KeepaliveEnable != null) {
             this.KeepaliveEnable = new Long(source.KeepaliveEnable);
         }
@@ -336,6 +362,7 @@ They represent weighted round robin and least connections, respectively. Default
         this.setParamObj(map, prefix + "Certificate.", this.Certificate);
         this.setParamSimple(map, prefix + "Scheduler", this.Scheduler);
         this.setParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
+        this.setParamSimple(map, prefix + "TargetType", this.TargetType);
         this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
         this.setParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
         this.setParamSimple(map, prefix + "SessionType", this.SessionType);

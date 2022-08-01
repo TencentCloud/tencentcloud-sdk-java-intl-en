@@ -26,7 +26,7 @@ public class CacheConfigCache extends AbstractModel{
     * Cache configuration switch
 on: enable
 off: disable
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Switch")
     @Expose
@@ -35,7 +35,7 @@ Note: this field may return null, indicating that no valid value is obtained.
     /**
     * Cache expiration time settings
 Unit: second. The maximum value is 365 days.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("CacheTime")
     @Expose
@@ -43,10 +43,10 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
     * Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("CompareMaxAge")
     @Expose
@@ -54,10 +54,10 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
     * Force cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("IgnoreCacheControl")
     @Expose
@@ -78,11 +78,11 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      * Get Cache configuration switch
 on: enable
 off: disable
-Note: this field may return null, indicating that no valid value is obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Switch Cache configuration switch
 on: enable
 off: disable
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
@@ -92,11 +92,11 @@ Note: this field may return null, indicating that no valid value is obtained.
      * Set Cache configuration switch
 on: enable
 off: disable
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Switch Cache configuration switch
 on: enable
 off: disable
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
@@ -105,10 +105,10 @@ Note: this field may return null, indicating that no valid value is obtained.
     /**
      * Get Cache expiration time settings
 Unit: second. The maximum value is 365 days.
-Note: this field may return null, indicating that no valid value is obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return CacheTime Cache expiration time settings
 Unit: second. The maximum value is 365 days.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Long getCacheTime() {
         return this.CacheTime;
@@ -117,10 +117,10 @@ Note: this field may return null, indicating that no valid value is obtained.
     /**
      * Set Cache expiration time settings
 Unit: second. The maximum value is 365 days.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param CacheTime Cache expiration time settings
 Unit: second. The maximum value is 365 days.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCacheTime(Long CacheTime) {
         this.CacheTime = CacheTime;
@@ -128,15 +128,15 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Get Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return CompareMaxAge Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getCompareMaxAge() {
         return this.CompareMaxAge;
@@ -144,15 +144,15 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Set Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param CompareMaxAge Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCompareMaxAge(String CompareMaxAge) {
         this.CompareMaxAge = CompareMaxAge;
@@ -160,15 +160,15 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Get Force cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid value is obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return IgnoreCacheControl Force cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getIgnoreCacheControl() {
         return this.IgnoreCacheControl;
@@ -176,15 +176,15 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Set Force cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param IgnoreCacheControl Force cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setIgnoreCacheControl(String IgnoreCacheControl) {
         this.IgnoreCacheControl = IgnoreCacheControl;

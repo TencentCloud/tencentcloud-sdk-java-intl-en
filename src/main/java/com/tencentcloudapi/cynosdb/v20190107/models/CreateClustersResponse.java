@@ -24,7 +24,7 @@ public class CreateClustersResponse extends AbstractModel{
 
     /**
     * Freezing transaction ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TranId")
     @Expose
@@ -32,31 +32,31 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Order ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DealNames")
     @Expose
     private String [] DealNames;
 
     /**
-    * List of resource IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get resource IDs.)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * List of resource IDs (This field has been deprecated. You need to use `dealNames` in the `DescribeResourcesByDealName` API to get resource IDs.)
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
 
     /**
-    * List of cluster IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get cluster IDs.)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * List of cluster IDs (This field has been deprecated. You need to use `dealNames` in the `DescribeResourcesByDealName` API to get cluster IDs.)
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ClusterIds")
     @Expose
     private String [] ClusterIds;
 
     /**
-    * Big order ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Big order ID
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BigDealIds")
     @Expose
@@ -71,9 +71,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Freezing transaction ID
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return TranId Freezing transaction ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTranId() {
         return this.TranId;
@@ -81,9 +81,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Freezing transaction ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param TranId Freezing transaction ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTranId(String TranId) {
         this.TranId = TranId;
@@ -91,9 +91,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Order ID
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return DealNames Order ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getDealNames() {
         return this.DealNames;
@@ -101,69 +101,69 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Order ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param DealNames Order ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;
     }
 
     /**
-     * Get List of resource IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get resource IDs.)
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ResourceIds List of resource IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get resource IDs.)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get List of resource IDs (This field has been deprecated. You need to use `dealNames` in the `DescribeResourcesByDealName` API to get resource IDs.)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ResourceIds List of resource IDs (This field has been deprecated. You need to use `dealNames` in the `DescribeResourcesByDealName` API to get resource IDs.)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set List of resource IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get resource IDs.)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ResourceIds List of resource IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get resource IDs.)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set List of resource IDs (This field has been deprecated. You need to use `dealNames` in the `DescribeResourcesByDealName` API to get resource IDs.)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ResourceIds List of resource IDs (This field has been deprecated. You need to use `dealNames` in the `DescribeResourcesByDealName` API to get resource IDs.)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get List of cluster IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get cluster IDs.)
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ClusterIds List of cluster IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get cluster IDs.)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get List of cluster IDs (This field has been deprecated. You need to use `dealNames` in the `DescribeResourcesByDealName` API to get cluster IDs.)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ClusterIds List of cluster IDs (This field has been deprecated. You need to use `dealNames` in the `DescribeResourcesByDealName` API to get cluster IDs.)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getClusterIds() {
         return this.ClusterIds;
     }
 
     /**
-     * Set List of cluster IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get cluster IDs.)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ClusterIds List of cluster IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get cluster IDs.)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set List of cluster IDs (This field has been deprecated. You need to use `dealNames` in the `DescribeResourcesByDealName` API to get cluster IDs.)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ClusterIds List of cluster IDs (This field has been deprecated. You need to use `dealNames` in the `DescribeResourcesByDealName` API to get cluster IDs.)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setClusterIds(String [] ClusterIds) {
         this.ClusterIds = ClusterIds;
     }
 
     /**
-     * Get Big order ID.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return BigDealIds Big order ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Big order ID
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BigDealIds Big order ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getBigDealIds() {
         return this.BigDealIds;
     }
 
     /**
-     * Set Big order ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param BigDealIds Big order ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Big order ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BigDealIds Big order ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBigDealIds(String [] BigDealIds) {
         this.BigDealIds = BigDealIds;

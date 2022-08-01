@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class PostSize extends AbstractModel{
 
     /**
-    * Limit the size of a POST request. The default value is 32 MB.
+    * Limit the size of POST requests. The default value is 32 MB.
 off: Disable
 on: Enable
     */
@@ -39,10 +39,10 @@ on: Enable
     private Long MaxSize;
 
     /**
-     * Get Limit the size of a POST request. The default value is 32 MB.
+     * Get Limit the size of POST requests. The default value is 32 MB.
 off: Disable
 on: Enable 
-     * @return Switch Limit the size of a POST request. The default value is 32 MB.
+     * @return Switch Limit the size of POST requests. The default value is 32 MB.
 off: Disable
 on: Enable
      */
@@ -51,10 +51,10 @@ on: Enable
     }
 
     /**
-     * Set Limit the size of a POST request. The default value is 32 MB.
+     * Set Limit the size of POST requests. The default value is 32 MB.
 off: Disable
 on: Enable
-     * @param Switch Limit the size of a POST request. The default value is 32 MB.
+     * @param Switch Limit the size of POST requests. The default value is 32 MB.
 off: Disable
 on: Enable
      */

@@ -24,7 +24,7 @@ public class DescribePushTasksResponse extends AbstractModel{
 
     /**
     * Prefetch history
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("PushLogs")
     @Expose
@@ -32,7 +32,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Total number of tasks, which is used for pagination.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,9 +47,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Prefetch history
-Note: This field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return PushLogs Prefetch history
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public PushTask [] getPushLogs() {
         return this.PushLogs;
@@ -57,9 +57,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Prefetch history
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param PushLogs Prefetch history
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setPushLogs(PushTask [] PushLogs) {
         this.PushLogs = PushLogs;
@@ -67,9 +67,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Total number of tasks, which is used for pagination.
-Note: This field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return TotalCount Total number of tasks, which is used for pagination.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -77,9 +77,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total number of tasks, which is used for pagination.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param TotalCount Total number of tasks, which is used for pagination.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

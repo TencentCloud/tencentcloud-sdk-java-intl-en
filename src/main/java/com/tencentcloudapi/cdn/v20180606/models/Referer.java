@@ -23,61 +23,61 @@ import java.util.HashMap;
 public class Referer extends AbstractModel{
 
     /**
-    * Referer blocklist/allowlist configuration switch
-on: enabled
-off: disabled
+    * Referer blacklist/whitelist configuration switch
+`on`: Enable
+`off`: Disable
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Referer blocklist/allowlist configuration rule
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Referer blacklist/whitelist configuration rule
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("RefererRules")
     @Expose
     private RefererRule [] RefererRules;
 
     /**
-     * Get Referer blocklist/allowlist configuration switch
-on: enabled
-off: disabled 
-     * @return Switch Referer blocklist/allowlist configuration switch
-on: enabled
-off: disabled
+     * Get Referer blacklist/whitelist configuration switch
+`on`: Enable
+`off`: Disable 
+     * @return Switch Referer blacklist/whitelist configuration switch
+`on`: Enable
+`off`: Disable
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Referer blocklist/allowlist configuration switch
-on: enabled
-off: disabled
-     * @param Switch Referer blocklist/allowlist configuration switch
-on: enabled
-off: disabled
+     * Set Referer blacklist/whitelist configuration switch
+`on`: Enable
+`off`: Disable
+     * @param Switch Referer blacklist/whitelist configuration switch
+`on`: Enable
+`off`: Disable
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Referer blocklist/allowlist configuration rule
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RefererRules Referer blocklist/allowlist configuration rule
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Referer blacklist/whitelist configuration rule
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return RefererRules Referer blacklist/whitelist configuration rule
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public RefererRule [] getRefererRules() {
         return this.RefererRules;
     }
 
     /**
-     * Set Referer blocklist/allowlist configuration rule
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RefererRules Referer blocklist/allowlist configuration rule
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Referer blacklist/whitelist configuration rule
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param RefererRules Referer blacklist/whitelist configuration rule
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRefererRules(RefererRule [] RefererRules) {
         this.RefererRules = RefererRules;

@@ -39,7 +39,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Advanced custom CC attack defense rule
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("AdvancedRules")
     @Expose
@@ -83,9 +83,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Advanced custom CC attack defense rule
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return AdvancedRules Advanced custom CC attack defense rule
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public AdvancedCCRules [] getAdvancedRules() {
         return this.AdvancedRules;
@@ -93,9 +93,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Advanced custom CC attack defense rule
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param AdvancedRules Advanced custom CC attack defense rule
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setAdvancedRules(AdvancedCCRules [] AdvancedRules) {
         this.AdvancedRules = AdvancedRules;

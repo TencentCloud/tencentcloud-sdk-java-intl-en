@@ -30,7 +30,7 @@ public class AnalysisDimensional extends AbstractModel{
     private String Name;
 
     /**
-    * Analysis type. Valid values: `query`, `field`
+    * Type of data being analyzed. Valid values: `query`; `field`; `original`
     */
     @SerializedName("Type")
     @Expose
@@ -42,6 +42,13 @@ public class AnalysisDimensional extends AbstractModel{
     @SerializedName("Content")
     @Expose
     private String Content;
+
+    /**
+    * Configuration
+    */
+    @SerializedName("ConfigInfo")
+    @Expose
+    private AlarmAnalysisConfig [] ConfigInfo;
 
     /**
      * Get Analysis name 
@@ -60,16 +67,16 @@ public class AnalysisDimensional extends AbstractModel{
     }
 
     /**
-     * Get Analysis type. Valid values: `query`, `field` 
-     * @return Type Analysis type. Valid values: `query`, `field`
+     * Get Type of data being analyzed. Valid values: `query`; `field`; `original` 
+     * @return Type Type of data being analyzed. Valid values: `query`; `field`; `original`
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Analysis type. Valid values: `query`, `field`
-     * @param Type Analysis type. Valid values: `query`, `field`
+     * Set Type of data being analyzed. Valid values: `query`; `field`; `original`
+     * @param Type Type of data being analyzed. Valid values: `query`; `field`; `original`
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -91,6 +98,22 @@ public class AnalysisDimensional extends AbstractModel{
         this.Content = Content;
     }
 
+    /**
+     * Get Configuration 
+     * @return ConfigInfo Configuration
+     */
+    public AlarmAnalysisConfig [] getConfigInfo() {
+        return this.ConfigInfo;
+    }
+
+    /**
+     * Set Configuration
+     * @param ConfigInfo Configuration
+     */
+    public void setConfigInfo(AlarmAnalysisConfig [] ConfigInfo) {
+        this.ConfigInfo = ConfigInfo;
+    }
+
     public AnalysisDimensional() {
     }
 
@@ -108,6 +131,12 @@ public class AnalysisDimensional extends AbstractModel{
         if (source.Content != null) {
             this.Content = new String(source.Content);
         }
+        if (source.ConfigInfo != null) {
+            this.ConfigInfo = new AlarmAnalysisConfig[source.ConfigInfo.length];
+            for (int i = 0; i < source.ConfigInfo.length; i++) {
+                this.ConfigInfo[i] = new AlarmAnalysisConfig(source.ConfigInfo[i]);
+            }
+        }
     }
 
 
@@ -118,6 +147,7 @@ public class AnalysisDimensional extends AbstractModel{
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamArrayObj(map, prefix + "ConfigInfo.", this.ConfigInfo);
 
     }
 }

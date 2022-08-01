@@ -105,6 +105,46 @@ If you currently use a password to log in, you will no longer be able to do so a
     }
 
     /**
+     *This API is used to configure the out-of-band network and deployment network of a CHC host.
+     * @param req ConfigureChcAssistVpcRequest
+     * @return ConfigureChcAssistVpcResponse
+     * @throws TencentCloudSDKException
+     */
+    public ConfigureChcAssistVpcResponse ConfigureChcAssistVpc(ConfigureChcAssistVpcRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ConfigureChcAssistVpcResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ConfigureChcAssistVpcResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ConfigureChcAssistVpc");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to configure the deployment network of a CHC host.
+     * @param req ConfigureChcDeployVpcRequest
+     * @return ConfigureChcDeployVpcResponse
+     * @throws TencentCloudSDKException
+     */
+    public ConfigureChcDeployVpcResponse ConfigureChcDeployVpc(ConfigureChcDeployVpcRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ConfigureChcDeployVpcResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ConfigureChcDeployVpcResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ConfigureChcDeployVpc");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a [spread placement group](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1). After you create one, you can specify it for an instance when you [create the instance](https://intl.cloud.tencent.com/document/api/213/15730?from_cn_redirect=1), 
      * @param req CreateDisasterRecoverGroupRequest
      * @return CreateDisasterRecoverGroupResponse
@@ -289,6 +329,29 @@ If you currently use a password to log in, you will no longer be able to do so a
                 Type type = new TypeToken<JsonResponseModel<DeleteLaunchTemplateVersionsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteLaunchTemplateVersions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the details of one or more CHC host.
+
+* You can filter the query results with the instance ID, name or device type. See `Filter` for more information.
+* If no parameter is defined, a certain number of instances under the current account will be returned. The number is specified by `Limit` and is `20` by default.
+     * @param req DescribeChcHostsRequest
+     * @return DescribeChcHostsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeChcHostsResponse DescribeChcHosts(DescribeChcHostsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeChcHostsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeChcHostsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeChcHosts");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -932,6 +995,26 @@ If you currently use a password to log in, you will no longer be able to do so a
     }
 
     /**
+     *This API is used to modify the CHC host attributes.
+     * @param req ModifyChcAttributeRequest
+     * @return ModifyChcAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyChcAttributeResponse ModifyChcAttribute(ModifyChcAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyChcAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyChcAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyChcAttribute");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify the attributes of [spread placement groups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1).
      * @param req ModifyDisasterRecoverGroupAttributeRequest
      * @return ModifyDisasterRecoverGroupAttributeResponse
@@ -1046,13 +1129,12 @@ If you currently use a password to log in, you will no longer be able to do so a
     }
 
     /**
-     *This API is used to change the project to which an instance belongs.
+     *This API is used to change the project to which an instance is assigned.
 
-* Project is a virtual concept. You can create multiple projects under one account, manage different resources in each project, and assign different instances to different projects. You may use the [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) API to query instances and use the project ID to filter results.
-* You cannot modify the project of an instance that is bound to a load balancer. You need to firstly unbind the load balancer from the instance by using the [`DeregisterInstancesFromLoadBalancer`](https://intl.cloud.tencent.com/document/api/214/1258?from_cn_redirect=1) API.
-[^_^]: # (If you modify the project of an instance, security groups associated with the instance will be automatically disassociated. You can use the [`ModifyInstancesAttribute`](https://intl.cloud.tencent.com/document/api/213/15739?from_cn_redirect=1) API to associate the instance with the security groups again.
-* Batch operations are supported. You can operate up to 100 instances in each request.
-* You can call the [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) API and find the result of the operation in the response parameter `LatestOperationState`. If the value is `SUCCESS`, the operation is successful.
+* Project is a virtual concept. You can create multiple projects under one account, manage different resources in each project, and assign different instances to different projects. You may use the [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) API to query instances and use the project ID to filter the results.
+* You cannot modify the project of an instance that is bound to a load balancer. You need to unbind the load balancer from the instance by using the [DeregisterInstancesFromLoadBalancer](https://intl.cloud.tencent.com/document/api/214/1258?from_cn_redirect=1) API before using this API.
+* Batch operations are supported. Up to 100 instances per request is allowed.
+* You can use the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) to query the operation result. If the `LatestOperationState` in the response is `SUCCESS`, the operation is successful.
      * @param req ModifyInstancesProjectRequest
      * @return ModifyInstancesProjectResponse
      * @throws TencentCloudSDKException
@@ -1175,6 +1257,46 @@ If you currently use a password to log in, you will no longer be able to do so a
                 Type type = new TypeToken<JsonResponseModel<RebootInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "RebootInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to remove the out-of-band network and deployment network of a CHC host.
+     * @param req RemoveChcAssistVpcRequest
+     * @return RemoveChcAssistVpcResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveChcAssistVpcResponse RemoveChcAssistVpc(RemoveChcAssistVpcRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RemoveChcAssistVpcResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RemoveChcAssistVpcResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RemoveChcAssistVpc");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to remove the deployment network of a CHC host.
+     * @param req RemoveChcDeployVpcRequest
+     * @return RemoveChcDeployVpcResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveChcDeployVpcResponse RemoveChcDeployVpc(RemoveChcDeployVpcRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RemoveChcDeployVpcResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RemoveChcDeployVpcResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RemoveChcDeployVpc");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

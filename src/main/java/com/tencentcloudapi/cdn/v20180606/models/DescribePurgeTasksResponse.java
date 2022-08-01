@@ -24,7 +24,7 @@ public class DescribePurgeTasksResponse extends AbstractModel{
 
     /**
     * Detailed purge record.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("PurgeLogs")
     @Expose
@@ -32,7 +32,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Total number of tasks, which is used for pagination.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,9 +47,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Detailed purge record.
-Note: This field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return PurgeLogs Detailed purge record.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public PurgeTask [] getPurgeLogs() {
         return this.PurgeLogs;
@@ -57,9 +57,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Detailed purge record.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param PurgeLogs Detailed purge record.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setPurgeLogs(PurgeTask [] PurgeLogs) {
         this.PurgeLogs = PurgeLogs;
@@ -67,9 +67,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Total number of tasks, which is used for pagination.
-Note: This field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return TotalCount Total number of tasks, which is used for pagination.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -77,9 +77,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total number of tasks, which is used for pagination.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param TotalCount Total number of tasks, which is used for pagination.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

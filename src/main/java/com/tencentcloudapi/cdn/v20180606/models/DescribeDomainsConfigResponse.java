@@ -30,7 +30,7 @@ public class DescribeDomainsConfigResponse extends AbstractModel{
     private DetailDomain [] Domains;
 
     /**
-    * The number of domain names that matched the query conditions
+    * Number of domain names that match the specified query conditions
 Used for paginated queries
     */
     @SerializedName("TotalNumber")
@@ -61,9 +61,9 @@ Used for paginated queries
     }
 
     /**
-     * Get The number of domain names that matched the query conditions
+     * Get Number of domain names that match the specified query conditions
 Used for paginated queries 
-     * @return TotalNumber The number of domain names that matched the query conditions
+     * @return TotalNumber Number of domain names that match the specified query conditions
 Used for paginated queries
      */
     public Long getTotalNumber() {
@@ -71,9 +71,9 @@ Used for paginated queries
     }
 
     /**
-     * Set The number of domain names that matched the query conditions
+     * Set Number of domain names that match the specified query conditions
 Used for paginated queries
-     * @param TotalNumber The number of domain names that matched the query conditions
+     * @param TotalNumber Number of domain names that match the specified query conditions
 Used for paginated queries
      */
     public void setTotalNumber(Long TotalNumber) {

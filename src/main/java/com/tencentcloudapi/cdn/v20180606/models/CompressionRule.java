@@ -24,7 +24,7 @@ public class CompressionRule extends AbstractModel{
 
     /**
     * true: must be set as true, enables compression
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Compress")
     @Expose
@@ -32,16 +32,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * The minimum file size to trigger compression (in bytes)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("MinLength")
     @Expose
     private Long MinLength;
 
     /**
-    * The maximum file size to trigger compression (in bytes)
-The maximum value is 30 MB
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The maximum file size to trigger compression (in bytes).
+The maximum value is 30 MB.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("MaxLength")
     @Expose
@@ -49,18 +49,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * File compression algorithm
-gzip: specifies Gzip compression
-brotli: specifies Brotli compression
-Note: this field may return null, indicating that no valid values can be obtained.
+`gzip`: Gzip compression
+`brotli`: Brotli compression
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Algorithms")
     @Expose
     private String [] Algorithms;
 
     /**
-    * Compress according to the file suffix type
-Such as: jpg, txt
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Compress based on file suffix.
+File suffixes such as jpg and txt are supported.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("FileExtensions")
     @Expose
@@ -68,13 +68,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Rule types:
-`all`: effective for all files.
-`file`: effective for specified file suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
-`contentType`: effective when the `ContentType` is specified
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+`contentType`: Apply when the `ContentType` is specified.
 If this field is specified, `FileExtensions` does not take effect.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("RuleType")
     @Expose
@@ -87,7 +87,7 @@ For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `contentType`, enter `text/html`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("RulePaths")
     @Expose
@@ -95,9 +95,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get true: must be set as true, enables compression
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return Compress true: must be set as true, enables compression
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Boolean getCompress() {
         return this.Compress;
@@ -105,9 +105,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set true: must be set as true, enables compression
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param Compress true: must be set as true, enables compression
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setCompress(Boolean Compress) {
         this.Compress = Compress;
@@ -115,9 +115,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get The minimum file size to trigger compression (in bytes)
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return MinLength The minimum file size to trigger compression (in bytes)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getMinLength() {
         return this.MinLength;
@@ -125,33 +125,33 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set The minimum file size to trigger compression (in bytes)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param MinLength The minimum file size to trigger compression (in bytes)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setMinLength(Long MinLength) {
         this.MinLength = MinLength;
     }
 
     /**
-     * Get The maximum file size to trigger compression (in bytes)
-The maximum value is 30 MB
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MaxLength The maximum file size to trigger compression (in bytes)
-The maximum value is 30 MB
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The maximum file size to trigger compression (in bytes).
+The maximum value is 30 MB.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return MaxLength The maximum file size to trigger compression (in bytes).
+The maximum value is 30 MB.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Long getMaxLength() {
         return this.MaxLength;
     }
 
     /**
-     * Set The maximum file size to trigger compression (in bytes)
-The maximum value is 30 MB
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MaxLength The maximum file size to trigger compression (in bytes)
-The maximum value is 30 MB
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The maximum file size to trigger compression (in bytes).
+The maximum value is 30 MB.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param MaxLength The maximum file size to trigger compression (in bytes).
+The maximum value is 30 MB.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setMaxLength(Long MaxLength) {
         this.MaxLength = MaxLength;
@@ -159,13 +159,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get File compression algorithm
-gzip: specifies Gzip compression
-brotli: specifies Brotli compression
-Note: this field may return null, indicating that no valid values can be obtained. 
+`gzip`: Gzip compression
+`brotli`: Brotli compression
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Algorithms File compression algorithm
-gzip: specifies Gzip compression
-brotli: specifies Brotli compression
-Note: this field may return null, indicating that no valid values can be obtained.
+`gzip`: Gzip compression
+`brotli`: Brotli compression
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String [] getAlgorithms() {
         return this.Algorithms;
@@ -173,37 +173,37 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set File compression algorithm
-gzip: specifies Gzip compression
-brotli: specifies Brotli compression
-Note: this field may return null, indicating that no valid values can be obtained.
+`gzip`: Gzip compression
+`brotli`: Brotli compression
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Algorithms File compression algorithm
-gzip: specifies Gzip compression
-brotli: specifies Brotli compression
-Note: this field may return null, indicating that no valid values can be obtained.
+`gzip`: Gzip compression
+`brotli`: Brotli compression
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setAlgorithms(String [] Algorithms) {
         this.Algorithms = Algorithms;
     }
 
     /**
-     * Get Compress according to the file suffix type
-Such as: jpg, txt
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FileExtensions Compress according to the file suffix type
-Such as: jpg, txt
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Compress based on file suffix.
+File suffixes such as jpg and txt are supported.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return FileExtensions Compress based on file suffix.
+File suffixes such as jpg and txt are supported.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String [] getFileExtensions() {
         return this.FileExtensions;
     }
 
     /**
-     * Set Compress according to the file suffix type
-Such as: jpg, txt
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FileExtensions Compress according to the file suffix type
-Such as: jpg, txt
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Compress based on file suffix.
+File suffixes such as jpg and txt are supported.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param FileExtensions Compress based on file suffix.
+File suffixes such as jpg and txt are supported.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setFileExtensions(String [] FileExtensions) {
         this.FileExtensions = FileExtensions;
@@ -211,21 +211,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Rule types:
-`all`: effective for all files.
-`file`: effective for specified file suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
-`contentType`: effective when the `ContentType` is specified
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+`contentType`: Apply when the `ContentType` is specified.
 If this field is specified, `FileExtensions` does not take effect.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return RuleType Rule types:
-`all`: effective for all files.
-`file`: effective for specified file suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
-`contentType`: effective when the `ContentType` is specified
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+`contentType`: Apply when the `ContentType` is specified.
 If this field is specified, `FileExtensions` does not take effect.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getRuleType() {
         return this.RuleType;
@@ -233,21 +233,21 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Rule types:
-`all`: effective for all files.
-`file`: effective for specified file suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
-`contentType`: effective when the `ContentType` is specified
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+`contentType`: Apply when the `ContentType` is specified.
 If this field is specified, `FileExtensions` does not take effect.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param RuleType Rule types:
-`all`: effective for all files.
-`file`: effective for specified file suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
-`contentType`: effective when the `ContentType` is specified
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+`contentType`: Apply when the `ContentType` is specified.
 If this field is specified, `FileExtensions` does not take effect.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRuleType(String RuleType) {
         this.RuleType = RuleType;
@@ -260,14 +260,14 @@ For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `contentType`, enter `text/html`.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return RulePaths Content for each `CacheType`:
 For `all`, enter a wildcard `*`.
 For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `contentType`, enter `text/html`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String [] getRulePaths() {
         return this.RulePaths;
@@ -280,14 +280,14 @@ For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `contentType`, enter `text/html`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param RulePaths Content for each `CacheType`:
 For `all`, enter a wildcard `*`.
 For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `contentType`, enter `text/html`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRulePaths(String [] RulePaths) {
         this.RulePaths = RulePaths;

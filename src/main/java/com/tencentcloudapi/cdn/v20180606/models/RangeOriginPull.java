@@ -24,8 +24,8 @@ public class RangeOriginPull extends AbstractModel{
 
     /**
     * Range GETs configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
     */
     @SerializedName("Switch")
     @Expose
@@ -33,7 +33,7 @@ off: disabled
 
     /**
     * Range GETs configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("RangeRules")
     @Expose
@@ -41,11 +41,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Range GETs configuration switch
-on: enabled
-off: disabled 
+`on`: Enable
+`off`: Disable 
      * @return Switch Range GETs configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     public String getSwitch() {
         return this.Switch;
@@ -53,11 +53,11 @@ off: disabled
 
     /**
      * Set Range GETs configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      * @param Switch Range GETs configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
@@ -65,9 +65,9 @@ off: disabled
 
     /**
      * Get Range GETs configuration
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return RangeRules Range GETs configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public RangeOriginPullRule [] getRangeRules() {
         return this.RangeRules;
@@ -75,9 +75,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Range GETs configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param RangeRules Range GETs configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRangeRules(RangeOriginPullRule [] RangeRules) {
         this.RangeRules = RangeRules;

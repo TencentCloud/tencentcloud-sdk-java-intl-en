@@ -31,7 +31,7 @@ public class LogSetInfo extends AbstractModel{
 
     /**
     * Channel
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Channel")
     @Expose
@@ -66,7 +66,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long LogsetSavePeriod;
 
     /**
-    * Creation date
+    * Creation time
     */
     @SerializedName("CreateTime")
     @Expose
@@ -81,7 +81,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Whether the logset has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Deleted")
     @Expose
@@ -89,7 +89,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Whether English is used in this region
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("RegionEn")
     @Expose
@@ -113,9 +113,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Channel
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return Channel Channel
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getChannel() {
         return this.Channel;
@@ -123,9 +123,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Channel
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param Channel Channel
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setChannel(String Channel) {
         this.Channel = Channel;
@@ -196,16 +196,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Creation date 
-     * @return CreateTime Creation date
+     * Get Creation time 
+     * @return CreateTime Creation time
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation date
-     * @param CreateTime Creation date
+     * Set Creation time
+     * @param CreateTime Creation time
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -229,9 +229,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Whether the logset has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Deleted Whether the logset has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getDeleted() {
         return this.Deleted;
@@ -239,9 +239,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Whether the logset has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Deleted Whether the logset has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setDeleted(String Deleted) {
         this.Deleted = Deleted;
@@ -249,9 +249,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Whether English is used in this region
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return RegionEn Whether English is used in this region
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getRegionEn() {
         return this.RegionEn;
@@ -259,9 +259,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Whether English is used in this region
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param RegionEn Whether English is used in this region
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRegionEn(String RegionEn) {
         this.RegionEn = RegionEn;

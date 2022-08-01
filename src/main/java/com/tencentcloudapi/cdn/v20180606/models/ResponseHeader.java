@@ -24,8 +24,8 @@ public class ResponseHeader extends AbstractModel{
 
     /**
     * Custom response header switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
     */
     @SerializedName("Switch")
     @Expose
@@ -33,7 +33,7 @@ off: disabled
 
     /**
     * Custom response header rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("HeaderRules")
     @Expose
@@ -41,11 +41,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Custom response header switch
-on: enabled
-off: disabled 
+`on`: Enable
+`off`: Disable 
      * @return Switch Custom response header switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     public String getSwitch() {
         return this.Switch;
@@ -53,11 +53,11 @@ off: disabled
 
     /**
      * Set Custom response header switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      * @param Switch Custom response header switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
@@ -65,9 +65,9 @@ off: disabled
 
     /**
      * Get Custom response header rules
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return HeaderRules Custom response header rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public HttpHeaderPathRule [] getHeaderRules() {
         return this.HeaderRules;
@@ -75,9 +75,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Custom response header rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param HeaderRules Custom response header rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setHeaderRules(HttpHeaderPathRule [] HeaderRules) {
         this.HeaderRules = HeaderRules;

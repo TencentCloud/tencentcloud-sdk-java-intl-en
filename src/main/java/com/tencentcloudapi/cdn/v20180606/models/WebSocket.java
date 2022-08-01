@@ -25,14 +25,14 @@ public class WebSocket extends AbstractModel{
     /**
     * Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
 
-* WebSocket is now only available for beta users. To use it, please submit a ticket.
+* WebSocket is an ECDN feature. You can enable it in the ECDN domain name configuration.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Sets the timeout period in seconds. Maximum value: 65.
+    * Sets timeout period in seconds. Maximum value: 300
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Timeout")
@@ -42,10 +42,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     /**
      * Get Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
 
-* WebSocket is now only available for beta users. To use it, please submit a ticket. 
+* WebSocket is an ECDN feature. You can enable it in the ECDN domain name configuration. 
      * @return Switch Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
 
-* WebSocket is now only available for beta users. To use it, please submit a ticket.
+* WebSocket is an ECDN feature. You can enable it in the ECDN domain name configuration.
      */
     public String getSwitch() {
         return this.Switch;
@@ -54,19 +54,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     /**
      * Set Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
 
-* WebSocket is now only available for beta users. To use it, please submit a ticket.
+* WebSocket is an ECDN feature. You can enable it in the ECDN domain name configuration.
      * @param Switch Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
 
-* WebSocket is now only available for beta users. To use it, please submit a ticket.
+* WebSocket is an ECDN feature. You can enable it in the ECDN domain name configuration.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Sets the timeout period in seconds. Maximum value: 65.
+     * Get Sets timeout period in seconds. Maximum value: 300
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Timeout Sets the timeout period in seconds. Maximum value: 65.
+     * @return Timeout Sets timeout period in seconds. Maximum value: 300
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getTimeout() {
@@ -74,9 +74,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Sets the timeout period in seconds. Maximum value: 65.
+     * Set Sets timeout period in seconds. Maximum value: 300
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Timeout Sets the timeout period in seconds. Maximum value: 65.
+     * @param Timeout Sets timeout period in seconds. Maximum value: 300
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setTimeout(Long Timeout) {

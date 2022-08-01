@@ -45,7 +45,7 @@ public class UrlRedirectRule extends AbstractModel{
 
     /**
     * Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("RedirectHost")
     @Expose
@@ -53,7 +53,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Whether to use full-path matching or arbitrary matching
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("FullMatch")
     @Expose
@@ -109,9 +109,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return RedirectHost Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getRedirectHost() {
         return this.RedirectHost;
@@ -119,9 +119,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param RedirectHost Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRedirectHost(String RedirectHost) {
         this.RedirectHost = RedirectHost;
@@ -129,9 +129,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Whether to use full-path matching or arbitrary matching
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return FullMatch Whether to use full-path matching or arbitrary matching
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Boolean getFullMatch() {
         return this.FullMatch;
@@ -139,9 +139,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Whether to use full-path matching or arbitrary matching
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param FullMatch Whether to use full-path matching or arbitrary matching
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setFullMatch(Boolean FullMatch) {
         this.FullMatch = FullMatch;

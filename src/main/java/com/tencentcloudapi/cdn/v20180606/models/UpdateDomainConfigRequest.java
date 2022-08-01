@@ -177,14 +177,14 @@ public class UpdateDomainConfigRequest extends AbstractModel{
     private Seo Seo;
 
     /**
-    * Access protocol forced redirect configuration
+    * Protocol redirect configuration
     */
     @SerializedName("ForceRedirect")
     @Expose
     private ForceRedirect ForceRedirect;
 
     /**
-    * Referer hotlink protection configuration
+    * Referer configuration
     */
     @SerializedName("Referer")
     @Expose
@@ -198,29 +198,29 @@ public class UpdateDomainConfigRequest extends AbstractModel{
     private MaxAge MaxAge;
 
     /**
-    * Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration
-    */
-    @SerializedName("ServiceType")
-    @Expose
-    private String ServiceType;
-
-    /**
-    * Specific region configuration
-Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
+    * Specific-region special configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside the Chinese mainland.
     */
     @SerializedName("SpecificConfig")
     @Expose
     private SpecificConfig SpecificConfig;
 
     /**
+    * Domain name service type
+`web`: Static acceleration
+`download`: Download acceleration
+`media`: Streaming media VOD acceleration
+    */
+    @SerializedName("ServiceType")
+    @Expose
+    private String ServiceType;
+
+    /**
     * Domain name acceleration region
-`mainland`: acceleration inside the Chinese mainland
-`overseas`: acceleration outside the Chinese mainland
-`global`: global acceleration
-When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
+`mainland`: Acceleration inside the Chinese mainland
+`overseas`: Acceleration outside the Chinese mainland
+`global`: Acceleration over the globe
+After switching to global acceleration, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
     */
     @SerializedName("Area")
     @Expose
@@ -234,14 +234,14 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
     private OriginPullTimeout OriginPullTimeout;
 
     /**
-    * Origin access authentication for S3 bucket
+    * Access authentication for S3 origin
     */
     @SerializedName("AwsPrivateAccess")
     @Expose
     private AwsPrivateAccess AwsPrivateAccess;
 
     /**
-    * UA blocklist/allowlist Configuration
+    * UA blocklist/allowlist configuration
     */
     @SerializedName("UserAgentFilter")
     @Expose
@@ -255,7 +255,7 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
     private AccessControl AccessControl;
 
     /**
-    * Configuration of URL rewriting
+    * URL rewriting configuration
     */
     @SerializedName("UrlRedirect")
     @Expose
@@ -304,6 +304,13 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
     private OriginCombine OriginCombine;
 
     /**
+    * Post transport configuration
+    */
+    @SerializedName("PostMaxSize")
+    @Expose
+    private PostSize PostMaxSize;
+
+    /**
     * QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
     */
     @SerializedName("Quic")
@@ -318,14 +325,14 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
     private OssPrivateAccess OssPrivateAccess;
 
     /**
-    * WebSocket configuration.
+    * WebSocket configuration
     */
     @SerializedName("WebSocket")
     @Expose
     private WebSocket WebSocket;
 
     /**
-    * Configuration of remote authentication
+    * Remote authentication configuration
     */
     @SerializedName("RemoteAuthentication")
     @Expose
@@ -337,6 +344,20 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
     @SerializedName("ShareCname")
     @Expose
     private ShareCname ShareCname;
+
+    /**
+    * Access authentication for Huawei Cloud OBS origin
+    */
+    @SerializedName("HwPrivateAccess")
+    @Expose
+    private HwPrivateAccess HwPrivateAccess;
+
+    /**
+    * Access authentication for QiNiu Cloud Kodo origin
+    */
+    @SerializedName("QnPrivateAccess")
+    @Expose
+    private QnPrivateAccess QnPrivateAccess;
 
     /**
      * Get Domain name 
@@ -691,32 +712,32 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
     }
 
     /**
-     * Get Access protocol forced redirect configuration 
-     * @return ForceRedirect Access protocol forced redirect configuration
+     * Get Protocol redirect configuration 
+     * @return ForceRedirect Protocol redirect configuration
      */
     public ForceRedirect getForceRedirect() {
         return this.ForceRedirect;
     }
 
     /**
-     * Set Access protocol forced redirect configuration
-     * @param ForceRedirect Access protocol forced redirect configuration
+     * Set Protocol redirect configuration
+     * @param ForceRedirect Protocol redirect configuration
      */
     public void setForceRedirect(ForceRedirect ForceRedirect) {
         this.ForceRedirect = ForceRedirect;
     }
 
     /**
-     * Get Referer hotlink protection configuration 
-     * @return Referer Referer hotlink protection configuration
+     * Get Referer configuration 
+     * @return Referer Referer configuration
      */
     public Referer getReferer() {
         return this.Referer;
     }
 
     /**
-     * Set Referer hotlink protection configuration
-     * @param Referer Referer hotlink protection configuration
+     * Set Referer configuration
+     * @param Referer Referer configuration
      */
     public void setReferer(Referer Referer) {
         this.Referer = Referer;
@@ -739,14 +760,34 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
     }
 
     /**
+     * Get Specific-region special configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside the Chinese mainland. 
+     * @return SpecificConfig Specific-region special configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside the Chinese mainland.
+     */
+    public SpecificConfig getSpecificConfig() {
+        return this.SpecificConfig;
+    }
+
+    /**
+     * Set Specific-region special configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside the Chinese mainland.
+     * @param SpecificConfig Specific-region special configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside the Chinese mainland.
+     */
+    public void setSpecificConfig(SpecificConfig SpecificConfig) {
+        this.SpecificConfig = SpecificConfig;
+    }
+
+    /**
      * Get Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration 
+`web`: Static acceleration
+`download`: Download acceleration
+`media`: Streaming media VOD acceleration 
      * @return ServiceType Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration
+`web`: Static acceleration
+`download`: Download acceleration
+`media`: Streaming media VOD acceleration
      */
     public String getServiceType() {
         return this.ServiceType;
@@ -754,49 +795,29 @@ media: streaming media VOD acceleration
 
     /**
      * Set Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration
+`web`: Static acceleration
+`download`: Download acceleration
+`media`: Streaming media VOD acceleration
      * @param ServiceType Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration
+`web`: Static acceleration
+`download`: Download acceleration
+`media`: Streaming media VOD acceleration
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
     }
 
     /**
-     * Get Specific region configuration
-Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China. 
-     * @return SpecificConfig Specific region configuration
-Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
-     */
-    public SpecificConfig getSpecificConfig() {
-        return this.SpecificConfig;
-    }
-
-    /**
-     * Set Specific region configuration
-Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
-     * @param SpecificConfig Specific region configuration
-Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
-     */
-    public void setSpecificConfig(SpecificConfig SpecificConfig) {
-        this.SpecificConfig = SpecificConfig;
-    }
-
-    /**
      * Get Domain name acceleration region
-`mainland`: acceleration inside the Chinese mainland
-`overseas`: acceleration outside the Chinese mainland
-`global`: global acceleration
-When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings. 
+`mainland`: Acceleration inside the Chinese mainland
+`overseas`: Acceleration outside the Chinese mainland
+`global`: Acceleration over the globe
+After switching to global acceleration, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings. 
      * @return Area Domain name acceleration region
-`mainland`: acceleration inside the Chinese mainland
-`overseas`: acceleration outside the Chinese mainland
-`global`: global acceleration
-When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
+`mainland`: Acceleration inside the Chinese mainland
+`overseas`: Acceleration outside the Chinese mainland
+`global`: Acceleration over the globe
+After switching to global acceleration, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
      */
     public String getArea() {
         return this.Area;
@@ -804,15 +825,15 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
 
     /**
      * Set Domain name acceleration region
-`mainland`: acceleration inside the Chinese mainland
-`overseas`: acceleration outside the Chinese mainland
-`global`: global acceleration
-When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
+`mainland`: Acceleration inside the Chinese mainland
+`overseas`: Acceleration outside the Chinese mainland
+`global`: Acceleration over the globe
+After switching to global acceleration, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
      * @param Area Domain name acceleration region
-`mainland`: acceleration inside the Chinese mainland
-`overseas`: acceleration outside the Chinese mainland
-`global`: global acceleration
-When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
+`mainland`: Acceleration inside the Chinese mainland
+`overseas`: Acceleration outside the Chinese mainland
+`global`: Acceleration over the globe
+After switching to global acceleration, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
      */
     public void setArea(String Area) {
         this.Area = Area;
@@ -835,32 +856,32 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
     }
 
     /**
-     * Get Origin access authentication for S3 bucket 
-     * @return AwsPrivateAccess Origin access authentication for S3 bucket
+     * Get Access authentication for S3 origin 
+     * @return AwsPrivateAccess Access authentication for S3 origin
      */
     public AwsPrivateAccess getAwsPrivateAccess() {
         return this.AwsPrivateAccess;
     }
 
     /**
-     * Set Origin access authentication for S3 bucket
-     * @param AwsPrivateAccess Origin access authentication for S3 bucket
+     * Set Access authentication for S3 origin
+     * @param AwsPrivateAccess Access authentication for S3 origin
      */
     public void setAwsPrivateAccess(AwsPrivateAccess AwsPrivateAccess) {
         this.AwsPrivateAccess = AwsPrivateAccess;
     }
 
     /**
-     * Get UA blocklist/allowlist Configuration 
-     * @return UserAgentFilter UA blocklist/allowlist Configuration
+     * Get UA blocklist/allowlist configuration 
+     * @return UserAgentFilter UA blocklist/allowlist configuration
      */
     public UserAgentFilter getUserAgentFilter() {
         return this.UserAgentFilter;
     }
 
     /**
-     * Set UA blocklist/allowlist Configuration
-     * @param UserAgentFilter UA blocklist/allowlist Configuration
+     * Set UA blocklist/allowlist configuration
+     * @param UserAgentFilter UA blocklist/allowlist configuration
      */
     public void setUserAgentFilter(UserAgentFilter UserAgentFilter) {
         this.UserAgentFilter = UserAgentFilter;
@@ -883,16 +904,16 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
     }
 
     /**
-     * Get Configuration of URL rewriting 
-     * @return UrlRedirect Configuration of URL rewriting
+     * Get URL rewriting configuration 
+     * @return UrlRedirect URL rewriting configuration
      */
     public UrlRedirect getUrlRedirect() {
         return this.UrlRedirect;
     }
 
     /**
-     * Set Configuration of URL rewriting
-     * @param UrlRedirect Configuration of URL rewriting
+     * Set URL rewriting configuration
+     * @param UrlRedirect URL rewriting configuration
      */
     public void setUrlRedirect(UrlRedirect UrlRedirect) {
         this.UrlRedirect = UrlRedirect;
@@ -995,6 +1016,22 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
     }
 
     /**
+     * Get Post transport configuration 
+     * @return PostMaxSize Post transport configuration
+     */
+    public PostSize getPostMaxSize() {
+        return this.PostMaxSize;
+    }
+
+    /**
+     * Set Post transport configuration
+     * @param PostMaxSize Post transport configuration
+     */
+    public void setPostMaxSize(PostSize PostMaxSize) {
+        this.PostMaxSize = PostMaxSize;
+    }
+
+    /**
      * Get QUIC access, which is a paid service. You can check the product document and Billing Overview for more information. 
      * @return Quic QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
      */
@@ -1027,32 +1064,32 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
     }
 
     /**
-     * Get WebSocket configuration. 
-     * @return WebSocket WebSocket configuration.
+     * Get WebSocket configuration 
+     * @return WebSocket WebSocket configuration
      */
     public WebSocket getWebSocket() {
         return this.WebSocket;
     }
 
     /**
-     * Set WebSocket configuration.
-     * @param WebSocket WebSocket configuration.
+     * Set WebSocket configuration
+     * @param WebSocket WebSocket configuration
      */
     public void setWebSocket(WebSocket WebSocket) {
         this.WebSocket = WebSocket;
     }
 
     /**
-     * Get Configuration of remote authentication 
-     * @return RemoteAuthentication Configuration of remote authentication
+     * Get Remote authentication configuration 
+     * @return RemoteAuthentication Remote authentication configuration
      */
     public RemoteAuthentication getRemoteAuthentication() {
         return this.RemoteAuthentication;
     }
 
     /**
-     * Set Configuration of remote authentication
-     * @param RemoteAuthentication Configuration of remote authentication
+     * Set Remote authentication configuration
+     * @param RemoteAuthentication Remote authentication configuration
      */
     public void setRemoteAuthentication(RemoteAuthentication RemoteAuthentication) {
         this.RemoteAuthentication = RemoteAuthentication;
@@ -1072,6 +1109,38 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
      */
     public void setShareCname(ShareCname ShareCname) {
         this.ShareCname = ShareCname;
+    }
+
+    /**
+     * Get Access authentication for Huawei Cloud OBS origin 
+     * @return HwPrivateAccess Access authentication for Huawei Cloud OBS origin
+     */
+    public HwPrivateAccess getHwPrivateAccess() {
+        return this.HwPrivateAccess;
+    }
+
+    /**
+     * Set Access authentication for Huawei Cloud OBS origin
+     * @param HwPrivateAccess Access authentication for Huawei Cloud OBS origin
+     */
+    public void setHwPrivateAccess(HwPrivateAccess HwPrivateAccess) {
+        this.HwPrivateAccess = HwPrivateAccess;
+    }
+
+    /**
+     * Get Access authentication for QiNiu Cloud Kodo origin 
+     * @return QnPrivateAccess Access authentication for QiNiu Cloud Kodo origin
+     */
+    public QnPrivateAccess getQnPrivateAccess() {
+        return this.QnPrivateAccess;
+    }
+
+    /**
+     * Set Access authentication for QiNiu Cloud Kodo origin
+     * @param QnPrivateAccess Access authentication for QiNiu Cloud Kodo origin
+     */
+    public void setQnPrivateAccess(QnPrivateAccess QnPrivateAccess) {
+        this.QnPrivateAccess = QnPrivateAccess;
     }
 
     public UpdateDomainConfigRequest() {
@@ -1157,11 +1226,11 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
         if (source.MaxAge != null) {
             this.MaxAge = new MaxAge(source.MaxAge);
         }
-        if (source.ServiceType != null) {
-            this.ServiceType = new String(source.ServiceType);
-        }
         if (source.SpecificConfig != null) {
             this.SpecificConfig = new SpecificConfig(source.SpecificConfig);
+        }
+        if (source.ServiceType != null) {
+            this.ServiceType = new String(source.ServiceType);
         }
         if (source.Area != null) {
             this.Area = new String(source.Area);
@@ -1202,6 +1271,9 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
         if (source.OriginCombine != null) {
             this.OriginCombine = new OriginCombine(source.OriginCombine);
         }
+        if (source.PostMaxSize != null) {
+            this.PostMaxSize = new PostSize(source.PostMaxSize);
+        }
         if (source.Quic != null) {
             this.Quic = new Quic(source.Quic);
         }
@@ -1216,6 +1288,12 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
         }
         if (source.ShareCname != null) {
             this.ShareCname = new ShareCname(source.ShareCname);
+        }
+        if (source.HwPrivateAccess != null) {
+            this.HwPrivateAccess = new HwPrivateAccess(source.HwPrivateAccess);
+        }
+        if (source.QnPrivateAccess != null) {
+            this.QnPrivateAccess = new QnPrivateAccess(source.QnPrivateAccess);
         }
     }
 
@@ -1249,8 +1327,8 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
         this.setParamObj(map, prefix + "ForceRedirect.", this.ForceRedirect);
         this.setParamObj(map, prefix + "Referer.", this.Referer);
         this.setParamObj(map, prefix + "MaxAge.", this.MaxAge);
-        this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
         this.setParamObj(map, prefix + "SpecificConfig.", this.SpecificConfig);
+        this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
         this.setParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
@@ -1263,11 +1341,14 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
         this.setParamObj(map, prefix + "Ipv6Access.", this.Ipv6Access);
         this.setParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
         this.setParamObj(map, prefix + "OriginCombine.", this.OriginCombine);
+        this.setParamObj(map, prefix + "PostMaxSize.", this.PostMaxSize);
         this.setParamObj(map, prefix + "Quic.", this.Quic);
         this.setParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
         this.setParamObj(map, prefix + "WebSocket.", this.WebSocket);
         this.setParamObj(map, prefix + "RemoteAuthentication.", this.RemoteAuthentication);
         this.setParamObj(map, prefix + "ShareCname.", this.ShareCname);
+        this.setParamObj(map, prefix + "HwPrivateAccess.", this.HwPrivateAccess);
+        this.setParamObj(map, prefix + "QnPrivateAccess.", this.QnPrivateAccess);
 
     }
 }

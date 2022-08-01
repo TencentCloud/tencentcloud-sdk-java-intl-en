@@ -61,7 +61,7 @@ You must specify either a task ID or a starting time for your query.
     private Long Offset;
 
     /**
-    * Limit on paged queries. Default value: 20
+    * Limit on paginated queries. Default value: 20
     */
     @SerializedName("Limit")
     @Expose
@@ -187,16 +187,16 @@ You must specify either a task ID or a starting time for your query.
     }
 
     /**
-     * Get Limit on paged queries. Default value: 20 
-     * @return Limit Limit on paged queries. Default value: 20
+     * Get Limit on paginated queries. Default value: 20 
+     * @return Limit Limit on paginated queries. Default value: 20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit on paged queries. Default value: 20
-     * @param Limit Limit on paged queries. Default value: 20
+     * Set Limit on paginated queries. Default value: 20
+     * @param Limit Limit on paginated queries. Default value: 20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

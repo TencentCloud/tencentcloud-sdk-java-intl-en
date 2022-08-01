@@ -50,7 +50,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("CacheConfig")
     @Expose
@@ -138,9 +138,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Cache configuration
-Note: this field may return null, indicating that no valid value is obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return CacheConfig Cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public RuleCacheConfig getCacheConfig() {
         return this.CacheConfig;
@@ -148,9 +148,9 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Set Cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param CacheConfig Cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCacheConfig(RuleCacheConfig CacheConfig) {
         this.CacheConfig = CacheConfig;

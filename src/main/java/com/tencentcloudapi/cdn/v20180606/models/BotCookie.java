@@ -52,7 +52,7 @@ public class BotCookie extends AbstractModel{
 
     /**
     * Redirection target page
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RedirectUrl")
     @Expose
@@ -60,7 +60,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Update time
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -132,9 +132,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Redirection target page
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return RedirectUrl Redirection target page
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRedirectUrl() {
         return this.RedirectUrl;
@@ -142,9 +142,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Redirection target page
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param RedirectUrl Redirection target page
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRedirectUrl(String RedirectUrl) {
         this.RedirectUrl = RedirectUrl;
@@ -152,9 +152,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Update time
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return UpdateTime Update time
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -162,9 +162,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Update time
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param UpdateTime Update time
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

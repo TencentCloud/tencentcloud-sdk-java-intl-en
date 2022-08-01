@@ -24,17 +24,17 @@ public class AdvanceConfig extends AbstractModel{
 
     /**
     * Advanced configuration name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Whether advanced configuration is supported:
-`on`: support
-`off`: do not support
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Whether to support advanced configuration
+`on`: Supported
+`off`: Not supported
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Value")
     @Expose
@@ -42,9 +42,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Advanced configuration name
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Name Advanced configuration name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getName() {
         return this.Name;
@@ -52,37 +52,37 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Advanced configuration name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Name Advanced configuration name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Whether advanced configuration is supported:
-`on`: support
-`off`: do not support
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Value Whether advanced configuration is supported:
-`on`: support
-`off`: do not support
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Whether to support advanced configuration
+`on`: Supported
+`off`: Not supported
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Value Whether to support advanced configuration
+`on`: Supported
+`off`: Not supported
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Whether advanced configuration is supported:
-`on`: support
-`off`: do not support
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Value Whether advanced configuration is supported:
-`on`: support
-`off`: do not support
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Whether to support advanced configuration
+`on`: Supported
+`off`: Not supported
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Value Whether to support advanced configuration
+`on`: Supported
+`off`: Not supported
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setValue(String Value) {
         this.Value = Value;

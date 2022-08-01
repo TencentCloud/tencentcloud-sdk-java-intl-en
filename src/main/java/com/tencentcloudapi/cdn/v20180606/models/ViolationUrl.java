@@ -45,11 +45,11 @@ public class ViolationUrl extends AbstractModel{
 
     /**
     * Current status of the resources in violation
-forbid: blocked
-release: unblocked
-delay: processing delayed 
-reject: appeal dismissed. The status is still blocked.
-complain: appeal in process
+`forbid`: Blocked
+`release`: Unblocked
+`delay`: Processing delayed
+`reject`: Appeal dismissed. The status is still blocked.
+`complain`: Appeal in process
     */
     @SerializedName("UrlStatus")
     @Expose
@@ -119,17 +119,17 @@ complain: appeal in process
 
     /**
      * Get Current status of the resources in violation
-forbid: blocked
-release: unblocked
-delay: processing delayed 
-reject: appeal dismissed. The status is still blocked.
-complain: appeal in process 
+`forbid`: Blocked
+`release`: Unblocked
+`delay`: Processing delayed
+`reject`: Appeal dismissed. The status is still blocked.
+`complain`: Appeal in process 
      * @return UrlStatus Current status of the resources in violation
-forbid: blocked
-release: unblocked
-delay: processing delayed 
-reject: appeal dismissed. The status is still blocked.
-complain: appeal in process
+`forbid`: Blocked
+`release`: Unblocked
+`delay`: Processing delayed
+`reject`: Appeal dismissed. The status is still blocked.
+`complain`: Appeal in process
      */
     public String getUrlStatus() {
         return this.UrlStatus;
@@ -137,17 +137,17 @@ complain: appeal in process
 
     /**
      * Set Current status of the resources in violation
-forbid: blocked
-release: unblocked
-delay: processing delayed 
-reject: appeal dismissed. The status is still blocked.
-complain: appeal in process
+`forbid`: Blocked
+`release`: Unblocked
+`delay`: Processing delayed
+`reject`: Appeal dismissed. The status is still blocked.
+`complain`: Appeal in process
      * @param UrlStatus Current status of the resources in violation
-forbid: blocked
-release: unblocked
-delay: processing delayed 
-reject: appeal dismissed. The status is still blocked.
-complain: appeal in process
+`forbid`: Blocked
+`release`: Unblocked
+`delay`: Processing delayed
+`reject`: Appeal dismissed. The status is still blocked.
+`complain`: Appeal in process
      */
     public void setUrlStatus(String UrlStatus) {
         this.UrlStatus = UrlStatus;

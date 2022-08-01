@@ -40,6 +40,13 @@ You can query the project IDs in two ways:
     private Long ProjectId;
 
     /**
+    * Tag description list. This parameter is used to bind a tag to a key pair.
+    */
+    @SerializedName("TagSpecification")
+    @Expose
+    private TagSpecification [] TagSpecification;
+
+    /**
      * Get Name of the key pair, which can contain numbers, letters, and underscores, with a maximum length of 25 characters. 
      * @return KeyName Name of the key pair, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
      */
@@ -83,6 +90,22 @@ You can query the project IDs in two ways:
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get Tag description list. This parameter is used to bind a tag to a key pair. 
+     * @return TagSpecification Tag description list. This parameter is used to bind a tag to a key pair.
+     */
+    public TagSpecification [] getTagSpecification() {
+        return this.TagSpecification;
+    }
+
+    /**
+     * Set Tag description list. This parameter is used to bind a tag to a key pair.
+     * @param TagSpecification Tag description list. This parameter is used to bind a tag to a key pair.
+     */
+    public void setTagSpecification(TagSpecification [] TagSpecification) {
+        this.TagSpecification = TagSpecification;
+    }
+
     public CreateKeyPairRequest() {
     }
 
@@ -97,6 +120,12 @@ You can query the project IDs in two ways:
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
         }
+        if (source.TagSpecification != null) {
+            this.TagSpecification = new TagSpecification[source.TagSpecification.length];
+            for (int i = 0; i < source.TagSpecification.length; i++) {
+                this.TagSpecification[i] = new TagSpecification(source.TagSpecification[i]);
+            }
+        }
     }
 
 
@@ -106,6 +135,7 @@ You can query the project IDs in two ways:
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "KeyName", this.KeyName);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
 
     }
 }

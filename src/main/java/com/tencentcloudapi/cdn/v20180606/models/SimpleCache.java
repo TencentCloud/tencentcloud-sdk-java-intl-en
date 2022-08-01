@@ -24,7 +24,7 @@ public class SimpleCache extends AbstractModel{
 
     /**
     * Cache expiration time rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("CacheRules")
     @Expose
@@ -32,11 +32,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Follows origin server Cache-Control: max-age configurations
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 If this is enabled, resources that do not match CacheRules rules will be cached by the node according to the max-age value returned by the origin server. Resources that match CacheRules rules will be cached on the node according to the cache expiration time set in CacheRules.
 This conflicts with CompareMaxAge. The two cannot be enabled at the same time.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("FollowOrigin")
     @Expose
@@ -44,10 +44,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Forced cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("IgnoreCacheControl")
     @Expose
@@ -55,10 +55,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Ignores the Set-Cookie header of the origin server
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("IgnoreSetCookie")
     @Expose
@@ -66,10 +66,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("CompareMaxAge")
     @Expose
@@ -77,7 +77,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Always forwards to the origin server for verification
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Revalidate")
     @Expose
@@ -85,9 +85,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Cache expiration time rules
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return CacheRules Cache expiration time rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public SimpleCacheRule [] getCacheRules() {
         return this.CacheRules;
@@ -95,9 +95,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Cache expiration time rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param CacheRules Cache expiration time rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCacheRules(SimpleCacheRule [] CacheRules) {
         this.CacheRules = CacheRules;
@@ -105,17 +105,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Follows origin server Cache-Control: max-age configurations
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 If this is enabled, resources that do not match CacheRules rules will be cached by the node according to the max-age value returned by the origin server. Resources that match CacheRules rules will be cached on the node according to the cache expiration time set in CacheRules.
 This conflicts with CompareMaxAge. The two cannot be enabled at the same time.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return FollowOrigin Follows origin server Cache-Control: max-age configurations
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 If this is enabled, resources that do not match CacheRules rules will be cached by the node according to the max-age value returned by the origin server. Resources that match CacheRules rules will be cached on the node according to the cache expiration time set in CacheRules.
 This conflicts with CompareMaxAge. The two cannot be enabled at the same time.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getFollowOrigin() {
         return this.FollowOrigin;
@@ -123,17 +123,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Follows origin server Cache-Control: max-age configurations
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 If this is enabled, resources that do not match CacheRules rules will be cached by the node according to the max-age value returned by the origin server. Resources that match CacheRules rules will be cached on the node according to the cache expiration time set in CacheRules.
 This conflicts with CompareMaxAge. The two cannot be enabled at the same time.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param FollowOrigin Follows origin server Cache-Control: max-age configurations
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 If this is enabled, resources that do not match CacheRules rules will be cached by the node according to the max-age value returned by the origin server. Resources that match CacheRules rules will be cached on the node according to the cache expiration time set in CacheRules.
 This conflicts with CompareMaxAge. The two cannot be enabled at the same time.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setFollowOrigin(String FollowOrigin) {
         this.FollowOrigin = FollowOrigin;
@@ -141,15 +141,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Forced cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return IgnoreCacheControl Forced cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getIgnoreCacheControl() {
         return this.IgnoreCacheControl;
@@ -157,15 +157,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Forced cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param IgnoreCacheControl Forced cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setIgnoreCacheControl(String IgnoreCacheControl) {
         this.IgnoreCacheControl = IgnoreCacheControl;
@@ -173,15 +173,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Ignores the Set-Cookie header of the origin server
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained. 
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return IgnoreSetCookie Ignores the Set-Cookie header of the origin server
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getIgnoreSetCookie() {
         return this.IgnoreSetCookie;
@@ -189,15 +189,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Ignores the Set-Cookie header of the origin server
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param IgnoreSetCookie Ignores the Set-Cookie header of the origin server
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setIgnoreSetCookie(String IgnoreSetCookie) {
         this.IgnoreSetCookie = IgnoreSetCookie;
@@ -205,15 +205,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained. 
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return CompareMaxAge Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getCompareMaxAge() {
         return this.CompareMaxAge;
@@ -221,15 +221,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param CompareMaxAge Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCompareMaxAge(String CompareMaxAge) {
         this.CompareMaxAge = CompareMaxAge;
@@ -237,9 +237,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Always forwards to the origin server for verification
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Revalidate Always forwards to the origin server for verification
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Revalidate getRevalidate() {
         return this.Revalidate;
@@ -247,9 +247,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Always forwards to the origin server for verification
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Revalidate Always forwards to the origin server for verification
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRevalidate(Revalidate Revalidate) {
         this.Revalidate = Revalidate;

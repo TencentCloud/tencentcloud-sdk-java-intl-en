@@ -24,8 +24,8 @@ public class ResponseHeaderCache extends AbstractModel{
 
     /**
     * Origin server header cache switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
     */
     @SerializedName("Switch")
     @Expose
@@ -33,11 +33,11 @@ off: disabled
 
     /**
      * Get Origin server header cache switch
-on: enabled
-off: disabled 
+`on`: Enable
+`off`: Disable 
      * @return Switch Origin server header cache switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     public String getSwitch() {
         return this.Switch;
@@ -45,11 +45,11 @@ off: disabled
 
     /**
      * Set Origin server header cache switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      * @param Switch Origin server header cache switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

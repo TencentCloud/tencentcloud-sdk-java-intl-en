@@ -38,10 +38,10 @@ public class PushTask extends AbstractModel{
 
     /**
     * Prefetch task status
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
     */
     @SerializedName("Status")
     @Expose
@@ -63,9 +63,9 @@ public class PushTask extends AbstractModel{
 
     /**
     * Prefetch region
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe
     */
     @SerializedName("Area")
     @Expose
@@ -73,7 +73,7 @@ public class PushTask extends AbstractModel{
 
     /**
     * Prefetch task update time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -113,15 +113,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Prefetch task status
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server 
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server 
      * @return Status Prefetch task status
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
      */
     public String getStatus() {
         return this.Status;
@@ -129,15 +129,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Prefetch task status
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
      * @param Status Prefetch task status
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -177,13 +177,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Prefetch region
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global 
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe 
      * @return Area Prefetch region
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe
      */
     public String getArea() {
         return this.Area;
@@ -191,13 +191,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Prefetch region
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe
      * @param Area Prefetch region
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe
      */
     public void setArea(String Area) {
         this.Area = Area;
@@ -205,9 +205,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Prefetch task update time
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return UpdateTime Prefetch task update time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -215,9 +215,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Prefetch task update time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param UpdateTime Prefetch task update time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

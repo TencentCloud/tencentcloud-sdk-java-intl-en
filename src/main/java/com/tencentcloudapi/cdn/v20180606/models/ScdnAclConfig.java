@@ -47,7 +47,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * ACL rule group, which is required when the access control is on.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("AdvancedScriptData")
     @Expose
@@ -111,9 +111,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get ACL rule group, which is required when the access control is on.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return AdvancedScriptData ACL rule group, which is required when the access control is on.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public AdvancedScdnAclGroup [] getAdvancedScriptData() {
         return this.AdvancedScriptData;
@@ -121,9 +121,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set ACL rule group, which is required when the access control is on.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param AdvancedScriptData ACL rule group, which is required when the access control is on.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setAdvancedScriptData(AdvancedScdnAclGroup [] AdvancedScriptData) {
         this.AdvancedScriptData = AdvancedScriptData;

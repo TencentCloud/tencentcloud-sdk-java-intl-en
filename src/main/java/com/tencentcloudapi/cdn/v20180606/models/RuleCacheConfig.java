@@ -24,7 +24,7 @@ public class RuleCacheConfig extends AbstractModel{
 
     /**
     * Cache configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Cache")
     @Expose
@@ -32,7 +32,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
     /**
     * No cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("NoCache")
     @Expose
@@ -40,7 +40,7 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
     * Follows the origin server configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("FollowOrigin")
     @Expose
@@ -48,9 +48,9 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Get Cache configuration
-Note: this field may return `null`, indicating that no valid value is obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Cache Cache configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public CacheConfigCache getCache() {
         return this.Cache;
@@ -58,9 +58,9 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
     /**
      * Set Cache configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Cache Cache configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCache(CacheConfigCache Cache) {
         this.Cache = Cache;
@@ -68,9 +68,9 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
     /**
      * Get No cache configuration
-Note: this field may return null, indicating that no valid value is obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return NoCache No cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public CacheConfigNoCache getNoCache() {
         return this.NoCache;
@@ -78,9 +78,9 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Set No cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param NoCache No cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setNoCache(CacheConfigNoCache NoCache) {
         this.NoCache = NoCache;
@@ -88,9 +88,9 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Get Follows the origin server configuration
-Note: this field may return null, indicating that no valid value is obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return FollowOrigin Follows the origin server configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public CacheConfigFollowOrigin getFollowOrigin() {
         return this.FollowOrigin;
@@ -98,9 +98,9 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Set Follows the origin server configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param FollowOrigin Follows the origin server configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setFollowOrigin(CacheConfigFollowOrigin FollowOrigin) {
         this.FollowOrigin = FollowOrigin;

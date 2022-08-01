@@ -100,6 +100,16 @@ public class ProcessMediaRequest extends AbstractModel{
     private String SessionContext;
 
     /**
+    * The scheme ID.
+Notes: 1. If output information is not specified for a scheme, the request parameters `OutputStorage` and `OutputDir` will be used.
+2. If a notification is not configured for a scheme, the request parameter `TaskNotifyConfig` will be used.
+3. The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+    */
+    @SerializedName("ScheduleId")
+    @Expose
+    private Long ScheduleId;
+
+    /**
      * Get The information of the file to process. 
      * @return InputInfo The information of the file to process.
      */
@@ -275,6 +285,34 @@ public class ProcessMediaRequest extends AbstractModel{
         this.SessionContext = SessionContext;
     }
 
+    /**
+     * Get The scheme ID.
+Notes: 1. If output information is not specified for a scheme, the request parameters `OutputStorage` and `OutputDir` will be used.
+2. If a notification is not configured for a scheme, the request parameter `TaskNotifyConfig` will be used.
+3. The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme. 
+     * @return ScheduleId The scheme ID.
+Notes: 1. If output information is not specified for a scheme, the request parameters `OutputStorage` and `OutputDir` will be used.
+2. If a notification is not configured for a scheme, the request parameter `TaskNotifyConfig` will be used.
+3. The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+     */
+    public Long getScheduleId() {
+        return this.ScheduleId;
+    }
+
+    /**
+     * Set The scheme ID.
+Notes: 1. If output information is not specified for a scheme, the request parameters `OutputStorage` and `OutputDir` will be used.
+2. If a notification is not configured for a scheme, the request parameter `TaskNotifyConfig` will be used.
+3. The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+     * @param ScheduleId The scheme ID.
+Notes: 1. If output information is not specified for a scheme, the request parameters `OutputStorage` and `OutputDir` will be used.
+2. If a notification is not configured for a scheme, the request parameter `TaskNotifyConfig` will be used.
+3. The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+     */
+    public void setScheduleId(Long ScheduleId) {
+        this.ScheduleId = ScheduleId;
+    }
+
     public ProcessMediaRequest() {
     }
 
@@ -316,6 +354,9 @@ public class ProcessMediaRequest extends AbstractModel{
         if (source.SessionContext != null) {
             this.SessionContext = new String(source.SessionContext);
         }
+        if (source.ScheduleId != null) {
+            this.ScheduleId = new Long(source.ScheduleId);
+        }
     }
 
 
@@ -334,6 +375,7 @@ public class ProcessMediaRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
+        this.setParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
 
     }
 }

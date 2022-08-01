@@ -37,7 +37,7 @@ public class ClusterCIDRSettings extends AbstractModel{
     private Boolean IgnoreClusterCIDRConflict;
 
     /**
-    * Maximum number of pods on each node in the cluster
+    * Maximum number of Pods on each node. Value range: 16 to 256. When its power is not 2, it will round upward to the closest power of 2.
     */
     @SerializedName("MaxNodePodNum")
     @Expose
@@ -111,16 +111,16 @@ public class ClusterCIDRSettings extends AbstractModel{
     }
 
     /**
-     * Get Maximum number of pods on each node in the cluster 
-     * @return MaxNodePodNum Maximum number of pods on each node in the cluster
+     * Get Maximum number of Pods on each node. Value range: 16 to 256. When its power is not 2, it will round upward to the closest power of 2. 
+     * @return MaxNodePodNum Maximum number of Pods on each node. Value range: 16 to 256. When its power is not 2, it will round upward to the closest power of 2.
      */
     public Long getMaxNodePodNum() {
         return this.MaxNodePodNum;
     }
 
     /**
-     * Set Maximum number of pods on each node in the cluster
-     * @param MaxNodePodNum Maximum number of pods on each node in the cluster
+     * Set Maximum number of Pods on each node. Value range: 16 to 256. When its power is not 2, it will round upward to the closest power of 2.
+     * @param MaxNodePodNum Maximum number of Pods on each node. Value range: 16 to 256. When its power is not 2, it will round upward to the closest power of 2.
      */
     public void setMaxNodePodNum(Long MaxNodePodNum) {
         this.MaxNodePodNum = MaxNodePodNum;

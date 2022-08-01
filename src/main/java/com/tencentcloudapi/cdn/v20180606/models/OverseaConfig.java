@@ -24,7 +24,7 @@ public class OverseaConfig extends AbstractModel{
 
     /**
     * Timestamp hotlink protection configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Authentication")
     @Expose
@@ -32,23 +32,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Bandwidth cap configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("BandwidthAlert")
     @Expose
     private BandwidthAlert BandwidthAlert;
 
     /**
-    * Cache rules configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Cache rule configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Cache")
     @Expose
     private Cache Cache;
 
     /**
-    * Cache configurations.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Cache configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("CacheKey")
     @Expose
@@ -56,7 +56,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Smart compression configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Compression")
     @Expose
@@ -64,7 +64,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Download speed limit configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("DownstreamCapping")
     @Expose
@@ -72,7 +72,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Error code redirect configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("ErrorPage")
     @Expose
@@ -80,15 +80,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * 301 and 302 automatic origin-pull follow-redirect configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("FollowRedirect")
     @Expose
     private FollowRedirect FollowRedirect;
 
     /**
-    * Access protocol forced redirect configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Protocol redirect configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("ForceRedirect")
     @Expose
@@ -96,7 +96,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * HTTPS configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Https")
     @Expose
@@ -104,7 +104,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * IP blocklist/allowlist configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("IpFilter")
     @Expose
@@ -112,7 +112,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * IP access limit configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("IpFreqLimit")
     @Expose
@@ -120,7 +120,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Browser cache rules configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("MaxAge")
     @Expose
@@ -128,7 +128,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Origin server configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Origin")
     @Expose
@@ -136,7 +136,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Cross-border optimization configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("OriginPullOptimization")
     @Expose
@@ -144,7 +144,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Range GETs configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("RangeOriginPull")
     @Expose
@@ -152,7 +152,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Hotlink protection configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Referer")
     @Expose
@@ -160,7 +160,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Origin-pull request header configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("RequestHeader")
     @Expose
@@ -168,7 +168,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Origin server response header configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("ResponseHeader")
     @Expose
@@ -176,7 +176,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Follows origin server cache header configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("ResponseHeaderCache")
     @Expose
@@ -184,15 +184,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * SEO configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Seo")
     @Expose
     private Seo Seo;
 
     /**
-    * Domain name service type. `web`: static acceleration; `download`: download acceleration; `media`: streaming media acceleration.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Domain name service type. Values: `web` (static acceleration); `download` (download acceleration); `media` (streaming media acceleration).
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("ServiceType")
     @Expose
@@ -200,7 +200,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Status code cache configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("StatusCodeCache")
     @Expose
@@ -208,33 +208,49 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Video dragging configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("VideoSeek")
     @Expose
     private VideoSeek VideoSeek;
 
     /**
-    * Private access for S3 origin
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Access authentication for S3 origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("AwsPrivateAccess")
     @Expose
     private AwsPrivateAccess AwsPrivateAccess;
 
     /**
-    * Private access for OSS origin
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Access authentication for OSS origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("OssPrivateAccess")
     @Expose
     private OssPrivateAccess OssPrivateAccess;
 
     /**
+    * Access authentication for Huawei Cloud OBS origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("HwPrivateAccess")
+    @Expose
+    private HwPrivateAccess HwPrivateAccess;
+
+    /**
+    * Access authentication for QiNiu Cloud Kodo origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("QnPrivateAccess")
+    @Expose
+    private QnPrivateAccess QnPrivateAccess;
+
+    /**
      * Get Timestamp hotlink protection configuration.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return Authentication Timestamp hotlink protection configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Authentication getAuthentication() {
         return this.Authentication;
@@ -242,9 +258,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Timestamp hotlink protection configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param Authentication Timestamp hotlink protection configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setAuthentication(Authentication Authentication) {
         this.Authentication = Authentication;
@@ -252,9 +268,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Bandwidth cap configuration.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return BandwidthAlert Bandwidth cap configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public BandwidthAlert getBandwidthAlert() {
         return this.BandwidthAlert;
@@ -262,49 +278,49 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Bandwidth cap configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param BandwidthAlert Bandwidth cap configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setBandwidthAlert(BandwidthAlert BandwidthAlert) {
         this.BandwidthAlert = BandwidthAlert;
     }
 
     /**
-     * Get Cache rules configuration.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Cache Cache rules configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Cache rule configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Cache Cache rule configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Cache getCache() {
         return this.Cache;
     }
 
     /**
-     * Set Cache rules configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Cache Cache rules configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Cache rule configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Cache Cache rule configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCache(Cache Cache) {
         this.Cache = Cache;
     }
 
     /**
-     * Get Cache configurations.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CacheKey Cache configurations.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Cache configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return CacheKey Cache configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public CacheKey getCacheKey() {
         return this.CacheKey;
     }
 
     /**
-     * Set Cache configurations.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CacheKey Cache configurations.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Cache configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param CacheKey Cache configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCacheKey(CacheKey CacheKey) {
         this.CacheKey = CacheKey;
@@ -312,9 +328,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Smart compression configuration.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Compression Smart compression configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Compression getCompression() {
         return this.Compression;
@@ -322,9 +338,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Smart compression configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Compression Smart compression configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCompression(Compression Compression) {
         this.Compression = Compression;
@@ -332,9 +348,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Download speed limit configuration.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return DownstreamCapping Download speed limit configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public DownstreamCapping getDownstreamCapping() {
         return this.DownstreamCapping;
@@ -342,9 +358,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Download speed limit configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param DownstreamCapping Download speed limit configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setDownstreamCapping(DownstreamCapping DownstreamCapping) {
         this.DownstreamCapping = DownstreamCapping;
@@ -352,9 +368,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Error code redirect configuration.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return ErrorPage Error code redirect configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public ErrorPage getErrorPage() {
         return this.ErrorPage;
@@ -362,9 +378,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Error code redirect configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param ErrorPage Error code redirect configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setErrorPage(ErrorPage ErrorPage) {
         this.ErrorPage = ErrorPage;
@@ -372,9 +388,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get 301 and 302 automatic origin-pull follow-redirect configuration.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return FollowRedirect 301 and 302 automatic origin-pull follow-redirect configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public FollowRedirect getFollowRedirect() {
         return this.FollowRedirect;
@@ -382,29 +398,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set 301 and 302 automatic origin-pull follow-redirect configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param FollowRedirect 301 and 302 automatic origin-pull follow-redirect configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setFollowRedirect(FollowRedirect FollowRedirect) {
         this.FollowRedirect = FollowRedirect;
     }
 
     /**
-     * Get Access protocol forced redirect configuration.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ForceRedirect Access protocol forced redirect configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Protocol redirect configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return ForceRedirect Protocol redirect configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public ForceRedirect getForceRedirect() {
         return this.ForceRedirect;
     }
 
     /**
-     * Set Access protocol forced redirect configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ForceRedirect Access protocol forced redirect configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Protocol redirect configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param ForceRedirect Protocol redirect configuration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setForceRedirect(ForceRedirect ForceRedirect) {
         this.ForceRedirect = ForceRedirect;
@@ -412,9 +428,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get HTTPS configuration.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Https HTTPS configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Https getHttps() {
         return this.Https;
@@ -422,9 +438,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set HTTPS configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Https HTTPS configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setHttps(Https Https) {
         this.Https = Https;
@@ -432,9 +448,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get IP blocklist/allowlist configuration.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return IpFilter IP blocklist/allowlist configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public IpFilter getIpFilter() {
         return this.IpFilter;
@@ -442,9 +458,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set IP blocklist/allowlist configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param IpFilter IP blocklist/allowlist configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setIpFilter(IpFilter IpFilter) {
         this.IpFilter = IpFilter;
@@ -452,9 +468,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get IP access limit configuration.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return IpFreqLimit IP access limit configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public IpFreqLimit getIpFreqLimit() {
         return this.IpFreqLimit;
@@ -462,9 +478,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set IP access limit configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param IpFreqLimit IP access limit configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setIpFreqLimit(IpFreqLimit IpFreqLimit) {
         this.IpFreqLimit = IpFreqLimit;
@@ -472,9 +488,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Browser cache rules configuration.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return MaxAge Browser cache rules configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public MaxAge getMaxAge() {
         return this.MaxAge;
@@ -482,9 +498,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Browser cache rules configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param MaxAge Browser cache rules configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setMaxAge(MaxAge MaxAge) {
         this.MaxAge = MaxAge;
@@ -492,9 +508,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Origin server configuration.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Origin Origin server configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Origin getOrigin() {
         return this.Origin;
@@ -502,9 +518,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Origin server configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Origin Origin server configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setOrigin(Origin Origin) {
         this.Origin = Origin;
@@ -512,9 +528,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Cross-border optimization configuration.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return OriginPullOptimization Cross-border optimization configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public OriginPullOptimization getOriginPullOptimization() {
         return this.OriginPullOptimization;
@@ -522,9 +538,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Cross-border optimization configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param OriginPullOptimization Cross-border optimization configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setOriginPullOptimization(OriginPullOptimization OriginPullOptimization) {
         this.OriginPullOptimization = OriginPullOptimization;
@@ -532,9 +548,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Range GETs configuration.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return RangeOriginPull Range GETs configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public RangeOriginPull getRangeOriginPull() {
         return this.RangeOriginPull;
@@ -542,9 +558,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Range GETs configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param RangeOriginPull Range GETs configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRangeOriginPull(RangeOriginPull RangeOriginPull) {
         this.RangeOriginPull = RangeOriginPull;
@@ -552,9 +568,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Hotlink protection configuration.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Referer Hotlink protection configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Referer getReferer() {
         return this.Referer;
@@ -562,9 +578,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Hotlink protection configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Referer Hotlink protection configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setReferer(Referer Referer) {
         this.Referer = Referer;
@@ -572,9 +588,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Origin-pull request header configuration.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return RequestHeader Origin-pull request header configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public RequestHeader getRequestHeader() {
         return this.RequestHeader;
@@ -582,9 +598,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Origin-pull request header configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param RequestHeader Origin-pull request header configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRequestHeader(RequestHeader RequestHeader) {
         this.RequestHeader = RequestHeader;
@@ -592,9 +608,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Origin server response header configuration.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return ResponseHeader Origin server response header configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public ResponseHeader getResponseHeader() {
         return this.ResponseHeader;
@@ -602,9 +618,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Origin server response header configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param ResponseHeader Origin server response header configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setResponseHeader(ResponseHeader ResponseHeader) {
         this.ResponseHeader = ResponseHeader;
@@ -612,9 +628,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Follows origin server cache header configuration.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return ResponseHeaderCache Follows origin server cache header configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public ResponseHeaderCache getResponseHeaderCache() {
         return this.ResponseHeaderCache;
@@ -622,9 +638,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Follows origin server cache header configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param ResponseHeaderCache Follows origin server cache header configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setResponseHeaderCache(ResponseHeaderCache ResponseHeaderCache) {
         this.ResponseHeaderCache = ResponseHeaderCache;
@@ -632,9 +648,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get SEO configuration.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Seo SEO configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Seo getSeo() {
         return this.Seo;
@@ -642,29 +658,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set SEO configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Seo SEO configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setSeo(Seo Seo) {
         this.Seo = Seo;
     }
 
     /**
-     * Get Domain name service type. `web`: static acceleration; `download`: download acceleration; `media`: streaming media acceleration.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceType Domain name service type. `web`: static acceleration; `download`: download acceleration; `media`: streaming media acceleration.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Domain name service type. Values: `web` (static acceleration); `download` (download acceleration); `media` (streaming media acceleration).
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return ServiceType Domain name service type. Values: `web` (static acceleration); `download` (download acceleration); `media` (streaming media acceleration).
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set Domain name service type. `web`: static acceleration; `download`: download acceleration; `media`: streaming media acceleration.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ServiceType Domain name service type. `web`: static acceleration; `download`: download acceleration; `media`: streaming media acceleration.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Domain name service type. Values: `web` (static acceleration); `download` (download acceleration); `media` (streaming media acceleration).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param ServiceType Domain name service type. Values: `web` (static acceleration); `download` (download acceleration); `media` (streaming media acceleration).
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
@@ -672,9 +688,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Status code cache configuration.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return StatusCodeCache Status code cache configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public StatusCodeCache getStatusCodeCache() {
         return this.StatusCodeCache;
@@ -682,9 +698,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Status code cache configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param StatusCodeCache Status code cache configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setStatusCodeCache(StatusCodeCache StatusCodeCache) {
         this.StatusCodeCache = StatusCodeCache;
@@ -692,9 +708,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Video dragging configuration.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return VideoSeek Video dragging configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public VideoSeek getVideoSeek() {
         return this.VideoSeek;
@@ -702,52 +718,92 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Video dragging configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param VideoSeek Video dragging configuration.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setVideoSeek(VideoSeek VideoSeek) {
         this.VideoSeek = VideoSeek;
     }
 
     /**
-     * Get Private access for S3 origin
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return AwsPrivateAccess Private access for S3 origin
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Access authentication for S3 origin
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return AwsPrivateAccess Access authentication for S3 origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public AwsPrivateAccess getAwsPrivateAccess() {
         return this.AwsPrivateAccess;
     }
 
     /**
-     * Set Private access for S3 origin
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param AwsPrivateAccess Private access for S3 origin
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Access authentication for S3 origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param AwsPrivateAccess Access authentication for S3 origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setAwsPrivateAccess(AwsPrivateAccess AwsPrivateAccess) {
         this.AwsPrivateAccess = AwsPrivateAccess;
     }
 
     /**
-     * Get Private access for OSS origin
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return OssPrivateAccess Private access for OSS origin
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Access authentication for OSS origin
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return OssPrivateAccess Access authentication for OSS origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public OssPrivateAccess getOssPrivateAccess() {
         return this.OssPrivateAccess;
     }
 
     /**
-     * Set Private access for OSS origin
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param OssPrivateAccess Private access for OSS origin
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Access authentication for OSS origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param OssPrivateAccess Access authentication for OSS origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setOssPrivateAccess(OssPrivateAccess OssPrivateAccess) {
         this.OssPrivateAccess = OssPrivateAccess;
+    }
+
+    /**
+     * Get Access authentication for Huawei Cloud OBS origin
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return HwPrivateAccess Access authentication for Huawei Cloud OBS origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public HwPrivateAccess getHwPrivateAccess() {
+        return this.HwPrivateAccess;
+    }
+
+    /**
+     * Set Access authentication for Huawei Cloud OBS origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param HwPrivateAccess Access authentication for Huawei Cloud OBS origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setHwPrivateAccess(HwPrivateAccess HwPrivateAccess) {
+        this.HwPrivateAccess = HwPrivateAccess;
+    }
+
+    /**
+     * Get Access authentication for QiNiu Cloud Kodo origin
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return QnPrivateAccess Access authentication for QiNiu Cloud Kodo origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public QnPrivateAccess getQnPrivateAccess() {
+        return this.QnPrivateAccess;
+    }
+
+    /**
+     * Set Access authentication for QiNiu Cloud Kodo origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param QnPrivateAccess Access authentication for QiNiu Cloud Kodo origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setQnPrivateAccess(QnPrivateAccess QnPrivateAccess) {
+        this.QnPrivateAccess = QnPrivateAccess;
     }
 
     public OverseaConfig() {
@@ -836,6 +892,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.OssPrivateAccess != null) {
             this.OssPrivateAccess = new OssPrivateAccess(source.OssPrivateAccess);
         }
+        if (source.HwPrivateAccess != null) {
+            this.HwPrivateAccess = new HwPrivateAccess(source.HwPrivateAccess);
+        }
+        if (source.QnPrivateAccess != null) {
+            this.QnPrivateAccess = new QnPrivateAccess(source.QnPrivateAccess);
+        }
     }
 
 
@@ -869,6 +931,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamObj(map, prefix + "VideoSeek.", this.VideoSeek);
         this.setParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
         this.setParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
+        this.setParamObj(map, prefix + "HwPrivateAccess.", this.HwPrivateAccess);
+        this.setParamObj(map, prefix + "QnPrivateAccess.", this.QnPrivateAccess);
 
     }
 }

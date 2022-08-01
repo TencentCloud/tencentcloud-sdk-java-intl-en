@@ -31,15 +31,15 @@ public class AccessControl extends AbstractModel{
 
     /**
     * Request header and request URL access rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("AccessControlRules")
     @Expose
     private AccessControlRule [] AccessControlRules;
 
     /**
-    * Returned status code
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Returns status code
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("ReturnCode")
     @Expose
@@ -63,9 +63,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Request header and request URL access rule
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return AccessControlRules Request header and request URL access rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public AccessControlRule [] getAccessControlRules() {
         return this.AccessControlRules;
@@ -73,29 +73,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Request header and request URL access rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param AccessControlRules Request header and request URL access rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setAccessControlRules(AccessControlRule [] AccessControlRules) {
         this.AccessControlRules = AccessControlRules;
     }
 
     /**
-     * Get Returned status code
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ReturnCode Returned status code
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Returns status code
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return ReturnCode Returns status code
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Long getReturnCode() {
         return this.ReturnCode;
     }
 
     /**
-     * Set Returned status code
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ReturnCode Returned status code
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Returns status code
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param ReturnCode Returns status code
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setReturnCode(Long ReturnCode) {
         this.ReturnCode = ReturnCode;

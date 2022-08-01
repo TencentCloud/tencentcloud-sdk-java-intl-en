@@ -24,9 +24,9 @@ public class ForceRedirect extends AbstractModel{
 
     /**
     * Access forced redirect configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Switch")
     @Expose
@@ -36,7 +36,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     * Access forced redirect types
 http: forced HTTP redirect
 https: forced HTTPS redirect
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("RedirectType")
     @Expose
@@ -45,15 +45,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
     * Status code returned for forced redirect 
 Supports 301, 302.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("RedirectStatusCode")
     @Expose
     private Long RedirectStatusCode;
 
     /**
-    * Whether to return the added header in forced redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Whether to return the newly added header during force redirection
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("CarryHeaders")
     @Expose
@@ -61,13 +61,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Access forced redirect configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained. 
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Switch Access forced redirect configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
@@ -75,13 +75,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Access forced redirect configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Switch Access forced redirect configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
@@ -91,11 +91,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Get Access forced redirect types
 http: forced HTTP redirect
 https: forced HTTPS redirect
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return RedirectType Access forced redirect types
 http: forced HTTP redirect
 https: forced HTTPS redirect
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getRedirectType() {
         return this.RedirectType;
@@ -105,11 +105,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Set Access forced redirect types
 http: forced HTTP redirect
 https: forced HTTPS redirect
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param RedirectType Access forced redirect types
 http: forced HTTP redirect
 https: forced HTTPS redirect
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRedirectType(String RedirectType) {
         this.RedirectType = RedirectType;
@@ -118,10 +118,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Get Status code returned for forced redirect 
 Supports 301, 302.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return RedirectStatusCode Status code returned for forced redirect 
 Supports 301, 302.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Long getRedirectStatusCode() {
         return this.RedirectStatusCode;
@@ -130,30 +130,30 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Set Status code returned for forced redirect 
 Supports 301, 302.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param RedirectStatusCode Status code returned for forced redirect 
 Supports 301, 302.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRedirectStatusCode(Long RedirectStatusCode) {
         this.RedirectStatusCode = RedirectStatusCode;
     }
 
     /**
-     * Get Whether to return the added header in forced redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return CarryHeaders Whether to return the added header in forced redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Whether to return the newly added header during force redirection
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return CarryHeaders Whether to return the newly added header during force redirection
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getCarryHeaders() {
         return this.CarryHeaders;
     }
 
     /**
-     * Set Whether to return the added header in forced redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param CarryHeaders Whether to return the added header in forced redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Whether to return the newly added header during force redirection
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param CarryHeaders Whether to return the newly added header during force redirection
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCarryHeaders(String CarryHeaders) {
         this.CarryHeaders = CarryHeaders;

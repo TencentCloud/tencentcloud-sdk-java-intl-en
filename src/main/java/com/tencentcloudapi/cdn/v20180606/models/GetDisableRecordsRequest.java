@@ -37,7 +37,7 @@ public class GetDisableRecordsRequest extends AbstractModel{
     private String StartTime;
 
     /**
-    * End time, such as 2018-12-14 10:24:00
+    * End time, such as `2018-12-14 10:24:00`
     */
     @SerializedName("EndTime")
     @Expose
@@ -60,7 +60,7 @@ enable: The URL is enabled (unblocked) and can be normally accessed
     private Long Offset;
 
     /**
-    * Limit on paged queries. Default value: 20
+    * Pagination limit. Default value: 20.
     */
     @SerializedName("Limit")
     @Expose
@@ -106,16 +106,16 @@ enable: The URL is enabled (unblocked) and can be normally accessed
     }
 
     /**
-     * Get End time, such as 2018-12-14 10:24:00 
-     * @return EndTime End time, such as 2018-12-14 10:24:00
+     * Get End time, such as `2018-12-14 10:24:00` 
+     * @return EndTime End time, such as `2018-12-14 10:24:00`
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time, such as 2018-12-14 10:24:00
-     * @param EndTime End time, such as 2018-12-14 10:24:00
+     * Set End time, such as `2018-12-14 10:24:00`
+     * @param EndTime End time, such as `2018-12-14 10:24:00`
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -162,16 +162,16 @@ enable: The URL is enabled (unblocked) and can be normally accessed
     }
 
     /**
-     * Get Limit on paged queries. Default value: 20 
-     * @return Limit Limit on paged queries. Default value: 20
+     * Get Pagination limit. Default value: 20. 
+     * @return Limit Pagination limit. Default value: 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit on paged queries. Default value: 20
-     * @param Limit Limit on paged queries. Default value: 20
+     * Set Pagination limit. Default value: 20.
+     * @param Limit Pagination limit. Default value: 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

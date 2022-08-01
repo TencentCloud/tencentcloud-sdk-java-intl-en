@@ -103,6 +103,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long Backtracking;
 
     /**
+    * Whether to be encoded in GBK format. Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsGBK")
+    @Expose
+    private Long IsGBK;
+
+    /**
+    * Whether to be formatted as JSON (standard). Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("JsonStandard")
+    @Expose
+    private Long JsonStandard;
+
+    /**
      * Get Time field key name. `time_key` and `time_format` must appear in pairs
 Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return TimeKey Time field key name. `time_key` and `time_format` must appear in pairs
@@ -302,6 +318,46 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.Backtracking = Backtracking;
     }
 
+    /**
+     * Get Whether to be encoded in GBK format. Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsGBK Whether to be encoded in GBK format. Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getIsGBK() {
+        return this.IsGBK;
+    }
+
+    /**
+     * Set Whether to be encoded in GBK format. Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsGBK Whether to be encoded in GBK format. Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIsGBK(Long IsGBK) {
+        this.IsGBK = IsGBK;
+    }
+
+    /**
+     * Get Whether to be formatted as JSON (standard). Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return JsonStandard Whether to be formatted as JSON (standard). Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getJsonStandard() {
+        return this.JsonStandard;
+    }
+
+    /**
+     * Set Whether to be formatted as JSON (standard). Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param JsonStandard Whether to be formatted as JSON (standard). Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setJsonStandard(Long JsonStandard) {
+        this.JsonStandard = JsonStandard;
+    }
+
     public ExtractRuleInfo() {
     }
 
@@ -346,6 +402,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.Backtracking != null) {
             this.Backtracking = new Long(source.Backtracking);
         }
+        if (source.IsGBK != null) {
+            this.IsGBK = new Long(source.IsGBK);
+        }
+        if (source.JsonStandard != null) {
+            this.JsonStandard = new Long(source.JsonStandard);
+        }
     }
 
 
@@ -363,6 +425,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "UnMatchUpLoadSwitch", this.UnMatchUpLoadSwitch);
         this.setParamSimple(map, prefix + "UnMatchLogKey", this.UnMatchLogKey);
         this.setParamSimple(map, prefix + "Backtracking", this.Backtracking);
+        this.setParamSimple(map, prefix + "IsGBK", this.IsGBK);
+        this.setParamSimple(map, prefix + "JsonStandard", this.JsonStandard);
 
     }
 }

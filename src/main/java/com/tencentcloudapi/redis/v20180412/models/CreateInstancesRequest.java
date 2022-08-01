@@ -187,6 +187,20 @@ If the instance `TypeId` is CKV 3.2, the password can contain 8–30 letters and
     private Boolean DryRun;
 
     /**
+    * Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+    */
+    @SerializedName("ProductVersion")
+    @Expose
+    private String ProductVersion;
+
+    /**
+    * Dedicated cluster ID, which is required when `ProductVersion` is "cdc".
+    */
+    @SerializedName("RedisClusterId")
+    @Expose
+    private String RedisClusterId;
+
+    /**
      * Get Instance type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture). 
      * @return TypeId Instance type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture).
      */
@@ -566,6 +580,38 @@ If the instance `TypeId` is CKV 3.2, the password can contain 8–30 letters and
         this.DryRun = DryRun;
     }
 
+    /**
+     * Get Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition) 
+     * @return ProductVersion Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+     */
+    public String getProductVersion() {
+        return this.ProductVersion;
+    }
+
+    /**
+     * Set Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+     * @param ProductVersion Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+     */
+    public void setProductVersion(String ProductVersion) {
+        this.ProductVersion = ProductVersion;
+    }
+
+    /**
+     * Get Dedicated cluster ID, which is required when `ProductVersion` is "cdc". 
+     * @return RedisClusterId Dedicated cluster ID, which is required when `ProductVersion` is "cdc".
+     */
+    public String getRedisClusterId() {
+        return this.RedisClusterId;
+    }
+
+    /**
+     * Set Dedicated cluster ID, which is required when `ProductVersion` is "cdc".
+     * @param RedisClusterId Dedicated cluster ID, which is required when `ProductVersion` is "cdc".
+     */
+    public void setRedisClusterId(String RedisClusterId) {
+        this.RedisClusterId = RedisClusterId;
+    }
+
     public CreateInstancesRequest() {
     }
 
@@ -652,6 +698,12 @@ If the instance `TypeId` is CKV 3.2, the password can contain 8–30 letters and
         if (source.DryRun != null) {
             this.DryRun = new Boolean(source.DryRun);
         }
+        if (source.ProductVersion != null) {
+            this.ProductVersion = new String(source.ProductVersion);
+        }
+        if (source.RedisClusterId != null) {
+            this.RedisClusterId = new String(source.RedisClusterId);
+        }
     }
 
 
@@ -682,6 +734,8 @@ If the instance `TypeId` is CKV 3.2, the password can contain 8–30 letters and
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
+        this.setParamSimple(map, prefix + "ProductVersion", this.ProductVersion);
+        this.setParamSimple(map, prefix + "RedisClusterId", this.RedisClusterId);
 
     }
 }

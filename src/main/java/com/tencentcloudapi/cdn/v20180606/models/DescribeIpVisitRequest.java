@@ -54,7 +54,7 @@ Please note that if domain names are specified, this parameter will be ignored.
     private Long Project;
 
     /**
-    * Time granularity, which can be:
+    * Sampling interval in minutes. The available options vary for different query period. See below: 
 5min: 5 minutes. If the query period is within 24 hours, `5min` will be used by default.
 day: 1 day. If the query period is longer than 24 hours, `day` will be used by default.
     */
@@ -139,10 +139,10 @@ Please note that if domain names are specified, this parameter will be ignored.
     }
 
     /**
-     * Get Time granularity, which can be:
+     * Get Sampling interval in minutes. The available options vary for different query period. See below: 
 5min: 5 minutes. If the query period is within 24 hours, `5min` will be used by default.
 day: 1 day. If the query period is longer than 24 hours, `day` will be used by default. 
-     * @return Interval Time granularity, which can be:
+     * @return Interval Sampling interval in minutes. The available options vary for different query period. See below: 
 5min: 5 minutes. If the query period is within 24 hours, `5min` will be used by default.
 day: 1 day. If the query period is longer than 24 hours, `day` will be used by default.
      */
@@ -151,10 +151,10 @@ day: 1 day. If the query period is longer than 24 hours, `day` will be used by d
     }
 
     /**
-     * Set Time granularity, which can be:
+     * Set Sampling interval in minutes. The available options vary for different query period. See below: 
 5min: 5 minutes. If the query period is within 24 hours, `5min` will be used by default.
 day: 1 day. If the query period is longer than 24 hours, `day` will be used by default.
-     * @param Interval Time granularity, which can be:
+     * @param Interval Sampling interval in minutes. The available options vary for different query period. See below: 
 5min: 5 minutes. If the query period is within 24 hours, `5min` will be used by default.
 day: 1 day. If the query period is longer than 24 hours, `day` will be used by default.
      */

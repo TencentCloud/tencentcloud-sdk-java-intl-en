@@ -24,7 +24,7 @@ public class Ipv6 extends AbstractModel{
 
     /**
     * Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Switch")
     @Expose
@@ -32,9 +32,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Switch Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
@@ -42,9 +42,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Switch Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

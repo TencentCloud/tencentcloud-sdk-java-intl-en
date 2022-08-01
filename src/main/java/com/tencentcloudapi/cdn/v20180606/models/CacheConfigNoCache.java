@@ -23,9 +23,9 @@ import java.util.HashMap;
 public class CacheConfigNoCache extends AbstractModel{
 
     /**
-    * No cache configuration switch
-on: enable
-off: disable
+    * No-cache configuration switch
+`on`: Enable
+`off`: Disable
 Note: this field may return null, indicating that no valid value is obtained.
     */
     @SerializedName("Switch")
@@ -34,23 +34,23 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
     * Always forwards to the origin server for verification
-on: enable
-off: disable
-This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Revalidate")
     @Expose
     private String Revalidate;
 
     /**
-     * Get No cache configuration switch
-on: enable
-off: disable
+     * Get No-cache configuration switch
+`on`: Enable
+`off`: Disable
 Note: this field may return null, indicating that no valid value is obtained. 
-     * @return Switch No cache configuration switch
-on: enable
-off: disable
+     * @return Switch No-cache configuration switch
+`on`: Enable
+`off`: Disable
 Note: this field may return null, indicating that no valid value is obtained.
      */
     public String getSwitch() {
@@ -58,13 +58,13 @@ Note: this field may return null, indicating that no valid value is obtained.
     }
 
     /**
-     * Set No cache configuration switch
-on: enable
-off: disable
+     * Set No-cache configuration switch
+`on`: Enable
+`off`: Disable
 Note: this field may return null, indicating that no valid value is obtained.
-     * @param Switch No cache configuration switch
-on: enable
-off: disable
+     * @param Switch No-cache configuration switch
+`on`: Enable
+`off`: Disable
 Note: this field may return null, indicating that no valid value is obtained.
      */
     public void setSwitch(String Switch) {
@@ -73,15 +73,15 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Get Always forwards to the origin server for verification
-on: enable
-off: disable
-This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained. 
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Revalidate Always forwards to the origin server for verification
-on: enable
-off: disable
-This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getRevalidate() {
         return this.Revalidate;
@@ -89,15 +89,15 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Set Always forwards to the origin server for verification
-on: enable
-off: disable
-This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Revalidate Always forwards to the origin server for verification
-on: enable
-off: disable
-This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRevalidate(String Revalidate) {
         this.Revalidate = Revalidate;

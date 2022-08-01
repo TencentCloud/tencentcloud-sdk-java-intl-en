@@ -23,9 +23,9 @@ import java.util.HashMap;
 public class UrlRedirect extends AbstractModel{
 
     /**
-    * Whether URL rewriting is enabled
-`on`: enabled
-`off`: disabled
+    * Whether to enable URL rewriting
+`on`: Enable
+`off`: Disable
     */
     @SerializedName("Switch")
     @Expose
@@ -40,24 +40,24 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     private UrlRedirectRule [] PathRules;
 
     /**
-     * Get Whether URL rewriting is enabled
-`on`: enabled
-`off`: disabled 
-     * @return Switch Whether URL rewriting is enabled
-`on`: enabled
-`off`: disabled
+     * Get Whether to enable URL rewriting
+`on`: Enable
+`off`: Disable 
+     * @return Switch Whether to enable URL rewriting
+`on`: Enable
+`off`: Disable
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether URL rewriting is enabled
-`on`: enabled
-`off`: disabled
-     * @param Switch Whether URL rewriting is enabled
-`on`: enabled
-`off`: disabled
+     * Set Whether to enable URL rewriting
+`on`: Enable
+`off`: Disable
+     * @param Switch Whether to enable URL rewriting
+`on`: Enable
+`off`: Disable
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

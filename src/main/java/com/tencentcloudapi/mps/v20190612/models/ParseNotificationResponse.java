@@ -23,8 +23,10 @@ import java.util.HashMap;
 public class ParseNotificationResponse extends AbstractModel{
 
     /**
-    * Supported event type. Valid values:
-<li>WorkflowTask: Video workflow processing task.</li>
+    * The event type. Valid values:
+<li>WorkflowTask</li>
+<li>EditMediaTask</li>
+<li>ScheduleTask (scheme)</li>
     */
     @SerializedName("EventType")
     @Expose
@@ -60,6 +62,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String SessionContext;
 
     /**
+    * The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ScheduleTaskEvent")
+    @Expose
+    private ScheduleTask ScheduleTaskEvent;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -67,20 +77,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Supported event type. Valid values:
-<li>WorkflowTask: Video workflow processing task.</li> 
-     * @return EventType Supported event type. Valid values:
-<li>WorkflowTask: Video workflow processing task.</li>
+     * Get The event type. Valid values:
+<li>WorkflowTask</li>
+<li>EditMediaTask</li>
+<li>ScheduleTask (scheme)</li> 
+     * @return EventType The event type. Valid values:
+<li>WorkflowTask</li>
+<li>EditMediaTask</li>
+<li>ScheduleTask (scheme)</li>
      */
     public String getEventType() {
         return this.EventType;
     }
 
     /**
-     * Set Supported event type. Valid values:
-<li>WorkflowTask: Video workflow processing task.</li>
-     * @param EventType Supported event type. Valid values:
-<li>WorkflowTask: Video workflow processing task.</li>
+     * Set The event type. Valid values:
+<li>WorkflowTask</li>
+<li>EditMediaTask</li>
+<li>ScheduleTask (scheme)</li>
+     * @param EventType The event type. Valid values:
+<li>WorkflowTask</li>
+<li>EditMediaTask</li>
+<li>ScheduleTask (scheme)</li>
      */
     public void setEventType(String EventType) {
         this.EventType = EventType;
@@ -155,6 +173,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ScheduleTaskEvent The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public ScheduleTask getScheduleTaskEvent() {
+        return this.ScheduleTaskEvent;
+    }
+
+    /**
+     * Set The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ScheduleTaskEvent The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setScheduleTaskEvent(ScheduleTask ScheduleTaskEvent) {
+        this.ScheduleTaskEvent = ScheduleTaskEvent;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -193,6 +231,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.SessionContext != null) {
             this.SessionContext = new String(source.SessionContext);
         }
+        if (source.ScheduleTaskEvent != null) {
+            this.ScheduleTaskEvent = new ScheduleTask(source.ScheduleTaskEvent);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -208,6 +249,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "EditMediaTaskEvent.", this.EditMediaTaskEvent);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
+        this.setParamObj(map, prefix + "ScheduleTaskEvent.", this.ScheduleTaskEvent);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

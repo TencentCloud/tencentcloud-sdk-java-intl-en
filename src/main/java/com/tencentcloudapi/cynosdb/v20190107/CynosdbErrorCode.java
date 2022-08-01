@@ -18,13 +18,13 @@ public enum CynosdbErrorCode {
     // Failed to query the backup policy. Please try again later. If the problem persists, please contact customer service.
      FAILEDOPERATION_GETBACKUPSTRATEGYERROR("FailedOperation.GetBackupStrategyError"),
      
-    // Insufficient account balance.
+    // Insufficient account balance
      FAILEDOPERATION_INSUFFICIENTBALANCE("FailedOperation.InsufficientBalance"),
      
     // Operation failed. Try again later. If the problem persists, contact customer service.
      FAILEDOPERATION_OPERATIONFAILEDERROR("FailedOperation.OperationFailedError"),
      
-    // 
+    // Failed to query specifications.
      FAILEDOPERATION_QUERYSPECBYSPECCODEERROR("FailedOperation.QuerySpecBySpecCodeError"),
      
     // Failed to create the order and make a payment. Please try again later. If the problem persists, please contact customer service.
@@ -123,7 +123,7 @@ public enum CynosdbErrorCode {
     // Invalid instance specification.
      INVALIDPARAMETERVALUE_INVALIDSPEC("InvalidParameterValue.InvalidSpec"),
      
-    // Invalid availability zone ({{1}}).
+    // Invalid AZ
      INVALIDPARAMETERVALUE_INVALIDZONEIDERROR("InvalidParameterValue.InvalidZoneIdError"),
      
     // These two parameters cannot be set at the same time.
@@ -131,6 +131,9 @@ public enum CynosdbErrorCode {
      
     // Incorrect parameter.
      INVALIDPARAMETERVALUE_PARAMERROR("InvalidParameterValue.ParamError"),
+     
+    // 
+     INVALIDPARAMETERVALUE_PARAMETEROUTRANGEERROR("InvalidParameterValue.ParameterOutRangeError"),
      
     // This operation is not allowed for monthly-subscribed instances.
      INVALIDPARAMETERVALUE_PREPAYPAYMODEERROR("InvalidParameterValue.PrePayPayModeError"),
@@ -192,7 +195,7 @@ public enum CynosdbErrorCode {
     // The instance is exceptional, so the operation cannot be performed temporarily.
      RESOURCEUNAVAILABLE_INSTANCESTATUSABNORMAL("ResourceUnavailable.InstanceStatusAbnormal"),
      
-    // Users who haven't completed identity verification cannot make purchases.
+    // Users who haven't completed identity verification can’t make purchases.
      UNAUTHORIZEDOPERATION_NOTREALNAMEACCOUNT("UnauthorizedOperation.NotRealNameAccount"),
      
     // CAM authentication failed.

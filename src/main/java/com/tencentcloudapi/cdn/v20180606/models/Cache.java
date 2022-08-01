@@ -24,7 +24,7 @@ public class Cache extends AbstractModel{
 
     /**
     * Basic cache expiration time configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("SimpleCache")
     @Expose
@@ -32,7 +32,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * (Disused) Advanced cache validity configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("AdvancedCache")
     @Expose
@@ -40,7 +40,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Advanced path cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("RuleCache")
     @Expose
@@ -48,9 +48,9 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Get Basic cache expiration time configuration
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return SimpleCache Basic cache expiration time configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public SimpleCache getSimpleCache() {
         return this.SimpleCache;
@@ -58,9 +58,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Basic cache expiration time configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param SimpleCache Basic cache expiration time configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSimpleCache(SimpleCache SimpleCache) {
         this.SimpleCache = SimpleCache;
@@ -68,9 +68,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get (Disused) Advanced cache validity configuration
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return AdvancedCache (Disused) Advanced cache validity configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public AdvancedCache getAdvancedCache() {
         return this.AdvancedCache;
@@ -78,9 +78,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set (Disused) Advanced cache validity configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param AdvancedCache (Disused) Advanced cache validity configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setAdvancedCache(AdvancedCache AdvancedCache) {
         this.AdvancedCache = AdvancedCache;
@@ -88,9 +88,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Advanced path cache configuration
-Note: this field may return null, indicating that no valid value is obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return RuleCache Advanced path cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public RuleCache [] getRuleCache() {
         return this.RuleCache;
@@ -98,9 +98,9 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Set Advanced path cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param RuleCache Advanced path cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRuleCache(RuleCache [] RuleCache) {
         this.RuleCache = RuleCache;

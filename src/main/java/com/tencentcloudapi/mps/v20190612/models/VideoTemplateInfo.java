@@ -23,26 +23,29 @@ import java.util.HashMap;
 public class VideoTemplateInfo extends AbstractModel{
 
     /**
-    * Video stream codec. Valid values:
+    * The video codec. Valid values:
 <li>`libx264`: H.264</li>
 <li>`libx265`: H.265</li>
 <li>`av1`: AOMedia Video 1</li>
+Note: You must specify a resolution (not higher than 640 x 480) if the H.265 codec is used.
+Note: You can only use the AOMedia Video 1 codec for MP4 files.
     */
     @SerializedName("Codec")
     @Expose
     private String Codec;
 
     /**
-    * Video frame rate in Hz. Value range: [0, 100].
+    * The video frame rate (Hz). Value range: [0, 100].
 If the value is 0, the frame rate will be the same as that of the source video.
+Note: For adaptive bitrate streaming, the value range of this parameter is [0, 60].
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-    * Video stream bitrate (Kbps). Valid values: `0`; [75, 35000]
-If the value is `0`, the original video bitrate will be used.
+    * The video bitrate (Kbps). Value range: 0 and [128, 35000].
+If the value is 0, the bitrate of the video will be the same as that of the source video.
     */
     @SerializedName("Bitrate")
     @Expose
@@ -50,9 +53,10 @@ If the value is `0`, the original video bitrate will be used.
 
     /**
     * Resolution adaption. Valid values:
-<li>open: Enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: Disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+<li>open: Enabled. When resolution adaption is enabled, `Width` indicates the long side of a video, while `Height` indicates the short side.</li>
+<li>close: Disabled. When resolution adaption is disabled, `Width` indicates the width of a video, while `Height` indicates the height.</li>
 Default value: open.
+Note: When resolution adaption is enabled, `Width` cannot be smaller than `Height`.
     */
     @SerializedName("ResolutionAdaptive")
     @Expose
@@ -91,12 +95,13 @@ If this parameter is 0 or left empty, the system will automatically set the GOP 
     private Long Gop;
 
     /**
-    * Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
-<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+    * The fill mode, which indicates how a video is resized when the video’s original aspect ratio is different from the target aspect ratio. Valid values:
+<li>stretch: Stretch the image frame by frame to fill the entire screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: Keep the image's original aspect ratio and fill the blank space with black bars.</li>
+<li>white: Keep the image’s original aspect ratio and fill the blank space with white bars.</li>
+<li>gauss: Keep the image’s original aspect ratio and apply Gaussian blur to the blank space.</li>
 Default value: black.
+Note: Only `stretch` and `black` are supported for adaptive bitrate streaming.
     */
     @SerializedName("FillType")
     @Expose
@@ -112,68 +117,80 @@ It is not recommended to specify this parameter if there are no special requirem
     private Long Vcrf;
 
     /**
-     * Get Video stream codec. Valid values:
-<li>`libx264`: H.264</li>
-<li>`libx265`: H.265</li>
-<li>`av1`: AOMedia Video 1</li> 
-     * @return Codec Video stream codec. Valid values:
+     * Get The video codec. Valid values:
 <li>`libx264`: H.264</li>
 <li>`libx265`: H.265</li>
 <li>`av1`: AOMedia Video 1</li>
+Note: You must specify a resolution (not higher than 640 x 480) if the H.265 codec is used.
+Note: You can only use the AOMedia Video 1 codec for MP4 files. 
+     * @return Codec The video codec. Valid values:
+<li>`libx264`: H.264</li>
+<li>`libx265`: H.265</li>
+<li>`av1`: AOMedia Video 1</li>
+Note: You must specify a resolution (not higher than 640 x 480) if the H.265 codec is used.
+Note: You can only use the AOMedia Video 1 codec for MP4 files.
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set Video stream codec. Valid values:
+     * Set The video codec. Valid values:
 <li>`libx264`: H.264</li>
 <li>`libx265`: H.265</li>
 <li>`av1`: AOMedia Video 1</li>
-     * @param Codec Video stream codec. Valid values:
+Note: You must specify a resolution (not higher than 640 x 480) if the H.265 codec is used.
+Note: You can only use the AOMedia Video 1 codec for MP4 files.
+     * @param Codec The video codec. Valid values:
 <li>`libx264`: H.264</li>
 <li>`libx265`: H.265</li>
 <li>`av1`: AOMedia Video 1</li>
+Note: You must specify a resolution (not higher than 640 x 480) if the H.265 codec is used.
+Note: You can only use the AOMedia Video 1 codec for MP4 files.
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
     }
 
     /**
-     * Get Video frame rate in Hz. Value range: [0, 100].
-If the value is 0, the frame rate will be the same as that of the source video. 
-     * @return Fps Video frame rate in Hz. Value range: [0, 100].
+     * Get The video frame rate (Hz). Value range: [0, 100].
 If the value is 0, the frame rate will be the same as that of the source video.
+Note: For adaptive bitrate streaming, the value range of this parameter is [0, 60]. 
+     * @return Fps The video frame rate (Hz). Value range: [0, 100].
+If the value is 0, the frame rate will be the same as that of the source video.
+Note: For adaptive bitrate streaming, the value range of this parameter is [0, 60].
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set Video frame rate in Hz. Value range: [0, 100].
+     * Set The video frame rate (Hz). Value range: [0, 100].
 If the value is 0, the frame rate will be the same as that of the source video.
-     * @param Fps Video frame rate in Hz. Value range: [0, 100].
+Note: For adaptive bitrate streaming, the value range of this parameter is [0, 60].
+     * @param Fps The video frame rate (Hz). Value range: [0, 100].
 If the value is 0, the frame rate will be the same as that of the source video.
+Note: For adaptive bitrate streaming, the value range of this parameter is [0, 60].
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
     }
 
     /**
-     * Get Video stream bitrate (Kbps). Valid values: `0`; [75, 35000]
-If the value is `0`, the original video bitrate will be used. 
-     * @return Bitrate Video stream bitrate (Kbps). Valid values: `0`; [75, 35000]
-If the value is `0`, the original video bitrate will be used.
+     * Get The video bitrate (Kbps). Value range: 0 and [128, 35000].
+If the value is 0, the bitrate of the video will be the same as that of the source video. 
+     * @return Bitrate The video bitrate (Kbps). Value range: 0 and [128, 35000].
+If the value is 0, the bitrate of the video will be the same as that of the source video.
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set Video stream bitrate (Kbps). Valid values: `0`; [75, 35000]
-If the value is `0`, the original video bitrate will be used.
-     * @param Bitrate Video stream bitrate (Kbps). Valid values: `0`; [75, 35000]
-If the value is `0`, the original video bitrate will be used.
+     * Set The video bitrate (Kbps). Value range: 0 and [128, 35000].
+If the value is 0, the bitrate of the video will be the same as that of the source video.
+     * @param Bitrate The video bitrate (Kbps). Value range: 0 and [128, 35000].
+If the value is 0, the bitrate of the video will be the same as that of the source video.
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
@@ -181,13 +198,15 @@ If the value is `0`, the original video bitrate will be used.
 
     /**
      * Get Resolution adaption. Valid values:
-<li>open: Enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: Disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
-Default value: open. 
-     * @return ResolutionAdaptive Resolution adaption. Valid values:
-<li>open: Enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: Disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+<li>open: Enabled. When resolution adaption is enabled, `Width` indicates the long side of a video, while `Height` indicates the short side.</li>
+<li>close: Disabled. When resolution adaption is disabled, `Width` indicates the width of a video, while `Height` indicates the height.</li>
 Default value: open.
+Note: When resolution adaption is enabled, `Width` cannot be smaller than `Height`. 
+     * @return ResolutionAdaptive Resolution adaption. Valid values:
+<li>open: Enabled. When resolution adaption is enabled, `Width` indicates the long side of a video, while `Height` indicates the short side.</li>
+<li>close: Disabled. When resolution adaption is disabled, `Width` indicates the width of a video, while `Height` indicates the height.</li>
+Default value: open.
+Note: When resolution adaption is enabled, `Width` cannot be smaller than `Height`.
      */
     public String getResolutionAdaptive() {
         return this.ResolutionAdaptive;
@@ -195,13 +214,15 @@ Default value: open.
 
     /**
      * Set Resolution adaption. Valid values:
-<li>open: Enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: Disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+<li>open: Enabled. When resolution adaption is enabled, `Width` indicates the long side of a video, while `Height` indicates the short side.</li>
+<li>close: Disabled. When resolution adaption is disabled, `Width` indicates the width of a video, while `Height` indicates the height.</li>
 Default value: open.
+Note: When resolution adaption is enabled, `Width` cannot be smaller than `Height`.
      * @param ResolutionAdaptive Resolution adaption. Valid values:
-<li>open: Enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: Disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+<li>open: Enabled. When resolution adaption is enabled, `Width` indicates the long side of a video, while `Height` indicates the short side.</li>
+<li>close: Disabled. When resolution adaption is disabled, `Width` indicates the width of a video, while `Height` indicates the height.</li>
 Default value: open.
+Note: When resolution adaption is enabled, `Width` cannot be smaller than `Height`.
      */
     public void setResolutionAdaptive(String ResolutionAdaptive) {
         this.ResolutionAdaptive = ResolutionAdaptive;
@@ -300,36 +321,40 @@ If this parameter is 0 or left empty, the system will automatically set the GOP 
     }
 
     /**
-     * Get Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
-<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
-Default value: black. 
-     * @return FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
-<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+     * Get The fill mode, which indicates how a video is resized when the video’s original aspect ratio is different from the target aspect ratio. Valid values:
+<li>stretch: Stretch the image frame by frame to fill the entire screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: Keep the image's original aspect ratio and fill the blank space with black bars.</li>
+<li>white: Keep the image’s original aspect ratio and fill the blank space with white bars.</li>
+<li>gauss: Keep the image’s original aspect ratio and apply Gaussian blur to the blank space.</li>
 Default value: black.
+Note: Only `stretch` and `black` are supported for adaptive bitrate streaming. 
+     * @return FillType The fill mode, which indicates how a video is resized when the video’s original aspect ratio is different from the target aspect ratio. Valid values:
+<li>stretch: Stretch the image frame by frame to fill the entire screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: Keep the image's original aspect ratio and fill the blank space with black bars.</li>
+<li>white: Keep the image’s original aspect ratio and fill the blank space with white bars.</li>
+<li>gauss: Keep the image’s original aspect ratio and apply Gaussian blur to the blank space.</li>
+Default value: black.
+Note: Only `stretch` and `black` are supported for adaptive bitrate streaming.
      */
     public String getFillType() {
         return this.FillType;
     }
 
     /**
-     * Set Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
-<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+     * Set The fill mode, which indicates how a video is resized when the video’s original aspect ratio is different from the target aspect ratio. Valid values:
+<li>stretch: Stretch the image frame by frame to fill the entire screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: Keep the image's original aspect ratio and fill the blank space with black bars.</li>
+<li>white: Keep the image’s original aspect ratio and fill the blank space with white bars.</li>
+<li>gauss: Keep the image’s original aspect ratio and apply Gaussian blur to the blank space.</li>
 Default value: black.
-     * @param FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
-<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+Note: Only `stretch` and `black` are supported for adaptive bitrate streaming.
+     * @param FillType The fill mode, which indicates how a video is resized when the video’s original aspect ratio is different from the target aspect ratio. Valid values:
+<li>stretch: Stretch the image frame by frame to fill the entire screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: Keep the image's original aspect ratio and fill the blank space with black bars.</li>
+<li>white: Keep the image’s original aspect ratio and fill the blank space with white bars.</li>
+<li>gauss: Keep the image’s original aspect ratio and apply Gaussian blur to the blank space.</li>
 Default value: black.
+Note: Only `stretch` and `black` are supported for adaptive bitrate streaming.
      */
     public void setFillType(String FillType) {
         this.FillType = FillType;

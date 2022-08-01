@@ -24,8 +24,8 @@ public class IpFilter extends AbstractModel{
 
     /**
     * IP blocklist/allowlist configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
     */
     @SerializedName("Switch")
     @Expose
@@ -33,19 +33,19 @@ off: disabled
 
     /**
     * IP blocklist/allowlist type
-whitelist: allowlist
-blacklist: blocklist
-Note: this field may return null, indicating that no valid values can be obtained.
+`whitelist`: IP allowlist
+`blacklist`: IP blocklist
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("FilterType")
     @Expose
     private String FilterType;
 
     /**
-    * IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered
-Note: this field may return null, indicating that no valid values can be obtained.
+    * IP blocklist/allowlist
+Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format.
+Up to 50 whitelists or blacklists can be entered
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Filters")
     @Expose
@@ -53,7 +53,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("FilterRules")
     @Expose
@@ -62,7 +62,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     /**
     * HTTP code returned when the IP allowlist/blocklist verification fails
 Valid values: 400-499
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("ReturnCode")
     @Expose
@@ -70,11 +70,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get IP blocklist/allowlist configuration switch
-on: enabled
-off: disabled 
+`on`: Enable
+`off`: Disable 
      * @return Switch IP blocklist/allowlist configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     public String getSwitch() {
         return this.Switch;
@@ -82,11 +82,11 @@ off: disabled
 
     /**
      * Set IP blocklist/allowlist configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      * @param Switch IP blocklist/allowlist configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
@@ -94,13 +94,13 @@ off: disabled
 
     /**
      * Get IP blocklist/allowlist type
-whitelist: allowlist
-blacklist: blocklist
-Note: this field may return null, indicating that no valid values can be obtained. 
+`whitelist`: IP allowlist
+`blacklist`: IP blocklist
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return FilterType IP blocklist/allowlist type
-whitelist: allowlist
-blacklist: blocklist
-Note: this field may return null, indicating that no valid values can be obtained.
+`whitelist`: IP allowlist
+`blacklist`: IP blocklist
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getFilterType() {
         return this.FilterType;
@@ -108,41 +108,41 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set IP blocklist/allowlist type
-whitelist: allowlist
-blacklist: blocklist
-Note: this field may return null, indicating that no valid values can be obtained.
+`whitelist`: IP allowlist
+`blacklist`: IP blocklist
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param FilterType IP blocklist/allowlist type
-whitelist: allowlist
-blacklist: blocklist
-Note: this field may return null, indicating that no valid values can be obtained.
+`whitelist`: IP allowlist
+`blacklist`: IP blocklist
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setFilterType(String FilterType) {
         this.FilterType = FilterType;
     }
 
     /**
-     * Get IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Filters IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get IP blocklist/allowlist
+Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format.
+Up to 50 whitelists or blacklists can be entered
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Filters IP blocklist/allowlist
+Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format.
+Up to 50 whitelists or blacklists can be entered
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Filters IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set IP blocklist/allowlist
+Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format.
+Up to 50 whitelists or blacklists can be entered
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Filters IP blocklist/allowlist
+Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format.
+Up to 50 whitelists or blacklists can be entered
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setFilters(String [] Filters) {
         this.Filters = Filters;
@@ -150,9 +150,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
-Note: this field may return `null`, indicating that no valid value is obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return FilterRules IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public IpFilterPathRule [] getFilterRules() {
         return this.FilterRules;
@@ -160,9 +160,9 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
     /**
      * Set IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param FilterRules IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setFilterRules(IpFilterPathRule [] FilterRules) {
         this.FilterRules = FilterRules;
@@ -171,10 +171,10 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     /**
      * Get HTTP code returned when the IP allowlist/blocklist verification fails
 Valid values: 400-499
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return ReturnCode HTTP code returned when the IP allowlist/blocklist verification fails
 Valid values: 400-499
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Long getReturnCode() {
         return this.ReturnCode;
@@ -183,10 +183,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     /**
      * Set HTTP code returned when the IP allowlist/blocklist verification fails
 Valid values: 400-499
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param ReturnCode HTTP code returned when the IP allowlist/blocklist verification fails
 Valid values: 400-499
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setReturnCode(Long ReturnCode) {
         this.ReturnCode = ReturnCode;

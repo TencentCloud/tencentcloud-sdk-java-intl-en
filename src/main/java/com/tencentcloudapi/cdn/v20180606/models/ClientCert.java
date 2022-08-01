@@ -23,9 +23,9 @@ import java.util.HashMap;
 public class ClientCert extends AbstractModel{
 
     /**
-    * Client Certificate
+    * Client certificate
 PEM format, requires Base64 encoding.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Certificate")
     @Expose
@@ -33,7 +33,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Client certificate name
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("CertName")
     @Expose
@@ -42,7 +42,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
     * Certificate expiration time
 When this is used as an input parameter, it can be left blank.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -51,31 +51,31 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
     * Certificate issuance time
 When this is used as an input parameter, it can be left blank.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("DeployTime")
     @Expose
     private String DeployTime;
 
     /**
-     * Get Client Certificate
+     * Get Client certificate
 PEM format, requires Base64 encoding.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Certificate Client Certificate
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Certificate Client certificate
 PEM format, requires Base64 encoding.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getCertificate() {
         return this.Certificate;
     }
 
     /**
-     * Set Client Certificate
+     * Set Client certificate
 PEM format, requires Base64 encoding.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Certificate Client Certificate
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Certificate Client certificate
 PEM format, requires Base64 encoding.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCertificate(String Certificate) {
         this.Certificate = Certificate;
@@ -83,9 +83,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Client certificate name
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return CertName Client certificate name
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getCertName() {
         return this.CertName;
@@ -93,9 +93,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Client certificate name
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param CertName Client certificate name
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCertName(String CertName) {
         this.CertName = CertName;
@@ -104,10 +104,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Get Certificate expiration time
 When this is used as an input parameter, it can be left blank.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return ExpireTime Certificate expiration time
 When this is used as an input parameter, it can be left blank.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getExpireTime() {
         return this.ExpireTime;
@@ -116,10 +116,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Set Certificate expiration time
 When this is used as an input parameter, it can be left blank.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param ExpireTime Certificate expiration time
 When this is used as an input parameter, it can be left blank.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
@@ -128,10 +128,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Get Certificate issuance time
 When this is used as an input parameter, it can be left blank.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return DeployTime Certificate issuance time
 When this is used as an input parameter, it can be left blank.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getDeployTime() {
         return this.DeployTime;
@@ -140,10 +140,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Set Certificate issuance time
 When this is used as an input parameter, it can be left blank.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param DeployTime Certificate issuance time
 When this is used as an input parameter, it can be left blank.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setDeployTime(String DeployTime) {
         this.DeployTime = DeployTime;

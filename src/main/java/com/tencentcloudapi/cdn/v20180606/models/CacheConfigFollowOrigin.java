@@ -24,20 +24,28 @@ public class CacheConfigFollowOrigin extends AbstractModel{
 
     /**
     * Follow origin server switch configuration
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
+    * Heuristic cache configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("HeuristicCache")
+    @Expose
+    private HeuristicCache HeuristicCache;
+
+    /**
      * Get Follow origin server switch configuration
-on: enable
-off: disable 
+`on`: Enable
+`off`: Disable 
      * @return Switch Follow origin server switch configuration
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
      */
     public String getSwitch() {
         return this.Switch;
@@ -45,14 +53,34 @@ off: disable
 
     /**
      * Set Follow origin server switch configuration
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
      * @param Switch Follow origin server switch configuration
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
+    }
+
+    /**
+     * Get Heuristic cache configuration
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return HeuristicCache Heuristic cache configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public HeuristicCache getHeuristicCache() {
+        return this.HeuristicCache;
+    }
+
+    /**
+     * Set Heuristic cache configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param HeuristicCache Heuristic cache configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setHeuristicCache(HeuristicCache HeuristicCache) {
+        this.HeuristicCache = HeuristicCache;
     }
 
     public CacheConfigFollowOrigin() {
@@ -66,6 +94,9 @@ off: disable
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }
+        if (source.HeuristicCache != null) {
+            this.HeuristicCache = new HeuristicCache(source.HeuristicCache);
+        }
     }
 
 
@@ -74,6 +105,7 @@ off: disable
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamObj(map, prefix + "HeuristicCache.", this.HeuristicCache);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreatePrometheusAgentResponse extends AbstractModel{
 
     /**
-    * 
+    * ID of a successfully created agent.
     */
     @SerializedName("AgentId")
     @Expose
@@ -37,16 +37,16 @@ public class CreatePrometheusAgentResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get  
-     * @return AgentId 
+     * Get ID of a successfully created agent. 
+     * @return AgentId ID of a successfully created agent.
      */
     public String getAgentId() {
         return this.AgentId;
     }
 
     /**
-     * Set 
-     * @param AgentId 
+     * Set ID of a successfully created agent.
+     * @param AgentId ID of a successfully created agent.
      */
     public void setAgentId(String AgentId) {
         this.AgentId = AgentId;

@@ -25,9 +25,9 @@ public class ScdnCCRules extends AbstractModel{
     /**
     * Rule types:
 `all`: effective for all files.
-`file`: effective for specified file suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 `index`: effective for web homepages and root directories.
     */
     @SerializedName("RuleType")
@@ -99,15 +99,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     /**
      * Get Rule types:
 `all`: effective for all files.
-`file`: effective for specified file suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 `index`: effective for web homepages and root directories. 
      * @return RuleType Rule types:
 `all`: effective for all files.
-`file`: effective for specified file suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 `index`: effective for web homepages and root directories.
      */
     public String getRuleType() {
@@ -117,15 +117,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     /**
      * Set Rule types:
 `all`: effective for all files.
-`file`: effective for specified file suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 `index`: effective for web homepages and root directories.
      * @param RuleType Rule types:
 `all`: effective for all files.
-`file`: effective for specified file suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 `index`: effective for web homepages and root directories.
      */
     public void setRuleType(String RuleType) {

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class UpdatePayTypeRequest extends AbstractModel{
 
     /**
-    * Billing region, which can be mainland or overseas.
+    * Billing region, which can be `mainland` or `overseas`.
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * Billing mode, which can be flux or bandwidth.
+    * Billing mode, which can be `flux` or `bandwidth`.
     */
     @SerializedName("PayType")
     @Expose
     private String PayType;
 
     /**
-     * Get Billing region, which can be mainland or overseas. 
-     * @return Area Billing region, which can be mainland or overseas.
+     * Get Billing region, which can be `mainland` or `overseas`. 
+     * @return Area Billing region, which can be `mainland` or `overseas`.
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Billing region, which can be mainland or overseas.
-     * @param Area Billing region, which can be mainland or overseas.
+     * Set Billing region, which can be `mainland` or `overseas`.
+     * @param Area Billing region, which can be `mainland` or `overseas`.
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get Billing mode, which can be flux or bandwidth. 
-     * @return PayType Billing mode, which can be flux or bandwidth.
+     * Get Billing mode, which can be `flux` or `bandwidth`. 
+     * @return PayType Billing mode, which can be `flux` or `bandwidth`.
      */
     public String getPayType() {
         return this.PayType;
     }
 
     /**
-     * Set Billing mode, which can be flux or bandwidth.
-     * @param PayType Billing mode, which can be flux or bandwidth.
+     * Set Billing mode, which can be `flux` or `bandwidth`.
+     * @param PayType Billing mode, which can be `flux` or `bandwidth`.
      */
     public void setPayType(String PayType) {
         this.PayType = PayType;

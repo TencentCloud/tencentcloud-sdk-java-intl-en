@@ -121,6 +121,27 @@ public class Backup extends AbstractModel{
     private String BackupFormat;
 
     /**
+    * The code of current region where the instance resides
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+    * The download address of cross-region backup in target region
+    */
+    @SerializedName("CrossBackupAddr")
+    @Expose
+    private CrossBackupAddr [] CrossBackupAddr;
+
+    /**
+    * The target region and status of cross-region backup
+    */
+    @SerializedName("CrossBackupStatus")
+    @Expose
+    private CrossRegionStatus [] CrossBackupStatus;
+
+    /**
      * Get File name. The name of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter. 
      * @return FileName File name. The name of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
      */
@@ -344,6 +365,54 @@ public class Backup extends AbstractModel{
         this.BackupFormat = BackupFormat;
     }
 
+    /**
+     * Get The code of current region where the instance resides 
+     * @return Region The code of current region where the instance resides
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set The code of current region where the instance resides
+     * @param Region The code of current region where the instance resides
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * Get The download address of cross-region backup in target region 
+     * @return CrossBackupAddr The download address of cross-region backup in target region
+     */
+    public CrossBackupAddr [] getCrossBackupAddr() {
+        return this.CrossBackupAddr;
+    }
+
+    /**
+     * Set The download address of cross-region backup in target region
+     * @param CrossBackupAddr The download address of cross-region backup in target region
+     */
+    public void setCrossBackupAddr(CrossBackupAddr [] CrossBackupAddr) {
+        this.CrossBackupAddr = CrossBackupAddr;
+    }
+
+    /**
+     * Get The target region and status of cross-region backup 
+     * @return CrossBackupStatus The target region and status of cross-region backup
+     */
+    public CrossRegionStatus [] getCrossBackupStatus() {
+        return this.CrossBackupStatus;
+    }
+
+    /**
+     * Set The target region and status of cross-region backup
+     * @param CrossBackupStatus The target region and status of cross-region backup
+     */
+    public void setCrossBackupStatus(CrossRegionStatus [] CrossBackupStatus) {
+        this.CrossBackupStatus = CrossBackupStatus;
+    }
+
     public Backup() {
     }
 
@@ -397,6 +466,21 @@ public class Backup extends AbstractModel{
         if (source.BackupFormat != null) {
             this.BackupFormat = new String(source.BackupFormat);
         }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.CrossBackupAddr != null) {
+            this.CrossBackupAddr = new CrossBackupAddr[source.CrossBackupAddr.length];
+            for (int i = 0; i < source.CrossBackupAddr.length; i++) {
+                this.CrossBackupAddr[i] = new CrossBackupAddr(source.CrossBackupAddr[i]);
+            }
+        }
+        if (source.CrossBackupStatus != null) {
+            this.CrossBackupStatus = new CrossRegionStatus[source.CrossBackupStatus.length];
+            for (int i = 0; i < source.CrossBackupStatus.length; i++) {
+                this.CrossBackupStatus[i] = new CrossRegionStatus(source.CrossBackupStatus[i]);
+            }
+        }
     }
 
 
@@ -418,6 +502,9 @@ public class Backup extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupName", this.BackupName);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "BackupFormat", this.BackupFormat);
+        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamArrayObj(map, prefix + "CrossBackupAddr.", this.CrossBackupAddr);
+        this.setParamArrayObj(map, prefix + "CrossBackupStatus.", this.CrossBackupStatus);
 
     }
 }

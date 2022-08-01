@@ -85,6 +85,13 @@ Default value: 0.
     private TEHDConfig TEHDConfig;
 
     /**
+    * Audio/Video enhancement configuration.
+    */
+    @SerializedName("EnhanceConfig")
+    @Expose
+    private EnhanceConfig EnhanceConfig;
+
+    /**
      * Get Container format. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files. 
      * @return Container Container format. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
      */
@@ -236,6 +243,22 @@ Default value: 0.
         this.TEHDConfig = TEHDConfig;
     }
 
+    /**
+     * Get Audio/Video enhancement configuration. 
+     * @return EnhanceConfig Audio/Video enhancement configuration.
+     */
+    public EnhanceConfig getEnhanceConfig() {
+        return this.EnhanceConfig;
+    }
+
+    /**
+     * Set Audio/Video enhancement configuration.
+     * @param EnhanceConfig Audio/Video enhancement configuration.
+     */
+    public void setEnhanceConfig(EnhanceConfig EnhanceConfig) {
+        this.EnhanceConfig = EnhanceConfig;
+    }
+
     public CreateTranscodeTemplateRequest() {
     }
 
@@ -268,6 +291,9 @@ Default value: 0.
         if (source.TEHDConfig != null) {
             this.TEHDConfig = new TEHDConfig(source.TEHDConfig);
         }
+        if (source.EnhanceConfig != null) {
+            this.EnhanceConfig = new EnhanceConfig(source.EnhanceConfig);
+        }
     }
 
 
@@ -283,6 +309,7 @@ Default value: 0.
         this.setParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
         this.setParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
         this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
+        this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
 
     }
 }

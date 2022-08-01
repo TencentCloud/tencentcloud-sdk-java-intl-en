@@ -37,11 +37,11 @@ public class MaxAgeRule extends AbstractModel{
     /**
     * Content for each `MaxAgeType`:
 For `all`, enter a wildcard `*`.
-For `file`, enter a suffix, e.g., `jpg` or `txt`.
-For `directory`, enter a path, e.g., `/xxx/test/`.
-For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `file`, enter the suffix, e.g., `jpg` or `txt`.
+For `directory`, enter the path, e.g., `/xxx/test/`.
+For `path`, enter the absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a forward slash `/`.
-Note: the rule `all` cannot be deleted. It follows origin by default and can be modified.
+Note: The rule `all` cannot be deleted. It follows origin by default and can be modified.
     */
     @SerializedName("MaxAgeContents")
     @Expose
@@ -49,7 +49,7 @@ Note: the rule `all` cannot be deleted. It follows origin by default and can be 
 
     /**
     * MaxAge time (in seconds)
-Note: the value `0` means not to cache.
+Note: The value `0` means not to cache.
     */
     @SerializedName("MaxAgeTime")
     @Expose
@@ -57,7 +57,7 @@ Note: the value `0` means not to cache.
 
     /**
     * Whether to follow the origin server. Valid values: `on` and `off`. If it's on, `MaxAgeTime` is ignored.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("FollowOrigin")
     @Expose
@@ -102,18 +102,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     /**
      * Get Content for each `MaxAgeType`:
 For `all`, enter a wildcard `*`.
-For `file`, enter a suffix, e.g., `jpg` or `txt`.
-For `directory`, enter a path, e.g., `/xxx/test/`.
-For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `file`, enter the suffix, e.g., `jpg` or `txt`.
+For `directory`, enter the path, e.g., `/xxx/test/`.
+For `path`, enter the absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a forward slash `/`.
-Note: the rule `all` cannot be deleted. It follows origin by default and can be modified. 
+Note: The rule `all` cannot be deleted. It follows origin by default and can be modified. 
      * @return MaxAgeContents Content for each `MaxAgeType`:
 For `all`, enter a wildcard `*`.
-For `file`, enter a suffix, e.g., `jpg` or `txt`.
-For `directory`, enter a path, e.g., `/xxx/test/`.
-For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `file`, enter the suffix, e.g., `jpg` or `txt`.
+For `directory`, enter the path, e.g., `/xxx/test/`.
+For `path`, enter the absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a forward slash `/`.
-Note: the rule `all` cannot be deleted. It follows origin by default and can be modified.
+Note: The rule `all` cannot be deleted. It follows origin by default and can be modified.
      */
     public String [] getMaxAgeContents() {
         return this.MaxAgeContents;
@@ -122,18 +122,18 @@ Note: the rule `all` cannot be deleted. It follows origin by default and can be 
     /**
      * Set Content for each `MaxAgeType`:
 For `all`, enter a wildcard `*`.
-For `file`, enter a suffix, e.g., `jpg` or `txt`.
-For `directory`, enter a path, e.g., `/xxx/test/`.
-For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `file`, enter the suffix, e.g., `jpg` or `txt`.
+For `directory`, enter the path, e.g., `/xxx/test/`.
+For `path`, enter the absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a forward slash `/`.
-Note: the rule `all` cannot be deleted. It follows origin by default and can be modified.
+Note: The rule `all` cannot be deleted. It follows origin by default and can be modified.
      * @param MaxAgeContents Content for each `MaxAgeType`:
 For `all`, enter a wildcard `*`.
-For `file`, enter a suffix, e.g., `jpg` or `txt`.
-For `directory`, enter a path, e.g., `/xxx/test/`.
-For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `file`, enter the suffix, e.g., `jpg` or `txt`.
+For `directory`, enter the path, e.g., `/xxx/test/`.
+For `path`, enter the absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a forward slash `/`.
-Note: the rule `all` cannot be deleted. It follows origin by default and can be modified.
+Note: The rule `all` cannot be deleted. It follows origin by default and can be modified.
      */
     public void setMaxAgeContents(String [] MaxAgeContents) {
         this.MaxAgeContents = MaxAgeContents;
@@ -141,9 +141,9 @@ Note: the rule `all` cannot be deleted. It follows origin by default and can be 
 
     /**
      * Get MaxAge time (in seconds)
-Note: the value `0` means not to cache. 
+Note: The value `0` means not to cache. 
      * @return MaxAgeTime MaxAge time (in seconds)
-Note: the value `0` means not to cache.
+Note: The value `0` means not to cache.
      */
     public Long getMaxAgeTime() {
         return this.MaxAgeTime;
@@ -151,9 +151,9 @@ Note: the value `0` means not to cache.
 
     /**
      * Set MaxAge time (in seconds)
-Note: the value `0` means not to cache.
+Note: The value `0` means not to cache.
      * @param MaxAgeTime MaxAge time (in seconds)
-Note: the value `0` means not to cache.
+Note: The value `0` means not to cache.
      */
     public void setMaxAgeTime(Long MaxAgeTime) {
         this.MaxAgeTime = MaxAgeTime;
@@ -161,9 +161,9 @@ Note: the value `0` means not to cache.
 
     /**
      * Get Whether to follow the origin server. Valid values: `on` and `off`. If it's on, `MaxAgeTime` is ignored.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return FollowOrigin Whether to follow the origin server. Valid values: `on` and `off`. If it's on, `MaxAgeTime` is ignored.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getFollowOrigin() {
         return this.FollowOrigin;
@@ -171,9 +171,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Whether to follow the origin server. Valid values: `on` and `off`. If it's on, `MaxAgeTime` is ignored.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param FollowOrigin Whether to follow the origin server. Valid values: `on` and `off`. If it's on, `MaxAgeTime` is ignored.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setFollowOrigin(String FollowOrigin) {
         this.FollowOrigin = FollowOrigin;

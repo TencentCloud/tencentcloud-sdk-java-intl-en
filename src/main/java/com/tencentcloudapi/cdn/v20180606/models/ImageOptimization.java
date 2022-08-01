@@ -24,7 +24,7 @@ public class ImageOptimization extends AbstractModel{
 
     /**
     * `WebpAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("WebpAdapter")
     @Expose
@@ -32,7 +32,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * `TpgAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("TpgAdapter")
     @Expose
@@ -40,7 +40,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * `GuetzliAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("GuetzliAdapter")
     @Expose
@@ -48,9 +48,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get `WebpAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return WebpAdapter `WebpAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public WebpAdapter getWebpAdapter() {
         return this.WebpAdapter;
@@ -58,9 +58,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set `WebpAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param WebpAdapter `WebpAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setWebpAdapter(WebpAdapter WebpAdapter) {
         this.WebpAdapter = WebpAdapter;
@@ -68,9 +68,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get `TpgAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return TpgAdapter `TpgAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public TpgAdapter getTpgAdapter() {
         return this.TpgAdapter;
@@ -78,9 +78,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set `TpgAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param TpgAdapter `TpgAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setTpgAdapter(TpgAdapter TpgAdapter) {
         this.TpgAdapter = TpgAdapter;
@@ -88,9 +88,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get `GuetzliAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return GuetzliAdapter `GuetzliAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public GuetzliAdapter getGuetzliAdapter() {
         return this.GuetzliAdapter;
@@ -98,9 +98,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set `GuetzliAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param GuetzliAdapter `GuetzliAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setGuetzliAdapter(GuetzliAdapter GuetzliAdapter) {
         this.GuetzliAdapter = GuetzliAdapter;

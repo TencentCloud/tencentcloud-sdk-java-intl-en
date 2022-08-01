@@ -53,14 +53,14 @@ public class CreateClustersRequest extends AbstractModel{
 
     /**
     * Database version. Valid values: 
-<li> Valid values for `MYSQL`: 5.7 </li>
+<li> Valid values for `MYSQL`: 5.7 and 8.0 </li>
     */
     @SerializedName("DbVersion")
     @Expose
     private String DbVersion;
 
     /**
-    * Project ID
+    * Project ID.
     */
     @SerializedName("ProjectId")
     @Expose
@@ -68,7 +68,7 @@ public class CreateClustersRequest extends AbstractModel{
 
     /**
     * It is required when `DbMode` is set to `NORMAL` or left empty.
-Number of CPU cores of a non-serverless instance
+Number of CPU cores of normal instance
     */
     @SerializedName("Cpu")
     @Expose
@@ -84,42 +84,42 @@ Memory of a non-serverless instance in GB
 
     /**
     * This parameter has been deprecated.
-Storage capacity in GB.
+Storage capacity in GB
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * Cluster name
+    * Cluster name, which can contain less than 64 letters, digits, or symbols (-_.).
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * Account password (it must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).)
+    * Account password, which must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).
     */
     @SerializedName("AdminPassword")
     @Expose
     private String AdminPassword;
 
     /**
-    * Port. Default value: 5432
+    * Port. Valid range: [0, 65535). Default value: 3306
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * Billing mode. 0: pay-as-you-go; 1: monthly subscription. Default value: 0
+    * Billing mode. `0`: pay-as-you-go; `1`: monthly subscription. Default value: `0`
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * Number of purchased items. Currently, only 1 can be passed in. If this parameter is left empty, 1 will be used by default.
+    * Number of purchased clusters. Valid range: [1,50]. Default value: 1
     */
     @SerializedName("Count")
     @Expose
@@ -127,8 +127,8 @@ Storage capacity in GB.
 
     /**
     * Rollback type:
-noneRollback: no rollback
-snapRollback: rollback by snapshot
+noneRollback: no rollback;
+snapRollback: rollback by snapshot;
 timeRollback: rollback by time point
     */
     @SerializedName("RollbackStrategy")
@@ -143,7 +143,7 @@ timeRollback: rollback by time point
     private Long RollbackId;
 
     /**
-    * Pass in the source cluster ID during rollback to find the source `poolId`
+    * The source cluster ID passed in during rollback to find the source `poolId`
     */
     @SerializedName("OriginalClusterId")
     @Expose
@@ -165,15 +165,15 @@ Specified allowed time range for time point rollback
     private Long ExpectTimeThresh;
 
     /**
-    * The maximum storage of a non-serverless instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is prepaid, the parameter value cannot exceed the maximum storage corresponding to the CPU and memory specifications.
+    * Storage upper limit of normal instance in GB
+If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the parameter value can’t exceed the maximum storage corresponding to the CPU and memory specifications.
     */
     @SerializedName("StorageLimit")
     @Expose
     private Long StorageLimit;
 
     /**
-    * Number of instances
+    * Number of Instances. Valid range: (0,16]
     */
     @SerializedName("InstanceCount")
     @Expose
@@ -187,21 +187,21 @@ If `DbType` is `MYSQL` and the storage billing mode is prepaid, the parameter va
     private Long TimeSpan;
 
     /**
-    * Purchase duration unit of monthly subscription plan
+    * Duration unit of monthly subscription. Valid values: `s`, `d`, `m`, `y`
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * Whether auto-renewal is enabled for monthly subscription plan
+    * Whether auto-renewal is enabled for monthly subscription plan. Default value: `0`
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
+    * Whether to automatically select a voucher. `1`: yes; `0`: no. Default value: `0`
     */
     @SerializedName("AutoVoucher")
     @Expose
@@ -230,7 +230,7 @@ If `DbType` is `MYSQL` and the storage billing mode is prepaid, the parameter va
 
     /**
     * Database type
-Valid values when `DbType` is `MYSQL` (default value: NORMAL):
+Valid values when `DbType` is `MYSQL` (default value: `NORMAL`):
 <li>NORMAL</li>
 <li>SERVERLESS</li>
     */
@@ -239,16 +239,16 @@ Valid values when `DbType` is `MYSQL` (default value: NORMAL):
     private String DbMode;
 
     /**
-    * This parameter is required if `DbMode` is `SERVERLESS`
-Minimum number of CPU cores. For the value range, please see the returned result of `DescribeServerlessInstanceSpecs`
+    * This parameter is required if `DbMode` is `SERVERLESS`.
+Minimum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
     */
     @SerializedName("MinCpu")
     @Expose
     private Float MinCpu;
 
     /**
-    * This parameter is required if `DbMode` is `SERVERLESS`:
-Maximum number of CPU cores. For the value range, please see the returned result of `DescribeServerlessInstanceSpecs`
+    * This parameter is required if `DbMode` is `SERVERLESS`.
+Maximum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
     */
     @SerializedName("MaxCpu")
     @Expose
@@ -266,16 +266,16 @@ Default value: yes
 
     /**
     * This parameter specifies the delay for automatic cluster pause in seconds if `DbMode` is `SERVERLESS`. Value range: [600,691200]
-Default value: 600
+Default value: `600`
     */
     @SerializedName("AutoPauseDelay")
     @Expose
     private Long AutoPauseDelay;
 
     /**
-    * The billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid). Default value: `0`.
-If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be postpaid.
-Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
+    * The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription). Default value: `0`.
+If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
+Clusters with storage billed in monthly subscription can’t be cloned or rolled back.
     */
     @SerializedName("StoragePayMode")
     @Expose
@@ -310,11 +310,18 @@ Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
     private Long DealMode;
 
     /**
-    * Parameter template ID
+    * Parameter template ID, which can be obtained by querying parameter template information “DescribeParamTemplates”
     */
     @SerializedName("ParamTemplateId")
     @Expose
     private Long ParamTemplateId;
+
+    /**
+    * Multi-AZ address
+    */
+    @SerializedName("SlaveZone")
+    @Expose
+    private String SlaveZone;
 
     /**
      * Get AZ 
@@ -386,9 +393,9 @@ Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
 
     /**
      * Get Database version. Valid values: 
-<li> Valid values for `MYSQL`: 5.7 </li> 
+<li> Valid values for `MYSQL`: 5.7 and 8.0 </li> 
      * @return DbVersion Database version. Valid values: 
-<li> Valid values for `MYSQL`: 5.7 </li>
+<li> Valid values for `MYSQL`: 5.7 and 8.0 </li>
      */
     public String getDbVersion() {
         return this.DbVersion;
@@ -396,25 +403,25 @@ Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
 
     /**
      * Set Database version. Valid values: 
-<li> Valid values for `MYSQL`: 5.7 </li>
+<li> Valid values for `MYSQL`: 5.7 and 8.0 </li>
      * @param DbVersion Database version. Valid values: 
-<li> Valid values for `MYSQL`: 5.7 </li>
+<li> Valid values for `MYSQL`: 5.7 and 8.0 </li>
      */
     public void setDbVersion(String DbVersion) {
         this.DbVersion = DbVersion;
     }
 
     /**
-     * Get Project ID 
-     * @return ProjectId Project ID
+     * Get Project ID. 
+     * @return ProjectId Project ID.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID
-     * @param ProjectId Project ID
+     * Set Project ID.
+     * @param ProjectId Project ID.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
@@ -422,9 +429,9 @@ Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
 
     /**
      * Get It is required when `DbMode` is set to `NORMAL` or left empty.
-Number of CPU cores of a non-serverless instance 
+Number of CPU cores of normal instance 
      * @return Cpu It is required when `DbMode` is set to `NORMAL` or left empty.
-Number of CPU cores of a non-serverless instance
+Number of CPU cores of normal instance
      */
     public Long getCpu() {
         return this.Cpu;
@@ -432,9 +439,9 @@ Number of CPU cores of a non-serverless instance
 
     /**
      * Set It is required when `DbMode` is set to `NORMAL` or left empty.
-Number of CPU cores of a non-serverless instance
+Number of CPU cores of normal instance
      * @param Cpu It is required when `DbMode` is set to `NORMAL` or left empty.
-Number of CPU cores of a non-serverless instance
+Number of CPU cores of normal instance
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
@@ -462,9 +469,9 @@ Memory of a non-serverless instance in GB
 
     /**
      * Get This parameter has been deprecated.
-Storage capacity in GB. 
+Storage capacity in GB 
      * @return Storage This parameter has been deprecated.
-Storage capacity in GB.
+Storage capacity in GB
      */
     public Long getStorage() {
         return this.Storage;
@@ -472,89 +479,89 @@ Storage capacity in GB.
 
     /**
      * Set This parameter has been deprecated.
-Storage capacity in GB.
+Storage capacity in GB
      * @param Storage This parameter has been deprecated.
-Storage capacity in GB.
+Storage capacity in GB
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get Cluster name 
-     * @return ClusterName Cluster name
+     * Get Cluster name, which can contain less than 64 letters, digits, or symbols (-_.). 
+     * @return ClusterName Cluster name, which can contain less than 64 letters, digits, or symbols (-_.).
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Cluster name
-     * @param ClusterName Cluster name
+     * Set Cluster name, which can contain less than 64 letters, digits, or symbols (-_.).
+     * @param ClusterName Cluster name, which can contain less than 64 letters, digits, or symbols (-_.).
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get Account password (it must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).) 
-     * @return AdminPassword Account password (it must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).)
+     * Get Account password, which must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/). 
+     * @return AdminPassword Account password, which must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).
      */
     public String getAdminPassword() {
         return this.AdminPassword;
     }
 
     /**
-     * Set Account password (it must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).)
-     * @param AdminPassword Account password (it must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).)
+     * Set Account password, which must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).
+     * @param AdminPassword Account password, which must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).
      */
     public void setAdminPassword(String AdminPassword) {
         this.AdminPassword = AdminPassword;
     }
 
     /**
-     * Get Port. Default value: 5432 
-     * @return Port Port. Default value: 5432
+     * Get Port. Valid range: [0, 65535). Default value: 3306 
+     * @return Port Port. Valid range: [0, 65535). Default value: 3306
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Port. Default value: 5432
-     * @param Port Port. Default value: 5432
+     * Set Port. Valid range: [0, 65535). Default value: 3306
+     * @param Port Port. Valid range: [0, 65535). Default value: 3306
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Billing mode. 0: pay-as-you-go; 1: monthly subscription. Default value: 0 
-     * @return PayMode Billing mode. 0: pay-as-you-go; 1: monthly subscription. Default value: 0
+     * Get Billing mode. `0`: pay-as-you-go; `1`: monthly subscription. Default value: `0` 
+     * @return PayMode Billing mode. `0`: pay-as-you-go; `1`: monthly subscription. Default value: `0`
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Billing mode. 0: pay-as-you-go; 1: monthly subscription. Default value: 0
-     * @param PayMode Billing mode. 0: pay-as-you-go; 1: monthly subscription. Default value: 0
+     * Set Billing mode. `0`: pay-as-you-go; `1`: monthly subscription. Default value: `0`
+     * @param PayMode Billing mode. `0`: pay-as-you-go; `1`: monthly subscription. Default value: `0`
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get Number of purchased items. Currently, only 1 can be passed in. If this parameter is left empty, 1 will be used by default. 
-     * @return Count Number of purchased items. Currently, only 1 can be passed in. If this parameter is left empty, 1 will be used by default.
+     * Get Number of purchased clusters. Valid range: [1,50]. Default value: 1 
+     * @return Count Number of purchased clusters. Valid range: [1,50]. Default value: 1
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set Number of purchased items. Currently, only 1 can be passed in. If this parameter is left empty, 1 will be used by default.
-     * @param Count Number of purchased items. Currently, only 1 can be passed in. If this parameter is left empty, 1 will be used by default.
+     * Set Number of purchased clusters. Valid range: [1,50]. Default value: 1
+     * @param Count Number of purchased clusters. Valid range: [1,50]. Default value: 1
      */
     public void setCount(Long Count) {
         this.Count = Count;
@@ -562,12 +569,12 @@ Storage capacity in GB.
 
     /**
      * Get Rollback type:
-noneRollback: no rollback
-snapRollback: rollback by snapshot
+noneRollback: no rollback;
+snapRollback: rollback by snapshot;
 timeRollback: rollback by time point 
      * @return RollbackStrategy Rollback type:
-noneRollback: no rollback
-snapRollback: rollback by snapshot
+noneRollback: no rollback;
+snapRollback: rollback by snapshot;
 timeRollback: rollback by time point
      */
     public String getRollbackStrategy() {
@@ -576,12 +583,12 @@ timeRollback: rollback by time point
 
     /**
      * Set Rollback type:
-noneRollback: no rollback
-snapRollback: rollback by snapshot
+noneRollback: no rollback;
+snapRollback: rollback by snapshot;
 timeRollback: rollback by time point
      * @param RollbackStrategy Rollback type:
-noneRollback: no rollback
-snapRollback: rollback by snapshot
+noneRollback: no rollback;
+snapRollback: rollback by snapshot;
 timeRollback: rollback by time point
      */
     public void setRollbackStrategy(String RollbackStrategy) {
@@ -605,16 +612,16 @@ timeRollback: rollback by time point
     }
 
     /**
-     * Get Pass in the source cluster ID during rollback to find the source `poolId` 
-     * @return OriginalClusterId Pass in the source cluster ID during rollback to find the source `poolId`
+     * Get The source cluster ID passed in during rollback to find the source `poolId` 
+     * @return OriginalClusterId The source cluster ID passed in during rollback to find the source `poolId`
      */
     public String getOriginalClusterId() {
         return this.OriginalClusterId;
     }
 
     /**
-     * Set Pass in the source cluster ID during rollback to find the source `poolId`
-     * @param OriginalClusterId Pass in the source cluster ID during rollback to find the source `poolId`
+     * Set The source cluster ID passed in during rollback to find the source `poolId`
+     * @param OriginalClusterId The source cluster ID passed in during rollback to find the source `poolId`
      */
     public void setOriginalClusterId(String OriginalClusterId) {
         this.OriginalClusterId = OriginalClusterId;
@@ -657,36 +664,36 @@ Specified allowed time range for time point rollback
     }
 
     /**
-     * Get The maximum storage of a non-serverless instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is prepaid, the parameter value cannot exceed the maximum storage corresponding to the CPU and memory specifications. 
-     * @return StorageLimit The maximum storage of a non-serverless instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is prepaid, the parameter value cannot exceed the maximum storage corresponding to the CPU and memory specifications.
+     * Get Storage upper limit of normal instance in GB
+If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the parameter value can’t exceed the maximum storage corresponding to the CPU and memory specifications. 
+     * @return StorageLimit Storage upper limit of normal instance in GB
+If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the parameter value can’t exceed the maximum storage corresponding to the CPU and memory specifications.
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set The maximum storage of a non-serverless instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is prepaid, the parameter value cannot exceed the maximum storage corresponding to the CPU and memory specifications.
-     * @param StorageLimit The maximum storage of a non-serverless instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is prepaid, the parameter value cannot exceed the maximum storage corresponding to the CPU and memory specifications.
+     * Set Storage upper limit of normal instance in GB
+If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the parameter value can’t exceed the maximum storage corresponding to the CPU and memory specifications.
+     * @param StorageLimit Storage upper limit of normal instance in GB
+If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the parameter value can’t exceed the maximum storage corresponding to the CPU and memory specifications.
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
     }
 
     /**
-     * Get Number of instances 
-     * @return InstanceCount Number of instances
+     * Get Number of Instances. Valid range: (0,16] 
+     * @return InstanceCount Number of Instances. Valid range: (0,16]
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set Number of instances
-     * @param InstanceCount Number of instances
+     * Set Number of Instances. Valid range: (0,16]
+     * @param InstanceCount Number of Instances. Valid range: (0,16]
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
@@ -709,48 +716,48 @@ If `DbType` is `MYSQL` and the storage billing mode is prepaid, the parameter va
     }
 
     /**
-     * Get Purchase duration unit of monthly subscription plan 
-     * @return TimeUnit Purchase duration unit of monthly subscription plan
+     * Get Duration unit of monthly subscription. Valid values: `s`, `d`, `m`, `y` 
+     * @return TimeUnit Duration unit of monthly subscription. Valid values: `s`, `d`, `m`, `y`
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set Purchase duration unit of monthly subscription plan
-     * @param TimeUnit Purchase duration unit of monthly subscription plan
+     * Set Duration unit of monthly subscription. Valid values: `s`, `d`, `m`, `y`
+     * @param TimeUnit Duration unit of monthly subscription. Valid values: `s`, `d`, `m`, `y`
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get Whether auto-renewal is enabled for monthly subscription plan 
-     * @return AutoRenewFlag Whether auto-renewal is enabled for monthly subscription plan
+     * Get Whether auto-renewal is enabled for monthly subscription plan. Default value: `0` 
+     * @return AutoRenewFlag Whether auto-renewal is enabled for monthly subscription plan. Default value: `0`
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set Whether auto-renewal is enabled for monthly subscription plan
-     * @param AutoRenewFlag Whether auto-renewal is enabled for monthly subscription plan
+     * Set Whether auto-renewal is enabled for monthly subscription plan. Default value: `0`
+     * @param AutoRenewFlag Whether auto-renewal is enabled for monthly subscription plan. Default value: `0`
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0 
-     * @return AutoVoucher Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
+     * Get Whether to automatically select a voucher. `1`: yes; `0`: no. Default value: `0` 
+     * @return AutoVoucher Whether to automatically select a voucher. `1`: yes; `0`: no. Default value: `0`
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
-     * @param AutoVoucher Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
+     * Set Whether to automatically select a voucher. `1`: yes; `0`: no. Default value: `0`
+     * @param AutoVoucher Whether to automatically select a voucher. `1`: yes; `0`: no. Default value: `0`
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
@@ -806,11 +813,11 @@ If `DbType` is `MYSQL` and the storage billing mode is prepaid, the parameter va
 
     /**
      * Get Database type
-Valid values when `DbType` is `MYSQL` (default value: NORMAL):
+Valid values when `DbType` is `MYSQL` (default value: `NORMAL`):
 <li>NORMAL</li>
 <li>SERVERLESS</li> 
      * @return DbMode Database type
-Valid values when `DbType` is `MYSQL` (default value: NORMAL):
+Valid values when `DbType` is `MYSQL` (default value: `NORMAL`):
 <li>NORMAL</li>
 <li>SERVERLESS</li>
      */
@@ -820,11 +827,11 @@ Valid values when `DbType` is `MYSQL` (default value: NORMAL):
 
     /**
      * Set Database type
-Valid values when `DbType` is `MYSQL` (default value: NORMAL):
+Valid values when `DbType` is `MYSQL` (default value: `NORMAL`):
 <li>NORMAL</li>
 <li>SERVERLESS</li>
      * @param DbMode Database type
-Valid values when `DbType` is `MYSQL` (default value: NORMAL):
+Valid values when `DbType` is `MYSQL` (default value: `NORMAL`):
 <li>NORMAL</li>
 <li>SERVERLESS</li>
      */
@@ -833,40 +840,40 @@ Valid values when `DbType` is `MYSQL` (default value: NORMAL):
     }
 
     /**
-     * Get This parameter is required if `DbMode` is `SERVERLESS`
-Minimum number of CPU cores. For the value range, please see the returned result of `DescribeServerlessInstanceSpecs` 
-     * @return MinCpu This parameter is required if `DbMode` is `SERVERLESS`
-Minimum number of CPU cores. For the value range, please see the returned result of `DescribeServerlessInstanceSpecs`
+     * Get This parameter is required if `DbMode` is `SERVERLESS`.
+Minimum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`. 
+     * @return MinCpu This parameter is required if `DbMode` is `SERVERLESS`.
+Minimum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
      */
     public Float getMinCpu() {
         return this.MinCpu;
     }
 
     /**
-     * Set This parameter is required if `DbMode` is `SERVERLESS`
-Minimum number of CPU cores. For the value range, please see the returned result of `DescribeServerlessInstanceSpecs`
-     * @param MinCpu This parameter is required if `DbMode` is `SERVERLESS`
-Minimum number of CPU cores. For the value range, please see the returned result of `DescribeServerlessInstanceSpecs`
+     * Set This parameter is required if `DbMode` is `SERVERLESS`.
+Minimum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
+     * @param MinCpu This parameter is required if `DbMode` is `SERVERLESS`.
+Minimum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
      */
     public void setMinCpu(Float MinCpu) {
         this.MinCpu = MinCpu;
     }
 
     /**
-     * Get This parameter is required if `DbMode` is `SERVERLESS`:
-Maximum number of CPU cores. For the value range, please see the returned result of `DescribeServerlessInstanceSpecs` 
-     * @return MaxCpu This parameter is required if `DbMode` is `SERVERLESS`:
-Maximum number of CPU cores. For the value range, please see the returned result of `DescribeServerlessInstanceSpecs`
+     * Get This parameter is required if `DbMode` is `SERVERLESS`.
+Maximum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`. 
+     * @return MaxCpu This parameter is required if `DbMode` is `SERVERLESS`.
+Maximum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
      */
     public Float getMaxCpu() {
         return this.MaxCpu;
     }
 
     /**
-     * Set This parameter is required if `DbMode` is `SERVERLESS`:
-Maximum number of CPU cores. For the value range, please see the returned result of `DescribeServerlessInstanceSpecs`
-     * @param MaxCpu This parameter is required if `DbMode` is `SERVERLESS`:
-Maximum number of CPU cores. For the value range, please see the returned result of `DescribeServerlessInstanceSpecs`
+     * Set This parameter is required if `DbMode` is `SERVERLESS`.
+Maximum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
+     * @param MaxCpu This parameter is required if `DbMode` is `SERVERLESS`.
+Maximum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
      */
     public void setMaxCpu(Float MaxCpu) {
         this.MaxCpu = MaxCpu;
@@ -902,9 +909,9 @@ Default value: yes
 
     /**
      * Get This parameter specifies the delay for automatic cluster pause in seconds if `DbMode` is `SERVERLESS`. Value range: [600,691200]
-Default value: 600 
+Default value: `600` 
      * @return AutoPauseDelay This parameter specifies the delay for automatic cluster pause in seconds if `DbMode` is `SERVERLESS`. Value range: [600,691200]
-Default value: 600
+Default value: `600`
      */
     public Long getAutoPauseDelay() {
         return this.AutoPauseDelay;
@@ -912,33 +919,33 @@ Default value: 600
 
     /**
      * Set This parameter specifies the delay for automatic cluster pause in seconds if `DbMode` is `SERVERLESS`. Value range: [600,691200]
-Default value: 600
+Default value: `600`
      * @param AutoPauseDelay This parameter specifies the delay for automatic cluster pause in seconds if `DbMode` is `SERVERLESS`. Value range: [600,691200]
-Default value: 600
+Default value: `600`
      */
     public void setAutoPauseDelay(Long AutoPauseDelay) {
         this.AutoPauseDelay = AutoPauseDelay;
     }
 
     /**
-     * Get The billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid). Default value: `0`.
-If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be postpaid.
-Clusters with storage billed in prepaid mode cannot be cloned or rolled back. 
-     * @return StoragePayMode The billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid). Default value: `0`.
-If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be postpaid.
-Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
+     * Get The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription). Default value: `0`.
+If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
+Clusters with storage billed in monthly subscription can’t be cloned or rolled back. 
+     * @return StoragePayMode The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription). Default value: `0`.
+If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
+Clusters with storage billed in monthly subscription can’t be cloned or rolled back.
      */
     public Long getStoragePayMode() {
         return this.StoragePayMode;
     }
 
     /**
-     * Set The billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid). Default value: `0`.
-If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be postpaid.
-Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
-     * @param StoragePayMode The billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid). Default value: `0`.
-If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be postpaid.
-Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
+     * Set The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription). Default value: `0`.
+If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
+Clusters with storage billed in monthly subscription can’t be cloned or rolled back.
+     * @param StoragePayMode The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription). Default value: `0`.
+If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
+Clusters with storage billed in monthly subscription can’t be cloned or rolled back.
      */
     public void setStoragePayMode(Long StoragePayMode) {
         this.StoragePayMode = StoragePayMode;
@@ -1009,19 +1016,35 @@ Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
     }
 
     /**
-     * Get Parameter template ID 
-     * @return ParamTemplateId Parameter template ID
+     * Get Parameter template ID, which can be obtained by querying parameter template information “DescribeParamTemplates” 
+     * @return ParamTemplateId Parameter template ID, which can be obtained by querying parameter template information “DescribeParamTemplates”
      */
     public Long getParamTemplateId() {
         return this.ParamTemplateId;
     }
 
     /**
-     * Set Parameter template ID
-     * @param ParamTemplateId Parameter template ID
+     * Set Parameter template ID, which can be obtained by querying parameter template information “DescribeParamTemplates”
+     * @param ParamTemplateId Parameter template ID, which can be obtained by querying parameter template information “DescribeParamTemplates”
      */
     public void setParamTemplateId(Long ParamTemplateId) {
         this.ParamTemplateId = ParamTemplateId;
+    }
+
+    /**
+     * Get Multi-AZ address 
+     * @return SlaveZone Multi-AZ address
+     */
+    public String getSlaveZone() {
+        return this.SlaveZone;
+    }
+
+    /**
+     * Set Multi-AZ address
+     * @param SlaveZone Multi-AZ address
+     */
+    public void setSlaveZone(String SlaveZone) {
+        this.SlaveZone = SlaveZone;
     }
 
     public CreateClustersRequest() {
@@ -1161,6 +1184,9 @@ Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
         if (source.ParamTemplateId != null) {
             this.ParamTemplateId = new Long(source.ParamTemplateId);
         }
+        if (source.SlaveZone != null) {
+            this.SlaveZone = new String(source.SlaveZone);
+        }
     }
 
 
@@ -1207,6 +1233,7 @@ Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
         this.setParamArrayObj(map, prefix + "ClusterParams.", this.ClusterParams);
         this.setParamSimple(map, prefix + "DealMode", this.DealMode);
         this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
+        this.setParamSimple(map, prefix + "SlaveZone", this.SlaveZone);
 
     }
 }

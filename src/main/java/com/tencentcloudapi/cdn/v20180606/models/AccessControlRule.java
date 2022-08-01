@@ -25,7 +25,7 @@ public class AccessControlRule extends AbstractModel{
     /**
     * requestHeader: access control over request header
 url: access control over access URL
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("RuleType")
     @Expose
@@ -33,7 +33,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Blocked content
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("RuleContent")
     @Expose
@@ -42,7 +42,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
     * on: regular match
 off: exact match
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Regex")
     @Expose
@@ -50,7 +50,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * This parameter is required only if `RuleType` is `requestHeader`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("RuleHeader")
     @Expose
@@ -59,10 +59,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Get requestHeader: access control over request header
 url: access control over access URL
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return RuleType requestHeader: access control over request header
 url: access control over access URL
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getRuleType() {
         return this.RuleType;
@@ -71,10 +71,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Set requestHeader: access control over request header
 url: access control over access URL
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param RuleType requestHeader: access control over request header
 url: access control over access URL
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRuleType(String RuleType) {
         this.RuleType = RuleType;
@@ -82,9 +82,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Blocked content
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return RuleContent Blocked content
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getRuleContent() {
         return this.RuleContent;
@@ -92,9 +92,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Blocked content
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param RuleContent Blocked content
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRuleContent(String RuleContent) {
         this.RuleContent = RuleContent;
@@ -103,10 +103,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Get on: regular match
 off: exact match
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Regex on: regular match
 off: exact match
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getRegex() {
         return this.Regex;
@@ -115,10 +115,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Set on: regular match
 off: exact match
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Regex on: regular match
 off: exact match
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRegex(String Regex) {
         this.Regex = Regex;
@@ -126,9 +126,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get This parameter is required only if `RuleType` is `requestHeader`
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return RuleHeader This parameter is required only if `RuleType` is `requestHeader`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getRuleHeader() {
         return this.RuleHeader;
@@ -136,9 +136,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set This parameter is required only if `RuleType` is `requestHeader`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param RuleHeader This parameter is required only if `RuleType` is `requestHeader`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRuleHeader(String RuleHeader) {
         this.RuleHeader = RuleHeader;

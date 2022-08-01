@@ -24,7 +24,7 @@ public class Compatibility extends AbstractModel{
 
     /**
     * Compatibility flag status code.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Code")
     @Expose
@@ -32,9 +32,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Compatibility flag status code.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Code Compatibility flag status code.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Long getCode() {
         return this.Code;
@@ -42,9 +42,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Compatibility flag status code.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Code Compatibility flag status code.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCode(Long Code) {
         this.Code = Code;

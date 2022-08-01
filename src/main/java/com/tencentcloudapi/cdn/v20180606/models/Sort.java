@@ -33,7 +33,7 @@ Default value: createTime.
     private String Key;
 
     /**
-    * `asc` or `desc`. Default: `desc`.
+    * asc/desc. Default value: desc.
     */
     @SerializedName("Sequence")
     @Expose
@@ -68,16 +68,16 @@ Default value: createTime.
     }
 
     /**
-     * Get `asc` or `desc`. Default: `desc`. 
-     * @return Sequence `asc` or `desc`. Default: `desc`.
+     * Get asc/desc. Default value: desc. 
+     * @return Sequence asc/desc. Default value: desc.
      */
     public String getSequence() {
         return this.Sequence;
     }
 
     /**
-     * Set `asc` or `desc`. Default: `desc`.
-     * @param Sequence `asc` or `desc`. Default: `desc`.
+     * Set asc/desc. Default value: desc.
+     * @param Sequence asc/desc. Default value: desc.
      */
     public void setSequence(String Sequence) {
         this.Sequence = Sequence;

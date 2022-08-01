@@ -24,7 +24,7 @@ public class CacheOptResult extends AbstractModel{
 
     /**
     * List of succeeded URLs
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("SuccessUrls")
     @Expose
@@ -32,7 +32,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * List of failed URLs
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("FailUrls")
     @Expose
@@ -40,9 +40,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get List of succeeded URLs
-Note: This field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return SuccessUrls List of succeeded URLs
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String [] getSuccessUrls() {
         return this.SuccessUrls;
@@ -50,9 +50,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of succeeded URLs
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param SuccessUrls List of succeeded URLs
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setSuccessUrls(String [] SuccessUrls) {
         this.SuccessUrls = SuccessUrls;
@@ -60,9 +60,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get List of failed URLs
-Note: This field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return FailUrls List of failed URLs
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String [] getFailUrls() {
         return this.FailUrls;
@@ -70,9 +70,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of failed URLs
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param FailUrls List of failed URLs
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setFailUrls(String [] FailUrls) {
         this.FailUrls = FailUrls;

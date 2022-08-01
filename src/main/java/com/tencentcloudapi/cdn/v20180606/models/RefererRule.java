@@ -24,21 +24,21 @@ public class RefererRule extends AbstractModel{
 
     /**
     * Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
     */
     @SerializedName("RuleType")
     @Expose
     private String RuleType;
 
     /**
-    * Content for each RuleType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+    * Content for each `RuleType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
     */
     @SerializedName("RulePaths")
     @Expose
@@ -46,8 +46,8 @@ For `path`, enter the corresponding absolute path, such as /xxx/test.html.
 
     /**
     * Referer configuration types
-whitelist: allowlist
-blacklist: blocklist
+`whitelist`: Allowlist
+`blacklist`: Blocklist
     */
     @SerializedName("RefererType")
     @Expose
@@ -62,8 +62,8 @@ blacklist: blocklist
 
     /**
     * Whether to allow empty referer
-true: allow empty referer
-false: do not allow empty referer
+`true`: Allow empty referer when `RefererType = whitelist`.
+`false`: Reject empty refer when `RefererType = blacklist`.
     */
     @SerializedName("AllowEmpty")
     @Expose
@@ -71,15 +71,15 @@ false: do not allow empty referer
 
     /**
      * Get Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths 
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths. 
      * @return RuleType Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
      */
     public String getRuleType() {
         return this.RuleType;
@@ -87,47 +87,47 @@ false: do not allow empty referer
 
     /**
      * Set Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
      * @param RuleType Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
      */
     public void setRuleType(String RuleType) {
         this.RuleType = RuleType;
     }
 
     /**
-     * Get Content for each RuleType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html. 
-     * @return RulePaths Content for each RuleType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+     * Get Content for each `RuleType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`. 
+     * @return RulePaths Content for each `RuleType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
      */
     public String [] getRulePaths() {
         return this.RulePaths;
     }
 
     /**
-     * Set Content for each RuleType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-     * @param RulePaths Content for each RuleType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+     * Set Content for each `RuleType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+     * @param RulePaths Content for each `RuleType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
      */
     public void setRulePaths(String [] RulePaths) {
         this.RulePaths = RulePaths;
@@ -135,11 +135,11 @@ For `path`, enter the corresponding absolute path, such as /xxx/test.html.
 
     /**
      * Get Referer configuration types
-whitelist: allowlist
-blacklist: blocklist 
+`whitelist`: Allowlist
+`blacklist`: Blocklist 
      * @return RefererType Referer configuration types
-whitelist: allowlist
-blacklist: blocklist
+`whitelist`: Allowlist
+`blacklist`: Blocklist
      */
     public String getRefererType() {
         return this.RefererType;
@@ -147,11 +147,11 @@ blacklist: blocklist
 
     /**
      * Set Referer configuration types
-whitelist: allowlist
-blacklist: blocklist
+`whitelist`: Allowlist
+`blacklist`: Blocklist
      * @param RefererType Referer configuration types
-whitelist: allowlist
-blacklist: blocklist
+`whitelist`: Allowlist
+`blacklist`: Blocklist
      */
     public void setRefererType(String RefererType) {
         this.RefererType = RefererType;
@@ -175,11 +175,11 @@ blacklist: blocklist
 
     /**
      * Get Whether to allow empty referer
-true: allow empty referer
-false: do not allow empty referer 
+`true`: Allow empty referer when `RefererType = whitelist`.
+`false`: Reject empty refer when `RefererType = blacklist`. 
      * @return AllowEmpty Whether to allow empty referer
-true: allow empty referer
-false: do not allow empty referer
+`true`: Allow empty referer when `RefererType = whitelist`.
+`false`: Reject empty refer when `RefererType = blacklist`.
      */
     public Boolean getAllowEmpty() {
         return this.AllowEmpty;
@@ -187,11 +187,11 @@ false: do not allow empty referer
 
     /**
      * Set Whether to allow empty referer
-true: allow empty referer
-false: do not allow empty referer
+`true`: Allow empty referer when `RefererType = whitelist`.
+`false`: Reject empty refer when `RefererType = blacklist`.
      * @param AllowEmpty Whether to allow empty referer
-true: allow empty referer
-false: do not allow empty referer
+`true`: Allow empty referer when `RefererType = whitelist`.
+`false`: Reject empty refer when `RefererType = blacklist`.
      */
     public void setAllowEmpty(Boolean AllowEmpty) {
         this.AllowEmpty = AllowEmpty;

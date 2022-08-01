@@ -24,9 +24,9 @@ public class MaxAge extends AbstractModel{
 
     /**
     * Browser cache configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Switch")
     @Expose
@@ -34,7 +34,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * MaxAge rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("MaxAgeRules")
     @Expose
@@ -42,13 +42,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Browser cache configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained. 
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Switch Browser cache configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
@@ -56,13 +56,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Browser cache configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Switch Browser cache configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
@@ -70,9 +70,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get MaxAge rule
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return MaxAgeRules MaxAge rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public MaxAgeRule [] getMaxAgeRules() {
         return this.MaxAgeRules;
@@ -80,9 +80,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set MaxAge rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param MaxAgeRules MaxAge rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setMaxAgeRules(MaxAgeRule [] MaxAgeRules) {
         this.MaxAgeRules = MaxAgeRules;

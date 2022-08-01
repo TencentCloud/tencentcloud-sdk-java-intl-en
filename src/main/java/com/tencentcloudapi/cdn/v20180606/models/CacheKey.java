@@ -24,16 +24,16 @@ public class CacheKey extends AbstractModel{
 
     /**
     * Whether to enable full-path cache
-`on`: enables full-path cache (i.e., disables Ignore Query String)
-`off`: disables full-path cache (i.e., enables Ignore Query String)
+`on`: Enable full-path cache (i.e., disable Ignore Query String)
+`off`: Disable full-path cache (i.e., enable Ignore Query String)
     */
     @SerializedName("FullUrlCache")
     @Expose
     private String FullUrlCache;
 
     /**
-    * Whether caches are case insensitive
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specifies whether the cache key is case sensitive
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("IgnoreCase")
     @Expose
@@ -41,7 +41,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Request parameter contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("QueryString")
     @Expose
@@ -49,7 +49,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Cookie contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Cookie")
     @Expose
@@ -57,7 +57,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Request header contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Header")
     @Expose
@@ -65,7 +65,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Custom string contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("CacheTag")
     @Expose
@@ -73,15 +73,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Request protocol contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Scheme")
     @Expose
     private SchemeKey Scheme;
 
     /**
-    * Path-based cache key configuration
-Note: this field may return null, indicating that no valid value is obtained.
+    * Path-specific cache key configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("KeyRules")
     @Expose
@@ -89,11 +89,11 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Get Whether to enable full-path cache
-`on`: enables full-path cache (i.e., disables Ignore Query String)
-`off`: disables full-path cache (i.e., enables Ignore Query String) 
+`on`: Enable full-path cache (i.e., disable Ignore Query String)
+`off`: Disable full-path cache (i.e., enable Ignore Query String) 
      * @return FullUrlCache Whether to enable full-path cache
-`on`: enables full-path cache (i.e., disables Ignore Query String)
-`off`: disables full-path cache (i.e., enables Ignore Query String)
+`on`: Enable full-path cache (i.e., disable Ignore Query String)
+`off`: Disable full-path cache (i.e., enable Ignore Query String)
      */
     public String getFullUrlCache() {
         return this.FullUrlCache;
@@ -101,31 +101,31 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Set Whether to enable full-path cache
-`on`: enables full-path cache (i.e., disables Ignore Query String)
-`off`: disables full-path cache (i.e., enables Ignore Query String)
+`on`: Enable full-path cache (i.e., disable Ignore Query String)
+`off`: Disable full-path cache (i.e., enable Ignore Query String)
      * @param FullUrlCache Whether to enable full-path cache
-`on`: enables full-path cache (i.e., disables Ignore Query String)
-`off`: disables full-path cache (i.e., enables Ignore Query String)
+`on`: Enable full-path cache (i.e., disable Ignore Query String)
+`off`: Disable full-path cache (i.e., enable Ignore Query String)
      */
     public void setFullUrlCache(String FullUrlCache) {
         this.FullUrlCache = FullUrlCache;
     }
 
     /**
-     * Get Whether caches are case insensitive
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IgnoreCase Whether caches are case insensitive
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specifies whether the cache key is case sensitive
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return IgnoreCase Specifies whether the cache key is case sensitive
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getIgnoreCase() {
         return this.IgnoreCase;
     }
 
     /**
-     * Set Whether caches are case insensitive
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IgnoreCase Whether caches are case insensitive
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specifies whether the cache key is case sensitive
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param IgnoreCase Specifies whether the cache key is case sensitive
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setIgnoreCase(String IgnoreCase) {
         this.IgnoreCase = IgnoreCase;
@@ -133,9 +133,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Request parameter contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return QueryString Request parameter contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public QueryStringKey getQueryString() {
         return this.QueryString;
@@ -143,9 +143,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Request parameter contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param QueryString Request parameter contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setQueryString(QueryStringKey QueryString) {
         this.QueryString = QueryString;
@@ -153,9 +153,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Cookie contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Cookie Cookie contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public CookieKey getCookie() {
         return this.Cookie;
@@ -163,9 +163,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Cookie contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Cookie Cookie contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCookie(CookieKey Cookie) {
         this.Cookie = Cookie;
@@ -173,9 +173,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Request header contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Header Request header contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public HeaderKey getHeader() {
         return this.Header;
@@ -183,9 +183,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Request header contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Header Request header contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setHeader(HeaderKey Header) {
         this.Header = Header;
@@ -193,9 +193,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Custom string contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return CacheTag Custom string contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public CacheTagKey getCacheTag() {
         return this.CacheTag;
@@ -203,9 +203,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Custom string contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param CacheTag Custom string contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCacheTag(CacheTagKey CacheTag) {
         this.CacheTag = CacheTag;
@@ -213,9 +213,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Request protocol contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Scheme Request protocol contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public SchemeKey getScheme() {
         return this.Scheme;
@@ -223,29 +223,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Request protocol contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Scheme Request protocol contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setScheme(SchemeKey Scheme) {
         this.Scheme = Scheme;
     }
 
     /**
-     * Get Path-based cache key configuration
-Note: this field may return null, indicating that no valid value is obtained. 
-     * @return KeyRules Path-based cache key configuration
-Note: this field may return null, indicating that no valid value is obtained.
+     * Get Path-specific cache key configuration
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return KeyRules Path-specific cache key configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public KeyRule [] getKeyRules() {
         return this.KeyRules;
     }
 
     /**
-     * Set Path-based cache key configuration
-Note: this field may return null, indicating that no valid value is obtained.
-     * @param KeyRules Path-based cache key configuration
-Note: this field may return null, indicating that no valid value is obtained.
+     * Set Path-specific cache key configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param KeyRules Path-specific cache key configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setKeyRules(KeyRule [] KeyRules) {
         this.KeyRules = KeyRules;

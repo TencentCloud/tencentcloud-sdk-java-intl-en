@@ -24,7 +24,7 @@ public class CookieKey extends AbstractModel{
 
     /**
     * Whether to use `Cookie` as part of `CacheKey`. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Switch")
     @Expose
@@ -32,7 +32,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Used cookies (separated by ';')
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Value")
     @Expose
@@ -40,9 +40,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Whether to use `Cookie` as part of `CacheKey`. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Switch Whether to use `Cookie` as part of `CacheKey`. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
@@ -50,9 +50,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Whether to use `Cookie` as part of `CacheKey`. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Switch Whether to use `Cookie` as part of `CacheKey`. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
@@ -60,9 +60,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Used cookies (separated by ';')
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Value Used cookies (separated by ';')
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getValue() {
         return this.Value;
@@ -70,9 +70,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Used cookies (separated by ';')
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Value Used cookies (separated by ';')
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setValue(String Value) {
         this.Value = Value;

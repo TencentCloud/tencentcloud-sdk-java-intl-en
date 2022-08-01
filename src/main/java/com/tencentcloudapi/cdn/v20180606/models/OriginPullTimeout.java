@@ -24,7 +24,7 @@ public class OriginPullTimeout extends AbstractModel{
 
     /**
     * The origin-pull connection timeout (in seconds). Valid range: 5-60.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("ConnectTimeout")
     @Expose
@@ -32,7 +32,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * The origin-pull receipt timeout (in seconds). Valid range: 10-60.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("ReceiveTimeout")
     @Expose
@@ -40,9 +40,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get The origin-pull connection timeout (in seconds). Valid range: 5-60.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return ConnectTimeout The origin-pull connection timeout (in seconds). Valid range: 5-60.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Long getConnectTimeout() {
         return this.ConnectTimeout;
@@ -50,9 +50,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set The origin-pull connection timeout (in seconds). Valid range: 5-60.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param ConnectTimeout The origin-pull connection timeout (in seconds). Valid range: 5-60.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setConnectTimeout(Long ConnectTimeout) {
         this.ConnectTimeout = ConnectTimeout;
@@ -60,9 +60,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get The origin-pull receipt timeout (in seconds). Valid range: 10-60.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return ReceiveTimeout The origin-pull receipt timeout (in seconds). Valid range: 10-60.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Long getReceiveTimeout() {
         return this.ReceiveTimeout;
@@ -70,9 +70,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set The origin-pull receipt timeout (in seconds). Valid range: 10-60.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param ReceiveTimeout The origin-pull receipt timeout (in seconds). Valid range: 10-60.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setReceiveTimeout(Long ReceiveTimeout) {
         this.ReceiveTimeout = ReceiveTimeout;

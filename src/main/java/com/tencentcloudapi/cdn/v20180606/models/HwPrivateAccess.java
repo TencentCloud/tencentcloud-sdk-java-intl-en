@@ -23,92 +23,107 @@ import java.util.HashMap;
 public class HwPrivateAccess extends AbstractModel{
 
     /**
-    * 
+    * Whether to enable access authentication. Valid values: `on`, `off`.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("AccessKey")
     @Expose
     private String AccessKey;
 
     /**
-    * 
+    * Key
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("SecretKey")
     @Expose
     private String SecretKey;
 
     /**
-    * bucketname
+    * BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Bucket")
     @Expose
     private String Bucket;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Whether to enable access authentication. Valid values: `on`, `off`. 
+     * @return Switch Whether to enable access authentication. Valid values: `on`, `off`.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Whether to enable access authentication. Valid values: `on`, `off`.
+     * @param Switch Whether to enable access authentication. Valid values: `on`, `off`.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return AccessKey 
+     * Get Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return AccessKey Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getAccessKey() {
         return this.AccessKey;
     }
 
     /**
-     * Set 
-     * @param AccessKey 
+     * Set Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param AccessKey Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setAccessKey(String AccessKey) {
         this.AccessKey = AccessKey;
     }
 
     /**
-     * Get  
-     * @return SecretKey 
+     * Get Key
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return SecretKey Key
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getSecretKey() {
         return this.SecretKey;
     }
 
     /**
-     * Set 
-     * @param SecretKey 
+     * Set Key
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param SecretKey Key
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;
     }
 
     /**
-     * Get bucketname 
-     * @return Bucket bucketname
+     * Get BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Bucket BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * Set bucketname
-     * @param Bucket bucketname
+     * Set BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Bucket BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;

@@ -24,9 +24,9 @@ public class PathRule extends AbstractModel{
 
     /**
     * Whether to enable wildcard match (`*`).
-false: disable
-true: enable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`false`: disabled
+`true`: enabled
+Note: this field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Regex")
     @Expose
@@ -57,9 +57,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String ServerName;
 
     /**
-    * Origin server region. Valid values: `CN` and `OV`.
-CN: the Chinese mainland
-OV: outside the Chinese mainland
+    * Region of the origin server. Valid values: `CN` and `OV`.
+`CN`: Within the Chinese mainland
+`OV`: Outside the Chinese mainland
 Default value: `CN`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
@@ -69,7 +69,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the match path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("ForwardUri")
     @Expose
@@ -77,7 +77,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Origin-pull header setting when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("RequestHeaders")
     @Expose
@@ -85,9 +85,9 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
     /**
     * When `Regex` is `false`, this parameter should be `true`.
-`false`: disabled
+`false`: Disabled
 `true`: enabled
-Note: this field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("FullMatch")
     @Expose
@@ -95,13 +95,13 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Get Whether to enable wildcard match (`*`).
-false: disable
-true: enable
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+`false`: disabled
+`true`: enabled
+Note: this field may return `null`, indicating that no valid value can be obtained. 
      * @return Regex Whether to enable wildcard match (`*`).
-false: disable
-true: enable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`false`: disabled
+`true`: enabled
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public Boolean getRegex() {
         return this.Regex;
@@ -109,13 +109,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Whether to enable wildcard match (`*`).
-false: disable
-true: enable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`false`: disabled
+`true`: enabled
+Note: this field may return `null`, indicating that no valid value can be obtained.
      * @param Regex Whether to enable wildcard match (`*`).
-false: disable
-true: enable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`false`: disabled
+`true`: enabled
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRegex(Boolean Regex) {
         this.Regex = Regex;
@@ -182,14 +182,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Origin server region. Valid values: `CN` and `OV`.
-CN: the Chinese mainland
-OV: outside the Chinese mainland
+     * Get Region of the origin server. Valid values: `CN` and `OV`.
+`CN`: Within the Chinese mainland
+`OV`: Outside the Chinese mainland
 Default value: `CN`.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return OriginArea Origin server region. Valid values: `CN` and `OV`.
-CN: the Chinese mainland
-OV: outside the Chinese mainland
+     * @return OriginArea Region of the origin server. Valid values: `CN` and `OV`.
+`CN`: Within the Chinese mainland
+`OV`: Outside the Chinese mainland
 Default value: `CN`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
@@ -198,14 +198,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Origin server region. Valid values: `CN` and `OV`.
-CN: the Chinese mainland
-OV: outside the Chinese mainland
+     * Set Region of the origin server. Valid values: `CN` and `OV`.
+`CN`: Within the Chinese mainland
+`OV`: Outside the Chinese mainland
 Default value: `CN`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param OriginArea Origin server region. Valid values: `CN` and `OV`.
-CN: the Chinese mainland
-OV: outside the Chinese mainland
+     * @param OriginArea Region of the origin server. Valid values: `CN` and `OV`.
+`CN`: Within the Chinese mainland
+`OV`: Outside the Chinese mainland
 Default value: `CN`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
@@ -215,9 +215,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the match path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return ForwardUri Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the match path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getForwardUri() {
         return this.ForwardUri;
@@ -225,9 +225,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the match path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param ForwardUri Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the match path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setForwardUri(String ForwardUri) {
         this.ForwardUri = ForwardUri;
@@ -235,9 +235,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Origin-pull header setting when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return RequestHeaders Origin-pull header setting when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public HttpHeaderRule [] getRequestHeaders() {
         return this.RequestHeaders;
@@ -245,9 +245,9 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
     /**
      * Set Origin-pull header setting when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param RequestHeaders Origin-pull header setting when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRequestHeaders(HttpHeaderRule [] RequestHeaders) {
         this.RequestHeaders = RequestHeaders;
@@ -255,13 +255,13 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
     /**
      * Get When `Regex` is `false`, this parameter should be `true`.
-`false`: disabled
+`false`: Disabled
 `true`: enabled
-Note: this field may return `null`, indicating that no valid value can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return FullMatch When `Regex` is `false`, this parameter should be `true`.
-`false`: disabled
+`false`: Disabled
 `true`: enabled
-Note: this field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Boolean getFullMatch() {
         return this.FullMatch;
@@ -269,13 +269,13 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Set When `Regex` is `false`, this parameter should be `true`.
-`false`: disabled
+`false`: Disabled
 `true`: enabled
-Note: this field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param FullMatch When `Regex` is `false`, this parameter should be `true`.
-`false`: disabled
+`false`: Disabled
 `true`: enabled
-Note: this field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setFullMatch(Boolean FullMatch) {
         this.FullMatch = FullMatch;

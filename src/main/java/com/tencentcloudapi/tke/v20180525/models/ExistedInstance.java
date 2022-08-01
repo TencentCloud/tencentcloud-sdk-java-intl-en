@@ -134,6 +134,15 @@ Note: This field may return null, indicating that no valid value was found.
     private String InstanceChargeType;
 
     /**
+    * IPv6 address of the instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IPv6Addresses")
+    @Expose
+    private String [] IPv6Addresses;
+
+    /**
      * Get Whether the instance supports being added to the cluster (TRUE: support; FALSE: not support).
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Usable Whether the instance supports being added to the cluster (TRUE: support; FALSE: not support).
@@ -409,6 +418,30 @@ Note: This field may return null, indicating that no valid value was found.
         this.InstanceChargeType = InstanceChargeType;
     }
 
+    /**
+     * Get IPv6 address of the instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return IPv6Addresses IPv6 address of the instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String [] getIPv6Addresses() {
+        return this.IPv6Addresses;
+    }
+
+    /**
+     * Set IPv6 address of the instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param IPv6Addresses IPv6 address of the instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setIPv6Addresses(String [] IPv6Addresses) {
+        this.IPv6Addresses = IPv6Addresses;
+    }
+
     public ExistedInstance() {
     }
 
@@ -465,6 +498,12 @@ Note: This field may return null, indicating that no valid value was found.
         if (source.InstanceChargeType != null) {
             this.InstanceChargeType = new String(source.InstanceChargeType);
         }
+        if (source.IPv6Addresses != null) {
+            this.IPv6Addresses = new String[source.IPv6Addresses.length];
+            for (int i = 0; i < source.IPv6Addresses.length; i++) {
+                this.IPv6Addresses[i] = new String(source.IPv6Addresses[i]);
+            }
+        }
     }
 
 
@@ -486,6 +525,7 @@ Note: This field may return null, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "AutoscalingGroupId", this.AutoscalingGroupId);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+        this.setParamArraySimple(map, prefix + "IPv6Addresses.", this.IPv6Addresses);
 
     }
 }

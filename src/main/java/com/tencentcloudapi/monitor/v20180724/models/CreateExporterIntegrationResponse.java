@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateExporterIntegrationResponse extends AbstractModel{
 
     /**
-    * 
+    * The list of successfully created integrations.
     */
     @SerializedName("Names")
     @Expose
@@ -37,16 +37,16 @@ public class CreateExporterIntegrationResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get  
-     * @return Names 
+     * Get The list of successfully created integrations. 
+     * @return Names The list of successfully created integrations.
      */
     public String [] getNames() {
         return this.Names;
     }
 
     /**
-     * Set 
-     * @param Names 
+     * Set The list of successfully created integrations.
+     * @param Names The list of successfully created integrations.
      */
     public void setNames(String [] Names) {
         this.Names = Names;

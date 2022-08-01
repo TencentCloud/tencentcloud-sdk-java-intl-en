@@ -31,7 +31,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String CustomTlsStatus;
 
     /**
-    * Specifies the TLS version. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+    * TLS version settings. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("TlsVersion")
@@ -47,10 +47,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String Cipher;
 
     /**
-    * Origin authentication type
-`off`: disable authentication
-`oneWay`: authenticate the origin 
-`twoWay`: two-way authentication
+    * Origin-pull verification status
+`off`: Disables origin-pull verification
+`oneWay`: Only verify the origin
+`twoWay`: Enables two-way origin-pull verification
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("VerifyOriginType")
@@ -58,7 +58,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String VerifyOriginType;
 
     /**
-    * Information of the origin-pull certificate
+    * Configuration information of the origin-pull certificate
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("CertInfo")
@@ -66,7 +66,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private ServerCert CertInfo;
 
     /**
-    * Information of the origin server certificate
+    * Configuration information of the origin server certificate
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("OriginCertInfo")
@@ -94,9 +94,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Specifies the TLS version. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+     * Get TLS version settings. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return TlsVersion Specifies the TLS version. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+     * @return TlsVersion TLS version settings. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String [] getTlsVersion() {
@@ -104,9 +104,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Specifies the TLS version. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+     * Set TLS version settings. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param TlsVersion Specifies the TLS version. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+     * @param TlsVersion TLS version settings. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setTlsVersion(String [] TlsVersion) {
@@ -134,15 +134,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Origin authentication type
-`off`: disable authentication
-`oneWay`: authenticate the origin 
-`twoWay`: two-way authentication
+     * Get Origin-pull verification status
+`off`: Disables origin-pull verification
+`oneWay`: Only verify the origin
+`twoWay`: Enables two-way origin-pull verification
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return VerifyOriginType Origin authentication type
-`off`: disable authentication
-`oneWay`: authenticate the origin 
-`twoWay`: two-way authentication
+     * @return VerifyOriginType Origin-pull verification status
+`off`: Disables origin-pull verification
+`oneWay`: Only verify the origin
+`twoWay`: Enables two-way origin-pull verification
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getVerifyOriginType() {
@@ -150,15 +150,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Origin authentication type
-`off`: disable authentication
-`oneWay`: authenticate the origin 
-`twoWay`: two-way authentication
+     * Set Origin-pull verification status
+`off`: Disables origin-pull verification
+`oneWay`: Only verify the origin
+`twoWay`: Enables two-way origin-pull verification
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param VerifyOriginType Origin authentication type
-`off`: disable authentication
-`oneWay`: authenticate the origin 
-`twoWay`: two-way authentication
+     * @param VerifyOriginType Origin-pull verification status
+`off`: Disables origin-pull verification
+`oneWay`: Only verify the origin
+`twoWay`: Enables two-way origin-pull verification
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setVerifyOriginType(String VerifyOriginType) {
@@ -166,9 +166,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Information of the origin-pull certificate
+     * Get Configuration information of the origin-pull certificate
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return CertInfo Information of the origin-pull certificate
+     * @return CertInfo Configuration information of the origin-pull certificate
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public ServerCert getCertInfo() {
@@ -176,9 +176,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Information of the origin-pull certificate
+     * Set Configuration information of the origin-pull certificate
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param CertInfo Information of the origin-pull certificate
+     * @param CertInfo Configuration information of the origin-pull certificate
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setCertInfo(ServerCert CertInfo) {
@@ -186,9 +186,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Information of the origin server certificate
+     * Get Configuration information of the origin server certificate
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return OriginCertInfo Information of the origin server certificate
+     * @return OriginCertInfo Configuration information of the origin server certificate
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public ClientCert getOriginCertInfo() {
@@ -196,9 +196,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Information of the origin server certificate
+     * Set Configuration information of the origin server certificate
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param OriginCertInfo Information of the origin server certificate
+     * @param OriginCertInfo Configuration information of the origin server certificate
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setOriginCertInfo(ClientCert OriginCertInfo) {

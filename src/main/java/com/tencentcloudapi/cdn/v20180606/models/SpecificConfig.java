@@ -24,7 +24,7 @@ public class SpecificConfig extends AbstractModel{
 
     /**
     * Specific configuration for domain name inside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Mainland")
     @Expose
@@ -32,7 +32,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Specific configuration for domain name outside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Overseas")
     @Expose
@@ -40,9 +40,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Specific configuration for domain name inside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Mainland Specific configuration for domain name inside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public MainlandConfig getMainland() {
         return this.Mainland;
@@ -50,9 +50,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Specific configuration for domain name inside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Mainland Specific configuration for domain name inside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setMainland(MainlandConfig Mainland) {
         this.Mainland = Mainland;
@@ -60,9 +60,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Specific configuration for domain name outside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Overseas Specific configuration for domain name outside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public OverseaConfig getOverseas() {
         return this.Overseas;
@@ -70,9 +70,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Specific configuration for domain name outside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Overseas Specific configuration for domain name outside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setOverseas(OverseaConfig Overseas) {
         this.Overseas = Overseas;

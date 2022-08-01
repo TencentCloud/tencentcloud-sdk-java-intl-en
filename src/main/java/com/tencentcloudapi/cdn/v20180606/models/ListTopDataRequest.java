@@ -25,8 +25,8 @@ public class ListTopDataRequest extends AbstractModel{
     /**
     * Query start time in the format of `yyyy-MM-dd HH:mm:ss`
 Only supports data query at daily granularity. The date in the input parameter is used as the start date.
-Data generated after or at 00:00:00 on the start date will be returned
-Only data for the last 90 days can be queried
+If the specified start date is greater than 00:00:00, it will be rounded down to 00:00:00 on the date. For example, if `StartTime` is 2018-09-04 10:40:00, it will be rounded down to 2018-09-04 00:00:00.
+Only data from the last 90 days will be queried.
     */
     @SerializedName("StartTime")
     @Expose
@@ -35,7 +35,7 @@ Only data for the last 90 days can be queried
     /**
     * Query end time in the format of `yyyy-MM-dd HH:mm:ss`
 Only supports data query at daily granularity. The date in the input parameter is used as the end date.
-Data generated before or at 23:59:59 on the end date will be returned
+If the specified end date is smaller than 23:59:59, it will be rounded up to 23:59:59 on the date. For example, if `EndTime` is 2018-09-05 22:40:00, it will be rounded up to 2018-09-05 23:59:59.
 `EndTime` must be later than or equal to `StartTime`
     */
     @SerializedName("EndTime")
@@ -43,12 +43,12 @@ Data generated before or at 23:59:59 on the end date will be returned
     private String EndTime;
 
     /**
-    * Object representing the sort criteria. The following objects are supported:
-`url`: sorts by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
-`district`: sorts by province, country, or region. Supported filters are `flux` and `request`.
-`isp`: sorts by ISP. Supported filters are `flux` and `request`.
-`host`: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
-`originHost`: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX).
+    * Objects to be sorted. Valid values:
+`url`: Sort by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
+`district`: sorts provinces or countries/regions. Supported filters are `flux` and `request`.
+`isp`: sorts ISPs. Supported filters are `flux` and `request`.
+`host`: Sort by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
+`originHost`: Sort by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX).
     */
     @SerializedName("Metric")
     @Expose
@@ -91,7 +91,7 @@ Please note that if domain names are specified, this parameter will be ignored.
     private Long Project;
 
     /**
-    * Default is `false` for multi-domain name queries, which returns sorted results of all domain names. 
+    * The sorted results of all domain names are returned by default (false) during a multi-domain-name query
 If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `request`, it can be set to `true` to return the sorted results of each domain.
     */
     @SerializedName("Detail")
@@ -106,18 +106,18 @@ If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `re
     private String Code;
 
     /**
-    * Specifies a service region for the query. If it is left blank, CDN data within Mainland China will be queried.
-`mainland`: specifies to query CDN data within Mainland China;
-`overseas`: specifies to query CDN data outside Mainland China. Supported metrics are `url`, `district`, `host`, and `originHost`. If `Metric` is `originHost`, supported filters are `flux`, `request`, and `bandwidth`.
+    * Specifies the service region. If this value is left blank, it means to query CDN data within the Chinese mainland.
+`mainland`: Query CDN data in the Chinese mainland.
+`overseas`: Query CDN data outside the Chinese mainland. Supported metrics are `url`, `district`, `host`, and `originHost`. If `Metric` is `originHost`, supported filters are `flux`, `request`, and `bandwidth`.
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * The region type can be specified only when you query CDN data outside Mainland China and `Metric` is `district` or `host`; if you leave it empty, data of the service region will be queried (only applicable when `Area` is `overseas` and `Metric` is `district` or `host`)
-server: specifies to query data of service region (where a CDN node is located)
-client: specifies to query data of the client region (where a user request device is located). If `Metric` is `host`, `Filter` can only be `flux`, `request`, or `bandwidth`
+    * Specifies a region type for the query. If it is left blank, data of the service region will be queried. This parameter is only valid when `Area` is `overseas` and `Metric` is `district` or `host`.
+`server`: Query by the location of server (Tencent Cloud CDN nodes).
+`client`: Query data of the client region where the request devices are located; if `Metric` is `host`, supported filters are `flux`, `request`, and `bandwidth`.
     */
     @SerializedName("AreaType")
     @Expose
@@ -140,12 +140,12 @@ client: specifies to query data of the client region (where a user request devic
     /**
      * Get Query start time in the format of `yyyy-MM-dd HH:mm:ss`
 Only supports data query at daily granularity. The date in the input parameter is used as the start date.
-Data generated after or at 00:00:00 on the start date will be returned
-Only data for the last 90 days can be queried 
+If the specified start date is greater than 00:00:00, it will be rounded down to 00:00:00 on the date. For example, if `StartTime` is 2018-09-04 10:40:00, it will be rounded down to 2018-09-04 00:00:00.
+Only data from the last 90 days will be queried. 
      * @return StartTime Query start time in the format of `yyyy-MM-dd HH:mm:ss`
 Only supports data query at daily granularity. The date in the input parameter is used as the start date.
-Data generated after or at 00:00:00 on the start date will be returned
-Only data for the last 90 days can be queried
+If the specified start date is greater than 00:00:00, it will be rounded down to 00:00:00 on the date. For example, if `StartTime` is 2018-09-04 10:40:00, it will be rounded down to 2018-09-04 00:00:00.
+Only data from the last 90 days will be queried.
      */
     public String getStartTime() {
         return this.StartTime;
@@ -154,12 +154,12 @@ Only data for the last 90 days can be queried
     /**
      * Set Query start time in the format of `yyyy-MM-dd HH:mm:ss`
 Only supports data query at daily granularity. The date in the input parameter is used as the start date.
-Data generated after or at 00:00:00 on the start date will be returned
-Only data for the last 90 days can be queried
+If the specified start date is greater than 00:00:00, it will be rounded down to 00:00:00 on the date. For example, if `StartTime` is 2018-09-04 10:40:00, it will be rounded down to 2018-09-04 00:00:00.
+Only data from the last 90 days will be queried.
      * @param StartTime Query start time in the format of `yyyy-MM-dd HH:mm:ss`
 Only supports data query at daily granularity. The date in the input parameter is used as the start date.
-Data generated after or at 00:00:00 on the start date will be returned
-Only data for the last 90 days can be queried
+If the specified start date is greater than 00:00:00, it will be rounded down to 00:00:00 on the date. For example, if `StartTime` is 2018-09-04 10:40:00, it will be rounded down to 2018-09-04 00:00:00.
+Only data from the last 90 days will be queried.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
@@ -168,11 +168,11 @@ Only data for the last 90 days can be queried
     /**
      * Get Query end time in the format of `yyyy-MM-dd HH:mm:ss`
 Only supports data query at daily granularity. The date in the input parameter is used as the end date.
-Data generated before or at 23:59:59 on the end date will be returned
+If the specified end date is smaller than 23:59:59, it will be rounded up to 23:59:59 on the date. For example, if `EndTime` is 2018-09-05 22:40:00, it will be rounded up to 2018-09-05 23:59:59.
 `EndTime` must be later than or equal to `StartTime` 
      * @return EndTime Query end time in the format of `yyyy-MM-dd HH:mm:ss`
 Only supports data query at daily granularity. The date in the input parameter is used as the end date.
-Data generated before or at 23:59:59 on the end date will be returned
+If the specified end date is smaller than 23:59:59, it will be rounded up to 23:59:59 on the date. For example, if `EndTime` is 2018-09-05 22:40:00, it will be rounded up to 2018-09-05 23:59:59.
 `EndTime` must be later than or equal to `StartTime`
      */
     public String getEndTime() {
@@ -182,11 +182,11 @@ Data generated before or at 23:59:59 on the end date will be returned
     /**
      * Set Query end time in the format of `yyyy-MM-dd HH:mm:ss`
 Only supports data query at daily granularity. The date in the input parameter is used as the end date.
-Data generated before or at 23:59:59 on the end date will be returned
+If the specified end date is smaller than 23:59:59, it will be rounded up to 23:59:59 on the date. For example, if `EndTime` is 2018-09-05 22:40:00, it will be rounded up to 2018-09-05 23:59:59.
 `EndTime` must be later than or equal to `StartTime`
      * @param EndTime Query end time in the format of `yyyy-MM-dd HH:mm:ss`
 Only supports data query at daily granularity. The date in the input parameter is used as the end date.
-Data generated before or at 23:59:59 on the end date will be returned
+If the specified end date is smaller than 23:59:59, it will be rounded up to 23:59:59 on the date. For example, if `EndTime` is 2018-09-05 22:40:00, it will be rounded up to 2018-09-05 23:59:59.
 `EndTime` must be later than or equal to `StartTime`
      */
     public void setEndTime(String EndTime) {
@@ -194,36 +194,36 @@ Data generated before or at 23:59:59 on the end date will be returned
     }
 
     /**
-     * Get Object representing the sort criteria. The following objects are supported:
-`url`: sorts by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
-`district`: sorts by province, country, or region. Supported filters are `flux` and `request`.
-`isp`: sorts by ISP. Supported filters are `flux` and `request`.
-`host`: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
-`originHost`: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX). 
-     * @return Metric Object representing the sort criteria. The following objects are supported:
-`url`: sorts by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
-`district`: sorts by province, country, or region. Supported filters are `flux` and `request`.
-`isp`: sorts by ISP. Supported filters are `flux` and `request`.
-`host`: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
-`originHost`: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX).
+     * Get Objects to be sorted. Valid values:
+`url`: Sort by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
+`district`: sorts provinces or countries/regions. Supported filters are `flux` and `request`.
+`isp`: sorts ISPs. Supported filters are `flux` and `request`.
+`host`: Sort by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
+`originHost`: Sort by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX). 
+     * @return Metric Objects to be sorted. Valid values:
+`url`: Sort by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
+`district`: sorts provinces or countries/regions. Supported filters are `flux` and `request`.
+`isp`: sorts ISPs. Supported filters are `flux` and `request`.
+`host`: Sort by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
+`originHost`: Sort by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX).
      */
     public String getMetric() {
         return this.Metric;
     }
 
     /**
-     * Set Object representing the sort criteria. The following objects are supported:
-`url`: sorts by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
-`district`: sorts by province, country, or region. Supported filters are `flux` and `request`.
-`isp`: sorts by ISP. Supported filters are `flux` and `request`.
-`host`: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
-`originHost`: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX).
-     * @param Metric Object representing the sort criteria. The following objects are supported:
-`url`: sorts by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
-`district`: sorts by province, country, or region. Supported filters are `flux` and `request`.
-`isp`: sorts by ISP. Supported filters are `flux` and `request`.
-`host`: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
-`originHost`: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX).
+     * Set Objects to be sorted. Valid values:
+`url`: Sort by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
+`district`: sorts provinces or countries/regions. Supported filters are `flux` and `request`.
+`isp`: sorts ISPs. Supported filters are `flux` and `request`.
+`host`: Sort by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
+`originHost`: Sort by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX).
+     * @param Metric Objects to be sorted. Valid values:
+`url`: Sort by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
+`district`: sorts provinces or countries/regions. Supported filters are `flux` and `request`.
+`isp`: sorts ISPs. Supported filters are `flux` and `request`.
+`host`: Sort by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
+`originHost`: Sort by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX).
      */
     public void setMetric(String Metric) {
         this.Metric = Metric;
@@ -338,9 +338,9 @@ Please note that if domain names are specified, this parameter will be ignored.
     }
 
     /**
-     * Get Default is `false` for multi-domain name queries, which returns sorted results of all domain names. 
+     * Get The sorted results of all domain names are returned by default (false) during a multi-domain-name query
 If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `request`, it can be set to `true` to return the sorted results of each domain. 
-     * @return Detail Default is `false` for multi-domain name queries, which returns sorted results of all domain names. 
+     * @return Detail The sorted results of all domain names are returned by default (false) during a multi-domain-name query
 If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `request`, it can be set to `true` to return the sorted results of each domain.
      */
     public Boolean getDetail() {
@@ -348,9 +348,9 @@ If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `re
     }
 
     /**
-     * Set Default is `false` for multi-domain name queries, which returns sorted results of all domain names. 
+     * Set The sorted results of all domain names are returned by default (false) during a multi-domain-name query
 If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `request`, it can be set to `true` to return the sorted results of each domain.
-     * @param Detail Default is `false` for multi-domain name queries, which returns sorted results of all domain names. 
+     * @param Detail The sorted results of all domain names are returned by default (false) during a multi-domain-name query
 If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `request`, it can be set to `true` to return the sorted results of each domain.
      */
     public void setDetail(Boolean Detail) {
@@ -374,48 +374,48 @@ If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `re
     }
 
     /**
-     * Get Specifies a service region for the query. If it is left blank, CDN data within Mainland China will be queried.
-`mainland`: specifies to query CDN data within Mainland China;
-`overseas`: specifies to query CDN data outside Mainland China. Supported metrics are `url`, `district`, `host`, and `originHost`. If `Metric` is `originHost`, supported filters are `flux`, `request`, and `bandwidth`. 
-     * @return Area Specifies a service region for the query. If it is left blank, CDN data within Mainland China will be queried.
-`mainland`: specifies to query CDN data within Mainland China;
-`overseas`: specifies to query CDN data outside Mainland China. Supported metrics are `url`, `district`, `host`, and `originHost`. If `Metric` is `originHost`, supported filters are `flux`, `request`, and `bandwidth`.
+     * Get Specifies the service region. If this value is left blank, it means to query CDN data within the Chinese mainland.
+`mainland`: Query CDN data in the Chinese mainland.
+`overseas`: Query CDN data outside the Chinese mainland. Supported metrics are `url`, `district`, `host`, and `originHost`. If `Metric` is `originHost`, supported filters are `flux`, `request`, and `bandwidth`. 
+     * @return Area Specifies the service region. If this value is left blank, it means to query CDN data within the Chinese mainland.
+`mainland`: Query CDN data in the Chinese mainland.
+`overseas`: Query CDN data outside the Chinese mainland. Supported metrics are `url`, `district`, `host`, and `originHost`. If `Metric` is `originHost`, supported filters are `flux`, `request`, and `bandwidth`.
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Specifies a service region for the query. If it is left blank, CDN data within Mainland China will be queried.
-`mainland`: specifies to query CDN data within Mainland China;
-`overseas`: specifies to query CDN data outside Mainland China. Supported metrics are `url`, `district`, `host`, and `originHost`. If `Metric` is `originHost`, supported filters are `flux`, `request`, and `bandwidth`.
-     * @param Area Specifies a service region for the query. If it is left blank, CDN data within Mainland China will be queried.
-`mainland`: specifies to query CDN data within Mainland China;
-`overseas`: specifies to query CDN data outside Mainland China. Supported metrics are `url`, `district`, `host`, and `originHost`. If `Metric` is `originHost`, supported filters are `flux`, `request`, and `bandwidth`.
+     * Set Specifies the service region. If this value is left blank, it means to query CDN data within the Chinese mainland.
+`mainland`: Query CDN data in the Chinese mainland.
+`overseas`: Query CDN data outside the Chinese mainland. Supported metrics are `url`, `district`, `host`, and `originHost`. If `Metric` is `originHost`, supported filters are `flux`, `request`, and `bandwidth`.
+     * @param Area Specifies the service region. If this value is left blank, it means to query CDN data within the Chinese mainland.
+`mainland`: Query CDN data in the Chinese mainland.
+`overseas`: Query CDN data outside the Chinese mainland. Supported metrics are `url`, `district`, `host`, and `originHost`. If `Metric` is `originHost`, supported filters are `flux`, `request`, and `bandwidth`.
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get The region type can be specified only when you query CDN data outside Mainland China and `Metric` is `district` or `host`; if you leave it empty, data of the service region will be queried (only applicable when `Area` is `overseas` and `Metric` is `district` or `host`)
-server: specifies to query data of service region (where a CDN node is located)
-client: specifies to query data of the client region (where a user request device is located). If `Metric` is `host`, `Filter` can only be `flux`, `request`, or `bandwidth` 
-     * @return AreaType The region type can be specified only when you query CDN data outside Mainland China and `Metric` is `district` or `host`; if you leave it empty, data of the service region will be queried (only applicable when `Area` is `overseas` and `Metric` is `district` or `host`)
-server: specifies to query data of service region (where a CDN node is located)
-client: specifies to query data of the client region (where a user request device is located). If `Metric` is `host`, `Filter` can only be `flux`, `request`, or `bandwidth`
+     * Get Specifies a region type for the query. If it is left blank, data of the service region will be queried. This parameter is only valid when `Area` is `overseas` and `Metric` is `district` or `host`.
+`server`: Query by the location of server (Tencent Cloud CDN nodes).
+`client`: Query data of the client region where the request devices are located; if `Metric` is `host`, supported filters are `flux`, `request`, and `bandwidth`. 
+     * @return AreaType Specifies a region type for the query. If it is left blank, data of the service region will be queried. This parameter is only valid when `Area` is `overseas` and `Metric` is `district` or `host`.
+`server`: Query by the location of server (Tencent Cloud CDN nodes).
+`client`: Query data of the client region where the request devices are located; if `Metric` is `host`, supported filters are `flux`, `request`, and `bandwidth`.
      */
     public String getAreaType() {
         return this.AreaType;
     }
 
     /**
-     * Set The region type can be specified only when you query CDN data outside Mainland China and `Metric` is `district` or `host`; if you leave it empty, data of the service region will be queried (only applicable when `Area` is `overseas` and `Metric` is `district` or `host`)
-server: specifies to query data of service region (where a CDN node is located)
-client: specifies to query data of the client region (where a user request device is located). If `Metric` is `host`, `Filter` can only be `flux`, `request`, or `bandwidth`
-     * @param AreaType The region type can be specified only when you query CDN data outside Mainland China and `Metric` is `district` or `host`; if you leave it empty, data of the service region will be queried (only applicable when `Area` is `overseas` and `Metric` is `district` or `host`)
-server: specifies to query data of service region (where a CDN node is located)
-client: specifies to query data of the client region (where a user request device is located). If `Metric` is `host`, `Filter` can only be `flux`, `request`, or `bandwidth`
+     * Set Specifies a region type for the query. If it is left blank, data of the service region will be queried. This parameter is only valid when `Area` is `overseas` and `Metric` is `district` or `host`.
+`server`: Query by the location of server (Tencent Cloud CDN nodes).
+`client`: Query data of the client region where the request devices are located; if `Metric` is `host`, supported filters are `flux`, `request`, and `bandwidth`.
+     * @param AreaType Specifies a region type for the query. If it is left blank, data of the service region will be queried. This parameter is only valid when `Area` is `overseas` and `Metric` is `district` or `host`.
+`server`: Query by the location of server (Tencent Cloud CDN nodes).
+`client`: Query data of the client region where the request devices are located; if `Metric` is `host`, supported filters are `flux`, `request`, and `bandwidth`.
      */
     public void setAreaType(String AreaType) {
         this.AreaType = AreaType;

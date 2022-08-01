@@ -24,15 +24,15 @@ public class GetDisableRecordsResponse extends AbstractModel{
 
     /**
     * Blocking history
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("UrlRecordList")
     @Expose
     private UrlRecord [] UrlRecordList;
 
     /**
-    * Total number of tasks, which is used for pagination
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total number of tasks, which is used for pagination.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,9 +47,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Blocking history
-Note: This field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return UrlRecordList Blocking history
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public UrlRecord [] getUrlRecordList() {
         return this.UrlRecordList;
@@ -57,29 +57,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Blocking history
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param UrlRecordList Blocking history
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setUrlRecordList(UrlRecord [] UrlRecordList) {
         this.UrlRecordList = UrlRecordList;
     }
 
     /**
-     * Get Total number of tasks, which is used for pagination
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Total number of tasks, which is used for pagination
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total number of tasks, which is used for pagination.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return TotalCount Total number of tasks, which is used for pagination.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of tasks, which is used for pagination
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Total number of tasks, which is used for pagination
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total number of tasks, which is used for pagination.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param TotalCount Total number of tasks, which is used for pagination.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

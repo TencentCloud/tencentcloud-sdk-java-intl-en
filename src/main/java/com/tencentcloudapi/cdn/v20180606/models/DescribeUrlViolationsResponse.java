@@ -24,7 +24,7 @@ public class DescribeUrlViolationsResponse extends AbstractModel{
 
     /**
     * Details of URLs in violation
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("UrlRecordList")
     @Expose
@@ -46,9 +46,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Details of URLs in violation
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return UrlRecordList Details of URLs in violation
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public ViolationUrl [] getUrlRecordList() {
         return this.UrlRecordList;
@@ -56,9 +56,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Details of URLs in violation
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param UrlRecordList Details of URLs in violation
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setUrlRecordList(ViolationUrl [] UrlRecordList) {
         this.UrlRecordList = UrlRecordList;

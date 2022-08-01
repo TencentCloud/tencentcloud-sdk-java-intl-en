@@ -24,9 +24,9 @@ public class ErrorPage extends AbstractModel{
 
     /**
     * Status code redirect configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Switch")
     @Expose
@@ -34,7 +34,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Status code redirect rules configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("PageRules")
     @Expose
@@ -42,13 +42,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Status code redirect configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained. 
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Switch Status code redirect configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
@@ -56,13 +56,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Status code redirect configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Switch Status code redirect configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
@@ -70,9 +70,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Status code redirect rules configuration
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return PageRules Status code redirect rules configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public ErrorPageRule [] getPageRules() {
         return this.PageRules;
@@ -80,9 +80,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Status code redirect rules configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param PageRules Status code redirect rules configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setPageRules(ErrorPageRule [] PageRules) {
         this.PageRules = PageRules;

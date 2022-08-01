@@ -44,15 +44,15 @@ public class ScdnAclGroup extends AbstractModel{
     private String Result;
 
     /**
-    * Whether the rule is effective. Valid values: `active` and `inactive`.
+    * Whether the rule is activated. Valid values: `active` and `inactive`.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error page configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Error page configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("ErrorPage")
     @Expose
@@ -107,36 +107,36 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Whether the rule is effective. Valid values: `active` and `inactive`. 
-     * @return Status Whether the rule is effective. Valid values: `active` and `inactive`.
+     * Get Whether the rule is activated. Valid values: `active` and `inactive`. 
+     * @return Status Whether the rule is activated. Valid values: `active` and `inactive`.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Whether the rule is effective. Valid values: `active` and `inactive`.
-     * @param Status Whether the rule is effective. Valid values: `active` and `inactive`.
+     * Set Whether the rule is activated. Valid values: `active` and `inactive`.
+     * @param Status Whether the rule is activated. Valid values: `active` and `inactive`.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error page configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ErrorPage Error page configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Error page configuration
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return ErrorPage Error page configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public ScdnErrorPage getErrorPage() {
         return this.ErrorPage;
     }
 
     /**
-     * Set Error page configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ErrorPage Error page configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Error page configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param ErrorPage Error page configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setErrorPage(ScdnErrorPage ErrorPage) {
         this.ErrorPage = ErrorPage;

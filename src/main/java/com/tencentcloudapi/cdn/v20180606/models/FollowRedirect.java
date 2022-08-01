@@ -24,20 +24,27 @@ public class FollowRedirect extends AbstractModel{
 
     /**
     * Origin-pull follow-redirect switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
+    * 
+    */
+    @SerializedName("RedirectConfig")
+    @Expose
+    private RedirectConfig RedirectConfig;
+
+    /**
      * Get Origin-pull follow-redirect switch
-on: enabled
-off: disabled 
+`on`: Enable
+`off`: Disable 
      * @return Switch Origin-pull follow-redirect switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     public String getSwitch() {
         return this.Switch;
@@ -45,14 +52,30 @@ off: disabled
 
     /**
      * Set Origin-pull follow-redirect switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      * @param Switch Origin-pull follow-redirect switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
+    }
+
+    /**
+     * Get  
+     * @return RedirectConfig 
+     */
+    public RedirectConfig getRedirectConfig() {
+        return this.RedirectConfig;
+    }
+
+    /**
+     * Set 
+     * @param RedirectConfig 
+     */
+    public void setRedirectConfig(RedirectConfig RedirectConfig) {
+        this.RedirectConfig = RedirectConfig;
     }
 
     public FollowRedirect() {
@@ -66,6 +89,9 @@ off: disabled
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }
+        if (source.RedirectConfig != null) {
+            this.RedirectConfig = new RedirectConfig(source.RedirectConfig);
+        }
     }
 
 
@@ -74,6 +100,7 @@ off: disabled
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamObj(map, prefix + "RedirectConfig.", this.RedirectConfig);
 
     }
 }

@@ -30,16 +30,16 @@ public class DescribeMapInfoResponse extends AbstractModel{
     private MapInfo [] MapInfoList;
 
     /**
-    * The relationship between server region ID and sub-region ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Mapping relationship between server region ID and sub-region ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("ServerRegionRelation")
     @Expose
     private RegionMapRelation [] ServerRegionRelation;
 
     /**
-    * The relationship between client region ID and sub-region ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Mapping relationship between client region ID and sub-region ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("ClientRegionRelation")
     @Expose
@@ -69,40 +69,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The relationship between server region ID and sub-region ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ServerRegionRelation The relationship between server region ID and sub-region ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Mapping relationship between server region ID and sub-region ID
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return ServerRegionRelation Mapping relationship between server region ID and sub-region ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public RegionMapRelation [] getServerRegionRelation() {
         return this.ServerRegionRelation;
     }
 
     /**
-     * Set The relationship between server region ID and sub-region ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ServerRegionRelation The relationship between server region ID and sub-region ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Mapping relationship between server region ID and sub-region ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param ServerRegionRelation Mapping relationship between server region ID and sub-region ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setServerRegionRelation(RegionMapRelation [] ServerRegionRelation) {
         this.ServerRegionRelation = ServerRegionRelation;
     }
 
     /**
-     * Get The relationship between client region ID and sub-region ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ClientRegionRelation The relationship between client region ID and sub-region ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Mapping relationship between client region ID and sub-region ID
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return ClientRegionRelation Mapping relationship between client region ID and sub-region ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public RegionMapRelation [] getClientRegionRelation() {
         return this.ClientRegionRelation;
     }
 
     /**
-     * Set The relationship between client region ID and sub-region ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ClientRegionRelation The relationship between client region ID and sub-region ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Mapping relationship between client region ID and sub-region ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param ClientRegionRelation Mapping relationship between client region ID and sub-region ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setClientRegionRelation(RegionMapRelation [] ClientRegionRelation) {
         this.ClientRegionRelation = ClientRegionRelation;

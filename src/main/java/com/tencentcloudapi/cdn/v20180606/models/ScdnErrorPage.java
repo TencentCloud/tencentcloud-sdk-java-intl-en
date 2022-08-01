@@ -32,7 +32,7 @@ public class ScdnErrorPage extends AbstractModel{
     private Long RedirectCode;
 
     /**
-    * Redirection URL
+    * URL to be redirected
     */
     @SerializedName("RedirectUrl")
     @Expose
@@ -63,16 +63,16 @@ public class ScdnErrorPage extends AbstractModel{
     }
 
     /**
-     * Get Redirection URL 
-     * @return RedirectUrl Redirection URL
+     * Get URL to be redirected 
+     * @return RedirectUrl URL to be redirected
      */
     public String getRedirectUrl() {
         return this.RedirectUrl;
     }
 
     /**
-     * Set Redirection URL
-     * @param RedirectUrl Redirection URL
+     * Set URL to be redirected
+     * @param RedirectUrl URL to be redirected
      */
     public void setRedirectUrl(String RedirectUrl) {
         this.RedirectUrl = RedirectUrl;

@@ -24,15 +24,15 @@ public class UserAgentFilter extends AbstractModel{
 
     /**
     * Switch. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * UA blocklist/allowlist effect rule list
-Note: this field may return null, indicating that no valid values can be obtained.
+    * UA blacklist/whitelist effect rule list
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("FilterRules")
     @Expose
@@ -40,9 +40,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Switch. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Switch Switch. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
@@ -50,29 +50,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Switch. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Switch Switch. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get UA blocklist/allowlist effect rule list
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FilterRules UA blocklist/allowlist effect rule list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get UA blacklist/whitelist effect rule list
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return FilterRules UA blacklist/whitelist effect rule list
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public UserAgentFilterRule [] getFilterRules() {
         return this.FilterRules;
     }
 
     /**
-     * Set UA blocklist/allowlist effect rule list
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FilterRules UA blocklist/allowlist effect rule list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set UA blacklist/whitelist effect rule list
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param FilterRules UA blacklist/whitelist effect rule list
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setFilterRules(UserAgentFilterRule [] FilterRules) {
         this.FilterRules = FilterRules;

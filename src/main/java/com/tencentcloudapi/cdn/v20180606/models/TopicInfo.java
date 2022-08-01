@@ -45,7 +45,7 @@ public class TopicInfo extends AbstractModel{
 
     /**
     * Creation time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("CreateTime")
     @Expose
@@ -53,15 +53,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Either `cdn` or `ecdn`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Channel")
     @Expose
     private String Channel;
 
     /**
-    * Whether the log topic has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Whether the logset has been removed from CLS
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Deleted")
     @Expose
@@ -117,9 +117,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Creation time
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return CreateTime Creation time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -127,9 +127,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Creation time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param CreateTime Creation time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -137,9 +137,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Either `cdn` or `ecdn`.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Channel Either `cdn` or `ecdn`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getChannel() {
         return this.Channel;
@@ -147,29 +147,29 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Either `cdn` or `ecdn`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Channel Either `cdn` or `ecdn`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setChannel(String Channel) {
         this.Channel = Channel;
     }
 
     /**
-     * Get Whether the log topic has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Deleted Whether the log topic has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Whether the logset has been removed from CLS
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Deleted Whether the logset has been removed from CLS
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getDeleted() {
         return this.Deleted;
     }
 
     /**
-     * Set Whether the log topic has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Deleted Whether the log topic has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Whether the logset has been removed from CLS
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Deleted Whether the logset has been removed from CLS
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setDeleted(String Deleted) {
         this.Deleted = Deleted;

@@ -24,8 +24,8 @@ public class BandwidthAlert extends AbstractModel{
 
     /**
     * Specifies whether to enable the bandwidth cap
-`on`: enable
-`off`: disable
+`on`: Enable
+`off`: Disable
     */
     @SerializedName("Switch")
     @Expose
@@ -41,9 +41,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Action taken when threshold is reached
-RESOLVE_DNS_TO_ORIGIN: requests will be forwarded to the origin server. This is only supported for domain names of external origin.
-RETURN_404: a 404 error will be returned for all requests.
-Note: this field may return null, indicating that no valid values can be obtained.
+`RESOLVE_DNS_TO_ORIGIN`: Requests will be forwarded to the origin server. This is only supported for domain names of external origin.
+`RETURN_404`: A 404 error will be returned for all requests.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("CounterMeasure")
     @Expose
@@ -59,8 +59,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Indicates whether to trigger alerts when the upper limit is reached
-`on`: enable
-`off`: disable
+`on`: Enable
+`off`: Disable
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("AlertSwitch")
@@ -85,21 +85,29 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Dimension of the usage limit
-`bandwidth`: bandwidth
-`flux`: traffic
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`bandwidth`: Bandwidth
+`flux`: Traffic
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Metric")
     @Expose
     private String Metric;
 
     /**
+    * Usage limit configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("StatisticItems")
+    @Expose
+    private StatisticItem [] StatisticItems;
+
+    /**
      * Get Specifies whether to enable the bandwidth cap
-`on`: enable
-`off`: disable 
+`on`: Enable
+`off`: Disable 
      * @return Switch Specifies whether to enable the bandwidth cap
-`on`: enable
-`off`: disable
+`on`: Enable
+`off`: Disable
      */
     public String getSwitch() {
         return this.Switch;
@@ -107,11 +115,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Specifies whether to enable the bandwidth cap
-`on`: enable
-`off`: disable
+`on`: Enable
+`off`: Disable
      * @param Switch Specifies whether to enable the bandwidth cap
-`on`: enable
-`off`: disable
+`on`: Enable
+`off`: Disable
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
@@ -139,13 +147,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Action taken when threshold is reached
-RESOLVE_DNS_TO_ORIGIN: requests will be forwarded to the origin server. This is only supported for domain names of external origin.
-RETURN_404: a 404 error will be returned for all requests.
-Note: this field may return null, indicating that no valid values can be obtained. 
+`RESOLVE_DNS_TO_ORIGIN`: Requests will be forwarded to the origin server. This is only supported for domain names of external origin.
+`RETURN_404`: A 404 error will be returned for all requests.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return CounterMeasure Action taken when threshold is reached
-RESOLVE_DNS_TO_ORIGIN: requests will be forwarded to the origin server. This is only supported for domain names of external origin.
-RETURN_404: a 404 error will be returned for all requests.
-Note: this field may return null, indicating that no valid values can be obtained.
+`RESOLVE_DNS_TO_ORIGIN`: Requests will be forwarded to the origin server. This is only supported for domain names of external origin.
+`RETURN_404`: A 404 error will be returned for all requests.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getCounterMeasure() {
         return this.CounterMeasure;
@@ -153,13 +161,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Action taken when threshold is reached
-RESOLVE_DNS_TO_ORIGIN: requests will be forwarded to the origin server. This is only supported for domain names of external origin.
-RETURN_404: a 404 error will be returned for all requests.
-Note: this field may return null, indicating that no valid values can be obtained.
+`RESOLVE_DNS_TO_ORIGIN`: Requests will be forwarded to the origin server. This is only supported for domain names of external origin.
+`RETURN_404`: A 404 error will be returned for all requests.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param CounterMeasure Action taken when threshold is reached
-RESOLVE_DNS_TO_ORIGIN: requests will be forwarded to the origin server. This is only supported for domain names of external origin.
-RETURN_404: a 404 error will be returned for all requests.
-Note: this field may return null, indicating that no valid values can be obtained.
+`RESOLVE_DNS_TO_ORIGIN`: Requests will be forwarded to the origin server. This is only supported for domain names of external origin.
+`RETURN_404`: A 404 error will be returned for all requests.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setCounterMeasure(String CounterMeasure) {
         this.CounterMeasure = CounterMeasure;
@@ -187,12 +195,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Indicates whether to trigger alerts when the upper limit is reached
-`on`: enable
-`off`: disable
+`on`: Enable
+`off`: Disable
 Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return AlertSwitch Indicates whether to trigger alerts when the upper limit is reached
-`on`: enable
-`off`: disable
+`on`: Enable
+`off`: Disable
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getAlertSwitch() {
@@ -201,12 +209,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Indicates whether to trigger alerts when the upper limit is reached
-`on`: enable
-`off`: disable
+`on`: Enable
+`off`: Disable
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param AlertSwitch Indicates whether to trigger alerts when the upper limit is reached
-`on`: enable
-`off`: disable
+`on`: Enable
+`off`: Disable
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setAlertSwitch(String AlertSwitch) {
@@ -255,13 +263,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Dimension of the usage limit
-`bandwidth`: bandwidth
-`flux`: traffic
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+`bandwidth`: Bandwidth
+`flux`: Traffic
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Metric Dimension of the usage limit
-`bandwidth`: bandwidth
-`flux`: traffic
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`bandwidth`: Bandwidth
+`flux`: Traffic
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getMetric() {
         return this.Metric;
@@ -269,16 +277,36 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Dimension of the usage limit
-`bandwidth`: bandwidth
-`flux`: traffic
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`bandwidth`: Bandwidth
+`flux`: Traffic
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Metric Dimension of the usage limit
-`bandwidth`: bandwidth
-`flux`: traffic
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`bandwidth`: Bandwidth
+`flux`: Traffic
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setMetric(String Metric) {
         this.Metric = Metric;
+    }
+
+    /**
+     * Get Usage limit configuration
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return StatisticItems Usage limit configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public StatisticItem [] getStatisticItems() {
+        return this.StatisticItems;
+    }
+
+    /**
+     * Set Usage limit configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param StatisticItems Usage limit configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setStatisticItems(StatisticItem [] StatisticItems) {
+        this.StatisticItems = StatisticItems;
     }
 
     public BandwidthAlert() {
@@ -313,6 +341,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.Metric != null) {
             this.Metric = new String(source.Metric);
         }
+        if (source.StatisticItems != null) {
+            this.StatisticItems = new StatisticItem[source.StatisticItems.length];
+            for (int i = 0; i < source.StatisticItems.length; i++) {
+                this.StatisticItems[i] = new StatisticItem(source.StatisticItems[i]);
+            }
+        }
     }
 
 
@@ -328,6 +362,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "AlertPercentage", this.AlertPercentage);
         this.setParamSimple(map, prefix + "LastTriggerTimeOverseas", this.LastTriggerTimeOverseas);
         this.setParamSimple(map, prefix + "Metric", this.Metric);
+        this.setParamArrayObj(map, prefix + "StatisticItems.", this.StatisticItems);
 
     }
 }

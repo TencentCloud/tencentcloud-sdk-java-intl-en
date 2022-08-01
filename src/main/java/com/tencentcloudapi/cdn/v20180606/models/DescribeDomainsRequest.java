@@ -37,7 +37,7 @@ public class DescribeDomainsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Query condition filter, complex type.
+    * Query condition filter, which supports complex type.
     */
     @SerializedName("Filters")
     @Expose
@@ -76,16 +76,16 @@ public class DescribeDomainsRequest extends AbstractModel{
     }
 
     /**
-     * Get Query condition filter, complex type. 
-     * @return Filters Query condition filter, complex type.
+     * Get Query condition filter, which supports complex type. 
+     * @return Filters Query condition filter, which supports complex type.
      */
     public DomainFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Query condition filter, complex type.
-     * @param Filters Query condition filter, complex type.
+     * Set Query condition filter, which supports complex type.
+     * @param Filters Query condition filter, which supports complex type.
      */
     public void setFilters(DomainFilter [] Filters) {
         this.Filters = Filters;

@@ -38,7 +38,7 @@ public class DataDisk extends AbstractModel{
 
     /**
     * Data disk ID. Note that it’s not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
-This parameter is only available for the `DescribeInstances` API.
+It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
     */
     @SerializedName("DiskId")
     @Expose
@@ -136,9 +136,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Data disk ID. Note that it’s not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
-This parameter is only available for the `DescribeInstances` API. 
+It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`. 
      * @return DiskId Data disk ID. Note that it’s not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
-This parameter is only available for the `DescribeInstances` API.
+It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
      */
     public String getDiskId() {
         return this.DiskId;
@@ -146,9 +146,9 @@ This parameter is only available for the `DescribeInstances` API.
 
     /**
      * Set Data disk ID. Note that it’s not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
-This parameter is only available for the `DescribeInstances` API.
+It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
      * @param DiskId Data disk ID. Note that it’s not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
-This parameter is only available for the `DescribeInstances` API.
+It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;

@@ -59,7 +59,7 @@ You must specify either a task ID or a starting time.
     private Long Offset;
 
     /**
-    * Limit on paged queries. Default value: 20
+    * Limit on paginated queries. Default value: 20
     */
     @SerializedName("Limit")
     @Expose
@@ -67,9 +67,9 @@ You must specify either a task ID or a starting time.
 
     /**
     * Specifies a region for your query:
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global
+`mainland`: Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe
     */
     @SerializedName("Area")
     @Expose
@@ -77,10 +77,10 @@ You must specify either a task ID or a starting time.
 
     /**
     * Queries the status of a specified task
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
     */
     @SerializedName("Status")
     @Expose
@@ -171,16 +171,16 @@ You must specify either a task ID or a starting time.
     }
 
     /**
-     * Get Limit on paged queries. Default value: 20 
-     * @return Limit Limit on paged queries. Default value: 20
+     * Get Limit on paginated queries. Default value: 20 
+     * @return Limit Limit on paginated queries. Default value: 20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit on paged queries. Default value: 20
-     * @param Limit Limit on paged queries. Default value: 20
+     * Set Limit on paginated queries. Default value: 20
+     * @param Limit Limit on paginated queries. Default value: 20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -188,13 +188,13 @@ You must specify either a task ID or a starting time.
 
     /**
      * Get Specifies a region for your query:
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global 
+`mainland`: Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe 
      * @return Area Specifies a region for your query:
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global
+`mainland`: Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe
      */
     public String getArea() {
         return this.Area;
@@ -202,13 +202,13 @@ You must specify either a task ID or a starting time.
 
     /**
      * Set Specifies a region for your query:
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global
+`mainland`: Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe
      * @param Area Specifies a region for your query:
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global
+`mainland`: Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe
      */
     public void setArea(String Area) {
         this.Area = Area;
@@ -216,15 +216,15 @@ You must specify either a task ID or a starting time.
 
     /**
      * Get Queries the status of a specified task
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server 
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server 
      * @return Status Queries the status of a specified task
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
      */
     public String getStatus() {
         return this.Status;
@@ -232,15 +232,15 @@ You must specify either a task ID or a starting time.
 
     /**
      * Set Queries the status of a specified task
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
      * @param Status Queries the status of a specified task
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
      */
     public void setStatus(String Status) {
         this.Status = Status;

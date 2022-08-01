@@ -24,10 +24,10 @@ public class PathBasedOriginRule extends AbstractModel{
 
     /**
     * Rule types:
-`file`: effective for files with specified suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
-`index`: effective for specified homepages.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+`index`: Apply to specified homepages.
     */
     @SerializedName("RuleType")
     @Expose
@@ -45,7 +45,7 @@ For `index`, enter a forward slash `/`.
     private String [] RulePaths;
 
     /**
-    * Origin server list. Domain names and IPv4 addresses are supported.
+    * Origin server list. Domain name and IPv4 addresses are supported.
     */
     @SerializedName("Origin")
     @Expose
@@ -53,15 +53,15 @@ For `index`, enter a forward slash `/`.
 
     /**
      * Get Rule types:
-`file`: effective for files with specified suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
-`index`: effective for specified homepages. 
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+`index`: Apply to specified homepages. 
      * @return RuleType Rule types:
-`file`: effective for files with specified suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
-`index`: effective for specified homepages.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+`index`: Apply to specified homepages.
      */
     public String getRuleType() {
         return this.RuleType;
@@ -69,15 +69,15 @@ For `index`, enter a forward slash `/`.
 
     /**
      * Set Rule types:
-`file`: effective for files with specified suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
-`index`: effective for specified homepages.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+`index`: Apply to specified homepages.
      * @param RuleType Rule types:
-`file`: effective for files with specified suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
-`index`: effective for specified homepages.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+`index`: Apply to specified homepages.
      */
     public void setRuleType(String RuleType) {
         this.RuleType = RuleType;
@@ -116,16 +116,16 @@ For `index`, enter a forward slash `/`.
     }
 
     /**
-     * Get Origin server list. Domain names and IPv4 addresses are supported. 
-     * @return Origin Origin server list. Domain names and IPv4 addresses are supported.
+     * Get Origin server list. Domain name and IPv4 addresses are supported. 
+     * @return Origin Origin server list. Domain name and IPv4 addresses are supported.
      */
     public String [] getOrigin() {
         return this.Origin;
     }
 
     /**
-     * Set Origin server list. Domain names and IPv4 addresses are supported.
-     * @param Origin Origin server list. Domain names and IPv4 addresses are supported.
+     * Set Origin server list. Domain name and IPv4 addresses are supported.
+     * @param Origin Origin server list. Domain name and IPv4 addresses are supported.
      */
     public void setOrigin(String [] Origin) {
         this.Origin = Origin;

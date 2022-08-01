@@ -24,8 +24,8 @@ public class OriginPullOptimization extends AbstractModel{
 
     /**
     * Cross-border origin-pull optimization configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
     */
     @SerializedName("Switch")
     @Expose
@@ -35,7 +35,7 @@ off: disabled
     * Cross-border types
 OVToCN: origin-pull from outside mainland China to inside mainland China
 CNToOV: origin-pull from inside mainland China to outside mainland China
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("OptimizationType")
     @Expose
@@ -43,11 +43,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Cross-border origin-pull optimization configuration switch
-on: enabled
-off: disabled 
+`on`: Enable
+`off`: Disable 
      * @return Switch Cross-border origin-pull optimization configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     public String getSwitch() {
         return this.Switch;
@@ -55,11 +55,11 @@ off: disabled
 
     /**
      * Set Cross-border origin-pull optimization configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      * @param Switch Cross-border origin-pull optimization configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
@@ -69,11 +69,11 @@ off: disabled
      * Get Cross-border types
 OVToCN: origin-pull from outside mainland China to inside mainland China
 CNToOV: origin-pull from inside mainland China to outside mainland China
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return OptimizationType Cross-border types
 OVToCN: origin-pull from outside mainland China to inside mainland China
 CNToOV: origin-pull from inside mainland China to outside mainland China
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getOptimizationType() {
         return this.OptimizationType;
@@ -83,11 +83,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Set Cross-border types
 OVToCN: origin-pull from outside mainland China to inside mainland China
 CNToOV: origin-pull from inside mainland China to outside mainland China
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param OptimizationType Cross-border types
 OVToCN: origin-pull from outside mainland China to inside mainland China
 CNToOV: origin-pull from inside mainland China to outside mainland China
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setOptimizationType(String OptimizationType) {
         this.OptimizationType = OptimizationType;

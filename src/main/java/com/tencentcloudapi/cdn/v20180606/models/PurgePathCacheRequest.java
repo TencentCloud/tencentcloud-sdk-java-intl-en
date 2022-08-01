@@ -46,6 +46,17 @@ public class PurgePathCacheRequest extends AbstractModel{
     private Boolean UrlEncode;
 
     /**
+    * Region to purge
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified region to purge should match the domain name’s acceleration region.
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
      * Get List of directories. The protocol header such as "http://" or "https://" needs to be included. 
      * @return Paths List of directories. The protocol header such as "http://" or "https://" needs to be included.
      */
@@ -101,6 +112,38 @@ public class PurgePathCacheRequest extends AbstractModel{
         this.UrlEncode = UrlEncode;
     }
 
+    /**
+     * Get Region to purge
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified region to purge should match the domain name’s acceleration region. 
+     * @return Area Region to purge
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified region to purge should match the domain name’s acceleration region.
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set Region to purge
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified region to purge should match the domain name’s acceleration region.
+     * @param Area Region to purge
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified region to purge should match the domain name’s acceleration region.
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
     public PurgePathCacheRequest() {
     }
 
@@ -121,6 +164,9 @@ public class PurgePathCacheRequest extends AbstractModel{
         if (source.UrlEncode != null) {
             this.UrlEncode = new Boolean(source.UrlEncode);
         }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
     }
 
 
@@ -131,6 +177,7 @@ public class PurgePathCacheRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Paths.", this.Paths);
         this.setParamSimple(map, prefix + "FlushType", this.FlushType);
         this.setParamSimple(map, prefix + "UrlEncode", this.UrlEncode);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

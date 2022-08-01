@@ -24,9 +24,9 @@ public class Https extends AbstractModel{
 
     /**
     * HTTPS configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Switch")
     @Expose
@@ -34,10 +34,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * HTTP2 configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Http2")
     @Expose
@@ -45,10 +45,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * OCSP configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("OcspStapling")
     @Expose
@@ -56,10 +56,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Client certificate authentication feature
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("VerifyClient")
     @Expose
@@ -67,7 +67,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Server certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("CertInfo")
     @Expose
@@ -75,7 +75,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Client certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("ClientCertInfo")
     @Expose
@@ -83,10 +83,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Spdy configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Spdy")
     @Expose
@@ -98,7 +98,7 @@ closed: already closed
 deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("SslStatus")
     @Expose
@@ -106,6 +106,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * HSTS configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Hsts")
     @Expose
@@ -113,7 +114,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("TlsVersion")
     @Expose
@@ -121,13 +122,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get HTTPS configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained. 
+`on`: Enable
+`off`: Disable
+Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return Switch HTTPS configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getSwitch() {
         return this.Switch;
@@ -135,13 +136,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set HTTPS configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param Switch HTTPS configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
@@ -149,15 +150,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get HTTP2 configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Http2 HTTP2 configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getHttp2() {
         return this.Http2;
@@ -165,15 +166,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set HTTP2 configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Http2 HTTP2 configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setHttp2(String Http2) {
         this.Http2 = Http2;
@@ -181,15 +182,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get OCSP configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained. 
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return OcspStapling OCSP configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getOcspStapling() {
         return this.OcspStapling;
@@ -197,15 +198,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set OCSP configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param OcspStapling OCSP configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setOcspStapling(String OcspStapling) {
         this.OcspStapling = OcspStapling;
@@ -213,15 +214,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Client certificate authentication feature
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return VerifyClient Client certificate authentication feature
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getVerifyClient() {
         return this.VerifyClient;
@@ -229,15 +230,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Client certificate authentication feature
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param VerifyClient Client certificate authentication feature
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setVerifyClient(String VerifyClient) {
         this.VerifyClient = VerifyClient;
@@ -245,9 +246,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Server certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return CertInfo Server certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public ServerCert getCertInfo() {
         return this.CertInfo;
@@ -255,9 +256,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Server certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param CertInfo Server certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCertInfo(ServerCert CertInfo) {
         this.CertInfo = CertInfo;
@@ -265,9 +266,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Client certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return ClientCertInfo Client certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public ClientCert getClientCertInfo() {
         return this.ClientCertInfo;
@@ -275,9 +276,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Client certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param ClientCertInfo Client certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setClientCertInfo(ClientCert ClientCertInfo) {
         this.ClientCertInfo = ClientCertInfo;
@@ -285,15 +286,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Spdy configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained. 
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Spdy Spdy configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getSpdy() {
         return this.Spdy;
@@ -301,15 +302,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Spdy configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Spdy Spdy configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setSpdy(String Spdy) {
         this.Spdy = Spdy;
@@ -321,13 +322,13 @@ closed: already closed
 deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return SslStatus HTTPS certificate deployment status
 closed: already closed
 deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getSslStatus() {
         return this.SslStatus;
@@ -339,21 +340,23 @@ closed: already closed
 deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param SslStatus HTTPS certificate deployment status
 closed: already closed
 deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setSslStatus(String SslStatus) {
         this.SslStatus = SslStatus;
     }
 
     /**
-     * Get HSTS configuration 
+     * Get HSTS configuration
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Hsts HSTS configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Hsts getHsts() {
         return this.Hsts;
@@ -361,7 +364,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set HSTS configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Hsts HSTS configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setHsts(Hsts Hsts) {
         this.Hsts = Hsts;
@@ -369,9 +374,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return TlsVersion TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String [] getTlsVersion() {
         return this.TlsVersion;
@@ -379,9 +384,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param TlsVersion TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setTlsVersion(String [] TlsVersion) {
         this.TlsVersion = TlsVersion;

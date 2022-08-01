@@ -38,9 +38,9 @@ public class PurgeTask extends AbstractModel{
 
     /**
     * Purge task status
-`fail`: purge failed
-`done`: purge succeeded
-`process`: purge in progress
+`fail`: Purge failed
+`done`: Purge succeeded
+`process`: Purge in progress
     */
     @SerializedName("Status")
     @Expose
@@ -58,7 +58,7 @@ public class PurgeTask extends AbstractModel{
     /**
     * Purge method
 `flush`: purges updated resources; this type is available only for directory purges
-`delete`: purges all resources
+`delete`: Purge all resources
     */
     @SerializedName("FlushType")
     @Expose
@@ -105,13 +105,13 @@ public class PurgeTask extends AbstractModel{
 
     /**
      * Get Purge task status
-`fail`: purge failed
-`done`: purge succeeded
-`process`: purge in progress 
+`fail`: Purge failed
+`done`: Purge succeeded
+`process`: Purge in progress 
      * @return Status Purge task status
-`fail`: purge failed
-`done`: purge succeeded
-`process`: purge in progress
+`fail`: Purge failed
+`done`: Purge succeeded
+`process`: Purge in progress
      */
     public String getStatus() {
         return this.Status;
@@ -119,13 +119,13 @@ public class PurgeTask extends AbstractModel{
 
     /**
      * Set Purge task status
-`fail`: purge failed
-`done`: purge succeeded
-`process`: purge in progress
+`fail`: Purge failed
+`done`: Purge succeeded
+`process`: Purge in progress
      * @param Status Purge task status
-`fail`: purge failed
-`done`: purge succeeded
-`process`: purge in progress
+`fail`: Purge failed
+`done`: Purge succeeded
+`process`: Purge in progress
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -158,10 +158,10 @@ public class PurgeTask extends AbstractModel{
     /**
      * Get Purge method
 `flush`: purges updated resources; this type is available only for directory purges
-`delete`: purges all resources 
+`delete`: Purge all resources 
      * @return FlushType Purge method
 `flush`: purges updated resources; this type is available only for directory purges
-`delete`: purges all resources
+`delete`: Purge all resources
      */
     public String getFlushType() {
         return this.FlushType;
@@ -170,10 +170,10 @@ public class PurgeTask extends AbstractModel{
     /**
      * Set Purge method
 `flush`: purges updated resources; this type is available only for directory purges
-`delete`: purges all resources
+`delete`: Purge all resources
      * @param FlushType Purge method
 `flush`: purges updated resources; this type is available only for directory purges
-`delete`: purges all resources
+`delete`: Purge all resources
      */
     public void setFlushType(String FlushType) {
         this.FlushType = FlushType;

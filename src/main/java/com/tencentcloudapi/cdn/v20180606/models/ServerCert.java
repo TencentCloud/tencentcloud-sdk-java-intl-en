@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class ServerCert extends AbstractModel{
 
     /**
-    * Server certificate ID, which is auto-generated when the certificate is added to Tencent Cloud SSL Certificates
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Server certificate ID, which is auto-generated when the certificate is being managed by the SSL Certificate Service
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("CertId")
     @Expose
@@ -33,7 +33,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     /**
     * Server certificate name
 This is auto-generated when the certificate is being hosted by the SSL Certificate Service
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("CertName")
     @Expose
@@ -42,7 +42,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
     * Server certificate information
 This is required when uploading an external certificate, which should contain the complete certificate chain.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Certificate")
     @Expose
@@ -51,16 +51,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
     * Server key information
 This is required when uploading an external certificate.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("PrivateKey")
     @Expose
     private String PrivateKey;
 
     /**
-    * Certificate expiration time
+    * Time when the certificate expires
 Can be left blank when used as an input parameter
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -69,7 +69,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
     * Certificate issuance time
 Can be left blank when used as an input parameter
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("DeployTime")
     @Expose
@@ -77,7 +77,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Certificate remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Message")
     @Expose
@@ -85,27 +85,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Certificate source
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("From")
     @Expose
     private String From;
 
     /**
-     * Get Server certificate ID, which is auto-generated when the certificate is added to Tencent Cloud SSL Certificates
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return CertId Server certificate ID, which is auto-generated when the certificate is added to Tencent Cloud SSL Certificates
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Server certificate ID, which is auto-generated when the certificate is being managed by the SSL Certificate Service
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return CertId Server certificate ID, which is auto-generated when the certificate is being managed by the SSL Certificate Service
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set Server certificate ID, which is auto-generated when the certificate is added to Tencent Cloud SSL Certificates
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param CertId Server certificate ID, which is auto-generated when the certificate is added to Tencent Cloud SSL Certificates
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Server certificate ID, which is auto-generated when the certificate is being managed by the SSL Certificate Service
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param CertId Server certificate ID, which is auto-generated when the certificate is being managed by the SSL Certificate Service
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
@@ -114,10 +114,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     /**
      * Get Server certificate name
 This is auto-generated when the certificate is being hosted by the SSL Certificate Service
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return CertName Server certificate name
 This is auto-generated when the certificate is being hosted by the SSL Certificate Service
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getCertName() {
         return this.CertName;
@@ -126,10 +126,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Set Server certificate name
 This is auto-generated when the certificate is being hosted by the SSL Certificate Service
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param CertName Server certificate name
 This is auto-generated when the certificate is being hosted by the SSL Certificate Service
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCertName(String CertName) {
         this.CertName = CertName;
@@ -138,10 +138,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Get Server certificate information
 This is required when uploading an external certificate, which should contain the complete certificate chain.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Certificate Server certificate information
 This is required when uploading an external certificate, which should contain the complete certificate chain.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getCertificate() {
         return this.Certificate;
@@ -150,10 +150,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Set Server certificate information
 This is required when uploading an external certificate, which should contain the complete certificate chain.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Certificate Server certificate information
 This is required when uploading an external certificate, which should contain the complete certificate chain.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCertificate(String Certificate) {
         this.Certificate = Certificate;
@@ -162,10 +162,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Get Server key information
 This is required when uploading an external certificate.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return PrivateKey Server key information
 This is required when uploading an external certificate.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getPrivateKey() {
         return this.PrivateKey;
@@ -174,34 +174,34 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Set Server key information
 This is required when uploading an external certificate.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param PrivateKey Server key information
 This is required when uploading an external certificate.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setPrivateKey(String PrivateKey) {
         this.PrivateKey = PrivateKey;
     }
 
     /**
-     * Get Certificate expiration time
+     * Get Time when the certificate expires
 Can be left blank when used as an input parameter
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ExpireTime Certificate expiration time
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return ExpireTime Time when the certificate expires
 Can be left blank when used as an input parameter
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Certificate expiration time
+     * Set Time when the certificate expires
 Can be left blank when used as an input parameter
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ExpireTime Certificate expiration time
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param ExpireTime Time when the certificate expires
 Can be left blank when used as an input parameter
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
@@ -210,10 +210,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Get Certificate issuance time
 Can be left blank when used as an input parameter
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return DeployTime Certificate issuance time
 Can be left blank when used as an input parameter
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getDeployTime() {
         return this.DeployTime;
@@ -222,10 +222,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * Set Certificate issuance time
 Can be left blank when used as an input parameter
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param DeployTime Certificate issuance time
 Can be left blank when used as an input parameter
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setDeployTime(String DeployTime) {
         this.DeployTime = DeployTime;
@@ -233,9 +233,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Certificate remarks
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Message Certificate remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getMessage() {
         return this.Message;
@@ -243,9 +243,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Certificate remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Message Certificate remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setMessage(String Message) {
         this.Message = Message;
@@ -253,9 +253,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Certificate source
-Note: This field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return From Certificate source
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getFrom() {
         return this.From;
@@ -263,9 +263,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Certificate source
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param From Certificate source
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setFrom(String From) {
         this.From = From;

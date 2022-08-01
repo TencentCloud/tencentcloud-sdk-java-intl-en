@@ -24,9 +24,9 @@ public class DescribeReportDataRequest extends AbstractModel{
 
     /**
     * Query the start time in the format of `yyyy-MM-dd`
-If the report type is `daily`, the start time and end time must be the same day.
+If the report type is `daily`, the start time and end time must be of the same day.
 If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
-If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month.
     */
     @SerializedName("StartTime")
     @Expose
@@ -36,7 +36,7 @@ If the report type is `monthly`, the start time must be the first day of the cal
     * Query the end time in the format of `yyyy-MM-dd`
 If the report type is `daily`, the start time and end time must be of the same day.
 If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
-If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month.
     */
     @SerializedName("EndTime")
     @Expose
@@ -54,8 +54,8 @@ monthly: monthly report (calendar month)
 
     /**
     * Domain name acceleration region
-mainland: in Mainland China
-overseas: outside Mainland China
+`mainland`: Regions within the Chinese mainland
+`overseas`: Regions outside the Chinese mainland
     */
     @SerializedName("Area")
     @Expose
@@ -84,13 +84,13 @@ overseas: outside Mainland China
 
     /**
      * Get Query the start time in the format of `yyyy-MM-dd`
-If the report type is `daily`, the start time and end time must be the same day.
+If the report type is `daily`, the start time and end time must be of the same day.
 If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
-If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month. 
+If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month. 
      * @return StartTime Query the start time in the format of `yyyy-MM-dd`
-If the report type is `daily`, the start time and end time must be the same day.
+If the report type is `daily`, the start time and end time must be of the same day.
 If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
-If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month.
      */
     public String getStartTime() {
         return this.StartTime;
@@ -98,13 +98,13 @@ If the report type is `monthly`, the start time must be the first day of the cal
 
     /**
      * Set Query the start time in the format of `yyyy-MM-dd`
-If the report type is `daily`, the start time and end time must be the same day.
+If the report type is `daily`, the start time and end time must be of the same day.
 If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
-If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month.
      * @param StartTime Query the start time in the format of `yyyy-MM-dd`
-If the report type is `daily`, the start time and end time must be the same day.
+If the report type is `daily`, the start time and end time must be of the same day.
 If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
-If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
@@ -114,11 +114,11 @@ If the report type is `monthly`, the start time must be the first day of the cal
      * Get Query the end time in the format of `yyyy-MM-dd`
 If the report type is `daily`, the start time and end time must be of the same day.
 If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
-If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month. 
+If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month. 
      * @return EndTime Query the end time in the format of `yyyy-MM-dd`
 If the report type is `daily`, the start time and end time must be of the same day.
 If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
-If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month.
      */
     public String getEndTime() {
         return this.EndTime;
@@ -128,11 +128,11 @@ If the report type is `monthly`, the start time must be the first day of the cal
      * Set Query the end time in the format of `yyyy-MM-dd`
 If the report type is `daily`, the start time and end time must be of the same day.
 If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
-If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month.
      * @param EndTime Query the end time in the format of `yyyy-MM-dd`
 If the report type is `daily`, the start time and end time must be of the same day.
 If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
-If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -168,11 +168,11 @@ monthly: monthly report (calendar month)
 
     /**
      * Get Domain name acceleration region
-mainland: in Mainland China
-overseas: outside Mainland China 
+`mainland`: Regions within the Chinese mainland
+`overseas`: Regions outside the Chinese mainland 
      * @return Area Domain name acceleration region
-mainland: in Mainland China
-overseas: outside Mainland China
+`mainland`: Regions within the Chinese mainland
+`overseas`: Regions outside the Chinese mainland
      */
     public String getArea() {
         return this.Area;
@@ -180,11 +180,11 @@ overseas: outside Mainland China
 
     /**
      * Set Domain name acceleration region
-mainland: in Mainland China
-overseas: outside Mainland China
+`mainland`: Regions within the Chinese mainland
+`overseas`: Regions outside the Chinese mainland
      * @param Area Domain name acceleration region
-mainland: in Mainland China
-overseas: outside Mainland China
+`mainland`: Regions within the Chinese mainland
+`overseas`: Regions outside the Chinese mainland
      */
     public void setArea(String Area) {
         this.Area = Area;

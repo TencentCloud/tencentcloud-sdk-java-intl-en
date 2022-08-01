@@ -71,6 +71,17 @@ public class DescribeTranscodeTemplatesRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * The template type (replacing `TEHDType`). Valid values:
+<li>Common: Common transcoding template</li>
+<li>TEHD: TESHD template</li>
+<li>Enhance: Audio/Video enhancement template.</li>
+This parameter is left empty by default, which indicates to return all types of templates.
+    */
+    @SerializedName("TranscodeType")
+    @Expose
+    private String TranscodeType;
+
+    /**
      * Get Unique ID filter of transcoding templates. Array length limit: 100. 
      * @return Definitions Unique ID filter of transcoding templates. Array length limit: 100.
      */
@@ -190,6 +201,38 @@ public class DescribeTranscodeTemplatesRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get The template type (replacing `TEHDType`). Valid values:
+<li>Common: Common transcoding template</li>
+<li>TEHD: TESHD template</li>
+<li>Enhance: Audio/Video enhancement template.</li>
+This parameter is left empty by default, which indicates to return all types of templates. 
+     * @return TranscodeType The template type (replacing `TEHDType`). Valid values:
+<li>Common: Common transcoding template</li>
+<li>TEHD: TESHD template</li>
+<li>Enhance: Audio/Video enhancement template.</li>
+This parameter is left empty by default, which indicates to return all types of templates.
+     */
+    public String getTranscodeType() {
+        return this.TranscodeType;
+    }
+
+    /**
+     * Set The template type (replacing `TEHDType`). Valid values:
+<li>Common: Common transcoding template</li>
+<li>TEHD: TESHD template</li>
+<li>Enhance: Audio/Video enhancement template.</li>
+This parameter is left empty by default, which indicates to return all types of templates.
+     * @param TranscodeType The template type (replacing `TEHDType`). Valid values:
+<li>Common: Common transcoding template</li>
+<li>TEHD: TESHD template</li>
+<li>Enhance: Audio/Video enhancement template.</li>
+This parameter is left empty by default, which indicates to return all types of templates.
+     */
+    public void setTranscodeType(String TranscodeType) {
+        this.TranscodeType = TranscodeType;
+    }
+
     public DescribeTranscodeTemplatesRequest() {
     }
 
@@ -219,6 +262,9 @@ public class DescribeTranscodeTemplatesRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.TranscodeType != null) {
+            this.TranscodeType = new String(source.TranscodeType);
+        }
     }
 
 
@@ -232,6 +278,7 @@ public class DescribeTranscodeTemplatesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TEHDType", this.TEHDType);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "TranscodeType", this.TranscodeType);
 
     }
 }

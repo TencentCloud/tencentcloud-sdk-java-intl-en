@@ -47,7 +47,7 @@ unknown: unknown node location
     private String Location;
 
     /**
-    * Node activation and deactivation history
+    * Activation and deactivation history of the node.
     */
     @SerializedName("History")
     @Expose
@@ -55,17 +55,17 @@ unknown: unknown node location
 
     /**
     * Node region
-mainland: cache node in Mainland China
-overseas: cache node outside Mainland China
-unknown: service region unknown
+`mainland`: Acceleration nodes inside the Chinese mainland
+`overseas`: Acceleration nodes outside the Chinese mainland
+`unknown`: Service region unknown
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * City where the node resides
-Note: this field may return `null`, indicating that no valid value is obtained.
+    * City where the nodes reside
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("City")
     @Expose
@@ -132,16 +132,16 @@ unknown: unknown node location
     }
 
     /**
-     * Get Node activation and deactivation history 
-     * @return History Node activation and deactivation history
+     * Get Activation and deactivation history of the node. 
+     * @return History Activation and deactivation history of the node.
      */
     public CdnIpHistory [] getHistory() {
         return this.History;
     }
 
     /**
-     * Set Node activation and deactivation history
-     * @param History Node activation and deactivation history
+     * Set Activation and deactivation history of the node.
+     * @param History Activation and deactivation history of the node.
      */
     public void setHistory(CdnIpHistory [] History) {
         this.History = History;
@@ -149,13 +149,13 @@ unknown: unknown node location
 
     /**
      * Get Node region
-mainland: cache node in Mainland China
-overseas: cache node outside Mainland China
-unknown: service region unknown 
+`mainland`: Acceleration nodes inside the Chinese mainland
+`overseas`: Acceleration nodes outside the Chinese mainland
+`unknown`: Service region unknown 
      * @return Area Node region
-mainland: cache node in Mainland China
-overseas: cache node outside Mainland China
-unknown: service region unknown
+`mainland`: Acceleration nodes inside the Chinese mainland
+`overseas`: Acceleration nodes outside the Chinese mainland
+`unknown`: Service region unknown
      */
     public String getArea() {
         return this.Area;
@@ -163,33 +163,33 @@ unknown: service region unknown
 
     /**
      * Set Node region
-mainland: cache node in Mainland China
-overseas: cache node outside Mainland China
-unknown: service region unknown
+`mainland`: Acceleration nodes inside the Chinese mainland
+`overseas`: Acceleration nodes outside the Chinese mainland
+`unknown`: Service region unknown
      * @param Area Node region
-mainland: cache node in Mainland China
-overseas: cache node outside Mainland China
-unknown: service region unknown
+`mainland`: Acceleration nodes inside the Chinese mainland
+`overseas`: Acceleration nodes outside the Chinese mainland
+`unknown`: Service region unknown
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get City where the node resides
-Note: this field may return `null`, indicating that no valid value is obtained. 
-     * @return City City where the node resides
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Get City where the nodes reside
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return City City where the nodes reside
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getCity() {
         return this.City;
     }
 
     /**
-     * Set City where the node resides
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param City City where the node resides
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Set City where the nodes reside
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param City City where the nodes reside
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCity(String City) {
         this.City = City;

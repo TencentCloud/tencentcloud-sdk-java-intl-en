@@ -62,6 +62,7 @@ public class TaskNotifyConfig extends AbstractModel{
 <li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
 <li>TDMQ-CMQ: Message queue</li>
 <li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+<li>SCF: We do not recommend this notification type, which you need to configure in the SCF console.</li>
 Default value: `TDMQ-CMQ`.
     */
     @SerializedName("NotifyType")
@@ -160,11 +161,13 @@ Default value: `TDMQ-CMQ`.
 <li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
 <li>TDMQ-CMQ: Message queue</li>
 <li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+<li>SCF: We do not recommend this notification type, which you need to configure in the SCF console.</li>
 Default value: `TDMQ-CMQ`. 
      * @return NotifyType The notification type. Valid values:
 <li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
 <li>TDMQ-CMQ: Message queue</li>
 <li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+<li>SCF: We do not recommend this notification type, which you need to configure in the SCF console.</li>
 Default value: `TDMQ-CMQ`.
      */
     public String getNotifyType() {
@@ -176,11 +179,13 @@ Default value: `TDMQ-CMQ`.
 <li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
 <li>TDMQ-CMQ: Message queue</li>
 <li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+<li>SCF: We do not recommend this notification type, which you need to configure in the SCF console.</li>
 Default value: `TDMQ-CMQ`.
      * @param NotifyType The notification type. Valid values:
 <li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
 <li>TDMQ-CMQ: Message queue</li>
 <li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+<li>SCF: We do not recommend this notification type, which you need to configure in the SCF console.</li>
 Default value: `TDMQ-CMQ`.
      */
     public void setNotifyType(String NotifyType) {

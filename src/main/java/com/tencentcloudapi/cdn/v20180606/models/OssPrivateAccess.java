@@ -46,6 +46,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String SecretKey;
 
     /**
+    * Region
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+    * BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Bucket")
+    @Expose
+    private String Bucket;
+
+    /**
      * Get Whether to enable access authentication. Valid values: `on`, `off`. 
      * @return Switch Whether to enable access authentication. Valid values: `on`, `off`.
      */
@@ -101,6 +117,46 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.SecretKey = SecretKey;
     }
 
+    /**
+     * Get Region
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Region Region
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set Region
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Region Region
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * Get BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Bucket BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getBucket() {
+        return this.Bucket;
+    }
+
+    /**
+     * Set BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Bucket BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setBucket(String Bucket) {
+        this.Bucket = Bucket;
+    }
+
     public OssPrivateAccess() {
     }
 
@@ -118,6 +174,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.SecretKey != null) {
             this.SecretKey = new String(source.SecretKey);
         }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Bucket != null) {
+            this.Bucket = new String(source.Bucket);
+        }
     }
 
 
@@ -128,6 +190,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamSimple(map, prefix + "AccessKey", this.AccessKey);
         this.setParamSimple(map, prefix + "SecretKey", this.SecretKey);
+        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "Bucket", this.Bucket);
 
     }
 }

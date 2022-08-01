@@ -31,7 +31,7 @@ public class AwsPrivateAccess extends AbstractModel{
 
     /**
     * Access ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("AccessKey")
     @Expose
@@ -39,11 +39,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Key.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("SecretKey")
     @Expose
     private String SecretKey;
+
+    /**
+    * Region.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+    * BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Bucket")
+    @Expose
+    private String Bucket;
 
     /**
      * Get Switch, which can be set to on or off. 
@@ -63,9 +79,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Access ID.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return AccessKey Access ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getAccessKey() {
         return this.AccessKey;
@@ -73,9 +89,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Access ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param AccessKey Access ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setAccessKey(String AccessKey) {
         this.AccessKey = AccessKey;
@@ -83,9 +99,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Key.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return SecretKey Key.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getSecretKey() {
         return this.SecretKey;
@@ -93,12 +109,52 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Key.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param SecretKey Key.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;
+    }
+
+    /**
+     * Get Region.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Region Region.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set Region.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Region Region.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * Get BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Bucket BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getBucket() {
+        return this.Bucket;
+    }
+
+    /**
+     * Set BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Bucket BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setBucket(String Bucket) {
+        this.Bucket = Bucket;
     }
 
     public AwsPrivateAccess() {
@@ -118,6 +174,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.SecretKey != null) {
             this.SecretKey = new String(source.SecretKey);
         }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Bucket != null) {
+            this.Bucket = new String(source.Bucket);
+        }
     }
 
 
@@ -128,6 +190,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamSimple(map, prefix + "AccessKey", this.AccessKey);
         this.setParamSimple(map, prefix + "SecretKey", this.SecretKey);
+        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "Bucket", this.Bucket);
 
     }
 }

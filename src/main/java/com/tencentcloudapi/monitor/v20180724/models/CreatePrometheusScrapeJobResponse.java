@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreatePrometheusScrapeJobResponse extends AbstractModel{
 
     /**
-    * 
+    * ID of a successfully created scrape task.
     */
     @SerializedName("JobId")
     @Expose
@@ -37,16 +37,16 @@ public class CreatePrometheusScrapeJobResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get  
-     * @return JobId 
+     * Get ID of a successfully created scrape task. 
+     * @return JobId ID of a successfully created scrape task.
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 
-     * @param JobId 
+     * Set ID of a successfully created scrape task.
+     * @param JobId ID of a successfully created scrape task.
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

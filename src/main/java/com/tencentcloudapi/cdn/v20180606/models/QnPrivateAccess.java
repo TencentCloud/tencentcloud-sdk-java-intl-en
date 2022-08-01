@@ -23,69 +23,74 @@ import java.util.HashMap;
 public class QnPrivateAccess extends AbstractModel{
 
     /**
-    * 
+    * Switch. Valid values: `on`, `off`.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("AccessKey")
     @Expose
     private String AccessKey;
 
     /**
-    * 
+    * Key
     */
     @SerializedName("SecretKey")
     @Expose
     private String SecretKey;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Switch. Valid values: `on`, `off`. 
+     * @return Switch Switch. Valid values: `on`, `off`.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Switch. Valid values: `on`, `off`.
+     * @param Switch Switch. Valid values: `on`, `off`.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return AccessKey 
+     * Get Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return AccessKey Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getAccessKey() {
         return this.AccessKey;
     }
 
     /**
-     * Set 
-     * @param AccessKey 
+     * Set Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param AccessKey Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setAccessKey(String AccessKey) {
         this.AccessKey = AccessKey;
     }
 
     /**
-     * Get  
-     * @return SecretKey 
+     * Get Key 
+     * @return SecretKey Key
      */
     public String getSecretKey() {
         return this.SecretKey;
     }
 
     /**
-     * Set 
-     * @param SecretKey 
+     * Set Key
+     * @param SecretKey Key
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;

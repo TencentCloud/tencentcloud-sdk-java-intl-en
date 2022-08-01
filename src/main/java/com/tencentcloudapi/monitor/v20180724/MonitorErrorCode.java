@@ -108,6 +108,9 @@ public enum MonitorErrorCode {
     // The instance is not running.
      FAILEDOPERATION_INSTANCENOTRUNNING("FailedOperation.InstanceNotRunning"),
      
+    // 
+     FAILEDOPERATION_INTERNALERROR("FailedOperation.InternalError"),
+     
     // The resource already exists.
      FAILEDOPERATION_RESOURCEEXIST("FailedOperation.ResourceExist"),
      

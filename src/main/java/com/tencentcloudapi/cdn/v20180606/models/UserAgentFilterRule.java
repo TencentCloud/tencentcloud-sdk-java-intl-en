@@ -24,11 +24,11 @@ public class UserAgentFilterRule extends AbstractModel{
 
     /**
     * Effective access path type
-all: all access paths are effective
-file: effective by file extension
-directory: effective by directory
-path: effective by full access path
-Note: this field may return null, indicating that no valid values can be obtained.
+`all`: All access paths are effective
+`file`: Effective by file extension
+`directory`: Effective by directory
+`path`: Effective by full access path
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("RuleType")
     @Expose
@@ -36,7 +36,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Effective access paths
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("RulePaths")
     @Expose
@@ -44,15 +44,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * `UserAgent` list
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("UserAgents")
     @Expose
     private String [] UserAgents;
 
     /**
-    * blocklist or allowlist. Valid values: blacklist, whitelist
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Blocklist or allowlist. Valid values: `blacklist`, `whitelist`
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("FilterType")
     @Expose
@@ -60,17 +60,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Effective access path type
-all: all access paths are effective
-file: effective by file extension
-directory: effective by directory
-path: effective by full access path
-Note: this field may return null, indicating that no valid values can be obtained. 
+`all`: All access paths are effective
+`file`: Effective by file extension
+`directory`: Effective by directory
+`path`: Effective by full access path
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return RuleType Effective access path type
-all: all access paths are effective
-file: effective by file extension
-directory: effective by directory
-path: effective by full access path
-Note: this field may return null, indicating that no valid values can be obtained.
+`all`: All access paths are effective
+`file`: Effective by file extension
+`directory`: Effective by directory
+`path`: Effective by full access path
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getRuleType() {
         return this.RuleType;
@@ -78,17 +78,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Effective access path type
-all: all access paths are effective
-file: effective by file extension
-directory: effective by directory
-path: effective by full access path
-Note: this field may return null, indicating that no valid values can be obtained.
+`all`: All access paths are effective
+`file`: Effective by file extension
+`directory`: Effective by directory
+`path`: Effective by full access path
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param RuleType Effective access path type
-all: all access paths are effective
-file: effective by file extension
-directory: effective by directory
-path: effective by full access path
-Note: this field may return null, indicating that no valid values can be obtained.
+`all`: All access paths are effective
+`file`: Effective by file extension
+`directory`: Effective by directory
+`path`: Effective by full access path
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRuleType(String RuleType) {
         this.RuleType = RuleType;
@@ -96,9 +96,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Effective access paths
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return RulePaths Effective access paths
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String [] getRulePaths() {
         return this.RulePaths;
@@ -106,9 +106,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Effective access paths
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param RulePaths Effective access paths
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRulePaths(String [] RulePaths) {
         this.RulePaths = RulePaths;
@@ -116,9 +116,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get `UserAgent` list
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return UserAgents `UserAgent` list
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String [] getUserAgents() {
         return this.UserAgents;
@@ -126,29 +126,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set `UserAgent` list
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param UserAgents `UserAgent` list
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setUserAgents(String [] UserAgents) {
         this.UserAgents = UserAgents;
     }
 
     /**
-     * Get blocklist or allowlist. Valid values: blacklist, whitelist
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FilterType blocklist or allowlist. Valid values: blacklist, whitelist
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Blocklist or allowlist. Valid values: `blacklist`, `whitelist`
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return FilterType Blocklist or allowlist. Valid values: `blacklist`, `whitelist`
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getFilterType() {
         return this.FilterType;
     }
 
     /**
-     * Set blocklist or allowlist. Valid values: blacklist, whitelist
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FilterType blocklist or allowlist. Valid values: blacklist, whitelist
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Blocklist or allowlist. Valid values: `blacklist`, `whitelist`
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param FilterType Blocklist or allowlist. Valid values: `blacklist`, `whitelist`
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setFilterType(String FilterType) {
         this.FilterType = FilterType;

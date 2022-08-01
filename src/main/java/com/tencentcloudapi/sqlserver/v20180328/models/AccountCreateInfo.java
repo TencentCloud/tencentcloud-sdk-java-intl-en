@@ -58,7 +58,7 @@ public class AccountCreateInfo extends AbstractModel{
     private Boolean IsAdmin;
 
     /**
-    * Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`.
+    * Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`
     */
     @SerializedName("Authentication")
     @Expose
@@ -145,16 +145,16 @@ public class AccountCreateInfo extends AbstractModel{
     }
 
     /**
-     * Get Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`. 
-     * @return Authentication Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`.
+     * Get Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication` 
+     * @return Authentication Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`
      */
     public String getAuthentication() {
         return this.Authentication;
     }
 
     /**
-     * Set Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`.
-     * @param Authentication Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`.
+     * Set Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`
+     * @param Authentication Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`
      */
     public void setAuthentication(String Authentication) {
         this.Authentication = Authentication;

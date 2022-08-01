@@ -46,6 +46,13 @@ If you want to use the default project, specify 0 for the parameter.
     private String PublicKey;
 
     /**
+    * Tag description list. This parameter is used to bind a tag to a key pair.
+    */
+    @SerializedName("TagSpecification")
+    @Expose
+    private TagSpecification [] TagSpecification;
+
+    /**
      * Get Key pair name, which can contain numbers, letters, and underscores, with a maximum length of 25 characters. 
      * @return KeyName Key pair name, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
      */
@@ -101,6 +108,22 @@ If you want to use the default project, specify 0 for the parameter.
         this.PublicKey = PublicKey;
     }
 
+    /**
+     * Get Tag description list. This parameter is used to bind a tag to a key pair. 
+     * @return TagSpecification Tag description list. This parameter is used to bind a tag to a key pair.
+     */
+    public TagSpecification [] getTagSpecification() {
+        return this.TagSpecification;
+    }
+
+    /**
+     * Set Tag description list. This parameter is used to bind a tag to a key pair.
+     * @param TagSpecification Tag description list. This parameter is used to bind a tag to a key pair.
+     */
+    public void setTagSpecification(TagSpecification [] TagSpecification) {
+        this.TagSpecification = TagSpecification;
+    }
+
     public ImportKeyPairRequest() {
     }
 
@@ -118,6 +141,12 @@ If you want to use the default project, specify 0 for the parameter.
         if (source.PublicKey != null) {
             this.PublicKey = new String(source.PublicKey);
         }
+        if (source.TagSpecification != null) {
+            this.TagSpecification = new TagSpecification[source.TagSpecification.length];
+            for (int i = 0; i < source.TagSpecification.length; i++) {
+                this.TagSpecification[i] = new TagSpecification(source.TagSpecification[i]);
+            }
+        }
     }
 
 
@@ -128,6 +157,7 @@ If you want to use the default project, specify 0 for the parameter.
         this.setParamSimple(map, prefix + "KeyName", this.KeyName);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "PublicKey", this.PublicKey);
+        this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
 
     }
 }

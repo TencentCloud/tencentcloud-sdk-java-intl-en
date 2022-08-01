@@ -37,14 +37,14 @@ public class SearchClsLogRequest extends AbstractModel{
     private String TopicIds;
 
     /**
-    * Start time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
+    * Query start time in the format of YYYY-mm-dd HH:MM:SS
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
+    * Query end time in the format of YYYY-mm-dd HH:MM:SS
     */
     @SerializedName("EndTime")
     @Expose
@@ -65,7 +65,7 @@ public class SearchClsLogRequest extends AbstractModel{
     private String Channel;
 
     /**
-    * Content to be queried. For more information, please visit https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1
+    * Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
     */
     @SerializedName("Query")
     @Expose
@@ -118,32 +118,32 @@ public class SearchClsLogRequest extends AbstractModel{
     }
 
     /**
-     * Get Start time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS` 
-     * @return StartTime Start time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
+     * Get Query start time in the format of YYYY-mm-dd HH:MM:SS 
+     * @return StartTime Query start time in the format of YYYY-mm-dd HH:MM:SS
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
-     * @param StartTime Start time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
+     * Set Query start time in the format of YYYY-mm-dd HH:MM:SS
+     * @param StartTime Query start time in the format of YYYY-mm-dd HH:MM:SS
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS` 
-     * @return EndTime End time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
+     * Get Query end time in the format of YYYY-mm-dd HH:MM:SS 
+     * @return EndTime Query end time in the format of YYYY-mm-dd HH:MM:SS
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
-     * @param EndTime End time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
+     * Set Query end time in the format of YYYY-mm-dd HH:MM:SS
+     * @param EndTime Query end time in the format of YYYY-mm-dd HH:MM:SS
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -182,16 +182,16 @@ public class SearchClsLogRequest extends AbstractModel{
     }
 
     /**
-     * Get Content to be queried. For more information, please visit https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1 
-     * @return Query Content to be queried. For more information, please visit https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1
+     * Get Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1]. 
+     * @return Query Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set Content to be queried. For more information, please visit https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1
-     * @param Query Content to be queried. For more information, please visit https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1
+     * Set Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
+     * @param Query Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
      */
     public void setQuery(String Query) {
         this.Query = Query;

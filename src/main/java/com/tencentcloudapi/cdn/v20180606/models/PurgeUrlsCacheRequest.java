@@ -31,17 +31,17 @@ public class PurgeUrlsCacheRequest extends AbstractModel{
 
     /**
     * Purging region
-The acceleration region of the acceleration domain name will be purged if this parameter is not passed in
-If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged
-If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged
-The specified purging region should match the domain name acceleration region
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified purging region should match the domain name acceleration region.
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * Whether to encode Chinese characters before purge.
+    * Whether to encode Chinese characters for purge
     */
     @SerializedName("UrlEncode")
     @Expose
@@ -65,15 +65,15 @@ The specified purging region should match the domain name acceleration region
 
     /**
      * Get Purging region
-The acceleration region of the acceleration domain name will be purged if this parameter is not passed in
-If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged
-If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged
-The specified purging region should match the domain name acceleration region 
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified purging region should match the domain name acceleration region. 
      * @return Area Purging region
-The acceleration region of the acceleration domain name will be purged if this parameter is not passed in
-If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged
-If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged
-The specified purging region should match the domain name acceleration region
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified purging region should match the domain name acceleration region.
      */
     public String getArea() {
         return this.Area;
@@ -81,31 +81,31 @@ The specified purging region should match the domain name acceleration region
 
     /**
      * Set Purging region
-The acceleration region of the acceleration domain name will be purged if this parameter is not passed in
-If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged
-If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged
-The specified purging region should match the domain name acceleration region
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified purging region should match the domain name acceleration region.
      * @param Area Purging region
-The acceleration region of the acceleration domain name will be purged if this parameter is not passed in
-If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged
-If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged
-The specified purging region should match the domain name acceleration region
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified purging region should match the domain name acceleration region.
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get Whether to encode Chinese characters before purge. 
-     * @return UrlEncode Whether to encode Chinese characters before purge.
+     * Get Whether to encode Chinese characters for purge 
+     * @return UrlEncode Whether to encode Chinese characters for purge
      */
     public Boolean getUrlEncode() {
         return this.UrlEncode;
     }
 
     /**
-     * Set Whether to encode Chinese characters before purge.
-     * @param UrlEncode Whether to encode Chinese characters before purge.
+     * Set Whether to encode Chinese characters for purge
+     * @param UrlEncode Whether to encode Chinese characters for purge
      */
     public void setUrlEncode(Boolean UrlEncode) {
         this.UrlEncode = UrlEncode;

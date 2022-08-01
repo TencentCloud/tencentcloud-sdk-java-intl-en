@@ -24,8 +24,8 @@ public class Authentication extends AbstractModel{
 
     /**
     * Hotlink protection configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 When this is enabled, one mode needs to be configured. Other modes need to be set to null.
     */
     @SerializedName("Switch")
@@ -34,7 +34,7 @@ When this is enabled, one mode needs to be configured. Other modes need to be se
 
     /**
     * Timestamp hotlink protection mode A configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("TypeA")
     @Expose
@@ -42,7 +42,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("TypeB")
     @Expose
@@ -50,7 +50,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Timestamp hotlink protection mode C configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("TypeC")
     @Expose
@@ -58,7 +58,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Timestamp hotlink protection mode D configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("TypeD")
     @Expose
@@ -66,12 +66,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Hotlink protection configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 When this is enabled, one mode needs to be configured. Other modes need to be set to null. 
      * @return Switch Hotlink protection configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 When this is enabled, one mode needs to be configured. Other modes need to be set to null.
      */
     public String getSwitch() {
@@ -80,12 +80,12 @@ When this is enabled, one mode needs to be configured. Other modes need to be se
 
     /**
      * Set Hotlink protection configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 When this is enabled, one mode needs to be configured. Other modes need to be set to null.
      * @param Switch Hotlink protection configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 When this is enabled, one mode needs to be configured. Other modes need to be set to null.
      */
     public void setSwitch(String Switch) {
@@ -94,9 +94,9 @@ When this is enabled, one mode needs to be configured. Other modes need to be se
 
     /**
      * Get Timestamp hotlink protection mode A configuration
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return TypeA Timestamp hotlink protection mode A configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public AuthenticationTypeA getTypeA() {
         return this.TypeA;
@@ -104,9 +104,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Timestamp hotlink protection mode A configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param TypeA Timestamp hotlink protection mode A configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setTypeA(AuthenticationTypeA TypeA) {
         this.TypeA = TypeA;
@@ -114,9 +114,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return TypeB Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public AuthenticationTypeB getTypeB() {
         return this.TypeB;
@@ -124,9 +124,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param TypeB Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setTypeB(AuthenticationTypeB TypeB) {
         this.TypeB = TypeB;
@@ -134,9 +134,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Timestamp hotlink protection mode C configuration
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return TypeC Timestamp hotlink protection mode C configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public AuthenticationTypeC getTypeC() {
         return this.TypeC;
@@ -144,9 +144,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Timestamp hotlink protection mode C configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param TypeC Timestamp hotlink protection mode C configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setTypeC(AuthenticationTypeC TypeC) {
         this.TypeC = TypeC;
@@ -154,9 +154,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Timestamp hotlink protection mode D configuration
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return TypeD Timestamp hotlink protection mode D configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public AuthenticationTypeD getTypeD() {
         return this.TypeD;
@@ -164,9 +164,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Timestamp hotlink protection mode D configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param TypeD Timestamp hotlink protection mode D configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setTypeD(AuthenticationTypeD TypeD) {
         this.TypeD = TypeD;

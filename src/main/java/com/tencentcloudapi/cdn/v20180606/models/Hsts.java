@@ -31,7 +31,7 @@ public class Hsts extends AbstractModel{
 
     /**
     * `MaxAge` value.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("MaxAge")
     @Expose
@@ -39,7 +39,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Whether to include subdomain names. Valid values: on, off.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("IncludeSubDomains")
     @Expose
@@ -63,9 +63,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get `MaxAge` value.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return MaxAge `MaxAge` value.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Long getMaxAge() {
         return this.MaxAge;
@@ -73,9 +73,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set `MaxAge` value.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param MaxAge `MaxAge` value.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setMaxAge(Long MaxAge) {
         this.MaxAge = MaxAge;
@@ -83,9 +83,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Whether to include subdomain names. Valid values: on, off.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return IncludeSubDomains Whether to include subdomain names. Valid values: on, off.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getIncludeSubDomains() {
         return this.IncludeSubDomains;
@@ -93,9 +93,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Whether to include subdomain names. Valid values: on, off.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param IncludeSubDomains Whether to include subdomain names. Valid values: on, off.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setIncludeSubDomains(String IncludeSubDomains) {
         this.IncludeSubDomains = IncludeSubDomains;

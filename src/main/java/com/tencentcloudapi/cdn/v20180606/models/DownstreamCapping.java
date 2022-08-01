@@ -24,8 +24,8 @@ public class DownstreamCapping extends AbstractModel{
 
     /**
     * Downstream speed configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
     */
     @SerializedName("Switch")
     @Expose
@@ -33,7 +33,7 @@ off: disabled
 
     /**
     * Downstream speed limiting rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("CappingRules")
     @Expose
@@ -41,11 +41,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Downstream speed configuration switch
-on: enabled
-off: disabled 
+`on`: Enable
+`off`: Disable 
      * @return Switch Downstream speed configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     public String getSwitch() {
         return this.Switch;
@@ -53,11 +53,11 @@ off: disabled
 
     /**
      * Set Downstream speed configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      * @param Switch Downstream speed configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
@@ -65,9 +65,9 @@ off: disabled
 
     /**
      * Get Downstream speed limiting rules
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return CappingRules Downstream speed limiting rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public CappingRule [] getCappingRules() {
         return this.CappingRules;
@@ -75,9 +75,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Downstream speed limiting rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param CappingRules Downstream speed limiting rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCappingRules(CappingRule [] CappingRules) {
         this.CappingRules = CappingRules;

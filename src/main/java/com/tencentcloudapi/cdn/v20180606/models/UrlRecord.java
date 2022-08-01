@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class UrlRecord extends AbstractModel{
 
     /**
-    * Status (disable: blocked; enable: unblocked)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Status. `disable`: Blocked; `enable`: Unblocked.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Status")
     @Expose
@@ -32,7 +32,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Corresponding URL
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("RealUrl")
     @Expose
@@ -40,35 +40,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Update time.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get Status (disable: blocked; enable: unblocked)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Status (disable: blocked; enable: unblocked)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Status. `disable`: Blocked; `enable`: Unblocked.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Status Status. `disable`: Blocked; `enable`: Unblocked.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status (disable: blocked; enable: unblocked)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Status (disable: blocked; enable: unblocked)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Status. `disable`: Blocked; `enable`: Unblocked.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Status Status. `disable`: Blocked; `enable`: Unblocked.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -76,9 +76,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Corresponding URL
-Note: This field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return RealUrl Corresponding URL
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getRealUrl() {
         return this.RealUrl;
@@ -86,9 +86,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Corresponding URL
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param RealUrl Corresponding URL
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRealUrl(String RealUrl) {
         this.RealUrl = RealUrl;
@@ -96,9 +96,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Creation time
-Note: This field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -106,29 +106,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Update time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Update time.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return UpdateTime Update time.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Update time.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param UpdateTime Update time.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

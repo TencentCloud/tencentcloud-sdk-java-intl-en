@@ -24,15 +24,15 @@ public class Tag extends AbstractModel{
 
     /**
     * Tag key
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("TagKey")
     @Expose
     private String TagKey;
 
     /**
-    * Tag value.
-Note: this field may return null, indicating that no valid value is obtained.
+    * Tag value
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("TagValue")
     @Expose
@@ -40,9 +40,9 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Get Tag key
-Note: this field may return null, indicating that no valid value is obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return TagKey Tag key
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getTagKey() {
         return this.TagKey;
@@ -50,29 +50,29 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * Set Tag key
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param TagKey Tag key
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;
     }
 
     /**
-     * Get Tag value.
-Note: this field may return null, indicating that no valid value is obtained. 
-     * @return TagValue Tag value.
-Note: this field may return null, indicating that no valid value is obtained.
+     * Get Tag value
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return TagValue Tag value
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getTagValue() {
         return this.TagValue;
     }
 
     /**
-     * Set Tag value.
-Note: this field may return null, indicating that no valid value is obtained.
-     * @param TagValue Tag value.
-Note: this field may return null, indicating that no valid value is obtained.
+     * Set Tag value
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param TagValue Tag value
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setTagValue(String TagValue) {
         this.TagValue = TagValue;

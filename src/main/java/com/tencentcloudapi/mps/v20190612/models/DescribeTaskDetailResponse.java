@@ -23,9 +23,11 @@ import java.util.HashMap;
 public class DescribeTaskDetailResponse extends AbstractModel{
 
     /**
-    * Task type. Currently valid values:
-<li>WorkflowTask: Video workflow processing task.</li>
-<li>LiveStreamProcessTask: Live stream processing task.</li>
+    * The task type. Valid values:
+<li>WorkflowTask</li>
+<li>EditMediaTask</li>
+<li>LiveStreamProcessTask</li>
+<li>ScheduleTask (scheme)</li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -63,19 +65,19 @@ public class DescribeTaskDetailResponse extends AbstractModel{
     private String FinishTime;
 
     /**
+    * Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
+    */
+    @SerializedName("EditMediaTask")
+    @Expose
+    private EditMediaTask EditMediaTask;
+
+    /**
     * Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("WorkflowTask")
     @Expose
     private WorkflowTask WorkflowTask;
-
-    /**
-    * Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
-    */
-    @SerializedName("EditMediaTask")
-    @Expose
-    private EditMediaTask EditMediaTask;
 
     /**
     * Information of a live stream processing task. This field has a value only when `TaskType` is `LiveStreamProcessTask`.
@@ -122,6 +124,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ExtInfo;
 
     /**
+    * The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ScheduleTask")
+    @Expose
+    private ScheduleTask ScheduleTask;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -129,24 +139,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Task type. Currently valid values:
-<li>WorkflowTask: Video workflow processing task.</li>
-<li>LiveStreamProcessTask: Live stream processing task.</li> 
-     * @return TaskType Task type. Currently valid values:
-<li>WorkflowTask: Video workflow processing task.</li>
-<li>LiveStreamProcessTask: Live stream processing task.</li>
+     * Get The task type. Valid values:
+<li>WorkflowTask</li>
+<li>EditMediaTask</li>
+<li>LiveStreamProcessTask</li>
+<li>ScheduleTask (scheme)</li> 
+     * @return TaskType The task type. Valid values:
+<li>WorkflowTask</li>
+<li>EditMediaTask</li>
+<li>LiveStreamProcessTask</li>
+<li>ScheduleTask (scheme)</li>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set Task type. Currently valid values:
-<li>WorkflowTask: Video workflow processing task.</li>
-<li>LiveStreamProcessTask: Live stream processing task.</li>
-     * @param TaskType Task type. Currently valid values:
-<li>WorkflowTask: Video workflow processing task.</li>
-<li>LiveStreamProcessTask: Live stream processing task.</li>
+     * Set The task type. Valid values:
+<li>WorkflowTask</li>
+<li>EditMediaTask</li>
+<li>LiveStreamProcessTask</li>
+<li>ScheduleTask (scheme)</li>
+     * @param TaskType The task type. Valid values:
+<li>WorkflowTask</li>
+<li>EditMediaTask</li>
+<li>LiveStreamProcessTask</li>
+<li>ScheduleTask (scheme)</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
@@ -229,6 +247,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`. 
+     * @return EditMediaTask Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
+     */
+    public EditMediaTask getEditMediaTask() {
+        return this.EditMediaTask;
+    }
+
+    /**
+     * Set Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
+     * @param EditMediaTask Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
+     */
+    public void setEditMediaTask(EditMediaTask EditMediaTask) {
+        this.EditMediaTask = EditMediaTask;
+    }
+
+    /**
      * Get Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return WorkflowTask Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
@@ -246,22 +280,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setWorkflowTask(WorkflowTask WorkflowTask) {
         this.WorkflowTask = WorkflowTask;
-    }
-
-    /**
-     * Get Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`. 
-     * @return EditMediaTask Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
-     */
-    public EditMediaTask getEditMediaTask() {
-        return this.EditMediaTask;
-    }
-
-    /**
-     * Set Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
-     * @param EditMediaTask Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
-     */
-    public void setEditMediaTask(EditMediaTask EditMediaTask) {
-        this.EditMediaTask = EditMediaTask;
     }
 
     /**
@@ -369,6 +387,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ScheduleTask The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public ScheduleTask getScheduleTask() {
+        return this.ScheduleTask;
+    }
+
+    /**
+     * Set The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ScheduleTask The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setScheduleTask(ScheduleTask ScheduleTask) {
+        this.ScheduleTask = ScheduleTask;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -407,11 +445,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.FinishTime != null) {
             this.FinishTime = new String(source.FinishTime);
         }
-        if (source.WorkflowTask != null) {
-            this.WorkflowTask = new WorkflowTask(source.WorkflowTask);
-        }
         if (source.EditMediaTask != null) {
             this.EditMediaTask = new EditMediaTask(source.EditMediaTask);
+        }
+        if (source.WorkflowTask != null) {
+            this.WorkflowTask = new WorkflowTask(source.WorkflowTask);
         }
         if (source.LiveStreamProcessTask != null) {
             this.LiveStreamProcessTask = new LiveStreamProcessTask(source.LiveStreamProcessTask);
@@ -431,6 +469,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ExtInfo != null) {
             this.ExtInfo = new String(source.ExtInfo);
         }
+        if (source.ScheduleTask != null) {
+            this.ScheduleTask = new ScheduleTask(source.ScheduleTask);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -446,14 +487,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
-        this.setParamObj(map, prefix + "WorkflowTask.", this.WorkflowTask);
         this.setParamObj(map, prefix + "EditMediaTask.", this.EditMediaTask);
+        this.setParamObj(map, prefix + "WorkflowTask.", this.WorkflowTask);
         this.setParamObj(map, prefix + "LiveStreamProcessTask.", this.LiveStreamProcessTask);
         this.setParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
+        this.setParamObj(map, prefix + "ScheduleTask.", this.ScheduleTask);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

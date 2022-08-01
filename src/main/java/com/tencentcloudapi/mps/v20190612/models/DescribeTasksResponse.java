@@ -37,6 +37,13 @@ public class DescribeTasksResponse extends AbstractModel{
     private String ScrollToken;
 
     /**
+    * The total number of records that meet the conditions.
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class DescribeTasksResponse extends AbstractModel{
     }
 
     /**
+     * Get The total number of records that meet the conditions. 
+     * @return TotalCount The total number of records that meet the conditions.
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set The total number of records that meet the conditions.
+     * @param TotalCount The total number of records that meet the conditions.
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -108,6 +131,9 @@ public class DescribeTasksResponse extends AbstractModel{
         if (source.ScrollToken != null) {
             this.ScrollToken = new String(source.ScrollToken);
         }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -120,6 +146,7 @@ public class DescribeTasksResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TaskSet.", this.TaskSet);
         this.setParamSimple(map, prefix + "ScrollToken", this.ScrollToken);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -24,8 +24,8 @@ public class Compression extends AbstractModel{
 
     /**
     * Smart compression configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
     */
     @SerializedName("Switch")
     @Expose
@@ -33,7 +33,7 @@ off: disabled
 
     /**
     * Compression rules array
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("CompressionRules")
     @Expose
@@ -41,11 +41,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Smart compression configuration switch
-on: enabled
-off: disabled 
+`on`: Enable
+`off`: Disable 
      * @return Switch Smart compression configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     public String getSwitch() {
         return this.Switch;
@@ -53,11 +53,11 @@ off: disabled
 
     /**
      * Set Smart compression configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      * @param Switch Smart compression configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
@@ -65,9 +65,9 @@ off: disabled
 
     /**
      * Get Compression rules array
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return CompressionRules Compression rules array
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public CompressionRule [] getCompressionRules() {
         return this.CompressionRules;
@@ -75,9 +75,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Compression rules array
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param CompressionRules Compression rules array
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCompressionRules(CompressionRule [] CompressionRules) {
         this.CompressionRules = CompressionRules;

@@ -24,15 +24,15 @@ public class DisableCachesResponse extends AbstractModel{
 
     /**
     * Submission result
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("CacheOptResult")
     @Expose
     private CacheOptResult CacheOptResult;
 
     /**
-    * Task ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Task ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("TaskId")
     @Expose
@@ -47,9 +47,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Submission result
-Note: This field may return null, indicating that no valid values can be obtained. 
+Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return CacheOptResult Submission result
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public CacheOptResult getCacheOptResult() {
         return this.CacheOptResult;
@@ -57,29 +57,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Submission result
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param CacheOptResult Submission result
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setCacheOptResult(CacheOptResult CacheOptResult) {
         this.CacheOptResult = CacheOptResult;
     }
 
     /**
-     * Get Task ID.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return TaskId Task ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Task ID
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return TaskId Task ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param TaskId Task ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Task ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param TaskId Task ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

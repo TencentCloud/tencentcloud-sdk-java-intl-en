@@ -24,8 +24,8 @@ public class VideoSeek extends AbstractModel{
 
     /**
     * Video dragging switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
     */
     @SerializedName("Switch")
     @Expose
@@ -33,11 +33,11 @@ off: disabled
 
     /**
      * Get Video dragging switch
-on: enabled
-off: disabled 
+`on`: Enable
+`off`: Disable 
      * @return Switch Video dragging switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     public String getSwitch() {
         return this.Switch;
@@ -45,11 +45,11 @@ off: disabled
 
     /**
      * Set Video dragging switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      * @param Switch Video dragging switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

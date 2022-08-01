@@ -45,8 +45,8 @@ public class DomainLog extends AbstractModel{
 
     /**
     * Acceleration region corresponding to the log package
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
     */
     @SerializedName("Area")
     @Expose
@@ -109,11 +109,11 @@ public class DomainLog extends AbstractModel{
 
     /**
      * Get Acceleration region corresponding to the log package
-`mainland`: within Mainland China
-`overseas`: outside Mainland China 
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland 
      * @return Area Acceleration region corresponding to the log package
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
      */
     public String getArea() {
         return this.Area;
@@ -121,11 +121,11 @@ public class DomainLog extends AbstractModel{
 
     /**
      * Set Acceleration region corresponding to the log package
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
      * @param Area Acceleration region corresponding to the log package
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
      */
     public void setArea(String Area) {
         this.Area = Area;

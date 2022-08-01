@@ -51,7 +51,7 @@ public class DescribeCdnDomainLogsRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * Limit on paged queries. Default value: 100. Maximum value: 1,000
+    * Limit on paginated queries. Default value: 100. Maximum value: 1,000
     */
     @SerializedName("Limit")
     @Expose
@@ -141,16 +141,16 @@ access: access logs
     }
 
     /**
-     * Get Limit on paged queries. Default value: 100. Maximum value: 1,000 
-     * @return Limit Limit on paged queries. Default value: 100. Maximum value: 1,000
+     * Get Limit on paginated queries. Default value: 100. Maximum value: 1,000 
+     * @return Limit Limit on paginated queries. Default value: 100. Maximum value: 1,000
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Limit on paged queries. Default value: 100. Maximum value: 1,000
-     * @param Limit Limit on paged queries. Default value: 100. Maximum value: 1,000
+     * Set Limit on paginated queries. Default value: 100. Maximum value: 1,000
+     * @param Limit Limit on paginated queries. Default value: 100. Maximum value: 1,000
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -63,7 +63,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * WAF rule level. Valid values: 100, 200, and 300.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Level")
     @Expose
@@ -71,7 +71,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * WAF sub-rule switch
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("SubRuleSwitch")
     @Expose
@@ -175,9 +175,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get WAF rule level. Valid values: 100, 200, and 300.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Level WAF rule level. Valid values: 100, 200, and 300.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Long getLevel() {
         return this.Level;
@@ -185,9 +185,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set WAF rule level. Valid values: 100, 200, and 300.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Level WAF rule level. Valid values: 100, 200, and 300.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setLevel(Long Level) {
         this.Level = Level;
@@ -195,9 +195,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get WAF sub-rule switch
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return SubRuleSwitch WAF sub-rule switch
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public WafSubRuleStatus [] getSubRuleSwitch() {
         return this.SubRuleSwitch;
@@ -205,9 +205,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set WAF sub-rule switch
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param SubRuleSwitch WAF sub-rule switch
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setSubRuleSwitch(WafSubRuleStatus [] SubRuleSwitch) {
         this.SubRuleSwitch = SubRuleSwitch;

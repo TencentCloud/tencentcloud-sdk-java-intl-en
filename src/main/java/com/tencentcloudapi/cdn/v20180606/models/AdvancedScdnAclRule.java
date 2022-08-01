@@ -32,15 +32,15 @@ public class AdvancedScdnAclRule extends AbstractModel{
 `ipCountry`: country/region of the requester IP
 `ipArea`: region of the requester IP
 `xForwardFor`: X-Forward-For request header
-`directory`: path
-`index`: homepage
-`path`: full path of a file
-`file`: file extension
-`param`: request parameter
+`directory`: Path
+`index`: Homepage
+`path`: Full path of a file
+`file`: File extension
+`param`: Request parameter
 `referer`: Referer request header
 `cookie`: Cookie request header
 `userAgent`: User-Agent request header
-`head`: custom request header
+`head`: Custom request header
     */
     @SerializedName("MatchKey")
     @Expose
@@ -48,12 +48,12 @@ public class AdvancedScdnAclRule extends AbstractModel{
 
     /**
     * Logical operator. Valid values:
-`exclude`: the keyword is not included
-`include`: the keyword is included
-`notequal`: not the same as the keyword
-`equal`: the same as the keyword
-`matching`: the prefix is matched
-`null`: empty or does not exist
+`exclude`: The keyword is not included
+`include`: The keyword is included
+`notequal`: Not the same as the keyword
+`equal`: The same as the keyword
+`matching`: The prefix is matched
+`null`: Empty or does not exist
     */
     @SerializedName("LogicOperator")
     @Expose
@@ -71,7 +71,7 @@ When `MatchKey` is `method`,
 Values: `HEAD`, `GET`, `POST`, `PUT`, `OPTIONS`, `TRACE`, `DELETE`, `PATCH` and `CONNECT`.
 
 When `MatchKey` is `ipCountry`, valid values include:
-`OTHER`: other countries/regions
+`OTHER`: Other areas
 `VE`: Venezuela
 `UY`: Uruguay
 `SR`: Suriname
@@ -304,15 +304,15 @@ valid value is `/;/index.html`.
 `ipCountry`: country/region of the requester IP
 `ipArea`: region of the requester IP
 `xForwardFor`: X-Forward-For request header
-`directory`: path
-`index`: homepage
-`path`: full path of a file
-`file`: file extension
-`param`: request parameter
+`directory`: Path
+`index`: Homepage
+`path`: Full path of a file
+`file`: File extension
+`param`: Request parameter
 `referer`: Referer request header
 `cookie`: Cookie request header
 `userAgent`: User-Agent request header
-`head`: custom request header 
+`head`: Custom request header 
      * @return MatchKey Keyword. Valid values:
 `protocol`: HTTP protocol
 `httpVersion`: HTTP version
@@ -322,15 +322,15 @@ valid value is `/;/index.html`.
 `ipCountry`: country/region of the requester IP
 `ipArea`: region of the requester IP
 `xForwardFor`: X-Forward-For request header
-`directory`: path
-`index`: homepage
-`path`: full path of a file
-`file`: file extension
-`param`: request parameter
+`directory`: Path
+`index`: Homepage
+`path`: Full path of a file
+`file`: File extension
+`param`: Request parameter
 `referer`: Referer request header
 `cookie`: Cookie request header
 `userAgent`: User-Agent request header
-`head`: custom request header
+`head`: Custom request header
      */
     public String getMatchKey() {
         return this.MatchKey;
@@ -346,15 +346,15 @@ valid value is `/;/index.html`.
 `ipCountry`: country/region of the requester IP
 `ipArea`: region of the requester IP
 `xForwardFor`: X-Forward-For request header
-`directory`: path
-`index`: homepage
-`path`: full path of a file
-`file`: file extension
-`param`: request parameter
+`directory`: Path
+`index`: Homepage
+`path`: Full path of a file
+`file`: File extension
+`param`: Request parameter
 `referer`: Referer request header
 `cookie`: Cookie request header
 `userAgent`: User-Agent request header
-`head`: custom request header
+`head`: Custom request header
      * @param MatchKey Keyword. Valid values:
 `protocol`: HTTP protocol
 `httpVersion`: HTTP version
@@ -364,15 +364,15 @@ valid value is `/;/index.html`.
 `ipCountry`: country/region of the requester IP
 `ipArea`: region of the requester IP
 `xForwardFor`: X-Forward-For request header
-`directory`: path
-`index`: homepage
-`path`: full path of a file
-`file`: file extension
-`param`: request parameter
+`directory`: Path
+`index`: Homepage
+`path`: Full path of a file
+`file`: File extension
+`param`: Request parameter
 `referer`: Referer request header
 `cookie`: Cookie request header
 `userAgent`: User-Agent request header
-`head`: custom request header
+`head`: Custom request header
      */
     public void setMatchKey(String MatchKey) {
         this.MatchKey = MatchKey;
@@ -380,19 +380,19 @@ valid value is `/;/index.html`.
 
     /**
      * Get Logical operator. Valid values:
-`exclude`: the keyword is not included
-`include`: the keyword is included
-`notequal`: not the same as the keyword
-`equal`: the same as the keyword
-`matching`: the prefix is matched
-`null`: empty or does not exist 
+`exclude`: The keyword is not included
+`include`: The keyword is included
+`notequal`: Not the same as the keyword
+`equal`: The same as the keyword
+`matching`: The prefix is matched
+`null`: Empty or does not exist 
      * @return LogicOperator Logical operator. Valid values:
-`exclude`: the keyword is not included
-`include`: the keyword is included
-`notequal`: not the same as the keyword
-`equal`: the same as the keyword
-`matching`: the prefix is matched
-`null`: empty or does not exist
+`exclude`: The keyword is not included
+`include`: The keyword is included
+`notequal`: Not the same as the keyword
+`equal`: The same as the keyword
+`matching`: The prefix is matched
+`null`: Empty or does not exist
      */
     public String getLogicOperator() {
         return this.LogicOperator;
@@ -400,19 +400,19 @@ valid value is `/;/index.html`.
 
     /**
      * Set Logical operator. Valid values:
-`exclude`: the keyword is not included
-`include`: the keyword is included
-`notequal`: not the same as the keyword
-`equal`: the same as the keyword
-`matching`: the prefix is matched
-`null`: empty or does not exist
+`exclude`: The keyword is not included
+`include`: The keyword is included
+`notequal`: Not the same as the keyword
+`equal`: The same as the keyword
+`matching`: The prefix is matched
+`null`: Empty or does not exist
      * @param LogicOperator Logical operator. Valid values:
-`exclude`: the keyword is not included
-`include`: the keyword is included
-`notequal`: not the same as the keyword
-`equal`: the same as the keyword
-`matching`: the prefix is matched
-`null`: empty or does not exist
+`exclude`: The keyword is not included
+`include`: The keyword is included
+`notequal`: Not the same as the keyword
+`equal`: The same as the keyword
+`matching`: The prefix is matched
+`null`: Empty or does not exist
      */
     public void setLogicOperator(String LogicOperator) {
         this.LogicOperator = LogicOperator;
@@ -430,7 +430,7 @@ When `MatchKey` is `method`,
 Values: `HEAD`, `GET`, `POST`, `PUT`, `OPTIONS`, `TRACE`, `DELETE`, `PATCH` and `CONNECT`.
 
 When `MatchKey` is `ipCountry`, valid values include:
-`OTHER`: other countries/regions
+`OTHER`: Other areas
 `VE`: Venezuela
 `UY`: Uruguay
 `SR`: Suriname
@@ -645,7 +645,7 @@ When `MatchKey` is `method`,
 Values: `HEAD`, `GET`, `POST`, `PUT`, `OPTIONS`, `TRACE`, `DELETE`, `PATCH` and `CONNECT`.
 
 When `MatchKey` is `ipCountry`, valid values include:
-`OTHER`: other countries/regions
+`OTHER`: Other areas
 `VE`: Venezuela
 `UY`: Uruguay
 `SR`: Suriname
@@ -866,7 +866,7 @@ When `MatchKey` is `method`,
 Values: `HEAD`, `GET`, `POST`, `PUT`, `OPTIONS`, `TRACE`, `DELETE`, `PATCH` and `CONNECT`.
 
 When `MatchKey` is `ipCountry`, valid values include:
-`OTHER`: other countries/regions
+`OTHER`: Other areas
 `VE`: Venezuela
 `UY`: Uruguay
 `SR`: Suriname
@@ -1081,7 +1081,7 @@ When `MatchKey` is `method`,
 Values: `HEAD`, `GET`, `POST`, `PUT`, `OPTIONS`, `TRACE`, `DELETE`, `PATCH` and `CONNECT`.
 
 When `MatchKey` is `ipCountry`, valid values include:
-`OTHER`: other countries/regions
+`OTHER`: Other areas
 `VE`: Venezuela
 `UY`: Uruguay
 `SR`: Suriname

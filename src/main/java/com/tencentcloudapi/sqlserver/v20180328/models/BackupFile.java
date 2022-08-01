@@ -58,6 +58,20 @@ public class BackupFile extends AbstractModel{
     private String DownloadLink;
 
     /**
+    * The code of the region where current instance resides
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+    * The target region and download address of cross-region backup
+    */
+    @SerializedName("CrossBackupAddr")
+    @Expose
+    private CrossBackupAddr [] CrossBackupAddr;
+
+    /**
      * Get Unique ID of a backup file 
      * @return Id Unique ID of a backup file
      */
@@ -137,6 +151,38 @@ public class BackupFile extends AbstractModel{
         this.DownloadLink = DownloadLink;
     }
 
+    /**
+     * Get The code of the region where current instance resides 
+     * @return Region The code of the region where current instance resides
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set The code of the region where current instance resides
+     * @param Region The code of the region where current instance resides
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * Get The target region and download address of cross-region backup 
+     * @return CrossBackupAddr The target region and download address of cross-region backup
+     */
+    public CrossBackupAddr [] getCrossBackupAddr() {
+        return this.CrossBackupAddr;
+    }
+
+    /**
+     * Set The target region and download address of cross-region backup
+     * @param CrossBackupAddr The target region and download address of cross-region backup
+     */
+    public void setCrossBackupAddr(CrossBackupAddr [] CrossBackupAddr) {
+        this.CrossBackupAddr = CrossBackupAddr;
+    }
+
     public BackupFile() {
     }
 
@@ -163,6 +209,15 @@ public class BackupFile extends AbstractModel{
         if (source.DownloadLink != null) {
             this.DownloadLink = new String(source.DownloadLink);
         }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.CrossBackupAddr != null) {
+            this.CrossBackupAddr = new CrossBackupAddr[source.CrossBackupAddr.length];
+            for (int i = 0; i < source.CrossBackupAddr.length; i++) {
+                this.CrossBackupAddr[i] = new CrossBackupAddr(source.CrossBackupAddr[i]);
+            }
+        }
     }
 
 
@@ -175,6 +230,8 @@ public class BackupFile extends AbstractModel{
         this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamArraySimple(map, prefix + "DBs.", this.DBs);
         this.setParamSimple(map, prefix + "DownloadLink", this.DownloadLink);
+        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamArrayObj(map, prefix + "CrossBackupAddr.", this.CrossBackupAddr);
 
     }
 }

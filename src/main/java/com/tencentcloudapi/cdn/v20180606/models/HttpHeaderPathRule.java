@@ -35,7 +35,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
     * HTTP header name. Up to 100 characters can be set.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("HeaderName")
     @Expose
@@ -45,7 +45,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     * HTTP header value. Up to 1000 characters can be set.
 Not required when Mode is del
 Required when Mode is add/set
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("HeaderValue")
     @Expose
@@ -53,23 +53,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
-Note: this field may return null, indicating that no valid values can be obtained.
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("RuleType")
     @Expose
     private String RuleType;
 
     /**
-    * Content for each RuleType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Content for each `RuleType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("RulePaths")
     @Expose
@@ -109,9 +109,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get HTTP header name. Up to 100 characters can be set.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return HeaderName HTTP header name. Up to 100 characters can be set.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getHeaderName() {
         return this.HeaderName;
@@ -119,9 +119,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set HTTP header name. Up to 100 characters can be set.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param HeaderName HTTP header name. Up to 100 characters can be set.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setHeaderName(String HeaderName) {
         this.HeaderName = HeaderName;
@@ -131,11 +131,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Get HTTP header value. Up to 1000 characters can be set.
 Not required when Mode is del
 Required when Mode is add/set
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return HeaderValue HTTP header value. Up to 1000 characters can be set.
 Not required when Mode is del
 Required when Mode is add/set
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getHeaderValue() {
         return this.HeaderValue;
@@ -145,11 +145,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * Set HTTP header value. Up to 1000 characters can be set.
 Not required when Mode is del
 Required when Mode is add/set
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param HeaderValue HTTP header value. Up to 1000 characters can be set.
 Not required when Mode is del
 Required when Mode is add/set
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setHeaderValue(String HeaderValue) {
         this.HeaderValue = HeaderValue;
@@ -157,17 +157,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
-Note: this field may return null, indicating that no valid values can be obtained. 
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return RuleType Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
-Note: this field may return null, indicating that no valid values can be obtained.
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getRuleType() {
         return this.RuleType;
@@ -175,53 +175,53 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
-Note: this field may return null, indicating that no valid values can be obtained.
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param RuleType Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
-Note: this field may return null, indicating that no valid values can be obtained.
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRuleType(String RuleType) {
         this.RuleType = RuleType;
     }
 
     /**
-     * Get Content for each RuleType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RulePaths Content for each RuleType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Content for each `RuleType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return RulePaths Content for each `RuleType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String [] getRulePaths() {
         return this.RulePaths;
     }
 
     /**
-     * Set Content for each RuleType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RulePaths Content for each RuleType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Content for each `RuleType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param RulePaths Content for each `RuleType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setRulePaths(String [] RulePaths) {
         this.RulePaths = RulePaths;

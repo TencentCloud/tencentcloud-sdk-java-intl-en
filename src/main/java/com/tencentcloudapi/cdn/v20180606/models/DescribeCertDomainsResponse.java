@@ -24,7 +24,7 @@ public class DescribeCertDomainsResponse extends AbstractModel{
 
     /**
     * List of domain names connected to CDN
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Domains")
     @Expose
@@ -32,7 +32,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * List of CDN domain names with certificates configured
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("CertifiedDomains")
     @Expose
@@ -47,9 +47,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get List of domain names connected to CDN
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Domains List of domain names connected to CDN
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String [] getDomains() {
         return this.Domains;
@@ -57,9 +57,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of domain names connected to CDN
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Domains List of domain names connected to CDN
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;
@@ -67,9 +67,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get List of CDN domain names with certificates configured
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return CertifiedDomains List of CDN domain names with certificates configured
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String [] getCertifiedDomains() {
         return this.CertifiedDomains;
@@ -77,9 +77,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of CDN domain names with certificates configured
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param CertifiedDomains List of CDN domain names with certificates configured
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCertifiedDomains(String [] CertifiedDomains) {
         this.CertifiedDomains = CertifiedDomains;

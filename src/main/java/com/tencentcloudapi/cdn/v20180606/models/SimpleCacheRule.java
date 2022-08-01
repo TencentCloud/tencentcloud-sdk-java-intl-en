@@ -24,10 +24,10 @@ public class SimpleCacheRule extends AbstractModel{
 
     /**
     * Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 index: home page
     */
     @SerializedName("CacheType")
@@ -35,12 +35,12 @@ index: home page
     private String CacheType;
 
     /**
-    * Content for each CacheType:
-Enter `*` for `all`
-Enter an extension for `file`, such as `jpg` or `txt`
-Enter a path for `directory`, such as `/xxx/test`
-Enter an absolute path for `path`, such as `/xxx/test.html`
-Enter `/` for `index`
+    * Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
     */
     @SerializedName("CacheContents")
     @Expose
@@ -56,16 +56,16 @@ Unit: second. The maximum value is 365 days.
 
     /**
      * Get Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 index: home page 
      * @return CacheType Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 index: home page
      */
     public String getCacheType() {
@@ -74,16 +74,16 @@ index: home page
 
     /**
      * Set Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 index: home page
      * @param CacheType Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 index: home page
      */
     public void setCacheType(String CacheType) {
@@ -91,36 +91,36 @@ index: home page
     }
 
     /**
-     * Get Content for each CacheType:
-Enter `*` for `all`
-Enter an extension for `file`, such as `jpg` or `txt`
-Enter a path for `directory`, such as `/xxx/test`
-Enter an absolute path for `path`, such as `/xxx/test.html`
-Enter `/` for `index` 
-     * @return CacheContents Content for each CacheType:
-Enter `*` for `all`
-Enter an extension for `file`, such as `jpg` or `txt`
-Enter a path for `directory`, such as `/xxx/test`
-Enter an absolute path for `path`, such as `/xxx/test.html`
-Enter `/` for `index`
+     * Get Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`. 
+     * @return CacheContents Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
      */
     public String [] getCacheContents() {
         return this.CacheContents;
     }
 
     /**
-     * Set Content for each CacheType:
-Enter `*` for `all`
-Enter an extension for `file`, such as `jpg` or `txt`
-Enter a path for `directory`, such as `/xxx/test`
-Enter an absolute path for `path`, such as `/xxx/test.html`
-Enter `/` for `index`
-     * @param CacheContents Content for each CacheType:
-Enter `*` for `all`
-Enter an extension for `file`, such as `jpg` or `txt`
-Enter a path for `directory`, such as `/xxx/test`
-Enter an absolute path for `path`, such as `/xxx/test.html`
-Enter `/` for `index`
+     * Set Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
+     * @param CacheContents Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
      */
     public void setCacheContents(String [] CacheContents) {
         this.CacheContents = CacheContents;

@@ -66,7 +66,7 @@ public class ListClsTopicDomainsResponse extends AbstractModel{
 
     /**
     * Last modified time of log topic
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -177,9 +177,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Last modified time of log topic
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return UpdateTime Last modified time of log topic
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -187,9 +187,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Last modified time of log topic
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param UpdateTime Last modified time of log topic
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

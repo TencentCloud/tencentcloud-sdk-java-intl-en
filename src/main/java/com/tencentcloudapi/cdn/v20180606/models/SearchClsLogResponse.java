@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SearchClsLogResponse extends AbstractModel{
 
     /**
-    * Query result
+    * Query results
     */
     @SerializedName("Logs")
     @Expose
@@ -37,16 +37,16 @@ public class SearchClsLogResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Query result 
-     * @return Logs Query result
+     * Get Query results 
+     * @return Logs Query results
      */
     public ClsSearchLogs getLogs() {
         return this.Logs;
     }
 
     /**
-     * Set Query result
-     * @param Logs Query result
+     * Set Query results
+     * @param Logs Query results
      */
     public void setLogs(ClsSearchLogs Logs) {
         this.Logs = Logs;
