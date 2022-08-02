@@ -100,6 +100,26 @@ This API is used to add user lists (user management).
     }
 
     /**
+     * This API is used to query the Yarn application statistics.
+     * @param req DescribeEmrApplicationStaticsRequest
+     * @return DescribeEmrApplicationStaticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEmrApplicationStaticsResponse DescribeEmrApplicationStatics(DescribeEmrApplicationStaticsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEmrApplicationStaticsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEmrApplicationStaticsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEmrApplicationStatics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query EMR instances.
      * @param req DescribeInstancesRequest
      * @return DescribeInstancesResponse
@@ -221,6 +241,26 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
     }
 
     /**
+     *This API is used to query price of scale-out.
+     * @param req InquiryPriceScaleOutInstanceRequest
+     * @return InquiryPriceScaleOutInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceScaleOutInstanceResponse InquiryPriceScaleOutInstance(InquiryPriceScaleOutInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquiryPriceScaleOutInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquiryPriceScaleOutInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InquiryPriceScaleOutInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query price of scaling.
      * @param req InquiryPriceUpdateInstanceRequest
      * @return InquiryPriceUpdateInstanceResponse
@@ -273,6 +313,46 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
                 Type type = new TypeToken<JsonResponseModel<ModifyResourceSchedulerResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyResourceScheduler");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to scale out instances.
+     * @param req ScaleOutInstanceRequest
+     * @return ScaleOutInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScaleOutInstanceResponse ScaleOutInstance(ScaleOutInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ScaleOutInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ScaleOutInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ScaleOutInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to terminate EMR instances. It is only supported in the official paid edition of EMR.
+     * @param req TerminateInstanceRequest
+     * @return TerminateInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateInstanceResponse TerminateInstance(TerminateInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TerminateInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TerminateInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TerminateInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

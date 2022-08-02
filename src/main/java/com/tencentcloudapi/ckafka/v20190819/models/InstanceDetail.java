@@ -252,7 +252,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ClusterType;
 
     /**
-    * 
+    * Instance feature list.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Features")
     @Expose
@@ -803,16 +804,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return Features 
+     * Get Instance feature list.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Features Instance feature list.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getFeatures() {
         return this.Features;
     }
 
     /**
-     * Set 
-     * @param Features 
+     * Set Instance feature list.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Features Instance feature list.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFeatures(String [] Features) {
         this.Features = Features;
