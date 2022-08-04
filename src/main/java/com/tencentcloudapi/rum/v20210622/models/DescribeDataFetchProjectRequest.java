@@ -184,6 +184,20 @@ public class DescribeDataFetchProjectRequest extends AbstractModel{
     private String Env;
 
     /**
+    * HTTP status code.
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * retcode
+    */
+    @SerializedName("Ret")
+    @Expose
+    private String Ret;
+
+    /**
      * Get Start time 
      * @return StartTime Start time
      */
@@ -551,6 +565,38 @@ public class DescribeDataFetchProjectRequest extends AbstractModel{
         this.Env = Env;
     }
 
+    /**
+     * Get HTTP status code. 
+     * @return Status HTTP status code.
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set HTTP status code.
+     * @param Status HTTP status code.
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get retcode 
+     * @return Ret retcode
+     */
+    public String getRet() {
+        return this.Ret;
+    }
+
+    /**
+     * Set retcode
+     * @param Ret retcode
+     */
+    public void setRet(String Ret) {
+        this.Ret = Ret;
+    }
+
     public DescribeDataFetchProjectRequest() {
     }
 
@@ -628,6 +674,12 @@ public class DescribeDataFetchProjectRequest extends AbstractModel{
         if (source.Env != null) {
             this.Env = new String(source.Env);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.Ret != null) {
+            this.Ret = new String(source.Ret);
+        }
     }
 
 
@@ -658,6 +710,8 @@ public class DescribeDataFetchProjectRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CostType", this.CostType);
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Env", this.Env);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Ret", this.Ret);
 
     }
 }

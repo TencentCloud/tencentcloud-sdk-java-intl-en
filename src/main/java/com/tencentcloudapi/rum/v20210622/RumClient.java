@@ -852,6 +852,26 @@ Default API request rate limit: 20 requests/sec.
     }
 
     /**
+     *This API is used to get the list of projects (under teams created by an instance).
+     * @param req DescribeProjectsRequest
+     * @return DescribeProjectsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProjectsResponse DescribeProjects(DescribeProjectsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeProjectsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeProjectsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeProjects");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the list of PVs under a project.
      * @param req DescribePvListRequest
      * @return DescribePvListResponse
@@ -904,6 +924,26 @@ Default API request rate limit: 20 requests/sec.
                 Type type = new TypeToken<JsonResponseModel<DescribeReleaseFilesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeReleaseFiles");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the list of homepage scores.
+     * @param req DescribeScoresRequest
+     * @return DescribeScoresResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScoresResponse DescribeScores(DescribeScoresRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeScoresResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeScoresResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeScores");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

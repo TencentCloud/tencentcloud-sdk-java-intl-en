@@ -30,7 +30,7 @@ public class CreateTawInstanceRequest extends AbstractModel{
     private Long AreaId;
 
     /**
-    * Billing mode (1: trial; 2: prepaid; 3: postpaid)
+    * Billing type (1: Pay-as-you-go).
     */
     @SerializedName("ChargeType")
     @Expose
@@ -102,16 +102,16 @@ public class CreateTawInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Billing mode (1: trial; 2: prepaid; 3: postpaid) 
-     * @return ChargeType Billing mode (1: trial; 2: prepaid; 3: postpaid)
+     * Get Billing type (1: Pay-as-you-go). 
+     * @return ChargeType Billing type (1: Pay-as-you-go).
      */
     public Long getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set Billing mode (1: trial; 2: prepaid; 3: postpaid)
-     * @param ChargeType Billing mode (1: trial; 2: prepaid; 3: postpaid)
+     * Set Billing type (1: Pay-as-you-go).
+     * @param ChargeType Billing type (1: Pay-as-you-go).
      */
     public void setChargeType(Long ChargeType) {
         this.ChargeType = ChargeType;
