@@ -377,6 +377,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private ResourceTag [] ResourceTags;
 
     /**
+    * Database engine version
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DbVersionId")
+    @Expose
+    private String DbVersionId;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -1204,6 +1212,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.ResourceTags = ResourceTags;
     }
 
+    /**
+     * Get Database engine version
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DbVersionId Database engine version
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDbVersionId() {
+        return this.DbVersionId;
+    }
+
+    /**
+     * Set Database engine version
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DbVersionId Database engine version
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDbVersionId(String DbVersionId) {
+        this.DbVersionId = DbVersionId;
+    }
+
     public DCDBInstanceInfo() {
     }
 
@@ -1365,6 +1393,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.ResourceTags[i] = new ResourceTag(source.ResourceTags[i]);
             }
         }
+        if (source.DbVersionId != null) {
+            this.DbVersionId = new String(source.DbVersionId);
+        }
     }
 
 
@@ -1421,6 +1452,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "DcnDstNum", this.DcnDstNum);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamSimple(map, prefix + "DbVersionId", this.DbVersionId);
 
     }
 }
