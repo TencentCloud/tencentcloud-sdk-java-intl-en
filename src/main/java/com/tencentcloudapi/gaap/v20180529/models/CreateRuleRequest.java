@@ -101,6 +101,13 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
     private String ServerNameIndication;
 
     /**
+    * Enables HTTP-to-HTTPS force redirect for a forwarding rule. Enter a hostname and path of the current forwarding rule.
+    */
+    @SerializedName("ForcedRedirect")
+    @Expose
+    private String ForcedRedirect;
+
+    /**
      * Get Layer-7 listener ID 
      * @return ListenerId Layer-7 listener ID
      */
@@ -280,6 +287,22 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
         this.ServerNameIndication = ServerNameIndication;
     }
 
+    /**
+     * Get Enables HTTP-to-HTTPS force redirect for a forwarding rule. Enter a hostname and path of the current forwarding rule. 
+     * @return ForcedRedirect Enables HTTP-to-HTTPS force redirect for a forwarding rule. Enter a hostname and path of the current forwarding rule.
+     */
+    public String getForcedRedirect() {
+        return this.ForcedRedirect;
+    }
+
+    /**
+     * Set Enables HTTP-to-HTTPS force redirect for a forwarding rule. Enter a hostname and path of the current forwarding rule.
+     * @param ForcedRedirect Enables HTTP-to-HTTPS force redirect for a forwarding rule. Enter a hostname and path of the current forwarding rule.
+     */
+    public void setForcedRedirect(String ForcedRedirect) {
+        this.ForcedRedirect = ForcedRedirect;
+    }
+
     public CreateRuleRequest() {
     }
 
@@ -321,6 +344,9 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
         if (source.ServerNameIndication != null) {
             this.ServerNameIndication = new String(source.ServerNameIndication);
         }
+        if (source.ForcedRedirect != null) {
+            this.ForcedRedirect = new String(source.ForcedRedirect);
+        }
     }
 
 
@@ -339,6 +365,7 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
         this.setParamSimple(map, prefix + "ForwardHost", this.ForwardHost);
         this.setParamSimple(map, prefix + "ServerNameIndicationSwitch", this.ServerNameIndicationSwitch);
         this.setParamSimple(map, prefix + "ServerNameIndication", this.ServerNameIndication);
+        this.setParamSimple(map, prefix + "ForcedRedirect", this.ForcedRedirect);
 
     }
 }

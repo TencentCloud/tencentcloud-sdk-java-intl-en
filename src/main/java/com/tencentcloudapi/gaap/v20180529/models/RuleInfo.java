@@ -128,6 +128,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String ServerNameIndication;
 
     /**
+    * Forces requests to redirect to HTTPS. When `https:` is passed in, all requests are redirected to HTTPS.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ForcedRedirect")
+    @Expose
+    private String ForcedRedirect;
+
+    /**
      * Get Rule information 
      * @return RuleId Rule information
      */
@@ -379,6 +387,26 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.ServerNameIndication = ServerNameIndication;
     }
 
+    /**
+     * Get Forces requests to redirect to HTTPS. When `https:` is passed in, all requests are redirected to HTTPS.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ForcedRedirect Forces requests to redirect to HTTPS. When `https:` is passed in, all requests are redirected to HTTPS.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getForcedRedirect() {
+        return this.ForcedRedirect;
+    }
+
+    /**
+     * Set Forces requests to redirect to HTTPS. When `https:` is passed in, all requests are redirected to HTTPS.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ForcedRedirect Forces requests to redirect to HTTPS. When `https:` is passed in, all requests are redirected to HTTPS.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setForcedRedirect(String ForcedRedirect) {
+        this.ForcedRedirect = ForcedRedirect;
+    }
+
     public RuleInfo() {
     }
 
@@ -432,6 +460,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.ServerNameIndication != null) {
             this.ServerNameIndication = new String(source.ServerNameIndication);
         }
+        if (source.ForcedRedirect != null) {
+            this.ForcedRedirect = new String(source.ForcedRedirect);
+        }
     }
 
 
@@ -453,6 +484,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "ForwardHost", this.ForwardHost);
         this.setParamSimple(map, prefix + "ServerNameIndicationSwitch", this.ServerNameIndicationSwitch);
         this.setParamSimple(map, prefix + "ServerNameIndication", this.ServerNameIndication);
+        this.setParamSimple(map, prefix + "ForcedRedirect", this.ForcedRedirect);
 
     }
 }

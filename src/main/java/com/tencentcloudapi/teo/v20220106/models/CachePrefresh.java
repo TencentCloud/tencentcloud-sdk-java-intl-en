@@ -23,46 +23,51 @@ import java.util.HashMap;
 public class CachePrefresh extends AbstractModel{
 
     /**
-    * 
+    * Configuration switch
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Cache prefresh percentage. Values: 1-99
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Percent")
     @Expose
     private Long Percent;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Configuration switch 
+     * @return Switch Configuration switch
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Configuration switch
+     * @param Switch Configuration switch
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return Percent 
+     * Get Cache prefresh percentage. Values: 1-99
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Percent Cache prefresh percentage. Values: 1-99
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getPercent() {
         return this.Percent;
     }
 
     /**
-     * Set 
-     * @param Percent 
+     * Set Cache prefresh percentage. Values: 1-99
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Percent Cache prefresh percentage. Values: 1-99
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPercent(Long Percent) {
         this.Percent = Percent;

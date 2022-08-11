@@ -128,7 +128,7 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     private ClientIp ClientIpHeader;
 
     /**
-    * 
+    * Cache prefresh configuration
     */
     @SerializedName("CachePrefresh")
     @Expose
@@ -375,16 +375,16 @@ public class ModifyZoneSettingRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return CachePrefresh 
+     * Get Cache prefresh configuration 
+     * @return CachePrefresh Cache prefresh configuration
      */
     public CachePrefresh getCachePrefresh() {
         return this.CachePrefresh;
     }
 
     /**
-     * Set 
-     * @param CachePrefresh 
+     * Set Cache prefresh configuration
+     * @param CachePrefresh Cache prefresh configuration
      */
     public void setCachePrefresh(CachePrefresh CachePrefresh) {
         this.CachePrefresh = CachePrefresh;

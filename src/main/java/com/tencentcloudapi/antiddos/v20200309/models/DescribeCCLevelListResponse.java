@@ -30,7 +30,7 @@ public class DescribeCCLevelListResponse extends AbstractModel{
     private Long Total;
 
     /**
-    * Details of level-defining policies
+    * Total number of level-defining policies
     */
     @SerializedName("LevelList")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeCCLevelListResponse extends AbstractModel{
     }
 
     /**
-     * Get Details of level-defining policies 
-     * @return LevelList Details of level-defining policies
+     * Get Total number of level-defining policies 
+     * @return LevelList Total number of level-defining policies
      */
     public CCLevelPolicy [] getLevelList() {
         return this.LevelList;
     }
 
     /**
-     * Set Details of level-defining policies
-     * @param LevelList Details of level-defining policies
+     * Set Total number of level-defining policies
+     * @param LevelList Total number of level-defining policies
      */
     public void setLevelList(CCLevelPolicy [] LevelList) {
         this.LevelList = LevelList;

@@ -23,46 +23,51 @@ import java.util.HashMap;
 public class OriginCheckOriginStatus extends AbstractModel{
 
     /**
-    * 
+    * `healthy`: Healthy; `unhealthy`: Unhealthy; `process`: Checking origin.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * List of unhealthy origin groups when `Status = unhealthy`
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Host")
     @Expose
     private String [] Host;
 
     /**
-     * Get  
-     * @return Status 
+     * Get `healthy`: Healthy; `unhealthy`: Unhealthy; `process`: Checking origin. 
+     * @return Status `healthy`: Healthy; `unhealthy`: Unhealthy; `process`: Checking origin.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set `healthy`: Healthy; `unhealthy`: Unhealthy; `process`: Checking origin.
+     * @param Status `healthy`: Healthy; `unhealthy`: Unhealthy; `process`: Checking origin.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return Host 
+     * Get List of unhealthy origin groups when `Status = unhealthy`
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Host List of unhealthy origin groups when `Status = unhealthy`
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getHost() {
         return this.Host;
     }
 
     /**
-     * Set 
-     * @param Host 
+     * Set List of unhealthy origin groups when `Status = unhealthy`
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Host List of unhealthy origin groups when `Status = unhealthy`
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHost(String [] Host) {
         this.Host = Host;

@@ -149,7 +149,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private ClientIp ClientIpHeader;
 
     /**
-    * 
+    * Cache prefresh configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("CachePrefresh")
     @Expose
@@ -475,16 +476,20 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get  
-     * @return CachePrefresh 
+     * Get Cache prefresh configuration
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return CachePrefresh Cache prefresh configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public CachePrefresh getCachePrefresh() {
         return this.CachePrefresh;
     }
 
     /**
-     * Set 
-     * @param CachePrefresh 
+     * Set Cache prefresh configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param CachePrefresh Cache prefresh configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCachePrefresh(CachePrefresh CachePrefresh) {
         this.CachePrefresh = CachePrefresh;

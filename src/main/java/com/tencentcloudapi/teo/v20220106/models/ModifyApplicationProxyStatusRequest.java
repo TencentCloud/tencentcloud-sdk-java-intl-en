@@ -30,7 +30,7 @@ public class ModifyApplicationProxyStatusRequest extends AbstractModel{
     private String ZoneId;
 
     /**
-    * Layer-4 proxy ID
+    * ID of the proxy
     */
     @SerializedName("ProxyId")
     @Expose
@@ -62,16 +62,16 @@ public class ModifyApplicationProxyStatusRequest extends AbstractModel{
     }
 
     /**
-     * Get Layer-4 proxy ID 
-     * @return ProxyId Layer-4 proxy ID
+     * Get ID of the proxy 
+     * @return ProxyId ID of the proxy
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set Layer-4 proxy ID
-     * @param ProxyId Layer-4 proxy ID
+     * Set ID of the proxy
+     * @param ProxyId ID of the proxy
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;

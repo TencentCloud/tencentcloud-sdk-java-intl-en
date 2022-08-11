@@ -37,7 +37,9 @@ public class CreateApplicationProxyRequest extends AbstractModel{
     private String ZoneName;
 
     /**
-    * Layer-4 proxy name
+    * Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
     */
     @SerializedName("ProxyName")
     @Expose
@@ -96,8 +98,8 @@ public class CreateApplicationProxyRequest extends AbstractModel{
 
     /**
     * Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
+`hostname`: Create by subdomain name
+`instance`: Create by instance
     */
     @SerializedName("ProxyType")
     @Expose
@@ -136,16 +138,24 @@ public class CreateApplicationProxyRequest extends AbstractModel{
     }
 
     /**
-     * Get Layer-4 proxy name 
-     * @return ProxyName Layer-4 proxy name
+     * Get Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance` 
+     * @return ProxyName Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
      */
     public String getProxyName() {
         return this.ProxyName;
     }
 
     /**
-     * Set Layer-4 proxy name
-     * @param ProxyName Layer-4 proxy name
+     * Set Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
+     * @param ProxyName Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
      */
     public void setProxyName(String ProxyName) {
         this.ProxyName = ProxyName;
@@ -273,11 +283,11 @@ public class CreateApplicationProxyRequest extends AbstractModel{
 
     /**
      * Get Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance 
+`hostname`: Create by subdomain name
+`instance`: Create by instance 
      * @return ProxyType Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
+`hostname`: Create by subdomain name
+`instance`: Create by instance
      */
     public String getProxyType() {
         return this.ProxyType;
@@ -285,11 +295,11 @@ public class CreateApplicationProxyRequest extends AbstractModel{
 
     /**
      * Set Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
+`hostname`: Create by subdomain name
+`instance`: Create by instance
      * @param ProxyType Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
+`hostname`: Create by subdomain name
+`instance`: Create by instance
      */
     public void setProxyType(String ProxyType) {
         this.ProxyType = ProxyType;

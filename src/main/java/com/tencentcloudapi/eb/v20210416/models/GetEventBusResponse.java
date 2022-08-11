@@ -44,7 +44,7 @@ public class GetEventBusResponse extends AbstractModel{
     private String ClsTopicId;
 
     /**
-    * Creation time
+    * Creation time.
     */
     @SerializedName("AddTime")
     @Expose
@@ -134,16 +134,16 @@ public class GetEventBusResponse extends AbstractModel{
     }
 
     /**
-     * Get Creation time 
-     * @return AddTime Creation time
+     * Get Creation time. 
+     * @return AddTime Creation time.
      */
     public String getAddTime() {
         return this.AddTime;
     }
 
     /**
-     * Set Creation time
-     * @param AddTime Creation time
+     * Set Creation time.
+     * @param AddTime Creation time.
      */
     public void setAddTime(String AddTime) {
         this.AddTime = AddTime;

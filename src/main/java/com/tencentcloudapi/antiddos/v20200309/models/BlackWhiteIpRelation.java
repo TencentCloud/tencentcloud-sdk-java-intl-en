@@ -51,6 +51,13 @@ public class BlackWhiteIpRelation extends AbstractModel{
     private Long Mask;
 
     /**
+    * Modification time
+    */
+    @SerializedName("ModifyTime")
+    @Expose
+    private String ModifyTime;
+
+    /**
      * Get IP address 
      * @return Ip IP address
      */
@@ -114,6 +121,22 @@ public class BlackWhiteIpRelation extends AbstractModel{
         this.Mask = Mask;
     }
 
+    /**
+     * Get Modification time 
+     * @return ModifyTime Modification time
+     */
+    public String getModifyTime() {
+        return this.ModifyTime;
+    }
+
+    /**
+     * Set Modification time
+     * @param ModifyTime Modification time
+     */
+    public void setModifyTime(String ModifyTime) {
+        this.ModifyTime = ModifyTime;
+    }
+
     public BlackWhiteIpRelation() {
     }
 
@@ -137,6 +160,9 @@ public class BlackWhiteIpRelation extends AbstractModel{
         if (source.Mask != null) {
             this.Mask = new Long(source.Mask);
         }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
     }
 
 
@@ -148,6 +174,7 @@ public class BlackWhiteIpRelation extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArrayObj(map, prefix + "InstanceDetailList.", this.InstanceDetailList);
         this.setParamSimple(map, prefix + "Mask", this.Mask);
+        this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
 
     }
 }

@@ -30,7 +30,9 @@ public class DescribeApplicationProxyDetailResponse extends AbstractModel{
     private String ProxyId;
 
     /**
-    * Instance name
+    * Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
     */
     @SerializedName("ProxyName")
     @Expose
@@ -127,15 +129,17 @@ public class DescribeApplicationProxyDetailResponse extends AbstractModel{
 
     /**
     * Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
+`hostname`: Create by subdomain name
+`instance`: Create by instance
     */
     @SerializedName("ProxyType")
     @Expose
     private String ProxyType;
 
     /**
-    * ID of the layer-7 domain name
+    * When `ProxyType=hostname`:
+`ProxyName` indicates a specified domain name, such as test.123.com
+`HostId` indicates a unique ID of the domain name.
     */
     @SerializedName("HostId")
     @Expose
@@ -165,16 +169,24 @@ public class DescribeApplicationProxyDetailResponse extends AbstractModel{
     }
 
     /**
-     * Get Instance name 
-     * @return ProxyName Instance name
+     * Get Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance` 
+     * @return ProxyName Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
      */
     public String getProxyName() {
         return this.ProxyName;
     }
 
     /**
-     * Set Instance name
-     * @param ProxyName Instance name
+     * Set Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
+     * @param ProxyName Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
      */
     public void setProxyName(String ProxyName) {
         this.ProxyName = ProxyName;
@@ -394,11 +406,11 @@ public class DescribeApplicationProxyDetailResponse extends AbstractModel{
 
     /**
      * Get Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance 
+`hostname`: Create by subdomain name
+`instance`: Create by instance 
      * @return ProxyType Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
+`hostname`: Create by subdomain name
+`instance`: Create by instance
      */
     public String getProxyType() {
         return this.ProxyType;
@@ -406,27 +418,35 @@ public class DescribeApplicationProxyDetailResponse extends AbstractModel{
 
     /**
      * Set Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
+`hostname`: Create by subdomain name
+`instance`: Create by instance
      * @param ProxyType Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
+`hostname`: Create by subdomain name
+`instance`: Create by instance
      */
     public void setProxyType(String ProxyType) {
         this.ProxyType = ProxyType;
     }
 
     /**
-     * Get ID of the layer-7 domain name 
-     * @return HostId ID of the layer-7 domain name
+     * Get When `ProxyType=hostname`:
+`ProxyName` indicates a specified domain name, such as test.123.com
+`HostId` indicates a unique ID of the domain name. 
+     * @return HostId When `ProxyType=hostname`:
+`ProxyName` indicates a specified domain name, such as test.123.com
+`HostId` indicates a unique ID of the domain name.
      */
     public String getHostId() {
         return this.HostId;
     }
 
     /**
-     * Set ID of the layer-7 domain name
-     * @param HostId ID of the layer-7 domain name
+     * Set When `ProxyType=hostname`:
+`ProxyName` indicates a specified domain name, such as test.123.com
+`HostId` indicates a unique ID of the domain name.
+     * @param HostId When `ProxyType=hostname`:
+`ProxyName` indicates a specified domain name, such as test.123.com
+`HostId` indicates a unique ID of the domain name.
      */
     public void setHostId(String HostId) {
         this.HostId = HostId;

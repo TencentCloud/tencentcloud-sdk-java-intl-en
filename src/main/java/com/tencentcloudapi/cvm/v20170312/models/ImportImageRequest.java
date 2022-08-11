@@ -86,6 +86,16 @@ public class ImportImageRequest extends AbstractModel{
     private TagSpecification [] TagSpecification;
 
     /**
+    * The license type used to activate the OS after importing an image.
+Valid values:
+`TencentCloud`: Tencent Cloud official license
+`BYOL`: Bring Your Own License
+    */
+    @SerializedName("LicenseType")
+    @Expose
+    private String LicenseType;
+
+    /**
      * Get OS architecture of the image to be imported, `x86_64` or `i386`. 
      * @return Architecture OS architecture of the image to be imported, `x86_64` or `i386`.
      */
@@ -229,6 +239,34 @@ public class ImportImageRequest extends AbstractModel{
         this.TagSpecification = TagSpecification;
     }
 
+    /**
+     * Get The license type used to activate the OS after importing an image.
+Valid values:
+`TencentCloud`: Tencent Cloud official license
+`BYOL`: Bring Your Own License 
+     * @return LicenseType The license type used to activate the OS after importing an image.
+Valid values:
+`TencentCloud`: Tencent Cloud official license
+`BYOL`: Bring Your Own License
+     */
+    public String getLicenseType() {
+        return this.LicenseType;
+    }
+
+    /**
+     * Set The license type used to activate the OS after importing an image.
+Valid values:
+`TencentCloud`: Tencent Cloud official license
+`BYOL`: Bring Your Own License
+     * @param LicenseType The license type used to activate the OS after importing an image.
+Valid values:
+`TencentCloud`: Tencent Cloud official license
+`BYOL`: Bring Your Own License
+     */
+    public void setLicenseType(String LicenseType) {
+        this.LicenseType = LicenseType;
+    }
+
     public ImportImageRequest() {
     }
 
@@ -267,6 +305,9 @@ public class ImportImageRequest extends AbstractModel{
                 this.TagSpecification[i] = new TagSpecification(source.TagSpecification[i]);
             }
         }
+        if (source.LicenseType != null) {
+            this.LicenseType = new String(source.LicenseType);
+        }
     }
 
 
@@ -283,6 +324,7 @@ public class ImportImageRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
         this.setParamSimple(map, prefix + "Force", this.Force);
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
+        this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
 
     }
 }

@@ -37,7 +37,9 @@ public class OriginGroup extends AbstractModel{
     private String OriginName;
 
     /**
-    * Origin server type
+    * Origin-pull configuration type
+`area`: Origin-pull by the client IP’s region specified by `Area` in `OriginRecord`.
+`weight`: Origin-pull by the weight specified by `Weight` in `OriginRecord`.
     */
     @SerializedName("Type")
     @Expose
@@ -80,30 +82,36 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String OriginType;
 
     /**
-    * Whether the origin group is used for layer-4 proxy
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Whether the origin group uses layer-4 proxy.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ApplicationProxyUsed")
     @Expose
     private Boolean ApplicationProxyUsed;
 
     /**
-    * Whether the origin group is used for load balancing
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Whether the origin group is used for load balancing.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LoadBalancingUsed")
     @Expose
     private Boolean LoadBalancingUsed;
 
     /**
-    * 
+    * Origin status 
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
     @Expose
     private OriginCheckOriginStatus Status;
 
     /**
-    * 
+    * Proxy mode of the load balancing task associated with the origin group.
+`none`: This origin group is not used for load balancing.
+`dns_only`: Used for DNS-only load balancing 
+`proxied`: Used for proxied load balancing
+`both`: It’s used for both DNS-only and proxied load balancing.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LoadBalancingUsedType")
     @Expose
@@ -142,16 +150,24 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Origin server type 
-     * @return Type Origin server type
+     * Get Origin-pull configuration type
+`area`: Origin-pull by the client IP’s region specified by `Area` in `OriginRecord`.
+`weight`: Origin-pull by the weight specified by `Weight` in `OriginRecord`. 
+     * @return Type Origin-pull configuration type
+`area`: Origin-pull by the client IP’s region specified by `Area` in `OriginRecord`.
+`weight`: Origin-pull by the weight specified by `Weight` in `OriginRecord`.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Origin server type
-     * @param Type Origin server type
+     * Set Origin-pull configuration type
+`area`: Origin-pull by the client IP’s region specified by `Area` in `OriginRecord`.
+`weight`: Origin-pull by the weight specified by `Weight` in `OriginRecord`.
+     * @param Type Origin-pull configuration type
+`area`: Origin-pull by the client IP’s region specified by `Area` in `OriginRecord`.
+`weight`: Origin-pull by the weight specified by `Weight` in `OriginRecord`.
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -242,72 +258,96 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Whether the origin group is used for layer-4 proxy
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return ApplicationProxyUsed Whether the origin group is used for layer-4 proxy
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Whether the origin group uses layer-4 proxy.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ApplicationProxyUsed Whether the origin group uses layer-4 proxy.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getApplicationProxyUsed() {
         return this.ApplicationProxyUsed;
     }
 
     /**
-     * Set Whether the origin group is used for layer-4 proxy
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param ApplicationProxyUsed Whether the origin group is used for layer-4 proxy
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Whether the origin group uses layer-4 proxy.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ApplicationProxyUsed Whether the origin group uses layer-4 proxy.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setApplicationProxyUsed(Boolean ApplicationProxyUsed) {
         this.ApplicationProxyUsed = ApplicationProxyUsed;
     }
 
     /**
-     * Get Whether the origin group is used for load balancing
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return LoadBalancingUsed Whether the origin group is used for load balancing
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Whether the origin group is used for load balancing.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LoadBalancingUsed Whether the origin group is used for load balancing.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getLoadBalancingUsed() {
         return this.LoadBalancingUsed;
     }
 
     /**
-     * Set Whether the origin group is used for load balancing
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param LoadBalancingUsed Whether the origin group is used for load balancing
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Whether the origin group is used for load balancing.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LoadBalancingUsed Whether the origin group is used for load balancing.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLoadBalancingUsed(Boolean LoadBalancingUsed) {
         this.LoadBalancingUsed = LoadBalancingUsed;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Origin status 
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Status Origin status 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public OriginCheckOriginStatus getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Origin status 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Status Origin status 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(OriginCheckOriginStatus Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return LoadBalancingUsedType 
+     * Get Proxy mode of the load balancing task associated with the origin group.
+`none`: This origin group is not used for load balancing.
+`dns_only`: Used for DNS-only load balancing 
+`proxied`: Used for proxied load balancing
+`both`: It’s used for both DNS-only and proxied load balancing.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LoadBalancingUsedType Proxy mode of the load balancing task associated with the origin group.
+`none`: This origin group is not used for load balancing.
+`dns_only`: Used for DNS-only load balancing 
+`proxied`: Used for proxied load balancing
+`both`: It’s used for both DNS-only and proxied load balancing.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLoadBalancingUsedType() {
         return this.LoadBalancingUsedType;
     }
 
     /**
-     * Set 
-     * @param LoadBalancingUsedType 
+     * Set Proxy mode of the load balancing task associated with the origin group.
+`none`: This origin group is not used for load balancing.
+`dns_only`: Used for DNS-only load balancing 
+`proxied`: Used for proxied load balancing
+`both`: It’s used for both DNS-only and proxied load balancing.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LoadBalancingUsedType Proxy mode of the load balancing task associated with the origin group.
+`none`: This origin group is not used for load balancing.
+`dns_only`: Used for DNS-only load balancing 
+`proxied`: Used for proxied load balancing
+`both`: It’s used for both DNS-only and proxied load balancing.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLoadBalancingUsedType(String LoadBalancingUsedType) {
         this.LoadBalancingUsedType = LoadBalancingUsedType;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ApplicationProxy extends AbstractModel{
 
     /**
-    * Instance ID
+    * ID of the proxy
 Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("ProxyId")
@@ -31,7 +31,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String ProxyId;
 
     /**
-    * Instance name
+    * Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
     */
     @SerializedName("ProxyName")
     @Expose
@@ -136,26 +138,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
     * Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
-Note: This field may return `null`, indicating that no valid value can be obtained.
+`hostname`: Create by subdomain name
+`instance`: Create by instance
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProxyType")
     @Expose
     private String ProxyType;
 
     /**
-    * ID of the layer-7 domain name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * When `ProxyType=hostname`:
+`ProxyName` indicates a specified domain name;
+`HostId` indicates a unique ID of the domain name.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostId")
     @Expose
     private String HostId;
 
     /**
-     * Get Instance ID
+     * Get ID of the proxy
 Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return ProxyId Instance ID
+     * @return ProxyId ID of the proxy
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getProxyId() {
@@ -163,9 +167,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Set Instance ID
+     * Set ID of the proxy
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param ProxyId Instance ID
+     * @param ProxyId ID of the proxy
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setProxyId(String ProxyId) {
@@ -173,16 +177,24 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Instance name 
-     * @return ProxyName Instance name
+     * Get Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance` 
+     * @return ProxyName Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
      */
     public String getProxyName() {
         return this.ProxyName;
     }
 
     /**
-     * Set Instance name
-     * @param ProxyName Instance name
+     * Set Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
+     * @param ProxyName Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
      */
     public void setProxyName(String ProxyName) {
         this.ProxyName = ProxyName;
@@ -434,13 +446,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Get Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
-Note: This field may return `null`, indicating that no valid value can be obtained. 
+`hostname`: Create by subdomain name
+`instance`: Create by instance
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ProxyType Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
-Note: This field may return `null`, indicating that no valid value can be obtained.
+`hostname`: Create by subdomain name
+`instance`: Create by instance
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProxyType() {
         return this.ProxyType;
@@ -448,33 +460,41 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Set Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
-Note: This field may return `null`, indicating that no valid value can be obtained.
+`hostname`: Create by subdomain name
+`instance`: Create by instance
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ProxyType Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
-Note: This field may return `null`, indicating that no valid value can be obtained.
+`hostname`: Create by subdomain name
+`instance`: Create by instance
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProxyType(String ProxyType) {
         this.ProxyType = ProxyType;
     }
 
     /**
-     * Get ID of the layer-7 domain name
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return HostId ID of the layer-7 domain name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get When `ProxyType=hostname`:
+`ProxyName` indicates a specified domain name;
+`HostId` indicates a unique ID of the domain name.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HostId When `ProxyType=hostname`:
+`ProxyName` indicates a specified domain name;
+`HostId` indicates a unique ID of the domain name.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHostId() {
         return this.HostId;
     }
 
     /**
-     * Set ID of the layer-7 domain name
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param HostId ID of the layer-7 domain name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set When `ProxyType=hostname`:
+`ProxyName` indicates a specified domain name;
+`HostId` indicates a unique ID of the domain name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HostId When `ProxyType=hostname`:
+`ProxyName` indicates a specified domain name;
+`HostId` indicates a unique ID of the domain name.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHostId(String HostId) {
         this.HostId = HostId;

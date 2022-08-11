@@ -120,11 +120,18 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
     private String [] FilterInstanceIdList;
 
     /**
-    * 
+    * Searches by tag
     */
     @SerializedName("FilterTag")
     @Expose
     private TagFilter FilterTag;
+
+    /**
+    * 
+    */
+    @SerializedName("FilterPackType")
+    @Expose
+    private String [] FilterPackType;
 
     /**
      * Get Starting offset of the page. Value: (number of pages – 1) * items per page. 
@@ -359,19 +366,35 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return FilterTag 
+     * Get Searches by tag 
+     * @return FilterTag Searches by tag
      */
     public TagFilter getFilterTag() {
         return this.FilterTag;
     }
 
     /**
-     * Set 
-     * @param FilterTag 
+     * Set Searches by tag
+     * @param FilterTag Searches by tag
      */
     public void setFilterTag(TagFilter FilterTag) {
         this.FilterTag = FilterTag;
+    }
+
+    /**
+     * Get  
+     * @return FilterPackType 
+     */
+    public String [] getFilterPackType() {
+        return this.FilterPackType;
+    }
+
+    /**
+     * Set 
+     * @param FilterPackType 
+     */
+    public void setFilterPackType(String [] FilterPackType) {
+        this.FilterPackType = FilterPackType;
     }
 
     public DescribeListBGPIPInstancesRequest() {
@@ -430,6 +453,12 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
         if (source.FilterTag != null) {
             this.FilterTag = new TagFilter(source.FilterTag);
         }
+        if (source.FilterPackType != null) {
+            this.FilterPackType = new String[source.FilterPackType.length];
+            for (int i = 0; i < source.FilterPackType.length; i++) {
+                this.FilterPackType[i] = new String(source.FilterPackType[i]);
+            }
+        }
     }
 
 
@@ -451,6 +480,7 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FilterCname", this.FilterCname);
         this.setParamArraySimple(map, prefix + "FilterInstanceIdList.", this.FilterInstanceIdList);
         this.setParamObj(map, prefix + "FilterTag.", this.FilterTag);
+        this.setParamArraySimple(map, prefix + "FilterPackType.", this.FilterPackType);
 
     }
 }

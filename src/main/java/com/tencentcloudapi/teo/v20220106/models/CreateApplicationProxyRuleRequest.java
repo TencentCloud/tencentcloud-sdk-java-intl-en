@@ -53,22 +53,20 @@ public class CreateApplicationProxyRuleRequest extends AbstractModel{
     private String [] Port;
 
     /**
-    * Origin server type. Valid values:
+    * Origin type. Valid values:
 `custom`: Specified origins
-`origins`: An origin group
-`load_balancing`: A load balancer
+`origins`: Origin group
     */
     @SerializedName("OriginType")
     @Expose
     private String OriginType;
 
     /**
-    * Origin server information.
-When `OriginType=custom`, this field value indicates multiple origin servers in either of the following formats:
+    * Origin information:
+When `OriginType=custom`, it can include one or more origins in either of the following formats:
 IP:Port
 Domain name:Port
-When `OriginType=origins`, it indicates the origin group ID.
- 
+When `OriginType=origins`, it is an origin group ID.
     */
     @SerializedName("OriginValue")
     @Expose
@@ -168,64 +166,56 @@ When `Proto=UDP`, valid values:
     }
 
     /**
-     * Get Origin server type. Valid values:
+     * Get Origin type. Valid values:
 `custom`: Specified origins
-`origins`: An origin group
-`load_balancing`: A load balancer 
-     * @return OriginType Origin server type. Valid values:
+`origins`: Origin group 
+     * @return OriginType Origin type. Valid values:
 `custom`: Specified origins
-`origins`: An origin group
-`load_balancing`: A load balancer
+`origins`: Origin group
      */
     public String getOriginType() {
         return this.OriginType;
     }
 
     /**
-     * Set Origin server type. Valid values:
+     * Set Origin type. Valid values:
 `custom`: Specified origins
-`origins`: An origin group
-`load_balancing`: A load balancer
-     * @param OriginType Origin server type. Valid values:
+`origins`: Origin group
+     * @param OriginType Origin type. Valid values:
 `custom`: Specified origins
-`origins`: An origin group
-`load_balancing`: A load balancer
+`origins`: Origin group
      */
     public void setOriginType(String OriginType) {
         this.OriginType = OriginType;
     }
 
     /**
-     * Get Origin server information.
-When `OriginType=custom`, this field value indicates multiple origin servers in either of the following formats:
+     * Get Origin information:
+When `OriginType=custom`, it can include one or more origins in either of the following formats:
 IP:Port
 Domain name:Port
-When `OriginType=origins`, it indicates the origin group ID.
-  
-     * @return OriginValue Origin server information.
-When `OriginType=custom`, this field value indicates multiple origin servers in either of the following formats:
+When `OriginType=origins`, it is an origin group ID. 
+     * @return OriginValue Origin information:
+When `OriginType=custom`, it can include one or more origins in either of the following formats:
 IP:Port
 Domain name:Port
-When `OriginType=origins`, it indicates the origin group ID.
- 
+When `OriginType=origins`, it is an origin group ID.
      */
     public String [] getOriginValue() {
         return this.OriginValue;
     }
 
     /**
-     * Set Origin server information.
-When `OriginType=custom`, this field value indicates multiple origin servers in either of the following formats:
+     * Set Origin information:
+When `OriginType=custom`, it can include one or more origins in either of the following formats:
 IP:Port
 Domain name:Port
-When `OriginType=origins`, it indicates the origin group ID.
- 
-     * @param OriginValue Origin server information.
-When `OriginType=custom`, this field value indicates multiple origin servers in either of the following formats:
+When `OriginType=origins`, it is an origin group ID.
+     * @param OriginValue Origin information:
+When `OriginType=custom`, it can include one or more origins in either of the following formats:
 IP:Port
 Domain name:Port
-When `OriginType=origins`, it indicates the origin group ID.
- 
+When `OriginType=origins`, it is an origin group ID.
      */
     public void setOriginValue(String [] OriginValue) {
         this.OriginValue = OriginValue;

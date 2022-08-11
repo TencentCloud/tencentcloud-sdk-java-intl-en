@@ -30,15 +30,17 @@ public class OriginRecord extends AbstractModel{
     private String Record;
 
     /**
-    * Region of the origin group. It’s available when the origin group `Type` is `area`. 
-If it’s left empty, it means to use the default region.
+    * A specific region when `Type=area`.
+The default region when `Type` is not specified.
     */
     @SerializedName("Area")
     @Expose
     private String [] Area;
 
     /**
-    * The weight of the origin group. It’s available when the `Type` is `weight`.
+    * A specific weight when `Type=weight`.
+The value range is [1-100].
+The total weight of multiple origins in an origin group should be 100.
     */
     @SerializedName("Weight")
     @Expose
@@ -77,6 +79,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private OriginRecordPrivateParameter [] PrivateParameter;
 
     /**
+    * 
+    */
+    @SerializedName("Proto")
+    @Expose
+    private String Proto;
+
+    /**
      * Get Record value 
      * @return Record Record value
      */
@@ -93,36 +102,44 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Region of the origin group. It’s available when the origin group `Type` is `area`. 
-If it’s left empty, it means to use the default region. 
-     * @return Area Region of the origin group. It’s available when the origin group `Type` is `area`. 
-If it’s left empty, it means to use the default region.
+     * Get A specific region when `Type=area`.
+The default region when `Type` is not specified. 
+     * @return Area A specific region when `Type=area`.
+The default region when `Type` is not specified.
      */
     public String [] getArea() {
         return this.Area;
     }
 
     /**
-     * Set Region of the origin group. It’s available when the origin group `Type` is `area`. 
-If it’s left empty, it means to use the default region.
-     * @param Area Region of the origin group. It’s available when the origin group `Type` is `area`. 
-If it’s left empty, it means to use the default region.
+     * Set A specific region when `Type=area`.
+The default region when `Type` is not specified.
+     * @param Area A specific region when `Type=area`.
+The default region when `Type` is not specified.
      */
     public void setArea(String [] Area) {
         this.Area = Area;
     }
 
     /**
-     * Get The weight of the origin group. It’s available when the `Type` is `weight`. 
-     * @return Weight The weight of the origin group. It’s available when the `Type` is `weight`.
+     * Get A specific weight when `Type=weight`.
+The value range is [1-100].
+The total weight of multiple origins in an origin group should be 100. 
+     * @return Weight A specific weight when `Type=weight`.
+The value range is [1-100].
+The total weight of multiple origins in an origin group should be 100.
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set The weight of the origin group. It’s available when the `Type` is `weight`.
-     * @param Weight The weight of the origin group. It’s available when the `Type` is `weight`.
+     * Set A specific weight when `Type=weight`.
+The value range is [1-100].
+The total weight of multiple origins in an origin group should be 100.
+     * @param Weight A specific weight when `Type=weight`.
+The value range is [1-100].
+The total weight of multiple origins in an origin group should be 100.
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
@@ -208,6 +225,22 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.PrivateParameter = PrivateParameter;
     }
 
+    /**
+     * Get  
+     * @return Proto 
+     */
+    public String getProto() {
+        return this.Proto;
+    }
+
+    /**
+     * Set 
+     * @param Proto 
+     */
+    public void setProto(String Proto) {
+        this.Proto = Proto;
+    }
+
     public OriginRecord() {
     }
 
@@ -243,6 +276,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 this.PrivateParameter[i] = new OriginRecordPrivateParameter(source.PrivateParameter[i]);
             }
         }
+        if (source.Proto != null) {
+            this.Proto = new String(source.Proto);
+        }
     }
 
 
@@ -257,6 +293,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "RecordId", this.RecordId);
         this.setParamSimple(map, prefix + "Private", this.Private);
         this.setParamArrayObj(map, prefix + "PrivateParameter.", this.PrivateParameter);
+        this.setParamSimple(map, prefix + "Proto", this.Proto);
 
     }
 }

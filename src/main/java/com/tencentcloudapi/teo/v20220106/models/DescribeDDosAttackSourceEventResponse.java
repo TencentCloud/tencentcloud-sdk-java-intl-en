@@ -13,14 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.antiddos.v20200309.models;
+package com.tencentcloudapi.teo.v20220106.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteBlackWhiteIpListResponse extends AbstractModel{
+public class DescribeDDosAttackSourceEventResponse extends AbstractModel{
+
+    /**
+    * DDoS attack source data
+    */
+    @SerializedName("Data")
+    @Expose
+    private DDosAttackSourceEventData Data;
+
+    /**
+    * Status. 1: failed; 0: succeeded
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * Returned message
+    */
+    @SerializedName("Msg")
+    @Expose
+    private String Msg;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -28,6 +49,54 @@ public class DeleteBlackWhiteIpListResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get DDoS attack source data 
+     * @return Data DDoS attack source data
+     */
+    public DDosAttackSourceEventData getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set DDoS attack source data
+     * @param Data DDoS attack source data
+     */
+    public void setData(DDosAttackSourceEventData Data) {
+        this.Data = Data;
+    }
+
+    /**
+     * Get Status. 1: failed; 0: succeeded 
+     * @return Status Status. 1: failed; 0: succeeded
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Status. 1: failed; 0: succeeded
+     * @param Status Status. 1: failed; 0: succeeded
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get Returned message 
+     * @return Msg Returned message
+     */
+    public String getMsg() {
+        return this.Msg;
+    }
+
+    /**
+     * Set Returned message
+     * @param Msg Returned message
+     */
+    public void setMsg(String Msg) {
+        this.Msg = Msg;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -45,14 +114,23 @@ public class DeleteBlackWhiteIpListResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DeleteBlackWhiteIpListResponse() {
+    public DescribeDDosAttackSourceEventResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteBlackWhiteIpListResponse(DeleteBlackWhiteIpListResponse source) {
+    public DescribeDDosAttackSourceEventResponse(DescribeDDosAttackSourceEventResponse source) {
+        if (source.Data != null) {
+            this.Data = new DDosAttackSourceEventData(source.Data);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Msg != null) {
+            this.Msg = new String(source.Msg);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +141,9 @@ public class DeleteBlackWhiteIpListResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Msg", this.Msg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -31,7 +31,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Long LogTime;
 
     /**
-    * Site name
+    * Subdomain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Domain")
@@ -83,9 +83,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Site name
+     * Get Subdomain name
 Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Domain Site name
+     * @return Domain Subdomain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getDomain() {
@@ -93,9 +93,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Set Site name
+     * Set Subdomain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Domain Site name
+     * @param Domain Subdomain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setDomain(String Domain) {

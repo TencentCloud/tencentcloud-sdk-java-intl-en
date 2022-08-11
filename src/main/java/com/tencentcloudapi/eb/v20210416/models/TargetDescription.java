@@ -44,6 +44,13 @@ public class TargetDescription extends AbstractModel{
     private CkafkaTargetParams CkafkaTargetParams;
 
     /**
+    * ElasticSearch parameters
+    */
+    @SerializedName("ESTargetParams")
+    @Expose
+    private ESTargetParams ESTargetParams;
+
+    /**
      * Get Six-Segment QCS resource description. For more information, see [Resource Description Method](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1) 
      * @return ResourceDescription Six-Segment QCS resource description. For more information, see [Resource Description Method](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
      */
@@ -91,6 +98,22 @@ public class TargetDescription extends AbstractModel{
         this.CkafkaTargetParams = CkafkaTargetParams;
     }
 
+    /**
+     * Get ElasticSearch parameters 
+     * @return ESTargetParams ElasticSearch parameters
+     */
+    public ESTargetParams getESTargetParams() {
+        return this.ESTargetParams;
+    }
+
+    /**
+     * Set ElasticSearch parameters
+     * @param ESTargetParams ElasticSearch parameters
+     */
+    public void setESTargetParams(ESTargetParams ESTargetParams) {
+        this.ESTargetParams = ESTargetParams;
+    }
+
     public TargetDescription() {
     }
 
@@ -108,6 +131,9 @@ public class TargetDescription extends AbstractModel{
         if (source.CkafkaTargetParams != null) {
             this.CkafkaTargetParams = new CkafkaTargetParams(source.CkafkaTargetParams);
         }
+        if (source.ESTargetParams != null) {
+            this.ESTargetParams = new ESTargetParams(source.ESTargetParams);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class TargetDescription extends AbstractModel{
         this.setParamSimple(map, prefix + "ResourceDescription", this.ResourceDescription);
         this.setParamObj(map, prefix + "SCFParams.", this.SCFParams);
         this.setParamObj(map, prefix + "CkafkaTargetParams.", this.CkafkaTargetParams);
+        this.setParamObj(map, prefix + "ESTargetParams.", this.ESTargetParams);
 
     }
 }

@@ -198,6 +198,13 @@ public class DescribeInstancesRequest extends AbstractModel{
     private String [] ProductVersions;
 
     /**
+    * The specified instances for batch query
+    */
+    @SerializedName("InstanceIds")
+    @Expose
+    private String [] InstanceIds;
+
+    /**
      * Get Number of returned results. Default value: 20. Maximum value: 1000. 
      * @return Limit Number of returned results. Default value: 20. Maximum value: 1000.
      */
@@ -597,6 +604,22 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.ProductVersions = ProductVersions;
     }
 
+    /**
+     * Get The specified instances for batch query 
+     * @return InstanceIds The specified instances for batch query
+     */
+    public String [] getInstanceIds() {
+        return this.InstanceIds;
+    }
+
+    /**
+     * Set The specified instances for batch query
+     * @param InstanceIds The specified instances for batch query
+     */
+    public void setInstanceIds(String [] InstanceIds) {
+        this.InstanceIds = InstanceIds;
+    }
+
     public DescribeInstancesRequest() {
     }
 
@@ -719,6 +742,12 @@ public class DescribeInstancesRequest extends AbstractModel{
                 this.ProductVersions[i] = new String(source.ProductVersions[i]);
             }
         }
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
+        }
     }
 
 
@@ -751,6 +780,7 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
         this.setParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
         this.setParamArraySimple(map, prefix + "ProductVersions.", this.ProductVersions);
+        this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
 
     }
 }

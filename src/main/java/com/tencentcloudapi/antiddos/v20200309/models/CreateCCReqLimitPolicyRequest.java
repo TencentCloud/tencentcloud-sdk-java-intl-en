@@ -58,6 +58,13 @@ public class CreateCCReqLimitPolicyRequest extends AbstractModel{
     private CCReqLimitPolicyRecord Policy;
 
     /**
+    * Whether it’s a global CC frequency limit
+    */
+    @SerializedName("IsGlobal")
+    @Expose
+    private Long IsGlobal;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -137,6 +144,22 @@ public class CreateCCReqLimitPolicyRequest extends AbstractModel{
         this.Policy = Policy;
     }
 
+    /**
+     * Get Whether it’s a global CC frequency limit 
+     * @return IsGlobal Whether it’s a global CC frequency limit
+     */
+    public Long getIsGlobal() {
+        return this.IsGlobal;
+    }
+
+    /**
+     * Set Whether it’s a global CC frequency limit
+     * @param IsGlobal Whether it’s a global CC frequency limit
+     */
+    public void setIsGlobal(Long IsGlobal) {
+        this.IsGlobal = IsGlobal;
+    }
+
     public CreateCCReqLimitPolicyRequest() {
     }
 
@@ -160,6 +183,9 @@ public class CreateCCReqLimitPolicyRequest extends AbstractModel{
         if (source.Policy != null) {
             this.Policy = new CCReqLimitPolicyRecord(source.Policy);
         }
+        if (source.IsGlobal != null) {
+            this.IsGlobal = new Long(source.IsGlobal);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class CreateCCReqLimitPolicyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamObj(map, prefix + "Policy.", this.Policy);
+        this.setParamSimple(map, prefix + "IsGlobal", this.IsGlobal);
 
     }
 }

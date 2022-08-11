@@ -395,6 +395,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private ResourceTag [] ResourceTags;
 
     /**
+    * Database version
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DbVersionId")
+    @Expose
+    private String DbVersionId;
+
+    /**
      * Get Instance ID, which uniquely identifies a TDSQL instance 
      * @return InstanceId Instance ID, which uniquely identifies a TDSQL instance
      */
@@ -1270,6 +1278,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.ResourceTags = ResourceTags;
     }
 
+    /**
+     * Get Database version
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DbVersionId Database version
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDbVersionId() {
+        return this.DbVersionId;
+    }
+
+    /**
+     * Set Database version
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DbVersionId Database version
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDbVersionId(String DbVersionId) {
+        this.DbVersionId = DbVersionId;
+    }
+
     public DBInstance() {
     }
 
@@ -1434,6 +1462,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.ResourceTags[i] = new ResourceTag(source.ResourceTags[i]);
             }
         }
+        if (source.DbVersionId != null) {
+            this.DbVersionId = new String(source.DbVersionId);
+        }
     }
 
 
@@ -1492,6 +1523,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "DcnDstNum", this.DcnDstNum);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamSimple(map, prefix + "DbVersionId", this.DbVersionId);
 
     }
 }

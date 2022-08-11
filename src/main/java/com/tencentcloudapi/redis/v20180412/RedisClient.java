@@ -99,6 +99,46 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify the role of an instance in a replication group.
+     * @param req ChangeInstanceRoleRequest
+     * @return ChangeInstanceRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChangeInstanceRoleResponse ChangeInstanceRole(ChangeInstanceRoleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChangeInstanceRoleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChangeInstanceRoleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChangeInstanceRole");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to switch with master instance in a replication group.
+     * @param req ChangeMasterInstanceRequest
+     * @return ChangeMasterInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChangeMasterInstanceResponse ChangeMasterInstance(ChangeMasterInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ChangeMasterInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ChangeMasterInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ChangeMasterInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to promote a replica node group of a multi-AZ deployed instance to master node group or a replica node of a single-AZ deployed instance to master node.
      * @param req ChangeReplicaToMasterRequest
      * @return ChangeReplicaToMasterResponse

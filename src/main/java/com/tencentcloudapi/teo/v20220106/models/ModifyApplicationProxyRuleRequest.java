@@ -62,20 +62,20 @@ public class ModifyApplicationProxyRuleRequest extends AbstractModel{
     /**
     * Origin server type. Valid values:
 `custom`: Specified origins
-`origins`: An origin group
-`load_balancing`: A load balancer
+`origins`: Origin group
     */
     @SerializedName("OriginType")
     @Expose
     private String OriginType;
 
     /**
-    * Origin server information.
-When `OriginType=custom`, this field value indicates multiple origin servers in either of the following formats:
-IP:Port
-Domain name: Port
-When `OriginType=origins`, it indicates the origin group ID.
- 
+    * Origin server information:
+When `OriginType=custom`, it indicates one or more origin servers. Example:
+OriginValue=["8.8.8.8:80","9.9.9.9:80"]
+OriginValue=["test.com:80"]
+
+When `OriginType=origins`, it indicates an origin group ID. Example:
+OriginValue=["origin-xxx"]
     */
     @SerializedName("OriginValue")
     @Expose
@@ -193,12 +193,10 @@ When `Proto=UDP`, valid values:
     /**
      * Get Origin server type. Valid values:
 `custom`: Specified origins
-`origins`: An origin group
-`load_balancing`: A load balancer 
+`origins`: Origin group 
      * @return OriginType Origin server type. Valid values:
 `custom`: Specified origins
-`origins`: An origin group
-`load_balancing`: A load balancer
+`origins`: Origin group
      */
     public String getOriginType() {
         return this.OriginType;
@@ -207,48 +205,50 @@ When `Proto=UDP`, valid values:
     /**
      * Set Origin server type. Valid values:
 `custom`: Specified origins
-`origins`: An origin group
-`load_balancing`: A load balancer
+`origins`: Origin group
      * @param OriginType Origin server type. Valid values:
 `custom`: Specified origins
-`origins`: An origin group
-`load_balancing`: A load balancer
+`origins`: Origin group
      */
     public void setOriginType(String OriginType) {
         this.OriginType = OriginType;
     }
 
     /**
-     * Get Origin server information.
-When `OriginType=custom`, this field value indicates multiple origin servers in either of the following formats:
-IP:Port
-Domain name: Port
-When `OriginType=origins`, it indicates the origin group ID.
-  
-     * @return OriginValue Origin server information.
-When `OriginType=custom`, this field value indicates multiple origin servers in either of the following formats:
-IP:Port
-Domain name: Port
-When `OriginType=origins`, it indicates the origin group ID.
- 
+     * Get Origin server information:
+When `OriginType=custom`, it indicates one or more origin servers. Example:
+OriginValue=["8.8.8.8:80","9.9.9.9:80"]
+OriginValue=["test.com:80"]
+
+When `OriginType=origins`, it indicates an origin group ID. Example:
+OriginValue=["origin-xxx"] 
+     * @return OriginValue Origin server information:
+When `OriginType=custom`, it indicates one or more origin servers. Example:
+OriginValue=["8.8.8.8:80","9.9.9.9:80"]
+OriginValue=["test.com:80"]
+
+When `OriginType=origins`, it indicates an origin group ID. Example:
+OriginValue=["origin-xxx"]
      */
     public String [] getOriginValue() {
         return this.OriginValue;
     }
 
     /**
-     * Set Origin server information.
-When `OriginType=custom`, this field value indicates multiple origin servers in either of the following formats:
-IP:Port
-Domain name: Port
-When `OriginType=origins`, it indicates the origin group ID.
- 
-     * @param OriginValue Origin server information.
-When `OriginType=custom`, this field value indicates multiple origin servers in either of the following formats:
-IP:Port
-Domain name: Port
-When `OriginType=origins`, it indicates the origin group ID.
- 
+     * Set Origin server information:
+When `OriginType=custom`, it indicates one or more origin servers. Example:
+OriginValue=["8.8.8.8:80","9.9.9.9:80"]
+OriginValue=["test.com:80"]
+
+When `OriginType=origins`, it indicates an origin group ID. Example:
+OriginValue=["origin-xxx"]
+     * @param OriginValue Origin server information:
+When `OriginType=custom`, it indicates one or more origin servers. Example:
+OriginValue=["8.8.8.8:80","9.9.9.9:80"]
+OriginValue=["test.com:80"]
+
+When `OriginType=origins`, it indicates an origin group ID. Example:
+OriginValue=["origin-xxx"]
      */
     public void setOriginValue(String [] OriginValue) {
         this.OriginValue = OriginValue;

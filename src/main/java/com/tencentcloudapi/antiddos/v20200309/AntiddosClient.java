@@ -419,26 +419,6 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete an Anti-DDoS IP blocklist/allowlist.
-     * @param req DeleteBlackWhiteIpListRequest
-     * @return DeleteBlackWhiteIpListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteBlackWhiteIpListResponse DeleteBlackWhiteIpList(DeleteBlackWhiteIpListRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteBlackWhiteIpListResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteBlackWhiteIpListResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteBlackWhiteIpList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to delete a level-defining policy of CC attacks. 
      * @param req DeleteCCLevelPolicyRequest
      * @return DeleteCCLevelPolicyResponse
@@ -699,7 +679,7 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the list of CC protection levels.
+     *Gets the list of CC protection levels
      * @param req DescribeCCLevelListRequest
      * @return DescribeCCLevelListResponse
      * @throws TencentCloudSDKException

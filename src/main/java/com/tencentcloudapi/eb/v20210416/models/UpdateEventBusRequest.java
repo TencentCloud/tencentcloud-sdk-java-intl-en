@@ -30,14 +30,14 @@ public class UpdateEventBusRequest extends AbstractModel{
     private String EventBusId;
 
     /**
-    * Event bus description, which can contain up to 200 characters of any type
+    * Event bus description, which can contain up to 200 characters of any type.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Event bus name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
+    * Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
     */
     @SerializedName("EventBusName")
     @Expose
@@ -60,32 +60,32 @@ public class UpdateEventBusRequest extends AbstractModel{
     }
 
     /**
-     * Get Event bus description, which can contain up to 200 characters of any type 
-     * @return Description Event bus description, which can contain up to 200 characters of any type
+     * Get Event bus description, which can contain up to 200 characters of any type. 
+     * @return Description Event bus description, which can contain up to 200 characters of any type.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Event bus description, which can contain up to 200 characters of any type
-     * @param Description Event bus description, which can contain up to 200 characters of any type
+     * Set Event bus description, which can contain up to 200 characters of any type.
+     * @param Description Event bus description, which can contain up to 200 characters of any type.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Event bus name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter 
-     * @return EventBusName Event bus name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
+     * Get Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter. 
+     * @return EventBusName Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
      */
     public String getEventBusName() {
         return this.EventBusName;
     }
 
     /**
-     * Set Event bus name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
-     * @param EventBusName Event bus name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
+     * Set Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
+     * @param EventBusName Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
      */
     public void setEventBusName(String EventBusName) {
         this.EventBusName = EventBusName;

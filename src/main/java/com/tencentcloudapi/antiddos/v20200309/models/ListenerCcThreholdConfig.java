@@ -30,7 +30,7 @@ public class ListenerCcThreholdConfig extends AbstractModel{
     private String Domain;
 
     /**
-    * Protocol. Value: htttps
+    * Protocol. Value: `https`.
     */
     @SerializedName("Protocol")
     @Expose
@@ -67,16 +67,16 @@ public class ListenerCcThreholdConfig extends AbstractModel{
     }
 
     /**
-     * Get Protocol. Value: htttps 
-     * @return Protocol Protocol. Value: htttps
+     * Get Protocol. Value: `https`. 
+     * @return Protocol Protocol. Value: `https`.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Protocol. Value: htttps
-     * @param Protocol Protocol. Value: htttps
+     * Set Protocol. Value: `https`.
+     * @param Protocol Protocol. Value: `https`.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

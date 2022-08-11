@@ -51,14 +51,14 @@ public class CreateConnectionRequest extends AbstractModel{
     private String Description;
 
     /**
-    * Switch
+    * Whether to enable
     */
     @SerializedName("Enable")
     @Expose
     private Boolean Enable;
 
     /**
-    * Type
+    * Type of the connector
     */
     @SerializedName("Type")
     @Expose
@@ -129,32 +129,32 @@ public class CreateConnectionRequest extends AbstractModel{
     }
 
     /**
-     * Get Switch 
-     * @return Enable Switch
+     * Get Whether to enable 
+     * @return Enable Whether to enable
      */
     public Boolean getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set Switch
-     * @param Enable Switch
+     * Set Whether to enable
+     * @param Enable Whether to enable
      */
     public void setEnable(Boolean Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get Type 
-     * @return Type Type
+     * Get Type of the connector 
+     * @return Type Type of the connector
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type
-     * @param Type Type
+     * Set Type of the connector
+     * @param Type Type of the connector
      */
     public void setType(String Type) {
         this.Type = Type;

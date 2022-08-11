@@ -39,7 +39,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long TotalCount;
 
     /**
-    * Indicates the number of instances that can be created by the site when `ZoneId` is specified
+    * Disused
 Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Quota")
@@ -47,14 +47,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Long Quota;
 
     /**
-    * 
+    * When `PlatType` is `ip`, it indicates the number of proxies that schedule via Anycast IP.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("IpCount")
     @Expose
     private Long IpCount;
 
     /**
-    * 
+    * When `PlatType` is `domain`, it indicates the number of proxies that schedule via CNAME.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("DomainCount")
     @Expose
@@ -108,9 +110,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Indicates the number of instances that can be created by the site when `ZoneId` is specified
+     * Get Disused
 Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Quota Indicates the number of instances that can be created by the site when `ZoneId` is specified
+     * @return Quota Disused
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Long getQuota() {
@@ -118,9 +120,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Set Indicates the number of instances that can be created by the site when `ZoneId` is specified
+     * Set Disused
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Quota Indicates the number of instances that can be created by the site when `ZoneId` is specified
+     * @param Quota Disused
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setQuota(Long Quota) {
@@ -128,32 +130,40 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get  
-     * @return IpCount 
+     * Get When `PlatType` is `ip`, it indicates the number of proxies that schedule via Anycast IP.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return IpCount When `PlatType` is `ip`, it indicates the number of proxies that schedule via Anycast IP.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getIpCount() {
         return this.IpCount;
     }
 
     /**
-     * Set 
-     * @param IpCount 
+     * Set When `PlatType` is `ip`, it indicates the number of proxies that schedule via Anycast IP.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param IpCount When `PlatType` is `ip`, it indicates the number of proxies that schedule via Anycast IP.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setIpCount(Long IpCount) {
         this.IpCount = IpCount;
     }
 
     /**
-     * Get  
-     * @return DomainCount 
+     * Get When `PlatType` is `domain`, it indicates the number of proxies that schedule via CNAME.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return DomainCount When `PlatType` is `domain`, it indicates the number of proxies that schedule via CNAME.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Long getDomainCount() {
         return this.DomainCount;
     }
 
     /**
-     * Set 
-     * @param DomainCount 
+     * Set When `PlatType` is `domain`, it indicates the number of proxies that schedule via CNAME.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param DomainCount When `PlatType` is `domain`, it indicates the number of proxies that schedule via CNAME.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setDomainCount(Long DomainCount) {
         this.DomainCount = DomainCount;

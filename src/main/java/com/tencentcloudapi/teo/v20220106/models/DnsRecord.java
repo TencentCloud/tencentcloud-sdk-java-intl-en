@@ -125,11 +125,11 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String Cname;
 
     /**
-    * Specifies whether to enable load balancing, layer-4 proxy, or security protection for the domain name.
-- `lb`: Load balancing.
-- `security`: Security protection.
-- `l4`: Layer-4 proxy.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Which service is enabled for the domain name.
+- `lb`: Load balancing
+- `security`: Security acceleration
+- `l4`: L4 proxy
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DomainStatus")
     @Expose
@@ -376,32 +376,32 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Specifies whether to enable load balancing, layer-4 proxy, or security protection for the domain name.
-- `lb`: Load balancing.
-- `security`: Security protection.
-- `l4`: Layer-4 proxy.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return DomainStatus Specifies whether to enable load balancing, layer-4 proxy, or security protection for the domain name.
-- `lb`: Load balancing.
-- `security`: Security protection.
-- `l4`: Layer-4 proxy.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Which service is enabled for the domain name.
+- `lb`: Load balancing
+- `security`: Security acceleration
+- `l4`: L4 proxy
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DomainStatus Which service is enabled for the domain name.
+- `lb`: Load balancing
+- `security`: Security acceleration
+- `l4`: L4 proxy
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getDomainStatus() {
         return this.DomainStatus;
     }
 
     /**
-     * Set Specifies whether to enable load balancing, layer-4 proxy, or security protection for the domain name.
-- `lb`: Load balancing.
-- `security`: Security protection.
-- `l4`: Layer-4 proxy.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param DomainStatus Specifies whether to enable load balancing, layer-4 proxy, or security protection for the domain name.
-- `lb`: Load balancing.
-- `security`: Security protection.
-- `l4`: Layer-4 proxy.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Which service is enabled for the domain name.
+- `lb`: Load balancing
+- `security`: Security acceleration
+- `l4`: L4 proxy
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DomainStatus Which service is enabled for the domain name.
+- `lb`: Load balancing
+- `security`: Security acceleration
+- `l4`: L4 proxy
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDomainStatus(String [] DomainStatus) {
         this.DomainStatus = DomainStatus;

@@ -51,14 +51,14 @@ public class DownloadL7LogsRequest extends AbstractModel{
     private Long PageNo;
 
     /**
-    * List of sites
+    * Array of site names
     */
     @SerializedName("Zones")
     @Expose
     private String [] Zones;
 
     /**
-    * List of domain names
+    * Array of subdomain names
     */
     @SerializedName("Domains")
     @Expose
@@ -129,32 +129,32 @@ public class DownloadL7LogsRequest extends AbstractModel{
     }
 
     /**
-     * Get List of sites 
-     * @return Zones List of sites
+     * Get Array of site names 
+     * @return Zones Array of site names
      */
     public String [] getZones() {
         return this.Zones;
     }
 
     /**
-     * Set List of sites
-     * @param Zones List of sites
+     * Set Array of site names
+     * @param Zones Array of site names
      */
     public void setZones(String [] Zones) {
         this.Zones = Zones;
     }
 
     /**
-     * Get List of domain names 
-     * @return Domains List of domain names
+     * Get Array of subdomain names 
+     * @return Domains Array of subdomain names
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set List of domain names
-     * @param Domains List of domain names
+     * Set Array of subdomain names
+     * @param Domains Array of subdomain names
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;

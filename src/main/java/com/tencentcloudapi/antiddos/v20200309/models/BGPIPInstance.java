@@ -184,11 +184,26 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Long BGPIPChannelFlag;
 
     /**
-    * 
+    * Tag that the Anti-DDoS Advanced instance is associated with
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("TagInfoList")
     @Expose
     private TagInfo [] TagInfoList;
+
+    /**
+    * 
+    */
+    @SerializedName("AnycastOutPackRelation")
+    @Expose
+    private AnycastOutPackRelation AnycastOutPackRelation;
+
+    /**
+    * 
+    */
+    @SerializedName("InstanceVersion")
+    @Expose
+    private Long InstanceVersion;
 
     /**
      * Get Anti-DDoS instance details 
@@ -595,19 +610,55 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get  
-     * @return TagInfoList 
+     * Get Tag that the Anti-DDoS Advanced instance is associated with
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return TagInfoList Tag that the Anti-DDoS Advanced instance is associated with
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public TagInfo [] getTagInfoList() {
         return this.TagInfoList;
     }
 
     /**
-     * Set 
-     * @param TagInfoList 
+     * Set Tag that the Anti-DDoS Advanced instance is associated with
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param TagInfoList Tag that the Anti-DDoS Advanced instance is associated with
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setTagInfoList(TagInfo [] TagInfoList) {
         this.TagInfoList = TagInfoList;
+    }
+
+    /**
+     * Get  
+     * @return AnycastOutPackRelation 
+     */
+    public AnycastOutPackRelation getAnycastOutPackRelation() {
+        return this.AnycastOutPackRelation;
+    }
+
+    /**
+     * Set 
+     * @param AnycastOutPackRelation 
+     */
+    public void setAnycastOutPackRelation(AnycastOutPackRelation AnycastOutPackRelation) {
+        this.AnycastOutPackRelation = AnycastOutPackRelation;
+    }
+
+    /**
+     * Get  
+     * @return InstanceVersion 
+     */
+    public Long getInstanceVersion() {
+        return this.InstanceVersion;
+    }
+
+    /**
+     * Set 
+     * @param InstanceVersion 
+     */
+    public void setInstanceVersion(Long InstanceVersion) {
+        this.InstanceVersion = InstanceVersion;
     }
 
     public BGPIPInstance() {
@@ -684,6 +735,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 this.TagInfoList[i] = new TagInfo(source.TagInfoList[i]);
             }
         }
+        if (source.AnycastOutPackRelation != null) {
+            this.AnycastOutPackRelation = new AnycastOutPackRelation(source.AnycastOutPackRelation);
+        }
+        if (source.InstanceVersion != null) {
+            this.InstanceVersion = new Long(source.InstanceVersion);
+        }
     }
 
 
@@ -712,6 +769,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "V6Flag", this.V6Flag);
         this.setParamSimple(map, prefix + "BGPIPChannelFlag", this.BGPIPChannelFlag);
         this.setParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
+        this.setParamObj(map, prefix + "AnycastOutPackRelation.", this.AnycastOutPackRelation);
+        this.setParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
 
     }
 }
