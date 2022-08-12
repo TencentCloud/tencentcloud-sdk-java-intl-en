@@ -75,6 +75,13 @@ It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-
     private Tag [] Tags;
 
     /**
+    * UIN of the initiator
+    */
+    @SerializedName("SourceIdentity")
+    @Expose
+    private String SourceIdentity;
+
+    /**
      * Get Resource descriptions of a role, which can be obtained by clicking the role name in the [CAM console](https://console.cloud.tencent.com/cam/role).
 General role:
 qcs::cam::uin/12345678:role/4611686018427397919, qcs::cam::uin/12345678:roleName/testRoleName
@@ -210,6 +217,22 @@ It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-
         this.Tags = Tags;
     }
 
+    /**
+     * Get UIN of the initiator 
+     * @return SourceIdentity UIN of the initiator
+     */
+    public String getSourceIdentity() {
+        return this.SourceIdentity;
+    }
+
+    /**
+     * Set UIN of the initiator
+     * @param SourceIdentity UIN of the initiator
+     */
+    public void setSourceIdentity(String SourceIdentity) {
+        this.SourceIdentity = SourceIdentity;
+    }
+
     public AssumeRoleRequest() {
     }
 
@@ -239,6 +262,9 @@ It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.SourceIdentity != null) {
+            this.SourceIdentity = new String(source.SourceIdentity);
+        }
     }
 
 
@@ -252,6 +278,7 @@ It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-
         this.setParamSimple(map, prefix + "Policy", this.Policy);
         this.setParamSimple(map, prefix + "ExternalId", this.ExternalId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "SourceIdentity", this.SourceIdentity);
 
     }
 }

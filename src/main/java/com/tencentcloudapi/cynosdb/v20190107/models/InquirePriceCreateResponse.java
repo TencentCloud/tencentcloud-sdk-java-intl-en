@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ses.v20201002.models;
+package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetSendEmailStatusResponse extends AbstractModel{
+public class InquirePriceCreateResponse extends AbstractModel{
 
     /**
-    * Status of sent emails
+    * Instance price
     */
-    @SerializedName("EmailStatusList")
+    @SerializedName("InstancePrice")
     @Expose
-    private SendEmailStatus [] EmailStatusList;
+    private TradePrice InstancePrice;
+
+    /**
+    * Storage price
+    */
+    @SerializedName("StoragePrice")
+    @Expose
+    private TradePrice StoragePrice;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +44,35 @@ public class GetSendEmailStatusResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Status of sent emails 
-     * @return EmailStatusList Status of sent emails
+     * Get Instance price 
+     * @return InstancePrice Instance price
      */
-    public SendEmailStatus [] getEmailStatusList() {
-        return this.EmailStatusList;
+    public TradePrice getInstancePrice() {
+        return this.InstancePrice;
     }
 
     /**
-     * Set Status of sent emails
-     * @param EmailStatusList Status of sent emails
+     * Set Instance price
+     * @param InstancePrice Instance price
      */
-    public void setEmailStatusList(SendEmailStatus [] EmailStatusList) {
-        this.EmailStatusList = EmailStatusList;
+    public void setInstancePrice(TradePrice InstancePrice) {
+        this.InstancePrice = InstancePrice;
+    }
+
+    /**
+     * Get Storage price 
+     * @return StoragePrice Storage price
+     */
+    public TradePrice getStoragePrice() {
+        return this.StoragePrice;
+    }
+
+    /**
+     * Set Storage price
+     * @param StoragePrice Storage price
+     */
+    public void setStoragePrice(TradePrice StoragePrice) {
+        this.StoragePrice = StoragePrice;
     }
 
     /**
@@ -68,19 +91,19 @@ public class GetSendEmailStatusResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public GetSendEmailStatusResponse() {
+    public InquirePriceCreateResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetSendEmailStatusResponse(GetSendEmailStatusResponse source) {
-        if (source.EmailStatusList != null) {
-            this.EmailStatusList = new SendEmailStatus[source.EmailStatusList.length];
-            for (int i = 0; i < source.EmailStatusList.length; i++) {
-                this.EmailStatusList[i] = new SendEmailStatus(source.EmailStatusList[i]);
-            }
+    public InquirePriceCreateResponse(InquirePriceCreateResponse source) {
+        if (source.InstancePrice != null) {
+            this.InstancePrice = new TradePrice(source.InstancePrice);
+        }
+        if (source.StoragePrice != null) {
+            this.StoragePrice = new TradePrice(source.StoragePrice);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -92,7 +115,8 @@ public class GetSendEmailStatusResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "EmailStatusList.", this.EmailStatusList);
+        this.setParamObj(map, prefix + "InstancePrice.", this.InstancePrice);
+        this.setParamObj(map, prefix + "StoragePrice.", this.StoragePrice);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -53,7 +53,7 @@ Tencent Cloud team <noreply@mail.qcloud.com>
     private Long TaskType;
 
     /**
-    * Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will be sent to Tencent Cloud.
+    * Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
     */
     @SerializedName("ReplyToAddresses")
     @Expose
@@ -67,7 +67,7 @@ Tencent Cloud team <noreply@mail.qcloud.com>
     private Template Template;
 
     /**
-    * Email content when emails are sent by calling the API. This parameter is currently unavailable.
+    * Disused
     */
     @SerializedName("Simple")
     @Expose
@@ -181,16 +181,16 @@ Tencent Cloud team <noreply@mail.qcloud.com>
     }
 
     /**
-     * Get Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will be sent to Tencent Cloud. 
-     * @return ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will be sent to Tencent Cloud.
+     * Get Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent. 
+     * @return ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
      */
     public String getReplyToAddresses() {
         return this.ReplyToAddresses;
     }
 
     /**
-     * Set Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will be sent to Tencent Cloud.
-     * @param ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will be sent to Tencent Cloud.
+     * Set Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
+     * @param ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
      */
     public void setReplyToAddresses(String ReplyToAddresses) {
         this.ReplyToAddresses = ReplyToAddresses;
@@ -213,16 +213,16 @@ Tencent Cloud team <noreply@mail.qcloud.com>
     }
 
     /**
-     * Get Email content when emails are sent by calling the API. This parameter is currently unavailable. 
-     * @return Simple Email content when emails are sent by calling the API. This parameter is currently unavailable.
+     * Get Disused 
+     * @return Simple Disused
      */
     public Simple getSimple() {
         return this.Simple;
     }
 
     /**
-     * Set Email content when emails are sent by calling the API. This parameter is currently unavailable.
-     * @param Simple Email content when emails are sent by calling the API. This parameter is currently unavailable.
+     * Set Disused
+     * @param Simple Disused
      */
     public void setSimple(Simple Simple) {
         this.Simple = Simple;

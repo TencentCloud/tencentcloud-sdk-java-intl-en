@@ -54,7 +54,7 @@ public enum SesErrorCode {
     // Unable to send because the sender is not verified.
      FAILEDOPERATION_NOTAUTHENTICATEDSENDER("FailedOperation.NotAuthenticatedSender"),
      
-    // Cannot query email records for this date. Only data within 90 days can be queried.
+    // You cannot query email records for this date. Only data within 90 days can be queried.
      FAILEDOPERATION_NOTSUPPORTDATE("FailedOperation.NotSupportDate"),
      
     // Incorrect protocol. Make sure the protocol is correct.
@@ -63,7 +63,7 @@ public enum SesErrorCode {
     // The recipient has unsubscribed.
      FAILEDOPERATION_RECEIVERHASUNSUBSCRIBED("FailedOperation.ReceiverHasUnsubscribed"),
      
-    // 
+    // The message was rejected by the recipient.
      FAILEDOPERATION_REJECTEDBYRECIPIENTS("FailedOperation.RejectedByRecipients"),
      
     // Email sending error. Please submit a ticket to us for troubleshooting.
@@ -87,7 +87,7 @@ public enum SesErrorCode {
     // Unsupported email type.
      FAILEDOPERATION_UNSUPPORTMAILTYPE("FailedOperation.UnsupportMailType"),
      
-    // The feature of sending custom emails is not enabled. Use a template to send emails.
+    // You can only send emails by using a template.
      FAILEDOPERATION_WITHOUTPERMISSION("FailedOperation.WithOutPermission"),
      
     // The format of the `TemplateData` field is incorrect. Make sure it is in JSON format.
@@ -153,7 +153,7 @@ public enum SesErrorCode {
     // Incorrect template content. Make sure the Base64 content is correct.
      INVALIDPARAMETERVALUE_TEMPLATECONTENTISWRONG("InvalidParameterValue.TemplateContentIsWrong"),
      
-    // Variables must be in JSON format.
+    // Template parameters must be in JSON format.
      INVALIDPARAMETERVALUE_TEMPLATEDATAERROR("InvalidParameterValue.TemplateDataError"),
      
     // Invalid template name. Make sure the characters and length of the template name are valid.
@@ -165,7 +165,7 @@ public enum SesErrorCode {
     // The template does not exist. Please create a template.
      INVALIDPARAMETERVALUE_TEMPLATENOTEXIST("InvalidParameterValue.TemplateNotExist"),
      
-    // 
+    // Template variables do not match recipient list parameters.
      INVALIDPARAMETERVALUE_TEMPLATENOTMATCHDATA("InvalidParameterValue.TemplateNotMatchData"),
      
     // Incorrect search date. Make sure the date and its format are valid.
@@ -210,7 +210,7 @@ public enum SesErrorCode {
     // The number of sender addresses exceeds the upper limit.
      OPERATIONDENIED_EXCEEDSENDERLIMIT("OperationDenied.ExceedSenderLimit"),
      
-    // The recipient group is being operated. Please try later.
+    // The recipient group is being operated. Try again later.
      OPERATIONDENIED_RECEIVERISOPERATING("OperationDenied.ReceiverIsOperating"),
      
     // The recipient group does not exist.

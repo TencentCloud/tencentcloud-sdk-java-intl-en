@@ -46,7 +46,7 @@ Sender <email address>
     private String Subject;
 
     /**
-    * Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud.
+    * Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
     */
     @SerializedName("ReplyToAddresses")
     @Expose
@@ -60,7 +60,7 @@ Sender <email address>
     private Template Template;
 
     /**
-    * Email content when sending emails by calling the API.
+    * Disused
     */
     @SerializedName("Simple")
     @Expose
@@ -144,16 +144,16 @@ Sender <email address>
     }
 
     /**
-     * Get Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud. 
-     * @return ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud.
+     * Get Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent. 
+     * @return ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
      */
     public String getReplyToAddresses() {
         return this.ReplyToAddresses;
     }
 
     /**
-     * Set Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud.
-     * @param ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud.
+     * Set Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
+     * @param ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
      */
     public void setReplyToAddresses(String ReplyToAddresses) {
         this.ReplyToAddresses = ReplyToAddresses;
@@ -176,16 +176,16 @@ Sender <email address>
     }
 
     /**
-     * Get Email content when sending emails by calling the API. 
-     * @return Simple Email content when sending emails by calling the API.
+     * Get Disused 
+     * @return Simple Disused
      */
     public Simple getSimple() {
         return this.Simple;
     }
 
     /**
-     * Set Email content when sending emails by calling the API.
-     * @param Simple Email content when sending emails by calling the API.
+     * Set Disused
+     * @param Simple Disused
      */
     public void setSimple(Simple Simple) {
         this.Simple = Simple;

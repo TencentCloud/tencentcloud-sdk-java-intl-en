@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ses.v20201002.models;
+package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetSendEmailStatusResponse extends AbstractModel{
+public class DescribeParamTemplatesResponse extends AbstractModel{
 
     /**
-    * Status of sent emails
+    * Number of parameter templates
     */
-    @SerializedName("EmailStatusList")
+    @SerializedName("TotalCount")
     @Expose
-    private SendEmailStatus [] EmailStatusList;
+    private Long TotalCount;
+
+    /**
+    * Parameter template information
+    */
+    @SerializedName("Items")
+    @Expose
+    private ParamTemplateListInfo [] Items;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +44,35 @@ public class GetSendEmailStatusResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Status of sent emails 
-     * @return EmailStatusList Status of sent emails
+     * Get Number of parameter templates 
+     * @return TotalCount Number of parameter templates
      */
-    public SendEmailStatus [] getEmailStatusList() {
-        return this.EmailStatusList;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set Status of sent emails
-     * @param EmailStatusList Status of sent emails
+     * Set Number of parameter templates
+     * @param TotalCount Number of parameter templates
      */
-    public void setEmailStatusList(SendEmailStatus [] EmailStatusList) {
-        this.EmailStatusList = EmailStatusList;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get Parameter template information 
+     * @return Items Parameter template information
+     */
+    public ParamTemplateListInfo [] getItems() {
+        return this.Items;
+    }
+
+    /**
+     * Set Parameter template information
+     * @param Items Parameter template information
+     */
+    public void setItems(ParamTemplateListInfo [] Items) {
+        this.Items = Items;
     }
 
     /**
@@ -68,18 +91,21 @@ public class GetSendEmailStatusResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public GetSendEmailStatusResponse() {
+    public DescribeParamTemplatesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetSendEmailStatusResponse(GetSendEmailStatusResponse source) {
-        if (source.EmailStatusList != null) {
-            this.EmailStatusList = new SendEmailStatus[source.EmailStatusList.length];
-            for (int i = 0; i < source.EmailStatusList.length; i++) {
-                this.EmailStatusList[i] = new SendEmailStatus(source.EmailStatusList[i]);
+    public DescribeParamTemplatesResponse(DescribeParamTemplatesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Items != null) {
+            this.Items = new ParamTemplateListInfo[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new ParamTemplateListInfo(source.Items[i]);
             }
         }
         if (source.RequestId != null) {
@@ -92,7 +118,8 @@ public class GetSendEmailStatusResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "EmailStatusList.", this.EmailStatusList);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -30,7 +30,7 @@ public class ListEmailTemplatesResponse extends AbstractModel{
     private TemplatesMetadata [] TemplatesMetadata;
 
     /**
-    * Total number of templates.
+    * Total number of templates
     */
     @SerializedName("TotalCount")
     @Expose
@@ -60,16 +60,16 @@ public class ListEmailTemplatesResponse extends AbstractModel{
     }
 
     /**
-     * Get Total number of templates. 
-     * @return TotalCount Total number of templates.
+     * Get Total number of templates 
+     * @return TotalCount Total number of templates
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of templates.
-     * @param TotalCount Total number of templates.
+     * Set Total number of templates
+     * @param TotalCount Total number of templates
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

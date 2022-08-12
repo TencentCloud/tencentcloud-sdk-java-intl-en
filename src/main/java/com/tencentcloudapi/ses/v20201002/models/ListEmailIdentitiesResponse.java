@@ -30,6 +30,20 @@ public class ListEmailIdentitiesResponse extends AbstractModel{
     private EmailIdentity [] EmailIdentities;
 
     /**
+    * Maximum reputation level
+    */
+    @SerializedName("MaxReputationLevel")
+    @Expose
+    private Long MaxReputationLevel;
+
+    /**
+    * Maximum number of emails sent per domain name
+    */
+    @SerializedName("MaxDailyQuota")
+    @Expose
+    private Long MaxDailyQuota;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -50,6 +64,38 @@ public class ListEmailIdentitiesResponse extends AbstractModel{
      */
     public void setEmailIdentities(EmailIdentity [] EmailIdentities) {
         this.EmailIdentities = EmailIdentities;
+    }
+
+    /**
+     * Get Maximum reputation level 
+     * @return MaxReputationLevel Maximum reputation level
+     */
+    public Long getMaxReputationLevel() {
+        return this.MaxReputationLevel;
+    }
+
+    /**
+     * Set Maximum reputation level
+     * @param MaxReputationLevel Maximum reputation level
+     */
+    public void setMaxReputationLevel(Long MaxReputationLevel) {
+        this.MaxReputationLevel = MaxReputationLevel;
+    }
+
+    /**
+     * Get Maximum number of emails sent per domain name 
+     * @return MaxDailyQuota Maximum number of emails sent per domain name
+     */
+    public Long getMaxDailyQuota() {
+        return this.MaxDailyQuota;
+    }
+
+    /**
+     * Set Maximum number of emails sent per domain name
+     * @param MaxDailyQuota Maximum number of emails sent per domain name
+     */
+    public void setMaxDailyQuota(Long MaxDailyQuota) {
+        this.MaxDailyQuota = MaxDailyQuota;
     }
 
     /**
@@ -82,6 +128,12 @@ public class ListEmailIdentitiesResponse extends AbstractModel{
                 this.EmailIdentities[i] = new EmailIdentity(source.EmailIdentities[i]);
             }
         }
+        if (source.MaxReputationLevel != null) {
+            this.MaxReputationLevel = new Long(source.MaxReputationLevel);
+        }
+        if (source.MaxDailyQuota != null) {
+            this.MaxDailyQuota = new Long(source.MaxDailyQuota);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -93,6 +145,8 @@ public class ListEmailIdentitiesResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "EmailIdentities.", this.EmailIdentities);
+        this.setParamSimple(map, prefix + "MaxReputationLevel", this.MaxReputationLevel);
+        this.setParamSimple(map, prefix + "MaxDailyQuota", this.MaxDailyQuota);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

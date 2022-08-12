@@ -73,7 +73,10 @@ public enum StsErrorCode {
      RESOURCENOTFOUND_ROLENOTFOUND("ResourceNotFound.RoleNotFound"),
      
     // Unauthorized operation.
-     UNAUTHORIZEDOPERATION("UnauthorizedOperation");
+     UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
+     
+    // Unsupported operation.
+     UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;
     private StsErrorCode (String value){

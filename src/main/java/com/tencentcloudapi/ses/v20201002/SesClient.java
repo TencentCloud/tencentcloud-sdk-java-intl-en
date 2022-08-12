@@ -39,7 +39,7 @@ public class SesClient extends AbstractClient{
     }
 
     /**
-     *This API is used to send a TEXT or HTML email to multiple recipients at a time for marketing or notification purposes. By default, you can send emails using a template only. To send custom content, please contact your sales rep to enable this feature. You need to create a recipient group with email addresses first and then send emails by group ID. SES supports scheduled and recurring email sending tasks. You need to pass in `TimedParam` for a scheduled task and `CycleParam` for a recurring one.
+     *This API is used to send a TEXT or HTML email to multiple recipients at a time for marketing or notification purposes. By default, you can send emails using a template only. You need to create a recipient group with email addresses first and then send emails by group ID. SES supports scheduled and recurring email sending tasks. You need to pass in `TimedParam` for a scheduled task and `CycleParam` for a recurring one.
      * @param req BatchSendEmailRequest
      * @return BatchSendEmailResponse
      * @throws TencentCloudSDKException
@@ -301,6 +301,7 @@ Note: Only an approved template can be used to send emails.
 
     /**
      *This API is used to get email sending status. Only data within 30 days can be queried.
+Default API request rate limit: 1 request/sec.
      * @param req GetSendEmailStatusRequest
      * @return GetSendEmailStatusResponse
      * @throws TencentCloudSDKException
@@ -460,7 +461,7 @@ Note: Only an approved template can be used to send emails.
     }
 
     /**
-     *This API is used to send a TEXT or HTML email triggered for authentication or transaction. By default, you can send emails using a template only. To send custom content, please contact your sales rep to enable this feature.
+     *This API is used to send an HTML or TEXT email triggered for authentication or transaction. By default, you can send emails using a template only.
      * @param req SendEmailRequest
      * @return SendEmailResponse
      * @throws TencentCloudSDKException

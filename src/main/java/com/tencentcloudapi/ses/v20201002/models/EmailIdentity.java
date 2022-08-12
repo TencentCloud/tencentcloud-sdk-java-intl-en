@@ -44,6 +44,20 @@ public class EmailIdentity extends AbstractModel{
     private Boolean SendingEnabled;
 
     /**
+    * Current reputation level
+    */
+    @SerializedName("CurrentReputationLevel")
+    @Expose
+    private Long CurrentReputationLevel;
+
+    /**
+    * Maximum number of messages sent per day
+    */
+    @SerializedName("DailyQuota")
+    @Expose
+    private Long DailyQuota;
+
+    /**
      * Get Sender domain. 
      * @return IdentityName Sender domain.
      */
@@ -91,6 +105,38 @@ public class EmailIdentity extends AbstractModel{
         this.SendingEnabled = SendingEnabled;
     }
 
+    /**
+     * Get Current reputation level 
+     * @return CurrentReputationLevel Current reputation level
+     */
+    public Long getCurrentReputationLevel() {
+        return this.CurrentReputationLevel;
+    }
+
+    /**
+     * Set Current reputation level
+     * @param CurrentReputationLevel Current reputation level
+     */
+    public void setCurrentReputationLevel(Long CurrentReputationLevel) {
+        this.CurrentReputationLevel = CurrentReputationLevel;
+    }
+
+    /**
+     * Get Maximum number of messages sent per day 
+     * @return DailyQuota Maximum number of messages sent per day
+     */
+    public Long getDailyQuota() {
+        return this.DailyQuota;
+    }
+
+    /**
+     * Set Maximum number of messages sent per day
+     * @param DailyQuota Maximum number of messages sent per day
+     */
+    public void setDailyQuota(Long DailyQuota) {
+        this.DailyQuota = DailyQuota;
+    }
+
     public EmailIdentity() {
     }
 
@@ -108,6 +154,12 @@ public class EmailIdentity extends AbstractModel{
         if (source.SendingEnabled != null) {
             this.SendingEnabled = new Boolean(source.SendingEnabled);
         }
+        if (source.CurrentReputationLevel != null) {
+            this.CurrentReputationLevel = new Long(source.CurrentReputationLevel);
+        }
+        if (source.DailyQuota != null) {
+            this.DailyQuota = new Long(source.DailyQuota);
+        }
     }
 
 
@@ -118,6 +170,8 @@ public class EmailIdentity extends AbstractModel{
         this.setParamSimple(map, prefix + "IdentityName", this.IdentityName);
         this.setParamSimple(map, prefix + "IdentityType", this.IdentityType);
         this.setParamSimple(map, prefix + "SendingEnabled", this.SendingEnabled);
+        this.setParamSimple(map, prefix + "CurrentReputationLevel", this.CurrentReputationLevel);
+        this.setParamSimple(map, prefix + "DailyQuota", this.DailyQuota);
 
     }
 }

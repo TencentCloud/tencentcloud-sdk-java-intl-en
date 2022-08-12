@@ -1,5 +1,8 @@
 package com.tencentcloudapi.cynosdb.v20190107;
 public enum CynosdbErrorCode {
+    // Batch query failed
+     FAILEDOPERATION_BATCHGETINSTANCEERROR("FailedOperation.BatchGetInstanceError"),
+     
     // Failed to get permissions. Please try again later. If the problem persists, please contact customer service.
      FAILEDOPERATION_CAMCHECKRESOURCEERROR("FailedOperation.CamCheckResourceError"),
      
@@ -71,6 +74,9 @@ public enum CynosdbErrorCode {
      
     // This API was not found.
      INVALIDPARAMETER_CONTROLLERNOTFOUNDERROR("InvalidParameter.ControllerNotFoundError"),
+     
+    // Unknown parameter. Please check whether the parameter is valid.
+     INVALIDPARAMETER_INVALIDPARAMETERERROR("InvalidParameter.InvalidParameterError"),
      
     // The current instance cannot be isolated.
      INVALIDPARAMETER_ISOLATENOTALLOWED("InvalidParameter.IsolateNotAllowed"),

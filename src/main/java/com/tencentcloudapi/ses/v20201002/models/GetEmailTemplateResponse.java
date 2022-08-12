@@ -30,6 +30,13 @@ public class GetEmailTemplateResponse extends AbstractModel{
     private TemplateContent TemplateContent;
 
     /**
+    * Template status. Valid values: `0` (approved); `1` (pending approval); `2` (rejected).
+    */
+    @SerializedName("TemplateStatus")
+    @Expose
+    private Long TemplateStatus;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -50,6 +57,22 @@ public class GetEmailTemplateResponse extends AbstractModel{
      */
     public void setTemplateContent(TemplateContent TemplateContent) {
         this.TemplateContent = TemplateContent;
+    }
+
+    /**
+     * Get Template status. Valid values: `0` (approved); `1` (pending approval); `2` (rejected). 
+     * @return TemplateStatus Template status. Valid values: `0` (approved); `1` (pending approval); `2` (rejected).
+     */
+    public Long getTemplateStatus() {
+        return this.TemplateStatus;
+    }
+
+    /**
+     * Set Template status. Valid values: `0` (approved); `1` (pending approval); `2` (rejected).
+     * @param TemplateStatus Template status. Valid values: `0` (approved); `1` (pending approval); `2` (rejected).
+     */
+    public void setTemplateStatus(Long TemplateStatus) {
+        this.TemplateStatus = TemplateStatus;
     }
 
     /**
@@ -79,6 +102,9 @@ public class GetEmailTemplateResponse extends AbstractModel{
         if (source.TemplateContent != null) {
             this.TemplateContent = new TemplateContent(source.TemplateContent);
         }
+        if (source.TemplateStatus != null) {
+            this.TemplateStatus = new Long(source.TemplateStatus);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +116,7 @@ public class GetEmailTemplateResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "TemplateContent.", this.TemplateContent);
+        this.setParamSimple(map, prefix + "TemplateStatus", this.TemplateStatus);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

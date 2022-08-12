@@ -23,115 +23,115 @@ import java.util.HashMap;
 public class GetSendEmailStatusRequest extends AbstractModel{
 
     /**
-    * Sent date. This parameter is required. You can only query the sending status for a single date at a time.
+    * Date sent. This parameter is required. You can only query the sending status for a single date at a time.
     */
     @SerializedName("RequestDate")
     @Expose
     private String RequestDate;
 
     /**
-    * Offset. Default value: `0`
+    * Offset. Default value: `0`.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Maximum number of pulled entries. The maximum value is `100`.
+    * Maximum number of pulled entries. Maximum value: `100`.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * `MessageId` field returned by the `SendMail` API
+    * The `MessageId` field returned by the `SendMail` API.
     */
     @SerializedName("MessageId")
     @Expose
     private String MessageId;
 
     /**
-    * Recipient email address
+    * Recipient email address.
     */
     @SerializedName("ToEmailAddress")
     @Expose
     private String ToEmailAddress;
 
     /**
-     * Get Sent date. This parameter is required. You can only query the sending status for a single date at a time. 
-     * @return RequestDate Sent date. This parameter is required. You can only query the sending status for a single date at a time.
+     * Get Date sent. This parameter is required. You can only query the sending status for a single date at a time. 
+     * @return RequestDate Date sent. This parameter is required. You can only query the sending status for a single date at a time.
      */
     public String getRequestDate() {
         return this.RequestDate;
     }
 
     /**
-     * Set Sent date. This parameter is required. You can only query the sending status for a single date at a time.
-     * @param RequestDate Sent date. This parameter is required. You can only query the sending status for a single date at a time.
+     * Set Date sent. This parameter is required. You can only query the sending status for a single date at a time.
+     * @param RequestDate Date sent. This parameter is required. You can only query the sending status for a single date at a time.
      */
     public void setRequestDate(String RequestDate) {
         this.RequestDate = RequestDate;
     }
 
     /**
-     * Get Offset. Default value: `0` 
-     * @return Offset Offset. Default value: `0`
+     * Get Offset. Default value: `0`. 
+     * @return Offset Offset. Default value: `0`.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. Default value: `0`
-     * @param Offset Offset. Default value: `0`
+     * Set Offset. Default value: `0`.
+     * @param Offset Offset. Default value: `0`.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Maximum number of pulled entries. The maximum value is `100`. 
-     * @return Limit Maximum number of pulled entries. The maximum value is `100`.
+     * Get Maximum number of pulled entries. Maximum value: `100`. 
+     * @return Limit Maximum number of pulled entries. Maximum value: `100`.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Maximum number of pulled entries. The maximum value is `100`.
-     * @param Limit Maximum number of pulled entries. The maximum value is `100`.
+     * Set Maximum number of pulled entries. Maximum value: `100`.
+     * @param Limit Maximum number of pulled entries. Maximum value: `100`.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get `MessageId` field returned by the `SendMail` API 
-     * @return MessageId `MessageId` field returned by the `SendMail` API
+     * Get The `MessageId` field returned by the `SendMail` API. 
+     * @return MessageId The `MessageId` field returned by the `SendMail` API.
      */
     public String getMessageId() {
         return this.MessageId;
     }
 
     /**
-     * Set `MessageId` field returned by the `SendMail` API
-     * @param MessageId `MessageId` field returned by the `SendMail` API
+     * Set The `MessageId` field returned by the `SendMail` API.
+     * @param MessageId The `MessageId` field returned by the `SendMail` API.
      */
     public void setMessageId(String MessageId) {
         this.MessageId = MessageId;
     }
 
     /**
-     * Get Recipient email address 
-     * @return ToEmailAddress Recipient email address
+     * Get Recipient email address. 
+     * @return ToEmailAddress Recipient email address.
      */
     public String getToEmailAddress() {
         return this.ToEmailAddress;
     }
 
     /**
-     * Set Recipient email address
-     * @param ToEmailAddress Recipient email address
+     * Set Recipient email address.
+     * @param ToEmailAddress Recipient email address.
      */
     public void setToEmailAddress(String ToEmailAddress) {
         this.ToEmailAddress = ToEmailAddress;
