@@ -121,4 +121,24 @@ The data generated with the SDK must be stored in COS, and the region of the COS
         return rsp.response;
     }
 
+    /**
+     *This API is used to pass in URLs of a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.
+     * @param req VideoLivenessCompareRequest
+     * @return VideoLivenessCompareResponse
+     * @throws TencentCloudSDKException
+     */
+    public VideoLivenessCompareResponse VideoLivenessCompare(VideoLivenessCompareRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<VideoLivenessCompareResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<VideoLivenessCompareResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "VideoLivenessCompare");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }
