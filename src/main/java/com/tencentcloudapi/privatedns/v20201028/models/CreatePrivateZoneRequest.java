@@ -51,7 +51,7 @@ public class CreatePrivateZoneRequest extends AbstractModel{
     private String Remark;
 
     /**
-    * Whether to enable subdomain recursive DNS. Valid values: ENABLED, DISABLED. Default value: DISABLED
+    * Whether to enable subdomain recursive DNS. Valid values: `ENABLED` (default) and `DISABLED`.
     */
     @SerializedName("DnsForwardStatus")
     @Expose
@@ -70,6 +70,13 @@ public class CreatePrivateZoneRequest extends AbstractModel{
     @SerializedName("AccountVpcSet")
     @Expose
     private AccountVpcInfo [] AccountVpcSet;
+
+    /**
+    * Whether to enable CNAME flattening. Valid values: `ENABLED` (default) and `DISABLED`.
+    */
+    @SerializedName("CnameSpeedupStatus")
+    @Expose
+    private String CnameSpeedupStatus;
 
     /**
      * Get Domain name, which must be in the format of standard TLD 
@@ -136,16 +143,16 @@ public class CreatePrivateZoneRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to enable subdomain recursive DNS. Valid values: ENABLED, DISABLED. Default value: DISABLED 
-     * @return DnsForwardStatus Whether to enable subdomain recursive DNS. Valid values: ENABLED, DISABLED. Default value: DISABLED
+     * Get Whether to enable subdomain recursive DNS. Valid values: `ENABLED` (default) and `DISABLED`. 
+     * @return DnsForwardStatus Whether to enable subdomain recursive DNS. Valid values: `ENABLED` (default) and `DISABLED`.
      */
     public String getDnsForwardStatus() {
         return this.DnsForwardStatus;
     }
 
     /**
-     * Set Whether to enable subdomain recursive DNS. Valid values: ENABLED, DISABLED. Default value: DISABLED
-     * @param DnsForwardStatus Whether to enable subdomain recursive DNS. Valid values: ENABLED, DISABLED. Default value: DISABLED
+     * Set Whether to enable subdomain recursive DNS. Valid values: `ENABLED` (default) and `DISABLED`.
+     * @param DnsForwardStatus Whether to enable subdomain recursive DNS. Valid values: `ENABLED` (default) and `DISABLED`.
      */
     public void setDnsForwardStatus(String DnsForwardStatus) {
         this.DnsForwardStatus = DnsForwardStatus;
@@ -181,6 +188,22 @@ public class CreatePrivateZoneRequest extends AbstractModel{
      */
     public void setAccountVpcSet(AccountVpcInfo [] AccountVpcSet) {
         this.AccountVpcSet = AccountVpcSet;
+    }
+
+    /**
+     * Get Whether to enable CNAME flattening. Valid values: `ENABLED` (default) and `DISABLED`. 
+     * @return CnameSpeedupStatus Whether to enable CNAME flattening. Valid values: `ENABLED` (default) and `DISABLED`.
+     */
+    public String getCnameSpeedupStatus() {
+        return this.CnameSpeedupStatus;
+    }
+
+    /**
+     * Set Whether to enable CNAME flattening. Valid values: `ENABLED` (default) and `DISABLED`.
+     * @param CnameSpeedupStatus Whether to enable CNAME flattening. Valid values: `ENABLED` (default) and `DISABLED`.
+     */
+    public void setCnameSpeedupStatus(String CnameSpeedupStatus) {
+        this.CnameSpeedupStatus = CnameSpeedupStatus;
     }
 
     public CreatePrivateZoneRequest() {
@@ -224,6 +247,9 @@ public class CreatePrivateZoneRequest extends AbstractModel{
                 this.AccountVpcSet[i] = new AccountVpcInfo(source.AccountVpcSet[i]);
             }
         }
+        if (source.CnameSpeedupStatus != null) {
+            this.CnameSpeedupStatus = new String(source.CnameSpeedupStatus);
+        }
     }
 
 
@@ -238,6 +264,7 @@ public class CreatePrivateZoneRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DnsForwardStatus", this.DnsForwardStatus);
         this.setParamArrayObj(map, prefix + "Vpcs.", this.Vpcs);
         this.setParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
+        this.setParamSimple(map, prefix + "CnameSpeedupStatus", this.CnameSpeedupStatus);
 
     }
 }

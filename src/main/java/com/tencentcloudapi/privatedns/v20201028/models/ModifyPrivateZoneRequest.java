@@ -44,6 +44,13 @@ public class ModifyPrivateZoneRequest extends AbstractModel{
     private String DnsForwardStatus;
 
     /**
+    * Whether to enable CNAME flattening. Valid values: `ENABLED` and `DISABLED`.
+    */
+    @SerializedName("CnameSpeedupStatus")
+    @Expose
+    private String CnameSpeedupStatus;
+
+    /**
      * Get Private domain ID 
      * @return ZoneId Private domain ID
      */
@@ -91,6 +98,22 @@ public class ModifyPrivateZoneRequest extends AbstractModel{
         this.DnsForwardStatus = DnsForwardStatus;
     }
 
+    /**
+     * Get Whether to enable CNAME flattening. Valid values: `ENABLED` and `DISABLED`. 
+     * @return CnameSpeedupStatus Whether to enable CNAME flattening. Valid values: `ENABLED` and `DISABLED`.
+     */
+    public String getCnameSpeedupStatus() {
+        return this.CnameSpeedupStatus;
+    }
+
+    /**
+     * Set Whether to enable CNAME flattening. Valid values: `ENABLED` and `DISABLED`.
+     * @param CnameSpeedupStatus Whether to enable CNAME flattening. Valid values: `ENABLED` and `DISABLED`.
+     */
+    public void setCnameSpeedupStatus(String CnameSpeedupStatus) {
+        this.CnameSpeedupStatus = CnameSpeedupStatus;
+    }
+
     public ModifyPrivateZoneRequest() {
     }
 
@@ -108,6 +131,9 @@ public class ModifyPrivateZoneRequest extends AbstractModel{
         if (source.DnsForwardStatus != null) {
             this.DnsForwardStatus = new String(source.DnsForwardStatus);
         }
+        if (source.CnameSpeedupStatus != null) {
+            this.CnameSpeedupStatus = new String(source.CnameSpeedupStatus);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class ModifyPrivateZoneRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "DnsForwardStatus", this.DnsForwardStatus);
+        this.setParamSimple(map, prefix + "CnameSpeedupStatus", this.CnameSpeedupStatus);
 
     }
 }

@@ -352,18 +352,32 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long CrossBackupSaveDays;
 
     /**
-    * 
+    * Domain name of the public network address
     */
     @SerializedName("DnsPodDomain")
     @Expose
     private String DnsPodDomain;
 
     /**
-    * 
+    * Port number of the public network
     */
     @SerializedName("TgwWanVPort")
     @Expose
     private Long TgwWanVPort;
+
+    /**
+    * 
+    */
+    @SerializedName("Collation")
+    @Expose
+    private String Collation;
+
+    /**
+    * 
+    */
+    @SerializedName("TimeZone")
+    @Expose
+    private String TimeZone;
 
     /**
      * Get Instance ID 
@@ -1130,35 +1144,67 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get  
-     * @return DnsPodDomain 
+     * Get Domain name of the public network address 
+     * @return DnsPodDomain Domain name of the public network address
      */
     public String getDnsPodDomain() {
         return this.DnsPodDomain;
     }
 
     /**
-     * Set 
-     * @param DnsPodDomain 
+     * Set Domain name of the public network address
+     * @param DnsPodDomain Domain name of the public network address
      */
     public void setDnsPodDomain(String DnsPodDomain) {
         this.DnsPodDomain = DnsPodDomain;
     }
 
     /**
-     * Get  
-     * @return TgwWanVPort 
+     * Get Port number of the public network 
+     * @return TgwWanVPort Port number of the public network
      */
     public Long getTgwWanVPort() {
         return this.TgwWanVPort;
     }
 
     /**
-     * Set 
-     * @param TgwWanVPort 
+     * Set Port number of the public network
+     * @param TgwWanVPort Port number of the public network
      */
     public void setTgwWanVPort(Long TgwWanVPort) {
         this.TgwWanVPort = TgwWanVPort;
+    }
+
+    /**
+     * Get  
+     * @return Collation 
+     */
+    public String getCollation() {
+        return this.Collation;
+    }
+
+    /**
+     * Set 
+     * @param Collation 
+     */
+    public void setCollation(String Collation) {
+        this.Collation = Collation;
+    }
+
+    /**
+     * Get  
+     * @return TimeZone 
+     */
+    public String getTimeZone() {
+        return this.TimeZone;
+    }
+
+    /**
+     * Set 
+     * @param TimeZone 
+     */
+    public void setTimeZone(String TimeZone) {
+        this.TimeZone = TimeZone;
     }
 
     public DBInstance() {
@@ -1322,6 +1368,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.TgwWanVPort != null) {
             this.TgwWanVPort = new Long(source.TgwWanVPort);
         }
+        if (source.Collation != null) {
+            this.Collation = new String(source.Collation);
+        }
+        if (source.TimeZone != null) {
+            this.TimeZone = new String(source.TimeZone);
+        }
     }
 
 
@@ -1377,6 +1429,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "CrossBackupSaveDays", this.CrossBackupSaveDays);
         this.setParamSimple(map, prefix + "DnsPodDomain", this.DnsPodDomain);
         this.setParamSimple(map, prefix + "TgwWanVPort", this.TgwWanVPort);
+        this.setParamSimple(map, prefix + "Collation", this.Collation);
+        this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
 
     }
 }
