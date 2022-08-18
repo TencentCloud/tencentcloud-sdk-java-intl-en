@@ -30,7 +30,7 @@ public class ModifyLocalBinlogConfigRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Retention period of local binlog. Value range: [120,168].
+    * Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours.
     */
     @SerializedName("SaveHours")
     @Expose
@@ -60,16 +60,16 @@ public class ModifyLocalBinlogConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get Retention period of local binlog. Value range: [120,168]. 
-     * @return SaveHours Retention period of local binlog. Value range: [120,168].
+     * Get Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours. 
+     * @return SaveHours Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours.
      */
     public Long getSaveHours() {
         return this.SaveHours;
     }
 
     /**
-     * Set Retention period of local binlog. Value range: [120,168].
-     * @param SaveHours Retention period of local binlog. Value range: [120,168].
+     * Set Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours.
+     * @param SaveHours Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours.
      */
     public void setSaveHours(Long SaveHours) {
         this.SaveHours = SaveHours;

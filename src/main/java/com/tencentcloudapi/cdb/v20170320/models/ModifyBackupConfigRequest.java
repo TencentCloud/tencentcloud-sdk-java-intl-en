@@ -65,7 +65,7 @@ public class ModifyBackupConfigRequest extends AbstractModel{
     private CommonTimeWindow BackupTimeWindow;
 
     /**
-    * Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`.
+    * Switch for periodic archive. Valid values: `off` (disable), `on` (enable). Default value:`off`. When you enable the periodic archive policy for the first time, you need to enter the `BackupPeriodSaveDays`, `BackupPeriodSaveInterval`, `BackupPeriodSaveCount`, and `StartBackupPeriodSaveDate` parameters; otherwise, the policy will not take effect.
     */
     @SerializedName("EnableBackupPeriodSave")
     @Expose
@@ -203,16 +203,16 @@ public class ModifyBackupConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`. 
-     * @return EnableBackupPeriodSave Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`.
+     * Get Switch for periodic archive. Valid values: `off` (disable), `on` (enable). Default value:`off`. When you enable the periodic archive policy for the first time, you need to enter the `BackupPeriodSaveDays`, `BackupPeriodSaveInterval`, `BackupPeriodSaveCount`, and `StartBackupPeriodSaveDate` parameters; otherwise, the policy will not take effect. 
+     * @return EnableBackupPeriodSave Switch for periodic archive. Valid values: `off` (disable), `on` (enable). Default value:`off`. When you enable the periodic archive policy for the first time, you need to enter the `BackupPeriodSaveDays`, `BackupPeriodSaveInterval`, `BackupPeriodSaveCount`, and `StartBackupPeriodSaveDate` parameters; otherwise, the policy will not take effect.
      */
     public String getEnableBackupPeriodSave() {
         return this.EnableBackupPeriodSave;
     }
 
     /**
-     * Set Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`.
-     * @param EnableBackupPeriodSave Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`.
+     * Set Switch for periodic archive. Valid values: `off` (disable), `on` (enable). Default value:`off`. When you enable the periodic archive policy for the first time, you need to enter the `BackupPeriodSaveDays`, `BackupPeriodSaveInterval`, `BackupPeriodSaveCount`, and `StartBackupPeriodSaveDate` parameters; otherwise, the policy will not take effect.
+     * @param EnableBackupPeriodSave Switch for periodic archive. Valid values: `off` (disable), `on` (enable). Default value:`off`. When you enable the periodic archive policy for the first time, you need to enter the `BackupPeriodSaveDays`, `BackupPeriodSaveInterval`, `BackupPeriodSaveCount`, and `StartBackupPeriodSaveDate` parameters; otherwise, the policy will not take effect.
      */
     public void setEnableBackupPeriodSave(String EnableBackupPeriodSave) {
         this.EnableBackupPeriodSave = EnableBackupPeriodSave;

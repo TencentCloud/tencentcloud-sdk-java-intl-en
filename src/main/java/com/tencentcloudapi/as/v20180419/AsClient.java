@@ -39,7 +39,9 @@ public class AsClient extends AbstractClient{
     }
 
     /**
-     *This API (AttachInstances) is used to add CVM instances to an auto scaling group.
+     *This API is used to add CVM instances to an auto scaling group.
+* Only CVM instances in `RUNNING` or `STOPPED` status can be added.
+* The added CVM instances must in the same VPC as the scaling group.
 
      * @param req AttachInstancesRequest
      * @return AttachInstancesResponse
@@ -157,6 +159,31 @@ Note: for a scaling group that is created based on a monthly-subscribed instance
                 Type type = new TypeToken<JsonResponseModel<CreateAutoScalingGroupFromInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateAutoScalingGroupFromInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a launch configuration.
+
+* To modify a launch configuration, you can use `ModifyLaunchConfigurationAttributes`.
+
+* You can create up to 20 launch configurations for each project. For more information, see [Usage Limits](https://intl.cloud.tencent.com/document/product/377/3120?from_cn_redirect=1).
+
+     * @param req CreateLaunchConfigurationRequest
+     * @return CreateLaunchConfigurationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLaunchConfigurationResponse CreateLaunchConfiguration(CreateLaunchConfigurationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLaunchConfigurationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLaunchConfigurationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateLaunchConfiguration");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -539,6 +566,29 @@ When the notification is sent to a CMQ topic or queue, the following contents ar
     }
 
     /**
+     *This API is used to query the information of launch configurations.
+
+* You can query the launch configuration details based on information such as launch configuration ID and name. For more information on filters, see `Filter`.
+* If the parameter is empty, a certain number (specified by `Limit` and 20 by default) of launch configurations of the current user will be returned.
+     * @param req DescribeLaunchConfigurationsRequest
+     * @return DescribeLaunchConfigurationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLaunchConfigurationsResponse DescribeLaunchConfigurations(DescribeLaunchConfigurationsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLaunchConfigurationsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLaunchConfigurationsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLaunchConfigurations");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DescribeLifecycleHooks) is used to query the information of lifecycle hooks.
 
 * You can query the details of lifecycle hooks based on information such as auto scaling group ID, lifecycle hook ID, or lifecycle hook name. For more information on filters, see `Filter`.
@@ -663,6 +713,39 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
                 Type type = new TypeToken<JsonResponseModel<DetachLoadBalancersResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DetachLoadBalancers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to disable the specified auto-scaling group.
+* When a scaling group is disabled, the following activities are not triggered automatically:
+    - Scaling activities triggered alert policies
+    - Scaling activities triggered by desired group capacity
+    - Replacement of unhealthy instances
+    - Scheduled actions
+* When the scaling group is disabled, you can trigger scaling activities manually, including: 
+    - Scale out to the specify number of instances (ScaleOutInstances)
+    - Scale in to the specify number of instances (ScaleInInstances)
+    - Remove instances from the scaling group (DetachInstances)
+    - Delete instances from the scaling group (RemoveInstances)
+    - Add instances to a scaling group (AttachInstances)
+    - Shut down CVM instances in a scaling group (StopAutoScalingInstances)
+    - Start up CVM instances in a scaling group (StartAutoScalingInstances)
+     * @param req DisableAutoScalingGroupRequest
+     * @return DisableAutoScalingGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableAutoScalingGroupResponse DisableAutoScalingGroup(DisableAutoScalingGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableAutoScalingGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableAutoScalingGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableAutoScalingGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -925,6 +1008,56 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
     }
 
     /**
+     *This API is used to reduce the specified number of instances from the scaling group.
+* There is no on going scaling task.
+* This API is valid even when the scaling group is disabled. For more details, see [DisableAutoScalingGroup](https://intl.cloud.tencent.com/document/api/377/20435?from_cn_redirect=1).
+* You can specify the instances to remove in the scale-in activity by using `TerminationPolicies`. For more information, see [Scaling In Policies](https://intl.cloud.tencent.com/document/product/377/8563?from_cn_redirect=1).
+* Only the `IN_SERVICE` instances will be reduced. To reduce instances in other statues, use the [`DetachInstances`](https://intl.cloud.tencent.com/document/api/377/20436?from_cn_redirect=1) or [`RemoveInstances`](https://intl.cloud.tencent.com/document/api/377/20431?from_cn_redirect=1) API.
+* The desired capacity will be reduced accordingly. The new desired capacity should be no less than the minimum capacity.
+* If the scale-in activity failed or partially succeeded, the final desired capacity only deducts the instances that have been reduced successfully.
+     * @param req ScaleInInstancesRequest
+     * @return ScaleInInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScaleInInstancesResponse ScaleInInstances(ScaleInInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ScaleInInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ScaleInInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ScaleInInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to add the specified number of instances to the scaling group, which returns the scaling activity ID `ActivityId`.
+* There is no on going scaling task.
+* This API is valid even when the scaling group is disabled. For more details, see [DisableAutoScalingGroup](https://intl.cloud.tencent.com/document/api/377/20435?from_cn_redirect=1).
+* The desired capacity will be increased accordingly. The new desired capacity should be no more than the maximum capacity.
+* If the scale-out activity failed or partially succeeded, the final desired capacity only includes the instances that have been added successfully.
+     * @param req ScaleOutInstancesRequest
+     * @return ScaleOutInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScaleOutInstancesResponse ScaleOutInstances(ScaleOutInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ScaleOutInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ScaleOutInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ScaleOutInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to enable scale-in protection for an instance.
 When scale-in protection is enabled, the instance will not be removed in scale-in activities triggered by replacement of unhealthy instances, alarm threshold reached, change of desired quantity, etc.
      * @param req SetInstancesProtectionRequest
@@ -984,6 +1117,29 @@ When scale-in protection is enabled, the instance will not be removed in scale-i
                 Type type = new TypeToken<JsonResponseModel<StopAutoScalingInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "StopAutoScalingInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to upgrade a launch configuration.
+
+* This API is used to upgrade a launch configuration in a "completely overriding" manner, i.e., it uniformly sets a new configuration according to the API parameters regardless of the original parameters. If optional fields are left empty, their default values will be used.
+* After the launch configuration is upgraded, the existing instances that have been created by it will not be changed, but new instances will be created according to the new configuration.
+     * @param req UpgradeLaunchConfigurationRequest
+     * @return UpgradeLaunchConfigurationResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeLaunchConfigurationResponse UpgradeLaunchConfiguration(UpgradeLaunchConfigurationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeLaunchConfigurationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeLaunchConfigurationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpgradeLaunchConfiguration");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

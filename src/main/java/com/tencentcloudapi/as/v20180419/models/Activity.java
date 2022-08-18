@@ -38,9 +38,10 @@ public class Activity extends AbstractModel{
 
     /**
     * Type of the scaling activity. Valid values:<br>
-<li>SCALE_OUT: scales out. <li>SCALE_IN: scales in. <li>ATTACH_INSTANCES: adds an instance. <li>REMOVE_INSTANCES: terminates an instance. <li>DETACH_INSTANCES: removes an instance. <li>TERMINATE_INSTANCES_UNEXPECTEDLY: terminates an instance in the CVM console. <li>REPLACE_UNHEALTHY_INSTANCE: replaces an unhealthy instance.
-<li>START_INSTANCES: starts an instance.
-<li>STOP_INSTANCES: stops an instance.
+<li>`SCALE_OUT`: Scale out. <li>`SCALE_IN`: Scale in. <li>`ATTACH_INSTANCES`: Add instances. <li>`REMOVE_INSTANCES`: Terminate instances. <li>`DETACH_INSTANCES`: Remove instances. <li>`TERMINATE_INSTANCES_UNEXPECTEDLY`: Terminate instances in the CVM console. <li>`REPLACE_UNHEALTHY_INSTANCE`: Replace an unhealthy instance.
+<li>`START_INSTANCES`: Starts up instances.
+<li>`STOP_INSTANCES`: Shut down instances.
+<li>`INVOKE_COMMAND`: Execute commands
     */
     @SerializedName("ActivityType")
     @Expose
@@ -130,6 +131,13 @@ public class Activity extends AbstractModel{
     private DetailedStatusMessage [] DetailedStatusMessageSet;
 
     /**
+    * Result of the command execution
+    */
+    @SerializedName("InvocationResultSet")
+    @Expose
+    private InvocationResult [] InvocationResultSet;
+
+    /**
      * Get Auto scaling group ID. 
      * @return AutoScalingGroupId Auto scaling group ID.
      */
@@ -163,13 +171,15 @@ public class Activity extends AbstractModel{
 
     /**
      * Get Type of the scaling activity. Valid values:<br>
-<li>SCALE_OUT: scales out. <li>SCALE_IN: scales in. <li>ATTACH_INSTANCES: adds an instance. <li>REMOVE_INSTANCES: terminates an instance. <li>DETACH_INSTANCES: removes an instance. <li>TERMINATE_INSTANCES_UNEXPECTEDLY: terminates an instance in the CVM console. <li>REPLACE_UNHEALTHY_INSTANCE: replaces an unhealthy instance.
-<li>START_INSTANCES: starts an instance.
-<li>STOP_INSTANCES: stops an instance. 
+<li>`SCALE_OUT`: Scale out. <li>`SCALE_IN`: Scale in. <li>`ATTACH_INSTANCES`: Add instances. <li>`REMOVE_INSTANCES`: Terminate instances. <li>`DETACH_INSTANCES`: Remove instances. <li>`TERMINATE_INSTANCES_UNEXPECTEDLY`: Terminate instances in the CVM console. <li>`REPLACE_UNHEALTHY_INSTANCE`: Replace an unhealthy instance.
+<li>`START_INSTANCES`: Starts up instances.
+<li>`STOP_INSTANCES`: Shut down instances.
+<li>`INVOKE_COMMAND`: Execute commands 
      * @return ActivityType Type of the scaling activity. Valid values:<br>
-<li>SCALE_OUT: scales out. <li>SCALE_IN: scales in. <li>ATTACH_INSTANCES: adds an instance. <li>REMOVE_INSTANCES: terminates an instance. <li>DETACH_INSTANCES: removes an instance. <li>TERMINATE_INSTANCES_UNEXPECTEDLY: terminates an instance in the CVM console. <li>REPLACE_UNHEALTHY_INSTANCE: replaces an unhealthy instance.
-<li>START_INSTANCES: starts an instance.
-<li>STOP_INSTANCES: stops an instance.
+<li>`SCALE_OUT`: Scale out. <li>`SCALE_IN`: Scale in. <li>`ATTACH_INSTANCES`: Add instances. <li>`REMOVE_INSTANCES`: Terminate instances. <li>`DETACH_INSTANCES`: Remove instances. <li>`TERMINATE_INSTANCES_UNEXPECTEDLY`: Terminate instances in the CVM console. <li>`REPLACE_UNHEALTHY_INSTANCE`: Replace an unhealthy instance.
+<li>`START_INSTANCES`: Starts up instances.
+<li>`STOP_INSTANCES`: Shut down instances.
+<li>`INVOKE_COMMAND`: Execute commands
      */
     public String getActivityType() {
         return this.ActivityType;
@@ -177,13 +187,15 @@ public class Activity extends AbstractModel{
 
     /**
      * Set Type of the scaling activity. Valid values:<br>
-<li>SCALE_OUT: scales out. <li>SCALE_IN: scales in. <li>ATTACH_INSTANCES: adds an instance. <li>REMOVE_INSTANCES: terminates an instance. <li>DETACH_INSTANCES: removes an instance. <li>TERMINATE_INSTANCES_UNEXPECTEDLY: terminates an instance in the CVM console. <li>REPLACE_UNHEALTHY_INSTANCE: replaces an unhealthy instance.
-<li>START_INSTANCES: starts an instance.
-<li>STOP_INSTANCES: stops an instance.
+<li>`SCALE_OUT`: Scale out. <li>`SCALE_IN`: Scale in. <li>`ATTACH_INSTANCES`: Add instances. <li>`REMOVE_INSTANCES`: Terminate instances. <li>`DETACH_INSTANCES`: Remove instances. <li>`TERMINATE_INSTANCES_UNEXPECTEDLY`: Terminate instances in the CVM console. <li>`REPLACE_UNHEALTHY_INSTANCE`: Replace an unhealthy instance.
+<li>`START_INSTANCES`: Starts up instances.
+<li>`STOP_INSTANCES`: Shut down instances.
+<li>`INVOKE_COMMAND`: Execute commands
      * @param ActivityType Type of the scaling activity. Valid values:<br>
-<li>SCALE_OUT: scales out. <li>SCALE_IN: scales in. <li>ATTACH_INSTANCES: adds an instance. <li>REMOVE_INSTANCES: terminates an instance. <li>DETACH_INSTANCES: removes an instance. <li>TERMINATE_INSTANCES_UNEXPECTEDLY: terminates an instance in the CVM console. <li>REPLACE_UNHEALTHY_INSTANCE: replaces an unhealthy instance.
-<li>START_INSTANCES: starts an instance.
-<li>STOP_INSTANCES: stops an instance.
+<li>`SCALE_OUT`: Scale out. <li>`SCALE_IN`: Scale in. <li>`ATTACH_INSTANCES`: Add instances. <li>`REMOVE_INSTANCES`: Terminate instances. <li>`DETACH_INSTANCES`: Remove instances. <li>`TERMINATE_INSTANCES_UNEXPECTEDLY`: Terminate instances in the CVM console. <li>`REPLACE_UNHEALTHY_INSTANCE`: Replace an unhealthy instance.
+<li>`START_INSTANCES`: Starts up instances.
+<li>`STOP_INSTANCES`: Shut down instances.
+<li>`INVOKE_COMMAND`: Execute commands
      */
     public void setActivityType(String ActivityType) {
         this.ActivityType = ActivityType;
@@ -389,6 +401,22 @@ public class Activity extends AbstractModel{
         this.DetailedStatusMessageSet = DetailedStatusMessageSet;
     }
 
+    /**
+     * Get Result of the command execution 
+     * @return InvocationResultSet Result of the command execution
+     */
+    public InvocationResult [] getInvocationResultSet() {
+        return this.InvocationResultSet;
+    }
+
+    /**
+     * Set Result of the command execution
+     * @param InvocationResultSet Result of the command execution
+     */
+    public void setInvocationResultSet(InvocationResult [] InvocationResultSet) {
+        this.InvocationResultSet = InvocationResultSet;
+    }
+
     public Activity() {
     }
 
@@ -448,6 +476,12 @@ public class Activity extends AbstractModel{
                 this.DetailedStatusMessageSet[i] = new DetailedStatusMessage(source.DetailedStatusMessageSet[i]);
             }
         }
+        if (source.InvocationResultSet != null) {
+            this.InvocationResultSet = new InvocationResult[source.InvocationResultSet.length];
+            for (int i = 0; i < source.InvocationResultSet.length; i++) {
+                this.InvocationResultSet[i] = new InvocationResult(source.InvocationResultSet[i]);
+            }
+        }
     }
 
 
@@ -469,6 +503,7 @@ public class Activity extends AbstractModel{
         this.setParamSimple(map, prefix + "StatusMessageSimplified", this.StatusMessageSimplified);
         this.setParamArrayObj(map, prefix + "LifecycleActionResultSet.", this.LifecycleActionResultSet);
         this.setParamArrayObj(map, prefix + "DetailedStatusMessageSet.", this.DetailedStatusMessageSet);
+        this.setParamArrayObj(map, prefix + "InvocationResultSet.", this.InvocationResultSet);
 
     }
 }

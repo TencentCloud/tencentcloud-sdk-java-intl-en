@@ -159,6 +159,26 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create one or more TencentDB instance accounts. The account names, host addresses, and passwords are required, and account remarks and the maximum connections are optional.
+     * @param req CreateAccountsRequest
+     * @return CreateAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAccountsResponse CreateAccounts(CreateAccountsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAccountsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAccountsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAccounts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create an audit policy for a TencentDB instance by associating an audit rule with the TencentDB instance.
      * @param req CreateAuditPolicyRequest
      * @return CreateAuditPolicyResponse
@@ -401,6 +421,26 @@ This is an asynchronous API. You can also use the [DescribeDBInstances](https://
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountPrivilegesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAccountPrivileges");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API (DescribeAccounts) is used to query information of all TencentDB accounts.
+     * @param req DescribeAccountsRequest
+     * @return DescribeAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccountsResponse DescribeAccounts(DescribeAccountsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAccountsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAccountsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAccounts");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1694,6 +1734,26 @@ Note that when modifying account permissions, you need to pass in the full permi
     }
 
     /**
+     *This API (ModifyDBInstanceVipVport) is used to modify the IP and port number of a TencentDB instance, switch from the basic network to VPC, or change VPC subnets.
+     * @param req ModifyDBInstanceVipVportRequest
+     * @return ModifyDBInstanceVipVportResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceVipVportResponse ModifyDBInstanceVipVport(ModifyDBInstanceVipVportRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBInstanceVipVportResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceVipVportResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDBInstanceVipVport");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (ModifyInstanceParam) is used to modify instance parameters.
      * @param req ModifyInstanceParamRequest
      * @return ModifyInstanceParamResponse
@@ -1706,6 +1766,26 @@ Note that when modifying account permissions, you need to pass in the full permi
                 Type type = new TypeToken<JsonResponseModel<ModifyInstanceParamResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyInstanceParam");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the password complexity of a TencentDB instance.
+     * @param req ModifyInstancePasswordComplexityRequest
+     * @return ModifyInstancePasswordComplexityResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstancePasswordComplexityResponse ModifyInstancePasswordComplexity(ModifyInstancePasswordComplexityRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstancePasswordComplexityResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstancePasswordComplexityResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstancePasswordComplexity");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1746,6 +1826,26 @@ Note that when modifying account permissions, you need to pass in the full permi
                 Type type = new TypeToken<JsonResponseModel<ModifyLocalBinlogConfigResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyLocalBinlogConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the name or description of a placement group.
+     * @param req ModifyNameOrDescByDpIdRequest
+     * @return ModifyNameOrDescByDpIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNameOrDescByDpIdResponse ModifyNameOrDescByDpId(ModifyNameOrDescByDpIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNameOrDescByDpIdResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNameOrDescByDpIdResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyNameOrDescByDpId");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

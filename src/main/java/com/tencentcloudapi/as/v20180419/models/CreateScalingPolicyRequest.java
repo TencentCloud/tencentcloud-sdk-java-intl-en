@@ -65,7 +65,8 @@ public class CreateScalingPolicyRequest extends AbstractModel{
     private Long Cooldown;
 
     /**
-    * Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
+    * This parameter is diused. Please use [CreateNotificationConfiguration](https://intl.cloud.tencent.com/document/api/377/33185?from_cn_redirect=1) instead.
+Notification group ID, which is the set of user group IDs.
     */
     @SerializedName("NotificationUserGroupIds")
     @Expose
@@ -168,16 +169,20 @@ public class CreateScalingPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API. 
-     * @return NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
+     * Get This parameter is diused. Please use [CreateNotificationConfiguration](https://intl.cloud.tencent.com/document/api/377/33185?from_cn_redirect=1) instead.
+Notification group ID, which is the set of user group IDs. 
+     * @return NotificationUserGroupIds This parameter is diused. Please use [CreateNotificationConfiguration](https://intl.cloud.tencent.com/document/api/377/33185?from_cn_redirect=1) instead.
+Notification group ID, which is the set of user group IDs.
      */
     public String [] getNotificationUserGroupIds() {
         return this.NotificationUserGroupIds;
     }
 
     /**
-     * Set Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
-     * @param NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
+     * Set This parameter is diused. Please use [CreateNotificationConfiguration](https://intl.cloud.tencent.com/document/api/377/33185?from_cn_redirect=1) instead.
+Notification group ID, which is the set of user group IDs.
+     * @param NotificationUserGroupIds This parameter is diused. Please use [CreateNotificationConfiguration](https://intl.cloud.tencent.com/document/api/377/33185?from_cn_redirect=1) instead.
+Notification group ID, which is the set of user group IDs.
      */
     public void setNotificationUserGroupIds(String [] NotificationUserGroupIds) {
         this.NotificationUserGroupIds = NotificationUserGroupIds;

@@ -45,8 +45,20 @@ public enum AsErrorCode {
     // An internal request error occurred.
      INTERNALERROR_REQUESTERROR("InternalError.RequestError"),
      
+    // The image cannot be found.
+     INVALIDIMAGEID_NOTFOUND("InvalidImageId.NotFound"),
+     
+    // Invalid launch configuration.
+     INVALIDLAUNCHCONFIGURATION("InvalidLaunchConfiguration"),
+     
+    // The launch configuration ID is invalid.
+     INVALIDLAUNCHCONFIGURATIONID("InvalidLaunchConfigurationId"),
+     
     // Invalid parameter.
      INVALIDPARAMETER("InvalidParameter"),
+     
+    // Invalid Action request.
+     INVALIDPARAMETER_ACTIONNOTFOUND("InvalidParameter.ActionNotFound"),
      
     // Multiple parameters specified conflict and cannot co-exist.
      INVALIDPARAMETER_CONFLICT("InvalidParameter.Conflict"),
@@ -141,6 +153,9 @@ public enum AsErrorCode {
     // Invalid filter condition.
      INVALIDPARAMETERVALUE_INVALIDFILTER("InvalidParameterValue.InvalidFilter"),
      
+    // 
+     INVALIDPARAMETERVALUE_INVALIDHPCCLUSTERID("InvalidParameterValue.InvalidHpcClusterId"),
+     
     // Invalid image ID.
      INVALIDPARAMETERVALUE_INVALIDIMAGEID("InvalidParameterValue.InvalidImageId"),
      
@@ -149,6 +164,9 @@ public enum AsErrorCode {
      
     // Invalid instance type.
      INVALIDPARAMETERVALUE_INVALIDINSTANCETYPE("InvalidParameterValue.InvalidInstanceType"),
+     
+    // Invalid launch configuration
+     INVALIDPARAMETERVALUE_INVALIDLAUNCHCONFIGURATION("InvalidParameterValue.InvalidLaunchConfiguration"),
      
     // Invalid launch configuration ID.
      INVALIDPARAMETERVALUE_INVALIDLAUNCHCONFIGURATIONID("InvalidParameterValue.InvalidLaunchConfigurationId"),
@@ -164,6 +182,9 @@ public enum AsErrorCode {
      
     // The scheduled task name contains invalid characters.
      INVALIDPARAMETERVALUE_INVALIDSCHEDULEDACTIONNAMEINCLUDEILLEGALCHAR("InvalidParameterValue.InvalidScheduledActionNameIncludeIllegalChar"),
+     
+    // Invalid snapshot ID.
+     INVALIDPARAMETERVALUE_INVALIDSNAPSHOTID("InvalidParameterValue.InvalidSnapshotId"),
      
     // Invalid subnet ID.
      INVALIDPARAMETERVALUE_INVALIDSUBNETID("InvalidParameterValue.InvalidSubnetId"),
@@ -258,6 +279,9 @@ public enum AsErrorCode {
     // Too many values for the specified filter
      LIMITEXCEEDED_FILTERVALUESTOOLONG("LimitExceeded.FilterValuesTooLong"),
      
+    // You are short of the launch configuration quota.
+     LIMITEXCEEDED_LAUNCHCONFIGURATIONQUOTANOTENOUGH("LimitExceeded.LaunchConfigurationQuotaNotEnough"),
+     
     // The maximum number of instances exceeds the limit.
      LIMITEXCEEDED_MAXSIZELIMITEXCEEDED("LimitExceeded.MaxSizeLimitExceeded"),
      
@@ -275,6 +299,9 @@ public enum AsErrorCode {
      
     // A parameter is missing in a specific scenario.
      MISSINGPARAMETER_INSCENARIO("MissingParameter.InScenario"),
+     
+    // The `InstanceMarketOptions` parameter of the spot instance is missing.
+     MISSINGPARAMETER_INSTANCEMARKETOPTIONS("MissingParameter.InstanceMarketOptions"),
      
     // The auto scaling group is performing a scaling activity.
      RESOURCEINUSE_ACTIVITYINPROGRESS("ResourceInUse.ActivityInProgress"),
@@ -363,6 +390,9 @@ public enum AsErrorCode {
     // The instance and the auto scaling group are in different VPCs.
      RESOURCEUNAVAILABLE_CVMVPCINCONSISTENT("ResourceUnavailable.CvmVpcInconsistent"),
      
+    // Unable to add the instance to the scaling group.
+     RESOURCEUNAVAILABLE_INSTANCECANNOTATTACH("ResourceUnavailable.InstanceCannotAttach"),
+     
     // The specified instance is active.
      RESOURCEUNAVAILABLE_INSTANCEINOPERATION("ResourceUnavailable.InstanceInOperation"),
      
@@ -400,7 +430,10 @@ public enum AsErrorCode {
      RESOURCEUNAVAILABLE_TDMQCMQTOPICHASNOSUBSCRIBER("ResourceUnavailable.TDMQCMQTopicHasNoSubscriber"),
      
     // The specified availability zone is unavailable.
-     RESOURCEUNAVAILABLE_ZONEUNAVAILABLE("ResourceUnavailable.ZoneUnavailable");
+     RESOURCEUNAVAILABLE_ZONEUNAVAILABLE("ResourceUnavailable.ZoneUnavailable"),
+     
+    // Unsupported operation.
+     UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;
     private AsErrorCode (String value){
