@@ -37,14 +37,14 @@ public class CreateCloudRecordingRequest extends AbstractModel{
     private String RoomId;
 
     /**
-    * The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include this user ID in the room ID.
+    * The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in the user ID.
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * The signature (similar to login password) required for the recording robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104). |
+    * The signature (similar to a login password) required for the recording robot to enter the room. Each user ID corresponds to a signature. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104).
     */
     @SerializedName("UserSig")
     @Expose
@@ -58,7 +58,7 @@ public class CreateCloudRecordingRequest extends AbstractModel{
     private RecordParams RecordParams;
 
     /**
-    * The cloud storage parameters.
+    * The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD.
     */
     @SerializedName("StorageParams")
     @Expose
@@ -134,32 +134,32 @@ public class CreateCloudRecordingRequest extends AbstractModel{
     }
 
     /**
-     * Get The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include this user ID in the room ID. 
-     * @return UserId The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include this user ID in the room ID.
+     * Get The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in the user ID. 
+     * @return UserId The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in the user ID.
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include this user ID in the room ID.
-     * @param UserId The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include this user ID in the room ID.
+     * Set The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in the user ID.
+     * @param UserId The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in the user ID.
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get The signature (similar to login password) required for the recording robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104). | 
-     * @return UserSig The signature (similar to login password) required for the recording robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104). |
+     * Get The signature (similar to a login password) required for the recording robot to enter the room. Each user ID corresponds to a signature. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104). 
+     * @return UserSig The signature (similar to a login password) required for the recording robot to enter the room. Each user ID corresponds to a signature. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104).
      */
     public String getUserSig() {
         return this.UserSig;
     }
 
     /**
-     * Set The signature (similar to login password) required for the recording robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104). |
-     * @param UserSig The signature (similar to login password) required for the recording robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104). |
+     * Set The signature (similar to a login password) required for the recording robot to enter the room. Each user ID corresponds to a signature. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104).
+     * @param UserSig The signature (similar to a login password) required for the recording robot to enter the room. Each user ID corresponds to a signature. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104).
      */
     public void setUserSig(String UserSig) {
         this.UserSig = UserSig;
@@ -182,16 +182,16 @@ public class CreateCloudRecordingRequest extends AbstractModel{
     }
 
     /**
-     * Get The cloud storage parameters. 
-     * @return StorageParams The cloud storage parameters.
+     * Get The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD. 
+     * @return StorageParams The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD.
      */
     public StorageParams getStorageParams() {
         return this.StorageParams;
     }
 
     /**
-     * Set The cloud storage parameters.
-     * @param StorageParams The cloud storage parameters.
+     * Set The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD.
+     * @param StorageParams The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD.
      */
     public void setStorageParams(StorageParams StorageParams) {
         this.StorageParams = StorageParams;

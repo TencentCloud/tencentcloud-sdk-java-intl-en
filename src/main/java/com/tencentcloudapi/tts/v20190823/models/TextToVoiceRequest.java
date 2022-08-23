@@ -94,6 +94,13 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
     private String Codec;
 
     /**
+    * Whether to enable the timestamp feature. Default value: `false`.
+    */
+    @SerializedName("EnableSubtitle")
+    @Expose
+    private Boolean EnableSubtitle;
+
+    /**
      * Get The source text for synthesizing speech, which is encoded in UTF-8.
 It can contain up to 150 Chinese characters (a full-width punctuation as a Chinese character) or 500 letters ( a half-width punctuation as a letter). 
      * @return Text The source text for synthesizing speech, which is encoded in UTF-8.
@@ -257,6 +264,22 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
         this.Codec = Codec;
     }
 
+    /**
+     * Get Whether to enable the timestamp feature. Default value: `false`. 
+     * @return EnableSubtitle Whether to enable the timestamp feature. Default value: `false`.
+     */
+    public Boolean getEnableSubtitle() {
+        return this.EnableSubtitle;
+    }
+
+    /**
+     * Set Whether to enable the timestamp feature. Default value: `false`.
+     * @param EnableSubtitle Whether to enable the timestamp feature. Default value: `false`.
+     */
+    public void setEnableSubtitle(Boolean EnableSubtitle) {
+        this.EnableSubtitle = EnableSubtitle;
+    }
+
     public TextToVoiceRequest() {
     }
 
@@ -295,6 +318,9 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
         if (source.Codec != null) {
             this.Codec = new String(source.Codec);
         }
+        if (source.EnableSubtitle != null) {
+            this.EnableSubtitle = new Boolean(source.EnableSubtitle);
+        }
     }
 
 
@@ -312,6 +338,7 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
         this.setParamSimple(map, prefix + "PrimaryLanguage", this.PrimaryLanguage);
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
         this.setParamSimple(map, prefix + "Codec", this.Codec);
+        this.setParamSimple(map, prefix + "EnableSubtitle", this.EnableSubtitle);
 
     }
 }

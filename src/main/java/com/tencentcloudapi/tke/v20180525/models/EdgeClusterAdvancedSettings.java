@@ -31,6 +31,22 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private EdgeClusterExtraArgs ExtraArgs;
 
     /**
+    * Runtime type. Valid values: "docker" (default), "containerd".
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Runtime")
+    @Expose
+    private String Runtime;
+
+    /**
+    * Forwarding mode of kube-proxy. Valid values: "iptables" (default), "ipvs".
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ProxyMode")
+    @Expose
+    private String ProxyMode;
+
+    /**
      * Get Custom parameters of the cluster
 Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return ExtraArgs Custom parameters of the cluster
@@ -50,6 +66,46 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.ExtraArgs = ExtraArgs;
     }
 
+    /**
+     * Get Runtime type. Valid values: "docker" (default), "containerd".
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Runtime Runtime type. Valid values: "docker" (default), "containerd".
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getRuntime() {
+        return this.Runtime;
+    }
+
+    /**
+     * Set Runtime type. Valid values: "docker" (default), "containerd".
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Runtime Runtime type. Valid values: "docker" (default), "containerd".
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setRuntime(String Runtime) {
+        this.Runtime = Runtime;
+    }
+
+    /**
+     * Get Forwarding mode of kube-proxy. Valid values: "iptables" (default), "ipvs".
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ProxyMode Forwarding mode of kube-proxy. Valid values: "iptables" (default), "ipvs".
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getProxyMode() {
+        return this.ProxyMode;
+    }
+
+    /**
+     * Set Forwarding mode of kube-proxy. Valid values: "iptables" (default), "ipvs".
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ProxyMode Forwarding mode of kube-proxy. Valid values: "iptables" (default), "ipvs".
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setProxyMode(String ProxyMode) {
+        this.ProxyMode = ProxyMode;
+    }
+
     public EdgeClusterAdvancedSettings() {
     }
 
@@ -61,6 +117,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.ExtraArgs != null) {
             this.ExtraArgs = new EdgeClusterExtraArgs(source.ExtraArgs);
         }
+        if (source.Runtime != null) {
+            this.Runtime = new String(source.Runtime);
+        }
+        if (source.ProxyMode != null) {
+            this.ProxyMode = new String(source.ProxyMode);
+        }
     }
 
 
@@ -69,6 +131,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
+        this.setParamSimple(map, prefix + "Runtime", this.Runtime);
+        this.setParamSimple(map, prefix + "ProxyMode", this.ProxyMode);
 
     }
 }

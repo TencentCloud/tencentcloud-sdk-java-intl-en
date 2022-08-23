@@ -319,6 +319,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create log collection configuration for a TKE Edge cluster.
+     * @param req CreateEdgeLogConfigRequest
+     * @return CreateEdgeLogConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEdgeLogConfigResponse CreateEdgeLogConfig(CreateEdgeLogConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateEdgeLogConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateEdgeLogConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateEdgeLogConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create an alarm rule.
      * @param req CreatePrometheusAlertRuleRequest
      * @return CreatePrometheusAlertRuleResponse
@@ -779,6 +799,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query cluster access addresses, including private network address, public network address, public network domain name, and security policy for public network access.
+     * @param req DescribeClusterEndpointsRequest
+     * @return DescribeClusterEndpointsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterEndpointsResponse DescribeClusterEndpoints(DescribeClusterEndpointsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterEndpointsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterEndpointsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterEndpoints");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      * This API is used to query information of one or more instances in a cluster. 
      * @param req DescribeClusterInstancesRequest
      * @return DescribeClusterInstancesResponse
@@ -1091,6 +1131,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeEdgeClusterInstancesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeEdgeClusterInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the status of events, audits and logs.
+     * @param req DescribeEdgeLogSwitchesRequest
+     * @return DescribeEdgeLogSwitchesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEdgeLogSwitchesResponse DescribeEdgeLogSwitches(DescribeEdgeLogSwitchesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEdgeLogSwitchesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEdgeLogSwitchesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEdgeLogSwitches");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1499,6 +1559,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to install the log collection add-on on TKE Edge cluster nodes.
+     * @param req InstallEdgeLogAgentRequest
+     * @return InstallEdgeLogAgentResponse
+     * @throws TencentCloudSDKException
+     */
+    public InstallEdgeLogAgentResponse InstallEdgeLogAgent(InstallEdgeLogAgentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InstallEdgeLogAgentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InstallEdgeLogAgentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InstallEdgeLogAgent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *Modify cluster scaling group attributes
      * @param req ModifyClusterAsGroupAttributeRequest
      * @return ModifyClusterAsGroupAttributeResponse
@@ -1691,6 +1771,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SetNodePoolNodeProtectionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SetNodePoolNodeProtection");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to uninstall the log collection add-on from TKE Edge cluster nodes.
+     * @param req UninstallEdgeLogAgentRequest
+     * @return UninstallEdgeLogAgentResponse
+     * @throws TencentCloudSDKException
+     */
+    public UninstallEdgeLogAgentResponse UninstallEdgeLogAgent(UninstallEdgeLogAgentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UninstallEdgeLogAgentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UninstallEdgeLogAgentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UninstallEdgeLogAgent");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

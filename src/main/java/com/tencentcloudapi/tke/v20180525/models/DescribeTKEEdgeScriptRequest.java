@@ -51,6 +51,13 @@ public class DescribeTKEEdgeScriptRequest extends AbstractModel{
     private String Config;
 
     /**
+    * A legacy version of edgectl script can be downloaded. The latest version is downloaded by default. The version information can be checked in the script.
+    */
+    @SerializedName("ScriptVersion")
+    @Expose
+    private String ScriptVersion;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -114,6 +121,22 @@ public class DescribeTKEEdgeScriptRequest extends AbstractModel{
         this.Config = Config;
     }
 
+    /**
+     * Get A legacy version of edgectl script can be downloaded. The latest version is downloaded by default. The version information can be checked in the script. 
+     * @return ScriptVersion A legacy version of edgectl script can be downloaded. The latest version is downloaded by default. The version information can be checked in the script.
+     */
+    public String getScriptVersion() {
+        return this.ScriptVersion;
+    }
+
+    /**
+     * Set A legacy version of edgectl script can be downloaded. The latest version is downloaded by default. The version information can be checked in the script.
+     * @param ScriptVersion A legacy version of edgectl script can be downloaded. The latest version is downloaded by default. The version information can be checked in the script.
+     */
+    public void setScriptVersion(String ScriptVersion) {
+        this.ScriptVersion = ScriptVersion;
+    }
+
     public DescribeTKEEdgeScriptRequest() {
     }
 
@@ -134,6 +157,9 @@ public class DescribeTKEEdgeScriptRequest extends AbstractModel{
         if (source.Config != null) {
             this.Config = new String(source.Config);
         }
+        if (source.ScriptVersion != null) {
+            this.ScriptVersion = new String(source.ScriptVersion);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class DescribeTKEEdgeScriptRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Interface", this.Interface);
         this.setParamSimple(map, prefix + "NodeName", this.NodeName);
         this.setParamSimple(map, prefix + "Config", this.Config);
+        this.setParamSimple(map, prefix + "ScriptVersion", this.ScriptVersion);
 
     }
 }

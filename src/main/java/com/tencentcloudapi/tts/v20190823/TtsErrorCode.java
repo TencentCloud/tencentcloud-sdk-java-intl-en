@@ -90,6 +90,9 @@ public enum TtsErrorCode {
     // Server opened.
      UNSUPPORTEDOPERATION_SERVERALREADYOPEN("UnsupportedOperation.ServerAlreadyOpen"),
      
+    // The service is already terminated.
+     UNSUPPORTEDOPERATION_SERVERDESTORYED("UnsupportedOperation.ServerDestoryed"),
+     
     // Service inactivated.
      UNSUPPORTEDOPERATION_SERVERNOTOPEN("UnsupportedOperation.ServerNotOpen"),
      

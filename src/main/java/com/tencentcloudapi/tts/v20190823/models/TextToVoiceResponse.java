@@ -37,6 +37,13 @@ public class TextToVoiceResponse extends AbstractModel{
     private String SessionId;
 
     /**
+    * Timestamp information. If the timestamp feature is not enabled, an empty array will be returned.
+    */
+    @SerializedName("Subtitles")
+    @Expose
+    private Subtitle [] Subtitles;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -76,6 +83,22 @@ public class TextToVoiceResponse extends AbstractModel{
     }
 
     /**
+     * Get Timestamp information. If the timestamp feature is not enabled, an empty array will be returned. 
+     * @return Subtitles Timestamp information. If the timestamp feature is not enabled, an empty array will be returned.
+     */
+    public Subtitle [] getSubtitles() {
+        return this.Subtitles;
+    }
+
+    /**
+     * Set Timestamp information. If the timestamp feature is not enabled, an empty array will be returned.
+     * @param Subtitles Timestamp information. If the timestamp feature is not enabled, an empty array will be returned.
+     */
+    public void setSubtitles(Subtitle [] Subtitles) {
+        this.Subtitles = Subtitles;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -105,6 +128,12 @@ public class TextToVoiceResponse extends AbstractModel{
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
+        if (source.Subtitles != null) {
+            this.Subtitles = new Subtitle[source.Subtitles.length];
+            for (int i = 0; i < source.Subtitles.length; i++) {
+                this.Subtitles[i] = new Subtitle(source.Subtitles[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +146,7 @@ public class TextToVoiceResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Audio", this.Audio);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamArrayObj(map, prefix + "Subtitles.", this.Subtitles);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -79,6 +79,13 @@ public class UpdatePublishCdnStreamRequest extends AbstractModel{
     private McuPublishCdnParam [] PublishCdnParams;
 
     /**
+    * The stream mixing SEI parameters.
+    */
+    @SerializedName("SeiParams")
+    @Expose
+    private McuSeiParams SeiParams;
+
+    /**
      * Get The [SDKAppID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are relayed. 
      * @return SdkAppId The [SDKAppID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are relayed.
      */
@@ -206,6 +213,22 @@ public class UpdatePublishCdnStreamRequest extends AbstractModel{
         this.PublishCdnParams = PublishCdnParams;
     }
 
+    /**
+     * Get The stream mixing SEI parameters. 
+     * @return SeiParams The stream mixing SEI parameters.
+     */
+    public McuSeiParams getSeiParams() {
+        return this.SeiParams;
+    }
+
+    /**
+     * Set The stream mixing SEI parameters.
+     * @param SeiParams The stream mixing SEI parameters.
+     */
+    public void setSeiParams(McuSeiParams SeiParams) {
+        this.SeiParams = SeiParams;
+    }
+
     public UpdatePublishCdnStreamRequest() {
     }
 
@@ -241,6 +264,9 @@ public class UpdatePublishCdnStreamRequest extends AbstractModel{
                 this.PublishCdnParams[i] = new McuPublishCdnParam(source.PublishCdnParams[i]);
             }
         }
+        if (source.SeiParams != null) {
+            this.SeiParams = new McuSeiParams(source.SeiParams);
+        }
     }
 
 
@@ -256,6 +282,7 @@ public class UpdatePublishCdnStreamRequest extends AbstractModel{
         this.setParamObj(map, prefix + "VideoParams.", this.VideoParams);
         this.setParamObj(map, prefix + "SingleSubscribeParams.", this.SingleSubscribeParams);
         this.setParamArrayObj(map, prefix + "PublishCdnParams.", this.PublishCdnParams);
+        this.setParamObj(map, prefix + "SeiParams.", this.SeiParams);
 
     }
 }

@@ -101,6 +101,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long MaxNodePodNum;
 
     /**
+    * Cluster advanced settings
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ClusterAdvancedSettings")
+    @Expose
+    private EdgeClusterAdvancedSettings ClusterAdvancedSettings;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -280,6 +288,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.MaxNodePodNum = MaxNodePodNum;
     }
 
+    /**
+     * Get Cluster advanced settings
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ClusterAdvancedSettings Cluster advanced settings
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public EdgeClusterAdvancedSettings getClusterAdvancedSettings() {
+        return this.ClusterAdvancedSettings;
+    }
+
+    /**
+     * Set Cluster advanced settings
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ClusterAdvancedSettings Cluster advanced settings
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setClusterAdvancedSettings(EdgeClusterAdvancedSettings ClusterAdvancedSettings) {
+        this.ClusterAdvancedSettings = ClusterAdvancedSettings;
+    }
+
     public EdgeCluster() {
     }
 
@@ -321,6 +349,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.MaxNodePodNum != null) {
             this.MaxNodePodNum = new Long(source.MaxNodePodNum);
         }
+        if (source.ClusterAdvancedSettings != null) {
+            this.ClusterAdvancedSettings = new EdgeClusterAdvancedSettings(source.ClusterAdvancedSettings);
+        }
     }
 
 
@@ -339,6 +370,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "EdgeClusterVersion", this.EdgeClusterVersion);
         this.setParamSimple(map, prefix + "MaxNodePodNum", this.MaxNodePodNum);
+        this.setParamObj(map, prefix + "ClusterAdvancedSettings.", this.ClusterAdvancedSettings);
 
     }
 }

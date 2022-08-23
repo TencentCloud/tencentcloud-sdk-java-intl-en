@@ -44,6 +44,14 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
     private String Command;
 
     /**
+    * Version of edgectl script. The latest version is obtained by default.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ScriptVersion")
+    @Expose
+    private String ScriptVersion;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -99,6 +107,26 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
     }
 
     /**
+     * Get Version of edgectl script. The latest version is obtained by default.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ScriptVersion Version of edgectl script. The latest version is obtained by default.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getScriptVersion() {
+        return this.ScriptVersion;
+    }
+
+    /**
+     * Set Version of edgectl script. The latest version is obtained by default.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ScriptVersion Version of edgectl script. The latest version is obtained by default.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setScriptVersion(String ScriptVersion) {
+        this.ScriptVersion = ScriptVersion;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -131,6 +159,9 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
         if (source.Command != null) {
             this.Command = new String(source.Command);
         }
+        if (source.ScriptVersion != null) {
+            this.ScriptVersion = new String(source.ScriptVersion);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -144,6 +175,7 @@ public class DescribeTKEEdgeScriptResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Link", this.Link);
         this.setParamSimple(map, prefix + "Token", this.Token);
         this.setParamSimple(map, prefix + "Command", this.Command);
+        this.setParamSimple(map, prefix + "ScriptVersion", this.ScriptVersion);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

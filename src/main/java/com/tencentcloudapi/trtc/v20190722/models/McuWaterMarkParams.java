@@ -23,23 +23,46 @@ import java.util.HashMap;
 public class McuWaterMarkParams extends AbstractModel{
 
     /**
-    * The information of the watermark image.
+    * The watermark type. The default is 0, which indicates an image watermark.
+    */
+    @SerializedName("WaterMarkType")
+    @Expose
+    private Long WaterMarkType;
+
+    /**
+    * The watermark image information. This parameter is required if `WaterMarkType` is 0.
     */
     @SerializedName("WaterMarkImage")
     @Expose
     private McuWaterMarkImage WaterMarkImage;
 
     /**
-     * Get The information of the watermark image. 
-     * @return WaterMarkImage The information of the watermark image.
+     * Get The watermark type. The default is 0, which indicates an image watermark. 
+     * @return WaterMarkType The watermark type. The default is 0, which indicates an image watermark.
+     */
+    public Long getWaterMarkType() {
+        return this.WaterMarkType;
+    }
+
+    /**
+     * Set The watermark type. The default is 0, which indicates an image watermark.
+     * @param WaterMarkType The watermark type. The default is 0, which indicates an image watermark.
+     */
+    public void setWaterMarkType(Long WaterMarkType) {
+        this.WaterMarkType = WaterMarkType;
+    }
+
+    /**
+     * Get The watermark image information. This parameter is required if `WaterMarkType` is 0. 
+     * @return WaterMarkImage The watermark image information. This parameter is required if `WaterMarkType` is 0.
      */
     public McuWaterMarkImage getWaterMarkImage() {
         return this.WaterMarkImage;
     }
 
     /**
-     * Set The information of the watermark image.
-     * @param WaterMarkImage The information of the watermark image.
+     * Set The watermark image information. This parameter is required if `WaterMarkType` is 0.
+     * @param WaterMarkImage The watermark image information. This parameter is required if `WaterMarkType` is 0.
      */
     public void setWaterMarkImage(McuWaterMarkImage WaterMarkImage) {
         this.WaterMarkImage = WaterMarkImage;
@@ -53,6 +76,9 @@ public class McuWaterMarkParams extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public McuWaterMarkParams(McuWaterMarkParams source) {
+        if (source.WaterMarkType != null) {
+            this.WaterMarkType = new Long(source.WaterMarkType);
+        }
         if (source.WaterMarkImage != null) {
             this.WaterMarkImage = new McuWaterMarkImage(source.WaterMarkImage);
         }
@@ -63,6 +89,7 @@ public class McuWaterMarkParams extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "WaterMarkType", this.WaterMarkType);
         this.setParamObj(map, prefix + "WaterMarkImage.", this.WaterMarkImage);
 
     }
