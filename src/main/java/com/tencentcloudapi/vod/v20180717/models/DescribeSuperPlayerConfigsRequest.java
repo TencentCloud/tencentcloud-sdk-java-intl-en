@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class DescribeSuperPlayerConfigsRequest extends AbstractModel{
 
     /**
+    * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * Player configuration name filter. Array length limit: 100.
     */
     @SerializedName("Names")
@@ -53,11 +60,20 @@ public class DescribeSuperPlayerConfigsRequest extends AbstractModel{
     private String Type;
 
     /**
-    * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-    */
-    @SerializedName("SubAppId")
-    @Expose
-    private Long SubAppId;
+     * Get <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b> 
+     * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
+    }
 
     /**
      * Get Player configuration name filter. Array length limit: 100. 
@@ -131,22 +147,6 @@ public class DescribeSuperPlayerConfigsRequest extends AbstractModel{
         this.Type = Type;
     }
 
-    /**
-     * Get [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty. 
-     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public Long getSubAppId() {
-        return this.SubAppId;
-    }
-
-    /**
-     * Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
-    }
-
     public DescribeSuperPlayerConfigsRequest() {
     }
 
@@ -155,6 +155,9 @@ public class DescribeSuperPlayerConfigsRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeSuperPlayerConfigsRequest(DescribeSuperPlayerConfigsRequest source) {
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
         if (source.Names != null) {
             this.Names = new String[source.Names.length];
             for (int i = 0; i < source.Names.length; i++) {
@@ -170,9 +173,6 @@ public class DescribeSuperPlayerConfigsRequest extends AbstractModel{
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
-        }
     }
 
 
@@ -180,11 +180,11 @@ public class DescribeSuperPlayerConfigsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamArraySimple(map, prefix + "Names.", this.Names);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Type", this.Type);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }
 }

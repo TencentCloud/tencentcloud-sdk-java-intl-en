@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class BindLiveDomainCertResponse extends AbstractModel{
+public class ModifyNetworkAclQuintupleEntriesResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,14 +45,14 @@ public class BindLiveDomainCertResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public BindLiveDomainCertResponse() {
+    public ModifyNetworkAclQuintupleEntriesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public BindLiveDomainCertResponse(BindLiveDomainCertResponse source) {
+    public ModifyNetworkAclQuintupleEntriesResponse(ModifyNetworkAclQuintupleEntriesResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }

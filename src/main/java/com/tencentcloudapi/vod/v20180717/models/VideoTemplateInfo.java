@@ -64,26 +64,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ResolutionAdaptive;
 
     /**
-    * Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+    * The maximum video width (or long side) in pixels. Value range: 0 and [128, 8192].
+<li>If both `Width` and `Height` are 0, the output resolution will be the same as that of the source video.</li>
+<li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
+<li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
+<li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
 Default value: 0.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+    * The maximum video height (or short side) in pixels. Value range: 0 and [128, 8192].
+<li>If both `Width` and `Height` are 0, the output resolution will be the same as that of the source video.</li>
+<li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
+<li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
+<li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
 Default value: 0.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Height")
     @Expose
@@ -120,6 +118,16 @@ When this parameter is set to 0 or left empty, `Gop` will be automatically set.
     @SerializedName("Gop")
     @Expose
     private Long Gop;
+
+    /**
+    * Whether to output an HDR (high dynamic range) video if the source video is HDR. Valid values:
+<li>ON: If the source video is HDR, output an HDR video; if not, output an SDR (standard dynamic range) video.</li>
+<li>OFF: Output an SDR video regardless of whether the source video is HDR.</li>
+Default value: OFF.
+    */
+    @SerializedName("PreserveHDRSwitch")
+    @Expose
+    private String PreserveHDRSwitch;
 
     /**
      * Get The video codec. Valid values:
@@ -238,80 +246,72 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+     * Get The maximum video width (or long side) in pixels. Value range: 0 and [128, 8192].
+<li>If both `Width` and `Height` are 0, the output resolution will be the same as that of the source video.</li>
+<li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
+<li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
+<li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
+Default value: 0. 
+     * @return Width The maximum video width (or long side) in pixels. Value range: 0 and [128, 8192].
+<li>If both `Width` and `Height` are 0, the output resolution will be the same as that of the source video.</li>
+<li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
+<li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
+<li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
 Default value: 0.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Width Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+     * Set The maximum video width (or long side) in pixels. Value range: 0 and [128, 8192].
+<li>If both `Width` and `Height` are 0, the output resolution will be the same as that of the source video.</li>
+<li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
+<li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
+<li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
 Default value: 0.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Width Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+     * @param Width The maximum video width (or long side) in pixels. Value range: 0 and [128, 8192].
+<li>If both `Width` and `Height` are 0, the output resolution will be the same as that of the source video.</li>
+<li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
+<li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
+<li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
 Default value: 0.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+     * Get The maximum video height (or short side) in pixels. Value range: 0 and [128, 8192].
+<li>If both `Width` and `Height` are 0, the output resolution will be the same as that of the source video.</li>
+<li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
+<li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
+<li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
+Default value: 0. 
+     * @return Height The maximum video height (or short side) in pixels. Value range: 0 and [128, 8192].
+<li>If both `Width` and `Height` are 0, the output resolution will be the same as that of the source video.</li>
+<li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
+<li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
+<li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
 Default value: 0.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Height Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+     * Set The maximum video height (or short side) in pixels. Value range: 0 and [128, 8192].
+<li>If both `Width` and `Height` are 0, the output resolution will be the same as that of the source video.</li>
+<li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
+<li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
+<li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
 Default value: 0.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Height Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+     * @param Height The maximum video height (or short side) in pixels. Value range: 0 and [128, 8192].
+<li>If both `Width` and `Height` are 0, the output resolution will be the same as that of the source video.</li>
+<li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
+<li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
+<li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
 Default value: 0.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
@@ -409,6 +409,34 @@ When this parameter is set to 0 or left empty, `Gop` will be automatically set.
         this.Gop = Gop;
     }
 
+    /**
+     * Get Whether to output an HDR (high dynamic range) video if the source video is HDR. Valid values:
+<li>ON: If the source video is HDR, output an HDR video; if not, output an SDR (standard dynamic range) video.</li>
+<li>OFF: Output an SDR video regardless of whether the source video is HDR.</li>
+Default value: OFF. 
+     * @return PreserveHDRSwitch Whether to output an HDR (high dynamic range) video if the source video is HDR. Valid values:
+<li>ON: If the source video is HDR, output an HDR video; if not, output an SDR (standard dynamic range) video.</li>
+<li>OFF: Output an SDR video regardless of whether the source video is HDR.</li>
+Default value: OFF.
+     */
+    public String getPreserveHDRSwitch() {
+        return this.PreserveHDRSwitch;
+    }
+
+    /**
+     * Set Whether to output an HDR (high dynamic range) video if the source video is HDR. Valid values:
+<li>ON: If the source video is HDR, output an HDR video; if not, output an SDR (standard dynamic range) video.</li>
+<li>OFF: Output an SDR video regardless of whether the source video is HDR.</li>
+Default value: OFF.
+     * @param PreserveHDRSwitch Whether to output an HDR (high dynamic range) video if the source video is HDR. Valid values:
+<li>ON: If the source video is HDR, output an HDR video; if not, output an SDR (standard dynamic range) video.</li>
+<li>OFF: Output an SDR video regardless of whether the source video is HDR.</li>
+Default value: OFF.
+     */
+    public void setPreserveHDRSwitch(String PreserveHDRSwitch) {
+        this.PreserveHDRSwitch = PreserveHDRSwitch;
+    }
+
     public VideoTemplateInfo() {
     }
 
@@ -444,6 +472,9 @@ When this parameter is set to 0 or left empty, `Gop` will be automatically set.
         if (source.Gop != null) {
             this.Gop = new Long(source.Gop);
         }
+        if (source.PreserveHDRSwitch != null) {
+            this.PreserveHDRSwitch = new String(source.PreserveHDRSwitch);
+        }
     }
 
 
@@ -460,6 +491,7 @@ When this parameter is set to 0 or left empty, `Gop` will be automatically set.
         this.setParamSimple(map, prefix + "FillType", this.FillType);
         this.setParamSimple(map, prefix + "Vcrf", this.Vcrf);
         this.setParamSimple(map, prefix + "Gop", this.Gop);
+        this.setParamSimple(map, prefix + "PreserveHDRSwitch", this.PreserveHDRSwitch);
 
     }
 }

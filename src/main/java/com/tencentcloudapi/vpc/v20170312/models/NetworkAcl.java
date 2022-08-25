@@ -72,6 +72,20 @@ public class NetworkAcl extends AbstractModel{
     private NetworkAclEntry [] EgressEntries;
 
     /**
+    * Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
+    */
+    @SerializedName("NetworkAclType")
+    @Expose
+    private String NetworkAclType;
+
+    /**
+    * Tag key-value pairs
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
      * Get `ID` of the `VPC` instance. 
      * @return VpcId `ID` of the `VPC` instance.
      */
@@ -183,6 +197,38 @@ public class NetworkAcl extends AbstractModel{
         this.EgressEntries = EgressEntries;
     }
 
+    /**
+     * Get Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`. 
+     * @return NetworkAclType Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
+     */
+    public String getNetworkAclType() {
+        return this.NetworkAclType;
+    }
+
+    /**
+     * Set Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
+     * @param NetworkAclType Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
+     */
+    public void setNetworkAclType(String NetworkAclType) {
+        this.NetworkAclType = NetworkAclType;
+    }
+
+    /**
+     * Get Tag key-value pairs 
+     * @return TagSet Tag key-value pairs
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set Tag key-value pairs
+     * @param TagSet Tag key-value pairs
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
     public NetworkAcl() {
     }
 
@@ -221,6 +267,15 @@ public class NetworkAcl extends AbstractModel{
                 this.EgressEntries[i] = new NetworkAclEntry(source.EgressEntries[i]);
             }
         }
+        if (source.NetworkAclType != null) {
+            this.NetworkAclType = new String(source.NetworkAclType);
+        }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
     }
 
 
@@ -235,6 +290,8 @@ public class NetworkAcl extends AbstractModel{
         this.setParamArrayObj(map, prefix + "SubnetSet.", this.SubnetSet);
         this.setParamArrayObj(map, prefix + "IngressEntries.", this.IngressEntries);
         this.setParamArrayObj(map, prefix + "EgressEntries.", this.EgressEntries);
+        this.setParamSimple(map, prefix + "NetworkAclType", this.NetworkAclType);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

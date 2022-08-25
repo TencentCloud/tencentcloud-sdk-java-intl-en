@@ -20,90 +20,79 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyLiveDomainCertRequest extends AbstractModel{
+public class LiveCertDomainInfo extends AbstractModel{
 
     /**
-    * Playback domain name.
+    * The domain name.
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
 
     /**
-    * Certificate ID.
-    */
-    @SerializedName("CertId")
-    @Expose
-    private Long CertId;
-
-    /**
-    * Status. 0: off, 1: on.
+    * Whether to enable HTTPS for the domain.
+1: Enable
+0: Disable
+-1: Keep the current configuration
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get Playback domain name. 
-     * @return DomainName Playback domain name.
+     * Get The domain name. 
+     * @return DomainName The domain name.
      */
     public String getDomainName() {
         return this.DomainName;
     }
 
     /**
-     * Set Playback domain name.
-     * @param DomainName Playback domain name.
+     * Set The domain name.
+     * @param DomainName The domain name.
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * Get Certificate ID. 
-     * @return CertId Certificate ID.
-     */
-    public Long getCertId() {
-        return this.CertId;
-    }
-
-    /**
-     * Set Certificate ID.
-     * @param CertId Certificate ID.
-     */
-    public void setCertId(Long CertId) {
-        this.CertId = CertId;
-    }
-
-    /**
-     * Get Status. 0: off, 1: on. 
-     * @return Status Status. 0: off, 1: on.
+     * Get Whether to enable HTTPS for the domain.
+1: Enable
+0: Disable
+-1: Keep the current configuration 
+     * @return Status Whether to enable HTTPS for the domain.
+1: Enable
+0: Disable
+-1: Keep the current configuration
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status. 0: off, 1: on.
-     * @param Status Status. 0: off, 1: on.
+     * Set Whether to enable HTTPS for the domain.
+1: Enable
+0: Disable
+-1: Keep the current configuration
+     * @param Status Whether to enable HTTPS for the domain.
+1: Enable
+0: Disable
+-1: Keep the current configuration
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
-    public ModifyLiveDomainCertRequest() {
+    public LiveCertDomainInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyLiveDomainCertRequest(ModifyLiveDomainCertRequest source) {
+    public LiveCertDomainInfo(LiveCertDomainInfo source) {
         if (source.DomainName != null) {
             this.DomainName = new String(source.DomainName);
-        }
-        if (source.CertId != null) {
-            this.CertId = new Long(source.CertId);
         }
         if (source.Status != null) {
             this.Status = new Long(source.Status);
@@ -116,7 +105,6 @@ public class ModifyLiveDomainCertRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
-        this.setParamSimple(map, prefix + "CertId", this.CertId);
         this.setParamSimple(map, prefix + "Status", this.Status);
 
     }

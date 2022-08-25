@@ -13,14 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteLiveCertResponse extends AbstractModel{
+public class FetchMessageListByOffsetResponse extends AbstractModel{
+
+    /**
+    * Returned result. Note: The returned list does not display the message content (key and value). To query the message content, call the `FetchMessageByOffset` API.
+    */
+    @SerializedName("Result")
+    @Expose
+    private ConsumerRecord [] Result;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -28,6 +35,22 @@ public class DeleteLiveCertResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Returned result. Note: The returned list does not display the message content (key and value). To query the message content, call the `FetchMessageByOffset` API. 
+     * @return Result Returned result. Note: The returned list does not display the message content (key and value). To query the message content, call the `FetchMessageByOffset` API.
+     */
+    public ConsumerRecord [] getResult() {
+        return this.Result;
+    }
+
+    /**
+     * Set Returned result. Note: The returned list does not display the message content (key and value). To query the message content, call the `FetchMessageByOffset` API.
+     * @param Result Returned result. Note: The returned list does not display the message content (key and value). To query the message content, call the `FetchMessageByOffset` API.
+     */
+    public void setResult(ConsumerRecord [] Result) {
+        this.Result = Result;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -45,14 +68,20 @@ public class DeleteLiveCertResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DeleteLiveCertResponse() {
+    public FetchMessageListByOffsetResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteLiveCertResponse(DeleteLiveCertResponse source) {
+    public FetchMessageListByOffsetResponse(FetchMessageListByOffsetResponse source) {
+        if (source.Result != null) {
+            this.Result = new ConsumerRecord[source.Result.length];
+            for (int i = 0; i < source.Result.length; i++) {
+                this.Result[i] = new ConsumerRecord(source.Result[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +92,7 @@ public class DeleteLiveCertResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

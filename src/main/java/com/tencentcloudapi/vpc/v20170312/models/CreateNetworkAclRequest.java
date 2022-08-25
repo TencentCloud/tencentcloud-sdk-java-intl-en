@@ -37,6 +37,20 @@ public class CreateNetworkAclRequest extends AbstractModel{
     private String NetworkAclName;
 
     /**
+    * Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
+    */
+    @SerializedName("NetworkAclType")
+    @Expose
+    private String NetworkAclType;
+
+    /**
+    * Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API. 
      * @return VpcId VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
      */
@@ -68,6 +82,38 @@ public class CreateNetworkAclRequest extends AbstractModel{
         this.NetworkAclName = NetworkAclName;
     }
 
+    /**
+     * Get Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`. 
+     * @return NetworkAclType Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
+     */
+    public String getNetworkAclType() {
+        return this.NetworkAclType;
+    }
+
+    /**
+     * Set Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
+     * @param NetworkAclType Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
+     */
+    public void setNetworkAclType(String NetworkAclType) {
+        this.NetworkAclType = NetworkAclType;
+    }
+
+    /**
+     * Get Bound tags, such as [{"Key": "city", "Value": "shanghai"}]. 
+     * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     * @param Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateNetworkAclRequest() {
     }
 
@@ -82,6 +128,15 @@ public class CreateNetworkAclRequest extends AbstractModel{
         if (source.NetworkAclName != null) {
             this.NetworkAclName = new String(source.NetworkAclName);
         }
+        if (source.NetworkAclType != null) {
+            this.NetworkAclType = new String(source.NetworkAclType);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -91,6 +146,8 @@ public class CreateNetworkAclRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "NetworkAclName", this.NetworkAclName);
+        this.setParamSimple(map, prefix + "NetworkAclType", this.NetworkAclType);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

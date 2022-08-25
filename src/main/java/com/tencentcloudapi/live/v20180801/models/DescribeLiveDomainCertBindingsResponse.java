@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.monitor.v20180724.models;
+package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMonitorTypesResponse extends AbstractModel{
+public class DescribeLiveDomainCertBindingsResponse extends AbstractModel{
 
     /**
-    * Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
+    * The information of domains that meet the query criteria.
     */
-    @SerializedName("MonitorTypes")
+    @SerializedName("LiveDomainCertBindings")
     @Expose
-    private String [] MonitorTypes;
+    private LiveDomainCertBindings [] LiveDomainCertBindings;
 
     /**
-    * Monitoring type details
+    * The number of records returned, which is needed for pagination.
     */
-    @SerializedName("MonitorTypeInfos")
+    @SerializedName("TotalNum")
     @Expose
-    private MonitorTypeInfo [] MonitorTypeInfos;
+    private Long TotalNum;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +44,35 @@ public class DescribeMonitorTypesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring) 
-     * @return MonitorTypes Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
+     * Get The information of domains that meet the query criteria. 
+     * @return LiveDomainCertBindings The information of domains that meet the query criteria.
      */
-    public String [] getMonitorTypes() {
-        return this.MonitorTypes;
+    public LiveDomainCertBindings [] getLiveDomainCertBindings() {
+        return this.LiveDomainCertBindings;
     }
 
     /**
-     * Set Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
-     * @param MonitorTypes Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
+     * Set The information of domains that meet the query criteria.
+     * @param LiveDomainCertBindings The information of domains that meet the query criteria.
      */
-    public void setMonitorTypes(String [] MonitorTypes) {
-        this.MonitorTypes = MonitorTypes;
+    public void setLiveDomainCertBindings(LiveDomainCertBindings [] LiveDomainCertBindings) {
+        this.LiveDomainCertBindings = LiveDomainCertBindings;
     }
 
     /**
-     * Get Monitoring type details 
-     * @return MonitorTypeInfos Monitoring type details
+     * Get The number of records returned, which is needed for pagination. 
+     * @return TotalNum The number of records returned, which is needed for pagination.
      */
-    public MonitorTypeInfo [] getMonitorTypeInfos() {
-        return this.MonitorTypeInfos;
+    public Long getTotalNum() {
+        return this.TotalNum;
     }
 
     /**
-     * Set Monitoring type details
-     * @param MonitorTypeInfos Monitoring type details
+     * Set The number of records returned, which is needed for pagination.
+     * @param TotalNum The number of records returned, which is needed for pagination.
      */
-    public void setMonitorTypeInfos(MonitorTypeInfo [] MonitorTypeInfos) {
-        this.MonitorTypeInfos = MonitorTypeInfos;
+    public void setTotalNum(Long TotalNum) {
+        this.TotalNum = TotalNum;
     }
 
     /**
@@ -91,25 +91,22 @@ public class DescribeMonitorTypesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeMonitorTypesResponse() {
+    public DescribeLiveDomainCertBindingsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeMonitorTypesResponse(DescribeMonitorTypesResponse source) {
-        if (source.MonitorTypes != null) {
-            this.MonitorTypes = new String[source.MonitorTypes.length];
-            for (int i = 0; i < source.MonitorTypes.length; i++) {
-                this.MonitorTypes[i] = new String(source.MonitorTypes[i]);
+    public DescribeLiveDomainCertBindingsResponse(DescribeLiveDomainCertBindingsResponse source) {
+        if (source.LiveDomainCertBindings != null) {
+            this.LiveDomainCertBindings = new LiveDomainCertBindings[source.LiveDomainCertBindings.length];
+            for (int i = 0; i < source.LiveDomainCertBindings.length; i++) {
+                this.LiveDomainCertBindings[i] = new LiveDomainCertBindings(source.LiveDomainCertBindings[i]);
             }
         }
-        if (source.MonitorTypeInfos != null) {
-            this.MonitorTypeInfos = new MonitorTypeInfo[source.MonitorTypeInfos.length];
-            for (int i = 0; i < source.MonitorTypeInfos.length; i++) {
-                this.MonitorTypeInfos[i] = new MonitorTypeInfo(source.MonitorTypeInfos[i]);
-            }
+        if (source.TotalNum != null) {
+            this.TotalNum = new Long(source.TotalNum);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -121,8 +118,8 @@ public class DescribeMonitorTypesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "MonitorTypes.", this.MonitorTypes);
-        this.setParamArrayObj(map, prefix + "MonitorTypeInfos.", this.MonitorTypeInfos);
+        this.setParamArrayObj(map, prefix + "LiveDomainCertBindings.", this.LiveDomainCertBindings);
+        this.setParamSimple(map, prefix + "TotalNum", this.TotalNum);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

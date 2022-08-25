@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class MediaClassInfo extends AbstractModel{
 
     /**
-    * Category ID
+    * The category ID.
     */
     @SerializedName("ClassId")
     @Expose
@@ -37,11 +37,11 @@ public class MediaClassInfo extends AbstractModel{
     private Long ParentId;
 
     /**
-    * Category name
+    * The category name.
     */
-    @SerializedName("ClassName")
+    @SerializedName("Name")
     @Expose
-    private String ClassName;
+    private String Name;
 
     /**
     * Category level. 0 for first-level category, up to 3, i.e., up to 4 levels of categories are allowed.
@@ -51,23 +51,30 @@ public class MediaClassInfo extends AbstractModel{
     private Long Level;
 
     /**
-    * Set of IDs of the immediate subcategories in current category
+    * The IDs of the immediate subcategories of the current category.
     */
     @SerializedName("SubClassIdSet")
     @Expose
     private Long [] SubClassIdSet;
 
     /**
-     * Get Category ID 
-     * @return ClassId Category ID
+    * The category name. This parameter is not recommended. Please use `Name` instead.
+    */
+    @SerializedName("ClassName")
+    @Expose
+    private String ClassName;
+
+    /**
+     * Get The category ID. 
+     * @return ClassId The category ID.
      */
     public Long getClassId() {
         return this.ClassId;
     }
 
     /**
-     * Set Category ID
-     * @param ClassId Category ID
+     * Set The category ID.
+     * @param ClassId The category ID.
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
@@ -90,19 +97,19 @@ public class MediaClassInfo extends AbstractModel{
     }
 
     /**
-     * Get Category name 
-     * @return ClassName Category name
+     * Get The category name. 
+     * @return Name The category name.
      */
-    public String getClassName() {
-        return this.ClassName;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set Category name
-     * @param ClassName Category name
+     * Set The category name.
+     * @param Name The category name.
      */
-    public void setClassName(String ClassName) {
-        this.ClassName = ClassName;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
@@ -122,19 +129,35 @@ public class MediaClassInfo extends AbstractModel{
     }
 
     /**
-     * Get Set of IDs of the immediate subcategories in current category 
-     * @return SubClassIdSet Set of IDs of the immediate subcategories in current category
+     * Get The IDs of the immediate subcategories of the current category. 
+     * @return SubClassIdSet The IDs of the immediate subcategories of the current category.
      */
     public Long [] getSubClassIdSet() {
         return this.SubClassIdSet;
     }
 
     /**
-     * Set Set of IDs of the immediate subcategories in current category
-     * @param SubClassIdSet Set of IDs of the immediate subcategories in current category
+     * Set The IDs of the immediate subcategories of the current category.
+     * @param SubClassIdSet The IDs of the immediate subcategories of the current category.
      */
     public void setSubClassIdSet(Long [] SubClassIdSet) {
         this.SubClassIdSet = SubClassIdSet;
+    }
+
+    /**
+     * Get The category name. This parameter is not recommended. Please use `Name` instead. 
+     * @return ClassName The category name. This parameter is not recommended. Please use `Name` instead.
+     */
+    public String getClassName() {
+        return this.ClassName;
+    }
+
+    /**
+     * Set The category name. This parameter is not recommended. Please use `Name` instead.
+     * @param ClassName The category name. This parameter is not recommended. Please use `Name` instead.
+     */
+    public void setClassName(String ClassName) {
+        this.ClassName = ClassName;
     }
 
     public MediaClassInfo() {
@@ -151,8 +174,8 @@ public class MediaClassInfo extends AbstractModel{
         if (source.ParentId != null) {
             this.ParentId = new Long(source.ParentId);
         }
-        if (source.ClassName != null) {
-            this.ClassName = new String(source.ClassName);
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
         if (source.Level != null) {
             this.Level = new Long(source.Level);
@@ -163,6 +186,9 @@ public class MediaClassInfo extends AbstractModel{
                 this.SubClassIdSet[i] = new Long(source.SubClassIdSet[i]);
             }
         }
+        if (source.ClassName != null) {
+            this.ClassName = new String(source.ClassName);
+        }
     }
 
 
@@ -172,9 +198,10 @@ public class MediaClassInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClassId", this.ClassId);
         this.setParamSimple(map, prefix + "ParentId", this.ParentId);
-        this.setParamSimple(map, prefix + "ClassName", this.ClassName);
+        this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Level", this.Level);
         this.setParamArraySimple(map, prefix + "SubClassIdSet.", this.SubClassIdSet);
+        this.setParamSimple(map, prefix + "ClassName", this.ClassName);
 
     }
 }

@@ -117,6 +117,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String CreateTime;
 
     /**
+    * Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("FilenameMode")
+    @Expose
+    private Long FilenameMode;
+
+    /**
      * Get Shipping rule ID 
      * @return ShipperId Shipping rule ID
      */
@@ -336,6 +344,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return FilenameMode Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getFilenameMode() {
+        return this.FilenameMode;
+    }
+
+    /**
+     * Set Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param FilenameMode Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setFilenameMode(Long FilenameMode) {
+        this.FilenameMode = FilenameMode;
+    }
+
     public ShipperInfo() {
     }
 
@@ -386,6 +414,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.FilenameMode != null) {
+            this.FilenameMode = new Long(source.FilenameMode);
+        }
     }
 
 
@@ -406,6 +437,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamObj(map, prefix + "Compress.", this.Compress);
         this.setParamObj(map, prefix + "Content.", this.Content);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "FilenameMode", this.FilenameMode);
 
     }
 }

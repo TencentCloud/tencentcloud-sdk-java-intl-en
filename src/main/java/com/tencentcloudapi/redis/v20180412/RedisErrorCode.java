@@ -210,6 +210,9 @@ public enum RedisErrorCode {
     // Backup status exception. The operation cannot be performed temporarily. The backup may have expired or been deleted.
      RESOURCEUNAVAILABLE_BACKUPSTATUSABNORMAL("ResourceUnavailable.BackupStatusAbnormal"),
      
+    // 
+     RESOURCEUNAVAILABLE_BACKUPSTATUSINVALID("ResourceUnavailable.BackupStatusInvalid"),
+     
     // Failed to call the backend API.
      RESOURCEUNAVAILABLE_CALLOSSERROR("ResourceUnavailable.CallOssError"),
      

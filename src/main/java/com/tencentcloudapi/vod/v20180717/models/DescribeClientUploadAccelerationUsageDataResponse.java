@@ -13,14 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyLiveDomainCertResponse extends AbstractModel{
+public class DescribeClientUploadAccelerationUsageDataResponse extends AbstractModel{
+
+    /**
+    * The usage of client upload acceleration.
+    */
+    @SerializedName("ClientUploadAccelerationUsageDataSet")
+    @Expose
+    private StatDataItem [] ClientUploadAccelerationUsageDataSet;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -28,6 +35,22 @@ public class ModifyLiveDomainCertResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get The usage of client upload acceleration. 
+     * @return ClientUploadAccelerationUsageDataSet The usage of client upload acceleration.
+     */
+    public StatDataItem [] getClientUploadAccelerationUsageDataSet() {
+        return this.ClientUploadAccelerationUsageDataSet;
+    }
+
+    /**
+     * Set The usage of client upload acceleration.
+     * @param ClientUploadAccelerationUsageDataSet The usage of client upload acceleration.
+     */
+    public void setClientUploadAccelerationUsageDataSet(StatDataItem [] ClientUploadAccelerationUsageDataSet) {
+        this.ClientUploadAccelerationUsageDataSet = ClientUploadAccelerationUsageDataSet;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -45,14 +68,20 @@ public class ModifyLiveDomainCertResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ModifyLiveDomainCertResponse() {
+    public DescribeClientUploadAccelerationUsageDataResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyLiveDomainCertResponse(ModifyLiveDomainCertResponse source) {
+    public DescribeClientUploadAccelerationUsageDataResponse(DescribeClientUploadAccelerationUsageDataResponse source) {
+        if (source.ClientUploadAccelerationUsageDataSet != null) {
+            this.ClientUploadAccelerationUsageDataSet = new StatDataItem[source.ClientUploadAccelerationUsageDataSet.length];
+            for (int i = 0; i < source.ClientUploadAccelerationUsageDataSet.length; i++) {
+                this.ClientUploadAccelerationUsageDataSet[i] = new StatDataItem(source.ClientUploadAccelerationUsageDataSet[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +92,7 @@ public class ModifyLiveDomainCertResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "ClientUploadAccelerationUsageDataSet.", this.ClientUploadAccelerationUsageDataSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyNetworkAclEntriesRequest extends AbstractModel{
+public class DeleteNetworkAclQuintupleEntriesRequest extends AbstractModel{
 
     /**
     * Network ACL instance ID, such as `acl-12345678`.
@@ -30,14 +30,7 @@ public class ModifyNetworkAclEntriesRequest extends AbstractModel{
     private String NetworkAclId;
 
     /**
-    * Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
-    */
-    @SerializedName("NetworkAclEntrySet")
-    @Expose
-    private NetworkAclEntrySet NetworkAclEntrySet;
-
-    /**
-    * Network ACL quintuple rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
+    * Network ACL quintuple rule set.
     */
     @SerializedName("NetworkAclQuintupleSet")
     @Expose
@@ -60,50 +53,31 @@ public class ModifyNetworkAclEntriesRequest extends AbstractModel{
     }
 
     /**
-     * Get Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time. 
-     * @return NetworkAclEntrySet Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
-     */
-    public NetworkAclEntrySet getNetworkAclEntrySet() {
-        return this.NetworkAclEntrySet;
-    }
-
-    /**
-     * Set Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
-     * @param NetworkAclEntrySet Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
-     */
-    public void setNetworkAclEntrySet(NetworkAclEntrySet NetworkAclEntrySet) {
-        this.NetworkAclEntrySet = NetworkAclEntrySet;
-    }
-
-    /**
-     * Get Network ACL quintuple rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time. 
-     * @return NetworkAclQuintupleSet Network ACL quintuple rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
+     * Get Network ACL quintuple rule set. 
+     * @return NetworkAclQuintupleSet Network ACL quintuple rule set.
      */
     public NetworkAclQuintupleEntries getNetworkAclQuintupleSet() {
         return this.NetworkAclQuintupleSet;
     }
 
     /**
-     * Set Network ACL quintuple rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
-     * @param NetworkAclQuintupleSet Network ACL quintuple rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
+     * Set Network ACL quintuple rule set.
+     * @param NetworkAclQuintupleSet Network ACL quintuple rule set.
      */
     public void setNetworkAclQuintupleSet(NetworkAclQuintupleEntries NetworkAclQuintupleSet) {
         this.NetworkAclQuintupleSet = NetworkAclQuintupleSet;
     }
 
-    public ModifyNetworkAclEntriesRequest() {
+    public DeleteNetworkAclQuintupleEntriesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyNetworkAclEntriesRequest(ModifyNetworkAclEntriesRequest source) {
+    public DeleteNetworkAclQuintupleEntriesRequest(DeleteNetworkAclQuintupleEntriesRequest source) {
         if (source.NetworkAclId != null) {
             this.NetworkAclId = new String(source.NetworkAclId);
-        }
-        if (source.NetworkAclEntrySet != null) {
-            this.NetworkAclEntrySet = new NetworkAclEntrySet(source.NetworkAclEntrySet);
         }
         if (source.NetworkAclQuintupleSet != null) {
             this.NetworkAclQuintupleSet = new NetworkAclQuintupleEntries(source.NetworkAclQuintupleSet);
@@ -116,7 +90,6 @@ public class ModifyNetworkAclEntriesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NetworkAclId", this.NetworkAclId);
-        this.setParamObj(map, prefix + "NetworkAclEntrySet.", this.NetworkAclEntrySet);
         this.setParamObj(map, prefix + "NetworkAclQuintupleSet.", this.NetworkAclQuintupleSet);
 
     }

@@ -45,6 +45,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long CreateLimitCount;
 
     /**
+    * The number of domains accelerated in the Chinese mainland, globally, and outside the Chinese mainland respectively.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PlayTypeCount")
+    @Expose
+    private Long [] PlayTypeCount;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -104,6 +112,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get The number of domains accelerated in the Chinese mainland, globally, and outside the Chinese mainland respectively.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PlayTypeCount The number of domains accelerated in the Chinese mainland, globally, and outside the Chinese mainland respectively.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long [] getPlayTypeCount() {
+        return this.PlayTypeCount;
+    }
+
+    /**
+     * Set The number of domains accelerated in the Chinese mainland, globally, and outside the Chinese mainland respectively.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PlayTypeCount The number of domains accelerated in the Chinese mainland, globally, and outside the Chinese mainland respectively.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPlayTypeCount(Long [] PlayTypeCount) {
+        this.PlayTypeCount = PlayTypeCount;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -139,6 +167,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.CreateLimitCount != null) {
             this.CreateLimitCount = new Long(source.CreateLimitCount);
         }
+        if (source.PlayTypeCount != null) {
+            this.PlayTypeCount = new Long[source.PlayTypeCount.length];
+            for (int i = 0; i < source.PlayTypeCount.length; i++) {
+                this.PlayTypeCount[i] = new Long(source.PlayTypeCount[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -152,6 +186,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "AllCount", this.AllCount);
         this.setParamArrayObj(map, prefix + "DomainList.", this.DomainList);
         this.setParamSimple(map, prefix + "CreateLimitCount", this.CreateLimitCount);
+        this.setParamArraySimple(map, prefix + "PlayTypeCount.", this.PlayTypeCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

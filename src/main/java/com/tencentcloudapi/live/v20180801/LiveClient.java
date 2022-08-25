@@ -102,27 +102,6 @@ After the number of watermarks exceeds the upper limit of 100, to add a new wate
     }
 
     /**
-     *This API is used to bind a domain name certificate.
-Note: you need to call the `CreateLiveCert` API first to add a certificate. After getting the certificate ID, call this API for binding.
-     * @param req BindLiveDomainCertRequest
-     * @return BindLiveDomainCertResponse
-     * @throws TencentCloudSDKException
-     */
-    public BindLiveDomainCertResponse BindLiveDomainCert(BindLiveDomainCertRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<BindLiveDomainCertResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<BindLiveDomainCertResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "BindLiveDomainCert");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to cancel a stream mix. It can be used basically in the same way as `mix_streamv2.cancel_mix_stream`.
      * @param req CancelCommonMixStreamRequest
      * @return CancelCommonMixStreamResponse
@@ -200,26 +179,6 @@ Note: at least enter one callback URL.
                 Type type = new TypeToken<JsonResponseModel<CreateLiveCallbackTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateLiveCallbackTemplate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to add a certificate.
-     * @param req CreateLiveCertRequest
-     * @return CreateLiveCertResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateLiveCertResponse CreateLiveCert(CreateLiveCertRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateLiveCertResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateLiveCertResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLiveCert");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -498,26 +457,6 @@ Note: only one screencapturing template can be associated with one domain name.
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveCallbackTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteLiveCallbackTemplate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to delete a certificate corresponding to the domain name.
-     * @param req DeleteLiveCertRequest
-     * @return DeleteLiveCertResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteLiveCertResponse DeleteLiveCert(DeleteLiveCertRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteLiveCertResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLiveCertResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLiveCert");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1003,6 +942,26 @@ Note: data can be queried one hour after it is generated. For example, data betw
                 Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainCertResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeLiveDomainCert");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query domains bound with certificates.
+     * @param req DescribeLiveDomainCertBindingsRequest
+     * @return DescribeLiveDomainCertBindingsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveDomainCertBindingsResponse DescribeLiveDomainCertBindings(DescribeLiveDomainCertBindingsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveDomainCertBindingsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveDomainCertBindingsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLiveDomainCertBindings");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1820,38 +1779,19 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
     }
 
     /**
-     *This API is used to modify a certificate.
-     * @param req ModifyLiveCertRequest
-     * @return ModifyLiveCertResponse
+     *This API is used to bind a certificate to multiple playback domains and update the HTTPS configuration of the domains.
+If a self-owned certificate is used, it will be automatically uploaded to Tencent Cloud’s SSL Certificate Service.
+     * @param req ModifyLiveDomainCertBindingsRequest
+     * @return ModifyLiveDomainCertBindingsResponse
      * @throws TencentCloudSDKException
      */
-    public ModifyLiveCertResponse ModifyLiveCert(ModifyLiveCertRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLiveCertResponse> rsp = null;
+    public ModifyLiveDomainCertBindingsResponse ModifyLiveDomainCertBindings(ModifyLiveDomainCertBindingsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLiveDomainCertBindingsResponse> rsp = null;
         String rspStr = "";
         try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLiveCertResponse>>() {
+                Type type = new TypeToken<JsonResponseModel<ModifyLiveDomainCertBindingsResponse>>() {
                 }.getType();
-                rspStr = this.internalRequest(req, "ModifyLiveCert");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to modify the domain name and certificate binding information.
-     * @param req ModifyLiveDomainCertRequest
-     * @return ModifyLiveDomainCertResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyLiveDomainCertResponse ModifyLiveDomainCert(ModifyLiveDomainCertRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLiveDomainCertResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLiveDomainCertResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLiveDomainCert");
+                rspStr = this.internalRequest(req, "ModifyLiveDomainCertBindings");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

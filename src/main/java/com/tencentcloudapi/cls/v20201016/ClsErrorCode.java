@@ -141,7 +141,7 @@ public enum ClsErrorCode {
     // The number of partitions exceeds the limit.
      LIMITEXCEEDED_PARTITION("LimitExceeded.Partition"),
      
-    // 
+    // Out of search memory.
      LIMITEXCEEDED_SEARCHRESOURCES("LimitExceeded.SearchResources"),
      
     // The number of logs returned by the search API exceeds the upper limit (20 MB).
@@ -191,6 +191,9 @@ public enum ClsErrorCode {
      
     // The topic is bound to a function for shipping.
      OPERATIONDENIED_TOPICHASDELIVERFUNCTION("OperationDenied.TopicHasDeliverFunction"),
+     
+    // The topic is bound to the `scheduleSql` job.
+     OPERATIONDENIED_TOPICHASSCHEDULESQLTASK("OperationDenied.TopicHasScheduleSqlTask"),
      
     // The resource does not exist.
      RESOURCENOTFOUND("ResourceNotFound"),

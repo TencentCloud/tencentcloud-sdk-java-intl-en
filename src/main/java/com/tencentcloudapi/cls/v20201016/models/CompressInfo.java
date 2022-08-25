@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class CompressInfo extends AbstractModel{
 
     /**
-    * Compression format. Valid values: `gzip`, `lzop`, `none` (no compression)
+    * Compression format. Valid values: `gzip`; `lzop`; `snappy`; `none` (no compression)
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-     * Get Compression format. Valid values: `gzip`, `lzop`, `none` (no compression) 
-     * @return Format Compression format. Valid values: `gzip`, `lzop`, `none` (no compression)
+     * Get Compression format. Valid values: `gzip`; `lzop`; `snappy`; `none` (no compression) 
+     * @return Format Compression format. Valid values: `gzip`; `lzop`; `snappy`; `none` (no compression)
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set Compression format. Valid values: `gzip`, `lzop`, `none` (no compression)
-     * @param Format Compression format. Valid values: `gzip`, `lzop`, `none` (no compression)
+     * Set Compression format. Valid values: `gzip`; `lzop`; `snappy`; `none` (no compression)
+     * @param Format Compression format. Valid values: `gzip`; `lzop`; `snappy`; `none` (no compression)
      */
     public void setFormat(String Format) {
         this.Format = Format;

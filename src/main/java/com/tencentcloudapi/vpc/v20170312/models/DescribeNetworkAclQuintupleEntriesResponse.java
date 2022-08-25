@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.monitor.v20180724.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeMonitorTypesResponse extends AbstractModel{
+public class DescribeNetworkAclQuintupleEntriesResponse extends AbstractModel{
 
     /**
-    * Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
+    * The list of the network ACL quintuple entries
     */
-    @SerializedName("MonitorTypes")
+    @SerializedName("NetworkAclQuintupleSet")
     @Expose
-    private String [] MonitorTypes;
+    private NetworkAclQuintupleEntry [] NetworkAclQuintupleSet;
 
     /**
-    * Monitoring type details
+    * Number of eligible instances.
     */
-    @SerializedName("MonitorTypeInfos")
+    @SerializedName("TotalCount")
     @Expose
-    private MonitorTypeInfo [] MonitorTypeInfos;
+    private Long TotalCount;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +44,35 @@ public class DescribeMonitorTypesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring) 
-     * @return MonitorTypes Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
+     * Get The list of the network ACL quintuple entries 
+     * @return NetworkAclQuintupleSet The list of the network ACL quintuple entries
      */
-    public String [] getMonitorTypes() {
-        return this.MonitorTypes;
+    public NetworkAclQuintupleEntry [] getNetworkAclQuintupleSet() {
+        return this.NetworkAclQuintupleSet;
     }
 
     /**
-     * Set Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
-     * @param MonitorTypes Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
+     * Set The list of the network ACL quintuple entries
+     * @param NetworkAclQuintupleSet The list of the network ACL quintuple entries
      */
-    public void setMonitorTypes(String [] MonitorTypes) {
-        this.MonitorTypes = MonitorTypes;
+    public void setNetworkAclQuintupleSet(NetworkAclQuintupleEntry [] NetworkAclQuintupleSet) {
+        this.NetworkAclQuintupleSet = NetworkAclQuintupleSet;
     }
 
     /**
-     * Get Monitoring type details 
-     * @return MonitorTypeInfos Monitoring type details
+     * Get Number of eligible instances. 
+     * @return TotalCount Number of eligible instances.
      */
-    public MonitorTypeInfo [] getMonitorTypeInfos() {
-        return this.MonitorTypeInfos;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set Monitoring type details
-     * @param MonitorTypeInfos Monitoring type details
+     * Set Number of eligible instances.
+     * @param TotalCount Number of eligible instances.
      */
-    public void setMonitorTypeInfos(MonitorTypeInfo [] MonitorTypeInfos) {
-        this.MonitorTypeInfos = MonitorTypeInfos;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -91,25 +91,22 @@ public class DescribeMonitorTypesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeMonitorTypesResponse() {
+    public DescribeNetworkAclQuintupleEntriesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeMonitorTypesResponse(DescribeMonitorTypesResponse source) {
-        if (source.MonitorTypes != null) {
-            this.MonitorTypes = new String[source.MonitorTypes.length];
-            for (int i = 0; i < source.MonitorTypes.length; i++) {
-                this.MonitorTypes[i] = new String(source.MonitorTypes[i]);
+    public DescribeNetworkAclQuintupleEntriesResponse(DescribeNetworkAclQuintupleEntriesResponse source) {
+        if (source.NetworkAclQuintupleSet != null) {
+            this.NetworkAclQuintupleSet = new NetworkAclQuintupleEntry[source.NetworkAclQuintupleSet.length];
+            for (int i = 0; i < source.NetworkAclQuintupleSet.length; i++) {
+                this.NetworkAclQuintupleSet[i] = new NetworkAclQuintupleEntry(source.NetworkAclQuintupleSet[i]);
             }
         }
-        if (source.MonitorTypeInfos != null) {
-            this.MonitorTypeInfos = new MonitorTypeInfo[source.MonitorTypeInfos.length];
-            for (int i = 0; i < source.MonitorTypeInfos.length; i++) {
-                this.MonitorTypeInfos[i] = new MonitorTypeInfo(source.MonitorTypeInfos[i]);
-            }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -121,8 +118,8 @@ public class DescribeMonitorTypesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "MonitorTypes.", this.MonitorTypes);
-        this.setParamArrayObj(map, prefix + "MonitorTypeInfos.", this.MonitorTypeInfos);
+        this.setParamArrayObj(map, prefix + "NetworkAclQuintupleSet.", this.NetworkAclQuintupleSet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.live.v20180801.models;
+package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLiveCertResponse extends AbstractModel{
-
-    /**
-    * Certificate ID
-    */
-    @SerializedName("CertId")
-    @Expose
-    private Long CertId;
+public class SwitchProxyResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -35,22 +28,6 @@ public class CreateLiveCertResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get Certificate ID 
-     * @return CertId Certificate ID
-     */
-    public Long getCertId() {
-        return this.CertId;
-    }
-
-    /**
-     * Set Certificate ID
-     * @param CertId Certificate ID
-     */
-    public void setCertId(Long CertId) {
-        this.CertId = CertId;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -68,17 +45,14 @@ public class CreateLiveCertResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateLiveCertResponse() {
+    public SwitchProxyResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateLiveCertResponse(CreateLiveCertResponse source) {
-        if (source.CertId != null) {
-            this.CertId = new Long(source.CertId);
-        }
+    public SwitchProxyResponse(SwitchProxyResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -89,7 +63,6 @@ public class CreateLiveCertResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "CertId", this.CertId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

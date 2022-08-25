@@ -30,11 +30,11 @@ public class SubAppIdInfo extends AbstractModel{
     private Long SubAppId;
 
     /**
-    * Subapplication name.
+    * The subapplication name.
     */
-    @SerializedName("Name")
+    @SerializedName("SubAppIdName")
     @Expose
-    private String Name;
+    private String SubAppIdName;
 
     /**
     * Subapplication overview.
@@ -62,6 +62,13 @@ public class SubAppIdInfo extends AbstractModel{
     private String Status;
 
     /**
+    * The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get Subapplication ID. 
      * @return SubAppId Subapplication ID.
      */
@@ -78,19 +85,19 @@ public class SubAppIdInfo extends AbstractModel{
     }
 
     /**
-     * Get Subapplication name. 
-     * @return Name Subapplication name.
+     * Get The subapplication name. 
+     * @return SubAppIdName The subapplication name.
      */
-    public String getName() {
-        return this.Name;
+    public String getSubAppIdName() {
+        return this.SubAppIdName;
     }
 
     /**
-     * Set Subapplication name.
-     * @param Name Subapplication name.
+     * Set The subapplication name.
+     * @param SubAppIdName The subapplication name.
      */
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setSubAppIdName(String SubAppIdName) {
+        this.SubAppIdName = SubAppIdName;
     }
 
     /**
@@ -157,6 +164,22 @@ public class SubAppIdInfo extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead. 
+     * @return Name The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
+     * @param Name The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public SubAppIdInfo() {
     }
 
@@ -168,8 +191,8 @@ public class SubAppIdInfo extends AbstractModel{
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
         }
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
+        if (source.SubAppIdName != null) {
+            this.SubAppIdName = new String(source.SubAppIdName);
         }
         if (source.Description != null) {
             this.Description = new String(source.Description);
@@ -180,6 +203,9 @@ public class SubAppIdInfo extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -188,10 +214,11 @@ public class SubAppIdInfo extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
-        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "SubAppIdName", this.SubAppIdName);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

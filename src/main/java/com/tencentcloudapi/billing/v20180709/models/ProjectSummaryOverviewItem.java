@@ -86,6 +86,13 @@ public class ProjectSummaryOverviewItem extends AbstractModel{
     private String TotalCost;
 
     /**
+    * Payment by commission credits
+    */
+    @SerializedName("TransferPayAmount")
+    @Expose
+    private String TransferPayAmount;
+
+    /**
      * Get Project ID 
      * @return ProjectId Project ID
      */
@@ -229,6 +236,22 @@ public class ProjectSummaryOverviewItem extends AbstractModel{
         this.TotalCost = TotalCost;
     }
 
+    /**
+     * Get Payment by commission credits 
+     * @return TransferPayAmount Payment by commission credits
+     */
+    public String getTransferPayAmount() {
+        return this.TransferPayAmount;
+    }
+
+    /**
+     * Set Payment by commission credits
+     * @param TransferPayAmount Payment by commission credits
+     */
+    public void setTransferPayAmount(String TransferPayAmount) {
+        this.TransferPayAmount = TransferPayAmount;
+    }
+
     public ProjectSummaryOverviewItem() {
     }
 
@@ -264,6 +287,9 @@ public class ProjectSummaryOverviewItem extends AbstractModel{
         if (source.TotalCost != null) {
             this.TotalCost = new String(source.TotalCost);
         }
+        if (source.TransferPayAmount != null) {
+            this.TransferPayAmount = new String(source.TransferPayAmount);
+        }
     }
 
 
@@ -280,6 +306,7 @@ public class ProjectSummaryOverviewItem extends AbstractModel{
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
         this.setParamSimple(map, prefix + "BillMonth", this.BillMonth);
         this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
+        this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
 
     }
 }

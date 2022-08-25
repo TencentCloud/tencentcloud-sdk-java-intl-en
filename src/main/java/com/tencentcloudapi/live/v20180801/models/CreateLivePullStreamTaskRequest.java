@@ -52,7 +52,7 @@ Notes:
     /**
     * The push domain name.
 The pulled stream is pushed to this domain.
-Use a push domain you have added in the CSS console.
+Note: If the destination is not a CSS address and its format is different from that of CSS addresses, pass the full address to `ToUrl`. For details, see the description of the `ToUrl` parameter.
     */
     @SerializedName("DomainName")
     @Expose
@@ -210,6 +210,13 @@ You can specify only one backup source URL.
     private String BackupSourceUrl;
 
     /**
+    * 
+    */
+    @SerializedName("WatermarkList")
+    @Expose
+    private PullPushWatermarkInfo [] WatermarkList;
+
+    /**
      * Get The source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files 
@@ -296,10 +303,10 @@ Notes:
     /**
      * Get The push domain name.
 The pulled stream is pushed to this domain.
-Use a push domain you have added in the CSS console. 
+Note: If the destination is not a CSS address and its format is different from that of CSS addresses, pass the full address to `ToUrl`. For details, see the description of the `ToUrl` parameter. 
      * @return DomainName The push domain name.
 The pulled stream is pushed to this domain.
-Use a push domain you have added in the CSS console.
+Note: If the destination is not a CSS address and its format is different from that of CSS addresses, pass the full address to `ToUrl`. For details, see the description of the `ToUrl` parameter.
      */
     public String getDomainName() {
         return this.DomainName;
@@ -308,10 +315,10 @@ Use a push domain you have added in the CSS console.
     /**
      * Set The push domain name.
 The pulled stream is pushed to this domain.
-Use a push domain you have added in the CSS console.
+Note: If the destination is not a CSS address and its format is different from that of CSS addresses, pass the full address to `ToUrl`. For details, see the description of the `ToUrl` parameter.
      * @param DomainName The push domain name.
 The pulled stream is pushed to this domain.
-Use a push domain you have added in the CSS console.
+Note: If the destination is not a CSS address and its format is different from that of CSS addresses, pass the full address to `ToUrl`. For details, see the description of the `ToUrl` parameter.
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
@@ -741,6 +748,22 @@ You can specify only one backup source URL.
         this.BackupSourceUrl = BackupSourceUrl;
     }
 
+    /**
+     * Get  
+     * @return WatermarkList 
+     */
+    public PullPushWatermarkInfo [] getWatermarkList() {
+        return this.WatermarkList;
+    }
+
+    /**
+     * Set 
+     * @param WatermarkList 
+     */
+    public void setWatermarkList(PullPushWatermarkInfo [] WatermarkList) {
+        this.WatermarkList = WatermarkList;
+    }
+
     public CreateLivePullStreamTaskRequest() {
     }
 
@@ -809,6 +832,12 @@ You can specify only one backup source URL.
         if (source.BackupSourceUrl != null) {
             this.BackupSourceUrl = new String(source.BackupSourceUrl);
         }
+        if (source.WatermarkList != null) {
+            this.WatermarkList = new PullPushWatermarkInfo[source.WatermarkList.length];
+            for (int i = 0; i < source.WatermarkList.length; i++) {
+                this.WatermarkList[i] = new PullPushWatermarkInfo(source.WatermarkList[i]);
+            }
+        }
     }
 
 
@@ -834,6 +863,7 @@ You can specify only one backup source URL.
         this.setParamSimple(map, prefix + "ToUrl", this.ToUrl);
         this.setParamSimple(map, prefix + "BackupSourceType", this.BackupSourceType);
         this.setParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
+        this.setParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
 
     }
 }

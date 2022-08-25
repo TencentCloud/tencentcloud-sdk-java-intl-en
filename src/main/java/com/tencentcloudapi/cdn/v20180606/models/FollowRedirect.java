@@ -32,7 +32,8 @@ public class FollowRedirect extends AbstractModel{
     private String Switch;
 
     /**
-    * 
+    * Specifies a host header for 302 redirects. This feature is only available to beta users. To join the beta, please submit a ticket.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RedirectConfig")
     @Expose
@@ -63,16 +64,20 @@ public class FollowRedirect extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return RedirectConfig 
+     * Get Specifies a host header for 302 redirects. This feature is only available to beta users. To join the beta, please submit a ticket.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RedirectConfig Specifies a host header for 302 redirects. This feature is only available to beta users. To join the beta, please submit a ticket.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public RedirectConfig getRedirectConfig() {
         return this.RedirectConfig;
     }
 
     /**
-     * Set 
-     * @param RedirectConfig 
+     * Set Specifies a host header for 302 redirects. This feature is only available to beta users. To join the beta, please submit a ticket.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RedirectConfig Specifies a host header for 302 redirects. This feature is only available to beta users. To join the beta, please submit a ticket.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRedirectConfig(RedirectConfig RedirectConfig) {
         this.RedirectConfig = RedirectConfig;

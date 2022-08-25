@@ -39,6 +39,16 @@ public class PlayerConfig extends AbstractModel{
     private String Type;
 
     /**
+    * The type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming: Adaptive bitrate stream</li>
+<li>Transcode: Transcoded stream</li>
+<li>Original: The original stream</li>
+    */
+    @SerializedName("AudioVideoType")
+    @Expose
+    private String AudioVideoType;
+
+    /**
     * Switch of DRM-protected adaptive bitstream playback:
 <li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
 <li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
@@ -60,6 +70,13 @@ public class PlayerConfig extends AbstractModel{
     @SerializedName("DrmStreamingsInfo")
     @Expose
     private DrmStreamingsInfo DrmStreamingsInfo;
+
+    /**
+    * The ID of the transcoding template allowed.
+    */
+    @SerializedName("TranscodeDefinition")
+    @Expose
+    private Long TranscodeDefinition;
 
     /**
     * ID of the image sprite generating template that allows output.
@@ -154,6 +171,34 @@ public class PlayerConfig extends AbstractModel{
     }
 
     /**
+     * Get The type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming: Adaptive bitrate stream</li>
+<li>Transcode: Transcoded stream</li>
+<li>Original: The original stream</li> 
+     * @return AudioVideoType The type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming: Adaptive bitrate stream</li>
+<li>Transcode: Transcoded stream</li>
+<li>Original: The original stream</li>
+     */
+    public String getAudioVideoType() {
+        return this.AudioVideoType;
+    }
+
+    /**
+     * Set The type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming: Adaptive bitrate stream</li>
+<li>Transcode: Transcoded stream</li>
+<li>Original: The original stream</li>
+     * @param AudioVideoType The type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming: Adaptive bitrate stream</li>
+<li>Transcode: Transcoded stream</li>
+<li>Original: The original stream</li>
+     */
+    public void setAudioVideoType(String AudioVideoType) {
+        this.AudioVideoType = AudioVideoType;
+    }
+
+    /**
      * Get Switch of DRM-protected adaptive bitstream playback:
 <li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
 <li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li> 
@@ -207,6 +252,22 @@ public class PlayerConfig extends AbstractModel{
      */
     public void setDrmStreamingsInfo(DrmStreamingsInfo DrmStreamingsInfo) {
         this.DrmStreamingsInfo = DrmStreamingsInfo;
+    }
+
+    /**
+     * Get The ID of the transcoding template allowed. 
+     * @return TranscodeDefinition The ID of the transcoding template allowed.
+     */
+    public Long getTranscodeDefinition() {
+        return this.TranscodeDefinition;
+    }
+
+    /**
+     * Set The ID of the transcoding template allowed.
+     * @param TranscodeDefinition The ID of the transcoding template allowed.
+     */
+    public void setTranscodeDefinition(Long TranscodeDefinition) {
+        this.TranscodeDefinition = TranscodeDefinition;
     }
 
     /**
@@ -347,6 +408,9 @@ public class PlayerConfig extends AbstractModel{
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.AudioVideoType != null) {
+            this.AudioVideoType = new String(source.AudioVideoType);
+        }
         if (source.DrmSwitch != null) {
             this.DrmSwitch = new String(source.DrmSwitch);
         }
@@ -355,6 +419,9 @@ public class PlayerConfig extends AbstractModel{
         }
         if (source.DrmStreamingsInfo != null) {
             this.DrmStreamingsInfo = new DrmStreamingsInfo(source.DrmStreamingsInfo);
+        }
+        if (source.TranscodeDefinition != null) {
+            this.TranscodeDefinition = new Long(source.TranscodeDefinition);
         }
         if (source.ImageSpriteDefinition != null) {
             this.ImageSpriteDefinition = new Long(source.ImageSpriteDefinition);
@@ -389,9 +456,11 @@ public class PlayerConfig extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "AudioVideoType", this.AudioVideoType);
         this.setParamSimple(map, prefix + "DrmSwitch", this.DrmSwitch);
         this.setParamSimple(map, prefix + "AdaptiveDynamicStreamingDefinition", this.AdaptiveDynamicStreamingDefinition);
         this.setParamObj(map, prefix + "DrmStreamingsInfo.", this.DrmStreamingsInfo);
+        this.setParamSimple(map, prefix + "TranscodeDefinition", this.TranscodeDefinition);
         this.setParamSimple(map, prefix + "ImageSpriteDefinition", this.ImageSpriteDefinition);
         this.setParamArrayObj(map, prefix + "ResolutionNameSet.", this.ResolutionNameSet);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);

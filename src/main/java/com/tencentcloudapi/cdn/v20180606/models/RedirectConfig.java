@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class RedirectConfig extends AbstractModel{
 
     /**
-    * 
+    * Configuration switch
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * The custom host header that is sent when the primary origin server follows 302 redirects
     */
     @SerializedName("FollowRedirectHost")
     @Expose
     private String FollowRedirectHost;
 
     /**
-    * 
+    * The custom host header that is sent when the secondary origin server follows 302 redirects
     */
     @SerializedName("FollowRedirectBackupHost")
     @Expose
     private String FollowRedirectBackupHost;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Configuration switch 
+     * @return Switch Configuration switch
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Configuration switch
+     * @param Switch Configuration switch
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return FollowRedirectHost 
+     * Get The custom host header that is sent when the primary origin server follows 302 redirects 
+     * @return FollowRedirectHost The custom host header that is sent when the primary origin server follows 302 redirects
      */
     public String getFollowRedirectHost() {
         return this.FollowRedirectHost;
     }
 
     /**
-     * Set 
-     * @param FollowRedirectHost 
+     * Set The custom host header that is sent when the primary origin server follows 302 redirects
+     * @param FollowRedirectHost The custom host header that is sent when the primary origin server follows 302 redirects
      */
     public void setFollowRedirectHost(String FollowRedirectHost) {
         this.FollowRedirectHost = FollowRedirectHost;
     }
 
     /**
-     * Get  
-     * @return FollowRedirectBackupHost 
+     * Get The custom host header that is sent when the secondary origin server follows 302 redirects 
+     * @return FollowRedirectBackupHost The custom host header that is sent when the secondary origin server follows 302 redirects
      */
     public String getFollowRedirectBackupHost() {
         return this.FollowRedirectBackupHost;
     }
 
     /**
-     * Set 
-     * @param FollowRedirectBackupHost 
+     * Set The custom host header that is sent when the secondary origin server follows 302 redirects
+     * @param FollowRedirectBackupHost The custom host header that is sent when the secondary origin server follows 302 redirects
      */
     public void setFollowRedirectBackupHost(String FollowRedirectBackupHost) {
         this.FollowRedirectBackupHost = FollowRedirectBackupHost;

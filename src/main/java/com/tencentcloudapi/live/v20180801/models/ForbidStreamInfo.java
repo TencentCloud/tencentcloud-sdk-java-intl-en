@@ -44,6 +44,22 @@ public class ForbidStreamInfo extends AbstractModel{
     private String ExpireTime;
 
     /**
+    * The push path.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AppName")
+    @Expose
+    private String AppName;
+
+    /**
+    * The push domain name.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DomainName")
+    @Expose
+    private String DomainName;
+
+    /**
      * Get Stream name. 
      * @return StreamName Stream name.
      */
@@ -91,6 +107,46 @@ public class ForbidStreamInfo extends AbstractModel{
         this.ExpireTime = ExpireTime;
     }
 
+    /**
+     * Get The push path.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AppName The push path.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getAppName() {
+        return this.AppName;
+    }
+
+    /**
+     * Set The push path.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AppName The push path.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAppName(String AppName) {
+        this.AppName = AppName;
+    }
+
+    /**
+     * Get The push domain name.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DomainName The push domain name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDomainName() {
+        return this.DomainName;
+    }
+
+    /**
+     * Set The push domain name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DomainName The push domain name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDomainName(String DomainName) {
+        this.DomainName = DomainName;
+    }
+
     public ForbidStreamInfo() {
     }
 
@@ -108,6 +164,12 @@ public class ForbidStreamInfo extends AbstractModel{
         if (source.ExpireTime != null) {
             this.ExpireTime = new String(source.ExpireTime);
         }
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
     }
 
 
@@ -118,6 +180,8 @@ public class ForbidStreamInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "StreamName", this.StreamName);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "AppName", this.AppName);
+        this.setParamSimple(map, prefix + "DomainName", this.DomainName);
 
     }
 }

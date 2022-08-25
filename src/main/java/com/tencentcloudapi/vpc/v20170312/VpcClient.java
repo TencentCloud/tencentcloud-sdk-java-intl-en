@@ -859,6 +859,26 @@ Before taking actions on a NAT gateway, ensure that it has been successfully cre
     }
 
     /**
+     *This API is used to add one or more in/outbound rules of the network ACL quintuple.
+     * @param req CreateNetworkAclQuintupleEntriesRequest
+     * @return CreateNetworkAclQuintupleEntriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNetworkAclQuintupleEntriesResponse CreateNetworkAclQuintupleEntries(CreateNetworkAclQuintupleEntriesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNetworkAclQuintupleEntriesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNetworkAclQuintupleEntriesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateNetworkAclQuintupleEntries");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create an ENI.
 * You can specify private IP addresses and a primary IP when creating an ENI. The specified private IP must be in the same subnet as the ENI and is not occupied.
 * When creating an ENI, you can specify the number of private IP addresses that you want to apply for. The system will randomly generate private IP addresses.
@@ -1576,6 +1596,26 @@ When a NAT gateway is deleted, all routes containing this gateway are deleted au
                 Type type = new TypeToken<JsonResponseModel<DeleteNetworkAclResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteNetworkAcl");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete specified in/outbound rules of the network ACL quintuple. In the `NetworkAclQuintupleEntrySet` parameters, `NetworkAclQuintupleEntryId` is required for `NetworkAclQuintupleEntry`.
+     * @param req DeleteNetworkAclQuintupleEntriesRequest
+     * @return DeleteNetworkAclQuintupleEntriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNetworkAclQuintupleEntriesResponse DeleteNetworkAclQuintupleEntries(DeleteNetworkAclQuintupleEntriesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteNetworkAclQuintupleEntriesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteNetworkAclQuintupleEntriesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteNetworkAclQuintupleEntries");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2423,7 +2463,7 @@ A service provider can query all review requests created by any `APPID` under it
 
     /**
      *This API is used to query the location and network information of one or more IP addresses.
-This API is currently in beta test. To use it, please [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=660&source=0&data_title=%E5%BC%B9%E6%80%A7%E5%85%AC%E7%BD%91%20EIP&level3_id=662&queue=96&scene_code=16400&step=2).
+This API is only available for existing customers. For any questions, please [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=660&source=0&data_title=%E5%BC%B9%E6%80%A7%E5%85%AC%E7%BD%91%20EIP&level3_id=662&queue=96&scene_code=16400&step=2).
      * @param req DescribeIpGeolocationInfosRequest
      * @return DescribeIpGeolocationInfosResponse
      * @throws TencentCloudSDKException
@@ -2575,6 +2615,26 @@ This API is currently in beta test. To use it, please [submit a ticket](https://
                 Type type = new TypeToken<JsonResponseModel<DescribeNetDetectsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeNetDetects");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of in/outbound network ACL quintuple entries.
+     * @param req DescribeNetworkAclQuintupleEntriesRequest
+     * @return DescribeNetworkAclQuintupleEntriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNetworkAclQuintupleEntriesResponse DescribeNetworkAclQuintupleEntries(DescribeNetworkAclQuintupleEntriesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNetworkAclQuintupleEntriesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNetworkAclQuintupleEntriesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNetworkAclQuintupleEntries");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -4058,6 +4118,26 @@ This API is completed asynchronously. If you need to query the execution result 
                 Type type = new TypeToken<JsonResponseModel<ModifyNetworkAclEntriesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyNetworkAclEntries");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the in/outbound rules of the network ACL quintuple. In the `NetworkAclQuintupleEntrySet` parameters, `NetworkAclQuintupleEntryId` is required for `NetworkAclQuintupleEntry`.
+     * @param req ModifyNetworkAclQuintupleEntriesRequest
+     * @return ModifyNetworkAclQuintupleEntriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNetworkAclQuintupleEntriesResponse ModifyNetworkAclQuintupleEntries(ModifyNetworkAclQuintupleEntriesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyNetworkAclQuintupleEntriesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyNetworkAclQuintupleEntriesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyNetworkAclQuintupleEntries");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

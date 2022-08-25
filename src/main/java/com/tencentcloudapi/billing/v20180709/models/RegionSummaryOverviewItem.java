@@ -87,6 +87,13 @@ Note: This field may return null, indicating that no valid value was found.
     private String TotalCost;
 
     /**
+    * Payment by commission credits
+    */
+    @SerializedName("TransferPayAmount")
+    @Expose
+    private String TransferPayAmount;
+
+    /**
      * Get Region ID
 Note: This field may return null, indicating that no valid value was found. 
      * @return RegionId Region ID
@@ -234,6 +241,22 @@ Note: This field may return null, indicating that no valid value was found.
         this.TotalCost = TotalCost;
     }
 
+    /**
+     * Get Payment by commission credits 
+     * @return TransferPayAmount Payment by commission credits
+     */
+    public String getTransferPayAmount() {
+        return this.TransferPayAmount;
+    }
+
+    /**
+     * Set Payment by commission credits
+     * @param TransferPayAmount Payment by commission credits
+     */
+    public void setTransferPayAmount(String TransferPayAmount) {
+        this.TransferPayAmount = TransferPayAmount;
+    }
+
     public RegionSummaryOverviewItem() {
     }
 
@@ -269,6 +292,9 @@ Note: This field may return null, indicating that no valid value was found.
         if (source.TotalCost != null) {
             this.TotalCost = new String(source.TotalCost);
         }
+        if (source.TransferPayAmount != null) {
+            this.TransferPayAmount = new String(source.TransferPayAmount);
+        }
     }
 
 
@@ -285,6 +311,7 @@ Note: This field may return null, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
         this.setParamSimple(map, prefix + "BillMonth", this.BillMonth);
         this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
+        this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
 
     }
 }
