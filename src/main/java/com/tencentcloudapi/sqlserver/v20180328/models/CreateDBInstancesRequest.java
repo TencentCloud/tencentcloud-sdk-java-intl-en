@@ -163,6 +163,20 @@ public class CreateDBInstancesRequest extends AbstractModel{
     private ResourceTag [] ResourceTags;
 
     /**
+    * Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
+    */
+    @SerializedName("Collation")
+    @Expose
+    private String Collation;
+
+    /**
+    * System time zone. Default value: `China Standard Time`.
+    */
+    @SerializedName("TimeZone")
+    @Expose
+    private String TimeZone;
+
+    /**
      * Get Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API 
      * @return Zone Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API
      */
@@ -482,6 +496,38 @@ public class CreateDBInstancesRequest extends AbstractModel{
         this.ResourceTags = ResourceTags;
     }
 
+    /**
+     * Get Collation of system character sets. Default value: `Chinese_PRC_CI_AS`. 
+     * @return Collation Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
+     */
+    public String getCollation() {
+        return this.Collation;
+    }
+
+    /**
+     * Set Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
+     * @param Collation Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
+     */
+    public void setCollation(String Collation) {
+        this.Collation = Collation;
+    }
+
+    /**
+     * Get System time zone. Default value: `China Standard Time`. 
+     * @return TimeZone System time zone. Default value: `China Standard Time`.
+     */
+    public String getTimeZone() {
+        return this.TimeZone;
+    }
+
+    /**
+     * Set System time zone. Default value: `China Standard Time`.
+     * @param TimeZone System time zone. Default value: `China Standard Time`.
+     */
+    public void setTimeZone(String TimeZone) {
+        this.TimeZone = TimeZone;
+    }
+
     public CreateDBInstancesRequest() {
     }
 
@@ -562,6 +608,12 @@ public class CreateDBInstancesRequest extends AbstractModel{
                 this.ResourceTags[i] = new ResourceTag(source.ResourceTags[i]);
             }
         }
+        if (source.Collation != null) {
+            this.Collation = new String(source.Collation);
+        }
+        if (source.TimeZone != null) {
+            this.TimeZone = new String(source.TimeZone);
+        }
     }
 
 
@@ -589,6 +641,8 @@ public class CreateDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "HAType", this.HAType);
         this.setParamSimple(map, prefix + "MultiZones", this.MultiZones);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamSimple(map, prefix + "Collation", this.Collation);
+        this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
 
     }
 }

@@ -337,6 +337,26 @@ If you currently use a password to log in, you will no longer be able to do so a
     }
 
     /**
+     *This API is used to query the actions not allowed for the specified CHC instances.
+     * @param req DescribeChcDeniedActionsRequest
+     * @return DescribeChcDeniedActionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeChcDeniedActionsResponse DescribeChcDeniedActions(DescribeChcDeniedActionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeChcDeniedActionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeChcDeniedActionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeChcDeniedActions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the details of one or more CHC host.
 
 * You can filter the query results with the instance ID, name or device type. See `Filter` for more information.

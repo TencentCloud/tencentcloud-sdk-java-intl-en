@@ -366,14 +366,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long TgwWanVPort;
 
     /**
-    * 
+    * Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
     */
     @SerializedName("Collation")
     @Expose
     private String Collation;
 
     /**
-    * 
+    * System time zone. Default value: `China Standard Time`.
     */
     @SerializedName("TimeZone")
     @Expose
@@ -1176,32 +1176,32 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get  
-     * @return Collation 
+     * Get Collation of system character sets. Default value: `Chinese_PRC_CI_AS`. 
+     * @return Collation Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
      */
     public String getCollation() {
         return this.Collation;
     }
 
     /**
-     * Set 
-     * @param Collation 
+     * Set Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
+     * @param Collation Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
      */
     public void setCollation(String Collation) {
         this.Collation = Collation;
     }
 
     /**
-     * Get  
-     * @return TimeZone 
+     * Get System time zone. Default value: `China Standard Time`. 
+     * @return TimeZone System time zone. Default value: `China Standard Time`.
      */
     public String getTimeZone() {
         return this.TimeZone;
     }
 
     /**
-     * Set 
-     * @param TimeZone 
+     * Set System time zone. Default value: `China Standard Time`.
+     * @param TimeZone System time zone. Default value: `China Standard Time`.
      */
     public void setTimeZone(String TimeZone) {
         this.TimeZone = TimeZone;

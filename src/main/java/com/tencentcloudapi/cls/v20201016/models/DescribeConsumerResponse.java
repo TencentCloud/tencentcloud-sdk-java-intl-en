@@ -52,6 +52,14 @@ Note: This field may return `null`, indicating that no valid value was found.
     private Ckafka Ckafka;
 
     /**
+    * Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Compression")
+    @Expose
+    private Long Compression;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -127,6 +135,26 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
+     * Get Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Compression Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getCompression() {
+        return this.Compression;
+    }
+
+    /**
+     * Set Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Compression Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCompression(Long Compression) {
+        this.Compression = Compression;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -162,6 +190,9 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.Ckafka != null) {
             this.Ckafka = new Ckafka(source.Ckafka);
         }
+        if (source.Compression != null) {
+            this.Compression = new Long(source.Compression);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -176,6 +207,7 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "NeedContent", this.NeedContent);
         this.setParamObj(map, prefix + "Content.", this.Content);
         this.setParamObj(map, prefix + "Ckafka.", this.Ckafka);
+        this.setParamSimple(map, prefix + "Compression", this.Compression);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

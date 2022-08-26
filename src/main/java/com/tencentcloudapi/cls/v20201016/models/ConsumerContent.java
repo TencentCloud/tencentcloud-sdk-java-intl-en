@@ -31,7 +31,7 @@ Note: This field may return `null`, indicating that no valid value was found.
     private Boolean EnableTag;
 
     /**
-    * List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+    * List of metadata to ship. Supported metadata types: \_\_SOURCE\_\_, \_\_FILENAME\_\_, \_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MetaFields")
@@ -75,9 +75,9 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+     * Get List of metadata to ship. Supported metadata types: \_\_SOURCE\_\_, \_\_FILENAME\_\_, \_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MetaFields List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+     * @return MetaFields List of metadata to ship. Supported metadata types: \_\_SOURCE\_\_, \_\_FILENAME\_\_, \_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getMetaFields() {
@@ -85,9 +85,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+     * Set List of metadata to ship. Supported metadata types: \_\_SOURCE\_\_, \_\_FILENAME\_\_, \_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MetaFields List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+     * @param MetaFields List of metadata to ship. Supported metadata types: \_\_SOURCE\_\_, \_\_FILENAME\_\_, \_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMetaFields(String [] MetaFields) {

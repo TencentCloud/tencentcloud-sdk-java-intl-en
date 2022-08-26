@@ -63,6 +63,30 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String NetType;
 
     /**
+    * Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("UniqSubnetId")
+    @Expose
+    private String UniqSubnetId;
+
+    /**
+    * VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("UniqVpcId")
+    @Expose
+    private String UniqVpcId;
+
+    /**
+    * Description
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get Private network IP
 Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return Vip Private network IP
@@ -162,6 +186,66 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.NetType = NetType;
     }
 
+    /**
+     * Get Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return UniqSubnetId Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getUniqSubnetId() {
+        return this.UniqSubnetId;
+    }
+
+    /**
+     * Set Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param UniqSubnetId Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setUniqSubnetId(String UniqSubnetId) {
+        this.UniqSubnetId = UniqSubnetId;
+    }
+
+    /**
+     * Get VPC ID
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return UniqVpcId VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getUniqVpcId() {
+        return this.UniqVpcId;
+    }
+
+    /**
+     * Set VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param UniqVpcId VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setUniqVpcId(String UniqVpcId) {
+        this.UniqVpcId = UniqVpcId;
+    }
+
+    /**
+     * Get Description
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Description Description
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set Description
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Description Description
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public NetAddr() {
     }
 
@@ -185,6 +269,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.NetType != null) {
             this.NetType = new String(source.NetType);
         }
+        if (source.UniqSubnetId != null) {
+            this.UniqSubnetId = new String(source.UniqSubnetId);
+        }
+        if (source.UniqVpcId != null) {
+            this.UniqVpcId = new String(source.UniqVpcId);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -197,6 +290,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "WanDomain", this.WanDomain);
         this.setParamSimple(map, prefix + "WanPort", this.WanPort);
         this.setParamSimple(map, prefix + "NetType", this.NetType);
+        this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+        this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }
