@@ -32,8 +32,19 @@ public class AsrFullTextConfigureInfo extends AbstractModel{
     private String Switch;
 
     /**
-    * Format of generated subtitles file. If this parameter is left empty or a blank string is entered, no subtitles files will be generated. Valid value:
-<li>vtt: generates a WebVTT subtitles file.</li>
+    * The formats of the subtitle files generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+    */
+    @SerializedName("SubtitleFormats")
+    @Expose
+    private String [] SubtitleFormats;
+
+    /**
+    * The format of the subtitle file generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormats` instead.</font>
     */
     @SerializedName("SubtitleFormat")
     @Expose
@@ -64,20 +75,52 @@ public class AsrFullTextConfigureInfo extends AbstractModel{
     }
 
     /**
-     * Get Format of generated subtitles file. If this parameter is left empty or a blank string is entered, no subtitles files will be generated. Valid value:
-<li>vtt: generates a WebVTT subtitles file.</li> 
-     * @return SubtitleFormat Format of generated subtitles file. If this parameter is left empty or a blank string is entered, no subtitles files will be generated. Valid value:
-<li>vtt: generates a WebVTT subtitles file.</li>
+     * Get The formats of the subtitle files generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li> 
+     * @return SubtitleFormats The formats of the subtitle files generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+     */
+    public String [] getSubtitleFormats() {
+        return this.SubtitleFormats;
+    }
+
+    /**
+     * Set The formats of the subtitle files generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+     * @param SubtitleFormats The formats of the subtitle files generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+     */
+    public void setSubtitleFormats(String [] SubtitleFormats) {
+        this.SubtitleFormats = SubtitleFormats;
+    }
+
+    /**
+     * Get The format of the subtitle file generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormats` instead.</font> 
+     * @return SubtitleFormat The format of the subtitle file generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormats` instead.</font>
      */
     public String getSubtitleFormat() {
         return this.SubtitleFormat;
     }
 
     /**
-     * Set Format of generated subtitles file. If this parameter is left empty or a blank string is entered, no subtitles files will be generated. Valid value:
-<li>vtt: generates a WebVTT subtitles file.</li>
-     * @param SubtitleFormat Format of generated subtitles file. If this parameter is left empty or a blank string is entered, no subtitles files will be generated. Valid value:
-<li>vtt: generates a WebVTT subtitles file.</li>
+     * Set The format of the subtitle file generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormats` instead.</font>
+     * @param SubtitleFormat The format of the subtitle file generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormats` instead.</font>
      */
     public void setSubtitleFormat(String SubtitleFormat) {
         this.SubtitleFormat = SubtitleFormat;
@@ -94,6 +137,12 @@ public class AsrFullTextConfigureInfo extends AbstractModel{
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }
+        if (source.SubtitleFormats != null) {
+            this.SubtitleFormats = new String[source.SubtitleFormats.length];
+            for (int i = 0; i < source.SubtitleFormats.length; i++) {
+                this.SubtitleFormats[i] = new String(source.SubtitleFormats[i]);
+            }
+        }
         if (source.SubtitleFormat != null) {
             this.SubtitleFormat = new String(source.SubtitleFormat);
         }
@@ -105,6 +154,7 @@ public class AsrFullTextConfigureInfo extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamArraySimple(map, prefix + "SubtitleFormats.", this.SubtitleFormats);
         this.setParamSimple(map, prefix + "SubtitleFormat", this.SubtitleFormat);
 
     }

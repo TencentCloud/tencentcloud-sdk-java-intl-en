@@ -72,6 +72,16 @@ If this parameter is an empty string, it indicates that the video is not protect
     private String DrmType;
 
     /**
+    * The provider of the DRM key. Valid values:
+<li>SDMC</li>
+<li>VOD</li>
+The default is `VOD`.
+    */
+    @SerializedName("DrmKeyProvider")
+    @Expose
+    private String DrmKeyProvider;
+
+    /**
     * Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
     */
     @SerializedName("StreamInfos")
@@ -235,6 +245,34 @@ If this parameter is an empty string, it indicates that the video is not protect
     }
 
     /**
+     * Get The provider of the DRM key. Valid values:
+<li>SDMC</li>
+<li>VOD</li>
+The default is `VOD`. 
+     * @return DrmKeyProvider The provider of the DRM key. Valid values:
+<li>SDMC</li>
+<li>VOD</li>
+The default is `VOD`.
+     */
+    public String getDrmKeyProvider() {
+        return this.DrmKeyProvider;
+    }
+
+    /**
+     * Set The provider of the DRM key. Valid values:
+<li>SDMC</li>
+<li>VOD</li>
+The default is `VOD`.
+     * @param DrmKeyProvider The provider of the DRM key. Valid values:
+<li>SDMC</li>
+<li>VOD</li>
+The default is `VOD`.
+     */
+    public void setDrmKeyProvider(String DrmKeyProvider) {
+        this.DrmKeyProvider = DrmKeyProvider;
+    }
+
+    /**
      * Get Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input. 
      * @return StreamInfos Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
      */
@@ -356,6 +394,9 @@ If this parameter is an empty string, it indicates that the video is not protect
         if (source.DrmType != null) {
             this.DrmType = new String(source.DrmType);
         }
+        if (source.DrmKeyProvider != null) {
+            this.DrmKeyProvider = new String(source.DrmKeyProvider);
+        }
         if (source.StreamInfos != null) {
             this.StreamInfos = new AdaptiveStreamTemplate[source.StreamInfos.length];
             for (int i = 0; i < source.StreamInfos.length; i++) {
@@ -387,6 +428,7 @@ If this parameter is an empty string, it indicates that the video is not protect
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "Format", this.Format);
         this.setParamSimple(map, prefix + "DrmType", this.DrmType);
+        this.setParamSimple(map, prefix + "DrmKeyProvider", this.DrmKeyProvider);
         this.setParamArrayObj(map, prefix + "StreamInfos.", this.StreamInfos);
         this.setParamSimple(map, prefix + "DisableHigherVideoBitrate", this.DisableHigherVideoBitrate);
         this.setParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);

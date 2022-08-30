@@ -20,14 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTaskDetailRequest extends AbstractModel{
+public class SetDrmKeyProviderInfoRequest extends AbstractModel{
 
     /**
-    * Video processing task ID.
+    * The DRM key information provided by SDMC.
     */
-    @SerializedName("TaskId")
+    @SerializedName("SDMCInfo")
     @Expose
-    private String TaskId;
+    private SDMCDrmKeyProviderInfo SDMCInfo;
 
     /**
     * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
@@ -37,19 +37,19 @@ public class DescribeTaskDetailRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-     * Get Video processing task ID. 
-     * @return TaskId Video processing task ID.
+     * Get The DRM key information provided by SDMC. 
+     * @return SDMCInfo The DRM key information provided by SDMC.
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public SDMCDrmKeyProviderInfo getSDMCInfo() {
+        return this.SDMCInfo;
     }
 
     /**
-     * Set Video processing task ID.
-     * @param TaskId Video processing task ID.
+     * Set The DRM key information provided by SDMC.
+     * @param SDMCInfo The DRM key information provided by SDMC.
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setSDMCInfo(SDMCDrmKeyProviderInfo SDMCInfo) {
+        this.SDMCInfo = SDMCInfo;
     }
 
     /**
@@ -68,16 +68,16 @@ public class DescribeTaskDetailRequest extends AbstractModel{
         this.SubAppId = SubAppId;
     }
 
-    public DescribeTaskDetailRequest() {
+    public SetDrmKeyProviderInfoRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTaskDetailRequest(DescribeTaskDetailRequest source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
+    public SetDrmKeyProviderInfoRequest(SetDrmKeyProviderInfoRequest source) {
+        if (source.SDMCInfo != null) {
+            this.SDMCInfo = new SDMCDrmKeyProviderInfo(source.SDMCInfo);
         }
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
@@ -89,7 +89,7 @@ public class DescribeTaskDetailRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamObj(map, prefix + "SDMCInfo.", this.SDMCInfo);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }

@@ -43,6 +43,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String SourceContext;
 
     /**
+    * The TRTC recording information.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TrtcRecordInfo")
+    @Expose
+    private TrtcRecordInfo TrtcRecordInfo;
+
+    /**
      * Get Source of a media file:
 <li>`Record`: recording, such as live or time-shift recording</li>
 <li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
@@ -98,6 +106,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.SourceContext = SourceContext;
     }
 
+    /**
+     * Get The TRTC recording information.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TrtcRecordInfo The TRTC recording information.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public TrtcRecordInfo getTrtcRecordInfo() {
+        return this.TrtcRecordInfo;
+    }
+
+    /**
+     * Set The TRTC recording information.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TrtcRecordInfo The TRTC recording information.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTrtcRecordInfo(TrtcRecordInfo TrtcRecordInfo) {
+        this.TrtcRecordInfo = TrtcRecordInfo;
+    }
+
     public MediaSourceData() {
     }
 
@@ -112,6 +140,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.SourceContext != null) {
             this.SourceContext = new String(source.SourceContext);
         }
+        if (source.TrtcRecordInfo != null) {
+            this.TrtcRecordInfo = new TrtcRecordInfo(source.TrtcRecordInfo);
+        }
     }
 
 
@@ -121,6 +152,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
         this.setParamSimple(map, prefix + "SourceContext", this.SourceContext);
+        this.setParamObj(map, prefix + "TrtcRecordInfo.", this.TrtcRecordInfo);
 
     }
 }

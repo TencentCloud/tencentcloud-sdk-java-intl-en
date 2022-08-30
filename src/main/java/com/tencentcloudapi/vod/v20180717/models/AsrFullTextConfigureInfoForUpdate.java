@@ -32,8 +32,17 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel{
     private String Switch;
 
     /**
-    * Format of generated subtitles file. If an empty string is entered, no subtitles files will be generated. Valid values:
-<li>vtt: generates a WebVTT subtitles file.</li>
+    * The modification information of the subtitle format list.
+    */
+    @SerializedName("SubtitleFormatsOperation")
+    @Expose
+    private SubtitleFormatsOperation SubtitleFormatsOperation;
+
+    /**
+    * The format of the subtitle file generated. <font color='red'>If you pass in an empty string</font>, no subtitle files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
     */
     @SerializedName("SubtitleFormat")
     @Expose
@@ -64,20 +73,44 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel{
     }
 
     /**
-     * Get Format of generated subtitles file. If an empty string is entered, no subtitles files will be generated. Valid values:
-<li>vtt: generates a WebVTT subtitles file.</li> 
-     * @return SubtitleFormat Format of generated subtitles file. If an empty string is entered, no subtitles files will be generated. Valid values:
-<li>vtt: generates a WebVTT subtitles file.</li>
+     * Get The modification information of the subtitle format list. 
+     * @return SubtitleFormatsOperation The modification information of the subtitle format list.
+     */
+    public SubtitleFormatsOperation getSubtitleFormatsOperation() {
+        return this.SubtitleFormatsOperation;
+    }
+
+    /**
+     * Set The modification information of the subtitle format list.
+     * @param SubtitleFormatsOperation The modification information of the subtitle format list.
+     */
+    public void setSubtitleFormatsOperation(SubtitleFormatsOperation SubtitleFormatsOperation) {
+        this.SubtitleFormatsOperation = SubtitleFormatsOperation;
+    }
+
+    /**
+     * Get The format of the subtitle file generated. <font color='red'>If you pass in an empty string</font>, no subtitle files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font> 
+     * @return SubtitleFormat The format of the subtitle file generated. <font color='red'>If you pass in an empty string</font>, no subtitle files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
      */
     public String getSubtitleFormat() {
         return this.SubtitleFormat;
     }
 
     /**
-     * Set Format of generated subtitles file. If an empty string is entered, no subtitles files will be generated. Valid values:
-<li>vtt: generates a WebVTT subtitles file.</li>
-     * @param SubtitleFormat Format of generated subtitles file. If an empty string is entered, no subtitles files will be generated. Valid values:
-<li>vtt: generates a WebVTT subtitles file.</li>
+     * Set The format of the subtitle file generated. <font color='red'>If you pass in an empty string</font>, no subtitle files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
+     * @param SubtitleFormat The format of the subtitle file generated. <font color='red'>If you pass in an empty string</font>, no subtitle files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
      */
     public void setSubtitleFormat(String SubtitleFormat) {
         this.SubtitleFormat = SubtitleFormat;
@@ -94,6 +127,9 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel{
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }
+        if (source.SubtitleFormatsOperation != null) {
+            this.SubtitleFormatsOperation = new SubtitleFormatsOperation(source.SubtitleFormatsOperation);
+        }
         if (source.SubtitleFormat != null) {
             this.SubtitleFormat = new String(source.SubtitleFormat);
         }
@@ -105,6 +141,7 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamObj(map, prefix + "SubtitleFormatsOperation.", this.SubtitleFormatsOperation);
         this.setParamSimple(map, prefix + "SubtitleFormat", this.SubtitleFormat);
 
     }

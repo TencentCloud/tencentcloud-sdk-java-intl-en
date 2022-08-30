@@ -195,6 +195,23 @@ public class SearchMediaRequest extends AbstractModel{
     private String [] StorageClasses;
 
     /**
+    * The TRTC application IDs. Any file that matches one of the application IDs will be returned.
+<li>Array length limit: 10</li>
+    */
+    @SerializedName("TrtcSdkAppIds")
+    @Expose
+    private Long [] TrtcSdkAppIds;
+
+    /**
+    * The TRTC room IDs. Any file that matches one of the room IDs will be returned.
+<li>Element length limit: 64 characters.</li>
+<li>Array length limit: 10.</li>
+    */
+    @SerializedName("TrtcRoomIds")
+    @Expose
+    private String [] TrtcRoomIds;
+
+    /**
     * (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
 Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
     */
@@ -709,6 +726,50 @@ End time in the creation time range.
     }
 
     /**
+     * Get The TRTC application IDs. Any file that matches one of the application IDs will be returned.
+<li>Array length limit: 10</li> 
+     * @return TrtcSdkAppIds The TRTC application IDs. Any file that matches one of the application IDs will be returned.
+<li>Array length limit: 10</li>
+     */
+    public Long [] getTrtcSdkAppIds() {
+        return this.TrtcSdkAppIds;
+    }
+
+    /**
+     * Set The TRTC application IDs. Any file that matches one of the application IDs will be returned.
+<li>Array length limit: 10</li>
+     * @param TrtcSdkAppIds The TRTC application IDs. Any file that matches one of the application IDs will be returned.
+<li>Array length limit: 10</li>
+     */
+    public void setTrtcSdkAppIds(Long [] TrtcSdkAppIds) {
+        this.TrtcSdkAppIds = TrtcSdkAppIds;
+    }
+
+    /**
+     * Get The TRTC room IDs. Any file that matches one of the room IDs will be returned.
+<li>Element length limit: 64 characters.</li>
+<li>Array length limit: 10.</li> 
+     * @return TrtcRoomIds The TRTC room IDs. Any file that matches one of the room IDs will be returned.
+<li>Element length limit: 64 characters.</li>
+<li>Array length limit: 10.</li>
+     */
+    public String [] getTrtcRoomIds() {
+        return this.TrtcRoomIds;
+    }
+
+    /**
+     * Set The TRTC room IDs. Any file that matches one of the room IDs will be returned.
+<li>Element length limit: 64 characters.</li>
+<li>Array length limit: 10.</li>
+     * @param TrtcRoomIds The TRTC room IDs. Any file that matches one of the room IDs will be returned.
+<li>Element length limit: 64 characters.</li>
+<li>Array length limit: 10.</li>
+     */
+    public void setTrtcRoomIds(String [] TrtcRoomIds) {
+        this.TrtcRoomIds = TrtcRoomIds;
+    }
+
+    /**
      * Get (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
 Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters. 
      * @return Text (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
@@ -956,6 +1017,18 @@ End time in the creation time range.
                 this.StorageClasses[i] = new String(source.StorageClasses[i]);
             }
         }
+        if (source.TrtcSdkAppIds != null) {
+            this.TrtcSdkAppIds = new Long[source.TrtcSdkAppIds.length];
+            for (int i = 0; i < source.TrtcSdkAppIds.length; i++) {
+                this.TrtcSdkAppIds[i] = new Long(source.TrtcSdkAppIds[i]);
+            }
+        }
+        if (source.TrtcRoomIds != null) {
+            this.TrtcRoomIds = new String[source.TrtcRoomIds.length];
+            for (int i = 0; i < source.TrtcRoomIds.length; i++) {
+                this.TrtcRoomIds[i] = new String(source.TrtcRoomIds[i]);
+            }
+        }
         if (source.Text != null) {
             this.Text = new String(source.Text);
         }
@@ -1000,6 +1073,8 @@ End time in the creation time range.
         this.setParamArraySimple(map, prefix + "Filters.", this.Filters);
         this.setParamArraySimple(map, prefix + "StorageRegions.", this.StorageRegions);
         this.setParamArraySimple(map, prefix + "StorageClasses.", this.StorageClasses);
+        this.setParamArraySimple(map, prefix + "TrtcSdkAppIds.", this.TrtcSdkAppIds);
+        this.setParamArraySimple(map, prefix + "TrtcRoomIds.", this.TrtcRoomIds);
         this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
         this.setParamSimple(map, prefix + "StreamId", this.StreamId);

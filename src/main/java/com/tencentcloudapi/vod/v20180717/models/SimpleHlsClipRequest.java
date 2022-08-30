@@ -58,6 +58,43 @@ public class SimpleHlsClipRequest extends AbstractModel{
     private Long IsPersistence;
 
     /**
+    * The expiration time of the video clip that is to be saved, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). `9999-12-31T23:59:59Z` is the default value, which means the video clip will never expire. After expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. This parameter is valid only if `IsPersistence` is 1.
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private String ExpireTime;
+
+    /**
+    * The task flow to execute on the video clipped for persistent storage. For details, see [Upload from Server](https://intl.cloud.tencent.com/document/product/266/33912). This parameter is valid only if `IsPersistence` is 1.
+    */
+    @SerializedName("Procedure")
+    @Expose
+    private String Procedure;
+
+    /**
+    * The ID of the media file’s category. You can use the [CreateClass](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API to create a category and get the category ID.
+<li>The default value is `0`, which means the “Other” category.</li>
+This parameter is valid only if `IsPersistence` is `1`.
+    */
+    @SerializedName("ClassId")
+    @Expose
+    private Long ClassId;
+
+    /**
+    * The source context, which is used to pass through user request information. The [NewFileUpload](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 250 characters and is valid only if `IsPersistence` is `1`.
+    */
+    @SerializedName("SourceContext")
+    @Expose
+    private String SourceContext;
+
+    /**
+    * The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`.
+    */
+    @SerializedName("SessionContext")
+    @Expose
+    private String SessionContext;
+
+    /**
      * Get URL of the HLS video in VOD that needs to be clipped. 
      * @return Url URL of the HLS video in VOD that needs to be clipped.
      */
@@ -137,6 +174,94 @@ public class SimpleHlsClipRequest extends AbstractModel{
         this.IsPersistence = IsPersistence;
     }
 
+    /**
+     * Get The expiration time of the video clip that is to be saved, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). `9999-12-31T23:59:59Z` is the default value, which means the video clip will never expire. After expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. This parameter is valid only if `IsPersistence` is 1. 
+     * @return ExpireTime The expiration time of the video clip that is to be saved, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). `9999-12-31T23:59:59Z` is the default value, which means the video clip will never expire. After expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. This parameter is valid only if `IsPersistence` is 1.
+     */
+    public String getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set The expiration time of the video clip that is to be saved, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). `9999-12-31T23:59:59Z` is the default value, which means the video clip will never expire. After expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. This parameter is valid only if `IsPersistence` is 1.
+     * @param ExpireTime The expiration time of the video clip that is to be saved, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). `9999-12-31T23:59:59Z` is the default value, which means the video clip will never expire. After expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. This parameter is valid only if `IsPersistence` is 1.
+     */
+    public void setExpireTime(String ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
+    /**
+     * Get The task flow to execute on the video clipped for persistent storage. For details, see [Upload from Server](https://intl.cloud.tencent.com/document/product/266/33912). This parameter is valid only if `IsPersistence` is 1. 
+     * @return Procedure The task flow to execute on the video clipped for persistent storage. For details, see [Upload from Server](https://intl.cloud.tencent.com/document/product/266/33912). This parameter is valid only if `IsPersistence` is 1.
+     */
+    public String getProcedure() {
+        return this.Procedure;
+    }
+
+    /**
+     * Set The task flow to execute on the video clipped for persistent storage. For details, see [Upload from Server](https://intl.cloud.tencent.com/document/product/266/33912). This parameter is valid only if `IsPersistence` is 1.
+     * @param Procedure The task flow to execute on the video clipped for persistent storage. For details, see [Upload from Server](https://intl.cloud.tencent.com/document/product/266/33912). This parameter is valid only if `IsPersistence` is 1.
+     */
+    public void setProcedure(String Procedure) {
+        this.Procedure = Procedure;
+    }
+
+    /**
+     * Get The ID of the media file’s category. You can use the [CreateClass](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API to create a category and get the category ID.
+<li>The default value is `0`, which means the “Other” category.</li>
+This parameter is valid only if `IsPersistence` is `1`. 
+     * @return ClassId The ID of the media file’s category. You can use the [CreateClass](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API to create a category and get the category ID.
+<li>The default value is `0`, which means the “Other” category.</li>
+This parameter is valid only if `IsPersistence` is `1`.
+     */
+    public Long getClassId() {
+        return this.ClassId;
+    }
+
+    /**
+     * Set The ID of the media file’s category. You can use the [CreateClass](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API to create a category and get the category ID.
+<li>The default value is `0`, which means the “Other” category.</li>
+This parameter is valid only if `IsPersistence` is `1`.
+     * @param ClassId The ID of the media file’s category. You can use the [CreateClass](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API to create a category and get the category ID.
+<li>The default value is `0`, which means the “Other” category.</li>
+This parameter is valid only if `IsPersistence` is `1`.
+     */
+    public void setClassId(Long ClassId) {
+        this.ClassId = ClassId;
+    }
+
+    /**
+     * Get The source context, which is used to pass through user request information. The [NewFileUpload](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 250 characters and is valid only if `IsPersistence` is `1`. 
+     * @return SourceContext The source context, which is used to pass through user request information. The [NewFileUpload](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 250 characters and is valid only if `IsPersistence` is `1`.
+     */
+    public String getSourceContext() {
+        return this.SourceContext;
+    }
+
+    /**
+     * Set The source context, which is used to pass through user request information. The [NewFileUpload](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 250 characters and is valid only if `IsPersistence` is `1`.
+     * @param SourceContext The source context, which is used to pass through user request information. The [NewFileUpload](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 250 characters and is valid only if `IsPersistence` is `1`.
+     */
+    public void setSourceContext(String SourceContext) {
+        this.SourceContext = SourceContext;
+    }
+
+    /**
+     * Get The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`. 
+     * @return SessionContext The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`.
+     */
+    public String getSessionContext() {
+        return this.SessionContext;
+    }
+
+    /**
+     * Set The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`.
+     * @param SessionContext The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`.
+     */
+    public void setSessionContext(String SessionContext) {
+        this.SessionContext = SessionContext;
+    }
+
     public SimpleHlsClipRequest() {
     }
 
@@ -160,6 +285,21 @@ public class SimpleHlsClipRequest extends AbstractModel{
         if (source.IsPersistence != null) {
             this.IsPersistence = new Long(source.IsPersistence);
         }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.Procedure != null) {
+            this.Procedure = new String(source.Procedure);
+        }
+        if (source.ClassId != null) {
+            this.ClassId = new Long(source.ClassId);
+        }
+        if (source.SourceContext != null) {
+            this.SourceContext = new String(source.SourceContext);
+        }
+        if (source.SessionContext != null) {
+            this.SessionContext = new String(source.SessionContext);
+        }
     }
 
 
@@ -172,6 +312,11 @@ public class SimpleHlsClipRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
         this.setParamSimple(map, prefix + "IsPersistence", this.IsPersistence);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "Procedure", this.Procedure);
+        this.setParamSimple(map, prefix + "ClassId", this.ClassId);
+        this.setParamSimple(map, prefix + "SourceContext", this.SourceContext);
+        this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
 
     }
 }

@@ -164,6 +164,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private WechatMiniProgramPublishTask WechatMiniProgramPublishCompleteEvent;
 
     /**
+    * Watermark removal completion event. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RemoveWatermarkCompleteEvent")
+    @Expose
+    private RemoveWatermarkTask RemoveWatermarkCompleteEvent;
+
+    /**
     * Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
@@ -544,6 +552,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Watermark removal completion event. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return RemoveWatermarkCompleteEvent Watermark removal completion event. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public RemoveWatermarkTask getRemoveWatermarkCompleteEvent() {
+        return this.RemoveWatermarkCompleteEvent;
+    }
+
+    /**
+     * Set Watermark removal completion event. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param RemoveWatermarkCompleteEvent Watermark removal completion event. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setRemoveWatermarkCompleteEvent(RemoveWatermarkTask RemoveWatermarkCompleteEvent) {
+        this.RemoveWatermarkCompleteEvent = RemoveWatermarkCompleteEvent;
+    }
+
+    /**
      * Get Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return RestoreMediaCompleteEvent Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
@@ -619,6 +647,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.WechatMiniProgramPublishCompleteEvent != null) {
             this.WechatMiniProgramPublishCompleteEvent = new WechatMiniProgramPublishTask(source.WechatMiniProgramPublishCompleteEvent);
         }
+        if (source.RemoveWatermarkCompleteEvent != null) {
+            this.RemoveWatermarkCompleteEvent = new RemoveWatermarkTask(source.RemoveWatermarkCompleteEvent);
+        }
         if (source.RestoreMediaCompleteEvent != null) {
             this.RestoreMediaCompleteEvent = new RestoreMediaTask(source.RestoreMediaCompleteEvent);
         }
@@ -645,6 +676,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamObj(map, prefix + "SnapshotByTimeOffsetCompleteEvent.", this.SnapshotByTimeOffsetCompleteEvent);
         this.setParamObj(map, prefix + "WechatPublishCompleteEvent.", this.WechatPublishCompleteEvent);
         this.setParamObj(map, prefix + "WechatMiniProgramPublishCompleteEvent.", this.WechatMiniProgramPublishCompleteEvent);
+        this.setParamObj(map, prefix + "RemoveWatermarkCompleteEvent.", this.RemoveWatermarkCompleteEvent);
         this.setParamObj(map, prefix + "RestoreMediaCompleteEvent.", this.RestoreMediaCompleteEvent);
 
     }

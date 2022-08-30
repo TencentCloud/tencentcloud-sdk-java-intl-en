@@ -44,6 +44,13 @@ public class SimpleHlsClipResponse extends AbstractModel{
     private String FileId;
 
     /**
+    * The ID of the task flow to execute on the video clipped for persistent storage.
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -99,6 +106,22 @@ public class SimpleHlsClipResponse extends AbstractModel{
     }
 
     /**
+     * Get The ID of the task flow to execute on the video clipped for persistent storage. 
+     * @return TaskId The ID of the task flow to execute on the video clipped for persistent storage.
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set The ID of the task flow to execute on the video clipped for persistent storage.
+     * @param TaskId The ID of the task flow to execute on the video clipped for persistent storage.
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -131,6 +154,9 @@ public class SimpleHlsClipResponse extends AbstractModel{
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
         }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -144,6 +170,7 @@ public class SimpleHlsClipResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamObj(map, prefix + "MetaData.", this.MetaData);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

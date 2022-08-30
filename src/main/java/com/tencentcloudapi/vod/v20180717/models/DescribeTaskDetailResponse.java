@@ -29,16 +29,9 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>SplitMedia: Video splitting</li>
 <li>ComposeMedia: Media file producing</li>
 <li>WechatPublish: WeChat publishing</li>
-<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
-
-Task types for v2017:
-<li>Transcode: Transcoding</li>
-<li>SnapshotByTimeOffset: Screencapturing</li>
-<li>Concat: Video splicing</li>
-<li>Clip: Video clipping</li>
-<li>ImageSprites: Image sprite generating</li>
+<li>RemoveWatermarkTask: Watermark removal</li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -172,6 +165,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetTask;
 
     /**
+    * The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RemoveWatermarkTask")
+    @Expose
+    private RemoveWatermarkTask RemoveWatermarkTask;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -185,32 +186,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>SplitMedia: Video splitting</li>
 <li>ComposeMedia: Media file producing</li>
 <li>WechatPublish: WeChat publishing</li>
-<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
-
-Task types for v2017:
-<li>Transcode: Transcoding</li>
-<li>SnapshotByTimeOffset: Screencapturing</li>
-<li>Concat: Video splicing</li>
-<li>Clip: Video clipping</li>
-<li>ImageSprites: Image sprite generating</li> 
+<li>RemoveWatermarkTask: Watermark removal</li> 
      * @return TaskType The task type. Valid values:
 <li>Procedure: Video processing</li>
 <li>EditMedia: Video editing</li>
 <li>SplitMedia: Video splitting</li>
 <li>ComposeMedia: Media file producing</li>
 <li>WechatPublish: WeChat publishing</li>
-<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
-
-Task types for v2017:
-<li>Transcode: Transcoding</li>
-<li>SnapshotByTimeOffset: Screencapturing</li>
-<li>Concat: Video splicing</li>
-<li>Clip: Video clipping</li>
-<li>ImageSprites: Image sprite generating</li>
+<li>RemoveWatermarkTask: Watermark removal</li>
      */
     public String getTaskType() {
         return this.TaskType;
@@ -223,32 +210,18 @@ Task types for v2017:
 <li>SplitMedia: Video splitting</li>
 <li>ComposeMedia: Media file producing</li>
 <li>WechatPublish: WeChat publishing</li>
-<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
-
-Task types for v2017:
-<li>Transcode: Transcoding</li>
-<li>SnapshotByTimeOffset: Screencapturing</li>
-<li>Concat: Video splicing</li>
-<li>Clip: Video clipping</li>
-<li>ImageSprites: Image sprite generating</li>
+<li>RemoveWatermarkTask: Watermark removal</li>
      * @param TaskType The task type. Valid values:
 <li>Procedure: Video processing</li>
 <li>EditMedia: Video editing</li>
 <li>SplitMedia: Video splitting</li>
 <li>ComposeMedia: Media file producing</li>
 <li>WechatPublish: WeChat publishing</li>
-<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
-
-Task types for v2017:
-<li>Transcode: Transcoding</li>
-<li>SnapshotByTimeOffset: Screencapturing</li>
-<li>Concat: Video splicing</li>
-<li>Clip: Video clipping</li>
-<li>ImageSprites: Image sprite generating</li>
+<li>RemoveWatermarkTask: Watermark removal</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
@@ -571,6 +544,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RemoveWatermarkTask The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public RemoveWatermarkTask getRemoveWatermarkTask() {
+        return this.RemoveWatermarkTask;
+    }
+
+    /**
+     * Set The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RemoveWatermarkTask The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRemoveWatermarkTask(RemoveWatermarkTask RemoveWatermarkTask) {
+        this.RemoveWatermarkTask = RemoveWatermarkTask;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -645,6 +638,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.SnapshotByTimeOffsetTask != null) {
             this.SnapshotByTimeOffsetTask = new SnapshotByTimeOffsetTask2017(source.SnapshotByTimeOffsetTask);
         }
+        if (source.RemoveWatermarkTask != null) {
+            this.RemoveWatermarkTask = new RemoveWatermarkTask(source.RemoveWatermarkTask);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -672,6 +668,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "ClipTask.", this.ClipTask);
         this.setParamObj(map, prefix + "CreateImageSpriteTask.", this.CreateImageSpriteTask);
         this.setParamObj(map, prefix + "SnapshotByTimeOffsetTask.", this.SnapshotByTimeOffsetTask);
+        this.setParamObj(map, prefix + "RemoveWatermarkTask.", this.RemoveWatermarkTask);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

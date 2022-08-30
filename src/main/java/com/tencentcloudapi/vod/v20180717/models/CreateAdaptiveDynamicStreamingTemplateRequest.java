@@ -65,6 +65,16 @@ If this parameter is an empty string, it indicates that the video is not protect
     private String DrmType;
 
     /**
+    * The provider of the DRM key. Valid values:
+<li>SDMC</li>
+<li>VOD</li>
+The default is `VOD`.
+    */
+    @SerializedName("DrmKeyProvider")
+    @Expose
+    private String DrmKeyProvider;
+
+    /**
     * Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
 <li>0: no,</li>
 <li>1: yes.</li>
@@ -200,6 +210,34 @@ If this parameter is an empty string, it indicates that the video is not protect
     }
 
     /**
+     * Get The provider of the DRM key. Valid values:
+<li>SDMC</li>
+<li>VOD</li>
+The default is `VOD`. 
+     * @return DrmKeyProvider The provider of the DRM key. Valid values:
+<li>SDMC</li>
+<li>VOD</li>
+The default is `VOD`.
+     */
+    public String getDrmKeyProvider() {
+        return this.DrmKeyProvider;
+    }
+
+    /**
+     * Set The provider of the DRM key. Valid values:
+<li>SDMC</li>
+<li>VOD</li>
+The default is `VOD`.
+     * @param DrmKeyProvider The provider of the DRM key. Valid values:
+<li>SDMC</li>
+<li>VOD</li>
+The default is `VOD`.
+     */
+    public void setDrmKeyProvider(String DrmKeyProvider) {
+        this.DrmKeyProvider = DrmKeyProvider;
+    }
+
+    /**
      * Get Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
 <li>0: no,</li>
 <li>1: yes.</li>
@@ -297,6 +335,9 @@ Default value: no.
         if (source.DrmType != null) {
             this.DrmType = new String(source.DrmType);
         }
+        if (source.DrmKeyProvider != null) {
+            this.DrmKeyProvider = new String(source.DrmKeyProvider);
+        }
         if (source.DisableHigherVideoBitrate != null) {
             this.DisableHigherVideoBitrate = new Long(source.DisableHigherVideoBitrate);
         }
@@ -318,6 +359,7 @@ Default value: no.
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "DrmType", this.DrmType);
+        this.setParamSimple(map, prefix + "DrmKeyProvider", this.DrmKeyProvider);
         this.setParamSimple(map, prefix + "DisableHigherVideoBitrate", this.DisableHigherVideoBitrate);
         this.setParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);
         this.setParamSimple(map, prefix + "Comment", this.Comment);

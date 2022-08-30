@@ -72,6 +72,29 @@ public class LiveRealTimeClipRequest extends AbstractModel{
     private String Procedure;
 
     /**
+    * The ID of the media file’s category. You can use the [CreateClass](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API to create a category and get the category ID.
+<li>The default value is `0`, which means the “Other” category.</li>
+This parameter is valid only if `IsPersistence` is `1`.
+    */
+    @SerializedName("ClassId")
+    @Expose
+    private Long ClassId;
+
+    /**
+    * The source context, which is used to pass through user request information. The [NewFileUpload](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 250 characters and is valid only if `IsPersistence` is `1`.
+    */
+    @SerializedName("SourceContext")
+    @Expose
+    private String SourceContext;
+
+    /**
+    * The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`.
+    */
+    @SerializedName("SessionContext")
+    @Expose
+    private String SessionContext;
+
+    /**
     * Whether the metadata of clipped video needs to be returned. 0: no, 1: yes. Default value: no.
     */
     @SerializedName("MetaDataRequired")
@@ -84,6 +107,15 @@ public class LiveRealTimeClipRequest extends AbstractModel{
     @SerializedName("Host")
     @Expose
     private String Host;
+
+    /**
+    * The information of the live stream to clip.
+<li>The video clip is cut from the original stream by default.</li>
+<li>If `Type` of `StreamInfo` is set to `Transcoding`, the video clip will be cut from the output stream of the transcoding template specified by `TemplateId`.</li>
+    */
+    @SerializedName("StreamInfo")
+    @Expose
+    private LiveRealTimeClipStreamInfo StreamInfo;
 
     /**
     * Reserved field. Do not enter a value for it.
@@ -205,6 +237,62 @@ public class LiveRealTimeClipRequest extends AbstractModel{
     }
 
     /**
+     * Get The ID of the media file’s category. You can use the [CreateClass](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API to create a category and get the category ID.
+<li>The default value is `0`, which means the “Other” category.</li>
+This parameter is valid only if `IsPersistence` is `1`. 
+     * @return ClassId The ID of the media file’s category. You can use the [CreateClass](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API to create a category and get the category ID.
+<li>The default value is `0`, which means the “Other” category.</li>
+This parameter is valid only if `IsPersistence` is `1`.
+     */
+    public Long getClassId() {
+        return this.ClassId;
+    }
+
+    /**
+     * Set The ID of the media file’s category. You can use the [CreateClass](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API to create a category and get the category ID.
+<li>The default value is `0`, which means the “Other” category.</li>
+This parameter is valid only if `IsPersistence` is `1`.
+     * @param ClassId The ID of the media file’s category. You can use the [CreateClass](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API to create a category and get the category ID.
+<li>The default value is `0`, which means the “Other” category.</li>
+This parameter is valid only if `IsPersistence` is `1`.
+     */
+    public void setClassId(Long ClassId) {
+        this.ClassId = ClassId;
+    }
+
+    /**
+     * Get The source context, which is used to pass through user request information. The [NewFileUpload](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 250 characters and is valid only if `IsPersistence` is `1`. 
+     * @return SourceContext The source context, which is used to pass through user request information. The [NewFileUpload](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 250 characters and is valid only if `IsPersistence` is `1`.
+     */
+    public String getSourceContext() {
+        return this.SourceContext;
+    }
+
+    /**
+     * Set The source context, which is used to pass through user request information. The [NewFileUpload](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 250 characters and is valid only if `IsPersistence` is `1`.
+     * @param SourceContext The source context, which is used to pass through user request information. The [NewFileUpload](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 250 characters and is valid only if `IsPersistence` is `1`.
+     */
+    public void setSourceContext(String SourceContext) {
+        this.SourceContext = SourceContext;
+    }
+
+    /**
+     * Get The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`. 
+     * @return SessionContext The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`.
+     */
+    public String getSessionContext() {
+        return this.SessionContext;
+    }
+
+    /**
+     * Set The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`.
+     * @param SessionContext The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`.
+     */
+    public void setSessionContext(String SessionContext) {
+        this.SessionContext = SessionContext;
+    }
+
+    /**
      * Get Whether the metadata of clipped video needs to be returned. 0: no, 1: yes. Default value: no. 
      * @return MetaDataRequired Whether the metadata of clipped video needs to be returned. 0: no, 1: yes. Default value: no.
      */
@@ -234,6 +322,30 @@ public class LiveRealTimeClipRequest extends AbstractModel{
      */
     public void setHost(String Host) {
         this.Host = Host;
+    }
+
+    /**
+     * Get The information of the live stream to clip.
+<li>The video clip is cut from the original stream by default.</li>
+<li>If `Type` of `StreamInfo` is set to `Transcoding`, the video clip will be cut from the output stream of the transcoding template specified by `TemplateId`.</li> 
+     * @return StreamInfo The information of the live stream to clip.
+<li>The video clip is cut from the original stream by default.</li>
+<li>If `Type` of `StreamInfo` is set to `Transcoding`, the video clip will be cut from the output stream of the transcoding template specified by `TemplateId`.</li>
+     */
+    public LiveRealTimeClipStreamInfo getStreamInfo() {
+        return this.StreamInfo;
+    }
+
+    /**
+     * Set The information of the live stream to clip.
+<li>The video clip is cut from the original stream by default.</li>
+<li>If `Type` of `StreamInfo` is set to `Transcoding`, the video clip will be cut from the output stream of the transcoding template specified by `TemplateId`.</li>
+     * @param StreamInfo The information of the live stream to clip.
+<li>The video clip is cut from the original stream by default.</li>
+<li>If `Type` of `StreamInfo` is set to `Transcoding`, the video clip will be cut from the output stream of the transcoding template specified by `TemplateId`.</li>
+     */
+    public void setStreamInfo(LiveRealTimeClipStreamInfo StreamInfo) {
+        this.StreamInfo = StreamInfo;
     }
 
     /**
@@ -281,11 +393,23 @@ public class LiveRealTimeClipRequest extends AbstractModel{
         if (source.Procedure != null) {
             this.Procedure = new String(source.Procedure);
         }
+        if (source.ClassId != null) {
+            this.ClassId = new Long(source.ClassId);
+        }
+        if (source.SourceContext != null) {
+            this.SourceContext = new String(source.SourceContext);
+        }
+        if (source.SessionContext != null) {
+            this.SessionContext = new String(source.SessionContext);
+        }
         if (source.MetaDataRequired != null) {
             this.MetaDataRequired = new Long(source.MetaDataRequired);
         }
         if (source.Host != null) {
             this.Host = new String(source.Host);
+        }
+        if (source.StreamInfo != null) {
+            this.StreamInfo = new LiveRealTimeClipStreamInfo(source.StreamInfo);
         }
         if (source.ExtInfo != null) {
             this.ExtInfo = new String(source.ExtInfo);
@@ -304,8 +428,12 @@ public class LiveRealTimeClipRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "IsPersistence", this.IsPersistence);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "Procedure", this.Procedure);
+        this.setParamSimple(map, prefix + "ClassId", this.ClassId);
+        this.setParamSimple(map, prefix + "SourceContext", this.SourceContext);
+        this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "MetaDataRequired", this.MetaDataRequired);
         this.setParamSimple(map, prefix + "Host", this.Host);
+        this.setParamObj(map, prefix + "StreamInfo.", this.StreamInfo);
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
 
     }

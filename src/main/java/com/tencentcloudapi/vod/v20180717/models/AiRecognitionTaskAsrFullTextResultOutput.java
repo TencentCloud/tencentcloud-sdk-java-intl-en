@@ -38,14 +38,21 @@ public class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel{
     private String SegmentSetFileUrl;
 
     /**
-    * Expiration time of the URL to the file of the list for full-text speech recognition segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+    * The expiration time of the URLs of full-text speech recognition segments in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
     */
     @SerializedName("SegmentSetFileUrlExpireTime")
     @Expose
     private String SegmentSetFileUrlExpireTime;
 
     /**
-    * Subtitles file URL.
+    * The subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
+    */
+    @SerializedName("SubtitleSet")
+    @Expose
+    private AiRecognitionTaskAsrFullTextResultOutputSubtitleItem [] SubtitleSet;
+
+    /**
+    * The URLs of the subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
     */
     @SerializedName("SubtitleUrl")
     @Expose
@@ -88,32 +95,48 @@ public class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel{
     }
 
     /**
-     * Get Expiration time of the URL to the file of the list for full-text speech recognition segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732) 
-     * @return SegmentSetFileUrlExpireTime Expiration time of the URL to the file of the list for full-text speech recognition segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     * Get The expiration time of the URLs of full-text speech recognition segments in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format). 
+     * @return SegmentSetFileUrlExpireTime The expiration time of the URLs of full-text speech recognition segments in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
      */
     public String getSegmentSetFileUrlExpireTime() {
         return this.SegmentSetFileUrlExpireTime;
     }
 
     /**
-     * Set Expiration time of the URL to the file of the list for full-text speech recognition segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
-     * @param SegmentSetFileUrlExpireTime Expiration time of the URL to the file of the list for full-text speech recognition segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     * Set The expiration time of the URLs of full-text speech recognition segments in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
+     * @param SegmentSetFileUrlExpireTime The expiration time of the URLs of full-text speech recognition segments in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
      */
     public void setSegmentSetFileUrlExpireTime(String SegmentSetFileUrlExpireTime) {
         this.SegmentSetFileUrlExpireTime = SegmentSetFileUrlExpireTime;
     }
 
     /**
-     * Get Subtitles file URL. 
-     * @return SubtitleUrl Subtitles file URL.
+     * Get The subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo). 
+     * @return SubtitleSet The subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
+     */
+    public AiRecognitionTaskAsrFullTextResultOutputSubtitleItem [] getSubtitleSet() {
+        return this.SubtitleSet;
+    }
+
+    /**
+     * Set The subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
+     * @param SubtitleSet The subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
+     */
+    public void setSubtitleSet(AiRecognitionTaskAsrFullTextResultOutputSubtitleItem [] SubtitleSet) {
+        this.SubtitleSet = SubtitleSet;
+    }
+
+    /**
+     * Get The URLs of the subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo). 
+     * @return SubtitleUrl The URLs of the subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
      */
     public String getSubtitleUrl() {
         return this.SubtitleUrl;
     }
 
     /**
-     * Set Subtitles file URL.
-     * @param SubtitleUrl Subtitles file URL.
+     * Set The URLs of the subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
+     * @param SubtitleUrl The URLs of the subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
      */
     public void setSubtitleUrl(String SubtitleUrl) {
         this.SubtitleUrl = SubtitleUrl;
@@ -139,6 +162,12 @@ public class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel{
         if (source.SegmentSetFileUrlExpireTime != null) {
             this.SegmentSetFileUrlExpireTime = new String(source.SegmentSetFileUrlExpireTime);
         }
+        if (source.SubtitleSet != null) {
+            this.SubtitleSet = new AiRecognitionTaskAsrFullTextResultOutputSubtitleItem[source.SubtitleSet.length];
+            for (int i = 0; i < source.SubtitleSet.length; i++) {
+                this.SubtitleSet[i] = new AiRecognitionTaskAsrFullTextResultOutputSubtitleItem(source.SubtitleSet[i]);
+            }
+        }
         if (source.SubtitleUrl != null) {
             this.SubtitleUrl = new String(source.SubtitleUrl);
         }
@@ -152,6 +181,7 @@ public class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel{
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
         this.setParamSimple(map, prefix + "SegmentSetFileUrl", this.SegmentSetFileUrl);
         this.setParamSimple(map, prefix + "SegmentSetFileUrlExpireTime", this.SegmentSetFileUrlExpireTime);
+        this.setParamArrayObj(map, prefix + "SubtitleSet.", this.SubtitleSet);
         this.setParamSimple(map, prefix + "SubtitleUrl", this.SubtitleUrl);
 
     }
