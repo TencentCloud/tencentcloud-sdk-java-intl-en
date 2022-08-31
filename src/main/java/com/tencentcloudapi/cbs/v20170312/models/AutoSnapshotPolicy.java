@@ -23,25 +23,11 @@ import java.util.HashMap;
 public class AutoSnapshotPolicy extends AbstractModel{
 
     /**
-    * Scheduled snapshot policy ID.
+    * The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
     */
-    @SerializedName("AutoSnapshotPolicyId")
+    @SerializedName("DiskIdSet")
     @Expose
-    private String AutoSnapshotPolicyId;
-
-    /**
-    * Scheduled snapshot policy name.
-    */
-    @SerializedName("AutoSnapshotPolicyName")
-    @Expose
-    private String AutoSnapshotPolicyName;
-
-    /**
-    * Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
-    */
-    @SerializedName("AutoSnapshotPolicyState")
-    @Expose
-    private String AutoSnapshotPolicyState;
+    private String [] DiskIdSet;
 
     /**
     * Whether scheduled snapshot policy is activated.
@@ -51,25 +37,26 @@ public class AutoSnapshotPolicy extends AbstractModel{
     private Boolean IsActivated;
 
     /**
+    * Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
+    */
+    @SerializedName("AutoSnapshotPolicyState")
+    @Expose
+    private String AutoSnapshotPolicyState;
+
+    /**
+    * Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsCopyToRemote")
+    @Expose
+    private Long IsCopyToRemote;
+
+    /**
     * Whether the snapshot created by this scheduled snapshot policy is retained permanently.
     */
     @SerializedName("IsPermanent")
     @Expose
     private Boolean IsPermanent;
-
-    /**
-    * Number of days the snapshot created by this scheduled snapshot policy is retained.
-    */
-    @SerializedName("RetentionDays")
-    @Expose
-    private Long RetentionDays;
-
-    /**
-    * The time the scheduled snapshot policy was created.
-    */
-    @SerializedName("CreateTime")
-    @Expose
-    private String CreateTime;
 
     /**
     * The time the scheduled snapshot will be triggered again.
@@ -79,6 +66,20 @@ public class AutoSnapshotPolicy extends AbstractModel{
     private String NextTriggerTime;
 
     /**
+    * Scheduled snapshot policy name.
+    */
+    @SerializedName("AutoSnapshotPolicyName")
+    @Expose
+    private String AutoSnapshotPolicyName;
+
+    /**
+    * Scheduled snapshot policy ID.
+    */
+    @SerializedName("AutoSnapshotPolicyId")
+    @Expose
+    private String AutoSnapshotPolicyId;
+
+    /**
     * The policy for executing the scheduled snapshot.
     */
     @SerializedName("Policy")
@@ -86,58 +87,49 @@ public class AutoSnapshotPolicy extends AbstractModel{
     private Policy [] Policy;
 
     /**
-    * The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
+    * The time the scheduled snapshot policy was created.
     */
-    @SerializedName("DiskIdSet")
+    @SerializedName("CreateTime")
     @Expose
-    private String [] DiskIdSet;
+    private String CreateTime;
 
     /**
-     * Get Scheduled snapshot policy ID. 
-     * @return AutoSnapshotPolicyId Scheduled snapshot policy ID.
+    * Number of days the snapshot created by this scheduled snapshot policy is retained.
+    */
+    @SerializedName("RetentionDays")
+    @Expose
+    private Long RetentionDays;
+
+    /**
+    * ID of the replication target account
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CopyToAccountUin")
+    @Expose
+    private String CopyToAccountUin;
+
+    /**
+    * List of IDs of the instances associated with the scheduled snapshot policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("InstanceIdSet")
+    @Expose
+    private String [] InstanceIdSet;
+
+    /**
+     * Get The list of cloud disk IDs that the current scheduled snapshot policy is bound to. 
+     * @return DiskIdSet The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
      */
-    public String getAutoSnapshotPolicyId() {
-        return this.AutoSnapshotPolicyId;
+    public String [] getDiskIdSet() {
+        return this.DiskIdSet;
     }
 
     /**
-     * Set Scheduled snapshot policy ID.
-     * @param AutoSnapshotPolicyId Scheduled snapshot policy ID.
+     * Set The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
+     * @param DiskIdSet The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
      */
-    public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
-        this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;
-    }
-
-    /**
-     * Get Scheduled snapshot policy name. 
-     * @return AutoSnapshotPolicyName Scheduled snapshot policy name.
-     */
-    public String getAutoSnapshotPolicyName() {
-        return this.AutoSnapshotPolicyName;
-    }
-
-    /**
-     * Set Scheduled snapshot policy name.
-     * @param AutoSnapshotPolicyName Scheduled snapshot policy name.
-     */
-    public void setAutoSnapshotPolicyName(String AutoSnapshotPolicyName) {
-        this.AutoSnapshotPolicyName = AutoSnapshotPolicyName;
-    }
-
-    /**
-     * Get Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated. 
-     * @return AutoSnapshotPolicyState Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
-     */
-    public String getAutoSnapshotPolicyState() {
-        return this.AutoSnapshotPolicyState;
-    }
-
-    /**
-     * Set Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
-     * @param AutoSnapshotPolicyState Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
-     */
-    public void setAutoSnapshotPolicyState(String AutoSnapshotPolicyState) {
-        this.AutoSnapshotPolicyState = AutoSnapshotPolicyState;
+    public void setDiskIdSet(String [] DiskIdSet) {
+        this.DiskIdSet = DiskIdSet;
     }
 
     /**
@@ -157,6 +149,42 @@ public class AutoSnapshotPolicy extends AbstractModel{
     }
 
     /**
+     * Get Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated. 
+     * @return AutoSnapshotPolicyState Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
+     */
+    public String getAutoSnapshotPolicyState() {
+        return this.AutoSnapshotPolicyState;
+    }
+
+    /**
+     * Set Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
+     * @param AutoSnapshotPolicyState Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
+     */
+    public void setAutoSnapshotPolicyState(String AutoSnapshotPolicyState) {
+        this.AutoSnapshotPolicyState = AutoSnapshotPolicyState;
+    }
+
+    /**
+     * Get Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsCopyToRemote Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getIsCopyToRemote() {
+        return this.IsCopyToRemote;
+    }
+
+    /**
+     * Set Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsCopyToRemote Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIsCopyToRemote(Long IsCopyToRemote) {
+        this.IsCopyToRemote = IsCopyToRemote;
+    }
+
+    /**
      * Get Whether the snapshot created by this scheduled snapshot policy is retained permanently. 
      * @return IsPermanent Whether the snapshot created by this scheduled snapshot policy is retained permanently.
      */
@@ -170,38 +198,6 @@ public class AutoSnapshotPolicy extends AbstractModel{
      */
     public void setIsPermanent(Boolean IsPermanent) {
         this.IsPermanent = IsPermanent;
-    }
-
-    /**
-     * Get Number of days the snapshot created by this scheduled snapshot policy is retained. 
-     * @return RetentionDays Number of days the snapshot created by this scheduled snapshot policy is retained.
-     */
-    public Long getRetentionDays() {
-        return this.RetentionDays;
-    }
-
-    /**
-     * Set Number of days the snapshot created by this scheduled snapshot policy is retained.
-     * @param RetentionDays Number of days the snapshot created by this scheduled snapshot policy is retained.
-     */
-    public void setRetentionDays(Long RetentionDays) {
-        this.RetentionDays = RetentionDays;
-    }
-
-    /**
-     * Get The time the scheduled snapshot policy was created. 
-     * @return CreateTime The time the scheduled snapshot policy was created.
-     */
-    public String getCreateTime() {
-        return this.CreateTime;
-    }
-
-    /**
-     * Set The time the scheduled snapshot policy was created.
-     * @param CreateTime The time the scheduled snapshot policy was created.
-     */
-    public void setCreateTime(String CreateTime) {
-        this.CreateTime = CreateTime;
     }
 
     /**
@@ -221,6 +217,38 @@ public class AutoSnapshotPolicy extends AbstractModel{
     }
 
     /**
+     * Get Scheduled snapshot policy name. 
+     * @return AutoSnapshotPolicyName Scheduled snapshot policy name.
+     */
+    public String getAutoSnapshotPolicyName() {
+        return this.AutoSnapshotPolicyName;
+    }
+
+    /**
+     * Set Scheduled snapshot policy name.
+     * @param AutoSnapshotPolicyName Scheduled snapshot policy name.
+     */
+    public void setAutoSnapshotPolicyName(String AutoSnapshotPolicyName) {
+        this.AutoSnapshotPolicyName = AutoSnapshotPolicyName;
+    }
+
+    /**
+     * Get Scheduled snapshot policy ID. 
+     * @return AutoSnapshotPolicyId Scheduled snapshot policy ID.
+     */
+    public String getAutoSnapshotPolicyId() {
+        return this.AutoSnapshotPolicyId;
+    }
+
+    /**
+     * Set Scheduled snapshot policy ID.
+     * @param AutoSnapshotPolicyId Scheduled snapshot policy ID.
+     */
+    public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
+        this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;
+    }
+
+    /**
      * Get The policy for executing the scheduled snapshot. 
      * @return Policy The policy for executing the scheduled snapshot.
      */
@@ -237,19 +265,75 @@ public class AutoSnapshotPolicy extends AbstractModel{
     }
 
     /**
-     * Get The list of cloud disk IDs that the current scheduled snapshot policy is bound to. 
-     * @return DiskIdSet The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
+     * Get The time the scheduled snapshot policy was created. 
+     * @return CreateTime The time the scheduled snapshot policy was created.
      */
-    public String [] getDiskIdSet() {
-        return this.DiskIdSet;
+    public String getCreateTime() {
+        return this.CreateTime;
     }
 
     /**
-     * Set The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
-     * @param DiskIdSet The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
+     * Set The time the scheduled snapshot policy was created.
+     * @param CreateTime The time the scheduled snapshot policy was created.
      */
-    public void setDiskIdSet(String [] DiskIdSet) {
-        this.DiskIdSet = DiskIdSet;
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get Number of days the snapshot created by this scheduled snapshot policy is retained. 
+     * @return RetentionDays Number of days the snapshot created by this scheduled snapshot policy is retained.
+     */
+    public Long getRetentionDays() {
+        return this.RetentionDays;
+    }
+
+    /**
+     * Set Number of days the snapshot created by this scheduled snapshot policy is retained.
+     * @param RetentionDays Number of days the snapshot created by this scheduled snapshot policy is retained.
+     */
+    public void setRetentionDays(Long RetentionDays) {
+        this.RetentionDays = RetentionDays;
+    }
+
+    /**
+     * Get ID of the replication target account
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CopyToAccountUin ID of the replication target account
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getCopyToAccountUin() {
+        return this.CopyToAccountUin;
+    }
+
+    /**
+     * Set ID of the replication target account
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CopyToAccountUin ID of the replication target account
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCopyToAccountUin(String CopyToAccountUin) {
+        this.CopyToAccountUin = CopyToAccountUin;
+    }
+
+    /**
+     * Get List of IDs of the instances associated with the scheduled snapshot policy.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return InstanceIdSet List of IDs of the instances associated with the scheduled snapshot policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getInstanceIdSet() {
+        return this.InstanceIdSet;
+    }
+
+    /**
+     * Set List of IDs of the instances associated with the scheduled snapshot policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param InstanceIdSet List of IDs of the instances associated with the scheduled snapshot policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setInstanceIdSet(String [] InstanceIdSet) {
+        this.InstanceIdSet = InstanceIdSet;
     }
 
     public AutoSnapshotPolicy() {
@@ -260,29 +344,32 @@ public class AutoSnapshotPolicy extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AutoSnapshotPolicy(AutoSnapshotPolicy source) {
-        if (source.AutoSnapshotPolicyId != null) {
-            this.AutoSnapshotPolicyId = new String(source.AutoSnapshotPolicyId);
-        }
-        if (source.AutoSnapshotPolicyName != null) {
-            this.AutoSnapshotPolicyName = new String(source.AutoSnapshotPolicyName);
-        }
-        if (source.AutoSnapshotPolicyState != null) {
-            this.AutoSnapshotPolicyState = new String(source.AutoSnapshotPolicyState);
+        if (source.DiskIdSet != null) {
+            this.DiskIdSet = new String[source.DiskIdSet.length];
+            for (int i = 0; i < source.DiskIdSet.length; i++) {
+                this.DiskIdSet[i] = new String(source.DiskIdSet[i]);
+            }
         }
         if (source.IsActivated != null) {
             this.IsActivated = new Boolean(source.IsActivated);
         }
+        if (source.AutoSnapshotPolicyState != null) {
+            this.AutoSnapshotPolicyState = new String(source.AutoSnapshotPolicyState);
+        }
+        if (source.IsCopyToRemote != null) {
+            this.IsCopyToRemote = new Long(source.IsCopyToRemote);
+        }
         if (source.IsPermanent != null) {
             this.IsPermanent = new Boolean(source.IsPermanent);
         }
-        if (source.RetentionDays != null) {
-            this.RetentionDays = new Long(source.RetentionDays);
-        }
-        if (source.CreateTime != null) {
-            this.CreateTime = new String(source.CreateTime);
-        }
         if (source.NextTriggerTime != null) {
             this.NextTriggerTime = new String(source.NextTriggerTime);
+        }
+        if (source.AutoSnapshotPolicyName != null) {
+            this.AutoSnapshotPolicyName = new String(source.AutoSnapshotPolicyName);
+        }
+        if (source.AutoSnapshotPolicyId != null) {
+            this.AutoSnapshotPolicyId = new String(source.AutoSnapshotPolicyId);
         }
         if (source.Policy != null) {
             this.Policy = new Policy[source.Policy.length];
@@ -290,10 +377,19 @@ public class AutoSnapshotPolicy extends AbstractModel{
                 this.Policy[i] = new Policy(source.Policy[i]);
             }
         }
-        if (source.DiskIdSet != null) {
-            this.DiskIdSet = new String[source.DiskIdSet.length];
-            for (int i = 0; i < source.DiskIdSet.length; i++) {
-                this.DiskIdSet[i] = new String(source.DiskIdSet[i]);
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.RetentionDays != null) {
+            this.RetentionDays = new Long(source.RetentionDays);
+        }
+        if (source.CopyToAccountUin != null) {
+            this.CopyToAccountUin = new String(source.CopyToAccountUin);
+        }
+        if (source.InstanceIdSet != null) {
+            this.InstanceIdSet = new String[source.InstanceIdSet.length];
+            for (int i = 0; i < source.InstanceIdSet.length; i++) {
+                this.InstanceIdSet[i] = new String(source.InstanceIdSet[i]);
             }
         }
     }
@@ -303,16 +399,19 @@ public class AutoSnapshotPolicy extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
-        this.setParamSimple(map, prefix + "AutoSnapshotPolicyName", this.AutoSnapshotPolicyName);
-        this.setParamSimple(map, prefix + "AutoSnapshotPolicyState", this.AutoSnapshotPolicyState);
-        this.setParamSimple(map, prefix + "IsActivated", this.IsActivated);
-        this.setParamSimple(map, prefix + "IsPermanent", this.IsPermanent);
-        this.setParamSimple(map, prefix + "RetentionDays", this.RetentionDays);
-        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
-        this.setParamSimple(map, prefix + "NextTriggerTime", this.NextTriggerTime);
-        this.setParamArrayObj(map, prefix + "Policy.", this.Policy);
         this.setParamArraySimple(map, prefix + "DiskIdSet.", this.DiskIdSet);
+        this.setParamSimple(map, prefix + "IsActivated", this.IsActivated);
+        this.setParamSimple(map, prefix + "AutoSnapshotPolicyState", this.AutoSnapshotPolicyState);
+        this.setParamSimple(map, prefix + "IsCopyToRemote", this.IsCopyToRemote);
+        this.setParamSimple(map, prefix + "IsPermanent", this.IsPermanent);
+        this.setParamSimple(map, prefix + "NextTriggerTime", this.NextTriggerTime);
+        this.setParamSimple(map, prefix + "AutoSnapshotPolicyName", this.AutoSnapshotPolicyName);
+        this.setParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
+        this.setParamArrayObj(map, prefix + "Policy.", this.Policy);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "RetentionDays", this.RetentionDays);
+        this.setParamSimple(map, prefix + "CopyToAccountUin", this.CopyToAccountUin);
+        this.setParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
 
     }
 }

@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class Policy extends AbstractModel{
 
     /**
-    * Specifies the days of the week, from Monday to Sunday, on which a scheduled snapshot will be triggered. Value range: [0, 6]. 0 indicates triggering on Sunday, 1-6 indicate triggering on Monday-Saturday.
-    */
-    @SerializedName("DayOfWeek")
-    @Expose
-    private Long [] DayOfWeek;
-
-    /**
     * Specifies the time that that the scheduled snapshot policy will be triggered. The unit is hour. The value range is [0-23]. 00:00-23:00 is a total of 24 time points that can be selected. 1 indicates 01:00, and so on.
     */
     @SerializedName("Hour")
@@ -37,20 +30,11 @@ public class Policy extends AbstractModel{
     private Long [] Hour;
 
     /**
-     * Get Specifies the days of the week, from Monday to Sunday, on which a scheduled snapshot will be triggered. Value range: [0, 6]. 0 indicates triggering on Sunday, 1-6 indicate triggering on Monday-Saturday. 
-     * @return DayOfWeek Specifies the days of the week, from Monday to Sunday, on which a scheduled snapshot will be triggered. Value range: [0, 6]. 0 indicates triggering on Sunday, 1-6 indicate triggering on Monday-Saturday.
-     */
-    public Long [] getDayOfWeek() {
-        return this.DayOfWeek;
-    }
-
-    /**
-     * Set Specifies the days of the week, from Monday to Sunday, on which a scheduled snapshot will be triggered. Value range: [0, 6]. 0 indicates triggering on Sunday, 1-6 indicate triggering on Monday-Saturday.
-     * @param DayOfWeek Specifies the days of the week, from Monday to Sunday, on which a scheduled snapshot will be triggered. Value range: [0, 6]. 0 indicates triggering on Sunday, 1-6 indicate triggering on Monday-Saturday.
-     */
-    public void setDayOfWeek(Long [] DayOfWeek) {
-        this.DayOfWeek = DayOfWeek;
-    }
+    * Specifies the days of the week, from Monday to Sunday, on which a scheduled snapshot will be triggered. Value range: [0, 6]. 0 indicates triggering on Sunday, 1-6 indicate triggering on Monday-Saturday.
+    */
+    @SerializedName("DayOfWeek")
+    @Expose
+    private Long [] DayOfWeek;
 
     /**
      * Get Specifies the time that that the scheduled snapshot policy will be triggered. The unit is hour. The value range is [0-23]. 00:00-23:00 is a total of 24 time points that can be selected. 1 indicates 01:00, and so on. 
@@ -68,6 +52,22 @@ public class Policy extends AbstractModel{
         this.Hour = Hour;
     }
 
+    /**
+     * Get Specifies the days of the week, from Monday to Sunday, on which a scheduled snapshot will be triggered. Value range: [0, 6]. 0 indicates triggering on Sunday, 1-6 indicate triggering on Monday-Saturday. 
+     * @return DayOfWeek Specifies the days of the week, from Monday to Sunday, on which a scheduled snapshot will be triggered. Value range: [0, 6]. 0 indicates triggering on Sunday, 1-6 indicate triggering on Monday-Saturday.
+     */
+    public Long [] getDayOfWeek() {
+        return this.DayOfWeek;
+    }
+
+    /**
+     * Set Specifies the days of the week, from Monday to Sunday, on which a scheduled snapshot will be triggered. Value range: [0, 6]. 0 indicates triggering on Sunday, 1-6 indicate triggering on Monday-Saturday.
+     * @param DayOfWeek Specifies the days of the week, from Monday to Sunday, on which a scheduled snapshot will be triggered. Value range: [0, 6]. 0 indicates triggering on Sunday, 1-6 indicate triggering on Monday-Saturday.
+     */
+    public void setDayOfWeek(Long [] DayOfWeek) {
+        this.DayOfWeek = DayOfWeek;
+    }
+
     public Policy() {
     }
 
@@ -76,16 +76,16 @@ public class Policy extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public Policy(Policy source) {
-        if (source.DayOfWeek != null) {
-            this.DayOfWeek = new Long[source.DayOfWeek.length];
-            for (int i = 0; i < source.DayOfWeek.length; i++) {
-                this.DayOfWeek[i] = new Long(source.DayOfWeek[i]);
-            }
-        }
         if (source.Hour != null) {
             this.Hour = new Long[source.Hour.length];
             for (int i = 0; i < source.Hour.length; i++) {
                 this.Hour[i] = new Long(source.Hour[i]);
+            }
+        }
+        if (source.DayOfWeek != null) {
+            this.DayOfWeek = new Long[source.DayOfWeek.length];
+            for (int i = 0; i < source.DayOfWeek.length; i++) {
+                this.DayOfWeek[i] = new Long(source.DayOfWeek[i]);
             }
         }
     }
@@ -95,8 +95,8 @@ public class Policy extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "DayOfWeek.", this.DayOfWeek);
         this.setParamArraySimple(map, prefix + "Hour.", this.Hour);
+        this.setParamArraySimple(map, prefix + "DayOfWeek.", this.DayOfWeek);
 
     }
 }

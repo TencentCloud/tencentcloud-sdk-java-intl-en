@@ -30,20 +30,6 @@ public class DiskConfig extends AbstractModel{
     private Boolean Available;
 
     /**
-    * Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
-    */
-    @SerializedName("DiskType")
-    @Expose
-    private String DiskType;
-
-    /**
-    * Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
-    */
-    @SerializedName("DiskUsage")
-    @Expose
-    private String DiskUsage;
-
-    /**
     * Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
     */
     @SerializedName("DiskChargeType")
@@ -51,25 +37,42 @@ public class DiskConfig extends AbstractModel{
     private String DiskChargeType;
 
     /**
-    * The maximum configurable cloud disk size (in GB).
-    */
-    @SerializedName("MaxDiskSize")
-    @Expose
-    private Long MaxDiskSize;
-
-    /**
-    * The minimum configurable cloud disk size (in GB).
-    */
-    @SerializedName("MinDiskSize")
-    @Expose
-    private Long MinDiskSize;
-
-    /**
     * The [Availability Region](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) of the cloud drive.
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
+
+    /**
+    * Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
+Note: This field may return null, indicating that no valid value was found.
+    */
+    @SerializedName("InstanceFamily")
+    @Expose
+    private String InstanceFamily;
+
+    /**
+    * Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
+    */
+    @SerializedName("DiskType")
+    @Expose
+    private String DiskType;
+
+    /**
+    * Minimum increment of cloud disk size adjustment in GB.
+Note: This field might return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("StepSize")
+    @Expose
+    private Long StepSize;
+
+    /**
+    * Additional performance range.
+Note: This field might return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ExtraPerformanceRange")
+    @Expose
+    private Long [] ExtraPerformanceRange;
 
     /**
     * Instance model.
@@ -80,12 +83,25 @@ Note: This field may return null, indicating that no valid value was found.
     private String DeviceClass;
 
     /**
-    * Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
-Note: This field may return null, indicating that no valid value was found.
+    * Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
     */
-    @SerializedName("InstanceFamily")
+    @SerializedName("DiskUsage")
     @Expose
-    private String InstanceFamily;
+    private String DiskUsage;
+
+    /**
+    * The minimum configurable cloud disk size (in GB).
+    */
+    @SerializedName("MinDiskSize")
+    @Expose
+    private Long MinDiskSize;
+
+    /**
+    * The maximum configurable cloud disk size (in GB).
+    */
+    @SerializedName("MaxDiskSize")
+    @Expose
+    private Long MaxDiskSize;
 
     /**
      * Get Whether the configuration is available. 
@@ -101,38 +117,6 @@ Note: This field may return null, indicating that no valid value was found.
      */
     public void setAvailable(Boolean Available) {
         this.Available = Available;
-    }
-
-    /**
-     * Get Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk. 
-     * @return DiskType Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
-     */
-    public String getDiskType() {
-        return this.DiskType;
-    }
-
-    /**
-     * Set Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
-     * @param DiskType Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
-     */
-    public void setDiskType(String DiskType) {
-        this.DiskType = DiskType;
-    }
-
-    /**
-     * Get Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk. 
-     * @return DiskUsage Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
-     */
-    public String getDiskUsage() {
-        return this.DiskUsage;
-    }
-
-    /**
-     * Set Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
-     * @param DiskUsage Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
-     */
-    public void setDiskUsage(String DiskUsage) {
-        this.DiskUsage = DiskUsage;
     }
 
     /**
@@ -152,38 +136,6 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get The maximum configurable cloud disk size (in GB). 
-     * @return MaxDiskSize The maximum configurable cloud disk size (in GB).
-     */
-    public Long getMaxDiskSize() {
-        return this.MaxDiskSize;
-    }
-
-    /**
-     * Set The maximum configurable cloud disk size (in GB).
-     * @param MaxDiskSize The maximum configurable cloud disk size (in GB).
-     */
-    public void setMaxDiskSize(Long MaxDiskSize) {
-        this.MaxDiskSize = MaxDiskSize;
-    }
-
-    /**
-     * Get The minimum configurable cloud disk size (in GB). 
-     * @return MinDiskSize The minimum configurable cloud disk size (in GB).
-     */
-    public Long getMinDiskSize() {
-        return this.MinDiskSize;
-    }
-
-    /**
-     * Set The minimum configurable cloud disk size (in GB).
-     * @param MinDiskSize The minimum configurable cloud disk size (in GB).
-     */
-    public void setMinDiskSize(Long MinDiskSize) {
-        this.MinDiskSize = MinDiskSize;
-    }
-
-    /**
      * Get The [Availability Region](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) of the cloud drive. 
      * @return Zone The [Availability Region](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) of the cloud drive.
      */
@@ -197,6 +149,82 @@ Note: This field may return null, indicating that no valid value was found.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
+    }
+
+    /**
+     * Get Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
+Note: This field may return null, indicating that no valid value was found. 
+     * @return InstanceFamily Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public String getInstanceFamily() {
+        return this.InstanceFamily;
+    }
+
+    /**
+     * Set Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
+Note: This field may return null, indicating that no valid value was found.
+     * @param InstanceFamily Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public void setInstanceFamily(String InstanceFamily) {
+        this.InstanceFamily = InstanceFamily;
+    }
+
+    /**
+     * Get Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk. 
+     * @return DiskType Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
+     */
+    public String getDiskType() {
+        return this.DiskType;
+    }
+
+    /**
+     * Set Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
+     * @param DiskType Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
+     */
+    public void setDiskType(String DiskType) {
+        this.DiskType = DiskType;
+    }
+
+    /**
+     * Get Minimum increment of cloud disk size adjustment in GB.
+Note: This field might return null, indicating that no valid values can be obtained. 
+     * @return StepSize Minimum increment of cloud disk size adjustment in GB.
+Note: This field might return null, indicating that no valid values can be obtained.
+     */
+    public Long getStepSize() {
+        return this.StepSize;
+    }
+
+    /**
+     * Set Minimum increment of cloud disk size adjustment in GB.
+Note: This field might return null, indicating that no valid values can be obtained.
+     * @param StepSize Minimum increment of cloud disk size adjustment in GB.
+Note: This field might return null, indicating that no valid values can be obtained.
+     */
+    public void setStepSize(Long StepSize) {
+        this.StepSize = StepSize;
+    }
+
+    /**
+     * Get Additional performance range.
+Note: This field might return null, indicating that no valid values can be obtained. 
+     * @return ExtraPerformanceRange Additional performance range.
+Note: This field might return null, indicating that no valid values can be obtained.
+     */
+    public Long [] getExtraPerformanceRange() {
+        return this.ExtraPerformanceRange;
+    }
+
+    /**
+     * Set Additional performance range.
+Note: This field might return null, indicating that no valid values can be obtained.
+     * @param ExtraPerformanceRange Additional performance range.
+Note: This field might return null, indicating that no valid values can be obtained.
+     */
+    public void setExtraPerformanceRange(Long [] ExtraPerformanceRange) {
+        this.ExtraPerformanceRange = ExtraPerformanceRange;
     }
 
     /**
@@ -220,23 +248,51 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
-Note: This field may return null, indicating that no valid value was found. 
-     * @return InstanceFamily Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
-Note: This field may return null, indicating that no valid value was found.
+     * Get Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk. 
+     * @return DiskUsage Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
      */
-    public String getInstanceFamily() {
-        return this.InstanceFamily;
+    public String getDiskUsage() {
+        return this.DiskUsage;
     }
 
     /**
-     * Set Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
-Note: This field may return null, indicating that no valid value was found.
-     * @param InstanceFamily Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
-Note: This field may return null, indicating that no valid value was found.
+     * Set Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+     * @param DiskUsage Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
      */
-    public void setInstanceFamily(String InstanceFamily) {
-        this.InstanceFamily = InstanceFamily;
+    public void setDiskUsage(String DiskUsage) {
+        this.DiskUsage = DiskUsage;
+    }
+
+    /**
+     * Get The minimum configurable cloud disk size (in GB). 
+     * @return MinDiskSize The minimum configurable cloud disk size (in GB).
+     */
+    public Long getMinDiskSize() {
+        return this.MinDiskSize;
+    }
+
+    /**
+     * Set The minimum configurable cloud disk size (in GB).
+     * @param MinDiskSize The minimum configurable cloud disk size (in GB).
+     */
+    public void setMinDiskSize(Long MinDiskSize) {
+        this.MinDiskSize = MinDiskSize;
+    }
+
+    /**
+     * Get The maximum configurable cloud disk size (in GB). 
+     * @return MaxDiskSize The maximum configurable cloud disk size (in GB).
+     */
+    public Long getMaxDiskSize() {
+        return this.MaxDiskSize;
+    }
+
+    /**
+     * Set The maximum configurable cloud disk size (in GB).
+     * @param MaxDiskSize The maximum configurable cloud disk size (in GB).
+     */
+    public void setMaxDiskSize(Long MaxDiskSize) {
+        this.MaxDiskSize = MaxDiskSize;
     }
 
     public DiskConfig() {
@@ -250,29 +306,38 @@ Note: This field may return null, indicating that no valid value was found.
         if (source.Available != null) {
             this.Available = new Boolean(source.Available);
         }
-        if (source.DiskType != null) {
-            this.DiskType = new String(source.DiskType);
-        }
-        if (source.DiskUsage != null) {
-            this.DiskUsage = new String(source.DiskUsage);
-        }
         if (source.DiskChargeType != null) {
             this.DiskChargeType = new String(source.DiskChargeType);
-        }
-        if (source.MaxDiskSize != null) {
-            this.MaxDiskSize = new Long(source.MaxDiskSize);
-        }
-        if (source.MinDiskSize != null) {
-            this.MinDiskSize = new Long(source.MinDiskSize);
         }
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.InstanceFamily != null) {
+            this.InstanceFamily = new String(source.InstanceFamily);
+        }
+        if (source.DiskType != null) {
+            this.DiskType = new String(source.DiskType);
+        }
+        if (source.StepSize != null) {
+            this.StepSize = new Long(source.StepSize);
+        }
+        if (source.ExtraPerformanceRange != null) {
+            this.ExtraPerformanceRange = new Long[source.ExtraPerformanceRange.length];
+            for (int i = 0; i < source.ExtraPerformanceRange.length; i++) {
+                this.ExtraPerformanceRange[i] = new Long(source.ExtraPerformanceRange[i]);
+            }
+        }
         if (source.DeviceClass != null) {
             this.DeviceClass = new String(source.DeviceClass);
         }
-        if (source.InstanceFamily != null) {
-            this.InstanceFamily = new String(source.InstanceFamily);
+        if (source.DiskUsage != null) {
+            this.DiskUsage = new String(source.DiskUsage);
+        }
+        if (source.MinDiskSize != null) {
+            this.MinDiskSize = new Long(source.MinDiskSize);
+        }
+        if (source.MaxDiskSize != null) {
+            this.MaxDiskSize = new Long(source.MaxDiskSize);
         }
     }
 
@@ -282,14 +347,16 @@ Note: This field may return null, indicating that no valid value was found.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Available", this.Available);
-        this.setParamSimple(map, prefix + "DiskType", this.DiskType);
-        this.setParamSimple(map, prefix + "DiskUsage", this.DiskUsage);
         this.setParamSimple(map, prefix + "DiskChargeType", this.DiskChargeType);
-        this.setParamSimple(map, prefix + "MaxDiskSize", this.MaxDiskSize);
-        this.setParamSimple(map, prefix + "MinDiskSize", this.MinDiskSize);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
-        this.setParamSimple(map, prefix + "DeviceClass", this.DeviceClass);
         this.setParamSimple(map, prefix + "InstanceFamily", this.InstanceFamily);
+        this.setParamSimple(map, prefix + "DiskType", this.DiskType);
+        this.setParamSimple(map, prefix + "StepSize", this.StepSize);
+        this.setParamArraySimple(map, prefix + "ExtraPerformanceRange.", this.ExtraPerformanceRange);
+        this.setParamSimple(map, prefix + "DeviceClass", this.DeviceClass);
+        this.setParamSimple(map, prefix + "DiskUsage", this.DiskUsage);
+        this.setParamSimple(map, prefix + "MinDiskSize", this.MinDiskSize);
+        this.setParamSimple(map, prefix + "MaxDiskSize", this.MaxDiskSize);
 
     }
 }

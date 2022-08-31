@@ -30,20 +30,6 @@ public class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel{
     private String AutoSnapshotPolicyId;
 
     /**
-    * The policy for executing the scheduled snapshot.
-    */
-    @SerializedName("Policy")
-    @Expose
-    private Policy [] Policy;
-
-    /**
-    * The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
-    */
-    @SerializedName("AutoSnapshotPolicyName")
-    @Expose
-    private String AutoSnapshotPolicyName;
-
-    /**
     * Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE.
     */
     @SerializedName("IsActivated")
@@ -58,7 +44,21 @@ public class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel{
     private Boolean IsPermanent;
 
     /**
-    * The number of days for which snapshots created by this policy are retained. This parameter cannot clash with `IsPermanent`, which is, if the scheduled snapshot policy is configured to retain permanently, `RetentionDays` must be 0.
+    * The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
+    */
+    @SerializedName("AutoSnapshotPolicyName")
+    @Expose
+    private String AutoSnapshotPolicyName;
+
+    /**
+    * The policy for executing the scheduled snapshot.
+    */
+    @SerializedName("Policy")
+    @Expose
+    private Policy [] Policy;
+
+    /**
+    * Number of days to retain the snapshots created according to this scheduled snapshot policy. If this parameter is specified, `IsPermanent` cannot be specified as `TRUE`; otherwise, they will conflict with each other.
     */
     @SerializedName("RetentionDays")
     @Expose
@@ -78,38 +78,6 @@ public class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel{
      */
     public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
         this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;
-    }
-
-    /**
-     * Get The policy for executing the scheduled snapshot. 
-     * @return Policy The policy for executing the scheduled snapshot.
-     */
-    public Policy [] getPolicy() {
-        return this.Policy;
-    }
-
-    /**
-     * Set The policy for executing the scheduled snapshot.
-     * @param Policy The policy for executing the scheduled snapshot.
-     */
-    public void setPolicy(Policy [] Policy) {
-        this.Policy = Policy;
-    }
-
-    /**
-     * Get The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes. 
-     * @return AutoSnapshotPolicyName The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
-     */
-    public String getAutoSnapshotPolicyName() {
-        return this.AutoSnapshotPolicyName;
-    }
-
-    /**
-     * Set The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
-     * @param AutoSnapshotPolicyName The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
-     */
-    public void setAutoSnapshotPolicyName(String AutoSnapshotPolicyName) {
-        this.AutoSnapshotPolicyName = AutoSnapshotPolicyName;
     }
 
     /**
@@ -145,16 +113,48 @@ public class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get The number of days for which snapshots created by this policy are retained. This parameter cannot clash with `IsPermanent`, which is, if the scheduled snapshot policy is configured to retain permanently, `RetentionDays` must be 0. 
-     * @return RetentionDays The number of days for which snapshots created by this policy are retained. This parameter cannot clash with `IsPermanent`, which is, if the scheduled snapshot policy is configured to retain permanently, `RetentionDays` must be 0.
+     * Get The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes. 
+     * @return AutoSnapshotPolicyName The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
+     */
+    public String getAutoSnapshotPolicyName() {
+        return this.AutoSnapshotPolicyName;
+    }
+
+    /**
+     * Set The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
+     * @param AutoSnapshotPolicyName The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
+     */
+    public void setAutoSnapshotPolicyName(String AutoSnapshotPolicyName) {
+        this.AutoSnapshotPolicyName = AutoSnapshotPolicyName;
+    }
+
+    /**
+     * Get The policy for executing the scheduled snapshot. 
+     * @return Policy The policy for executing the scheduled snapshot.
+     */
+    public Policy [] getPolicy() {
+        return this.Policy;
+    }
+
+    /**
+     * Set The policy for executing the scheduled snapshot.
+     * @param Policy The policy for executing the scheduled snapshot.
+     */
+    public void setPolicy(Policy [] Policy) {
+        this.Policy = Policy;
+    }
+
+    /**
+     * Get Number of days to retain the snapshots created according to this scheduled snapshot policy. If this parameter is specified, `IsPermanent` cannot be specified as `TRUE`; otherwise, they will conflict with each other. 
+     * @return RetentionDays Number of days to retain the snapshots created according to this scheduled snapshot policy. If this parameter is specified, `IsPermanent` cannot be specified as `TRUE`; otherwise, they will conflict with each other.
      */
     public Long getRetentionDays() {
         return this.RetentionDays;
     }
 
     /**
-     * Set The number of days for which snapshots created by this policy are retained. This parameter cannot clash with `IsPermanent`, which is, if the scheduled snapshot policy is configured to retain permanently, `RetentionDays` must be 0.
-     * @param RetentionDays The number of days for which snapshots created by this policy are retained. This parameter cannot clash with `IsPermanent`, which is, if the scheduled snapshot policy is configured to retain permanently, `RetentionDays` must be 0.
+     * Set Number of days to retain the snapshots created according to this scheduled snapshot policy. If this parameter is specified, `IsPermanent` cannot be specified as `TRUE`; otherwise, they will conflict with each other.
+     * @param RetentionDays Number of days to retain the snapshots created according to this scheduled snapshot policy. If this parameter is specified, `IsPermanent` cannot be specified as `TRUE`; otherwise, they will conflict with each other.
      */
     public void setRetentionDays(Long RetentionDays) {
         this.RetentionDays = RetentionDays;
@@ -171,20 +171,20 @@ public class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel{
         if (source.AutoSnapshotPolicyId != null) {
             this.AutoSnapshotPolicyId = new String(source.AutoSnapshotPolicyId);
         }
-        if (source.Policy != null) {
-            this.Policy = new Policy[source.Policy.length];
-            for (int i = 0; i < source.Policy.length; i++) {
-                this.Policy[i] = new Policy(source.Policy[i]);
-            }
-        }
-        if (source.AutoSnapshotPolicyName != null) {
-            this.AutoSnapshotPolicyName = new String(source.AutoSnapshotPolicyName);
-        }
         if (source.IsActivated != null) {
             this.IsActivated = new Boolean(source.IsActivated);
         }
         if (source.IsPermanent != null) {
             this.IsPermanent = new Boolean(source.IsPermanent);
+        }
+        if (source.AutoSnapshotPolicyName != null) {
+            this.AutoSnapshotPolicyName = new String(source.AutoSnapshotPolicyName);
+        }
+        if (source.Policy != null) {
+            this.Policy = new Policy[source.Policy.length];
+            for (int i = 0; i < source.Policy.length; i++) {
+                this.Policy[i] = new Policy(source.Policy[i]);
+            }
         }
         if (source.RetentionDays != null) {
             this.RetentionDays = new Long(source.RetentionDays);
@@ -197,10 +197,10 @@ public class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
-        this.setParamArrayObj(map, prefix + "Policy.", this.Policy);
-        this.setParamSimple(map, prefix + "AutoSnapshotPolicyName", this.AutoSnapshotPolicyName);
         this.setParamSimple(map, prefix + "IsActivated", this.IsActivated);
         this.setParamSimple(map, prefix + "IsPermanent", this.IsPermanent);
+        this.setParamSimple(map, prefix + "AutoSnapshotPolicyName", this.AutoSnapshotPolicyName);
+        this.setParamArrayObj(map, prefix + "Policy.", this.Policy);
         this.setParamSimple(map, prefix + "RetentionDays", this.RetentionDays);
 
     }

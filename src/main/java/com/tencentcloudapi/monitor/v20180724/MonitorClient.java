@@ -79,6 +79,26 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *This API is used to forcibly terminate a Grafana instance.
+     * @param req CleanGrafanaInstanceRequest
+     * @return CleanGrafanaInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CleanGrafanaInstanceResponse CleanGrafanaInstance(CleanGrafanaInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CleanGrafanaInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CleanGrafanaInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CleanGrafanaInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a notification template.
      * @param req CreateAlarmNoticeRequest
      * @return CreateAlarmNoticeResponse
@@ -153,6 +173,66 @@ Note that alert object and alert message are special fields of Prometheus Rule A
                 Type type = new TypeToken<JsonResponseModel<CreateExporterIntegrationResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateExporterIntegration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a Grafana instance.
+     * @param req CreateGrafanaInstanceRequest
+     * @return CreateGrafanaInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGrafanaInstanceResponse CreateGrafanaInstance(CreateGrafanaInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateGrafanaInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateGrafanaInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateGrafanaInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a Grafana integration configuration.
+     * @param req CreateGrafanaIntegrationRequest
+     * @return CreateGrafanaIntegrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGrafanaIntegrationResponse CreateGrafanaIntegration(CreateGrafanaIntegrationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateGrafanaIntegrationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateGrafanaIntegrationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateGrafanaIntegration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a Grafana notification channel.
+     * @param req CreateGrafanaNotificationChannelRequest
+     * @return CreateGrafanaNotificationChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGrafanaNotificationChannelResponse CreateGrafanaNotificationChannel(CreateGrafanaNotificationChannelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateGrafanaNotificationChannelResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateGrafanaNotificationChannelResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateGrafanaNotificationChannel");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -253,6 +333,26 @@ Note that alert object and alert message are special fields of Prometheus Rule A
                 Type type = new TypeToken<JsonResponseModel<CreateRecordingRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateRecordingRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to authorize a Grafana instance to another Tencent Cloud user.
+     * @param req CreateSSOAccountRequest
+     * @return CreateSSOAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSSOAccountResponse CreateSSOAccount(CreateSSOAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateSSOAccountResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateSSOAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateSSOAccount");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -363,6 +463,66 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     }
 
     /**
+     *This API is used to delete a Grafana instance.
+     * @param req DeleteGrafanaInstanceRequest
+     * @return DeleteGrafanaInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGrafanaInstanceResponse DeleteGrafanaInstance(DeleteGrafanaInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteGrafanaInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteGrafanaInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteGrafanaInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a Grafana integration configuration.
+     * @param req DeleteGrafanaIntegrationRequest
+     * @return DeleteGrafanaIntegrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGrafanaIntegrationResponse DeleteGrafanaIntegration(DeleteGrafanaIntegrationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteGrafanaIntegrationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteGrafanaIntegrationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteGrafanaIntegration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a Grafana notification channel.
+     * @param req DeleteGrafanaNotificationChannelRequest
+     * @return DeleteGrafanaNotificationChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGrafanaNotificationChannelResponse DeleteGrafanaNotificationChannel(DeleteGrafanaNotificationChannelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteGrafanaNotificationChannelResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteGrafanaNotificationChannelResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteGrafanaNotificationChannel");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete an alarm policy group.
      * @param req DeletePolicyGroupRequest
      * @return DeletePolicyGroupResponse
@@ -415,6 +575,26 @@ Note that alert object and alert message are special fields of Prometheus Rule A
                 Type type = new TypeToken<JsonResponseModel<DeleteRecordingRulesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteRecordingRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete an authorized TCMG user.
+     * @param req DeleteSSOAccountRequest
+     * @return DeleteSSOAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSSOAccountResponse DeleteSSOAccount(DeleteSSOAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteSSOAccountResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteSSOAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteSSOAccount");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -725,6 +905,26 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     }
 
     /**
+     *This API is used to list Grafana DNS configurations.
+     * @param req DescribeDNSConfigRequest
+     * @return DescribeDNSConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDNSConfigResponse DescribeDNSConfig(DescribeDNSConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDNSConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDNSConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDNSConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the list of exporter integrations.
      * @param req DescribeExporterIntegrationsRequest
      * @return DescribeExporterIntegrationsResponse
@@ -737,6 +937,146 @@ Note: **If you use a sub-account, you can only query the alarm records of author
                 Type type = new TypeToken<JsonResponseModel<DescribeExporterIntegrationsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeExporterIntegrations");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to list Grafana settings, i.e., the `grafana.ini` file content.
+     * @param req DescribeGrafanaConfigRequest
+     * @return DescribeGrafanaConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGrafanaConfigResponse DescribeGrafanaConfig(DescribeGrafanaConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGrafanaConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGrafanaConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGrafanaConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to list Grafana environment variables.
+     * @param req DescribeGrafanaEnvironmentsRequest
+     * @return DescribeGrafanaEnvironmentsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGrafanaEnvironmentsResponse DescribeGrafanaEnvironments(DescribeGrafanaEnvironmentsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGrafanaEnvironmentsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGrafanaEnvironmentsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGrafanaEnvironments");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to list all Grafana instances under a user account.
+     * @param req DescribeGrafanaInstancesRequest
+     * @return DescribeGrafanaInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGrafanaInstancesResponse DescribeGrafanaInstances(DescribeGrafanaInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGrafanaInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGrafanaInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGrafanaInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to list installed Grafana integrations.
+     * @param req DescribeGrafanaIntegrationsRequest
+     * @return DescribeGrafanaIntegrationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGrafanaIntegrationsResponse DescribeGrafanaIntegrations(DescribeGrafanaIntegrationsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGrafanaIntegrationsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGrafanaIntegrationsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGrafanaIntegrations");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to list Grafana notification channels.
+     * @param req DescribeGrafanaNotificationChannelsRequest
+     * @return DescribeGrafanaNotificationChannelsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGrafanaNotificationChannelsResponse DescribeGrafanaNotificationChannels(DescribeGrafanaNotificationChannelsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGrafanaNotificationChannelsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGrafanaNotificationChannelsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGrafanaNotificationChannels");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to list the Grafana allowlist.
+     * @param req DescribeGrafanaWhiteListRequest
+     * @return DescribeGrafanaWhiteListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGrafanaWhiteListResponse DescribeGrafanaWhiteList(DescribeGrafanaWhiteListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGrafanaWhiteListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGrafanaWhiteListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGrafanaWhiteList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to list the plugins installed in an instance.
+     * @param req DescribeInstalledPluginsRequest
+     * @return DescribeInstalledPluginsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstalledPluginsResponse DescribeInstalledPlugins(DescribeInstalledPluginsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeInstalledPluginsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeInstalledPluginsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeInstalledPlugins");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -929,6 +1269,26 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     }
 
     /**
+     *This API is used to list all authorized accounts of the current Grafana instance.
+     * @param req DescribeSSOAccountRequest
+     * @return DescribeSSOAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSSOAccountResponse DescribeSSOAccount(DescribeSSOAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSSOAccountResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSSOAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSSOAccount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to list Prometheus scrape configurations in TKE.
 <p>Note: The prerequisite is that the corresponding TKE service has been integrated through the Prometheus console. For more information, see
 <a href="https://intl.cloud.tencent.com/document/product/248/48859?from_cn_redirect=1" target="_blank">Agent Management</a>.</p>
@@ -991,6 +1351,66 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     }
 
     /**
+     *This API is used to set the Grafana public network access.
+     * @param req EnableGrafanaInternetRequest
+     * @return EnableGrafanaInternetResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableGrafanaInternetResponse EnableGrafanaInternet(EnableGrafanaInternetRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableGrafanaInternetResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableGrafanaInternetResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableGrafanaInternet");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to set the Grafana SSO through a Tencent Cloud account.
+     * @param req EnableGrafanaSSORequest
+     * @return EnableGrafanaSSOResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableGrafanaSSOResponse EnableGrafanaSSO(EnableGrafanaSSORequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableGrafanaSSOResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableGrafanaSSOResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableGrafanaSSO");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to set whether to enable CAM authentication during SSO.
+     * @param req EnableSSOCamCheckRequest
+     * @return EnableSSOCamCheckResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableSSOCamCheckResponse EnableSSOCamCheck(EnableSSOCamCheckRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableSSOCamCheckResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableSSOCamCheckResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableSSOCamCheck");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the monitoring data of Tencent Cloud services except TKE. To pull TKE’s monitoring data, please use the API [DescribeStatisticData](https://intl.cloud.tencent.com/document/product/248/51845?from_cn_redirect=1).
 You can get the monitoring data of a Tencent Cloud service by passing in its namespace, object dimension description, and monitoring metrics.
 API call rate limit: 20 calls/second (1,200 calls/minute). A single request can get the data of up to 10 instances for up to 1,440 data points.
@@ -1026,6 +1446,26 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
                 Type type = new TypeToken<JsonResponseModel<GetPrometheusAgentManagementCommandResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "GetPrometheusAgentManagementCommand");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to install a Grafana plugin.
+     * @param req InstallPluginsRequest
+     * @return InstallPluginsResponse
+     * @throws TencentCloudSDKException
+     */
+    public InstallPluginsResponse InstallPlugins(InstallPluginsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InstallPluginsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InstallPluginsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InstallPlugins");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1174,6 +1614,26 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
     }
 
     /**
+     *This API is used to modify the attributes of a Grafana instance.
+     * @param req ModifyGrafanaInstanceRequest
+     * @return ModifyGrafanaInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGrafanaInstanceResponse ModifyGrafanaInstance(ModifyGrafanaInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyGrafanaInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyGrafanaInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyGrafanaInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to update policy group.
      * @param req ModifyPolicyGroupRequest
      * @return ModifyPolicyGroupResponse
@@ -1232,6 +1692,26 @@ The data of the same IP metric/value pair must be reported by minute in chronolo
                 Type type = new TypeToken<JsonResponseModel<PutMonitorDataResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "PutMonitorData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to restore a Grafana instance.
+     * @param req ResumeGrafanaInstanceRequest
+     * @return ResumeGrafanaInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResumeGrafanaInstanceResponse ResumeGrafanaInstance(ResumeGrafanaInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResumeGrafanaInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResumeGrafanaInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ResumeGrafanaInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1381,6 +1861,26 @@ Alarm policies in the same type under the project will be set as non-default.
     }
 
     /**
+     *This API is used to delete installed plugins.
+     * @param req UninstallGrafanaPluginsRequest
+     * @return UninstallGrafanaPluginsResponse
+     * @throws TencentCloudSDKException
+     */
+    public UninstallGrafanaPluginsResponse UninstallGrafanaPlugins(UninstallGrafanaPluginsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UninstallGrafanaPluginsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UninstallGrafanaPluginsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UninstallGrafanaPlugins");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to update a Prometheus alerting rule.
 
 Note that alert object and alert message are special fields of Prometheus Rule Annotations, which need to be passed in through `annotations` and correspond to `summary` and `description` keys respectively. For more information, see [Alerting rules](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/).
@@ -1423,6 +1923,26 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     }
 
     /**
+     *This API is used to update the Grafana DNS configuration.
+     * @param req UpdateDNSConfigRequest
+     * @return UpdateDNSConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateDNSConfigResponse UpdateDNSConfig(UpdateDNSConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateDNSConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateDNSConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateDNSConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to update the exporter integration configuration.
      * @param req UpdateExporterIntegrationRequest
      * @return UpdateExporterIntegrationResponse
@@ -1435,6 +1955,106 @@ Note that alert object and alert message are special fields of Prometheus Rule A
                 Type type = new TypeToken<JsonResponseModel<UpdateExporterIntegrationResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdateExporterIntegration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to update the Grafana configuration.
+     * @param req UpdateGrafanaConfigRequest
+     * @return UpdateGrafanaConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateGrafanaConfigResponse UpdateGrafanaConfig(UpdateGrafanaConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateGrafanaConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateGrafanaConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateGrafanaConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to update Grafana environment variables.
+     * @param req UpdateGrafanaEnvironmentsRequest
+     * @return UpdateGrafanaEnvironmentsResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateGrafanaEnvironmentsResponse UpdateGrafanaEnvironments(UpdateGrafanaEnvironmentsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateGrafanaEnvironmentsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateGrafanaEnvironmentsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateGrafanaEnvironments");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to update the Grafana integration configuration.
+     * @param req UpdateGrafanaIntegrationRequest
+     * @return UpdateGrafanaIntegrationResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateGrafanaIntegrationResponse UpdateGrafanaIntegration(UpdateGrafanaIntegrationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateGrafanaIntegrationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateGrafanaIntegrationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateGrafanaIntegration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to update the Grafana notification channel.
+     * @param req UpdateGrafanaNotificationChannelRequest
+     * @return UpdateGrafanaNotificationChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateGrafanaNotificationChannelResponse UpdateGrafanaNotificationChannel(UpdateGrafanaNotificationChannelRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateGrafanaNotificationChannelResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateGrafanaNotificationChannelResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateGrafanaNotificationChannel");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to update the Grafana allowlist.
+     * @param req UpdateGrafanaWhiteListRequest
+     * @return UpdateGrafanaWhiteListResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateGrafanaWhiteListResponse UpdateGrafanaWhiteList(UpdateGrafanaWhiteListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateGrafanaWhiteListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateGrafanaWhiteListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateGrafanaWhiteList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1503,6 +2123,26 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     }
 
     /**
+     *This API is used to update the remarks and permission information of an authorized account in an overwriting manner.
+     * @param req UpdateSSOAccountRequest
+     * @return UpdateSSOAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateSSOAccountResponse UpdateSSOAccount(UpdateSSOAccountRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateSSOAccountResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateSSOAccountResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateSSOAccount");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to update a Grafana dashboard.
      * @param req UpgradeGrafanaDashboardRequest
      * @return UpgradeGrafanaDashboardResponse
@@ -1515,6 +2155,26 @@ Note that alert object and alert message are special fields of Prometheus Rule A
                 Type type = new TypeToken<JsonResponseModel<UpgradeGrafanaDashboardResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpgradeGrafanaDashboard");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to upgrade a Grafana instance.
+     * @param req UpgradeGrafanaInstanceRequest
+     * @return UpgradeGrafanaInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeGrafanaInstanceResponse UpgradeGrafanaInstance(UpgradeGrafanaInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeGrafanaInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeGrafanaInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpgradeGrafanaInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

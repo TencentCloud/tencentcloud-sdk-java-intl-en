@@ -39,7 +39,7 @@ Note: This field may return null, indicating that no valid value was found.
     private String RenewFlag;
 
     /**
-    * Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
+    * Cloud disk types. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: Premium Cloud Disk <br><li>CLOUD_BSSD: General Purpose SSD <br><li>CLOUD_SSD: SSD <br><li>CLOUD_HSSD: Enhanced SSD <br><li>CLOUD_TSSD: Tremendous SSD
     */
     @SerializedName("DiskType")
     @Expose
@@ -288,6 +288,20 @@ Note: This field may return null, indicating that no valid value was found.
     private Long DeleteSnapshot;
 
     /**
+    * Number of used cloud disk backups.
+    */
+    @SerializedName("DiskBackupCount")
+    @Expose
+    private Long DiskBackupCount;
+
+    /**
+    * Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
      * Get Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
 Note: This field may return null, indicating that no valid value was found. 
      * @return DeleteWithInstance Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
@@ -328,16 +342,16 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD 
-     * @return DiskType Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
+     * Get Cloud disk types. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: Premium Cloud Disk <br><li>CLOUD_BSSD: General Purpose SSD <br><li>CLOUD_SSD: SSD <br><li>CLOUD_HSSD: Enhanced SSD <br><li>CLOUD_TSSD: Tremendous SSD 
+     * @return DiskType Cloud disk types. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: Premium Cloud Disk <br><li>CLOUD_BSSD: General Purpose SSD <br><li>CLOUD_SSD: SSD <br><li>CLOUD_HSSD: Enhanced SSD <br><li>CLOUD_TSSD: Tremendous SSD
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
-     * @param DiskType Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
+     * Set Cloud disk types. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: Premium Cloud Disk <br><li>CLOUD_BSSD: General Purpose SSD <br><li>CLOUD_SSD: SSD <br><li>CLOUD_HSSD: Enhanced SSD <br><li>CLOUD_TSSD: Tremendous SSD
+     * @param DiskType Cloud disk types. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: Premium Cloud Disk <br><li>CLOUD_BSSD: General Purpose SSD <br><li>CLOUD_SSD: SSD <br><li>CLOUD_HSSD: Enhanced SSD <br><li>CLOUD_TSSD: Tremendous SSD
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
@@ -915,6 +929,38 @@ Note: This field may return null, indicating that no valid value was found.
         this.DeleteSnapshot = DeleteSnapshot;
     }
 
+    /**
+     * Get Number of used cloud disk backups. 
+     * @return DiskBackupCount Number of used cloud disk backups.
+     */
+    public Long getDiskBackupCount() {
+        return this.DiskBackupCount;
+    }
+
+    /**
+     * Set Number of used cloud disk backups.
+     * @param DiskBackupCount Number of used cloud disk backups.
+     */
+    public void setDiskBackupCount(Long DiskBackupCount) {
+        this.DiskBackupCount = DiskBackupCount;
+    }
+
+    /**
+     * Get Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS 
+     * @return InstanceType Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS
+     * @param InstanceType Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
     public Disk() {
     }
 
@@ -1040,6 +1086,12 @@ Note: This field may return null, indicating that no valid value was found.
         if (source.DeleteSnapshot != null) {
             this.DeleteSnapshot = new Long(source.DeleteSnapshot);
         }
+        if (source.DiskBackupCount != null) {
+            this.DiskBackupCount = new Long(source.DiskBackupCount);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
     }
 
 
@@ -1083,6 +1135,8 @@ Note: This field may return null, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "Shareable", this.Shareable);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "DeleteSnapshot", this.DeleteSnapshot);
+        this.setParamSimple(map, prefix + "DiskBackupCount", this.DiskBackupCount);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

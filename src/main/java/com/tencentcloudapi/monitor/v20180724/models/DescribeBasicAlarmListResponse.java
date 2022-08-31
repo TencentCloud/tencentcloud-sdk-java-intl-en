@@ -39,6 +39,14 @@ Note: This field may return null, indicating that no valid value was found.
     private Long Total;
 
     /**
+    * Remarks
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Warning")
+    @Expose
+    private String Warning;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -86,6 +94,26 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
+     * Get Remarks
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Warning Remarks
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getWarning() {
+        return this.Warning;
+    }
+
+    /**
+     * Set Remarks
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Warning Remarks
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setWarning(String Warning) {
+        this.Warning = Warning;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -118,6 +146,9 @@ Note: This field may return null, indicating that no valid value was found.
         if (source.Total != null) {
             this.Total = new Long(source.Total);
         }
+        if (source.Warning != null) {
+            this.Warning = new String(source.Warning);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -130,6 +161,7 @@ Note: This field may return null, indicating that no valid value was found.
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Alarms.", this.Alarms);
         this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamSimple(map, prefix + "Warning", this.Warning);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

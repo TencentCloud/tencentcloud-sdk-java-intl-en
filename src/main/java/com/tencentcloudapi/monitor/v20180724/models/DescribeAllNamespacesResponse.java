@@ -51,6 +51,14 @@ public class DescribeAllNamespacesResponse extends AbstractModel{
     private CommonNamespace [] CustomNamespacesNew;
 
     /**
+    * General alarm policy type, including TAPM, RUM, and CAT.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CommonNamespaces")
+    @Expose
+    private CommonNamespaceNew [] CommonNamespaces;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -122,6 +130,26 @@ public class DescribeAllNamespacesResponse extends AbstractModel{
     }
 
     /**
+     * Get General alarm policy type, including TAPM, RUM, and CAT.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CommonNamespaces General alarm policy type, including TAPM, RUM, and CAT.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public CommonNamespaceNew [] getCommonNamespaces() {
+        return this.CommonNamespaces;
+    }
+
+    /**
+     * Set General alarm policy type, including TAPM, RUM, and CAT.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CommonNamespaces General alarm policy type, including TAPM, RUM, and CAT.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCommonNamespaces(CommonNamespaceNew [] CommonNamespaces) {
+        this.CommonNamespaces = CommonNamespaces;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -163,6 +191,12 @@ public class DescribeAllNamespacesResponse extends AbstractModel{
                 this.CustomNamespacesNew[i] = new CommonNamespace(source.CustomNamespacesNew[i]);
             }
         }
+        if (source.CommonNamespaces != null) {
+            this.CommonNamespaces = new CommonNamespaceNew[source.CommonNamespaces.length];
+            for (int i = 0; i < source.CommonNamespaces.length; i++) {
+                this.CommonNamespaces[i] = new CommonNamespaceNew(source.CommonNamespaces[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -177,6 +211,7 @@ public class DescribeAllNamespacesResponse extends AbstractModel{
         this.setParamObj(map, prefix + "CustomNamespaces.", this.CustomNamespaces);
         this.setParamArrayObj(map, prefix + "QceNamespacesNew.", this.QceNamespacesNew);
         this.setParamArrayObj(map, prefix + "CustomNamespacesNew.", this.CustomNamespacesNew);
+        this.setParamArrayObj(map, prefix + "CommonNamespaces.", this.CommonNamespaces);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
