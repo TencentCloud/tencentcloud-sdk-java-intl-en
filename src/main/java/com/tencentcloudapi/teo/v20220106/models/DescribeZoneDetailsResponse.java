@@ -80,36 +80,6 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Boolean Paused;
 
     /**
-    * Site creation date
-    */
-    @SerializedName("CreatedOn")
-    @Expose
-    private String CreatedOn;
-
-    /**
-    * Site modification date
-    */
-    @SerializedName("ModifiedOn")
-    @Expose
-    private String ModifiedOn;
-
-    /**
-    * User-defined name server information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-    */
-    @SerializedName("VanityNameServers")
-    @Expose
-    private VanityNameServers VanityNameServers;
-
-    /**
-    * User-defined name server IP information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-    */
-    @SerializedName("VanityNameServersIps")
-    @Expose
-    private VanityNameServersIps [] VanityNameServersIps;
-
-    /**
     * Specifies whether to enable CNAME acceleration
 - `enabled`: Enable
 - `disabled`: Disable
@@ -127,6 +97,59 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     @SerializedName("CnameStatus")
     @Expose
     private String CnameStatus;
+
+    /**
+    * Resource tag
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * 
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
+    * Billable resource
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Resources")
+    @Expose
+    private Resource [] Resources;
+
+    /**
+    * Site modification date
+    */
+    @SerializedName("ModifiedOn")
+    @Expose
+    private String ModifiedOn;
+
+    /**
+    * Site creation date
+    */
+    @SerializedName("CreatedOn")
+    @Expose
+    private String CreatedOn;
+
+    /**
+    * User-defined name server information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("VanityNameServers")
+    @Expose
+    private VanityNameServers VanityNameServers;
+
+    /**
+    * User-defined name server IP information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("VanityNameServersIps")
+    @Expose
+    private VanityNameServersIps [] VanityNameServersIps;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -280,78 +303,6 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Site creation date 
-     * @return CreatedOn Site creation date
-     */
-    public String getCreatedOn() {
-        return this.CreatedOn;
-    }
-
-    /**
-     * Set Site creation date
-     * @param CreatedOn Site creation date
-     */
-    public void setCreatedOn(String CreatedOn) {
-        this.CreatedOn = CreatedOn;
-    }
-
-    /**
-     * Get Site modification date 
-     * @return ModifiedOn Site modification date
-     */
-    public String getModifiedOn() {
-        return this.ModifiedOn;
-    }
-
-    /**
-     * Set Site modification date
-     * @param ModifiedOn Site modification date
-     */
-    public void setModifiedOn(String ModifiedOn) {
-        this.ModifiedOn = ModifiedOn;
-    }
-
-    /**
-     * Get User-defined name server information
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return VanityNameServers User-defined name server information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     */
-    public VanityNameServers getVanityNameServers() {
-        return this.VanityNameServers;
-    }
-
-    /**
-     * Set User-defined name server information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param VanityNameServers User-defined name server information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     */
-    public void setVanityNameServers(VanityNameServers VanityNameServers) {
-        this.VanityNameServers = VanityNameServers;
-    }
-
-    /**
-     * Get User-defined name server IP information
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return VanityNameServersIps User-defined name server IP information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     */
-    public VanityNameServersIps [] getVanityNameServersIps() {
-        return this.VanityNameServersIps;
-    }
-
-    /**
-     * Set User-defined name server IP information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param VanityNameServersIps User-defined name server IP information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     */
-    public void setVanityNameServersIps(VanityNameServersIps [] VanityNameServersIps) {
-        this.VanityNameServersIps = VanityNameServersIps;
-    }
-
-    /**
      * Get Specifies whether to enable CNAME acceleration
 - `enabled`: Enable
 - `disabled`: Disable 
@@ -401,6 +352,134 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      */
     public void setCnameStatus(String CnameStatus) {
         this.CnameStatus = CnameStatus;
+    }
+
+    /**
+     * Get Resource tag
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Tags Resource tag
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Resource tag
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Tags Resource tag
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get  
+     * @return Area 
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set 
+     * @param Area 
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
+    /**
+     * Get Billable resource
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Resources Billable resource
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Resource [] getResources() {
+        return this.Resources;
+    }
+
+    /**
+     * Set Billable resource
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Resources Billable resource
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setResources(Resource [] Resources) {
+        this.Resources = Resources;
+    }
+
+    /**
+     * Get Site modification date 
+     * @return ModifiedOn Site modification date
+     */
+    public String getModifiedOn() {
+        return this.ModifiedOn;
+    }
+
+    /**
+     * Set Site modification date
+     * @param ModifiedOn Site modification date
+     */
+    public void setModifiedOn(String ModifiedOn) {
+        this.ModifiedOn = ModifiedOn;
+    }
+
+    /**
+     * Get Site creation date 
+     * @return CreatedOn Site creation date
+     */
+    public String getCreatedOn() {
+        return this.CreatedOn;
+    }
+
+    /**
+     * Set Site creation date
+     * @param CreatedOn Site creation date
+     */
+    public void setCreatedOn(String CreatedOn) {
+        this.CreatedOn = CreatedOn;
+    }
+
+    /**
+     * Get User-defined name server information
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return VanityNameServers User-defined name server information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public VanityNameServers getVanityNameServers() {
+        return this.VanityNameServers;
+    }
+
+    /**
+     * Set User-defined name server information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param VanityNameServers User-defined name server information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setVanityNameServers(VanityNameServers VanityNameServers) {
+        this.VanityNameServers = VanityNameServers;
+    }
+
+    /**
+     * Get User-defined name server IP information
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return VanityNameServersIps User-defined name server IP information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public VanityNameServersIps [] getVanityNameServersIps() {
+        return this.VanityNameServersIps;
+    }
+
+    /**
+     * Set User-defined name server IP information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param VanityNameServersIps User-defined name server IP information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setVanityNameServersIps(VanityNameServersIps [] VanityNameServersIps) {
+        this.VanityNameServersIps = VanityNameServersIps;
     }
 
     /**
@@ -454,11 +533,32 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.Paused != null) {
             this.Paused = new Boolean(source.Paused);
         }
-        if (source.CreatedOn != null) {
-            this.CreatedOn = new String(source.CreatedOn);
+        if (source.CnameSpeedUp != null) {
+            this.CnameSpeedUp = new String(source.CnameSpeedUp);
+        }
+        if (source.CnameStatus != null) {
+            this.CnameStatus = new String(source.CnameStatus);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
+        if (source.Resources != null) {
+            this.Resources = new Resource[source.Resources.length];
+            for (int i = 0; i < source.Resources.length; i++) {
+                this.Resources[i] = new Resource(source.Resources[i]);
+            }
         }
         if (source.ModifiedOn != null) {
             this.ModifiedOn = new String(source.ModifiedOn);
+        }
+        if (source.CreatedOn != null) {
+            this.CreatedOn = new String(source.CreatedOn);
         }
         if (source.VanityNameServers != null) {
             this.VanityNameServers = new VanityNameServers(source.VanityNameServers);
@@ -468,12 +568,6 @@ Note: This field may return `null`, indicating that no valid value can be obtain
             for (int i = 0; i < source.VanityNameServersIps.length; i++) {
                 this.VanityNameServersIps[i] = new VanityNameServersIps(source.VanityNameServersIps[i]);
             }
-        }
-        if (source.CnameSpeedUp != null) {
-            this.CnameSpeedUp = new String(source.CnameSpeedUp);
-        }
-        if (source.CnameStatus != null) {
-            this.CnameStatus = new String(source.CnameStatus);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -492,12 +586,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Paused", this.Paused);
-        this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
-        this.setParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
-        this.setParamObj(map, prefix + "VanityNameServers.", this.VanityNameServers);
-        this.setParamArrayObj(map, prefix + "VanityNameServersIps.", this.VanityNameServersIps);
         this.setParamSimple(map, prefix + "CnameSpeedUp", this.CnameSpeedUp);
         this.setParamSimple(map, prefix + "CnameStatus", this.CnameStatus);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Area", this.Area);
+        this.setParamArrayObj(map, prefix + "Resources.", this.Resources);
+        this.setParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
+        this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
+        this.setParamObj(map, prefix + "VanityNameServers.", this.VanityNameServers);
+        this.setParamArrayObj(map, prefix + "VanityNameServersIps.", this.VanityNameServersIps);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

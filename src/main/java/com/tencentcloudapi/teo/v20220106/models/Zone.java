@@ -78,6 +78,42 @@ public class Zone extends AbstractModel{
     private Boolean Paused;
 
     /**
+    * Specifies whether to enable CNAME acceleration
+- `enabled`: Enable
+- `disabled`: Disable
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CnameSpeedUp")
+    @Expose
+    private String CnameSpeedUp;
+
+    /**
+    * Ownership verification status of the site when it is connected to EdgeOne via CNAME.
+- `finished`: The site is verified.
+- `pending`: Verifying the ownership of the site.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("CnameStatus")
+    @Expose
+    private String CnameStatus;
+
+    /**
+    * Resource tag
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * Billable resource
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Resources")
+    @Expose
+    private Resource [] Resources;
+
+    /**
     * Site creation date
     */
     @SerializedName("CreatedOn")
@@ -92,14 +128,11 @@ public class Zone extends AbstractModel{
     private String ModifiedOn;
 
     /**
-    * Ownership verification status of the site when it is connected to EdgeOne via CNAME.
-- `finished`: The site is verified.
-- `pending`: Verifying the ownership of the site.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * 
     */
-    @SerializedName("CnameStatus")
+    @SerializedName("Area")
     @Expose
-    private String CnameStatus;
+    private String Area;
 
     /**
      * Get Site ID 
@@ -238,6 +271,102 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
+     * Get Specifies whether to enable CNAME acceleration
+- `enabled`: Enable
+- `disabled`: Disable
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CnameSpeedUp Specifies whether to enable CNAME acceleration
+- `enabled`: Enable
+- `disabled`: Disable
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getCnameSpeedUp() {
+        return this.CnameSpeedUp;
+    }
+
+    /**
+     * Set Specifies whether to enable CNAME acceleration
+- `enabled`: Enable
+- `disabled`: Disable
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CnameSpeedUp Specifies whether to enable CNAME acceleration
+- `enabled`: Enable
+- `disabled`: Disable
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCnameSpeedUp(String CnameSpeedUp) {
+        this.CnameSpeedUp = CnameSpeedUp;
+    }
+
+    /**
+     * Get Ownership verification status of the site when it is connected to EdgeOne via CNAME.
+- `finished`: The site is verified.
+- `pending`: Verifying the ownership of the site.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return CnameStatus Ownership verification status of the site when it is connected to EdgeOne via CNAME.
+- `finished`: The site is verified.
+- `pending`: Verifying the ownership of the site.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getCnameStatus() {
+        return this.CnameStatus;
+    }
+
+    /**
+     * Set Ownership verification status of the site when it is connected to EdgeOne via CNAME.
+- `finished`: The site is verified.
+- `pending`: Verifying the ownership of the site.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param CnameStatus Ownership verification status of the site when it is connected to EdgeOne via CNAME.
+- `finished`: The site is verified.
+- `pending`: Verifying the ownership of the site.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setCnameStatus(String CnameStatus) {
+        this.CnameStatus = CnameStatus;
+    }
+
+    /**
+     * Get Resource tag
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Tags Resource tag
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Resource tag
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Tags Resource tag
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get Billable resource
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Resources Billable resource
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Resource [] getResources() {
+        return this.Resources;
+    }
+
+    /**
+     * Set Billable resource
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Resources Billable resource
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setResources(Resource [] Resources) {
+        this.Resources = Resources;
+    }
+
+    /**
      * Get Site creation date 
      * @return CreatedOn Site creation date
      */
@@ -270,31 +399,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Ownership verification status of the site when it is connected to EdgeOne via CNAME.
-- `finished`: The site is verified.
-- `pending`: Verifying the ownership of the site.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return CnameStatus Ownership verification status of the site when it is connected to EdgeOne via CNAME.
-- `finished`: The site is verified.
-- `pending`: Verifying the ownership of the site.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get  
+     * @return Area 
      */
-    public String getCnameStatus() {
-        return this.CnameStatus;
+    public String getArea() {
+        return this.Area;
     }
 
     /**
-     * Set Ownership verification status of the site when it is connected to EdgeOne via CNAME.
-- `finished`: The site is verified.
-- `pending`: Verifying the ownership of the site.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param CnameStatus Ownership verification status of the site when it is connected to EdgeOne via CNAME.
-- `finished`: The site is verified.
-- `pending`: Verifying the ownership of the site.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set 
+     * @param Area 
      */
-    public void setCnameStatus(String CnameStatus) {
-        this.CnameStatus = CnameStatus;
+    public void setArea(String Area) {
+        this.Area = Area;
     }
 
     public Zone() {
@@ -332,14 +449,32 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.Paused != null) {
             this.Paused = new Boolean(source.Paused);
         }
+        if (source.CnameSpeedUp != null) {
+            this.CnameSpeedUp = new String(source.CnameSpeedUp);
+        }
+        if (source.CnameStatus != null) {
+            this.CnameStatus = new String(source.CnameStatus);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.Resources != null) {
+            this.Resources = new Resource[source.Resources.length];
+            for (int i = 0; i < source.Resources.length; i++) {
+                this.Resources[i] = new Resource(source.Resources[i]);
+            }
+        }
         if (source.CreatedOn != null) {
             this.CreatedOn = new String(source.CreatedOn);
         }
         if (source.ModifiedOn != null) {
             this.ModifiedOn = new String(source.ModifiedOn);
         }
-        if (source.CnameStatus != null) {
-            this.CnameStatus = new String(source.CnameStatus);
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
         }
     }
 
@@ -355,9 +490,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Paused", this.Paused);
+        this.setParamSimple(map, prefix + "CnameSpeedUp", this.CnameSpeedUp);
+        this.setParamSimple(map, prefix + "CnameStatus", this.CnameStatus);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArrayObj(map, prefix + "Resources.", this.Resources);
         this.setParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
         this.setParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
-        this.setParamSimple(map, prefix + "CnameStatus", this.CnameStatus);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

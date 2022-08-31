@@ -30,7 +30,7 @@ public class CreateLoadBalancingRequest extends AbstractModel{
     private String ZoneId;
 
     /**
-    * Subdomain name. You can use @ to represent the root domain.
+    * Subdomain name
     */
     @SerializedName("Host")
     @Expose
@@ -76,16 +76,16 @@ public class CreateLoadBalancingRequest extends AbstractModel{
     }
 
     /**
-     * Get Subdomain name. You can use @ to represent the root domain. 
-     * @return Host Subdomain name. You can use @ to represent the root domain.
+     * Get Subdomain name 
+     * @return Host Subdomain name
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set Subdomain name. You can use @ to represent the root domain.
-     * @param Host Subdomain name. You can use @ to represent the root domain.
+     * Set Subdomain name
+     * @param Host Subdomain name
      */
     public void setHost(String Host) {
         this.Host = Host;

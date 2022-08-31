@@ -26,6 +26,8 @@ public class ZoneFilter extends AbstractModel{
     * Filters by the field name. Vaules:
 - `name`: Site name.
 - `status`: Site status.
+- `tagKey`: Tag key.
+- `tagValue`: Tag value.
     */
     @SerializedName("Name")
     @Expose
@@ -48,10 +50,14 @@ public class ZoneFilter extends AbstractModel{
     /**
      * Get Filters by the field name. Vaules:
 - `name`: Site name.
-- `status`: Site status. 
+- `status`: Site status.
+- `tagKey`: Tag key.
+- `tagValue`: Tag value. 
      * @return Name Filters by the field name. Vaules:
 - `name`: Site name.
 - `status`: Site status.
+- `tagKey`: Tag key.
+- `tagValue`: Tag value.
      */
     public String getName() {
         return this.Name;
@@ -61,9 +67,13 @@ public class ZoneFilter extends AbstractModel{
      * Set Filters by the field name. Vaules:
 - `name`: Site name.
 - `status`: Site status.
+- `tagKey`: Tag key.
+- `tagValue`: Tag value.
      * @param Name Filters by the field name. Vaules:
 - `name`: Site name.
 - `status`: Site status.
+- `tagKey`: Tag key.
+- `tagValue`: Tag value.
      */
     public void setName(String Name) {
         this.Name = Name;
