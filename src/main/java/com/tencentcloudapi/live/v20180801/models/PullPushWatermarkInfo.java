@@ -23,210 +23,171 @@ import java.util.HashMap;
 public class PullPushWatermarkInfo extends AbstractModel{
 
     /**
-    * Watermark ID.
-    */
-    @SerializedName("WatermarkId")
-    @Expose
-    private Long WatermarkId;
-
-    /**
-    * Watermark image URL.
+    * The watermark image URL.
+Characters not allowed:
+;(){}$>`#"'|
     */
     @SerializedName("PictureUrl")
     @Expose
     private String PictureUrl;
 
     /**
-    * Display position: X-axis offset.
+    * The horizontal offset (%) of the watermark. The default value is 0.
     */
     @SerializedName("XPosition")
     @Expose
     private Long XPosition;
 
     /**
-    * Display position: Y-axis offset.
+    * The vertical offset (%) of the watermark. The default value is 0.
     */
     @SerializedName("YPosition")
     @Expose
     private Long YPosition;
 
     /**
-    * Watermark name.
-    */
-    @SerializedName("WatermarkName")
-    @Expose
-    private String WatermarkName;
-
-    /**
-    * Current status. 0: not used. 1: in use.
-    */
-    @SerializedName("Status")
-    @Expose
-    private Long Status;
-
-    /**
-    * Creation time.
-    */
-    @SerializedName("CreateTime")
-    @Expose
-    private String CreateTime;
-
-    /**
-    * Watermark width
+    * The watermark width as a percentage of the video width. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original width of the watermark image is used.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Watermark height
+    * The watermark height as a percentage of the video height. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original height of the watermark image is used.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-     * Get Watermark ID. 
-     * @return WatermarkId Watermark ID.
-     */
-    public Long getWatermarkId() {
-        return this.WatermarkId;
-    }
+    * The origin. The default value is 0.
+0: Top left corner
+1: Top right corner
+2: Bottom right corner
+3: Bottom left corner
+    */
+    @SerializedName("Location")
+    @Expose
+    private Long Location;
 
     /**
-     * Set Watermark ID.
-     * @param WatermarkId Watermark ID.
-     */
-    public void setWatermarkId(Long WatermarkId) {
-        this.WatermarkId = WatermarkId;
-    }
-
-    /**
-     * Get Watermark image URL. 
-     * @return PictureUrl Watermark image URL.
+     * Get The watermark image URL.
+Characters not allowed:
+;(){}$>`#"'| 
+     * @return PictureUrl The watermark image URL.
+Characters not allowed:
+;(){}$>`#"'|
      */
     public String getPictureUrl() {
         return this.PictureUrl;
     }
 
     /**
-     * Set Watermark image URL.
-     * @param PictureUrl Watermark image URL.
+     * Set The watermark image URL.
+Characters not allowed:
+;(){}$>`#"'|
+     * @param PictureUrl The watermark image URL.
+Characters not allowed:
+;(){}$>`#"'|
      */
     public void setPictureUrl(String PictureUrl) {
         this.PictureUrl = PictureUrl;
     }
 
     /**
-     * Get Display position: X-axis offset. 
-     * @return XPosition Display position: X-axis offset.
+     * Get The horizontal offset (%) of the watermark. The default value is 0. 
+     * @return XPosition The horizontal offset (%) of the watermark. The default value is 0.
      */
     public Long getXPosition() {
         return this.XPosition;
     }
 
     /**
-     * Set Display position: X-axis offset.
-     * @param XPosition Display position: X-axis offset.
+     * Set The horizontal offset (%) of the watermark. The default value is 0.
+     * @param XPosition The horizontal offset (%) of the watermark. The default value is 0.
      */
     public void setXPosition(Long XPosition) {
         this.XPosition = XPosition;
     }
 
     /**
-     * Get Display position: Y-axis offset. 
-     * @return YPosition Display position: Y-axis offset.
+     * Get The vertical offset (%) of the watermark. The default value is 0. 
+     * @return YPosition The vertical offset (%) of the watermark. The default value is 0.
      */
     public Long getYPosition() {
         return this.YPosition;
     }
 
     /**
-     * Set Display position: Y-axis offset.
-     * @param YPosition Display position: Y-axis offset.
+     * Set The vertical offset (%) of the watermark. The default value is 0.
+     * @param YPosition The vertical offset (%) of the watermark. The default value is 0.
      */
     public void setYPosition(Long YPosition) {
         this.YPosition = YPosition;
     }
 
     /**
-     * Get Watermark name. 
-     * @return WatermarkName Watermark name.
-     */
-    public String getWatermarkName() {
-        return this.WatermarkName;
-    }
-
-    /**
-     * Set Watermark name.
-     * @param WatermarkName Watermark name.
-     */
-    public void setWatermarkName(String WatermarkName) {
-        this.WatermarkName = WatermarkName;
-    }
-
-    /**
-     * Get Current status. 0: not used. 1: in use. 
-     * @return Status Current status. 0: not used. 1: in use.
-     */
-    public Long getStatus() {
-        return this.Status;
-    }
-
-    /**
-     * Set Current status. 0: not used. 1: in use.
-     * @param Status Current status. 0: not used. 1: in use.
-     */
-    public void setStatus(Long Status) {
-        this.Status = Status;
-    }
-
-    /**
-     * Get Creation time. 
-     * @return CreateTime Creation time.
-     */
-    public String getCreateTime() {
-        return this.CreateTime;
-    }
-
-    /**
-     * Set Creation time.
-     * @param CreateTime Creation time.
-     */
-    public void setCreateTime(String CreateTime) {
-        this.CreateTime = CreateTime;
-    }
-
-    /**
-     * Get Watermark width 
-     * @return Width Watermark width
+     * Get The watermark width as a percentage of the video width. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original width of the watermark image is used. 
+     * @return Width The watermark width as a percentage of the video width. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original width of the watermark image is used.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Watermark width
-     * @param Width Watermark width
+     * Set The watermark width as a percentage of the video width. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original width of the watermark image is used.
+     * @param Width The watermark width as a percentage of the video width. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original width of the watermark image is used.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Watermark height 
-     * @return Height Watermark height
+     * Get The watermark height as a percentage of the video height. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original height of the watermark image is used. 
+     * @return Height The watermark height as a percentage of the video height. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original height of the watermark image is used.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Watermark height
-     * @param Height Watermark height
+     * Set The watermark height as a percentage of the video height. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original height of the watermark image is used.
+     * @param Height The watermark height as a percentage of the video height. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original height of the watermark image is used.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
+    }
+
+    /**
+     * Get The origin. The default value is 0.
+0: Top left corner
+1: Top right corner
+2: Bottom right corner
+3: Bottom left corner 
+     * @return Location The origin. The default value is 0.
+0: Top left corner
+1: Top right corner
+2: Bottom right corner
+3: Bottom left corner
+     */
+    public Long getLocation() {
+        return this.Location;
+    }
+
+    /**
+     * Set The origin. The default value is 0.
+0: Top left corner
+1: Top right corner
+2: Bottom right corner
+3: Bottom left corner
+     * @param Location The origin. The default value is 0.
+0: Top left corner
+1: Top right corner
+2: Bottom right corner
+3: Bottom left corner
+     */
+    public void setLocation(Long Location) {
+        this.Location = Location;
     }
 
     public PullPushWatermarkInfo() {
@@ -237,9 +198,6 @@ public class PullPushWatermarkInfo extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public PullPushWatermarkInfo(PullPushWatermarkInfo source) {
-        if (source.WatermarkId != null) {
-            this.WatermarkId = new Long(source.WatermarkId);
-        }
         if (source.PictureUrl != null) {
             this.PictureUrl = new String(source.PictureUrl);
         }
@@ -249,20 +207,14 @@ public class PullPushWatermarkInfo extends AbstractModel{
         if (source.YPosition != null) {
             this.YPosition = new Long(source.YPosition);
         }
-        if (source.WatermarkName != null) {
-            this.WatermarkName = new String(source.WatermarkName);
-        }
-        if (source.Status != null) {
-            this.Status = new Long(source.Status);
-        }
-        if (source.CreateTime != null) {
-            this.CreateTime = new String(source.CreateTime);
-        }
         if (source.Width != null) {
             this.Width = new Long(source.Width);
         }
         if (source.Height != null) {
             this.Height = new Long(source.Height);
+        }
+        if (source.Location != null) {
+            this.Location = new Long(source.Location);
         }
     }
 
@@ -271,15 +223,12 @@ public class PullPushWatermarkInfo extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "WatermarkId", this.WatermarkId);
         this.setParamSimple(map, prefix + "PictureUrl", this.PictureUrl);
         this.setParamSimple(map, prefix + "XPosition", this.XPosition);
         this.setParamSimple(map, prefix + "YPosition", this.YPosition);
-        this.setParamSimple(map, prefix + "WatermarkName", this.WatermarkName);
-        this.setParamSimple(map, prefix + "Status", this.Status);
-        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
+        this.setParamSimple(map, prefix + "Location", this.Location);
 
     }
 }

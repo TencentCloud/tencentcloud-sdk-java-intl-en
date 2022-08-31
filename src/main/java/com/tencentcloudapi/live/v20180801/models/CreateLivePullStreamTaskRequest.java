@@ -210,7 +210,11 @@ You can specify only one backup source URL.
     private String BackupSourceUrl;
 
     /**
-    * 
+    * The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG, JPG, and GIF.
     */
     @SerializedName("WatermarkList")
     @Expose
@@ -749,16 +753,32 @@ You can specify only one backup source URL.
     }
 
     /**
-     * Get  
-     * @return WatermarkList 
+     * Get The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG, JPG, and GIF. 
+     * @return WatermarkList The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG, JPG, and GIF.
      */
     public PullPushWatermarkInfo [] getWatermarkList() {
         return this.WatermarkList;
     }
 
     /**
-     * Set 
-     * @param WatermarkList 
+     * Set The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG, JPG, and GIF.
+     * @param WatermarkList The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG, JPG, and GIF.
      */
     public void setWatermarkList(PullPushWatermarkInfo [] WatermarkList) {
         this.WatermarkList = WatermarkList;

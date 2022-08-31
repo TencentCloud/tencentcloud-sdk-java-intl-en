@@ -164,6 +164,21 @@ You can specify only one backup source URL.
     private String BackupSourceUrl;
 
     /**
+    * The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG and JPG.
+4. If you change the watermark configuration of a task whose source is a list of video files, the new configuration will take effect for the next file in the list.
+5. If you change the watermark configuration of a task whose source is a live stream, the new configuration will take effect immediately.
+6. If you want to stop using watermarks, pass in an empty array.
+7. Currently, animated watermarks are not supported.
+    */
+    @SerializedName("WatermarkList")
+    @Expose
+    private PullPushWatermarkInfo [] WatermarkList;
+
+    /**
      * Get The task ID. 
      * @return TaskId The task ID.
      */
@@ -547,6 +562,54 @@ You can specify only one backup source URL.
         this.BackupSourceUrl = BackupSourceUrl;
     }
 
+    /**
+     * Get The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG and JPG.
+4. If you change the watermark configuration of a task whose source is a list of video files, the new configuration will take effect for the next file in the list.
+5. If you change the watermark configuration of a task whose source is a live stream, the new configuration will take effect immediately.
+6. If you want to stop using watermarks, pass in an empty array.
+7. Currently, animated watermarks are not supported. 
+     * @return WatermarkList The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG and JPG.
+4. If you change the watermark configuration of a task whose source is a list of video files, the new configuration will take effect for the next file in the list.
+5. If you change the watermark configuration of a task whose source is a live stream, the new configuration will take effect immediately.
+6. If you want to stop using watermarks, pass in an empty array.
+7. Currently, animated watermarks are not supported.
+     */
+    public PullPushWatermarkInfo [] getWatermarkList() {
+        return this.WatermarkList;
+    }
+
+    /**
+     * Set The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG and JPG.
+4. If you change the watermark configuration of a task whose source is a list of video files, the new configuration will take effect for the next file in the list.
+5. If you change the watermark configuration of a task whose source is a live stream, the new configuration will take effect immediately.
+6. If you want to stop using watermarks, pass in an empty array.
+7. Currently, animated watermarks are not supported.
+     * @param WatermarkList The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG and JPG.
+4. If you change the watermark configuration of a task whose source is a list of video files, the new configuration will take effect for the next file in the list.
+5. If you change the watermark configuration of a task whose source is a live stream, the new configuration will take effect immediately.
+6. If you want to stop using watermarks, pass in an empty array.
+7. Currently, animated watermarks are not supported.
+     */
+    public void setWatermarkList(PullPushWatermarkInfo [] WatermarkList) {
+        this.WatermarkList = WatermarkList;
+    }
+
     public ModifyLivePullStreamTaskRequest() {
     }
 
@@ -606,6 +669,12 @@ You can specify only one backup source URL.
         if (source.BackupSourceUrl != null) {
             this.BackupSourceUrl = new String(source.BackupSourceUrl);
         }
+        if (source.WatermarkList != null) {
+            this.WatermarkList = new PullPushWatermarkInfo[source.WatermarkList.length];
+            for (int i = 0; i < source.WatermarkList.length; i++) {
+                this.WatermarkList[i] = new PullPushWatermarkInfo(source.WatermarkList[i]);
+            }
+        }
     }
 
 
@@ -628,6 +697,7 @@ You can specify only one backup source URL.
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "BackupSourceType", this.BackupSourceType);
         this.setParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
+        this.setParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
 
     }
 }

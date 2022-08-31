@@ -230,6 +230,32 @@ The information includes the source URL, offset, and report time.
     private String Comment;
 
     /**
+    * The backup source type. Valid values:
+PullLivePushLive: Live streaming
+PullVodPushLive: Video files
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BackupSourceType")
+    @Expose
+    private String BackupSourceType;
+
+    /**
+    * The URL of the backup source.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BackupSourceUrl")
+    @Expose
+    private String BackupSourceUrl;
+
+    /**
+    * The information of watermarks to add.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("WatermarkList")
+    @Expose
+    private PullPushWatermarkInfo [] WatermarkList;
+
+    /**
      * Get The task ID. 
      * @return TaskId The task ID.
      */
@@ -781,6 +807,74 @@ The information includes the source URL, offset, and report time.
         this.Comment = Comment;
     }
 
+    /**
+     * Get The backup source type. Valid values:
+PullLivePushLive: Live streaming
+PullVodPushLive: Video files
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BackupSourceType The backup source type. Valid values:
+PullLivePushLive: Live streaming
+PullVodPushLive: Video files
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getBackupSourceType() {
+        return this.BackupSourceType;
+    }
+
+    /**
+     * Set The backup source type. Valid values:
+PullLivePushLive: Live streaming
+PullVodPushLive: Video files
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BackupSourceType The backup source type. Valid values:
+PullLivePushLive: Live streaming
+PullVodPushLive: Video files
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBackupSourceType(String BackupSourceType) {
+        this.BackupSourceType = BackupSourceType;
+    }
+
+    /**
+     * Get The URL of the backup source.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BackupSourceUrl The URL of the backup source.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getBackupSourceUrl() {
+        return this.BackupSourceUrl;
+    }
+
+    /**
+     * Set The URL of the backup source.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BackupSourceUrl The URL of the backup source.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBackupSourceUrl(String BackupSourceUrl) {
+        this.BackupSourceUrl = BackupSourceUrl;
+    }
+
+    /**
+     * Get The information of watermarks to add.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return WatermarkList The information of watermarks to add.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public PullPushWatermarkInfo [] getWatermarkList() {
+        return this.WatermarkList;
+    }
+
+    /**
+     * Set The information of watermarks to add.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param WatermarkList The information of watermarks to add.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setWatermarkList(PullPushWatermarkInfo [] WatermarkList) {
+        this.WatermarkList = WatermarkList;
+    }
+
     public PullStreamTaskInfo() {
     }
 
@@ -864,6 +958,18 @@ The information includes the source URL, offset, and report time.
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
+        if (source.BackupSourceType != null) {
+            this.BackupSourceType = new String(source.BackupSourceType);
+        }
+        if (source.BackupSourceUrl != null) {
+            this.BackupSourceUrl = new String(source.BackupSourceUrl);
+        }
+        if (source.WatermarkList != null) {
+            this.WatermarkList = new PullPushWatermarkInfo[source.WatermarkList.length];
+            for (int i = 0; i < source.WatermarkList.length; i++) {
+                this.WatermarkList[i] = new PullPushWatermarkInfo(source.WatermarkList[i]);
+            }
+        }
     }
 
 
@@ -894,6 +1000,9 @@ The information includes the source URL, offset, and report time.
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamObj(map, prefix + "RecentPullInfo.", this.RecentPullInfo);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "BackupSourceType", this.BackupSourceType);
+        this.setParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
+        this.setParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
 
     }
 }
