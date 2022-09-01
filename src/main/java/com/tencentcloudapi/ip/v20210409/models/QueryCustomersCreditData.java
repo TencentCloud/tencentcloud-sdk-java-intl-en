@@ -93,6 +93,27 @@ public class QueryCustomersCreditData extends AbstractModel{
     private Float RemainingCredit;
 
     /**
+    * 0: Identity not verified; 1: Individual identity verified; 2: Enterprise identity verified.
+    */
+    @SerializedName("IdentifyType")
+    @Expose
+    private Long IdentifyType;
+
+    /**
+    * Customer remarks
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
+    * Forced status
+    */
+    @SerializedName("Force")
+    @Expose
+    private Long Force;
+
+    /**
      * Get Name 
      * @return Name Name
      */
@@ -252,6 +273,54 @@ public class QueryCustomersCreditData extends AbstractModel{
         this.RemainingCredit = RemainingCredit;
     }
 
+    /**
+     * Get 0: Identity not verified; 1: Individual identity verified; 2: Enterprise identity verified. 
+     * @return IdentifyType 0: Identity not verified; 1: Individual identity verified; 2: Enterprise identity verified.
+     */
+    public Long getIdentifyType() {
+        return this.IdentifyType;
+    }
+
+    /**
+     * Set 0: Identity not verified; 1: Individual identity verified; 2: Enterprise identity verified.
+     * @param IdentifyType 0: Identity not verified; 1: Individual identity verified; 2: Enterprise identity verified.
+     */
+    public void setIdentifyType(Long IdentifyType) {
+        this.IdentifyType = IdentifyType;
+    }
+
+    /**
+     * Get Customer remarks 
+     * @return Remark Customer remarks
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set Customer remarks
+     * @param Remark Customer remarks
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
+    /**
+     * Get Forced status 
+     * @return Force Forced status
+     */
+    public Long getForce() {
+        return this.Force;
+    }
+
+    /**
+     * Set Forced status
+     * @param Force Forced status
+     */
+    public void setForce(Long Force) {
+        this.Force = Force;
+    }
+
     public QueryCustomersCreditData() {
     }
 
@@ -290,6 +359,15 @@ public class QueryCustomersCreditData extends AbstractModel{
         if (source.RemainingCredit != null) {
             this.RemainingCredit = new Float(source.RemainingCredit);
         }
+        if (source.IdentifyType != null) {
+            this.IdentifyType = new Long(source.IdentifyType);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.Force != null) {
+            this.Force = new Long(source.Force);
+        }
     }
 
 
@@ -307,6 +385,9 @@ public class QueryCustomersCreditData extends AbstractModel{
         this.setParamSimple(map, prefix + "ClientUin", this.ClientUin);
         this.setParamSimple(map, prefix + "Credit", this.Credit);
         this.setParamSimple(map, prefix + "RemainingCredit", this.RemainingCredit);
+        this.setParamSimple(map, prefix + "IdentifyType", this.IdentifyType);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "Force", this.Force);
 
     }
 }

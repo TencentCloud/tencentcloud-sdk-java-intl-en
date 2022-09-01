@@ -44,6 +44,13 @@ public class QueryCreditAllocationHistoryData extends AbstractModel{
     private Float Credit;
 
     /**
+    * The allocated total credit
+    */
+    @SerializedName("AllocatedCredit")
+    @Expose
+    private Float AllocatedCredit;
+
+    /**
      * Get Allocation time 
      * @return AllocatedTime Allocation time
      */
@@ -91,6 +98,22 @@ public class QueryCreditAllocationHistoryData extends AbstractModel{
         this.Credit = Credit;
     }
 
+    /**
+     * Get The allocated total credit 
+     * @return AllocatedCredit The allocated total credit
+     */
+    public Float getAllocatedCredit() {
+        return this.AllocatedCredit;
+    }
+
+    /**
+     * Set The allocated total credit
+     * @param AllocatedCredit The allocated total credit
+     */
+    public void setAllocatedCredit(Float AllocatedCredit) {
+        this.AllocatedCredit = AllocatedCredit;
+    }
+
     public QueryCreditAllocationHistoryData() {
     }
 
@@ -108,6 +131,9 @@ public class QueryCreditAllocationHistoryData extends AbstractModel{
         if (source.Credit != null) {
             this.Credit = new Float(source.Credit);
         }
+        if (source.AllocatedCredit != null) {
+            this.AllocatedCredit = new Float(source.AllocatedCredit);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class QueryCreditAllocationHistoryData extends AbstractModel{
         this.setParamSimple(map, prefix + "AllocatedTime", this.AllocatedTime);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
         this.setParamSimple(map, prefix + "Credit", this.Credit);
+        this.setParamSimple(map, prefix + "AllocatedCredit", this.AllocatedCredit);
 
     }
 }

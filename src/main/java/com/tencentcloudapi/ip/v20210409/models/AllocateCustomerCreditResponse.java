@@ -23,11 +23,57 @@ import java.util.HashMap;
 public class AllocateCustomerCreditResponse extends AbstractModel{
 
     /**
+    * The updated total credit
+    */
+    @SerializedName("TotalCredit")
+    @Expose
+    private Float TotalCredit;
+
+    /**
+    * The updated available credit
+    */
+    @SerializedName("RemainingCredit")
+    @Expose
+    private Float RemainingCredit;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get The updated total credit 
+     * @return TotalCredit The updated total credit
+     */
+    public Float getTotalCredit() {
+        return this.TotalCredit;
+    }
+
+    /**
+     * Set The updated total credit
+     * @param TotalCredit The updated total credit
+     */
+    public void setTotalCredit(Float TotalCredit) {
+        this.TotalCredit = TotalCredit;
+    }
+
+    /**
+     * Get The updated available credit 
+     * @return RemainingCredit The updated available credit
+     */
+    public Float getRemainingCredit() {
+        return this.RemainingCredit;
+    }
+
+    /**
+     * Set The updated available credit
+     * @param RemainingCredit The updated available credit
+     */
+    public void setRemainingCredit(Float RemainingCredit) {
+        this.RemainingCredit = RemainingCredit;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -53,6 +99,12 @@ public class AllocateCustomerCreditResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AllocateCustomerCreditResponse(AllocateCustomerCreditResponse source) {
+        if (source.TotalCredit != null) {
+            this.TotalCredit = new Float(source.TotalCredit);
+        }
+        if (source.RemainingCredit != null) {
+            this.RemainingCredit = new Float(source.RemainingCredit);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +115,8 @@ public class AllocateCustomerCreditResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TotalCredit", this.TotalCredit);
+        this.setParamSimple(map, prefix + "RemainingCredit", this.RemainingCredit);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
