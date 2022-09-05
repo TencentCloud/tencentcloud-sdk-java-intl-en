@@ -156,6 +156,45 @@ public class VpnConnection extends AbstractModel{
     private String HealthCheckStatus;
 
     /**
+    * Whether to enable DPD. Values: `0` (Disable) and `1` (Enable)
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DpdEnable")
+    @Expose
+    private Long DpdEnable;
+
+    /**
+    * DPD timeout period. 
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DpdTimeout")
+    @Expose
+    private String DpdTimeout;
+
+    /**
+    * The action to take in case of DPD timeout. Values: `clear` (Disconnect) and `restart` (retry). This parameter only takes effect when `DpdEnable` is set to `1`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DpdAction")
+    @Expose
+    private String DpdAction;
+
+    /**
+    * Array of tag key-value pairs
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
+    * Negotiation type
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("NegotiationType")
+    @Expose
+    private String NegotiationType;
+
+    /**
      * Get Tunnel instance ID. 
      * @return VpnConnectionId Tunnel instance ID.
      */
@@ -459,6 +498,102 @@ public class VpnConnection extends AbstractModel{
         this.HealthCheckStatus = HealthCheckStatus;
     }
 
+    /**
+     * Get Whether to enable DPD. Values: `0` (Disable) and `1` (Enable)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DpdEnable Whether to enable DPD. Values: `0` (Disable) and `1` (Enable)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getDpdEnable() {
+        return this.DpdEnable;
+    }
+
+    /**
+     * Set Whether to enable DPD. Values: `0` (Disable) and `1` (Enable)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DpdEnable Whether to enable DPD. Values: `0` (Disable) and `1` (Enable)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDpdEnable(Long DpdEnable) {
+        this.DpdEnable = DpdEnable;
+    }
+
+    /**
+     * Get DPD timeout period. 
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DpdTimeout DPD timeout period. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDpdTimeout() {
+        return this.DpdTimeout;
+    }
+
+    /**
+     * Set DPD timeout period. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DpdTimeout DPD timeout period. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDpdTimeout(String DpdTimeout) {
+        this.DpdTimeout = DpdTimeout;
+    }
+
+    /**
+     * Get The action to take in case of DPD timeout. Values: `clear` (Disconnect) and `restart` (retry). This parameter only takes effect when `DpdEnable` is set to `1`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DpdAction The action to take in case of DPD timeout. Values: `clear` (Disconnect) and `restart` (retry). This parameter only takes effect when `DpdEnable` is set to `1`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDpdAction() {
+        return this.DpdAction;
+    }
+
+    /**
+     * Set The action to take in case of DPD timeout. Values: `clear` (Disconnect) and `restart` (retry). This parameter only takes effect when `DpdEnable` is set to `1`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DpdAction The action to take in case of DPD timeout. Values: `clear` (Disconnect) and `restart` (retry). This parameter only takes effect when `DpdEnable` is set to `1`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDpdAction(String DpdAction) {
+        this.DpdAction = DpdAction;
+    }
+
+    /**
+     * Get Array of tag key-value pairs 
+     * @return TagSet Array of tag key-value pairs
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set Array of tag key-value pairs
+     * @param TagSet Array of tag key-value pairs
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
+    /**
+     * Get Negotiation type
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return NegotiationType Negotiation type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getNegotiationType() {
+        return this.NegotiationType;
+    }
+
+    /**
+     * Set Negotiation type
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param NegotiationType Negotiation type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setNegotiationType(String NegotiationType) {
+        this.NegotiationType = NegotiationType;
+    }
+
     public VpnConnection() {
     }
 
@@ -527,6 +662,24 @@ public class VpnConnection extends AbstractModel{
         if (source.HealthCheckStatus != null) {
             this.HealthCheckStatus = new String(source.HealthCheckStatus);
         }
+        if (source.DpdEnable != null) {
+            this.DpdEnable = new Long(source.DpdEnable);
+        }
+        if (source.DpdTimeout != null) {
+            this.DpdTimeout = new String(source.DpdTimeout);
+        }
+        if (source.DpdAction != null) {
+            this.DpdAction = new String(source.DpdAction);
+        }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
+        if (source.NegotiationType != null) {
+            this.NegotiationType = new String(source.NegotiationType);
+        }
     }
 
 
@@ -553,6 +706,11 @@ public class VpnConnection extends AbstractModel{
         this.setParamSimple(map, prefix + "HealthCheckLocalIp", this.HealthCheckLocalIp);
         this.setParamSimple(map, prefix + "HealthCheckRemoteIp", this.HealthCheckRemoteIp);
         this.setParamSimple(map, prefix + "HealthCheckStatus", this.HealthCheckStatus);
+        this.setParamSimple(map, prefix + "DpdEnable", this.DpdEnable);
+        this.setParamSimple(map, prefix + "DpdTimeout", this.DpdTimeout);
+        this.setParamSimple(map, prefix + "DpdAction", this.DpdAction);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamSimple(map, prefix + "NegotiationType", this.NegotiationType);
 
     }
 }

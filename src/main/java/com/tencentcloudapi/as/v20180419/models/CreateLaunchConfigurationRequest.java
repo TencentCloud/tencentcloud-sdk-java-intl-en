@@ -190,7 +190,8 @@ If this field is configured in a launch configuration, the `InstanceName` of a C
     private String DiskTypePolicy;
 
     /**
-    * 
+    * HPC ID<br>
+Note: This field is default to empty
     */
     @SerializedName("HpcClusterId")
     @Expose
@@ -601,16 +602,20 @@ If this field is configured in a launch configuration, the `InstanceName` of a C
     }
 
     /**
-     * Get  
-     * @return HpcClusterId 
+     * Get HPC ID<br>
+Note: This field is default to empty 
+     * @return HpcClusterId HPC ID<br>
+Note: This field is default to empty
      */
     public String getHpcClusterId() {
         return this.HpcClusterId;
     }
 
     /**
-     * Set 
-     * @param HpcClusterId 
+     * Set HPC ID<br>
+Note: This field is default to empty
+     * @param HpcClusterId HPC ID<br>
+Note: This field is default to empty
      */
     public void setHpcClusterId(String HpcClusterId) {
         this.HpcClusterId = HpcClusterId;

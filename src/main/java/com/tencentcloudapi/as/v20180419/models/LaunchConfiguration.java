@@ -226,7 +226,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String DiskTypePolicy;
 
     /**
-    * 
+    * HPC ID<br>
+Note: This field is default to empty
     */
     @SerializedName("HpcClusterId")
     @Expose
@@ -709,16 +710,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return HpcClusterId 
+     * Get HPC ID<br>
+Note: This field is default to empty 
+     * @return HpcClusterId HPC ID<br>
+Note: This field is default to empty
      */
     public String getHpcClusterId() {
         return this.HpcClusterId;
     }
 
     /**
-     * Set 
-     * @param HpcClusterId 
+     * Set HPC ID<br>
+Note: This field is default to empty
+     * @param HpcClusterId HPC ID<br>
+Note: This field is default to empty
      */
     public void setHpcClusterId(String HpcClusterId) {
         this.HpcClusterId = HpcClusterId;
