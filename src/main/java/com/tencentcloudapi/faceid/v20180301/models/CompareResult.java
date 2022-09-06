@@ -1,0 +1,541 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.faceid.v20180301.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class CompareResult extends AbstractModel{
+
+    /**
+    * The final comparison result.
+    */
+    @SerializedName("ErrorCode")
+    @Expose
+    private String ErrorCode;
+
+    /**
+    * The description of the final comparison result.
+    */
+    @SerializedName("ErrorMsg")
+    @Expose
+    private String ErrorMsg;
+
+    /**
+    * 
+    */
+    @SerializedName("LiveData")
+    @Expose
+    private FileInfo LiveData;
+
+    /**
+    * The video for this liveness detection process. The URL is valid for 10 minutes.
+    */
+    @SerializedName("LiveVideo")
+    @Expose
+    private FileInfo LiveVideo;
+
+    /**
+    * The code of the liveness detection result.
+    */
+    @SerializedName("LiveErrorCode")
+    @Expose
+    private String LiveErrorCode;
+
+    /**
+    * The description of the liveness detection result.
+    */
+    @SerializedName("LiveErrorMsg")
+    @Expose
+    private String LiveErrorMsg;
+
+    /**
+    * The best face screenshot in this liveness detection. The URL is valid for 10 minutes.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BestFrame")
+    @Expose
+    private FileInfo BestFrame;
+
+    /**
+    * The profile photo screenshot from the identity document. The URL is valid for 10 minutes.
+    */
+    @SerializedName("ProfileImage")
+    @Expose
+    private FileInfo ProfileImage;
+
+    /**
+    * The code of the face comparison result.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CompareErrorCode")
+    @Expose
+    private String CompareErrorCode;
+
+    /**
+    * The description of the face comparison result.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CompareErrorMsg")
+    @Expose
+    private String CompareErrorMsg;
+
+    /**
+    * Similarity
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Sim")
+    @Expose
+    private Float Sim;
+
+    /**
+    * This field is disused.
+    */
+    @SerializedName("IsNeedCharge")
+    @Expose
+    private Boolean IsNeedCharge;
+
+    /**
+    * The identity document photo info edited by the user in JSON. If the value of `DisableChangeOcrResult` is `true`, the editing feature is disabled and this field does not exist. The URL is valid for 10 minutes.
+When the value of `IdCardType` is `HK`:
+- CnName string: Chinese name
+- EnName string: English name
+- TelexCode string: The code corresponding to the Chinese name
+- Sex string: Gender. Valid values: `M` (male) and `F` (female).
+- Birthday string: Date of birth.
+- Permanent int: Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
+- IdNum string: ID number.
+- Symbol string: The ID symbol below the date of birth, such as "***AZ".
+- FirstIssueDate string: The date of first issuance.
+- CurrentIssueDate string: The date of latest issuance.
+
+When the value of `IdCardType` is `ML`:
+- Sex string: `LELAKI` (male) and `PEREMPUAN` (female).
+- Birthday string
+- ID string
+- Name string
+- Address string
+- Type string: Identity document type.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CardInfoInputJson")
+    @Expose
+    private FileInfo CardInfoInputJson;
+
+    /**
+    * The request ID of this verification process.
+    */
+    @SerializedName("RequestId")
+    @Expose
+    private String RequestId;
+
+    /**
+     * Get The final comparison result. 
+     * @return ErrorCode The final comparison result.
+     */
+    public String getErrorCode() {
+        return this.ErrorCode;
+    }
+
+    /**
+     * Set The final comparison result.
+     * @param ErrorCode The final comparison result.
+     */
+    public void setErrorCode(String ErrorCode) {
+        this.ErrorCode = ErrorCode;
+    }
+
+    /**
+     * Get The description of the final comparison result. 
+     * @return ErrorMsg The description of the final comparison result.
+     */
+    public String getErrorMsg() {
+        return this.ErrorMsg;
+    }
+
+    /**
+     * Set The description of the final comparison result.
+     * @param ErrorMsg The description of the final comparison result.
+     */
+    public void setErrorMsg(String ErrorMsg) {
+        this.ErrorMsg = ErrorMsg;
+    }
+
+    /**
+     * Get  
+     * @return LiveData 
+     */
+    public FileInfo getLiveData() {
+        return this.LiveData;
+    }
+
+    /**
+     * Set 
+     * @param LiveData 
+     */
+    public void setLiveData(FileInfo LiveData) {
+        this.LiveData = LiveData;
+    }
+
+    /**
+     * Get The video for this liveness detection process. The URL is valid for 10 minutes. 
+     * @return LiveVideo The video for this liveness detection process. The URL is valid for 10 minutes.
+     */
+    public FileInfo getLiveVideo() {
+        return this.LiveVideo;
+    }
+
+    /**
+     * Set The video for this liveness detection process. The URL is valid for 10 minutes.
+     * @param LiveVideo The video for this liveness detection process. The URL is valid for 10 minutes.
+     */
+    public void setLiveVideo(FileInfo LiveVideo) {
+        this.LiveVideo = LiveVideo;
+    }
+
+    /**
+     * Get The code of the liveness detection result. 
+     * @return LiveErrorCode The code of the liveness detection result.
+     */
+    public String getLiveErrorCode() {
+        return this.LiveErrorCode;
+    }
+
+    /**
+     * Set The code of the liveness detection result.
+     * @param LiveErrorCode The code of the liveness detection result.
+     */
+    public void setLiveErrorCode(String LiveErrorCode) {
+        this.LiveErrorCode = LiveErrorCode;
+    }
+
+    /**
+     * Get The description of the liveness detection result. 
+     * @return LiveErrorMsg The description of the liveness detection result.
+     */
+    public String getLiveErrorMsg() {
+        return this.LiveErrorMsg;
+    }
+
+    /**
+     * Set The description of the liveness detection result.
+     * @param LiveErrorMsg The description of the liveness detection result.
+     */
+    public void setLiveErrorMsg(String LiveErrorMsg) {
+        this.LiveErrorMsg = LiveErrorMsg;
+    }
+
+    /**
+     * Get The best face screenshot in this liveness detection. The URL is valid for 10 minutes.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BestFrame The best face screenshot in this liveness detection. The URL is valid for 10 minutes.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public FileInfo getBestFrame() {
+        return this.BestFrame;
+    }
+
+    /**
+     * Set The best face screenshot in this liveness detection. The URL is valid for 10 minutes.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BestFrame The best face screenshot in this liveness detection. The URL is valid for 10 minutes.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBestFrame(FileInfo BestFrame) {
+        this.BestFrame = BestFrame;
+    }
+
+    /**
+     * Get The profile photo screenshot from the identity document. The URL is valid for 10 minutes. 
+     * @return ProfileImage The profile photo screenshot from the identity document. The URL is valid for 10 minutes.
+     */
+    public FileInfo getProfileImage() {
+        return this.ProfileImage;
+    }
+
+    /**
+     * Set The profile photo screenshot from the identity document. The URL is valid for 10 minutes.
+     * @param ProfileImage The profile photo screenshot from the identity document. The URL is valid for 10 minutes.
+     */
+    public void setProfileImage(FileInfo ProfileImage) {
+        this.ProfileImage = ProfileImage;
+    }
+
+    /**
+     * Get The code of the face comparison result.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CompareErrorCode The code of the face comparison result.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getCompareErrorCode() {
+        return this.CompareErrorCode;
+    }
+
+    /**
+     * Set The code of the face comparison result.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CompareErrorCode The code of the face comparison result.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCompareErrorCode(String CompareErrorCode) {
+        this.CompareErrorCode = CompareErrorCode;
+    }
+
+    /**
+     * Get The description of the face comparison result.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CompareErrorMsg The description of the face comparison result.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getCompareErrorMsg() {
+        return this.CompareErrorMsg;
+    }
+
+    /**
+     * Set The description of the face comparison result.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CompareErrorMsg The description of the face comparison result.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCompareErrorMsg(String CompareErrorMsg) {
+        this.CompareErrorMsg = CompareErrorMsg;
+    }
+
+    /**
+     * Get Similarity
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Sim Similarity
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Float getSim() {
+        return this.Sim;
+    }
+
+    /**
+     * Set Similarity
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Sim Similarity
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSim(Float Sim) {
+        this.Sim = Sim;
+    }
+
+    /**
+     * Get This field is disused. 
+     * @return IsNeedCharge This field is disused.
+     */
+    public Boolean getIsNeedCharge() {
+        return this.IsNeedCharge;
+    }
+
+    /**
+     * Set This field is disused.
+     * @param IsNeedCharge This field is disused.
+     */
+    public void setIsNeedCharge(Boolean IsNeedCharge) {
+        this.IsNeedCharge = IsNeedCharge;
+    }
+
+    /**
+     * Get The identity document photo info edited by the user in JSON. If the value of `DisableChangeOcrResult` is `true`, the editing feature is disabled and this field does not exist. The URL is valid for 10 minutes.
+When the value of `IdCardType` is `HK`:
+- CnName string: Chinese name
+- EnName string: English name
+- TelexCode string: The code corresponding to the Chinese name
+- Sex string: Gender. Valid values: `M` (male) and `F` (female).
+- Birthday string: Date of birth.
+- Permanent int: Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
+- IdNum string: ID number.
+- Symbol string: The ID symbol below the date of birth, such as "***AZ".
+- FirstIssueDate string: The date of first issuance.
+- CurrentIssueDate string: The date of latest issuance.
+
+When the value of `IdCardType` is `ML`:
+- Sex string: `LELAKI` (male) and `PEREMPUAN` (female).
+- Birthday string
+- ID string
+- Name string
+- Address string
+- Type string: Identity document type.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CardInfoInputJson The identity document photo info edited by the user in JSON. If the value of `DisableChangeOcrResult` is `true`, the editing feature is disabled and this field does not exist. The URL is valid for 10 minutes.
+When the value of `IdCardType` is `HK`:
+- CnName string: Chinese name
+- EnName string: English name
+- TelexCode string: The code corresponding to the Chinese name
+- Sex string: Gender. Valid values: `M` (male) and `F` (female).
+- Birthday string: Date of birth.
+- Permanent int: Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
+- IdNum string: ID number.
+- Symbol string: The ID symbol below the date of birth, such as "***AZ".
+- FirstIssueDate string: The date of first issuance.
+- CurrentIssueDate string: The date of latest issuance.
+
+When the value of `IdCardType` is `ML`:
+- Sex string: `LELAKI` (male) and `PEREMPUAN` (female).
+- Birthday string
+- ID string
+- Name string
+- Address string
+- Type string: Identity document type.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public FileInfo getCardInfoInputJson() {
+        return this.CardInfoInputJson;
+    }
+
+    /**
+     * Set The identity document photo info edited by the user in JSON. If the value of `DisableChangeOcrResult` is `true`, the editing feature is disabled and this field does not exist. The URL is valid for 10 minutes.
+When the value of `IdCardType` is `HK`:
+- CnName string: Chinese name
+- EnName string: English name
+- TelexCode string: The code corresponding to the Chinese name
+- Sex string: Gender. Valid values: `M` (male) and `F` (female).
+- Birthday string: Date of birth.
+- Permanent int: Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
+- IdNum string: ID number.
+- Symbol string: The ID symbol below the date of birth, such as "***AZ".
+- FirstIssueDate string: The date of first issuance.
+- CurrentIssueDate string: The date of latest issuance.
+
+When the value of `IdCardType` is `ML`:
+- Sex string: `LELAKI` (male) and `PEREMPUAN` (female).
+- Birthday string
+- ID string
+- Name string
+- Address string
+- Type string: Identity document type.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CardInfoInputJson The identity document photo info edited by the user in JSON. If the value of `DisableChangeOcrResult` is `true`, the editing feature is disabled and this field does not exist. The URL is valid for 10 minutes.
+When the value of `IdCardType` is `HK`:
+- CnName string: Chinese name
+- EnName string: English name
+- TelexCode string: The code corresponding to the Chinese name
+- Sex string: Gender. Valid values: `M` (male) and `F` (female).
+- Birthday string: Date of birth.
+- Permanent int: Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
+- IdNum string: ID number.
+- Symbol string: The ID symbol below the date of birth, such as "***AZ".
+- FirstIssueDate string: The date of first issuance.
+- CurrentIssueDate string: The date of latest issuance.
+
+When the value of `IdCardType` is `ML`:
+- Sex string: `LELAKI` (male) and `PEREMPUAN` (female).
+- Birthday string
+- ID string
+- Name string
+- Address string
+- Type string: Identity document type.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCardInfoInputJson(FileInfo CardInfoInputJson) {
+        this.CardInfoInputJson = CardInfoInputJson;
+    }
+
+    /**
+     * Get The request ID of this verification process. 
+     * @return RequestId The request ID of this verification process.
+     */
+    public String getRequestId() {
+        return this.RequestId;
+    }
+
+    /**
+     * Set The request ID of this verification process.
+     * @param RequestId The request ID of this verification process.
+     */
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
+    }
+
+    public CompareResult() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CompareResult(CompareResult source) {
+        if (source.ErrorCode != null) {
+            this.ErrorCode = new String(source.ErrorCode);
+        }
+        if (source.ErrorMsg != null) {
+            this.ErrorMsg = new String(source.ErrorMsg);
+        }
+        if (source.LiveData != null) {
+            this.LiveData = new FileInfo(source.LiveData);
+        }
+        if (source.LiveVideo != null) {
+            this.LiveVideo = new FileInfo(source.LiveVideo);
+        }
+        if (source.LiveErrorCode != null) {
+            this.LiveErrorCode = new String(source.LiveErrorCode);
+        }
+        if (source.LiveErrorMsg != null) {
+            this.LiveErrorMsg = new String(source.LiveErrorMsg);
+        }
+        if (source.BestFrame != null) {
+            this.BestFrame = new FileInfo(source.BestFrame);
+        }
+        if (source.ProfileImage != null) {
+            this.ProfileImage = new FileInfo(source.ProfileImage);
+        }
+        if (source.CompareErrorCode != null) {
+            this.CompareErrorCode = new String(source.CompareErrorCode);
+        }
+        if (source.CompareErrorMsg != null) {
+            this.CompareErrorMsg = new String(source.CompareErrorMsg);
+        }
+        if (source.Sim != null) {
+            this.Sim = new Float(source.Sim);
+        }
+        if (source.IsNeedCharge != null) {
+            this.IsNeedCharge = new Boolean(source.IsNeedCharge);
+        }
+        if (source.CardInfoInputJson != null) {
+            this.CardInfoInputJson = new FileInfo(source.CardInfoInputJson);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
+        this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
+        this.setParamObj(map, prefix + "LiveData.", this.LiveData);
+        this.setParamObj(map, prefix + "LiveVideo.", this.LiveVideo);
+        this.setParamSimple(map, prefix + "LiveErrorCode", this.LiveErrorCode);
+        this.setParamSimple(map, prefix + "LiveErrorMsg", this.LiveErrorMsg);
+        this.setParamObj(map, prefix + "BestFrame.", this.BestFrame);
+        this.setParamObj(map, prefix + "ProfileImage.", this.ProfileImage);
+        this.setParamSimple(map, prefix + "CompareErrorCode", this.CompareErrorCode);
+        this.setParamSimple(map, prefix + "CompareErrorMsg", this.CompareErrorMsg);
+        this.setParamSimple(map, prefix + "Sim", this.Sim);
+        this.setParamSimple(map, prefix + "IsNeedCharge", this.IsNeedCharge);
+        this.setParamObj(map, prefix + "CardInfoInputJson.", this.CardInfoInputJson);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+
+    }
+}
+

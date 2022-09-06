@@ -39,6 +39,66 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *This API is used to apply for a token before calling the liveness detection service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
+     * @param req ApplyLivenessTokenRequest
+     * @return ApplyLivenessTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyLivenessTokenResponse ApplyLivenessToken(ApplyLivenessTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplyLivenessTokenResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplyLivenessTokenResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ApplyLivenessToken");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to apply for a token before calling the SDK-based verification service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
+     * @param req ApplySdkVerificationTokenRequest
+     * @return ApplySdkVerificationTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplySdkVerificationTokenResponse ApplySdkVerificationToken(ApplySdkVerificationTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplySdkVerificationTokenResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplySdkVerificationTokenResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ApplySdkVerificationToken");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to apply for a token before calling the web-based verification service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
+     * @param req ApplyWebVerificationTokenRequest
+     * @return ApplyWebVerificationTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyWebVerificationTokenResponse ApplyWebVerificationToken(ApplyWebVerificationTokenRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplyWebVerificationTokenResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplyWebVerificationTokenResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ApplyWebVerificationToken");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to generate a temporary `UploadUrl` for uploading resource files (with the `HTTP PUT` method). After resource upload, `ResourceUrl` will be passed to the `TargetAction` API to complete the resource passing (specific fields vary by case). 
 The data will be stored in a COS bucket in the region specified by the parameter `Region` for two hours.
      * @param req CreateUploadUrlRequest
@@ -102,7 +162,68 @@ The data generated with the SDK must be stored in COS, and the region of the COS
     }
 
     /**
+     *This API is used to get the verification result with the corresponding token (SdkToken) after the liveness detection is completed. The token is valid for two hours after issuance and can be called multiple times.
+     * @param req GetLivenessResultRequest
+     * @return GetLivenessResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetLivenessResultResponse GetLivenessResult(GetLivenessResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetLivenessResultResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetLivenessResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetLivenessResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the verification result with the corresponding token after the SDK-based verification is completed. The token is valid for three days after issuance and can be called multiple times.
+     * @param req GetSdkVerificationResultRequest
+     * @return GetSdkVerificationResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetSdkVerificationResultResponse GetSdkVerificationResult(GetSdkVerificationResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetSdkVerificationResultResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetSdkVerificationResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetSdkVerificationResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the verification result with the corresponding token (BizToken) after the web-based verification is completed. The BizToken is valid for three days (3*24*3,600s) after issuance and can be called multiple times.
+     * @param req GetWebVerificationResultRequest
+     * @return GetWebVerificationResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetWebVerificationResultResponse GetWebVerificationResult(GetWebVerificationResultRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetWebVerificationResultResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetWebVerificationResultResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetWebVerificationResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to pass in a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.
+This API on the legacy version will continue to serve existing users but will be unavailable to new users. We recommend you use `VideoLivenessCompare` for better service quality.
      * @param req LivenessCompareRequest
      * @return LivenessCompareResponse
      * @throws TencentCloudSDKException
