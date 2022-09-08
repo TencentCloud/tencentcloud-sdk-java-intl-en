@@ -103,6 +103,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String [] PolicyIds;
 
     /**
+    * Backend AMP consumer ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AMPConsumerId")
+    @Expose
+    private String AMPConsumerId;
+
+    /**
     * Channel to push alarm notifications to CLS.
 Note: This field may return `null`, indicating that no valid values can be obtained.
     */
@@ -311,6 +319,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Backend AMP consumer ID.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AMPConsumerId Backend AMP consumer ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getAMPConsumerId() {
+        return this.AMPConsumerId;
+    }
+
+    /**
+     * Set Backend AMP consumer ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AMPConsumerId Backend AMP consumer ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAMPConsumerId(String AMPConsumerId) {
+        this.AMPConsumerId = AMPConsumerId;
+    }
+
+    /**
      * Get Channel to push alarm notifications to CLS.
 Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return CLSNotices Channel to push alarm notifications to CLS.
@@ -377,6 +405,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 this.PolicyIds[i] = new String(source.PolicyIds[i]);
             }
         }
+        if (source.AMPConsumerId != null) {
+            this.AMPConsumerId = new String(source.AMPConsumerId);
+        }
         if (source.CLSNotices != null) {
             this.CLSNotices = new CLSNotice[source.CLSNotices.length];
             for (int i = 0; i < source.CLSNotices.length; i++) {
@@ -400,6 +431,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "IsPreset", this.IsPreset);
         this.setParamSimple(map, prefix + "NoticeLanguage", this.NoticeLanguage);
         this.setParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
+        this.setParamSimple(map, prefix + "AMPConsumerId", this.AMPConsumerId);
         this.setParamArrayObj(map, prefix + "CLSNotices.", this.CLSNotices);
 
     }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ReceiverInfo extends AbstractModel{
 
     /**
-    * Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates '10:0:0'.
+    * Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates “10:0:0”.
     */
     @SerializedName("StartTime")
     @Expose
@@ -65,7 +65,7 @@ public class ReceiverInfo extends AbstractModel{
     private String [] SendFor;
 
     /**
-    * Uid of the alarm call recipient.
+    * UID of the phone call alarm.
     */
     @SerializedName("UidList")
     @Expose
@@ -107,14 +107,14 @@ public class ReceiverInfo extends AbstractModel{
     private Long NeedSendNotice;
 
     /**
-    * Recipient group list. The list of recipient group IDs that is queried by a platform API.
+    * Recipient group list. The list of recipient group IDs that is queried by API.
     */
     @SerializedName("ReceiverGroupList")
     @Expose
     private Long [] ReceiverGroupList;
 
     /**
-    * Recipient list. The list of recipient IDs that is queried by a platform API.
+    * Recipient list. The list of recipient IDs that is queried by API.
     */
     @SerializedName("ReceiverUserList")
     @Expose
@@ -128,16 +128,16 @@ public class ReceiverInfo extends AbstractModel{
     private String ReceiveLanguage;
 
     /**
-     * Get Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates '10:0:0'. 
-     * @return StartTime Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates '10:0:0'.
+     * Get Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates “10:0:0”. 
+     * @return StartTime Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates “10:0:0”.
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates '10:0:0'.
-     * @param StartTime Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates '10:0:0'.
+     * Set Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates “10:0:0”.
+     * @param StartTime Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates “10:0:0”.
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
@@ -224,16 +224,16 @@ public class ReceiverInfo extends AbstractModel{
     }
 
     /**
-     * Get Uid of the alarm call recipient. 
-     * @return UidList Uid of the alarm call recipient.
+     * Get UID of the phone call alarm. 
+     * @return UidList UID of the phone call alarm.
      */
     public Long [] getUidList() {
         return this.UidList;
     }
 
     /**
-     * Set Uid of the alarm call recipient.
-     * @param UidList Uid of the alarm call recipient.
+     * Set UID of the phone call alarm.
+     * @param UidList UID of the phone call alarm.
      */
     public void setUidList(Long [] UidList) {
         this.UidList = UidList;
@@ -320,32 +320,32 @@ public class ReceiverInfo extends AbstractModel{
     }
 
     /**
-     * Get Recipient group list. The list of recipient group IDs that is queried by a platform API. 
-     * @return ReceiverGroupList Recipient group list. The list of recipient group IDs that is queried by a platform API.
+     * Get Recipient group list. The list of recipient group IDs that is queried by API. 
+     * @return ReceiverGroupList Recipient group list. The list of recipient group IDs that is queried by API.
      */
     public Long [] getReceiverGroupList() {
         return this.ReceiverGroupList;
     }
 
     /**
-     * Set Recipient group list. The list of recipient group IDs that is queried by a platform API.
-     * @param ReceiverGroupList Recipient group list. The list of recipient group IDs that is queried by a platform API.
+     * Set Recipient group list. The list of recipient group IDs that is queried by API.
+     * @param ReceiverGroupList Recipient group list. The list of recipient group IDs that is queried by API.
      */
     public void setReceiverGroupList(Long [] ReceiverGroupList) {
         this.ReceiverGroupList = ReceiverGroupList;
     }
 
     /**
-     * Get Recipient list. The list of recipient IDs that is queried by a platform API. 
-     * @return ReceiverUserList Recipient list. The list of recipient IDs that is queried by a platform API.
+     * Get Recipient list. The list of recipient IDs that is queried by API. 
+     * @return ReceiverUserList Recipient list. The list of recipient IDs that is queried by API.
      */
     public Long [] getReceiverUserList() {
         return this.ReceiverUserList;
     }
 
     /**
-     * Set Recipient list. The list of recipient IDs that is queried by a platform API.
-     * @param ReceiverUserList Recipient list. The list of recipient IDs that is queried by a platform API.
+     * Set Recipient list. The list of recipient IDs that is queried by API.
+     * @param ReceiverUserList Recipient list. The list of recipient IDs that is queried by API.
      */
     public void setReceiverUserList(Long [] ReceiverUserList) {
         this.ReceiverUserList = ReceiverUserList;

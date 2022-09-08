@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeGrafanaNotificationChannelsRequest extends AbstractModel{
 
     /**
-    * Instance name
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -65,16 +65,16 @@ public class DescribeGrafanaNotificationChannelsRequest extends AbstractModel{
     private Long ChannelState;
 
     /**
-     * Get Instance name 
-     * @return InstanceId Instance name
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceId Instance name
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

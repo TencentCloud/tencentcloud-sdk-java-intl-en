@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class CreateGrafanaNotificationChannelResponse extends AbstractModel{
 
     /**
+    * 
+    */
+    @SerializedName("ChannelId")
+    @Expose
+    private String ChannelId;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get  
+     * @return ChannelId 
+     */
+    public String getChannelId() {
+        return this.ChannelId;
+    }
+
+    /**
+     * Set 
+     * @param ChannelId 
+     */
+    public void setChannelId(String ChannelId) {
+        this.ChannelId = ChannelId;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -53,6 +76,9 @@ public class CreateGrafanaNotificationChannelResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateGrafanaNotificationChannelResponse(CreateGrafanaNotificationChannelResponse source) {
+        if (source.ChannelId != null) {
+            this.ChannelId = new String(source.ChannelId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +89,7 @@ public class CreateGrafanaNotificationChannelResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

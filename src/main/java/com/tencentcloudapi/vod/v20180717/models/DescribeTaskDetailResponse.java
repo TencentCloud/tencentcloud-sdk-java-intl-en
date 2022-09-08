@@ -27,11 +27,12 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>Procedure: Video processing</li>
 <li>EditMedia: Video editing</li>
 <li>SplitMedia: Video splitting</li>
-<li>ComposeMedia: Media file producing</li>
+<li>ComposeMedia: Media file production</li>
 <li>WechatPublish: WeChat publishing</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
+<li> ReviewAudioVideo: Moderation</li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -173,6 +174,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private RemoveWatermarkTask RemoveWatermarkTask;
 
     /**
+    * The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ReviewAudioVideoTask")
+    @Expose
+    private ReviewAudioVideoTask ReviewAudioVideoTask;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -184,20 +193,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>Procedure: Video processing</li>
 <li>EditMedia: Video editing</li>
 <li>SplitMedia: Video splitting</li>
-<li>ComposeMedia: Media file producing</li>
-<li>WechatPublish: WeChat publishing</li>
-<li>PullUpload: Pulling media files for upload</li>
-<li>FastClipMedia: Quick clipping</li>
-<li>RemoveWatermarkTask: Watermark removal</li> 
-     * @return TaskType The task type. Valid values:
-<li>Procedure: Video processing</li>
-<li>EditMedia: Video editing</li>
-<li>SplitMedia: Video splitting</li>
-<li>ComposeMedia: Media file producing</li>
+<li>ComposeMedia: Media file production</li>
 <li>WechatPublish: WeChat publishing</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
+<li> ReviewAudioVideo: Moderation</li> 
+     * @return TaskType The task type. Valid values:
+<li>Procedure: Video processing</li>
+<li>EditMedia: Video editing</li>
+<li>SplitMedia: Video splitting</li>
+<li>ComposeMedia: Media file production</li>
+<li>WechatPublish: WeChat publishing</li>
+<li>PullUpload: Pulling media files for upload</li>
+<li>FastClipMedia: Quick clipping</li>
+<li>RemoveWatermarkTask: Watermark removal</li>
+<li> ReviewAudioVideo: Moderation</li>
      */
     public String getTaskType() {
         return this.TaskType;
@@ -208,20 +219,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>Procedure: Video processing</li>
 <li>EditMedia: Video editing</li>
 <li>SplitMedia: Video splitting</li>
-<li>ComposeMedia: Media file producing</li>
+<li>ComposeMedia: Media file production</li>
 <li>WechatPublish: WeChat publishing</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
+<li> ReviewAudioVideo: Moderation</li>
      * @param TaskType The task type. Valid values:
 <li>Procedure: Video processing</li>
 <li>EditMedia: Video editing</li>
 <li>SplitMedia: Video splitting</li>
-<li>ComposeMedia: Media file producing</li>
+<li>ComposeMedia: Media file production</li>
 <li>WechatPublish: WeChat publishing</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
+<li> ReviewAudioVideo: Moderation</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
@@ -564,6 +577,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ReviewAudioVideoTask The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public ReviewAudioVideoTask getReviewAudioVideoTask() {
+        return this.ReviewAudioVideoTask;
+    }
+
+    /**
+     * Set The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ReviewAudioVideoTask The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setReviewAudioVideoTask(ReviewAudioVideoTask ReviewAudioVideoTask) {
+        this.ReviewAudioVideoTask = ReviewAudioVideoTask;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -641,6 +674,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RemoveWatermarkTask != null) {
             this.RemoveWatermarkTask = new RemoveWatermarkTask(source.RemoveWatermarkTask);
         }
+        if (source.ReviewAudioVideoTask != null) {
+            this.ReviewAudioVideoTask = new ReviewAudioVideoTask(source.ReviewAudioVideoTask);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -669,6 +705,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "CreateImageSpriteTask.", this.CreateImageSpriteTask);
         this.setParamObj(map, prefix + "SnapshotByTimeOffsetTask.", this.SnapshotByTimeOffsetTask);
         this.setParamObj(map, prefix + "RemoveWatermarkTask.", this.RemoveWatermarkTask);
+        this.setParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

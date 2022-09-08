@@ -38,8 +38,9 @@ public class EventContent extends AbstractModel{
 <li>EditMediaComplete: Finished video editing.</li>
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
-<li>ComposeMediaComplete: Finished composition.</li>
+<li>ComposeMediaComplete: Finished producing the media file.</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
+<li>ReviewAudioVideoComplete: Finished moderation</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -180,6 +181,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private RestoreMediaTask RestoreMediaCompleteEvent;
 
     /**
+    * The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ReviewAudioVideoCompleteEvent")
+    @Expose
+    private ReviewAudioVideoTask ReviewAudioVideoCompleteEvent;
+
+    /**
      * Get Event handler. The caller must call `ConfirmEvents` to confirm that the message has been received, and the confirmation is valid for 30 seconds. After the confirmation expires, the event can be obtained again. 
      * @return EventHandle Event handler. The caller must call `ConfirmEvents` to confirm that the message has been received, and the confirmation is valid for 30 seconds. After the confirmation expires, the event can be obtained again.
      */
@@ -204,8 +213,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 <li>EditMediaComplete: Finished video editing.</li>
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
-<li>ComposeMediaComplete: Finished composition.</li>
+<li>ComposeMediaComplete: Finished producing the media file.</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
+<li>ReviewAudioVideoComplete: Finished moderation</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -220,8 +230,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 <li>EditMediaComplete: Finished video editing.</li>
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
-<li>ComposeMediaComplete: Finished composition.</li>
+<li>ComposeMediaComplete: Finished producing the media file.</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
+<li>ReviewAudioVideoComplete: Finished moderation</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -242,8 +253,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 <li>EditMediaComplete: Finished video editing.</li>
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
-<li>ComposeMediaComplete: Finished composition.</li>
+<li>ComposeMediaComplete: Finished producing the media file.</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
+<li>ReviewAudioVideoComplete: Finished moderation</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -258,8 +270,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 <li>EditMediaComplete: Finished video editing.</li>
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
-<li>ComposeMediaComplete: Finished composition.</li>
+<li>ComposeMediaComplete: Finished producing the media file.</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
+<li>ReviewAudioVideoComplete: Finished moderation</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -591,6 +604,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.RestoreMediaCompleteEvent = RestoreMediaCompleteEvent;
     }
 
+    /**
+     * Get The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ReviewAudioVideoCompleteEvent The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public ReviewAudioVideoTask getReviewAudioVideoCompleteEvent() {
+        return this.ReviewAudioVideoCompleteEvent;
+    }
+
+    /**
+     * Set The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ReviewAudioVideoCompleteEvent The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setReviewAudioVideoCompleteEvent(ReviewAudioVideoTask ReviewAudioVideoCompleteEvent) {
+        this.ReviewAudioVideoCompleteEvent = ReviewAudioVideoCompleteEvent;
+    }
+
     public EventContent() {
     }
 
@@ -653,6 +686,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.RestoreMediaCompleteEvent != null) {
             this.RestoreMediaCompleteEvent = new RestoreMediaTask(source.RestoreMediaCompleteEvent);
         }
+        if (source.ReviewAudioVideoCompleteEvent != null) {
+            this.ReviewAudioVideoCompleteEvent = new ReviewAudioVideoTask(source.ReviewAudioVideoCompleteEvent);
+        }
     }
 
 
@@ -678,6 +714,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamObj(map, prefix + "WechatMiniProgramPublishCompleteEvent.", this.WechatMiniProgramPublishCompleteEvent);
         this.setParamObj(map, prefix + "RemoveWatermarkCompleteEvent.", this.RemoveWatermarkCompleteEvent);
         this.setParamObj(map, prefix + "RestoreMediaCompleteEvent.", this.RestoreMediaCompleteEvent);
+        this.setParamObj(map, prefix + "ReviewAudioVideoCompleteEvent.", this.ReviewAudioVideoCompleteEvent);
 
     }
 }

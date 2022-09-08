@@ -65,7 +65,7 @@ public class MLIDPassportOCRResponse extends AbstractModel{
     private String IssuingCountry;
 
     /**
-    * Nationality
+    * Country/region code
     */
     @SerializedName("Nationality")
     @Expose
@@ -221,16 +221,16 @@ public class MLIDPassportOCRResponse extends AbstractModel{
     }
 
     /**
-     * Get Nationality 
-     * @return Nationality Nationality
+     * Get Country/region code 
+     * @return Nationality Country/region code
      */
     public String getNationality() {
         return this.Nationality;
     }
 
     /**
-     * Set Nationality
-     * @param Nationality Nationality
+     * Set Country/region code
+     * @param Nationality Country/region code
      */
     public void setNationality(String Nationality) {
         this.Nationality = Nationality;

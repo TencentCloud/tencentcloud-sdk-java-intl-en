@@ -23,92 +23,112 @@ import java.util.HashMap;
 public class AnycastOutPackRelation extends AbstractModel{
 
     /**
-    * 
+    * Application bandwidth (in Mbps).
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NormalBandwidth")
     @Expose
     private Long NormalBandwidth;
 
     /**
-    * 
+    * Number of forwarding rules
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ForwardRulesLimit")
     @Expose
     private Long ForwardRulesLimit;
 
     /**
-    * 
+    * Auto-renewal flag
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * 
+    * Expiration date
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CurDeadline")
     @Expose
     private String CurDeadline;
 
     /**
-     * Get  
-     * @return NormalBandwidth 
+     * Get Application bandwidth (in Mbps).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return NormalBandwidth Application bandwidth (in Mbps).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getNormalBandwidth() {
         return this.NormalBandwidth;
     }
 
     /**
-     * Set 
-     * @param NormalBandwidth 
+     * Set Application bandwidth (in Mbps).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param NormalBandwidth Application bandwidth (in Mbps).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNormalBandwidth(Long NormalBandwidth) {
         this.NormalBandwidth = NormalBandwidth;
     }
 
     /**
-     * Get  
-     * @return ForwardRulesLimit 
+     * Get Number of forwarding rules
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ForwardRulesLimit Number of forwarding rules
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getForwardRulesLimit() {
         return this.ForwardRulesLimit;
     }
 
     /**
-     * Set 
-     * @param ForwardRulesLimit 
+     * Set Number of forwarding rules
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ForwardRulesLimit Number of forwarding rules
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setForwardRulesLimit(Long ForwardRulesLimit) {
         this.ForwardRulesLimit = ForwardRulesLimit;
     }
 
     /**
-     * Get  
-     * @return AutoRenewFlag 
+     * Get Auto-renewal flag
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AutoRenewFlag Auto-renewal flag
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 
-     * @param AutoRenewFlag 
+     * Set Auto-renewal flag
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AutoRenewFlag Auto-renewal flag
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get  
-     * @return CurDeadline 
+     * Get Expiration date
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CurDeadline Expiration date
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCurDeadline() {
         return this.CurDeadline;
     }
 
     /**
-     * Set 
-     * @param CurDeadline 
+     * Set Expiration date
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CurDeadline Expiration date
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCurDeadline(String CurDeadline) {
         this.CurDeadline = CurDeadline;

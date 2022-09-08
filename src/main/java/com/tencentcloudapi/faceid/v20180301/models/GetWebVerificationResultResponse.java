@@ -63,14 +63,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private VerificationDetail [] VerificationDetailList;
 
     /**
-    * 
+    * The temporary URL of the video collected from the video stream. It is valid for 10 minutes. Download the video if needed.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VideoUrl")
     @Expose
     private String VideoUrl;
 
     /**
-    * 
+    * The MD5 hash value of the video collected from the video stream. It can be used to check whether the video content is consistent with the file content.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VideoMd5")
     @Expose
@@ -184,32 +186,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return VideoUrl 
+     * Get The temporary URL of the video collected from the video stream. It is valid for 10 minutes. Download the video if needed.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return VideoUrl The temporary URL of the video collected from the video stream. It is valid for 10 minutes. Download the video if needed.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVideoUrl() {
         return this.VideoUrl;
     }
 
     /**
-     * Set 
-     * @param VideoUrl 
+     * Set The temporary URL of the video collected from the video stream. It is valid for 10 minutes. Download the video if needed.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param VideoUrl The temporary URL of the video collected from the video stream. It is valid for 10 minutes. Download the video if needed.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVideoUrl(String VideoUrl) {
         this.VideoUrl = VideoUrl;
     }
 
     /**
-     * Get  
-     * @return VideoMd5 
+     * Get The MD5 hash value of the video collected from the video stream. It can be used to check whether the video content is consistent with the file content.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return VideoMd5 The MD5 hash value of the video collected from the video stream. It can be used to check whether the video content is consistent with the file content.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVideoMd5() {
         return this.VideoMd5;
     }
 
     /**
-     * Set 
-     * @param VideoMd5 
+     * Set The MD5 hash value of the video collected from the video stream. It can be used to check whether the video content is consistent with the file content.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param VideoMd5 The MD5 hash value of the video collected from the video stream. It can be used to check whether the video content is consistent with the file content.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVideoMd5(String VideoMd5) {
         this.VideoMd5 = VideoMd5;

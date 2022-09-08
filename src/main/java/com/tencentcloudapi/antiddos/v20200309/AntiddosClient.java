@@ -719,7 +719,7 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
-     *This API is used to obtain a CC precise protection policy.
+     *This API is used to obtain the list of CC precise protection policies.
      * @param req DescribeCCPrecisionPlyListRequest
      * @return DescribeCCPrecisionPlyListResponse
      * @throws TencentCloudSDKException
@@ -779,7 +779,7 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
-     *This API is used to obtain a layer-4 access control list.
+     *This API is used to obtain the layer-4 access control list.
      * @param req DescribeCcBlackWhiteIpListRequest
      * @return DescribeCcBlackWhiteIpListResponse
      * @throws TencentCloudSDKException

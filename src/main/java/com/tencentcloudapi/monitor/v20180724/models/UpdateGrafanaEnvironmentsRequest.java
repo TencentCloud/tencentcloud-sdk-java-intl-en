@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class UpdateGrafanaEnvironmentsRequest extends AbstractModel{
 
     /**
-    * Instance name
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -37,16 +37,16 @@ public class UpdateGrafanaEnvironmentsRequest extends AbstractModel{
     private String Envs;
 
     /**
-     * Get Instance name 
-     * @return InstanceId Instance name
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceId Instance name
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

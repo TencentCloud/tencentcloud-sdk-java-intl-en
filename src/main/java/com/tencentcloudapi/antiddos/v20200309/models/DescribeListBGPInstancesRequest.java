@@ -37,7 +37,7 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * IP filter
+    * Filters by IP.
     */
     @SerializedName("FilterIp")
     @Expose
@@ -51,14 +51,14 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
     private String FilterInstanceId;
 
     /**
-    * Region filter. For example, `ap-guangzhou`.
+    * Filters by region. For example, `ap-guangzhou`.
     */
     @SerializedName("FilterRegion")
     @Expose
     private String FilterRegion;
 
     /**
-    * Name filter
+    * Filters by name.
     */
     @SerializedName("FilterName")
     @Expose
@@ -79,11 +79,32 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
     private String FilterStatus;
 
     /**
-    * Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
+    * Filters by binding status. `bounding`: The instance is bound; `failed`: The binding failed.
     */
     @SerializedName("FilterBoundStatus")
     @Expose
     private String FilterBoundStatus;
+
+    /**
+    * Array of instance IDs
+    */
+    @SerializedName("FilterInstanceIdList")
+    @Expose
+    private String [] FilterInstanceIdList;
+
+    /**
+    * Filters by Enterprise edition
+    */
+    @SerializedName("FilterEnterpriseFlag")
+    @Expose
+    private Long FilterEnterpriseFlag;
+
+    /**
+    * Filters by tag
+    */
+    @SerializedName("FilterTag")
+    @Expose
+    private TagFilter FilterTag;
 
     /**
      * Get Starting offset of the page. Value: (number of pages – 1) * items per page. 
@@ -118,16 +139,16 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get IP filter 
-     * @return FilterIp IP filter
+     * Get Filters by IP. 
+     * @return FilterIp Filters by IP.
      */
     public String getFilterIp() {
         return this.FilterIp;
     }
 
     /**
-     * Set IP filter
-     * @param FilterIp IP filter
+     * Set Filters by IP.
+     * @param FilterIp Filters by IP.
      */
     public void setFilterIp(String FilterIp) {
         this.FilterIp = FilterIp;
@@ -150,32 +171,32 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Region filter. For example, `ap-guangzhou`. 
-     * @return FilterRegion Region filter. For example, `ap-guangzhou`.
+     * Get Filters by region. For example, `ap-guangzhou`. 
+     * @return FilterRegion Filters by region. For example, `ap-guangzhou`.
      */
     public String getFilterRegion() {
         return this.FilterRegion;
     }
 
     /**
-     * Set Region filter. For example, `ap-guangzhou`.
-     * @param FilterRegion Region filter. For example, `ap-guangzhou`.
+     * Set Filters by region. For example, `ap-guangzhou`.
+     * @param FilterRegion Filters by region. For example, `ap-guangzhou`.
      */
     public void setFilterRegion(String FilterRegion) {
         this.FilterRegion = FilterRegion;
     }
 
     /**
-     * Get Name filter 
-     * @return FilterName Name filter
+     * Get Filters by name. 
+     * @return FilterName Filters by name.
      */
     public String getFilterName() {
         return this.FilterName;
     }
 
     /**
-     * Set Name filter
-     * @param FilterName Name filter
+     * Set Filters by name.
+     * @param FilterName Filters by name.
      */
     public void setFilterName(String FilterName) {
         this.FilterName = FilterName;
@@ -214,19 +235,67 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed. 
-     * @return FilterBoundStatus Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
+     * Get Filters by binding status. `bounding`: The instance is bound; `failed`: The binding failed. 
+     * @return FilterBoundStatus Filters by binding status. `bounding`: The instance is bound; `failed`: The binding failed.
      */
     public String getFilterBoundStatus() {
         return this.FilterBoundStatus;
     }
 
     /**
-     * Set Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
-     * @param FilterBoundStatus Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
+     * Set Filters by binding status. `bounding`: The instance is bound; `failed`: The binding failed.
+     * @param FilterBoundStatus Filters by binding status. `bounding`: The instance is bound; `failed`: The binding failed.
      */
     public void setFilterBoundStatus(String FilterBoundStatus) {
         this.FilterBoundStatus = FilterBoundStatus;
+    }
+
+    /**
+     * Get Array of instance IDs 
+     * @return FilterInstanceIdList Array of instance IDs
+     */
+    public String [] getFilterInstanceIdList() {
+        return this.FilterInstanceIdList;
+    }
+
+    /**
+     * Set Array of instance IDs
+     * @param FilterInstanceIdList Array of instance IDs
+     */
+    public void setFilterInstanceIdList(String [] FilterInstanceIdList) {
+        this.FilterInstanceIdList = FilterInstanceIdList;
+    }
+
+    /**
+     * Get Filters by Enterprise edition 
+     * @return FilterEnterpriseFlag Filters by Enterprise edition
+     */
+    public Long getFilterEnterpriseFlag() {
+        return this.FilterEnterpriseFlag;
+    }
+
+    /**
+     * Set Filters by Enterprise edition
+     * @param FilterEnterpriseFlag Filters by Enterprise edition
+     */
+    public void setFilterEnterpriseFlag(Long FilterEnterpriseFlag) {
+        this.FilterEnterpriseFlag = FilterEnterpriseFlag;
+    }
+
+    /**
+     * Get Filters by tag 
+     * @return FilterTag Filters by tag
+     */
+    public TagFilter getFilterTag() {
+        return this.FilterTag;
+    }
+
+    /**
+     * Set Filters by tag
+     * @param FilterTag Filters by tag
+     */
+    public void setFilterTag(TagFilter FilterTag) {
+        this.FilterTag = FilterTag;
     }
 
     public DescribeListBGPInstancesRequest() {
@@ -264,6 +333,18 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         if (source.FilterBoundStatus != null) {
             this.FilterBoundStatus = new String(source.FilterBoundStatus);
         }
+        if (source.FilterInstanceIdList != null) {
+            this.FilterInstanceIdList = new String[source.FilterInstanceIdList.length];
+            for (int i = 0; i < source.FilterInstanceIdList.length; i++) {
+                this.FilterInstanceIdList[i] = new String(source.FilterInstanceIdList[i]);
+            }
+        }
+        if (source.FilterEnterpriseFlag != null) {
+            this.FilterEnterpriseFlag = new Long(source.FilterEnterpriseFlag);
+        }
+        if (source.FilterTag != null) {
+            this.FilterTag = new TagFilter(source.FilterTag);
+        }
     }
 
 
@@ -280,6 +361,9 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FilterLine", this.FilterLine);
         this.setParamSimple(map, prefix + "FilterStatus", this.FilterStatus);
         this.setParamSimple(map, prefix + "FilterBoundStatus", this.FilterBoundStatus);
+        this.setParamArraySimple(map, prefix + "FilterInstanceIdList.", this.FilterInstanceIdList);
+        this.setParamSimple(map, prefix + "FilterEnterpriseFlag", this.FilterEnterpriseFlag);
+        this.setParamObj(map, prefix + "FilterTag.", this.FilterTag);
 
     }
 }

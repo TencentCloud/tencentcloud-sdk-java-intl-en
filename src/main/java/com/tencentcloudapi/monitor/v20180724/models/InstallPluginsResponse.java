@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class InstallPluginsResponse extends AbstractModel{
 
     /**
+    * 
+    */
+    @SerializedName("PluginIds")
+    @Expose
+    private String [] PluginIds;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get  
+     * @return PluginIds 
+     */
+    public String [] getPluginIds() {
+        return this.PluginIds;
+    }
+
+    /**
+     * Set 
+     * @param PluginIds 
+     */
+    public void setPluginIds(String [] PluginIds) {
+        this.PluginIds = PluginIds;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -53,6 +76,12 @@ public class InstallPluginsResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public InstallPluginsResponse(InstallPluginsResponse source) {
+        if (source.PluginIds != null) {
+            this.PluginIds = new String[source.PluginIds.length];
+            for (int i = 0; i < source.PluginIds.length; i++) {
+                this.PluginIds[i] = new String(source.PluginIds[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +92,7 @@ public class InstallPluginsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "PluginIds.", this.PluginIds);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -192,7 +192,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private TagInfo [] TagInfoList;
 
     /**
-    * 
+    * All-out package details of the instance
+When an all-out package is not used by the instance, this field is `null`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("AnycastOutPackRelation")
     @Expose
@@ -630,16 +632,24 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get  
-     * @return AnycastOutPackRelation 
+     * Get All-out package details of the instance
+When an all-out package is not used by the instance, this field is `null`.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return AnycastOutPackRelation All-out package details of the instance
+When an all-out package is not used by the instance, this field is `null`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public AnycastOutPackRelation getAnycastOutPackRelation() {
         return this.AnycastOutPackRelation;
     }
 
     /**
-     * Set 
-     * @param AnycastOutPackRelation 
+     * Set All-out package details of the instance
+When an all-out package is not used by the instance, this field is `null`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param AnycastOutPackRelation All-out package details of the instance
+When an all-out package is not used by the instance, this field is `null`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setAnycastOutPackRelation(AnycastOutPackRelation AnycastOutPackRelation) {
         this.AnycastOutPackRelation = AnycastOutPackRelation;

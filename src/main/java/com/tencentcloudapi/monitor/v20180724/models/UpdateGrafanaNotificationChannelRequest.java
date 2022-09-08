@@ -30,7 +30,7 @@ public class UpdateGrafanaNotificationChannelRequest extends AbstractModel{
     private String ChannelId;
 
     /**
-    * Instance name
+    * Instance ID.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -58,6 +58,13 @@ public class UpdateGrafanaNotificationChannelRequest extends AbstractModel{
     private String [] ExtraOrgIds;
 
     /**
+    * 
+    */
+    @SerializedName("OrganizationIds")
+    @Expose
+    private String [] OrganizationIds;
+
+    /**
      * Get Channel ID 
      * @return ChannelId Channel ID
      */
@@ -74,16 +81,16 @@ public class UpdateGrafanaNotificationChannelRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceId Instance name
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceId Instance name
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -137,6 +144,22 @@ public class UpdateGrafanaNotificationChannelRequest extends AbstractModel{
         this.ExtraOrgIds = ExtraOrgIds;
     }
 
+    /**
+     * Get  
+     * @return OrganizationIds 
+     */
+    public String [] getOrganizationIds() {
+        return this.OrganizationIds;
+    }
+
+    /**
+     * Set 
+     * @param OrganizationIds 
+     */
+    public void setOrganizationIds(String [] OrganizationIds) {
+        this.OrganizationIds = OrganizationIds;
+    }
+
     public UpdateGrafanaNotificationChannelRequest() {
     }
 
@@ -166,6 +189,12 @@ public class UpdateGrafanaNotificationChannelRequest extends AbstractModel{
                 this.ExtraOrgIds[i] = new String(source.ExtraOrgIds[i]);
             }
         }
+        if (source.OrganizationIds != null) {
+            this.OrganizationIds = new String[source.OrganizationIds.length];
+            for (int i = 0; i < source.OrganizationIds.length; i++) {
+                this.OrganizationIds[i] = new String(source.OrganizationIds[i]);
+            }
+        }
     }
 
 
@@ -178,6 +207,7 @@ public class UpdateGrafanaNotificationChannelRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ChannelName", this.ChannelName);
         this.setParamArraySimple(map, prefix + "Receivers.", this.Receivers);
         this.setParamArraySimple(map, prefix + "ExtraOrgIds.", this.ExtraOrgIds);
+        this.setParamArraySimple(map, prefix + "OrganizationIds.", this.OrganizationIds);
 
     }
 }

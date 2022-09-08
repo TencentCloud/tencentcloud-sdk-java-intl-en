@@ -127,7 +127,7 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
     private TagFilter FilterTag;
 
     /**
-    * 
+    * Filters by package type.
     */
     @SerializedName("FilterPackType")
     @Expose
@@ -382,16 +382,16 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return FilterPackType 
+     * Get Filters by package type. 
+     * @return FilterPackType Filters by package type.
      */
     public String [] getFilterPackType() {
         return this.FilterPackType;
     }
 
     /**
-     * Set 
-     * @param FilterPackType 
+     * Set Filters by package type.
+     * @param FilterPackType Filters by package type.
      */
     public void setFilterPackType(String [] FilterPackType) {
         this.FilterPackType = FilterPackType;

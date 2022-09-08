@@ -37,16 +37,16 @@ public class BGPInstanceSpecification extends AbstractModel{
     private Long ProtectCountLimit;
 
     /**
-    * Number of protection IPs
+    * Number of protected IPs
     */
     @SerializedName("ProtectIPNumberLimit")
     @Expose
     private Long ProtectIPNumberLimit;
 
     /**
-    * Auto-renewal status. Valid values:
-`0`: disabled
-`1`: enabled
+    * Auto-renewal status. Values:
+`0`: Disabled
+`1`: Enabled
 ]
     */
     @SerializedName("AutoRenewFlag")
@@ -55,18 +55,51 @@ public class BGPInstanceSpecification extends AbstractModel{
 
     /**
     * Protection type of Anti-DDoS Pro. Valid values: `0` (general protection) and `1` (Lighthouse-based protection).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UnionPackFlag")
     @Expose
     private Long UnionPackFlag;
 
     /**
-    * 
+    * Application bandwidth
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceBandWidth")
     @Expose
     private Long ServiceBandWidth;
+
+    /**
+    * Whether it’s an Anti-DDoS Pro Premium edition. Values: `0` (General edition); `1` (Premium edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BattleEditionFlag")
+    @Expose
+    private Long BattleEditionFlag;
+
+    /**
+    * Whether it’s an Anti-DDoS Pro Standard edition. Values: `0` (General edition); `1` (Standard edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ChannelEditionFlag")
+    @Expose
+    private Long ChannelEditionFlag;
+
+    /**
+    * Whether it’s an Anti-DDoS Pro Enterprise edition. Values: `0` (General edition); `1` (Enterprise edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EnterpriseFlag")
+    @Expose
+    private Long EnterpriseFlag;
+
+    /**
+    * Elastic bandwidth threshold of the Anti-DDoS Pro Enterprise edition.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ElasticLimit")
+    @Expose
+    private Long ElasticLimit;
 
     /**
      * Get Base protection bandwidth (in Gbps) 
@@ -101,29 +134,29 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Number of protection IPs 
-     * @return ProtectIPNumberLimit Number of protection IPs
+     * Get Number of protected IPs 
+     * @return ProtectIPNumberLimit Number of protected IPs
      */
     public Long getProtectIPNumberLimit() {
         return this.ProtectIPNumberLimit;
     }
 
     /**
-     * Set Number of protection IPs
-     * @param ProtectIPNumberLimit Number of protection IPs
+     * Set Number of protected IPs
+     * @param ProtectIPNumberLimit Number of protected IPs
      */
     public void setProtectIPNumberLimit(Long ProtectIPNumberLimit) {
         this.ProtectIPNumberLimit = ProtectIPNumberLimit;
     }
 
     /**
-     * Get Auto-renewal status. Valid values:
-`0`: disabled
-`1`: enabled
+     * Get Auto-renewal status. Values:
+`0`: Disabled
+`1`: Enabled
 ] 
-     * @return AutoRenewFlag Auto-renewal status. Valid values:
-`0`: disabled
-`1`: enabled
+     * @return AutoRenewFlag Auto-renewal status. Values:
+`0`: Disabled
+`1`: Enabled
 ]
      */
     public Long getAutoRenewFlag() {
@@ -131,13 +164,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Auto-renewal status. Valid values:
-`0`: disabled
-`1`: enabled
+     * Set Auto-renewal status. Values:
+`0`: Disabled
+`1`: Enabled
 ]
-     * @param AutoRenewFlag Auto-renewal status. Valid values:
-`0`: disabled
-`1`: enabled
+     * @param AutoRenewFlag Auto-renewal status. Values:
+`0`: Disabled
+`1`: Enabled
 ]
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
@@ -146,9 +179,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Protection type of Anti-DDoS Pro. Valid values: `0` (general protection) and `1` (Lighthouse-based protection).
-Note: This field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return UnionPackFlag Protection type of Anti-DDoS Pro. Valid values: `0` (general protection) and `1` (Lighthouse-based protection).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getUnionPackFlag() {
         return this.UnionPackFlag;
@@ -156,28 +189,112 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Protection type of Anti-DDoS Pro. Valid values: `0` (general protection) and `1` (Lighthouse-based protection).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param UnionPackFlag Protection type of Anti-DDoS Pro. Valid values: `0` (general protection) and `1` (Lighthouse-based protection).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUnionPackFlag(Long UnionPackFlag) {
         this.UnionPackFlag = UnionPackFlag;
     }
 
     /**
-     * Get  
-     * @return ServiceBandWidth 
+     * Get Application bandwidth
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ServiceBandWidth Application bandwidth
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getServiceBandWidth() {
         return this.ServiceBandWidth;
     }
 
     /**
-     * Set 
-     * @param ServiceBandWidth 
+     * Set Application bandwidth
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ServiceBandWidth Application bandwidth
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceBandWidth(Long ServiceBandWidth) {
         this.ServiceBandWidth = ServiceBandWidth;
+    }
+
+    /**
+     * Get Whether it’s an Anti-DDoS Pro Premium edition. Values: `0` (General edition); `1` (Premium edition).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BattleEditionFlag Whether it’s an Anti-DDoS Pro Premium edition. Values: `0` (General edition); `1` (Premium edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getBattleEditionFlag() {
+        return this.BattleEditionFlag;
+    }
+
+    /**
+     * Set Whether it’s an Anti-DDoS Pro Premium edition. Values: `0` (General edition); `1` (Premium edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BattleEditionFlag Whether it’s an Anti-DDoS Pro Premium edition. Values: `0` (General edition); `1` (Premium edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBattleEditionFlag(Long BattleEditionFlag) {
+        this.BattleEditionFlag = BattleEditionFlag;
+    }
+
+    /**
+     * Get Whether it’s an Anti-DDoS Pro Standard edition. Values: `0` (General edition); `1` (Standard edition).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ChannelEditionFlag Whether it’s an Anti-DDoS Pro Standard edition. Values: `0` (General edition); `1` (Standard edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getChannelEditionFlag() {
+        return this.ChannelEditionFlag;
+    }
+
+    /**
+     * Set Whether it’s an Anti-DDoS Pro Standard edition. Values: `0` (General edition); `1` (Standard edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ChannelEditionFlag Whether it’s an Anti-DDoS Pro Standard edition. Values: `0` (General edition); `1` (Standard edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setChannelEditionFlag(Long ChannelEditionFlag) {
+        this.ChannelEditionFlag = ChannelEditionFlag;
+    }
+
+    /**
+     * Get Whether it’s an Anti-DDoS Pro Enterprise edition. Values: `0` (General edition); `1` (Enterprise edition).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EnterpriseFlag Whether it’s an Anti-DDoS Pro Enterprise edition. Values: `0` (General edition); `1` (Enterprise edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getEnterpriseFlag() {
+        return this.EnterpriseFlag;
+    }
+
+    /**
+     * Set Whether it’s an Anti-DDoS Pro Enterprise edition. Values: `0` (General edition); `1` (Enterprise edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EnterpriseFlag Whether it’s an Anti-DDoS Pro Enterprise edition. Values: `0` (General edition); `1` (Enterprise edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEnterpriseFlag(Long EnterpriseFlag) {
+        this.EnterpriseFlag = EnterpriseFlag;
+    }
+
+    /**
+     * Get Elastic bandwidth threshold of the Anti-DDoS Pro Enterprise edition.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ElasticLimit Elastic bandwidth threshold of the Anti-DDoS Pro Enterprise edition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getElasticLimit() {
+        return this.ElasticLimit;
+    }
+
+    /**
+     * Set Elastic bandwidth threshold of the Anti-DDoS Pro Enterprise edition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ElasticLimit Elastic bandwidth threshold of the Anti-DDoS Pro Enterprise edition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setElasticLimit(Long ElasticLimit) {
+        this.ElasticLimit = ElasticLimit;
     }
 
     public BGPInstanceSpecification() {
@@ -206,6 +323,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.ServiceBandWidth != null) {
             this.ServiceBandWidth = new Long(source.ServiceBandWidth);
         }
+        if (source.BattleEditionFlag != null) {
+            this.BattleEditionFlag = new Long(source.BattleEditionFlag);
+        }
+        if (source.ChannelEditionFlag != null) {
+            this.ChannelEditionFlag = new Long(source.ChannelEditionFlag);
+        }
+        if (source.EnterpriseFlag != null) {
+            this.EnterpriseFlag = new Long(source.EnterpriseFlag);
+        }
+        if (source.ElasticLimit != null) {
+            this.ElasticLimit = new Long(source.ElasticLimit);
+        }
     }
 
 
@@ -219,6 +348,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "UnionPackFlag", this.UnionPackFlag);
         this.setParamSimple(map, prefix + "ServiceBandWidth", this.ServiceBandWidth);
+        this.setParamSimple(map, prefix + "BattleEditionFlag", this.BattleEditionFlag);
+        this.setParamSimple(map, prefix + "ChannelEditionFlag", this.ChannelEditionFlag);
+        this.setParamSimple(map, prefix + "EnterpriseFlag", this.EnterpriseFlag);
+        this.setParamSimple(map, prefix + "ElasticLimit", this.ElasticLimit);
 
     }
 }

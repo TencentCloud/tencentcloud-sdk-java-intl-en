@@ -23,48 +23,48 @@ import java.util.HashMap;
 public class BGPInstance extends AbstractModel{
 
     /**
-    * Anti-DDoS instance details
+    * Details of the Anti-DDoS Pro instance
     */
     @SerializedName("InstanceDetail")
     @Expose
     private InstanceRelation InstanceDetail;
 
     /**
-    * Anti-DDoS instance specifications
+    * Specifications of the Anti-DDoS Pro instance
     */
     @SerializedName("SpecificationLimit")
     @Expose
     private BGPInstanceSpecification SpecificationLimit;
 
     /**
-    * Anti-DDoS instance usage statistics
+    * Usage statistics of the Anti-DDoS Pro instance
     */
     @SerializedName("Usage")
     @Expose
     private BGPInstanceUsages Usage;
 
     /**
-    * Region of the Anti-DDoS instance
+    * Region of the Anti-DDoS Pro instance
     */
     @SerializedName("Region")
     @Expose
     private RegionInfo Region;
 
     /**
-    * Status of the Anti-DDoS instance. Valid values:
-`idle`: running
-`attacking`: under attacks
-`blocking`: blocked
-`creating`: creating
-`deblocking`: unblocked
-`isolate`: isolated
+    * Status of the Anti-DDoS Pro instance. Valid values:
+`idle`: The instance is running normally.
+`attacking`: The instance is under attack.
+`blocking`: The instance is blocked.
+`creating`: The instance is being created.
+`deblocking`: Unblocking the instance
+`isolate`: The instance is being isolated.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Purchase Time
+    * Purchase time
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -78,15 +78,15 @@ public class BGPInstance extends AbstractModel{
     private String ExpiredTime;
 
     /**
-    * Name of the Anti-DDoS instance
+    * Name of the Anti-DDoS Pro instance
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Package details of the Anti-DDoS instance.
-Note: This field is `null` for an Anti-DDoS instance without using a package.
+    * Details of the package to which the Anti-DDoS Pro instance belongs.
+When the package provided is not used by the instance, this field is `null`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("PackInfo")
@@ -102,9 +102,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
     * Binding status of the Anti-DDoS Pro instance
-`idle`: the instance is bound.
- `bounding`: the instance is in binding.
-`failed`: the binding failed.
+`idle`: The instance is bound.
+ `bounding`: Binding the instance.
+`failed`: Failed to bind
 ]
     */
     @SerializedName("BoundStatus")
@@ -119,127 +119,141 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String DDoSLevel;
 
     /**
-    * CC protection switch
+    * Status of CC protection
     */
     @SerializedName("CCEnable")
     @Expose
     private Long CCEnable;
 
     /**
-     * Get Anti-DDoS instance details 
-     * @return InstanceDetail Anti-DDoS instance details
+    * Tags associated with the resource
+    */
+    @SerializedName("TagInfoList")
+    @Expose
+    private TagInfo [] TagInfoList;
+
+    /**
+    * New edition of Anti-DDoS Pro
+    */
+    @SerializedName("IpCountNewFlag")
+    @Expose
+    private Long IpCountNewFlag;
+
+    /**
+     * Get Details of the Anti-DDoS Pro instance 
+     * @return InstanceDetail Details of the Anti-DDoS Pro instance
      */
     public InstanceRelation getInstanceDetail() {
         return this.InstanceDetail;
     }
 
     /**
-     * Set Anti-DDoS instance details
-     * @param InstanceDetail Anti-DDoS instance details
+     * Set Details of the Anti-DDoS Pro instance
+     * @param InstanceDetail Details of the Anti-DDoS Pro instance
      */
     public void setInstanceDetail(InstanceRelation InstanceDetail) {
         this.InstanceDetail = InstanceDetail;
     }
 
     /**
-     * Get Anti-DDoS instance specifications 
-     * @return SpecificationLimit Anti-DDoS instance specifications
+     * Get Specifications of the Anti-DDoS Pro instance 
+     * @return SpecificationLimit Specifications of the Anti-DDoS Pro instance
      */
     public BGPInstanceSpecification getSpecificationLimit() {
         return this.SpecificationLimit;
     }
 
     /**
-     * Set Anti-DDoS instance specifications
-     * @param SpecificationLimit Anti-DDoS instance specifications
+     * Set Specifications of the Anti-DDoS Pro instance
+     * @param SpecificationLimit Specifications of the Anti-DDoS Pro instance
      */
     public void setSpecificationLimit(BGPInstanceSpecification SpecificationLimit) {
         this.SpecificationLimit = SpecificationLimit;
     }
 
     /**
-     * Get Anti-DDoS instance usage statistics 
-     * @return Usage Anti-DDoS instance usage statistics
+     * Get Usage statistics of the Anti-DDoS Pro instance 
+     * @return Usage Usage statistics of the Anti-DDoS Pro instance
      */
     public BGPInstanceUsages getUsage() {
         return this.Usage;
     }
 
     /**
-     * Set Anti-DDoS instance usage statistics
-     * @param Usage Anti-DDoS instance usage statistics
+     * Set Usage statistics of the Anti-DDoS Pro instance
+     * @param Usage Usage statistics of the Anti-DDoS Pro instance
      */
     public void setUsage(BGPInstanceUsages Usage) {
         this.Usage = Usage;
     }
 
     /**
-     * Get Region of the Anti-DDoS instance 
-     * @return Region Region of the Anti-DDoS instance
+     * Get Region of the Anti-DDoS Pro instance 
+     * @return Region Region of the Anti-DDoS Pro instance
      */
     public RegionInfo getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region of the Anti-DDoS instance
-     * @param Region Region of the Anti-DDoS instance
+     * Set Region of the Anti-DDoS Pro instance
+     * @param Region Region of the Anti-DDoS Pro instance
      */
     public void setRegion(RegionInfo Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Status of the Anti-DDoS instance. Valid values:
-`idle`: running
-`attacking`: under attacks
-`blocking`: blocked
-`creating`: creating
-`deblocking`: unblocked
-`isolate`: isolated 
-     * @return Status Status of the Anti-DDoS instance. Valid values:
-`idle`: running
-`attacking`: under attacks
-`blocking`: blocked
-`creating`: creating
-`deblocking`: unblocked
-`isolate`: isolated
+     * Get Status of the Anti-DDoS Pro instance. Valid values:
+`idle`: The instance is running normally.
+`attacking`: The instance is under attack.
+`blocking`: The instance is blocked.
+`creating`: The instance is being created.
+`deblocking`: Unblocking the instance
+`isolate`: The instance is being isolated. 
+     * @return Status Status of the Anti-DDoS Pro instance. Valid values:
+`idle`: The instance is running normally.
+`attacking`: The instance is under attack.
+`blocking`: The instance is blocked.
+`creating`: The instance is being created.
+`deblocking`: Unblocking the instance
+`isolate`: The instance is being isolated.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status of the Anti-DDoS instance. Valid values:
-`idle`: running
-`attacking`: under attacks
-`blocking`: blocked
-`creating`: creating
-`deblocking`: unblocked
-`isolate`: isolated
-     * @param Status Status of the Anti-DDoS instance. Valid values:
-`idle`: running
-`attacking`: under attacks
-`blocking`: blocked
-`creating`: creating
-`deblocking`: unblocked
-`isolate`: isolated
+     * Set Status of the Anti-DDoS Pro instance. Valid values:
+`idle`: The instance is running normally.
+`attacking`: The instance is under attack.
+`blocking`: The instance is blocked.
+`creating`: The instance is being created.
+`deblocking`: Unblocking the instance
+`isolate`: The instance is being isolated.
+     * @param Status Status of the Anti-DDoS Pro instance. Valid values:
+`idle`: The instance is running normally.
+`attacking`: The instance is under attack.
+`blocking`: The instance is blocked.
+`creating`: The instance is being created.
+`deblocking`: Unblocking the instance
+`isolate`: The instance is being isolated.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Purchase Time 
-     * @return CreatedTime Purchase Time
+     * Get Purchase time 
+     * @return CreatedTime Purchase time
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set Purchase Time
-     * @param CreatedTime Purchase Time
+     * Set Purchase time
+     * @param CreatedTime Purchase time
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
@@ -262,27 +276,27 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Name of the Anti-DDoS instance 
-     * @return Name Name of the Anti-DDoS instance
+     * Get Name of the Anti-DDoS Pro instance 
+     * @return Name Name of the Anti-DDoS Pro instance
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of the Anti-DDoS instance
-     * @param Name Name of the Anti-DDoS instance
+     * Set Name of the Anti-DDoS Pro instance
+     * @param Name Name of the Anti-DDoS Pro instance
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Package details of the Anti-DDoS instance.
-Note: This field is `null` for an Anti-DDoS instance without using a package.
+     * Get Details of the package to which the Anti-DDoS Pro instance belongs.
+When the package provided is not used by the instance, this field is `null`.
 Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return PackInfo Package details of the Anti-DDoS instance.
-Note: This field is `null` for an Anti-DDoS instance without using a package.
+     * @return PackInfo Details of the package to which the Anti-DDoS Pro instance belongs.
+When the package provided is not used by the instance, this field is `null`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public PackInfo getPackInfo() {
@@ -290,11 +304,11 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Set Package details of the Anti-DDoS instance.
-Note: This field is `null` for an Anti-DDoS instance without using a package.
+     * Set Details of the package to which the Anti-DDoS Pro instance belongs.
+When the package provided is not used by the instance, this field is `null`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param PackInfo Package details of the Anti-DDoS instance.
-Note: This field is `null` for an Anti-DDoS instance without using a package.
+     * @param PackInfo Details of the package to which the Anti-DDoS Pro instance belongs.
+When the package provided is not used by the instance, this field is `null`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setPackInfo(PackInfo PackInfo) {
@@ -319,14 +333,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Get Binding status of the Anti-DDoS Pro instance
-`idle`: the instance is bound.
- `bounding`: the instance is in binding.
-`failed`: the binding failed.
+`idle`: The instance is bound.
+ `bounding`: Binding the instance.
+`failed`: Failed to bind
 ] 
      * @return BoundStatus Binding status of the Anti-DDoS Pro instance
-`idle`: the instance is bound.
- `bounding`: the instance is in binding.
-`failed`: the binding failed.
+`idle`: The instance is bound.
+ `bounding`: Binding the instance.
+`failed`: Failed to bind
 ]
      */
     public String getBoundStatus() {
@@ -335,14 +349,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
      * Set Binding status of the Anti-DDoS Pro instance
-`idle`: the instance is bound.
- `bounding`: the instance is in binding.
-`failed`: the binding failed.
+`idle`: The instance is bound.
+ `bounding`: Binding the instance.
+`failed`: Failed to bind
 ]
      * @param BoundStatus Binding status of the Anti-DDoS Pro instance
-`idle`: the instance is bound.
- `bounding`: the instance is in binding.
-`failed`: the binding failed.
+`idle`: The instance is bound.
+ `bounding`: Binding the instance.
+`failed`: Failed to bind
 ]
      */
     public void setBoundStatus(String BoundStatus) {
@@ -366,19 +380,51 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get CC protection switch 
-     * @return CCEnable CC protection switch
+     * Get Status of CC protection 
+     * @return CCEnable Status of CC protection
      */
     public Long getCCEnable() {
         return this.CCEnable;
     }
 
     /**
-     * Set CC protection switch
-     * @param CCEnable CC protection switch
+     * Set Status of CC protection
+     * @param CCEnable Status of CC protection
      */
     public void setCCEnable(Long CCEnable) {
         this.CCEnable = CCEnable;
+    }
+
+    /**
+     * Get Tags associated with the resource 
+     * @return TagInfoList Tags associated with the resource
+     */
+    public TagInfo [] getTagInfoList() {
+        return this.TagInfoList;
+    }
+
+    /**
+     * Set Tags associated with the resource
+     * @param TagInfoList Tags associated with the resource
+     */
+    public void setTagInfoList(TagInfo [] TagInfoList) {
+        this.TagInfoList = TagInfoList;
+    }
+
+    /**
+     * Get New edition of Anti-DDoS Pro 
+     * @return IpCountNewFlag New edition of Anti-DDoS Pro
+     */
+    public Long getIpCountNewFlag() {
+        return this.IpCountNewFlag;
+    }
+
+    /**
+     * Set New edition of Anti-DDoS Pro
+     * @param IpCountNewFlag New edition of Anti-DDoS Pro
+     */
+    public void setIpCountNewFlag(Long IpCountNewFlag) {
+        this.IpCountNewFlag = IpCountNewFlag;
     }
 
     public BGPInstance() {
@@ -431,6 +477,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.CCEnable != null) {
             this.CCEnable = new Long(source.CCEnable);
         }
+        if (source.TagInfoList != null) {
+            this.TagInfoList = new TagInfo[source.TagInfoList.length];
+            for (int i = 0; i < source.TagInfoList.length; i++) {
+                this.TagInfoList[i] = new TagInfo(source.TagInfoList[i]);
+            }
+        }
+        if (source.IpCountNewFlag != null) {
+            this.IpCountNewFlag = new Long(source.IpCountNewFlag);
+        }
     }
 
 
@@ -451,6 +506,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "BoundStatus", this.BoundStatus);
         this.setParamSimple(map, prefix + "DDoSLevel", this.DDoSLevel);
         this.setParamSimple(map, prefix + "CCEnable", this.CCEnable);
+        this.setParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
+        this.setParamSimple(map, prefix + "IpCountNewFlag", this.IpCountNewFlag);
 
     }
 }

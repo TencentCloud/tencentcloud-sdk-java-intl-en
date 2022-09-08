@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeListBGPInstancesResponse extends AbstractModel{
 
     /**
-    * Total number of lists
+    * Total number of Anti-DDoS Pro instances
     */
     @SerializedName("Total")
     @Expose
@@ -44,16 +44,16 @@ public class DescribeListBGPInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Total number of lists 
-     * @return Total Total number of lists
+     * Get Total number of Anti-DDoS Pro instances 
+     * @return Total Total number of Anti-DDoS Pro instances
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set Total number of lists
-     * @param Total Total number of lists
+     * Set Total number of Anti-DDoS Pro instances
+     * @param Total Total number of Anti-DDoS Pro instances
      */
     public void setTotal(Long Total) {
         this.Total = Total;

@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class CreateSSOAccountResponse extends AbstractModel{
 
     /**
+    * 
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get  
+     * @return UserId 
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set 
+     * @param UserId 
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -53,6 +76,9 @@ public class CreateSSOAccountResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateSSOAccountResponse(CreateSSOAccountResponse source) {
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +89,7 @@ public class CreateSSOAccountResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

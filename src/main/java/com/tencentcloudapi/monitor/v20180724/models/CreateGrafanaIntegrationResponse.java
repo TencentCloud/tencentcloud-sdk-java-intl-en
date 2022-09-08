@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class CreateGrafanaIntegrationResponse extends AbstractModel{
 
     /**
+    * 
+    */
+    @SerializedName("IntegrationId")
+    @Expose
+    private String IntegrationId;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get  
+     * @return IntegrationId 
+     */
+    public String getIntegrationId() {
+        return this.IntegrationId;
+    }
+
+    /**
+     * Set 
+     * @param IntegrationId 
+     */
+    public void setIntegrationId(String IntegrationId) {
+        this.IntegrationId = IntegrationId;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -53,6 +76,9 @@ public class CreateGrafanaIntegrationResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateGrafanaIntegrationResponse(CreateGrafanaIntegrationResponse source) {
+        if (source.IntegrationId != null) {
+            this.IntegrationId = new String(source.IntegrationId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +89,7 @@ public class CreateGrafanaIntegrationResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "IntegrationId", this.IntegrationId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
