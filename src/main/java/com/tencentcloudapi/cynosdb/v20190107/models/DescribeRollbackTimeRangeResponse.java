@@ -23,18 +23,25 @@ import java.util.HashMap;
 public class DescribeRollbackTimeRangeResponse extends AbstractModel{
 
     /**
-    * Start time point of valid rollback time range
+    * Start time of valid rollback time range (disused)
     */
     @SerializedName("TimeRangeStart")
     @Expose
     private String TimeRangeStart;
 
     /**
-    * End time point of valid rollback time range
+    * End time of valid rollback time range (disused)
     */
     @SerializedName("TimeRangeEnd")
     @Expose
     private String TimeRangeEnd;
+
+    /**
+    * Time range available for rollback
+    */
+    @SerializedName("RollbackTimeRanges")
+    @Expose
+    private RollbackTimeRange [] RollbackTimeRanges;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +51,51 @@ public class DescribeRollbackTimeRangeResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Start time point of valid rollback time range 
-     * @return TimeRangeStart Start time point of valid rollback time range
+     * Get Start time of valid rollback time range (disused) 
+     * @return TimeRangeStart Start time of valid rollback time range (disused)
      */
     public String getTimeRangeStart() {
         return this.TimeRangeStart;
     }
 
     /**
-     * Set Start time point of valid rollback time range
-     * @param TimeRangeStart Start time point of valid rollback time range
+     * Set Start time of valid rollback time range (disused)
+     * @param TimeRangeStart Start time of valid rollback time range (disused)
      */
     public void setTimeRangeStart(String TimeRangeStart) {
         this.TimeRangeStart = TimeRangeStart;
     }
 
     /**
-     * Get End time point of valid rollback time range 
-     * @return TimeRangeEnd End time point of valid rollback time range
+     * Get End time of valid rollback time range (disused) 
+     * @return TimeRangeEnd End time of valid rollback time range (disused)
      */
     public String getTimeRangeEnd() {
         return this.TimeRangeEnd;
     }
 
     /**
-     * Set End time point of valid rollback time range
-     * @param TimeRangeEnd End time point of valid rollback time range
+     * Set End time of valid rollback time range (disused)
+     * @param TimeRangeEnd End time of valid rollback time range (disused)
      */
     public void setTimeRangeEnd(String TimeRangeEnd) {
         this.TimeRangeEnd = TimeRangeEnd;
+    }
+
+    /**
+     * Get Time range available for rollback 
+     * @return RollbackTimeRanges Time range available for rollback
+     */
+    public RollbackTimeRange [] getRollbackTimeRanges() {
+        return this.RollbackTimeRanges;
+    }
+
+    /**
+     * Set Time range available for rollback
+     * @param RollbackTimeRanges Time range available for rollback
+     */
+    public void setRollbackTimeRanges(RollbackTimeRange [] RollbackTimeRanges) {
+        this.RollbackTimeRanges = RollbackTimeRanges;
     }
 
     /**
@@ -105,6 +128,12 @@ public class DescribeRollbackTimeRangeResponse extends AbstractModel{
         if (source.TimeRangeEnd != null) {
             this.TimeRangeEnd = new String(source.TimeRangeEnd);
         }
+        if (source.RollbackTimeRanges != null) {
+            this.RollbackTimeRanges = new RollbackTimeRange[source.RollbackTimeRanges.length];
+            for (int i = 0; i < source.RollbackTimeRanges.length; i++) {
+                this.RollbackTimeRanges[i] = new RollbackTimeRange(source.RollbackTimeRanges[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +146,7 @@ public class DescribeRollbackTimeRangeResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TimeRangeStart", this.TimeRangeStart);
         this.setParamSimple(map, prefix + "TimeRangeEnd", this.TimeRangeEnd);
+        this.setParamArrayObj(map, prefix + "RollbackTimeRanges.", this.RollbackTimeRanges);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

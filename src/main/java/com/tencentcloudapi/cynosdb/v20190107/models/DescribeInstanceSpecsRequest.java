@@ -31,6 +31,13 @@ public class DescribeInstanceSpecsRequest extends AbstractModel{
     private String DbType;
 
     /**
+    * Whether to return the AZ information.
+    */
+    @SerializedName("IncludeZoneStocks")
+    @Expose
+    private Boolean IncludeZoneStocks;
+
+    /**
      * Get Database type. Valid values: 
 <li> MYSQL </li> 
      * @return DbType Database type. Valid values: 
@@ -50,6 +57,22 @@ public class DescribeInstanceSpecsRequest extends AbstractModel{
         this.DbType = DbType;
     }
 
+    /**
+     * Get Whether to return the AZ information. 
+     * @return IncludeZoneStocks Whether to return the AZ information.
+     */
+    public Boolean getIncludeZoneStocks() {
+        return this.IncludeZoneStocks;
+    }
+
+    /**
+     * Set Whether to return the AZ information.
+     * @param IncludeZoneStocks Whether to return the AZ information.
+     */
+    public void setIncludeZoneStocks(Boolean IncludeZoneStocks) {
+        this.IncludeZoneStocks = IncludeZoneStocks;
+    }
+
     public DescribeInstanceSpecsRequest() {
     }
 
@@ -61,6 +84,9 @@ public class DescribeInstanceSpecsRequest extends AbstractModel{
         if (source.DbType != null) {
             this.DbType = new String(source.DbType);
         }
+        if (source.IncludeZoneStocks != null) {
+            this.IncludeZoneStocks = new Boolean(source.IncludeZoneStocks);
+        }
     }
 
 
@@ -69,6 +95,7 @@ public class DescribeInstanceSpecsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DbType", this.DbType);
+        this.setParamSimple(map, prefix + "IncludeZoneStocks", this.IncludeZoneStocks);
 
     }
 }

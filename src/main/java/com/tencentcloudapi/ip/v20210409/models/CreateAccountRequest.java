@@ -62,14 +62,14 @@ A global mobile number within 1-32 digits is allowed, such as 18888888888.
     private String PhoneNum;
 
     /**
-    * Country code, which can be obtained via the `GetCountryCodes` API, such as 852.
+    * Customer’s country/region code, which can be obtained via the `GetCountryCodes` API, such as “852”.
     */
     @SerializedName("CountryCode")
     @Expose
     private String CountryCode;
 
     /**
-    * ISO2 standard country code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field.
+    * Customer’s ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
     */
     @SerializedName("Area")
     @Expose
@@ -179,32 +179,32 @@ A global mobile number within 1-32 digits is allowed, such as 18888888888.
     }
 
     /**
-     * Get Country code, which can be obtained via the `GetCountryCodes` API, such as 852. 
-     * @return CountryCode Country code, which can be obtained via the `GetCountryCodes` API, such as 852.
+     * Get Customer’s country/region code, which can be obtained via the `GetCountryCodes` API, such as “852”. 
+     * @return CountryCode Customer’s country/region code, which can be obtained via the `GetCountryCodes` API, such as “852”.
      */
     public String getCountryCode() {
         return this.CountryCode;
     }
 
     /**
-     * Set Country code, which can be obtained via the `GetCountryCodes` API, such as 852.
-     * @param CountryCode Country code, which can be obtained via the `GetCountryCodes` API, such as 852.
+     * Set Customer’s country/region code, which can be obtained via the `GetCountryCodes` API, such as “852”.
+     * @param CountryCode Customer’s country/region code, which can be obtained via the `GetCountryCodes` API, such as “852”.
      */
     public void setCountryCode(String CountryCode) {
         this.CountryCode = CountryCode;
     }
 
     /**
-     * Get ISO2 standard country code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field. 
-     * @return Area ISO2 standard country code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field.
+     * Get Customer’s ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`. 
+     * @return Area Customer’s ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set ISO2 standard country code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field.
-     * @param Area ISO2 standard country code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field.
+     * Set Customer’s ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
+     * @param Area Customer’s ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
      */
     public void setArea(String Area) {
         this.Area = Area;

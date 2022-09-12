@@ -51,6 +51,42 @@ public class InstanceSpec extends AbstractModel{
     private Long MinStorageSize;
 
     /**
+    * Whether there is an inventory.
+    */
+    @SerializedName("HasStock")
+    @Expose
+    private Boolean HasStock;
+
+    /**
+    * Machine type
+    */
+    @SerializedName("MachineType")
+    @Expose
+    private String MachineType;
+
+    /**
+    * Maximum IOPS
+    */
+    @SerializedName("MaxIops")
+    @Expose
+    private Long MaxIops;
+
+    /**
+    * Maximum bandwidth
+    */
+    @SerializedName("MaxIoBandWidth")
+    @Expose
+    private Long MaxIoBandWidth;
+
+    /**
+    * Inventory information in a region
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ZoneStockInfos")
+    @Expose
+    private ZoneStockInfo [] ZoneStockInfos;
+
+    /**
      * Get Number of instance CPU cores 
      * @return Cpu Number of instance CPU cores
      */
@@ -114,6 +150,90 @@ public class InstanceSpec extends AbstractModel{
         this.MinStorageSize = MinStorageSize;
     }
 
+    /**
+     * Get Whether there is an inventory. 
+     * @return HasStock Whether there is an inventory.
+     */
+    public Boolean getHasStock() {
+        return this.HasStock;
+    }
+
+    /**
+     * Set Whether there is an inventory.
+     * @param HasStock Whether there is an inventory.
+     */
+    public void setHasStock(Boolean HasStock) {
+        this.HasStock = HasStock;
+    }
+
+    /**
+     * Get Machine type 
+     * @return MachineType Machine type
+     */
+    public String getMachineType() {
+        return this.MachineType;
+    }
+
+    /**
+     * Set Machine type
+     * @param MachineType Machine type
+     */
+    public void setMachineType(String MachineType) {
+        this.MachineType = MachineType;
+    }
+
+    /**
+     * Get Maximum IOPS 
+     * @return MaxIops Maximum IOPS
+     */
+    public Long getMaxIops() {
+        return this.MaxIops;
+    }
+
+    /**
+     * Set Maximum IOPS
+     * @param MaxIops Maximum IOPS
+     */
+    public void setMaxIops(Long MaxIops) {
+        this.MaxIops = MaxIops;
+    }
+
+    /**
+     * Get Maximum bandwidth 
+     * @return MaxIoBandWidth Maximum bandwidth
+     */
+    public Long getMaxIoBandWidth() {
+        return this.MaxIoBandWidth;
+    }
+
+    /**
+     * Set Maximum bandwidth
+     * @param MaxIoBandWidth Maximum bandwidth
+     */
+    public void setMaxIoBandWidth(Long MaxIoBandWidth) {
+        this.MaxIoBandWidth = MaxIoBandWidth;
+    }
+
+    /**
+     * Get Inventory information in a region
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ZoneStockInfos Inventory information in a region
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public ZoneStockInfo [] getZoneStockInfos() {
+        return this.ZoneStockInfos;
+    }
+
+    /**
+     * Set Inventory information in a region
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ZoneStockInfos Inventory information in a region
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setZoneStockInfos(ZoneStockInfo [] ZoneStockInfos) {
+        this.ZoneStockInfos = ZoneStockInfos;
+    }
+
     public InstanceSpec() {
     }
 
@@ -134,6 +254,24 @@ public class InstanceSpec extends AbstractModel{
         if (source.MinStorageSize != null) {
             this.MinStorageSize = new Long(source.MinStorageSize);
         }
+        if (source.HasStock != null) {
+            this.HasStock = new Boolean(source.HasStock);
+        }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
+        if (source.MaxIops != null) {
+            this.MaxIops = new Long(source.MaxIops);
+        }
+        if (source.MaxIoBandWidth != null) {
+            this.MaxIoBandWidth = new Long(source.MaxIoBandWidth);
+        }
+        if (source.ZoneStockInfos != null) {
+            this.ZoneStockInfos = new ZoneStockInfo[source.ZoneStockInfos.length];
+            for (int i = 0; i < source.ZoneStockInfos.length; i++) {
+                this.ZoneStockInfos[i] = new ZoneStockInfo(source.ZoneStockInfos[i]);
+            }
+        }
     }
 
 
@@ -145,6 +283,11 @@ public class InstanceSpec extends AbstractModel{
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "MaxStorageSize", this.MaxStorageSize);
         this.setParamSimple(map, prefix + "MinStorageSize", this.MinStorageSize);
+        this.setParamSimple(map, prefix + "HasStock", this.HasStock);
+        this.setParamSimple(map, prefix + "MachineType", this.MachineType);
+        this.setParamSimple(map, prefix + "MaxIops", this.MaxIops);
+        this.setParamSimple(map, prefix + "MaxIoBandWidth", this.MaxIoBandWidth);
+        this.setParamArrayObj(map, prefix + "ZoneStockInfos.", this.ZoneStockInfos);
 
     }
 }
