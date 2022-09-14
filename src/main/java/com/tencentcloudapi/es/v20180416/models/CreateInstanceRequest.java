@@ -241,6 +241,20 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
     private String Protocol;
 
     /**
+    * The maintenance time slot
+    */
+    @SerializedName("OperationDuration")
+    @Expose
+    private OperationDuration OperationDuration;
+
+    /**
+    * Whether to enable the storage-computing separation feature.
+    */
+    @SerializedName("EnableHybridStorage")
+    @Expose
+    private Boolean EnableHybridStorage;
+
+    /**
      * Get Availability Zone 
      * @return Zone Availability Zone
      */
@@ -752,6 +766,38 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
         this.Protocol = Protocol;
     }
 
+    /**
+     * Get The maintenance time slot 
+     * @return OperationDuration The maintenance time slot
+     */
+    public OperationDuration getOperationDuration() {
+        return this.OperationDuration;
+    }
+
+    /**
+     * Set The maintenance time slot
+     * @param OperationDuration The maintenance time slot
+     */
+    public void setOperationDuration(OperationDuration OperationDuration) {
+        this.OperationDuration = OperationDuration;
+    }
+
+    /**
+     * Get Whether to enable the storage-computing separation feature. 
+     * @return EnableHybridStorage Whether to enable the storage-computing separation feature.
+     */
+    public Boolean getEnableHybridStorage() {
+        return this.EnableHybridStorage;
+    }
+
+    /**
+     * Set Whether to enable the storage-computing separation feature.
+     * @param EnableHybridStorage Whether to enable the storage-computing separation feature.
+     */
+    public void setEnableHybridStorage(Boolean EnableHybridStorage) {
+        this.EnableHybridStorage = EnableHybridStorage;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -862,6 +908,12 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
         if (source.Protocol != null) {
             this.Protocol = new String(source.Protocol);
         }
+        if (source.OperationDuration != null) {
+            this.OperationDuration = new OperationDuration(source.OperationDuration);
+        }
+        if (source.EnableHybridStorage != null) {
+            this.EnableHybridStorage = new Boolean(source.EnableHybridStorage);
+        }
     }
 
 
@@ -899,6 +951,8 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);
         this.setParamObj(map, prefix + "WebNodeTypeInfo.", this.WebNodeTypeInfo);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
+        this.setParamSimple(map, prefix + "EnableHybridStorage", this.EnableHybridStorage);
 
     }
 }

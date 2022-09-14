@@ -587,6 +587,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private EsConfigSetInfo [] EsConfigSets;
 
     /**
+    * The maintenance time slot of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OperationDuration")
+    @Expose
+    private OperationDuration OperationDuration;
+
+    /**
+    * Web node list
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OptionalWebServiceInfos")
+    @Expose
+    private OptionalWebServiceInfo [] OptionalWebServiceInfos;
+
+    /**
+    * Autonomous index option
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AutoIndexEnabled")
+    @Expose
+    private Boolean AutoIndexEnabled;
+
+    /**
+    * Whether the storage-computing separation feature is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EnableHybridStorage")
+    @Expose
+    private Boolean EnableHybridStorage;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -1942,6 +1974,86 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.EsConfigSets = EsConfigSets;
     }
 
+    /**
+     * Get The maintenance time slot of the cluster
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OperationDuration The maintenance time slot of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public OperationDuration getOperationDuration() {
+        return this.OperationDuration;
+    }
+
+    /**
+     * Set The maintenance time slot of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OperationDuration The maintenance time slot of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setOperationDuration(OperationDuration OperationDuration) {
+        this.OperationDuration = OperationDuration;
+    }
+
+    /**
+     * Get Web node list
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OptionalWebServiceInfos Web node list
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public OptionalWebServiceInfo [] getOptionalWebServiceInfos() {
+        return this.OptionalWebServiceInfos;
+    }
+
+    /**
+     * Set Web node list
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OptionalWebServiceInfos Web node list
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setOptionalWebServiceInfos(OptionalWebServiceInfo [] OptionalWebServiceInfos) {
+        this.OptionalWebServiceInfos = OptionalWebServiceInfos;
+    }
+
+    /**
+     * Get Autonomous index option
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AutoIndexEnabled Autonomous index option
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getAutoIndexEnabled() {
+        return this.AutoIndexEnabled;
+    }
+
+    /**
+     * Set Autonomous index option
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AutoIndexEnabled Autonomous index option
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAutoIndexEnabled(Boolean AutoIndexEnabled) {
+        this.AutoIndexEnabled = AutoIndexEnabled;
+    }
+
+    /**
+     * Get Whether the storage-computing separation feature is enabled.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EnableHybridStorage Whether the storage-computing separation feature is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getEnableHybridStorage() {
+        return this.EnableHybridStorage;
+    }
+
+    /**
+     * Set Whether the storage-computing separation feature is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EnableHybridStorage Whether the storage-computing separation feature is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEnableHybridStorage(Boolean EnableHybridStorage) {
+        this.EnableHybridStorage = EnableHybridStorage;
+    }
+
     public InstanceInfo() {
     }
 
@@ -2190,6 +2302,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.EsConfigSets[i] = new EsConfigSetInfo(source.EsConfigSets[i]);
             }
         }
+        if (source.OperationDuration != null) {
+            this.OperationDuration = new OperationDuration(source.OperationDuration);
+        }
+        if (source.OptionalWebServiceInfos != null) {
+            this.OptionalWebServiceInfos = new OptionalWebServiceInfo[source.OptionalWebServiceInfos.length];
+            for (int i = 0; i < source.OptionalWebServiceInfos.length; i++) {
+                this.OptionalWebServiceInfos[i] = new OptionalWebServiceInfo(source.OptionalWebServiceInfos[i]);
+            }
+        }
+        if (source.AutoIndexEnabled != null) {
+            this.AutoIndexEnabled = new Boolean(source.AutoIndexEnabled);
+        }
+        if (source.EnableHybridStorage != null) {
+            this.EnableHybridStorage = new Boolean(source.EnableHybridStorage);
+        }
     }
 
 
@@ -2272,6 +2399,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "EsPrivateUrl", this.EsPrivateUrl);
         this.setParamSimple(map, prefix + "EsPrivateDomain", this.EsPrivateDomain);
         this.setParamArrayObj(map, prefix + "EsConfigSets.", this.EsConfigSets);
+        this.setParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
+        this.setParamArrayObj(map, prefix + "OptionalWebServiceInfos.", this.OptionalWebServiceInfos);
+        this.setParamSimple(map, prefix + "AutoIndexEnabled", this.AutoIndexEnabled);
+        this.setParamSimple(map, prefix + "EnableHybridStorage", this.EnableHybridStorage);
 
     }
 }

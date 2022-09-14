@@ -239,6 +239,13 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     private EsConfigSetInfo EsConfigSet;
 
     /**
+    * The maintenance time slot
+    */
+    @SerializedName("OperationDuration")
+    @Expose
+    private OperationDurationUpdated OperationDuration;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -742,6 +749,22 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
         this.EsConfigSet = EsConfigSet;
     }
 
+    /**
+     * Get The maintenance time slot 
+     * @return OperationDuration The maintenance time slot
+     */
+    public OperationDurationUpdated getOperationDuration() {
+        return this.OperationDuration;
+    }
+
+    /**
+     * Set The maintenance time slot
+     * @param OperationDuration The maintenance time slot
+     */
+    public void setOperationDuration(OperationDurationUpdated OperationDuration) {
+        this.OperationDuration = OperationDuration;
+    }
+
     public UpdateInstanceRequest() {
     }
 
@@ -846,6 +869,9 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
         if (source.EsConfigSet != null) {
             this.EsConfigSet = new EsConfigSetInfo(source.EsConfigSet);
         }
+        if (source.OperationDuration != null) {
+            this.OperationDuration = new OperationDurationUpdated(source.OperationDuration);
+        }
     }
 
 
@@ -883,6 +909,7 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
         this.setParamSimple(map, prefix + "CerebroPublicAccess", this.CerebroPublicAccess);
         this.setParamSimple(map, prefix + "CerebroPrivateAccess", this.CerebroPrivateAccess);
         this.setParamObj(map, prefix + "EsConfigSet.", this.EsConfigSet);
+        this.setParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
 
     }
 }

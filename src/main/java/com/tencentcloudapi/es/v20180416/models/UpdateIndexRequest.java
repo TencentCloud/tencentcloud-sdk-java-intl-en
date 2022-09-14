@@ -65,6 +65,13 @@ public class UpdateIndexRequest extends AbstractModel{
     private String Password;
 
     /**
+    * Whether to roll over the backup index
+    */
+    @SerializedName("RolloverBackingIndex")
+    @Expose
+    private Boolean RolloverBackingIndex;
+
+    /**
      * Get ES cluster ID 
      * @return InstanceId ES cluster ID
      */
@@ -160,6 +167,22 @@ public class UpdateIndexRequest extends AbstractModel{
         this.Password = Password;
     }
 
+    /**
+     * Get Whether to roll over the backup index 
+     * @return RolloverBackingIndex Whether to roll over the backup index
+     */
+    public Boolean getRolloverBackingIndex() {
+        return this.RolloverBackingIndex;
+    }
+
+    /**
+     * Set Whether to roll over the backup index
+     * @param RolloverBackingIndex Whether to roll over the backup index
+     */
+    public void setRolloverBackingIndex(Boolean RolloverBackingIndex) {
+        this.RolloverBackingIndex = RolloverBackingIndex;
+    }
+
     public UpdateIndexRequest() {
     }
 
@@ -186,6 +209,9 @@ public class UpdateIndexRequest extends AbstractModel{
         if (source.Password != null) {
             this.Password = new String(source.Password);
         }
+        if (source.RolloverBackingIndex != null) {
+            this.RolloverBackingIndex = new Boolean(source.RolloverBackingIndex);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class UpdateIndexRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UpdateMetaJson", this.UpdateMetaJson);
         this.setParamSimple(map, prefix + "Username", this.Username);
         this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamSimple(map, prefix + "RolloverBackingIndex", this.RolloverBackingIndex);
 
     }
 }

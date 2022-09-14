@@ -100,6 +100,13 @@ public class DescribeInstancesRequest extends AbstractModel{
     private Long [] HealthStatus;
 
     /**
+    * VPC IDs
+    */
+    @SerializedName("VpcIds")
+    @Expose
+    private String [] VpcIds;
+
+    /**
      * Get AZ of the cluster instance. If this is not passed in, all AZs are used by default 
      * @return Zone AZ of the cluster instance. If this is not passed in, all AZs are used by default
      */
@@ -275,6 +282,22 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.HealthStatus = HealthStatus;
     }
 
+    /**
+     * Get VPC IDs 
+     * @return VpcIds VPC IDs
+     */
+    public String [] getVpcIds() {
+        return this.VpcIds;
+    }
+
+    /**
+     * Set VPC IDs
+     * @param VpcIds VPC IDs
+     */
+    public void setVpcIds(String [] VpcIds) {
+        this.VpcIds = VpcIds;
+    }
+
     public DescribeInstancesRequest() {
     }
 
@@ -334,6 +357,12 @@ public class DescribeInstancesRequest extends AbstractModel{
                 this.HealthStatus[i] = new Long(source.HealthStatus[i]);
             }
         }
+        if (source.VpcIds != null) {
+            this.VpcIds = new String[source.VpcIds.length];
+            for (int i = 0; i < source.VpcIds.length; i++) {
+                this.VpcIds[i] = new String(source.VpcIds[i]);
+            }
+        }
     }
 
 
@@ -352,6 +381,7 @@ public class DescribeInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "IpList.", this.IpList);
         this.setParamArraySimple(map, prefix + "ZoneList.", this.ZoneList);
         this.setParamArraySimple(map, prefix + "HealthStatus.", this.HealthStatus);
+        this.setParamArraySimple(map, prefix + "VpcIds.", this.VpcIds);
 
     }
 }
