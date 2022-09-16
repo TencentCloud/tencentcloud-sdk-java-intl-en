@@ -53,6 +53,14 @@ public class ReviewAudioVideoTask extends AbstractModel{
     private String Message;
 
     /**
+    * The input of a moderation task.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Input")
+    @Expose
+    private ReviewAudioVideoTaskInput Input;
+
+    /**
     * The output of a moderation task.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -68,7 +76,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String SessionId;
 
     /**
-    * The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
+    * The source context, which is used to pass through user request information. The `ReviewAudioVideoComplete` callback will return the value of this parameter. It can contain up to 1,000 characters.
     */
     @SerializedName("SessionContext")
     @Expose
@@ -147,6 +155,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get The input of a moderation task.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Input The input of a moderation task.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public ReviewAudioVideoTaskInput getInput() {
+        return this.Input;
+    }
+
+    /**
+     * Set The input of a moderation task.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Input The input of a moderation task.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setInput(ReviewAudioVideoTaskInput Input) {
+        this.Input = Input;
+    }
+
+    /**
      * Get The output of a moderation task.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Output The output of a moderation task.
@@ -183,16 +211,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters. 
-     * @return SessionContext The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
+     * Get The source context, which is used to pass through user request information. The `ReviewAudioVideoComplete` callback will return the value of this parameter. It can contain up to 1,000 characters. 
+     * @return SessionContext The source context, which is used to pass through user request information. The `ReviewAudioVideoComplete` callback will return the value of this parameter. It can contain up to 1,000 characters.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
-     * @param SessionContext The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
+     * Set The source context, which is used to pass through user request information. The `ReviewAudioVideoComplete` callback will return the value of this parameter. It can contain up to 1,000 characters.
+     * @param SessionContext The source context, which is used to pass through user request information. The `ReviewAudioVideoComplete` callback will return the value of this parameter. It can contain up to 1,000 characters.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
@@ -218,6 +246,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Message != null) {
             this.Message = new String(source.Message);
         }
+        if (source.Input != null) {
+            this.Input = new ReviewAudioVideoTaskInput(source.Input);
+        }
         if (source.Output != null) {
             this.Output = new ReviewAudioVideoTaskOutput(source.Output);
         }
@@ -238,6 +269,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "ErrCodeExt", this.ErrCodeExt);
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
