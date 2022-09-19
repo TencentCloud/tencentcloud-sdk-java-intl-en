@@ -60,6 +60,30 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String [] ClusterExternalACL;
 
     /**
+    * Public network domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ClusterExternalDomain")
+    @Expose
+    private String ClusterExternalDomain;
+
+    /**
+    * Private network domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ClusterIntranetDomain")
+    @Expose
+    private String ClusterIntranetDomain;
+
+    /**
+    * Public network security group
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SecurityGroup")
+    @Expose
+    private String SecurityGroup;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -155,6 +179,66 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get Public network domain name
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ClusterExternalDomain Public network domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getClusterExternalDomain() {
+        return this.ClusterExternalDomain;
+    }
+
+    /**
+     * Set Public network domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ClusterExternalDomain Public network domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setClusterExternalDomain(String ClusterExternalDomain) {
+        this.ClusterExternalDomain = ClusterExternalDomain;
+    }
+
+    /**
+     * Get Private network domain name
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ClusterIntranetDomain Private network domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getClusterIntranetDomain() {
+        return this.ClusterIntranetDomain;
+    }
+
+    /**
+     * Set Private network domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ClusterIntranetDomain Private network domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setClusterIntranetDomain(String ClusterIntranetDomain) {
+        this.ClusterIntranetDomain = ClusterIntranetDomain;
+    }
+
+    /**
+     * Get Public network security group
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return SecurityGroup Public network security group
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getSecurityGroup() {
+        return this.SecurityGroup;
+    }
+
+    /**
+     * Set Public network security group
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param SecurityGroup Public network security group
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setSecurityGroup(String SecurityGroup) {
+        this.SecurityGroup = SecurityGroup;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -196,6 +280,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 this.ClusterExternalACL[i] = new String(source.ClusterExternalACL[i]);
             }
         }
+        if (source.ClusterExternalDomain != null) {
+            this.ClusterExternalDomain = new String(source.ClusterExternalDomain);
+        }
+        if (source.ClusterIntranetDomain != null) {
+            this.ClusterIntranetDomain = new String(source.ClusterIntranetDomain);
+        }
+        if (source.SecurityGroup != null) {
+            this.SecurityGroup = new String(source.SecurityGroup);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -211,6 +304,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "ClusterIntranetEndpoint", this.ClusterIntranetEndpoint);
         this.setParamSimple(map, prefix + "ClusterDomain", this.ClusterDomain);
         this.setParamArraySimple(map, prefix + "ClusterExternalACL.", this.ClusterExternalACL);
+        this.setParamSimple(map, prefix + "ClusterExternalDomain", this.ClusterExternalDomain);
+        this.setParamSimple(map, prefix + "ClusterIntranetDomain", this.ClusterIntranetDomain);
+        this.setParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

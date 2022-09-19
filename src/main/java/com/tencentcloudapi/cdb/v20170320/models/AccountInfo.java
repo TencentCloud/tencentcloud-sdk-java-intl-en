@@ -58,7 +58,7 @@ public class AccountInfo extends AbstractModel{
     private String ModifyPasswordTime;
 
     /**
-    * This parameter is no longer supported.
+    * This parameter is deprecated.
     */
     @SerializedName("CreateTime")
     @Expose
@@ -152,16 +152,16 @@ public class AccountInfo extends AbstractModel{
     }
 
     /**
-     * Get This parameter is no longer supported. 
-     * @return CreateTime This parameter is no longer supported.
+     * Get This parameter is deprecated. 
+     * @return CreateTime This parameter is deprecated.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set This parameter is no longer supported.
-     * @param CreateTime This parameter is no longer supported.
+     * Set This parameter is deprecated.
+     * @param CreateTime This parameter is deprecated.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

@@ -186,6 +186,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Boolean QGPUShareEnable;
 
     /**
+    * Runtime version
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("RuntimeVersion")
+    @Expose
+    private String RuntimeVersion;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -573,6 +581,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.QGPUShareEnable = QGPUShareEnable;
     }
 
+    /**
+     * Get Runtime version
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return RuntimeVersion Runtime version
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getRuntimeVersion() {
+        return this.RuntimeVersion;
+    }
+
+    /**
+     * Set Runtime version
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param RuntimeVersion Runtime version
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setRuntimeVersion(String RuntimeVersion) {
+        this.RuntimeVersion = RuntimeVersion;
+    }
+
     public Cluster() {
     }
 
@@ -650,6 +678,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.QGPUShareEnable != null) {
             this.QGPUShareEnable = new Boolean(source.QGPUShareEnable);
         }
+        if (source.RuntimeVersion != null) {
+            this.RuntimeVersion = new String(source.RuntimeVersion);
+        }
     }
 
 
@@ -679,6 +710,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
         this.setParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
         this.setParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
+        this.setParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
 
     }
 }

@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class ModifyNameOrDescByDpIdRequest extends AbstractModel{
 
     /**
-    * ID of a placement group.
+    * Placement group ID
     */
     @SerializedName("DeployGroupId")
     @Expose
     private String DeployGroupId;
 
     /**
-    * Name of a placement group, which can contain up to 60 characters. The placement group name and description cannot both be empty.
+    * Name of a placement group, which can contain up to 60 characters. The placement group name and description can’t be empty.
     */
     @SerializedName("DeployGroupName")
     @Expose
     private String DeployGroupName;
 
     /**
-    * Description of a placement group, which can contain up to 200 characters. The placement group name and description cannot both be empty.
+    * Description of a placement group, which can contain up to 200 characters. The placement group name and description can’t be empty.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get ID of a placement group. 
-     * @return DeployGroupId ID of a placement group.
+     * Get Placement group ID 
+     * @return DeployGroupId Placement group ID
      */
     public String getDeployGroupId() {
         return this.DeployGroupId;
     }
 
     /**
-     * Set ID of a placement group.
-     * @param DeployGroupId ID of a placement group.
+     * Set Placement group ID
+     * @param DeployGroupId Placement group ID
      */
     public void setDeployGroupId(String DeployGroupId) {
         this.DeployGroupId = DeployGroupId;
     }
 
     /**
-     * Get Name of a placement group, which can contain up to 60 characters. The placement group name and description cannot both be empty. 
-     * @return DeployGroupName Name of a placement group, which can contain up to 60 characters. The placement group name and description cannot both be empty.
+     * Get Name of a placement group, which can contain up to 60 characters. The placement group name and description can’t be empty. 
+     * @return DeployGroupName Name of a placement group, which can contain up to 60 characters. The placement group name and description can’t be empty.
      */
     public String getDeployGroupName() {
         return this.DeployGroupName;
     }
 
     /**
-     * Set Name of a placement group, which can contain up to 60 characters. The placement group name and description cannot both be empty.
-     * @param DeployGroupName Name of a placement group, which can contain up to 60 characters. The placement group name and description cannot both be empty.
+     * Set Name of a placement group, which can contain up to 60 characters. The placement group name and description can’t be empty.
+     * @param DeployGroupName Name of a placement group, which can contain up to 60 characters. The placement group name and description can’t be empty.
      */
     public void setDeployGroupName(String DeployGroupName) {
         this.DeployGroupName = DeployGroupName;
     }
 
     /**
-     * Get Description of a placement group, which can contain up to 200 characters. The placement group name and description cannot both be empty. 
-     * @return Description Description of a placement group, which can contain up to 200 characters. The placement group name and description cannot both be empty.
+     * Get Description of a placement group, which can contain up to 200 characters. The placement group name and description can’t be empty. 
+     * @return Description Description of a placement group, which can contain up to 200 characters. The placement group name and description can’t be empty.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Description of a placement group, which can contain up to 200 characters. The placement group name and description cannot both be empty.
-     * @param Description Description of a placement group, which can contain up to 200 characters. The placement group name and description cannot both be empty.
+     * Set Description of a placement group, which can contain up to 200 characters. The placement group name and description can’t be empty.
+     * @param Description Description of a placement group, which can contain up to 200 characters. The placement group name and description can’t be empty.
      */
     public void setDescription(String Description) {
         this.Description = Description;

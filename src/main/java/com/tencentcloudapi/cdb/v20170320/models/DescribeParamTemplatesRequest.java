@@ -30,6 +30,27 @@ public class DescribeParamTemplatesRequest extends AbstractModel{
     private String [] EngineVersions;
 
     /**
+    * Engine type. If it is left empty, all engine types will be queried.
+    */
+    @SerializedName("EngineTypes")
+    @Expose
+    private String [] EngineTypes;
+
+    /**
+    * Template name. If it is left empty, all template names will be queried.
+    */
+    @SerializedName("TemplateNames")
+    @Expose
+    private String [] TemplateNames;
+
+    /**
+    * Template ID. If it is left empty, all template IDs will be queried.
+    */
+    @SerializedName("TemplateIds")
+    @Expose
+    private Long [] TemplateIds;
+
+    /**
      * Get Engine version. If it is left empty, all parameter templates will be queried. 
      * @return EngineVersions Engine version. If it is left empty, all parameter templates will be queried.
      */
@@ -43,6 +64,54 @@ public class DescribeParamTemplatesRequest extends AbstractModel{
      */
     public void setEngineVersions(String [] EngineVersions) {
         this.EngineVersions = EngineVersions;
+    }
+
+    /**
+     * Get Engine type. If it is left empty, all engine types will be queried. 
+     * @return EngineTypes Engine type. If it is left empty, all engine types will be queried.
+     */
+    public String [] getEngineTypes() {
+        return this.EngineTypes;
+    }
+
+    /**
+     * Set Engine type. If it is left empty, all engine types will be queried.
+     * @param EngineTypes Engine type. If it is left empty, all engine types will be queried.
+     */
+    public void setEngineTypes(String [] EngineTypes) {
+        this.EngineTypes = EngineTypes;
+    }
+
+    /**
+     * Get Template name. If it is left empty, all template names will be queried. 
+     * @return TemplateNames Template name. If it is left empty, all template names will be queried.
+     */
+    public String [] getTemplateNames() {
+        return this.TemplateNames;
+    }
+
+    /**
+     * Set Template name. If it is left empty, all template names will be queried.
+     * @param TemplateNames Template name. If it is left empty, all template names will be queried.
+     */
+    public void setTemplateNames(String [] TemplateNames) {
+        this.TemplateNames = TemplateNames;
+    }
+
+    /**
+     * Get Template ID. If it is left empty, all template IDs will be queried. 
+     * @return TemplateIds Template ID. If it is left empty, all template IDs will be queried.
+     */
+    public Long [] getTemplateIds() {
+        return this.TemplateIds;
+    }
+
+    /**
+     * Set Template ID. If it is left empty, all template IDs will be queried.
+     * @param TemplateIds Template ID. If it is left empty, all template IDs will be queried.
+     */
+    public void setTemplateIds(Long [] TemplateIds) {
+        this.TemplateIds = TemplateIds;
     }
 
     public DescribeParamTemplatesRequest() {
@@ -59,6 +128,24 @@ public class DescribeParamTemplatesRequest extends AbstractModel{
                 this.EngineVersions[i] = new String(source.EngineVersions[i]);
             }
         }
+        if (source.EngineTypes != null) {
+            this.EngineTypes = new String[source.EngineTypes.length];
+            for (int i = 0; i < source.EngineTypes.length; i++) {
+                this.EngineTypes[i] = new String(source.EngineTypes[i]);
+            }
+        }
+        if (source.TemplateNames != null) {
+            this.TemplateNames = new String[source.TemplateNames.length];
+            for (int i = 0; i < source.TemplateNames.length; i++) {
+                this.TemplateNames[i] = new String(source.TemplateNames[i]);
+            }
+        }
+        if (source.TemplateIds != null) {
+            this.TemplateIds = new Long[source.TemplateIds.length];
+            for (int i = 0; i < source.TemplateIds.length; i++) {
+                this.TemplateIds[i] = new Long(source.TemplateIds[i]);
+            }
+        }
     }
 
 
@@ -67,6 +154,9 @@ public class DescribeParamTemplatesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "EngineVersions.", this.EngineVersions);
+        this.setParamArraySimple(map, prefix + "EngineTypes.", this.EngineTypes);
+        this.setParamArraySimple(map, prefix + "TemplateNames.", this.TemplateNames);
+        this.setParamArraySimple(map, prefix + "TemplateIds.", this.TemplateIds);
 
     }
 }

@@ -159,7 +159,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create one or more TencentDB instance accounts. The account names, host addresses, and passwords are required, and account remarks and the maximum connections are optional.
+     *This API is used to create a TencentDB account. The account name, host address, and password are required. Account remarks and maximum connections can also be configured.
      * @param req CreateAccountsRequest
      * @return CreateAccountsResponse
      * @throws TencentCloudSDKException
@@ -429,7 +429,7 @@ This is an asynchronous API. You can also use the [DescribeDBInstances](https://
     }
 
     /**
-     *This API (DescribeAccounts) is used to query information of all TencentDB accounts.
+     *This API is used to query information of all TencentDB accounts.
      * @param req DescribeAccountsRequest
      * @return DescribeAccountsResponse
      * @throws TencentCloudSDKException
@@ -829,6 +829,28 @@ This is an asynchronous API. You can also use the [DescribeDBInstances](https://
     }
 
     /**
+     *This API (DescribeDBPrice) is used to query the prices of pay-as-you-go or monthly subscribed TencentDB instances by passing in information such as instance type, purchased duration, number of purchased instances, memory size, disk size, and AZ.
+
+Note: To query prices in a specific region, please use the access point of the region. For more information on access points, see <a href="https://cloud.tencent.com/document/api/236/15832">Service Addresses</a>. For example, to query prices in Guangzhou, send a request to: cdb.ap-guangzhou.tencentcloudapi.com. Likewise, to query prices in Shanghai, send a request to: cdb.ap-shanghai.tencentcloudapi.com.
+     * @param req DescribeDBPriceRequest
+     * @return DescribeDBPriceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBPriceResponse DescribeDBPrice(DescribeDBPriceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBPriceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBPriceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBPrice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DescribeDBSecurityGroups) is used to query the security group details of an instance.
      * @param req DescribeDBSecurityGroupsRequest
      * @return DescribeDBSecurityGroupsResponse
@@ -861,26 +883,6 @@ This is an asynchronous API. You can also use the [DescribeDBInstances](https://
                 Type type = new TypeToken<JsonResponseModel<DescribeDBSwitchRecordsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDBSwitchRecords");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API (DescribeDBZoneConfig) is used to query the specifications of TencentDB instances purchasable in a region.
-     * @param req DescribeDBZoneConfigRequest
-     * @return DescribeDBZoneConfigResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDBZoneConfigResponse DescribeDBZoneConfig(DescribeDBZoneConfigRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDBZoneConfigResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDBZoneConfigResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDBZoneConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1734,7 +1736,7 @@ Note that when modifying account permissions, you need to pass in the full permi
     }
 
     /**
-     *This API (ModifyDBInstanceVipVport) is used to modify the IP and port number of a TencentDB instance, switch from the basic network to VPC, or change VPC subnets.
+     *This API is used to modify the IP and port number of a TencentDB instance, switch from classic network to VPC, or change VPC subnets.
      * @param req ModifyDBInstanceVipVportRequest
      * @return ModifyDBInstanceVipVportResponse
      * @throws TencentCloudSDKException

@@ -1,0 +1,151 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.tke.v20180525.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class CUDNN extends AbstractModel{
+
+    /**
+    * cuDNN version
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
+
+    /**
+    * cuDNN name
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * Doc name of cuDNN
+    */
+    @SerializedName("DocName")
+    @Expose
+    private String DocName;
+
+    /**
+    * Dev name of cuDNN
+    */
+    @SerializedName("DevName")
+    @Expose
+    private String DevName;
+
+    /**
+     * Get cuDNN version 
+     * @return Version cuDNN version
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set cuDNN version
+     * @param Version cuDNN version
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
+    /**
+     * Get cuDNN name 
+     * @return Name cuDNN name
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set cuDNN name
+     * @param Name cuDNN name
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get Doc name of cuDNN 
+     * @return DocName Doc name of cuDNN
+     */
+    public String getDocName() {
+        return this.DocName;
+    }
+
+    /**
+     * Set Doc name of cuDNN
+     * @param DocName Doc name of cuDNN
+     */
+    public void setDocName(String DocName) {
+        this.DocName = DocName;
+    }
+
+    /**
+     * Get Dev name of cuDNN 
+     * @return DevName Dev name of cuDNN
+     */
+    public String getDevName() {
+        return this.DevName;
+    }
+
+    /**
+     * Set Dev name of cuDNN
+     * @param DevName Dev name of cuDNN
+     */
+    public void setDevName(String DevName) {
+        this.DevName = DevName;
+    }
+
+    public CUDNN() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public CUDNN(CUDNN source) {
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.DocName != null) {
+            this.DocName = new String(source.DocName);
+        }
+        if (source.DevName != null) {
+            this.DevName = new String(source.DevName);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "DocName", this.DocName);
+        this.setParamSimple(map, prefix + "DevName", this.DevName);
+
+    }
+}
+

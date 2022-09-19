@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class DescribeAccountsRequest extends AbstractModel{
 
     /**
-    * Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+    * Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Record offset. Default value: 0.
+    * Record offset. Default value: `0`.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of results to be returned for a single request. Value range: 1-100. Default value: 20.
+    * Number of results to be returned for a single request. Value range: 1-100. Default value: `20`.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Regular expression for matching account names, which complies with the rules at MySQL official website.
+    * Regex for matching account names, which complies with the rules at MySQL's official website
     */
     @SerializedName("AccountRegexp")
     @Expose
     private String AccountRegexp;
 
     /**
-     * Get Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. 
-     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * Get Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console. 
+     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Record offset. Default value: 0. 
-     * @return Offset Record offset. Default value: 0.
+     * Get Record offset. Default value: `0`. 
+     * @return Offset Record offset. Default value: `0`.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Record offset. Default value: 0.
-     * @param Offset Record offset. Default value: 0.
+     * Set Record offset. Default value: `0`.
+     * @param Offset Record offset. Default value: `0`.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of results to be returned for a single request. Value range: 1-100. Default value: 20. 
-     * @return Limit Number of results to be returned for a single request. Value range: 1-100. Default value: 20.
+     * Get Number of results to be returned for a single request. Value range: 1-100. Default value: `20`. 
+     * @return Limit Number of results to be returned for a single request. Value range: 1-100. Default value: `20`.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results to be returned for a single request. Value range: 1-100. Default value: 20.
-     * @param Limit Number of results to be returned for a single request. Value range: 1-100. Default value: 20.
+     * Set Number of results to be returned for a single request. Value range: 1-100. Default value: `20`.
+     * @param Limit Number of results to be returned for a single request. Value range: 1-100. Default value: `20`.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Regular expression for matching account names, which complies with the rules at MySQL official website. 
-     * @return AccountRegexp Regular expression for matching account names, which complies with the rules at MySQL official website.
+     * Get Regex for matching account names, which complies with the rules at MySQL's official website 
+     * @return AccountRegexp Regex for matching account names, which complies with the rules at MySQL's official website
      */
     public String getAccountRegexp() {
         return this.AccountRegexp;
     }
 
     /**
-     * Set Regular expression for matching account names, which complies with the rules at MySQL official website.
-     * @param AccountRegexp Regular expression for matching account names, which complies with the rules at MySQL official website.
+     * Set Regex for matching account names, which complies with the rules at MySQL's official website
+     * @param AccountRegexp Regex for matching account names, which complies with the rules at MySQL's official website
      */
     public void setAccountRegexp(String AccountRegexp) {
         this.AccountRegexp = AccountRegexp;

@@ -86,6 +86,27 @@ public class CreateTKEEdgeClusterRequest extends AbstractModel{
     private EdgeClusterPublicLB PublicLB;
 
     /**
+    * Cluster specification level
+    */
+    @SerializedName("ClusterLevel")
+    @Expose
+    private String ClusterLevel;
+
+    /**
+    * Whether auto upgrade is supported
+    */
+    @SerializedName("AutoUpgradeClusterLevel")
+    @Expose
+    private Boolean AutoUpgradeClusterLevel;
+
+    /**
+    * Cluster billing mode
+    */
+    @SerializedName("ChargeType")
+    @Expose
+    private String ChargeType;
+
+    /**
      * Get  
      * @return K8SVersion 
      */
@@ -229,6 +250,54 @@ public class CreateTKEEdgeClusterRequest extends AbstractModel{
         this.PublicLB = PublicLB;
     }
 
+    /**
+     * Get Cluster specification level 
+     * @return ClusterLevel Cluster specification level
+     */
+    public String getClusterLevel() {
+        return this.ClusterLevel;
+    }
+
+    /**
+     * Set Cluster specification level
+     * @param ClusterLevel Cluster specification level
+     */
+    public void setClusterLevel(String ClusterLevel) {
+        this.ClusterLevel = ClusterLevel;
+    }
+
+    /**
+     * Get Whether auto upgrade is supported 
+     * @return AutoUpgradeClusterLevel Whether auto upgrade is supported
+     */
+    public Boolean getAutoUpgradeClusterLevel() {
+        return this.AutoUpgradeClusterLevel;
+    }
+
+    /**
+     * Set Whether auto upgrade is supported
+     * @param AutoUpgradeClusterLevel Whether auto upgrade is supported
+     */
+    public void setAutoUpgradeClusterLevel(Boolean AutoUpgradeClusterLevel) {
+        this.AutoUpgradeClusterLevel = AutoUpgradeClusterLevel;
+    }
+
+    /**
+     * Get Cluster billing mode 
+     * @return ChargeType Cluster billing mode
+     */
+    public String getChargeType() {
+        return this.ChargeType;
+    }
+
+    /**
+     * Set Cluster billing mode
+     * @param ChargeType Cluster billing mode
+     */
+    public void setChargeType(String ChargeType) {
+        this.ChargeType = ChargeType;
+    }
+
     public CreateTKEEdgeClusterRequest() {
     }
 
@@ -264,6 +333,15 @@ public class CreateTKEEdgeClusterRequest extends AbstractModel{
         if (source.PublicLB != null) {
             this.PublicLB = new EdgeClusterPublicLB(source.PublicLB);
         }
+        if (source.ClusterLevel != null) {
+            this.ClusterLevel = new String(source.ClusterLevel);
+        }
+        if (source.AutoUpgradeClusterLevel != null) {
+            this.AutoUpgradeClusterLevel = new Boolean(source.AutoUpgradeClusterLevel);
+        }
+        if (source.ChargeType != null) {
+            this.ChargeType = new String(source.ChargeType);
+        }
     }
 
 
@@ -280,6 +358,9 @@ public class CreateTKEEdgeClusterRequest extends AbstractModel{
         this.setParamObj(map, prefix + "ClusterAdvancedSettings.", this.ClusterAdvancedSettings);
         this.setParamSimple(map, prefix + "MaxNodePodNum", this.MaxNodePodNum);
         this.setParamObj(map, prefix + "PublicLB.", this.PublicLB);
+        this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
+        this.setParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
+        this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
 
     }
 }

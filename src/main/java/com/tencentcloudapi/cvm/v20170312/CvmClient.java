@@ -1015,6 +1015,26 @@ If you currently use a password to log in, you will no longer be able to do so a
     }
 
     /**
+     *This API is used to query the price of creating instances. You can only use this API for instances whose configuration is within the purchase limit. For more information, see [RunInstances](https://intl.cloud.tencent.com/document/api/213/15730?from_cn_redirect=1).
+     * @param req InquiryPriceRunInstancesRequest
+     * @return InquiryPriceRunInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceRunInstancesResponse InquiryPriceRunInstances(InquiryPriceRunInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquiryPriceRunInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquiryPriceRunInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InquiryPriceRunInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify the CHC host attributes.
      * @param req ModifyChcAttributeRequest
      * @return ModifyChcAttributeResponse

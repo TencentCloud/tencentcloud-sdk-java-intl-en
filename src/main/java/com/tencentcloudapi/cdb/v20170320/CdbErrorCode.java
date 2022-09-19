@@ -372,6 +372,9 @@ public enum CdbErrorCode {
     // Delayed replication is not allowed because the instance is executing another task.
      OPERATIONDENIED_INSTANCETASKRUNNING("OperationDenied.InstanceTaskRunning"),
      
+    // Abnormal instance task status.
+     OPERATIONDENIED_INSTANCETASKSTATUSERROR("OperationDenied.InstanceTaskStatusError"),
+     
     // The instance does not support this operation.
      OPERATIONDENIED_INSTANCEUNSUPPORTEDOPERATEERROR("OperationDenied.InstanceUnsupportedOperateError"),
      

@@ -319,6 +319,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create CVM instances in the specified TKE edge cluster.
+     * @param req CreateEdgeCVMInstancesRequest
+     * @return CreateEdgeCVMInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEdgeCVMInstancesResponse CreateEdgeCVMInstances(CreateEdgeCVMInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateEdgeCVMInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateEdgeCVMInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateEdgeCVMInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create log collection configuration for a TKE Edge cluster.
      * @param req CreateEdgeLogConfigRequest
      * @return CreateEdgeLogConfigResponse

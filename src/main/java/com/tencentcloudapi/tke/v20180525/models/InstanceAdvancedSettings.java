@@ -87,6 +87,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long DesiredPodNumber;
 
     /**
+    * GPU driver parameters
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("GPUArgs")
+    @Expose
+    private GPUArgs GPUArgs;
+
+    /**
     * Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
@@ -263,6 +271,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get GPU driver parameters
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return GPUArgs GPU driver parameters
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public GPUArgs getGPUArgs() {
+        return this.GPUArgs;
+    }
+
+    /**
+     * Set GPU driver parameters
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param GPUArgs GPU driver parameters
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setGPUArgs(GPUArgs GPUArgs) {
+        this.GPUArgs = GPUArgs;
+    }
+
+    /**
      * Get Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return PreStartUserScript Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
@@ -340,6 +368,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.DesiredPodNumber != null) {
             this.DesiredPodNumber = new Long(source.DesiredPodNumber);
         }
+        if (source.GPUArgs != null) {
+            this.GPUArgs = new GPUArgs(source.GPUArgs);
+        }
         if (source.PreStartUserScript != null) {
             this.PreStartUserScript = new String(source.PreStartUserScript);
         }
@@ -364,6 +395,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
         this.setParamSimple(map, prefix + "DesiredPodNumber", this.DesiredPodNumber);
+        this.setParamObj(map, prefix + "GPUArgs.", this.GPUArgs);
         this.setParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
         this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
 

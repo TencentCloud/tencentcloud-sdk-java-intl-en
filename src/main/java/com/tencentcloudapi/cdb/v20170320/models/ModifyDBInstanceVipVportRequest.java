@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class ModifyDBInstanceVipVportRequest extends AbstractModel{
 
     /**
-    * Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID, whose value is the `InstanceId` value in output parameters.
+    * Instance ID in the format of cdb-c1nl9rpv, cdbro-c2nl9rpv, or cdbrg-c3nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872) API to query the ID, which is the value of the `InstanceId` output parameter.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Destination IP. Either this parameter or `DstPort` must be passed in.
+    * Target IP. Either this parameter or `DstPort` must be passed in.
     */
     @SerializedName("DstIp")
     @Expose
     private String DstIp;
 
     /**
-    * Destination port number. Value range: [1024-65535]. Either this parameter or `DstIp` must be passed in.
+    * Target port number. Value range: 1024-65535. Either this parameter or `DstIp` must be passed in.
     */
     @SerializedName("DstPort")
     @Expose
@@ -51,62 +51,62 @@ public class ModifyDBInstanceVipVportRequest extends AbstractModel{
     private String UniqVpcId;
 
     /**
-    * Unified subnet ID.
+    * Unified subnet ID
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0-168 hours. Default value: 24 hours.
+    * Repossession duration in hours for old IP in the original network when changing from classic network to VPC or changing the VPC subnet. Value range: 0–168. Default value: `24`.
     */
     @SerializedName("ReleaseDuration")
     @Expose
     private Long ReleaseDuration;
 
     /**
-     * Get Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID, whose value is the `InstanceId` value in output parameters. 
-     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID, whose value is the `InstanceId` value in output parameters.
+     * Get Instance ID in the format of cdb-c1nl9rpv, cdbro-c2nl9rpv, or cdbrg-c3nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872) API to query the ID, which is the value of the `InstanceId` output parameter. 
+     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv, cdbro-c2nl9rpv, or cdbrg-c3nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872) API to query the ID, which is the value of the `InstanceId` output parameter.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID, whose value is the `InstanceId` value in output parameters.
-     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID, whose value is the `InstanceId` value in output parameters.
+     * Set Instance ID in the format of cdb-c1nl9rpv, cdbro-c2nl9rpv, or cdbrg-c3nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872) API to query the ID, which is the value of the `InstanceId` output parameter.
+     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv, cdbro-c2nl9rpv, or cdbrg-c3nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872) API to query the ID, which is the value of the `InstanceId` output parameter.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Destination IP. Either this parameter or `DstPort` must be passed in. 
-     * @return DstIp Destination IP. Either this parameter or `DstPort` must be passed in.
+     * Get Target IP. Either this parameter or `DstPort` must be passed in. 
+     * @return DstIp Target IP. Either this parameter or `DstPort` must be passed in.
      */
     public String getDstIp() {
         return this.DstIp;
     }
 
     /**
-     * Set Destination IP. Either this parameter or `DstPort` must be passed in.
-     * @param DstIp Destination IP. Either this parameter or `DstPort` must be passed in.
+     * Set Target IP. Either this parameter or `DstPort` must be passed in.
+     * @param DstIp Target IP. Either this parameter or `DstPort` must be passed in.
      */
     public void setDstIp(String DstIp) {
         this.DstIp = DstIp;
     }
 
     /**
-     * Get Destination port number. Value range: [1024-65535]. Either this parameter or `DstIp` must be passed in. 
-     * @return DstPort Destination port number. Value range: [1024-65535]. Either this parameter or `DstIp` must be passed in.
+     * Get Target port number. Value range: 1024-65535. Either this parameter or `DstIp` must be passed in. 
+     * @return DstPort Target port number. Value range: 1024-65535. Either this parameter or `DstIp` must be passed in.
      */
     public Long getDstPort() {
         return this.DstPort;
     }
 
     /**
-     * Set Destination port number. Value range: [1024-65535]. Either this parameter or `DstIp` must be passed in.
-     * @param DstPort Destination port number. Value range: [1024-65535]. Either this parameter or `DstIp` must be passed in.
+     * Set Target port number. Value range: 1024-65535. Either this parameter or `DstIp` must be passed in.
+     * @param DstPort Target port number. Value range: 1024-65535. Either this parameter or `DstIp` must be passed in.
      */
     public void setDstPort(Long DstPort) {
         this.DstPort = DstPort;
@@ -129,32 +129,32 @@ public class ModifyDBInstanceVipVportRequest extends AbstractModel{
     }
 
     /**
-     * Get Unified subnet ID. 
-     * @return UniqSubnetId Unified subnet ID.
+     * Get Unified subnet ID 
+     * @return UniqSubnetId Unified subnet ID
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set Unified subnet ID.
-     * @param UniqSubnetId Unified subnet ID.
+     * Set Unified subnet ID
+     * @param UniqSubnetId Unified subnet ID
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0-168 hours. Default value: 24 hours. 
-     * @return ReleaseDuration Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0-168 hours. Default value: 24 hours.
+     * Get Repossession duration in hours for old IP in the original network when changing from classic network to VPC or changing the VPC subnet. Value range: 0–168. Default value: `24`. 
+     * @return ReleaseDuration Repossession duration in hours for old IP in the original network when changing from classic network to VPC or changing the VPC subnet. Value range: 0–168. Default value: `24`.
      */
     public Long getReleaseDuration() {
         return this.ReleaseDuration;
     }
 
     /**
-     * Set Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0-168 hours. Default value: 24 hours.
-     * @param ReleaseDuration Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0-168 hours. Default value: 24 hours.
+     * Set Repossession duration in hours for old IP in the original network when changing from classic network to VPC or changing the VPC subnet. Value range: 0–168. Default value: `24`.
+     * @param ReleaseDuration Repossession duration in hours for old IP in the original network when changing from classic network to VPC or changing the VPC subnet. Value range: 0–168. Default value: `24`.
      */
     public void setReleaseDuration(Long ReleaseDuration) {
         this.ReleaseDuration = ReleaseDuration;

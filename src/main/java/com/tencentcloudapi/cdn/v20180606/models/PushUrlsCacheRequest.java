@@ -77,6 +77,20 @@ This feature is in beta test.
     private Boolean DisableRange;
 
     /**
+    * 
+    */
+    @SerializedName("Headers")
+    @Expose
+    private HTTPHeader [] Headers;
+
+    /**
+    * Whether to encode the URL
+    */
+    @SerializedName("UrlEncode")
+    @Expose
+    private Boolean UrlEncode;
+
+    /**
      * Get List of URLs. The protocol header such as "http://" or "https://" needs to be included. 
      * @return Urls List of URLs. The protocol header such as "http://" or "https://" needs to be included.
      */
@@ -220,6 +234,38 @@ This feature is in beta test.
         this.DisableRange = DisableRange;
     }
 
+    /**
+     * Get  
+     * @return Headers 
+     */
+    public HTTPHeader [] getHeaders() {
+        return this.Headers;
+    }
+
+    /**
+     * Set 
+     * @param Headers 
+     */
+    public void setHeaders(HTTPHeader [] Headers) {
+        this.Headers = Headers;
+    }
+
+    /**
+     * Get Whether to encode the URL 
+     * @return UrlEncode Whether to encode the URL
+     */
+    public Boolean getUrlEncode() {
+        return this.UrlEncode;
+    }
+
+    /**
+     * Set Whether to encode the URL
+     * @param UrlEncode Whether to encode the URL
+     */
+    public void setUrlEncode(Boolean UrlEncode) {
+        this.UrlEncode = UrlEncode;
+    }
+
     public PushUrlsCacheRequest() {
     }
 
@@ -249,6 +295,15 @@ This feature is in beta test.
         if (source.DisableRange != null) {
             this.DisableRange = new Boolean(source.DisableRange);
         }
+        if (source.Headers != null) {
+            this.Headers = new HTTPHeader[source.Headers.length];
+            for (int i = 0; i < source.Headers.length; i++) {
+                this.Headers[i] = new HTTPHeader(source.Headers[i]);
+            }
+        }
+        if (source.UrlEncode != null) {
+            this.UrlEncode = new Boolean(source.UrlEncode);
+        }
     }
 
 
@@ -262,6 +317,8 @@ This feature is in beta test.
         this.setParamSimple(map, prefix + "Layer", this.Layer);
         this.setParamSimple(map, prefix + "ParseM3U8", this.ParseM3U8);
         this.setParamSimple(map, prefix + "DisableRange", this.DisableRange);
+        this.setParamArrayObj(map, prefix + "Headers.", this.Headers);
+        this.setParamSimple(map, prefix + "UrlEncode", this.UrlEncode);
 
     }
 }

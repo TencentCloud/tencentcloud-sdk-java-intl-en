@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateAccountsResponse extends AbstractModel{
 
     /**
-    * Async task request ID, which can be used to query the execution result of an async task.
+    * Async task request ID, which can be used to query the execution result of an async task
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -37,16 +37,16 @@ public class CreateAccountsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Async task request ID, which can be used to query the execution result of an async task. 
-     * @return AsyncRequestId Async task request ID, which can be used to query the execution result of an async task.
+     * Get Async task request ID, which can be used to query the execution result of an async task 
+     * @return AsyncRequestId Async task request ID, which can be used to query the execution result of an async task
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
     }
 
     /**
-     * Set Async task request ID, which can be used to query the execution result of an async task.
-     * @param AsyncRequestId Async task request ID, which can be used to query the execution result of an async task.
+     * Set Async task request ID, which can be used to query the execution result of an async task
+     * @param AsyncRequestId Async task request ID, which can be used to query the execution result of an async task
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

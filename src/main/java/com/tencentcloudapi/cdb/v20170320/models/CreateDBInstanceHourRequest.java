@@ -93,7 +93,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private String InstanceRole;
 
     /**
-    * AZ information of the primary instance, which is required for purchasing disaster recovery instances.
+    * AZ information of the source instance, which is required for purchasing disaster recovery instances and read-only instances.
     */
     @SerializedName("MasterRegion")
     @Expose
@@ -212,7 +212,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     private Long ParamTemplateId;
 
     /**
-    * The array of alarm policy IDs.
+    * Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
     */
     @SerializedName("AlarmPolicyList")
     @Expose
@@ -442,16 +442,16 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
-     * Get AZ information of the primary instance, which is required for purchasing disaster recovery instances. 
-     * @return MasterRegion AZ information of the primary instance, which is required for purchasing disaster recovery instances.
+     * Get AZ information of the source instance, which is required for purchasing disaster recovery instances and read-only instances. 
+     * @return MasterRegion AZ information of the source instance, which is required for purchasing disaster recovery instances and read-only instances.
      */
     public String getMasterRegion() {
         return this.MasterRegion;
     }
 
     /**
-     * Set AZ information of the primary instance, which is required for purchasing disaster recovery instances.
-     * @param MasterRegion AZ information of the primary instance, which is required for purchasing disaster recovery instances.
+     * Set AZ information of the source instance, which is required for purchasing disaster recovery instances and read-only instances.
+     * @param MasterRegion AZ information of the source instance, which is required for purchasing disaster recovery instances and read-only instances.
      */
     public void setMasterRegion(String MasterRegion) {
         this.MasterRegion = MasterRegion;
@@ -714,16 +714,16 @@ public class CreateDBInstanceHourRequest extends AbstractModel{
     }
 
     /**
-     * Get The array of alarm policy IDs. 
-     * @return AlarmPolicyList The array of alarm policy IDs.
+     * Get Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API. 
+     * @return AlarmPolicyList Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
      */
     public Long [] getAlarmPolicyList() {
         return this.AlarmPolicyList;
     }
 
     /**
-     * Set The array of alarm policy IDs.
-     * @param AlarmPolicyList The array of alarm policy IDs.
+     * Set Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
+     * @param AlarmPolicyList Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
      */
     public void setAlarmPolicyList(Long [] AlarmPolicyList) {
         this.AlarmPolicyList = AlarmPolicyList;

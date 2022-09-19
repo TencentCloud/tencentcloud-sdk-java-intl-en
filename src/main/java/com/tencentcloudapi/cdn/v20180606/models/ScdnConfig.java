@@ -46,6 +46,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private AdvancedCCRules [] AdvancedRules;
 
     /**
+    * Global advanced CC protection rules
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("GlobalAdvancedRules")
+    @Expose
+    private AdvancedCCRules [] GlobalAdvancedRules;
+
+    /**
      * Get Valid values: `on` and `off`. 
      * @return Switch Valid values: `on` and `off`.
      */
@@ -101,6 +109,26 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.AdvancedRules = AdvancedRules;
     }
 
+    /**
+     * Get Global advanced CC protection rules
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return GlobalAdvancedRules Global advanced CC protection rules
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public AdvancedCCRules [] getGlobalAdvancedRules() {
+        return this.GlobalAdvancedRules;
+    }
+
+    /**
+     * Set Global advanced CC protection rules
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param GlobalAdvancedRules Global advanced CC protection rules
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setGlobalAdvancedRules(AdvancedCCRules [] GlobalAdvancedRules) {
+        this.GlobalAdvancedRules = GlobalAdvancedRules;
+    }
+
     public ScdnConfig() {
     }
 
@@ -124,6 +152,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 this.AdvancedRules[i] = new AdvancedCCRules(source.AdvancedRules[i]);
             }
         }
+        if (source.GlobalAdvancedRules != null) {
+            this.GlobalAdvancedRules = new AdvancedCCRules[source.GlobalAdvancedRules.length];
+            for (int i = 0; i < source.GlobalAdvancedRules.length; i++) {
+                this.GlobalAdvancedRules[i] = new AdvancedCCRules(source.GlobalAdvancedRules[i]);
+            }
+        }
     }
 
 
@@ -134,6 +168,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
         this.setParamArrayObj(map, prefix + "AdvancedRules.", this.AdvancedRules);
+        this.setParamArrayObj(map, prefix + "GlobalAdvancedRules.", this.GlobalAdvancedRules);
 
     }
 }

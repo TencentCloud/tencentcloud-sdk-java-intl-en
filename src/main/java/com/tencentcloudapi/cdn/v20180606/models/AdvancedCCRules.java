@@ -86,6 +86,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private ScdnSevenLayerRules [] Configure;
 
     /**
+    * Whether to enable the rule. Values: `on` (enable), `off` (disable).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Switch")
+    @Expose
+    private String Switch;
+
+    /**
      * Get Rule name 
      * @return RuleName Rule name
      */
@@ -241,6 +249,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.Configure = Configure;
     }
 
+    /**
+     * Get Whether to enable the rule. Values: `on` (enable), `off` (disable).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Switch Whether to enable the rule. Values: `on` (enable), `off` (disable).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getSwitch() {
+        return this.Switch;
+    }
+
+    /**
+     * Set Whether to enable the rule. Values: `on` (enable), `off` (disable).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Switch Whether to enable the rule. Values: `on` (enable), `off` (disable).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSwitch(String Switch) {
+        this.Switch = Switch;
+    }
+
     public AdvancedCCRules() {
     }
 
@@ -276,6 +304,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.Configure[i] = new ScdnSevenLayerRules(source.Configure[i]);
             }
         }
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
+        }
     }
 
 
@@ -291,6 +322,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
         this.setParamArrayObj(map, prefix + "Configure.", this.Configure);
+        this.setParamSimple(map, prefix + "Switch", this.Switch);
 
     }
 }

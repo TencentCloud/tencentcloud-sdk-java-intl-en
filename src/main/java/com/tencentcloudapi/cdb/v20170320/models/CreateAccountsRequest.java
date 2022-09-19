@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateAccountsRequest extends AbstractModel{
 
     /**
-    * Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+    * Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * TencentDB account.
+    * List of TencentDB accounts
     */
     @SerializedName("Accounts")
     @Expose
@@ -58,32 +58,32 @@ public class CreateAccountsRequest extends AbstractModel{
     private Long MaxUserConnections;
 
     /**
-     * Get Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. 
-     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * Get Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console. 
+     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get TencentDB account. 
-     * @return Accounts TencentDB account.
+     * Get List of TencentDB accounts 
+     * @return Accounts List of TencentDB accounts
      */
     public Account [] getAccounts() {
         return this.Accounts;
     }
 
     /**
-     * Set TencentDB account.
-     * @param Accounts TencentDB account.
+     * Set List of TencentDB accounts
+     * @param Accounts List of TencentDB accounts
      */
     public void setAccounts(Account [] Accounts) {
         this.Accounts = Accounts;

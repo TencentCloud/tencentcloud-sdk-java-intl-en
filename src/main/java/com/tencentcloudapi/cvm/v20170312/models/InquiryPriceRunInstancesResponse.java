@@ -13,22 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.cvm.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBInstanceVipVportResponse extends AbstractModel{
+public class InquiryPriceRunInstancesResponse extends AbstractModel{
 
     /**
-    * Async task ID. This parameter is deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Price of the instance with the specified configurations.
     */
-    @SerializedName("AsyncRequestId")
+    @SerializedName("Price")
     @Expose
-    private String AsyncRequestId;
+    private Price Price;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,23 +37,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Async task ID. This parameter is deprecated.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AsyncRequestId Async task ID. This parameter is deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Price of the instance with the specified configurations. 
+     * @return Price Price of the instance with the specified configurations.
      */
-    public String getAsyncRequestId() {
-        return this.AsyncRequestId;
+    public Price getPrice() {
+        return this.Price;
     }
 
     /**
-     * Set Async task ID. This parameter is deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AsyncRequestId Async task ID. This parameter is deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Price of the instance with the specified configurations.
+     * @param Price Price of the instance with the specified configurations.
      */
-    public void setAsyncRequestId(String AsyncRequestId) {
-        this.AsyncRequestId = AsyncRequestId;
+    public void setPrice(Price Price) {
+        this.Price = Price;
     }
 
     /**
@@ -73,16 +68,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public ModifyDBInstanceVipVportResponse() {
+    public InquiryPriceRunInstancesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyDBInstanceVipVportResponse(ModifyDBInstanceVipVportResponse source) {
-        if (source.AsyncRequestId != null) {
-            this.AsyncRequestId = new String(source.AsyncRequestId);
+    public InquiryPriceRunInstancesResponse(InquiryPriceRunInstancesResponse source) {
+        if (source.Price != null) {
+            this.Price = new Price(source.Price);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +89,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+        this.setParamObj(map, prefix + "Price.", this.Price);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

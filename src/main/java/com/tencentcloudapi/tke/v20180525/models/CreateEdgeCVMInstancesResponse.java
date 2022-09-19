@@ -13,22 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.tke.v20180525.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyDBInstanceVipVportResponse extends AbstractModel{
+public class CreateEdgeCVMInstancesResponse extends AbstractModel{
 
     /**
-    * Async task ID. This parameter is deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of CVM IDs
     */
-    @SerializedName("AsyncRequestId")
+    @SerializedName("CvmIdSet")
     @Expose
-    private String AsyncRequestId;
+    private String [] CvmIdSet;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,23 +37,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Async task ID. This parameter is deprecated.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AsyncRequestId Async task ID. This parameter is deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of CVM IDs 
+     * @return CvmIdSet List of CVM IDs
      */
-    public String getAsyncRequestId() {
-        return this.AsyncRequestId;
+    public String [] getCvmIdSet() {
+        return this.CvmIdSet;
     }
 
     /**
-     * Set Async task ID. This parameter is deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AsyncRequestId Async task ID. This parameter is deprecated.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of CVM IDs
+     * @param CvmIdSet List of CVM IDs
      */
-    public void setAsyncRequestId(String AsyncRequestId) {
-        this.AsyncRequestId = AsyncRequestId;
+    public void setCvmIdSet(String [] CvmIdSet) {
+        this.CvmIdSet = CvmIdSet;
     }
 
     /**
@@ -73,16 +68,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public ModifyDBInstanceVipVportResponse() {
+    public CreateEdgeCVMInstancesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyDBInstanceVipVportResponse(ModifyDBInstanceVipVportResponse source) {
-        if (source.AsyncRequestId != null) {
-            this.AsyncRequestId = new String(source.AsyncRequestId);
+    public CreateEdgeCVMInstancesResponse(CreateEdgeCVMInstancesResponse source) {
+        if (source.CvmIdSet != null) {
+            this.CvmIdSet = new String[source.CvmIdSet.length];
+            for (int i = 0; i < source.CvmIdSet.length; i++) {
+                this.CvmIdSet[i] = new String(source.CvmIdSet[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +92,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+        this.setParamArraySimple(map, prefix + "CvmIdSet.", this.CvmIdSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
