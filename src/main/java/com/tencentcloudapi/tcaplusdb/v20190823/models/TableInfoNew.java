@@ -247,6 +247,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long TxhBackupExpireDay;
 
     /**
+    * Cached information of the table
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SyncTableInfo")
+    @Expose
+    private SyncTableInfo SyncTableInfo;
+
+    /**
      * Get Table name
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return TableName Table name
@@ -806,6 +814,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.TxhBackupExpireDay = TxhBackupExpireDay;
     }
 
+    /**
+     * Get Cached information of the table
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SyncTableInfo Cached information of the table
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public SyncTableInfo getSyncTableInfo() {
+        return this.SyncTableInfo;
+    }
+
+    /**
+     * Set Cached information of the table
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SyncTableInfo Cached information of the table
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSyncTableInfo(SyncTableInfo SyncTableInfo) {
+        this.SyncTableInfo = SyncTableInfo;
+    }
+
     public TableInfoNew() {
     }
 
@@ -901,6 +929,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.TxhBackupExpireDay != null) {
             this.TxhBackupExpireDay = new Long(source.TxhBackupExpireDay);
         }
+        if (source.SyncTableInfo != null) {
+            this.SyncTableInfo = new SyncTableInfo(source.SyncTableInfo);
+        }
     }
 
 
@@ -936,6 +967,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "SortRule", this.SortRule);
         this.setParamSimple(map, prefix + "DbClusterInfoStruct", this.DbClusterInfoStruct);
         this.setParamSimple(map, prefix + "TxhBackupExpireDay", this.TxhBackupExpireDay);
+        this.setParamObj(map, prefix + "SyncTableInfo.", this.SyncTableInfo);
 
     }
 }

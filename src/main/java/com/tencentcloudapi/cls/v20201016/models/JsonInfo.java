@@ -30,8 +30,8 @@ public class JsonInfo extends AbstractModel{
     private Boolean EnableTag;
 
     /**
-    * Metadata information list. Valid values: __SOURCE__; __FILENAME__; __TIMESTAMP__
-Note: This field may return `null`, indicating that no valid value was found.
+    * List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MetaFields")
     @Expose
@@ -54,20 +54,20 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Metadata information list. Valid values: __SOURCE__; __FILENAME__; __TIMESTAMP__
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return MetaFields Metadata information list. Valid values: __SOURCE__; __FILENAME__; __TIMESTAMP__
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MetaFields List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getMetaFields() {
         return this.MetaFields;
     }
 
     /**
-     * Set Metadata information list. Valid values: __SOURCE__; __FILENAME__; __TIMESTAMP__
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param MetaFields Metadata information list. Valid values: __SOURCE__; __FILENAME__; __TIMESTAMP__
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MetaFields List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMetaFields(String [] MetaFields) {
         this.MetaFields = MetaFields;

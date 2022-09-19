@@ -65,7 +65,7 @@ public class ModifyTopicRequest extends AbstractModel{
     private Long MaxSplitPartitions;
 
     /**
-    * Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+    * Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
     */
     @SerializedName("Period")
     @Expose
@@ -168,16 +168,16 @@ public class ModifyTopicRequest extends AbstractModel{
     }
 
     /**
-     * Get Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention) 
-     * @return Period Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+     * Get Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention. 
+     * @return Period Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
-     * @param Period Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+     * Set Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
+     * @param Period Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
      */
     public void setPeriod(Long Period) {
         this.Period = Period;

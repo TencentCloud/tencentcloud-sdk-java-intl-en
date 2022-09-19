@@ -93,6 +93,13 @@ public class CreateShipperRequest extends AbstractModel{
     private ContentInfo Content;
 
     /**
+    * Naming a shipping file. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+    */
+    @SerializedName("FilenameMode")
+    @Expose
+    private Long FilenameMode;
+
+    /**
      * Get ID of the log topic to which the shipping rule to be created belongs 
      * @return TopicId ID of the log topic to which the shipping rule to be created belongs
      */
@@ -252,6 +259,22 @@ public class CreateShipperRequest extends AbstractModel{
         this.Content = Content;
     }
 
+    /**
+     * Get Naming a shipping file. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`. 
+     * @return FilenameMode Naming a shipping file. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+     */
+    public Long getFilenameMode() {
+        return this.FilenameMode;
+    }
+
+    /**
+     * Set Naming a shipping file. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+     * @param FilenameMode Naming a shipping file. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+     */
+    public void setFilenameMode(Long FilenameMode) {
+        this.FilenameMode = FilenameMode;
+    }
+
     public CreateShipperRequest() {
     }
 
@@ -293,6 +316,9 @@ public class CreateShipperRequest extends AbstractModel{
         if (source.Content != null) {
             this.Content = new ContentInfo(source.Content);
         }
+        if (source.FilenameMode != null) {
+            this.FilenameMode = new Long(source.FilenameMode);
+        }
     }
 
 
@@ -310,6 +336,7 @@ public class CreateShipperRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Partition", this.Partition);
         this.setParamObj(map, prefix + "Compress.", this.Compress);
         this.setParamObj(map, prefix + "Content.", this.Content);
+        this.setParamSimple(map, prefix + "FilenameMode", this.FilenameMode);
 
     }
 }

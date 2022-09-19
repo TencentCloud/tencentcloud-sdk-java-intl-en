@@ -119,6 +119,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create manual backup.
+     * @param req CreateBackupRequest
+     * @return CreateBackupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBackupResponse CreateBackup(CreateBackupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBackupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBackupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBackup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a cluster.
      * @param req CreateClustersRequest
      * @return CreateClustersResponse
