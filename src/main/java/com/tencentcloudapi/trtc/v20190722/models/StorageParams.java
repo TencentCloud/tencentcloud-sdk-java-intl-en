@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class StorageParams extends AbstractModel{
 
     /**
-    * The cloud storage information.
+    * The third-party cloud storage information (not supported currently).
     */
     @SerializedName("CloudStorage")
     @Expose
@@ -37,16 +37,16 @@ public class StorageParams extends AbstractModel{
     private CloudVod CloudVod;
 
     /**
-     * Get The cloud storage information. 
-     * @return CloudStorage The cloud storage information.
+     * Get The third-party cloud storage information (not supported currently). 
+     * @return CloudStorage The third-party cloud storage information (not supported currently).
      */
     public CloudStorage getCloudStorage() {
         return this.CloudStorage;
     }
 
     /**
-     * Set The cloud storage information.
-     * @param CloudStorage The cloud storage information.
+     * Set The third-party cloud storage information (not supported currently).
+     * @param CloudStorage The third-party cloud storage information (not supported currently).
      */
     public void setCloudStorage(CloudStorage CloudStorage) {
         this.CloudStorage = CloudStorage;

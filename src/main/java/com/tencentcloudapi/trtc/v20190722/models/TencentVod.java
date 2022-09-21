@@ -73,6 +73,13 @@ The default value is `0`, which means others.
     private String SourceContext;
 
     /**
+    * The format of recording files saved to VOD. 0 (default): MP4; 1: HLS.
+    */
+    @SerializedName("MediaType")
+    @Expose
+    private Long MediaType;
+
+    /**
      * Get The operation to perform on the media uploaded. The value of this parameter is the name of a task flow template. You can create a custom task flow template in Tencent Cloud VOD. 
      * @return Procedure The operation to perform on the media uploaded. The value of this parameter is the name of a task flow template. You can create a custom task flow template in Tencent Cloud VOD.
      */
@@ -188,6 +195,22 @@ The default value is `0`, which means others.
         this.SourceContext = SourceContext;
     }
 
+    /**
+     * Get The format of recording files saved to VOD. 0 (default): MP4; 1: HLS. 
+     * @return MediaType The format of recording files saved to VOD. 0 (default): MP4; 1: HLS.
+     */
+    public Long getMediaType() {
+        return this.MediaType;
+    }
+
+    /**
+     * Set The format of recording files saved to VOD. 0 (default): MP4; 1: HLS.
+     * @param MediaType The format of recording files saved to VOD. 0 (default): MP4; 1: HLS.
+     */
+    public void setMediaType(Long MediaType) {
+        this.MediaType = MediaType;
+    }
+
     public TencentVod() {
     }
 
@@ -217,6 +240,9 @@ The default value is `0`, which means others.
         if (source.SourceContext != null) {
             this.SourceContext = new String(source.SourceContext);
         }
+        if (source.MediaType != null) {
+            this.MediaType = new Long(source.MediaType);
+        }
     }
 
 
@@ -231,6 +257,7 @@ The default value is `0`, which means others.
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "SourceContext", this.SourceContext);
+        this.setParamSimple(map, prefix + "MediaType", this.MediaType);
 
     }
 }

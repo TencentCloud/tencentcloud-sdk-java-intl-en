@@ -109,7 +109,10 @@ public enum TrtcErrorCode {
      RESOURCENOTFOUND("ResourceNotFound"),
      
     // No permission to manipulate `SdkAppId`.
-     UNAUTHORIZEDOPERATION_SDKAPPID("UnauthorizedOperation.SdkAppId");
+     UNAUTHORIZEDOPERATION_SDKAPPID("UnauthorizedOperation.SdkAppId"),
+     
+    // Unsupported operation.
+     UNSUPPORTEDOPERATION("UnsupportedOperation");
      
     private String value;
     private TrtcErrorCode (String value){

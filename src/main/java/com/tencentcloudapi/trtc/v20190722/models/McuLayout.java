@@ -93,6 +93,13 @@ Grey: 0x999999
     private String BackgroundImageUrl;
 
     /**
+    * Custom cropping.
+    */
+    @SerializedName("CustomCrop")
+    @Expose
+    private McuCustomCrop CustomCrop;
+
+    /**
      * Get The information of the stream that is displayed. If you do not pass this parameter, TRTC will display the videos of anchors in the room according to their room entry sequence. 
      * @return UserMediaStream The information of the stream that is displayed. If you do not pass this parameter, TRTC will display the videos of anchors in the room according to their room entry sequence.
      */
@@ -264,6 +271,22 @@ Grey: 0x999999
         this.BackgroundImageUrl = BackgroundImageUrl;
     }
 
+    /**
+     * Get Custom cropping. 
+     * @return CustomCrop Custom cropping.
+     */
+    public McuCustomCrop getCustomCrop() {
+        return this.CustomCrop;
+    }
+
+    /**
+     * Set Custom cropping.
+     * @param CustomCrop Custom cropping.
+     */
+    public void setCustomCrop(McuCustomCrop CustomCrop) {
+        this.CustomCrop = CustomCrop;
+    }
+
     public McuLayout() {
     }
 
@@ -299,6 +322,9 @@ Grey: 0x999999
         if (source.BackgroundImageUrl != null) {
             this.BackgroundImageUrl = new String(source.BackgroundImageUrl);
         }
+        if (source.CustomCrop != null) {
+            this.CustomCrop = new McuCustomCrop(source.CustomCrop);
+        }
     }
 
 
@@ -315,6 +341,7 @@ Grey: 0x999999
         this.setParamSimple(map, prefix + "RenderMode", this.RenderMode);
         this.setParamSimple(map, prefix + "BackGroundColor", this.BackGroundColor);
         this.setParamSimple(map, prefix + "BackgroundImageUrl", this.BackgroundImageUrl);
+        this.setParamObj(map, prefix + "CustomCrop.", this.CustomCrop);
 
     }
 }

@@ -56,11 +56,18 @@ public class RecordParams extends AbstractModel{
     private SubscribeStreamUserIds SubscribeStreamUserIds;
 
     /**
-    * The format of recording files. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if recording files are saved to VOD.
+    * The output format. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
     */
     @SerializedName("OutputFormat")
     @Expose
     private Long OutputFormat;
+
+    /**
+    * Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
+    */
+    @SerializedName("AvMerge")
+    @Expose
+    private Long AvMerge;
 
     /**
      * Get The recording mode.
@@ -147,19 +154,35 @@ public class RecordParams extends AbstractModel{
     }
 
     /**
-     * Get The format of recording files. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if recording files are saved to VOD. 
-     * @return OutputFormat The format of recording files. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if recording files are saved to VOD.
+     * Get The output format. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`. 
+     * @return OutputFormat The output format. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
      */
     public Long getOutputFormat() {
         return this.OutputFormat;
     }
 
     /**
-     * Set The format of recording files. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if recording files are saved to VOD.
-     * @param OutputFormat The format of recording files. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if recording files are saved to VOD.
+     * Set The output format. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
+     * @param OutputFormat The output format. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
      */
     public void setOutputFormat(Long OutputFormat) {
         this.OutputFormat = OutputFormat;
+    }
+
+    /**
+     * Get Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default. 
+     * @return AvMerge Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
+     */
+    public Long getAvMerge() {
+        return this.AvMerge;
+    }
+
+    /**
+     * Set Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
+     * @param AvMerge Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
+     */
+    public void setAvMerge(Long AvMerge) {
+        this.AvMerge = AvMerge;
     }
 
     public RecordParams() {
@@ -185,6 +208,9 @@ public class RecordParams extends AbstractModel{
         if (source.OutputFormat != null) {
             this.OutputFormat = new Long(source.OutputFormat);
         }
+        if (source.AvMerge != null) {
+            this.AvMerge = new Long(source.AvMerge);
+        }
     }
 
 
@@ -197,6 +223,7 @@ public class RecordParams extends AbstractModel{
         this.setParamSimple(map, prefix + "StreamType", this.StreamType);
         this.setParamObj(map, prefix + "SubscribeStreamUserIds.", this.SubscribeStreamUserIds);
         this.setParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
+        this.setParamSimple(map, prefix + "AvMerge", this.AvMerge);
 
     }
 }
