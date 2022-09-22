@@ -74,7 +74,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long DataAmount;
 
     /**
-    * Task execution time in seconds
+    * The compute time in ms.
     */
     @SerializedName("UsedTime")
     @Expose
@@ -151,6 +151,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("DisplayFormat")
     @Expose
     private String DisplayFormat;
+
+    /**
+    * The task time in ms.
+    */
+    @SerializedName("TotalTime")
+    @Expose
+    private Long TotalTime;
 
     /**
      * Get Unique task ID 
@@ -273,16 +280,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Task execution time in seconds 
-     * @return UsedTime Task execution time in seconds
+     * Get The compute time in ms. 
+     * @return UsedTime The compute time in ms.
      */
     public Long getUsedTime() {
         return this.UsedTime;
     }
 
     /**
-     * Set Task execution time in seconds
-     * @param UsedTime Task execution time in seconds
+     * Set The compute time in ms.
+     * @param UsedTime The compute time in ms.
      */
     public void setUsedTime(Long UsedTime) {
         this.UsedTime = UsedTime;
@@ -456,6 +463,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.DisplayFormat = DisplayFormat;
     }
 
+    /**
+     * Get The task time in ms. 
+     * @return TotalTime The task time in ms.
+     */
+    public Long getTotalTime() {
+        return this.TotalTime;
+    }
+
+    /**
+     * Set The task time in ms.
+     * @param TotalTime The task time in ms.
+     */
+    public void setTotalTime(Long TotalTime) {
+        this.TotalTime = TotalTime;
+    }
+
     public TaskResultInfo() {
     }
 
@@ -521,6 +544,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.DisplayFormat != null) {
             this.DisplayFormat = new String(source.DisplayFormat);
         }
+        if (source.TotalTime != null) {
+            this.TotalTime = new Long(source.TotalTime);
+        }
     }
 
 
@@ -546,6 +572,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Percentage", this.Percentage);
         this.setParamSimple(map, prefix + "ProgressDetail", this.ProgressDetail);
         this.setParamSimple(map, prefix + "DisplayFormat", this.DisplayFormat);
+        this.setParamSimple(map, prefix + "TotalTime", this.TotalTime);
 
     }
 }

@@ -44,7 +44,7 @@ public class TaskResponseInfo extends AbstractModel{
     private String Id;
 
     /**
-    * Computing time in ms
+    * The compute time in ms.
     */
     @SerializedName("UsedTime")
     @Expose
@@ -248,6 +248,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String UiUrl;
 
     /**
+    * The task time in ms.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TotalTime")
+    @Expose
+    private Long TotalTime;
+
+    /**
+    * The program entry parameter for running a task under a Spark job.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CmdArgs")
+    @Expose
+    private String CmdArgs;
+
+    /**
      * Get Database name of the task 
      * @return DatabaseName Database name of the task
      */
@@ -296,16 +312,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Computing time in ms 
-     * @return UsedTime Computing time in ms
+     * Get The compute time in ms. 
+     * @return UsedTime The compute time in ms.
      */
     public Long getUsedTime() {
         return this.UsedTime;
     }
 
     /**
-     * Set Computing time in ms
-     * @param UsedTime Computing time in ms
+     * Set The compute time in ms.
+     * @param UsedTime The compute time in ms.
      */
     public void setUsedTime(Long UsedTime) {
         this.UsedTime = UsedTime;
@@ -787,6 +803,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.UiUrl = UiUrl;
     }
 
+    /**
+     * Get The task time in ms.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TotalTime The task time in ms.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getTotalTime() {
+        return this.TotalTime;
+    }
+
+    /**
+     * Set The task time in ms.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TotalTime The task time in ms.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTotalTime(Long TotalTime) {
+        this.TotalTime = TotalTime;
+    }
+
+    /**
+     * Get The program entry parameter for running a task under a Spark job.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CmdArgs The program entry parameter for running a task under a Spark job.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getCmdArgs() {
+        return this.CmdArgs;
+    }
+
+    /**
+     * Set The program entry parameter for running a task under a Spark job.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CmdArgs The program entry parameter for running a task under a Spark job.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCmdArgs(String CmdArgs) {
+        this.CmdArgs = CmdArgs;
+    }
+
     public TaskResponseInfo() {
     }
 
@@ -885,6 +941,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.UiUrl != null) {
             this.UiUrl = new String(source.UiUrl);
         }
+        if (source.TotalTime != null) {
+            this.TotalTime = new Long(source.TotalTime);
+        }
+        if (source.CmdArgs != null) {
+            this.CmdArgs = new String(source.CmdArgs);
+        }
     }
 
 
@@ -922,6 +984,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "SparkJobId", this.SparkJobId);
         this.setParamSimple(map, prefix + "SparkJobFile", this.SparkJobFile);
         this.setParamSimple(map, prefix + "UiUrl", this.UiUrl);
+        this.setParamSimple(map, prefix + "TotalTime", this.TotalTime);
+        this.setParamSimple(map, prefix + "CmdArgs", this.CmdArgs);
 
     }
 }

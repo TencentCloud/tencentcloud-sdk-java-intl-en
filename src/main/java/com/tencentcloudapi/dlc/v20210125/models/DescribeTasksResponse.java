@@ -37,6 +37,14 @@ public class DescribeTasksResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
+    * The task overview.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TasksOverview")
+    @Expose
+    private TasksOverview TasksOverview;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -76,6 +84,26 @@ public class DescribeTasksResponse extends AbstractModel{
     }
 
     /**
+     * Get The task overview.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TasksOverview The task overview.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public TasksOverview getTasksOverview() {
+        return this.TasksOverview;
+    }
+
+    /**
+     * Set The task overview.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TasksOverview The task overview.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTasksOverview(TasksOverview TasksOverview) {
+        this.TasksOverview = TasksOverview;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -108,6 +136,9 @@ public class DescribeTasksResponse extends AbstractModel{
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.TasksOverview != null) {
+            this.TasksOverview = new TasksOverview(source.TasksOverview);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -120,6 +151,7 @@ public class DescribeTasksResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TaskList.", this.TaskList);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamObj(map, prefix + "TasksOverview.", this.TasksOverview);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

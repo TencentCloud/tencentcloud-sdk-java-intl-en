@@ -65,6 +65,20 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
     private Long ManualBackupCount;
 
     /**
+    * Total capacity of remote backups in the current region
+    */
+    @SerializedName("RemoteBackupVolume")
+    @Expose
+    private Long RemoteBackupVolume;
+
+    /**
+    * Total number of remote backups in the current region
+    */
+    @SerializedName("RemoteBackupCount")
+    @Expose
+    private Long RemoteBackupCount;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -168,6 +182,38 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
     }
 
     /**
+     * Get Total capacity of remote backups in the current region 
+     * @return RemoteBackupVolume Total capacity of remote backups in the current region
+     */
+    public Long getRemoteBackupVolume() {
+        return this.RemoteBackupVolume;
+    }
+
+    /**
+     * Set Total capacity of remote backups in the current region
+     * @param RemoteBackupVolume Total capacity of remote backups in the current region
+     */
+    public void setRemoteBackupVolume(Long RemoteBackupVolume) {
+        this.RemoteBackupVolume = RemoteBackupVolume;
+    }
+
+    /**
+     * Get Total number of remote backups in the current region 
+     * @return RemoteBackupCount Total number of remote backups in the current region
+     */
+    public Long getRemoteBackupCount() {
+        return this.RemoteBackupCount;
+    }
+
+    /**
+     * Set Total number of remote backups in the current region
+     * @param RemoteBackupCount Total number of remote backups in the current region
+     */
+    public void setRemoteBackupCount(Long RemoteBackupCount) {
+        this.RemoteBackupCount = RemoteBackupCount;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -209,6 +255,12 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
         if (source.ManualBackupCount != null) {
             this.ManualBackupCount = new Long(source.ManualBackupCount);
         }
+        if (source.RemoteBackupVolume != null) {
+            this.RemoteBackupVolume = new Long(source.RemoteBackupVolume);
+        }
+        if (source.RemoteBackupCount != null) {
+            this.RemoteBackupCount = new Long(source.RemoteBackupCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -225,6 +277,8 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoBackupCount", this.AutoBackupCount);
         this.setParamSimple(map, prefix + "ManualBackupVolume", this.ManualBackupVolume);
         this.setParamSimple(map, prefix + "ManualBackupCount", this.ManualBackupCount);
+        this.setParamSimple(map, prefix + "RemoteBackupVolume", this.RemoteBackupVolume);
+        this.setParamSimple(map, prefix + "RemoteBackupCount", this.RemoteBackupCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

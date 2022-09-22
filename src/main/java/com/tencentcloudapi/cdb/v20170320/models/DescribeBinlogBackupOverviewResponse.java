@@ -23,18 +23,32 @@ import java.util.HashMap;
 public class DescribeBinlogBackupOverviewResponse extends AbstractModel{
 
     /**
-    * Total capacity of log backups in bytes.
+    * Total capacity of log backups in bytes (including remote log backups)
     */
     @SerializedName("BinlogBackupVolume")
     @Expose
     private Long BinlogBackupVolume;
 
     /**
-    * Total number of log backups.
+    * Total number of log backups (include remote log backups)
     */
     @SerializedName("BinlogBackupCount")
     @Expose
     private Long BinlogBackupCount;
+
+    /**
+    * Capacity of remote log backups in bytes
+    */
+    @SerializedName("RemoteBinlogVolume")
+    @Expose
+    private Long RemoteBinlogVolume;
+
+    /**
+    * Number of remote backups
+    */
+    @SerializedName("RemoteBinlogCount")
+    @Expose
+    private Long RemoteBinlogCount;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +58,67 @@ public class DescribeBinlogBackupOverviewResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Total capacity of log backups in bytes. 
-     * @return BinlogBackupVolume Total capacity of log backups in bytes.
+     * Get Total capacity of log backups in bytes (including remote log backups) 
+     * @return BinlogBackupVolume Total capacity of log backups in bytes (including remote log backups)
      */
     public Long getBinlogBackupVolume() {
         return this.BinlogBackupVolume;
     }
 
     /**
-     * Set Total capacity of log backups in bytes.
-     * @param BinlogBackupVolume Total capacity of log backups in bytes.
+     * Set Total capacity of log backups in bytes (including remote log backups)
+     * @param BinlogBackupVolume Total capacity of log backups in bytes (including remote log backups)
      */
     public void setBinlogBackupVolume(Long BinlogBackupVolume) {
         this.BinlogBackupVolume = BinlogBackupVolume;
     }
 
     /**
-     * Get Total number of log backups. 
-     * @return BinlogBackupCount Total number of log backups.
+     * Get Total number of log backups (include remote log backups) 
+     * @return BinlogBackupCount Total number of log backups (include remote log backups)
      */
     public Long getBinlogBackupCount() {
         return this.BinlogBackupCount;
     }
 
     /**
-     * Set Total number of log backups.
-     * @param BinlogBackupCount Total number of log backups.
+     * Set Total number of log backups (include remote log backups)
+     * @param BinlogBackupCount Total number of log backups (include remote log backups)
      */
     public void setBinlogBackupCount(Long BinlogBackupCount) {
         this.BinlogBackupCount = BinlogBackupCount;
+    }
+
+    /**
+     * Get Capacity of remote log backups in bytes 
+     * @return RemoteBinlogVolume Capacity of remote log backups in bytes
+     */
+    public Long getRemoteBinlogVolume() {
+        return this.RemoteBinlogVolume;
+    }
+
+    /**
+     * Set Capacity of remote log backups in bytes
+     * @param RemoteBinlogVolume Capacity of remote log backups in bytes
+     */
+    public void setRemoteBinlogVolume(Long RemoteBinlogVolume) {
+        this.RemoteBinlogVolume = RemoteBinlogVolume;
+    }
+
+    /**
+     * Get Number of remote backups 
+     * @return RemoteBinlogCount Number of remote backups
+     */
+    public Long getRemoteBinlogCount() {
+        return this.RemoteBinlogCount;
+    }
+
+    /**
+     * Set Number of remote backups
+     * @param RemoteBinlogCount Number of remote backups
+     */
+    public void setRemoteBinlogCount(Long RemoteBinlogCount) {
+        this.RemoteBinlogCount = RemoteBinlogCount;
     }
 
     /**
@@ -105,6 +151,12 @@ public class DescribeBinlogBackupOverviewResponse extends AbstractModel{
         if (source.BinlogBackupCount != null) {
             this.BinlogBackupCount = new Long(source.BinlogBackupCount);
         }
+        if (source.RemoteBinlogVolume != null) {
+            this.RemoteBinlogVolume = new Long(source.RemoteBinlogVolume);
+        }
+        if (source.RemoteBinlogCount != null) {
+            this.RemoteBinlogCount = new Long(source.RemoteBinlogCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -117,6 +169,8 @@ public class DescribeBinlogBackupOverviewResponse extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BinlogBackupVolume", this.BinlogBackupVolume);
         this.setParamSimple(map, prefix + "BinlogBackupCount", this.BinlogBackupCount);
+        this.setParamSimple(map, prefix + "RemoteBinlogVolume", this.RemoteBinlogVolume);
+        this.setParamSimple(map, prefix + "RemoteBinlogCount", this.RemoteBinlogCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

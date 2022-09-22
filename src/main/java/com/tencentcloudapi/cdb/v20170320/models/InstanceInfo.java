@@ -333,6 +333,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private TagInfoItem [] TagList;
 
     /**
+    * Engine type
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EngineType")
+    @Expose
+    private String EngineType;
+
+    /**
+    * Maximum delay threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MaxDelayTime")
+    @Expose
+    private Long MaxDelayTime;
+
+    /**
      * Get Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled) 
      * @return WanStatus Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled)
      */
@@ -1056,6 +1072,46 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.TagList = TagList;
     }
 
+    /**
+     * Get Engine type
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EngineType Engine type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getEngineType() {
+        return this.EngineType;
+    }
+
+    /**
+     * Set Engine type
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EngineType Engine type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEngineType(String EngineType) {
+        this.EngineType = EngineType;
+    }
+
+    /**
+     * Get Maximum delay threshold
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MaxDelayTime Maximum delay threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getMaxDelayTime() {
+        return this.MaxDelayTime;
+    }
+
+    /**
+     * Set Maximum delay threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MaxDelayTime Maximum delay threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMaxDelayTime(Long MaxDelayTime) {
+        this.MaxDelayTime = MaxDelayTime;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1202,6 +1258,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.TagList[i] = new TagInfoItem(source.TagList[i]);
             }
         }
+        if (source.EngineType != null) {
+            this.EngineType = new String(source.EngineType);
+        }
+        if (source.MaxDelayTime != null) {
+            this.MaxDelayTime = new Long(source.MaxDelayTime);
+        }
     }
 
 
@@ -1252,6 +1314,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
+        this.setParamSimple(map, prefix + "EngineType", this.EngineType);
+        this.setParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
 
     }
 }
