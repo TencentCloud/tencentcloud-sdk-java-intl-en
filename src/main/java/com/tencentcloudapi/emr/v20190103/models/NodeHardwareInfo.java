@@ -375,6 +375,38 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String Clients;
 
     /**
+    * The current system time.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CurrentTime")
+    @Expose
+    private String CurrentTime;
+
+    /**
+    * Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsFederation")
+    @Expose
+    private Long IsFederation;
+
+    /**
+    * Device name
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DeviceName")
+    @Expose
+    private String DeviceName;
+
+    /**
+    * Service
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ServiceClient")
+    @Expose
+    private String ServiceClient;
+
+    /**
      * Get User `APPID`
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return AppId User `APPID`
@@ -1254,6 +1286,86 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.Clients = Clients;
     }
 
+    /**
+     * Get The current system time.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CurrentTime The current system time.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getCurrentTime() {
+        return this.CurrentTime;
+    }
+
+    /**
+     * Set The current system time.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CurrentTime The current system time.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCurrentTime(String CurrentTime) {
+        this.CurrentTime = CurrentTime;
+    }
+
+    /**
+     * Get Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsFederation Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getIsFederation() {
+        return this.IsFederation;
+    }
+
+    /**
+     * Set Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsFederation Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIsFederation(Long IsFederation) {
+        this.IsFederation = IsFederation;
+    }
+
+    /**
+     * Get Device name
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DeviceName Device name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDeviceName() {
+        return this.DeviceName;
+    }
+
+    /**
+     * Set Device name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DeviceName Device name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDeviceName(String DeviceName) {
+        this.DeviceName = DeviceName;
+    }
+
+    /**
+     * Get Service
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ServiceClient Service
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getServiceClient() {
+        return this.ServiceClient;
+    }
+
+    /**
+     * Set Service
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ServiceClient Service
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setServiceClient(String ServiceClient) {
+        this.ServiceClient = ServiceClient;
+    }
+
     public NodeHardwareInfo() {
     }
 
@@ -1400,6 +1512,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.Clients != null) {
             this.Clients = new String(source.Clients);
         }
+        if (source.CurrentTime != null) {
+            this.CurrentTime = new String(source.CurrentTime);
+        }
+        if (source.IsFederation != null) {
+            this.IsFederation = new Long(source.IsFederation);
+        }
+        if (source.DeviceName != null) {
+            this.DeviceName = new String(source.DeviceName);
+        }
+        if (source.ServiceClient != null) {
+            this.ServiceClient = new String(source.ServiceClient);
+        }
     }
 
 
@@ -1451,6 +1575,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamObj(map, prefix + "SubnetInfo.", this.SubnetInfo);
         this.setParamSimple(map, prefix + "Clients", this.Clients);
+        this.setParamSimple(map, prefix + "CurrentTime", this.CurrentTime);
+        this.setParamSimple(map, prefix + "IsFederation", this.IsFederation);
+        this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
+        this.setParamSimple(map, prefix + "ServiceClient", this.ServiceClient);
 
     }
 }

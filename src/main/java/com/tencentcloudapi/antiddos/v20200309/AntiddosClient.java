@@ -319,6 +319,26 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add layer-7 forwarding rules.
+     * @param req CreateNewL7RulesRequest
+     * @return CreateNewL7RulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNewL7RulesResponse CreateNewL7Rules(CreateNewL7RulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateNewL7RulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateNewL7RulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateNewL7Rules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to add Anti-DDoS feature filtering rules.
      * @param req CreatePacketFilterConfigRequest
      * @return CreatePacketFilterConfigResponse
@@ -631,6 +651,26 @@ public class AntiddosClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBasicDeviceStatusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeBasicDeviceStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain Anti-DDoS Pro traffic data.
+     * @param req DescribeBgpBizTrendRequest
+     * @return DescribeBgpBizTrendResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBgpBizTrendResponse DescribeBgpBizTrend(DescribeBgpBizTrendRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBgpBizTrendResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBgpBizTrendResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBgpBizTrend");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1133,6 +1173,26 @@ public class AntiddosClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeListWaterPrintConfigResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeListWaterPrintConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to obtain layer-7 forwarding rules.
+     * @param req DescribeNewL7RulesRequest
+     * @return DescribeNewL7RulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNewL7RulesResponse DescribeNewL7Rules(DescribeNewL7RulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeNewL7RulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeNewL7RulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeNewL7Rules");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

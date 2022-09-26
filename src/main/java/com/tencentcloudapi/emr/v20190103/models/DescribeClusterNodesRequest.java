@@ -73,6 +73,20 @@ Note: only the above values are supported for the time being. Entering other val
     private SearchItem [] SearchFields;
 
     /**
+    * None
+    */
+    @SerializedName("OrderField")
+    @Expose
+    private String OrderField;
+
+    /**
+    * None
+    */
+    @SerializedName("Asc")
+    @Expose
+    private Long Asc;
+
+    /**
      * Get Cluster instance ID in the format of emr-xxxxxxxx 
      * @return InstanceId Cluster instance ID in the format of emr-xxxxxxxx
      */
@@ -200,6 +214,38 @@ Note: only the above values are supported for the time being. Entering other val
         this.SearchFields = SearchFields;
     }
 
+    /**
+     * Get None 
+     * @return OrderField None
+     */
+    public String getOrderField() {
+        return this.OrderField;
+    }
+
+    /**
+     * Set None
+     * @param OrderField None
+     */
+    public void setOrderField(String OrderField) {
+        this.OrderField = OrderField;
+    }
+
+    /**
+     * Get None 
+     * @return Asc None
+     */
+    public Long getAsc() {
+        return this.Asc;
+    }
+
+    /**
+     * Set None
+     * @param Asc None
+     */
+    public void setAsc(Long Asc) {
+        this.Asc = Asc;
+    }
+
     public DescribeClusterNodesRequest() {
     }
 
@@ -229,6 +275,12 @@ Note: only the above values are supported for the time being. Entering other val
                 this.SearchFields[i] = new SearchItem(source.SearchFields[i]);
             }
         }
+        if (source.OrderField != null) {
+            this.OrderField = new String(source.OrderField);
+        }
+        if (source.Asc != null) {
+            this.Asc = new Long(source.Asc);
+        }
     }
 
 
@@ -242,6 +294,8 @@ Note: only the above values are supported for the time being. Entering other val
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
         this.setParamArrayObj(map, prefix + "SearchFields.", this.SearchFields);
+        this.setParamSimple(map, prefix + "OrderField", this.OrderField);
+        this.setParamSimple(map, prefix + "Asc", this.Asc);
 
     }
 }

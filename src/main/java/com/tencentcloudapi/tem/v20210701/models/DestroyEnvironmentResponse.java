@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteApplicationResponse extends AbstractModel{
+public class DestroyEnvironmentResponse extends AbstractModel{
 
     /**
     * Returned result.
@@ -68,14 +68,14 @@ public class DeleteApplicationResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DeleteApplicationResponse() {
+    public DestroyEnvironmentResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteApplicationResponse(DeleteApplicationResponse source) {
+    public DestroyEnvironmentResponse(DestroyEnvironmentResponse source) {
         if (source.Result != null) {
             this.Result = new Boolean(source.Result);
         }

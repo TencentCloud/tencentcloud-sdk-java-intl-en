@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteApplicationRequest extends AbstractModel{
 
     /**
-    * Service ID
+    * Application ID.
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -37,7 +37,7 @@ public class DeleteApplicationRequest extends AbstractModel{
     private String EnvironmentId;
 
     /**
-    * Retain as default
+    * Source channel. Please keep the default value.
     */
     @SerializedName("SourceChannel")
     @Expose
@@ -51,16 +51,16 @@ public class DeleteApplicationRequest extends AbstractModel{
     private Boolean DeleteApplicationIfNoRunningVersion;
 
     /**
-     * Get Service ID 
-     * @return ApplicationId Service ID
+     * Get Application ID. 
+     * @return ApplicationId Application ID.
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set Service ID
-     * @param ApplicationId Service ID
+     * Set Application ID.
+     * @param ApplicationId Application ID.
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
@@ -83,16 +83,16 @@ public class DeleteApplicationRequest extends AbstractModel{
     }
 
     /**
-     * Get Retain as default 
-     * @return SourceChannel Retain as default
+     * Get Source channel. Please keep the default value. 
+     * @return SourceChannel Source channel. Please keep the default value.
      */
     public Long getSourceChannel() {
         return this.SourceChannel;
     }
 
     /**
-     * Set Retain as default
-     * @param SourceChannel Retain as default
+     * Set Source channel. Please keep the default value.
+     * @param SourceChannel Source channel. Please keep the default value.
      */
     public void setSourceChannel(Long SourceChannel) {
         this.SourceChannel = SourceChannel;

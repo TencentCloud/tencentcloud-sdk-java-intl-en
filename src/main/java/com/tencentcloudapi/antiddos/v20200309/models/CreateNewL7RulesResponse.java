@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tem.v20210701.models;
+package com.tencentcloudapi.antiddos.v20200309.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteApplicationResponse extends AbstractModel{
+public class CreateNewL7RulesResponse extends AbstractModel{
 
     /**
-    * Returned result.
+    * Success code
     */
-    @SerializedName("Result")
+    @SerializedName("Success")
     @Expose
-    private Boolean Result;
+    private SuccessCode Success;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +37,19 @@ public class DeleteApplicationResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Returned result. 
-     * @return Result Returned result.
+     * Get Success code 
+     * @return Success Success code
      */
-    public Boolean getResult() {
-        return this.Result;
+    public SuccessCode getSuccess() {
+        return this.Success;
     }
 
     /**
-     * Set Returned result.
-     * @param Result Returned result.
+     * Set Success code
+     * @param Success Success code
      */
-    public void setResult(Boolean Result) {
-        this.Result = Result;
+    public void setSuccess(SuccessCode Success) {
+        this.Success = Success;
     }
 
     /**
@@ -68,16 +68,16 @@ public class DeleteApplicationResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DeleteApplicationResponse() {
+    public CreateNewL7RulesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteApplicationResponse(DeleteApplicationResponse source) {
-        if (source.Result != null) {
-            this.Result = new Boolean(source.Result);
+    public CreateNewL7RulesResponse(CreateNewL7RulesResponse source) {
+        if (source.Success != null) {
+            this.Success = new SuccessCode(source.Success);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +89,7 @@ public class DeleteApplicationResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamObj(map, prefix + "Success.", this.Success);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

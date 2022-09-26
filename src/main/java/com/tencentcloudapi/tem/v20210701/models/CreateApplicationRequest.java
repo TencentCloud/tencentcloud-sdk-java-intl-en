@@ -37,21 +37,21 @@ public class CreateApplicationRequest extends AbstractModel{
     private String Description;
 
     /**
-    * Whether to use the default image service. 1: yes; 0: no
+    * Whether to use the default image service. `1`: yes; `0`: no
     */
     @SerializedName("UseDefaultImageService")
     @Expose
     private Long UseDefaultImageService;
 
     /**
-    * Type of the bound repository. 0: Personal Edition; 1: Enterprise Edition
+    * Type of the bound repository. `0`: TCR Personal; `1`: TCR Enterprise
     */
     @SerializedName("RepoType")
     @Expose
     private Long RepoType;
 
     /**
-    * Instance ID of Enterprise Edition image service
+    * TCR Enterprise instance ID
     */
     @SerializedName("InstanceId")
     @Expose
@@ -105,11 +105,18 @@ public class CreateApplicationRequest extends AbstractModel{
     private String DeployMode;
 
     /**
-    * Whether to enable the call chain feature
+    * Whether to enable APM tracing for the Java application. `1`: Enable, `0`: Disable
     */
     @SerializedName("EnableTracing")
     @Expose
     private Long EnableTracing;
+
+    /**
+    * Parameters of the default image service
+    */
+    @SerializedName("UseDefaultImageServiceParameters")
+    @Expose
+    private UseDefaultRepoParameters UseDefaultImageServiceParameters;
 
     /**
      * Get Application name 
@@ -144,48 +151,48 @@ public class CreateApplicationRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to use the default image service. 1: yes; 0: no 
-     * @return UseDefaultImageService Whether to use the default image service. 1: yes; 0: no
+     * Get Whether to use the default image service. `1`: yes; `0`: no 
+     * @return UseDefaultImageService Whether to use the default image service. `1`: yes; `0`: no
      */
     public Long getUseDefaultImageService() {
         return this.UseDefaultImageService;
     }
 
     /**
-     * Set Whether to use the default image service. 1: yes; 0: no
-     * @param UseDefaultImageService Whether to use the default image service. 1: yes; 0: no
+     * Set Whether to use the default image service. `1`: yes; `0`: no
+     * @param UseDefaultImageService Whether to use the default image service. `1`: yes; `0`: no
      */
     public void setUseDefaultImageService(Long UseDefaultImageService) {
         this.UseDefaultImageService = UseDefaultImageService;
     }
 
     /**
-     * Get Type of the bound repository. 0: Personal Edition; 1: Enterprise Edition 
-     * @return RepoType Type of the bound repository. 0: Personal Edition; 1: Enterprise Edition
+     * Get Type of the bound repository. `0`: TCR Personal; `1`: TCR Enterprise 
+     * @return RepoType Type of the bound repository. `0`: TCR Personal; `1`: TCR Enterprise
      */
     public Long getRepoType() {
         return this.RepoType;
     }
 
     /**
-     * Set Type of the bound repository. 0: Personal Edition; 1: Enterprise Edition
-     * @param RepoType Type of the bound repository. 0: Personal Edition; 1: Enterprise Edition
+     * Set Type of the bound repository. `0`: TCR Personal; `1`: TCR Enterprise
+     * @param RepoType Type of the bound repository. `0`: TCR Personal; `1`: TCR Enterprise
      */
     public void setRepoType(Long RepoType) {
         this.RepoType = RepoType;
     }
 
     /**
-     * Get Instance ID of Enterprise Edition image service 
-     * @return InstanceId Instance ID of Enterprise Edition image service
+     * Get TCR Enterprise instance ID 
+     * @return InstanceId TCR Enterprise instance ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID of Enterprise Edition image service
-     * @param InstanceId Instance ID of Enterprise Edition image service
+     * Set TCR Enterprise instance ID
+     * @param InstanceId TCR Enterprise instance ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -308,19 +315,35 @@ public class CreateApplicationRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to enable the call chain feature 
-     * @return EnableTracing Whether to enable the call chain feature
+     * Get Whether to enable APM tracing for the Java application. `1`: Enable, `0`: Disable 
+     * @return EnableTracing Whether to enable APM tracing for the Java application. `1`: Enable, `0`: Disable
      */
     public Long getEnableTracing() {
         return this.EnableTracing;
     }
 
     /**
-     * Set Whether to enable the call chain feature
-     * @param EnableTracing Whether to enable the call chain feature
+     * Set Whether to enable APM tracing for the Java application. `1`: Enable, `0`: Disable
+     * @param EnableTracing Whether to enable APM tracing for the Java application. `1`: Enable, `0`: Disable
      */
     public void setEnableTracing(Long EnableTracing) {
         this.EnableTracing = EnableTracing;
+    }
+
+    /**
+     * Get Parameters of the default image service 
+     * @return UseDefaultImageServiceParameters Parameters of the default image service
+     */
+    public UseDefaultRepoParameters getUseDefaultImageServiceParameters() {
+        return this.UseDefaultImageServiceParameters;
+    }
+
+    /**
+     * Set Parameters of the default image service
+     * @param UseDefaultImageServiceParameters Parameters of the default image service
+     */
+    public void setUseDefaultImageServiceParameters(UseDefaultRepoParameters UseDefaultImageServiceParameters) {
+        this.UseDefaultImageServiceParameters = UseDefaultImageServiceParameters;
     }
 
     public CreateApplicationRequest() {
@@ -370,6 +393,9 @@ public class CreateApplicationRequest extends AbstractModel{
         if (source.EnableTracing != null) {
             this.EnableTracing = new Long(source.EnableTracing);
         }
+        if (source.UseDefaultImageServiceParameters != null) {
+            this.UseDefaultImageServiceParameters = new UseDefaultRepoParameters(source.UseDefaultImageServiceParameters);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class CreateApplicationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CodingLanguage", this.CodingLanguage);
         this.setParamSimple(map, prefix + "DeployMode", this.DeployMode);
         this.setParamSimple(map, prefix + "EnableTracing", this.EnableTracing);
+        this.setParamObj(map, prefix + "UseDefaultImageServiceParameters.", this.UseDefaultImageServiceParameters);
 
     }
 }

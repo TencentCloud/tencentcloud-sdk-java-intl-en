@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateApplicationResponse extends AbstractModel{
 
     /**
-    * Service code
+    * ID of the created application
     */
     @SerializedName("Result")
     @Expose
@@ -37,16 +37,16 @@ public class CreateApplicationResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Service code 
-     * @return Result Service code
+     * Get ID of the created application 
+     * @return Result ID of the created application
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set Service code
-     * @param Result Service code
+     * Set ID of the created application
+     * @param Result ID of the created application
      */
     public void setResult(String Result) {
         this.Result = Result;

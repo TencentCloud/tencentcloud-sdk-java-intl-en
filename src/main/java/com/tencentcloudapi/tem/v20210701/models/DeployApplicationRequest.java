@@ -317,11 +317,40 @@ If `konajdk` is selected, the value can be:
     private EnablePrometheusConf EnablePrometheusConf;
 
     /**
-    * `1`: Enable APM collection; `0`: Disable APM collection
+    * `1`: Enable APM tracing (Skywalking)
+`0`: Disable APM tracing
     */
     @SerializedName("EnableTracing")
     @Expose
     private Long EnableTracing;
+
+    /**
+    * 
+    */
+    @SerializedName("EnableMetrics")
+    @Expose
+    private Long EnableMetrics;
+
+    /**
+    * 
+    */
+    @SerializedName("TcrInstanceId")
+    @Expose
+    private String TcrInstanceId;
+
+    /**
+    * 
+    */
+    @SerializedName("RepoServer")
+    @Expose
+    private String RepoServer;
+
+    /**
+    * 
+    */
+    @SerializedName("RepoType")
+    @Expose
+    private Long RepoType;
 
     /**
      * Get Application ID 
@@ -1020,19 +1049,87 @@ If `konajdk` is selected, the value can be:
     }
 
     /**
-     * Get `1`: Enable APM collection; `0`: Disable APM collection 
-     * @return EnableTracing `1`: Enable APM collection; `0`: Disable APM collection
+     * Get `1`: Enable APM tracing (Skywalking)
+`0`: Disable APM tracing 
+     * @return EnableTracing `1`: Enable APM tracing (Skywalking)
+`0`: Disable APM tracing
      */
     public Long getEnableTracing() {
         return this.EnableTracing;
     }
 
     /**
-     * Set `1`: Enable APM collection; `0`: Disable APM collection
-     * @param EnableTracing `1`: Enable APM collection; `0`: Disable APM collection
+     * Set `1`: Enable APM tracing (Skywalking)
+`0`: Disable APM tracing
+     * @param EnableTracing `1`: Enable APM tracing (Skywalking)
+`0`: Disable APM tracing
      */
     public void setEnableTracing(Long EnableTracing) {
         this.EnableTracing = EnableTracing;
+    }
+
+    /**
+     * Get  
+     * @return EnableMetrics 
+     */
+    public Long getEnableMetrics() {
+        return this.EnableMetrics;
+    }
+
+    /**
+     * Set 
+     * @param EnableMetrics 
+     */
+    public void setEnableMetrics(Long EnableMetrics) {
+        this.EnableMetrics = EnableMetrics;
+    }
+
+    /**
+     * Get  
+     * @return TcrInstanceId 
+     */
+    public String getTcrInstanceId() {
+        return this.TcrInstanceId;
+    }
+
+    /**
+     * Set 
+     * @param TcrInstanceId 
+     */
+    public void setTcrInstanceId(String TcrInstanceId) {
+        this.TcrInstanceId = TcrInstanceId;
+    }
+
+    /**
+     * Get  
+     * @return RepoServer 
+     */
+    public String getRepoServer() {
+        return this.RepoServer;
+    }
+
+    /**
+     * Set 
+     * @param RepoServer 
+     */
+    public void setRepoServer(String RepoServer) {
+        this.RepoServer = RepoServer;
+    }
+
+    /**
+     * Get  
+     * @return RepoType 
+     */
+    public Long getRepoType() {
+        return this.RepoType;
+    }
+
+    /**
+     * Set 
+     * @param RepoType 
+     */
+    public void setRepoType(Long RepoType) {
+        this.RepoType = RepoType;
     }
 
     public DeployApplicationRequest() {
@@ -1193,6 +1290,18 @@ If `konajdk` is selected, the value can be:
         if (source.EnableTracing != null) {
             this.EnableTracing = new Long(source.EnableTracing);
         }
+        if (source.EnableMetrics != null) {
+            this.EnableMetrics = new Long(source.EnableMetrics);
+        }
+        if (source.TcrInstanceId != null) {
+            this.TcrInstanceId = new String(source.TcrInstanceId);
+        }
+        if (source.RepoServer != null) {
+            this.RepoServer = new String(source.RepoServer);
+        }
+        if (source.RepoType != null) {
+            this.RepoType = new Long(source.RepoType);
+        }
     }
 
 
@@ -1241,6 +1350,10 @@ If `konajdk` is selected, the value can be:
         this.setParamSimple(map, prefix + "OsFlavour", this.OsFlavour);
         this.setParamObj(map, prefix + "EnablePrometheusConf.", this.EnablePrometheusConf);
         this.setParamSimple(map, prefix + "EnableTracing", this.EnableTracing);
+        this.setParamSimple(map, prefix + "EnableMetrics", this.EnableMetrics);
+        this.setParamSimple(map, prefix + "TcrInstanceId", this.TcrInstanceId);
+        this.setParamSimple(map, prefix + "RepoServer", this.RepoServer);
+        this.setParamSimple(map, prefix + "RepoType", this.RepoType);
 
     }
 }

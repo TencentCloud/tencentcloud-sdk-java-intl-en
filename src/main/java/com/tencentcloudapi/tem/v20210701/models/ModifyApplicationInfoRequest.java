@@ -44,7 +44,7 @@ public class ModifyApplicationInfoRequest extends AbstractModel{
     private Long SourceChannel;
 
     /**
-    * Whether to enable the call chain. Valid values: `0`: disable; `1`: enable
+    * (Disused) Whether to enable the call chain. 
     */
     @SerializedName("EnableTracing")
     @Expose
@@ -99,16 +99,16 @@ public class ModifyApplicationInfoRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to enable the call chain. Valid values: `0`: disable; `1`: enable 
-     * @return EnableTracing Whether to enable the call chain. Valid values: `0`: disable; `1`: enable
+     * Get (Disused) Whether to enable the call chain.  
+     * @return EnableTracing (Disused) Whether to enable the call chain. 
      */
     public Long getEnableTracing() {
         return this.EnableTracing;
     }
 
     /**
-     * Set Whether to enable the call chain. Valid values: `0`: disable; `1`: enable
-     * @param EnableTracing Whether to enable the call chain. Valid values: `0`: disable; `1`: enable
+     * Set (Disused) Whether to enable the call chain. 
+     * @param EnableTracing (Disused) Whether to enable the call chain. 
      */
     public void setEnableTracing(Long EnableTracing) {
         this.EnableTracing = EnableTracing;

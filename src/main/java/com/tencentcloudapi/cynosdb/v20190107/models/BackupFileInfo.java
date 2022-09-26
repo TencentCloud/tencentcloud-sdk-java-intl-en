@@ -23,42 +23,42 @@ import java.util.HashMap;
 public class BackupFileInfo extends AbstractModel{
 
     /**
-    * Snapshot file ID used for rollback
+    * Snapshot file ID, which is deprecated. You need to use `BackupId`.
     */
     @SerializedName("SnapshotId")
     @Expose
     private Long SnapshotId;
 
     /**
-    * Snapshot file name
+    * Backup file name
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * Snapshot file size
+    * Backup file size
     */
     @SerializedName("FileSize")
     @Expose
     private Long FileSize;
 
     /**
-    * Snapshot backup start time
+    * Backup start time
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Snapshot backup end time
+    * Backup end time
     */
     @SerializedName("FinishTime")
     @Expose
     private String FinishTime;
 
     /**
-    * Backup type. snapshot: snapshot backup; timepoint: time point backup
+    * Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
     */
     @SerializedName("BackupType")
     @Expose
@@ -86,96 +86,119 @@ public class BackupFileInfo extends AbstractModel{
     private String SnapshotTime;
 
     /**
-     * Get Snapshot file ID used for rollback 
-     * @return SnapshotId Snapshot file ID used for rollback
+    * Backup ID
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BackupId")
+    @Expose
+    private Long BackupId;
+
+    /**
+    * 
+    */
+    @SerializedName("SnapShotType")
+    @Expose
+    private String SnapShotType;
+
+    /**
+    * Backup file alias
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BackupName")
+    @Expose
+    private String BackupName;
+
+    /**
+     * Get Snapshot file ID, which is deprecated. You need to use `BackupId`. 
+     * @return SnapshotId Snapshot file ID, which is deprecated. You need to use `BackupId`.
      */
     public Long getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set Snapshot file ID used for rollback
-     * @param SnapshotId Snapshot file ID used for rollback
+     * Set Snapshot file ID, which is deprecated. You need to use `BackupId`.
+     * @param SnapshotId Snapshot file ID, which is deprecated. You need to use `BackupId`.
      */
     public void setSnapshotId(Long SnapshotId) {
         this.SnapshotId = SnapshotId;
     }
 
     /**
-     * Get Snapshot file name 
-     * @return FileName Snapshot file name
+     * Get Backup file name 
+     * @return FileName Backup file name
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set Snapshot file name
-     * @param FileName Snapshot file name
+     * Set Backup file name
+     * @param FileName Backup file name
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get Snapshot file size 
-     * @return FileSize Snapshot file size
+     * Get Backup file size 
+     * @return FileSize Backup file size
      */
     public Long getFileSize() {
         return this.FileSize;
     }
 
     /**
-     * Set Snapshot file size
-     * @param FileSize Snapshot file size
+     * Set Backup file size
+     * @param FileSize Backup file size
      */
     public void setFileSize(Long FileSize) {
         this.FileSize = FileSize;
     }
 
     /**
-     * Get Snapshot backup start time 
-     * @return StartTime Snapshot backup start time
+     * Get Backup start time 
+     * @return StartTime Backup start time
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Snapshot backup start time
-     * @param StartTime Snapshot backup start time
+     * Set Backup start time
+     * @param StartTime Backup start time
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Snapshot backup end time 
-     * @return FinishTime Snapshot backup end time
+     * Get Backup end time 
+     * @return FinishTime Backup end time
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set Snapshot backup end time
-     * @param FinishTime Snapshot backup end time
+     * Set Backup end time
+     * @param FinishTime Backup end time
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;
     }
 
     /**
-     * Get Backup type. snapshot: snapshot backup; timepoint: time point backup 
-     * @return BackupType Backup type. snapshot: snapshot backup; timepoint: time point backup
+     * Get Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup). 
+     * @return BackupType Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
      */
     public String getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set Backup type. snapshot: snapshot backup; timepoint: time point backup
-     * @param BackupType Backup type. snapshot: snapshot backup; timepoint: time point backup
+     * Set Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
+     * @param BackupType Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
      */
     public void setBackupType(String BackupType) {
         this.BackupType = BackupType;
@@ -229,6 +252,62 @@ public class BackupFileInfo extends AbstractModel{
         this.SnapshotTime = SnapshotTime;
     }
 
+    /**
+     * Get Backup ID
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BackupId Backup ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getBackupId() {
+        return this.BackupId;
+    }
+
+    /**
+     * Set Backup ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BackupId Backup ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBackupId(Long BackupId) {
+        this.BackupId = BackupId;
+    }
+
+    /**
+     * Get  
+     * @return SnapShotType 
+     */
+    public String getSnapShotType() {
+        return this.SnapShotType;
+    }
+
+    /**
+     * Set 
+     * @param SnapShotType 
+     */
+    public void setSnapShotType(String SnapShotType) {
+        this.SnapShotType = SnapShotType;
+    }
+
+    /**
+     * Get Backup file alias
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BackupName Backup file alias
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getBackupName() {
+        return this.BackupName;
+    }
+
+    /**
+     * Set Backup file alias
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BackupName Backup file alias
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBackupName(String BackupName) {
+        this.BackupName = BackupName;
+    }
+
     public BackupFileInfo() {
     }
 
@@ -264,6 +343,15 @@ public class BackupFileInfo extends AbstractModel{
         if (source.SnapshotTime != null) {
             this.SnapshotTime = new String(source.SnapshotTime);
         }
+        if (source.BackupId != null) {
+            this.BackupId = new Long(source.BackupId);
+        }
+        if (source.SnapShotType != null) {
+            this.SnapShotType = new String(source.SnapShotType);
+        }
+        if (source.BackupName != null) {
+            this.BackupName = new String(source.BackupName);
+        }
     }
 
 
@@ -280,6 +368,9 @@ public class BackupFileInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
         this.setParamSimple(map, prefix + "BackupStatus", this.BackupStatus);
         this.setParamSimple(map, prefix + "SnapshotTime", this.SnapshotTime);
+        this.setParamSimple(map, prefix + "BackupId", this.BackupId);
+        this.setParamSimple(map, prefix + "SnapShotType", this.SnapShotType);
+        this.setParamSimple(map, prefix + "BackupName", this.BackupName);
 
     }
 }

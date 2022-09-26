@@ -30,14 +30,14 @@ public class DescribeBackupListRequest extends AbstractModel{
     private String ClusterId;
 
     /**
-    * Backup file list offset
+    * The number of results to be returned. Value range: (0,100]
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Backup file list start
+    * Record offset. Value range: [0,INF)
     */
     @SerializedName("Offset")
     @Expose
@@ -50,6 +50,62 @@ public class DescribeBackupListRequest extends AbstractModel{
     @SerializedName("DbType")
     @Expose
     private String DbType;
+
+    /**
+    * Backup ID
+    */
+    @SerializedName("BackupIds")
+    @Expose
+    private Long [] BackupIds;
+
+    /**
+    * Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
+    */
+    @SerializedName("BackupType")
+    @Expose
+    private String BackupType;
+
+    /**
+    * Back mode. Valid values: `auto` (automatic backup), `manual` (manual backup)
+    */
+    @SerializedName("BackupMethod")
+    @Expose
+    private String BackupMethod;
+
+    /**
+    * 
+    */
+    @SerializedName("SnapShotType")
+    @Expose
+    private String SnapShotType;
+
+    /**
+    * Backup start time
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * Backup end time
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
+    * 
+    */
+    @SerializedName("FileNames")
+    @Expose
+    private String [] FileNames;
+
+    /**
+    * Backup alias, which supports fuzzy query.
+    */
+    @SerializedName("BackupNames")
+    @Expose
+    private String [] BackupNames;
 
     /**
      * Get Cluster ID 
@@ -68,32 +124,32 @@ public class DescribeBackupListRequest extends AbstractModel{
     }
 
     /**
-     * Get Backup file list offset 
-     * @return Limit Backup file list offset
+     * Get The number of results to be returned. Value range: (0,100] 
+     * @return Limit The number of results to be returned. Value range: (0,100]
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Backup file list offset
-     * @param Limit Backup file list offset
+     * Set The number of results to be returned. Value range: (0,100]
+     * @param Limit The number of results to be returned. Value range: (0,100]
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Backup file list start 
-     * @return Offset Backup file list start
+     * Get Record offset. Value range: [0,INF) 
+     * @return Offset Record offset. Value range: [0,INF)
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Backup file list start
-     * @param Offset Backup file list start
+     * Set Record offset. Value range: [0,INF)
+     * @param Offset Record offset. Value range: [0,INF)
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -119,6 +175,134 @@ public class DescribeBackupListRequest extends AbstractModel{
         this.DbType = DbType;
     }
 
+    /**
+     * Get Backup ID 
+     * @return BackupIds Backup ID
+     */
+    public Long [] getBackupIds() {
+        return this.BackupIds;
+    }
+
+    /**
+     * Set Backup ID
+     * @param BackupIds Backup ID
+     */
+    public void setBackupIds(Long [] BackupIds) {
+        this.BackupIds = BackupIds;
+    }
+
+    /**
+     * Get Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup). 
+     * @return BackupType Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
+     */
+    public String getBackupType() {
+        return this.BackupType;
+    }
+
+    /**
+     * Set Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
+     * @param BackupType Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
+     */
+    public void setBackupType(String BackupType) {
+        this.BackupType = BackupType;
+    }
+
+    /**
+     * Get Back mode. Valid values: `auto` (automatic backup), `manual` (manual backup) 
+     * @return BackupMethod Back mode. Valid values: `auto` (automatic backup), `manual` (manual backup)
+     */
+    public String getBackupMethod() {
+        return this.BackupMethod;
+    }
+
+    /**
+     * Set Back mode. Valid values: `auto` (automatic backup), `manual` (manual backup)
+     * @param BackupMethod Back mode. Valid values: `auto` (automatic backup), `manual` (manual backup)
+     */
+    public void setBackupMethod(String BackupMethod) {
+        this.BackupMethod = BackupMethod;
+    }
+
+    /**
+     * Get  
+     * @return SnapShotType 
+     */
+    public String getSnapShotType() {
+        return this.SnapShotType;
+    }
+
+    /**
+     * Set 
+     * @param SnapShotType 
+     */
+    public void setSnapShotType(String SnapShotType) {
+        this.SnapShotType = SnapShotType;
+    }
+
+    /**
+     * Get Backup start time 
+     * @return StartTime Backup start time
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set Backup start time
+     * @param StartTime Backup start time
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get Backup end time 
+     * @return EndTime Backup end time
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set Backup end time
+     * @param EndTime Backup end time
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
+     * Get  
+     * @return FileNames 
+     */
+    public String [] getFileNames() {
+        return this.FileNames;
+    }
+
+    /**
+     * Set 
+     * @param FileNames 
+     */
+    public void setFileNames(String [] FileNames) {
+        this.FileNames = FileNames;
+    }
+
+    /**
+     * Get Backup alias, which supports fuzzy query. 
+     * @return BackupNames Backup alias, which supports fuzzy query.
+     */
+    public String [] getBackupNames() {
+        return this.BackupNames;
+    }
+
+    /**
+     * Set Backup alias, which supports fuzzy query.
+     * @param BackupNames Backup alias, which supports fuzzy query.
+     */
+    public void setBackupNames(String [] BackupNames) {
+        this.BackupNames = BackupNames;
+    }
+
     public DescribeBackupListRequest() {
     }
 
@@ -139,6 +323,39 @@ public class DescribeBackupListRequest extends AbstractModel{
         if (source.DbType != null) {
             this.DbType = new String(source.DbType);
         }
+        if (source.BackupIds != null) {
+            this.BackupIds = new Long[source.BackupIds.length];
+            for (int i = 0; i < source.BackupIds.length; i++) {
+                this.BackupIds[i] = new Long(source.BackupIds[i]);
+            }
+        }
+        if (source.BackupType != null) {
+            this.BackupType = new String(source.BackupType);
+        }
+        if (source.BackupMethod != null) {
+            this.BackupMethod = new String(source.BackupMethod);
+        }
+        if (source.SnapShotType != null) {
+            this.SnapShotType = new String(source.SnapShotType);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.FileNames != null) {
+            this.FileNames = new String[source.FileNames.length];
+            for (int i = 0; i < source.FileNames.length; i++) {
+                this.FileNames[i] = new String(source.FileNames[i]);
+            }
+        }
+        if (source.BackupNames != null) {
+            this.BackupNames = new String[source.BackupNames.length];
+            for (int i = 0; i < source.BackupNames.length; i++) {
+                this.BackupNames[i] = new String(source.BackupNames[i]);
+            }
+        }
     }
 
 
@@ -150,6 +367,14 @@ public class DescribeBackupListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "DbType", this.DbType);
+        this.setParamArraySimple(map, prefix + "BackupIds.", this.BackupIds);
+        this.setParamSimple(map, prefix + "BackupType", this.BackupType);
+        this.setParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
+        this.setParamSimple(map, prefix + "SnapShotType", this.SnapShotType);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamArraySimple(map, prefix + "FileNames.", this.FileNames);
+        this.setParamArraySimple(map, prefix + "BackupNames.", this.BackupNames);
 
     }
 }

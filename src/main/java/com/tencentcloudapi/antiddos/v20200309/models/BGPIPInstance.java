@@ -201,7 +201,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private AnycastOutPackRelation AnycastOutPackRelation;
 
     /**
-    * 
+    * Edition of the instance
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("InstanceVersion")
     @Expose
@@ -656,16 +657,20 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get  
-     * @return InstanceVersion 
+     * Get Edition of the instance
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return InstanceVersion Edition of the instance
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Long getInstanceVersion() {
         return this.InstanceVersion;
     }
 
     /**
-     * Set 
-     * @param InstanceVersion 
+     * Set Edition of the instance
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param InstanceVersion Edition of the instance
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setInstanceVersion(Long InstanceVersion) {
         this.InstanceVersion = InstanceVersion;

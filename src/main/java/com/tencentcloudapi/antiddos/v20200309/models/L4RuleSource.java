@@ -45,6 +45,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long Port;
 
     /**
+    * Secondary origin server. `1`: secondary origin server; `0`: general origin server.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Backup")
+    @Expose
+    private Long Backup;
+
+    /**
      * Get IP or domain name for forwarding. 
      * @return Source IP or domain name for forwarding.
      */
@@ -96,6 +104,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.Port = Port;
     }
 
+    /**
+     * Get Secondary origin server. `1`: secondary origin server; `0`: general origin server.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Backup Secondary origin server. `1`: secondary origin server; `0`: general origin server.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getBackup() {
+        return this.Backup;
+    }
+
+    /**
+     * Set Secondary origin server. `1`: secondary origin server; `0`: general origin server.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Backup Secondary origin server. `1`: secondary origin server; `0`: general origin server.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setBackup(Long Backup) {
+        this.Backup = Backup;
+    }
+
     public L4RuleSource() {
     }
 
@@ -113,6 +141,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.Port != null) {
             this.Port = new Long(source.Port);
         }
+        if (source.Backup != null) {
+            this.Backup = new Long(source.Backup);
+        }
     }
 
 
@@ -123,6 +154,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamSimple(map, prefix + "Weight", this.Weight);
         this.setParamSimple(map, prefix + "Port", this.Port);
+        this.setParamSimple(map, prefix + "Backup", this.Backup);
 
     }
 }

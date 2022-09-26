@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateAccountRequest extends AbstractModel{
 
     /**
-    * Account type of a new customer. Valid value: `business`.
+    * Account type of a new customer. Valid values: `personal`, `company`.
     */
     @SerializedName("AccountType")
     @Expose
@@ -83,16 +83,16 @@ A global mobile number within 1-32 digits is allowed, such as 18888888888.
     private String Extended;
 
     /**
-     * Get Account type of a new customer. Valid value: `business`. 
-     * @return AccountType Account type of a new customer. Valid value: `business`.
+     * Get Account type of a new customer. Valid values: `personal`, `company`. 
+     * @return AccountType Account type of a new customer. Valid values: `personal`, `company`.
      */
     public String getAccountType() {
         return this.AccountType;
     }
 
     /**
-     * Set Account type of a new customer. Valid value: `business`.
-     * @param AccountType Account type of a new customer. Valid value: `business`.
+     * Set Account type of a new customer. Valid values: `personal`, `company`.
+     * @param AccountType Account type of a new customer. Valid values: `personal`, `company`.
      */
     public void setAccountType(String AccountType) {
         this.AccountType = AccountType;
