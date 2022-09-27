@@ -23,23 +23,78 @@ import java.util.HashMap;
 public class DescribeGeneralResourceQuotasRequest extends AbstractModel{
 
     /**
-    * List of resource names. Valid values: USER_KEY_PAIR, INSTANCE, SNAPSHOT.
+    * Resource name list. Values:
+- `GENERAL_BUNDLE_INSTANCE`: General bundle
+- `STORAGE_BUNDLE_INSTANCE`:  Storage bundle 
+- `ENTERPRISE_BUNDLE_INSTANCE`: Enterprise bundle 
+- `EXCLUSIVE_BUNDLE_INSTANCE`： Dedicated bundle
+- `BEFAST_BUNDLE_INSTANCE`: BeFast bundle
+- `USER_KEY_PAIR`: Key pair
+- `SNAPSHOT`: Snapshot
+- `BLUEPRINT`: Custom image
+- `FREE_BLUEPRINT`: Free custom image
+- `DATA_DISK`: Data disk
+- `FIREWALL_RULE`: Firewall rules
     */
     @SerializedName("ResourceNames")
     @Expose
     private String [] ResourceNames;
 
     /**
-     * Get List of resource names. Valid values: USER_KEY_PAIR, INSTANCE, SNAPSHOT. 
-     * @return ResourceNames List of resource names. Valid values: USER_KEY_PAIR, INSTANCE, SNAPSHOT.
+     * Get Resource name list. Values:
+- `GENERAL_BUNDLE_INSTANCE`: General bundle
+- `STORAGE_BUNDLE_INSTANCE`:  Storage bundle 
+- `ENTERPRISE_BUNDLE_INSTANCE`: Enterprise bundle 
+- `EXCLUSIVE_BUNDLE_INSTANCE`： Dedicated bundle
+- `BEFAST_BUNDLE_INSTANCE`: BeFast bundle
+- `USER_KEY_PAIR`: Key pair
+- `SNAPSHOT`: Snapshot
+- `BLUEPRINT`: Custom image
+- `FREE_BLUEPRINT`: Free custom image
+- `DATA_DISK`: Data disk
+- `FIREWALL_RULE`: Firewall rules 
+     * @return ResourceNames Resource name list. Values:
+- `GENERAL_BUNDLE_INSTANCE`: General bundle
+- `STORAGE_BUNDLE_INSTANCE`:  Storage bundle 
+- `ENTERPRISE_BUNDLE_INSTANCE`: Enterprise bundle 
+- `EXCLUSIVE_BUNDLE_INSTANCE`： Dedicated bundle
+- `BEFAST_BUNDLE_INSTANCE`: BeFast bundle
+- `USER_KEY_PAIR`: Key pair
+- `SNAPSHOT`: Snapshot
+- `BLUEPRINT`: Custom image
+- `FREE_BLUEPRINT`: Free custom image
+- `DATA_DISK`: Data disk
+- `FIREWALL_RULE`: Firewall rules
      */
     public String [] getResourceNames() {
         return this.ResourceNames;
     }
 
     /**
-     * Set List of resource names. Valid values: USER_KEY_PAIR, INSTANCE, SNAPSHOT.
-     * @param ResourceNames List of resource names. Valid values: USER_KEY_PAIR, INSTANCE, SNAPSHOT.
+     * Set Resource name list. Values:
+- `GENERAL_BUNDLE_INSTANCE`: General bundle
+- `STORAGE_BUNDLE_INSTANCE`:  Storage bundle 
+- `ENTERPRISE_BUNDLE_INSTANCE`: Enterprise bundle 
+- `EXCLUSIVE_BUNDLE_INSTANCE`： Dedicated bundle
+- `BEFAST_BUNDLE_INSTANCE`: BeFast bundle
+- `USER_KEY_PAIR`: Key pair
+- `SNAPSHOT`: Snapshot
+- `BLUEPRINT`: Custom image
+- `FREE_BLUEPRINT`: Free custom image
+- `DATA_DISK`: Data disk
+- `FIREWALL_RULE`: Firewall rules
+     * @param ResourceNames Resource name list. Values:
+- `GENERAL_BUNDLE_INSTANCE`: General bundle
+- `STORAGE_BUNDLE_INSTANCE`:  Storage bundle 
+- `ENTERPRISE_BUNDLE_INSTANCE`: Enterprise bundle 
+- `EXCLUSIVE_BUNDLE_INSTANCE`： Dedicated bundle
+- `BEFAST_BUNDLE_INSTANCE`: BeFast bundle
+- `USER_KEY_PAIR`: Key pair
+- `SNAPSHOT`: Snapshot
+- `BLUEPRINT`: Custom image
+- `FREE_BLUEPRINT`: Free custom image
+- `DATA_DISK`: Data disk
+- `FIREWALL_RULE`: Firewall rules
      */
     public void setResourceNames(String [] ResourceNames) {
         this.ResourceNames = ResourceNames;

@@ -614,11 +614,9 @@ The snapshot must be in `NORMAL` status. To query the status of a snapshot, you 
 * A VNC URL is only valid for 15 seconds. If you do not access the URL within 15 seconds, you will need to query another one.
 * The VNC URL can be used once only. You need to query a new one if you want to log in again.
 * Up to 30 re-connection attempts allowed in one minute.
+* `InstanceVncUrl`: Its value will be returned after the API is successfully called.
 After you get the value of `InstanceVncUrl`, you need to append `InstanceVncUrl=xxxx` to the end of the link `https://img.qcloud.com/qcloud/app/active_vnc/index.html?`.
-
-  - `InstanceVncUrl`: Its value will be returned after the API is successfully called.
-
-    The final URL can be in the following formats:
+ The final URL can be in the following formats:
 
 ```
 https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F%2Fbjvnc.qcloud.com%3A26789%2Fvnc%3Fs%3DaHpjWnRVMFNhYmxKdDM5MjRHNlVTSVQwajNUSW0wb2tBbmFtREFCTmFrcy8vUUNPMG0wSHZNOUUxRm5PMmUzWmFDcWlOdDJIbUJxSTZDL0RXcHZxYnZZMmRkWWZWcEZia2lyb09XMzdKNmM9
@@ -1054,7 +1052,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
-     *This API is used to query the price of renewed instance.
+     *This API is used to query the price of renewing one or more instances.
      * @param req InquirePriceRenewInstancesRequest
      * @return InquirePriceRenewInstancesResponse
      * @throws TencentCloudSDKException

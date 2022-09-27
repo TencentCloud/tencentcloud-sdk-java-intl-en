@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateInstancesRequest extends AbstractModel{
 
     /**
-    * ID of the Lighthouse package
+    * Bundle ID.
     */
     @SerializedName("BundleId")
     @Expose
     private String BundleId;
 
     /**
-    * ID of the Lighthouse image
+    * Image ID
     */
     @SerializedName("BlueprintId")
     @Expose
@@ -44,14 +44,14 @@ public class CreateInstancesRequest extends AbstractModel{
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
-    * The display name of the Lighthouse instance
+    * Instance display name.
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Number of the Lighthouse instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+    * Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
     */
     @SerializedName("InstanceCount")
     @Expose
@@ -97,32 +97,39 @@ If the dry run succeeds, the RequestId will be returned.
     private DockerContainerConfiguration [] Containers;
 
     /**
-     * Get ID of the Lighthouse package 
-     * @return BundleId ID of the Lighthouse package
+    * Whether to use the vouchers automatically. It defaults to No.
+    */
+    @SerializedName("AutoVoucher")
+    @Expose
+    private Boolean AutoVoucher;
+
+    /**
+     * Get Bundle ID. 
+     * @return BundleId Bundle ID.
      */
     public String getBundleId() {
         return this.BundleId;
     }
 
     /**
-     * Set ID of the Lighthouse package
-     * @param BundleId ID of the Lighthouse package
+     * Set Bundle ID.
+     * @param BundleId Bundle ID.
      */
     public void setBundleId(String BundleId) {
         this.BundleId = BundleId;
     }
 
     /**
-     * Get ID of the Lighthouse image 
-     * @return BlueprintId ID of the Lighthouse image
+     * Get Image ID 
+     * @return BlueprintId Image ID
      */
     public String getBlueprintId() {
         return this.BlueprintId;
     }
 
     /**
-     * Set ID of the Lighthouse image
-     * @param BlueprintId ID of the Lighthouse image
+     * Set Image ID
+     * @param BlueprintId Image ID
      */
     public void setBlueprintId(String BlueprintId) {
         this.BlueprintId = BlueprintId;
@@ -145,32 +152,32 @@ If the dry run succeeds, the RequestId will be returned.
     }
 
     /**
-     * Get The display name of the Lighthouse instance 
-     * @return InstanceName The display name of the Lighthouse instance
+     * Get Instance display name. 
+     * @return InstanceName Instance display name.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set The display name of the Lighthouse instance
-     * @param InstanceName The display name of the Lighthouse instance
+     * Set Instance display name.
+     * @param InstanceName Instance display name.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Number of the Lighthouse instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account. 
-     * @return InstanceCount Number of the Lighthouse instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+     * Get Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account. 
+     * @return InstanceCount Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set Number of the Lighthouse instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
-     * @param InstanceCount Number of the Lighthouse instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+     * Set Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+     * @param InstanceCount Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
@@ -272,6 +279,22 @@ If the dry run succeeds, the RequestId will be returned.
         this.Containers = Containers;
     }
 
+    /**
+     * Get Whether to use the vouchers automatically. It defaults to No. 
+     * @return AutoVoucher Whether to use the vouchers automatically. It defaults to No.
+     */
+    public Boolean getAutoVoucher() {
+        return this.AutoVoucher;
+    }
+
+    /**
+     * Set Whether to use the vouchers automatically. It defaults to No.
+     * @param AutoVoucher Whether to use the vouchers automatically. It defaults to No.
+     */
+    public void setAutoVoucher(Boolean AutoVoucher) {
+        this.AutoVoucher = AutoVoucher;
+    }
+
     public CreateInstancesRequest() {
     }
 
@@ -316,6 +339,9 @@ If the dry run succeeds, the RequestId will be returned.
                 this.Containers[i] = new DockerContainerConfiguration(source.Containers[i]);
             }
         }
+        if (source.AutoVoucher != null) {
+            this.AutoVoucher = new Boolean(source.AutoVoucher);
+        }
     }
 
 
@@ -333,6 +359,7 @@ If the dry run succeeds, the RequestId will be returned.
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamObj(map, prefix + "LoginConfiguration.", this.LoginConfiguration);
         this.setParamArrayObj(map, prefix + "Containers.", this.Containers);
+        this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
 
     }
 }

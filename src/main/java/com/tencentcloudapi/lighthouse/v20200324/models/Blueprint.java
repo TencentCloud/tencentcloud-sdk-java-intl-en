@@ -138,6 +138,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String ImageId;
 
     /**
+    * URL of official website of the open-source project
+    */
+    @SerializedName("CommunityUrl")
+    @Expose
+    private String CommunityUrl;
+
+    /**
+    * Guide documentation URL
+    */
+    @SerializedName("GuideUrl")
+    @Expose
+    private String GuideUrl;
+
+    /**
+    * Array of IDs of scenes associated with an image
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SceneIdSet")
+    @Expose
+    private String [] SceneIdSet;
+
+    /**
      * Get Image ID, which is the unique identifier of `Blueprint`. 
      * @return BlueprintId Image ID, which is the unique identifier of `Blueprint`.
      */
@@ -405,6 +427,58 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.ImageId = ImageId;
     }
 
+    /**
+     * Get URL of official website of the open-source project 
+     * @return CommunityUrl URL of official website of the open-source project
+     */
+    public String getCommunityUrl() {
+        return this.CommunityUrl;
+    }
+
+    /**
+     * Set URL of official website of the open-source project
+     * @param CommunityUrl URL of official website of the open-source project
+     */
+    public void setCommunityUrl(String CommunityUrl) {
+        this.CommunityUrl = CommunityUrl;
+    }
+
+    /**
+     * Get Guide documentation URL 
+     * @return GuideUrl Guide documentation URL
+     */
+    public String getGuideUrl() {
+        return this.GuideUrl;
+    }
+
+    /**
+     * Set Guide documentation URL
+     * @param GuideUrl Guide documentation URL
+     */
+    public void setGuideUrl(String GuideUrl) {
+        this.GuideUrl = GuideUrl;
+    }
+
+    /**
+     * Get Array of IDs of scenes associated with an image
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return SceneIdSet Array of IDs of scenes associated with an image
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String [] getSceneIdSet() {
+        return this.SceneIdSet;
+    }
+
+    /**
+     * Set Array of IDs of scenes associated with an image
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param SceneIdSet Array of IDs of scenes associated with an image
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setSceneIdSet(String [] SceneIdSet) {
+        this.SceneIdSet = SceneIdSet;
+    }
+
     public Blueprint() {
     }
 
@@ -461,6 +535,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.ImageId != null) {
             this.ImageId = new String(source.ImageId);
         }
+        if (source.CommunityUrl != null) {
+            this.CommunityUrl = new String(source.CommunityUrl);
+        }
+        if (source.GuideUrl != null) {
+            this.GuideUrl = new String(source.GuideUrl);
+        }
+        if (source.SceneIdSet != null) {
+            this.SceneIdSet = new String[source.SceneIdSet.length];
+            for (int i = 0; i < source.SceneIdSet.length; i++) {
+                this.SceneIdSet[i] = new String(source.SceneIdSet[i]);
+            }
+        }
     }
 
 
@@ -484,6 +570,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "SupportAutomationTools", this.SupportAutomationTools);
         this.setParamSimple(map, prefix + "RequiredMemorySize", this.RequiredMemorySize);
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
+        this.setParamSimple(map, prefix + "CommunityUrl", this.CommunityUrl);
+        this.setParamSimple(map, prefix + "GuideUrl", this.GuideUrl);
+        this.setParamArraySimple(map, prefix + "SceneIdSet.", this.SceneIdSet);
 
     }
 }

@@ -86,7 +86,17 @@ public class Disk extends AbstractModel{
     private String RenewFlag;
 
     /**
-    * Disk status
+    * Disk status. Values: 
+<li>`PENDING`: Creating</li>
+<li>`UNATTACHED`: Not attached</li>
+<li>`ATTACHING`: Attaching</li>
+<li>`ATTACHED`: Attached</li>
+<li>`DETACHING`: Detaching</li>
+<li>`SHUTDOWN`: Isolated</li>
+<li>`CREATED_FAILED`: Failed to create</li>
+<li>`TERMINATING`: Terminating</li>
+<li>`DELETING`: Deleting</li>
+<li>`FREEZING`: Freezing</li>
     */
     @SerializedName("DiskState")
     @Expose
@@ -128,27 +138,44 @@ public class Disk extends AbstractModel{
     private String LatestOperationRequestId;
 
     /**
-    * Creation time
+    * Creation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * Expiration date
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Expiration time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExpiredTime")
     @Expose
     private String ExpiredTime;
 
     /**
-    * Isolation time
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Isolation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsolatedTime")
     @Expose
     private String IsolatedTime;
+
+    /**
+    * Total disk backups
+    */
+    @SerializedName("DiskBackupCount")
+    @Expose
+    private Long DiskBackupCount;
+
+    /**
+    * Disk backup quota
+    */
+    @SerializedName("DiskBackupQuota")
+    @Expose
+    private Long DiskBackupQuota;
 
     /**
      * Get Disk ID 
@@ -295,16 +322,56 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Disk status 
-     * @return DiskState Disk status
+     * Get Disk status. Values: 
+<li>`PENDING`: Creating</li>
+<li>`UNATTACHED`: Not attached</li>
+<li>`ATTACHING`: Attaching</li>
+<li>`ATTACHED`: Attached</li>
+<li>`DETACHING`: Detaching</li>
+<li>`SHUTDOWN`: Isolated</li>
+<li>`CREATED_FAILED`: Failed to create</li>
+<li>`TERMINATING`: Terminating</li>
+<li>`DELETING`: Deleting</li>
+<li>`FREEZING`: Freezing</li> 
+     * @return DiskState Disk status. Values: 
+<li>`PENDING`: Creating</li>
+<li>`UNATTACHED`: Not attached</li>
+<li>`ATTACHING`: Attaching</li>
+<li>`ATTACHED`: Attached</li>
+<li>`DETACHING`: Detaching</li>
+<li>`SHUTDOWN`: Isolated</li>
+<li>`CREATED_FAILED`: Failed to create</li>
+<li>`TERMINATING`: Terminating</li>
+<li>`DELETING`: Deleting</li>
+<li>`FREEZING`: Freezing</li>
      */
     public String getDiskState() {
         return this.DiskState;
     }
 
     /**
-     * Set Disk status
-     * @param DiskState Disk status
+     * Set Disk status. Values: 
+<li>`PENDING`: Creating</li>
+<li>`UNATTACHED`: Not attached</li>
+<li>`ATTACHING`: Attaching</li>
+<li>`ATTACHED`: Attached</li>
+<li>`DETACHING`: Detaching</li>
+<li>`SHUTDOWN`: Isolated</li>
+<li>`CREATED_FAILED`: Failed to create</li>
+<li>`TERMINATING`: Terminating</li>
+<li>`DELETING`: Deleting</li>
+<li>`FREEZING`: Freezing</li>
+     * @param DiskState Disk status. Values: 
+<li>`PENDING`: Creating</li>
+<li>`UNATTACHED`: Not attached</li>
+<li>`ATTACHING`: Attaching</li>
+<li>`ATTACHED`: Attached</li>
+<li>`DETACHING`: Detaching</li>
+<li>`SHUTDOWN`: Isolated</li>
+<li>`CREATED_FAILED`: Failed to create</li>
+<li>`TERMINATING`: Terminating</li>
+<li>`DELETING`: Deleting</li>
+<li>`FREEZING`: Freezing</li>
      */
     public void setDiskState(String DiskState) {
         this.DiskState = DiskState;
@@ -391,59 +458,103 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Creation time 
-     * @return CreatedTime Creation time
+     * Get Creation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ. 
+     * @return CreatedTime Creation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreatedTime Creation time
+     * Set Creation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+     * @param CreatedTime Creation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get Expiration date
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ExpiredTime Expiration date
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Expiration time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ExpiredTime Expiration time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set Expiration date
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ExpiredTime Expiration date
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Expiration time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ExpiredTime Expiration time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExpiredTime(String ExpiredTime) {
         this.ExpiredTime = ExpiredTime;
     }
 
     /**
-     * Get Isolation time
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IsolatedTime Isolation time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Isolation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsolatedTime Isolation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIsolatedTime() {
         return this.IsolatedTime;
     }
 
     /**
-     * Set Isolation time
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IsolatedTime Isolation time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Isolation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsolatedTime Isolation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsolatedTime(String IsolatedTime) {
         this.IsolatedTime = IsolatedTime;
+    }
+
+    /**
+     * Get Total disk backups 
+     * @return DiskBackupCount Total disk backups
+     */
+    public Long getDiskBackupCount() {
+        return this.DiskBackupCount;
+    }
+
+    /**
+     * Set Total disk backups
+     * @param DiskBackupCount Total disk backups
+     */
+    public void setDiskBackupCount(Long DiskBackupCount) {
+        this.DiskBackupCount = DiskBackupCount;
+    }
+
+    /**
+     * Get Disk backup quota 
+     * @return DiskBackupQuota Disk backup quota
+     */
+    public Long getDiskBackupQuota() {
+        return this.DiskBackupQuota;
+    }
+
+    /**
+     * Set Disk backup quota
+     * @param DiskBackupQuota Disk backup quota
+     */
+    public void setDiskBackupQuota(Long DiskBackupQuota) {
+        this.DiskBackupQuota = DiskBackupQuota;
     }
 
     public Disk() {
@@ -508,6 +619,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.IsolatedTime != null) {
             this.IsolatedTime = new String(source.IsolatedTime);
         }
+        if (source.DiskBackupCount != null) {
+            this.DiskBackupCount = new Long(source.DiskBackupCount);
+        }
+        if (source.DiskBackupQuota != null) {
+            this.DiskBackupQuota = new Long(source.DiskBackupQuota);
+        }
     }
 
 
@@ -533,6 +650,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
         this.setParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
+        this.setParamSimple(map, prefix + "DiskBackupCount", this.DiskBackupCount);
+        this.setParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
 
     }
 }

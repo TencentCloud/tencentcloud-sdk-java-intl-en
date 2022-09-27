@@ -37,6 +37,13 @@ public class DescribeDiskDiscountRequest extends AbstractModel{
     private Long DiskSize;
 
     /**
+    * Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+    */
+    @SerializedName("DiskBackupQuota")
+    @Expose
+    private Long DiskBackupQuota;
+
+    /**
      * Get Cloud disk type. Valid values: "CLOUD_PREMIUM". 
      * @return DiskType Cloud disk type. Valid values: "CLOUD_PREMIUM".
      */
@@ -68,6 +75,22 @@ public class DescribeDiskDiscountRequest extends AbstractModel{
         this.DiskSize = DiskSize;
     }
 
+    /**
+     * Get Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed. 
+     * @return DiskBackupQuota Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+     */
+    public Long getDiskBackupQuota() {
+        return this.DiskBackupQuota;
+    }
+
+    /**
+     * Set Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+     * @param DiskBackupQuota Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+     */
+    public void setDiskBackupQuota(Long DiskBackupQuota) {
+        this.DiskBackupQuota = DiskBackupQuota;
+    }
+
     public DescribeDiskDiscountRequest() {
     }
 
@@ -82,6 +105,9 @@ public class DescribeDiskDiscountRequest extends AbstractModel{
         if (source.DiskSize != null) {
             this.DiskSize = new Long(source.DiskSize);
         }
+        if (source.DiskBackupQuota != null) {
+            this.DiskBackupQuota = new Long(source.DiskBackupQuota);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class DescribeDiskDiscountRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
 
     }
 }

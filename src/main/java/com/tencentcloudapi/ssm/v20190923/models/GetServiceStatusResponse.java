@@ -37,8 +37,8 @@ public class GetServiceStatusResponse extends AbstractModel{
     private Long InvalidType;
 
     /**
-    * `true`: allow SSM to manage Tencent Cloud API key secrets.
-`false`: forbid SSM to manage Tencent Cloud API key secrets.
+    * `true`: Allow SSM to manage Tencent Cloud API key secrets.
+`false`: Forbid SSM to manage Tencent Cloud API key secrets.
     */
     @SerializedName("AccessKeyEscrowEnabled")
     @Expose
@@ -84,20 +84,20 @@ public class GetServiceStatusResponse extends AbstractModel{
     }
 
     /**
-     * Get `true`: allow SSM to manage Tencent Cloud API key secrets.
-`false`: forbid SSM to manage Tencent Cloud API key secrets. 
-     * @return AccessKeyEscrowEnabled `true`: allow SSM to manage Tencent Cloud API key secrets.
-`false`: forbid SSM to manage Tencent Cloud API key secrets.
+     * Get `true`: Allow SSM to manage Tencent Cloud API key secrets.
+`false`: Forbid SSM to manage Tencent Cloud API key secrets. 
+     * @return AccessKeyEscrowEnabled `true`: Allow SSM to manage Tencent Cloud API key secrets.
+`false`: Forbid SSM to manage Tencent Cloud API key secrets.
      */
     public Boolean getAccessKeyEscrowEnabled() {
         return this.AccessKeyEscrowEnabled;
     }
 
     /**
-     * Set `true`: allow SSM to manage Tencent Cloud API key secrets.
-`false`: forbid SSM to manage Tencent Cloud API key secrets.
-     * @param AccessKeyEscrowEnabled `true`: allow SSM to manage Tencent Cloud API key secrets.
-`false`: forbid SSM to manage Tencent Cloud API key secrets.
+     * Set `true`: Allow SSM to manage Tencent Cloud API key secrets.
+`false`: Forbid SSM to manage Tencent Cloud API key secrets.
+     * @param AccessKeyEscrowEnabled `true`: Allow SSM to manage Tencent Cloud API key secrets.
+`false`: Forbid SSM to manage Tencent Cloud API key secrets.
      */
     public void setAccessKeyEscrowEnabled(Boolean AccessKeyEscrowEnabled) {
         this.AccessKeyEscrowEnabled = AccessKeyEscrowEnabled;

@@ -49,17 +49,20 @@ public class DescribeBlueprintsRequest extends AbstractModel{
 Type: String
 Required: no
 <li>blueprint-type</li>Filter by **image type**.
-Valid values: `APP_OS`: application image; `PURE_OS`: system image; `PRIVATE`: custom image; `SHARED`: shared image
+Valid values: `APP_OS` (application image); `PURE_OS` (system image); `PRIVATE` (custom image) and `SHARED` (shared image)
 Type: String
 Required: no
-<li>platform-type</li>Filter by **image platform type**.
-Valid values: `LINUX_UNIX`: Linux or Unix; `WINDOWS`: Windows
+<li>platform-type</li>Filter by **image operating system**.
+Valid values: `LINUX_UNIX` (Linux or Unix), `WINDOWS` (Windows)
 Type: String
 Required: no
 <li>blueprint-name</li>Filter by **image name**.
 Type: String
 Required: no
 <li>blueprint-state</li>Filter by **image status**.
+Type: String
+Required: no
+<li>scene-id</li>Filter by **scene ID**.
 Type: String
 Required: no
 
@@ -123,17 +126,20 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `BlueprintIds
 Type: String
 Required: no
 <li>blueprint-type</li>Filter by **image type**.
-Valid values: `APP_OS`: application image; `PURE_OS`: system image; `PRIVATE`: custom image; `SHARED`: shared image
+Valid values: `APP_OS` (application image); `PURE_OS` (system image); `PRIVATE` (custom image) and `SHARED` (shared image)
 Type: String
 Required: no
-<li>platform-type</li>Filter by **image platform type**.
-Valid values: `LINUX_UNIX`: Linux or Unix; `WINDOWS`: Windows
+<li>platform-type</li>Filter by **image operating system**.
+Valid values: `LINUX_UNIX` (Linux or Unix), `WINDOWS` (Windows)
 Type: String
 Required: no
 <li>blueprint-name</li>Filter by **image name**.
 Type: String
 Required: no
 <li>blueprint-state</li>Filter by **image status**.
+Type: String
+Required: no
+<li>scene-id</li>Filter by **scene ID**.
 Type: String
 Required: no
 
@@ -143,17 +149,20 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `BlueprintIds
 Type: String
 Required: no
 <li>blueprint-type</li>Filter by **image type**.
-Valid values: `APP_OS`: application image; `PURE_OS`: system image; `PRIVATE`: custom image; `SHARED`: shared image
+Valid values: `APP_OS` (application image); `PURE_OS` (system image); `PRIVATE` (custom image) and `SHARED` (shared image)
 Type: String
 Required: no
-<li>platform-type</li>Filter by **image platform type**.
-Valid values: `LINUX_UNIX`: Linux or Unix; `WINDOWS`: Windows
+<li>platform-type</li>Filter by **image operating system**.
+Valid values: `LINUX_UNIX` (Linux or Unix), `WINDOWS` (Windows)
 Type: String
 Required: no
 <li>blueprint-name</li>Filter by **image name**.
 Type: String
 Required: no
 <li>blueprint-state</li>Filter by **image status**.
+Type: String
+Required: no
+<li>scene-id</li>Filter by **scene ID**.
 Type: String
 Required: no
 
@@ -169,17 +178,20 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `BlueprintIds
 Type: String
 Required: no
 <li>blueprint-type</li>Filter by **image type**.
-Valid values: `APP_OS`: application image; `PURE_OS`: system image; `PRIVATE`: custom image; `SHARED`: shared image
+Valid values: `APP_OS` (application image); `PURE_OS` (system image); `PRIVATE` (custom image) and `SHARED` (shared image)
 Type: String
 Required: no
-<li>platform-type</li>Filter by **image platform type**.
-Valid values: `LINUX_UNIX`: Linux or Unix; `WINDOWS`: Windows
+<li>platform-type</li>Filter by **image operating system**.
+Valid values: `LINUX_UNIX` (Linux or Unix), `WINDOWS` (Windows)
 Type: String
 Required: no
 <li>blueprint-name</li>Filter by **image name**.
 Type: String
 Required: no
 <li>blueprint-state</li>Filter by **image status**.
+Type: String
+Required: no
+<li>scene-id</li>Filter by **scene ID**.
 Type: String
 Required: no
 
@@ -189,17 +201,20 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `BlueprintIds
 Type: String
 Required: no
 <li>blueprint-type</li>Filter by **image type**.
-Valid values: `APP_OS`: application image; `PURE_OS`: system image; `PRIVATE`: custom image; `SHARED`: shared image
+Valid values: `APP_OS` (application image); `PURE_OS` (system image); `PRIVATE` (custom image) and `SHARED` (shared image)
 Type: String
 Required: no
-<li>platform-type</li>Filter by **image platform type**.
-Valid values: `LINUX_UNIX`: Linux or Unix; `WINDOWS`: Windows
+<li>platform-type</li>Filter by **image operating system**.
+Valid values: `LINUX_UNIX` (Linux or Unix), `WINDOWS` (Windows)
 Type: String
 Required: no
 <li>blueprint-name</li>Filter by **image name**.
 Type: String
 Required: no
 <li>blueprint-state</li>Filter by **image status**.
+Type: String
+Required: no
+<li>scene-id</li>Filter by **scene ID**.
 Type: String
 Required: no
 

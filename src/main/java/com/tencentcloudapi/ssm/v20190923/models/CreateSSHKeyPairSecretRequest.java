@@ -60,6 +60,13 @@ You can also specify a custom KMS CMK created in the same region for encryption.
     private Tag [] Tags;
 
     /**
+    * Name of the SSH key pair, which only contains digits, letters and underscores and must start with a digit or letter. The maximum length is 25 characters.
+    */
+    @SerializedName("SSHKeyName")
+    @Expose
+    private String SSHKeyName;
+
+    /**
      * Get Secret name, which must be unique in the same region. It can contain 128 bytes of letters, digits, hyphens and underscores and must begin with a letter or digit. 
      * @return SecretName Secret name, which must be unique in the same region. It can contain 128 bytes of letters, digits, hyphens and underscores and must begin with a letter or digit.
      */
@@ -147,6 +154,22 @@ You can also specify a custom KMS CMK created in the same region for encryption.
         this.Tags = Tags;
     }
 
+    /**
+     * Get Name of the SSH key pair, which only contains digits, letters and underscores and must start with a digit or letter. The maximum length is 25 characters. 
+     * @return SSHKeyName Name of the SSH key pair, which only contains digits, letters and underscores and must start with a digit or letter. The maximum length is 25 characters.
+     */
+    public String getSSHKeyName() {
+        return this.SSHKeyName;
+    }
+
+    /**
+     * Set Name of the SSH key pair, which only contains digits, letters and underscores and must start with a digit or letter. The maximum length is 25 characters.
+     * @param SSHKeyName Name of the SSH key pair, which only contains digits, letters and underscores and must start with a digit or letter. The maximum length is 25 characters.
+     */
+    public void setSSHKeyName(String SSHKeyName) {
+        this.SSHKeyName = SSHKeyName;
+    }
+
     public CreateSSHKeyPairSecretRequest() {
     }
 
@@ -173,6 +196,9 @@ You can also specify a custom KMS CMK created in the same region for encryption.
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.SSHKeyName != null) {
+            this.SSHKeyName = new String(source.SSHKeyName);
+        }
     }
 
 
@@ -185,6 +211,7 @@ You can also specify a custom KMS CMK created in the same region for encryption.
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "SSHKeyName", this.SSHKeyName);
 
     }
 }

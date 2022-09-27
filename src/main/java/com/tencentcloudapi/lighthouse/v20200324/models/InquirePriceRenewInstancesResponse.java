@@ -31,7 +31,7 @@ public class InquirePriceRenewInstancesResponse extends AbstractModel{
 
     /**
     * List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DataDiskPriceSet")
     @Expose
@@ -62,9 +62,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return DataDiskPriceSet List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DataDiskPrice [] getDataDiskPriceSet() {
         return this.DataDiskPriceSet;
@@ -72,9 +72,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param DataDiskPriceSet List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDataDiskPriceSet(DataDiskPrice [] DataDiskPriceSet) {
         this.DataDiskPriceSet = DataDiskPriceSet;

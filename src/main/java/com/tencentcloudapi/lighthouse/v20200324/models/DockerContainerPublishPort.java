@@ -38,7 +38,7 @@ public class DockerContainerPublishPort extends AbstractModel{
 
     /**
     * External IP. It defaults to 0.0.0.0.
-Note: This field may return `null`, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Ip")
     @Expose
@@ -46,7 +46,7 @@ Note: This field may return `null`, indicating that no valid value was found.
 
     /**
     * The protocol defaults to `tcp`. Valid values: `tcp`, `udp` and `sctp`.
-Note: This field may return `null`, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Protocol")
     @Expose
@@ -86,9 +86,9 @@ Note: This field may return `null`, indicating that no valid value was found.
 
     /**
      * Get External IP. It defaults to 0.0.0.0.
-Note: This field may return `null`, indicating that no valid value was found. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Ip External IP. It defaults to 0.0.0.0.
-Note: This field may return `null`, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIp() {
         return this.Ip;
@@ -96,9 +96,9 @@ Note: This field may return `null`, indicating that no valid value was found.
 
     /**
      * Set External IP. It defaults to 0.0.0.0.
-Note: This field may return `null`, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Ip External IP. It defaults to 0.0.0.0.
-Note: This field may return `null`, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
@@ -106,9 +106,9 @@ Note: This field may return `null`, indicating that no valid value was found.
 
     /**
      * Get The protocol defaults to `tcp`. Valid values: `tcp`, `udp` and `sctp`.
-Note: This field may return `null`, indicating that no valid value was found. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Protocol The protocol defaults to `tcp`. Valid values: `tcp`, `udp` and `sctp`.
-Note: This field may return `null`, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProtocol() {
         return this.Protocol;
@@ -116,9 +116,9 @@ Note: This field may return `null`, indicating that no valid value was found.
 
     /**
      * Set The protocol defaults to `tcp`. Valid values: `tcp`, `udp` and `sctp`.
-Note: This field may return `null`, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Protocol The protocol defaults to `tcp`. Valid values: `tcp`, `udp` and `sctp`.
-Note: This field may return `null`, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

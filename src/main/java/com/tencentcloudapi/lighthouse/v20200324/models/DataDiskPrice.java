@@ -37,7 +37,7 @@ public class DataDiskPrice extends AbstractModel{
     private Float OriginalDiskPrice;
 
     /**
-    * Total cloud disk price.
+    * Total price of cloud disk
     */
     @SerializedName("OriginalPrice")
     @Expose
@@ -90,16 +90,16 @@ public class DataDiskPrice extends AbstractModel{
     }
 
     /**
-     * Get Total cloud disk price. 
-     * @return OriginalPrice Total cloud disk price.
+     * Get Total price of cloud disk 
+     * @return OriginalPrice Total price of cloud disk
      */
     public Float getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set Total cloud disk price.
-     * @param OriginalPrice Total cloud disk price.
+     * Set Total price of cloud disk
+     * @param OriginalPrice Total price of cloud disk
      */
     public void setOriginalPrice(Float OriginalPrice) {
         this.OriginalPrice = OriginalPrice;

@@ -30,7 +30,7 @@ public class DescribeInstancesResponse extends AbstractModel{
     private Long TotalCount;
 
     /**
-    * List of instance details.
+    * List of instance details
     */
     @SerializedName("InstanceSet")
     @Expose
@@ -60,16 +60,16 @@ public class DescribeInstancesResponse extends AbstractModel{
     }
 
     /**
-     * Get List of instance details. 
-     * @return InstanceSet List of instance details.
+     * Get List of instance details 
+     * @return InstanceSet List of instance details
      */
     public Instance [] getInstanceSet() {
         return this.InstanceSet;
     }
 
     /**
-     * Set List of instance details.
-     * @param InstanceSet List of instance details.
+     * Set List of instance details
+     * @param InstanceSet List of instance details
      */
     public void setInstanceSet(Instance [] InstanceSet) {
         this.InstanceSet = InstanceSet;

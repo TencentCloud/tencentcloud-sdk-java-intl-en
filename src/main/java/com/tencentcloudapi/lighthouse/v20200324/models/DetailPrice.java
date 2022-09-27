@@ -20,133 +20,146 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DiskPrice extends AbstractModel{
+public class DetailPrice extends AbstractModel{
 
     /**
-    * Cloud disk unit price.
+    * Values: 
+<li>"DiskSpace": Cloud disk space</li>
+<li>"DiskBackupQuota": Cloud disk backups</li>
     */
-    @SerializedName("OriginalDiskPrice")
+    @SerializedName("PriceName")
     @Expose
-    private Float OriginalDiskPrice;
+    private String PriceName;
 
     /**
-    * Total cloud disk price.
+    * Official unit price of the billable item
+    */
+    @SerializedName("OriginUnitPrice")
+    @Expose
+    private Float OriginUnitPrice;
+
+    /**
+    * Official total price of the billable item
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Float OriginalPrice;
 
     /**
-    * Discount.
+    * Discount of the billable item
     */
     @SerializedName("Discount")
     @Expose
     private Float Discount;
 
     /**
-    * Discounted total price.
+    * Discounted total price of the billable item
     */
     @SerializedName("DiscountPrice")
     @Expose
     private Float DiscountPrice;
 
     /**
-    * Detailed billing items
-    */
-    @SerializedName("DetailPrices")
-    @Expose
-    private DetailPrice [] DetailPrices;
-
-    /**
-     * Get Cloud disk unit price. 
-     * @return OriginalDiskPrice Cloud disk unit price.
+     * Get Values: 
+<li>"DiskSpace": Cloud disk space</li>
+<li>"DiskBackupQuota": Cloud disk backups</li> 
+     * @return PriceName Values: 
+<li>"DiskSpace": Cloud disk space</li>
+<li>"DiskBackupQuota": Cloud disk backups</li>
      */
-    public Float getOriginalDiskPrice() {
-        return this.OriginalDiskPrice;
+    public String getPriceName() {
+        return this.PriceName;
     }
 
     /**
-     * Set Cloud disk unit price.
-     * @param OriginalDiskPrice Cloud disk unit price.
+     * Set Values: 
+<li>"DiskSpace": Cloud disk space</li>
+<li>"DiskBackupQuota": Cloud disk backups</li>
+     * @param PriceName Values: 
+<li>"DiskSpace": Cloud disk space</li>
+<li>"DiskBackupQuota": Cloud disk backups</li>
      */
-    public void setOriginalDiskPrice(Float OriginalDiskPrice) {
-        this.OriginalDiskPrice = OriginalDiskPrice;
+    public void setPriceName(String PriceName) {
+        this.PriceName = PriceName;
     }
 
     /**
-     * Get Total cloud disk price. 
-     * @return OriginalPrice Total cloud disk price.
+     * Get Official unit price of the billable item 
+     * @return OriginUnitPrice Official unit price of the billable item
+     */
+    public Float getOriginUnitPrice() {
+        return this.OriginUnitPrice;
+    }
+
+    /**
+     * Set Official unit price of the billable item
+     * @param OriginUnitPrice Official unit price of the billable item
+     */
+    public void setOriginUnitPrice(Float OriginUnitPrice) {
+        this.OriginUnitPrice = OriginUnitPrice;
+    }
+
+    /**
+     * Get Official total price of the billable item 
+     * @return OriginalPrice Official total price of the billable item
      */
     public Float getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set Total cloud disk price.
-     * @param OriginalPrice Total cloud disk price.
+     * Set Official total price of the billable item
+     * @param OriginalPrice Official total price of the billable item
      */
     public void setOriginalPrice(Float OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get Discount. 
-     * @return Discount Discount.
+     * Get Discount of the billable item 
+     * @return Discount Discount of the billable item
      */
     public Float getDiscount() {
         return this.Discount;
     }
 
     /**
-     * Set Discount.
-     * @param Discount Discount.
+     * Set Discount of the billable item
+     * @param Discount Discount of the billable item
      */
     public void setDiscount(Float Discount) {
         this.Discount = Discount;
     }
 
     /**
-     * Get Discounted total price. 
-     * @return DiscountPrice Discounted total price.
+     * Get Discounted total price of the billable item 
+     * @return DiscountPrice Discounted total price of the billable item
      */
     public Float getDiscountPrice() {
         return this.DiscountPrice;
     }
 
     /**
-     * Set Discounted total price.
-     * @param DiscountPrice Discounted total price.
+     * Set Discounted total price of the billable item
+     * @param DiscountPrice Discounted total price of the billable item
      */
     public void setDiscountPrice(Float DiscountPrice) {
         this.DiscountPrice = DiscountPrice;
     }
 
-    /**
-     * Get Detailed billing items 
-     * @return DetailPrices Detailed billing items
-     */
-    public DetailPrice [] getDetailPrices() {
-        return this.DetailPrices;
-    }
-
-    /**
-     * Set Detailed billing items
-     * @param DetailPrices Detailed billing items
-     */
-    public void setDetailPrices(DetailPrice [] DetailPrices) {
-        this.DetailPrices = DetailPrices;
-    }
-
-    public DiskPrice() {
+    public DetailPrice() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DiskPrice(DiskPrice source) {
-        if (source.OriginalDiskPrice != null) {
-            this.OriginalDiskPrice = new Float(source.OriginalDiskPrice);
+    public DetailPrice(DetailPrice source) {
+        if (source.PriceName != null) {
+            this.PriceName = new String(source.PriceName);
+        }
+        if (source.OriginUnitPrice != null) {
+            this.OriginUnitPrice = new Float(source.OriginUnitPrice);
         }
         if (source.OriginalPrice != null) {
             this.OriginalPrice = new Float(source.OriginalPrice);
@@ -157,12 +170,6 @@ public class DiskPrice extends AbstractModel{
         if (source.DiscountPrice != null) {
             this.DiscountPrice = new Float(source.DiscountPrice);
         }
-        if (source.DetailPrices != null) {
-            this.DetailPrices = new DetailPrice[source.DetailPrices.length];
-            for (int i = 0; i < source.DetailPrices.length; i++) {
-                this.DetailPrices[i] = new DetailPrice(source.DetailPrices[i]);
-            }
-        }
     }
 
 
@@ -170,11 +177,11 @@ public class DiskPrice extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "OriginalDiskPrice", this.OriginalDiskPrice);
+        this.setParamSimple(map, prefix + "PriceName", this.PriceName);
+        this.setParamSimple(map, prefix + "OriginUnitPrice", this.OriginUnitPrice);
         this.setParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
         this.setParamSimple(map, prefix + "Discount", this.Discount);
         this.setParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
-        this.setParamArrayObj(map, prefix + "DetailPrices.", this.DetailPrices);
 
     }
 }
