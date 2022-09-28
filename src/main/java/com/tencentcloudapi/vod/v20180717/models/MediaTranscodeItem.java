@@ -111,6 +111,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private MediaAudioStreamItem [] AudioStreamSet;
 
     /**
+    * The watermark type. Valid values:
+<li>Trace: Digital watermark</li>
+<li>None: Regular watermark</li>
+    */
+    @SerializedName("DigitalWatermarkType")
+    @Expose
+    private String DigitalWatermarkType;
+
+    /**
      * Get Address of output video file.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Url Address of output video file.
@@ -330,6 +339,30 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.AudioStreamSet = AudioStreamSet;
     }
 
+    /**
+     * Get The watermark type. Valid values:
+<li>Trace: Digital watermark</li>
+<li>None: Regular watermark</li> 
+     * @return DigitalWatermarkType The watermark type. Valid values:
+<li>Trace: Digital watermark</li>
+<li>None: Regular watermark</li>
+     */
+    public String getDigitalWatermarkType() {
+        return this.DigitalWatermarkType;
+    }
+
+    /**
+     * Set The watermark type. Valid values:
+<li>Trace: Digital watermark</li>
+<li>None: Regular watermark</li>
+     * @param DigitalWatermarkType The watermark type. Valid values:
+<li>Trace: Digital watermark</li>
+<li>None: Regular watermark</li>
+     */
+    public void setDigitalWatermarkType(String DigitalWatermarkType) {
+        this.DigitalWatermarkType = DigitalWatermarkType;
+    }
+
     public MediaTranscodeItem() {
     }
 
@@ -377,6 +410,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 this.AudioStreamSet[i] = new MediaAudioStreamItem(source.AudioStreamSet[i]);
             }
         }
+        if (source.DigitalWatermarkType != null) {
+            this.DigitalWatermarkType = new String(source.DigitalWatermarkType);
+        }
     }
 
 
@@ -395,6 +431,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Container", this.Container);
         this.setParamArrayObj(map, prefix + "VideoStreamSet.", this.VideoStreamSet);
         this.setParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
+        this.setParamSimple(map, prefix + "DigitalWatermarkType", this.DigitalWatermarkType);
 
     }
 }

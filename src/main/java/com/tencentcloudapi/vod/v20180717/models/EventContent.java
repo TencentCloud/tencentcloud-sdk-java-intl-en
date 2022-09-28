@@ -39,8 +39,10 @@ public class EventContent extends AbstractModel{
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
 <li>ComposeMediaComplete: Finished producing the media file.</li>
+<li>WechatMiniProgramPublishComplete: Finished publishing on WeChat Mini Program</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
-<li>ReviewAudioVideoComplete: Finished moderation</li>
+<li>ReviewAudioVideoComplete: Finished moderation.</li>
+<li>ExtractTraceWatermarkComplete: Finished digital watermark extraction.</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -181,12 +183,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private RestoreMediaTask RestoreMediaCompleteEvent;
 
     /**
+    * The callback for the completion of digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ExtractTraceWatermarkCompleteEvent")
+    @Expose
+    private ExtractTraceWatermarkTask ExtractTraceWatermarkCompleteEvent;
+
+    /**
     * The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ReviewAudioVideoCompleteEvent")
     @Expose
     private ReviewAudioVideoTask ReviewAudioVideoCompleteEvent;
+
+    /**
+    * The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ReduceMediaBitrateCompleteEvent")
+    @Expose
+    private ReduceMediaBitrateTask ReduceMediaBitrateCompleteEvent;
 
     /**
      * Get Event handler. The caller must call `ConfirmEvents` to confirm that the message has been received, and the confirmation is valid for 30 seconds. After the confirmation expires, the event can be obtained again. 
@@ -214,8 +232,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
 <li>ComposeMediaComplete: Finished producing the media file.</li>
+<li>WechatMiniProgramPublishComplete: Finished publishing on WeChat Mini Program</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
-<li>ReviewAudioVideoComplete: Finished moderation</li>
+<li>ReviewAudioVideoComplete: Finished moderation.</li>
+<li>ExtractTraceWatermarkComplete: Finished digital watermark extraction.</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -231,8 +251,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
 <li>ComposeMediaComplete: Finished producing the media file.</li>
+<li>WechatMiniProgramPublishComplete: Finished publishing on WeChat Mini Program</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
-<li>ReviewAudioVideoComplete: Finished moderation</li>
+<li>ReviewAudioVideoComplete: Finished moderation.</li>
+<li>ExtractTraceWatermarkComplete: Finished digital watermark extraction.</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -254,8 +276,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
 <li>ComposeMediaComplete: Finished producing the media file.</li>
+<li>WechatMiniProgramPublishComplete: Finished publishing on WeChat Mini Program</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
-<li>ReviewAudioVideoComplete: Finished moderation</li>
+<li>ReviewAudioVideoComplete: Finished moderation.</li>
+<li>ExtractTraceWatermarkComplete: Finished digital watermark extraction.</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -271,8 +295,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
 <li>ComposeMediaComplete: Finished producing the media file.</li>
+<li>WechatMiniProgramPublishComplete: Finished publishing on WeChat Mini Program</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
-<li>ReviewAudioVideoComplete: Finished moderation</li>
+<li>ReviewAudioVideoComplete: Finished moderation.</li>
+<li>ExtractTraceWatermarkComplete: Finished digital watermark extraction.</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -605,6 +631,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get The callback for the completion of digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ExtractTraceWatermarkCompleteEvent The callback for the completion of digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public ExtractTraceWatermarkTask getExtractTraceWatermarkCompleteEvent() {
+        return this.ExtractTraceWatermarkCompleteEvent;
+    }
+
+    /**
+     * Set The callback for the completion of digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ExtractTraceWatermarkCompleteEvent The callback for the completion of digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setExtractTraceWatermarkCompleteEvent(ExtractTraceWatermarkTask ExtractTraceWatermarkCompleteEvent) {
+        this.ExtractTraceWatermarkCompleteEvent = ExtractTraceWatermarkCompleteEvent;
+    }
+
+    /**
      * Get The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ReviewAudioVideoCompleteEvent The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
@@ -622,6 +668,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setReviewAudioVideoCompleteEvent(ReviewAudioVideoTask ReviewAudioVideoCompleteEvent) {
         this.ReviewAudioVideoCompleteEvent = ReviewAudioVideoCompleteEvent;
+    }
+
+    /**
+     * Get The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ReduceMediaBitrateCompleteEvent The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public ReduceMediaBitrateTask getReduceMediaBitrateCompleteEvent() {
+        return this.ReduceMediaBitrateCompleteEvent;
+    }
+
+    /**
+     * Set The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ReduceMediaBitrateCompleteEvent The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setReduceMediaBitrateCompleteEvent(ReduceMediaBitrateTask ReduceMediaBitrateCompleteEvent) {
+        this.ReduceMediaBitrateCompleteEvent = ReduceMediaBitrateCompleteEvent;
     }
 
     public EventContent() {
@@ -686,8 +752,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RestoreMediaCompleteEvent != null) {
             this.RestoreMediaCompleteEvent = new RestoreMediaTask(source.RestoreMediaCompleteEvent);
         }
+        if (source.ExtractTraceWatermarkCompleteEvent != null) {
+            this.ExtractTraceWatermarkCompleteEvent = new ExtractTraceWatermarkTask(source.ExtractTraceWatermarkCompleteEvent);
+        }
         if (source.ReviewAudioVideoCompleteEvent != null) {
             this.ReviewAudioVideoCompleteEvent = new ReviewAudioVideoTask(source.ReviewAudioVideoCompleteEvent);
+        }
+        if (source.ReduceMediaBitrateCompleteEvent != null) {
+            this.ReduceMediaBitrateCompleteEvent = new ReduceMediaBitrateTask(source.ReduceMediaBitrateCompleteEvent);
         }
     }
 
@@ -714,7 +786,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "WechatMiniProgramPublishCompleteEvent.", this.WechatMiniProgramPublishCompleteEvent);
         this.setParamObj(map, prefix + "RemoveWatermarkCompleteEvent.", this.RemoveWatermarkCompleteEvent);
         this.setParamObj(map, prefix + "RestoreMediaCompleteEvent.", this.RestoreMediaCompleteEvent);
+        this.setParamObj(map, prefix + "ExtractTraceWatermarkCompleteEvent.", this.ExtractTraceWatermarkCompleteEvent);
         this.setParamObj(map, prefix + "ReviewAudioVideoCompleteEvent.", this.ReviewAudioVideoCompleteEvent);
+        this.setParamObj(map, prefix + "ReduceMediaBitrateCompleteEvent.", this.ReduceMediaBitrateCompleteEvent);
 
     }
 }

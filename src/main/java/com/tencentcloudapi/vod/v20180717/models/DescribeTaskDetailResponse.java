@@ -29,10 +29,12 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>SplitMedia: Video splitting</li>
 <li>ComposeMedia: Media file production</li>
 <li>WechatPublish: WeChat publishing</li>
+<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
 <li> ReviewAudioVideo: Moderation</li>
+<li> ReduceMediaBitrate: Bitrate reduction</li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -174,12 +176,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private RemoveWatermarkTask RemoveWatermarkTask;
 
     /**
+    * The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ExtractTraceWatermarkTask")
+    @Expose
+    private ExtractTraceWatermarkTask ExtractTraceWatermarkTask;
+
+    /**
     * The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ReviewAudioVideoTask")
     @Expose
     private ReviewAudioVideoTask ReviewAudioVideoTask;
+
+    /**
+    * The information of a bitrate reduction task. This parameter is valid only if `TaskType` is `ReduceMediaBitrate`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ReduceMediaBitrateTask")
+    @Expose
+    private ReduceMediaBitrateTask ReduceMediaBitrateTask;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -195,20 +213,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>SplitMedia: Video splitting</li>
 <li>ComposeMedia: Media file production</li>
 <li>WechatPublish: WeChat publishing</li>
+<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
-<li> ReviewAudioVideo: Moderation</li> 
+<li> ReviewAudioVideo: Moderation</li>
+<li> ReduceMediaBitrate: Bitrate reduction</li> 
      * @return TaskType The task type. Valid values:
 <li>Procedure: Video processing</li>
 <li>EditMedia: Video editing</li>
 <li>SplitMedia: Video splitting</li>
 <li>ComposeMedia: Media file production</li>
 <li>WechatPublish: WeChat publishing</li>
+<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
 <li> ReviewAudioVideo: Moderation</li>
+<li> ReduceMediaBitrate: Bitrate reduction</li>
      */
     public String getTaskType() {
         return this.TaskType;
@@ -221,20 +243,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>SplitMedia: Video splitting</li>
 <li>ComposeMedia: Media file production</li>
 <li>WechatPublish: WeChat publishing</li>
+<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
 <li> ReviewAudioVideo: Moderation</li>
+<li> ReduceMediaBitrate: Bitrate reduction</li>
      * @param TaskType The task type. Valid values:
 <li>Procedure: Video processing</li>
 <li>EditMedia: Video editing</li>
 <li>SplitMedia: Video splitting</li>
 <li>ComposeMedia: Media file production</li>
 <li>WechatPublish: WeChat publishing</li>
+<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
 <li> ReviewAudioVideo: Moderation</li>
+<li> ReduceMediaBitrate: Bitrate reduction</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
@@ -577,6 +603,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ExtractTraceWatermarkTask The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public ExtractTraceWatermarkTask getExtractTraceWatermarkTask() {
+        return this.ExtractTraceWatermarkTask;
+    }
+
+    /**
+     * Set The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ExtractTraceWatermarkTask The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setExtractTraceWatermarkTask(ExtractTraceWatermarkTask ExtractTraceWatermarkTask) {
+        this.ExtractTraceWatermarkTask = ExtractTraceWatermarkTask;
+    }
+
+    /**
      * Get The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ReviewAudioVideoTask The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
@@ -594,6 +640,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setReviewAudioVideoTask(ReviewAudioVideoTask ReviewAudioVideoTask) {
         this.ReviewAudioVideoTask = ReviewAudioVideoTask;
+    }
+
+    /**
+     * Get The information of a bitrate reduction task. This parameter is valid only if `TaskType` is `ReduceMediaBitrate`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ReduceMediaBitrateTask The information of a bitrate reduction task. This parameter is valid only if `TaskType` is `ReduceMediaBitrate`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public ReduceMediaBitrateTask getReduceMediaBitrateTask() {
+        return this.ReduceMediaBitrateTask;
+    }
+
+    /**
+     * Set The information of a bitrate reduction task. This parameter is valid only if `TaskType` is `ReduceMediaBitrate`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ReduceMediaBitrateTask The information of a bitrate reduction task. This parameter is valid only if `TaskType` is `ReduceMediaBitrate`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setReduceMediaBitrateTask(ReduceMediaBitrateTask ReduceMediaBitrateTask) {
+        this.ReduceMediaBitrateTask = ReduceMediaBitrateTask;
     }
 
     /**
@@ -674,8 +740,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RemoveWatermarkTask != null) {
             this.RemoveWatermarkTask = new RemoveWatermarkTask(source.RemoveWatermarkTask);
         }
+        if (source.ExtractTraceWatermarkTask != null) {
+            this.ExtractTraceWatermarkTask = new ExtractTraceWatermarkTask(source.ExtractTraceWatermarkTask);
+        }
         if (source.ReviewAudioVideoTask != null) {
             this.ReviewAudioVideoTask = new ReviewAudioVideoTask(source.ReviewAudioVideoTask);
+        }
+        if (source.ReduceMediaBitrateTask != null) {
+            this.ReduceMediaBitrateTask = new ReduceMediaBitrateTask(source.ReduceMediaBitrateTask);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -705,7 +777,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "CreateImageSpriteTask.", this.CreateImageSpriteTask);
         this.setParamObj(map, prefix + "SnapshotByTimeOffsetTask.", this.SnapshotByTimeOffsetTask);
         this.setParamObj(map, prefix + "RemoveWatermarkTask.", this.RemoveWatermarkTask);
+        this.setParamObj(map, prefix + "ExtractTraceWatermarkTask.", this.ExtractTraceWatermarkTask);
         this.setParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
+        this.setParamObj(map, prefix + "ReduceMediaBitrateTask.", this.ReduceMediaBitrateTask);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

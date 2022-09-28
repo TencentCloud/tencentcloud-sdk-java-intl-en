@@ -1623,6 +1623,26 @@ This API returns the video content duration for intelligent recognition in secon
     }
 
     /**
+     *This API is used to extract the user ID of a user that distributed a video containing a digital watermark.
+     * @param req ExtractTraceWatermarkRequest
+     * @return ExtractTraceWatermarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExtractTraceWatermarkResponse ExtractTraceWatermark(ExtractTraceWatermarkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ExtractTraceWatermarkResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ExtractTraceWatermarkResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ExtractTraceWatermark");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      ** After a media file is forbidden, except previewing it in the VOD Console, accessing the URLs of its various resources (such as source file, output files, and screenshots) in other scenarios will return error 403.
   It takes about 5-10 minutes for a forbidding/unblocking operation to take effect across the entire network.
      * @param req ForbidMediaDistributionRequest

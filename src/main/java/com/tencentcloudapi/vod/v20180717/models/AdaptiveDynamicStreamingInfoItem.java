@@ -61,6 +61,15 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
     private Long Size;
 
     /**
+    * The watermark type. Valid values:
+<li>Trace: Digital watermark</li>
+<li>None: Regular watermark</li>
+    */
+    @SerializedName("DigitalWatermarkType")
+    @Expose
+    private String DigitalWatermarkType;
+
+    /**
      * Get Adaptive bitrate streaming specification. 
      * @return Definition Adaptive bitrate streaming specification.
      */
@@ -152,6 +161,30 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
         this.Size = Size;
     }
 
+    /**
+     * Get The watermark type. Valid values:
+<li>Trace: Digital watermark</li>
+<li>None: Regular watermark</li> 
+     * @return DigitalWatermarkType The watermark type. Valid values:
+<li>Trace: Digital watermark</li>
+<li>None: Regular watermark</li>
+     */
+    public String getDigitalWatermarkType() {
+        return this.DigitalWatermarkType;
+    }
+
+    /**
+     * Set The watermark type. Valid values:
+<li>Trace: Digital watermark</li>
+<li>None: Regular watermark</li>
+     * @param DigitalWatermarkType The watermark type. Valid values:
+<li>Trace: Digital watermark</li>
+<li>None: Regular watermark</li>
+     */
+    public void setDigitalWatermarkType(String DigitalWatermarkType) {
+        this.DigitalWatermarkType = DigitalWatermarkType;
+    }
+
     public AdaptiveDynamicStreamingInfoItem() {
     }
 
@@ -175,6 +208,9 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
         if (source.Size != null) {
             this.Size = new Long(source.Size);
         }
+        if (source.DigitalWatermarkType != null) {
+            this.DigitalWatermarkType = new String(source.DigitalWatermarkType);
+        }
     }
 
 
@@ -187,6 +223,7 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
         this.setParamSimple(map, prefix + "DrmType", this.DrmType);
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Size", this.Size);
+        this.setParamSimple(map, prefix + "DigitalWatermarkType", this.DigitalWatermarkType);
 
     }
 }

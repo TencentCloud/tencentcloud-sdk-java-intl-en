@@ -44,16 +44,17 @@ public class TaskSimpleInfo extends AbstractModel{
     private String FileId;
 
     /**
-    * Task type. Valid values:
-<li>Procedure: video processing task;</li>
-<li>EditMedia: video editing task</li>
-<li>WechatDistribute: release on WeChat task.</li>
-Task types compatible with v2017:
-<li>Transcode: transcoding task;</li>
-<li>SnapshotByTimeOffset: video screencapturing task</li>
-<li>Concat: video splicing task;</li>
-<li>Clip: video clipping task;</li>
-<li>ImageSprites: image sprite generating task.</li>
+    * The task type. Valid values:
+<li>Procedure: Video processing</li>
+<li>EditMedia: Video editing</li>
+<li> ReduceMediaBitrate: Bitrate reduction</li>
+<li>WechatDistribute: Publishing to WeChat</li>
+Task types for v2017:
+<li>Transcode: Transcoding</li>
+<li>SnapshotByTimeOffset: Screencapturing</li>
+<li>Concat: Video splicing</li>
+<li>Clip: Video clipping</li>
+<li>ImageSprites: Image sprite generating</li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -143,52 +144,56 @@ Task types compatible with v2017:
     }
 
     /**
-     * Get Task type. Valid values:
-<li>Procedure: video processing task;</li>
-<li>EditMedia: video editing task</li>
-<li>WechatDistribute: release on WeChat task.</li>
-Task types compatible with v2017:
-<li>Transcode: transcoding task;</li>
-<li>SnapshotByTimeOffset: video screencapturing task</li>
-<li>Concat: video splicing task;</li>
-<li>Clip: video clipping task;</li>
-<li>ImageSprites: image sprite generating task.</li> 
-     * @return TaskType Task type. Valid values:
-<li>Procedure: video processing task;</li>
-<li>EditMedia: video editing task</li>
-<li>WechatDistribute: release on WeChat task.</li>
-Task types compatible with v2017:
-<li>Transcode: transcoding task;</li>
-<li>SnapshotByTimeOffset: video screencapturing task</li>
-<li>Concat: video splicing task;</li>
-<li>Clip: video clipping task;</li>
-<li>ImageSprites: image sprite generating task.</li>
+     * Get The task type. Valid values:
+<li>Procedure: Video processing</li>
+<li>EditMedia: Video editing</li>
+<li> ReduceMediaBitrate: Bitrate reduction</li>
+<li>WechatDistribute: Publishing to WeChat</li>
+Task types for v2017:
+<li>Transcode: Transcoding</li>
+<li>SnapshotByTimeOffset: Screencapturing</li>
+<li>Concat: Video splicing</li>
+<li>Clip: Video clipping</li>
+<li>ImageSprites: Image sprite generating</li> 
+     * @return TaskType The task type. Valid values:
+<li>Procedure: Video processing</li>
+<li>EditMedia: Video editing</li>
+<li> ReduceMediaBitrate: Bitrate reduction</li>
+<li>WechatDistribute: Publishing to WeChat</li>
+Task types for v2017:
+<li>Transcode: Transcoding</li>
+<li>SnapshotByTimeOffset: Screencapturing</li>
+<li>Concat: Video splicing</li>
+<li>Clip: Video clipping</li>
+<li>ImageSprites: Image sprite generating</li>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set Task type. Valid values:
-<li>Procedure: video processing task;</li>
-<li>EditMedia: video editing task</li>
-<li>WechatDistribute: release on WeChat task.</li>
-Task types compatible with v2017:
-<li>Transcode: transcoding task;</li>
-<li>SnapshotByTimeOffset: video screencapturing task</li>
-<li>Concat: video splicing task;</li>
-<li>Clip: video clipping task;</li>
-<li>ImageSprites: image sprite generating task.</li>
-     * @param TaskType Task type. Valid values:
-<li>Procedure: video processing task;</li>
-<li>EditMedia: video editing task</li>
-<li>WechatDistribute: release on WeChat task.</li>
-Task types compatible with v2017:
-<li>Transcode: transcoding task;</li>
-<li>SnapshotByTimeOffset: video screencapturing task</li>
-<li>Concat: video splicing task;</li>
-<li>Clip: video clipping task;</li>
-<li>ImageSprites: image sprite generating task.</li>
+     * Set The task type. Valid values:
+<li>Procedure: Video processing</li>
+<li>EditMedia: Video editing</li>
+<li> ReduceMediaBitrate: Bitrate reduction</li>
+<li>WechatDistribute: Publishing to WeChat</li>
+Task types for v2017:
+<li>Transcode: Transcoding</li>
+<li>SnapshotByTimeOffset: Screencapturing</li>
+<li>Concat: Video splicing</li>
+<li>Clip: Video clipping</li>
+<li>ImageSprites: Image sprite generating</li>
+     * @param TaskType The task type. Valid values:
+<li>Procedure: Video processing</li>
+<li>EditMedia: Video editing</li>
+<li> ReduceMediaBitrate: Bitrate reduction</li>
+<li>WechatDistribute: Publishing to WeChat</li>
+Task types for v2017:
+<li>Transcode: Transcoding</li>
+<li>SnapshotByTimeOffset: Screencapturing</li>
+<li>Concat: Video splicing</li>
+<li>Clip: Video clipping</li>
+<li>ImageSprites: Image sprite generating</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
