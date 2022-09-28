@@ -119,6 +119,26 @@ public class IotcloudClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete a device shadow. 
+     * @param req DeleteDeviceShadowRequest
+     * @return DeleteDeviceShadowResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDeviceShadowResponse DeleteDeviceShadow(DeleteDeviceShadowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDeviceShadowResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDeviceShadowResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteDeviceShadow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a private CA certificate.
      * @param req DeletePrivateCARequest
      * @return DeletePrivateCAResponse

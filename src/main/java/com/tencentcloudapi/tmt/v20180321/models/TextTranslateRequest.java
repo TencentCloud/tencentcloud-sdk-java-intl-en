@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TextTranslateRequest extends AbstractModel{
 
     /**
-    * The pure texts to be translated. It must be encoded in UTF-8 and can contain up to 2,000 characters in a request. For non-pure texts such as those with HTML tags, the translation may fail.
+    * The texts to be translated, which must be encoded in UTF-8 and can contain up to 2,000 characters in a request. For non-pure texts such as those with HTML tags, the translation may fail.
     */
     @SerializedName("SourceText")
     @Expose
@@ -96,16 +96,16 @@ hi: Hindi
     private String UntranslatedText;
 
     /**
-     * Get The pure texts to be translated. It must be encoded in UTF-8 and can contain up to 2,000 characters in a request. For non-pure texts such as those with HTML tags, the translation may fail. 
-     * @return SourceText The pure texts to be translated. It must be encoded in UTF-8 and can contain up to 2,000 characters in a request. For non-pure texts such as those with HTML tags, the translation may fail.
+     * Get The texts to be translated, which must be encoded in UTF-8 and can contain up to 2,000 characters in a request. For non-pure texts such as those with HTML tags, the translation may fail. 
+     * @return SourceText The texts to be translated, which must be encoded in UTF-8 and can contain up to 2,000 characters in a request. For non-pure texts such as those with HTML tags, the translation may fail.
      */
     public String getSourceText() {
         return this.SourceText;
     }
 
     /**
-     * Set The pure texts to be translated. It must be encoded in UTF-8 and can contain up to 2,000 characters in a request. For non-pure texts such as those with HTML tags, the translation may fail.
-     * @param SourceText The pure texts to be translated. It must be encoded in UTF-8 and can contain up to 2,000 characters in a request. For non-pure texts such as those with HTML tags, the translation may fail.
+     * Set The texts to be translated, which must be encoded in UTF-8 and can contain up to 2,000 characters in a request. For non-pure texts such as those with HTML tags, the translation may fail.
+     * @param SourceText The texts to be translated, which must be encoded in UTF-8 and can contain up to 2,000 characters in a request. For non-pure texts such as those with HTML tags, the translation may fail.
      */
     public void setSourceText(String SourceText) {
         this.SourceText = SourceText;

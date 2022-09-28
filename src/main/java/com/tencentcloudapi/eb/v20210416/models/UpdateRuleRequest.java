@@ -51,6 +51,13 @@ public class UpdateRuleRequest extends AbstractModel{
     private String Description;
 
     /**
+    * See [CKafka Target](https://intl.cloud.tencent.com/document/product/1359/56084?from_cn_redirect=1)
+    */
+    @SerializedName("EventPattern")
+    @Expose
+    private String EventPattern;
+
+    /**
     * Event rule name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
     */
     @SerializedName("RuleName")
@@ -122,6 +129,22 @@ public class UpdateRuleRequest extends AbstractModel{
     }
 
     /**
+     * Get See [CKafka Target](https://intl.cloud.tencent.com/document/product/1359/56084?from_cn_redirect=1) 
+     * @return EventPattern See [CKafka Target](https://intl.cloud.tencent.com/document/product/1359/56084?from_cn_redirect=1)
+     */
+    public String getEventPattern() {
+        return this.EventPattern;
+    }
+
+    /**
+     * Set See [CKafka Target](https://intl.cloud.tencent.com/document/product/1359/56084?from_cn_redirect=1)
+     * @param EventPattern See [CKafka Target](https://intl.cloud.tencent.com/document/product/1359/56084?from_cn_redirect=1)
+     */
+    public void setEventPattern(String EventPattern) {
+        this.EventPattern = EventPattern;
+    }
+
+    /**
      * Get Event rule name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter 
      * @return RuleName Event rule name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
      */
@@ -157,6 +180,9 @@ public class UpdateRuleRequest extends AbstractModel{
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.EventPattern != null) {
+            this.EventPattern = new String(source.EventPattern);
+        }
         if (source.RuleName != null) {
             this.RuleName = new String(source.RuleName);
         }
@@ -171,6 +197,7 @@ public class UpdateRuleRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EventBusId", this.EventBusId);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "EventPattern", this.EventPattern);
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);
 
     }

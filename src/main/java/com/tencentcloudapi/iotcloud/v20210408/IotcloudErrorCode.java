@@ -1,5 +1,8 @@
 package com.tencentcloudapi.iotcloud.v20210408;
 public enum IotcloudErrorCode {
+    // The operation failed as the account has been suspended due to overdue payments.
+     FAILEDOPERATION_ACCOUNTISOLATED("FailedOperation.AccountIsolated"),
+     
     // This device has been transferred and cannot be created again.
      FAILEDOPERATION_ALREADYDISTRIBUTIONDEVICE("FailedOperation.AlreadyDistributionDevice"),
      
@@ -8,6 +11,9 @@ public enum IotcloudErrorCode {
      
     // Internal error.
      INTERNALERROR("InternalError"),
+     
+    // An internal database error occurred.
+     INTERNALERROR_DBOPERATIONERROR("InternalError.DBOperationError"),
      
     // Parameter error.
      INVALIDPARAMETER("InvalidParameter"),
@@ -39,7 +45,7 @@ public enum IotcloudErrorCode {
     // Unable to operate because the CA certificate is already bound to a product.
      LIMITEXCEEDED_CAALREADYBINDPRODUCT("LimitExceeded.CAAlreadyBindProduct"),
      
-    // 
+    // The certificate name already exists.
      LIMITEXCEEDED_CACERTNAMEREPEAT("LimitExceeded.CACertNameRepeat"),
      
     // The CA certificate already exists.
@@ -57,11 +63,17 @@ public enum IotcloudErrorCode {
     // The device does not exist.
      RESOURCENOTFOUND_DEVICENOTEXIST("ResourceNotFound.DeviceNotExist"),
      
+    // The device shadow does not exist.
+     RESOURCENOTFOUND_DEVICESHADOWNOTEXIST("ResourceNotFound.DeviceShadowNotExist"),
+     
     // The product does not exist.
      RESOURCENOTFOUND_PRODUCTNOTEXIST("ResourceNotFound.ProductNotExist"),
      
     // The TSL model does not exist.
      RESOURCENOTFOUND_THINGMODELNOTEXIST("ResourceNotFound.ThingModelNotExist"),
+     
+    // There is already a TID application for this product, so it cannot be deleted.
+     UNAUTHORIZEDOPERATION_DELETETIDFAIL("UnauthorizedOperation.DeleteTidFail"),
      
     // Unable to delete this device as gateway devices have been bound to it.
      UNAUTHORIZEDOPERATION_DEVICEHASALREADYBINDGATEWAY("UnauthorizedOperation.DeviceHasAlreadyBindGateway"),
