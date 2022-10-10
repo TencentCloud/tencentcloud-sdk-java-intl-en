@@ -44,7 +44,8 @@ public class SendMessagesRequest extends AbstractModel{
     private String StringToken;
 
     /**
-    * Producer name, which must be globally unique. If it is not configured, the system will randomly generate one.
+    * Producer name, which is randomly generated and must be globally unique. If you set the producer name manually, the producer may fail to be created, causing message sending failure.
+This parameter is used only when a specific producer is allowed to produce messages. It won’t be used in most cases.
     */
     @SerializedName("ProducerName")
     @Expose
@@ -113,16 +114,20 @@ public class SendMessagesRequest extends AbstractModel{
     }
 
     /**
-     * Get Producer name, which must be globally unique. If it is not configured, the system will randomly generate one. 
-     * @return ProducerName Producer name, which must be globally unique. If it is not configured, the system will randomly generate one.
+     * Get Producer name, which is randomly generated and must be globally unique. If you set the producer name manually, the producer may fail to be created, causing message sending failure.
+This parameter is used only when a specific producer is allowed to produce messages. It won’t be used in most cases. 
+     * @return ProducerName Producer name, which is randomly generated and must be globally unique. If you set the producer name manually, the producer may fail to be created, causing message sending failure.
+This parameter is used only when a specific producer is allowed to produce messages. It won’t be used in most cases.
      */
     public String getProducerName() {
         return this.ProducerName;
     }
 
     /**
-     * Set Producer name, which must be globally unique. If it is not configured, the system will randomly generate one.
-     * @param ProducerName Producer name, which must be globally unique. If it is not configured, the system will randomly generate one.
+     * Set Producer name, which is randomly generated and must be globally unique. If you set the producer name manually, the producer may fail to be created, causing message sending failure.
+This parameter is used only when a specific producer is allowed to produce messages. It won’t be used in most cases.
+     * @param ProducerName Producer name, which is randomly generated and must be globally unique. If you set the producer name manually, the producer may fail to be created, causing message sending failure.
+This parameter is used only when a specific producer is allowed to produce messages. It won’t be used in most cases.
      */
     public void setProducerName(String ProducerName) {
         this.ProducerName = ProducerName;

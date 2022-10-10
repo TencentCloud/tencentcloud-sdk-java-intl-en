@@ -30,6 +30,31 @@ public class ModifyLiveSnapshotTemplateRequest extends AbstractModel{
     private Long TemplateId;
 
     /**
+    * The COS application ID.
+**Please note that this parameter is required now**.
+    */
+    @SerializedName("CosAppId")
+    @Expose
+    private Long CosAppId;
+
+    /**
+    * The COS bucket name.
+Note: Do not include the `-[appid]` part in the value of `CosBucket`.
+**Please note that this parameter is required now**.
+    */
+    @SerializedName("CosBucket")
+    @Expose
+    private String CosBucket;
+
+    /**
+    * The COS region.
+**Please note that this parameter is required now**.
+    */
+    @SerializedName("CosRegion")
+    @Expose
+    private String CosRegion;
+
+    /**
     * Template name.
 Maximum length: 255 bytes.
     */
@@ -77,28 +102,6 @@ Value range: 5-300s.
     private Long PornFlag;
 
     /**
-    * COS application ID.
-    */
-    @SerializedName("CosAppId")
-    @Expose
-    private Long CosAppId;
-
-    /**
-    * COS bucket name.
-Note: the value of `CosBucket` cannot contain `-[appid]`.
-    */
-    @SerializedName("CosBucket")
-    @Expose
-    private String CosBucket;
-
-    /**
-    * COS region.
-    */
-    @SerializedName("CosRegion")
-    @Expose
-    private String CosRegion;
-
-    /**
     * COS bucket folder prefix.
     */
     @SerializedName("CosPrefix")
@@ -126,6 +129,70 @@ Note: the value of `CosBucket` cannot contain `-[appid]`.
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
+    }
+
+    /**
+     * Get The COS application ID.
+**Please note that this parameter is required now**. 
+     * @return CosAppId The COS application ID.
+**Please note that this parameter is required now**.
+     */
+    public Long getCosAppId() {
+        return this.CosAppId;
+    }
+
+    /**
+     * Set The COS application ID.
+**Please note that this parameter is required now**.
+     * @param CosAppId The COS application ID.
+**Please note that this parameter is required now**.
+     */
+    public void setCosAppId(Long CosAppId) {
+        this.CosAppId = CosAppId;
+    }
+
+    /**
+     * Get The COS bucket name.
+Note: Do not include the `-[appid]` part in the value of `CosBucket`.
+**Please note that this parameter is required now**. 
+     * @return CosBucket The COS bucket name.
+Note: Do not include the `-[appid]` part in the value of `CosBucket`.
+**Please note that this parameter is required now**.
+     */
+    public String getCosBucket() {
+        return this.CosBucket;
+    }
+
+    /**
+     * Set The COS bucket name.
+Note: Do not include the `-[appid]` part in the value of `CosBucket`.
+**Please note that this parameter is required now**.
+     * @param CosBucket The COS bucket name.
+Note: Do not include the `-[appid]` part in the value of `CosBucket`.
+**Please note that this parameter is required now**.
+     */
+    public void setCosBucket(String CosBucket) {
+        this.CosBucket = CosBucket;
+    }
+
+    /**
+     * Get The COS region.
+**Please note that this parameter is required now**. 
+     * @return CosRegion The COS region.
+**Please note that this parameter is required now**.
+     */
+    public String getCosRegion() {
+        return this.CosRegion;
+    }
+
+    /**
+     * Set The COS region.
+**Please note that this parameter is required now**.
+     * @param CosRegion The COS region.
+**Please note that this parameter is required now**.
+     */
+    public void setCosRegion(String CosRegion) {
+        this.CosRegion = CosRegion;
     }
 
     /**
@@ -245,58 +312,6 @@ Value range: 5-300s.
     }
 
     /**
-     * Get COS application ID. 
-     * @return CosAppId COS application ID.
-     */
-    public Long getCosAppId() {
-        return this.CosAppId;
-    }
-
-    /**
-     * Set COS application ID.
-     * @param CosAppId COS application ID.
-     */
-    public void setCosAppId(Long CosAppId) {
-        this.CosAppId = CosAppId;
-    }
-
-    /**
-     * Get COS bucket name.
-Note: the value of `CosBucket` cannot contain `-[appid]`. 
-     * @return CosBucket COS bucket name.
-Note: the value of `CosBucket` cannot contain `-[appid]`.
-     */
-    public String getCosBucket() {
-        return this.CosBucket;
-    }
-
-    /**
-     * Set COS bucket name.
-Note: the value of `CosBucket` cannot contain `-[appid]`.
-     * @param CosBucket COS bucket name.
-Note: the value of `CosBucket` cannot contain `-[appid]`.
-     */
-    public void setCosBucket(String CosBucket) {
-        this.CosBucket = CosBucket;
-    }
-
-    /**
-     * Get COS region. 
-     * @return CosRegion COS region.
-     */
-    public String getCosRegion() {
-        return this.CosRegion;
-    }
-
-    /**
-     * Set COS region.
-     * @param CosRegion COS region.
-     */
-    public void setCosRegion(String CosRegion) {
-        this.CosRegion = CosRegion;
-    }
-
-    /**
      * Get COS bucket folder prefix. 
      * @return CosPrefix COS bucket folder prefix.
      */
@@ -339,6 +354,15 @@ Note: the value of `CosBucket` cannot contain `-[appid]`.
         if (source.TemplateId != null) {
             this.TemplateId = new Long(source.TemplateId);
         }
+        if (source.CosAppId != null) {
+            this.CosAppId = new Long(source.CosAppId);
+        }
+        if (source.CosBucket != null) {
+            this.CosBucket = new String(source.CosBucket);
+        }
+        if (source.CosRegion != null) {
+            this.CosRegion = new String(source.CosRegion);
+        }
         if (source.TemplateName != null) {
             this.TemplateName = new String(source.TemplateName);
         }
@@ -357,15 +381,6 @@ Note: the value of `CosBucket` cannot contain `-[appid]`.
         if (source.PornFlag != null) {
             this.PornFlag = new Long(source.PornFlag);
         }
-        if (source.CosAppId != null) {
-            this.CosAppId = new Long(source.CosAppId);
-        }
-        if (source.CosBucket != null) {
-            this.CosBucket = new String(source.CosBucket);
-        }
-        if (source.CosRegion != null) {
-            this.CosRegion = new String(source.CosRegion);
-        }
         if (source.CosPrefix != null) {
             this.CosPrefix = new String(source.CosPrefix);
         }
@@ -380,15 +395,15 @@ Note: the value of `CosBucket` cannot contain `-[appid]`.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamSimple(map, prefix + "CosAppId", this.CosAppId);
+        this.setParamSimple(map, prefix + "CosBucket", this.CosBucket);
+        this.setParamSimple(map, prefix + "CosRegion", this.CosRegion);
         this.setParamSimple(map, prefix + "TemplateName", this.TemplateName);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "SnapshotInterval", this.SnapshotInterval);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "PornFlag", this.PornFlag);
-        this.setParamSimple(map, prefix + "CosAppId", this.CosAppId);
-        this.setParamSimple(map, prefix + "CosBucket", this.CosBucket);
-        this.setParamSimple(map, prefix + "CosRegion", this.CosRegion);
         this.setParamSimple(map, prefix + "CosPrefix", this.CosPrefix);
         this.setParamSimple(map, prefix + "CosFileName", this.CosFileName);
 

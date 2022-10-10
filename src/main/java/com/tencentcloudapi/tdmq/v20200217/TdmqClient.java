@@ -1019,6 +1019,26 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the list of the purchased TDMQ for RocketMQ exclusive instances.
+     * @param req DescribeRocketMQVipInstancesRequest
+     * @return DescribeRocketMQVipInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQVipInstancesResponse DescribeRocketMQVipInstances(DescribeRocketMQVipInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRocketMQVipInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRocketMQVipInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRocketMQVipInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the list of roles.
      * @param req DescribeRolesRequest
      * @return DescribeRolesResponse
@@ -1339,11 +1359,11 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *This API is used to receive messages sent to a specified topic. If this API is called when there are no messages in the topic, the `ReceiveTimeout` exception will be reported.
+     *Currently, the `ReceiveMessage` API only supports partitioned topics. It is used to receive messages sent to a specified partitioned topic. If it is called when there are no messages in the partitioned topic, the `ReceiveTimeout` exception will be reported.
 
 Instructions on how to use `BatchReceivePolicy`:
 
-`BatchReceive` has the three parameters:
+`BatchReceive` has three parameters:
 
 ● `MaxNumMessages`: The maximum number of messages returned by `Receive` when `BatchReceive` is used.
 ● `MaxNumBytes`: The maximum size (in bytes) of the message returned by `Receive` when `BatchReceive` is used.

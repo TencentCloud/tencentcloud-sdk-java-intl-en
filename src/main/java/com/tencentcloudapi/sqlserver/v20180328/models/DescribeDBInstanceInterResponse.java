@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBInstancesResponse extends AbstractModel{
+public class DescribeDBInstanceInterResponse extends AbstractModel{
 
     /**
-    * Number of eligible instances.
+    * Number of records returned
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of instance details
+    * Details of instance in the interworking group
     */
-    @SerializedName("Items")
+    @SerializedName("InterInstanceSet")
     @Expose
-    private InstanceInfo [] Items;
+    private InterInstance [] InterInstanceSet;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +44,35 @@ public class DescribeDBInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Number of eligible instances. 
-     * @return TotalCount Number of eligible instances.
+     * Get Number of records returned 
+     * @return TotalCount Number of records returned
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of eligible instances.
-     * @param TotalCount Number of eligible instances.
+     * Set Number of records returned
+     * @param TotalCount Number of records returned
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of instance details 
-     * @return Items List of instance details
+     * Get Details of instance in the interworking group 
+     * @return InterInstanceSet Details of instance in the interworking group
      */
-    public InstanceInfo [] getItems() {
-        return this.Items;
+    public InterInstance [] getInterInstanceSet() {
+        return this.InterInstanceSet;
     }
 
     /**
-     * Set List of instance details
-     * @param Items List of instance details
+     * Set Details of instance in the interworking group
+     * @param InterInstanceSet Details of instance in the interworking group
      */
-    public void setItems(InstanceInfo [] Items) {
-        this.Items = Items;
+    public void setInterInstanceSet(InterInstance [] InterInstanceSet) {
+        this.InterInstanceSet = InterInstanceSet;
     }
 
     /**
@@ -91,21 +91,21 @@ public class DescribeDBInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeDBInstancesResponse() {
+    public DescribeDBInstanceInterResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDBInstancesResponse(DescribeDBInstancesResponse source) {
+    public DescribeDBInstanceInterResponse(DescribeDBInstanceInterResponse source) {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.Items != null) {
-            this.Items = new InstanceInfo[source.Items.length];
-            for (int i = 0; i < source.Items.length; i++) {
-                this.Items[i] = new InstanceInfo(source.Items[i]);
+        if (source.InterInstanceSet != null) {
+            this.InterInstanceSet = new InterInstance[source.InterInstanceSet.length];
+            for (int i = 0; i < source.InterInstanceSet.length; i++) {
+                this.InterInstanceSet[i] = new InterInstance(source.InterInstanceSet[i]);
             }
         }
         if (source.RequestId != null) {
@@ -119,7 +119,7 @@ public class DescribeDBInstancesResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Items.", this.Items);
+        this.setParamArrayObj(map, prefix + "InterInstanceSet.", this.InterInstanceSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

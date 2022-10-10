@@ -30,8 +30,8 @@ public class DescribeStreamPlayInfoListRequest extends AbstractModel{
     private String StartTime;
 
     /**
-    * End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
-The start time and end time cannot be more than 24 hours apart and must be within the last 15 days.
+    * The end time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+The start time and end time cannot be more than 24 hours apart and must be within the past month.
     */
     @SerializedName("EndTime")
     @Expose
@@ -86,20 +86,20 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
     }
 
     /**
-     * Get End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
-The start time and end time cannot be more than 24 hours apart and must be within the last 15 days. 
-     * @return EndTime End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
-The start time and end time cannot be more than 24 hours apart and must be within the last 15 days.
+     * Get The end time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+The start time and end time cannot be more than 24 hours apart and must be within the past month. 
+     * @return EndTime The end time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+The start time and end time cannot be more than 24 hours apart and must be within the past month.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
-The start time and end time cannot be more than 24 hours apart and must be within the last 15 days.
-     * @param EndTime End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
-The start time and end time cannot be more than 24 hours apart and must be within the last 15 days.
+     * Set The end time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+The start time and end time cannot be more than 24 hours apart and must be within the past month.
+     * @param EndTime The end time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+The start time and end time cannot be more than 24 hours apart and must be within the past month.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

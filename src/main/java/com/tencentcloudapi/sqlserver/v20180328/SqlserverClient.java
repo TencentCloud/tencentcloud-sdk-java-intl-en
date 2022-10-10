@@ -59,6 +59,26 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to disable instance interconnection.
+     * @param req CloseInterCommunicationRequest
+     * @return CloseInterCommunicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseInterCommunicationResponse CloseInterCommunication(CloseInterCommunicationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloseInterCommunicationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloseInterCommunicationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CloseInterCommunication");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create an instance account.
      * @param req CreateAccountRequest
      * @return CreateAccountResponse
@@ -111,6 +131,46 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateBackupMigrationResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateBackupMigration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a business intelligence service instance.
+     * @param req CreateBusinessDBInstancesRequest
+     * @return CreateBusinessDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBusinessDBInstancesResponse CreateBusinessDBInstances(CreateBusinessDBInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBusinessDBInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBusinessDBInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBusinessDBInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to add a business intelligence service file.
+     * @param req CreateBusinessIntelligenceFileRequest
+     * @return CreateBusinessIntelligenceFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBusinessIntelligenceFileResponse CreateBusinessIntelligenceFile(CreateBusinessIntelligenceFileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBusinessIntelligenceFileResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBusinessIntelligenceFileResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBusinessIntelligenceFile");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -231,6 +291,26 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteBackupMigrationResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteBackupMigration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a business intelligence service file.
+     * @param req DeleteBusinessIntelligenceFileRequest
+     * @return DeleteBusinessIntelligenceFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBusinessIntelligenceFileResponse DeleteBusinessIntelligenceFile(DeleteBusinessIntelligenceFileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteBusinessIntelligenceFileResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteBusinessIntelligenceFileResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteBusinessIntelligenceFile");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -419,6 +499,26 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the files required by business intelligence service.
+     * @param req DescribeBusinessIntelligenceFileRequest
+     * @return DescribeBusinessIntelligenceFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBusinessIntelligenceFileResponse DescribeBusinessIntelligenceFile(DescribeBusinessIntelligenceFileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBusinessIntelligenceFileResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBusinessIntelligenceFileResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBusinessIntelligenceFile");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the database character sets supported by an instance.
      * @param req DescribeDBCharsetsRequest
      * @return DescribeDBCharsetsResponse
@@ -431,6 +531,26 @@ public class SqlserverClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDBCharsetsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDBCharsets");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the information of the interconnected instances.
+     * @param req DescribeDBInstanceInterRequest
+     * @return DescribeDBInstanceInterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstanceInterResponse DescribeDBInstanceInter(DescribeDBInstanceInterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBInstanceInterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBInstanceInterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBInstanceInter");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1093,6 +1213,26 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
                 Type type = new TypeToken<JsonResponseModel<ModifyMigrationResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyMigration");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to enable instance interconnection, which can interconnect business intelligence services.
+     * @param req OpenInterCommunicationRequest
+     * @return OpenInterCommunicationResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenInterCommunicationResponse OpenInterCommunication(OpenInterCommunicationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OpenInterCommunicationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<OpenInterCommunicationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "OpenInterCommunication");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

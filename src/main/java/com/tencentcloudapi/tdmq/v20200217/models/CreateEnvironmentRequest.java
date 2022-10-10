@@ -30,7 +30,7 @@ public class CreateEnvironmentRequest extends AbstractModel{
     private String EnvironmentId;
 
     /**
-    * Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s.
+    * Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s (or 15 days).
     */
     @SerializedName("MsgTTL")
     @Expose
@@ -74,16 +74,16 @@ public class CreateEnvironmentRequest extends AbstractModel{
     }
 
     /**
-     * Get Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s. 
-     * @return MsgTTL Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s.
+     * Get Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s (or 15 days). 
+     * @return MsgTTL Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s (or 15 days).
      */
     public Long getMsgTTL() {
         return this.MsgTTL;
     }
 
     /**
-     * Set Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s.
-     * @param MsgTTL Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s.
+     * Set Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s (or 15 days).
+     * @param MsgTTL Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s (or 15 days).
      */
     public void setMsgTTL(Long MsgTTL) {
         this.MsgTTL = MsgTTL;

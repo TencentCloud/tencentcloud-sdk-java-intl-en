@@ -70,6 +70,18 @@ Default value: 0.
     private Long IsMiniProgramLive;
 
     /**
+    * The domain verification type.
+Valid values (the value of this parameter must be the same as `VerifyType` of the `AuthenticateDomainOwner` API):
+dnsCheck: Check immediately whether the verification DNS record has been added successfully. If so, record this verification result.
+fileCheck: Check immediately whether the verification HTML file has been uploaded successfully. If so, record this verification result.
+dbCheck: Check whether the domain has already been verified.
+If you do not pass a value, `dbCheck` will be used.
+    */
+    @SerializedName("VerifyOwnerType")
+    @Expose
+    private String VerifyOwnerType;
+
+    /**
      * Get Domain name. 
      * @return DomainName Domain name.
      */
@@ -197,6 +209,42 @@ Default value: 0.
         this.IsMiniProgramLive = IsMiniProgramLive;
     }
 
+    /**
+     * Get The domain verification type.
+Valid values (the value of this parameter must be the same as `VerifyType` of the `AuthenticateDomainOwner` API):
+dnsCheck: Check immediately whether the verification DNS record has been added successfully. If so, record this verification result.
+fileCheck: Check immediately whether the verification HTML file has been uploaded successfully. If so, record this verification result.
+dbCheck: Check whether the domain has already been verified.
+If you do not pass a value, `dbCheck` will be used. 
+     * @return VerifyOwnerType The domain verification type.
+Valid values (the value of this parameter must be the same as `VerifyType` of the `AuthenticateDomainOwner` API):
+dnsCheck: Check immediately whether the verification DNS record has been added successfully. If so, record this verification result.
+fileCheck: Check immediately whether the verification HTML file has been uploaded successfully. If so, record this verification result.
+dbCheck: Check whether the domain has already been verified.
+If you do not pass a value, `dbCheck` will be used.
+     */
+    public String getVerifyOwnerType() {
+        return this.VerifyOwnerType;
+    }
+
+    /**
+     * Set The domain verification type.
+Valid values (the value of this parameter must be the same as `VerifyType` of the `AuthenticateDomainOwner` API):
+dnsCheck: Check immediately whether the verification DNS record has been added successfully. If so, record this verification result.
+fileCheck: Check immediately whether the verification HTML file has been uploaded successfully. If so, record this verification result.
+dbCheck: Check whether the domain has already been verified.
+If you do not pass a value, `dbCheck` will be used.
+     * @param VerifyOwnerType The domain verification type.
+Valid values (the value of this parameter must be the same as `VerifyType` of the `AuthenticateDomainOwner` API):
+dnsCheck: Check immediately whether the verification DNS record has been added successfully. If so, record this verification result.
+fileCheck: Check immediately whether the verification HTML file has been uploaded successfully. If so, record this verification result.
+dbCheck: Check whether the domain has already been verified.
+If you do not pass a value, `dbCheck` will be used.
+     */
+    public void setVerifyOwnerType(String VerifyOwnerType) {
+        this.VerifyOwnerType = VerifyOwnerType;
+    }
+
     public AddLiveDomainRequest() {
     }
 
@@ -220,6 +268,9 @@ Default value: 0.
         if (source.IsMiniProgramLive != null) {
             this.IsMiniProgramLive = new Long(source.IsMiniProgramLive);
         }
+        if (source.VerifyOwnerType != null) {
+            this.VerifyOwnerType = new String(source.VerifyOwnerType);
+        }
     }
 
 
@@ -232,6 +283,7 @@ Default value: 0.
         this.setParamSimple(map, prefix + "PlayType", this.PlayType);
         this.setParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
         this.setParamSimple(map, prefix + "IsMiniProgramLive", this.IsMiniProgramLive);
+        this.setParamSimple(map, prefix + "VerifyOwnerType", this.VerifyOwnerType);
 
     }
 }

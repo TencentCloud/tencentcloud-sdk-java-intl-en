@@ -246,6 +246,13 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     private OperationDurationUpdated OperationDuration;
 
     /**
+    * Whether to enable the option for sending alerting messages over the public network.
+    */
+    @SerializedName("KibanaAlteringPublicAccess")
+    @Expose
+    private String KibanaAlteringPublicAccess;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -765,6 +772,22 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
         this.OperationDuration = OperationDuration;
     }
 
+    /**
+     * Get Whether to enable the option for sending alerting messages over the public network. 
+     * @return KibanaAlteringPublicAccess Whether to enable the option for sending alerting messages over the public network.
+     */
+    public String getKibanaAlteringPublicAccess() {
+        return this.KibanaAlteringPublicAccess;
+    }
+
+    /**
+     * Set Whether to enable the option for sending alerting messages over the public network.
+     * @param KibanaAlteringPublicAccess Whether to enable the option for sending alerting messages over the public network.
+     */
+    public void setKibanaAlteringPublicAccess(String KibanaAlteringPublicAccess) {
+        this.KibanaAlteringPublicAccess = KibanaAlteringPublicAccess;
+    }
+
     public UpdateInstanceRequest() {
     }
 
@@ -872,6 +895,9 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
         if (source.OperationDuration != null) {
             this.OperationDuration = new OperationDurationUpdated(source.OperationDuration);
         }
+        if (source.KibanaAlteringPublicAccess != null) {
+            this.KibanaAlteringPublicAccess = new String(source.KibanaAlteringPublicAccess);
+        }
     }
 
 
@@ -910,6 +936,7 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
         this.setParamSimple(map, prefix + "CerebroPrivateAccess", this.CerebroPrivateAccess);
         this.setParamObj(map, prefix + "EsConfigSet.", this.EsConfigSet);
         this.setParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
+        this.setParamSimple(map, prefix + "KibanaAlteringPublicAccess", this.KibanaAlteringPublicAccess);
 
     }
 }

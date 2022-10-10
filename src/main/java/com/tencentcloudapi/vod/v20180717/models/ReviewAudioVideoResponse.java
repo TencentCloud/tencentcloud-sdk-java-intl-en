@@ -13,28 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBInstancesResponse extends AbstractModel{
+public class ReviewAudioVideoResponse extends AbstractModel{
 
     /**
-    * Number of eligible instances.
+    * The task ID.
     */
-    @SerializedName("TotalCount")
+    @SerializedName("TaskId")
     @Expose
-    private Long TotalCount;
-
-    /**
-    * List of instance details
-    */
-    @SerializedName("Items")
-    @Expose
-    private InstanceInfo [] Items;
+    private String TaskId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +37,19 @@ public class DescribeDBInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Number of eligible instances. 
-     * @return TotalCount Number of eligible instances.
+     * Get The task ID. 
+     * @return TaskId The task ID.
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public String getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set Number of eligible instances.
-     * @param TotalCount Number of eligible instances.
+     * Set The task ID.
+     * @param TaskId The task ID.
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get List of instance details 
-     * @return Items List of instance details
-     */
-    public InstanceInfo [] getItems() {
-        return this.Items;
-    }
-
-    /**
-     * Set List of instance details
-     * @param Items List of instance details
-     */
-    public void setItems(InstanceInfo [] Items) {
-        this.Items = Items;
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -91,22 +68,16 @@ public class DescribeDBInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeDBInstancesResponse() {
+    public ReviewAudioVideoResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDBInstancesResponse(DescribeDBInstancesResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.Items != null) {
-            this.Items = new InstanceInfo[source.Items.length];
-            for (int i = 0; i < source.Items.length; i++) {
-                this.Items[i] = new InstanceInfo(source.Items[i]);
-            }
+    public ReviewAudioVideoResponse(ReviewAudioVideoResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +89,7 @@ public class DescribeDBInstancesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Items.", this.Items);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

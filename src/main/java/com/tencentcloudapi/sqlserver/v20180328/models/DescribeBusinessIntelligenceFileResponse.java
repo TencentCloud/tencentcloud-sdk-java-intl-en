@@ -13,28 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.sqlserver.v20180328.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDBInstancesResponse extends AbstractModel{
+public class DescribeBusinessIntelligenceFileResponse extends AbstractModel{
 
     /**
-    * Number of eligible instances.
+    * Total number of file deployment tasks
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of instance details
+    * File deployment task set
     */
-    @SerializedName("Items")
+    @SerializedName("BackupMigrationSet")
     @Expose
-    private InstanceInfo [] Items;
+    private BusinessIntelligenceFile [] BackupMigrationSet;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +44,35 @@ public class DescribeDBInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Number of eligible instances. 
-     * @return TotalCount Number of eligible instances.
+     * Get Total number of file deployment tasks 
+     * @return TotalCount Total number of file deployment tasks
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of eligible instances.
-     * @param TotalCount Number of eligible instances.
+     * Set Total number of file deployment tasks
+     * @param TotalCount Total number of file deployment tasks
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of instance details 
-     * @return Items List of instance details
+     * Get File deployment task set 
+     * @return BackupMigrationSet File deployment task set
      */
-    public InstanceInfo [] getItems() {
-        return this.Items;
+    public BusinessIntelligenceFile [] getBackupMigrationSet() {
+        return this.BackupMigrationSet;
     }
 
     /**
-     * Set List of instance details
-     * @param Items List of instance details
+     * Set File deployment task set
+     * @param BackupMigrationSet File deployment task set
      */
-    public void setItems(InstanceInfo [] Items) {
-        this.Items = Items;
+    public void setBackupMigrationSet(BusinessIntelligenceFile [] BackupMigrationSet) {
+        this.BackupMigrationSet = BackupMigrationSet;
     }
 
     /**
@@ -91,21 +91,21 @@ public class DescribeDBInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeDBInstancesResponse() {
+    public DescribeBusinessIntelligenceFileResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDBInstancesResponse(DescribeDBInstancesResponse source) {
+    public DescribeBusinessIntelligenceFileResponse(DescribeBusinessIntelligenceFileResponse source) {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.Items != null) {
-            this.Items = new InstanceInfo[source.Items.length];
-            for (int i = 0; i < source.Items.length; i++) {
-                this.Items[i] = new InstanceInfo(source.Items[i]);
+        if (source.BackupMigrationSet != null) {
+            this.BackupMigrationSet = new BusinessIntelligenceFile[source.BackupMigrationSet.length];
+            for (int i = 0; i < source.BackupMigrationSet.length; i++) {
+                this.BackupMigrationSet[i] = new BusinessIntelligenceFile(source.BackupMigrationSet[i]);
             }
         }
         if (source.RequestId != null) {
@@ -119,7 +119,7 @@ public class DescribeDBInstancesResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Items.", this.Items);
+        this.setParamArrayObj(map, prefix + "BackupMigrationSet.", this.BackupMigrationSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

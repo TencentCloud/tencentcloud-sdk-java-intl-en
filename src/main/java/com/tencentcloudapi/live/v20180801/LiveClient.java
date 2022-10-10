@@ -102,6 +102,26 @@ After the number of watermarks exceeds the upper limit of 100, to add a new wate
     }
 
     /**
+     *This API is used to verify the ownership of a domain.
+     * @param req AuthenticateDomainOwnerRequest
+     * @return AuthenticateDomainOwnerResponse
+     * @throws TencentCloudSDKException
+     */
+    public AuthenticateDomainOwnerResponse AuthenticateDomainOwner(AuthenticateDomainOwnerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AuthenticateDomainOwnerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AuthenticateDomainOwnerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AuthenticateDomainOwner");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to cancel a stream mix. It can be used basically in the same way as `mix_streamv2.cancel_mix_stream`.
      * @param req CancelCommonMixStreamRequest
      * @return CancelCommonMixStreamResponse
@@ -313,8 +333,8 @@ Note: only one screencapturing template can be associated with one domain name.
     }
 
     /**
-     *After a screencapturing template is created and a template ID is successfully returned, you need to call the [CreateLiveSnapshotRule](https://intl.cloud.tencent.com/document/product/267/32625?from_cn_redirect=1) API and bind the template ID to the stream.
-<br>Screencapturing-related document: [LVB Screencapturing](https://intl.cloud.tencent.com/document/product/267/32737?from_cn_redirect=1).
+     *This API is used to create a screencapture template. After a template ID is returned, you need to call the [CreateLiveSnapshotRule](https://intl.cloud.tencent.com/document/product/267/32625?from_cn_redirect=1) API to bind the template ID to a stream. You can create up to 50 screencapture templates.
+<br>To learn more about the live screencapture feature, see [Live Screencapture](https://intl.cloud.tencent.com/document/product/267/32737?from_cn_redirect=1).
      * @param req CreateLiveSnapshotTemplateRequest
      * @return CreateLiveSnapshotTemplateResponse
      * @throws TencentCloudSDKException
@@ -1433,10 +1453,10 @@ This API allows you to query the status of a stream in real time. Given external
     }
 
     /**
-     *This API is used to query your total usage of the transcoding service in the last 30 days.
+     *This API is used to query transcoding usage. You can use it to query data in the past three months.
 Notes:
 If the start time and end time are on the same day, the data returned will be on a 5-minute basis.
-If not or if the data of specified domains is queried, the data returned will be on an hourly basis.
+If the start time and end time are not on the same day or if the data of specified domains is queried, the data returned will be on an hourly basis.
      * @param req DescribeLiveTranscodeTotalInfoRequest
      * @return DescribeLiveTranscodeTotalInfoResponse
      * @throws TencentCloudSDKException
@@ -1651,6 +1671,26 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
                 Type type = new TypeToken<JsonResponseModel<DescribeTopClientIpSumInfoListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeTopClientIpSumInfoList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the number of transcoding tasks.
+     * @param req DescribeTranscodeTaskNumRequest
+     * @return DescribeTranscodeTaskNumResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTranscodeTaskNumResponse DescribeTranscodeTaskNum(DescribeTranscodeTaskNumRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTranscodeTaskNumResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTranscodeTaskNumResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTranscodeTaskNum");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

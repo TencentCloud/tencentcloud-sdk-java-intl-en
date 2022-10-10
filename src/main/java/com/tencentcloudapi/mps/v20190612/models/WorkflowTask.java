@@ -39,14 +39,14 @@ public class WorkflowTask extends AbstractModel{
     private String Status;
 
     /**
-    * Disused. Please use `ErrCode` of each specific task.
+    * If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * Disused. Please use `Message` of each specific task.
+    * Except those for source errors, error messages vary with task type.
     */
     @SerializedName("Message")
     @Expose
@@ -137,32 +137,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Disused. Please use `ErrCode` of each specific task. 
-     * @return ErrCode Disused. Please use `ErrCode` of each specific task.
+     * Get If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type. 
+     * @return ErrCode If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Disused. Please use `ErrCode` of each specific task.
-     * @param ErrCode Disused. Please use `ErrCode` of each specific task.
+     * Set If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+     * @param ErrCode If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get Disused. Please use `Message` of each specific task. 
-     * @return Message Disused. Please use `Message` of each specific task.
+     * Get Except those for source errors, error messages vary with task type. 
+     * @return Message Except those for source errors, error messages vary with task type.
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Disused. Please use `Message` of each specific task.
-     * @param Message Disused. Please use `Message` of each specific task.
+     * Set Except those for source errors, error messages vary with task type.
+     * @param Message Except those for source errors, error messages vary with task type.
      */
     public void setMessage(String Message) {
         this.Message = Message;

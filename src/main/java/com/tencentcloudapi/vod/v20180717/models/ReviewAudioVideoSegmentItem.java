@@ -94,6 +94,7 @@ Valid values when `Form` is `Voice` and `Label` is `Porn`:
 
     /**
     * The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
+<font color=red>Note</font>: This parameter is not supported currently.
     */
     @SerializedName("AreaCoordSet")
     @Expose
@@ -310,8 +311,10 @@ Valid values when `Form` is `Voice` and `Label` is `Porn`:
     }
 
     /**
-     * Get The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`. 
+     * Get The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
+<font color=red>Note</font>: This parameter is not supported currently. 
      * @return AreaCoordSet The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
+<font color=red>Note</font>: This parameter is not supported currently.
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
@@ -319,7 +322,9 @@ Valid values when `Form` is `Voice` and `Label` is `Porn`:
 
     /**
      * Set The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
+<font color=red>Note</font>: This parameter is not supported currently.
      * @param AreaCoordSet The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
+<font color=red>Note</font>: This parameter is not supported currently.
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;

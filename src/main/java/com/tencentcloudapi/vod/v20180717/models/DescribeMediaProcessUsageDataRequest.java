@@ -37,26 +37,29 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * The type of media processing task. Valid values:
-<li>Transcoding: General transcoding</li>
-<li>Transcoding-TESHD: TESHD transcoding</li>
-<li>Editing: Video editing</li>
-<li>Editing-TESHD: TESHD editing</li>
-<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
-<li>ContentAudit: Content moderation</li>
-<li>RemoveWatermark: Watermark removal</li>
-<li>Transcode: Transcoding, including general transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
-    */
-    @SerializedName("Type")
-    @Expose
-    private String Type;
-
-    /**
     * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
+
+    /**
+    * The type of media processing task. Valid values:
+<li>Transcoding: General transcoding</li>
+<li>Transcoding-TESHD: Top Speed Codec transcoding</li>
+<li>Editing: Video editing</li>
+<li>Editing-TESHD: Top Speed Codec editing</li>
+<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li>ContentAudit: Content moderation</li>
+<li> ContentRecognition: Content recognition</li>
+<li>RemoveWatermark: Watermark removal</li>
+<li> ExtractTraceWatermark: Digital watermark extraction</li>
+<li> AddTraceWatermark: Digital watermarking</li>
+<li>Transcode: Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
 
     /**
      * Get Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). 
@@ -91,54 +94,6 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel{
     }
 
     /**
-     * Get The type of media processing task. Valid values:
-<li>Transcoding: General transcoding</li>
-<li>Transcoding-TESHD: TESHD transcoding</li>
-<li>Editing: Video editing</li>
-<li>Editing-TESHD: TESHD editing</li>
-<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
-<li>ContentAudit: Content moderation</li>
-<li>RemoveWatermark: Watermark removal</li>
-<li>Transcode: Transcoding, including general transcoding, TESHD transcoding, and video editing. This value is not recommended.</li> 
-     * @return Type The type of media processing task. Valid values:
-<li>Transcoding: General transcoding</li>
-<li>Transcoding-TESHD: TESHD transcoding</li>
-<li>Editing: Video editing</li>
-<li>Editing-TESHD: TESHD editing</li>
-<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
-<li>ContentAudit: Content moderation</li>
-<li>RemoveWatermark: Watermark removal</li>
-<li>Transcode: Transcoding, including general transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
-     */
-    public String getType() {
-        return this.Type;
-    }
-
-    /**
-     * Set The type of media processing task. Valid values:
-<li>Transcoding: General transcoding</li>
-<li>Transcoding-TESHD: TESHD transcoding</li>
-<li>Editing: Video editing</li>
-<li>Editing-TESHD: TESHD editing</li>
-<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
-<li>ContentAudit: Content moderation</li>
-<li>RemoveWatermark: Watermark removal</li>
-<li>Transcode: Transcoding, including general transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
-     * @param Type The type of media processing task. Valid values:
-<li>Transcoding: General transcoding</li>
-<li>Transcoding-TESHD: TESHD transcoding</li>
-<li>Editing: Video editing</li>
-<li>Editing-TESHD: TESHD editing</li>
-<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
-<li>ContentAudit: Content moderation</li>
-<li>RemoveWatermark: Watermark removal</li>
-<li>Transcode: Transcoding, including general transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
-     */
-    public void setType(String Type) {
-        this.Type = Type;
-    }
-
-    /**
      * Get [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty. 
      * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
@@ -152,6 +107,66 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel{
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
+    }
+
+    /**
+     * Get The type of media processing task. Valid values:
+<li>Transcoding: General transcoding</li>
+<li>Transcoding-TESHD: Top Speed Codec transcoding</li>
+<li>Editing: Video editing</li>
+<li>Editing-TESHD: Top Speed Codec editing</li>
+<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li>ContentAudit: Content moderation</li>
+<li> ContentRecognition: Content recognition</li>
+<li>RemoveWatermark: Watermark removal</li>
+<li> ExtractTraceWatermark: Digital watermark extraction</li>
+<li> AddTraceWatermark: Digital watermarking</li>
+<li>Transcode: Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li> 
+     * @return Type The type of media processing task. Valid values:
+<li>Transcoding: General transcoding</li>
+<li>Transcoding-TESHD: Top Speed Codec transcoding</li>
+<li>Editing: Video editing</li>
+<li>Editing-TESHD: Top Speed Codec editing</li>
+<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li>ContentAudit: Content moderation</li>
+<li> ContentRecognition: Content recognition</li>
+<li>RemoveWatermark: Watermark removal</li>
+<li> ExtractTraceWatermark: Digital watermark extraction</li>
+<li> AddTraceWatermark: Digital watermarking</li>
+<li>Transcode: Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set The type of media processing task. Valid values:
+<li>Transcoding: General transcoding</li>
+<li>Transcoding-TESHD: Top Speed Codec transcoding</li>
+<li>Editing: Video editing</li>
+<li>Editing-TESHD: Top Speed Codec editing</li>
+<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li>ContentAudit: Content moderation</li>
+<li> ContentRecognition: Content recognition</li>
+<li>RemoveWatermark: Watermark removal</li>
+<li> ExtractTraceWatermark: Digital watermark extraction</li>
+<li> AddTraceWatermark: Digital watermarking</li>
+<li>Transcode: Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
+     * @param Type The type of media processing task. Valid values:
+<li>Transcoding: General transcoding</li>
+<li>Transcoding-TESHD: Top Speed Codec transcoding</li>
+<li>Editing: Video editing</li>
+<li>Editing-TESHD: Top Speed Codec editing</li>
+<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li>ContentAudit: Content moderation</li>
+<li> ContentRecognition: Content recognition</li>
+<li>RemoveWatermark: Watermark removal</li>
+<li> ExtractTraceWatermark: Digital watermark extraction</li>
+<li> AddTraceWatermark: Digital watermarking</li>
+<li>Transcode: Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
+     */
+    public void setType(String Type) {
+        this.Type = Type;
     }
 
     public DescribeMediaProcessUsageDataRequest() {
@@ -168,11 +183,11 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel{
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
-        if (source.Type != null) {
-            this.Type = new String(source.Type);
-        }
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
         }
     }
 
@@ -183,8 +198,8 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
-        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

@@ -44,7 +44,7 @@ public class ReceiveMessageRequest extends AbstractModel{
     private Long ReceiverQueueSize;
 
     /**
-    * Default value: Latest. It is used to determine the position where the consumer initially receives messages. Valid values: Earliest, Latest.
+    * A parameter used to determine the position where the consumer initially receives messages. Valid values: `Earliest` (default), `Latest`.
     */
     @SerializedName("SubInitialPosition")
     @Expose
@@ -120,16 +120,16 @@ public class ReceiveMessageRequest extends AbstractModel{
     }
 
     /**
-     * Get Default value: Latest. It is used to determine the position where the consumer initially receives messages. Valid values: Earliest, Latest. 
-     * @return SubInitialPosition Default value: Latest. It is used to determine the position where the consumer initially receives messages. Valid values: Earliest, Latest.
+     * Get A parameter used to determine the position where the consumer initially receives messages. Valid values: `Earliest` (default), `Latest`. 
+     * @return SubInitialPosition A parameter used to determine the position where the consumer initially receives messages. Valid values: `Earliest` (default), `Latest`.
      */
     public String getSubInitialPosition() {
         return this.SubInitialPosition;
     }
 
     /**
-     * Set Default value: Latest. It is used to determine the position where the consumer initially receives messages. Valid values: Earliest, Latest.
-     * @param SubInitialPosition Default value: Latest. It is used to determine the position where the consumer initially receives messages. Valid values: Earliest, Latest.
+     * Set A parameter used to determine the position where the consumer initially receives messages. Valid values: `Earliest` (default), `Latest`.
+     * @param SubInitialPosition A parameter used to determine the position where the consumer initially receives messages. Valid values: `Earliest` (default), `Latest`.
      */
     public void setSubInitialPosition(String SubInitialPosition) {
         this.SubInitialPosition = SubInitialPosition;

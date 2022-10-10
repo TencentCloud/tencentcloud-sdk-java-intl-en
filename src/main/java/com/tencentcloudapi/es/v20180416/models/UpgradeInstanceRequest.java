@@ -72,6 +72,13 @@ public class UpgradeInstanceRequest extends AbstractModel{
     private Boolean CosBackup;
 
     /**
+    * Whether to skip the check and perform a force restart in the rolling mode. Default value: `false`.
+    */
+    @SerializedName("SkipCheckForceRestart")
+    @Expose
+    private Boolean SkipCheckForceRestart;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -183,6 +190,22 @@ public class UpgradeInstanceRequest extends AbstractModel{
         this.CosBackup = CosBackup;
     }
 
+    /**
+     * Get Whether to skip the check and perform a force restart in the rolling mode. Default value: `false`. 
+     * @return SkipCheckForceRestart Whether to skip the check and perform a force restart in the rolling mode. Default value: `false`.
+     */
+    public Boolean getSkipCheckForceRestart() {
+        return this.SkipCheckForceRestart;
+    }
+
+    /**
+     * Set Whether to skip the check and perform a force restart in the rolling mode. Default value: `false`.
+     * @param SkipCheckForceRestart Whether to skip the check and perform a force restart in the rolling mode. Default value: `false`.
+     */
+    public void setSkipCheckForceRestart(Boolean SkipCheckForceRestart) {
+        this.SkipCheckForceRestart = SkipCheckForceRestart;
+    }
+
     public UpgradeInstanceRequest() {
     }
 
@@ -212,6 +235,9 @@ public class UpgradeInstanceRequest extends AbstractModel{
         if (source.CosBackup != null) {
             this.CosBackup = new Boolean(source.CosBackup);
         }
+        if (source.SkipCheckForceRestart != null) {
+            this.SkipCheckForceRestart = new Boolean(source.SkipCheckForceRestart);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class UpgradeInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
         this.setParamSimple(map, prefix + "UpgradeMode", this.UpgradeMode);
         this.setParamSimple(map, prefix + "CosBackup", this.CosBackup);
+        this.setParamSimple(map, prefix + "SkipCheckForceRestart", this.SkipCheckForceRestart);
 
     }
 }

@@ -65,6 +65,13 @@ public class CreateParamTemplateRequest extends AbstractModel{
     private String TemplateType;
 
     /**
+    * Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
+    */
+    @SerializedName("EngineType")
+    @Expose
+    private String EngineType;
+
+    /**
      * Get Parameter template name. 
      * @return Name Parameter template name.
      */
@@ -160,6 +167,22 @@ public class CreateParamTemplateRequest extends AbstractModel{
         this.TemplateType = TemplateType;
     }
 
+    /**
+     * Get Instance engine type. Valid values: `InnoDB` (default), `RocksDB`. 
+     * @return EngineType Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
+     */
+    public String getEngineType() {
+        return this.EngineType;
+    }
+
+    /**
+     * Set Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
+     * @param EngineType Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
+     */
+    public void setEngineType(String EngineType) {
+        this.EngineType = EngineType;
+    }
+
     public CreateParamTemplateRequest() {
     }
 
@@ -189,6 +212,9 @@ public class CreateParamTemplateRequest extends AbstractModel{
         if (source.TemplateType != null) {
             this.TemplateType = new String(source.TemplateType);
         }
+        if (source.EngineType != null) {
+            this.EngineType = new String(source.EngineType);
+        }
     }
 
 
@@ -202,6 +228,7 @@ public class CreateParamTemplateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamArrayObj(map, prefix + "ParamList.", this.ParamList);
         this.setParamSimple(map, prefix + "TemplateType", this.TemplateType);
+        this.setParamSimple(map, prefix + "EngineType", this.EngineType);
 
     }
 }

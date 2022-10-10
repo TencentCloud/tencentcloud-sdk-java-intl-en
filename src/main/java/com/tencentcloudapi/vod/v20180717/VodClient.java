@@ -2415,6 +2415,29 @@ There are two ways to create a task flow template:
     }
 
     /**
+     *This API is used to start a moderation task on a file stored in VOD to detect non-compliant content in images, text, and speech.
+
+If event notifications are used, the event type is [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1).
+
+     * @param req ReviewAudioVideoRequest
+     * @return ReviewAudioVideoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReviewAudioVideoResponse ReviewAudioVideo(ReviewAudioVideoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReviewAudioVideoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReviewAudioVideoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReviewAudioVideo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to search for media files by specific criteria. You can sort the results and specify the information to return.
 - Specify a list of file IDs (`FileIds`). Any file that matches one of the IDs will be returned.
 - Specify one or multiple keywords for `Names` or `Descriptions` for fuzzy search by filename or description.

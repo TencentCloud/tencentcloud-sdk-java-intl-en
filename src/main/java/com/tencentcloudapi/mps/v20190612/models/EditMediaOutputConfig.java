@@ -30,6 +30,13 @@ public class EditMediaOutputConfig extends AbstractModel{
     private String Container;
 
     /**
+    * The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get Format. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi` 
      * @return Container Format. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`
      */
@@ -45,6 +52,22 @@ public class EditMediaOutputConfig extends AbstractModel{
         this.Container = Container;
     }
 
+    /**
+     * Get The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing. 
+     * @return Type The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
+     * @param Type The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public EditMediaOutputConfig() {
     }
 
@@ -56,6 +79,9 @@ public class EditMediaOutputConfig extends AbstractModel{
         if (source.Container != null) {
             this.Container = new String(source.Container);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class EditMediaOutputConfig extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Container", this.Container);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }
