@@ -70,6 +70,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] DownIPList;
 
     /**
+    * Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
+    */
+    @SerializedName("RealServerFailoverRole")
+    @Expose
+    private String RealServerFailoverRole;
+
+    /**
      * Get Origin server ID 
      * @return RealServerId Origin server ID
      */
@@ -185,6 +192,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.DownIPList = DownIPList;
     }
 
+    /**
+     * Get Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener. 
+     * @return RealServerFailoverRole Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
+     */
+    public String getRealServerFailoverRole() {
+        return this.RealServerFailoverRole;
+    }
+
+    /**
+     * Set Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
+     * @param RealServerFailoverRole Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
+     */
+    public void setRealServerFailoverRole(String RealServerFailoverRole) {
+        this.RealServerFailoverRole = RealServerFailoverRole;
+    }
+
     public BindRealServer() {
     }
 
@@ -214,6 +237,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.DownIPList[i] = new String(source.DownIPList[i]);
             }
         }
+        if (source.RealServerFailoverRole != null) {
+            this.RealServerFailoverRole = new String(source.RealServerFailoverRole);
+        }
     }
 
 
@@ -227,6 +253,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "RealServerStatus", this.RealServerStatus);
         this.setParamSimple(map, prefix + "RealServerPort", this.RealServerPort);
         this.setParamArraySimple(map, prefix + "DownIPList.", this.DownIPList);
+        this.setParamSimple(map, prefix + "RealServerFailoverRole", this.RealServerFailoverRole);
 
     }
 }

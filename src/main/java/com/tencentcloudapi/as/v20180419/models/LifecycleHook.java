@@ -93,6 +93,14 @@ public class LifecycleHook extends AbstractModel{
     private String LifecycleTransitionType;
 
     /**
+    * Remote command execution object.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("LifecycleCommand")
+    @Expose
+    private LifecycleCommand LifecycleCommand;
+
+    /**
      * Get Lifecycle hook ID 
      * @return LifecycleHookId Lifecycle hook ID
      */
@@ -252,6 +260,26 @@ public class LifecycleHook extends AbstractModel{
         this.LifecycleTransitionType = LifecycleTransitionType;
     }
 
+    /**
+     * Get Remote command execution object.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LifecycleCommand Remote command execution object.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public LifecycleCommand getLifecycleCommand() {
+        return this.LifecycleCommand;
+    }
+
+    /**
+     * Set Remote command execution object.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LifecycleCommand Remote command execution object.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setLifecycleCommand(LifecycleCommand LifecycleCommand) {
+        this.LifecycleCommand = LifecycleCommand;
+    }
+
     public LifecycleHook() {
     }
 
@@ -290,6 +318,9 @@ public class LifecycleHook extends AbstractModel{
         if (source.LifecycleTransitionType != null) {
             this.LifecycleTransitionType = new String(source.LifecycleTransitionType);
         }
+        if (source.LifecycleCommand != null) {
+            this.LifecycleCommand = new LifecycleCommand(source.LifecycleCommand);
+        }
     }
 
 
@@ -307,6 +338,7 @@ public class LifecycleHook extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamObj(map, prefix + "NotificationTarget.", this.NotificationTarget);
         this.setParamSimple(map, prefix + "LifecycleTransitionType", this.LifecycleTransitionType);
+        this.setParamObj(map, prefix + "LifecycleCommand.", this.LifecycleCommand);
 
     }
 }

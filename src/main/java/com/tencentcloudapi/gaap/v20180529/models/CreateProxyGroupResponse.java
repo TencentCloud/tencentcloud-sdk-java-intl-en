@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateProxyGroupResponse extends AbstractModel{
 
     /**
-    * Connection Group ID
+    * ID of the connection group
     */
     @SerializedName("GroupId")
     @Expose
@@ -37,16 +37,16 @@ public class CreateProxyGroupResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Connection Group ID 
-     * @return GroupId Connection Group ID
+     * Get ID of the connection group 
+     * @return GroupId ID of the connection group
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Connection Group ID
-     * @param GroupId Connection Group ID
+     * Set ID of the connection group
+     * @param GroupId ID of the connection group
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

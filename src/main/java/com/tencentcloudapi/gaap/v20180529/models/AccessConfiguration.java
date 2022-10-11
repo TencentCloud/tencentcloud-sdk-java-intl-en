@@ -30,14 +30,14 @@ public class AccessConfiguration extends AbstractModel{
     private String AccessRegion;
 
     /**
-    * Connection bandwidth upper limit in Mbps.
+    * Connection bandwidth cap. Unit: Mbps.
     */
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
 
     /**
-    * Concurrent connection upper limit in 10,000 connections, which indicates the allowed number of concurrently online connections.
+    * Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
     */
     @SerializedName("Concurrent")
     @Expose
@@ -67,32 +67,32 @@ public class AccessConfiguration extends AbstractModel{
     }
 
     /**
-     * Get Connection bandwidth upper limit in Mbps. 
-     * @return Bandwidth Connection bandwidth upper limit in Mbps.
+     * Get Connection bandwidth cap. Unit: Mbps. 
+     * @return Bandwidth Connection bandwidth cap. Unit: Mbps.
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set Connection bandwidth upper limit in Mbps.
-     * @param Bandwidth Connection bandwidth upper limit in Mbps.
+     * Set Connection bandwidth cap. Unit: Mbps.
+     * @param Bandwidth Connection bandwidth cap. Unit: Mbps.
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get Concurrent connection upper limit in 10,000 connections, which indicates the allowed number of concurrently online connections. 
-     * @return Concurrent Concurrent connection upper limit in 10,000 connections, which indicates the allowed number of concurrently online connections.
+     * Get Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections. 
+     * @return Concurrent Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
      */
     public Long getConcurrent() {
         return this.Concurrent;
     }
 
     /**
-     * Set Concurrent connection upper limit in 10,000 connections, which indicates the allowed number of concurrently online connections.
-     * @param Concurrent Concurrent connection upper limit in 10,000 connections, which indicates the allowed number of concurrently online connections.
+     * Set Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
+     * @param Concurrent Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
      */
     public void setConcurrent(Long Concurrent) {
         this.Concurrent = Concurrent;

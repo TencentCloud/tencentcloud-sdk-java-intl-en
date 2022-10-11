@@ -126,6 +126,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private CertificateAliasInfo [] PolyClientCertificateAliasInfo;
 
     /**
+    * Whether to support HTTP3. Values:
+`0`: Do not support HTTP3 access;
+`1`: Support HTTP3 access.
+If HTTP3 is supported for a connection, the listener will use the port that is originally accessed to UDP, and a UDP listener with the same port cannot be created.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Http3Supported")
+    @Expose
+    private Long Http3Supported;
+
+    /**
      * Get Listener ID 
      * @return ListenerId Listener ID
      */
@@ -381,6 +392,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.PolyClientCertificateAliasInfo = PolyClientCertificateAliasInfo;
     }
 
+    /**
+     * Get Whether to support HTTP3. Values:
+`0`: Do not support HTTP3 access;
+`1`: Support HTTP3 access.
+If HTTP3 is supported for a connection, the listener will use the port that is originally accessed to UDP, and a UDP listener with the same port cannot be created.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Http3Supported Whether to support HTTP3. Values:
+`0`: Do not support HTTP3 access;
+`1`: Support HTTP3 access.
+If HTTP3 is supported for a connection, the listener will use the port that is originally accessed to UDP, and a UDP listener with the same port cannot be created.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getHttp3Supported() {
+        return this.Http3Supported;
+    }
+
+    /**
+     * Set Whether to support HTTP3. Values:
+`0`: Do not support HTTP3 access;
+`1`: Support HTTP3 access.
+If HTTP3 is supported for a connection, the listener will use the port that is originally accessed to UDP, and a UDP listener with the same port cannot be created.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Http3Supported Whether to support HTTP3. Values:
+`0`: Do not support HTTP3 access;
+`1`: Support HTTP3 access.
+If HTTP3 is supported for a connection, the listener will use the port that is originally accessed to UDP, and a UDP listener with the same port cannot be created.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setHttp3Supported(Long Http3Supported) {
+        this.Http3Supported = Http3Supported;
+    }
+
     public HTTPSListener() {
     }
 
@@ -431,6 +474,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.PolyClientCertificateAliasInfo[i] = new CertificateAliasInfo(source.PolyClientCertificateAliasInfo[i]);
             }
         }
+        if (source.Http3Supported != null) {
+            this.Http3Supported = new Long(source.Http3Supported);
+        }
     }
 
 
@@ -451,6 +497,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "AuthType", this.AuthType);
         this.setParamSimple(map, prefix + "ClientCertificateAlias", this.ClientCertificateAlias);
         this.setParamArrayObj(map, prefix + "PolyClientCertificateAliasInfo.", this.PolyClientCertificateAliasInfo);
+        this.setParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
 
     }
 }

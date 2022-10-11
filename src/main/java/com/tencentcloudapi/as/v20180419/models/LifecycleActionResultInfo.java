@@ -37,7 +37,27 @@ public class LifecycleActionResultInfo extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Whether the notification is sent to CMQ successfully
+    * Execution task ID. You can query the result by using the [DescribeInvocations](https://intl.cloud.tencent.com/document/api/1340/52679?from_cn_redirect=1) API of TAT. 
+    */
+    @SerializedName("InvocationId")
+    @Expose
+    private String InvocationId;
+
+    /**
+    * Result of command invocation,
+<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId.</li>
+<li>`FAILED`: Failed to invoke the command</li>
+<li>`NONE`</li>
+    */
+    @SerializedName("InvokeCommandResult")
+    @Expose
+    private String InvokeCommandResult;
+
+    /**
+    * Notification result, which indicates whether it is successful to notify CMQ/TDMQ.<br>
+<li>SUCCESSFUL: It is successful to notify CMQ/TDMQ.</li>
+<li>FAILED: It is failed to notify CMQ/TDMQ.</li>
+<li>NONE</li>
     */
     @SerializedName("NotificationResult")
     @Expose
@@ -51,7 +71,15 @@ public class LifecycleActionResultInfo extends AbstractModel{
     private String LifecycleActionResult;
 
     /**
-    * Cause of the result
+    * Reason of the result <br>
+<li>`HEARTBEAT_TIMEOUT`: Heartbeat timed out. The setting of `DefaultResult` is used.</li>
+<li>`NOTIFICATION_FAILURE`: Failed to send the notification. The setting of `DefaultResult` is used.</li>
+<li>`CALL_INTERFACE`: Calls the `CompleteLifecycleAction` to set the result</li>
+<li>ANOTHER_ACTION_ABANDON: It has been set to `ABANDON` by another operation.</li>
+<li>COMMAND_CALL_FAILURE: Failed to call the command. The DefaultResult is applied.</li>
+<li>COMMAND_EXEC_FINISH: Command completed</li>
+<li>COMMAND_CALL_FAILURE: Failed to execute the command. The DefaultResult is applied.</li>
+<li>COMMAND_EXEC_RESULT_CHECK_FAILURE: Failed to check the command result. The DefaultResult is applied.</li>
     */
     @SerializedName("ResultReason")
     @Expose
@@ -90,16 +118,72 @@ public class LifecycleActionResultInfo extends AbstractModel{
     }
 
     /**
-     * Get Whether the notification is sent to CMQ successfully 
-     * @return NotificationResult Whether the notification is sent to CMQ successfully
+     * Get Execution task ID. You can query the result by using the [DescribeInvocations](https://intl.cloud.tencent.com/document/api/1340/52679?from_cn_redirect=1) API of TAT.  
+     * @return InvocationId Execution task ID. You can query the result by using the [DescribeInvocations](https://intl.cloud.tencent.com/document/api/1340/52679?from_cn_redirect=1) API of TAT. 
+     */
+    public String getInvocationId() {
+        return this.InvocationId;
+    }
+
+    /**
+     * Set Execution task ID. You can query the result by using the [DescribeInvocations](https://intl.cloud.tencent.com/document/api/1340/52679?from_cn_redirect=1) API of TAT. 
+     * @param InvocationId Execution task ID. You can query the result by using the [DescribeInvocations](https://intl.cloud.tencent.com/document/api/1340/52679?from_cn_redirect=1) API of TAT. 
+     */
+    public void setInvocationId(String InvocationId) {
+        this.InvocationId = InvocationId;
+    }
+
+    /**
+     * Get Result of command invocation,
+<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId.</li>
+<li>`FAILED`: Failed to invoke the command</li>
+<li>`NONE`</li> 
+     * @return InvokeCommandResult Result of command invocation,
+<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId.</li>
+<li>`FAILED`: Failed to invoke the command</li>
+<li>`NONE`</li>
+     */
+    public String getInvokeCommandResult() {
+        return this.InvokeCommandResult;
+    }
+
+    /**
+     * Set Result of command invocation,
+<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId.</li>
+<li>`FAILED`: Failed to invoke the command</li>
+<li>`NONE`</li>
+     * @param InvokeCommandResult Result of command invocation,
+<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId.</li>
+<li>`FAILED`: Failed to invoke the command</li>
+<li>`NONE`</li>
+     */
+    public void setInvokeCommandResult(String InvokeCommandResult) {
+        this.InvokeCommandResult = InvokeCommandResult;
+    }
+
+    /**
+     * Get Notification result, which indicates whether it is successful to notify CMQ/TDMQ.<br>
+<li>SUCCESSFUL: It is successful to notify CMQ/TDMQ.</li>
+<li>FAILED: It is failed to notify CMQ/TDMQ.</li>
+<li>NONE</li> 
+     * @return NotificationResult Notification result, which indicates whether it is successful to notify CMQ/TDMQ.<br>
+<li>SUCCESSFUL: It is successful to notify CMQ/TDMQ.</li>
+<li>FAILED: It is failed to notify CMQ/TDMQ.</li>
+<li>NONE</li>
      */
     public String getNotificationResult() {
         return this.NotificationResult;
     }
 
     /**
-     * Set Whether the notification is sent to CMQ successfully
-     * @param NotificationResult Whether the notification is sent to CMQ successfully
+     * Set Notification result, which indicates whether it is successful to notify CMQ/TDMQ.<br>
+<li>SUCCESSFUL: It is successful to notify CMQ/TDMQ.</li>
+<li>FAILED: It is failed to notify CMQ/TDMQ.</li>
+<li>NONE</li>
+     * @param NotificationResult Notification result, which indicates whether it is successful to notify CMQ/TDMQ.<br>
+<li>SUCCESSFUL: It is successful to notify CMQ/TDMQ.</li>
+<li>FAILED: It is failed to notify CMQ/TDMQ.</li>
+<li>NONE</li>
      */
     public void setNotificationResult(String NotificationResult) {
         this.NotificationResult = NotificationResult;
@@ -122,16 +206,48 @@ public class LifecycleActionResultInfo extends AbstractModel{
     }
 
     /**
-     * Get Cause of the result 
-     * @return ResultReason Cause of the result
+     * Get Reason of the result <br>
+<li>`HEARTBEAT_TIMEOUT`: Heartbeat timed out. The setting of `DefaultResult` is used.</li>
+<li>`NOTIFICATION_FAILURE`: Failed to send the notification. The setting of `DefaultResult` is used.</li>
+<li>`CALL_INTERFACE`: Calls the `CompleteLifecycleAction` to set the result</li>
+<li>ANOTHER_ACTION_ABANDON: It has been set to `ABANDON` by another operation.</li>
+<li>COMMAND_CALL_FAILURE: Failed to call the command. The DefaultResult is applied.</li>
+<li>COMMAND_EXEC_FINISH: Command completed</li>
+<li>COMMAND_CALL_FAILURE: Failed to execute the command. The DefaultResult is applied.</li>
+<li>COMMAND_EXEC_RESULT_CHECK_FAILURE: Failed to check the command result. The DefaultResult is applied.</li> 
+     * @return ResultReason Reason of the result <br>
+<li>`HEARTBEAT_TIMEOUT`: Heartbeat timed out. The setting of `DefaultResult` is used.</li>
+<li>`NOTIFICATION_FAILURE`: Failed to send the notification. The setting of `DefaultResult` is used.</li>
+<li>`CALL_INTERFACE`: Calls the `CompleteLifecycleAction` to set the result</li>
+<li>ANOTHER_ACTION_ABANDON: It has been set to `ABANDON` by another operation.</li>
+<li>COMMAND_CALL_FAILURE: Failed to call the command. The DefaultResult is applied.</li>
+<li>COMMAND_EXEC_FINISH: Command completed</li>
+<li>COMMAND_CALL_FAILURE: Failed to execute the command. The DefaultResult is applied.</li>
+<li>COMMAND_EXEC_RESULT_CHECK_FAILURE: Failed to check the command result. The DefaultResult is applied.</li>
      */
     public String getResultReason() {
         return this.ResultReason;
     }
 
     /**
-     * Set Cause of the result
-     * @param ResultReason Cause of the result
+     * Set Reason of the result <br>
+<li>`HEARTBEAT_TIMEOUT`: Heartbeat timed out. The setting of `DefaultResult` is used.</li>
+<li>`NOTIFICATION_FAILURE`: Failed to send the notification. The setting of `DefaultResult` is used.</li>
+<li>`CALL_INTERFACE`: Calls the `CompleteLifecycleAction` to set the result</li>
+<li>ANOTHER_ACTION_ABANDON: It has been set to `ABANDON` by another operation.</li>
+<li>COMMAND_CALL_FAILURE: Failed to call the command. The DefaultResult is applied.</li>
+<li>COMMAND_EXEC_FINISH: Command completed</li>
+<li>COMMAND_CALL_FAILURE: Failed to execute the command. The DefaultResult is applied.</li>
+<li>COMMAND_EXEC_RESULT_CHECK_FAILURE: Failed to check the command result. The DefaultResult is applied.</li>
+     * @param ResultReason Reason of the result <br>
+<li>`HEARTBEAT_TIMEOUT`: Heartbeat timed out. The setting of `DefaultResult` is used.</li>
+<li>`NOTIFICATION_FAILURE`: Failed to send the notification. The setting of `DefaultResult` is used.</li>
+<li>`CALL_INTERFACE`: Calls the `CompleteLifecycleAction` to set the result</li>
+<li>ANOTHER_ACTION_ABANDON: It has been set to `ABANDON` by another operation.</li>
+<li>COMMAND_CALL_FAILURE: Failed to call the command. The DefaultResult is applied.</li>
+<li>COMMAND_EXEC_FINISH: Command completed</li>
+<li>COMMAND_CALL_FAILURE: Failed to execute the command. The DefaultResult is applied.</li>
+<li>COMMAND_EXEC_RESULT_CHECK_FAILURE: Failed to check the command result. The DefaultResult is applied.</li>
      */
     public void setResultReason(String ResultReason) {
         this.ResultReason = ResultReason;
@@ -151,6 +267,12 @@ public class LifecycleActionResultInfo extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.InvocationId != null) {
+            this.InvocationId = new String(source.InvocationId);
+        }
+        if (source.InvokeCommandResult != null) {
+            this.InvokeCommandResult = new String(source.InvokeCommandResult);
+        }
         if (source.NotificationResult != null) {
             this.NotificationResult = new String(source.NotificationResult);
         }
@@ -169,6 +291,8 @@ public class LifecycleActionResultInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LifecycleHookId", this.LifecycleHookId);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "InvocationId", this.InvocationId);
+        this.setParamSimple(map, prefix + "InvokeCommandResult", this.InvokeCommandResult);
         this.setParamSimple(map, prefix + "NotificationResult", this.NotificationResult);
         this.setParamSimple(map, prefix + "LifecycleActionResult", this.LifecycleActionResult);
         this.setParamSimple(map, prefix + "ResultReason", this.ResultReason);

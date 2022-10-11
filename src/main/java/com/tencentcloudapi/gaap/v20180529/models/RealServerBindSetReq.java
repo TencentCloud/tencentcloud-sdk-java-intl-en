@@ -51,7 +51,7 @@ public class RealServerBindSetReq extends AbstractModel{
     private Long RealServerWeight;
 
     /**
-    * Origin server role: master (primary origin server); slave (secondary origin server). This parameter is applicable when the primary/secondary origin server mode is enabled for a TCP listener.
+    * Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
     */
     @SerializedName("RealServerFailoverRole")
     @Expose
@@ -122,16 +122,16 @@ public class RealServerBindSetReq extends AbstractModel{
     }
 
     /**
-     * Get Origin server role: master (primary origin server); slave (secondary origin server). This parameter is applicable when the primary/secondary origin server mode is enabled for a TCP listener. 
-     * @return RealServerFailoverRole Origin server role: master (primary origin server); slave (secondary origin server). This parameter is applicable when the primary/secondary origin server mode is enabled for a TCP listener.
+     * Get Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener. 
+     * @return RealServerFailoverRole Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
      */
     public String getRealServerFailoverRole() {
         return this.RealServerFailoverRole;
     }
 
     /**
-     * Set Origin server role: master (primary origin server); slave (secondary origin server). This parameter is applicable when the primary/secondary origin server mode is enabled for a TCP listener.
-     * @param RealServerFailoverRole Origin server role: master (primary origin server); slave (secondary origin server). This parameter is applicable when the primary/secondary origin server mode is enabled for a TCP listener.
+     * Set Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
+     * @param RealServerFailoverRole Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
      */
     public void setRealServerFailoverRole(String RealServerFailoverRole) {
         this.RealServerFailoverRole = RealServerFailoverRole;

@@ -58,14 +58,14 @@ public class UpgradeLifecycleHookRequest extends AbstractModel{
     private Long HeartbeatTimeout;
 
     /**
-    * Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default.
+    * Additional information of a notification that Auto Scaling sends to targets. This parameter is set when you configure a notification (default value: "").
     */
     @SerializedName("NotificationMetadata")
     @Expose
     private String NotificationMetadata;
 
     /**
-    * Notification target
+    * Notification result. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
     */
     @SerializedName("NotificationTarget")
     @Expose
@@ -77,6 +77,13 @@ public class UpgradeLifecycleHookRequest extends AbstractModel{
     @SerializedName("LifecycleTransitionType")
     @Expose
     private String LifecycleTransitionType;
+
+    /**
+    * Remote command execution object. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
+    */
+    @SerializedName("LifecycleCommand")
+    @Expose
+    private LifecycleCommand LifecycleCommand;
 
     /**
      * Get Lifecycle hook ID 
@@ -159,32 +166,32 @@ public class UpgradeLifecycleHookRequest extends AbstractModel{
     }
 
     /**
-     * Get Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default. 
-     * @return NotificationMetadata Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default.
+     * Get Additional information of a notification that Auto Scaling sends to targets. This parameter is set when you configure a notification (default value: ""). 
+     * @return NotificationMetadata Additional information of a notification that Auto Scaling sends to targets. This parameter is set when you configure a notification (default value: "").
      */
     public String getNotificationMetadata() {
         return this.NotificationMetadata;
     }
 
     /**
-     * Set Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default.
-     * @param NotificationMetadata Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default.
+     * Set Additional information of a notification that Auto Scaling sends to targets. This parameter is set when you configure a notification (default value: "").
+     * @param NotificationMetadata Additional information of a notification that Auto Scaling sends to targets. This parameter is set when you configure a notification (default value: "").
      */
     public void setNotificationMetadata(String NotificationMetadata) {
         this.NotificationMetadata = NotificationMetadata;
     }
 
     /**
-     * Get Notification target 
-     * @return NotificationTarget Notification target
+     * Get Notification result. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time. 
+     * @return NotificationTarget Notification result. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
      */
     public NotificationTarget getNotificationTarget() {
         return this.NotificationTarget;
     }
 
     /**
-     * Set Notification target
-     * @param NotificationTarget Notification target
+     * Set Notification result. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
+     * @param NotificationTarget Notification result. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
      */
     public void setNotificationTarget(NotificationTarget NotificationTarget) {
         this.NotificationTarget = NotificationTarget;
@@ -204,6 +211,22 @@ public class UpgradeLifecycleHookRequest extends AbstractModel{
      */
     public void setLifecycleTransitionType(String LifecycleTransitionType) {
         this.LifecycleTransitionType = LifecycleTransitionType;
+    }
+
+    /**
+     * Get Remote command execution object. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time. 
+     * @return LifecycleCommand Remote command execution object. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
+     */
+    public LifecycleCommand getLifecycleCommand() {
+        return this.LifecycleCommand;
+    }
+
+    /**
+     * Set Remote command execution object. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
+     * @param LifecycleCommand Remote command execution object. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
+     */
+    public void setLifecycleCommand(LifecycleCommand LifecycleCommand) {
+        this.LifecycleCommand = LifecycleCommand;
     }
 
     public UpgradeLifecycleHookRequest() {
@@ -238,6 +261,9 @@ public class UpgradeLifecycleHookRequest extends AbstractModel{
         if (source.LifecycleTransitionType != null) {
             this.LifecycleTransitionType = new String(source.LifecycleTransitionType);
         }
+        if (source.LifecycleCommand != null) {
+            this.LifecycleCommand = new LifecycleCommand(source.LifecycleCommand);
+        }
     }
 
 
@@ -253,6 +279,7 @@ public class UpgradeLifecycleHookRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NotificationMetadata", this.NotificationMetadata);
         this.setParamObj(map, prefix + "NotificationTarget.", this.NotificationTarget);
         this.setParamSimple(map, prefix + "LifecycleTransitionType", this.LifecycleTransitionType);
+        this.setParamObj(map, prefix + "LifecycleCommand.", this.LifecycleCommand);
 
     }
 }

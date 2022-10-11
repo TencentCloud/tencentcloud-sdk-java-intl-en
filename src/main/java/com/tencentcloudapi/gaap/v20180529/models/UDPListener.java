@@ -78,7 +78,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long ListenerStatus;
 
     /**
-    * Origin server access policy of listeners
+    * The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
     */
     @SerializedName("Scheduler")
     @Expose
@@ -112,6 +112,94 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("SessionPersist")
     @Expose
     private Long SessionPersist;
+
+    /**
+    * Time interval of origin server health check (unit: seconds). Value range: [5, 300].
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("DelayLoop")
+    @Expose
+    private Long DelayLoop;
+
+    /**
+    * Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("ConnectTimeout")
+    @Expose
+    private Long ConnectTimeout;
+
+    /**
+    * Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("HealthyThreshold")
+    @Expose
+    private Long HealthyThreshold;
+
+    /**
+    * Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("UnhealthyThreshold")
+    @Expose
+    private Long UnhealthyThreshold;
+
+    /**
+    * Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("FailoverSwitch")
+    @Expose
+    private Long FailoverSwitch;
+
+    /**
+    * Whether the health check is enabled for the origin server. Values: `1` (enabled); `0` (disabled).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("HealthCheck")
+    @Expose
+    private Long HealthCheck;
+
+    /**
+    * The health check type. Values: `PORT` (port); `PING` (ping).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("CheckType")
+    @Expose
+    private String CheckType;
+
+    /**
+    * The health probe port.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("CheckPort")
+    @Expose
+    private Long CheckPort;
+
+    /**
+    * The UDP message type. Values: `TEXT` (text). This parameter is used only when `CheckType = PORT`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("ContextType")
+    @Expose
+    private String ContextType;
+
+    /**
+    * The UDP message sent by the health probe port. This parameter is used only when `CheckType = PORT`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("SendContext")
+    @Expose
+    private String SendContext;
+
+    /**
+    * The UDP message received by the health probe port. This parameter is used only when `CheckType = PORT`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RecvContext")
+    @Expose
+    private String RecvContext;
 
     /**
      * Get Listener ID 
@@ -250,16 +338,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Origin server access policy of listeners 
-     * @return Scheduler Origin server access policy of listeners
+     * Get The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy). 
+     * @return Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set Origin server access policy of listeners
-     * @param Scheduler Origin server access policy of listeners
+     * Set The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+     * @param Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;
@@ -333,6 +421,226 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.SessionPersist = SessionPersist;
     }
 
+    /**
+     * Get Time interval of origin server health check (unit: seconds). Value range: [5, 300].
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return DelayLoop Time interval of origin server health check (unit: seconds). Value range: [5, 300].
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Long getDelayLoop() {
+        return this.DelayLoop;
+    }
+
+    /**
+     * Set Time interval of origin server health check (unit: seconds). Value range: [5, 300].
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param DelayLoop Time interval of origin server health check (unit: seconds). Value range: [5, 300].
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setDelayLoop(Long DelayLoop) {
+        this.DelayLoop = DelayLoop;
+    }
+
+    /**
+     * Get Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return ConnectTimeout Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Long getConnectTimeout() {
+        return this.ConnectTimeout;
+    }
+
+    /**
+     * Set Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param ConnectTimeout Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setConnectTimeout(Long ConnectTimeout) {
+        this.ConnectTimeout = ConnectTimeout;
+    }
+
+    /**
+     * Get Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HealthyThreshold Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getHealthyThreshold() {
+        return this.HealthyThreshold;
+    }
+
+    /**
+     * Set Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HealthyThreshold Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setHealthyThreshold(Long HealthyThreshold) {
+        this.HealthyThreshold = HealthyThreshold;
+    }
+
+    /**
+     * Get Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return UnhealthyThreshold Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Long getUnhealthyThreshold() {
+        return this.UnhealthyThreshold;
+    }
+
+    /**
+     * Set Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param UnhealthyThreshold Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setUnhealthyThreshold(Long UnhealthyThreshold) {
+        this.UnhealthyThreshold = UnhealthyThreshold;
+    }
+
+    /**
+     * Get Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return FailoverSwitch Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Long getFailoverSwitch() {
+        return this.FailoverSwitch;
+    }
+
+    /**
+     * Set Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param FailoverSwitch Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setFailoverSwitch(Long FailoverSwitch) {
+        this.FailoverSwitch = FailoverSwitch;
+    }
+
+    /**
+     * Get Whether the health check is enabled for the origin server. Values: `1` (enabled); `0` (disabled).
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return HealthCheck Whether the health check is enabled for the origin server. Values: `1` (enabled); `0` (disabled).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Long getHealthCheck() {
+        return this.HealthCheck;
+    }
+
+    /**
+     * Set Whether the health check is enabled for the origin server. Values: `1` (enabled); `0` (disabled).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param HealthCheck Whether the health check is enabled for the origin server. Values: `1` (enabled); `0` (disabled).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setHealthCheck(Long HealthCheck) {
+        this.HealthCheck = HealthCheck;
+    }
+
+    /**
+     * Get The health check type. Values: `PORT` (port); `PING` (ping).
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return CheckType The health check type. Values: `PORT` (port); `PING` (ping).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getCheckType() {
+        return this.CheckType;
+    }
+
+    /**
+     * Set The health check type. Values: `PORT` (port); `PING` (ping).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param CheckType The health check type. Values: `PORT` (port); `PING` (ping).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setCheckType(String CheckType) {
+        this.CheckType = CheckType;
+    }
+
+    /**
+     * Get The health probe port.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return CheckPort The health probe port.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Long getCheckPort() {
+        return this.CheckPort;
+    }
+
+    /**
+     * Set The health probe port.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param CheckPort The health probe port.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setCheckPort(Long CheckPort) {
+        this.CheckPort = CheckPort;
+    }
+
+    /**
+     * Get The UDP message type. Values: `TEXT` (text). This parameter is used only when `CheckType = PORT`.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return ContextType The UDP message type. Values: `TEXT` (text). This parameter is used only when `CheckType = PORT`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getContextType() {
+        return this.ContextType;
+    }
+
+    /**
+     * Set The UDP message type. Values: `TEXT` (text). This parameter is used only when `CheckType = PORT`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param ContextType The UDP message type. Values: `TEXT` (text). This parameter is used only when `CheckType = PORT`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setContextType(String ContextType) {
+        this.ContextType = ContextType;
+    }
+
+    /**
+     * Get The UDP message sent by the health probe port. This parameter is used only when `CheckType = PORT`.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return SendContext The UDP message sent by the health probe port. This parameter is used only when `CheckType = PORT`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getSendContext() {
+        return this.SendContext;
+    }
+
+    /**
+     * Set The UDP message sent by the health probe port. This parameter is used only when `CheckType = PORT`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param SendContext The UDP message sent by the health probe port. This parameter is used only when `CheckType = PORT`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setSendContext(String SendContext) {
+        this.SendContext = SendContext;
+    }
+
+    /**
+     * Get The UDP message received by the health probe port. This parameter is used only when `CheckType = PORT`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RecvContext The UDP message received by the health probe port. This parameter is used only when `CheckType = PORT`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getRecvContext() {
+        return this.RecvContext;
+    }
+
+    /**
+     * Set The UDP message received by the health probe port. This parameter is used only when `CheckType = PORT`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RecvContext The UDP message received by the health probe port. This parameter is used only when `CheckType = PORT`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRecvContext(String RecvContext) {
+        this.RecvContext = RecvContext;
+    }
+
     public UDPListener() {
     }
 
@@ -380,6 +688,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.SessionPersist != null) {
             this.SessionPersist = new Long(source.SessionPersist);
         }
+        if (source.DelayLoop != null) {
+            this.DelayLoop = new Long(source.DelayLoop);
+        }
+        if (source.ConnectTimeout != null) {
+            this.ConnectTimeout = new Long(source.ConnectTimeout);
+        }
+        if (source.HealthyThreshold != null) {
+            this.HealthyThreshold = new Long(source.HealthyThreshold);
+        }
+        if (source.UnhealthyThreshold != null) {
+            this.UnhealthyThreshold = new Long(source.UnhealthyThreshold);
+        }
+        if (source.FailoverSwitch != null) {
+            this.FailoverSwitch = new Long(source.FailoverSwitch);
+        }
+        if (source.HealthCheck != null) {
+            this.HealthCheck = new Long(source.HealthCheck);
+        }
+        if (source.CheckType != null) {
+            this.CheckType = new String(source.CheckType);
+        }
+        if (source.CheckPort != null) {
+            this.CheckPort = new Long(source.CheckPort);
+        }
+        if (source.ContextType != null) {
+            this.ContextType = new String(source.ContextType);
+        }
+        if (source.SendContext != null) {
+            this.SendContext = new String(source.SendContext);
+        }
+        if (source.RecvContext != null) {
+            this.RecvContext = new String(source.RecvContext);
+        }
     }
 
 
@@ -399,6 +740,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "RealServerSet.", this.RealServerSet);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
+        this.setParamSimple(map, prefix + "DelayLoop", this.DelayLoop);
+        this.setParamSimple(map, prefix + "ConnectTimeout", this.ConnectTimeout);
+        this.setParamSimple(map, prefix + "HealthyThreshold", this.HealthyThreshold);
+        this.setParamSimple(map, prefix + "UnhealthyThreshold", this.UnhealthyThreshold);
+        this.setParamSimple(map, prefix + "FailoverSwitch", this.FailoverSwitch);
+        this.setParamSimple(map, prefix + "HealthCheck", this.HealthCheck);
+        this.setParamSimple(map, prefix + "CheckType", this.CheckType);
+        this.setParamSimple(map, prefix + "CheckPort", this.CheckPort);
+        this.setParamSimple(map, prefix + "ContextType", this.ContextType);
+        this.setParamSimple(map, prefix + "SendContext", this.SendContext);
+        this.setParamSimple(map, prefix + "RecvContext", this.RecvContext);
 
     }
 }

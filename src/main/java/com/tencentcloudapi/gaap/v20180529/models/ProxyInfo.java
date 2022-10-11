@@ -73,7 +73,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Bandwidth;
 
     /**
-    * Concurrence. Unit: requests/second.
+    * Concurrence. Unit: 10K requests/second.
     */
     @SerializedName("Concurrent")
     @Expose
@@ -295,6 +295,25 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Long InBanBlacklist;
 
     /**
+    * Feature bitmap. Valid values:
+`0`: Feature not supported
+`1`: Feature supported
+Each bit in the bitmap represents a feature:
+1st bit: Layer-4 acceleration;
+2nd bit: Layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: Dedicated BGP access;
+6th bit: Non-BGP access;
+7th bit: QoS acceleration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("FeatureBitmap")
+    @Expose
+    private Long FeatureBitmap;
+
+    /**
      * Get Connection instance ID; It's an old parameter, please switch to ProxyId.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return InstanceId Connection instance ID; It's an old parameter, please switch to ProxyId.
@@ -411,16 +430,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Concurrence. Unit: requests/second. 
-     * @return Concurrent Concurrence. Unit: requests/second.
+     * Get Concurrence. Unit: 10K requests/second. 
+     * @return Concurrent Concurrence. Unit: 10K requests/second.
      */
     public Long getConcurrent() {
         return this.Concurrent;
     }
 
     /**
-     * Set Concurrence. Unit: requests/second.
-     * @param Concurrent Concurrence. Unit: requests/second.
+     * Set Concurrence. Unit: 10K requests/second.
+     * @param Concurrent Concurrence. Unit: 10K requests/second.
      */
     public void setConcurrent(Long Concurrent) {
         this.Concurrent = Concurrent;
@@ -974,6 +993,70 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.InBanBlacklist = InBanBlacklist;
     }
 
+    /**
+     * Get Feature bitmap. Valid values:
+`0`: Feature not supported
+`1`: Feature supported
+Each bit in the bitmap represents a feature:
+1st bit: Layer-4 acceleration;
+2nd bit: Layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: Dedicated BGP access;
+6th bit: Non-BGP access;
+7th bit: QoS acceleration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return FeatureBitmap Feature bitmap. Valid values:
+`0`: Feature not supported
+`1`: Feature supported
+Each bit in the bitmap represents a feature:
+1st bit: Layer-4 acceleration;
+2nd bit: Layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: Dedicated BGP access;
+6th bit: Non-BGP access;
+7th bit: QoS acceleration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Long getFeatureBitmap() {
+        return this.FeatureBitmap;
+    }
+
+    /**
+     * Set Feature bitmap. Valid values:
+`0`: Feature not supported
+`1`: Feature supported
+Each bit in the bitmap represents a feature:
+1st bit: Layer-4 acceleration;
+2nd bit: Layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: Dedicated BGP access;
+6th bit: Non-BGP access;
+7th bit: QoS acceleration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param FeatureBitmap Feature bitmap. Valid values:
+`0`: Feature not supported
+`1`: Feature supported
+Each bit in the bitmap represents a feature:
+1st bit: Layer-4 acceleration;
+2nd bit: Layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: Dedicated BGP access;
+6th bit: Non-BGP access;
+7th bit: QoS acceleration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setFeatureBitmap(Long FeatureBitmap) {
+        this.FeatureBitmap = FeatureBitmap;
+    }
+
     public ProxyInfo() {
     }
 
@@ -1099,6 +1182,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.InBanBlacklist != null) {
             this.InBanBlacklist = new Long(source.InBanBlacklist);
         }
+        if (source.FeatureBitmap != null) {
+            this.FeatureBitmap = new Long(source.FeatureBitmap);
+        }
     }
 
 
@@ -1140,6 +1226,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamArrayObj(map, prefix + "IPList.", this.IPList);
         this.setParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
         this.setParamSimple(map, prefix + "InBanBlacklist", this.InBanBlacklist);
+        this.setParamSimple(map, prefix + "FeatureBitmap", this.FeatureBitmap);
 
     }
 }

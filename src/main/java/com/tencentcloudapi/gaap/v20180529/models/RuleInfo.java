@@ -58,7 +58,7 @@ public class RuleInfo extends AbstractModel{
     private String RealServerType;
 
     /**
-    * Forwarding policy of the origin server
+    * The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
     */
     @SerializedName("Scheduler")
     @Expose
@@ -216,16 +216,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Forwarding policy of the origin server 
-     * @return Scheduler Forwarding policy of the origin server
+     * Get The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy). 
+     * @return Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set Forwarding policy of the origin server
-     * @param Scheduler Forwarding policy of the origin server
+     * Set The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+     * @param Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;

@@ -83,6 +83,13 @@ public class ModifyLifecycleHookRequest extends AbstractModel{
     private NotificationTarget NotificationTarget;
 
     /**
+    * Remote command execution object.
+    */
+    @SerializedName("LifecycleCommand")
+    @Expose
+    private LifecycleCommand LifecycleCommand;
+
+    /**
      * Get Lifecycle hook ID. 
      * @return LifecycleHookId Lifecycle hook ID.
      */
@@ -226,6 +233,22 @@ public class ModifyLifecycleHookRequest extends AbstractModel{
         this.NotificationTarget = NotificationTarget;
     }
 
+    /**
+     * Get Remote command execution object. 
+     * @return LifecycleCommand Remote command execution object.
+     */
+    public LifecycleCommand getLifecycleCommand() {
+        return this.LifecycleCommand;
+    }
+
+    /**
+     * Set Remote command execution object.
+     * @param LifecycleCommand Remote command execution object.
+     */
+    public void setLifecycleCommand(LifecycleCommand LifecycleCommand) {
+        this.LifecycleCommand = LifecycleCommand;
+    }
+
     public ModifyLifecycleHookRequest() {
     }
 
@@ -258,6 +281,9 @@ public class ModifyLifecycleHookRequest extends AbstractModel{
         if (source.NotificationTarget != null) {
             this.NotificationTarget = new NotificationTarget(source.NotificationTarget);
         }
+        if (source.LifecycleCommand != null) {
+            this.LifecycleCommand = new LifecycleCommand(source.LifecycleCommand);
+        }
     }
 
 
@@ -273,6 +299,7 @@ public class ModifyLifecycleHookRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "NotificationMetadata", this.NotificationMetadata);
         this.setParamSimple(map, prefix + "LifecycleTransitionType", this.LifecycleTransitionType);
         this.setParamObj(map, prefix + "NotificationTarget.", this.NotificationTarget);
+        this.setParamObj(map, prefix + "LifecycleCommand.", this.LifecycleCommand);
 
     }
 }

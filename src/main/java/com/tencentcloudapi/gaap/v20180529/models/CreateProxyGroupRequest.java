@@ -44,7 +44,7 @@ public class CreateProxyGroupRequest extends AbstractModel{
     private String RealServerRegion;
 
     /**
-    * Tag list
+    * List of tags
     */
     @SerializedName("TagSet")
     @Expose
@@ -72,11 +72,7 @@ public class CreateProxyGroupRequest extends AbstractModel{
     private String PackageType;
 
     /**
-    * Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note that if HTTP3 is enabled for a connection, TCP/UDP access will not be allowed.
-After the connection is created, you cannot change your HTTP3 setting.
+    * (Disused) HTTP3.0 is supported by default when `IPAddressVersion` is `IPv4`.
     */
     @SerializedName("Http3Supported")
     @Expose
@@ -131,16 +127,16 @@ After the connection is created, you cannot change your HTTP3 setting.
     }
 
     /**
-     * Get Tag list 
-     * @return TagSet Tag list
+     * Get List of tags 
+     * @return TagSet List of tags
      */
     public TagPair [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set Tag list
-     * @param TagSet Tag list
+     * Set List of tags
+     * @param TagSet List of tags
      */
     public void setTagSet(TagPair [] TagSet) {
         this.TagSet = TagSet;
@@ -195,32 +191,16 @@ After the connection is created, you cannot change your HTTP3 setting.
     }
 
     /**
-     * Get Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note that if HTTP3 is enabled for a connection, TCP/UDP access will not be allowed.
-After the connection is created, you cannot change your HTTP3 setting. 
-     * @return Http3Supported Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note that if HTTP3 is enabled for a connection, TCP/UDP access will not be allowed.
-After the connection is created, you cannot change your HTTP3 setting.
+     * Get (Disused) HTTP3.0 is supported by default when `IPAddressVersion` is `IPv4`. 
+     * @return Http3Supported (Disused) HTTP3.0 is supported by default when `IPAddressVersion` is `IPv4`.
      */
     public Long getHttp3Supported() {
         return this.Http3Supported;
     }
 
     /**
-     * Set Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note that if HTTP3 is enabled for a connection, TCP/UDP access will not be allowed.
-After the connection is created, you cannot change your HTTP3 setting.
-     * @param Http3Supported Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note that if HTTP3 is enabled for a connection, TCP/UDP access will not be allowed.
-After the connection is created, you cannot change your HTTP3 setting.
+     * Set (Disused) HTTP3.0 is supported by default when `IPAddressVersion` is `IPv4`.
+     * @param Http3Supported (Disused) HTTP3.0 is supported by default when `IPAddressVersion` is `IPv4`.
      */
     public void setHttp3Supported(Long Http3Supported) {
         this.Http3Supported = Http3Supported;

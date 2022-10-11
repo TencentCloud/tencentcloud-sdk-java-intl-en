@@ -37,14 +37,14 @@ public class CreateUDPListenersRequest extends AbstractModel{
     private Long [] Ports;
 
     /**
-    * Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+    * The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
     */
     @SerializedName("Scheduler")
     @Expose
     private String Scheduler;
 
     /**
-    * Origin server type of listeners, which supports IP or DOMAIN type.
+    * The origin server type. Values: `IP` (IP address); `DOMAIN` (domain name).
     */
     @SerializedName("RealServerType")
     @Expose
@@ -70,6 +70,83 @@ public class CreateUDPListenersRequest extends AbstractModel{
     @SerializedName("RealServerPorts")
     @Expose
     private Long [] RealServerPorts;
+
+    /**
+    * Time interval of origin server health check (unit: seconds). Value range: [5, 300].
+    */
+    @SerializedName("DelayLoop")
+    @Expose
+    private Long DelayLoop;
+
+    /**
+    * Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
+    */
+    @SerializedName("ConnectTimeout")
+    @Expose
+    private Long ConnectTimeout;
+
+    /**
+    * Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+    */
+    @SerializedName("HealthyThreshold")
+    @Expose
+    private Long HealthyThreshold;
+
+    /**
+    * Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+    */
+    @SerializedName("UnhealthyThreshold")
+    @Expose
+    private Long UnhealthyThreshold;
+
+    /**
+    * Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+    */
+    @SerializedName("FailoverSwitch")
+    @Expose
+    private Long FailoverSwitch;
+
+    /**
+    * Whether the health check is enabled for the origin server. Values: `1` (enabled); `0` (disabled).
+    */
+    @SerializedName("HealthCheck")
+    @Expose
+    private Long HealthCheck;
+
+    /**
+    * The health check type. Values: `PORT` (port); `PING` (ping).
+    */
+    @SerializedName("CheckType")
+    @Expose
+    private String CheckType;
+
+    /**
+    * The health probe port.
+    */
+    @SerializedName("CheckPort")
+    @Expose
+    private Long CheckPort;
+
+    /**
+    * The UDP message type. Values: `TEXT` (text). This parameter is used only when `CheckType = PORT`.
+    */
+    @SerializedName("ContextType")
+    @Expose
+    private String ContextType;
+
+    /**
+    * The UDP message sent by the health probe port. This parameter is used only when `CheckType = PORT`.
+    */
+    @SerializedName("SendContext")
+    @Expose
+    private String SendContext;
+
+    /**
+    * The UDP message received by the health probe port. This parameter is used only when `CheckType = PORT`.
+    */
+    @SerializedName("RecvContext")
+    @Expose
+    private String RecvContext;
 
     /**
      * Get Listener name 
@@ -104,32 +181,32 @@ public class CreateUDPListenersRequest extends AbstractModel{
     }
 
     /**
-     * Get Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc). 
-     * @return Scheduler Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+     * Get The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy). 
+     * @return Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
-     * @param Scheduler Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+     * Set The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+     * @param Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;
     }
 
     /**
-     * Get Origin server type of listeners, which supports IP or DOMAIN type. 
-     * @return RealServerType Origin server type of listeners, which supports IP or DOMAIN type.
+     * Get The origin server type. Values: `IP` (IP address); `DOMAIN` (domain name). 
+     * @return RealServerType The origin server type. Values: `IP` (IP address); `DOMAIN` (domain name).
      */
     public String getRealServerType() {
         return this.RealServerType;
     }
 
     /**
-     * Set Origin server type of listeners, which supports IP or DOMAIN type.
-     * @param RealServerType Origin server type of listeners, which supports IP or DOMAIN type.
+     * Set The origin server type. Values: `IP` (IP address); `DOMAIN` (domain name).
+     * @param RealServerType The origin server type. Values: `IP` (IP address); `DOMAIN` (domain name).
      */
     public void setRealServerType(String RealServerType) {
         this.RealServerType = RealServerType;
@@ -183,6 +260,182 @@ public class CreateUDPListenersRequest extends AbstractModel{
         this.RealServerPorts = RealServerPorts;
     }
 
+    /**
+     * Get Time interval of origin server health check (unit: seconds). Value range: [5, 300]. 
+     * @return DelayLoop Time interval of origin server health check (unit: seconds). Value range: [5, 300].
+     */
+    public Long getDelayLoop() {
+        return this.DelayLoop;
+    }
+
+    /**
+     * Set Time interval of origin server health check (unit: seconds). Value range: [5, 300].
+     * @param DelayLoop Time interval of origin server health check (unit: seconds). Value range: [5, 300].
+     */
+    public void setDelayLoop(Long DelayLoop) {
+        this.DelayLoop = DelayLoop;
+    }
+
+    /**
+     * Get Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop. 
+     * @return ConnectTimeout Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
+     */
+    public Long getConnectTimeout() {
+        return this.ConnectTimeout;
+    }
+
+    /**
+     * Set Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
+     * @param ConnectTimeout Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
+     */
+    public void setConnectTimeout(Long ConnectTimeout) {
+        this.ConnectTimeout = ConnectTimeout;
+    }
+
+    /**
+     * Get Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10. 
+     * @return HealthyThreshold Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+     */
+    public Long getHealthyThreshold() {
+        return this.HealthyThreshold;
+    }
+
+    /**
+     * Set Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+     * @param HealthyThreshold Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+     */
+    public void setHealthyThreshold(Long HealthyThreshold) {
+        this.HealthyThreshold = HealthyThreshold;
+    }
+
+    /**
+     * Get Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10. 
+     * @return UnhealthyThreshold Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+     */
+    public Long getUnhealthyThreshold() {
+        return this.UnhealthyThreshold;
+    }
+
+    /**
+     * Set Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+     * @param UnhealthyThreshold Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+     */
+    public void setUnhealthyThreshold(Long UnhealthyThreshold) {
+        this.UnhealthyThreshold = UnhealthyThreshold;
+    }
+
+    /**
+     * Get Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`. 
+     * @return FailoverSwitch Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+     */
+    public Long getFailoverSwitch() {
+        return this.FailoverSwitch;
+    }
+
+    /**
+     * Set Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+     * @param FailoverSwitch Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+     */
+    public void setFailoverSwitch(Long FailoverSwitch) {
+        this.FailoverSwitch = FailoverSwitch;
+    }
+
+    /**
+     * Get Whether the health check is enabled for the origin server. Values: `1` (enabled); `0` (disabled). 
+     * @return HealthCheck Whether the health check is enabled for the origin server. Values: `1` (enabled); `0` (disabled).
+     */
+    public Long getHealthCheck() {
+        return this.HealthCheck;
+    }
+
+    /**
+     * Set Whether the health check is enabled for the origin server. Values: `1` (enabled); `0` (disabled).
+     * @param HealthCheck Whether the health check is enabled for the origin server. Values: `1` (enabled); `0` (disabled).
+     */
+    public void setHealthCheck(Long HealthCheck) {
+        this.HealthCheck = HealthCheck;
+    }
+
+    /**
+     * Get The health check type. Values: `PORT` (port); `PING` (ping). 
+     * @return CheckType The health check type. Values: `PORT` (port); `PING` (ping).
+     */
+    public String getCheckType() {
+        return this.CheckType;
+    }
+
+    /**
+     * Set The health check type. Values: `PORT` (port); `PING` (ping).
+     * @param CheckType The health check type. Values: `PORT` (port); `PING` (ping).
+     */
+    public void setCheckType(String CheckType) {
+        this.CheckType = CheckType;
+    }
+
+    /**
+     * Get The health probe port. 
+     * @return CheckPort The health probe port.
+     */
+    public Long getCheckPort() {
+        return this.CheckPort;
+    }
+
+    /**
+     * Set The health probe port.
+     * @param CheckPort The health probe port.
+     */
+    public void setCheckPort(Long CheckPort) {
+        this.CheckPort = CheckPort;
+    }
+
+    /**
+     * Get The UDP message type. Values: `TEXT` (text). This parameter is used only when `CheckType = PORT`. 
+     * @return ContextType The UDP message type. Values: `TEXT` (text). This parameter is used only when `CheckType = PORT`.
+     */
+    public String getContextType() {
+        return this.ContextType;
+    }
+
+    /**
+     * Set The UDP message type. Values: `TEXT` (text). This parameter is used only when `CheckType = PORT`.
+     * @param ContextType The UDP message type. Values: `TEXT` (text). This parameter is used only when `CheckType = PORT`.
+     */
+    public void setContextType(String ContextType) {
+        this.ContextType = ContextType;
+    }
+
+    /**
+     * Get The UDP message sent by the health probe port. This parameter is used only when `CheckType = PORT`. 
+     * @return SendContext The UDP message sent by the health probe port. This parameter is used only when `CheckType = PORT`.
+     */
+    public String getSendContext() {
+        return this.SendContext;
+    }
+
+    /**
+     * Set The UDP message sent by the health probe port. This parameter is used only when `CheckType = PORT`.
+     * @param SendContext The UDP message sent by the health probe port. This parameter is used only when `CheckType = PORT`.
+     */
+    public void setSendContext(String SendContext) {
+        this.SendContext = SendContext;
+    }
+
+    /**
+     * Get The UDP message received by the health probe port. This parameter is used only when `CheckType = PORT`. 
+     * @return RecvContext The UDP message received by the health probe port. This parameter is used only when `CheckType = PORT`.
+     */
+    public String getRecvContext() {
+        return this.RecvContext;
+    }
+
+    /**
+     * Set The UDP message received by the health probe port. This parameter is used only when `CheckType = PORT`.
+     * @param RecvContext The UDP message received by the health probe port. This parameter is used only when `CheckType = PORT`.
+     */
+    public void setRecvContext(String RecvContext) {
+        this.RecvContext = RecvContext;
+    }
+
     public CreateUDPListenersRequest() {
     }
 
@@ -218,6 +471,39 @@ public class CreateUDPListenersRequest extends AbstractModel{
                 this.RealServerPorts[i] = new Long(source.RealServerPorts[i]);
             }
         }
+        if (source.DelayLoop != null) {
+            this.DelayLoop = new Long(source.DelayLoop);
+        }
+        if (source.ConnectTimeout != null) {
+            this.ConnectTimeout = new Long(source.ConnectTimeout);
+        }
+        if (source.HealthyThreshold != null) {
+            this.HealthyThreshold = new Long(source.HealthyThreshold);
+        }
+        if (source.UnhealthyThreshold != null) {
+            this.UnhealthyThreshold = new Long(source.UnhealthyThreshold);
+        }
+        if (source.FailoverSwitch != null) {
+            this.FailoverSwitch = new Long(source.FailoverSwitch);
+        }
+        if (source.HealthCheck != null) {
+            this.HealthCheck = new Long(source.HealthCheck);
+        }
+        if (source.CheckType != null) {
+            this.CheckType = new String(source.CheckType);
+        }
+        if (source.CheckPort != null) {
+            this.CheckPort = new Long(source.CheckPort);
+        }
+        if (source.ContextType != null) {
+            this.ContextType = new String(source.ContextType);
+        }
+        if (source.SendContext != null) {
+            this.SendContext = new String(source.SendContext);
+        }
+        if (source.RecvContext != null) {
+            this.RecvContext = new String(source.RecvContext);
+        }
     }
 
 
@@ -232,6 +518,17 @@ public class CreateUDPListenersRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamArraySimple(map, prefix + "RealServerPorts.", this.RealServerPorts);
+        this.setParamSimple(map, prefix + "DelayLoop", this.DelayLoop);
+        this.setParamSimple(map, prefix + "ConnectTimeout", this.ConnectTimeout);
+        this.setParamSimple(map, prefix + "HealthyThreshold", this.HealthyThreshold);
+        this.setParamSimple(map, prefix + "UnhealthyThreshold", this.UnhealthyThreshold);
+        this.setParamSimple(map, prefix + "FailoverSwitch", this.FailoverSwitch);
+        this.setParamSimple(map, prefix + "HealthCheck", this.HealthCheck);
+        this.setParamSimple(map, prefix + "CheckType", this.CheckType);
+        this.setParamSimple(map, prefix + "CheckPort", this.CheckPort);
+        this.setParamSimple(map, prefix + "ContextType", this.ContextType);
+        this.setParamSimple(map, prefix + "SendContext", this.SendContext);
+        this.setParamSimple(map, prefix + "RecvContext", this.RecvContext);
 
     }
 }

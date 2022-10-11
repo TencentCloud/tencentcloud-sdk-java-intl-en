@@ -78,10 +78,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long ListenerStatus;
 
     /**
-    * Origin server access policy of listeners:
-`rr`: Round robin
-`wrr`: Weighted round robin
-`lc`: Least connection
+    * The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
     */
     @SerializedName("Scheduler")
     @Expose
@@ -311,28 +308,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Origin server access policy of listeners:
-`rr`: Round robin
-`wrr`: Weighted round robin
-`lc`: Least connection 
-     * @return Scheduler Origin server access policy of listeners:
-`rr`: Round robin
-`wrr`: Weighted round robin
-`lc`: Least connection
+     * Get The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy). 
+     * @return Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set Origin server access policy of listeners:
-`rr`: Round robin
-`wrr`: Weighted round robin
-`lc`: Least connection
-     * @param Scheduler Origin server access policy of listeners:
-`rr`: Round robin
-`wrr`: Weighted round robin
-`lc`: Least connection
+     * Set The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+     * @param Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;

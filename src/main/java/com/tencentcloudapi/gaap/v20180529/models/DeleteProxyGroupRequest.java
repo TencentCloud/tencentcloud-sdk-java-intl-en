@@ -31,8 +31,8 @@ public class DeleteProxyGroupRequest extends AbstractModel{
 
     /**
     * Whether to enable forced deletion. Valid values:
-0: no;
-1: yes.
+`0`: No;
+`1`: Yes.
 Default value: 0. If there is a connection or listener/rule bound to an origin server in the connection group and `Force` is 0, the operation will return a failure.
     */
     @SerializedName("Force")
@@ -57,12 +57,12 @@ Default value: 0. If there is a connection or listener/rule bound to an origin s
 
     /**
      * Get Whether to enable forced deletion. Valid values:
-0: no;
-1: yes.
+`0`: No;
+`1`: Yes.
 Default value: 0. If there is a connection or listener/rule bound to an origin server in the connection group and `Force` is 0, the operation will return a failure. 
      * @return Force Whether to enable forced deletion. Valid values:
-0: no;
-1: yes.
+`0`: No;
+`1`: Yes.
 Default value: 0. If there is a connection or listener/rule bound to an origin server in the connection group and `Force` is 0, the operation will return a failure.
      */
     public Long getForce() {
@@ -71,12 +71,12 @@ Default value: 0. If there is a connection or listener/rule bound to an origin s
 
     /**
      * Set Whether to enable forced deletion. Valid values:
-0: no;
-1: yes.
+`0`: No;
+`1`: Yes.
 Default value: 0. If there is a connection or listener/rule bound to an origin server in the connection group and `Force` is 0, the operation will return a failure.
      * @param Force Whether to enable forced deletion. Valid values:
-0: no;
-1: yes.
+`0`: No;
+`1`: Yes.
 Default value: 0. If there is a connection or listener/rule bound to an origin server in the connection group and `Force` is 0, the operation will return a failure.
      */
     public void setForce(Long Force) {

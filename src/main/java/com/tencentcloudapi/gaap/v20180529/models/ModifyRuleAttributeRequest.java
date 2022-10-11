@@ -37,10 +37,7 @@ public class ModifyRuleAttributeRequest extends AbstractModel{
     private String RuleId;
 
     /**
-    * Scheduling policy:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connections.
+    * The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
     */
     @SerializedName("Scheduler")
     @Expose
@@ -139,28 +136,16 @@ If `ForwardHost=default`, the domain name configured with the forwarding rule wi
     }
 
     /**
-     * Get Scheduling policy:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connections. 
-     * @return Scheduler Scheduling policy:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connections.
+     * Get The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy). 
+     * @return Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set Scheduling policy:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connections.
-     * @param Scheduler Scheduling policy:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connections.
+     * Set The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+     * @param Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;

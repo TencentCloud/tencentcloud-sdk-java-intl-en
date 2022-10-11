@@ -37,7 +37,7 @@ public class CreateTCPListenersRequest extends AbstractModel{
     private Long [] Ports;
 
     /**
-    * Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+    * The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
     */
     @SerializedName("Scheduler")
     @Expose
@@ -51,7 +51,7 @@ public class CreateTCPListenersRequest extends AbstractModel{
     private Long HealthCheck;
 
     /**
-    * The origin server type of listeners, supporting IP or DOMAIN type. The DOMAIN origin servers do not support the weighted round robin.
+    * The origin server type. Values: `IP` (IP address); `DOMAIN` (domain name).
     */
     @SerializedName("RealServerType")
     @Expose
@@ -153,16 +153,16 @@ public class CreateTCPListenersRequest extends AbstractModel{
     }
 
     /**
-     * Get Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc). 
-     * @return Scheduler Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+     * Get The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy). 
+     * @return Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
      */
     public String getScheduler() {
         return this.Scheduler;
     }
 
     /**
-     * Set Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
-     * @param Scheduler Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+     * Set The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+     * @param Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
      */
     public void setScheduler(String Scheduler) {
         this.Scheduler = Scheduler;
@@ -185,16 +185,16 @@ public class CreateTCPListenersRequest extends AbstractModel{
     }
 
     /**
-     * Get The origin server type of listeners, supporting IP or DOMAIN type. The DOMAIN origin servers do not support the weighted round robin. 
-     * @return RealServerType The origin server type of listeners, supporting IP or DOMAIN type. The DOMAIN origin servers do not support the weighted round robin.
+     * Get The origin server type. Values: `IP` (IP address); `DOMAIN` (domain name). 
+     * @return RealServerType The origin server type. Values: `IP` (IP address); `DOMAIN` (domain name).
      */
     public String getRealServerType() {
         return this.RealServerType;
     }
 
     /**
-     * Set The origin server type of listeners, supporting IP or DOMAIN type. The DOMAIN origin servers do not support the weighted round robin.
-     * @param RealServerType The origin server type of listeners, supporting IP or DOMAIN type. The DOMAIN origin servers do not support the weighted round robin.
+     * Set The origin server type. Values: `IP` (IP address); `DOMAIN` (domain name).
+     * @param RealServerType The origin server type. Values: `IP` (IP address); `DOMAIN` (domain name).
      */
     public void setRealServerType(String RealServerType) {
         this.RealServerType = RealServerType;

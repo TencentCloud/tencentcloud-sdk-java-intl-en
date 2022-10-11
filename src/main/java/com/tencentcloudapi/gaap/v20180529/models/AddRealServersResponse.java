@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AddRealServersResponse extends AbstractModel{
 
     /**
-    * Origin server information list
+    * An information list of origin server
     */
     @SerializedName("RealServerSet")
     @Expose
@@ -37,16 +37,16 @@ public class AddRealServersResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Origin server information list 
-     * @return RealServerSet Origin server information list
+     * Get An information list of origin server 
+     * @return RealServerSet An information list of origin server
      */
     public NewRealServer [] getRealServerSet() {
         return this.RealServerSet;
     }
 
     /**
-     * Set Origin server information list
-     * @param RealServerSet Origin server information list
+     * Set An information list of origin server
+     * @param RealServerSet An information list of origin server
      */
     public void setRealServerSet(NewRealServer [] RealServerSet) {
         this.RealServerSet = RealServerSet;

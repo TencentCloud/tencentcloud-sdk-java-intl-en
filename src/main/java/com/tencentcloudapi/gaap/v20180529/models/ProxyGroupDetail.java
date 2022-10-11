@@ -171,6 +171,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Http3Supported;
 
     /**
+    * Feature bitmap. Valid values:
+`0`: Feature not supported
+`1`: Feature supported
+Each bit in the bitmap represents a feature:
+1st bit: Layer-4 acceleration;
+2nd bit: Layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: Dedicated BGP access;
+6th bit: Non-BGP access;
+7th bit: QoS acceleration.
+Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("FeatureBitmap")
+    @Expose
+    private Long FeatureBitmap;
+
+    /**
      * Get Creation time 
      * @return CreateTime Creation time
      */
@@ -534,6 +553,70 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Http3Supported = Http3Supported;
     }
 
+    /**
+     * Get Feature bitmap. Valid values:
+`0`: Feature not supported
+`1`: Feature supported
+Each bit in the bitmap represents a feature:
+1st bit: Layer-4 acceleration;
+2nd bit: Layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: Dedicated BGP access;
+6th bit: Non-BGP access;
+7th bit: QoS acceleration.
+Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return FeatureBitmap Feature bitmap. Valid values:
+`0`: Feature not supported
+`1`: Feature supported
+Each bit in the bitmap represents a feature:
+1st bit: Layer-4 acceleration;
+2nd bit: Layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: Dedicated BGP access;
+6th bit: Non-BGP access;
+7th bit: QoS acceleration.
+Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getFeatureBitmap() {
+        return this.FeatureBitmap;
+    }
+
+    /**
+     * Set Feature bitmap. Valid values:
+`0`: Feature not supported
+`1`: Feature supported
+Each bit in the bitmap represents a feature:
+1st bit: Layer-4 acceleration;
+2nd bit: Layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: Dedicated BGP access;
+6th bit: Non-BGP access;
+7th bit: QoS acceleration.
+Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param FeatureBitmap Feature bitmap. Valid values:
+`0`: Feature not supported
+`1`: Feature supported
+Each bit in the bitmap represents a feature:
+1st bit: Layer-4 acceleration;
+2nd bit: Layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: Dedicated BGP access;
+6th bit: Non-BGP access;
+7th bit: QoS acceleration.
+Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setFeatureBitmap(Long FeatureBitmap) {
+        this.FeatureBitmap = FeatureBitmap;
+    }
+
     public ProxyGroupDetail() {
     }
 
@@ -605,6 +688,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Http3Supported != null) {
             this.Http3Supported = new Long(source.Http3Supported);
         }
+        if (source.FeatureBitmap != null) {
+            this.FeatureBitmap = new Long(source.FeatureBitmap);
+        }
     }
 
 
@@ -631,6 +717,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
         this.setParamSimple(map, prefix + "PackageType", this.PackageType);
         this.setParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
+        this.setParamSimple(map, prefix + "FeatureBitmap", this.FeatureBitmap);
 
     }
 }

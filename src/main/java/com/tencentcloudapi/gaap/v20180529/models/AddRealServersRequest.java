@@ -37,14 +37,14 @@ public class AddRealServersRequest extends AbstractModel{
     private String [] RealServerIP;
 
     /**
-    * Origin server name
+    * Name of the origin server
     */
     @SerializedName("RealServerName")
     @Expose
     private String RealServerName;
 
     /**
-    * Tag list
+    * List of tags
     */
     @SerializedName("TagSet")
     @Expose
@@ -83,32 +83,32 @@ public class AddRealServersRequest extends AbstractModel{
     }
 
     /**
-     * Get Origin server name 
-     * @return RealServerName Origin server name
+     * Get Name of the origin server 
+     * @return RealServerName Name of the origin server
      */
     public String getRealServerName() {
         return this.RealServerName;
     }
 
     /**
-     * Set Origin server name
-     * @param RealServerName Origin server name
+     * Set Name of the origin server
+     * @param RealServerName Name of the origin server
      */
     public void setRealServerName(String RealServerName) {
         this.RealServerName = RealServerName;
     }
 
     /**
-     * Get Tag list 
-     * @return TagSet Tag list
+     * Get List of tags 
+     * @return TagSet List of tags
      */
     public TagPair [] getTagSet() {
         return this.TagSet;
     }
 
     /**
-     * Set Tag list
-     * @param TagSet Tag list
+     * Set List of tags
+     * @param TagSet List of tags
      */
     public void setTagSet(TagPair [] TagSet) {
         this.TagSet = TagSet;
