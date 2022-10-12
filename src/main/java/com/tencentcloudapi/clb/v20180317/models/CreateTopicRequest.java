@@ -51,6 +51,13 @@ public class CreateTopicRequest extends AbstractModel{
     private Long Period;
 
     /**
+    * Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
+    */
+    @SerializedName("StorageType")
+    @Expose
+    private String StorageType;
+
+    /**
      * Get Log topic name 
      * @return TopicName Log topic name
      */
@@ -114,6 +121,22 @@ public class CreateTopicRequest extends AbstractModel{
         this.Period = Period;
     }
 
+    /**
+     * Get Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`. 
+     * @return StorageType Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
+     */
+    public String getStorageType() {
+        return this.StorageType;
+    }
+
+    /**
+     * Set Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
+     * @param StorageType Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
+     */
+    public void setStorageType(String StorageType) {
+        this.StorageType = StorageType;
+    }
+
     public CreateTopicRequest() {
     }
 
@@ -134,6 +157,9 @@ public class CreateTopicRequest extends AbstractModel{
         if (source.Period != null) {
             this.Period = new Long(source.Period);
         }
+        if (source.StorageType != null) {
+            this.StorageType = new String(source.StorageType);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class CreateTopicRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
         this.setParamSimple(map, prefix + "TopicType", this.TopicType);
         this.setParamSimple(map, prefix + "Period", this.Period);
+        this.setParamSimple(map, prefix + "StorageType", this.StorageType);
 
     }
 }

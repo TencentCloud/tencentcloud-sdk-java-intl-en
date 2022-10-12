@@ -21,6 +21,9 @@ public enum ClbErrorCode {
     // Wrong parameter format.
      INVALIDPARAMETER_FORMATERROR("InvalidParameter.FormatError"),
      
+    // Failed to query the parameter
+     INVALIDPARAMETER_INVALIDFILTER("InvalidParameter.InvalidFilter"),
+     
     // Wrong CLB instance ID.
      INVALIDPARAMETER_LBIDNOTFOUND("InvalidParameter.LBIdNotFound"),
      

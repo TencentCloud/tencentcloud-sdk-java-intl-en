@@ -725,6 +725,26 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
+     *Idle CLB instances are pay-as-you-go load balancers that, within seven days after the creation, do not have rules configured or the configured rules are not associated with any servers. 
+     * @param req DescribeIdleLoadBalancersRequest
+     * @return DescribeIdleLoadBalancersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIdleLoadBalancersResponse DescribeIdleLoadBalancers(DescribeIdleLoadBalancersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeIdleLoadBalancersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeIdleLoadBalancersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeIdleLoadBalancers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query CLB instances bound to the CVM or ENI.
      * @param req DescribeLBListenersRequest
      * @return DescribeLBListenersResponse

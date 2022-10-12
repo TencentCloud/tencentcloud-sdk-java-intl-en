@@ -63,8 +63,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Health check status code (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: 1-31. Default value: 31.
-1 means that the return value of 1xx after detection means healthy, 2 for returning 2xx for healthy, 4 for returning 3xx for healthy, 8 for returning 4xx for healthy, and 16 for returning 5xx for healthy. If you want multiple return codes to represent healthy, sum up the corresponding values. Note: The HTTP health check mode of TCP listeners only supports specifying one kind of health check status code.
-Note: This field may return null, indicating that no valid values can be obtained.
+`1`: Returns code 1xx for healthy status. `2`: Returns code 2xx for healthy status. `4`: Returns code 3xx for healthy status. `8`: Returns code 4xx for healthy status. `16`: Returns code 5xx for healthy status. If you want multiple return codes to represent healthy, sum up the corresponding values. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("HttpCode")
     @Expose
@@ -79,8 +79,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String HttpCheckPath;
 
     /**
-    * Health check domain name (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The target domain name for health check. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for TCP listeners.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("HttpCheckDomain")
     @Expose
@@ -256,11 +256,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Health check status code (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: 1-31. Default value: 31.
-1 means that the return value of 1xx after detection means healthy, 2 for returning 2xx for healthy, 4 for returning 3xx for healthy, 8 for returning 4xx for healthy, and 16 for returning 5xx for healthy. If you want multiple return codes to represent healthy, sum up the corresponding values. Note: The HTTP health check mode of TCP listeners only supports specifying one kind of health check status code.
-Note: This field may return null, indicating that no valid values can be obtained. 
+`1`: Returns code 1xx for healthy status. `2`: Returns code 2xx for healthy status. `4`: Returns code 3xx for healthy status. `8`: Returns code 4xx for healthy status. `16`: Returns code 5xx for healthy status. If you want multiple return codes to represent healthy, sum up the corresponding values. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return HttpCode Health check status code (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: 1-31. Default value: 31.
-1 means that the return value of 1xx after detection means healthy, 2 for returning 2xx for healthy, 4 for returning 3xx for healthy, 8 for returning 4xx for healthy, and 16 for returning 5xx for healthy. If you want multiple return codes to represent healthy, sum up the corresponding values. Note: The HTTP health check mode of TCP listeners only supports specifying one kind of health check status code.
-Note: This field may return null, indicating that no valid values can be obtained.
+`1`: Returns code 1xx for healthy status. `2`: Returns code 2xx for healthy status. `4`: Returns code 3xx for healthy status. `8`: Returns code 4xx for healthy status. `16`: Returns code 5xx for healthy status. If you want multiple return codes to represent healthy, sum up the corresponding values. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getHttpCode() {
         return this.HttpCode;
@@ -268,11 +268,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Health check status code (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: 1-31. Default value: 31.
-1 means that the return value of 1xx after detection means healthy, 2 for returning 2xx for healthy, 4 for returning 3xx for healthy, 8 for returning 4xx for healthy, and 16 for returning 5xx for healthy. If you want multiple return codes to represent healthy, sum up the corresponding values. Note: The HTTP health check mode of TCP listeners only supports specifying one kind of health check status code.
-Note: This field may return null, indicating that no valid values can be obtained.
+`1`: Returns code 1xx for healthy status. `2`: Returns code 2xx for healthy status. `4`: Returns code 3xx for healthy status. `8`: Returns code 4xx for healthy status. `16`: Returns code 5xx for healthy status. If you want multiple return codes to represent healthy, sum up the corresponding values. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param HttpCode Health check status code (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners). Value range: 1-31. Default value: 31.
-1 means that the return value of 1xx after detection means healthy, 2 for returning 2xx for healthy, 4 for returning 3xx for healthy, 8 for returning 4xx for healthy, and 16 for returning 5xx for healthy. If you want multiple return codes to represent healthy, sum up the corresponding values. Note: The HTTP health check mode of TCP listeners only supports specifying one kind of health check status code.
-Note: This field may return null, indicating that no valid values can be obtained.
+`1`: Returns code 1xx for healthy status. `2`: Returns code 2xx for healthy status. `4`: Returns code 3xx for healthy status. `8`: Returns code 4xx for healthy status. `16`: Returns code 5xx for healthy status. If you want multiple return codes to represent healthy, sum up the corresponding values. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setHttpCode(Long HttpCode) {
         this.HttpCode = HttpCode;
@@ -299,20 +299,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Health check domain name (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return HttpCheckDomain Health check domain name (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The target domain name for health check. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for TCP listeners.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return HttpCheckDomain The target domain name for health check. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for TCP listeners.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getHttpCheckDomain() {
         return this.HttpCheckDomain;
     }
 
     /**
-     * Set Health check domain name (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param HttpCheckDomain Health check domain name (applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The target domain name for health check. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for TCP listeners.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param HttpCheckDomain The target domain name for health check. It’s applicable only to HTTP/HTTPS forwarding rules and HTTP health checks of TCP listeners. It’s required for TCP listeners.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setHttpCheckDomain(String HttpCheckDomain) {
         this.HttpCheckDomain = HttpCheckDomain;

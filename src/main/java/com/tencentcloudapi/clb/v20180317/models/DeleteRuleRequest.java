@@ -44,14 +44,14 @@ public class DeleteRuleRequest extends AbstractModel{
     private String [] LocationIds;
 
     /**
-    * Specifies the target domain name. Only one domain name is allowed. This field is invalid when `LocationIds` is specified.
+    * The domain name associated with the forwarding rule to delete. If the rule is associated with multiple domain names, specify any one of them.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
+    * The forwarding path of the forwarding rule to delete.
     */
     @SerializedName("Url")
     @Expose
@@ -113,32 +113,32 @@ public class DeleteRuleRequest extends AbstractModel{
     }
 
     /**
-     * Get Specifies the target domain name. Only one domain name is allowed. This field is invalid when `LocationIds` is specified. 
-     * @return Domain Specifies the target domain name. Only one domain name is allowed. This field is invalid when `LocationIds` is specified.
+     * Get The domain name associated with the forwarding rule to delete. If the rule is associated with multiple domain names, specify any one of them. 
+     * @return Domain The domain name associated with the forwarding rule to delete. If the rule is associated with multiple domain names, specify any one of them.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Specifies the target domain name. Only one domain name is allowed. This field is invalid when `LocationIds` is specified.
-     * @param Domain Specifies the target domain name. Only one domain name is allowed. This field is invalid when `LocationIds` is specified.
+     * Set The domain name associated with the forwarding rule to delete. If the rule is associated with multiple domain names, specify any one of them.
+     * @param Domain The domain name associated with the forwarding rule to delete. If the rule is associated with multiple domain names, specify any one of them.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified. 
-     * @return Url Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
+     * Get The forwarding path of the forwarding rule to delete. 
+     * @return Url The forwarding path of the forwarding rule to delete.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
-     * @param Url Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
+     * Set The forwarding path of the forwarding rule to delete.
+     * @param Url The forwarding path of the forwarding rule to delete.
      */
     public void setUrl(String Url) {
         this.Url = Url;

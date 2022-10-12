@@ -119,6 +119,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long JsonStandard;
 
     /**
+    * Syslog protocol. Valid values: `tcp`, `udp`.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
+    * Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Address")
+    @Expose
+    private String Address;
+
+    /**
+    * `rfc3164`: Resolve logs by using the RFC3164 protocol during the syslog collection.
+`rfc5424`: Resolve logs by using the RFC5424 protocol during the syslog collection.
+`auto`: Automatically match either the RFC3164 or RFC5424 protocol.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ParseProtocol")
+    @Expose
+    private String ParseProtocol;
+
+    /**
      * Get Time field key name. `time_key` and `time_format` must appear in pairs
 Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return TimeKey Time field key name. `time_key` and `time_format` must appear in pairs
@@ -358,6 +387,86 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.JsonStandard = JsonStandard;
     }
 
+    /**
+     * Get Syslog protocol. Valid values: `tcp`, `udp`.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Protocol Syslog protocol. Valid values: `tcp`, `udp`.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set Syslog protocol. Valid values: `tcp`, `udp`.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Protocol Syslog protocol. Valid values: `tcp`, `udp`.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
+    /**
+     * Get Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Address Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getAddress() {
+        return this.Address;
+    }
+
+    /**
+     * Set Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Address Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAddress(String Address) {
+        this.Address = Address;
+    }
+
+    /**
+     * Get `rfc3164`: Resolve logs by using the RFC3164 protocol during the syslog collection.
+`rfc5424`: Resolve logs by using the RFC5424 protocol during the syslog collection.
+`auto`: Automatically match either the RFC3164 or RFC5424 protocol.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ParseProtocol `rfc3164`: Resolve logs by using the RFC3164 protocol during the syslog collection.
+`rfc5424`: Resolve logs by using the RFC5424 protocol during the syslog collection.
+`auto`: Automatically match either the RFC3164 or RFC5424 protocol.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getParseProtocol() {
+        return this.ParseProtocol;
+    }
+
+    /**
+     * Set `rfc3164`: Resolve logs by using the RFC3164 protocol during the syslog collection.
+`rfc5424`: Resolve logs by using the RFC5424 protocol during the syslog collection.
+`auto`: Automatically match either the RFC3164 or RFC5424 protocol.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ParseProtocol `rfc3164`: Resolve logs by using the RFC3164 protocol during the syslog collection.
+`rfc5424`: Resolve logs by using the RFC5424 protocol during the syslog collection.
+`auto`: Automatically match either the RFC3164 or RFC5424 protocol.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setParseProtocol(String ParseProtocol) {
+        this.ParseProtocol = ParseProtocol;
+    }
+
     public ExtractRuleInfo() {
     }
 
@@ -408,6 +517,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.JsonStandard != null) {
             this.JsonStandard = new Long(source.JsonStandard);
         }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.Address != null) {
+            this.Address = new String(source.Address);
+        }
+        if (source.ParseProtocol != null) {
+            this.ParseProtocol = new String(source.ParseProtocol);
+        }
     }
 
 
@@ -427,6 +545,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Backtracking", this.Backtracking);
         this.setParamSimple(map, prefix + "IsGBK", this.IsGBK);
         this.setParamSimple(map, prefix + "JsonStandard", this.JsonStandard);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamSimple(map, prefix + "Address", this.Address);
+        this.setParamSimple(map, prefix + "ParseProtocol", this.ParseProtocol);
 
     }
 }
