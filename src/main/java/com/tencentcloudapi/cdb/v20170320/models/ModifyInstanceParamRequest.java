@@ -51,6 +51,20 @@ public class ModifyInstanceParamRequest extends AbstractModel{
     private Long WaitSwitch;
 
     /**
+    * Whether to sync the parameters to read-only instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
+    */
+    @SerializedName("NotSyncRo")
+    @Expose
+    private Boolean NotSyncRo;
+
+    /**
+    * Whether to sync the parameters to disaster recovery instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
+    */
+    @SerializedName("NotSyncDr")
+    @Expose
+    private Boolean NotSyncDr;
+
+    /**
      * Get List of short instance IDs. 
      * @return InstanceIds List of short instance IDs.
      */
@@ -114,6 +128,38 @@ public class ModifyInstanceParamRequest extends AbstractModel{
         this.WaitSwitch = WaitSwitch;
     }
 
+    /**
+     * Get Whether to sync the parameters to read-only instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`. 
+     * @return NotSyncRo Whether to sync the parameters to read-only instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
+     */
+    public Boolean getNotSyncRo() {
+        return this.NotSyncRo;
+    }
+
+    /**
+     * Set Whether to sync the parameters to read-only instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
+     * @param NotSyncRo Whether to sync the parameters to read-only instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
+     */
+    public void setNotSyncRo(Boolean NotSyncRo) {
+        this.NotSyncRo = NotSyncRo;
+    }
+
+    /**
+     * Get Whether to sync the parameters to disaster recovery instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`. 
+     * @return NotSyncDr Whether to sync the parameters to disaster recovery instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
+     */
+    public Boolean getNotSyncDr() {
+        return this.NotSyncDr;
+    }
+
+    /**
+     * Set Whether to sync the parameters to disaster recovery instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
+     * @param NotSyncDr Whether to sync the parameters to disaster recovery instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
+     */
+    public void setNotSyncDr(Boolean NotSyncDr) {
+        this.NotSyncDr = NotSyncDr;
+    }
+
     public ModifyInstanceParamRequest() {
     }
 
@@ -140,6 +186,12 @@ public class ModifyInstanceParamRequest extends AbstractModel{
         if (source.WaitSwitch != null) {
             this.WaitSwitch = new Long(source.WaitSwitch);
         }
+        if (source.NotSyncRo != null) {
+            this.NotSyncRo = new Boolean(source.NotSyncRo);
+        }
+        if (source.NotSyncDr != null) {
+            this.NotSyncDr = new Boolean(source.NotSyncDr);
+        }
     }
 
 
@@ -151,6 +203,8 @@ public class ModifyInstanceParamRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "ParamList.", this.ParamList);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
+        this.setParamSimple(map, prefix + "NotSyncRo", this.NotSyncRo);
+        this.setParamSimple(map, prefix + "NotSyncDr", this.NotSyncDr);
 
     }
 }

@@ -1398,6 +1398,26 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
     }
 
     /**
+     *This API is used to import an OpenAPI to API gateway. 
+     * @param req ImportOpenApiRequest
+     * @return ImportOpenApiResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportOpenApiResponse ImportOpenApi(ImportOpenApiRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ImportOpenApiResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ImportOpenApiResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ImportOpenApi");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify an API document.
      * @param req ModifyAPIDocRequest
      * @return ModifyAPIDocResponse
