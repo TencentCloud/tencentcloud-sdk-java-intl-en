@@ -23,72 +23,118 @@ import java.util.HashMap;
 public class CreateSnapshotRequest extends AbstractModel{
 
     /**
-    * ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
+    * ID of the cloud disk for which to create a snapshot, which can be queried through the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
     */
     @SerializedName("DiskId")
     @Expose
     private String DiskId;
 
     /**
-    * Snapshot name. If it is left empty, the new snapshot name is "Not named" by default.
+    * Snapshot name. If it is not specified, "Unnamed" will be used by default.
     */
     @SerializedName("SnapshotName")
     @Expose
     private String SnapshotName;
 
     /**
-    * Expiration time of the snapshot. It must be in UTC ISO-8601 format, eg. 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires
+    * Expiration time of the snapshot. It must be in UTC ISO-8601 format, such as 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires.
     */
     @SerializedName("Deadline")
     @Expose
     private String Deadline;
 
     /**
-     * Get ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1). 
-     * @return DiskId ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
+    * ID of the cloud disk backup point. When this parameter is specified, the snapshot will be created from the backup point.
+    */
+    @SerializedName("DiskBackupId")
+    @Expose
+    private String DiskBackupId;
+
+    /**
+    * Tags bound to the snapshot.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+     * Get ID of the cloud disk for which to create a snapshot, which can be queried through the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API. 
+     * @return DiskId ID of the cloud disk for which to create a snapshot, which can be queried through the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
      */
     public String getDiskId() {
         return this.DiskId;
     }
 
     /**
-     * Set ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
-     * @param DiskId ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
+     * Set ID of the cloud disk for which to create a snapshot, which can be queried through the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
+     * @param DiskId ID of the cloud disk for which to create a snapshot, which can be queried through the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;
     }
 
     /**
-     * Get Snapshot name. If it is left empty, the new snapshot name is "Not named" by default. 
-     * @return SnapshotName Snapshot name. If it is left empty, the new snapshot name is "Not named" by default.
+     * Get Snapshot name. If it is not specified, "Unnamed" will be used by default. 
+     * @return SnapshotName Snapshot name. If it is not specified, "Unnamed" will be used by default.
      */
     public String getSnapshotName() {
         return this.SnapshotName;
     }
 
     /**
-     * Set Snapshot name. If it is left empty, the new snapshot name is "Not named" by default.
-     * @param SnapshotName Snapshot name. If it is left empty, the new snapshot name is "Not named" by default.
+     * Set Snapshot name. If it is not specified, "Unnamed" will be used by default.
+     * @param SnapshotName Snapshot name. If it is not specified, "Unnamed" will be used by default.
      */
     public void setSnapshotName(String SnapshotName) {
         this.SnapshotName = SnapshotName;
     }
 
     /**
-     * Get Expiration time of the snapshot. It must be in UTC ISO-8601 format, eg. 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires 
-     * @return Deadline Expiration time of the snapshot. It must be in UTC ISO-8601 format, eg. 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires
+     * Get Expiration time of the snapshot. It must be in UTC ISO-8601 format, such as 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires. 
+     * @return Deadline Expiration time of the snapshot. It must be in UTC ISO-8601 format, such as 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires.
      */
     public String getDeadline() {
         return this.Deadline;
     }
 
     /**
-     * Set Expiration time of the snapshot. It must be in UTC ISO-8601 format, eg. 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires
-     * @param Deadline Expiration time of the snapshot. It must be in UTC ISO-8601 format, eg. 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires
+     * Set Expiration time of the snapshot. It must be in UTC ISO-8601 format, such as 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires.
+     * @param Deadline Expiration time of the snapshot. It must be in UTC ISO-8601 format, such as 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires.
      */
     public void setDeadline(String Deadline) {
         this.Deadline = Deadline;
+    }
+
+    /**
+     * Get ID of the cloud disk backup point. When this parameter is specified, the snapshot will be created from the backup point. 
+     * @return DiskBackupId ID of the cloud disk backup point. When this parameter is specified, the snapshot will be created from the backup point.
+     */
+    public String getDiskBackupId() {
+        return this.DiskBackupId;
+    }
+
+    /**
+     * Set ID of the cloud disk backup point. When this parameter is specified, the snapshot will be created from the backup point.
+     * @param DiskBackupId ID of the cloud disk backup point. When this parameter is specified, the snapshot will be created from the backup point.
+     */
+    public void setDiskBackupId(String DiskBackupId) {
+        this.DiskBackupId = DiskBackupId;
+    }
+
+    /**
+     * Get Tags bound to the snapshot. 
+     * @return Tags Tags bound to the snapshot.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tags bound to the snapshot.
+     * @param Tags Tags bound to the snapshot.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
     }
 
     public CreateSnapshotRequest() {
@@ -108,6 +154,15 @@ public class CreateSnapshotRequest extends AbstractModel{
         if (source.Deadline != null) {
             this.Deadline = new String(source.Deadline);
         }
+        if (source.DiskBackupId != null) {
+            this.DiskBackupId = new String(source.DiskBackupId);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -118,6 +173,8 @@ public class CreateSnapshotRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskId", this.DiskId);
         this.setParamSimple(map, prefix + "SnapshotName", this.SnapshotName);
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
+        this.setParamSimple(map, prefix + "DiskBackupId", this.DiskBackupId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

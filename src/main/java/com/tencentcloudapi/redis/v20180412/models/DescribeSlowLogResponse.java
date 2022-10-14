@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeSlowLogResponse extends AbstractModel{
 
     /**
-    * Total number of slow logs
+    * Total number of slow queries
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Slow log details
+    * Slow query details
     */
     @SerializedName("InstanceSlowlogDetail")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeSlowLogResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Total number of slow logs 
-     * @return TotalCount Total number of slow logs
+     * Get Total number of slow queries 
+     * @return TotalCount Total number of slow queries
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of slow logs
-     * @param TotalCount Total number of slow logs
+     * Set Total number of slow queries
+     * @param TotalCount Total number of slow queries
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Slow log details 
-     * @return InstanceSlowlogDetail Slow log details
+     * Get Slow query details 
+     * @return InstanceSlowlogDetail Slow query details
      */
     public InstanceSlowlogDetail [] getInstanceSlowlogDetail() {
         return this.InstanceSlowlogDetail;
     }
 
     /**
-     * Set Slow log details
-     * @param InstanceSlowlogDetail Slow log details
+     * Set Slow query details
+     * @param InstanceSlowlogDetail Slow query details
      */
     public void setInstanceSlowlogDetail(InstanceSlowlogDetail [] InstanceSlowlogDetail) {
         this.InstanceSlowlogDetail = InstanceSlowlogDetail;

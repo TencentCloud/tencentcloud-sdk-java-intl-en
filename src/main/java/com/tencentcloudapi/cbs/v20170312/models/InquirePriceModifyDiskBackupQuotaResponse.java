@@ -20,10 +20,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceCreateDisksResponse extends AbstractModel{
+public class InquirePriceModifyDiskBackupQuotaResponse extends AbstractModel{
 
     /**
-    * Describes the price of newly purchased cloud disks.
+    * Price of the cloud disk after its backup point quota is modified.
     */
     @SerializedName("DiskPrice")
     @Expose
@@ -37,16 +37,16 @@ public class InquiryPriceCreateDisksResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Describes the price of newly purchased cloud disks. 
-     * @return DiskPrice Describes the price of newly purchased cloud disks.
+     * Get Price of the cloud disk after its backup point quota is modified. 
+     * @return DiskPrice Price of the cloud disk after its backup point quota is modified.
      */
     public Price getDiskPrice() {
         return this.DiskPrice;
     }
 
     /**
-     * Set Describes the price of newly purchased cloud disks.
-     * @param DiskPrice Describes the price of newly purchased cloud disks.
+     * Set Price of the cloud disk after its backup point quota is modified.
+     * @param DiskPrice Price of the cloud disk after its backup point quota is modified.
      */
     public void setDiskPrice(Price DiskPrice) {
         this.DiskPrice = DiskPrice;
@@ -68,14 +68,14 @@ public class InquiryPriceCreateDisksResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public InquiryPriceCreateDisksResponse() {
+    public InquirePriceModifyDiskBackupQuotaResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InquiryPriceCreateDisksResponse(InquiryPriceCreateDisksResponse source) {
+    public InquirePriceModifyDiskBackupQuotaResponse(InquirePriceModifyDiskBackupQuotaResponse source) {
         if (source.DiskPrice != null) {
             this.DiskPrice = new Price(source.DiskPrice);
         }

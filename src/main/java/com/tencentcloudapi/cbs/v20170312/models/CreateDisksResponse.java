@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateDisksResponse extends AbstractModel{
 
     /**
-    * List of created cloud disk IDs. 
+    * List of IDs of the created cloud disks.
     */
     @SerializedName("DiskIdSet")
     @Expose
@@ -37,16 +37,16 @@ public class CreateDisksResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get List of created cloud disk IDs.  
-     * @return DiskIdSet List of created cloud disk IDs. 
+     * Get List of IDs of the created cloud disks. 
+     * @return DiskIdSet List of IDs of the created cloud disks.
      */
     public String [] getDiskIdSet() {
         return this.DiskIdSet;
     }
 
     /**
-     * Set List of created cloud disk IDs. 
-     * @param DiskIdSet List of created cloud disk IDs. 
+     * Set List of IDs of the created cloud disks.
+     * @param DiskIdSet List of IDs of the created cloud disks.
      */
     public void setDiskIdSet(String [] DiskIdSet) {
         this.DiskIdSet = DiskIdSet;

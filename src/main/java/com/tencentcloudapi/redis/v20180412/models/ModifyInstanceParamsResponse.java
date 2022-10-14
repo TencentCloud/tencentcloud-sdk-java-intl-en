@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ModifyInstanceParamsResponse extends AbstractModel{
 
     /**
-    * Whether a modification is successfully made.
+    * Whether the parameter is modified successfully. <br><li>`True`: Yes<br><li>`False`: No<br>
     */
     @SerializedName("Changed")
     @Expose
     private Boolean Changed;
 
     /**
-    * Task ID
+    * ID of the task
     */
     @SerializedName("TaskId")
     @Expose
@@ -44,32 +44,32 @@ public class ModifyInstanceParamsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Whether a modification is successfully made. 
-     * @return Changed Whether a modification is successfully made.
+     * Get Whether the parameter is modified successfully. <br><li>`True`: Yes<br><li>`False`: No<br> 
+     * @return Changed Whether the parameter is modified successfully. <br><li>`True`: Yes<br><li>`False`: No<br>
      */
     public Boolean getChanged() {
         return this.Changed;
     }
 
     /**
-     * Set Whether a modification is successfully made.
-     * @param Changed Whether a modification is successfully made.
+     * Set Whether the parameter is modified successfully. <br><li>`True`: Yes<br><li>`False`: No<br>
+     * @param Changed Whether the parameter is modified successfully. <br><li>`True`: Yes<br><li>`False`: No<br>
      */
     public void setChanged(Boolean Changed) {
         this.Changed = Changed;
     }
 
     /**
-     * Get Task ID 
-     * @return TaskId Task ID
+     * Get ID of the task 
+     * @return TaskId ID of the task
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID
-     * @param TaskId Task ID
+     * Set ID of the task
+     * @param TaskId ID of the task
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

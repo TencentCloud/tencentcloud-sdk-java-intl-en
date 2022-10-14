@@ -30,14 +30,14 @@ public class AutoMountConfiguration extends AbstractModel{
     private String [] InstanceId;
 
     /**
-    * Path to the mount point in the CVM
+    * Mount point in the instance.
     */
     @SerializedName("MountPoint")
     @Expose
     private String [] MountPoint;
 
     /**
-    * File system type. Supported: ext4 and xfs.
+    * File system type. Valid values: `ext4`, `xfs`.
     */
     @SerializedName("FileSystemType")
     @Expose
@@ -60,32 +60,32 @@ public class AutoMountConfiguration extends AbstractModel{
     }
 
     /**
-     * Get Path to the mount point in the CVM 
-     * @return MountPoint Path to the mount point in the CVM
+     * Get Mount point in the instance. 
+     * @return MountPoint Mount point in the instance.
      */
     public String [] getMountPoint() {
         return this.MountPoint;
     }
 
     /**
-     * Set Path to the mount point in the CVM
-     * @param MountPoint Path to the mount point in the CVM
+     * Set Mount point in the instance.
+     * @param MountPoint Mount point in the instance.
      */
     public void setMountPoint(String [] MountPoint) {
         this.MountPoint = MountPoint;
     }
 
     /**
-     * Get File system type. Supported: ext4 and xfs. 
-     * @return FileSystemType File system type. Supported: ext4 and xfs.
+     * Get File system type. Valid values: `ext4`, `xfs`. 
+     * @return FileSystemType File system type. Valid values: `ext4`, `xfs`.
      */
     public String getFileSystemType() {
         return this.FileSystemType;
     }
 
     /**
-     * Set File system type. Supported: ext4 and xfs.
-     * @param FileSystemType File system type. Supported: ext4 and xfs.
+     * Set File system type. Valid values: `ext4`, `xfs`.
+     * @param FileSystemType File system type. Valid values: `ext4`, `xfs`.
      */
     public void setFileSystemType(String FileSystemType) {
         this.FileSystemType = FileSystemType;

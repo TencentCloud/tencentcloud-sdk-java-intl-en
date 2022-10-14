@@ -30,39 +30,46 @@ public class DescribeSlowLogRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Start time
+    * The start time
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * End time
+    * The end time
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Slow log threshold in microseconds
+    * The average execution time threshold of slow query in microseconds
     */
     @SerializedName("MinQueryTime")
     @Expose
     private Long MinQueryTime;
 
     /**
-    * Number of entries per page
+    * Number of slow queries displayed per page. Default value: `20`.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset, which is an integral multiple of `Limit`
+    * Slow query offset, which is an integral multiple of `Limit`.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
+
+    /**
+    * Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
+    */
+    @SerializedName("Role")
+    @Expose
+    private String Role;
 
     /**
      * Get Instance ID 
@@ -81,83 +88,99 @@ public class DescribeSlowLogRequest extends AbstractModel{
     }
 
     /**
-     * Get Start time 
-     * @return BeginTime Start time
+     * Get The start time 
+     * @return BeginTime The start time
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set Start time
-     * @param BeginTime Start time
+     * Set The start time
+     * @param BeginTime The start time
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get End time 
-     * @return EndTime End time
+     * Get The end time 
+     * @return EndTime The end time
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time
-     * @param EndTime End time
+     * Set The end time
+     * @param EndTime The end time
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Slow log threshold in microseconds 
-     * @return MinQueryTime Slow log threshold in microseconds
+     * Get The average execution time threshold of slow query in microseconds 
+     * @return MinQueryTime The average execution time threshold of slow query in microseconds
      */
     public Long getMinQueryTime() {
         return this.MinQueryTime;
     }
 
     /**
-     * Set Slow log threshold in microseconds
-     * @param MinQueryTime Slow log threshold in microseconds
+     * Set The average execution time threshold of slow query in microseconds
+     * @param MinQueryTime The average execution time threshold of slow query in microseconds
      */
     public void setMinQueryTime(Long MinQueryTime) {
         this.MinQueryTime = MinQueryTime;
     }
 
     /**
-     * Get Number of entries per page 
-     * @return Limit Number of entries per page
+     * Get Number of slow queries displayed per page. Default value: `20`. 
+     * @return Limit Number of slow queries displayed per page. Default value: `20`.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries per page
-     * @param Limit Number of entries per page
+     * Set Number of slow queries displayed per page. Default value: `20`.
+     * @param Limit Number of slow queries displayed per page. Default value: `20`.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset, which is an integral multiple of `Limit` 
-     * @return Offset Offset, which is an integral multiple of `Limit`
+     * Get Slow query offset, which is an integral multiple of `Limit`. 
+     * @return Offset Slow query offset, which is an integral multiple of `Limit`.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset, which is an integral multiple of `Limit`
-     * @param Offset Offset, which is an integral multiple of `Limit`
+     * Set Slow query offset, which is an integral multiple of `Limit`.
+     * @param Offset Slow query offset, which is an integral multiple of `Limit`.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
+    }
+
+    /**
+     * Get Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul> 
+     * @return Role Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
+     */
+    public String getRole() {
+        return this.Role;
+    }
+
+    /**
+     * Set Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
+     * @param Role Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
+     */
+    public void setRole(String Role) {
+        this.Role = Role;
     }
 
     public DescribeSlowLogRequest() {
@@ -186,6 +209,9 @@ public class DescribeSlowLogRequest extends AbstractModel{
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.Role != null) {
+            this.Role = new String(source.Role);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class DescribeSlowLogRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MinQueryTime", this.MinQueryTime);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Role", this.Role);
 
     }
 }

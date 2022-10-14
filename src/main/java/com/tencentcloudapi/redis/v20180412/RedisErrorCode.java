@@ -210,7 +210,7 @@ public enum RedisErrorCode {
     // Backup status exception. The operation cannot be performed temporarily. The backup may have expired or been deleted.
      RESOURCEUNAVAILABLE_BACKUPSTATUSABNORMAL("ResourceUnavailable.BackupStatusAbnormal"),
      
-    // 
+    // Backup is not supported when the instance is not in the “Running” status.
      RESOURCEUNAVAILABLE_BACKUPSTATUSINVALID("ResourceUnavailable.BackupStatusInvalid"),
      
     // Failed to call the backend API.
@@ -287,6 +287,9 @@ public enum RedisErrorCode {
      
     // There is an error with the auto-renewal flag.
      UNSUPPORTEDOPERATION_ISAUTORENEWERROR("UnsupportedOperation.IsAutoRenewError"),
+     
+    // 
+     UNSUPPORTEDOPERATION_LIMITPROXYVERSION("UnsupportedOperation.LimitProxyVersion"),
      
     // Only Cluster Edition instances support backup exporting.
      UNSUPPORTEDOPERATION_ONLYCLUSTERINSTANCECANEXPORTBACKUP("UnsupportedOperation.OnlyClusterInstanceCanExportBackup");

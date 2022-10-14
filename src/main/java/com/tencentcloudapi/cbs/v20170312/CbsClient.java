@@ -39,6 +39,30 @@ public class CbsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to roll back a backup point to the original cloud disk.
+
+* Only rollback to the original cloud disk is supported. For a data disk backup point, if you want to copy the backup point data to another cloud disk, use the `CreateSnapshot` API to convert the backup point into a snapshot, use the `CreateDisks` API to create an elastic cloud disk, and then copy the snapshot data to it.
+* Only backup points in `NORMAL` status can be rolled back. To query the status of a backup point, call the `DescribeDiskBackups` API and see the `BackupState` field in the response.
+* For an elastic cloud disk, it must be in unattached status. To query the status of the cloud disk, call the `DescribeDisks` API and see the `Attached` field in the response. For a non-elastic cloud disk purchased together with an instance, the instance must be in shutdown status, which can be queried through the `DescribeInstancesStatus` API.
+     * @param req ApplyDiskBackupRequest
+     * @return ApplyDiskBackupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyDiskBackupResponse ApplyDiskBackup(ApplyDiskBackupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ApplyDiskBackupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ApplyDiskBackupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ApplyDiskBackup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (ApplySnapshot) is used to roll back a snapshot to the original cloud disk.
 
 * The snapshot can only be rolled back to the original cloud disk. For data disk snapshots, if you need to copy the snapshot data to other cloud disks, use the API [CreateDisks](https://intl.cloud.tencent.com/document/product/362/16312?from_cn_redirect=1) to create an elastic cloud disk and then copy the snapshot data to the created cloud disk. 
@@ -155,10 +179,10 @@ public class CbsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create one or more cloud disks.
+     *This API is used to create cloud disks.
 
 * This API supports creating a cloud disk with a data disk snapshot so that the snapshot data can be copied to the purchased cloud disk.
-* This API is an async API. A cloud disk ID list will be returned when a request is made successfully, but it does not mean that the creation has been completed. You can call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API to query cloud disks by `DiskId`. If a new cloud disk can be found and its state is 'UNATTACHED' or 'ATTACHED', it means that the cloud disk has been created successfully.
+* This API is async. A cloud disk ID list will be returned when a request is made successfully, but it does not mean that the creation has been completed. You can call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API to query cloud disks by `DiskId`. If a new cloud disk can be found and its status is `UNATTACHED` or `ATTACHED`, the cloud disk has been created successfully.
      * @param req CreateDisksRequest
      * @return CreateDisksResponse
      * @throws TencentCloudSDKException
@@ -178,10 +202,11 @@ public class CbsClient extends AbstractClient{
     }
 
     /**
-     *This API (CreateSnapshot) is used to create a snapshot of a specified cloud disk.
+     *This API is used to create a snapshot for the specified cloud disk.
 
-* Snapshots can only be created for cloud disks with the snapshot capability. To check whether a cloud disk has the snapshot capability, see the SnapshotAbility field returned by the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
-* For the number of snapshots that can be created, please see [Product Usage Restriction](https://intl.cloud.tencent.com/doc/product/362/5145?from_cn_redirect=1).
+* You can only create snapshots for cloud disks with the snapshot capability. To check whether a cloud disk is snapshot-enabled, call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API and see the `SnapshotAbility` field in the response.
+* For the maximum number of snapshots that can be created, see [Use Limits](https://intl.cloud.tencent.com/doc/product/362/5145?from_cn_redirect=1).
+* Currently, you can convert backup points into general snapshots. After the conversion, snapshot usage fees may be charged, backup points will not be retained, and the occupied backup point quota will be released.
      * @param req CreateSnapshotRequest
      * @return CreateSnapshotResponse
      * @throws TencentCloudSDKException
@@ -215,6 +240,26 @@ public class CbsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteAutoSnapshotPoliciesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteAutoSnapshotPolicies");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete the backup points of the specified cloud disk in batches.
+     * @param req DeleteDiskBackupsRequest
+     * @return DeleteDiskBackupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDiskBackupsResponse DeleteDiskBackups(DeleteDiskBackupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDiskBackupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDiskBackupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteDiskBackups");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -282,6 +327,29 @@ public class CbsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDiskAssociatedAutoSnapshotPolicyResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDiskAssociatedAutoSnapshotPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the details of backup points.
+
+You can filter results by backup point ID. You can also look for certain backup points by specifying the ID or type of the cloud disk for which the backup points are created. The relationship between different filters is logical `AND`. For more information on filters, see `Filter`.
+If the parameter is empty, a certain number (as specified by `Limit` and 20 by default) of backup points will be returned.
+     * @param req DescribeDiskBackupsRequest
+     * @return DescribeDiskBackupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDiskBackupsResponse DescribeDiskBackups(DescribeDiskBackupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDiskBackupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDiskBackupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDiskBackups");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -511,6 +579,26 @@ You can filter according to the snapshot ID. The snapshot ID format is as follow
     }
 
     /**
+     *This API is used to query the price of a cloud disk after its backup point quota is modified.
+     * @param req InquirePriceModifyDiskBackupQuotaRequest
+     * @return InquirePriceModifyDiskBackupQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceModifyDiskBackupQuotaResponse InquirePriceModifyDiskBackupQuota(InquirePriceModifyDiskBackupQuotaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquirePriceModifyDiskBackupQuotaResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquirePriceModifyDiskBackupQuotaResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InquirePriceModifyDiskBackupQuota");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the price for adjusting the cloud disk’s extra performance.
      * @param req InquirePriceModifyDiskExtraPerformanceRequest
      * @return InquirePriceModifyDiskExtraPerformanceResponse
@@ -531,9 +619,9 @@ You can filter according to the snapshot ID. The snapshot ID format is as follow
     }
 
     /**
-     *This API (InquiryPriceCreateDisks) is used to inquire the price for cloud disk creation.
+     *This API is used to query the price of creating cloud disks.
 
-* It supports inquiring the price for the creation of multiple cloud disks. The total price for the creation is returned.
+* You can query the price of creating multiple cloud disks in a single request. In this case, the price returned will be the total price.
      * @param req InquiryPriceCreateDisksRequest
      * @return InquiryPriceCreateDisksResponse
      * @throws TencentCloudSDKException
@@ -610,6 +698,26 @@ You can filter according to the snapshot ID. The snapshot ID format is as follow
                 Type type = new TypeToken<JsonResponseModel<ModifyDiskAttributesResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyDiskAttributes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the cloud disk backup point quota.
+     * @param req ModifyDiskBackupQuotaRequest
+     * @return ModifyDiskBackupQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDiskBackupQuotaResponse ModifyDiskBackupQuota(ModifyDiskBackupQuotaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDiskBackupQuotaResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDiskBackupQuotaResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDiskBackupQuota");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

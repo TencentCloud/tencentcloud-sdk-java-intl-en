@@ -20,14 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceCreateDisksResponse extends AbstractModel{
+public class DescribeDiskBackupsResponse extends AbstractModel{
 
     /**
-    * Describes the price of newly purchased cloud disks.
+    * Number of eligible cloud disk backup points.
     */
-    @SerializedName("DiskPrice")
+    @SerializedName("TotalCount")
     @Expose
-    private Price DiskPrice;
+    private Long TotalCount;
+
+    /**
+    * List of details of cloud disk backup points.
+    */
+    @SerializedName("DiskBackupSet")
+    @Expose
+    private DiskBackup [] DiskBackupSet;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +44,35 @@ public class InquiryPriceCreateDisksResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Describes the price of newly purchased cloud disks. 
-     * @return DiskPrice Describes the price of newly purchased cloud disks.
+     * Get Number of eligible cloud disk backup points. 
+     * @return TotalCount Number of eligible cloud disk backup points.
      */
-    public Price getDiskPrice() {
-        return this.DiskPrice;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set Describes the price of newly purchased cloud disks.
-     * @param DiskPrice Describes the price of newly purchased cloud disks.
+     * Set Number of eligible cloud disk backup points.
+     * @param TotalCount Number of eligible cloud disk backup points.
      */
-    public void setDiskPrice(Price DiskPrice) {
-        this.DiskPrice = DiskPrice;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get List of details of cloud disk backup points. 
+     * @return DiskBackupSet List of details of cloud disk backup points.
+     */
+    public DiskBackup [] getDiskBackupSet() {
+        return this.DiskBackupSet;
+    }
+
+    /**
+     * Set List of details of cloud disk backup points.
+     * @param DiskBackupSet List of details of cloud disk backup points.
+     */
+    public void setDiskBackupSet(DiskBackup [] DiskBackupSet) {
+        this.DiskBackupSet = DiskBackupSet;
     }
 
     /**
@@ -68,16 +91,22 @@ public class InquiryPriceCreateDisksResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public InquiryPriceCreateDisksResponse() {
+    public DescribeDiskBackupsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InquiryPriceCreateDisksResponse(InquiryPriceCreateDisksResponse source) {
-        if (source.DiskPrice != null) {
-            this.DiskPrice = new Price(source.DiskPrice);
+    public DescribeDiskBackupsResponse(DescribeDiskBackupsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.DiskBackupSet != null) {
+            this.DiskBackupSet = new DiskBackup[source.DiskBackupSet.length];
+            for (int i = 0; i < source.DiskBackupSet.length; i++) {
+                this.DiskBackupSet[i] = new DiskBackup(source.DiskBackupSet[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +118,8 @@ public class InquiryPriceCreateDisksResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "DiskPrice.", this.DiskPrice);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "DiskBackupSet.", this.DiskBackupSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

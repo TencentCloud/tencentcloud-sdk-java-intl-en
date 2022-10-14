@@ -20,14 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceCreateDisksResponse extends AbstractModel{
-
-    /**
-    * Describes the price of newly purchased cloud disks.
-    */
-    @SerializedName("DiskPrice")
-    @Expose
-    private Price DiskPrice;
+public class ApplyDiskBackupResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -35,22 +28,6 @@ public class InquiryPriceCreateDisksResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get Describes the price of newly purchased cloud disks. 
-     * @return DiskPrice Describes the price of newly purchased cloud disks.
-     */
-    public Price getDiskPrice() {
-        return this.DiskPrice;
-    }
-
-    /**
-     * Set Describes the price of newly purchased cloud disks.
-     * @param DiskPrice Describes the price of newly purchased cloud disks.
-     */
-    public void setDiskPrice(Price DiskPrice) {
-        this.DiskPrice = DiskPrice;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -68,17 +45,14 @@ public class InquiryPriceCreateDisksResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public InquiryPriceCreateDisksResponse() {
+    public ApplyDiskBackupResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InquiryPriceCreateDisksResponse(InquiryPriceCreateDisksResponse source) {
-        if (source.DiskPrice != null) {
-            this.DiskPrice = new Price(source.DiskPrice);
-        }
+    public ApplyDiskBackupResponse(ApplyDiskBackupResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -89,7 +63,6 @@ public class InquiryPriceCreateDisksResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "DiskPrice.", this.DiskPrice);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

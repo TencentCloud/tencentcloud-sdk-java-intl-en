@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class InstanceParam extends AbstractModel{
 
     /**
-    * Sets a parameter name
+    * Parameter name, such as “timeout”. For supported custom parameters, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * Sets a parameter value
+    * Current parameter value. For example, if you set the current value of “timeout” to 120 (in seconds), the client connections that remain idle longer than 120 seconds will be closed. For more information on parameter values, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get Sets a parameter name 
-     * @return Key Sets a parameter name
+     * Get Parameter name, such as “timeout”. For supported custom parameters, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a> 
+     * @return Key Parameter name, such as “timeout”. For supported custom parameters, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Sets a parameter name
-     * @param Key Sets a parameter name
+     * Set Parameter name, such as “timeout”. For supported custom parameters, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
+     * @param Key Parameter name, such as “timeout”. For supported custom parameters, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get Sets a parameter value 
-     * @return Value Sets a parameter value
+     * Get Current parameter value. For example, if you set the current value of “timeout” to 120 (in seconds), the client connections that remain idle longer than 120 seconds will be closed. For more information on parameter values, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a> 
+     * @return Value Current parameter value. For example, if you set the current value of “timeout” to 120 (in seconds), the client connections that remain idle longer than 120 seconds will be closed. For more information on parameter values, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Sets a parameter value
-     * @param Value Sets a parameter value
+     * Set Current parameter value. For example, if you set the current value of “timeout” to 120 (in seconds), the client connections that remain idle longer than 120 seconds will be closed. For more information on parameter values, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
+     * @param Value Current parameter value. For example, if you set the current value of “timeout” to 120 (in seconds), the client connections that remain idle longer than 120 seconds will be closed. For more information on parameter values, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
      */
     public void setValue(String Value) {
         this.Value = Value;
