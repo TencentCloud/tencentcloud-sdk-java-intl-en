@@ -179,7 +179,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *Create a cluster access port (intranet / extranet access is enabled for independent clusters, and intranet access is supported for managed clusters)
+     *This API is used to create a cluster access endpoint.
      * @param req CreateClusterEndpointRequest
      * @return CreateClusterEndpointResponse
      * @throws TencentCloudSDKException
@@ -439,7 +439,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *Delete the cluster access port (intranet / extranet access is enabled for independent clusters, and intranet access is supported for managed clusters)
+     *This API is used to delete a cluster access endpoint.
      * @param req DeleteClusterEndpointRequest
      * @return DeleteClusterEndpointResponse
      * @throws TencentCloudSDKException
@@ -679,7 +679,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the K8s versions supported by TKE Edge.
+     *This API is used to check the edge component versions and K8s versions supported by TKE Edge.
      * @param req DescribeAvailableTKEEdgeVersionRequest
      * @return DescribeAvailableTKEEdgeVersionResponse
      * @throws TencentCloudSDKException

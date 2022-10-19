@@ -119,6 +119,26 @@ public class CiamClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the user information with multiple conditions.
+     * @param req DescribeUserRequest
+     * @return DescribeUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserResponse DescribeUser(DescribeUserRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeUserResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeUserResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query a user by ID.
      * @param req DescribeUserByIdRequest
      * @return DescribeUserByIdResponse

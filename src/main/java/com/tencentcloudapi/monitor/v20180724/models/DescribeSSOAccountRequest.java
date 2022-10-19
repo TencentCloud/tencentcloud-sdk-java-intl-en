@@ -30,6 +30,13 @@ public class DescribeSSOAccountRequest extends AbstractModel{
     private String InstanceId;
 
     /**
+    * Filter by account UIN
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -45,6 +52,22 @@ public class DescribeSSOAccountRequest extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get Filter by account UIN 
+     * @return UserId Filter by account UIN
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set Filter by account UIN
+     * @param UserId Filter by account UIN
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
+
     public DescribeSSOAccountRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DescribeSSOAccountRequest extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribeSSOAccountRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
 
     }
 }

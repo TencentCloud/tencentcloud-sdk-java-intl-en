@@ -59,6 +59,26 @@ public class GmeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete a room or remove members from the room.
+     * @param req DeleteRoomMemberRequest
+     * @return DeleteRoomMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRoomMemberResponse DeleteRoomMember(DeleteRoomMemberRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRoomMemberResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRoomMemberResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRoomMember");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the usage statistics of a GME application, including those of voice chat, voice messaging and speech-to-text, phrase analysis, etc. The maximum query period is the past 30 days.
      * @param req DescribeAppStatisticsRequest
      * @return DescribeAppStatisticsResponse

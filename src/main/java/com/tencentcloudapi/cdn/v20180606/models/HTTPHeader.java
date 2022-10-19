@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class HTTPHeader extends AbstractModel{
 
     /**
-    * 
+    * Request header name
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Request header value
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get  
-     * @return Name 
+     * Get Request header name 
+     * @return Name Request header name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Request header name
+     * @param Name Request header name
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Value 
+     * Get Request header value 
+     * @return Value Request header value
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 
-     * @param Value 
+     * Set Request header value
+     * @param Value Request header value
      */
     public void setValue(String Value) {
         this.Value = Value;

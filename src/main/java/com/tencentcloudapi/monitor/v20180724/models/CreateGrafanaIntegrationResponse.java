@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class CreateGrafanaIntegrationResponse extends AbstractModel{
 
     /**
-    * 
+    * Integration ID
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IntegrationId")
     @Expose
@@ -37,16 +38,20 @@ public class CreateGrafanaIntegrationResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get  
-     * @return IntegrationId 
+     * Get Integration ID
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IntegrationId Integration ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIntegrationId() {
         return this.IntegrationId;
     }
 
     /**
-     * Set 
-     * @param IntegrationId 
+     * Set Integration ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IntegrationId Integration ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIntegrationId(String IntegrationId) {
         this.IntegrationId = IntegrationId;

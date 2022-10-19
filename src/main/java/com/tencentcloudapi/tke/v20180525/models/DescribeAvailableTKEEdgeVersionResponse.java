@@ -30,6 +30,22 @@ public class DescribeAvailableTKEEdgeVersionResponse extends AbstractModel{
     private String [] Versions;
 
     /**
+    * Latest version of the edge cluster
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("EdgeVersionLatest")
+    @Expose
+    private String EdgeVersionLatest;
+
+    /**
+    * Current version of the edge cluster
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("EdgeVersionCurrent")
+    @Expose
+    private String EdgeVersionCurrent;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -50,6 +66,46 @@ public class DescribeAvailableTKEEdgeVersionResponse extends AbstractModel{
      */
     public void setVersions(String [] Versions) {
         this.Versions = Versions;
+    }
+
+    /**
+     * Get Latest version of the edge cluster
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return EdgeVersionLatest Latest version of the edge cluster
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getEdgeVersionLatest() {
+        return this.EdgeVersionLatest;
+    }
+
+    /**
+     * Set Latest version of the edge cluster
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param EdgeVersionLatest Latest version of the edge cluster
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setEdgeVersionLatest(String EdgeVersionLatest) {
+        this.EdgeVersionLatest = EdgeVersionLatest;
+    }
+
+    /**
+     * Get Current version of the edge cluster
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return EdgeVersionCurrent Current version of the edge cluster
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getEdgeVersionCurrent() {
+        return this.EdgeVersionCurrent;
+    }
+
+    /**
+     * Set Current version of the edge cluster
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param EdgeVersionCurrent Current version of the edge cluster
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setEdgeVersionCurrent(String EdgeVersionCurrent) {
+        this.EdgeVersionCurrent = EdgeVersionCurrent;
     }
 
     /**
@@ -82,6 +138,12 @@ public class DescribeAvailableTKEEdgeVersionResponse extends AbstractModel{
                 this.Versions[i] = new String(source.Versions[i]);
             }
         }
+        if (source.EdgeVersionLatest != null) {
+            this.EdgeVersionLatest = new String(source.EdgeVersionLatest);
+        }
+        if (source.EdgeVersionCurrent != null) {
+            this.EdgeVersionCurrent = new String(source.EdgeVersionCurrent);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -93,6 +155,8 @@ public class DescribeAvailableTKEEdgeVersionResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Versions.", this.Versions);
+        this.setParamSimple(map, prefix + "EdgeVersionLatest", this.EdgeVersionLatest);
+        this.setParamSimple(map, prefix + "EdgeVersionCurrent", this.EdgeVersionCurrent);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

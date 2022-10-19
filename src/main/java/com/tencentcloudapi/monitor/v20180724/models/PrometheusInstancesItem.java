@@ -271,6 +271,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String GrafanaInstanceId;
 
     /**
+    * The alert rule limit
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AlertRuleLimit")
+    @Expose
+    private Long AlertRuleLimit;
+
+    /**
+    * The recording rule limit
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RecordingRuleLimit")
+    @Expose
+    private Long RecordingRuleLimit;
+
+    /**
      * Get Instance ID. 
      * @return InstanceId Instance ID.
      */
@@ -938,6 +954,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.GrafanaInstanceId = GrafanaInstanceId;
     }
 
+    /**
+     * Get The alert rule limit
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AlertRuleLimit The alert rule limit
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getAlertRuleLimit() {
+        return this.AlertRuleLimit;
+    }
+
+    /**
+     * Set The alert rule limit
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AlertRuleLimit The alert rule limit
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAlertRuleLimit(Long AlertRuleLimit) {
+        this.AlertRuleLimit = AlertRuleLimit;
+    }
+
+    /**
+     * Get The recording rule limit
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RecordingRuleLimit The recording rule limit
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getRecordingRuleLimit() {
+        return this.RecordingRuleLimit;
+    }
+
+    /**
+     * Set The recording rule limit
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RecordingRuleLimit The recording rule limit
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRecordingRuleLimit(Long RecordingRuleLimit) {
+        this.RecordingRuleLimit = RecordingRuleLimit;
+    }
+
     public PrometheusInstancesItem() {
     }
 
@@ -1030,6 +1086,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.GrafanaInstanceId != null) {
             this.GrafanaInstanceId = new String(source.GrafanaInstanceId);
         }
+        if (source.AlertRuleLimit != null) {
+            this.AlertRuleLimit = new Long(source.AlertRuleLimit);
+        }
+        if (source.RecordingRuleLimit != null) {
+            this.RecordingRuleLimit = new Long(source.RecordingRuleLimit);
+        }
     }
 
 
@@ -1064,6 +1126,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "GrafanaIpWhiteList", this.GrafanaIpWhiteList);
         this.setParamObj(map, prefix + "Grant.", this.Grant);
         this.setParamSimple(map, prefix + "GrafanaInstanceId", this.GrafanaInstanceId);
+        this.setParamSimple(map, prefix + "AlertRuleLimit", this.AlertRuleLimit);
+        this.setParamSimple(map, prefix + "RecordingRuleLimit", this.RecordingRuleLimit);
 
     }
 }

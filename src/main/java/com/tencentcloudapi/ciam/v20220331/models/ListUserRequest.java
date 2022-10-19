@@ -47,7 +47,7 @@ public class ListUserRequest extends AbstractModel{
     private Filter [] Filters;
 
     /**
-    * 
+    * Whether the content is passed through
     */
     @SerializedName("Original")
     @Expose
@@ -114,16 +114,16 @@ public class ListUserRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Original 
+     * Get Whether the content is passed through 
+     * @return Original Whether the content is passed through
      */
     public Boolean getOriginal() {
         return this.Original;
     }
 
     /**
-     * Set 
-     * @param Original 
+     * Set Whether the content is passed through
+     * @param Original Whether the content is passed through
      */
     public void setOriginal(Boolean Original) {
         this.Original = Original;

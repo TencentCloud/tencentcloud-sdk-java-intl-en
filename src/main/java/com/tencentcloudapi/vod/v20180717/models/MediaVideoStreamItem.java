@@ -63,6 +63,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long Fps;
 
     /**
+    * The codec tag. This parameter is valid only if `Codec` is `hevc`.
+    */
+    @SerializedName("CodecTag")
+    @Expose
+    private String CodecTag;
+
+    /**
      * Get Bitrate of video stream in bps.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Bitrate Bitrate of video stream in bps.
@@ -162,6 +169,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Fps = Fps;
     }
 
+    /**
+     * Get The codec tag. This parameter is valid only if `Codec` is `hevc`. 
+     * @return CodecTag The codec tag. This parameter is valid only if `Codec` is `hevc`.
+     */
+    public String getCodecTag() {
+        return this.CodecTag;
+    }
+
+    /**
+     * Set The codec tag. This parameter is valid only if `Codec` is `hevc`.
+     * @param CodecTag The codec tag. This parameter is valid only if `Codec` is `hevc`.
+     */
+    public void setCodecTag(String CodecTag) {
+        this.CodecTag = CodecTag;
+    }
+
     public MediaVideoStreamItem() {
     }
 
@@ -185,6 +208,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.Fps != null) {
             this.Fps = new Long(source.Fps);
         }
+        if (source.CodecTag != null) {
+            this.CodecTag = new String(source.CodecTag);
+        }
     }
 
 
@@ -197,6 +223,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Codec", this.Codec);
         this.setParamSimple(map, prefix + "Fps", this.Fps);
+        this.setParamSimple(map, prefix + "CodecTag", this.CodecTag);
 
     }
 }

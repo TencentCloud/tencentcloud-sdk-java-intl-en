@@ -51,6 +51,21 @@ public class GrafanaAccountInfo extends AbstractModel{
     private String CreateAt;
 
     /**
+    * Instance ID
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * User’s root account UIN
+    */
+    @SerializedName("Uin")
+    @Expose
+    private String Uin;
+
+    /**
      * Get User account ID 
      * @return UserId User account ID
      */
@@ -114,6 +129,42 @@ public class GrafanaAccountInfo extends AbstractModel{
         this.CreateAt = CreateAt;
     }
 
+    /**
+     * Get Instance ID
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return InstanceId Instance ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set Instance ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param InstanceId Instance ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get User’s root account UIN 
+     * @return Uin User’s root account UIN
+     */
+    public String getUin() {
+        return this.Uin;
+    }
+
+    /**
+     * Set User’s root account UIN
+     * @param Uin User’s root account UIN
+     */
+    public void setUin(String Uin) {
+        this.Uin = Uin;
+    }
+
     public GrafanaAccountInfo() {
     }
 
@@ -137,6 +188,12 @@ public class GrafanaAccountInfo extends AbstractModel{
         if (source.CreateAt != null) {
             this.CreateAt = new String(source.CreateAt);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
     }
 
 
@@ -148,6 +205,8 @@ public class GrafanaAccountInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Role.", this.Role);
         this.setParamSimple(map, prefix + "Notes", this.Notes);
         this.setParamSimple(map, prefix + "CreateAt", this.CreateAt);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Uin", this.Uin);
 
     }
 }

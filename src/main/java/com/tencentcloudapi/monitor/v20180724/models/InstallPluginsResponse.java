@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class InstallPluginsResponse extends AbstractModel{
 
     /**
-    * 
+    * ID of the installed plugin
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PluginIds")
     @Expose
@@ -37,16 +38,20 @@ public class InstallPluginsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get  
-     * @return PluginIds 
+     * Get ID of the installed plugin
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PluginIds ID of the installed plugin
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getPluginIds() {
         return this.PluginIds;
     }
 
     /**
-     * Set 
-     * @param PluginIds 
+     * Set ID of the installed plugin
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PluginIds ID of the installed plugin
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPluginIds(String [] PluginIds) {
         this.PluginIds = PluginIds;

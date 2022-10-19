@@ -77,7 +77,7 @@ This feature is in beta test.
     private Boolean DisableRange;
 
     /**
-    * 
+    * Custom HTTP request headers (Up to 20). `Name`: Up to 128 characters. `Value`: Up to 1024 characters.
     */
     @SerializedName("Headers")
     @Expose
@@ -235,16 +235,16 @@ This feature is in beta test.
     }
 
     /**
-     * Get  
-     * @return Headers 
+     * Get Custom HTTP request headers (Up to 20). `Name`: Up to 128 characters. `Value`: Up to 1024 characters. 
+     * @return Headers Custom HTTP request headers (Up to 20). `Name`: Up to 128 characters. `Value`: Up to 1024 characters.
      */
     public HTTPHeader [] getHeaders() {
         return this.Headers;
     }
 
     /**
-     * Set 
-     * @param Headers 
+     * Set Custom HTTP request headers (Up to 20). `Name`: Up to 128 characters. `Value`: Up to 1024 characters.
+     * @param Headers Custom HTTP request headers (Up to 20). `Name`: Up to 128 characters. `Value`: Up to 1024 characters.
      */
     public void setHeaders(HTTPHeader [] Headers) {
         this.Headers = Headers;

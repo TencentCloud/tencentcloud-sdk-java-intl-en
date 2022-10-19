@@ -58,6 +58,37 @@ public class GrafanaNotificationChannel extends AbstractModel{
     private String UpdatedAt;
 
     /**
+    * Default valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+    */
+    @SerializedName("OrgId")
+    @Expose
+    private String OrgId;
+
+    /**
+    * Extra valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ExtraOrgIds")
+    @Expose
+    private String [] ExtraOrgIds;
+
+    /**
+    * Valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OrgIds")
+    @Expose
+    private String OrgIds;
+
+    /**
+    * All valid organizations in an alert channel
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OrganizationIds")
+    @Expose
+    private String OrganizationIds;
+
+    /**
      * Get Channel ID 
      * @return ChannelId Channel ID
      */
@@ -137,6 +168,82 @@ public class GrafanaNotificationChannel extends AbstractModel{
         this.UpdatedAt = UpdatedAt;
     }
 
+    /**
+     * Get Default valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead. 
+     * @return OrgId Default valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+     */
+    public String getOrgId() {
+        return this.OrgId;
+    }
+
+    /**
+     * Set Default valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+     * @param OrgId Default valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+     */
+    public void setOrgId(String OrgId) {
+        this.OrgId = OrgId;
+    }
+
+    /**
+     * Get Extra valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ExtraOrgIds Extra valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getExtraOrgIds() {
+        return this.ExtraOrgIds;
+    }
+
+    /**
+     * Set Extra valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ExtraOrgIds Extra valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setExtraOrgIds(String [] ExtraOrgIds) {
+        this.ExtraOrgIds = ExtraOrgIds;
+    }
+
+    /**
+     * Get Valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OrgIds Valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getOrgIds() {
+        return this.OrgIds;
+    }
+
+    /**
+     * Set Valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OrgIds Valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setOrgIds(String OrgIds) {
+        this.OrgIds = OrgIds;
+    }
+
+    /**
+     * Get All valid organizations in an alert channel
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OrganizationIds All valid organizations in an alert channel
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getOrganizationIds() {
+        return this.OrganizationIds;
+    }
+
+    /**
+     * Set All valid organizations in an alert channel
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OrganizationIds All valid organizations in an alert channel
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setOrganizationIds(String OrganizationIds) {
+        this.OrganizationIds = OrganizationIds;
+    }
+
     public GrafanaNotificationChannel() {
     }
 
@@ -163,6 +270,21 @@ public class GrafanaNotificationChannel extends AbstractModel{
         if (source.UpdatedAt != null) {
             this.UpdatedAt = new String(source.UpdatedAt);
         }
+        if (source.OrgId != null) {
+            this.OrgId = new String(source.OrgId);
+        }
+        if (source.ExtraOrgIds != null) {
+            this.ExtraOrgIds = new String[source.ExtraOrgIds.length];
+            for (int i = 0; i < source.ExtraOrgIds.length; i++) {
+                this.ExtraOrgIds[i] = new String(source.ExtraOrgIds[i]);
+            }
+        }
+        if (source.OrgIds != null) {
+            this.OrgIds = new String(source.OrgIds);
+        }
+        if (source.OrganizationIds != null) {
+            this.OrganizationIds = new String(source.OrganizationIds);
+        }
     }
 
 
@@ -175,6 +297,10 @@ public class GrafanaNotificationChannel extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Receivers.", this.Receivers);
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
+        this.setParamSimple(map, prefix + "OrgId", this.OrgId);
+        this.setParamArraySimple(map, prefix + "ExtraOrgIds.", this.ExtraOrgIds);
+        this.setParamSimple(map, prefix + "OrgIds", this.OrgIds);
+        this.setParamSimple(map, prefix + "OrganizationIds", this.OrganizationIds);
 
     }
 }

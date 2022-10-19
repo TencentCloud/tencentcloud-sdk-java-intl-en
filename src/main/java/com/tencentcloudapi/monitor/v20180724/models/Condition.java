@@ -53,8 +53,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String CalcValue;
 
     /**
-    * Duration.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Duration in seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ContinueTime")
     @Expose
@@ -94,6 +94,28 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     @SerializedName("Unit")
     @Expose
     private String Unit;
+
+    /**
+    * Whether it is an advanced metric. Valid values: `0` (no), `1` (yes).
+    */
+    @SerializedName("IsAdvanced")
+    @Expose
+    private Long IsAdvanced;
+
+    /**
+    * Whether the advance metric feature is enabled. Valid values: `0` (no), `1` (yes).
+    */
+    @SerializedName("IsOpen")
+    @Expose
+    private Long IsOpen;
+
+    /**
+    * Product ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ProductId")
+    @Expose
+    private String ProductId;
 
     /**
      * Get Alarm notification frequency. 
@@ -168,20 +190,20 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Duration.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return ContinueTime Duration.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Duration in seconds.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ContinueTime Duration in seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getContinueTime() {
         return this.ContinueTime;
     }
 
     /**
-     * Set Duration.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param ContinueTime Duration.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Duration in seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ContinueTime Duration in seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setContinueTime(String ContinueTime) {
         this.ContinueTime = ContinueTime;
@@ -267,6 +289,58 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.Unit = Unit;
     }
 
+    /**
+     * Get Whether it is an advanced metric. Valid values: `0` (no), `1` (yes). 
+     * @return IsAdvanced Whether it is an advanced metric. Valid values: `0` (no), `1` (yes).
+     */
+    public Long getIsAdvanced() {
+        return this.IsAdvanced;
+    }
+
+    /**
+     * Set Whether it is an advanced metric. Valid values: `0` (no), `1` (yes).
+     * @param IsAdvanced Whether it is an advanced metric. Valid values: `0` (no), `1` (yes).
+     */
+    public void setIsAdvanced(Long IsAdvanced) {
+        this.IsAdvanced = IsAdvanced;
+    }
+
+    /**
+     * Get Whether the advance metric feature is enabled. Valid values: `0` (no), `1` (yes). 
+     * @return IsOpen Whether the advance metric feature is enabled. Valid values: `0` (no), `1` (yes).
+     */
+    public Long getIsOpen() {
+        return this.IsOpen;
+    }
+
+    /**
+     * Set Whether the advance metric feature is enabled. Valid values: `0` (no), `1` (yes).
+     * @param IsOpen Whether the advance metric feature is enabled. Valid values: `0` (no), `1` (yes).
+     */
+    public void setIsOpen(Long IsOpen) {
+        this.IsOpen = IsOpen;
+    }
+
+    /**
+     * Get Product ID.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ProductId Product ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getProductId() {
+        return this.ProductId;
+    }
+
+    /**
+     * Set Product ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ProductId Product ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setProductId(String ProductId) {
+        this.ProductId = ProductId;
+    }
+
     public Condition() {
     }
 
@@ -305,6 +379,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.Unit != null) {
             this.Unit = new String(source.Unit);
         }
+        if (source.IsAdvanced != null) {
+            this.IsAdvanced = new Long(source.IsAdvanced);
+        }
+        if (source.IsOpen != null) {
+            this.IsOpen = new Long(source.IsOpen);
+        }
+        if (source.ProductId != null) {
+            this.ProductId = new String(source.ProductId);
+        }
     }
 
 
@@ -322,6 +405,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "RuleID", this.RuleID);
         this.setParamSimple(map, prefix + "Unit", this.Unit);
+        this.setParamSimple(map, prefix + "IsAdvanced", this.IsAdvanced);
+        this.setParamSimple(map, prefix + "IsOpen", this.IsOpen);
+        this.setParamSimple(map, prefix + "ProductId", this.ProductId);
 
     }
 }

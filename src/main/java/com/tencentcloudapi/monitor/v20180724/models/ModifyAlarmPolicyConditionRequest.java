@@ -72,6 +72,13 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
     private String [] GroupBy;
 
     /**
+    * Log alarm creation request parameters
+    */
+    @SerializedName("LogAlarmReqInfo")
+    @Expose
+    private LogAlarmReq LogAlarmReqInfo;
+
+    /**
      * Get Module name, which is fixed at "monitor" 
      * @return Module Module name, which is fixed at "monitor"
      */
@@ -183,6 +190,22 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
         this.GroupBy = GroupBy;
     }
 
+    /**
+     * Get Log alarm creation request parameters 
+     * @return LogAlarmReqInfo Log alarm creation request parameters
+     */
+    public LogAlarmReq getLogAlarmReqInfo() {
+        return this.LogAlarmReqInfo;
+    }
+
+    /**
+     * Set Log alarm creation request parameters
+     * @param LogAlarmReqInfo Log alarm creation request parameters
+     */
+    public void setLogAlarmReqInfo(LogAlarmReq LogAlarmReqInfo) {
+        this.LogAlarmReqInfo = LogAlarmReqInfo;
+    }
+
     public ModifyAlarmPolicyConditionRequest() {
     }
 
@@ -215,6 +238,9 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
                 this.GroupBy[i] = new String(source.GroupBy[i]);
             }
         }
+        if (source.LogAlarmReqInfo != null) {
+            this.LogAlarmReqInfo = new LogAlarmReq(source.LogAlarmReqInfo);
+        }
     }
 
 
@@ -229,6 +255,7 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
         this.setParamObj(map, prefix + "EventCondition.", this.EventCondition);
         this.setParamObj(map, prefix + "Filter.", this.Filter);
         this.setParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
+        this.setParamObj(map, prefix + "LogAlarmReqInfo.", this.LogAlarmReqInfo);
 
     }
 }

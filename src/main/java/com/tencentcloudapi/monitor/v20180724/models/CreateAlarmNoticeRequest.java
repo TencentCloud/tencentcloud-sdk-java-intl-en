@@ -72,6 +72,13 @@ public class CreateAlarmNoticeRequest extends AbstractModel{
     private CLSNotice [] CLSNotices;
 
     /**
+    * Tags bound to a template
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Module name. Enter "monitor" here 
      * @return Module Module name. Enter "monitor" here
      */
@@ -183,6 +190,22 @@ public class CreateAlarmNoticeRequest extends AbstractModel{
         this.CLSNotices = CLSNotices;
     }
 
+    /**
+     * Get Tags bound to a template 
+     * @return Tags Tags bound to a template
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tags bound to a template
+     * @param Tags Tags bound to a template
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateAlarmNoticeRequest() {
     }
 
@@ -221,6 +244,12 @@ public class CreateAlarmNoticeRequest extends AbstractModel{
                 this.CLSNotices[i] = new CLSNotice(source.CLSNotices[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -235,6 +264,7 @@ public class CreateAlarmNoticeRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "UserNotices.", this.UserNotices);
         this.setParamArrayObj(map, prefix + "URLNotices.", this.URLNotices);
         this.setParamArrayObj(map, prefix + "CLSNotices.", this.CLSNotices);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

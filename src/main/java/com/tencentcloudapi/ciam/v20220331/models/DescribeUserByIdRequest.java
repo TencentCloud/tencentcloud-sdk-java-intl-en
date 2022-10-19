@@ -37,7 +37,10 @@ public class DescribeUserByIdRequest extends AbstractModel{
     private String UserId;
 
     /**
-    * 
+    * Whether the content is passed through
+
+<li> **false** </li>Default. The returned information is desensitized.
+<li> **true** </li>Return the original content.
     */
     @SerializedName("Original")
     @Expose
@@ -76,16 +79,28 @@ public class DescribeUserByIdRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Original 
+     * Get Whether the content is passed through
+
+<li> **false** </li>Default. The returned information is desensitized.
+<li> **true** </li>Return the original content. 
+     * @return Original Whether the content is passed through
+
+<li> **false** </li>Default. The returned information is desensitized.
+<li> **true** </li>Return the original content.
      */
     public Boolean getOriginal() {
         return this.Original;
     }
 
     /**
-     * Set 
-     * @param Original 
+     * Set Whether the content is passed through
+
+<li> **false** </li>Default. The returned information is desensitized.
+<li> **true** </li>Return the original content.
+     * @param Original Whether the content is passed through
+
+<li> **false** </li>Default. The returned information is desensitized.
+<li> **true** </li>Return the original content.
      */
     public void setOriginal(Boolean Original) {
         this.Original = Original;

@@ -945,6 +945,26 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     }
 
     /**
+     *This API is used to list all Grafana alert channels.
+     * @param req DescribeGrafanaChannelsRequest
+     * @return DescribeGrafanaChannelsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGrafanaChannelsResponse DescribeGrafanaChannels(DescribeGrafanaChannelsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGrafanaChannelsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGrafanaChannelsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGrafanaChannels");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to list Grafana settings, i.e., the `grafana.ini` file content.
      * @param req DescribeGrafanaConfigRequest
      * @return DescribeGrafanaConfigResponse
@@ -1411,10 +1431,13 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     }
 
     /**
-     *This API is used to get the monitoring data of Tencent Cloud services except TKE. To pull TKE’s monitoring data, please use the API [DescribeStatisticData](https://intl.cloud.tencent.com/document/product/248/51845?from_cn_redirect=1).
+     *This API is used to get the monitoring data of Tencent Cloud services except TKE. To pull TKE’s monitoring data, use the [DescribeStatisticData](https://www.tencentcloud.com/document/product/248/39481) API.
 You can get the monitoring data of a Tencent Cloud service by passing in its namespace, object dimension description, and monitoring metrics.
 API call rate limit: 20 calls/second (1,200 calls/minute). A single request can get the data of up to 10 instances for up to 1,440 data points.
 If you need to call a large number of APIs to pull metrics or objects at a time, some APIs may fail to be called due to the rate limit. We suggest you evenly arrange API calls at a time granularity.
+
+>?
+>- Cloud Monitor has started billing the `GetMonitorData` API on September 1, 2022. Each root account has a free tier of one million call requests a month. If you want to call this API after the free tier is exceeded, you need to enable [pay-as-you-go billing for API requests](https://buy.cloud.tencent.com/APIRequestBuy). For billing rules, see [API billing documentation](https://intl.cloud.tencent.com/document/product/248/77914?from_cn_redirect=1).
      * @param req GetMonitorDataRequest
      * @return GetMonitorDataResponse
      * @throws TencentCloudSDKException

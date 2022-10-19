@@ -179,6 +179,27 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
     private String [] OneClickPolicyType;
 
     /**
+    * Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+    */
+    @SerializedName("NotBindAll")
+    @Expose
+    private Long NotBindAll;
+
+    /**
+    * Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+    */
+    @SerializedName("NotInstanceGroup")
+    @Expose
+    private Long NotInstanceGroup;
+
+    /**
+    * Filter policies by tag
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Value fixed at "monitor" 
      * @return Module Value fixed at "monitor"
      */
@@ -550,6 +571,54 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
         this.OneClickPolicyType = OneClickPolicyType;
     }
 
+    /**
+     * Get Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No). 
+     * @return NotBindAll Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+     */
+    public Long getNotBindAll() {
+        return this.NotBindAll;
+    }
+
+    /**
+     * Set Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+     * @param NotBindAll Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+     */
+    public void setNotBindAll(Long NotBindAll) {
+        this.NotBindAll = NotBindAll;
+    }
+
+    /**
+     * Get Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No). 
+     * @return NotInstanceGroup Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+     */
+    public Long getNotInstanceGroup() {
+        return this.NotInstanceGroup;
+    }
+
+    /**
+     * Set Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+     * @param NotInstanceGroup Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+     */
+    public void setNotInstanceGroup(Long NotInstanceGroup) {
+        this.NotInstanceGroup = NotInstanceGroup;
+    }
+
+    /**
+     * Get Filter policies by tag 
+     * @return Tags Filter policies by tag
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Filter policies by tag
+     * @param Tags Filter policies by tag
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public DescribeAlarmPoliciesRequest() {
     }
 
@@ -654,6 +723,18 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
                 this.OneClickPolicyType[i] = new String(source.OneClickPolicyType[i]);
             }
         }
+        if (source.NotBindAll != null) {
+            this.NotBindAll = new Long(source.NotBindAll);
+        }
+        if (source.NotInstanceGroup != null) {
+            this.NotInstanceGroup = new Long(source.NotInstanceGroup);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -682,6 +763,9 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
         this.setParamSimple(map, prefix + "NeedCorrespondence", this.NeedCorrespondence);
         this.setParamArrayObj(map, prefix + "TriggerTasks.", this.TriggerTasks);
         this.setParamArraySimple(map, prefix + "OneClickPolicyType.", this.OneClickPolicyType);
+        this.setParamSimple(map, prefix + "NotBindAll", this.NotBindAll);
+        this.setParamSimple(map, prefix + "NotInstanceGroup", this.NotInstanceGroup);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

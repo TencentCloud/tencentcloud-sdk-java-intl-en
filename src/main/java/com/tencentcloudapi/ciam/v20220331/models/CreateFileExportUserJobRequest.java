@@ -32,7 +32,6 @@ public class CreateFileExportUserJobRequest extends AbstractModel{
     /**
     * Exported data type
 
-<li> **JSON** </li>  JSON
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
     */
@@ -76,12 +75,10 @@ public class CreateFileExportUserJobRequest extends AbstractModel{
     /**
      * Get Exported data type
 
-<li> **JSON** </li>  JSON
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values 
      * @return Format Exported data type
 
-<li> **JSON** </li>  JSON
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
      */
@@ -92,12 +89,10 @@ public class CreateFileExportUserJobRequest extends AbstractModel{
     /**
      * Set Exported data type
 
-<li> **JSON** </li>  JSON
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
      * @param Format Exported data type
 
-<li> **JSON** </li>  JSON
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
      */

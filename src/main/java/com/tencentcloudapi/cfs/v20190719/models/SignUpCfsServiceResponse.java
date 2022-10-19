@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SignUpCfsServiceResponse extends AbstractModel{
 
     /**
-    * Current status of the CFS service for this user. Valid values: none (not activated), creating (activating), created (activated)
+    * Current status of the CFS service for this user. Valid values: `creating` (activating); `created` (activated)
     */
     @SerializedName("CfsServiceStatus")
     @Expose
@@ -37,16 +37,16 @@ public class SignUpCfsServiceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Current status of the CFS service for this user. Valid values: none (not activated), creating (activating), created (activated) 
-     * @return CfsServiceStatus Current status of the CFS service for this user. Valid values: none (not activated), creating (activating), created (activated)
+     * Get Current status of the CFS service for this user. Valid values: `creating` (activating); `created` (activated) 
+     * @return CfsServiceStatus Current status of the CFS service for this user. Valid values: `creating` (activating); `created` (activated)
      */
     public String getCfsServiceStatus() {
         return this.CfsServiceStatus;
     }
 
     /**
-     * Set Current status of the CFS service for this user. Valid values: none (not activated), creating (activating), created (activated)
-     * @param CfsServiceStatus Current status of the CFS service for this user. Valid values: none (not activated), creating (activating), created (activated)
+     * Set Current status of the CFS service for this user. Valid values: `creating` (activating); `created` (activated)
+     * @param CfsServiceStatus Current status of the CFS service for this user. Valid values: `creating` (activating); `created` (activated)
      */
     public void setCfsServiceStatus(String CfsServiceStatus) {
         this.CfsServiceStatus = CfsServiceStatus;

@@ -120,6 +120,16 @@ When this parameter is set to 0 or left empty, `Gop` will be automatically set.
     private String PreserveHDRSwitch;
 
     /**
+    * The codec tag. This parameter is valid only if the H.265 codec is used. Valid values:
+<li>hvc1</li>
+<li>hev1</li>
+Default value: hvc1.
+    */
+    @SerializedName("CodecTag")
+    @Expose
+    private String CodecTag;
+
+    /**
      * Get The video codec. Valid values:
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
@@ -387,6 +397,34 @@ When this parameter is set to 0 or left empty, `Gop` will be automatically set.
         this.PreserveHDRSwitch = PreserveHDRSwitch;
     }
 
+    /**
+     * Get The codec tag. This parameter is valid only if the H.265 codec is used. Valid values:
+<li>hvc1</li>
+<li>hev1</li>
+Default value: hvc1. 
+     * @return CodecTag The codec tag. This parameter is valid only if the H.265 codec is used. Valid values:
+<li>hvc1</li>
+<li>hev1</li>
+Default value: hvc1.
+     */
+    public String getCodecTag() {
+        return this.CodecTag;
+    }
+
+    /**
+     * Set The codec tag. This parameter is valid only if the H.265 codec is used. Valid values:
+<li>hvc1</li>
+<li>hev1</li>
+Default value: hvc1.
+     * @param CodecTag The codec tag. This parameter is valid only if the H.265 codec is used. Valid values:
+<li>hvc1</li>
+<li>hev1</li>
+Default value: hvc1.
+     */
+    public void setCodecTag(String CodecTag) {
+        this.CodecTag = CodecTag;
+    }
+
     public VideoTemplateInfoForUpdate() {
     }
 
@@ -425,6 +463,9 @@ When this parameter is set to 0 or left empty, `Gop` will be automatically set.
         if (source.PreserveHDRSwitch != null) {
             this.PreserveHDRSwitch = new String(source.PreserveHDRSwitch);
         }
+        if (source.CodecTag != null) {
+            this.CodecTag = new String(source.CodecTag);
+        }
     }
 
 
@@ -442,6 +483,7 @@ When this parameter is set to 0 or left empty, `Gop` will be automatically set.
         this.setParamSimple(map, prefix + "Vcrf", this.Vcrf);
         this.setParamSimple(map, prefix + "Gop", this.Gop);
         this.setParamSimple(map, prefix + "PreserveHDRSwitch", this.PreserveHDRSwitch);
+        this.setParamSimple(map, prefix + "CodecTag", this.CodecTag);
 
     }
 }

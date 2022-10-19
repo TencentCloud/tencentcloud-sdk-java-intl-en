@@ -153,6 +153,29 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String ProductId;
 
     /**
+    * Maximum value
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ValueMax")
+    @Expose
+    private Float ValueMax;
+
+    /**
+    * Minimum value
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ValueMin")
+    @Expose
+    private Float ValueMin;
+
+    /**
+    * 
+    */
+    @SerializedName("HierarchicalValue")
+    @Expose
+    private AlarmHierarchicalValue HierarchicalValue;
+
+    /**
      * Get Metric name or event name. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1) and the supported events via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
 Note: this field may return `null`, indicating that no valid value is obtained. 
      * @return MetricName Metric name or event name. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1) and the supported events via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
@@ -504,6 +527,62 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.ProductId = ProductId;
     }
 
+    /**
+     * Get Maximum value
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ValueMax Maximum value
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Float getValueMax() {
+        return this.ValueMax;
+    }
+
+    /**
+     * Set Maximum value
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ValueMax Maximum value
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setValueMax(Float ValueMax) {
+        this.ValueMax = ValueMax;
+    }
+
+    /**
+     * Get Minimum value
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ValueMin Minimum value
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Float getValueMin() {
+        return this.ValueMin;
+    }
+
+    /**
+     * Set Minimum value
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ValueMin Minimum value
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setValueMin(Float ValueMin) {
+        this.ValueMin = ValueMin;
+    }
+
+    /**
+     * Get  
+     * @return HierarchicalValue 
+     */
+    public AlarmHierarchicalValue getHierarchicalValue() {
+        return this.HierarchicalValue;
+    }
+
+    /**
+     * Set 
+     * @param HierarchicalValue 
+     */
+    public void setHierarchicalValue(AlarmHierarchicalValue HierarchicalValue) {
+        this.HierarchicalValue = HierarchicalValue;
+    }
+
     public AlarmPolicyRule() {
     }
 
@@ -554,6 +633,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.ProductId != null) {
             this.ProductId = new String(source.ProductId);
         }
+        if (source.ValueMax != null) {
+            this.ValueMax = new Float(source.ValueMax);
+        }
+        if (source.ValueMin != null) {
+            this.ValueMin = new Float(source.ValueMin);
+        }
+        if (source.HierarchicalValue != null) {
+            this.HierarchicalValue = new AlarmHierarchicalValue(source.HierarchicalValue);
+        }
     }
 
 
@@ -575,6 +663,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "IsAdvanced", this.IsAdvanced);
         this.setParamSimple(map, prefix + "IsOpen", this.IsOpen);
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
+        this.setParamSimple(map, prefix + "ValueMax", this.ValueMax);
+        this.setParamSimple(map, prefix + "ValueMin", this.ValueMin);
+        this.setParamObj(map, prefix + "HierarchicalValue.", this.HierarchicalValue);
 
     }
 }

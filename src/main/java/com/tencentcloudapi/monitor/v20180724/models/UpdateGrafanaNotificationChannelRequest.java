@@ -51,14 +51,14 @@ public class UpdateGrafanaNotificationChannelRequest extends AbstractModel{
     private String [] Receivers;
 
     /**
-    * Array of extra organization IDs
+    * This parameter has been deprecated. Please use `OrganizationIds` instead.
     */
     @SerializedName("ExtraOrgIds")
     @Expose
     private String [] ExtraOrgIds;
 
     /**
-    * 
+    * Array of valid organization IDs
     */
     @SerializedName("OrganizationIds")
     @Expose
@@ -129,32 +129,32 @@ public class UpdateGrafanaNotificationChannelRequest extends AbstractModel{
     }
 
     /**
-     * Get Array of extra organization IDs 
-     * @return ExtraOrgIds Array of extra organization IDs
+     * Get This parameter has been deprecated. Please use `OrganizationIds` instead. 
+     * @return ExtraOrgIds This parameter has been deprecated. Please use `OrganizationIds` instead.
      */
     public String [] getExtraOrgIds() {
         return this.ExtraOrgIds;
     }
 
     /**
-     * Set Array of extra organization IDs
-     * @param ExtraOrgIds Array of extra organization IDs
+     * Set This parameter has been deprecated. Please use `OrganizationIds` instead.
+     * @param ExtraOrgIds This parameter has been deprecated. Please use `OrganizationIds` instead.
      */
     public void setExtraOrgIds(String [] ExtraOrgIds) {
         this.ExtraOrgIds = ExtraOrgIds;
     }
 
     /**
-     * Get  
-     * @return OrganizationIds 
+     * Get Array of valid organization IDs 
+     * @return OrganizationIds Array of valid organization IDs
      */
     public String [] getOrganizationIds() {
         return this.OrganizationIds;
     }
 
     /**
-     * Set 
-     * @param OrganizationIds 
+     * Set Array of valid organization IDs
+     * @param OrganizationIds Array of valid organization IDs
      */
     public void setOrganizationIds(String [] OrganizationIds) {
         this.OrganizationIds = OrganizationIds;

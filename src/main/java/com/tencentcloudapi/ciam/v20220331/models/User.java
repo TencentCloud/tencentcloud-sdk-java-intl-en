@@ -307,6 +307,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long LockTime;
 
     /**
+    * Index field 1
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IndexedAttribute1")
+    @Expose
+    private String IndexedAttribute1;
+
+    /**
+    * Index field 2
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IndexedAttribute2")
+    @Expose
+    private String IndexedAttribute2;
+
+    /**
+    * Index field 3
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IndexedAttribute3")
+    @Expose
+    private String IndexedAttribute3;
+
+    /**
+    * Index field 4
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IndexedAttribute4")
+    @Expose
+    private String IndexedAttribute4;
+
+    /**
+    * Index field 5
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IndexedAttribute5")
+    @Expose
+    private String IndexedAttribute5;
+
+    /**
      * Get User ID 
      * @return UserId User ID
      */
@@ -1010,6 +1050,106 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.LockTime = LockTime;
     }
 
+    /**
+     * Get Index field 1
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return IndexedAttribute1 Index field 1
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getIndexedAttribute1() {
+        return this.IndexedAttribute1;
+    }
+
+    /**
+     * Set Index field 1
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param IndexedAttribute1 Index field 1
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIndexedAttribute1(String IndexedAttribute1) {
+        this.IndexedAttribute1 = IndexedAttribute1;
+    }
+
+    /**
+     * Get Index field 2
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return IndexedAttribute2 Index field 2
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getIndexedAttribute2() {
+        return this.IndexedAttribute2;
+    }
+
+    /**
+     * Set Index field 2
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param IndexedAttribute2 Index field 2
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIndexedAttribute2(String IndexedAttribute2) {
+        this.IndexedAttribute2 = IndexedAttribute2;
+    }
+
+    /**
+     * Get Index field 3
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return IndexedAttribute3 Index field 3
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getIndexedAttribute3() {
+        return this.IndexedAttribute3;
+    }
+
+    /**
+     * Set Index field 3
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param IndexedAttribute3 Index field 3
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIndexedAttribute3(String IndexedAttribute3) {
+        this.IndexedAttribute3 = IndexedAttribute3;
+    }
+
+    /**
+     * Get Index field 4
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return IndexedAttribute4 Index field 4
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getIndexedAttribute4() {
+        return this.IndexedAttribute4;
+    }
+
+    /**
+     * Set Index field 4
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param IndexedAttribute4 Index field 4
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIndexedAttribute4(String IndexedAttribute4) {
+        this.IndexedAttribute4 = IndexedAttribute4;
+    }
+
+    /**
+     * Get Index field 5
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return IndexedAttribute5 Index field 5
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public String getIndexedAttribute5() {
+        return this.IndexedAttribute5;
+    }
+
+    /**
+     * Set Index field 5
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param IndexedAttribute5 Index field 5
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIndexedAttribute5(String IndexedAttribute5) {
+        this.IndexedAttribute5 = IndexedAttribute5;
+    }
+
     public User() {
     }
 
@@ -1132,6 +1272,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.LockTime != null) {
             this.LockTime = new Long(source.LockTime);
         }
+        if (source.IndexedAttribute1 != null) {
+            this.IndexedAttribute1 = new String(source.IndexedAttribute1);
+        }
+        if (source.IndexedAttribute2 != null) {
+            this.IndexedAttribute2 = new String(source.IndexedAttribute2);
+        }
+        if (source.IndexedAttribute3 != null) {
+            this.IndexedAttribute3 = new String(source.IndexedAttribute3);
+        }
+        if (source.IndexedAttribute4 != null) {
+            this.IndexedAttribute4 = new String(source.IndexedAttribute4);
+        }
+        if (source.IndexedAttribute5 != null) {
+            this.IndexedAttribute5 = new String(source.IndexedAttribute5);
+        }
     }
 
 
@@ -1175,6 +1330,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "LockType", this.LockType);
         this.setParamSimple(map, prefix + "LockTime", this.LockTime);
+        this.setParamSimple(map, prefix + "IndexedAttribute1", this.IndexedAttribute1);
+        this.setParamSimple(map, prefix + "IndexedAttribute2", this.IndexedAttribute2);
+        this.setParamSimple(map, prefix + "IndexedAttribute3", this.IndexedAttribute3);
+        this.setParamSimple(map, prefix + "IndexedAttribute4", this.IndexedAttribute4);
+        this.setParamSimple(map, prefix + "IndexedAttribute5", this.IndexedAttribute5);
 
     }
 }

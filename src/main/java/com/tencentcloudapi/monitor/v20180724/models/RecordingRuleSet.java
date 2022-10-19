@@ -37,7 +37,7 @@ public class RecordingRuleSet extends AbstractModel{
     private Long RuleState;
 
     /**
-    * Rule name
+    * Group name
     */
     @SerializedName("Name")
     @Expose
@@ -72,6 +72,14 @@ public class RecordingRuleSet extends AbstractModel{
     private String UpdatedAt;
 
     /**
+    * Rule name
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RuleName")
+    @Expose
+    private String RuleName;
+
+    /**
      * Get Rule ID 
      * @return RuleId Rule ID
      */
@@ -104,16 +112,16 @@ public class RecordingRuleSet extends AbstractModel{
     }
 
     /**
-     * Get Rule name 
-     * @return Name Rule name
+     * Get Group name 
+     * @return Name Group name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Rule name
-     * @param Name Rule name
+     * Set Group name
+     * @param Name Group name
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -183,6 +191,26 @@ public class RecordingRuleSet extends AbstractModel{
         this.UpdatedAt = UpdatedAt;
     }
 
+    /**
+     * Get Rule name
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RuleName Rule name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getRuleName() {
+        return this.RuleName;
+    }
+
+    /**
+     * Set Rule name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RuleName Rule name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRuleName(String RuleName) {
+        this.RuleName = RuleName;
+    }
+
     public RecordingRuleSet() {
     }
 
@@ -212,6 +240,9 @@ public class RecordingRuleSet extends AbstractModel{
         if (source.UpdatedAt != null) {
             this.UpdatedAt = new String(source.UpdatedAt);
         }
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
     }
 
 
@@ -226,6 +257,7 @@ public class RecordingRuleSet extends AbstractModel{
         this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
+        this.setParamSimple(map, prefix + "RuleName", this.RuleName);
 
     }
 }

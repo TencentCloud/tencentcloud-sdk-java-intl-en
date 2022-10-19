@@ -51,6 +51,14 @@ public class GrafanaIntegrationConfig extends AbstractModel{
     private String Description;
 
     /**
+    * Grafana redirection address
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("GrafanaURL")
+    @Expose
+    private String GrafanaURL;
+
+    /**
      * Get Integration ID 
      * @return IntegrationId Integration ID
      */
@@ -114,6 +122,26 @@ public class GrafanaIntegrationConfig extends AbstractModel{
         this.Description = Description;
     }
 
+    /**
+     * Get Grafana redirection address
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return GrafanaURL Grafana redirection address
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getGrafanaURL() {
+        return this.GrafanaURL;
+    }
+
+    /**
+     * Set Grafana redirection address
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param GrafanaURL Grafana redirection address
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setGrafanaURL(String GrafanaURL) {
+        this.GrafanaURL = GrafanaURL;
+    }
+
     public GrafanaIntegrationConfig() {
     }
 
@@ -134,6 +162,9 @@ public class GrafanaIntegrationConfig extends AbstractModel{
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.GrafanaURL != null) {
+            this.GrafanaURL = new String(source.GrafanaURL);
+        }
     }
 
 
@@ -145,6 +176,7 @@ public class GrafanaIntegrationConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "Kind", this.Kind);
         this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "GrafanaURL", this.GrafanaURL);
 
     }
 }

@@ -39,6 +39,46 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to bind one or multiple file systems to a snapshot policy. A file system can be bound to only one policy.
+     * @param req BindAutoSnapshotPolicyRequest
+     * @return BindAutoSnapshotPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindAutoSnapshotPolicyResponse BindAutoSnapshotPolicy(BindAutoSnapshotPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindAutoSnapshotPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindAutoSnapshotPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BindAutoSnapshotPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a scheduled snapshot policy.
+     * @param req CreateAutoSnapshotPolicyRequest
+     * @return CreateAutoSnapshotPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAutoSnapshotPolicyResponse CreateAutoSnapshotPolicy(CreateAutoSnapshotPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAutoSnapshotPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAutoSnapshotPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAutoSnapshotPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a file system.
      * @param req CreateCfsFileSystemRequest
      * @return CreateCfsFileSystemResponse
@@ -91,6 +131,46 @@ public class CfsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateCfsRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateCfsRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a file system snapshot.
+     * @param req CreateCfsSnapshotRequest
+     * @return CreateCfsSnapshotResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCfsSnapshotResponse CreateCfsSnapshot(CreateCfsSnapshotRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCfsSnapshotResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCfsSnapshotResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCfsSnapshot");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a scheduled snapshot policy.
+     * @param req DeleteAutoSnapshotPolicyRequest
+     * @return DeleteAutoSnapshotPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAutoSnapshotPolicyResponse DeleteAutoSnapshotPolicy(DeleteAutoSnapshotPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAutoSnapshotPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAutoSnapshotPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteAutoSnapshotPolicy");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -159,6 +239,26 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete a file system snapshot.
+     * @param req DeleteCfsSnapshotRequest
+     * @return DeleteCfsSnapshotResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCfsSnapshotResponse DeleteCfsSnapshot(DeleteCfsSnapshotRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteCfsSnapshotResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteCfsSnapshotResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteCfsSnapshot");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a mount target.
      * @param req DeleteMountTargetRequest
      * @return DeleteMountTargetResponse
@@ -171,6 +271,26 @@ public class CfsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteMountTargetResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteMountTarget");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of scheduled snapshot policies of a file system.
+     * @param req DescribeAutoSnapshotPoliciesRequest
+     * @return DescribeAutoSnapshotPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAutoSnapshotPoliciesResponse DescribeAutoSnapshotPolicies(DescribeAutoSnapshotPoliciesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAutoSnapshotPoliciesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAutoSnapshotPoliciesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAutoSnapshotPolicies");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -299,6 +419,46 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get the snapshot overview of a file system.
+     * @param req DescribeCfsSnapshotOverviewRequest
+     * @return DescribeCfsSnapshotOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCfsSnapshotOverviewResponse DescribeCfsSnapshotOverview(DescribeCfsSnapshotOverviewRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCfsSnapshotOverviewResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCfsSnapshotOverviewResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCfsSnapshotOverview");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of snapshots of a file system.
+     * @param req DescribeCfsSnapshotsRequest
+     * @return DescribeCfsSnapshotsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCfsSnapshotsResponse DescribeCfsSnapshots(DescribeCfsSnapshotsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCfsSnapshotsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCfsSnapshotsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCfsSnapshots");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the mount targets of a file system.
      * @param req DescribeMountTargetsRequest
      * @return DescribeMountTargetsResponse
@@ -319,6 +479,26 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the operation logs of a snapshot.
+     * @param req DescribeSnapshotOperationLogsRequest
+     * @return DescribeSnapshotOperationLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSnapshotOperationLogsResponse DescribeSnapshotOperationLogs(DescribeSnapshotOperationLogsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSnapshotOperationLogsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSnapshotOperationLogsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSnapshotOperationLogs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to activate the CFS service.
      * @param req SignUpCfsServiceRequest
      * @return SignUpCfsServiceResponse
@@ -331,6 +511,46 @@ public class CfsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SignUpCfsServiceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SignUpCfsService");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to unbind a snapshot policy from a file system.
+     * @param req UnbindAutoSnapshotPolicyRequest
+     * @return UnbindAutoSnapshotPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnbindAutoSnapshotPolicyResponse UnbindAutoSnapshotPolicy(UnbindAutoSnapshotPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UnbindAutoSnapshotPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UnbindAutoSnapshotPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UnbindAutoSnapshotPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to update a scheduled snapshot policy.
+     * @param req UpdateAutoSnapshotPolicyRequest
+     * @return UpdateAutoSnapshotPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAutoSnapshotPolicyResponse UpdateAutoSnapshotPolicy(UpdateAutoSnapshotPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateAutoSnapshotPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateAutoSnapshotPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateAutoSnapshotPolicy");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -431,6 +651,26 @@ public class CfsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdateCfsRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdateCfsRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to update the name and retention period of a file system snapshot.
+     * @param req UpdateCfsSnapshotAttributeRequest
+     * @return UpdateCfsSnapshotAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateCfsSnapshotAttributeResponse UpdateCfsSnapshotAttribute(UpdateCfsSnapshotAttributeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateCfsSnapshotAttributeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateCfsSnapshotAttributeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateCfsSnapshotAttribute");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

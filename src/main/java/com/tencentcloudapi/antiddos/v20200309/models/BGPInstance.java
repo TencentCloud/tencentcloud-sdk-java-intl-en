@@ -140,6 +140,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Long IpCountNewFlag;
 
     /**
+    * The version of attack defense package
+    */
+    @SerializedName("VitalityVersion")
+    @Expose
+    private Long VitalityVersion;
+
+    /**
      * Get Details of the Anti-DDoS Pro instance 
      * @return InstanceDetail Details of the Anti-DDoS Pro instance
      */
@@ -427,6 +434,22 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.IpCountNewFlag = IpCountNewFlag;
     }
 
+    /**
+     * Get The version of attack defense package 
+     * @return VitalityVersion The version of attack defense package
+     */
+    public Long getVitalityVersion() {
+        return this.VitalityVersion;
+    }
+
+    /**
+     * Set The version of attack defense package
+     * @param VitalityVersion The version of attack defense package
+     */
+    public void setVitalityVersion(Long VitalityVersion) {
+        this.VitalityVersion = VitalityVersion;
+    }
+
     public BGPInstance() {
     }
 
@@ -486,6 +509,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.IpCountNewFlag != null) {
             this.IpCountNewFlag = new Long(source.IpCountNewFlag);
         }
+        if (source.VitalityVersion != null) {
+            this.VitalityVersion = new Long(source.VitalityVersion);
+        }
     }
 
 
@@ -508,6 +534,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "CCEnable", this.CCEnable);
         this.setParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
         this.setParamSimple(map, prefix + "IpCountNewFlag", this.IpCountNewFlag);
+        this.setParamSimple(map, prefix + "VitalityVersion", this.VitalityVersion);
 
     }
 }

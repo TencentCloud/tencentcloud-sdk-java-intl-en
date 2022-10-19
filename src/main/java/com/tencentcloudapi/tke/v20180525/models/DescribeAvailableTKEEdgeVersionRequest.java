@@ -22,6 +22,29 @@ import java.util.HashMap;
 
 public class DescribeAvailableTKEEdgeVersionRequest extends AbstractModel{
 
+    /**
+    * You can enter the `ClusterId` to query the current and latest versions of all cluster components.
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+     * Get You can enter the `ClusterId` to query the current and latest versions of all cluster components. 
+     * @return ClusterId You can enter the `ClusterId` to query the current and latest versions of all cluster components.
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set You can enter the `ClusterId` to query the current and latest versions of all cluster components.
+     * @param ClusterId You can enter the `ClusterId` to query the current and latest versions of all cluster components.
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
     public DescribeAvailableTKEEdgeVersionRequest() {
     }
 
@@ -30,6 +53,9 @@ public class DescribeAvailableTKEEdgeVersionRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAvailableTKEEdgeVersionRequest(DescribeAvailableTKEEdgeVersionRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
     }
 
 
@@ -37,6 +63,7 @@ public class DescribeAvailableTKEEdgeVersionRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

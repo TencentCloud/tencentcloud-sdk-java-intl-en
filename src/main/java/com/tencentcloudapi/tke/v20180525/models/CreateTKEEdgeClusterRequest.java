@@ -107,6 +107,20 @@ public class CreateTKEEdgeClusterRequest extends AbstractModel{
     private String ChargeType;
 
     /**
+    * Edge cluster version. It is the set of versions of all cluster components.
+    */
+    @SerializedName("EdgeVersion")
+    @Expose
+    private String EdgeVersion;
+
+    /**
+    * Prefix of the image registry of an edge component
+    */
+    @SerializedName("RegistryPrefix")
+    @Expose
+    private String RegistryPrefix;
+
+    /**
      * Get  
      * @return K8SVersion 
      */
@@ -298,6 +312,38 @@ public class CreateTKEEdgeClusterRequest extends AbstractModel{
         this.ChargeType = ChargeType;
     }
 
+    /**
+     * Get Edge cluster version. It is the set of versions of all cluster components. 
+     * @return EdgeVersion Edge cluster version. It is the set of versions of all cluster components.
+     */
+    public String getEdgeVersion() {
+        return this.EdgeVersion;
+    }
+
+    /**
+     * Set Edge cluster version. It is the set of versions of all cluster components.
+     * @param EdgeVersion Edge cluster version. It is the set of versions of all cluster components.
+     */
+    public void setEdgeVersion(String EdgeVersion) {
+        this.EdgeVersion = EdgeVersion;
+    }
+
+    /**
+     * Get Prefix of the image registry of an edge component 
+     * @return RegistryPrefix Prefix of the image registry of an edge component
+     */
+    public String getRegistryPrefix() {
+        return this.RegistryPrefix;
+    }
+
+    /**
+     * Set Prefix of the image registry of an edge component
+     * @param RegistryPrefix Prefix of the image registry of an edge component
+     */
+    public void setRegistryPrefix(String RegistryPrefix) {
+        this.RegistryPrefix = RegistryPrefix;
+    }
+
     public CreateTKEEdgeClusterRequest() {
     }
 
@@ -342,6 +388,12 @@ public class CreateTKEEdgeClusterRequest extends AbstractModel{
         if (source.ChargeType != null) {
             this.ChargeType = new String(source.ChargeType);
         }
+        if (source.EdgeVersion != null) {
+            this.EdgeVersion = new String(source.EdgeVersion);
+        }
+        if (source.RegistryPrefix != null) {
+            this.RegistryPrefix = new String(source.RegistryPrefix);
+        }
     }
 
 
@@ -361,6 +413,8 @@ public class CreateTKEEdgeClusterRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
         this.setParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
+        this.setParamSimple(map, prefix + "EdgeVersion", this.EdgeVersion);
+        this.setParamSimple(map, prefix + "RegistryPrefix", this.RegistryPrefix);
 
     }
 }

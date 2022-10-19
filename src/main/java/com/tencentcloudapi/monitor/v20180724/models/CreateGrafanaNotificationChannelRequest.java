@@ -37,7 +37,7 @@ public class CreateGrafanaNotificationChannelRequest extends AbstractModel{
     private String ChannelName;
 
     /**
-    * Organization ID
+    * Default value: `1`. This parameter has been deprecated. Please use `OrganizationIds` instead.
     */
     @SerializedName("OrgId")
     @Expose
@@ -51,14 +51,14 @@ public class CreateGrafanaNotificationChannelRequest extends AbstractModel{
     private String [] Receivers;
 
     /**
-    * Array of extra organization IDs
+    * Array of extra organization IDs. This parameter has been deprecated. Please use `OrganizationIds` instead.
     */
     @SerializedName("ExtraOrgIds")
     @Expose
     private String [] ExtraOrgIds;
 
     /**
-    * 
+    * Array of all valid organization IDs. Default value: `1`.
     */
     @SerializedName("OrganizationIds")
     @Expose
@@ -97,16 +97,16 @@ public class CreateGrafanaNotificationChannelRequest extends AbstractModel{
     }
 
     /**
-     * Get Organization ID 
-     * @return OrgId Organization ID
+     * Get Default value: `1`. This parameter has been deprecated. Please use `OrganizationIds` instead. 
+     * @return OrgId Default value: `1`. This parameter has been deprecated. Please use `OrganizationIds` instead.
      */
     public Long getOrgId() {
         return this.OrgId;
     }
 
     /**
-     * Set Organization ID
-     * @param OrgId Organization ID
+     * Set Default value: `1`. This parameter has been deprecated. Please use `OrganizationIds` instead.
+     * @param OrgId Default value: `1`. This parameter has been deprecated. Please use `OrganizationIds` instead.
      */
     public void setOrgId(Long OrgId) {
         this.OrgId = OrgId;
@@ -129,32 +129,32 @@ public class CreateGrafanaNotificationChannelRequest extends AbstractModel{
     }
 
     /**
-     * Get Array of extra organization IDs 
-     * @return ExtraOrgIds Array of extra organization IDs
+     * Get Array of extra organization IDs. This parameter has been deprecated. Please use `OrganizationIds` instead. 
+     * @return ExtraOrgIds Array of extra organization IDs. This parameter has been deprecated. Please use `OrganizationIds` instead.
      */
     public String [] getExtraOrgIds() {
         return this.ExtraOrgIds;
     }
 
     /**
-     * Set Array of extra organization IDs
-     * @param ExtraOrgIds Array of extra organization IDs
+     * Set Array of extra organization IDs. This parameter has been deprecated. Please use `OrganizationIds` instead.
+     * @param ExtraOrgIds Array of extra organization IDs. This parameter has been deprecated. Please use `OrganizationIds` instead.
      */
     public void setExtraOrgIds(String [] ExtraOrgIds) {
         this.ExtraOrgIds = ExtraOrgIds;
     }
 
     /**
-     * Get  
-     * @return OrganizationIds 
+     * Get Array of all valid organization IDs. Default value: `1`. 
+     * @return OrganizationIds Array of all valid organization IDs. Default value: `1`.
      */
     public String [] getOrganizationIds() {
         return this.OrganizationIds;
     }
 
     /**
-     * Set 
-     * @param OrganizationIds 
+     * Set Array of all valid organization IDs. Default value: `1`.
+     * @param OrganizationIds Array of all valid organization IDs. Default value: `1`.
      */
     public void setOrganizationIds(String [] OrganizationIds) {
         this.OrganizationIds = OrganizationIds;

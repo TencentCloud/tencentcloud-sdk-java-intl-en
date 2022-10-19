@@ -72,6 +72,13 @@ public class DescribeConditionsTemplateListRequest extends AbstractModel{
     private String UpdateTimeOrder;
 
     /**
+    * Sorting order based on the number of associated policies. Valid values: `asc` (ascending order), `desc` (descending order).
+    */
+    @SerializedName("PolicyCountOrder")
+    @Expose
+    private String PolicyCountOrder;
+
+    /**
      * Get The value is fixed to `monitor`. 
      * @return Module The value is fixed to `monitor`.
      */
@@ -183,6 +190,22 @@ public class DescribeConditionsTemplateListRequest extends AbstractModel{
         this.UpdateTimeOrder = UpdateTimeOrder;
     }
 
+    /**
+     * Get Sorting order based on the number of associated policies. Valid values: `asc` (ascending order), `desc` (descending order). 
+     * @return PolicyCountOrder Sorting order based on the number of associated policies. Valid values: `asc` (ascending order), `desc` (descending order).
+     */
+    public String getPolicyCountOrder() {
+        return this.PolicyCountOrder;
+    }
+
+    /**
+     * Set Sorting order based on the number of associated policies. Valid values: `asc` (ascending order), `desc` (descending order).
+     * @param PolicyCountOrder Sorting order based on the number of associated policies. Valid values: `asc` (ascending order), `desc` (descending order).
+     */
+    public void setPolicyCountOrder(String PolicyCountOrder) {
+        this.PolicyCountOrder = PolicyCountOrder;
+    }
+
     public DescribeConditionsTemplateListRequest() {
     }
 
@@ -212,6 +235,9 @@ public class DescribeConditionsTemplateListRequest extends AbstractModel{
         if (source.UpdateTimeOrder != null) {
             this.UpdateTimeOrder = new String(source.UpdateTimeOrder);
         }
+        if (source.PolicyCountOrder != null) {
+            this.PolicyCountOrder = new String(source.PolicyCountOrder);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class DescribeConditionsTemplateListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "UpdateTimeOrder", this.UpdateTimeOrder);
+        this.setParamSimple(map, prefix + "PolicyCountOrder", this.PolicyCountOrder);
 
     }
 }

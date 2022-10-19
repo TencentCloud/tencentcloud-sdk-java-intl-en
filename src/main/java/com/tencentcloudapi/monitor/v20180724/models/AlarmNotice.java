@@ -119,6 +119,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private CLSNotice [] CLSNotices;
 
     /**
+    * Tags bound to a notification template
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Alarm notification template ID
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Id Alarm notification template ID
@@ -358,6 +366,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.CLSNotices = CLSNotices;
     }
 
+    /**
+     * Get Tags bound to a notification template
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Tags Tags bound to a notification template
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tags bound to a notification template
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Tags Tags bound to a notification template
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public AlarmNotice() {
     }
 
@@ -414,6 +442,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 this.CLSNotices[i] = new CLSNotice(source.CLSNotices[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -433,6 +467,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
         this.setParamSimple(map, prefix + "AMPConsumerId", this.AMPConsumerId);
         this.setParamArrayObj(map, prefix + "CLSNotices.", this.CLSNotices);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

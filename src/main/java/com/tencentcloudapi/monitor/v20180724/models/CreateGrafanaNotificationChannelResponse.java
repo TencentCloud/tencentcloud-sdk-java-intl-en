@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class CreateGrafanaNotificationChannelResponse extends AbstractModel{
 
     /**
-    * 
+    * Channel ID.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ChannelId")
     @Expose
@@ -37,16 +38,20 @@ public class CreateGrafanaNotificationChannelResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get  
-     * @return ChannelId 
+     * Get Channel ID.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ChannelId Channel ID.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getChannelId() {
         return this.ChannelId;
     }
 
     /**
-     * Set 
-     * @param ChannelId 
+     * Set Channel ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ChannelId Channel ID.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setChannelId(String ChannelId) {
         this.ChannelId = ChannelId;

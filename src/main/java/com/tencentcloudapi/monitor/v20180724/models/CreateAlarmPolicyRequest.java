@@ -121,6 +121,20 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
     private String [] GroupBy;
 
     /**
+    * Tags bound to a template
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * Log alarm information
+    */
+    @SerializedName("LogAlarmReqInfo")
+    @Expose
+    private LogAlarmReq LogAlarmReqInfo;
+
+    /**
      * Get Value fixed at "monitor" 
      * @return Module Value fixed at "monitor"
      */
@@ -344,6 +358,38 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
         this.GroupBy = GroupBy;
     }
 
+    /**
+     * Get Tags bound to a template 
+     * @return Tags Tags bound to a template
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tags bound to a template
+     * @param Tags Tags bound to a template
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get Log alarm information 
+     * @return LogAlarmReqInfo Log alarm information
+     */
+    public LogAlarmReq getLogAlarmReqInfo() {
+        return this.LogAlarmReqInfo;
+    }
+
+    /**
+     * Set Log alarm information
+     * @param LogAlarmReqInfo Log alarm information
+     */
+    public void setLogAlarmReqInfo(LogAlarmReq LogAlarmReqInfo) {
+        this.LogAlarmReqInfo = LogAlarmReqInfo;
+    }
+
     public CreateAlarmPolicyRequest() {
     }
 
@@ -403,6 +449,15 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
                 this.GroupBy[i] = new String(source.GroupBy[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.LogAlarmReqInfo != null) {
+            this.LogAlarmReqInfo = new LogAlarmReq(source.LogAlarmReqInfo);
+        }
     }
 
 
@@ -424,6 +479,8 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "TriggerTasks.", this.TriggerTasks);
         this.setParamObj(map, prefix + "Filter.", this.Filter);
         this.setParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamObj(map, prefix + "LogAlarmReqInfo.", this.LogAlarmReqInfo);
 
     }
 }

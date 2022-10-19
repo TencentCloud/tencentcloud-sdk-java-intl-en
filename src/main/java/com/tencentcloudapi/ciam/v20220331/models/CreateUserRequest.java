@@ -93,6 +93,41 @@ public class CreateUserRequest extends AbstractModel{
     private MemberMap [] CustomizationAttributes;
 
     /**
+    * Index field 1
+    */
+    @SerializedName("IndexedAttribute1")
+    @Expose
+    private String IndexedAttribute1;
+
+    /**
+    * Index field 2
+    */
+    @SerializedName("IndexedAttribute2")
+    @Expose
+    private String IndexedAttribute2;
+
+    /**
+    * Index field 3
+    */
+    @SerializedName("IndexedAttribute3")
+    @Expose
+    private String IndexedAttribute3;
+
+    /**
+    * Index field 4
+    */
+    @SerializedName("IndexedAttribute4")
+    @Expose
+    private String IndexedAttribute4;
+
+    /**
+    * Index field 5
+    */
+    @SerializedName("IndexedAttribute5")
+    @Expose
+    private String IndexedAttribute5;
+
+    /**
      * Get User directory ID 
      * @return UserStoreId User directory ID
      */
@@ -252,6 +287,86 @@ public class CreateUserRequest extends AbstractModel{
         this.CustomizationAttributes = CustomizationAttributes;
     }
 
+    /**
+     * Get Index field 1 
+     * @return IndexedAttribute1 Index field 1
+     */
+    public String getIndexedAttribute1() {
+        return this.IndexedAttribute1;
+    }
+
+    /**
+     * Set Index field 1
+     * @param IndexedAttribute1 Index field 1
+     */
+    public void setIndexedAttribute1(String IndexedAttribute1) {
+        this.IndexedAttribute1 = IndexedAttribute1;
+    }
+
+    /**
+     * Get Index field 2 
+     * @return IndexedAttribute2 Index field 2
+     */
+    public String getIndexedAttribute2() {
+        return this.IndexedAttribute2;
+    }
+
+    /**
+     * Set Index field 2
+     * @param IndexedAttribute2 Index field 2
+     */
+    public void setIndexedAttribute2(String IndexedAttribute2) {
+        this.IndexedAttribute2 = IndexedAttribute2;
+    }
+
+    /**
+     * Get Index field 3 
+     * @return IndexedAttribute3 Index field 3
+     */
+    public String getIndexedAttribute3() {
+        return this.IndexedAttribute3;
+    }
+
+    /**
+     * Set Index field 3
+     * @param IndexedAttribute3 Index field 3
+     */
+    public void setIndexedAttribute3(String IndexedAttribute3) {
+        this.IndexedAttribute3 = IndexedAttribute3;
+    }
+
+    /**
+     * Get Index field 4 
+     * @return IndexedAttribute4 Index field 4
+     */
+    public String getIndexedAttribute4() {
+        return this.IndexedAttribute4;
+    }
+
+    /**
+     * Set Index field 4
+     * @param IndexedAttribute4 Index field 4
+     */
+    public void setIndexedAttribute4(String IndexedAttribute4) {
+        this.IndexedAttribute4 = IndexedAttribute4;
+    }
+
+    /**
+     * Get Index field 5 
+     * @return IndexedAttribute5 Index field 5
+     */
+    public String getIndexedAttribute5() {
+        return this.IndexedAttribute5;
+    }
+
+    /**
+     * Set Index field 5
+     * @param IndexedAttribute5 Index field 5
+     */
+    public void setIndexedAttribute5(String IndexedAttribute5) {
+        this.IndexedAttribute5 = IndexedAttribute5;
+    }
+
     public CreateUserRequest() {
     }
 
@@ -296,6 +411,21 @@ public class CreateUserRequest extends AbstractModel{
                 this.CustomizationAttributes[i] = new MemberMap(source.CustomizationAttributes[i]);
             }
         }
+        if (source.IndexedAttribute1 != null) {
+            this.IndexedAttribute1 = new String(source.IndexedAttribute1);
+        }
+        if (source.IndexedAttribute2 != null) {
+            this.IndexedAttribute2 = new String(source.IndexedAttribute2);
+        }
+        if (source.IndexedAttribute3 != null) {
+            this.IndexedAttribute3 = new String(source.IndexedAttribute3);
+        }
+        if (source.IndexedAttribute4 != null) {
+            this.IndexedAttribute4 = new String(source.IndexedAttribute4);
+        }
+        if (source.IndexedAttribute5 != null) {
+            this.IndexedAttribute5 = new String(source.IndexedAttribute5);
+        }
     }
 
 
@@ -313,6 +443,11 @@ public class CreateUserRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "UserGroup.", this.UserGroup);
         this.setParamSimple(map, prefix + "Birthdate", this.Birthdate);
         this.setParamArrayObj(map, prefix + "CustomizationAttributes.", this.CustomizationAttributes);
+        this.setParamSimple(map, prefix + "IndexedAttribute1", this.IndexedAttribute1);
+        this.setParamSimple(map, prefix + "IndexedAttribute2", this.IndexedAttribute2);
+        this.setParamSimple(map, prefix + "IndexedAttribute3", this.IndexedAttribute3);
+        this.setParamSimple(map, prefix + "IndexedAttribute4", this.IndexedAttribute4);
+        this.setParamSimple(map, prefix + "IndexedAttribute5", this.IndexedAttribute5);
 
     }
 }

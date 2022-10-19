@@ -51,7 +51,7 @@ public class CreateClusterEndpointRequest extends AbstractModel{
     private String Domain;
 
     /**
-    * The security group in use. Required only for public network access.
+    * The security group in use, which must be passed in when public access is enabled.
     */
     @SerializedName("SecurityGroup")
     @Expose
@@ -129,16 +129,16 @@ public class CreateClusterEndpointRequest extends AbstractModel{
     }
 
     /**
-     * Get The security group in use. Required only for public network access. 
-     * @return SecurityGroup The security group in use. Required only for public network access.
+     * Get The security group in use, which must be passed in when public access is enabled. 
+     * @return SecurityGroup The security group in use, which must be passed in when public access is enabled.
      */
     public String getSecurityGroup() {
         return this.SecurityGroup;
     }
 
     /**
-     * Set The security group in use. Required only for public network access.
-     * @param SecurityGroup The security group in use. Required only for public network access.
+     * Set The security group in use, which must be passed in when public access is enabled.
+     * @param SecurityGroup The security group in use, which must be passed in when public access is enabled.
      */
     public void setSecurityGroup(String SecurityGroup) {
         this.SecurityGroup = SecurityGroup;

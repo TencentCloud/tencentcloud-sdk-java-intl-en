@@ -33,11 +33,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String Switch;
 
     /**
-    * HTTP2 configuration switch
+    * Whether to enable HTTP2
 `on`: Enable
 `off`: Disable
-Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Http2")
     @Expose
@@ -149,32 +148,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get HTTP2 configuration switch
+     * Get Whether to enable HTTP2
 `on`: Enable
 `off`: Disable
-Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Http2 HTTP2 configuration switch
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Http2 Whether to enable HTTP2
 `on`: Enable
 `off`: Disable
-Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getHttp2() {
         return this.Http2;
     }
 
     /**
-     * Set HTTP2 configuration switch
+     * Set Whether to enable HTTP2
 `on`: Enable
 `off`: Disable
-Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Http2 HTTP2 configuration switch
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Http2 Whether to enable HTTP2
 `on`: Enable
 `off`: Disable
-Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setHttp2(String Http2) {
         this.Http2 = Http2;

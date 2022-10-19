@@ -61,10 +61,9 @@ public class Job extends AbstractModel{
     /**
     * Data type of the task
 
-<li> **JSON** </li>  JSON
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Format")
     @Expose
@@ -193,16 +192,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get Data type of the task
 
-<li> **JSON** </li>  JSON
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
-Note: This field may return null, indicating that no valid values can be obtained. 
+Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Format Data type of the task
 
-<li> **JSON** </li>  JSON
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public String getFormat() {
         return this.Format;
@@ -211,16 +208,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set Data type of the task
 
-<li> **JSON** </li>  JSON
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param Format Data type of the task
 
-<li> **JSON** </li>  JSON
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setFormat(String Format) {
         this.Format = Format;

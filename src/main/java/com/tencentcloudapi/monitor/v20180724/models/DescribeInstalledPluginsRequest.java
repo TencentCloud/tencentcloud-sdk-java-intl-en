@@ -30,6 +30,13 @@ public class DescribeInstalledPluginsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
+    * Filter by plugin ID
+    */
+    @SerializedName("PluginId")
+    @Expose
+    private String PluginId;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -45,6 +52,22 @@ public class DescribeInstalledPluginsRequest extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get Filter by plugin ID 
+     * @return PluginId Filter by plugin ID
+     */
+    public String getPluginId() {
+        return this.PluginId;
+    }
+
+    /**
+     * Set Filter by plugin ID
+     * @param PluginId Filter by plugin ID
+     */
+    public void setPluginId(String PluginId) {
+        this.PluginId = PluginId;
+    }
+
     public DescribeInstalledPluginsRequest() {
     }
 
@@ -56,6 +79,9 @@ public class DescribeInstalledPluginsRequest extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.PluginId != null) {
+            this.PluginId = new String(source.PluginId);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribeInstalledPluginsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "PluginId", this.PluginId);
 
     }
 }

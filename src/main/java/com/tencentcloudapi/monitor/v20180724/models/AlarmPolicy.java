@@ -290,6 +290,22 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long AdvancedMetricNumber;
 
     /**
+    * Whether the policy is associated with all objects
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsBindAll")
+    @Expose
+    private Long IsBindAll;
+
+    /**
+    * Policy tag
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Alarm policy ID
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return PolicyId Alarm policy ID
@@ -961,6 +977,46 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.AdvancedMetricNumber = AdvancedMetricNumber;
     }
 
+    /**
+     * Get Whether the policy is associated with all objects
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsBindAll Whether the policy is associated with all objects
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getIsBindAll() {
+        return this.IsBindAll;
+    }
+
+    /**
+     * Set Whether the policy is associated with all objects
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsBindAll Whether the policy is associated with all objects
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIsBindAll(Long IsBindAll) {
+        this.IsBindAll = IsBindAll;
+    }
+
+    /**
+     * Get Policy tag
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Tags Policy tag
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Policy tag
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Tags Policy tag
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public AlarmPolicy() {
     }
 
@@ -1083,6 +1139,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.AdvancedMetricNumber != null) {
             this.AdvancedMetricNumber = new Long(source.AdvancedMetricNumber);
         }
+        if (source.IsBindAll != null) {
+            this.IsBindAll = new Long(source.IsBindAll);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -1123,6 +1188,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "IsOneClick", this.IsOneClick);
         this.setParamSimple(map, prefix + "OneClickStatus", this.OneClickStatus);
         this.setParamSimple(map, prefix + "AdvancedMetricNumber", this.AdvancedMetricNumber);
+        this.setParamSimple(map, prefix + "IsBindAll", this.IsBindAll);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

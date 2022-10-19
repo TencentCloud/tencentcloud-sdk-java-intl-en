@@ -130,6 +130,16 @@ Default value: OFF.
     private String PreserveHDRSwitch;
 
     /**
+    * The codec tag. This parameter is valid only if the H.265 codec is used. Valid values:
+<li>hvc1</li>
+<li>hev1</li>
+Default value: hvc1.
+    */
+    @SerializedName("CodecTag")
+    @Expose
+    private String CodecTag;
+
+    /**
      * Get The video codec. Valid values:
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
@@ -437,6 +447,34 @@ Default value: OFF.
         this.PreserveHDRSwitch = PreserveHDRSwitch;
     }
 
+    /**
+     * Get The codec tag. This parameter is valid only if the H.265 codec is used. Valid values:
+<li>hvc1</li>
+<li>hev1</li>
+Default value: hvc1. 
+     * @return CodecTag The codec tag. This parameter is valid only if the H.265 codec is used. Valid values:
+<li>hvc1</li>
+<li>hev1</li>
+Default value: hvc1.
+     */
+    public String getCodecTag() {
+        return this.CodecTag;
+    }
+
+    /**
+     * Set The codec tag. This parameter is valid only if the H.265 codec is used. Valid values:
+<li>hvc1</li>
+<li>hev1</li>
+Default value: hvc1.
+     * @param CodecTag The codec tag. This parameter is valid only if the H.265 codec is used. Valid values:
+<li>hvc1</li>
+<li>hev1</li>
+Default value: hvc1.
+     */
+    public void setCodecTag(String CodecTag) {
+        this.CodecTag = CodecTag;
+    }
+
     public VideoTemplateInfo() {
     }
 
@@ -475,6 +513,9 @@ Default value: OFF.
         if (source.PreserveHDRSwitch != null) {
             this.PreserveHDRSwitch = new String(source.PreserveHDRSwitch);
         }
+        if (source.CodecTag != null) {
+            this.CodecTag = new String(source.CodecTag);
+        }
     }
 
 
@@ -492,6 +533,7 @@ Default value: OFF.
         this.setParamSimple(map, prefix + "Vcrf", this.Vcrf);
         this.setParamSimple(map, prefix + "Gop", this.Gop);
         this.setParamSimple(map, prefix + "PreserveHDRSwitch", this.PreserveHDRSwitch);
+        this.setParamSimple(map, prefix + "CodecTag", this.CodecTag);
 
     }
 }

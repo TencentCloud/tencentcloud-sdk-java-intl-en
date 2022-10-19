@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateSSOAccountResponse extends AbstractModel{
 
     /**
-    * 
+    * The added user UIN
     */
     @SerializedName("UserId")
     @Expose
@@ -37,16 +37,16 @@ public class CreateSSOAccountResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get  
-     * @return UserId 
+     * Get The added user UIN 
+     * @return UserId The added user UIN
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 
-     * @param UserId 
+     * Set The added user UIN
+     * @param UserId The added user UIN
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
