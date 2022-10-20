@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Filter extends AbstractModel{
 
     /**
-    * The name of the field to filter.
+    * Fields to be filtered.
     */
     @SerializedName("Name")
     @Expose
@@ -37,16 +37,16 @@ public class Filter extends AbstractModel{
     private String [] Values;
 
     /**
-     * Get The name of the field to filter. 
-     * @return Name The name of the field to filter.
+     * Get Fields to be filtered. 
+     * @return Name Fields to be filtered.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set The name of the field to filter.
-     * @param Name The name of the field to filter.
+     * Set Fields to be filtered.
+     * @param Name Fields to be filtered.
      */
     public void setName(String Name) {
         this.Name = Name;

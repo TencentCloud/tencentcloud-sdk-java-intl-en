@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class StorageParams extends AbstractModel{
 
     /**
-    * The third-party cloud storage information (not supported currently).
+    * The account information for third-party cloud storage. This parameter is not available currently. Please use `CloudVod` instead to save files to Tencent Cloud VOD.
     */
     @SerializedName("CloudStorage")
     @Expose
     private CloudStorage CloudStorage;
 
     /**
-    * The VOD information.
+    * The account information for saving files to Tencent Cloud VOD. This parameter is required. Currently, you can only save files to Tencent Cloud VOD.
     */
     @SerializedName("CloudVod")
     @Expose
     private CloudVod CloudVod;
 
     /**
-     * Get The third-party cloud storage information (not supported currently). 
-     * @return CloudStorage The third-party cloud storage information (not supported currently).
+     * Get The account information for third-party cloud storage. This parameter is not available currently. Please use `CloudVod` instead to save files to Tencent Cloud VOD. 
+     * @return CloudStorage The account information for third-party cloud storage. This parameter is not available currently. Please use `CloudVod` instead to save files to Tencent Cloud VOD.
      */
     public CloudStorage getCloudStorage() {
         return this.CloudStorage;
     }
 
     /**
-     * Set The third-party cloud storage information (not supported currently).
-     * @param CloudStorage The third-party cloud storage information (not supported currently).
+     * Set The account information for third-party cloud storage. This parameter is not available currently. Please use `CloudVod` instead to save files to Tencent Cloud VOD.
+     * @param CloudStorage The account information for third-party cloud storage. This parameter is not available currently. Please use `CloudVod` instead to save files to Tencent Cloud VOD.
      */
     public void setCloudStorage(CloudStorage CloudStorage) {
         this.CloudStorage = CloudStorage;
     }
 
     /**
-     * Get The VOD information. 
-     * @return CloudVod The VOD information.
+     * Get The account information for saving files to Tencent Cloud VOD. This parameter is required. Currently, you can only save files to Tencent Cloud VOD. 
+     * @return CloudVod The account information for saving files to Tencent Cloud VOD. This parameter is required. Currently, you can only save files to Tencent Cloud VOD.
      */
     public CloudVod getCloudVod() {
         return this.CloudVod;
     }
 
     /**
-     * Set The VOD information.
-     * @param CloudVod The VOD information.
+     * Set The account information for saving files to Tencent Cloud VOD. This parameter is required. Currently, you can only save files to Tencent Cloud VOD.
+     * @param CloudVod The account information for saving files to Tencent Cloud VOD. This parameter is required. Currently, you can only save files to Tencent Cloud VOD.
      */
     public void setCloudVod(CloudVod CloudVod) {
         this.CloudVod = CloudVod;
