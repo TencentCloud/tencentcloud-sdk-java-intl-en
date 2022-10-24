@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
 
     /**
-    * Original price in 0.01 CNY.
+    * Published price in US Cent
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Long OriginalPrice;
 
     /**
-    * Discounted price in 0.01 CNY.
+    * Discounted total amount in US Cent
     */
     @SerializedName("Price")
     @Expose
     private Long Price;
 
     /**
-    * Currency, such as USD for US dollar.
+    * Currency, such as USD.
     */
     @SerializedName("Currency")
     @Expose
@@ -51,48 +51,48 @@ public class InquiryPriceCreateDBInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Original price in 0.01 CNY. 
-     * @return OriginalPrice Original price in 0.01 CNY.
+     * Get Published price in US Cent 
+     * @return OriginalPrice Published price in US Cent
      */
     public Long getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set Original price in 0.01 CNY.
-     * @param OriginalPrice Original price in 0.01 CNY.
+     * Set Published price in US Cent
+     * @param OriginalPrice Published price in US Cent
      */
     public void setOriginalPrice(Long OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get Discounted price in 0.01 CNY. 
-     * @return Price Discounted price in 0.01 CNY.
+     * Get Discounted total amount in US Cent 
+     * @return Price Discounted total amount in US Cent
      */
     public Long getPrice() {
         return this.Price;
     }
 
     /**
-     * Set Discounted price in 0.01 CNY.
-     * @param Price Discounted price in 0.01 CNY.
+     * Set Discounted total amount in US Cent
+     * @param Price Discounted total amount in US Cent
      */
     public void setPrice(Long Price) {
         this.Price = Price;
     }
 
     /**
-     * Get Currency, such as USD for US dollar. 
-     * @return Currency Currency, such as USD for US dollar.
+     * Get Currency, such as USD. 
+     * @return Currency Currency, such as USD.
      */
     public String getCurrency() {
         return this.Currency;
     }
 
     /**
-     * Set Currency, such as USD for US dollar.
-     * @param Currency Currency, such as USD for US dollar.
+     * Set Currency, such as USD.
+     * @param Currency Currency, such as USD.
      */
     public void setCurrency(String Currency) {
         this.Currency = Currency;

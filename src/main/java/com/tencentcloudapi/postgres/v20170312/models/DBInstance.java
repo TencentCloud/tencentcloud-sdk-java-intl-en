@@ -292,6 +292,21 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long IsSupportTDE;
 
     /**
+    * 
+    */
+    @SerializedName("DBEngine")
+    @Expose
+    private String DBEngine;
+
+    /**
+    * Configuration information of database engine
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DBEngineConfig")
+    @Expose
+    private String DBEngineConfig;
+
+    /**
      * Get Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet` 
      * @return Region Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet`
      */
@@ -923,6 +938,42 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.IsSupportTDE = IsSupportTDE;
     }
 
+    /**
+     * Get  
+     * @return DBEngine 
+     */
+    public String getDBEngine() {
+        return this.DBEngine;
+    }
+
+    /**
+     * Set 
+     * @param DBEngine 
+     */
+    public void setDBEngine(String DBEngine) {
+        this.DBEngine = DBEngine;
+    }
+
+    /**
+     * Get Configuration information of database engine
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DBEngineConfig Configuration information of database engine
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDBEngineConfig() {
+        return this.DBEngineConfig;
+    }
+
+    /**
+     * Set Configuration information of database engine
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DBEngineConfig Configuration information of database engine
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDBEngineConfig(String DBEngineConfig) {
+        this.DBEngineConfig = DBEngineConfig;
+    }
+
     public DBInstance() {
     }
 
@@ -1054,6 +1105,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.IsSupportTDE != null) {
             this.IsSupportTDE = new Long(source.IsSupportTDE);
         }
+        if (source.DBEngine != null) {
+            this.DBEngine = new String(source.DBEngine);
+        }
+        if (source.DBEngineConfig != null) {
+            this.DBEngineConfig = new String(source.DBEngineConfig);
+        }
     }
 
 
@@ -1098,6 +1155,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
         this.setParamArrayObj(map, prefix + "DBNodeSet.", this.DBNodeSet);
         this.setParamSimple(map, prefix + "IsSupportTDE", this.IsSupportTDE);
+        this.setParamSimple(map, prefix + "DBEngine", this.DBEngine);
+        this.setParamSimple(map, prefix + "DBEngineConfig", this.DBEngineConfig);
 
     }
 }

@@ -79,7 +79,7 @@ public class SpecItemInfo extends AbstractModel{
     private Long Qps;
 
     /**
-    * Billing ID for this specification
+    * (Disused)
     */
     @SerializedName("Pid")
     @Expose
@@ -245,16 +245,16 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Billing ID for this specification 
-     * @return Pid Billing ID for this specification
+     * Get (Disused) 
+     * @return Pid (Disused)
      */
     public Long getPid() {
         return this.Pid;
     }
 
     /**
-     * Set Billing ID for this specification
-     * @param Pid Billing ID for this specification
+     * Set (Disused)
+     * @param Pid (Disused)
      */
     public void setPid(Long Pid) {
         this.Pid = Pid;

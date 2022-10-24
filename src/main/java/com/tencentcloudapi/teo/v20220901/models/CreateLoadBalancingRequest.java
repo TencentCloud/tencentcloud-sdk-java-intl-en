@@ -61,7 +61,7 @@ public class CreateLoadBalancingRequest extends AbstractModel{
 
     /**
     * When `Type=dns_only`, it indicates the amount of time that DNS records remain in the cache of a DNS server.
-Value range: 60-86400 (in seconds). If it’s not specified, the default value 600 will be used.
+Value range: 60-86400 (in seconds). If it's not specified, the default value 600 will be used.
     */
     @SerializedName("TTL")
     @Expose
@@ -171,9 +171,9 @@ Value range: 60-86400 (in seconds). If it’s not specified, the default value 6
 
     /**
      * Get When `Type=dns_only`, it indicates the amount of time that DNS records remain in the cache of a DNS server.
-Value range: 60-86400 (in seconds). If it’s not specified, the default value 600 will be used. 
+Value range: 60-86400 (in seconds). If it's not specified, the default value 600 will be used. 
      * @return TTL When `Type=dns_only`, it indicates the amount of time that DNS records remain in the cache of a DNS server.
-Value range: 60-86400 (in seconds). If it’s not specified, the default value 600 will be used.
+Value range: 60-86400 (in seconds). If it's not specified, the default value 600 will be used.
      */
     public Long getTTL() {
         return this.TTL;
@@ -181,9 +181,9 @@ Value range: 60-86400 (in seconds). If it’s not specified, the default value 6
 
     /**
      * Set When `Type=dns_only`, it indicates the amount of time that DNS records remain in the cache of a DNS server.
-Value range: 60-86400 (in seconds). If it’s not specified, the default value 600 will be used.
+Value range: 60-86400 (in seconds). If it's not specified, the default value 600 will be used.
      * @param TTL When `Type=dns_only`, it indicates the amount of time that DNS records remain in the cache of a DNS server.
-Value range: 60-86400 (in seconds). If it’s not specified, the default value 600 will be used.
+Value range: 60-86400 (in seconds). If it's not specified, the default value 600 will be used.
      */
     public void setTTL(Long TTL) {
         this.TTL = TTL;

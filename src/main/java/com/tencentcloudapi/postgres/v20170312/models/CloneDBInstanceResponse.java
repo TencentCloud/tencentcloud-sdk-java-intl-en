@@ -39,6 +39,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String BillId;
 
     /**
+    * ID of the cloned instance, which will be returned only when the instance is pay-as-you-go.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DBInstanceId")
+    @Expose
+    private String DBInstanceId;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -86,6 +94,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get ID of the cloned instance, which will be returned only when the instance is pay-as-you-go.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DBInstanceId ID of the cloned instance, which will be returned only when the instance is pay-as-you-go.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    /**
+     * Set ID of the cloned instance, which will be returned only when the instance is pay-as-you-go.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DBInstanceId ID of the cloned instance, which will be returned only when the instance is pay-as-you-go.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDBInstanceId(String DBInstanceId) {
+        this.DBInstanceId = DBInstanceId;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -115,6 +143,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.BillId != null) {
             this.BillId = new String(source.BillId);
         }
+        if (source.DBInstanceId != null) {
+            this.DBInstanceId = new String(source.DBInstanceId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -127,6 +158,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DealName", this.DealName);
         this.setParamSimple(map, prefix + "BillId", this.BillId);
+        this.setParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

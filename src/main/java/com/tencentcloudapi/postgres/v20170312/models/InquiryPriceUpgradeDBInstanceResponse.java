@@ -30,14 +30,14 @@ public class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel{
     private Long OriginalPrice;
 
     /**
-    * Actual amount payable
+    * Discounted total amount
     */
     @SerializedName("Price")
     @Expose
     private Long Price;
 
     /**
-    * Currency, such as USD for US dollar.
+    * Currency, such as USD.
     */
     @SerializedName("Currency")
     @Expose
@@ -67,32 +67,32 @@ public class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Get Actual amount payable 
-     * @return Price Actual amount payable
+     * Get Discounted total amount 
+     * @return Price Discounted total amount
      */
     public Long getPrice() {
         return this.Price;
     }
 
     /**
-     * Set Actual amount payable
-     * @param Price Actual amount payable
+     * Set Discounted total amount
+     * @param Price Discounted total amount
      */
     public void setPrice(Long Price) {
         this.Price = Price;
     }
 
     /**
-     * Get Currency, such as USD for US dollar. 
-     * @return Currency Currency, such as USD for US dollar.
+     * Get Currency, such as USD. 
+     * @return Currency Currency, such as USD.
      */
     public String getCurrency() {
         return this.Currency;
     }
 
     /**
-     * Set Currency, such as USD for US dollar.
-     * @param Currency Currency, such as USD for US dollar.
+     * Set Currency, such as USD.
+     * @param Currency Currency, such as USD.
      */
     public void setCurrency(String Currency) {
         this.Currency = Currency;

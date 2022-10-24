@@ -779,7 +779,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *This API is used to eliminate an isolated instance by specifying the `DBInstanceId` parameter. The data of an eliminated instance will be deleted and cannot be recovered.
+     *This API is used to terminate an isolated instance by specifying the `DBInstanceId` parameter. The data of an terminated instance will be deleted and cannot be recovered.
      * @param req DestroyDBInstanceRequest
      * @return DestroyDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -879,7 +879,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the upgrade price of an instance.
+     *This API is used to query the fees of upgrading a specified database instance. Only pay-as-you-go instance is supported.
      * @param req InquiryPriceUpgradeDBInstanceRequest
      * @return InquiryPriceUpgradeDBInstanceResponse
      * @throws TencentCloudSDKException

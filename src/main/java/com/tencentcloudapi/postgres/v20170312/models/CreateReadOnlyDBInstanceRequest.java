@@ -30,13 +30,6 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     private String SpecCode;
 
     /**
-    * PostgreSQL kernel version, which must be the same as that of the primary instance
-    */
-    @SerializedName("DBVersion")
-    @Expose
-    private String DBVersion;
-
-    /**
     * Instance storage capacity in GB
     */
     @SerializedName("Storage")
@@ -79,7 +72,14 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
+    * (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+    */
+    @SerializedName("DBVersion")
+    @Expose
+    private String DBVersion;
+
+    /**
+    * Instance billing mode. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go). If the source instance is pay-as-you-go, so is the read-only instance.
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -179,22 +179,6 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get PostgreSQL kernel version, which must be the same as that of the primary instance 
-     * @return DBVersion PostgreSQL kernel version, which must be the same as that of the primary instance
-     */
-    public String getDBVersion() {
-        return this.DBVersion;
-    }
-
-    /**
-     * Set PostgreSQL kernel version, which must be the same as that of the primary instance
-     * @param DBVersion PostgreSQL kernel version, which must be the same as that of the primary instance
-     */
-    public void setDBVersion(String DBVersion) {
-        this.DBVersion = DBVersion;
-    }
-
-    /**
      * Get Instance storage capacity in GB 
      * @return Storage Instance storage capacity in GB
      */
@@ -291,16 +275,32 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go). 
-     * @return InstanceChargeType Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
+     * Get (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance. 
+     * @return DBVersion (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+     */
+    public String getDBVersion() {
+        return this.DBVersion;
+    }
+
+    /**
+     * Set (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+     * @param DBVersion (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+     */
+    public void setDBVersion(String DBVersion) {
+        this.DBVersion = DBVersion;
+    }
+
+    /**
+     * Get Instance billing mode. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go). If the source instance is pay-as-you-go, so is the read-only instance. 
+     * @return InstanceChargeType Instance billing mode. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go). If the source instance is pay-as-you-go, so is the read-only instance.
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
-     * @param InstanceChargeType Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
+     * Set Instance billing mode. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go). If the source instance is pay-as-you-go, so is the read-only instance.
+     * @param InstanceChargeType Instance billing mode. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go). If the source instance is pay-as-you-go, so is the read-only instance.
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
@@ -493,9 +493,6 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
         if (source.SpecCode != null) {
             this.SpecCode = new String(source.SpecCode);
         }
-        if (source.DBVersion != null) {
-            this.DBVersion = new String(source.DBVersion);
-        }
         if (source.Storage != null) {
             this.Storage = new Long(source.Storage);
         }
@@ -513,6 +510,9 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
         }
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.DBVersion != null) {
+            this.DBVersion = new String(source.DBVersion);
         }
         if (source.InstanceChargeType != null) {
             this.InstanceChargeType = new String(source.InstanceChargeType);
@@ -564,13 +564,13 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SpecCode", this.SpecCode);
-        this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
         this.setParamSimple(map, prefix + "Storage", this.Storage);
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "MasterDBInstanceId", this.MasterDBInstanceId);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);

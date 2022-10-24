@@ -58,7 +58,7 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
     private Long Period;
 
     /**
-    * Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
+    * [Disused] Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
     */
     @SerializedName("Pid")
     @Expose
@@ -70,6 +70,22 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
+
+    /**
+    * Instance type. Default value: `primary`. Valid values:
+`primary` (dual-server high-availability, one-primary-one-standby)
+`readonly` (read-only instance)
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * 
+    */
+    @SerializedName("DBEngine")
+    @Expose
+    private String DBEngine;
 
     /**
      * Get AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API. 
@@ -152,16 +168,16 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API. 
-     * @return Pid Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
+     * Get [Disused] Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API. 
+     * @return Pid [Disused] Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
      */
     public Long getPid() {
         return this.Pid;
     }
 
     /**
-     * Set Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
-     * @param Pid Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
+     * Set [Disused] Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
+     * @param Pid [Disused] Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
      */
     public void setPid(Long Pid) {
         this.Pid = Pid;
@@ -181,6 +197,46 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
+    }
+
+    /**
+     * Get Instance type. Default value: `primary`. Valid values:
+`primary` (dual-server high-availability, one-primary-one-standby)
+`readonly` (read-only instance) 
+     * @return InstanceType Instance type. Default value: `primary`. Valid values:
+`primary` (dual-server high-availability, one-primary-one-standby)
+`readonly` (read-only instance)
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set Instance type. Default value: `primary`. Valid values:
+`primary` (dual-server high-availability, one-primary-one-standby)
+`readonly` (read-only instance)
+     * @param InstanceType Instance type. Default value: `primary`. Valid values:
+`primary` (dual-server high-availability, one-primary-one-standby)
+`readonly` (read-only instance)
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get  
+     * @return DBEngine 
+     */
+    public String getDBEngine() {
+        return this.DBEngine;
+    }
+
+    /**
+     * Set 
+     * @param DBEngine 
+     */
+    public void setDBEngine(String DBEngine) {
+        this.DBEngine = DBEngine;
     }
 
     public InquiryPriceCreateDBInstancesRequest() {
@@ -212,6 +268,12 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
         if (source.InstanceChargeType != null) {
             this.InstanceChargeType = new String(source.InstanceChargeType);
         }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.DBEngine != null) {
+            this.DBEngine = new String(source.DBEngine);
+        }
     }
 
 
@@ -226,6 +288,8 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "Pid", this.Pid);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "DBEngine", this.DBEngine);
 
     }
 }

@@ -30,6 +30,16 @@ public class DescribeProductConfigRequest extends AbstractModel{
     private String Zone;
 
     /**
+    * Database engines. Valid values:
+1. `postgresql` (TencentDB for PostgreSQL)
+2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
+Default value: `postgresql`
+    */
+    @SerializedName("DBEngine")
+    @Expose
+    private String DBEngine;
+
+    /**
      * Get AZ name 
      * @return Zone AZ name
      */
@@ -45,6 +55,34 @@ public class DescribeProductConfigRequest extends AbstractModel{
         this.Zone = Zone;
     }
 
+    /**
+     * Get Database engines. Valid values:
+1. `postgresql` (TencentDB for PostgreSQL)
+2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
+Default value: `postgresql` 
+     * @return DBEngine Database engines. Valid values:
+1. `postgresql` (TencentDB for PostgreSQL)
+2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
+Default value: `postgresql`
+     */
+    public String getDBEngine() {
+        return this.DBEngine;
+    }
+
+    /**
+     * Set Database engines. Valid values:
+1. `postgresql` (TencentDB for PostgreSQL)
+2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
+Default value: `postgresql`
+     * @param DBEngine Database engines. Valid values:
+1. `postgresql` (TencentDB for PostgreSQL)
+2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
+Default value: `postgresql`
+     */
+    public void setDBEngine(String DBEngine) {
+        this.DBEngine = DBEngine;
+    }
+
     public DescribeProductConfigRequest() {
     }
 
@@ -56,6 +94,9 @@ public class DescribeProductConfigRequest extends AbstractModel{
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.DBEngine != null) {
+            this.DBEngine = new String(source.DBEngine);
+        }
     }
 
 
@@ -64,6 +105,7 @@ public class DescribeProductConfigRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "DBEngine", this.DBEngine);
 
     }
 }

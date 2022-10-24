@@ -37,7 +37,7 @@ public class InquiryPriceRenewDBInstanceResponse extends AbstractModel{
     private Long Price;
 
     /**
-    * Currency, such as USD for US dollar.
+    * Currency, such as USD.
     */
     @SerializedName("Currency")
     @Expose
@@ -83,16 +83,16 @@ public class InquiryPriceRenewDBInstanceResponse extends AbstractModel{
     }
 
     /**
-     * Get Currency, such as USD for US dollar. 
-     * @return Currency Currency, such as USD for US dollar.
+     * Get Currency, such as USD. 
+     * @return Currency Currency, such as USD.
      */
     public String getCurrency() {
         return this.Currency;
     }
 
     /**
-     * Set Currency, such as USD for US dollar.
-     * @param Currency Currency, such as USD for US dollar.
+     * Set Currency, such as USD.
+     * @param Currency Currency, such as USD.
      */
     public void setCurrency(String Currency) {
         this.Currency = Currency;
