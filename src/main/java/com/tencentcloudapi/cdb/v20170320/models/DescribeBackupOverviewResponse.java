@@ -51,6 +51,22 @@ public class DescribeBackupOverviewResponse extends AbstractModel{
     private Long FreeVolume;
 
     /**
+    * Total capacity of backups of a user in the current region
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("RemoteBackupVolume")
+    @Expose
+    private Long RemoteBackupVolume;
+
+    /**
+    * Archive backup capacity, which includes data backups and log backups.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("BackupArchiveVolume")
+    @Expose
+    private Long BackupArchiveVolume;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -122,6 +138,46 @@ public class DescribeBackupOverviewResponse extends AbstractModel{
     }
 
     /**
+     * Get Total capacity of backups of a user in the current region
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return RemoteBackupVolume Total capacity of backups of a user in the current region
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public Long getRemoteBackupVolume() {
+        return this.RemoteBackupVolume;
+    }
+
+    /**
+     * Set Total capacity of backups of a user in the current region
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param RemoteBackupVolume Total capacity of backups of a user in the current region
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setRemoteBackupVolume(Long RemoteBackupVolume) {
+        this.RemoteBackupVolume = RemoteBackupVolume;
+    }
+
+    /**
+     * Get Archive backup capacity, which includes data backups and log backups.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return BackupArchiveVolume Archive backup capacity, which includes data backups and log backups.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public Long getBackupArchiveVolume() {
+        return this.BackupArchiveVolume;
+    }
+
+    /**
+     * Set Archive backup capacity, which includes data backups and log backups.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param BackupArchiveVolume Archive backup capacity, which includes data backups and log backups.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setBackupArchiveVolume(Long BackupArchiveVolume) {
+        this.BackupArchiveVolume = BackupArchiveVolume;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -157,6 +213,12 @@ public class DescribeBackupOverviewResponse extends AbstractModel{
         if (source.FreeVolume != null) {
             this.FreeVolume = new Long(source.FreeVolume);
         }
+        if (source.RemoteBackupVolume != null) {
+            this.RemoteBackupVolume = new Long(source.RemoteBackupVolume);
+        }
+        if (source.BackupArchiveVolume != null) {
+            this.BackupArchiveVolume = new Long(source.BackupArchiveVolume);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -171,6 +233,8 @@ public class DescribeBackupOverviewResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupVolume", this.BackupVolume);
         this.setParamSimple(map, prefix + "BillingVolume", this.BillingVolume);
         this.setParamSimple(map, prefix + "FreeVolume", this.FreeVolume);
+        this.setParamSimple(map, prefix + "RemoteBackupVolume", this.RemoteBackupVolume);
+        this.setParamSimple(map, prefix + "BackupArchiveVolume", this.BackupArchiveVolume);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -107,6 +107,34 @@ public class ModifyBackupConfigRequest extends AbstractModel{
     private String StartBackupPeriodSaveDate;
 
     /**
+    * Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+    */
+    @SerializedName("EnableBackupArchive")
+    @Expose
+    private String EnableBackupArchive;
+
+    /**
+    * The period (in days) of how long a data backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
+    */
+    @SerializedName("BackupArchiveDays")
+    @Expose
+    private Long BackupArchiveDays;
+
+    /**
+    * The period (in days) of how long a log backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
+    */
+    @SerializedName("BinlogArchiveDays")
+    @Expose
+    private Long BinlogArchiveDays;
+
+    /**
+    * Whether to enable the archive backup of the log. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+    */
+    @SerializedName("EnableBinlogArchive")
+    @Expose
+    private String EnableBinlogArchive;
+
+    /**
      * Get Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. 
      * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      */
@@ -298,6 +326,70 @@ public class ModifyBackupConfigRequest extends AbstractModel{
         this.StartBackupPeriodSaveDate = StartBackupPeriodSaveDate;
     }
 
+    /**
+     * Get Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`. 
+     * @return EnableBackupArchive Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     */
+    public String getEnableBackupArchive() {
+        return this.EnableBackupArchive;
+    }
+
+    /**
+     * Set Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     * @param EnableBackupArchive Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     */
+    public void setEnableBackupArchive(String EnableBackupArchive) {
+        this.EnableBackupArchive = EnableBackupArchive;
+    }
+
+    /**
+     * Get The period (in days) of how long a data backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires. 
+     * @return BackupArchiveDays The period (in days) of how long a data backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
+     */
+    public Long getBackupArchiveDays() {
+        return this.BackupArchiveDays;
+    }
+
+    /**
+     * Set The period (in days) of how long a data backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
+     * @param BackupArchiveDays The period (in days) of how long a data backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
+     */
+    public void setBackupArchiveDays(Long BackupArchiveDays) {
+        this.BackupArchiveDays = BackupArchiveDays;
+    }
+
+    /**
+     * Get The period (in days) of how long a log backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires. 
+     * @return BinlogArchiveDays The period (in days) of how long a log backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
+     */
+    public Long getBinlogArchiveDays() {
+        return this.BinlogArchiveDays;
+    }
+
+    /**
+     * Set The period (in days) of how long a log backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
+     * @param BinlogArchiveDays The period (in days) of how long a log backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
+     */
+    public void setBinlogArchiveDays(Long BinlogArchiveDays) {
+        this.BinlogArchiveDays = BinlogArchiveDays;
+    }
+
+    /**
+     * Get Whether to enable the archive backup of the log. Valid values: `off` (disable), `on` (enable). Default value: `off`. 
+     * @return EnableBinlogArchive Whether to enable the archive backup of the log. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     */
+    public String getEnableBinlogArchive() {
+        return this.EnableBinlogArchive;
+    }
+
+    /**
+     * Set Whether to enable the archive backup of the log. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     * @param EnableBinlogArchive Whether to enable the archive backup of the log. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     */
+    public void setEnableBinlogArchive(String EnableBinlogArchive) {
+        this.EnableBinlogArchive = EnableBinlogArchive;
+    }
+
     public ModifyBackupConfigRequest() {
     }
 
@@ -342,6 +434,18 @@ public class ModifyBackupConfigRequest extends AbstractModel{
         if (source.StartBackupPeriodSaveDate != null) {
             this.StartBackupPeriodSaveDate = new String(source.StartBackupPeriodSaveDate);
         }
+        if (source.EnableBackupArchive != null) {
+            this.EnableBackupArchive = new String(source.EnableBackupArchive);
+        }
+        if (source.BackupArchiveDays != null) {
+            this.BackupArchiveDays = new Long(source.BackupArchiveDays);
+        }
+        if (source.BinlogArchiveDays != null) {
+            this.BinlogArchiveDays = new Long(source.BinlogArchiveDays);
+        }
+        if (source.EnableBinlogArchive != null) {
+            this.EnableBinlogArchive = new String(source.EnableBinlogArchive);
+        }
     }
 
 
@@ -361,6 +465,10 @@ public class ModifyBackupConfigRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupPeriodSaveInterval", this.BackupPeriodSaveInterval);
         this.setParamSimple(map, prefix + "BackupPeriodSaveCount", this.BackupPeriodSaveCount);
         this.setParamSimple(map, prefix + "StartBackupPeriodSaveDate", this.StartBackupPeriodSaveDate);
+        this.setParamSimple(map, prefix + "EnableBackupArchive", this.EnableBackupArchive);
+        this.setParamSimple(map, prefix + "BackupArchiveDays", this.BackupArchiveDays);
+        this.setParamSimple(map, prefix + "BinlogArchiveDays", this.BinlogArchiveDays);
+        this.setParamSimple(map, prefix + "EnableBinlogArchive", this.EnableBinlogArchive);
 
     }
 }

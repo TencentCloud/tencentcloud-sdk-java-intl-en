@@ -79,6 +79,41 @@ public class BinlogInfo extends AbstractModel{
     private String BinlogFinishTime;
 
     /**
+    * The region where the binlog file resides
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+    * Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * The detailed information of remote binlog backups
+    */
+    @SerializedName("RemoteInfo")
+    @Expose
+    private RemoteBackupInfo [] RemoteInfo;
+
+    /**
+    * Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+    */
+    @SerializedName("CosStorageType")
+    @Expose
+    private Long CosStorageType;
+
+    /**
+    * Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get Binlog backup filename 
      * @return Name Binlog backup filename
      */
@@ -206,6 +241,86 @@ public class BinlogInfo extends AbstractModel{
         this.BinlogFinishTime = BinlogFinishTime;
     }
 
+    /**
+     * Get The region where the binlog file resides 
+     * @return Region The region where the binlog file resides
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set The region where the binlog file resides
+     * @param Region The region where the binlog file resides
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * Get Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress). 
+     * @return Status Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
+     * @param Status Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get The detailed information of remote binlog backups 
+     * @return RemoteInfo The detailed information of remote binlog backups
+     */
+    public RemoteBackupInfo [] getRemoteInfo() {
+        return this.RemoteInfo;
+    }
+
+    /**
+     * Set The detailed information of remote binlog backups
+     * @param RemoteInfo The detailed information of remote binlog backups
+     */
+    public void setRemoteInfo(RemoteBackupInfo [] RemoteInfo) {
+        this.RemoteInfo = RemoteInfo;
+    }
+
+    /**
+     * Get Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`. 
+     * @return CosStorageType Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+     */
+    public Long getCosStorageType() {
+        return this.CosStorageType;
+    }
+
+    /**
+     * Set Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+     * @param CosStorageType Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+     */
+    public void setCosStorageType(Long CosStorageType) {
+        this.CosStorageType = CosStorageType;
+    }
+
+    /**
+     * Get Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console. 
+     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public BinlogInfo() {
     }
 
@@ -238,6 +353,24 @@ public class BinlogInfo extends AbstractModel{
         if (source.BinlogFinishTime != null) {
             this.BinlogFinishTime = new String(source.BinlogFinishTime);
         }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.RemoteInfo != null) {
+            this.RemoteInfo = new RemoteBackupInfo[source.RemoteInfo.length];
+            for (int i = 0; i < source.RemoteInfo.length; i++) {
+                this.RemoteInfo[i] = new RemoteBackupInfo(source.RemoteInfo[i]);
+            }
+        }
+        if (source.CosStorageType != null) {
+            this.CosStorageType = new Long(source.CosStorageType);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -253,6 +386,11 @@ public class BinlogInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "BinlogStartTime", this.BinlogStartTime);
         this.setParamSimple(map, prefix + "BinlogFinishTime", this.BinlogFinishTime);
+        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArrayObj(map, prefix + "RemoteInfo.", this.RemoteInfo);
+        this.setParamSimple(map, prefix + "CosStorageType", this.CosStorageType);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

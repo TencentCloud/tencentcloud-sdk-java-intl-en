@@ -128,6 +128,34 @@ public class BackupInfo extends AbstractModel{
     private String SaveMode;
 
     /**
+    * The region where local backup resides
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+    * Detailed information of remote backups
+    */
+    @SerializedName("RemoteInfo")
+    @Expose
+    private RemoteBackupInfo [] RemoteInfo;
+
+    /**
+    * Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+    */
+    @SerializedName("CosStorageType")
+    @Expose
+    private Long CosStorageType;
+
+    /**
+    * Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get Backup filename 
      * @return Name Backup filename
      */
@@ -367,6 +395,70 @@ public class BackupInfo extends AbstractModel{
         this.SaveMode = SaveMode;
     }
 
+    /**
+     * Get The region where local backup resides 
+     * @return Region The region where local backup resides
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set The region where local backup resides
+     * @param Region The region where local backup resides
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * Get Detailed information of remote backups 
+     * @return RemoteInfo Detailed information of remote backups
+     */
+    public RemoteBackupInfo [] getRemoteInfo() {
+        return this.RemoteInfo;
+    }
+
+    /**
+     * Set Detailed information of remote backups
+     * @param RemoteInfo Detailed information of remote backups
+     */
+    public void setRemoteInfo(RemoteBackupInfo [] RemoteInfo) {
+        this.RemoteInfo = RemoteInfo;
+    }
+
+    /**
+     * Get Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`. 
+     * @return CosStorageType Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+     */
+    public Long getCosStorageType() {
+        return this.CosStorageType;
+    }
+
+    /**
+     * Set Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+     * @param CosStorageType Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+     */
+    public void setCosStorageType(Long CosStorageType) {
+        this.CosStorageType = CosStorageType;
+    }
+
+    /**
+     * Get Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console. 
+     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public BackupInfo() {
     }
 
@@ -420,6 +512,21 @@ public class BackupInfo extends AbstractModel{
         if (source.SaveMode != null) {
             this.SaveMode = new String(source.SaveMode);
         }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.RemoteInfo != null) {
+            this.RemoteInfo = new RemoteBackupInfo[source.RemoteInfo.length];
+            for (int i = 0; i < source.RemoteInfo.length; i++) {
+                this.RemoteInfo[i] = new RemoteBackupInfo(source.RemoteInfo[i]);
+            }
+        }
+        if (source.CosStorageType != null) {
+            this.CosStorageType = new Long(source.CosStorageType);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -442,6 +549,10 @@ public class BackupInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Way", this.Way);
         this.setParamSimple(map, prefix + "ManualBackupName", this.ManualBackupName);
         this.setParamSimple(map, prefix + "SaveMode", this.SaveMode);
+        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamArrayObj(map, prefix + "RemoteInfo.", this.RemoteInfo);
+        this.setParamSimple(map, prefix + "CosStorageType", this.CosStorageType);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

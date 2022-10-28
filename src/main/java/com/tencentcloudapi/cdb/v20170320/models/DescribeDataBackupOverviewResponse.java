@@ -65,18 +65,32 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
     private Long ManualBackupCount;
 
     /**
-    * Total capacity of remote backups in the current region
+    * Total capacity of remote backups
     */
     @SerializedName("RemoteBackupVolume")
     @Expose
     private Long RemoteBackupVolume;
 
     /**
-    * Total number of remote backups in the current region
+    * Total number of remote backups
     */
     @SerializedName("RemoteBackupCount")
     @Expose
     private Long RemoteBackupCount;
+
+    /**
+    * Total capacity of archive backups in the current region
+    */
+    @SerializedName("DataBackupArchiveVolume")
+    @Expose
+    private Long DataBackupArchiveVolume;
+
+    /**
+    * Total number of archive backups in the current region
+    */
+    @SerializedName("DataBackupArchiveCount")
+    @Expose
+    private Long DataBackupArchiveCount;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -182,35 +196,67 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
     }
 
     /**
-     * Get Total capacity of remote backups in the current region 
-     * @return RemoteBackupVolume Total capacity of remote backups in the current region
+     * Get Total capacity of remote backups 
+     * @return RemoteBackupVolume Total capacity of remote backups
      */
     public Long getRemoteBackupVolume() {
         return this.RemoteBackupVolume;
     }
 
     /**
-     * Set Total capacity of remote backups in the current region
-     * @param RemoteBackupVolume Total capacity of remote backups in the current region
+     * Set Total capacity of remote backups
+     * @param RemoteBackupVolume Total capacity of remote backups
      */
     public void setRemoteBackupVolume(Long RemoteBackupVolume) {
         this.RemoteBackupVolume = RemoteBackupVolume;
     }
 
     /**
-     * Get Total number of remote backups in the current region 
-     * @return RemoteBackupCount Total number of remote backups in the current region
+     * Get Total number of remote backups 
+     * @return RemoteBackupCount Total number of remote backups
      */
     public Long getRemoteBackupCount() {
         return this.RemoteBackupCount;
     }
 
     /**
-     * Set Total number of remote backups in the current region
-     * @param RemoteBackupCount Total number of remote backups in the current region
+     * Set Total number of remote backups
+     * @param RemoteBackupCount Total number of remote backups
      */
     public void setRemoteBackupCount(Long RemoteBackupCount) {
         this.RemoteBackupCount = RemoteBackupCount;
+    }
+
+    /**
+     * Get Total capacity of archive backups in the current region 
+     * @return DataBackupArchiveVolume Total capacity of archive backups in the current region
+     */
+    public Long getDataBackupArchiveVolume() {
+        return this.DataBackupArchiveVolume;
+    }
+
+    /**
+     * Set Total capacity of archive backups in the current region
+     * @param DataBackupArchiveVolume Total capacity of archive backups in the current region
+     */
+    public void setDataBackupArchiveVolume(Long DataBackupArchiveVolume) {
+        this.DataBackupArchiveVolume = DataBackupArchiveVolume;
+    }
+
+    /**
+     * Get Total number of archive backups in the current region 
+     * @return DataBackupArchiveCount Total number of archive backups in the current region
+     */
+    public Long getDataBackupArchiveCount() {
+        return this.DataBackupArchiveCount;
+    }
+
+    /**
+     * Set Total number of archive backups in the current region
+     * @param DataBackupArchiveCount Total number of archive backups in the current region
+     */
+    public void setDataBackupArchiveCount(Long DataBackupArchiveCount) {
+        this.DataBackupArchiveCount = DataBackupArchiveCount;
     }
 
     /**
@@ -261,6 +307,12 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
         if (source.RemoteBackupCount != null) {
             this.RemoteBackupCount = new Long(source.RemoteBackupCount);
         }
+        if (source.DataBackupArchiveVolume != null) {
+            this.DataBackupArchiveVolume = new Long(source.DataBackupArchiveVolume);
+        }
+        if (source.DataBackupArchiveCount != null) {
+            this.DataBackupArchiveCount = new Long(source.DataBackupArchiveCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -279,6 +331,8 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "ManualBackupCount", this.ManualBackupCount);
         this.setParamSimple(map, prefix + "RemoteBackupVolume", this.RemoteBackupVolume);
         this.setParamSimple(map, prefix + "RemoteBackupCount", this.RemoteBackupCount);
+        this.setParamSimple(map, prefix + "DataBackupArchiveVolume", this.DataBackupArchiveVolume);
+        this.setParamSimple(map, prefix + "DataBackupArchiveCount", this.DataBackupArchiveCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
