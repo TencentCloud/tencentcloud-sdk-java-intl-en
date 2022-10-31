@@ -97,6 +97,15 @@ public class ModifyTranscodeTemplateRequest extends AbstractModel{
     private TEHDConfigForUpdate TEHDConfig;
 
     /**
+    * The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+    */
+    @SerializedName("SegmentType")
+    @Expose
+    private String SegmentType;
+
+    /**
      * Get Unique ID of transcoding template. 
      * @return Definition Unique ID of transcoding template.
      */
@@ -272,6 +281,30 @@ public class ModifyTranscodeTemplateRequest extends AbstractModel{
         this.TEHDConfig = TEHDConfig;
     }
 
+    /**
+     * Get The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li> 
+     * @return SegmentType The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+     */
+    public String getSegmentType() {
+        return this.SegmentType;
+    }
+
+    /**
+     * Set The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+     * @param SegmentType The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+     */
+    public void setSegmentType(String SegmentType) {
+        this.SegmentType = SegmentType;
+    }
+
     public ModifyTranscodeTemplateRequest() {
     }
 
@@ -310,6 +343,9 @@ public class ModifyTranscodeTemplateRequest extends AbstractModel{
         if (source.TEHDConfig != null) {
             this.TEHDConfig = new TEHDConfigForUpdate(source.TEHDConfig);
         }
+        if (source.SegmentType != null) {
+            this.SegmentType = new String(source.SegmentType);
+        }
     }
 
 
@@ -327,6 +363,7 @@ public class ModifyTranscodeTemplateRequest extends AbstractModel{
         this.setParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
         this.setParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
         this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
+        this.setParamSimple(map, prefix + "SegmentType", this.SegmentType);
 
     }
 }

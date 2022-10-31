@@ -202,6 +202,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RecvContext;
 
     /**
+    * Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ProxyId")
+    @Expose
+    private String ProxyId;
+
+    /**
+    * Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
      * Get Listener ID 
      * @return ListenerId Listener ID
      */
@@ -641,6 +657,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RecvContext = RecvContext;
     }
 
+    /**
+     * Get Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ProxyId Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getProxyId() {
+        return this.ProxyId;
+    }
+
+    /**
+     * Set Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ProxyId Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setProxyId(String ProxyId) {
+        this.ProxyId = ProxyId;
+    }
+
+    /**
+     * Get Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return GroupId Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param GroupId Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
     public UDPListener() {
     }
 
@@ -721,6 +777,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RecvContext != null) {
             this.RecvContext = new String(source.RecvContext);
         }
+        if (source.ProxyId != null) {
+            this.ProxyId = new String(source.ProxyId);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
     }
 
 
@@ -751,6 +813,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ContextType", this.ContextType);
         this.setParamSimple(map, prefix + "SendContext", this.SendContext);
         this.setParamSimple(map, prefix + "RecvContext", this.RecvContext);
+        this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

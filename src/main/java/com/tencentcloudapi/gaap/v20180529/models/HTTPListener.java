@@ -70,6 +70,22 @@ public class HTTPListener extends AbstractModel{
     private Long ListenerStatus;
 
     /**
+    * Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("ProxyId")
+    @Expose
+    private String ProxyId;
+
+    /**
+    * Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
      * Get Listener ID 
      * @return ListenerId Listener ID
      */
@@ -185,6 +201,46 @@ public class HTTPListener extends AbstractModel{
         this.ListenerStatus = ListenerStatus;
     }
 
+    /**
+     * Get Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return ProxyId Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getProxyId() {
+        return this.ProxyId;
+    }
+
+    /**
+     * Set Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param ProxyId Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setProxyId(String ProxyId) {
+        this.ProxyId = ProxyId;
+    }
+
+    /**
+     * Get Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return GroupId Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param GroupId Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
     public HTTPListener() {
     }
 
@@ -211,6 +267,12 @@ public class HTTPListener extends AbstractModel{
         if (source.ListenerStatus != null) {
             this.ListenerStatus = new Long(source.ListenerStatus);
         }
+        if (source.ProxyId != null) {
+            this.ProxyId = new String(source.ProxyId);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
     }
 
 
@@ -224,6 +286,8 @@ public class HTTPListener extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "ListenerStatus", this.ListenerStatus);
+        this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

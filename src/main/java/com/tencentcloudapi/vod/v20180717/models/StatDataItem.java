@@ -32,11 +32,12 @@ public class StatDataItem extends AbstractModel{
     private String Time;
 
     /**
-    * Data size.
+    * The data size.
 <li>Storage capacity in bytes.</li>
 <li>Transcoding duration in seconds.</li>
 <li>Traffic in bytes.</li>
 <li>Bandwidth in bps.</li>
+<li>Live stream clip duration in seconds.</li>
     */
     @SerializedName("Value")
     @Expose
@@ -67,32 +68,36 @@ public class StatDataItem extends AbstractModel{
     }
 
     /**
-     * Get Data size.
-<li>Storage capacity in bytes.</li>
-<li>Transcoding duration in seconds.</li>
-<li>Traffic in bytes.</li>
-<li>Bandwidth in bps.</li> 
-     * @return Value Data size.
+     * Get The data size.
 <li>Storage capacity in bytes.</li>
 <li>Transcoding duration in seconds.</li>
 <li>Traffic in bytes.</li>
 <li>Bandwidth in bps.</li>
+<li>Live stream clip duration in seconds.</li> 
+     * @return Value The data size.
+<li>Storage capacity in bytes.</li>
+<li>Transcoding duration in seconds.</li>
+<li>Traffic in bytes.</li>
+<li>Bandwidth in bps.</li>
+<li>Live stream clip duration in seconds.</li>
      */
     public Long getValue() {
         return this.Value;
     }
 
     /**
-     * Set Data size.
+     * Set The data size.
 <li>Storage capacity in bytes.</li>
 <li>Transcoding duration in seconds.</li>
 <li>Traffic in bytes.</li>
 <li>Bandwidth in bps.</li>
-     * @param Value Data size.
+<li>Live stream clip duration in seconds.</li>
+     * @param Value The data size.
 <li>Storage capacity in bytes.</li>
 <li>Transcoding duration in seconds.</li>
 <li>Traffic in bytes.</li>
 <li>Bandwidth in bps.</li>
+<li>Live stream clip duration in seconds.</li>
      */
     public void setValue(Long Value) {
         this.Value = Value;

@@ -172,6 +172,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long SessionPersist;
 
     /**
+    * Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("ProxyId")
+    @Expose
+    private String ProxyId;
+
+    /**
+    * Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
      * Get Listener ID 
      * @return ListenerId Listener ID
      */
@@ -539,6 +555,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.SessionPersist = SessionPersist;
     }
 
+    /**
+     * Get Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return ProxyId Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getProxyId() {
+        return this.ProxyId;
+    }
+
+    /**
+     * Set Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param ProxyId Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setProxyId(String ProxyId) {
+        this.ProxyId = ProxyId;
+    }
+
+    /**
+     * Get Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return GroupId Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param GroupId Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
     public TCPListener() {
     }
 
@@ -607,6 +663,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.SessionPersist != null) {
             this.SessionPersist = new Long(source.SessionPersist);
         }
+        if (source.ProxyId != null) {
+            this.ProxyId = new String(source.ProxyId);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
     }
 
 
@@ -633,6 +695,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "UnhealthyThreshold", this.UnhealthyThreshold);
         this.setParamSimple(map, prefix + "FailoverSwitch", this.FailoverSwitch);
         this.setParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
+        this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

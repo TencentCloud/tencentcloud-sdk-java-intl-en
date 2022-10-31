@@ -127,6 +127,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String UpdateTime;
 
     /**
+    * The segment type. This parameter is valid only if `Container` is `hls`
+    */
+    @SerializedName("SegmentType")
+    @Expose
+    private String SegmentType;
+
+    /**
      * Get Unique ID of transcoding template. 
      * @return Definition Unique ID of transcoding template.
      */
@@ -386,6 +393,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get The segment type. This parameter is valid only if `Container` is `hls` 
+     * @return SegmentType The segment type. This parameter is valid only if `Container` is `hls`
+     */
+    public String getSegmentType() {
+        return this.SegmentType;
+    }
+
+    /**
+     * Set The segment type. This parameter is valid only if `Container` is `hls`
+     * @param SegmentType The segment type. This parameter is valid only if `Container` is `hls`
+     */
+    public void setSegmentType(String SegmentType) {
+        this.SegmentType = SegmentType;
+    }
+
     public TranscodeTemplate() {
     }
 
@@ -433,6 +456,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.SegmentType != null) {
+            this.SegmentType = new String(source.SegmentType);
+        }
     }
 
 
@@ -453,6 +479,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ContainerType", this.ContainerType);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "SegmentType", this.SegmentType);
 
     }
 }

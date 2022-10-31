@@ -121,6 +121,13 @@ The default is `VOD`.
     private String UpdateTime;
 
     /**
+    * The segment type. This parameter is valid only if `Format` is `HLS`.
+    */
+    @SerializedName("SegmentType")
+    @Expose
+    private String SegmentType;
+
+    /**
      * Get Unique ID of a transcoding to adaptive bitrate streaming template. 
      * @return Definition Unique ID of a transcoding to adaptive bitrate streaming template.
      */
@@ -368,6 +375,22 @@ The default is `VOD`.
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get The segment type. This parameter is valid only if `Format` is `HLS`. 
+     * @return SegmentType The segment type. This parameter is valid only if `Format` is `HLS`.
+     */
+    public String getSegmentType() {
+        return this.SegmentType;
+    }
+
+    /**
+     * Set The segment type. This parameter is valid only if `Format` is `HLS`.
+     * @param SegmentType The segment type. This parameter is valid only if `Format` is `HLS`.
+     */
+    public void setSegmentType(String SegmentType) {
+        this.SegmentType = SegmentType;
+    }
+
     public AdaptiveDynamicStreamingTemplate() {
     }
 
@@ -415,6 +438,9 @@ The default is `VOD`.
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.SegmentType != null) {
+            this.SegmentType = new String(source.SegmentType);
+        }
     }
 
 
@@ -434,6 +460,7 @@ The default is `VOD`.
         this.setParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "SegmentType", this.SegmentType);
 
     }
 }

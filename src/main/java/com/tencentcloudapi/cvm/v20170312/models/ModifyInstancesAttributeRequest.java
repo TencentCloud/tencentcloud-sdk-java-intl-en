@@ -52,6 +52,13 @@ public class ModifyInstancesAttributeRequest extends AbstractModel{
     private String CamRoleName;
 
     /**
+    * Host name of the instance. <br><li>Hyphens (-) cannot be the start or end of a host name or appear consecutively in a host name. <br><li>Windows: 2-15 characters, including [a-z], [A-Z], [0-9] and hyphens (-). Digit-only strings are not allowed. <br><li>Other OS: 2-60 characters, including [a-z], [A-Z], [0-9] and [.-]. Separate characters with dots. 
+    */
+    @SerializedName("HostName")
+    @Expose
+    private String HostName;
+
+    /**
     * Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
     */
     @SerializedName("DisableApiTermination")
@@ -136,6 +143,22 @@ When the value obtained in `RoleType` is `user` (default) or `system`, `CamRoleT
     }
 
     /**
+     * Get Host name of the instance. <br><li>Hyphens (-) cannot be the start or end of a host name or appear consecutively in a host name. <br><li>Windows: 2-15 characters, including [a-z], [A-Z], [0-9] and hyphens (-). Digit-only strings are not allowed. <br><li>Other OS: 2-60 characters, including [a-z], [A-Z], [0-9] and [.-]. Separate characters with dots.  
+     * @return HostName Host name of the instance. <br><li>Hyphens (-) cannot be the start or end of a host name or appear consecutively in a host name. <br><li>Windows: 2-15 characters, including [a-z], [A-Z], [0-9] and hyphens (-). Digit-only strings are not allowed. <br><li>Other OS: 2-60 characters, including [a-z], [A-Z], [0-9] and [.-]. Separate characters with dots. 
+     */
+    public String getHostName() {
+        return this.HostName;
+    }
+
+    /**
+     * Set Host name of the instance. <br><li>Hyphens (-) cannot be the start or end of a host name or appear consecutively in a host name. <br><li>Windows: 2-15 characters, including [a-z], [A-Z], [0-9] and hyphens (-). Digit-only strings are not allowed. <br><li>Other OS: 2-60 characters, including [a-z], [A-Z], [0-9] and [.-]. Separate characters with dots. 
+     * @param HostName Host name of the instance. <br><li>Hyphens (-) cannot be the start or end of a host name or appear consecutively in a host name. <br><li>Windows: 2-15 characters, including [a-z], [A-Z], [0-9] and hyphens (-). Digit-only strings are not allowed. <br><li>Other OS: 2-60 characters, including [a-z], [A-Z], [0-9] and [.-]. Separate characters with dots. 
+     */
+    public void setHostName(String HostName) {
+        this.HostName = HostName;
+    }
+
+    /**
      * Get Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`. 
      * @return DisableApiTermination Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
      */
@@ -201,6 +224,9 @@ When the value obtained in `RoleType` is `user` (default) or `system`, `CamRoleT
         if (source.CamRoleName != null) {
             this.CamRoleName = new String(source.CamRoleName);
         }
+        if (source.HostName != null) {
+            this.HostName = new String(source.HostName);
+        }
         if (source.DisableApiTermination != null) {
             this.DisableApiTermination = new Boolean(source.DisableApiTermination);
         }
@@ -218,6 +244,7 @@ When the value obtained in `RoleType` is `user` (default) or `system`, `CamRoleT
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
         this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
+        this.setParamSimple(map, prefix + "HostName", this.HostName);
         this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
         this.setParamSimple(map, prefix + "CamRoleType", this.CamRoleType);
 

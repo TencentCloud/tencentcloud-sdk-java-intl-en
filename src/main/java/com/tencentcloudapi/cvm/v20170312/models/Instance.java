@@ -285,6 +285,13 @@ Note: this field may return null, indicating that no valid value was found.
     private String LicenseType;
 
     /**
+    * Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+    */
+    @SerializedName("DisableApiTermination")
+    @Expose
+    private Boolean DisableApiTermination;
+
+    /**
      * Get Location of the instance 
      * @return Placement Location of the instance
      */
@@ -900,6 +907,22 @@ Note: this field may return null, indicating that no valid value was found.
         this.LicenseType = LicenseType;
     }
 
+    /**
+     * Get Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`. 
+     * @return DisableApiTermination Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+     */
+    public Boolean getDisableApiTermination() {
+        return this.DisableApiTermination;
+    }
+
+    /**
+     * Set Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+     * @param DisableApiTermination Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+     */
+    public void setDisableApiTermination(Boolean DisableApiTermination) {
+        this.DisableApiTermination = DisableApiTermination;
+    }
+
     public Instance() {
     }
 
@@ -1037,6 +1060,9 @@ Note: this field may return null, indicating that no valid value was found.
         if (source.LicenseType != null) {
             this.LicenseType = new String(source.LicenseType);
         }
+        if (source.DisableApiTermination != null) {
+            this.DisableApiTermination = new Boolean(source.DisableApiTermination);
+        }
     }
 
 
@@ -1080,6 +1106,7 @@ Note: this field may return null, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "IsolatedSource", this.IsolatedSource);
         this.setParamObj(map, prefix + "GPUInfo.", this.GPUInfo);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
+        this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
 
     }
 }

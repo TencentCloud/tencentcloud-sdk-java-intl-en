@@ -86,6 +86,15 @@ Note: the frame rate of all streams must be the same; otherwise, the frame rate 
     private String Comment;
 
     /**
+    * The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+    */
+    @SerializedName("SegmentType")
+    @Expose
+    private String SegmentType;
+
+    /**
      * Get Unique ID of adaptive bitrate streaming template. 
      * @return Definition Unique ID of adaptive bitrate streaming template.
      */
@@ -241,6 +250,30 @@ Note: the frame rate of all streams must be the same; otherwise, the frame rate 
         this.Comment = Comment;
     }
 
+    /**
+     * Get The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li> 
+     * @return SegmentType The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+     */
+    public String getSegmentType() {
+        return this.SegmentType;
+    }
+
+    /**
+     * Set The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+     * @param SegmentType The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+     */
+    public void setSegmentType(String SegmentType) {
+        this.SegmentType = SegmentType;
+    }
+
     public ModifyAdaptiveDynamicStreamingTemplateRequest() {
     }
 
@@ -276,6 +309,9 @@ Note: the frame rate of all streams must be the same; otherwise, the frame rate 
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
+        if (source.SegmentType != null) {
+            this.SegmentType = new String(source.SegmentType);
+        }
     }
 
 
@@ -291,6 +327,7 @@ Note: the frame rate of all streams must be the same; otherwise, the frame rate 
         this.setParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);
         this.setParamArrayObj(map, prefix + "StreamInfos.", this.StreamInfos);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "SegmentType", this.SegmentType);
 
     }
 }

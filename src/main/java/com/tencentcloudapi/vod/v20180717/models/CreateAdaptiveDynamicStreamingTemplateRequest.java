@@ -102,6 +102,16 @@ Default value: no.
     private String Comment;
 
     /**
+    * The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+Default: ts
+    */
+    @SerializedName("SegmentType")
+    @Expose
+    private String SegmentType;
+
+    /**
      * Get The adaptive bitrate streaming format. Valid values:
 <li>HLS</li>
 <li>MPEG-DASH</li> 
@@ -309,6 +319,34 @@ Default value: no.
         this.Comment = Comment;
     }
 
+    /**
+     * Get The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+Default: ts 
+     * @return SegmentType The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+Default: ts
+     */
+    public String getSegmentType() {
+        return this.SegmentType;
+    }
+
+    /**
+     * Set The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+Default: ts
+     * @param SegmentType The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+Default: ts
+     */
+    public void setSegmentType(String SegmentType) {
+        this.SegmentType = SegmentType;
+    }
+
     public CreateAdaptiveDynamicStreamingTemplateRequest() {
     }
 
@@ -347,6 +385,9 @@ Default value: no.
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
+        if (source.SegmentType != null) {
+            this.SegmentType = new String(source.SegmentType);
+        }
     }
 
 
@@ -363,6 +404,7 @@ Default value: no.
         this.setParamSimple(map, prefix + "DisableHigherVideoBitrate", this.DisableHigherVideoBitrate);
         this.setParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "SegmentType", this.SegmentType);
 
     }
 }

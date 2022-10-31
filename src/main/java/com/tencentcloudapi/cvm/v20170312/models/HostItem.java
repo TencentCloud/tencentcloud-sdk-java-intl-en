@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class HostItem extends AbstractModel{
 
     /**
-    * Location of the CDH instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
+    * CDH instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
     */
     @SerializedName("Placement")
     @Expose
@@ -51,42 +51,42 @@ public class HostItem extends AbstractModel{
     private String HostName;
 
     /**
-    * Billing method of the CDH instance
+    * CDH instance billing mode
     */
     @SerializedName("HostChargeType")
     @Expose
     private String HostChargeType;
 
     /**
-    * Auto renewal flag of the CDH instance
+    * CDH instance renewal flag
     */
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
 
     /**
-    * Creation time of the CDH instance
+    * CDH instance creation time
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * Expiration time of the CDH instance
+    * CDH instance expiry time
     */
     @SerializedName("ExpiredTime")
     @Expose
     private String ExpiredTime;
 
     /**
-    * List of IDs of CVM instances created on the CDH
+    * List of IDs of CVMs created on a CDH instance
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * CDH instance state
+    * CDH instance status
     */
     @SerializedName("HostState")
     @Expose
@@ -100,7 +100,7 @@ public class HostItem extends AbstractModel{
     private String HostIp;
 
     /**
-    * Resource information of the CDH instance
+    * CDH instance resource information
     */
     @SerializedName("HostResource")
     @Expose
@@ -115,16 +115,16 @@ Note: This field may return null, indicating that no valid value is found.
     private String CageId;
 
     /**
-     * Get Location of the CDH instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project. 
-     * @return Placement Location of the CDH instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
+     * Get CDH instance location. This parameter is used to specify the AZ, project, and other attributes of the instance. 
+     * @return Placement CDH instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
      */
     public Placement getPlacement() {
         return this.Placement;
     }
 
     /**
-     * Set Location of the CDH instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
-     * @param Placement Location of the CDH instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
+     * Set CDH instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+     * @param Placement CDH instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
      */
     public void setPlacement(Placement Placement) {
         this.Placement = Placement;
@@ -179,96 +179,96 @@ Note: This field may return null, indicating that no valid value is found.
     }
 
     /**
-     * Get Billing method of the CDH instance 
-     * @return HostChargeType Billing method of the CDH instance
+     * Get CDH instance billing mode 
+     * @return HostChargeType CDH instance billing mode
      */
     public String getHostChargeType() {
         return this.HostChargeType;
     }
 
     /**
-     * Set Billing method of the CDH instance
-     * @param HostChargeType Billing method of the CDH instance
+     * Set CDH instance billing mode
+     * @param HostChargeType CDH instance billing mode
      */
     public void setHostChargeType(String HostChargeType) {
         this.HostChargeType = HostChargeType;
     }
 
     /**
-     * Get Auto renewal flag of the CDH instance 
-     * @return RenewFlag Auto renewal flag of the CDH instance
+     * Get CDH instance renewal flag 
+     * @return RenewFlag CDH instance renewal flag
      */
     public String getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set Auto renewal flag of the CDH instance
-     * @param RenewFlag Auto renewal flag of the CDH instance
+     * Set CDH instance renewal flag
+     * @param RenewFlag CDH instance renewal flag
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get Creation time of the CDH instance 
-     * @return CreatedTime Creation time of the CDH instance
+     * Get CDH instance creation time 
+     * @return CreatedTime CDH instance creation time
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set Creation time of the CDH instance
-     * @param CreatedTime Creation time of the CDH instance
+     * Set CDH instance creation time
+     * @param CreatedTime CDH instance creation time
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get Expiration time of the CDH instance 
-     * @return ExpiredTime Expiration time of the CDH instance
+     * Get CDH instance expiry time 
+     * @return ExpiredTime CDH instance expiry time
      */
     public String getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set Expiration time of the CDH instance
-     * @param ExpiredTime Expiration time of the CDH instance
+     * Set CDH instance expiry time
+     * @param ExpiredTime CDH instance expiry time
      */
     public void setExpiredTime(String ExpiredTime) {
         this.ExpiredTime = ExpiredTime;
     }
 
     /**
-     * Get List of IDs of CVM instances created on the CDH 
-     * @return InstanceIds List of IDs of CVM instances created on the CDH
+     * Get List of IDs of CVMs created on a CDH instance 
+     * @return InstanceIds List of IDs of CVMs created on a CDH instance
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set List of IDs of CVM instances created on the CDH
-     * @param InstanceIds List of IDs of CVM instances created on the CDH
+     * Set List of IDs of CVMs created on a CDH instance
+     * @param InstanceIds List of IDs of CVMs created on a CDH instance
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get CDH instance state 
-     * @return HostState CDH instance state
+     * Get CDH instance status 
+     * @return HostState CDH instance status
      */
     public String getHostState() {
         return this.HostState;
     }
 
     /**
-     * Set CDH instance state
-     * @param HostState CDH instance state
+     * Set CDH instance status
+     * @param HostState CDH instance status
      */
     public void setHostState(String HostState) {
         this.HostState = HostState;
@@ -291,16 +291,16 @@ Note: This field may return null, indicating that no valid value is found.
     }
 
     /**
-     * Get Resource information of the CDH instance 
-     * @return HostResource Resource information of the CDH instance
+     * Get CDH instance resource information 
+     * @return HostResource CDH instance resource information
      */
     public HostResource getHostResource() {
         return this.HostResource;
     }
 
     /**
-     * Set Resource information of the CDH instance
-     * @param HostResource Resource information of the CDH instance
+     * Set CDH instance resource information
+     * @param HostResource CDH instance resource information
      */
     public void setHostResource(HostResource HostResource) {
         this.HostResource = HostResource;

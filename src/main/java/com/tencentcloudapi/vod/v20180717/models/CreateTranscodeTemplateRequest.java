@@ -92,6 +92,16 @@ Default value: 0.
     private TEHDConfig TEHDConfig;
 
     /**
+    * The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+Default: ts
+    */
+    @SerializedName("SegmentType")
+    @Expose
+    private String SegmentType;
+
+    /**
      * Get Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files. 
      * @return Container Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
      */
@@ -259,6 +269,34 @@ Default value: 0.
         this.TEHDConfig = TEHDConfig;
     }
 
+    /**
+     * Get The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+Default: ts 
+     * @return SegmentType The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+Default: ts
+     */
+    public String getSegmentType() {
+        return this.SegmentType;
+    }
+
+    /**
+     * Set The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+Default: ts
+     * @param SegmentType The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+Default: ts
+     */
+    public void setSegmentType(String SegmentType) {
+        this.SegmentType = SegmentType;
+    }
+
     public CreateTranscodeTemplateRequest() {
     }
 
@@ -294,6 +332,9 @@ Default value: 0.
         if (source.TEHDConfig != null) {
             this.TEHDConfig = new TEHDConfig(source.TEHDConfig);
         }
+        if (source.SegmentType != null) {
+            this.SegmentType = new String(source.SegmentType);
+        }
     }
 
 
@@ -310,6 +351,7 @@ Default value: 0.
         this.setParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
         this.setParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
         this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
+        this.setParamSimple(map, prefix + "SegmentType", this.SegmentType);
 
     }
 }
