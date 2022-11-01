@@ -44,7 +44,7 @@ public class DescribeTopicRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20
+    * The number of results to be returned, which defaults to 20 if left empty. The maximum value is 50.
     */
     @SerializedName("Limit")
     @Expose
@@ -106,16 +106,16 @@ public class DescribeTopicRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20 
-     * @return Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20
+     * Get The number of results to be returned, which defaults to 20 if left empty. The maximum value is 50. 
+     * @return Limit The number of results to be returned, which defaults to 20 if left empty. The maximum value is 50.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20
-     * @param Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20
+     * Set The number of results to be returned, which defaults to 20 if left empty. The maximum value is 50.
+     * @param Limit The number of results to be returned, which defaults to 20 if left empty. The maximum value is 50.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

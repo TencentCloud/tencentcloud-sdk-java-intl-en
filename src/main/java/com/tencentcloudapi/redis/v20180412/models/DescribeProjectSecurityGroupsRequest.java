@@ -23,28 +23,28 @@ import java.util.HashMap;
 public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
 
     /**
-    * Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb.
+    * Database engine name, which is `redis` for this API.
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-    * Project ID.
+    * Project ID
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Offset.
+    * Offset, which is an integral multiple of `Limit`.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of results to be pulled. Default value: 20
+    * The number of security groups to be pulled. Default value: `20`.
     */
     @SerializedName("Limit")
     @Expose
@@ -58,64 +58,64 @@ public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
     private String SearchKey;
 
     /**
-     * Get Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb. 
-     * @return Product Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb.
+     * Get Database engine name, which is `redis` for this API. 
+     * @return Product Database engine name, which is `redis` for this API.
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb.
-     * @param Product Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb.
+     * Set Database engine name, which is `redis` for this API.
+     * @param Product Database engine name, which is `redis` for this API.
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get Project ID. 
-     * @return ProjectId Project ID.
+     * Get Project ID 
+     * @return ProjectId Project ID
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID.
-     * @param ProjectId Project ID.
+     * Set Project ID
+     * @param ProjectId Project ID
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Offset. 
-     * @return Offset Offset.
+     * Get Offset, which is an integral multiple of `Limit`. 
+     * @return Offset Offset, which is an integral multiple of `Limit`.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset.
-     * @param Offset Offset.
+     * Set Offset, which is an integral multiple of `Limit`.
+     * @param Offset Offset, which is an integral multiple of `Limit`.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of results to be pulled. Default value: 20 
-     * @return Limit Number of results to be pulled. Default value: 20
+     * Get The number of security groups to be pulled. Default value: `20`. 
+     * @return Limit The number of security groups to be pulled. Default value: `20`.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results to be pulled. Default value: 20
-     * @param Limit Number of results to be pulled. Default value: 20
+     * Set The number of security groups to be pulled. Default value: `20`.
+     * @param Limit The number of security groups to be pulled. Default value: `20`.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

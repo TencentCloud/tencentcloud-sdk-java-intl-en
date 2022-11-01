@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel{
 
     /**
-    * Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
+    * Database engine name, which is `redis` for this API.
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-    * ID list of the security groups to be modified, which is an array of one or more security group IDs.
+    * List of IDs of security groups to be modified, which is an array of one or more security group IDs.
     */
     @SerializedName("SecurityGroupIds")
     @Expose
@@ -44,32 +44,32 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-     * Get Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc. 
-     * @return Product Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
+     * Get Database engine name, which is `redis` for this API. 
+     * @return Product Database engine name, which is `redis` for this API.
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
-     * @param Product Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
+     * Set Database engine name, which is `redis` for this API.
+     * @param Product Database engine name, which is `redis` for this API.
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get ID list of the security groups to be modified, which is an array of one or more security group IDs. 
-     * @return SecurityGroupIds ID list of the security groups to be modified, which is an array of one or more security group IDs.
+     * Get List of IDs of security groups to be modified, which is an array of one or more security group IDs. 
+     * @return SecurityGroupIds List of IDs of security groups to be modified, which is an array of one or more security group IDs.
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set ID list of the security groups to be modified, which is an array of one or more security group IDs.
-     * @param SecurityGroupIds ID list of the security groups to be modified, which is an array of one or more security group IDs.
+     * Set List of IDs of security groups to be modified, which is an array of one or more security group IDs.
+     * @param SecurityGroupIds List of IDs of security groups to be modified, which is an array of one or more security group IDs.
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;

@@ -20,21 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstancesResponse extends AbstractModel{
+public class CloseSSLResponse extends AbstractModel{
 
     /**
-    * Total number of instances
+    * Task ID
     */
-    @SerializedName("TotalCount")
+    @SerializedName("TaskId")
     @Expose
-    private Long TotalCount;
-
-    /**
-    * List of instance details
-    */
-    @SerializedName("InstanceSet")
-    @Expose
-    private InstanceSet [] InstanceSet;
+    private Long TaskId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +37,19 @@ public class DescribeInstancesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Total number of instances 
-     * @return TotalCount Total number of instances
+     * Get Task ID 
+     * @return TaskId Task ID
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public Long getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set Total number of instances
-     * @param TotalCount Total number of instances
+     * Set Task ID
+     * @param TaskId Task ID
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get List of instance details 
-     * @return InstanceSet List of instance details
-     */
-    public InstanceSet [] getInstanceSet() {
-        return this.InstanceSet;
-    }
-
-    /**
-     * Set List of instance details
-     * @param InstanceSet List of instance details
-     */
-    public void setInstanceSet(InstanceSet [] InstanceSet) {
-        this.InstanceSet = InstanceSet;
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -91,22 +68,16 @@ public class DescribeInstancesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeInstancesResponse() {
+    public CloseSSLResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeInstancesResponse(DescribeInstancesResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.InstanceSet != null) {
-            this.InstanceSet = new InstanceSet[source.InstanceSet.length];
-            for (int i = 0; i < source.InstanceSet.length; i++) {
-                this.InstanceSet[i] = new InstanceSet(source.InstanceSet[i]);
-            }
+    public CloseSSLResponse(CloseSSLResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +89,7 @@ public class DescribeInstancesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "InstanceSet.", this.InstanceSet);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

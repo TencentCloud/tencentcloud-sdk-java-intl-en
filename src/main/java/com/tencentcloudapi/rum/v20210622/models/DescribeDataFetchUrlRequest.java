@@ -198,6 +198,13 @@ public class DescribeDataFetchUrlRequest extends AbstractModel{
     private String Ret;
 
     /**
+    * Network status
+    */
+    @SerializedName("NetStatus")
+    @Expose
+    private String NetStatus;
+
+    /**
      * Get Start time 
      * @return StartTime Start time
      */
@@ -597,6 +604,22 @@ public class DescribeDataFetchUrlRequest extends AbstractModel{
         this.Ret = Ret;
     }
 
+    /**
+     * Get Network status 
+     * @return NetStatus Network status
+     */
+    public String getNetStatus() {
+        return this.NetStatus;
+    }
+
+    /**
+     * Set Network status
+     * @param NetStatus Network status
+     */
+    public void setNetStatus(String NetStatus) {
+        this.NetStatus = NetStatus;
+    }
+
     public DescribeDataFetchUrlRequest() {
     }
 
@@ -680,6 +703,9 @@ public class DescribeDataFetchUrlRequest extends AbstractModel{
         if (source.Ret != null) {
             this.Ret = new String(source.Ret);
         }
+        if (source.NetStatus != null) {
+            this.NetStatus = new String(source.NetStatus);
+        }
     }
 
 
@@ -712,6 +738,7 @@ public class DescribeDataFetchUrlRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Env", this.Env);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Ret", this.Ret);
+        this.setParamSimple(map, prefix + "NetStatus", this.NetStatus);
 
     }
 }

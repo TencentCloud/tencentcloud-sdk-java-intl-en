@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AssociateSecurityGroupsRequest extends AbstractModel{
 
     /**
-    * Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
+    * Database engine name, which is `redis` for this API.
     */
     @SerializedName("Product")
     @Expose
@@ -44,16 +44,16 @@ public class AssociateSecurityGroupsRequest extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-     * Get Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc. 
-     * @return Product Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
+     * Get Database engine name, which is `redis` for this API. 
+     * @return Product Database engine name, which is `redis` for this API.
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
-     * @param Product Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
+     * Set Database engine name, which is `redis` for this API.
+     * @param Product Database engine name, which is `redis` for this API.
      */
     public void setProduct(String Product) {
         this.Product = Product;

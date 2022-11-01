@@ -23,35 +23,35 @@ import java.util.HashMap;
 public class DescribeLogListRequest extends AbstractModel{
 
     /**
-    * Sorting order. Valid values: desc, asc
+    * Sorting order (required). Valid values: `desc`, `asc`.
     */
     @SerializedName("Sort")
     @Expose
     private String Sort;
 
     /**
-    * searchlog  histogram
+    * This parameter is required. Valid values: `searchlog`, `histogram`.
     */
     @SerializedName("ActionType")
     @Expose
     private String ActionType;
 
     /**
-    * Project ID
+    * Project ID (required)
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * Start time
+    * Start time (required)
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Number of raw logs returned in a single query. Maximum value: 100
+    * The number of raw logs returned for a single query. This parameter is required. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
@@ -65,94 +65,94 @@ public class DescribeLogListRequest extends AbstractModel{
     private String Context;
 
     /**
-    * Query statement, which can contain up to 4,096 characters.
+    * Query statement, which is required and can contain up to 4,096 characters.
     */
     @SerializedName("Query")
     @Expose
     private String Query;
 
     /**
-    * End time
+    * End time (required)
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get Sorting order. Valid values: desc, asc 
-     * @return Sort Sorting order. Valid values: desc, asc
+     * Get Sorting order (required). Valid values: `desc`, `asc`. 
+     * @return Sort Sorting order (required). Valid values: `desc`, `asc`.
      */
     public String getSort() {
         return this.Sort;
     }
 
     /**
-     * Set Sorting order. Valid values: desc, asc
-     * @param Sort Sorting order. Valid values: desc, asc
+     * Set Sorting order (required). Valid values: `desc`, `asc`.
+     * @param Sort Sorting order (required). Valid values: `desc`, `asc`.
      */
     public void setSort(String Sort) {
         this.Sort = Sort;
     }
 
     /**
-     * Get searchlog  histogram 
-     * @return ActionType searchlog  histogram
+     * Get This parameter is required. Valid values: `searchlog`, `histogram`. 
+     * @return ActionType This parameter is required. Valid values: `searchlog`, `histogram`.
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set searchlog  histogram
-     * @param ActionType searchlog  histogram
+     * Set This parameter is required. Valid values: `searchlog`, `histogram`.
+     * @param ActionType This parameter is required. Valid values: `searchlog`, `histogram`.
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get Project ID 
-     * @return ID Project ID
+     * Get Project ID (required) 
+     * @return ID Project ID (required)
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set Project ID
-     * @param ID Project ID
+     * Set Project ID (required)
+     * @param ID Project ID (required)
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get Start time 
-     * @return StartTime Start time
+     * Get Start time (required) 
+     * @return StartTime Start time (required)
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time
-     * @param StartTime Start time
+     * Set Start time (required)
+     * @param StartTime Start time (required)
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Number of raw logs returned in a single query. Maximum value: 100 
-     * @return Limit Number of raw logs returned in a single query. Maximum value: 100
+     * Get The number of raw logs returned for a single query. This parameter is required. Maximum value: 100. 
+     * @return Limit The number of raw logs returned for a single query. This parameter is required. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of raw logs returned in a single query. Maximum value: 100
-     * @param Limit Number of raw logs returned in a single query. Maximum value: 100
+     * Set The number of raw logs returned for a single query. This parameter is required. Maximum value: 100.
+     * @param Limit The number of raw logs returned for a single query. This parameter is required. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -175,32 +175,32 @@ public class DescribeLogListRequest extends AbstractModel{
     }
 
     /**
-     * Get Query statement, which can contain up to 4,096 characters. 
-     * @return Query Query statement, which can contain up to 4,096 characters.
+     * Get Query statement, which is required and can contain up to 4,096 characters. 
+     * @return Query Query statement, which is required and can contain up to 4,096 characters.
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set Query statement, which can contain up to 4,096 characters.
-     * @param Query Query statement, which can contain up to 4,096 characters.
+     * Set Query statement, which is required and can contain up to 4,096 characters.
+     * @param Query Query statement, which is required and can contain up to 4,096 characters.
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get End time 
-     * @return EndTime End time
+     * Get End time (required) 
+     * @return EndTime End time (required)
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time
-     * @param EndTime End time
+     * Set End time (required)
+     * @param EndTime End time (required)
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
