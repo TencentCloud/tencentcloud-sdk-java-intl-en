@@ -58,6 +58,13 @@ public class GetMonitorDataResponse extends AbstractModel{
     private String EndTime;
 
     /**
+    * Returned message
+    */
+    @SerializedName("Msg")
+    @Expose
+    private String Msg;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -145,6 +152,22 @@ public class GetMonitorDataResponse extends AbstractModel{
     }
 
     /**
+     * Get Returned message 
+     * @return Msg Returned message
+     */
+    public String getMsg() {
+        return this.Msg;
+    }
+
+    /**
+     * Set Returned message
+     * @param Msg Returned message
+     */
+    public void setMsg(String Msg) {
+        this.Msg = Msg;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -186,6 +209,9 @@ public class GetMonitorDataResponse extends AbstractModel{
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.Msg != null) {
+            this.Msg = new String(source.Msg);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -201,6 +227,7 @@ public class GetMonitorDataResponse extends AbstractModel{
         this.setParamArrayObj(map, prefix + "DataPoints.", this.DataPoints);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "Msg", this.Msg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

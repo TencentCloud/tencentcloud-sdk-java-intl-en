@@ -287,6 +287,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long RecordingRuleLimit;
 
     /**
+    * Migration status. 0: Not migrating; 1: Migrating from source instance; 2: Migrating to target instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MigrationType")
+    @Expose
+    private Long MigrationType;
+
+    /**
      * Get Instance ID. 
      * @return InstanceId Instance ID.
      */
@@ -994,6 +1002,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RecordingRuleLimit = RecordingRuleLimit;
     }
 
+    /**
+     * Get Migration status. 0: Not migrating; 1: Migrating from source instance; 2: Migrating to target instance.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MigrationType Migration status. 0: Not migrating; 1: Migrating from source instance; 2: Migrating to target instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getMigrationType() {
+        return this.MigrationType;
+    }
+
+    /**
+     * Set Migration status. 0: Not migrating; 1: Migrating from source instance; 2: Migrating to target instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MigrationType Migration status. 0: Not migrating; 1: Migrating from source instance; 2: Migrating to target instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMigrationType(Long MigrationType) {
+        this.MigrationType = MigrationType;
+    }
+
     public PrometheusInstancesItem() {
     }
 
@@ -1092,6 +1120,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RecordingRuleLimit != null) {
             this.RecordingRuleLimit = new Long(source.RecordingRuleLimit);
         }
+        if (source.MigrationType != null) {
+            this.MigrationType = new Long(source.MigrationType);
+        }
     }
 
 
@@ -1128,6 +1159,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "GrafanaInstanceId", this.GrafanaInstanceId);
         this.setParamSimple(map, prefix + "AlertRuleLimit", this.AlertRuleLimit);
         this.setParamSimple(map, prefix + "RecordingRuleLimit", this.RecordingRuleLimit);
+        this.setParamSimple(map, prefix + "MigrationType", this.MigrationType);
 
     }
 }
