@@ -44,6 +44,14 @@ public class MetricData extends AbstractModel{
     private DatePoint [] DataSet;
 
     /**
+    * The total number of requests within the query scope.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("MetricCount")
+    @Expose
+    private Long MetricCount;
+
+    /**
      * Get Resource description 
      * @return Resource Resource description
      */
@@ -91,6 +99,26 @@ public class MetricData extends AbstractModel{
         this.DataSet = DataSet;
     }
 
+    /**
+     * Get The total number of requests within the query scope.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return MetricCount The total number of requests within the query scope.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public Long getMetricCount() {
+        return this.MetricCount;
+    }
+
+    /**
+     * Set The total number of requests within the query scope.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param MetricCount The total number of requests within the query scope.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setMetricCount(Long MetricCount) {
+        this.MetricCount = MetricCount;
+    }
+
     public MetricData() {
     }
 
@@ -111,6 +139,9 @@ public class MetricData extends AbstractModel{
                 this.DataSet[i] = new DatePoint(source.DataSet[i]);
             }
         }
+        if (source.MetricCount != null) {
+            this.MetricCount = new Long(source.MetricCount);
+        }
     }
 
 
@@ -121,6 +152,7 @@ public class MetricData extends AbstractModel{
         this.setParamSimple(map, prefix + "Resource", this.Resource);
         this.setParamSimple(map, prefix + "Metric", this.Metric);
         this.setParamArrayObj(map, prefix + "DataSet.", this.DataSet);
+        this.setParamSimple(map, prefix + "MetricCount", this.MetricCount);
 
     }
 }

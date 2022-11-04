@@ -906,6 +906,26 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
+     *This API is used to query the list of AZs and resources supported for the user in the current region.
+     * @param req DescribeResourcesRequest
+     * @return DescribeResourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourcesResponse DescribeResources(DescribeResourcesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeResourcesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeResourcesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeResources");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (DescribeRewrite) is used to query the redirection relationship between the forwarding rules of a CLB instance by instance ID. If no listener ID or forwarding rule ID is specified, all redirection relationships in the instance will be returned.
      * @param req DescribeRewriteRequest
      * @return DescribeRewriteResponse
@@ -1435,6 +1455,26 @@ Note: This API can only be called in the Guangzhou region; for other regions, an
                 Type type = new TypeToken<JsonResponseModel<ReplaceCertForLoadBalancersResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ReplaceCertForLoadBalancers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create or manage a user-defined CLB configuration template.
+     * @param req SetCustomizedConfigForLoadBalancerRequest
+     * @return SetCustomizedConfigForLoadBalancerResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetCustomizedConfigForLoadBalancerResponse SetCustomizedConfigForLoadBalancer(SetCustomizedConfigForLoadBalancerRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetCustomizedConfigForLoadBalancerResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetCustomizedConfigForLoadBalancerResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetCustomizedConfigForLoadBalancer");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

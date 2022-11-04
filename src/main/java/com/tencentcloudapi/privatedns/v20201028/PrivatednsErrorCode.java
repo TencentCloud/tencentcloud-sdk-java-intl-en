@@ -144,6 +144,9 @@ public enum PrivatednsErrorCode {
     // Insufficient resource.
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
      
+    // Insufficient balance.
+     RESOURCEINSUFFICIENT_BALANCE("ResourceInsufficient.Balance"),
+     
     // The resource does not exist.
      RESOURCENOTFOUND("ResourceNotFound"),
      

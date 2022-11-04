@@ -229,6 +229,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Boolean IsMultiZoneCluster;
 
     /**
+    * Whether it is a manually deployed cluster
+Note: This field may return null, indicating that no valid value can be obtained. 
+    */
+    @SerializedName("IsHandsCluster")
+    @Expose
+    private Boolean IsHandsCluster;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -728,6 +736,26 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.IsMultiZoneCluster = IsMultiZoneCluster;
     }
 
+    /**
+     * Get Whether it is a manually deployed cluster
+Note: This field may return null, indicating that no valid value can be obtained.  
+     * @return IsHandsCluster Whether it is a manually deployed cluster
+Note: This field may return null, indicating that no valid value can be obtained. 
+     */
+    public Boolean getIsHandsCluster() {
+        return this.IsHandsCluster;
+    }
+
+    /**
+     * Set Whether it is a manually deployed cluster
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @param IsHandsCluster Whether it is a manually deployed cluster
+Note: This field may return null, indicating that no valid value can be obtained. 
+     */
+    public void setIsHandsCluster(Boolean IsHandsCluster) {
+        this.IsHandsCluster = IsHandsCluster;
+    }
+
     public EmrListInstance() {
     }
 
@@ -820,6 +848,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.IsMultiZoneCluster != null) {
             this.IsMultiZoneCluster = new Boolean(source.IsMultiZoneCluster);
         }
+        if (source.IsHandsCluster != null) {
+            this.IsHandsCluster = new Boolean(source.IsHandsCluster);
+        }
     }
 
 
@@ -854,6 +885,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
         this.setParamSimple(map, prefix + "ClusterClass", this.ClusterClass);
         this.setParamSimple(map, prefix + "IsMultiZoneCluster", this.IsMultiZoneCluster);
+        this.setParamSimple(map, prefix + "IsHandsCluster", this.IsHandsCluster);
 
     }
 }

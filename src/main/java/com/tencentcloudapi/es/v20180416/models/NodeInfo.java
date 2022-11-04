@@ -99,6 +99,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long MemSize;
 
     /**
+    * /
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DiskEnhance")
+    @Expose
+    private Long DiskEnhance;
+
+    /**
      * Get Number of nodes 
      * @return NodeNum Number of nodes
      */
@@ -282,6 +290,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.MemSize = MemSize;
     }
 
+    /**
+     * Get /
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DiskEnhance /
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getDiskEnhance() {
+        return this.DiskEnhance;
+    }
+
+    /**
+     * Set /
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DiskEnhance /
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDiskEnhance(Long DiskEnhance) {
+        this.DiskEnhance = DiskEnhance;
+    }
+
     public NodeInfo() {
     }
 
@@ -320,6 +348,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.MemSize != null) {
             this.MemSize = new Long(source.MemSize);
         }
+        if (source.DiskEnhance != null) {
+            this.DiskEnhance = new Long(source.DiskEnhance);
+        }
     }
 
 
@@ -337,6 +368,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "DiskEncrypt", this.DiskEncrypt);
         this.setParamSimple(map, prefix + "CpuNum", this.CpuNum);
         this.setParamSimple(map, prefix + "MemSize", this.MemSize);
+        this.setParamSimple(map, prefix + "DiskEnhance", this.DiskEnhance);
 
     }
 }

@@ -79,7 +79,7 @@ public class InstanceInfo extends AbstractModel{
     private String SubnetUid;
 
     /**
-    * Instance status. 0: processing; 1: normal; -1: stopped; -2: terminating; -3: terminated
+    * Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
     */
     @SerializedName("Status")
     @Expose
@@ -619,6 +619,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean EnableHybridStorage;
 
     /**
+    * The process progress
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ProcessPercent")
+    @Expose
+    private Float ProcessPercent;
+
+    /**
+    * The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("KibanaAlteringPublicAccess")
+    @Expose
+    private String KibanaAlteringPublicAccess;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -747,16 +763,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance status. 0: processing; 1: normal; -1: stopped; -2: terminating; -3: terminated 
-     * @return Status Instance status. 0: processing; 1: normal; -1: stopped; -2: terminating; -3: terminated
+     * Get Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation. 
+     * @return Status Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status. 0: processing; 1: normal; -1: stopped; -2: terminating; -3: terminated
-     * @param Status Instance status. 0: processing; 1: normal; -1: stopped; -2: terminating; -3: terminated
+     * Set Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
+     * @param Status Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -2054,6 +2070,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.EnableHybridStorage = EnableHybridStorage;
     }
 
+    /**
+     * Get The process progress
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ProcessPercent The process progress
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Float getProcessPercent() {
+        return this.ProcessPercent;
+    }
+
+    /**
+     * Set The process progress
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ProcessPercent The process progress
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setProcessPercent(Float ProcessPercent) {
+        this.ProcessPercent = ProcessPercent;
+    }
+
+    /**
+     * Get The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return KibanaAlteringPublicAccess The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getKibanaAlteringPublicAccess() {
+        return this.KibanaAlteringPublicAccess;
+    }
+
+    /**
+     * Set The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param KibanaAlteringPublicAccess The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setKibanaAlteringPublicAccess(String KibanaAlteringPublicAccess) {
+        this.KibanaAlteringPublicAccess = KibanaAlteringPublicAccess;
+    }
+
     public InstanceInfo() {
     }
 
@@ -2317,6 +2373,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.EnableHybridStorage != null) {
             this.EnableHybridStorage = new Boolean(source.EnableHybridStorage);
         }
+        if (source.ProcessPercent != null) {
+            this.ProcessPercent = new Float(source.ProcessPercent);
+        }
+        if (source.KibanaAlteringPublicAccess != null) {
+            this.KibanaAlteringPublicAccess = new String(source.KibanaAlteringPublicAccess);
+        }
     }
 
 
@@ -2403,6 +2465,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "OptionalWebServiceInfos.", this.OptionalWebServiceInfos);
         this.setParamSimple(map, prefix + "AutoIndexEnabled", this.AutoIndexEnabled);
         this.setParamSimple(map, prefix + "EnableHybridStorage", this.EnableHybridStorage);
+        this.setParamSimple(map, prefix + "ProcessPercent", this.ProcessPercent);
+        this.setParamSimple(map, prefix + "KibanaAlteringPublicAccess", this.KibanaAlteringPublicAccess);
 
     }
 }

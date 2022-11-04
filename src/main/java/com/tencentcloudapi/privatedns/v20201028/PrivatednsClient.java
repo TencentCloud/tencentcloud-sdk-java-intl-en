@@ -299,6 +299,26 @@ public class PrivatednsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify the DNS record status.
+     * @param req ModifyRecordsStatusRequest
+     * @return ModifyRecordsStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRecordsStatusResponse ModifyRecordsStatus(ModifyRecordsStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRecordsStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRecordsStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRecordsStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to activate the Private DNS service.
      * @param req SubscribePrivateZoneServiceRequest
      * @return SubscribePrivateZoneServiceResponse

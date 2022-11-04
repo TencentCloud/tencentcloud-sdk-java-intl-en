@@ -93,6 +93,13 @@ public class StartPublishCdnStreamRequest extends AbstractModel{
     private McuSeiParams SeiParams;
 
     /**
+    * The information of the room to which streams are relayed.
+    */
+    @SerializedName("FeedBackRoomParams")
+    @Expose
+    private McuFeedBackRoomParams [] FeedBackRoomParams;
+
+    /**
      * Get The [SDKAppID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are relayed. 
      * @return SdkAppId The [SDKAppID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are relayed.
      */
@@ -252,6 +259,22 @@ public class StartPublishCdnStreamRequest extends AbstractModel{
         this.SeiParams = SeiParams;
     }
 
+    /**
+     * Get The information of the room to which streams are relayed. 
+     * @return FeedBackRoomParams The information of the room to which streams are relayed.
+     */
+    public McuFeedBackRoomParams [] getFeedBackRoomParams() {
+        return this.FeedBackRoomParams;
+    }
+
+    /**
+     * Set The information of the room to which streams are relayed.
+     * @param FeedBackRoomParams The information of the room to which streams are relayed.
+     */
+    public void setFeedBackRoomParams(McuFeedBackRoomParams [] FeedBackRoomParams) {
+        this.FeedBackRoomParams = FeedBackRoomParams;
+    }
+
     public StartPublishCdnStreamRequest() {
     }
 
@@ -293,6 +316,12 @@ public class StartPublishCdnStreamRequest extends AbstractModel{
         if (source.SeiParams != null) {
             this.SeiParams = new McuSeiParams(source.SeiParams);
         }
+        if (source.FeedBackRoomParams != null) {
+            this.FeedBackRoomParams = new McuFeedBackRoomParams[source.FeedBackRoomParams.length];
+            for (int i = 0; i < source.FeedBackRoomParams.length; i++) {
+                this.FeedBackRoomParams[i] = new McuFeedBackRoomParams(source.FeedBackRoomParams[i]);
+            }
+        }
     }
 
 
@@ -310,6 +339,7 @@ public class StartPublishCdnStreamRequest extends AbstractModel{
         this.setParamObj(map, prefix + "SingleSubscribeParams.", this.SingleSubscribeParams);
         this.setParamArrayObj(map, prefix + "PublishCdnParams.", this.PublishCdnParams);
         this.setParamObj(map, prefix + "SeiParams.", this.SeiParams);
+        this.setParamArrayObj(map, prefix + "FeedBackRoomParams.", this.FeedBackRoomParams);
 
     }
 }

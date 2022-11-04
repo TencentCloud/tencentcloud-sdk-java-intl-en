@@ -255,6 +255,13 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
     private Boolean EnableHybridStorage;
 
     /**
+    * Whether to enable enhanced SSD
+    */
+    @SerializedName("DiskEnhance")
+    @Expose
+    private Long DiskEnhance;
+
+    /**
      * Get Availability Zone 
      * @return Zone Availability Zone
      */
@@ -798,6 +805,22 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
         this.EnableHybridStorage = EnableHybridStorage;
     }
 
+    /**
+     * Get Whether to enable enhanced SSD 
+     * @return DiskEnhance Whether to enable enhanced SSD
+     */
+    public Long getDiskEnhance() {
+        return this.DiskEnhance;
+    }
+
+    /**
+     * Set Whether to enable enhanced SSD
+     * @param DiskEnhance Whether to enable enhanced SSD
+     */
+    public void setDiskEnhance(Long DiskEnhance) {
+        this.DiskEnhance = DiskEnhance;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -914,6 +937,9 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
         if (source.EnableHybridStorage != null) {
             this.EnableHybridStorage = new Boolean(source.EnableHybridStorage);
         }
+        if (source.DiskEnhance != null) {
+            this.DiskEnhance = new Long(source.DiskEnhance);
+        }
     }
 
 
@@ -953,6 +979,7 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
         this.setParamSimple(map, prefix + "EnableHybridStorage", this.EnableHybridStorage);
+        this.setParamSimple(map, prefix + "DiskEnhance", this.DiskEnhance);
 
     }
 }

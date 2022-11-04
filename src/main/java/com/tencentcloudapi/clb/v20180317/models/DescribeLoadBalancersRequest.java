@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeLoadBalancersRequest extends AbstractModel{
 
     /**
-    * CLB instance ID
+    * CLB instance IDs. There can be up to 20 IDs.
     */
     @SerializedName("LoadBalancerIds")
     @Expose
@@ -159,16 +159,16 @@ Basic network does not support queries by VpcId.
     private Filter [] Filters;
 
     /**
-     * Get CLB instance ID 
-     * @return LoadBalancerIds CLB instance ID
+     * Get CLB instance IDs. There can be up to 20 IDs. 
+     * @return LoadBalancerIds CLB instance IDs. There can be up to 20 IDs.
      */
     public String [] getLoadBalancerIds() {
         return this.LoadBalancerIds;
     }
 
     /**
-     * Set CLB instance ID
-     * @param LoadBalancerIds CLB instance ID
+     * Set CLB instance IDs. There can be up to 20 IDs.
+     * @param LoadBalancerIds CLB instance IDs. There can be up to 20 IDs.
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;

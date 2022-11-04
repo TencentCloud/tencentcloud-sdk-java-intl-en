@@ -383,7 +383,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CurrentTime;
 
     /**
-    * Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+    * Whether it is used in a federation. Valid values: `0` (no), `1` (yes).
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsFederation")
@@ -1307,9 +1307,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+     * Get Whether it is used in a federation. Valid values: `0` (no), `1` (yes).
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsFederation Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+     * @return IsFederation Whether it is used in a federation. Valid values: `0` (no), `1` (yes).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsFederation() {
@@ -1317,9 +1317,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+     * Set Whether it is used in a federation. Valid values: `0` (no), `1` (yes).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsFederation Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+     * @param IsFederation Whether it is used in a federation. Valid values: `0` (no), `1` (yes).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsFederation(Long IsFederation) {

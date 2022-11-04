@@ -206,6 +206,13 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
     private String ScaleOutServiceConfAssign;
 
     /**
+    * Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
+    */
+    @SerializedName("AutoRenew")
+    @Expose
+    private Long AutoRenew;
+
+    /**
      * Get Time unit of scale-out. Valid values:
 <li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
 <li>m: Month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li> 
@@ -637,6 +644,22 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
         this.ScaleOutServiceConfAssign = ScaleOutServiceConfAssign;
     }
 
+    /**
+     * Get Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes). 
+     * @return AutoRenew Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
+     */
+    public Long getAutoRenew() {
+        return this.AutoRenew;
+    }
+
+    /**
+     * Set Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
+     * @param AutoRenew Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
+     */
+    public void setAutoRenew(Long AutoRenew) {
+        this.AutoRenew = AutoRenew;
+    }
+
     public ScaleOutInstanceRequest() {
     }
 
@@ -738,6 +761,9 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
         if (source.ScaleOutServiceConfAssign != null) {
             this.ScaleOutServiceConfAssign = new String(source.ScaleOutServiceConfAssign);
         }
+        if (source.AutoRenew != null) {
+            this.AutoRenew = new Long(source.AutoRenew);
+        }
     }
 
 
@@ -770,6 +796,7 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "ScaleOutServiceConfAssign", this.ScaleOutServiceConfAssign);
+        this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
 
     }
 }

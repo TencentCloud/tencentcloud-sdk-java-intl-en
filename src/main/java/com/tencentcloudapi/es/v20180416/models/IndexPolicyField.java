@@ -71,6 +71,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String FrozenMinAge;
 
     /**
+    * /
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("ColdAction")
+    @Expose
+    private String ColdAction;
+
+    /**
      * Get Whether to enable the warm phase
 Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return WarmEnable Whether to enable the warm phase
@@ -190,6 +198,26 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.FrozenMinAge = FrozenMinAge;
     }
 
+    /**
+     * Get /
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return ColdAction /
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getColdAction() {
+        return this.ColdAction;
+    }
+
+    /**
+     * Set /
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param ColdAction /
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setColdAction(String ColdAction) {
+        this.ColdAction = ColdAction;
+    }
+
     public IndexPolicyField() {
     }
 
@@ -216,6 +244,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.FrozenMinAge != null) {
             this.FrozenMinAge = new String(source.FrozenMinAge);
         }
+        if (source.ColdAction != null) {
+            this.ColdAction = new String(source.ColdAction);
+        }
     }
 
 
@@ -229,6 +260,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "ColdMinAge", this.ColdMinAge);
         this.setParamSimple(map, prefix + "FrozenEnable", this.FrozenEnable);
         this.setParamSimple(map, prefix + "FrozenMinAge", this.FrozenMinAge);
+        this.setParamSimple(map, prefix + "ColdAction", this.ColdAction);
 
     }
 }
