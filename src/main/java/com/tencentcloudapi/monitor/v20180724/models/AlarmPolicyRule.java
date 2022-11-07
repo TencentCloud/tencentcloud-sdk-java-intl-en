@@ -169,7 +169,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Float ValueMin;
 
     /**
-    * 
+    * The configuration of alarm level threshold
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HierarchicalValue")
     @Expose
@@ -568,16 +569,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return HierarchicalValue 
+     * Get The configuration of alarm level threshold
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HierarchicalValue The configuration of alarm level threshold
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AlarmHierarchicalValue getHierarchicalValue() {
         return this.HierarchicalValue;
     }
 
     /**
-     * Set 
-     * @param HierarchicalValue 
+     * Set The configuration of alarm level threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HierarchicalValue The configuration of alarm level threshold
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHierarchicalValue(AlarmHierarchicalValue HierarchicalValue) {
         this.HierarchicalValue = HierarchicalValue;

@@ -23,69 +23,84 @@ import java.util.HashMap;
 public class AlarmHierarchicalValue extends AbstractModel{
 
     /**
-    * 
+    * Threshold for the `Remind` level
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Remind")
     @Expose
     private String Remind;
 
     /**
-    * 
+    * Threshold for the `Warn` level
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Warn")
     @Expose
     private String Warn;
 
     /**
-    * 
+    * Threshold for the `Serious` level
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Serious")
     @Expose
     private String Serious;
 
     /**
-     * Get  
-     * @return Remind 
+     * Get Threshold for the `Remind` level
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Remind Threshold for the `Remind` level
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRemind() {
         return this.Remind;
     }
 
     /**
-     * Set 
-     * @param Remind 
+     * Set Threshold for the `Remind` level
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Remind Threshold for the `Remind` level
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRemind(String Remind) {
         this.Remind = Remind;
     }
 
     /**
-     * Get  
-     * @return Warn 
+     * Get Threshold for the `Warn` level
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Warn Threshold for the `Warn` level
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getWarn() {
         return this.Warn;
     }
 
     /**
-     * Set 
-     * @param Warn 
+     * Set Threshold for the `Warn` level
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Warn Threshold for the `Warn` level
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setWarn(String Warn) {
         this.Warn = Warn;
     }
 
     /**
-     * Get  
-     * @return Serious 
+     * Get Threshold for the `Serious` level
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Serious Threshold for the `Serious` level
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSerious() {
         return this.Serious;
     }
 
     /**
-     * Set 
-     * @param Serious 
+     * Set Threshold for the `Serious` level
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Serious Threshold for the `Serious` level
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSerious(String Serious) {
         this.Serious = Serious;

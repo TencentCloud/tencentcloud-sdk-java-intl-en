@@ -135,6 +135,20 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
     private LogAlarmReq LogAlarmReqInfo;
 
     /**
+    * Notification rules for different alarm levels
+    */
+    @SerializedName("HierarchicalNotices")
+    @Expose
+    private AlarmHierarchicalNotice [] HierarchicalNotices;
+
+    /**
+    * A dedicated field for migration policies. 0: Implement authentication logic; 1: Skip authentication logic.
+    */
+    @SerializedName("MigrateFlag")
+    @Expose
+    private Long MigrateFlag;
+
+    /**
      * Get Value fixed at "monitor" 
      * @return Module Value fixed at "monitor"
      */
@@ -390,6 +404,38 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
         this.LogAlarmReqInfo = LogAlarmReqInfo;
     }
 
+    /**
+     * Get Notification rules for different alarm levels 
+     * @return HierarchicalNotices Notification rules for different alarm levels
+     */
+    public AlarmHierarchicalNotice [] getHierarchicalNotices() {
+        return this.HierarchicalNotices;
+    }
+
+    /**
+     * Set Notification rules for different alarm levels
+     * @param HierarchicalNotices Notification rules for different alarm levels
+     */
+    public void setHierarchicalNotices(AlarmHierarchicalNotice [] HierarchicalNotices) {
+        this.HierarchicalNotices = HierarchicalNotices;
+    }
+
+    /**
+     * Get A dedicated field for migration policies. 0: Implement authentication logic; 1: Skip authentication logic. 
+     * @return MigrateFlag A dedicated field for migration policies. 0: Implement authentication logic; 1: Skip authentication logic.
+     */
+    public Long getMigrateFlag() {
+        return this.MigrateFlag;
+    }
+
+    /**
+     * Set A dedicated field for migration policies. 0: Implement authentication logic; 1: Skip authentication logic.
+     * @param MigrateFlag A dedicated field for migration policies. 0: Implement authentication logic; 1: Skip authentication logic.
+     */
+    public void setMigrateFlag(Long MigrateFlag) {
+        this.MigrateFlag = MigrateFlag;
+    }
+
     public CreateAlarmPolicyRequest() {
     }
 
@@ -458,6 +504,15 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
         if (source.LogAlarmReqInfo != null) {
             this.LogAlarmReqInfo = new LogAlarmReq(source.LogAlarmReqInfo);
         }
+        if (source.HierarchicalNotices != null) {
+            this.HierarchicalNotices = new AlarmHierarchicalNotice[source.HierarchicalNotices.length];
+            for (int i = 0; i < source.HierarchicalNotices.length; i++) {
+                this.HierarchicalNotices[i] = new AlarmHierarchicalNotice(source.HierarchicalNotices[i]);
+            }
+        }
+        if (source.MigrateFlag != null) {
+            this.MigrateFlag = new Long(source.MigrateFlag);
+        }
     }
 
 
@@ -481,6 +536,8 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "LogAlarmReqInfo.", this.LogAlarmReqInfo);
+        this.setParamArrayObj(map, prefix + "HierarchicalNotices.", this.HierarchicalNotices);
+        this.setParamSimple(map, prefix + "MigrateFlag", this.MigrateFlag);
 
     }
 }
