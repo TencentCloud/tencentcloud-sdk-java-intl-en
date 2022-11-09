@@ -47,6 +47,15 @@ Note: when a download URL of other media files is used as the material source an
     private Float Duration;
 
     /**
+    * The target video duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final video duration the same as the value of `TargetDuration`.</li>
+    */
+    @SerializedName("TargetDuration")
+    @Expose
+    private Float TargetDuration;
+
+    /**
     * Video origin position. Valid values:
 <li> Center: the origin of coordinates is the center position, such as the center of canvas.</li>
 Default value: Center.
@@ -100,20 +109,20 @@ Default value: 0 px.
     private String Height;
 
     /**
-    * Operation on video image such as image rotation.
-Note: this field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("ImageOperations")
-    @Expose
-    private ImageTransform [] ImageOperations;
-
-    /**
     * Operation on audio such as muting.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AudioOperations")
     @Expose
     private AudioTransform [] AudioOperations;
+
+    /**
+    * Operation on video image such as image rotation.
+Note: this field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ImageOperations")
+    @Expose
+    private ImageTransform [] ImageOperations;
 
     /**
      * Get Source of media material for video segment, which can be:
@@ -173,6 +182,30 @@ Note: when a download URL of other media files is used as the material source an
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
+    }
+
+    /**
+     * Get The target video duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final video duration the same as the value of `TargetDuration`.</li> 
+     * @return TargetDuration The target video duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final video duration the same as the value of `TargetDuration`.</li>
+     */
+    public Float getTargetDuration() {
+        return this.TargetDuration;
+    }
+
+    /**
+     * Set The target video duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final video duration the same as the value of `TargetDuration`.</li>
+     * @param TargetDuration The target video duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final video duration the same as the value of `TargetDuration`.</li>
+     */
+    public void setTargetDuration(Float TargetDuration) {
+        this.TargetDuration = TargetDuration;
     }
 
     /**
@@ -328,26 +361,6 @@ Default value: 0 px.
     }
 
     /**
-     * Get Operation on video image such as image rotation.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ImageOperations Operation on video image such as image rotation.
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public ImageTransform [] getImageOperations() {
-        return this.ImageOperations;
-    }
-
-    /**
-     * Set Operation on video image such as image rotation.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ImageOperations Operation on video image such as image rotation.
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public void setImageOperations(ImageTransform [] ImageOperations) {
-        this.ImageOperations = ImageOperations;
-    }
-
-    /**
      * Get Operation on audio such as muting.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return AudioOperations Operation on audio such as muting.
@@ -367,6 +380,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.AudioOperations = AudioOperations;
     }
 
+    /**
+     * Get Operation on video image such as image rotation.
+Note: this field may return null, indicating that no valid values can be obtained. 
+     * @return ImageOperations Operation on video image such as image rotation.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public ImageTransform [] getImageOperations() {
+        return this.ImageOperations;
+    }
+
+    /**
+     * Set Operation on video image such as image rotation.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ImageOperations Operation on video image such as image rotation.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public void setImageOperations(ImageTransform [] ImageOperations) {
+        this.ImageOperations = ImageOperations;
+    }
+
     public VideoTrackItem() {
     }
 
@@ -384,6 +417,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.Duration != null) {
             this.Duration = new Float(source.Duration);
         }
+        if (source.TargetDuration != null) {
+            this.TargetDuration = new Float(source.TargetDuration);
+        }
         if (source.CoordinateOrigin != null) {
             this.CoordinateOrigin = new String(source.CoordinateOrigin);
         }
@@ -399,16 +435,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.Height != null) {
             this.Height = new String(source.Height);
         }
-        if (source.ImageOperations != null) {
-            this.ImageOperations = new ImageTransform[source.ImageOperations.length];
-            for (int i = 0; i < source.ImageOperations.length; i++) {
-                this.ImageOperations[i] = new ImageTransform(source.ImageOperations[i]);
-            }
-        }
         if (source.AudioOperations != null) {
             this.AudioOperations = new AudioTransform[source.AudioOperations.length];
             for (int i = 0; i < source.AudioOperations.length; i++) {
                 this.AudioOperations[i] = new AudioTransform(source.AudioOperations[i]);
+            }
+        }
+        if (source.ImageOperations != null) {
+            this.ImageOperations = new ImageTransform[source.ImageOperations.length];
+            for (int i = 0; i < source.ImageOperations.length; i++) {
+                this.ImageOperations[i] = new ImageTransform(source.ImageOperations[i]);
             }
         }
     }
@@ -421,13 +457,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "SourceMedia", this.SourceMedia);
         this.setParamSimple(map, prefix + "SourceMediaStartTime", this.SourceMediaStartTime);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
+        this.setParamSimple(map, prefix + "TargetDuration", this.TargetDuration);
         this.setParamSimple(map, prefix + "CoordinateOrigin", this.CoordinateOrigin);
         this.setParamSimple(map, prefix + "XPos", this.XPos);
         this.setParamSimple(map, prefix + "YPos", this.YPos);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
-        this.setParamArrayObj(map, prefix + "ImageOperations.", this.ImageOperations);
         this.setParamArrayObj(map, prefix + "AudioOperations.", this.AudioOperations);
+        this.setParamArrayObj(map, prefix + "ImageOperations.", this.ImageOperations);
 
     }
 }

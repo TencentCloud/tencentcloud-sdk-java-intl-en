@@ -1739,6 +1739,27 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
     }
 
     /**
+     *This API is used to pause a live stream. The stream can be resumed if it is paused.
+Note: If you call this API to pause an inactive stream, the request will be considered successful.
+     * @param req DropLiveStreamRequest
+     * @return DropLiveStreamResponse
+     * @throws TencentCloudSDKException
+     */
+    public DropLiveStreamResponse DropLiveStream(DropLiveStreamRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DropLiveStreamResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DropLiveStreamResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DropLiveStream");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to enable a disabled LVB domain name.
      * @param req EnableLiveDomainRequest
      * @return EnableLiveDomainResponse

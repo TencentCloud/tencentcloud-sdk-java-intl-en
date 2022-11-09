@@ -47,6 +47,15 @@ Note: when a download URL of other media files is used as the material source an
     private Float Duration;
 
     /**
+    * The target audio duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final audio duration the same as the value of `TargetDuration`.</li>
+    */
+    @SerializedName("TargetDuration")
+    @Expose
+    private Float TargetDuration;
+
+    /**
     * Operation on audio segment, such as volume adjustment.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
@@ -115,6 +124,30 @@ Note: when a download URL of other media files is used as the material source an
     }
 
     /**
+     * Get The target audio duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final audio duration the same as the value of `TargetDuration`.</li> 
+     * @return TargetDuration The target audio duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final audio duration the same as the value of `TargetDuration`.</li>
+     */
+    public Float getTargetDuration() {
+        return this.TargetDuration;
+    }
+
+    /**
+     * Set The target audio duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final audio duration the same as the value of `TargetDuration`.</li>
+     * @param TargetDuration The target audio duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final audio duration the same as the value of `TargetDuration`.</li>
+     */
+    public void setTargetDuration(Float TargetDuration) {
+        this.TargetDuration = TargetDuration;
+    }
+
+    /**
      * Get Operation on audio segment, such as volume adjustment.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return AudioOperations Operation on audio segment, such as volume adjustment.
@@ -151,6 +184,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.Duration != null) {
             this.Duration = new Float(source.Duration);
         }
+        if (source.TargetDuration != null) {
+            this.TargetDuration = new Float(source.TargetDuration);
+        }
         if (source.AudioOperations != null) {
             this.AudioOperations = new AudioTransform[source.AudioOperations.length];
             for (int i = 0; i < source.AudioOperations.length; i++) {
@@ -167,6 +203,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "SourceMedia", this.SourceMedia);
         this.setParamSimple(map, prefix + "SourceMediaStartTime", this.SourceMediaStartTime);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
+        this.setParamSimple(map, prefix + "TargetDuration", this.TargetDuration);
         this.setParamArrayObj(map, prefix + "AudioOperations.", this.AudioOperations);
 
     }

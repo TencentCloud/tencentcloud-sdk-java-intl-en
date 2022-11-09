@@ -71,7 +71,7 @@ topspeed_H265: top speed codec - H265.
     private Long Bitrate;
 
     /**
-    * Type. Valid values: Transcode, MixStream, WaterMark.
+    * The task type. Valid values: Transcode, MixStream, WaterMark, Webrtc.
     */
     @SerializedName("Type")
     @Expose
@@ -90,6 +90,15 @@ topspeed_H265: top speed codec - H265.
     @SerializedName("Resolution")
     @Expose
     private String Resolution;
+
+    /**
+    * The region. Valid values:
+`Mainland`: Inside the Chinese mainland.
+`Overseas`: Outside the Chinese mainland.
+    */
+    @SerializedName("MainlandOrOversea")
+    @Expose
+    private String MainlandOrOversea;
 
     /**
      * Get Stream name. 
@@ -212,16 +221,16 @@ topspeed_H265: top speed codec - H265.
     }
 
     /**
-     * Get Type. Valid values: Transcode, MixStream, WaterMark. 
-     * @return Type Type. Valid values: Transcode, MixStream, WaterMark.
+     * Get The task type. Valid values: Transcode, MixStream, WaterMark, Webrtc. 
+     * @return Type The task type. Valid values: Transcode, MixStream, WaterMark, Webrtc.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type. Valid values: Transcode, MixStream, WaterMark.
-     * @param Type Type. Valid values: Transcode, MixStream, WaterMark.
+     * Set The task type. Valid values: Transcode, MixStream, WaterMark, Webrtc.
+     * @param Type The task type. Valid values: Transcode, MixStream, WaterMark, Webrtc.
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -259,6 +268,30 @@ topspeed_H265: top speed codec - H265.
         this.Resolution = Resolution;
     }
 
+    /**
+     * Get The region. Valid values:
+`Mainland`: Inside the Chinese mainland.
+`Overseas`: Outside the Chinese mainland. 
+     * @return MainlandOrOversea The region. Valid values:
+`Mainland`: Inside the Chinese mainland.
+`Overseas`: Outside the Chinese mainland.
+     */
+    public String getMainlandOrOversea() {
+        return this.MainlandOrOversea;
+    }
+
+    /**
+     * Set The region. Valid values:
+`Mainland`: Inside the Chinese mainland.
+`Overseas`: Outside the Chinese mainland.
+     * @param MainlandOrOversea The region. Valid values:
+`Mainland`: Inside the Chinese mainland.
+`Overseas`: Outside the Chinese mainland.
+     */
+    public void setMainlandOrOversea(String MainlandOrOversea) {
+        this.MainlandOrOversea = MainlandOrOversea;
+    }
+
     public TranscodeDetailInfo() {
     }
 
@@ -294,6 +327,9 @@ topspeed_H265: top speed codec - H265.
         if (source.Resolution != null) {
             this.Resolution = new String(source.Resolution);
         }
+        if (source.MainlandOrOversea != null) {
+            this.MainlandOrOversea = new String(source.MainlandOrOversea);
+        }
     }
 
 
@@ -310,6 +346,7 @@ topspeed_H265: top speed codec - H265.
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "PushDomain", this.PushDomain);
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
+        this.setParamSimple(map, prefix + "MainlandOrOversea", this.MainlandOrOversea);
 
     }
 }

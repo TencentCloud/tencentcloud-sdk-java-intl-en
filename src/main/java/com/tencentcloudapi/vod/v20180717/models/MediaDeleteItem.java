@@ -23,10 +23,11 @@ import java.util.HashMap;
 public class MediaDeleteItem extends AbstractModel{
 
     /**
-    * Type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
-<li>`OriginalFiles`: original files. You cannot initiate transcoding, publishing on WeChat, or other video processing operations after deleting the original files.</li>
-<li>`TranscodeFiles`: transcoded files</li>
-<li>`WechatPublishFiles`: files for publishing on WeChat</li>
+    * The type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
+<li>`OriginalFiles`: The original file. After deleting an original file, you can no longer perform operations such as transcoding or WeChat publishing on the file ID.</li>
+<li>`TranscodeFiles`: Transcoding outputs</li>
+<li>`AdaptiveDynamicStreamingFiles`: Adaptive bitrate outputs</li>
+<li>`WechatPublishFiles`: The file for WeChat publishing</li>
     */
     @SerializedName("Type")
     @Expose
@@ -41,28 +42,32 @@ Default value: 0, which indicates to delete all videos of the type specified by 
     private Long Definition;
 
     /**
-     * Get Type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
-<li>`OriginalFiles`: original files. You cannot initiate transcoding, publishing on WeChat, or other video processing operations after deleting the original files.</li>
-<li>`TranscodeFiles`: transcoded files</li>
-<li>`WechatPublishFiles`: files for publishing on WeChat</li> 
-     * @return Type Type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
-<li>`OriginalFiles`: original files. You cannot initiate transcoding, publishing on WeChat, or other video processing operations after deleting the original files.</li>
-<li>`TranscodeFiles`: transcoded files</li>
-<li>`WechatPublishFiles`: files for publishing on WeChat</li>
+     * Get The type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
+<li>`OriginalFiles`: The original file. After deleting an original file, you can no longer perform operations such as transcoding or WeChat publishing on the file ID.</li>
+<li>`TranscodeFiles`: Transcoding outputs</li>
+<li>`AdaptiveDynamicStreamingFiles`: Adaptive bitrate outputs</li>
+<li>`WechatPublishFiles`: The file for WeChat publishing</li> 
+     * @return Type The type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
+<li>`OriginalFiles`: The original file. After deleting an original file, you can no longer perform operations such as transcoding or WeChat publishing on the file ID.</li>
+<li>`TranscodeFiles`: Transcoding outputs</li>
+<li>`AdaptiveDynamicStreamingFiles`: Adaptive bitrate outputs</li>
+<li>`WechatPublishFiles`: The file for WeChat publishing</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
-<li>`OriginalFiles`: original files. You cannot initiate transcoding, publishing on WeChat, or other video processing operations after deleting the original files.</li>
-<li>`TranscodeFiles`: transcoded files</li>
-<li>`WechatPublishFiles`: files for publishing on WeChat</li>
-     * @param Type Type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
-<li>`OriginalFiles`: original files. You cannot initiate transcoding, publishing on WeChat, or other video processing operations after deleting the original files.</li>
-<li>`TranscodeFiles`: transcoded files</li>
-<li>`WechatPublishFiles`: files for publishing on WeChat</li>
+     * Set The type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
+<li>`OriginalFiles`: The original file. After deleting an original file, you can no longer perform operations such as transcoding or WeChat publishing on the file ID.</li>
+<li>`TranscodeFiles`: Transcoding outputs</li>
+<li>`AdaptiveDynamicStreamingFiles`: Adaptive bitrate outputs</li>
+<li>`WechatPublishFiles`: The file for WeChat publishing</li>
+     * @param Type The type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
+<li>`OriginalFiles`: The original file. After deleting an original file, you can no longer perform operations such as transcoding or WeChat publishing on the file ID.</li>
+<li>`TranscodeFiles`: Transcoding outputs</li>
+<li>`AdaptiveDynamicStreamingFiles`: Adaptive bitrate outputs</li>
+<li>`WechatPublishFiles`: The file for WeChat publishing</li>
      */
     public void setType(String Type) {
         this.Type = Type;

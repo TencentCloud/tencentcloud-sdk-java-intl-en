@@ -159,6 +159,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete the manual backup for a cluster. It cannot be used to delete the automatic backup.
+     * @param req DeleteBackupRequest
+     * @return DeleteBackupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBackupResponse DeleteBackup(DeleteBackupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteBackupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteBackupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteBackup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query database management accounts.
      * @param req DescribeAccountsRequest
      * @return DescribeAccountsResponse

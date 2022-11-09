@@ -109,14 +109,6 @@ public class SearchMediaRequest extends AbstractModel{
     private String [] StreamIds;
 
     /**
-    * Unique ID of LVB recording file. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
-    */
-    @SerializedName("Vids")
-    @Expose
-    private String [] Vids;
-
-    /**
     * Matches files created within the time period.
 <li>Includes specified start and end points in time.</li>
     */
@@ -236,14 +228,6 @@ The live stream code.
     private String StreamId;
 
     /**
-    * (This is not recommended. `Vids` should be used instead)
-Unique ID of LVB recording file.
-    */
-    @SerializedName("Vid")
-    @Expose
-    private String Vid;
-
-    /**
     * (This is not recommended. `CreateTime` should be used instead)
 Start time in the creation time range.
 <li>After or at the start time.</li>
@@ -264,6 +248,20 @@ End time in the creation time range.
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
+
+    /**
+    * This parameter is invalid now.
+    */
+    @SerializedName("Vids")
+    @Expose
+    private String [] Vids;
+
+    /**
+    * This parameter is invalid now.
+    */
+    @SerializedName("Vid")
+    @Expose
+    private String Vid;
 
     /**
      * Get <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b> 
@@ -487,26 +485,6 @@ End time in the creation time range.
      */
     public void setStreamIds(String [] StreamIds) {
         this.StreamIds = StreamIds;
-    }
-
-    /**
-     * Get Unique ID of LVB recording file. Any element in the set can be matched.
-<li>Array length limit: 10.</li> 
-     * @return Vids Unique ID of LVB recording file. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
-     */
-    public String [] getVids() {
-        return this.Vids;
-    }
-
-    /**
-     * Set Unique ID of LVB recording file. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
-     * @param Vids Unique ID of LVB recording file. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
-     */
-    public void setVids(String [] Vids) {
-        this.Vids = Vids;
     }
 
     /**
@@ -830,26 +808,6 @@ The live stream code.
     }
 
     /**
-     * Get (This is not recommended. `Vids` should be used instead)
-Unique ID of LVB recording file. 
-     * @return Vid (This is not recommended. `Vids` should be used instead)
-Unique ID of LVB recording file.
-     */
-    public String getVid() {
-        return this.Vid;
-    }
-
-    /**
-     * Set (This is not recommended. `Vids` should be used instead)
-Unique ID of LVB recording file.
-     * @param Vid (This is not recommended. `Vids` should be used instead)
-Unique ID of LVB recording file.
-     */
-    public void setVid(String Vid) {
-        this.Vid = Vid;
-    }
-
-    /**
      * Get (This is not recommended. `CreateTime` should be used instead)
 Start time in the creation time range.
 <li>After or at the start time.</li>
@@ -911,6 +869,38 @@ End time in the creation time range.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
+    }
+
+    /**
+     * Get This parameter is invalid now. 
+     * @return Vids This parameter is invalid now.
+     */
+    public String [] getVids() {
+        return this.Vids;
+    }
+
+    /**
+     * Set This parameter is invalid now.
+     * @param Vids This parameter is invalid now.
+     */
+    public void setVids(String [] Vids) {
+        this.Vids = Vids;
+    }
+
+    /**
+     * Get This parameter is invalid now. 
+     * @return Vid This parameter is invalid now.
+     */
+    public String getVid() {
+        return this.Vid;
+    }
+
+    /**
+     * Set This parameter is invalid now.
+     * @param Vid This parameter is invalid now.
+     */
+    public void setVid(String Vid) {
+        this.Vid = Vid;
     }
 
     public SearchMediaRequest() {
@@ -978,12 +968,6 @@ End time in the creation time range.
                 this.StreamIds[i] = new String(source.StreamIds[i]);
             }
         }
-        if (source.Vids != null) {
-            this.Vids = new String[source.Vids.length];
-            for (int i = 0; i < source.Vids.length; i++) {
-                this.Vids[i] = new String(source.Vids[i]);
-            }
-        }
         if (source.CreateTime != null) {
             this.CreateTime = new TimeRange(source.CreateTime);
         }
@@ -1038,14 +1022,20 @@ End time in the creation time range.
         if (source.StreamId != null) {
             this.StreamId = new String(source.StreamId);
         }
-        if (source.Vid != null) {
-            this.Vid = new String(source.Vid);
-        }
         if (source.StartTime != null) {
             this.StartTime = new String(source.StartTime);
         }
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
+        }
+        if (source.Vids != null) {
+            this.Vids = new String[source.Vids.length];
+            for (int i = 0; i < source.Vids.length; i++) {
+                this.Vids[i] = new String(source.Vids[i]);
+            }
+        }
+        if (source.Vid != null) {
+            this.Vid = new String(source.Vid);
         }
     }
 
@@ -1064,7 +1054,6 @@ End time in the creation time range.
         this.setParamArraySimple(map, prefix + "Categories.", this.Categories);
         this.setParamArraySimple(map, prefix + "SourceTypes.", this.SourceTypes);
         this.setParamArraySimple(map, prefix + "StreamIds.", this.StreamIds);
-        this.setParamArraySimple(map, prefix + "Vids.", this.Vids);
         this.setParamObj(map, prefix + "CreateTime.", this.CreateTime);
         this.setParamObj(map, prefix + "ExpireTime.", this.ExpireTime);
         this.setParamObj(map, prefix + "Sort.", this.Sort);
@@ -1078,9 +1067,10 @@ End time in the creation time range.
         this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
         this.setParamSimple(map, prefix + "StreamId", this.StreamId);
-        this.setParamSimple(map, prefix + "Vid", this.Vid);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamArraySimple(map, prefix + "Vids.", this.Vids);
+        this.setParamSimple(map, prefix + "Vid", this.Vid);
 
     }
 }
