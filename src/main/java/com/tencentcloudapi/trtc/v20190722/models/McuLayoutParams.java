@@ -30,7 +30,7 @@ public class McuLayoutParams extends AbstractModel{
     private Long MixLayoutMode;
 
     /**
-    * Whether to display users who publish only audio. 0: Yes; 1: No. This parameter is valid only if dynamic layouts are used. If you do not pass this parameter, 0 will be used.
+    * Whether to display users who publish only audio. 0: No; 1: Yes. This parameter is valid only if a dynamic layout is used. If you do not pass this parameter, 0 will be used.
     */
     @SerializedName("PureAudioHoldPlaceMode")
     @Expose
@@ -67,16 +67,16 @@ public class McuLayoutParams extends AbstractModel{
     }
 
     /**
-     * Get Whether to display users who publish only audio. 0: Yes; 1: No. This parameter is valid only if dynamic layouts are used. If you do not pass this parameter, 0 will be used. 
-     * @return PureAudioHoldPlaceMode Whether to display users who publish only audio. 0: Yes; 1: No. This parameter is valid only if dynamic layouts are used. If you do not pass this parameter, 0 will be used.
+     * Get Whether to display users who publish only audio. 0: No; 1: Yes. This parameter is valid only if a dynamic layout is used. If you do not pass this parameter, 0 will be used. 
+     * @return PureAudioHoldPlaceMode Whether to display users who publish only audio. 0: No; 1: Yes. This parameter is valid only if a dynamic layout is used. If you do not pass this parameter, 0 will be used.
      */
     public Long getPureAudioHoldPlaceMode() {
         return this.PureAudioHoldPlaceMode;
     }
 
     /**
-     * Set Whether to display users who publish only audio. 0: Yes; 1: No. This parameter is valid only if dynamic layouts are used. If you do not pass this parameter, 0 will be used.
-     * @param PureAudioHoldPlaceMode Whether to display users who publish only audio. 0: Yes; 1: No. This parameter is valid only if dynamic layouts are used. If you do not pass this parameter, 0 will be used.
+     * Set Whether to display users who publish only audio. 0: No; 1: Yes. This parameter is valid only if a dynamic layout is used. If you do not pass this parameter, 0 will be used.
+     * @param PureAudioHoldPlaceMode Whether to display users who publish only audio. 0: No; 1: Yes. This parameter is valid only if a dynamic layout is used. If you do not pass this parameter, 0 will be used.
      */
     public void setPureAudioHoldPlaceMode(Long PureAudioHoldPlaceMode) {
         this.PureAudioHoldPlaceMode = PureAudioHoldPlaceMode;

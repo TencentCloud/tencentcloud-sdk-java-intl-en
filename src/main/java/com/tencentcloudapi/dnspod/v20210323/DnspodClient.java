@@ -162,6 +162,26 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get DNS records of a domain.
+     * @param req DescribeRecordListRequest
+     * @return DescribeRecordListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRecordListResponse DescribeRecordList(DescribeRecordListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRecordListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRecordListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRecordList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to set the remarks of a domain.
      * @param req ModifyDomainRemarkRequest
      * @return ModifyDomainRemarkResponse

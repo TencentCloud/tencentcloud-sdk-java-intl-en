@@ -24,6 +24,12 @@ public enum TrtcErrorCode {
     // The room does not exist.
      FAILEDOPERATION_ROOMNOTEXIST("FailedOperation.RoomNotExist"),
      
+    // The application ID does not exist.
+     FAILEDOPERATION_SDKAPPIDNOTEXIST("FailedOperation.SdkAppIdNotExist"),
+     
+    // The user is not in the room.
+     FAILEDOPERATION_USERNOTEXIST("FailedOperation.UserNotExist"),
+     
     // Internal error.
      INTERNALERROR("InternalError"),
      
@@ -35,6 +41,9 @@ public enum TrtcErrorCode {
      
     // Failed to get room information.
      INTERNALERROR_GETROOMFROMCACHEERROR("InternalError.GetRoomFromCacheError"),
+     
+    // The user is not in the room.
+     INTERNALERROR_USERNOTEXIST("InternalError.UserNotExist"),
      
     // Parameter error.
      INVALIDPARAMETER("InvalidParameter"),
@@ -48,6 +57,9 @@ public enum TrtcErrorCode {
     // `SdkAppId` is incorrect.
      INVALIDPARAMETER_SDKAPPID("InvalidParameter.SdkAppId"),
      
+    // Invalid `UserId`.
+     INVALIDPARAMETER_USERID("InvalidParameter.UserId"),
+     
     // `UserIds` is incorrect.
      INVALIDPARAMETER_USERIDS("InvalidParameter.UserIds"),
      
@@ -59,6 +71,9 @@ public enum TrtcErrorCode {
      
     // `AccessKey` parameter missing.
      MISSINGPARAMETER_ACCESSKEY("MissingParameter.AccessKey"),
+     
+    // `AppId` missing.
+     MISSINGPARAMETER_APPID("MissingParameter.AppId"),
      
     // `Bucket` parameter missing.
      MISSINGPARAMETER_BUCKET("MissingParameter.Bucket"),

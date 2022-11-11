@@ -211,6 +211,46 @@ If a recording file is being uploaded to VOD, the response parameter `StorageFil
     }
 
     /**
+     *This API is used to disable or enable the audio and video of a user. It can be used by an anchor, room owner, or admin to block or unblock a user. It supports platforms including Android, iOS, Windows, macOS, web, and WeChat Mini Program. Use this API if the room ID is a number.
+     * @param req SetUserBlockedRequest
+     * @return SetUserBlockedResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetUserBlockedResponse SetUserBlocked(SetUserBlockedRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetUserBlockedResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetUserBlockedResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetUserBlocked");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API allows an anchor, room owner, admin to mute/unmute a user. It can be used on platforms including Android, iOS, Windows, macOS, web, and WeChat Mini Program. Use this API when the room ID is a string.
+     * @param req SetUserBlockedByStrRoomIdRequest
+     * @return SetUserBlockedByStrRoomIdResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetUserBlockedByStrRoomIdResponse SetUserBlockedByStrRoomId(SetUserBlockedByStrRoomIdRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetUserBlockedByStrRoomIdResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetUserBlockedByStrRoomIdResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetUserBlockedByStrRoomId");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to mix streams and relay the mixed stream to CDNs. You can use this API to do the following:
 1. Publish (also known as “relay”) the audio/video stream of one anchor to CDNs. For details, see example 2 (starting a task to relay the audio and video of a stream) and example 3 (starting a task to relay only the audio of a stream).
 2. Mix the streams of multiple anchors in a room or in different rooms and publish the mixed stream to CDNs. You can use `AudioParams.SubscribeAudioList` to specify the users whose audios are mixed, and use `VideoParams.LayoutParams` to specify the layout of the anchors’ videos. For details, see example 1 (mixing streams and publishing the mixed stream to a CDN).
