@@ -53,7 +53,7 @@ Sender <email address>
     private String ReplyToAddresses;
 
     /**
-    * Template when sending emails using a template.
+    * Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
     */
     @SerializedName("Template")
     @Expose
@@ -67,7 +67,7 @@ Sender <email address>
     private Simple Simple;
 
     /**
-    * Email attachments
+    * Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
     */
     @SerializedName("Attachments")
     @Expose
@@ -160,16 +160,16 @@ Sender <email address>
     }
 
     /**
-     * Get Template when sending emails using a template. 
-     * @return Template Template when sending emails using a template.
+     * Get Template parameters for template-based sending. As `Simple` has been disused, `Template` is required. 
+     * @return Template Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
      */
     public Template getTemplate() {
         return this.Template;
     }
 
     /**
-     * Set Template when sending emails using a template.
-     * @param Template Template when sending emails using a template.
+     * Set Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
+     * @param Template Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
      */
     public void setTemplate(Template Template) {
         this.Template = Template;
@@ -192,16 +192,16 @@ Sender <email address>
     }
 
     /**
-     * Get Email attachments 
-     * @return Attachments Email attachments
+     * Get Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error. 
+     * @return Attachments Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
      */
     public Attachment [] getAttachments() {
         return this.Attachments;
     }
 
     /**
-     * Set Email attachments
-     * @param Attachments Email attachments
+     * Set Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
+     * @param Attachments Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
      */
     public void setAttachments(Attachment [] Attachments) {
         this.Attachments = Attachments;

@@ -37,7 +37,7 @@ public class CreateSubscriptionRequest extends AbstractModel{
     private String TopicName;
 
     /**
-    * Subscriber name, which can contain up to 150 letters, digits, hyphens, and underscores.
+    * Subscriber name, which can contain up to 128 characters.
     */
     @SerializedName("SubscriptionName")
     @Expose
@@ -111,16 +111,16 @@ public class CreateSubscriptionRequest extends AbstractModel{
     }
 
     /**
-     * Get Subscriber name, which can contain up to 150 letters, digits, hyphens, and underscores. 
-     * @return SubscriptionName Subscriber name, which can contain up to 150 letters, digits, hyphens, and underscores.
+     * Get Subscriber name, which can contain up to 128 characters. 
+     * @return SubscriptionName Subscriber name, which can contain up to 128 characters.
      */
     public String getSubscriptionName() {
         return this.SubscriptionName;
     }
 
     /**
-     * Set Subscriber name, which can contain up to 150 letters, digits, hyphens, and underscores.
-     * @param SubscriptionName Subscriber name, which can contain up to 150 letters, digits, hyphens, and underscores.
+     * Set Subscriber name, which can contain up to 128 characters.
+     * @param SubscriptionName Subscriber name, which can contain up to 128 characters.
      */
     public void setSubscriptionName(String SubscriptionName) {
         this.SubscriptionName = SubscriptionName;

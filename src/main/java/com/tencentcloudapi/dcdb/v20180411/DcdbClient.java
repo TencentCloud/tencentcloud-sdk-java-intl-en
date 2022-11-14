@@ -824,6 +824,66 @@ Note: accounts with the same username but different hosts are different accounts
     }
 
     /**
+     *This API is used to modify instance network.
+     * @param req ModifyInstanceNetworkRequest
+     * @return ModifyInstanceNetworkResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceNetworkResponse ModifyInstanceNetwork(ModifyInstanceNetworkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceNetworkResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceNetworkResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstanceNetwork");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify instance VIP.
+     * @param req ModifyInstanceVipRequest
+     * @return ModifyInstanceVipResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceVipResponse ModifyInstanceVip(ModifyInstanceVipRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceVipResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceVipResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstanceVip");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify instance Vport.
+     * @param req ModifyInstanceVportRequest
+     * @return ModifyInstanceVportResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceVportResponse ModifyInstanceVport(ModifyInstanceVportRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceVportResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceVportResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstanceVport");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to reset the password of a TencentDB account.
 Note: accounts with the same username but different hosts are different accounts.
      * @param req ResetAccountPasswordRequest

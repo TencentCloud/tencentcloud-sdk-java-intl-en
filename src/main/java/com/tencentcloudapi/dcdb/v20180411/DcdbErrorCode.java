@@ -6,6 +6,9 @@ public enum DcdbErrorCode {
     // Failed to add the security group information of an instance.
      FAILEDOPERATION_ADDINSTANCEINFOFAILED("FailedOperation.AddInstanceInfoFailed"),
      
+    // Failed to apply for VIP
+     FAILEDOPERATION_APPLYVIPFAILED("FailedOperation.ApplyVipFailed"),
+     
     // Failed to associate the security group.
      FAILEDOPERATION_ASSOCIATESECURITYGROUPSFAILED("FailedOperation.AssociateSecurityGroupsFailed"),
      
@@ -42,6 +45,9 @@ public enum DcdbErrorCode {
     // Failed to reset the account password.
      FAILEDOPERATION_RESETPASSWORDFAILED("FailedOperation.ResetPasswordFailed"),
      
+    // Failed to update the security group
+     FAILEDOPERATION_SGCHANGEVIP("FailedOperation.SGChangeVip"),
+     
     // Failed to set a rule.
      FAILEDOPERATION_SETRULELOCATIONFAILED("FailedOperation.SetRuleLocationFailed"),
      
@@ -54,11 +60,23 @@ public enum DcdbErrorCode {
     // Unverified user.
      FAILEDOPERATION_USERNOTAUTHED("FailedOperation.UserNotAuthed"),
      
+    // VIP can’t be the same.
+     FAILEDOPERATION_VIPNOTCHANGE("FailedOperation.VipNotChange"),
+     
+    // Failed to add service to VPC
+     FAILEDOPERATION_VPCADDSERVICEFAILED("FailedOperation.VpcAddServiceFailed"),
+     
+    // Abnormal public network status
+     FAILEDOPERATION_WANSTATUSABNORMAL("FailedOperation.WanStatusAbnormal"),
+     
     // Internal error.
      INTERNALERROR("InternalError"),
      
     // CAM authentication request failed.
      INTERNALERROR_CAMAUTHFAILED("InternalError.CamAuthFailed"),
+     
+    // 
+     INTERNALERROR_CHECKVIPSTATUSFAILED("InternalError.CheckVipStatusFailed"),
      
     // Invalid COS instance address configuration.
      INTERNALERROR_COSCONFIGURATION("InternalError.CosConfiguration"),
@@ -108,6 +126,9 @@ public enum DcdbErrorCode {
     // Failed to get the list of accounts.
      INTERNALERROR_GETUSERLISTFAILED("InternalError.GetUserListFailed"),
      
+    // Failed to get the number of security groups
+     INTERNALERROR_GETUSERSGCOUNTFAILED("InternalError.GetUserSGCountFailed"),
+     
     // Failed to query the security group quota of the user.
      INTERNALERROR_GETUSGQUOTAERROR("InternalError.GetUsgQuotaError"),
      
@@ -153,6 +174,9 @@ public enum DcdbErrorCode {
     // Failed to update the database.
      INTERNALERROR_UPDATEDATABASEFAILED("InternalError.UpdateDatabaseFailed"),
      
+    // VPC operation failed
+     INTERNALERROR_VPCOPERATIONFAILED("InternalError.VpcOperationFailed"),
+     
     // Public network operation failed.
      INTERNALERROR_WANSERVICEFAILED("InternalError.WanServiceFailed"),
      
@@ -192,8 +216,20 @@ public enum DcdbErrorCode {
     // The specified VPC subnet was not found.
      INVALIDPARAMETER_SUBNETNOTFOUND("InvalidParameter.SubnetNotFound"),
      
+    // The SNAT subnet doesn’t support applying for IPs.
+     INVALIDPARAMETER_SUBNETUNAVAILABLE("InvalidParameter.SubnetUnavailable"),
+     
+    // VIP is not in the subnet.
+     INVALIDPARAMETER_VIPNOTINSUBNET("InvalidParameter.VipNotInSubnet"),
+     
+    // VIP is in use.
+     INVALIDPARAMETER_VIPUSED("InvalidParameter.VipUsed"),
+     
     // The specified VPC was not found.
      INVALIDPARAMETER_VPCNOTFOUND("InvalidParameter.VpcNotFound"),
+     
+    // Vport is in use.
+     INVALIDPARAMETER_VPORTUSED("InvalidParameter.VportUsed"),
      
     // Incorrect AZ information.
      INVALIDPARAMETER_ZONEIDILLEGAL("InvalidParameter.ZoneIdIllegal"),

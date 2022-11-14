@@ -37,6 +37,13 @@ public class CycleEmailParam extends AbstractModel{
     private Long IntervalTime;
 
     /**
+    * Specifies whether to end the cycle. This parameter is used to update the task. Valid values: 0: No; 1: Yes.
+    */
+    @SerializedName("TermCycle")
+    @Expose
+    private Long TermCycle;
+
+    /**
      * Get Start time of the task 
      * @return BeginTime Start time of the task
      */
@@ -68,6 +75,22 @@ public class CycleEmailParam extends AbstractModel{
         this.IntervalTime = IntervalTime;
     }
 
+    /**
+     * Get Specifies whether to end the cycle. This parameter is used to update the task. Valid values: 0: No; 1: Yes. 
+     * @return TermCycle Specifies whether to end the cycle. This parameter is used to update the task. Valid values: 0: No; 1: Yes.
+     */
+    public Long getTermCycle() {
+        return this.TermCycle;
+    }
+
+    /**
+     * Set Specifies whether to end the cycle. This parameter is used to update the task. Valid values: 0: No; 1: Yes.
+     * @param TermCycle Specifies whether to end the cycle. This parameter is used to update the task. Valid values: 0: No; 1: Yes.
+     */
+    public void setTermCycle(Long TermCycle) {
+        this.TermCycle = TermCycle;
+    }
+
     public CycleEmailParam() {
     }
 
@@ -82,6 +105,9 @@ public class CycleEmailParam extends AbstractModel{
         if (source.IntervalTime != null) {
             this.IntervalTime = new Long(source.IntervalTime);
         }
+        if (source.TermCycle != null) {
+            this.TermCycle = new Long(source.TermCycle);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class CycleEmailParam extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
         this.setParamSimple(map, prefix + "IntervalTime", this.IntervalTime);
+        this.setParamSimple(map, prefix + "TermCycle", this.TermCycle);
 
     }
 }

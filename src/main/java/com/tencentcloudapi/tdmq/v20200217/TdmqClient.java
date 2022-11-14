@@ -919,6 +919,46 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the list of TDMQ for RabbitMQ exclusive cluster nodes.
+     * @param req DescribeRabbitMQNodeListRequest
+     * @return DescribeRabbitMQNodeListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRabbitMQNodeListResponse DescribeRabbitMQNodeList(DescribeRabbitMQNodeListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRabbitMQNodeListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRabbitMQNodeListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRabbitMQNodeList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of the purchased TDMQ for RabbitMQ exclusive instances.
+     * @param req DescribeRabbitMQVipInstancesRequest
+     * @return DescribeRabbitMQVipInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRabbitMQVipInstancesResponse DescribeRabbitMQVipInstances(DescribeRabbitMQVipInstancesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRabbitMQVipInstancesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRabbitMQVipInstancesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRabbitMQVipInstances");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the information of a specific RocketMQ cluster.
      * @param req DescribeRocketMQClusterRequest
      * @return DescribeRocketMQClusterResponse
