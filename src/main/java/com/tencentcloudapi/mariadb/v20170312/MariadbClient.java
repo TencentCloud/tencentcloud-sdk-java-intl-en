@@ -462,6 +462,26 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     }
 
     /**
+     *This API is used to view the configured number of days for retention of database backup logs.
+     * @param req DescribeLogFileRetentionPeriodRequest
+     * @return DescribeLogFileRetentionPeriodResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogFileRetentionPeriodResponse DescribeLogFileRetentionPeriod(DescribeLogFileRetentionPeriodRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLogFileRetentionPeriodResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLogFileRetentionPeriodResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLogFileRetentionPeriod");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query TencentDB order information. You can pass in an order ID to query the TencentDB instance associated with the order and the corresponding task process ID.
      * @param req DescribeOrdersRequest
      * @return DescribeOrdersResponse
@@ -681,6 +701,66 @@ Note: accounts with the same username but different hosts are different accounts
                 Type type = new TypeToken<JsonResponseModel<ModifyDBSyncModeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyDBSyncMode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify instance network.
+     * @param req ModifyInstanceNetworkRequest
+     * @return ModifyInstanceNetworkResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceNetworkResponse ModifyInstanceNetwork(ModifyInstanceNetworkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceNetworkResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceNetworkResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstanceNetwork");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify instance VIP.
+     * @param req ModifyInstanceVipRequest
+     * @return ModifyInstanceVipResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceVipResponse ModifyInstanceVip(ModifyInstanceVipRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceVipResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceVipResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstanceVip");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify instance Vport.
+     * @param req ModifyInstanceVportRequest
+     * @return ModifyInstanceVportResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceVportResponse ModifyInstanceVport(ModifyInstanceVportRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyInstanceVportResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyInstanceVportResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyInstanceVport");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
