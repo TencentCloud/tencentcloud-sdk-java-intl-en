@@ -13,35 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ses.v20201002.models;
+package com.tencentcloudapi.intlpartnersmgt.v20220928.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class GetEmailTemplateResponse extends AbstractModel{
+public class QueryPartnerCreditResponse extends AbstractModel{
 
     /**
-    * Template content.
+    * Allocated credit
     */
-    @SerializedName("TemplateContent")
+    @SerializedName("AllocatedCredit")
     @Expose
-    private TemplateContent TemplateContent;
+    private Float AllocatedCredit;
 
     /**
-    * Template status. Valid values: `0` (approved); `1` (pending approval); `2` (rejected).
+    * Total credit
     */
-    @SerializedName("TemplateStatus")
+    @SerializedName("TotalCredit")
     @Expose
-    private Long TemplateStatus;
+    private Float TotalCredit;
 
     /**
-    * Template name
+    * Remaining credit
     */
-    @SerializedName("TemplateName")
+    @SerializedName("RemainingCredit")
     @Expose
-    private String TemplateName;
+    private Float RemainingCredit;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -51,51 +51,51 @@ public class GetEmailTemplateResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Template content. 
-     * @return TemplateContent Template content.
+     * Get Allocated credit 
+     * @return AllocatedCredit Allocated credit
      */
-    public TemplateContent getTemplateContent() {
-        return this.TemplateContent;
+    public Float getAllocatedCredit() {
+        return this.AllocatedCredit;
     }
 
     /**
-     * Set Template content.
-     * @param TemplateContent Template content.
+     * Set Allocated credit
+     * @param AllocatedCredit Allocated credit
      */
-    public void setTemplateContent(TemplateContent TemplateContent) {
-        this.TemplateContent = TemplateContent;
+    public void setAllocatedCredit(Float AllocatedCredit) {
+        this.AllocatedCredit = AllocatedCredit;
     }
 
     /**
-     * Get Template status. Valid values: `0` (approved); `1` (pending approval); `2` (rejected). 
-     * @return TemplateStatus Template status. Valid values: `0` (approved); `1` (pending approval); `2` (rejected).
+     * Get Total credit 
+     * @return TotalCredit Total credit
      */
-    public Long getTemplateStatus() {
-        return this.TemplateStatus;
+    public Float getTotalCredit() {
+        return this.TotalCredit;
     }
 
     /**
-     * Set Template status. Valid values: `0` (approved); `1` (pending approval); `2` (rejected).
-     * @param TemplateStatus Template status. Valid values: `0` (approved); `1` (pending approval); `2` (rejected).
+     * Set Total credit
+     * @param TotalCredit Total credit
      */
-    public void setTemplateStatus(Long TemplateStatus) {
-        this.TemplateStatus = TemplateStatus;
+    public void setTotalCredit(Float TotalCredit) {
+        this.TotalCredit = TotalCredit;
     }
 
     /**
-     * Get Template name 
-     * @return TemplateName Template name
+     * Get Remaining credit 
+     * @return RemainingCredit Remaining credit
      */
-    public String getTemplateName() {
-        return this.TemplateName;
+    public Float getRemainingCredit() {
+        return this.RemainingCredit;
     }
 
     /**
-     * Set Template name
-     * @param TemplateName Template name
+     * Set Remaining credit
+     * @param RemainingCredit Remaining credit
      */
-    public void setTemplateName(String TemplateName) {
-        this.TemplateName = TemplateName;
+    public void setRemainingCredit(Float RemainingCredit) {
+        this.RemainingCredit = RemainingCredit;
     }
 
     /**
@@ -114,22 +114,22 @@ public class GetEmailTemplateResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public GetEmailTemplateResponse() {
+    public QueryPartnerCreditResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public GetEmailTemplateResponse(GetEmailTemplateResponse source) {
-        if (source.TemplateContent != null) {
-            this.TemplateContent = new TemplateContent(source.TemplateContent);
+    public QueryPartnerCreditResponse(QueryPartnerCreditResponse source) {
+        if (source.AllocatedCredit != null) {
+            this.AllocatedCredit = new Float(source.AllocatedCredit);
         }
-        if (source.TemplateStatus != null) {
-            this.TemplateStatus = new Long(source.TemplateStatus);
+        if (source.TotalCredit != null) {
+            this.TotalCredit = new Float(source.TotalCredit);
         }
-        if (source.TemplateName != null) {
-            this.TemplateName = new String(source.TemplateName);
+        if (source.RemainingCredit != null) {
+            this.RemainingCredit = new Float(source.RemainingCredit);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -141,9 +141,9 @@ public class GetEmailTemplateResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "TemplateContent.", this.TemplateContent);
-        this.setParamSimple(map, prefix + "TemplateStatus", this.TemplateStatus);
-        this.setParamSimple(map, prefix + "TemplateName", this.TemplateName);
+        this.setParamSimple(map, prefix + "AllocatedCredit", this.AllocatedCredit);
+        this.setParamSimple(map, prefix + "TotalCredit", this.TotalCredit);
+        this.setParamSimple(map, prefix + "RemainingCredit", this.RemainingCredit);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
