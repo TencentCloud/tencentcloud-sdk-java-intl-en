@@ -26,6 +26,7 @@ public class CreateLivePullStreamTaskRequest extends AbstractModel{
     * The source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
+PullPicPushLive: Images
     */
     @SerializedName("SourceType")
     @Expose
@@ -221,12 +222,24 @@ Notes:
     private PullPushWatermarkInfo [] WatermarkList;
 
     /**
+    * Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+    */
+    @SerializedName("VodLocalMode")
+    @Expose
+    private Long VodLocalMode;
+
+    /**
      * Get The source type. Valid values:
 PullLivePushLive: Live streaming
-PullVodPushLive: Video files 
+PullVodPushLive: Video files
+PullPicPushLive: Images 
      * @return SourceType The source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
+PullPicPushLive: Images
      */
     public String getSourceType() {
         return this.SourceType;
@@ -236,9 +249,11 @@ PullVodPushLive: Video files
      * Set The source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
+PullPicPushLive: Images
      * @param SourceType The source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
+PullPicPushLive: Images
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;
@@ -784,6 +799,34 @@ Notes:
         this.WatermarkList = WatermarkList;
     }
 
+    /**
+     * Get Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees. 
+     * @return VodLocalMode Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+     */
+    public Long getVodLocalMode() {
+        return this.VodLocalMode;
+    }
+
+    /**
+     * Set Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+     * @param VodLocalMode Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+     */
+    public void setVodLocalMode(Long VodLocalMode) {
+        this.VodLocalMode = VodLocalMode;
+    }
+
     public CreateLivePullStreamTaskRequest() {
     }
 
@@ -858,6 +901,9 @@ Notes:
                 this.WatermarkList[i] = new PullPushWatermarkInfo(source.WatermarkList[i]);
             }
         }
+        if (source.VodLocalMode != null) {
+            this.VodLocalMode = new Long(source.VodLocalMode);
+        }
     }
 
 
@@ -884,6 +930,7 @@ Notes:
         this.setParamSimple(map, prefix + "BackupSourceType", this.BackupSourceType);
         this.setParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
         this.setParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
+        this.setParamSimple(map, prefix + "VodLocalMode", this.VodLocalMode);
 
     }
 }

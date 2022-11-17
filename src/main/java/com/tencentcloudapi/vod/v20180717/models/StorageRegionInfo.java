@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class StorageRegionInfo extends AbstractModel{
 
     /**
-    * Storage region.
+    * The storage region.
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * Description of the storage region.
+    * The description of the storage region.
     */
     @SerializedName("Description")
     @Expose
@@ -53,32 +53,41 @@ public class StorageRegionInfo extends AbstractModel{
     private Boolean IsDefault;
 
     /**
-     * Get Storage region. 
-     * @return Region Storage region.
+    * Whether the storage region is inside or outside the Chinese mainland. Valid values:
+<li>Chinese Mainland</li>
+<li>Outside Chinese Mainland</li>
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
+     * Get The storage region. 
+     * @return Region The storage region.
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Storage region.
-     * @param Region Storage region.
+     * Set The storage region.
+     * @param Region The storage region.
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Description of the storage region. 
-     * @return Description Description of the storage region.
+     * Get The description of the storage region. 
+     * @return Description The description of the storage region.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Description of the storage region.
-     * @param Description Description of the storage region.
+     * Set The description of the storage region.
+     * @param Description The description of the storage region.
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -124,6 +133,30 @@ public class StorageRegionInfo extends AbstractModel{
         this.IsDefault = IsDefault;
     }
 
+    /**
+     * Get Whether the storage region is inside or outside the Chinese mainland. Valid values:
+<li>Chinese Mainland</li>
+<li>Outside Chinese Mainland</li> 
+     * @return Area Whether the storage region is inside or outside the Chinese mainland. Valid values:
+<li>Chinese Mainland</li>
+<li>Outside Chinese Mainland</li>
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set Whether the storage region is inside or outside the Chinese mainland. Valid values:
+<li>Chinese Mainland</li>
+<li>Outside Chinese Mainland</li>
+     * @param Area Whether the storage region is inside or outside the Chinese mainland. Valid values:
+<li>Chinese Mainland</li>
+<li>Outside Chinese Mainland</li>
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
     public StorageRegionInfo() {
     }
 
@@ -144,6 +177,9 @@ public class StorageRegionInfo extends AbstractModel{
         if (source.IsDefault != null) {
             this.IsDefault = new Boolean(source.IsDefault);
         }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
     }
 
 
@@ -155,6 +191,7 @@ public class StorageRegionInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "IsDefault", this.IsDefault);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

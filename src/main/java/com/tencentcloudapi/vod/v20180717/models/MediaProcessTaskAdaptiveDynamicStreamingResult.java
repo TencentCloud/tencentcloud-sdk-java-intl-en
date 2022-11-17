@@ -51,6 +51,13 @@ public class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractMode
     private String Message;
 
     /**
+    * The progress of the adaptive bitrate task. Value range: 0-100.
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Long Progress;
+
+    /**
     * Input of adaptive bitrate streaming task.
     */
     @SerializedName("Input")
@@ -129,6 +136,22 @@ public class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractMode
     }
 
     /**
+     * Get The progress of the adaptive bitrate task. Value range: 0-100. 
+     * @return Progress The progress of the adaptive bitrate task. Value range: 0-100.
+     */
+    public Long getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set The progress of the adaptive bitrate task. Value range: 0-100.
+     * @param Progress The progress of the adaptive bitrate task. Value range: 0-100.
+     */
+    public void setProgress(Long Progress) {
+        this.Progress = Progress;
+    }
+
+    /**
      * Get Input of adaptive bitrate streaming task. 
      * @return Input Input of adaptive bitrate streaming task.
      */
@@ -180,6 +203,9 @@ public class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractMode
         if (source.Message != null) {
             this.Message = new String(source.Message);
         }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
         if (source.Input != null) {
             this.Input = new AdaptiveDynamicStreamingTaskInput(source.Input);
         }
@@ -197,6 +223,7 @@ public class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractMode
         this.setParamSimple(map, prefix + "ErrCodeExt", this.ErrCodeExt);
         this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
 

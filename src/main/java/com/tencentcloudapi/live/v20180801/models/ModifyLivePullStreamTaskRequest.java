@@ -148,8 +148,9 @@ PullLivePushLive: Live streaming
 PullVodPushLive: Video files
 Notes:
 1. Backup sources are supported only if the primary source type is live streaming.
-2. When pull from the primary source is interrupted, the system will pull from the backup source.
-3. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
+2. Leaving this parameter empty will reset the backup source.
+3. When pull from the primary source is interrupted, the system will pull from the backup source.
+4. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
     */
     @SerializedName("BackupSourceType")
     @Expose
@@ -177,6 +178,16 @@ Notes:
     @SerializedName("WatermarkList")
     @Expose
     private PullPushWatermarkInfo [] WatermarkList;
+
+    /**
+    * Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+    */
+    @SerializedName("VodLocalMode")
+    @Expose
+    private Long VodLocalMode;
 
     /**
      * Get The task ID. 
@@ -508,15 +519,17 @@ PullLivePushLive: Live streaming
 PullVodPushLive: Video files
 Notes:
 1. Backup sources are supported only if the primary source type is live streaming.
-2. When pull from the primary source is interrupted, the system will pull from the backup source.
-3. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is. 
+2. Leaving this parameter empty will reset the backup source.
+3. When pull from the primary source is interrupted, the system will pull from the backup source.
+4. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is. 
      * @return BackupSourceType The backup source type.
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
 Notes:
 1. Backup sources are supported only if the primary source type is live streaming.
-2. When pull from the primary source is interrupted, the system will pull from the backup source.
-3. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
+2. Leaving this parameter empty will reset the backup source.
+3. When pull from the primary source is interrupted, the system will pull from the backup source.
+4. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
      */
     public String getBackupSourceType() {
         return this.BackupSourceType;
@@ -528,15 +541,17 @@ PullLivePushLive: Live streaming
 PullVodPushLive: Video files
 Notes:
 1. Backup sources are supported only if the primary source type is live streaming.
-2. When pull from the primary source is interrupted, the system will pull from the backup source.
-3. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
+2. Leaving this parameter empty will reset the backup source.
+3. When pull from the primary source is interrupted, the system will pull from the backup source.
+4. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
      * @param BackupSourceType The backup source type.
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
 Notes:
 1. Backup sources are supported only if the primary source type is live streaming.
-2. When pull from the primary source is interrupted, the system will pull from the backup source.
-3. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
+2. Leaving this parameter empty will reset the backup source.
+3. When pull from the primary source is interrupted, the system will pull from the backup source.
+4. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
      */
     public void setBackupSourceType(String BackupSourceType) {
         this.BackupSourceType = BackupSourceType;
@@ -610,6 +625,34 @@ Notes:
         this.WatermarkList = WatermarkList;
     }
 
+    /**
+     * Get Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees. 
+     * @return VodLocalMode Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+     */
+    public Long getVodLocalMode() {
+        return this.VodLocalMode;
+    }
+
+    /**
+     * Set Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+     * @param VodLocalMode Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+     */
+    public void setVodLocalMode(Long VodLocalMode) {
+        this.VodLocalMode = VodLocalMode;
+    }
+
     public ModifyLivePullStreamTaskRequest() {
     }
 
@@ -675,6 +718,9 @@ Notes:
                 this.WatermarkList[i] = new PullPushWatermarkInfo(source.WatermarkList[i]);
             }
         }
+        if (source.VodLocalMode != null) {
+            this.VodLocalMode = new Long(source.VodLocalMode);
+        }
     }
 
 
@@ -698,6 +744,7 @@ Notes:
         this.setParamSimple(map, prefix + "BackupSourceType", this.BackupSourceType);
         this.setParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
         this.setParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
+        this.setParamSimple(map, prefix + "VodLocalMode", this.VodLocalMode);
 
     }
 }
