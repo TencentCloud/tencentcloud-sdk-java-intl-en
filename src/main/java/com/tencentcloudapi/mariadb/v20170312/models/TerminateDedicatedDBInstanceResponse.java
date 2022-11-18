@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.intlpartnersmgt.v20220928.models;
+package com.tencentcloudapi.mariadb.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryDirectCustomersCreditResponse extends AbstractModel{
+public class TerminateDedicatedDBInstanceResponse extends AbstractModel{
 
     /**
-    * Direct customer information list
+    * Async task ID
     */
-    @SerializedName("Data")
+    @SerializedName("FlowId")
     @Expose
-    private QueryDirectCustomersCreditData [] Data;
+    private Long FlowId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +37,19 @@ public class QueryDirectCustomersCreditResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Direct customer information list 
-     * @return Data Direct customer information list
+     * Get Async task ID 
+     * @return FlowId Async task ID
      */
-    public QueryDirectCustomersCreditData [] getData() {
-        return this.Data;
+    public Long getFlowId() {
+        return this.FlowId;
     }
 
     /**
-     * Set Direct customer information list
-     * @param Data Direct customer information list
+     * Set Async task ID
+     * @param FlowId Async task ID
      */
-    public void setData(QueryDirectCustomersCreditData [] Data) {
-        this.Data = Data;
+    public void setFlowId(Long FlowId) {
+        this.FlowId = FlowId;
     }
 
     /**
@@ -68,19 +68,16 @@ public class QueryDirectCustomersCreditResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public QueryDirectCustomersCreditResponse() {
+    public TerminateDedicatedDBInstanceResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public QueryDirectCustomersCreditResponse(QueryDirectCustomersCreditResponse source) {
-        if (source.Data != null) {
-            this.Data = new QueryDirectCustomersCreditData[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new QueryDirectCustomersCreditData(source.Data[i]);
-            }
+    public TerminateDedicatedDBInstanceResponse(TerminateDedicatedDBInstanceResponse source) {
+        if (source.FlowId != null) {
+            this.FlowId = new Long(source.FlowId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -92,7 +89,7 @@ public class QueryDirectCustomersCreditResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

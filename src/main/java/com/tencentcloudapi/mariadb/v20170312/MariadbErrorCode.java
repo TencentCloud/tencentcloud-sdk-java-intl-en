@@ -39,6 +39,12 @@ public enum MariadbErrorCode {
     // Failed to unassociate the security group.
      FAILEDOPERATION_DISASSOCIATESECURITYGROUPSFAILED("FailedOperation.DisassociateSecurityGroupsFailed"),
      
+    // Refund is not supported for the instance
+     FAILEDOPERATION_INSTANCECANNOTRETURN("FailedOperation.InstanceCanNotReturn"),
+     
+    // Instance refund failed
+     FAILEDOPERATION_INSTANCERETURNFAILED("FailedOperation.InstanceReturnFailed"),
+     
     // Failed to modify account permissions.
      FAILEDOPERATION_MODIFYRIGHTFAILED("FailedOperation.ModifyRightFailed"),
      
@@ -186,6 +192,9 @@ public enum MariadbErrorCode {
     // Parameter error.
      INVALIDPARAMETER("InvalidParameter"),
      
+    // API not found
+     INVALIDPARAMETER_ACTIONNOTFOUND("InvalidParameter.ActionNotFound"),
+     
     // The password contains invalid characters.
      INVALIDPARAMETER_CHARACTERERROR("InvalidParameter.CharacterError"),
      
@@ -293,6 +302,9 @@ public enum MariadbErrorCode {
      
     // Incorrect database instance status. Operations are not allowed.
      RESOURCEUNAVAILABLE_INSTANCESTATUSABNORMAL("ResourceUnavailable.InstanceStatusAbnormal"),
+     
+    // 
+     RESOURCEUNAVAILABLE_SGCHECKFAIL("ResourceUnavailable.SGCheckFail"),
      
     // You have no permission to manipulate this API or resource.
      UNAUTHORIZEDOPERATION_PERMISSIONDENIED("UnauthorizedOperation.PermissionDenied"),

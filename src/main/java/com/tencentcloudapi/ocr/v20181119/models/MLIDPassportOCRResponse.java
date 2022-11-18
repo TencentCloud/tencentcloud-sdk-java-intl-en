@@ -72,9 +72,9 @@ public class MLIDPassportOCRResponse extends AbstractModel{
     private String Nationality;
 
     /**
-    * Alarm code
--9103 Alarm for spoofed card
--9102 Alarm for photocopied card
+    * Alarm codes
+-9103 Alarm for spoofed document
+-9102 Alarm for photocopied document (including black & white and color ones)
 -9106 Alarm for covered card
     */
     @SerializedName("Warn")
@@ -237,13 +237,13 @@ public class MLIDPassportOCRResponse extends AbstractModel{
     }
 
     /**
-     * Get Alarm code
--9103 Alarm for spoofed card
--9102 Alarm for photocopied card
+     * Get Alarm codes
+-9103 Alarm for spoofed document
+-9102 Alarm for photocopied document (including black & white and color ones)
 -9106 Alarm for covered card 
-     * @return Warn Alarm code
--9103 Alarm for spoofed card
--9102 Alarm for photocopied card
+     * @return Warn Alarm codes
+-9103 Alarm for spoofed document
+-9102 Alarm for photocopied document (including black & white and color ones)
 -9106 Alarm for covered card
      */
     public Long [] getWarn() {
@@ -251,13 +251,13 @@ public class MLIDPassportOCRResponse extends AbstractModel{
     }
 
     /**
-     * Set Alarm code
--9103 Alarm for spoofed card
--9102 Alarm for photocopied card
+     * Set Alarm codes
+-9103 Alarm for spoofed document
+-9102 Alarm for photocopied document (including black & white and color ones)
 -9106 Alarm for covered card
-     * @param Warn Alarm code
--9103 Alarm for spoofed card
--9102 Alarm for photocopied card
+     * @param Warn Alarm codes
+-9103 Alarm for spoofed document
+-9102 Alarm for photocopied document (including black & white and color ones)
 -9106 Alarm for covered card
      */
     public void setWarn(Long [] Warn) {

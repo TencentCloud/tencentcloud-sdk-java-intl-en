@@ -115,11 +115,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String HeadImage;
 
     /**
-    * Multiple alarm codes. If the ID card is spoofed, photocopied, or doctored, the corresponding alarm code will be returned.
--9102: alarm for photocopied document
--9103: alarm for spoofed document
--9104: alarm for doctored document
--9105: alarm for forged document
+    * Multiple alarm codes. If the ID card is spoofed, photocopied, or photoshopped, the corresponding alarm code will be returned.
+-9102: Alarm for photocopied document
+-9103: Alarm for spoofed document
+-9104: Alarm for photoshopped document
     */
     @SerializedName("WarningCode")
     @Expose
@@ -357,32 +356,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Multiple alarm codes. If the ID card is spoofed, photocopied, or doctored, the corresponding alarm code will be returned.
--9102: alarm for photocopied document
--9103: alarm for spoofed document
--9104: alarm for doctored document
--9105: alarm for forged document 
-     * @return WarningCode Multiple alarm codes. If the ID card is spoofed, photocopied, or doctored, the corresponding alarm code will be returned.
--9102: alarm for photocopied document
--9103: alarm for spoofed document
--9104: alarm for doctored document
--9105: alarm for forged document
+     * Get Multiple alarm codes. If the ID card is spoofed, photocopied, or photoshopped, the corresponding alarm code will be returned.
+-9102: Alarm for photocopied document
+-9103: Alarm for spoofed document
+-9104: Alarm for photoshopped document 
+     * @return WarningCode Multiple alarm codes. If the ID card is spoofed, photocopied, or photoshopped, the corresponding alarm code will be returned.
+-9102: Alarm for photocopied document
+-9103: Alarm for spoofed document
+-9104: Alarm for photoshopped document
      */
     public Long [] getWarningCode() {
         return this.WarningCode;
     }
 
     /**
-     * Set Multiple alarm codes. If the ID card is spoofed, photocopied, or doctored, the corresponding alarm code will be returned.
--9102: alarm for photocopied document
--9103: alarm for spoofed document
--9104: alarm for doctored document
--9105: alarm for forged document
-     * @param WarningCode Multiple alarm codes. If the ID card is spoofed, photocopied, or doctored, the corresponding alarm code will be returned.
--9102: alarm for photocopied document
--9103: alarm for spoofed document
--9104: alarm for doctored document
--9105: alarm for forged document
+     * Set Multiple alarm codes. If the ID card is spoofed, photocopied, or photoshopped, the corresponding alarm code will be returned.
+-9102: Alarm for photocopied document
+-9103: Alarm for spoofed document
+-9104: Alarm for photoshopped document
+     * @param WarningCode Multiple alarm codes. If the ID card is spoofed, photocopied, or photoshopped, the corresponding alarm code will be returned.
+-9102: Alarm for photocopied document
+-9103: Alarm for spoofed document
+-9104: Alarm for photoshopped document
      */
     public void setWarningCode(Long [] WarningCode) {
         this.WarningCode = WarningCode;

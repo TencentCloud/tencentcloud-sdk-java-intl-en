@@ -13,21 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.intlpartnersmgt.v20220928.models;
+package com.tencentcloudapi.mariadb.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryDirectCustomersCreditResponse extends AbstractModel{
+public class IsolateDBInstanceResponse extends AbstractModel{
 
     /**
-    * Direct customer information list
+    * IDs of isolated instances
     */
-    @SerializedName("Data")
+    @SerializedName("SuccessInstanceIds")
     @Expose
-    private QueryDirectCustomersCreditData [] Data;
+    private String [] SuccessInstanceIds;
+
+    /**
+    * IDs of instances failed to be isolated
+    */
+    @SerializedName("FailedInstanceIds")
+    @Expose
+    private String [] FailedInstanceIds;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +44,35 @@ public class QueryDirectCustomersCreditResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Direct customer information list 
-     * @return Data Direct customer information list
+     * Get IDs of isolated instances 
+     * @return SuccessInstanceIds IDs of isolated instances
      */
-    public QueryDirectCustomersCreditData [] getData() {
-        return this.Data;
+    public String [] getSuccessInstanceIds() {
+        return this.SuccessInstanceIds;
     }
 
     /**
-     * Set Direct customer information list
-     * @param Data Direct customer information list
+     * Set IDs of isolated instances
+     * @param SuccessInstanceIds IDs of isolated instances
      */
-    public void setData(QueryDirectCustomersCreditData [] Data) {
-        this.Data = Data;
+    public void setSuccessInstanceIds(String [] SuccessInstanceIds) {
+        this.SuccessInstanceIds = SuccessInstanceIds;
+    }
+
+    /**
+     * Get IDs of instances failed to be isolated 
+     * @return FailedInstanceIds IDs of instances failed to be isolated
+     */
+    public String [] getFailedInstanceIds() {
+        return this.FailedInstanceIds;
+    }
+
+    /**
+     * Set IDs of instances failed to be isolated
+     * @param FailedInstanceIds IDs of instances failed to be isolated
+     */
+    public void setFailedInstanceIds(String [] FailedInstanceIds) {
+        this.FailedInstanceIds = FailedInstanceIds;
     }
 
     /**
@@ -68,18 +91,24 @@ public class QueryDirectCustomersCreditResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public QueryDirectCustomersCreditResponse() {
+    public IsolateDBInstanceResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public QueryDirectCustomersCreditResponse(QueryDirectCustomersCreditResponse source) {
-        if (source.Data != null) {
-            this.Data = new QueryDirectCustomersCreditData[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new QueryDirectCustomersCreditData(source.Data[i]);
+    public IsolateDBInstanceResponse(IsolateDBInstanceResponse source) {
+        if (source.SuccessInstanceIds != null) {
+            this.SuccessInstanceIds = new String[source.SuccessInstanceIds.length];
+            for (int i = 0; i < source.SuccessInstanceIds.length; i++) {
+                this.SuccessInstanceIds[i] = new String(source.SuccessInstanceIds[i]);
+            }
+        }
+        if (source.FailedInstanceIds != null) {
+            this.FailedInstanceIds = new String[source.FailedInstanceIds.length];
+            for (int i = 0; i < source.FailedInstanceIds.length; i++) {
+                this.FailedInstanceIds[i] = new String(source.FailedInstanceIds[i]);
             }
         }
         if (source.RequestId != null) {
@@ -92,7 +121,8 @@ public class QueryDirectCustomersCreditResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamArraySimple(map, prefix + "SuccessInstanceIds.", this.SuccessInstanceIds);
+        this.setParamArraySimple(map, prefix + "FailedInstanceIds.", this.FailedInstanceIds);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

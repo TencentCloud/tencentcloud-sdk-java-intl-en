@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLogFileRetentionPeriodResponse extends AbstractModel{
+public class TerminateDedicatedDBInstanceRequest extends AbstractModel{
 
     /**
     * Instance ID in the format of `tdsql-ow728lmc`
@@ -28,20 +28,6 @@ public class DescribeLogFileRetentionPeriodResponse extends AbstractModel{
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-
-    /**
-    * Backup log retention days
-    */
-    @SerializedName("Days")
-    @Expose
-    private Long Days;
-
-    /**
-    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-    */
-    @SerializedName("RequestId")
-    @Expose
-    private String RequestId;
 
     /**
      * Get Instance ID in the format of `tdsql-ow728lmc` 
@@ -59,54 +45,16 @@ public class DescribeLogFileRetentionPeriodResponse extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
-    /**
-     * Get Backup log retention days 
-     * @return Days Backup log retention days
-     */
-    public Long getDays() {
-        return this.Days;
-    }
-
-    /**
-     * Set Backup log retention days
-     * @param Days Backup log retention days
-     */
-    public void setDays(Long Days) {
-        this.Days = Days;
-    }
-
-    /**
-     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
-     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-     */
-    public String getRequestId() {
-        return this.RequestId;
-    }
-
-    /**
-     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-     */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
-    }
-
-    public DescribeLogFileRetentionPeriodResponse() {
+    public TerminateDedicatedDBInstanceRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeLogFileRetentionPeriodResponse(DescribeLogFileRetentionPeriodResponse source) {
+    public TerminateDedicatedDBInstanceRequest(TerminateDedicatedDBInstanceRequest source) {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
-        }
-        if (source.Days != null) {
-            this.Days = new Long(source.Days);
-        }
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -116,8 +64,6 @@ public class DescribeLogFileRetentionPeriodResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "Days", this.Days);
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

@@ -683,6 +683,26 @@ Note: accounts with the same username but different hosts are different accounts
     }
 
     /**
+     *This API is used to isolate a dedicated TencentDB instance.
+     * @param req IsolateDedicatedDBInstanceRequest
+     * @return IsolateDedicatedDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public IsolateDedicatedDBInstanceResponse IsolateDedicatedDBInstance(IsolateDedicatedDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<IsolateDedicatedDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<IsolateDedicatedDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "IsolateDedicatedDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to isolate pay-as-you-go TDSQL for MySQL instances.
      * @param req IsolateHourDCDBInstanceRequest
      * @return IsolateHourDCDBInstanceResponse
@@ -917,6 +937,26 @@ Note: accounts with the same username but different hosts are different accounts
                 Type type = new TypeToken<JsonResponseModel<SwitchDBInstanceHAResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SwitchDBInstanceHA");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to terminate the isolated dedicated TDSQL instance.
+     * @param req TerminateDedicatedDBInstanceRequest
+     * @return TerminateDedicatedDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateDedicatedDBInstanceResponse TerminateDedicatedDBInstance(TerminateDedicatedDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<TerminateDedicatedDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<TerminateDedicatedDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "TerminateDedicatedDBInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -13,46 +13,46 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mariadb.v20170312.models;
+package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLogFileRetentionPeriodRequest extends AbstractModel{
+public class TerminateDedicatedDBInstanceRequest extends AbstractModel{
 
     /**
-    * Instance ID in the format of `tdsql-ow728lmc`
+    * Instance ID in the format of `dcdbt-ow728lmc`
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Instance ID in the format of `tdsql-ow728lmc` 
-     * @return InstanceId Instance ID in the format of `tdsql-ow728lmc`
+     * Get Instance ID in the format of `dcdbt-ow728lmc` 
+     * @return InstanceId Instance ID in the format of `dcdbt-ow728lmc`
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID in the format of `tdsql-ow728lmc`
-     * @param InstanceId Instance ID in the format of `tdsql-ow728lmc`
+     * Set Instance ID in the format of `dcdbt-ow728lmc`
+     * @param InstanceId Instance ID in the format of `dcdbt-ow728lmc`
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
-    public DescribeLogFileRetentionPeriodRequest() {
+    public TerminateDedicatedDBInstanceRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeLogFileRetentionPeriodRequest(DescribeLogFileRetentionPeriodRequest source) {
+    public TerminateDedicatedDBInstanceRequest(TerminateDedicatedDBInstanceRequest source) {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
