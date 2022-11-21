@@ -69,6 +69,13 @@ public class OverrideTranscodeParameter extends AbstractModel{
     private TEHDConfigForUpdate TEHDConfig;
 
     /**
+    * The subtitle settings.
+    */
+    @SerializedName("SubtitleTemplate")
+    @Expose
+    private SubtitleTemplate SubtitleTemplate;
+
+    /**
      * Get Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, and m4a; mp3, flac, ogg, and m4a are formats of audio files. 
      * @return Container Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, and m4a; mp3, flac, ogg, and m4a are formats of audio files.
      */
@@ -180,6 +187,22 @@ public class OverrideTranscodeParameter extends AbstractModel{
         this.TEHDConfig = TEHDConfig;
     }
 
+    /**
+     * Get The subtitle settings. 
+     * @return SubtitleTemplate The subtitle settings.
+     */
+    public SubtitleTemplate getSubtitleTemplate() {
+        return this.SubtitleTemplate;
+    }
+
+    /**
+     * Set The subtitle settings.
+     * @param SubtitleTemplate The subtitle settings.
+     */
+    public void setSubtitleTemplate(SubtitleTemplate SubtitleTemplate) {
+        this.SubtitleTemplate = SubtitleTemplate;
+    }
+
     public OverrideTranscodeParameter() {
     }
 
@@ -206,6 +229,9 @@ public class OverrideTranscodeParameter extends AbstractModel{
         if (source.TEHDConfig != null) {
             this.TEHDConfig = new TEHDConfigForUpdate(source.TEHDConfig);
         }
+        if (source.SubtitleTemplate != null) {
+            this.SubtitleTemplate = new SubtitleTemplate(source.SubtitleTemplate);
+        }
     }
 
 
@@ -219,6 +245,7 @@ public class OverrideTranscodeParameter extends AbstractModel{
         this.setParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
         this.setParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
         this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
+        this.setParamObj(map, prefix + "SubtitleTemplate.", this.SubtitleTemplate);
 
     }
 }

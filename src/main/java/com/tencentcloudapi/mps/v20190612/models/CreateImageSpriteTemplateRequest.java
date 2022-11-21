@@ -103,6 +103,13 @@ Default value: black.
     private String Comment;
 
     /**
+    * The image format. Valid values: jpg (default), png, webp.
+    */
+    @SerializedName("Format")
+    @Expose
+    private String Format;
+
+    /**
      * Get Sampling type. Valid values:
 <li>Percent: By percent.</li>
 <li>Time: By time interval.</li> 
@@ -302,6 +309,22 @@ Default value: black.
         this.Comment = Comment;
     }
 
+    /**
+     * Get The image format. Valid values: jpg (default), png, webp. 
+     * @return Format The image format. Valid values: jpg (default), png, webp.
+     */
+    public String getFormat() {
+        return this.Format;
+    }
+
+    /**
+     * Set The image format. Valid values: jpg (default), png, webp.
+     * @param Format The image format. Valid values: jpg (default), png, webp.
+     */
+    public void setFormat(String Format) {
+        this.Format = Format;
+    }
+
     public CreateImageSpriteTemplateRequest() {
     }
 
@@ -340,6 +363,9 @@ Default value: black.
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
+        if (source.Format != null) {
+            this.Format = new String(source.Format);
+        }
     }
 
 
@@ -357,6 +383,7 @@ Default value: black.
         this.setParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
         this.setParamSimple(map, prefix + "FillType", this.FillType);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "Format", this.Format);
 
     }
 }

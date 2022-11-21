@@ -23,12 +23,13 @@ import java.util.HashMap;
 public class LiveStreamAiRecognitionResultItem extends AbstractModel{
 
     /**
-    * Result type. Valid values:
-<li>FaceRecognition: face recognition,</li>
-<li>AsrWordsRecognition: speech keyword recognition,</li>
-<li>OcrWordsRecognition: text keyword recognition,</li>
-<li>AsrFullTextRecognition: full speech recognition,</li>
-<li>OcrFullTextRecognition: full text recognition.</li>
+    * The result type. Valid values:
+<li>FaceRecognition: Face recognition</li>
+<li>AsrWordsRecognition: Speech keyword recognition</li>
+<li>OcrWordsRecognition: Text keyword recognition</li>
+<li>AsrFullTextRecognition: Full speech recognition</li>
+<li>OcrFullTextRecognition: Full text recognition</li>
+<li>TransTextRecognition: Speech translation</li>
     */
     @SerializedName("Type")
     @Expose
@@ -75,36 +76,47 @@ public class LiveStreamAiRecognitionResultItem extends AbstractModel{
     private LiveStreamOcrFullTextRecognitionResult [] OcrFullTextRecognitionResultSet;
 
     /**
-     * Get Result type. Valid values:
-<li>FaceRecognition: face recognition,</li>
-<li>AsrWordsRecognition: speech keyword recognition,</li>
-<li>OcrWordsRecognition: text keyword recognition,</li>
-<li>AsrFullTextRecognition: full speech recognition,</li>
-<li>OcrFullTextRecognition: full text recognition.</li> 
-     * @return Type Result type. Valid values:
-<li>FaceRecognition: face recognition,</li>
-<li>AsrWordsRecognition: speech keyword recognition,</li>
-<li>OcrWordsRecognition: text keyword recognition,</li>
-<li>AsrFullTextRecognition: full speech recognition,</li>
-<li>OcrFullTextRecognition: full text recognition.</li>
+    * The translation result. This parameter is valid only if `Type` is `TransTextRecognition`.
+    */
+    @SerializedName("TransTextRecognitionResultSet")
+    @Expose
+    private LiveStreamTransTextRecognitionResult [] TransTextRecognitionResultSet;
+
+    /**
+     * Get The result type. Valid values:
+<li>FaceRecognition: Face recognition</li>
+<li>AsrWordsRecognition: Speech keyword recognition</li>
+<li>OcrWordsRecognition: Text keyword recognition</li>
+<li>AsrFullTextRecognition: Full speech recognition</li>
+<li>OcrFullTextRecognition: Full text recognition</li>
+<li>TransTextRecognition: Speech translation</li> 
+     * @return Type The result type. Valid values:
+<li>FaceRecognition: Face recognition</li>
+<li>AsrWordsRecognition: Speech keyword recognition</li>
+<li>OcrWordsRecognition: Text keyword recognition</li>
+<li>AsrFullTextRecognition: Full speech recognition</li>
+<li>OcrFullTextRecognition: Full text recognition</li>
+<li>TransTextRecognition: Speech translation</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Result type. Valid values:
-<li>FaceRecognition: face recognition,</li>
-<li>AsrWordsRecognition: speech keyword recognition,</li>
-<li>OcrWordsRecognition: text keyword recognition,</li>
-<li>AsrFullTextRecognition: full speech recognition,</li>
-<li>OcrFullTextRecognition: full text recognition.</li>
-     * @param Type Result type. Valid values:
-<li>FaceRecognition: face recognition,</li>
-<li>AsrWordsRecognition: speech keyword recognition,</li>
-<li>OcrWordsRecognition: text keyword recognition,</li>
-<li>AsrFullTextRecognition: full speech recognition,</li>
-<li>OcrFullTextRecognition: full text recognition.</li>
+     * Set The result type. Valid values:
+<li>FaceRecognition: Face recognition</li>
+<li>AsrWordsRecognition: Speech keyword recognition</li>
+<li>OcrWordsRecognition: Text keyword recognition</li>
+<li>AsrFullTextRecognition: Full speech recognition</li>
+<li>OcrFullTextRecognition: Full text recognition</li>
+<li>TransTextRecognition: Speech translation</li>
+     * @param Type The result type. Valid values:
+<li>FaceRecognition: Face recognition</li>
+<li>AsrWordsRecognition: Speech keyword recognition</li>
+<li>OcrWordsRecognition: Text keyword recognition</li>
+<li>AsrFullTextRecognition: Full speech recognition</li>
+<li>OcrFullTextRecognition: Full text recognition</li>
+<li>TransTextRecognition: Speech translation</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -210,6 +222,22 @@ public class LiveStreamAiRecognitionResultItem extends AbstractModel{
         this.OcrFullTextRecognitionResultSet = OcrFullTextRecognitionResultSet;
     }
 
+    /**
+     * Get The translation result. This parameter is valid only if `Type` is `TransTextRecognition`. 
+     * @return TransTextRecognitionResultSet The translation result. This parameter is valid only if `Type` is `TransTextRecognition`.
+     */
+    public LiveStreamTransTextRecognitionResult [] getTransTextRecognitionResultSet() {
+        return this.TransTextRecognitionResultSet;
+    }
+
+    /**
+     * Set The translation result. This parameter is valid only if `Type` is `TransTextRecognition`.
+     * @param TransTextRecognitionResultSet The translation result. This parameter is valid only if `Type` is `TransTextRecognition`.
+     */
+    public void setTransTextRecognitionResultSet(LiveStreamTransTextRecognitionResult [] TransTextRecognitionResultSet) {
+        this.TransTextRecognitionResultSet = TransTextRecognitionResultSet;
+    }
+
     public LiveStreamAiRecognitionResultItem() {
     }
 
@@ -251,6 +279,12 @@ public class LiveStreamAiRecognitionResultItem extends AbstractModel{
                 this.OcrFullTextRecognitionResultSet[i] = new LiveStreamOcrFullTextRecognitionResult(source.OcrFullTextRecognitionResultSet[i]);
             }
         }
+        if (source.TransTextRecognitionResultSet != null) {
+            this.TransTextRecognitionResultSet = new LiveStreamTransTextRecognitionResult[source.TransTextRecognitionResultSet.length];
+            for (int i = 0; i < source.TransTextRecognitionResultSet.length; i++) {
+                this.TransTextRecognitionResultSet[i] = new LiveStreamTransTextRecognitionResult(source.TransTextRecognitionResultSet[i]);
+            }
+        }
     }
 
 
@@ -264,6 +298,7 @@ public class LiveStreamAiRecognitionResultItem extends AbstractModel{
         this.setParamArrayObj(map, prefix + "OcrWordsRecognitionResultSet.", this.OcrWordsRecognitionResultSet);
         this.setParamArrayObj(map, prefix + "AsrFullTextRecognitionResultSet.", this.AsrFullTextRecognitionResultSet);
         this.setParamArrayObj(map, prefix + "OcrFullTextRecognitionResultSet.", this.OcrFullTextRecognitionResultSet);
+        this.setParamArrayObj(map, prefix + "TransTextRecognitionResultSet.", this.TransTextRecognitionResultSet);
 
     }
 }

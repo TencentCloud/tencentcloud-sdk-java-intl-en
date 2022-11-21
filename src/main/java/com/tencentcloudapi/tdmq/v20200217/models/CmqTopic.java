@@ -145,6 +145,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long Status;
 
     /**
+    * Valid values: `0` (Pulsar), `1` (RocketMQ).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BrokerType")
+    @Expose
+    private Long BrokerType;
+
+    /**
      * Get Topic ID.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return TopicId Topic ID.
@@ -452,6 +460,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.Status = Status;
     }
 
+    /**
+     * Get Valid values: `0` (Pulsar), `1` (RocketMQ).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BrokerType Valid values: `0` (Pulsar), `1` (RocketMQ).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getBrokerType() {
+        return this.BrokerType;
+    }
+
+    /**
+     * Set Valid values: `0` (Pulsar), `1` (RocketMQ).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BrokerType Valid values: `0` (Pulsar), `1` (RocketMQ).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBrokerType(Long BrokerType) {
+        this.BrokerType = BrokerType;
+    }
+
     public CmqTopic() {
     }
 
@@ -508,6 +536,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.BrokerType != null) {
+            this.BrokerType = new Long(source.BrokerType);
+        }
     }
 
 
@@ -530,6 +561,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "TenantId", this.TenantId);
         this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "BrokerType", this.BrokerType);
 
     }
 }

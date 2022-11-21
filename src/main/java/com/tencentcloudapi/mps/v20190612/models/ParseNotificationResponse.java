@@ -33,7 +33,7 @@ public class ParseNotificationResponse extends AbstractModel{
     private String EventType;
 
     /**
-    * Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
+    * The information of a video processing task. Information will be returned only if `EventType` is `WorkflowTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("WorkflowTaskEvent")
@@ -41,7 +41,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private WorkflowTask WorkflowTaskEvent;
 
     /**
-    * Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
+    * The information of a video editing task. Information will be returned only if `EventType` is `EditMediaTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EditMediaTaskEvent")
     @Expose
@@ -62,7 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String SessionContext;
 
     /**
-    * The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+    * The information of a scheme. Information will be returned only if `EventType` is `ScheduleTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ScheduleTaskEvent")
@@ -105,9 +106,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
+     * Get The information of a video processing task. Information will be returned only if `EventType` is `WorkflowTask`.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WorkflowTaskEvent Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
+     * @return WorkflowTaskEvent The information of a video processing task. Information will be returned only if `EventType` is `WorkflowTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public WorkflowTask getWorkflowTaskEvent() {
@@ -115,9 +116,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
+     * Set The information of a video processing task. Information will be returned only if `EventType` is `WorkflowTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WorkflowTaskEvent Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
+     * @param WorkflowTaskEvent The information of a video processing task. Information will be returned only if `EventType` is `WorkflowTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setWorkflowTaskEvent(WorkflowTask WorkflowTaskEvent) {
@@ -125,16 +126,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`. 
-     * @return EditMediaTaskEvent Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
+     * Get The information of a video editing task. Information will be returned only if `EventType` is `EditMediaTask`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EditMediaTaskEvent The information of a video editing task. Information will be returned only if `EventType` is `EditMediaTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public EditMediaTask getEditMediaTaskEvent() {
         return this.EditMediaTaskEvent;
     }
 
     /**
-     * Set Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
-     * @param EditMediaTaskEvent Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
+     * Set The information of a video editing task. Information will be returned only if `EventType` is `EditMediaTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EditMediaTaskEvent The information of a video editing task. Information will be returned only if `EventType` is `EditMediaTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEditMediaTaskEvent(EditMediaTask EditMediaTaskEvent) {
         this.EditMediaTaskEvent = EditMediaTaskEvent;
@@ -173,9 +178,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+     * Get The information of a scheme. Information will be returned only if `EventType` is `ScheduleTask`.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ScheduleTaskEvent The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+     * @return ScheduleTaskEvent The information of a scheme. Information will be returned only if `EventType` is `ScheduleTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ScheduleTask getScheduleTaskEvent() {
@@ -183,9 +188,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+     * Set The information of a scheme. Information will be returned only if `EventType` is `ScheduleTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ScheduleTaskEvent The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+     * @param ScheduleTaskEvent The information of a scheme. Information will be returned only if `EventType` is `ScheduleTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setScheduleTaskEvent(ScheduleTask ScheduleTaskEvent) {

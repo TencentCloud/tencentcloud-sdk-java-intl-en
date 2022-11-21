@@ -72,7 +72,7 @@ Default value: open.
     private String ResolutionAdaptive;
 
     /**
-    * Image format. Valid values: jpg; png. Default value: jpg.
+    * The image format. Valid values: jpg (default), png, webp.
     */
     @SerializedName("Format")
     @Expose
@@ -222,16 +222,16 @@ Default value: open.
     }
 
     /**
-     * Get Image format. Valid values: jpg; png. Default value: jpg. 
-     * @return Format Image format. Valid values: jpg; png. Default value: jpg.
+     * Get The image format. Valid values: jpg (default), png, webp. 
+     * @return Format The image format. Valid values: jpg (default), png, webp.
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set Image format. Valid values: jpg; png. Default value: jpg.
-     * @param Format Image format. Valid values: jpg; png. Default value: jpg.
+     * Set The image format. Valid values: jpg (default), png, webp.
+     * @param Format The image format. Valid values: jpg (default), png, webp.
      */
     public void setFormat(String Format) {
         this.Format = Format;

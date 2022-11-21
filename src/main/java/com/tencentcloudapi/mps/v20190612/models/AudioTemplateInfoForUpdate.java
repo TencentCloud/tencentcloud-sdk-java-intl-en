@@ -74,6 +74,13 @@ When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound chan
     private Long AudioChannel;
 
     /**
+    * The audio tracks to retain. All audio tracks are retained by default.
+    */
+    @SerializedName("StreamSelects")
+    @Expose
+    private Long [] StreamSelects;
+
+    /**
      * Get Audio stream codec.
 When the outer `Container` parameter is `mp3`, the valid value is:
 <li>libmp3lame.</li>
@@ -229,6 +236,22 @@ When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound chan
         this.AudioChannel = AudioChannel;
     }
 
+    /**
+     * Get The audio tracks to retain. All audio tracks are retained by default. 
+     * @return StreamSelects The audio tracks to retain. All audio tracks are retained by default.
+     */
+    public Long [] getStreamSelects() {
+        return this.StreamSelects;
+    }
+
+    /**
+     * Set The audio tracks to retain. All audio tracks are retained by default.
+     * @param StreamSelects The audio tracks to retain. All audio tracks are retained by default.
+     */
+    public void setStreamSelects(Long [] StreamSelects) {
+        this.StreamSelects = StreamSelects;
+    }
+
     public AudioTemplateInfoForUpdate() {
     }
 
@@ -249,6 +272,12 @@ When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound chan
         if (source.AudioChannel != null) {
             this.AudioChannel = new Long(source.AudioChannel);
         }
+        if (source.StreamSelects != null) {
+            this.StreamSelects = new Long[source.StreamSelects.length];
+            for (int i = 0; i < source.StreamSelects.length; i++) {
+                this.StreamSelects[i] = new Long(source.StreamSelects[i]);
+            }
+        }
     }
 
 
@@ -260,6 +289,7 @@ When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound chan
         this.setParamSimple(map, prefix + "Bitrate", this.Bitrate);
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
         this.setParamSimple(map, prefix + "AudioChannel", this.AudioChannel);
+        this.setParamArraySimple(map, prefix + "StreamSelects.", this.StreamSelects);
 
     }
 }

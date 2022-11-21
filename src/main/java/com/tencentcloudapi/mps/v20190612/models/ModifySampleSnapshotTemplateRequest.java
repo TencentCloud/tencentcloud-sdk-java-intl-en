@@ -79,7 +79,7 @@ Default value: open.
     private Long SampleInterval;
 
     /**
-    * Image format. Valid values: jpg; png.
+    * The image format. Valid values: jpg, png, webp.
     */
     @SerializedName("Format")
     @Expose
@@ -245,16 +245,16 @@ Default value: open.
     }
 
     /**
-     * Get Image format. Valid values: jpg; png. 
-     * @return Format Image format. Valid values: jpg; png.
+     * Get The image format. Valid values: jpg, png, webp. 
+     * @return Format The image format. Valid values: jpg, png, webp.
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set Image format. Valid values: jpg; png.
-     * @param Format Image format. Valid values: jpg; png.
+     * Set The image format. Valid values: jpg, png, webp.
+     * @param Format The image format. Valid values: jpg, png, webp.
      */
     public void setFormat(String Format) {
         this.Format = Format;
