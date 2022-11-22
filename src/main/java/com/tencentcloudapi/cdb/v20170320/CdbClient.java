@@ -1433,7 +1433,7 @@ Note: the HTTP response packet will be very large if it contain a single large s
     }
 
     /**
-     *This API (InitDBInstances) is used to initialize instances, including their password, default character set, and instance port number.
+     *This API is used to initialize a TencentDB instance, including initial password, default character set, and instance port number. But it is disused and not recommended. You can now set the instance information by using the parameter `Password`, `ParamList`, and `Port` respectively in the `CreateDBInstance` and `CreateDBInstanceHour` APIs.
      * @param req InitDBInstancesRequest
      * @return InitDBInstancesResponse
      * @throws TencentCloudSDKException
