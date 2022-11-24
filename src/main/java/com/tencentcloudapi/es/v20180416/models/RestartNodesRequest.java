@@ -44,6 +44,20 @@ public class RestartNodesRequest extends AbstractModel{
     private Boolean ForceRestart;
 
     /**
+    * The restart mode. Valid values: `in-place` (default), `blue-green`.
+    */
+    @SerializedName("RestartMode")
+    @Expose
+    private String RestartMode;
+
+    /**
+    * The node status, applicable in the blue/green mode. The blue/green restart is risky if the node is offline.
+    */
+    @SerializedName("IsOffline")
+    @Expose
+    private Boolean IsOffline;
+
+    /**
      * Get Cluster instance ID 
      * @return InstanceId Cluster instance ID
      */
@@ -91,6 +105,38 @@ public class RestartNodesRequest extends AbstractModel{
         this.ForceRestart = ForceRestart;
     }
 
+    /**
+     * Get The restart mode. Valid values: `in-place` (default), `blue-green`. 
+     * @return RestartMode The restart mode. Valid values: `in-place` (default), `blue-green`.
+     */
+    public String getRestartMode() {
+        return this.RestartMode;
+    }
+
+    /**
+     * Set The restart mode. Valid values: `in-place` (default), `blue-green`.
+     * @param RestartMode The restart mode. Valid values: `in-place` (default), `blue-green`.
+     */
+    public void setRestartMode(String RestartMode) {
+        this.RestartMode = RestartMode;
+    }
+
+    /**
+     * Get The node status, applicable in the blue/green mode. The blue/green restart is risky if the node is offline. 
+     * @return IsOffline The node status, applicable in the blue/green mode. The blue/green restart is risky if the node is offline.
+     */
+    public Boolean getIsOffline() {
+        return this.IsOffline;
+    }
+
+    /**
+     * Set The node status, applicable in the blue/green mode. The blue/green restart is risky if the node is offline.
+     * @param IsOffline The node status, applicable in the blue/green mode. The blue/green restart is risky if the node is offline.
+     */
+    public void setIsOffline(Boolean IsOffline) {
+        this.IsOffline = IsOffline;
+    }
+
     public RestartNodesRequest() {
     }
 
@@ -111,6 +157,12 @@ public class RestartNodesRequest extends AbstractModel{
         if (source.ForceRestart != null) {
             this.ForceRestart = new Boolean(source.ForceRestart);
         }
+        if (source.RestartMode != null) {
+            this.RestartMode = new String(source.RestartMode);
+        }
+        if (source.IsOffline != null) {
+            this.IsOffline = new Boolean(source.IsOffline);
+        }
     }
 
 
@@ -121,6 +173,8 @@ public class RestartNodesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArraySimple(map, prefix + "NodeNames.", this.NodeNames);
         this.setParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
+        this.setParamSimple(map, prefix + "RestartMode", this.RestartMode);
+        this.setParamSimple(map, prefix + "IsOffline", this.IsOffline);
 
     }
 }

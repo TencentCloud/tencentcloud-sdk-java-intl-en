@@ -81,6 +81,22 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Boolean SupportNamespaceEndpoint;
 
     /**
+    * VPC Information
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Vpcs")
+    @Expose
+    private VpcConfig [] Vpcs;
+
+    /**
+    * Whether it is an exclusive instance
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsVip")
+    @Expose
+    private Boolean IsVip;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -216,6 +232,46 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.SupportNamespaceEndpoint = SupportNamespaceEndpoint;
     }
 
+    /**
+     * Get VPC Information
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Vpcs VPC Information
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public VpcConfig [] getVpcs() {
+        return this.Vpcs;
+    }
+
+    /**
+     * Set VPC Information
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Vpcs VPC Information
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setVpcs(VpcConfig [] Vpcs) {
+        this.Vpcs = Vpcs;
+    }
+
+    /**
+     * Get Whether it is an exclusive instance
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsVip Whether it is an exclusive instance
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getIsVip() {
+        return this.IsVip;
+    }
+
+    /**
+     * Set Whether it is an exclusive instance
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsVip Whether it is an exclusive instance
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIsVip(Boolean IsVip) {
+        this.IsVip = IsVip;
+    }
+
     public RocketMQClusterInfo() {
     }
 
@@ -248,6 +304,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.SupportNamespaceEndpoint != null) {
             this.SupportNamespaceEndpoint = new Boolean(source.SupportNamespaceEndpoint);
         }
+        if (source.Vpcs != null) {
+            this.Vpcs = new VpcConfig[source.Vpcs.length];
+            for (int i = 0; i < source.Vpcs.length; i++) {
+                this.Vpcs[i] = new VpcConfig(source.Vpcs[i]);
+            }
+        }
+        if (source.IsVip != null) {
+            this.IsVip = new Boolean(source.IsVip);
+        }
     }
 
 
@@ -263,6 +328,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "PublicEndPoint", this.PublicEndPoint);
         this.setParamSimple(map, prefix + "VpcEndPoint", this.VpcEndPoint);
         this.setParamSimple(map, prefix + "SupportNamespaceEndpoint", this.SupportNamespaceEndpoint);
+        this.setParamArrayObj(map, prefix + "Vpcs.", this.Vpcs);
+        this.setParamSimple(map, prefix + "IsVip", this.IsVip);
 
     }
 }

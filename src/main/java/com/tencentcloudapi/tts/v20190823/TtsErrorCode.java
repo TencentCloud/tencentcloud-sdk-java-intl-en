@@ -15,9 +15,6 @@ public enum TtsErrorCode {
     // The request text contains invalid characters.
      INVALIDPARAMETER_INVALIDTEXT("InvalidParameter.InvalidText"),
      
-    // Invalid `status`.
-     INVALIDPARAMETER_STATUS("InvalidParameter.Status"),
-     
     // Invalid `AppId`. See the description of `AppId`.
      INVALIDPARAMETERVALUE_APPID("InvalidParameterValue.AppId"),
      
@@ -36,8 +33,14 @@ public enum TtsErrorCode {
     // Parameter missing.
      INVALIDPARAMETERVALUE_MISSPARAMETERS("InvalidParameterValue.MissParameters"),
      
+    // Error in text segmentation.
+     INVALIDPARAMETERVALUE_PARTICIPLEERROR("InvalidParameterValue.ParticipleError"),
+     
     // Invalid `PrimaryLanguage`. See the description of `PrimaryLanguage`.
      INVALIDPARAMETERVALUE_PRIMARYLANGUAGE("InvalidParameterValue.PrimaryLanguage"),
+     
+    // Invalid SSML tag.
+     INVALIDPARAMETERVALUE_SSMLINVALID("InvalidParameterValue.SSMLInvalid"),
      
     // Invalid `SampleRate`. See the description of `SampleRate`.
      INVALIDPARAMETERVALUE_SAMPLERATE("InvalidParameterValue.SampleRate"),
@@ -86,6 +89,9 @@ public enum TtsErrorCode {
      
     // Free tier is used up.
      UNSUPPORTEDOPERATION_NOFREEACCOUNT("UnsupportedOperation.NoFreeAccount"),
+     
+    // The resource package is used up.
+     UNSUPPORTEDOPERATION_PKGEXHAUSTED("UnsupportedOperation.PkgExhausted"),
      
     // Server opened.
      UNSUPPORTEDOPERATION_SERVERALREADYOPEN("UnsupportedOperation.ServerAlreadyOpen"),
