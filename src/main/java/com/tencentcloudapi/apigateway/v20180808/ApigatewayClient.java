@@ -991,6 +991,26 @@ To make authentication and throttling for a service take effect, you need to bin
     }
 
     /**
+     *This API is used to query all plug-ins bound with the API.
+     * @param req DescribePluginsByApiRequest
+     * @return DescribePluginsByApiResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePluginsByApiResponse DescribePluginsByApi(DescribePluginsByApiRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePluginsByApiResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePluginsByApiResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePluginsByApi");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the details of a service, such as its description, domain name, protocol, creation time, and releases.
      * @param req DescribeServiceRequest
      * @return DescribeServiceResponse
