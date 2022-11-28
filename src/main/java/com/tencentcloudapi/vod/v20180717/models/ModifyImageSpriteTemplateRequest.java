@@ -117,6 +117,16 @@ Default value: black.
     private String Comment;
 
     /**
+    * The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
+    */
+    @SerializedName("Format")
+    @Expose
+    private String Format;
+
+    /**
      * Get Unique ID of an image sprite generating template. 
      * @return Definition Unique ID of an image sprite generating template.
      */
@@ -348,6 +358,34 @@ Default value: black.
         this.Comment = Comment;
     }
 
+    /**
+     * Get The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li> 
+     * @return Format The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
+     */
+    public String getFormat() {
+        return this.Format;
+    }
+
+    /**
+     * Set The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
+     * @param Format The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
+     */
+    public void setFormat(String Format) {
+        this.Format = Format;
+    }
+
     public ModifyImageSpriteTemplateRequest() {
     }
 
@@ -392,6 +430,9 @@ Default value: black.
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
+        if (source.Format != null) {
+            this.Format = new String(source.Format);
+        }
     }
 
 
@@ -411,6 +452,7 @@ Default value: black.
         this.setParamSimple(map, prefix + "ColumnCount", this.ColumnCount);
         this.setParamSimple(map, prefix + "FillType", this.FillType);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "Format", this.Format);
 
     }
 }

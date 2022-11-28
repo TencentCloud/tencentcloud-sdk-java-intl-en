@@ -45,7 +45,7 @@ For more information about supported extensions, see [Media types](https://intl.
     private String MediaName;
 
     /**
-    * URL of video cover to be pulled. Only gif, jpeg, and png formats are supported.
+    * The URL of the video to pull. Supported formats include GIF, JPEG (JPG), and PNG.
     */
     @SerializedName("CoverUrl")
     @Expose
@@ -162,16 +162,16 @@ For more information about supported extensions, see [Media types](https://intl.
     }
 
     /**
-     * Get URL of video cover to be pulled. Only gif, jpeg, and png formats are supported. 
-     * @return CoverUrl URL of video cover to be pulled. Only gif, jpeg, and png formats are supported.
+     * Get The URL of the video to pull. Supported formats include GIF, JPEG (JPG), and PNG. 
+     * @return CoverUrl The URL of the video to pull. Supported formats include GIF, JPEG (JPG), and PNG.
      */
     public String getCoverUrl() {
         return this.CoverUrl;
     }
 
     /**
-     * Set URL of video cover to be pulled. Only gif, jpeg, and png formats are supported.
-     * @param CoverUrl URL of video cover to be pulled. Only gif, jpeg, and png formats are supported.
+     * Set The URL of the video to pull. Supported formats include GIF, JPEG (JPG), and PNG.
+     * @param CoverUrl The URL of the video to pull. Supported formats include GIF, JPEG (JPG), and PNG.
      */
     public void setCoverUrl(String CoverUrl) {
         this.CoverUrl = CoverUrl;

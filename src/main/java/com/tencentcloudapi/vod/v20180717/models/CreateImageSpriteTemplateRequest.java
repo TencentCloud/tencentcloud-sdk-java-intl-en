@@ -120,6 +120,17 @@ Default value: open.
     private String ResolutionAdaptive;
 
     /**
+    * The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
+Default: jpg
+    */
+    @SerializedName("Format")
+    @Expose
+    private String Format;
+
+    /**
      * Get Sampling type. Valid values:
 <li>Percent: by percent.</li>
 <li>Time: by time interval.</li> 
@@ -375,6 +386,38 @@ Default value: open.
         this.ResolutionAdaptive = ResolutionAdaptive;
     }
 
+    /**
+     * Get The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
+Default: jpg 
+     * @return Format The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
+Default: jpg
+     */
+    public String getFormat() {
+        return this.Format;
+    }
+
+    /**
+     * Set The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
+Default: jpg
+     * @param Format The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
+Default: jpg
+     */
+    public void setFormat(String Format) {
+        this.Format = Format;
+    }
+
     public CreateImageSpriteTemplateRequest() {
     }
 
@@ -416,6 +459,9 @@ Default value: open.
         if (source.ResolutionAdaptive != null) {
             this.ResolutionAdaptive = new String(source.ResolutionAdaptive);
         }
+        if (source.Format != null) {
+            this.Format = new String(source.Format);
+        }
     }
 
 
@@ -434,6 +480,7 @@ Default value: open.
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
+        this.setParamSimple(map, prefix + "Format", this.Format);
 
     }
 }
