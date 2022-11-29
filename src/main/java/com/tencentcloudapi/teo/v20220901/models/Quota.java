@@ -44,11 +44,12 @@ public class Quota extends AbstractModel{
     private Long DailyAvailable;
 
     /**
-    * Quota type. Values:
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li>
+    * Type of cache purging/pre-warming. Values:
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
     */
     @SerializedName("Type")
     @Expose
@@ -103,32 +104,36 @@ public class Quota extends AbstractModel{
     }
 
     /**
-     * Get Quota type. Values:
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li> 
-     * @return Type Quota type. Values:
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li>
+     * Get Type of cache purging/pre-warming. Values:
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li> 
+     * @return Type Type of cache purging/pre-warming. Values:
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Quota type. Values:
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li>
-     * @param Type Quota type. Values:
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li>
+     * Set Type of cache purging/pre-warming. Values:
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
+     * @param Type Type of cache purging/pre-warming. Values:
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
      */
     public void setType(String Type) {
         this.Type = Type;

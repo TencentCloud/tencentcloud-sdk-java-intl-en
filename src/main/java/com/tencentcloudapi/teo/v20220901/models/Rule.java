@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class Rule extends AbstractModel{
 
     /**
+    * Feature to be executed.
+    */
+    @SerializedName("Actions")
+    @Expose
+    private Action [] Actions;
+
+    /**
     * Feature execution conditions.
 Note: If any condition in the array is met, the feature will run.
     */
@@ -31,11 +38,27 @@ Note: If any condition in the array is met, the feature will run.
     private RuleAndConditions [] Conditions;
 
     /**
-    * Feature to be executed.
+    * The nested rule.
     */
-    @SerializedName("Actions")
+    @SerializedName("SubRules")
     @Expose
-    private Action [] Actions;
+    private SubRuleItem [] SubRules;
+
+    /**
+     * Get Feature to be executed. 
+     * @return Actions Feature to be executed.
+     */
+    public Action [] getActions() {
+        return this.Actions;
+    }
+
+    /**
+     * Set Feature to be executed.
+     * @param Actions Feature to be executed.
+     */
+    public void setActions(Action [] Actions) {
+        this.Actions = Actions;
+    }
 
     /**
      * Get Feature execution conditions.
@@ -58,19 +81,19 @@ Note: If any condition in the array is met, the feature will run.
     }
 
     /**
-     * Get Feature to be executed. 
-     * @return Actions Feature to be executed.
+     * Get The nested rule. 
+     * @return SubRules The nested rule.
      */
-    public Action [] getActions() {
-        return this.Actions;
+    public SubRuleItem [] getSubRules() {
+        return this.SubRules;
     }
 
     /**
-     * Set Feature to be executed.
-     * @param Actions Feature to be executed.
+     * Set The nested rule.
+     * @param SubRules The nested rule.
      */
-    public void setActions(Action [] Actions) {
-        this.Actions = Actions;
+    public void setSubRules(SubRuleItem [] SubRules) {
+        this.SubRules = SubRules;
     }
 
     public Rule() {
@@ -81,16 +104,22 @@ Note: If any condition in the array is met, the feature will run.
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public Rule(Rule source) {
+        if (source.Actions != null) {
+            this.Actions = new Action[source.Actions.length];
+            for (int i = 0; i < source.Actions.length; i++) {
+                this.Actions[i] = new Action(source.Actions[i]);
+            }
+        }
         if (source.Conditions != null) {
             this.Conditions = new RuleAndConditions[source.Conditions.length];
             for (int i = 0; i < source.Conditions.length; i++) {
                 this.Conditions[i] = new RuleAndConditions(source.Conditions[i]);
             }
         }
-        if (source.Actions != null) {
-            this.Actions = new Action[source.Actions.length];
-            for (int i = 0; i < source.Actions.length; i++) {
-                this.Actions[i] = new Action(source.Actions[i]);
+        if (source.SubRules != null) {
+            this.SubRules = new SubRuleItem[source.SubRules.length];
+            for (int i = 0; i < source.SubRules.length; i++) {
+                this.SubRules[i] = new SubRuleItem(source.SubRules[i]);
             }
         }
     }
@@ -100,8 +129,9 @@ Note: If any condition in the array is met, the feature will run.
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Conditions.", this.Conditions);
         this.setParamArrayObj(map, prefix + "Actions.", this.Actions);
+        this.setParamArrayObj(map, prefix + "Conditions.", this.Conditions);
+        this.setParamArrayObj(map, prefix + "SubRules.", this.SubRules);
 
     }
 }

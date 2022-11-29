@@ -23,46 +23,61 @@ import java.util.HashMap;
 public class ClientIpCountry extends AbstractModel{
 
     /**
-    * 
+    * Whether to enable configuration. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Header name of ClientIpCountry. This field is valid only when `Switch=on`.
+If it is left empty, the default value `EO-Client-IPCountry` will be used.
     */
     @SerializedName("HeaderName")
     @Expose
     private String HeaderName;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Whether to enable configuration. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable</li> 
+     * @return Switch Whether to enable configuration. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Whether to enable configuration. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+     * @param Switch Whether to enable configuration. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return HeaderName 
+     * Get Header name of ClientIpCountry. This field is valid only when `Switch=on`.
+If it is left empty, the default value `EO-Client-IPCountry` will be used. 
+     * @return HeaderName Header name of ClientIpCountry. This field is valid only when `Switch=on`.
+If it is left empty, the default value `EO-Client-IPCountry` will be used.
      */
     public String getHeaderName() {
         return this.HeaderName;
     }
 
     /**
-     * Set 
-     * @param HeaderName 
+     * Set Header name of ClientIpCountry. This field is valid only when `Switch=on`.
+If it is left empty, the default value `EO-Client-IPCountry` will be used.
+     * @param HeaderName Header name of ClientIpCountry. This field is valid only when `Switch=on`.
+If it is left empty, the default value `EO-Client-IPCountry` will be used.
      */
     public void setHeaderName(String HeaderName) {
         this.HeaderName = HeaderName;

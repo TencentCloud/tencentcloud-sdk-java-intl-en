@@ -31,14 +31,14 @@ public class QueryCondition extends AbstractModel{
 
     /**
     * The conditional operator. Values:
-<li>`equals`: Equal to;</li>
-<li>`notEquals`: Not equal to;</li>
-<li>`include`: Contain;</li>
-<li>`notInclude`: Not contain;</li>
-<li>`startWith`: Start with;</li>
-<li>`notStartWith`: Not start with;</li>
-<li>`endWith`: End with;</li>
-<li>`notEndWith`: Not end with.</li>
+<li>`equals`: Equals</li>
+<li>`notEquals`: Does not equal</li>
+<li>`include`: Contains</li>
+<li>`notInclude`: Does not contain</li>
+<li>`startWith`: Starts with</li>
+<li>`notStartWith`: Does not start with</li>
+<li>`endWith`: Ends with</li>
+<li>`notEndWith`: Does not end with</li>
     */
     @SerializedName("Operator")
     @Expose
@@ -69,23 +69,23 @@ public class QueryCondition extends AbstractModel{
 
     /**
      * Get The conditional operator. Values:
-<li>`equals`: Equal to;</li>
-<li>`notEquals`: Not equal to;</li>
-<li>`include`: Contain;</li>
-<li>`notInclude`: Not contain;</li>
-<li>`startWith`: Start with;</li>
-<li>`notStartWith`: Not start with;</li>
-<li>`endWith`: End with;</li>
-<li>`notEndWith`: Not end with.</li> 
+<li>`equals`: Equals</li>
+<li>`notEquals`: Does not equal</li>
+<li>`include`: Contains</li>
+<li>`notInclude`: Does not contain</li>
+<li>`startWith`: Starts with</li>
+<li>`notStartWith`: Does not start with</li>
+<li>`endWith`: Ends with</li>
+<li>`notEndWith`: Does not end with</li> 
      * @return Operator The conditional operator. Values:
-<li>`equals`: Equal to;</li>
-<li>`notEquals`: Not equal to;</li>
-<li>`include`: Contain;</li>
-<li>`notInclude`: Not contain;</li>
-<li>`startWith`: Start with;</li>
-<li>`notStartWith`: Not start with;</li>
-<li>`endWith`: End with;</li>
-<li>`notEndWith`: Not end with.</li>
+<li>`equals`: Equals</li>
+<li>`notEquals`: Does not equal</li>
+<li>`include`: Contains</li>
+<li>`notInclude`: Does not contain</li>
+<li>`startWith`: Starts with</li>
+<li>`notStartWith`: Does not start with</li>
+<li>`endWith`: Ends with</li>
+<li>`notEndWith`: Does not end with</li>
      */
     public String getOperator() {
         return this.Operator;
@@ -93,23 +93,23 @@ public class QueryCondition extends AbstractModel{
 
     /**
      * Set The conditional operator. Values:
-<li>`equals`: Equal to;</li>
-<li>`notEquals`: Not equal to;</li>
-<li>`include`: Contain;</li>
-<li>`notInclude`: Not contain;</li>
-<li>`startWith`: Start with;</li>
-<li>`notStartWith`: Not start with;</li>
-<li>`endWith`: End with;</li>
-<li>`notEndWith`: Not end with.</li>
+<li>`equals`: Equals</li>
+<li>`notEquals`: Does not equal</li>
+<li>`include`: Contains</li>
+<li>`notInclude`: Does not contain</li>
+<li>`startWith`: Starts with</li>
+<li>`notStartWith`: Does not start with</li>
+<li>`endWith`: Ends with</li>
+<li>`notEndWith`: Does not end with</li>
      * @param Operator The conditional operator. Values:
-<li>`equals`: Equal to;</li>
-<li>`notEquals`: Not equal to;</li>
-<li>`include`: Contain;</li>
-<li>`notInclude`: Not contain;</li>
-<li>`startWith`: Start with;</li>
-<li>`notStartWith`: Not start with;</li>
-<li>`endWith`: End with;</li>
-<li>`notEndWith`: Not end with.</li>
+<li>`equals`: Equals</li>
+<li>`notEquals`: Does not equal</li>
+<li>`include`: Contains</li>
+<li>`notInclude`: Does not contain</li>
+<li>`startWith`: Starts with</li>
+<li>`notStartWith`: Does not start with</li>
+<li>`endWith`: Ends with</li>
+<li>`notEndWith`: Does not end with</li>
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;

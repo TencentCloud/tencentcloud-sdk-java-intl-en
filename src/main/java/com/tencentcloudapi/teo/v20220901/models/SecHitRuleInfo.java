@@ -79,6 +79,18 @@ public class SecHitRuleInfo extends AbstractModel{
     private String Domain;
 
     /**
+    * The bot tag. Values:
+<li>`evil_bot`: Malicious bot</li>
+<li>`suspect_bot`: Suspected bot</li>
+<li>`good_bot`: Good bot</li>
+<li>`normal`: Normal request</li>
+<li>`none`: Uncategorized</li>
+    */
+    @SerializedName("BotLabel")
+    @Expose
+    private String BotLabel;
+
+    /**
      * Get The rule ID. 
      * @return RuleId The rule ID.
      */
@@ -218,6 +230,42 @@ public class SecHitRuleInfo extends AbstractModel{
         this.Domain = Domain;
     }
 
+    /**
+     * Get The bot tag. Values:
+<li>`evil_bot`: Malicious bot</li>
+<li>`suspect_bot`: Suspected bot</li>
+<li>`good_bot`: Good bot</li>
+<li>`normal`: Normal request</li>
+<li>`none`: Uncategorized</li> 
+     * @return BotLabel The bot tag. Values:
+<li>`evil_bot`: Malicious bot</li>
+<li>`suspect_bot`: Suspected bot</li>
+<li>`good_bot`: Good bot</li>
+<li>`normal`: Normal request</li>
+<li>`none`: Uncategorized</li>
+     */
+    public String getBotLabel() {
+        return this.BotLabel;
+    }
+
+    /**
+     * Set The bot tag. Values:
+<li>`evil_bot`: Malicious bot</li>
+<li>`suspect_bot`: Suspected bot</li>
+<li>`good_bot`: Good bot</li>
+<li>`normal`: Normal request</li>
+<li>`none`: Uncategorized</li>
+     * @param BotLabel The bot tag. Values:
+<li>`evil_bot`: Malicious bot</li>
+<li>`suspect_bot`: Suspected bot</li>
+<li>`good_bot`: Good bot</li>
+<li>`normal`: Normal request</li>
+<li>`none`: Uncategorized</li>
+     */
+    public void setBotLabel(String BotLabel) {
+        this.BotLabel = BotLabel;
+    }
+
     public SecHitRuleInfo() {
     }
 
@@ -247,6 +295,9 @@ public class SecHitRuleInfo extends AbstractModel{
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
+        if (source.BotLabel != null) {
+            this.BotLabel = new String(source.BotLabel);
+        }
     }
 
 
@@ -261,6 +312,7 @@ public class SecHitRuleInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "RequestNum", this.RequestNum);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "BotLabel", this.BotLabel);
 
     }
 }

@@ -72,9 +72,8 @@ public class RateLimitUserRule extends AbstractModel{
 
     /**
     * The rule status. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>Default value: on</li>
+<li>`on`: Enabled</li>
+<li>`off`: Disabled</li>Default value: on
     */
     @SerializedName("RuleStatus")
     @Expose
@@ -104,7 +103,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * The filter. Values:
-<li>`host`: Domain name</li>
 <li>`sip`: Client IP</li>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -119,6 +117,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
+
+    /**
+    * The statistical dimension. Values:
+<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
+<li>`client_to_eo`: Requests from the client to EdgeOne</li>
+Note: A null value indicates responses from the origin server to EdgeOne are recorded.
+    */
+    @SerializedName("FreqScope")
+    @Expose
+    private String [] FreqScope;
 
     /**
      * Get The request threshold. Value range: 0-4294967294. 
@@ -242,13 +250,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get The rule status. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>Default value: on</li> 
+<li>`on`: Enabled</li>
+<li>`off`: Disabled</li>Default value: on 
      * @return RuleStatus The rule status. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>Default value: on</li>
+<li>`on`: Enabled</li>
+<li>`off`: Disabled</li>Default value: on
      */
     public String getRuleStatus() {
         return this.RuleStatus;
@@ -256,13 +262,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set The rule status. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>Default value: on</li>
+<li>`on`: Enabled</li>
+<li>`off`: Disabled</li>Default value: on
      * @param RuleStatus The rule status. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>Default value: on</li>
+<li>`on`: Enabled</li>
+<li>`off`: Disabled</li>Default value: on
      */
     public void setRuleStatus(String RuleStatus) {
         this.RuleStatus = RuleStatus;
@@ -322,11 +326,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get The filter. Values:
-<li>`host`: Domain name</li>
 <li>`sip`: Client IP</li>
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return FreqFields The filter. Values:
-<li>`host`: Domain name</li>
 <li>`sip`: Client IP</li>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -336,11 +338,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set The filter. Values:
-<li>`host`: Domain name</li>
 <li>`sip`: Client IP</li>
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param FreqFields The filter. Values:
-<li>`host`: Domain name</li>
 <li>`sip`: Client IP</li>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -366,6 +366,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Get The statistical dimension. Values:
+<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
+<li>`client_to_eo`: Requests from the client to EdgeOne</li>
+Note: A null value indicates responses from the origin server to EdgeOne are recorded. 
+     * @return FreqScope The statistical dimension. Values:
+<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
+<li>`client_to_eo`: Requests from the client to EdgeOne</li>
+Note: A null value indicates responses from the origin server to EdgeOne are recorded.
+     */
+    public String [] getFreqScope() {
+        return this.FreqScope;
+    }
+
+    /**
+     * Set The statistical dimension. Values:
+<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
+<li>`client_to_eo`: Requests from the client to EdgeOne</li>
+Note: A null value indicates responses from the origin server to EdgeOne are recorded.
+     * @param FreqScope The statistical dimension. Values:
+<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
+<li>`client_to_eo`: Requests from the client to EdgeOne</li>
+Note: A null value indicates responses from the origin server to EdgeOne are recorded.
+     */
+    public void setFreqScope(String [] FreqScope) {
+        this.FreqScope = FreqScope;
     }
 
     public RateLimitUserRule() {
@@ -418,6 +446,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.FreqScope != null) {
+            this.FreqScope = new String[source.FreqScope.length];
+            for (int i = 0; i < source.FreqScope.length; i++) {
+                this.FreqScope[i] = new String(source.FreqScope[i]);
+            }
+        }
     }
 
 
@@ -437,6 +471,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "RuleID", this.RuleID);
         this.setParamArraySimple(map, prefix + "FreqFields.", this.FreqFields);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamArraySimple(map, prefix + "FreqScope.", this.FreqScope);
 
     }
 }

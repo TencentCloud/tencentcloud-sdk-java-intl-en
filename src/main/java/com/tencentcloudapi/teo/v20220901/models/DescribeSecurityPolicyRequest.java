@@ -30,11 +30,18 @@ public class DescribeSecurityPolicyRequest extends AbstractModel{
     private String ZoneId;
 
     /**
-    * The subdomain name/layer-4 proxy.
+    * The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
     */
     @SerializedName("Entity")
     @Expose
     private String Entity;
+
+    /**
+    * The template ID. You must specify either this field or "Entity".
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private String TemplateId;
 
     /**
      * Get The site ID. 
@@ -53,19 +60,35 @@ public class DescribeSecurityPolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get The subdomain name/layer-4 proxy. 
-     * @return Entity The subdomain name/layer-4 proxy.
+     * Get The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId". 
+     * @return Entity The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
      */
     public String getEntity() {
         return this.Entity;
     }
 
     /**
-     * Set The subdomain name/layer-4 proxy.
-     * @param Entity The subdomain name/layer-4 proxy.
+     * Set The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
+     * @param Entity The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
      */
     public void setEntity(String Entity) {
         this.Entity = Entity;
+    }
+
+    /**
+     * Get The template ID. You must specify either this field or "Entity". 
+     * @return TemplateId The template ID. You must specify either this field or "Entity".
+     */
+    public String getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set The template ID. You must specify either this field or "Entity".
+     * @param TemplateId The template ID. You must specify either this field or "Entity".
+     */
+    public void setTemplateId(String TemplateId) {
+        this.TemplateId = TemplateId;
     }
 
     public DescribeSecurityPolicyRequest() {
@@ -82,6 +105,9 @@ public class DescribeSecurityPolicyRequest extends AbstractModel{
         if (source.Entity != null) {
             this.Entity = new String(source.Entity);
         }
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class DescribeSecurityPolicyRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "Entity", this.Entity);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
 
     }
 }

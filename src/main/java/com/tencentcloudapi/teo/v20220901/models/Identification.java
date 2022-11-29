@@ -39,7 +39,7 @@ public class Identification extends AbstractModel{
     private String Status;
 
     /**
-    * The site ownership information.
+    * Details of the DNS record.
     */
     @SerializedName("Ascription")
     @Expose
@@ -54,7 +54,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] OriginalNameServers;
 
     /**
-    * 
+    * Details of the verification file.
     */
     @SerializedName("FileAscription")
     @Expose
@@ -101,16 +101,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The site ownership information. 
-     * @return Ascription The site ownership information.
+     * Get Details of the DNS record. 
+     * @return Ascription Details of the DNS record.
      */
     public AscriptionInfo getAscription() {
         return this.Ascription;
     }
 
     /**
-     * Set The site ownership information.
-     * @param Ascription The site ownership information.
+     * Set Details of the DNS record.
+     * @param Ascription Details of the DNS record.
      */
     public void setAscription(AscriptionInfo Ascription) {
         this.Ascription = Ascription;
@@ -137,16 +137,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return FileAscription 
+     * Get Details of the verification file. 
+     * @return FileAscription Details of the verification file.
      */
     public FileAscriptionInfo getFileAscription() {
         return this.FileAscription;
     }
 
     /**
-     * Set 
-     * @param FileAscription 
+     * Set Details of the verification file.
+     * @param FileAscription Details of the verification file.
      */
     public void setFileAscription(FileAscriptionInfo FileAscription) {
         this.FileAscription = FileAscription;

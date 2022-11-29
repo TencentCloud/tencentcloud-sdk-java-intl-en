@@ -68,14 +68,17 @@ Value range: 60-86400 (in seconds). If it's not specified, the default value 600
     private Long TTL;
 
     /**
-    * 
+    * The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull (only used when `Type=proxied`)</li>If it is left empty, primary/secondary origin-pull is applied.
     */
     @SerializedName("OriginType")
     @Expose
     private String OriginType;
 
     /**
-    * 
+    * Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+If it is left empty, this configuration is not used.
     */
     @SerializedName("AdvancedOriginGroups")
     @Expose
@@ -190,32 +193,44 @@ Value range: 60-86400 (in seconds). If it's not specified, the default value 600
     }
 
     /**
-     * Get  
-     * @return OriginType 
+     * Get The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull (only used when `Type=proxied`)</li>If it is left empty, primary/secondary origin-pull is applied. 
+     * @return OriginType The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull (only used when `Type=proxied`)</li>If it is left empty, primary/secondary origin-pull is applied.
      */
     public String getOriginType() {
         return this.OriginType;
     }
 
     /**
-     * Set 
-     * @param OriginType 
+     * Set The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull (only used when `Type=proxied`)</li>If it is left empty, primary/secondary origin-pull is applied.
+     * @param OriginType The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull (only used when `Type=proxied`)</li>If it is left empty, primary/secondary origin-pull is applied.
      */
     public void setOriginType(String OriginType) {
         this.OriginType = OriginType;
     }
 
     /**
-     * Get  
-     * @return AdvancedOriginGroups 
+     * Get Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+If it is left empty, this configuration is not used. 
+     * @return AdvancedOriginGroups Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+If it is left empty, this configuration is not used.
      */
     public AdvancedOriginGroup [] getAdvancedOriginGroups() {
         return this.AdvancedOriginGroups;
     }
 
     /**
-     * Set 
-     * @param AdvancedOriginGroups 
+     * Set Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+If it is left empty, this configuration is not used.
+     * @param AdvancedOriginGroups Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+If it is left empty, this configuration is not used.
      */
     public void setAdvancedOriginGroups(AdvancedOriginGroup [] AdvancedOriginGroups) {
         this.AdvancedOriginGroups = AdvancedOriginGroups;

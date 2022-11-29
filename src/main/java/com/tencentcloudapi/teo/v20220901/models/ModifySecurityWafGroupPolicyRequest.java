@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ModifySecurityWafGroupPolicyRequest extends AbstractModel{
 
     /**
-    * The site ID.
+    * The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The subdomain name.
+    * The subdomain name. You must specify either "ZoneId+Entity" or "TemplateId". 
     */
     @SerializedName("Entity")
     @Expose
@@ -88,32 +88,39 @@ public class ModifySecurityWafGroupPolicyRequest extends AbstractModel{
     private WafGroup [] WafGroups;
 
     /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
+    * The template ID. You must specify either this field or "ZoneId+Entity".
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private String TemplateId;
+
+    /**
+     * Get The site ID. You must specify either "ZoneId+Entity" or "TemplateId". 
+     * @return ZoneId The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
+     * Set The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+     * @param ZoneId The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The subdomain name. 
-     * @return Entity The subdomain name.
+     * Get The subdomain name. You must specify either "ZoneId+Entity" or "TemplateId".  
+     * @return Entity The subdomain name. You must specify either "ZoneId+Entity" or "TemplateId". 
      */
     public String getEntity() {
         return this.Entity;
     }
 
     /**
-     * Set The subdomain name.
-     * @param Entity The subdomain name.
+     * Set The subdomain name. You must specify either "ZoneId+Entity" or "TemplateId". 
+     * @param Entity The subdomain name. You must specify either "ZoneId+Entity" or "TemplateId". 
      */
     public void setEntity(String Entity) {
         this.Entity = Entity;
@@ -251,6 +258,22 @@ public class ModifySecurityWafGroupPolicyRequest extends AbstractModel{
         this.WafGroups = WafGroups;
     }
 
+    /**
+     * Get The template ID. You must specify either this field or "ZoneId+Entity". 
+     * @return TemplateId The template ID. You must specify either this field or "ZoneId+Entity".
+     */
+    public String getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set The template ID. You must specify either this field or "ZoneId+Entity".
+     * @param TemplateId The template ID. You must specify either this field or "ZoneId+Entity".
+     */
+    public void setTemplateId(String TemplateId) {
+        this.TemplateId = TemplateId;
+    }
+
     public ModifySecurityWafGroupPolicyRequest() {
     }
 
@@ -286,6 +309,9 @@ public class ModifySecurityWafGroupPolicyRequest extends AbstractModel{
                 this.WafGroups[i] = new WafGroup(source.WafGroups[i]);
             }
         }
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
     }
 
 
@@ -301,6 +327,7 @@ public class ModifySecurityWafGroupPolicyRequest extends AbstractModel{
         this.setParamObj(map, prefix + "WafRules.", this.WafRules);
         this.setParamObj(map, prefix + "AiRule.", this.AiRule);
         this.setParamArrayObj(map, prefix + "WafGroups.", this.WafGroups);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
 
     }
 }

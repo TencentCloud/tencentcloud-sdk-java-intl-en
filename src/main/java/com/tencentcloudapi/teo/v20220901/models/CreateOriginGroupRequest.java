@@ -64,7 +64,7 @@ public class CreateOriginGroupRequest extends AbstractModel{
     private OriginRecord [] OriginRecords;
 
     /**
-    * 
+    * The origin domain. This field can be specified only when `OriginType=self`.
     */
     @SerializedName("HostHeader")
     @Expose
@@ -175,16 +175,16 @@ public class CreateOriginGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return HostHeader 
+     * Get The origin domain. This field can be specified only when `OriginType=self`. 
+     * @return HostHeader The origin domain. This field can be specified only when `OriginType=self`.
      */
     public String getHostHeader() {
         return this.HostHeader;
     }
 
     /**
-     * Set 
-     * @param HostHeader 
+     * Set The origin domain. This field can be specified only when `OriginType=self`.
+     * @param HostHeader The origin domain. This field can be specified only when `OriginType=self`.
      */
     public void setHostHeader(String HostHeader) {
         this.HostHeader = HostHeader;

@@ -40,10 +40,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Type of the certificate. Values:
-<li>`default`: Default certificate;</lil>
-<li>`upload`: Custom certificate;</li>
-<li>`managed`: Tencent Cloud-managed certificate.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`default`: Default certificate</lil>
+<li>`upload`: Specified certificate</li>
+<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Type")
     @Expose
@@ -72,6 +72,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("SignAlgo")
     @Expose
     private String SignAlgo;
+
+    /**
+    * Domain name of the certificate.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("CommonName")
+    @Expose
+    private String CommonName;
 
     /**
      * Get ID of the server certificate.
@@ -115,15 +123,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Type of the certificate. Values:
-<li>`default`: Default certificate;</lil>
-<li>`upload`: Custom certificate;</li>
-<li>`managed`: Tencent Cloud-managed certificate.</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
+<li>`default`: Default certificate</lil>
+<li>`upload`: Specified certificate</li>
+<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Type Type of the certificate. Values:
-<li>`default`: Default certificate;</lil>
-<li>`upload`: Custom certificate;</li>
-<li>`managed`: Tencent Cloud-managed certificate.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`default`: Default certificate</lil>
+<li>`upload`: Specified certificate</li>
+<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getType() {
         return this.Type;
@@ -131,15 +139,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Type of the certificate. Values:
-<li>`default`: Default certificate;</lil>
-<li>`upload`: Custom certificate;</li>
-<li>`managed`: Tencent Cloud-managed certificate.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`default`: Default certificate</lil>
+<li>`upload`: Specified certificate</li>
+<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Type Type of the certificate. Values:
-<li>`default`: Default certificate;</lil>
-<li>`upload`: Custom certificate;</li>
-<li>`managed`: Tencent Cloud-managed certificate.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`default`: Default certificate</lil>
+<li>`upload`: Specified certificate</li>
+<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -205,6 +213,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.SignAlgo = SignAlgo;
     }
 
+    /**
+     * Get Domain name of the certificate.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return CommonName Domain name of the certificate.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getCommonName() {
+        return this.CommonName;
+    }
+
+    /**
+     * Set Domain name of the certificate.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param CommonName Domain name of the certificate.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setCommonName(String CommonName) {
+        this.CommonName = CommonName;
+    }
+
     public ServerCertInfo() {
     }
 
@@ -231,6 +259,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.SignAlgo != null) {
             this.SignAlgo = new String(source.SignAlgo);
         }
+        if (source.CommonName != null) {
+            this.CommonName = new String(source.CommonName);
+        }
     }
 
 
@@ -244,6 +275,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "DeployTime", this.DeployTime);
         this.setParamSimple(map, prefix + "SignAlgo", this.SignAlgo);
+        this.setParamSimple(map, prefix + "CommonName", this.CommonName);
 
     }
 }

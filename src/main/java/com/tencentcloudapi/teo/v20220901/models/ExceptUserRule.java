@@ -24,7 +24,6 @@ public class ExceptUserRule extends AbstractModel{
 
     /**
     * The rule name.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RuleName")
     @Expose
@@ -32,7 +31,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * The rule action. It only supports the value `skip`, which indicates skipping all managed rules.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Action")
     @Expose
@@ -42,23 +40,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     * The rule status. Values:
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RuleStatus")
     @Expose
     private String RuleStatus;
 
     /**
-    * The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The rule ID, which is automatically created and only used as an output parameter.
     */
     @SerializedName("RuleID")
     @Expose
     private Long RuleID;
 
     /**
-    * The update time, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The update time. If it is null, the current date and time is recorded.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -81,18 +77,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private ExceptUserRuleScope ExceptUserRuleScope;
 
     /**
-    * The rule priority. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The rule priority. Value range: 0-100. If it is null, it defaults to 0.
     */
     @SerializedName("RulePriority")
     @Expose
     private Long RulePriority;
 
     /**
-     * Get The rule name.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get The rule name. 
      * @return RuleName The rule name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRuleName() {
         return this.RuleName;
@@ -100,19 +93,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set The rule name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RuleName The rule name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get The rule action. It only supports the value `skip`, which indicates skipping all managed rules.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get The rule action. It only supports the value `skip`, which indicates skipping all managed rules. 
      * @return Action The rule action. It only supports the value `skip`, which indicates skipping all managed rules.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAction() {
         return this.Action;
@@ -120,9 +109,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set The rule action. It only supports the value `skip`, which indicates skipping all managed rules.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Action The rule action. It only supports the value `skip`, which indicates skipping all managed rules.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAction(String Action) {
         this.Action = Action;
@@ -131,12 +118,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get The rule status. Values:
 <li>`on`: Enabled</li>
-<li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
+<li>`off`: Disabled</li> 
      * @return RuleStatus The rule status. Values:
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRuleStatus() {
         return this.RuleStatus;
@@ -146,51 +131,45 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Set The rule status. Values:
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RuleStatus The rule status. Values:
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRuleStatus(String RuleStatus) {
         this.RuleStatus = RuleStatus;
     }
 
     /**
-     * Get The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RuleID The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The rule ID, which is automatically created and only used as an output parameter. 
+     * @return RuleID The rule ID, which is automatically created and only used as an output parameter.
      */
     public Long getRuleID() {
         return this.RuleID;
     }
 
     /**
-     * Set The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RuleID The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The rule ID, which is automatically created and only used as an output parameter.
+     * @param RuleID The rule ID, which is automatically created and only used as an output parameter.
      */
     public void setRuleID(Long RuleID) {
         this.RuleID = RuleID;
     }
 
     /**
-     * Get The update time, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UpdateTime The update time, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The update time. If it is null, the current date and time is recorded.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return UpdateTime The update time. If it is null, the current date and time is recorded.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set The update time, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UpdateTime The update time, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The update time. If it is null, the current date and time is recorded.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param UpdateTime The update time. If it is null, the current date and time is recorded.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -237,20 +216,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The rule priority. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RulePriority The rule priority. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The rule priority. Value range: 0-100. If it is null, it defaults to 0. 
+     * @return RulePriority The rule priority. Value range: 0-100. If it is null, it defaults to 0.
      */
     public Long getRulePriority() {
         return this.RulePriority;
     }
 
     /**
-     * Set The rule priority. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RulePriority The rule priority. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The rule priority. Value range: 0-100. If it is null, it defaults to 0.
+     * @param RulePriority The rule priority. Value range: 0-100. If it is null, it defaults to 0.
      */
     public void setRulePriority(Long RulePriority) {
         this.RulePriority = RulePriority;

@@ -158,7 +158,8 @@ The original configuration will apply if this field is not specified.
     private Ipv6 Ipv6;
 
     /**
-    * 
+    * Whether to carry the location information of the client IP during origin-pull.
+The original configuration will apply if this field is not specified.
     */
     @SerializedName("ClientIpCountry")
     @Expose
@@ -501,16 +502,20 @@ The original configuration will apply if this field is not specified.
     }
 
     /**
-     * Get  
-     * @return ClientIpCountry 
+     * Get Whether to carry the location information of the client IP during origin-pull.
+The original configuration will apply if this field is not specified. 
+     * @return ClientIpCountry Whether to carry the location information of the client IP during origin-pull.
+The original configuration will apply if this field is not specified.
      */
     public ClientIpCountry getClientIpCountry() {
         return this.ClientIpCountry;
     }
 
     /**
-     * Set 
-     * @param ClientIpCountry 
+     * Set Whether to carry the location information of the client IP during origin-pull.
+The original configuration will apply if this field is not specified.
+     * @param ClientIpCountry Whether to carry the location information of the client IP during origin-pull.
+The original configuration will apply if this field is not specified.
      */
     public void setClientIpCountry(ClientIpCountry ClientIpCountry) {
         this.ClientIpCountry = ClientIpCountry;

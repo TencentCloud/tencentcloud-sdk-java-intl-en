@@ -23,49 +23,72 @@ import java.util.HashMap;
 public class DescribeSecurityPortraitRulesRequest extends AbstractModel{
 
     /**
-    * The site ID.
+    * The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Subdomain name/Application name
+    * The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
     */
     @SerializedName("Entity")
     @Expose
     private String Entity;
 
     /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
+    * The template ID. You must specify either this field or "ZoneId+Entity". 
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private String TemplateId;
+
+    /**
+     * Get The site ID. You must specify either "ZoneId+Entity" or "TemplateId". 
+     * @return ZoneId The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
+     * Set The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+     * @param ZoneId The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Subdomain name/Application name 
-     * @return Entity Subdomain name/Application name
+     * Get The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId". 
+     * @return Entity The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
      */
     public String getEntity() {
         return this.Entity;
     }
 
     /**
-     * Set Subdomain name/Application name
-     * @param Entity Subdomain name/Application name
+     * Set The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
+     * @param Entity The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
      */
     public void setEntity(String Entity) {
         this.Entity = Entity;
+    }
+
+    /**
+     * Get The template ID. You must specify either this field or "ZoneId+Entity".  
+     * @return TemplateId The template ID. You must specify either this field or "ZoneId+Entity". 
+     */
+    public String getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set The template ID. You must specify either this field or "ZoneId+Entity". 
+     * @param TemplateId The template ID. You must specify either this field or "ZoneId+Entity". 
+     */
+    public void setTemplateId(String TemplateId) {
+        this.TemplateId = TemplateId;
     }
 
     public DescribeSecurityPortraitRulesRequest() {
@@ -82,6 +105,9 @@ public class DescribeSecurityPortraitRulesRequest extends AbstractModel{
         if (source.Entity != null) {
             this.Entity = new String(source.Entity);
         }
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class DescribeSecurityPortraitRulesRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "Entity", this.Entity);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
 
     }
 }

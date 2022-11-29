@@ -36,7 +36,9 @@ public class RateLimitTemplate extends AbstractModel{
     private String Mode;
 
     /**
-    * 
+    * The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
     */
     @SerializedName("Action")
     @Expose
@@ -90,16 +92,24 @@ public class RateLimitTemplate extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Action 
+     * Get The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used. 
+     * @return Action The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set 
-     * @param Action 
+     * Set The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
+     * @param Action The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
      */
     public void setAction(String Action) {
         this.Action = Action;

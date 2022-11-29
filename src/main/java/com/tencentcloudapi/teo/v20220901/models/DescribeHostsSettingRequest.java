@@ -45,7 +45,7 @@ public class DescribeHostsSettingRequest extends AbstractModel{
 
     /**
     * Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No
+<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -101,9 +101,9 @@ public class DescribeHostsSettingRequest extends AbstractModel{
 
     /**
      * Get Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No 
+<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No</li> 
      * @return Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No
+<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -111,9 +111,9 @@ public class DescribeHostsSettingRequest extends AbstractModel{
 
     /**
      * Set Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No
+<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No</li>
      * @param Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No
+<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

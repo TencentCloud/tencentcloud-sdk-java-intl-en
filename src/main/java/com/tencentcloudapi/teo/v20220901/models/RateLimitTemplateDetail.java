@@ -30,7 +30,7 @@ public class RateLimitTemplateDetail extends AbstractModel{
 <li>`normal`: Moderate</li>
 <li>`strict`: Strict</li>
 <li>`close`: Off</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Mode")
     @Expose
@@ -44,16 +44,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long ID;
 
     /**
-    * The action, which will be triggered when the specified threshold reaches.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * The amount of time taken to perform the action. Value range: 0-172800 seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The blocking duration, in seconds. Value range: 0-172800.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("PunishTime")
     @Expose
@@ -81,7 +83,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`normal`: Moderate</li>
 <li>`strict`: Strict</li>
 <li>`close`: Off</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Mode The mode. Values:
 <li>`sup_loose`: Super loose</li>
 <li>`loose`: Loose</li>
@@ -89,7 +91,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`normal`: Moderate</li>
 <li>`strict`: Strict</li>
 <li>`close`: Off</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getMode() {
         return this.Mode;
@@ -103,7 +105,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`normal`: Moderate</li>
 <li>`strict`: Strict</li>
 <li>`close`: Off</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Mode The mode. Values:
 <li>`sup_loose`: Super loose</li>
 <li>`loose`: Loose</li>
@@ -111,7 +113,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`normal`: Moderate</li>
 <li>`strict`: Strict</li>
 <li>`close`: Off</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
@@ -134,40 +136,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The action, which will be triggered when the specified threshold reaches.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Action The action, which will be triggered when the specified threshold reaches.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Action The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set The action, which will be triggered when the specified threshold reaches.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Action The action, which will be triggered when the specified threshold reaches.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Action The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get The amount of time taken to perform the action. Value range: 0-172800 seconds.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PunishTime The amount of time taken to perform the action. Value range: 0-172800 seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The blocking duration, in seconds. Value range: 0-172800.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return PunishTime The blocking duration, in seconds. Value range: 0-172800.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Long getPunishTime() {
         return this.PunishTime;
     }
 
     /**
-     * Set The amount of time taken to perform the action. Value range: 0-172800 seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PunishTime The amount of time taken to perform the action. Value range: 0-172800 seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The blocking duration, in seconds. Value range: 0-172800.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param PunishTime The blocking duration, in seconds. Value range: 0-172800.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setPunishTime(Long PunishTime) {
         this.PunishTime = PunishTime;

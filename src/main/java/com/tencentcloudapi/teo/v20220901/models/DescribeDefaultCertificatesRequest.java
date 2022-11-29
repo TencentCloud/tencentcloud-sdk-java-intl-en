@@ -24,7 +24,7 @@ public class DescribeDefaultCertificatesRequest extends AbstractModel{
 
     /**
     * Filter criteria. Each filter criteria can have up to 5 entries.
-<li>`zone-id`: <br>Filter by <strong>site ID</strong>. Format: zone-xxx
+<li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -46,9 +46,9 @@ public class DescribeDefaultCertificatesRequest extends AbstractModel{
 
     /**
      * Get Filter criteria. Each filter criteria can have up to 5 entries.
-<li>`zone-id`: <br>Filter by <strong>site ID</strong>. Format: zone-xxx 
+<li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li> 
      * @return Filters Filter criteria. Each filter criteria can have up to 5 entries.
-<li>`zone-id`: <br>Filter by <strong>site ID</strong>. Format: zone-xxx
+<li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -56,9 +56,9 @@ public class DescribeDefaultCertificatesRequest extends AbstractModel{
 
     /**
      * Set Filter criteria. Each filter criteria can have up to 5 entries.
-<li>`zone-id`: <br>Filter by <strong>site ID</strong>. Format: zone-xxx
+<li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
      * @param Filters Filter criteria. Each filter criteria can have up to 5 entries.
-<li>`zone-id`: <br>Filter by <strong>site ID</strong>. Format: zone-xxx
+<li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

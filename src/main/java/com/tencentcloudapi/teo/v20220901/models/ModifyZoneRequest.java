@@ -46,6 +46,13 @@ public class ModifyZoneRequest extends AbstractModel{
     private VanityNameServers VanityNameServers;
 
     /**
+    * The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+    */
+    @SerializedName("AliasZoneName")
+    @Expose
+    private String AliasZoneName;
+
+    /**
      * Get The site ID. 
      * @return ZoneId The site ID.
      */
@@ -101,6 +108,22 @@ public class ModifyZoneRequest extends AbstractModel{
         this.VanityNameServers = VanityNameServers;
     }
 
+    /**
+     * Get The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_). 
+     * @return AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+     */
+    public String getAliasZoneName() {
+        return this.AliasZoneName;
+    }
+
+    /**
+     * Set The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+     * @param AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+     */
+    public void setAliasZoneName(String AliasZoneName) {
+        this.AliasZoneName = AliasZoneName;
+    }
+
     public ModifyZoneRequest() {
     }
 
@@ -118,6 +141,9 @@ public class ModifyZoneRequest extends AbstractModel{
         if (source.VanityNameServers != null) {
             this.VanityNameServers = new VanityNameServers(source.VanityNameServers);
         }
+        if (source.AliasZoneName != null) {
+            this.AliasZoneName = new String(source.AliasZoneName);
+        }
     }
 
 
@@ -128,6 +154,7 @@ public class ModifyZoneRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "VanityNameServers.", this.VanityNameServers);
+        this.setParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
 
     }
 }

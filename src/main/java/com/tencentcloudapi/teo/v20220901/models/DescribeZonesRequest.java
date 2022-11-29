@@ -38,11 +38,33 @@ public class DescribeZonesRequest extends AbstractModel{
 
     /**
     * Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No<li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No<li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No<li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No<li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No<li>`Fuzzy`:<br>   Filter by <strong>values in fuzzy query</strong> (only `zone-name` allowed). Values limit: 1<br>   Type: Boolean<br>   Required: No<br>   Default value: false
+<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
     */
     @SerializedName("Filters")
     @Expose
     private AdvancedFilter [] Filters;
+
+    /**
+    * The sorting field. Values:
+<li>`type`: Access mode</li>
+<li>`area`: Acceleration region</li>
+<li>`create-time`: Creation date</li>
+<li>`zone-name`: Site name</li>
+<li>`use-time`: Last used date</li>
+<li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used.
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
+
+    /**
+    * The sorting direction. Values:
+<li>`asc`: From smallest to largest</li>
+<li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used.
+    */
+    @SerializedName("Direction")
+    @Expose
+    private String Direction;
 
     /**
      * Get The page offset. Default value: 0 
@@ -78,9 +100,9 @@ public class DescribeZonesRequest extends AbstractModel{
 
     /**
      * Get Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No<li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No<li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No<li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No<li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No<li>`Fuzzy`:<br>   Filter by <strong>values in fuzzy query</strong> (only `zone-name` allowed). Values limit: 1<br>   Type: Boolean<br>   Required: No<br>   Default value: false 
+<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query. 
      * @return Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No<li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No<li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No<li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No<li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No<li>`Fuzzy`:<br>   Filter by <strong>values in fuzzy query</strong> (only `zone-name` allowed). Values limit: 1<br>   Type: Boolean<br>   Required: No<br>   Default value: false
+<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
      */
     public AdvancedFilter [] getFilters() {
         return this.Filters;
@@ -88,12 +110,76 @@ public class DescribeZonesRequest extends AbstractModel{
 
     /**
      * Set Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No<li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No<li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No<li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No<li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No<li>`Fuzzy`:<br>   Filter by <strong>values in fuzzy query</strong> (only `zone-name` allowed). Values limit: 1<br>   Type: Boolean<br>   Required: No<br>   Default value: false
+<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
      * @param Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No<li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No<li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No<li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No<li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No<li>`Fuzzy`:<br>   Filter by <strong>values in fuzzy query</strong> (only `zone-name` allowed). Values limit: 1<br>   Type: Boolean<br>   Required: No<br>   Default value: false
+<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
      */
     public void setFilters(AdvancedFilter [] Filters) {
         this.Filters = Filters;
+    }
+
+    /**
+     * Get The sorting field. Values:
+<li>`type`: Access mode</li>
+<li>`area`: Acceleration region</li>
+<li>`create-time`: Creation date</li>
+<li>`zone-name`: Site name</li>
+<li>`use-time`: Last used date</li>
+<li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used. 
+     * @return Order The sorting field. Values:
+<li>`type`: Access mode</li>
+<li>`area`: Acceleration region</li>
+<li>`create-time`: Creation date</li>
+<li>`zone-name`: Site name</li>
+<li>`use-time`: Last used date</li>
+<li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used.
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set The sorting field. Values:
+<li>`type`: Access mode</li>
+<li>`area`: Acceleration region</li>
+<li>`create-time`: Creation date</li>
+<li>`zone-name`: Site name</li>
+<li>`use-time`: Last used date</li>
+<li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used.
+     * @param Order The sorting field. Values:
+<li>`type`: Access mode</li>
+<li>`area`: Acceleration region</li>
+<li>`create-time`: Creation date</li>
+<li>`zone-name`: Site name</li>
+<li>`use-time`: Last used date</li>
+<li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used.
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
+    /**
+     * Get The sorting direction. Values:
+<li>`asc`: From smallest to largest</li>
+<li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used. 
+     * @return Direction The sorting direction. Values:
+<li>`asc`: From smallest to largest</li>
+<li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used.
+     */
+    public String getDirection() {
+        return this.Direction;
+    }
+
+    /**
+     * Set The sorting direction. Values:
+<li>`asc`: From smallest to largest</li>
+<li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used.
+     * @param Direction The sorting direction. Values:
+<li>`asc`: From smallest to largest</li>
+<li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used.
+     */
+    public void setDirection(String Direction) {
+        this.Direction = Direction;
     }
 
     public DescribeZonesRequest() {
@@ -116,6 +202,12 @@ public class DescribeZonesRequest extends AbstractModel{
                 this.Filters[i] = new AdvancedFilter(source.Filters[i]);
             }
         }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+        if (source.Direction != null) {
+            this.Direction = new String(source.Direction);
+        }
     }
 
 
@@ -126,6 +218,8 @@ public class DescribeZonesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "Direction", this.Direction);
 
     }
 }

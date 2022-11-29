@@ -39,6 +39,26 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *This API is used to bind a site to a plan.
+     * @param req BindZoneToPlanRequest
+     * @return BindZoneToPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindZoneToPlanResponse BindZoneToPlan(BindZoneToPlanRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BindZoneToPlanResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BindZoneToPlanResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BindZoneToPlan");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to verify a certificate.
      * @param req CheckCertificateRequest
      * @return CheckCertificateResponse
@@ -51,6 +71,26 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CheckCertificateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CheckCertificate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create an alias domain name.
+     * @param req CreateAliasDomainRequest
+     * @return CreateAliasDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAliasDomainResponse CreateAliasDomain(CreateAliasDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAliasDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAliasDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAliasDomain");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -419,6 +459,26 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete an alias domain name.
+     * @param req DeleteAliasDomainRequest
+     * @return DeleteAliasDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAliasDomainResponse DeleteAliasDomain(DeleteAliasDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAliasDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAliasDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteAliasDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete an application proxy.
      * @param req DeleteApplicationProxyRequest
      * @return DeleteApplicationProxyResponse
@@ -599,6 +659,26 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the information of alias domain names.
+     * @param req DescribeAliasDomainsRequest
+     * @return DescribeAliasDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAliasDomainsResponse DescribeAliasDomains(DescribeAliasDomainsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAliasDomainsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAliasDomainsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAliasDomains");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the list of application proxies.
      * @param req DescribeApplicationProxiesRequest
      * @return DescribeApplicationProxiesResponse
@@ -631,26 +711,6 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAvailablePlansResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAvailablePlans");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to get the billing data.
-     * @param req DescribeBillingDataRequest
-     * @return DescribeBillingDataResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeBillingDataResponse DescribeBillingData(DescribeBillingDataRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBillingDataResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBillingDataResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBillingData");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1339,7 +1399,7 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the security protection configuration.
+     *This API is used to query the security protection configuration. You must either specify "ZoneId+Entity" or "TemplateId".
      * @param req DescribeSecurityPolicyRequest
      * @return DescribeSecurityPolicyResponse
      * @throws TencentCloudSDKException
@@ -1939,6 +1999,46 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify an alias domain name.
+     * @param req ModifyAliasDomainRequest
+     * @return ModifyAliasDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAliasDomainResponse ModifyAliasDomain(ModifyAliasDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAliasDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAliasDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAliasDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the status of an alias domain name.
+     * @param req ModifyAliasDomainStatusRequest
+     * @return ModifyAliasDomainStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAliasDomainStatusResponse ModifyAliasDomainStatus(ModifyAliasDomainStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAliasDomainStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAliasDomainStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAliasDomainStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify an application proxy.
      * @param req ModifyApplicationProxyRequest
      * @return ModifyApplicationProxyResponse
@@ -2371,6 +2471,26 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyZoneStatusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyZoneStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *To reclaim a site and its associated alias domain names, specify the "ZoneId" field; to reclaim an alias domain name that is already added, specify the "ZoneName" filed.
+     * @param req ReclaimAliasDomainRequest
+     * @return ReclaimAliasDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReclaimAliasDomainResponse ReclaimAliasDomain(ReclaimAliasDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReclaimAliasDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReclaimAliasDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReclaimAliasDomain");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

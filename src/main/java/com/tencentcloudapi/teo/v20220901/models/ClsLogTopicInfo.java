@@ -120,7 +120,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Area;
 
     /**
-    * 
+    * Type of the shipping task. Values:
+<li>`cls`: Ship logs to CLS.</li>
+<li>`custom_endpoint`: Ship logs to custom APIs.</li>
     */
     @SerializedName("LogSetType")
     @Expose
@@ -359,16 +361,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return LogSetType 
+     * Get Type of the shipping task. Values:
+<li>`cls`: Ship logs to CLS.</li>
+<li>`custom_endpoint`: Ship logs to custom APIs.</li> 
+     * @return LogSetType Type of the shipping task. Values:
+<li>`cls`: Ship logs to CLS.</li>
+<li>`custom_endpoint`: Ship logs to custom APIs.</li>
      */
     public String getLogSetType() {
         return this.LogSetType;
     }
 
     /**
-     * Set 
-     * @param LogSetType 
+     * Set Type of the shipping task. Values:
+<li>`cls`: Ship logs to CLS.</li>
+<li>`custom_endpoint`: Ship logs to custom APIs.</li>
+     * @param LogSetType Type of the shipping task. Values:
+<li>`cls`: Ship logs to CLS.</li>
+<li>`custom_endpoint`: Ship logs to custom APIs.</li>
      */
     public void setLogSetType(String LogSetType) {
         this.LogSetType = LogSetType;

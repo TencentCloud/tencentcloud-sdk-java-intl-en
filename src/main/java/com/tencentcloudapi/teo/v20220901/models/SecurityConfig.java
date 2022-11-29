@@ -87,6 +87,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private DropPageConfig DropPageConfig;
 
     /**
+    * Security template settings
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("TemplateConfig")
+    @Expose
+    private TemplateConfig TemplateConfig;
+
+    /**
      * Get The settings of the managed rule. If it is null, the settings that were last configured will be used.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return WafConfig The settings of the managed rule. If it is null, the settings that were last configured will be used.
@@ -246,6 +254,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.DropPageConfig = DropPageConfig;
     }
 
+    /**
+     * Get Security template settings
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return TemplateConfig Security template settings
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public TemplateConfig getTemplateConfig() {
+        return this.TemplateConfig;
+    }
+
+    /**
+     * Set Security template settings
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param TemplateConfig Security template settings
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setTemplateConfig(TemplateConfig TemplateConfig) {
+        this.TemplateConfig = TemplateConfig;
+    }
+
     public SecurityConfig() {
     }
 
@@ -278,6 +306,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.DropPageConfig != null) {
             this.DropPageConfig = new DropPageConfig(source.DropPageConfig);
         }
+        if (source.TemplateConfig != null) {
+            this.TemplateConfig = new TemplateConfig(source.TemplateConfig);
+        }
     }
 
 
@@ -293,6 +324,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "IpTableConfig.", this.IpTableConfig);
         this.setParamObj(map, prefix + "ExceptConfig.", this.ExceptConfig);
         this.setParamObj(map, prefix + "DropPageConfig.", this.DropPageConfig);
+        this.setParamObj(map, prefix + "TemplateConfig.", this.TemplateConfig);
 
     }
 }

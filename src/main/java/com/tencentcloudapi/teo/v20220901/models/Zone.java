@@ -78,9 +78,9 @@ public class Zone extends AbstractModel{
     private Boolean Paused;
 
     /**
-    * Whether CNAME flattening is enabled. Valid values:
-<li>`enabled`: Enabled.</li>
-<li>`disabled`: Disabled.</li>
+    * Whether CNAME acceleration is enabled. Values:
+<li>`enabled`: Enabled</li>
+<li>`disabled`: Disabled</li>
     */
     @SerializedName("CnameSpeedUp")
     @Expose
@@ -148,6 +148,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("VanityNameServersIps")
     @Expose
     private VanityNameServersIps [] VanityNameServersIps;
+
+    /**
+    * Status of the proxy. Values:
+<li>`active`: Enabled</li>
+<li>`inactive`: Not activated</li>
+<li>`paused`: Disabled</li>
+    */
+    @SerializedName("ActiveStatus")
+    @Expose
+    private String ActiveStatus;
+
+    /**
+    * The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AliasZoneName")
+    @Expose
+    private String AliasZoneName;
 
     /**
      * Get The site ID. 
@@ -286,24 +304,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether CNAME flattening is enabled. Valid values:
-<li>`enabled`: Enabled.</li>
-<li>`disabled`: Disabled.</li> 
-     * @return CnameSpeedUp Whether CNAME flattening is enabled. Valid values:
-<li>`enabled`: Enabled.</li>
-<li>`disabled`: Disabled.</li>
+     * Get Whether CNAME acceleration is enabled. Values:
+<li>`enabled`: Enabled</li>
+<li>`disabled`: Disabled</li> 
+     * @return CnameSpeedUp Whether CNAME acceleration is enabled. Values:
+<li>`enabled`: Enabled</li>
+<li>`disabled`: Disabled</li>
      */
     public String getCnameSpeedUp() {
         return this.CnameSpeedUp;
     }
 
     /**
-     * Set Whether CNAME flattening is enabled. Valid values:
-<li>`enabled`: Enabled.</li>
-<li>`disabled`: Disabled.</li>
-     * @param CnameSpeedUp Whether CNAME flattening is enabled. Valid values:
-<li>`enabled`: Enabled.</li>
-<li>`disabled`: Disabled.</li>
+     * Set Whether CNAME acceleration is enabled. Values:
+<li>`enabled`: Enabled</li>
+<li>`disabled`: Disabled</li>
+     * @param CnameSpeedUp Whether CNAME acceleration is enabled. Values:
+<li>`enabled`: Enabled</li>
+<li>`disabled`: Disabled</li>
      */
     public void setCnameSpeedUp(String CnameSpeedUp) {
         this.CnameSpeedUp = CnameSpeedUp;
@@ -465,6 +483,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.VanityNameServersIps = VanityNameServersIps;
     }
 
+    /**
+     * Get Status of the proxy. Values:
+<li>`active`: Enabled</li>
+<li>`inactive`: Not activated</li>
+<li>`paused`: Disabled</li> 
+     * @return ActiveStatus Status of the proxy. Values:
+<li>`active`: Enabled</li>
+<li>`inactive`: Not activated</li>
+<li>`paused`: Disabled</li>
+     */
+    public String getActiveStatus() {
+        return this.ActiveStatus;
+    }
+
+    /**
+     * Set Status of the proxy. Values:
+<li>`active`: Enabled</li>
+<li>`inactive`: Not activated</li>
+<li>`paused`: Disabled</li>
+     * @param ActiveStatus Status of the proxy. Values:
+<li>`active`: Enabled</li>
+<li>`inactive`: Not activated</li>
+<li>`paused`: Disabled</li>
+     */
+    public void setActiveStatus(String ActiveStatus) {
+        this.ActiveStatus = ActiveStatus;
+    }
+
+    /**
+     * Get The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getAliasZoneName() {
+        return this.AliasZoneName;
+    }
+
+    /**
+     * Set The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAliasZoneName(String AliasZoneName) {
+        this.AliasZoneName = AliasZoneName;
+    }
+
     public Zone() {
     }
 
@@ -536,6 +602,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.VanityNameServersIps[i] = new VanityNameServersIps(source.VanityNameServersIps[i]);
             }
         }
+        if (source.ActiveStatus != null) {
+            this.ActiveStatus = new String(source.ActiveStatus);
+        }
+        if (source.AliasZoneName != null) {
+            this.AliasZoneName = new String(source.AliasZoneName);
+        }
     }
 
 
@@ -559,6 +631,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamObj(map, prefix + "VanityNameServers.", this.VanityNameServers);
         this.setParamArrayObj(map, prefix + "VanityNameServersIps.", this.VanityNameServersIps);
+        this.setParamSimple(map, prefix + "ActiveStatus", this.ActiveStatus);
+        this.setParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
 
     }
 }

@@ -83,9 +83,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Deployment status. Values:
-<li>`processing`: Deployment in progress;</li>
-<li>`deployed`: Deployed.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`processing`: Deployment in progress</li>
+<li>`deployed`: Deployed</li>
+<li>`failed`: Deployment failed</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Status")
     @Expose
@@ -100,7 +101,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Message;
 
     /**
-    * 
+    * Certificate algorithm.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("SignAlgo")
     @Expose
@@ -260,13 +262,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Deployment status. Values:
-<li>`processing`: Deployment in progress;</li>
-<li>`deployed`: Deployed.</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
+<li>`processing`: Deployment in progress</li>
+<li>`deployed`: Deployed</li>
+<li>`failed`: Deployment failed</li>
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return Status Deployment status. Values:
-<li>`processing`: Deployment in progress;</li>
-<li>`deployed`: Deployed.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`processing`: Deployment in progress</li>
+<li>`deployed`: Deployed</li>
+<li>`failed`: Deployment failed</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getStatus() {
         return this.Status;
@@ -274,13 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Deployment status. Values:
-<li>`processing`: Deployment in progress;</li>
-<li>`deployed`: Deployed.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`processing`: Deployment in progress</li>
+<li>`deployed`: Deployed</li>
+<li>`failed`: Deployment failed</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Status Deployment status. Values:
-<li>`processing`: Deployment in progress;</li>
-<li>`deployed`: Deployed.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`processing`: Deployment in progress</li>
+<li>`deployed`: Deployed</li>
+<li>`failed`: Deployment failed</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -307,16 +313,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return SignAlgo 
+     * Get Certificate algorithm.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return SignAlgo Certificate algorithm.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getSignAlgo() {
         return this.SignAlgo;
     }
 
     /**
-     * Set 
-     * @param SignAlgo 
+     * Set Certificate algorithm.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param SignAlgo Certificate algorithm.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setSignAlgo(String SignAlgo) {
         this.SignAlgo = SignAlgo;

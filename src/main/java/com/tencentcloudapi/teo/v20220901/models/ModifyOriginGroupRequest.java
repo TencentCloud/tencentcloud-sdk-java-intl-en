@@ -71,7 +71,8 @@ public class ModifyOriginGroupRequest extends AbstractModel{
     private OriginRecord [] OriginRecords;
 
     /**
-    * 
+    * The origin domain. This field can be specified only when `OriginType=self`.
+If it is left empty, the existing configuration is used.
     */
     @SerializedName("HostHeader")
     @Expose
@@ -198,16 +199,20 @@ public class ModifyOriginGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return HostHeader 
+     * Get The origin domain. This field can be specified only when `OriginType=self`.
+If it is left empty, the existing configuration is used. 
+     * @return HostHeader The origin domain. This field can be specified only when `OriginType=self`.
+If it is left empty, the existing configuration is used.
      */
     public String getHostHeader() {
         return this.HostHeader;
     }
 
     /**
-     * Set 
-     * @param HostHeader 
+     * Set The origin domain. This field can be specified only when `OriginType=self`.
+If it is left empty, the existing configuration is used.
+     * @param HostHeader The origin domain. This field can be specified only when `OriginType=self`.
+If it is left empty, the existing configuration is used.
      */
     public void setHostHeader(String HostHeader) {
         this.HostHeader = HostHeader;

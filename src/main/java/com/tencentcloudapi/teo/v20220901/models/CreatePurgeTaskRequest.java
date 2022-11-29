@@ -30,11 +30,12 @@ public class CreatePurgeTaskRequest extends AbstractModel{
     private String ZoneId;
 
     /**
-    * Purging mode. Values:
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li>
+    * Mode of cache purging. Values:
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li>
     */
     @SerializedName("Type")
     @Expose
@@ -43,13 +44,15 @@ public class CreatePurgeTaskRequest extends AbstractModel{
     /**
     * Target resource to be purged, which depends on the `Type` field.
 1. When `Type = purge_host`:
-Hostnames are purged, such as www.example.com and foo.bar.example.com.
+Enter the hostname, such as www.example.com and foo.bar.example.com.
 2. When `Type = purge_prefix`:
-Prefixes are purged, such as http://www.example.com/example.
+Enter the prefix, such as http://www.example.com/example.
 3. When `Type = purge_url`:
-URLs are purged, such as https://www.example.com/example.jpg.
-4. When `Type = purge_all`: All types of resources are purged.
-`Targets` is not a required field.
+Enter the URL, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`:
+This field can be left empty.
+5. When `Type = purge_cache_tag`:
+Enter the cache tag, such as tag1.
     */
     @SerializedName("Targets")
     @Expose
@@ -80,32 +83,36 @@ Note that if it’s enabled, the purging is based on the converted URLs.
     }
 
     /**
-     * Get Purging mode. Values:
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li> 
-     * @return Type Purging mode. Values:
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li>
+     * Get Mode of cache purging. Values:
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li> 
+     * @return Type Mode of cache purging. Values:
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Purging mode. Values:
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li>
-     * @param Type Purging mode. Values:
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li>
+     * Set Mode of cache purging. Values:
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li>
+     * @param Type Mode of cache purging. Values:
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -114,22 +121,26 @@ Note that if it’s enabled, the purging is based on the converted URLs.
     /**
      * Get Target resource to be purged, which depends on the `Type` field.
 1. When `Type = purge_host`:
-Hostnames are purged, such as www.example.com and foo.bar.example.com.
+Enter the hostname, such as www.example.com and foo.bar.example.com.
 2. When `Type = purge_prefix`:
-Prefixes are purged, such as http://www.example.com/example.
+Enter the prefix, such as http://www.example.com/example.
 3. When `Type = purge_url`:
-URLs are purged, such as https://www.example.com/example.jpg.
-4. When `Type = purge_all`: All types of resources are purged.
-`Targets` is not a required field. 
+Enter the URL, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`:
+This field can be left empty.
+5. When `Type = purge_cache_tag`:
+Enter the cache tag, such as tag1. 
      * @return Targets Target resource to be purged, which depends on the `Type` field.
 1. When `Type = purge_host`:
-Hostnames are purged, such as www.example.com and foo.bar.example.com.
+Enter the hostname, such as www.example.com and foo.bar.example.com.
 2. When `Type = purge_prefix`:
-Prefixes are purged, such as http://www.example.com/example.
+Enter the prefix, such as http://www.example.com/example.
 3. When `Type = purge_url`:
-URLs are purged, such as https://www.example.com/example.jpg.
-4. When `Type = purge_all`: All types of resources are purged.
-`Targets` is not a required field.
+Enter the URL, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`:
+This field can be left empty.
+5. When `Type = purge_cache_tag`:
+Enter the cache tag, such as tag1.
      */
     public String [] getTargets() {
         return this.Targets;
@@ -138,22 +149,26 @@ URLs are purged, such as https://www.example.com/example.jpg.
     /**
      * Set Target resource to be purged, which depends on the `Type` field.
 1. When `Type = purge_host`:
-Hostnames are purged, such as www.example.com and foo.bar.example.com.
+Enter the hostname, such as www.example.com and foo.bar.example.com.
 2. When `Type = purge_prefix`:
-Prefixes are purged, such as http://www.example.com/example.
+Enter the prefix, such as http://www.example.com/example.
 3. When `Type = purge_url`:
-URLs are purged, such as https://www.example.com/example.jpg.
-4. When `Type = purge_all`: All types of resources are purged.
-`Targets` is not a required field.
+Enter the URL, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`:
+This field can be left empty.
+5. When `Type = purge_cache_tag`:
+Enter the cache tag, such as tag1.
      * @param Targets Target resource to be purged, which depends on the `Type` field.
 1. When `Type = purge_host`:
-Hostnames are purged, such as www.example.com and foo.bar.example.com.
+Enter the hostname, such as www.example.com and foo.bar.example.com.
 2. When `Type = purge_prefix`:
-Prefixes are purged, such as http://www.example.com/example.
+Enter the prefix, such as http://www.example.com/example.
 3. When `Type = purge_url`:
-URLs are purged, such as https://www.example.com/example.jpg.
-4. When `Type = purge_all`: All types of resources are purged.
-`Targets` is not a required field.
+Enter the URL, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`:
+This field can be left empty.
+5. When `Type = purge_cache_tag`:
+Enter the cache tag, such as tag1.
      */
     public void setTargets(String [] Targets) {
         this.Targets = Targets;

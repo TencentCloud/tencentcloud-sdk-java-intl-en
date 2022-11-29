@@ -77,6 +77,14 @@ public class SecRuleRelatedInfo extends AbstractModel{
     private String RuleTypeName;
 
     /**
+    * The attack content.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AttackContent")
+    @Expose
+    private String AttackContent;
+
+    /**
      * Get The rule ID. 
      * @return RuleId The rule ID.
      */
@@ -220,6 +228,26 @@ public class SecRuleRelatedInfo extends AbstractModel{
         this.RuleTypeName = RuleTypeName;
     }
 
+    /**
+     * Get The attack content.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AttackContent The attack content.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getAttackContent() {
+        return this.AttackContent;
+    }
+
+    /**
+     * Set The attack content.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AttackContent The attack content.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAttackContent(String AttackContent) {
+        this.AttackContent = AttackContent;
+    }
+
     public SecRuleRelatedInfo() {
     }
 
@@ -246,6 +274,9 @@ public class SecRuleRelatedInfo extends AbstractModel{
         if (source.RuleTypeName != null) {
             this.RuleTypeName = new String(source.RuleTypeName);
         }
+        if (source.AttackContent != null) {
+            this.AttackContent = new String(source.AttackContent);
+        }
     }
 
 
@@ -259,6 +290,7 @@ public class SecRuleRelatedInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "RuleLevel", this.RuleLevel);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "RuleTypeName", this.RuleTypeName);
+        this.setParamSimple(map, prefix + "AttackContent", this.AttackContent);
 
     }
 }

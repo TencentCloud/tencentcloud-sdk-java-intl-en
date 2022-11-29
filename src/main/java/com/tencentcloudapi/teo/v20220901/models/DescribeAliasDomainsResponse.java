@@ -20,23 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBillingDataResponse extends AbstractModel{
+public class DescribeAliasDomainsResponse extends AbstractModel{
 
     /**
-    * Data of the sampling point
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total eligible alias domain names.
     */
-    @SerializedName("Data")
+    @SerializedName("TotalCount")
     @Expose
-    private DnsData [] Data;
+    private Long TotalCount;
 
     /**
-    * Time granularity of sampling
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Information of the eligible alias domain names.
     */
-    @SerializedName("Interval")
+    @SerializedName("AliasDomains")
     @Expose
-    private String Interval;
+    private AliasDomain [] AliasDomains;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,43 +44,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Data of the sampling point
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Data Data of the sampling point
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total eligible alias domain names. 
+     * @return TotalCount Total eligible alias domain names.
      */
-    public DnsData [] getData() {
-        return this.Data;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set Data of the sampling point
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Data Data of the sampling point
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total eligible alias domain names.
+     * @param TotalCount Total eligible alias domain names.
      */
-    public void setData(DnsData [] Data) {
-        this.Data = Data;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Time granularity of sampling
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Interval Time granularity of sampling
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Information of the eligible alias domain names. 
+     * @return AliasDomains Information of the eligible alias domain names.
      */
-    public String getInterval() {
-        return this.Interval;
+    public AliasDomain [] getAliasDomains() {
+        return this.AliasDomains;
     }
 
     /**
-     * Set Time granularity of sampling
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Interval Time granularity of sampling
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Information of the eligible alias domain names.
+     * @param AliasDomains Information of the eligible alias domain names.
      */
-    public void setInterval(String Interval) {
-        this.Interval = Interval;
+    public void setAliasDomains(AliasDomain [] AliasDomains) {
+        this.AliasDomains = AliasDomains;
     }
 
     /**
@@ -101,22 +91,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public DescribeBillingDataResponse() {
+    public DescribeAliasDomainsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeBillingDataResponse(DescribeBillingDataResponse source) {
-        if (source.Data != null) {
-            this.Data = new DnsData[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new DnsData(source.Data[i]);
-            }
+    public DescribeAliasDomainsResponse(DescribeAliasDomainsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.Interval != null) {
-            this.Interval = new String(source.Interval);
+        if (source.AliasDomains != null) {
+            this.AliasDomains = new AliasDomain[source.AliasDomains.length];
+            for (int i = 0; i < source.AliasDomains.length; i++) {
+                this.AliasDomains[i] = new AliasDomain(source.AliasDomains[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -128,8 +118,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
-        this.setParamSimple(map, prefix + "Interval", this.Interval);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "AliasDomains.", this.AliasDomains);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

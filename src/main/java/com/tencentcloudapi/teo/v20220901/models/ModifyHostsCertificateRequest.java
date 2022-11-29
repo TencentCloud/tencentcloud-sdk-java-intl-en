@@ -44,6 +44,15 @@ public class ModifyHostsCertificateRequest extends AbstractModel{
     private ServerCertInfo [] ServerCertInfo;
 
     /**
+    * Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne</li>
+<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+    */
+    @SerializedName("ApplyType")
+    @Expose
+    private String ApplyType;
+
+    /**
      * Get ID of the site. 
      * @return ZoneId ID of the site.
      */
@@ -91,6 +100,30 @@ public class ModifyHostsCertificateRequest extends AbstractModel{
         this.ServerCertInfo = ServerCertInfo;
     }
 
+    /**
+     * Get Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne</li>
+<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used. 
+     * @return ApplyType Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne</li>
+<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+     */
+    public String getApplyType() {
+        return this.ApplyType;
+    }
+
+    /**
+     * Set Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne</li>
+<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+     * @param ApplyType Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne</li>
+<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+     */
+    public void setApplyType(String ApplyType) {
+        this.ApplyType = ApplyType;
+    }
+
     public ModifyHostsCertificateRequest() {
     }
 
@@ -114,6 +147,9 @@ public class ModifyHostsCertificateRequest extends AbstractModel{
                 this.ServerCertInfo[i] = new ServerCertInfo(source.ServerCertInfo[i]);
             }
         }
+        if (source.ApplyType != null) {
+            this.ApplyType = new String(source.ApplyType);
+        }
     }
 
 
@@ -124,6 +160,7 @@ public class ModifyHostsCertificateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamArraySimple(map, prefix + "Hosts.", this.Hosts);
         this.setParamArrayObj(map, prefix + "ServerCertInfo.", this.ServerCertInfo);
+        this.setParamSimple(map, prefix + "ApplyType", this.ApplyType);
 
     }
 }

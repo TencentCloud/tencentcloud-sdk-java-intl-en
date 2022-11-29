@@ -23,46 +23,56 @@ import java.util.HashMap;
 public class PartialModule extends AbstractModel{
 
     /**
-    * 
+    * The module. Values:
+<li>`waf`: Managed rules</li>
     */
     @SerializedName("Module")
     @Expose
     private String Module;
 
     /**
-    * 
+    * List of managed rule IDs to be skipped.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Include")
     @Expose
     private Long [] Include;
 
     /**
-     * Get  
-     * @return Module 
+     * Get The module. Values:
+<li>`waf`: Managed rules</li> 
+     * @return Module The module. Values:
+<li>`waf`: Managed rules</li>
      */
     public String getModule() {
         return this.Module;
     }
 
     /**
-     * Set 
-     * @param Module 
+     * Set The module. Values:
+<li>`waf`: Managed rules</li>
+     * @param Module The module. Values:
+<li>`waf`: Managed rules</li>
      */
     public void setModule(String Module) {
         this.Module = Module;
     }
 
     /**
-     * Get  
-     * @return Include 
+     * Get List of managed rule IDs to be skipped.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Include List of managed rule IDs to be skipped.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Long [] getInclude() {
         return this.Include;
     }
 
     /**
-     * Set 
-     * @param Include 
+     * Set List of managed rule IDs to be skipped.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Include List of managed rule IDs to be skipped.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setInclude(Long [] Include) {
         this.Include = Include;

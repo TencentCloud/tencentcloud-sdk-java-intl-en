@@ -30,7 +30,7 @@ public class DeleteLogTopicTaskRequest extends AbstractModel{
     private String TopicId;
 
     /**
-    * Region of the logset.
+    * Region of the logset to be shipped. This field is only required when you configure CLS shipping tasks.
     */
     @SerializedName("LogSetRegion")
     @Expose
@@ -53,16 +53,16 @@ public class DeleteLogTopicTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get Region of the logset. 
-     * @return LogSetRegion Region of the logset.
+     * Get Region of the logset to be shipped. This field is only required when you configure CLS shipping tasks. 
+     * @return LogSetRegion Region of the logset to be shipped. This field is only required when you configure CLS shipping tasks.
      */
     public String getLogSetRegion() {
         return this.LogSetRegion;
     }
 
     /**
-     * Set Region of the logset.
-     * @param LogSetRegion Region of the logset.
+     * Set Region of the logset to be shipped. This field is only required when you configure CLS shipping tasks.
+     * @param LogSetRegion Region of the logset to be shipped. This field is only required when you configure CLS shipping tasks.
      */
     public void setLogSetRegion(String LogSetRegion) {
         this.LogSetRegion = LogSetRegion;

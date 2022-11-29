@@ -35,14 +35,13 @@ public class ExceptUserRuleCondition extends AbstractModel{
 <li>`method`: Request method</li>
 <li>`header`: Request header</li>
 <li>`sip_proto`: Network layer protocol</li>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MatchFrom")
     @Expose
     private String MatchFrom;
 
     /**
-    * The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
+    * The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
     */
     @SerializedName("MatchParam")
     @Expose
@@ -66,7 +65,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`match_prefix`: Prefix matches</li>
 <li>`match_suffix`: Suffix matches</li>
 <li>`wildcard`: Wildcard</li>
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Operator")
     @Expose
@@ -74,7 +72,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * The value of the parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MatchContent")
     @Expose
@@ -92,8 +89,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`accept`: Request content type</li>
 <li>`method`: Request method</li>
 <li>`header`: Request header</li>
-<li>`sip_proto`: Network layer protocol</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
+<li>`sip_proto`: Network layer protocol</li> 
      * @return MatchFrom The field to match. Values:
 <li>`host`: Request domain name</li>
 <li>`sip`: Client IP</li>
@@ -106,7 +102,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`method`: Request method</li>
 <li>`header`: Request header</li>
 <li>`sip_proto`: Network layer protocol</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMatchFrom() {
         return this.MatchFrom;
@@ -125,7 +120,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`method`: Request method</li>
 <li>`header`: Request header</li>
 <li>`sip_proto`: Network layer protocol</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MatchFrom The field to match. Values:
 <li>`host`: Request domain name</li>
 <li>`sip`: Client IP</li>
@@ -138,23 +132,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`method`: Request method</li>
 <li>`header`: Request header</li>
 <li>`sip_proto`: Network layer protocol</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMatchFrom(String MatchFrom) {
         this.MatchFrom = MatchFrom;
     }
 
     /**
-     * Get The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed. 
-     * @return MatchParam The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
+     * Get The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed. 
+     * @return MatchParam The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
      */
     public String getMatchParam() {
         return this.MatchParam;
     }
 
     /**
-     * Set The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
-     * @param MatchParam The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
+     * Set The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
+     * @param MatchParam The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
      */
     public void setMatchParam(String MatchParam) {
         this.MatchParam = MatchParam;
@@ -177,8 +170,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`len_eq`: Value equals</li>
 <li>`match_prefix`: Prefix matches</li>
 <li>`match_suffix`: Suffix matches</li>
-<li>`wildcard`: Wildcard</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
+<li>`wildcard`: Wildcard</li> 
      * @return Operator The logical operator. Values:
 <li>`equal`: String equals</li>
 <li>`not_equal`: Value not equals</li>
@@ -196,7 +188,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`match_prefix`: Prefix matches</li>
 <li>`match_suffix`: Suffix matches</li>
 <li>`wildcard`: Wildcard</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getOperator() {
         return this.Operator;
@@ -220,7 +211,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`match_prefix`: Prefix matches</li>
 <li>`match_suffix`: Suffix matches</li>
 <li>`wildcard`: Wildcard</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Operator The logical operator. Values:
 <li>`equal`: String equals</li>
 <li>`not_equal`: Value not equals</li>
@@ -238,17 +228,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`match_prefix`: Prefix matches</li>
 <li>`match_suffix`: Suffix matches</li>
 <li>`wildcard`: Wildcard</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get The value of the parameter.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get The value of the parameter. 
      * @return MatchContent The value of the parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMatchContent() {
         return this.MatchContent;
@@ -256,9 +243,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set The value of the parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MatchContent The value of the parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMatchContent(String MatchContent) {
         this.MatchContent = MatchContent;

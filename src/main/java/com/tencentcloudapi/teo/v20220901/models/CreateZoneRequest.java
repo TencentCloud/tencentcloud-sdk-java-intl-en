@@ -53,6 +53,22 @@ public class CreateZoneRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * Whether to allow duplicate sites. Values:
+<li>`true`: Duplicate sites are allowed.</li>
+<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
+    */
+    @SerializedName("AllowDuplicates")
+    @Expose
+    private Boolean AllowDuplicates;
+
+    /**
+    * The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+    */
+    @SerializedName("AliasZoneName")
+    @Expose
+    private String AliasZoneName;
+
+    /**
      * Get The site name. 
      * @return ZoneName The site name.
      */
@@ -124,6 +140,46 @@ public class CreateZoneRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get Whether to allow duplicate sites. Values:
+<li>`true`: Duplicate sites are allowed.</li>
+<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used. 
+     * @return AllowDuplicates Whether to allow duplicate sites. Values:
+<li>`true`: Duplicate sites are allowed.</li>
+<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
+     */
+    public Boolean getAllowDuplicates() {
+        return this.AllowDuplicates;
+    }
+
+    /**
+     * Set Whether to allow duplicate sites. Values:
+<li>`true`: Duplicate sites are allowed.</li>
+<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
+     * @param AllowDuplicates Whether to allow duplicate sites. Values:
+<li>`true`: Duplicate sites are allowed.</li>
+<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
+     */
+    public void setAllowDuplicates(Boolean AllowDuplicates) {
+        this.AllowDuplicates = AllowDuplicates;
+    }
+
+    /**
+     * Get The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_). 
+     * @return AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+     */
+    public String getAliasZoneName() {
+        return this.AliasZoneName;
+    }
+
+    /**
+     * Set The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+     * @param AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+     */
+    public void setAliasZoneName(String AliasZoneName) {
+        this.AliasZoneName = AliasZoneName;
+    }
+
     public CreateZoneRequest() {
     }
 
@@ -147,6 +203,12 @@ public class CreateZoneRequest extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.AllowDuplicates != null) {
+            this.AllowDuplicates = new Boolean(source.AllowDuplicates);
+        }
+        if (source.AliasZoneName != null) {
+            this.AliasZoneName = new String(source.AliasZoneName);
+        }
     }
 
 
@@ -158,6 +220,8 @@ public class CreateZoneRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "JumpStart", this.JumpStart);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "AllowDuplicates", this.AllowDuplicates);
+        this.setParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
 
     }
 }

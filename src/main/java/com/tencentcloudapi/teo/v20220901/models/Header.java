@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Header extends AbstractModel{
 
     /**
-    * HTTP header name
+    * HTTP header name.
     */
     @SerializedName("Name")
     @Expose
@@ -37,16 +37,16 @@ public class Header extends AbstractModel{
     private String Value;
 
     /**
-     * Get HTTP header name 
-     * @return Name HTTP header name
+     * Get HTTP header name. 
+     * @return Name HTTP header name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set HTTP header name
-     * @param Name HTTP header name
+     * Set HTTP header name.
+     * @param Name HTTP header name.
      */
     public void setName(String Name) {
         this.Name = Name;

@@ -60,6 +60,13 @@ public class ModifyRuleRequest extends AbstractModel{
     private String Status;
 
     /**
+    * Tag of the rule.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private String [] Tags;
+
+    /**
      * Get ID of the site 
      * @return ZoneId ID of the site
      */
@@ -147,6 +154,22 @@ public class ModifyRuleRequest extends AbstractModel{
         this.Status = Status;
     }
 
+    /**
+     * Get Tag of the rule. 
+     * @return Tags Tag of the rule.
+     */
+    public String [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag of the rule.
+     * @param Tags Tag of the rule.
+     */
+    public void setTags(String [] Tags) {
+        this.Tags = Tags;
+    }
+
     public ModifyRuleRequest() {
     }
 
@@ -173,6 +196,12 @@ public class ModifyRuleRequest extends AbstractModel{
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.Tags != null) {
+            this.Tags = new String[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new String(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -185,6 +214,7 @@ public class ModifyRuleRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
 
     }
 }

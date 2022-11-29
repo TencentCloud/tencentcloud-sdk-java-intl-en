@@ -85,7 +85,8 @@ public class OriginGroup extends AbstractModel{
     private String UpdateTime;
 
     /**
-    * 
+    * The origin domain when `OriginType=self`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("HostHeader")
     @Expose
@@ -244,16 +245,20 @@ public class OriginGroup extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return HostHeader 
+     * Get The origin domain when `OriginType=self`.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return HostHeader The origin domain when `OriginType=self`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getHostHeader() {
         return this.HostHeader;
     }
 
     /**
-     * Set 
-     * @param HostHeader 
+     * Set The origin domain when `OriginType=self`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param HostHeader The origin domain when `OriginType=self`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setHostHeader(String HostHeader) {
         this.HostHeader = HostHeader;

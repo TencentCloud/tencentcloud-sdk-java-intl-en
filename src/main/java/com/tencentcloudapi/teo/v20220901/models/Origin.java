@@ -42,16 +42,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     * Origin-pull protocol configuration. Values:
 <li>`http`: Force HTTP for origin-pull.</li>
 <li>`follow`: Follow protocol.</li>
-<li>`https`: Force HTTPS for origin-pull. This only supports port 443 on the origin server.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`https`: Force HTTPS for origin-pull.</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("OriginPullProtocol")
     @Expose
     private String OriginPullProtocol;
 
     /**
-    * When OriginType is COS, you can specify if access to private buckets is allowed.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to allow private access to buckets when `OriginType=cos`. Values:
+<li>`on`: Allow private access.</li>
+<li>`off`: Allow public access.</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("CosPrivateAccess")
     @Expose
@@ -101,13 +103,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Get Origin-pull protocol configuration. Values:
 <li>`http`: Force HTTP for origin-pull.</li>
 <li>`follow`: Follow protocol.</li>
-<li>`https`: Force HTTPS for origin-pull. This only supports port 443 on the origin server.</li>
-Note: This field may return null, indicating that no valid values can be obtained. 
+<li>`https`: Force HTTPS for origin-pull.</li>
+Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return OriginPullProtocol Origin-pull protocol configuration. Values:
 <li>`http`: Force HTTP for origin-pull.</li>
 <li>`follow`: Follow protocol.</li>
-<li>`https`: Force HTTPS for origin-pull. This only supports port 443 on the origin server.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`https`: Force HTTPS for origin-pull.</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getOriginPullProtocol() {
         return this.OriginPullProtocol;
@@ -117,33 +119,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Set Origin-pull protocol configuration. Values:
 <li>`http`: Force HTTP for origin-pull.</li>
 <li>`follow`: Follow protocol.</li>
-<li>`https`: Force HTTPS for origin-pull. This only supports port 443 on the origin server.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`https`: Force HTTPS for origin-pull.</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param OriginPullProtocol Origin-pull protocol configuration. Values:
 <li>`http`: Force HTTP for origin-pull.</li>
 <li>`follow`: Follow protocol.</li>
-<li>`https`: Force HTTPS for origin-pull. This only supports port 443 on the origin server.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`https`: Force HTTPS for origin-pull.</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setOriginPullProtocol(String OriginPullProtocol) {
         this.OriginPullProtocol = OriginPullProtocol;
     }
 
     /**
-     * Get When OriginType is COS, you can specify if access to private buckets is allowed.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CosPrivateAccess When OriginType is COS, you can specify if access to private buckets is allowed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to allow private access to buckets when `OriginType=cos`. Values:
+<li>`on`: Allow private access.</li>
+<li>`off`: Allow public access.</li>
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return CosPrivateAccess Whether to allow private access to buckets when `OriginType=cos`. Values:
+<li>`on`: Allow private access.</li>
+<li>`off`: Allow public access.</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String getCosPrivateAccess() {
         return this.CosPrivateAccess;
     }
 
     /**
-     * Set When OriginType is COS, you can specify if access to private buckets is allowed.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CosPrivateAccess When OriginType is COS, you can specify if access to private buckets is allowed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to allow private access to buckets when `OriginType=cos`. Values:
+<li>`on`: Allow private access.</li>
+<li>`off`: Allow public access.</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param CosPrivateAccess Whether to allow private access to buckets when `OriginType=cos`. Values:
+<li>`on`: Allow private access.</li>
+<li>`off`: Allow public access.</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setCosPrivateAccess(String CosPrivateAccess) {
         this.CosPrivateAccess = CosPrivateAccess;

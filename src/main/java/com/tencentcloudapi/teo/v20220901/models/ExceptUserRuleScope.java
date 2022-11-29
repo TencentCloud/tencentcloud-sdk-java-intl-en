@@ -23,97 +23,132 @@ import java.util.HashMap;
 public class ExceptUserRuleScope extends AbstractModel{
 
     /**
-    * 
+    * Exception mode. Values:
+<li>`complete`: Skip the exception rule for full requests.</li>
+<li>`partial`: Skip the exception rule for partial requests.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * The module that applies. Only WAF managed rules are supported currently.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The module to be activated. Values:
+<li>`waf`: Managed rules</li>
+<li>`cc`: Rate limiting rules</li>
+<li>`bot`: bot protection</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("Modules")
     @Expose
     private String [] Modules;
 
     /**
-    * 
+    * Module settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("PartialModules")
     @Expose
     private PartialModule [] PartialModules;
 
     /**
-    * 
+    * Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("SkipConditions")
     @Expose
     private SkipCondition [] SkipConditions;
 
     /**
-     * Get  
-     * @return Type 
+     * Get Exception mode. Values:
+<li>`complete`: Skip the exception rule for full requests.</li>
+<li>`partial`: Skip the exception rule for partial requests.</li> 
+     * @return Type Exception mode. Values:
+<li>`complete`: Skip the exception rule for full requests.</li>
+<li>`partial`: Skip the exception rule for partial requests.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Exception mode. Values:
+<li>`complete`: Skip the exception rule for full requests.</li>
+<li>`partial`: Skip the exception rule for partial requests.</li>
+     * @param Type Exception mode. Values:
+<li>`complete`: Skip the exception rule for full requests.</li>
+<li>`partial`: Skip the exception rule for partial requests.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get The module that applies. Only WAF managed rules are supported currently.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Modules The module that applies. Only WAF managed rules are supported currently.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The module to be activated. Values:
+<li>`waf`: Managed rules</li>
+<li>`cc`: Rate limiting rules</li>
+<li>`bot`: bot protection</li>
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Modules The module to be activated. Values:
+<li>`waf`: Managed rules</li>
+<li>`cc`: Rate limiting rules</li>
+<li>`bot`: bot protection</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public String [] getModules() {
         return this.Modules;
     }
 
     /**
-     * Set The module that applies. Only WAF managed rules are supported currently.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Modules The module that applies. Only WAF managed rules are supported currently.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The module to be activated. Values:
+<li>`waf`: Managed rules</li>
+<li>`cc`: Rate limiting rules</li>
+<li>`bot`: bot protection</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Modules The module to be activated. Values:
+<li>`waf`: Managed rules</li>
+<li>`cc`: Rate limiting rules</li>
+<li>`bot`: bot protection</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setModules(String [] Modules) {
         this.Modules = Modules;
     }
 
     /**
-     * Get  
-     * @return PartialModules 
+     * Get Module settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return PartialModules Module settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public PartialModule [] getPartialModules() {
         return this.PartialModules;
     }
 
     /**
-     * Set 
-     * @param PartialModules 
+     * Set Module settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param PartialModules Module settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setPartialModules(PartialModule [] PartialModules) {
         this.PartialModules = PartialModules;
     }
 
     /**
-     * Get  
-     * @return SkipConditions 
+     * Get Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return SkipConditions Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public SkipCondition [] getSkipConditions() {
         return this.SkipConditions;
     }
 
     /**
-     * Set 
-     * @param SkipConditions 
+     * Set Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param SkipConditions Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setSkipConditions(SkipCondition [] SkipConditions) {
         this.SkipConditions = SkipConditions;

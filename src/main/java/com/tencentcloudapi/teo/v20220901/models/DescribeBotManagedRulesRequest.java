@@ -23,20 +23,6 @@ import java.util.HashMap;
 public class DescribeBotManagedRulesRequest extends AbstractModel{
 
     /**
-    * The site ID.
-    */
-    @SerializedName("ZoneId")
-    @Expose
-    private String ZoneId;
-
-    /**
-    * The subdomain name.
-    */
-    @SerializedName("Entity")
-    @Expose
-    private String Entity;
-
-    /**
     * The page offset. Default value: 0
     */
     @SerializedName("Offset")
@@ -51,6 +37,20 @@ public class DescribeBotManagedRulesRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private String ZoneId;
+
+    /**
+    * The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
+    */
+    @SerializedName("Entity")
+    @Expose
+    private String Entity;
+
+    /**
     * The rule type. Values:
 <li>`idcid`</li>
 <li>`sipbot`</li>
@@ -61,36 +61,11 @@ public class DescribeBotManagedRulesRequest extends AbstractModel{
     private String RuleType;
 
     /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
-     */
-    public String getZoneId() {
-        return this.ZoneId;
-    }
-
-    /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
-     */
-    public void setZoneId(String ZoneId) {
-        this.ZoneId = ZoneId;
-    }
-
-    /**
-     * Get The subdomain name. 
-     * @return Entity The subdomain name.
-     */
-    public String getEntity() {
-        return this.Entity;
-    }
-
-    /**
-     * Set The subdomain name.
-     * @param Entity The subdomain name.
-     */
-    public void setEntity(String Entity) {
-        this.Entity = Entity;
-    }
+    * The template ID. You must specify either "ZoneId+Entity" or "TemplateId".
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private String TemplateId;
 
     /**
      * Get The page offset. Default value: 0 
@@ -125,6 +100,38 @@ public class DescribeBotManagedRulesRequest extends AbstractModel{
     }
 
     /**
+     * Get The site ID. You must specify either "ZoneId+Entity" or "TemplateId". 
+     * @return ZoneId The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+     */
+    public String getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+     * @param ZoneId The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+     */
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
+    /**
+     * Get The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId". 
+     * @return Entity The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
+     */
+    public String getEntity() {
+        return this.Entity;
+    }
+
+    /**
+     * Set The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
+     * @param Entity The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
+     */
+    public void setEntity(String Entity) {
+        this.Entity = Entity;
+    }
+
+    /**
      * Get The rule type. Values:
 <li>`idcid`</li>
 <li>`sipbot`</li>
@@ -152,6 +159,22 @@ public class DescribeBotManagedRulesRequest extends AbstractModel{
         this.RuleType = RuleType;
     }
 
+    /**
+     * Get The template ID. You must specify either "ZoneId+Entity" or "TemplateId". 
+     * @return TemplateId The template ID. You must specify either "ZoneId+Entity" or "TemplateId".
+     */
+    public String getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set The template ID. You must specify either "ZoneId+Entity" or "TemplateId".
+     * @param TemplateId The template ID. You must specify either "ZoneId+Entity" or "TemplateId".
+     */
+    public void setTemplateId(String TemplateId) {
+        this.TemplateId = TemplateId;
+    }
+
     public DescribeBotManagedRulesRequest() {
     }
 
@@ -160,20 +183,23 @@ public class DescribeBotManagedRulesRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeBotManagedRulesRequest(DescribeBotManagedRulesRequest source) {
-        if (source.ZoneId != null) {
-            this.ZoneId = new String(source.ZoneId);
-        }
-        if (source.Entity != null) {
-            this.Entity = new String(source.Entity);
-        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
+        }
+        if (source.Entity != null) {
+            this.Entity = new String(source.Entity);
+        }
         if (source.RuleType != null) {
             this.RuleType = new String(source.RuleType);
+        }
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
         }
     }
 
@@ -182,11 +208,12 @@ public class DescribeBotManagedRulesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
-        this.setParamSimple(map, prefix + "Entity", this.Entity);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "Entity", this.Entity);
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
 
     }
 }

@@ -63,6 +63,16 @@ public class IpTableRule extends AbstractModel{
     private String UpdateTime;
 
     /**
+    * The rule status. A null value indicates that the rule is enabled. Values:
+<li>`on`: Enabled</li>
+<li>`off`: Disabled</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
      * Get The action. Values:
 <li>`drop`: Block</li>
 <li>`trans`: Allow</li>
@@ -162,6 +172,34 @@ public class IpTableRule extends AbstractModel{
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get The rule status. A null value indicates that the rule is enabled. Values:
+<li>`on`: Enabled</li>
+<li>`off`: Disabled</li>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Status The rule status. A null value indicates that the rule is enabled. Values:
+<li>`on`: Enabled</li>
+<li>`off`: Disabled</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set The rule status. A null value indicates that the rule is enabled. Values:
+<li>`on`: Enabled</li>
+<li>`off`: Disabled</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Status The rule status. A null value indicates that the rule is enabled. Values:
+<li>`on`: Enabled</li>
+<li>`off`: Disabled</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
     public IpTableRule() {
     }
 
@@ -185,6 +223,9 @@ public class IpTableRule extends AbstractModel{
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
     }
 
 
@@ -197,6 +238,7 @@ public class IpTableRule extends AbstractModel{
         this.setParamSimple(map, prefix + "MatchContent", this.MatchContent);
         this.setParamSimple(map, prefix + "RuleID", this.RuleID);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

@@ -97,14 +97,17 @@ public class LoadBalancing extends AbstractModel{
     private String UpdateTime;
 
     /**
-    * 
+    * The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull</li>
     */
     @SerializedName("OriginType")
     @Expose
     private String OriginType;
 
     /**
-    * 
+    * Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("AdvancedOriginGroups")
     @Expose
@@ -287,32 +290,44 @@ public class LoadBalancing extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return OriginType 
+     * Get The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull</li> 
+     * @return OriginType The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull</li>
      */
     public String getOriginType() {
         return this.OriginType;
     }
 
     /**
-     * Set 
-     * @param OriginType 
+     * Set The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull</li>
+     * @param OriginType The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull</li>
      */
     public void setOriginType(String OriginType) {
         this.OriginType = OriginType;
     }
 
     /**
-     * Get  
-     * @return AdvancedOriginGroups 
+     * Get Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return AdvancedOriginGroups Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public AdvancedOriginGroup [] getAdvancedOriginGroups() {
         return this.AdvancedOriginGroups;
     }
 
     /**
-     * Set 
-     * @param AdvancedOriginGroups 
+     * Set Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param AdvancedOriginGroups Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setAdvancedOriginGroups(AdvancedOriginGroup [] AdvancedOriginGroups) {
         this.AdvancedOriginGroups = AdvancedOriginGroups;

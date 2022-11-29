@@ -53,9 +53,9 @@ public class ModifyApplicationProxyRuleRequest extends AbstractModel{
     private String OriginType;
 
     /**
-    * The port, which can be specified in the following formats:
-Single port, such as 80.
-Port range, such as 81-90. The original configuration will apply if this field is not specified.
+    * The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li>
     */
     @SerializedName("Port")
     @Expose
@@ -72,11 +72,9 @@ Port range, such as 81-90. The original configuration will apply if this field i
 
     /**
     * Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+
 The original configuration will apply if this field is not specified.
     */
     @SerializedName("OriginValue")
@@ -97,11 +95,20 @@ The original configuration will apply if this field is not specified.
     /**
     * Whether to enable session persistence. Values:
 <li>`true`: Enable</li>
-<li>`false`: Disable</li>The original configuration will apply if this field is not specified.
+<li>`false`: Disable</li>If it is left empty, the default value `false` is used.
     */
     @SerializedName("SessionPersist")
     @Expose
     private Boolean SessionPersist;
+
+    /**
+    * The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li>
+    */
+    @SerializedName("OriginPort")
+    @Expose
+    private String OriginPort;
 
     /**
      * Get The site ID. 
@@ -176,24 +183,24 @@ The original configuration will apply if this field is not specified.
     }
 
     /**
-     * Get The port, which can be specified in the following formats:
-Single port, such as 80.
-Port range, such as 81-90. The original configuration will apply if this field is not specified. 
-     * @return Port The port, which can be specified in the following formats:
-Single port, such as 80.
-Port range, such as 81-90. The original configuration will apply if this field is not specified.
+     * Get The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li> 
+     * @return Port The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li>
      */
     public String [] getPort() {
         return this.Port;
     }
 
     /**
-     * Set The port, which can be specified in the following formats:
-Single port, such as 80.
-Port range, such as 81-90. The original configuration will apply if this field is not specified.
-     * @param Port The port, which can be specified in the following formats:
-Single port, such as 80.
-Port range, such as 81-90. The original configuration will apply if this field is not specified.
+     * Set The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li>
+     * @param Port The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li>
      */
     public void setPort(String [] Port) {
         this.Port = Port;
@@ -225,18 +232,14 @@ Port range, such as 81-90. The original configuration will apply if this field i
 
     /**
      * Get Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+
 The original configuration will apply if this field is not specified. 
      * @return OriginValue Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+
 The original configuration will apply if this field is not specified.
      */
     public String [] getOriginValue() {
@@ -245,18 +248,14 @@ The original configuration will apply if this field is not specified.
 
     /**
      * Set Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+
 The original configuration will apply if this field is not specified.
      * @param OriginValue Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+
 The original configuration will apply if this field is not specified.
      */
     public void setOriginValue(String [] OriginValue) {
@@ -298,10 +297,10 @@ The original configuration will apply if this field is not specified.
     /**
      * Get Whether to enable session persistence. Values:
 <li>`true`: Enable</li>
-<li>`false`: Disable</li>The original configuration will apply if this field is not specified. 
+<li>`false`: Disable</li>If it is left empty, the default value `false` is used. 
      * @return SessionPersist Whether to enable session persistence. Values:
 <li>`true`: Enable</li>
-<li>`false`: Disable</li>The original configuration will apply if this field is not specified.
+<li>`false`: Disable</li>If it is left empty, the default value `false` is used.
      */
     public Boolean getSessionPersist() {
         return this.SessionPersist;
@@ -310,13 +309,37 @@ The original configuration will apply if this field is not specified.
     /**
      * Set Whether to enable session persistence. Values:
 <li>`true`: Enable</li>
-<li>`false`: Disable</li>The original configuration will apply if this field is not specified.
+<li>`false`: Disable</li>If it is left empty, the default value `false` is used.
      * @param SessionPersist Whether to enable session persistence. Values:
 <li>`true`: Enable</li>
-<li>`false`: Disable</li>The original configuration will apply if this field is not specified.
+<li>`false`: Disable</li>If it is left empty, the default value `false` is used.
      */
     public void setSessionPersist(Boolean SessionPersist) {
         this.SessionPersist = SessionPersist;
+    }
+
+    /**
+     * Get The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li> 
+     * @return OriginPort The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li>
+     */
+    public String getOriginPort() {
+        return this.OriginPort;
+    }
+
+    /**
+     * Set The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li>
+     * @param OriginPort The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li>
+     */
+    public void setOriginPort(String OriginPort) {
+        this.OriginPort = OriginPort;
     }
 
     public ModifyApplicationProxyRuleRequest() {
@@ -360,6 +383,9 @@ The original configuration will apply if this field is not specified.
         if (source.SessionPersist != null) {
             this.SessionPersist = new Boolean(source.SessionPersist);
         }
+        if (source.OriginPort != null) {
+            this.OriginPort = new String(source.OriginPort);
+        }
     }
 
 
@@ -376,6 +402,7 @@ The original configuration will apply if this field is not specified.
         this.setParamArraySimple(map, prefix + "OriginValue.", this.OriginValue);
         this.setParamSimple(map, prefix + "ForwardClientIp", this.ForwardClientIp);
         this.setParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
+        this.setParamSimple(map, prefix + "OriginPort", this.OriginPort);
 
     }
 }

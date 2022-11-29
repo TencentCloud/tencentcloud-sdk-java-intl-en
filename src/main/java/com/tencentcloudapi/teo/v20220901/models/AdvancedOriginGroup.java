@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class AdvancedOriginGroup extends AbstractModel{
 
     /**
-    * 
+    * Matching condition. The "Target" field must be unique.
     */
     @SerializedName("OriginGroupConditions")
     @Expose
     private OriginGroupCondition [] OriginGroupConditions;
 
     /**
-    * 
+    * ID of the primary origin server.
     */
     @SerializedName("OriginGroupId")
     @Expose
     private String OriginGroupId;
 
     /**
-    * 
+    * ID of the secondary origin server.
     */
     @SerializedName("BackupOriginGroupId")
     @Expose
     private String BackupOriginGroupId;
 
     /**
-     * Get  
-     * @return OriginGroupConditions 
+     * Get Matching condition. The "Target" field must be unique. 
+     * @return OriginGroupConditions Matching condition. The "Target" field must be unique.
      */
     public OriginGroupCondition [] getOriginGroupConditions() {
         return this.OriginGroupConditions;
     }
 
     /**
-     * Set 
-     * @param OriginGroupConditions 
+     * Set Matching condition. The "Target" field must be unique.
+     * @param OriginGroupConditions Matching condition. The "Target" field must be unique.
      */
     public void setOriginGroupConditions(OriginGroupCondition [] OriginGroupConditions) {
         this.OriginGroupConditions = OriginGroupConditions;
     }
 
     /**
-     * Get  
-     * @return OriginGroupId 
+     * Get ID of the primary origin server. 
+     * @return OriginGroupId ID of the primary origin server.
      */
     public String getOriginGroupId() {
         return this.OriginGroupId;
     }
 
     /**
-     * Set 
-     * @param OriginGroupId 
+     * Set ID of the primary origin server.
+     * @param OriginGroupId ID of the primary origin server.
      */
     public void setOriginGroupId(String OriginGroupId) {
         this.OriginGroupId = OriginGroupId;
     }
 
     /**
-     * Get  
-     * @return BackupOriginGroupId 
+     * Get ID of the secondary origin server. 
+     * @return BackupOriginGroupId ID of the secondary origin server.
      */
     public String getBackupOriginGroupId() {
         return this.BackupOriginGroupId;
     }
 
     /**
-     * Set 
-     * @param BackupOriginGroupId 
+     * Set ID of the secondary origin server.
+     * @param BackupOriginGroupId ID of the secondary origin server.
      */
     public void setBackupOriginGroupId(String BackupOriginGroupId) {
         this.BackupOriginGroupId = BackupOriginGroupId;

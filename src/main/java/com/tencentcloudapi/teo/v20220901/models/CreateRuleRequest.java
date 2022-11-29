@@ -53,6 +53,13 @@ public class CreateRuleRequest extends AbstractModel{
     private Rule [] Rules;
 
     /**
+    * Tag of the rule.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private String [] Tags;
+
+    /**
      * Get ID of the site 
      * @return ZoneId ID of the site
      */
@@ -124,6 +131,22 @@ public class CreateRuleRequest extends AbstractModel{
         this.Rules = Rules;
     }
 
+    /**
+     * Get Tag of the rule. 
+     * @return Tags Tag of the rule.
+     */
+    public String [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag of the rule.
+     * @param Tags Tag of the rule.
+     */
+    public void setTags(String [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateRuleRequest() {
     }
 
@@ -147,6 +170,12 @@ public class CreateRuleRequest extends AbstractModel{
                 this.Rules[i] = new Rule(source.Rules[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new String[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new String(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -158,6 +187,7 @@ public class CreateRuleRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
+        this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
 
     }
 }

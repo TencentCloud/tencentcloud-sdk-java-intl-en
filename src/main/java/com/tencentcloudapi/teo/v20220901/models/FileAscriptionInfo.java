@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class FileAscriptionInfo extends AbstractModel{
 
     /**
-    * 
+    * Directory of the verification file.
     */
     @SerializedName("IdentifyPath")
     @Expose
     private String IdentifyPath;
 
     /**
-    * 
+    * Content of the verification file.
     */
     @SerializedName("IdentifyContent")
     @Expose
     private String IdentifyContent;
 
     /**
-     * Get  
-     * @return IdentifyPath 
+     * Get Directory of the verification file. 
+     * @return IdentifyPath Directory of the verification file.
      */
     public String getIdentifyPath() {
         return this.IdentifyPath;
     }
 
     /**
-     * Set 
-     * @param IdentifyPath 
+     * Set Directory of the verification file.
+     * @param IdentifyPath Directory of the verification file.
      */
     public void setIdentifyPath(String IdentifyPath) {
         this.IdentifyPath = IdentifyPath;
     }
 
     /**
-     * Get  
-     * @return IdentifyContent 
+     * Get Content of the verification file. 
+     * @return IdentifyContent Content of the verification file.
      */
     public String getIdentifyContent() {
         return this.IdentifyContent;
     }
 
     /**
-     * Set 
-     * @param IdentifyContent 
+     * Set Content of the verification file.
+     * @param IdentifyContent Content of the verification file.
      */
     public void setIdentifyContent(String IdentifyContent) {
         this.IdentifyContent = IdentifyContent;

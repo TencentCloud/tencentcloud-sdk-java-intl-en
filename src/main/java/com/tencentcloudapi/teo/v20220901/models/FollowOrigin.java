@@ -32,6 +32,22 @@ public class FollowOrigin extends AbstractModel{
     private String Switch;
 
     /**
+    * Sets the default cache time when the origin server does not return the Cache-Control header.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("DefaultCacheTime")
+    @Expose
+    private Long DefaultCacheTime;
+
+    /**
+    * Specifies whether to enable cache when the origin server does not return the Cache-Control header.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("DefaultCache")
+    @Expose
+    private String DefaultCache;
+
+    /**
      * Get Whether to enable the configuration of following the origin server. Valid values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li> 
@@ -55,6 +71,46 @@ public class FollowOrigin extends AbstractModel{
         this.Switch = Switch;
     }
 
+    /**
+     * Get Sets the default cache time when the origin server does not return the Cache-Control header.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return DefaultCacheTime Sets the default cache time when the origin server does not return the Cache-Control header.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Long getDefaultCacheTime() {
+        return this.DefaultCacheTime;
+    }
+
+    /**
+     * Set Sets the default cache time when the origin server does not return the Cache-Control header.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param DefaultCacheTime Sets the default cache time when the origin server does not return the Cache-Control header.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setDefaultCacheTime(Long DefaultCacheTime) {
+        this.DefaultCacheTime = DefaultCacheTime;
+    }
+
+    /**
+     * Get Specifies whether to enable cache when the origin server does not return the Cache-Control header.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return DefaultCache Specifies whether to enable cache when the origin server does not return the Cache-Control header.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getDefaultCache() {
+        return this.DefaultCache;
+    }
+
+    /**
+     * Set Specifies whether to enable cache when the origin server does not return the Cache-Control header.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param DefaultCache Specifies whether to enable cache when the origin server does not return the Cache-Control header.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setDefaultCache(String DefaultCache) {
+        this.DefaultCache = DefaultCache;
+    }
+
     public FollowOrigin() {
     }
 
@@ -66,6 +122,12 @@ public class FollowOrigin extends AbstractModel{
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }
+        if (source.DefaultCacheTime != null) {
+            this.DefaultCacheTime = new Long(source.DefaultCacheTime);
+        }
+        if (source.DefaultCache != null) {
+            this.DefaultCache = new String(source.DefaultCache);
+        }
     }
 
 
@@ -74,6 +136,8 @@ public class FollowOrigin extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
+        this.setParamSimple(map, prefix + "DefaultCacheTime", this.DefaultCacheTime);
+        this.setParamSimple(map, prefix + "DefaultCache", this.DefaultCache);
 
     }
 }

@@ -71,6 +71,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private ServerCertInfo [] CertInfo;
 
     /**
+    * Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("ApplyType")
+    @Expose
+    private String ApplyType;
+
+    /**
      * Get Whether to enable HTTP2. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
@@ -202,6 +212,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.CertInfo = CertInfo;
     }
 
+    /**
+     * Get Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return ApplyType Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getApplyType() {
+        return this.ApplyType;
+    }
+
+    /**
+     * Set Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param ApplyType Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setApplyType(String ApplyType) {
+        this.ApplyType = ApplyType;
+    }
+
     public Https() {
     }
 
@@ -231,6 +269,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.CertInfo[i] = new ServerCertInfo(source.CertInfo[i]);
             }
         }
+        if (source.ApplyType != null) {
+            this.ApplyType = new String(source.ApplyType);
+        }
     }
 
 
@@ -243,6 +284,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArraySimple(map, prefix + "TlsVersion.", this.TlsVersion);
         this.setParamObj(map, prefix + "Hsts.", this.Hsts);
         this.setParamArrayObj(map, prefix + "CertInfo.", this.CertInfo);
+        this.setParamSimple(map, prefix + "ApplyType", this.ApplyType);
 
     }
 }

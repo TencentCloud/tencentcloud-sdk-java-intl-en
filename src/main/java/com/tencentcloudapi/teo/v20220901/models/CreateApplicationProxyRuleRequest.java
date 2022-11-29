@@ -46,9 +46,9 @@ public class CreateApplicationProxyRuleRequest extends AbstractModel{
     private String Proto;
 
     /**
-    * The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li>
+    * The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li>
     */
     @SerializedName("Port")
     @Expose
@@ -56,8 +56,8 @@ public class CreateApplicationProxyRuleRequest extends AbstractModel{
 
     /**
     * The origin type. Values:
-`custom`: Origin server, which is formatted as "IP:Port" or "Domain name:Port"
-`origins`: Origin group
+<li>`custom`: Specified origins</li>
+<li>`origins`: Origin group</li>
     */
     @SerializedName("OriginType")
     @Expose
@@ -65,11 +65,8 @@ public class CreateApplicationProxyRuleRequest extends AbstractModel{
 
     /**
     * Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
     */
     @SerializedName("OriginValue")
     @Expose
@@ -94,6 +91,15 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
     @SerializedName("SessionPersist")
     @Expose
     private Boolean SessionPersist;
+
+    /**
+    * The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li>
+    */
+    @SerializedName("OriginPort")
+    @Expose
+    private String OriginPort;
 
     /**
      * Get The site ID. 
@@ -152,24 +158,24 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
     }
 
     /**
-     * Get The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li> 
-     * @return Port The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li>
+     * Get The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li> 
+     * @return Port The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li>
      */
     public String [] getPort() {
         return this.Port;
     }
 
     /**
-     * Set The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li>
-     * @param Port The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li>
+     * Set The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li>
+     * @param Port The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li>
      */
     public void setPort(String [] Port) {
         this.Port = Port;
@@ -177,11 +183,11 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
 
     /**
      * Get The origin type. Values:
-`custom`: Origin server, which is formatted as "IP:Port" or "Domain name:Port"
-`origins`: Origin group 
+<li>`custom`: Specified origins</li>
+<li>`origins`: Origin group</li> 
      * @return OriginType The origin type. Values:
-`custom`: Origin server, which is formatted as "IP:Port" or "Domain name:Port"
-`origins`: Origin group
+<li>`custom`: Specified origins</li>
+<li>`origins`: Origin group</li>
      */
     public String getOriginType() {
         return this.OriginType;
@@ -189,11 +195,11 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
 
     /**
      * Set The origin type. Values:
-`custom`: Origin server, which is formatted as "IP:Port" or "Domain name:Port"
-`origins`: Origin group
+<li>`custom`: Specified origins</li>
+<li>`origins`: Origin group</li>
      * @param OriginType The origin type. Values:
-`custom`: Origin server, which is formatted as "IP:Port" or "Domain name:Port"
-`origins`: Origin group
+<li>`custom`: Specified origins</li>
+<li>`origins`: Origin group</li>
      */
     public void setOriginType(String OriginType) {
         this.OriginType = OriginType;
@@ -201,17 +207,11 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
 
     /**
      * Get Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。 
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li> 
      * @return OriginValue Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
      */
     public String [] getOriginValue() {
         return this.OriginValue;
@@ -219,17 +219,11 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
 
     /**
      * Set Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
      * @param OriginValue Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
      */
     public void setOriginValue(String [] OriginValue) {
         this.OriginValue = OriginValue;
@@ -291,6 +285,30 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
         this.SessionPersist = SessionPersist;
     }
 
+    /**
+     * Get The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li> 
+     * @return OriginPort The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li>
+     */
+    public String getOriginPort() {
+        return this.OriginPort;
+    }
+
+    /**
+     * Set The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li>
+     * @param OriginPort The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li>
+     */
+    public void setOriginPort(String OriginPort) {
+        this.OriginPort = OriginPort;
+    }
+
     public CreateApplicationProxyRuleRequest() {
     }
 
@@ -329,6 +347,9 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
         if (source.SessionPersist != null) {
             this.SessionPersist = new Boolean(source.SessionPersist);
         }
+        if (source.OriginPort != null) {
+            this.OriginPort = new String(source.OriginPort);
+        }
     }
 
 
@@ -344,6 +365,7 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
         this.setParamArraySimple(map, prefix + "OriginValue.", this.OriginValue);
         this.setParamSimple(map, prefix + "ForwardClientIp", this.ForwardClientIp);
         this.setParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
+        this.setParamSimple(map, prefix + "OriginPort", this.OriginPort);
 
     }
 }

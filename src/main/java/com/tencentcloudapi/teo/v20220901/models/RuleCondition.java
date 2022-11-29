@@ -24,8 +24,10 @@ public class RuleCondition extends AbstractModel{
 
     /**
     * Operator. Valid values:
-<li>equal: Equal to.</li>
-<li>notequal: Not equal to.</li>
+<li>`equals`: Equals</li>
+<li>`notEquals`: Does not equal</li>
+<li>`exist`: Exists</li>
+<li>`notexist`: Does not exist</li>
     */
     @SerializedName("Operator")
     @Expose
@@ -33,37 +35,68 @@ public class RuleCondition extends AbstractModel{
 
     /**
     * Match type. Valid values:
-<li>`host`: All</li>
 <li>`filename`: File name</li>
 <li>`extension`: File extension</li>
-<li>`host`: HOST: .</li>
-<li>`full_url`: The full URL of the current site. It must contain the HTTP protocol, host, and path.</li>
-<li>`url`: The URL path of the current site.</li>
+<li>`host`: Host</li>
+<li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
+<li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
+<li>`query_string`: Query string in the URL</li>
+<li>`request_header`: HTTP request header</li>
     */
     @SerializedName("Target")
     @Expose
     private String Target;
 
     /**
-    * Parameter values of the match type. Each match type has the following valid values:
-<li>`Target=extension`:  The extension of the file, such as `jpg` and `txt`.</li>
-<li>`Target=filename`: The file name without the extension.</li>
-<li>`Target=host`: Values can be `all` 
-or a host, such as `www.maxx55.com`.</li>
-<li>`Target=url`: A URL request path under the current site, such as `/example`.</li>
-<li>`Target=full_url`: A complete URL request under the current site. It must contain the protocol, host, and path, such as `https://www.maxx55.cn/example`.</li>
+    * The parameter value of the match type. It can be an empty string only when `Target=query string/request header` and `Operator=exist/notexist`.
+<li>When `Target=extension`, enter the file extension, such as "jpg" and "txt".</li>
+<li>When `Target=filename`, enter the file name, such as "foo" in "foo.jpg".</li>
+<li>When `Target=all`, it indicates any site request.</li>
+<li>When `Target=host`, enter the host under the current site, such as "www.maxx55.com".</li>
+<li>When `Target=url`, enter the partial URL path under the current site, such as "/example".</li>
+<li>When `Target=full_url`, enter the complete URL  under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
+<li>When `Target=client_country`, enter the ISO-3166 country/region code.</li>
+<li>When `Target=query_string`, enter the value of the query string, such as "cn" and "1" in "lang=cn&version=1".</li>
+<li>When `Target=request_header`, enter the HTTP request header value, such as "zh-CN,zh;q=0.9" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
+    * Whether the parameter value is case insensitive. Default value: false.
+    */
+    @SerializedName("IgnoreCase")
+    @Expose
+    private Boolean IgnoreCase;
+
+    /**
+    * The parameter name of the match type. This field is required only when `Target=query_string/request_header`.
+<li>`query_string`: Name of the query string, such as "lang" and "version" in "lang=cn&version=1".</li>
+<li>`request_header`: Name of the HTTP request header, such as "Accept-Language" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * 
+    */
+    @SerializedName("IgnoreNameCase")
+    @Expose
+    private Boolean IgnoreNameCase;
+
+    /**
      * Get Operator. Valid values:
-<li>equal: Equal to.</li>
-<li>notequal: Not equal to.</li> 
+<li>`equals`: Equals</li>
+<li>`notEquals`: Does not equal</li>
+<li>`exist`: Exists</li>
+<li>`notexist`: Does not exist</li> 
      * @return Operator Operator. Valid values:
-<li>equal: Equal to.</li>
-<li>notequal: Not equal to.</li>
+<li>`equals`: Equals</li>
+<li>`notEquals`: Does not equal</li>
+<li>`exist`: Exists</li>
+<li>`notexist`: Does not exist</li>
      */
     public String getOperator() {
         return this.Operator;
@@ -71,11 +104,15 @@ or a host, such as `www.maxx55.com`.</li>
 
     /**
      * Set Operator. Valid values:
-<li>equal: Equal to.</li>
-<li>notequal: Not equal to.</li>
+<li>`equals`: Equals</li>
+<li>`notEquals`: Does not equal</li>
+<li>`exist`: Exists</li>
+<li>`notexist`: Does not exist</li>
      * @param Operator Operator. Valid values:
-<li>equal: Equal to.</li>
-<li>notequal: Not equal to.</li>
+<li>`equals`: Equals</li>
+<li>`notEquals`: Does not equal</li>
+<li>`exist`: Exists</li>
+<li>`notexist`: Does not exist</li>
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
@@ -83,19 +120,21 @@ or a host, such as `www.maxx55.com`.</li>
 
     /**
      * Get Match type. Valid values:
-<li>`host`: All</li>
 <li>`filename`: File name</li>
 <li>`extension`: File extension</li>
-<li>`host`: HOST: .</li>
-<li>`full_url`: The full URL of the current site. It must contain the HTTP protocol, host, and path.</li>
-<li>`url`: The URL path of the current site.</li> 
+<li>`host`: Host</li>
+<li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
+<li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
+<li>`query_string`: Query string in the URL</li>
+<li>`request_header`: HTTP request header</li> 
      * @return Target Match type. Valid values:
-<li>`host`: All</li>
 <li>`filename`: File name</li>
 <li>`extension`: File extension</li>
-<li>`host`: HOST: .</li>
-<li>`full_url`: The full URL of the current site. It must contain the HTTP protocol, host, and path.</li>
-<li>`url`: The URL path of the current site.</li>
+<li>`host`: Host</li>
+<li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
+<li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
+<li>`query_string`: Query string in the URL</li>
+<li>`request_header`: HTTP request header</li>
      */
     public String getTarget() {
         return this.Target;
@@ -103,62 +142,132 @@ or a host, such as `www.maxx55.com`.</li>
 
     /**
      * Set Match type. Valid values:
-<li>`host`: All</li>
 <li>`filename`: File name</li>
 <li>`extension`: File extension</li>
-<li>`host`: HOST: .</li>
-<li>`full_url`: The full URL of the current site. It must contain the HTTP protocol, host, and path.</li>
-<li>`url`: The URL path of the current site.</li>
+<li>`host`: Host</li>
+<li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
+<li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
+<li>`query_string`: Query string in the URL</li>
+<li>`request_header`: HTTP request header</li>
      * @param Target Match type. Valid values:
-<li>`host`: All</li>
 <li>`filename`: File name</li>
 <li>`extension`: File extension</li>
-<li>`host`: HOST: .</li>
-<li>`full_url`: The full URL of the current site. It must contain the HTTP protocol, host, and path.</li>
-<li>`url`: The URL path of the current site.</li>
+<li>`host`: Host</li>
+<li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
+<li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
+<li>`query_string`: Query string in the URL</li>
+<li>`request_header`: HTTP request header</li>
      */
     public void setTarget(String Target) {
         this.Target = Target;
     }
 
     /**
-     * Get Parameter values of the match type. Each match type has the following valid values:
-<li>`Target=extension`:  The extension of the file, such as `jpg` and `txt`.</li>
-<li>`Target=filename`: The file name without the extension.</li>
-<li>`Target=host`: Values can be `all` 
-or a host, such as `www.maxx55.com`.</li>
-<li>`Target=url`: A URL request path under the current site, such as `/example`.</li>
-<li>`Target=full_url`: A complete URL request under the current site. It must contain the protocol, host, and path, such as `https://www.maxx55.cn/example`.</li> 
-     * @return Values Parameter values of the match type. Each match type has the following valid values:
-<li>`Target=extension`:  The extension of the file, such as `jpg` and `txt`.</li>
-<li>`Target=filename`: The file name without the extension.</li>
-<li>`Target=host`: Values can be `all` 
-or a host, such as `www.maxx55.com`.</li>
-<li>`Target=url`: A URL request path under the current site, such as `/example`.</li>
-<li>`Target=full_url`: A complete URL request under the current site. It must contain the protocol, host, and path, such as `https://www.maxx55.cn/example`.</li>
+     * Get The parameter value of the match type. It can be an empty string only when `Target=query string/request header` and `Operator=exist/notexist`.
+<li>When `Target=extension`, enter the file extension, such as "jpg" and "txt".</li>
+<li>When `Target=filename`, enter the file name, such as "foo" in "foo.jpg".</li>
+<li>When `Target=all`, it indicates any site request.</li>
+<li>When `Target=host`, enter the host under the current site, such as "www.maxx55.com".</li>
+<li>When `Target=url`, enter the partial URL path under the current site, such as "/example".</li>
+<li>When `Target=full_url`, enter the complete URL  under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
+<li>When `Target=client_country`, enter the ISO-3166 country/region code.</li>
+<li>When `Target=query_string`, enter the value of the query string, such as "cn" and "1" in "lang=cn&version=1".</li>
+<li>When `Target=request_header`, enter the HTTP request header value, such as "zh-CN,zh;q=0.9" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li> 
+     * @return Values The parameter value of the match type. It can be an empty string only when `Target=query string/request header` and `Operator=exist/notexist`.
+<li>When `Target=extension`, enter the file extension, such as "jpg" and "txt".</li>
+<li>When `Target=filename`, enter the file name, such as "foo" in "foo.jpg".</li>
+<li>When `Target=all`, it indicates any site request.</li>
+<li>When `Target=host`, enter the host under the current site, such as "www.maxx55.com".</li>
+<li>When `Target=url`, enter the partial URL path under the current site, such as "/example".</li>
+<li>When `Target=full_url`, enter the complete URL  under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
+<li>When `Target=client_country`, enter the ISO-3166 country/region code.</li>
+<li>When `Target=query_string`, enter the value of the query string, such as "cn" and "1" in "lang=cn&version=1".</li>
+<li>When `Target=request_header`, enter the HTTP request header value, such as "zh-CN,zh;q=0.9" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set Parameter values of the match type. Each match type has the following valid values:
-<li>`Target=extension`:  The extension of the file, such as `jpg` and `txt`.</li>
-<li>`Target=filename`: The file name without the extension.</li>
-<li>`Target=host`: Values can be `all` 
-or a host, such as `www.maxx55.com`.</li>
-<li>`Target=url`: A URL request path under the current site, such as `/example`.</li>
-<li>`Target=full_url`: A complete URL request under the current site. It must contain the protocol, host, and path, such as `https://www.maxx55.cn/example`.</li>
-     * @param Values Parameter values of the match type. Each match type has the following valid values:
-<li>`Target=extension`:  The extension of the file, such as `jpg` and `txt`.</li>
-<li>`Target=filename`: The file name without the extension.</li>
-<li>`Target=host`: Values can be `all` 
-or a host, such as `www.maxx55.com`.</li>
-<li>`Target=url`: A URL request path under the current site, such as `/example`.</li>
-<li>`Target=full_url`: A complete URL request under the current site. It must contain the protocol, host, and path, such as `https://www.maxx55.cn/example`.</li>
+     * Set The parameter value of the match type. It can be an empty string only when `Target=query string/request header` and `Operator=exist/notexist`.
+<li>When `Target=extension`, enter the file extension, such as "jpg" and "txt".</li>
+<li>When `Target=filename`, enter the file name, such as "foo" in "foo.jpg".</li>
+<li>When `Target=all`, it indicates any site request.</li>
+<li>When `Target=host`, enter the host under the current site, such as "www.maxx55.com".</li>
+<li>When `Target=url`, enter the partial URL path under the current site, such as "/example".</li>
+<li>When `Target=full_url`, enter the complete URL  under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
+<li>When `Target=client_country`, enter the ISO-3166 country/region code.</li>
+<li>When `Target=query_string`, enter the value of the query string, such as "cn" and "1" in "lang=cn&version=1".</li>
+<li>When `Target=request_header`, enter the HTTP request header value, such as "zh-CN,zh;q=0.9" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
+     * @param Values The parameter value of the match type. It can be an empty string only when `Target=query string/request header` and `Operator=exist/notexist`.
+<li>When `Target=extension`, enter the file extension, such as "jpg" and "txt".</li>
+<li>When `Target=filename`, enter the file name, such as "foo" in "foo.jpg".</li>
+<li>When `Target=all`, it indicates any site request.</li>
+<li>When `Target=host`, enter the host under the current site, such as "www.maxx55.com".</li>
+<li>When `Target=url`, enter the partial URL path under the current site, such as "/example".</li>
+<li>When `Target=full_url`, enter the complete URL  under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
+<li>When `Target=client_country`, enter the ISO-3166 country/region code.</li>
+<li>When `Target=query_string`, enter the value of the query string, such as "cn" and "1" in "lang=cn&version=1".</li>
+<li>When `Target=request_header`, enter the HTTP request header value, such as "zh-CN,zh;q=0.9" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
      */
     public void setValues(String [] Values) {
         this.Values = Values;
+    }
+
+    /**
+     * Get Whether the parameter value is case insensitive. Default value: false. 
+     * @return IgnoreCase Whether the parameter value is case insensitive. Default value: false.
+     */
+    public Boolean getIgnoreCase() {
+        return this.IgnoreCase;
+    }
+
+    /**
+     * Set Whether the parameter value is case insensitive. Default value: false.
+     * @param IgnoreCase Whether the parameter value is case insensitive. Default value: false.
+     */
+    public void setIgnoreCase(Boolean IgnoreCase) {
+        this.IgnoreCase = IgnoreCase;
+    }
+
+    /**
+     * Get The parameter name of the match type. This field is required only when `Target=query_string/request_header`.
+<li>`query_string`: Name of the query string, such as "lang" and "version" in "lang=cn&version=1".</li>
+<li>`request_header`: Name of the HTTP request header, such as "Accept-Language" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li> 
+     * @return Name The parameter name of the match type. This field is required only when `Target=query_string/request_header`.
+<li>`query_string`: Name of the query string, such as "lang" and "version" in "lang=cn&version=1".</li>
+<li>`request_header`: Name of the HTTP request header, such as "Accept-Language" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set The parameter name of the match type. This field is required only when `Target=query_string/request_header`.
+<li>`query_string`: Name of the query string, such as "lang" and "version" in "lang=cn&version=1".</li>
+<li>`request_header`: Name of the HTTP request header, such as "Accept-Language" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
+     * @param Name The parameter name of the match type. This field is required only when `Target=query_string/request_header`.
+<li>`query_string`: Name of the query string, such as "lang" and "version" in "lang=cn&version=1".</li>
+<li>`request_header`: Name of the HTTP request header, such as "Accept-Language" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get  
+     * @return IgnoreNameCase 
+     */
+    public Boolean getIgnoreNameCase() {
+        return this.IgnoreNameCase;
+    }
+
+    /**
+     * Set 
+     * @param IgnoreNameCase 
+     */
+    public void setIgnoreNameCase(Boolean IgnoreNameCase) {
+        this.IgnoreNameCase = IgnoreNameCase;
     }
 
     public RuleCondition() {
@@ -181,6 +290,15 @@ or a host, such as `www.maxx55.com`.</li>
                 this.Values[i] = new String(source.Values[i]);
             }
         }
+        if (source.IgnoreCase != null) {
+            this.IgnoreCase = new Boolean(source.IgnoreCase);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.IgnoreNameCase != null) {
+            this.IgnoreNameCase = new Boolean(source.IgnoreNameCase);
+        }
     }
 
 
@@ -191,6 +309,9 @@ or a host, such as `www.maxx55.com`.</li>
         this.setParamSimple(map, prefix + "Operator", this.Operator);
         this.setParamSimple(map, prefix + "Target", this.Target);
         this.setParamArraySimple(map, prefix + "Values.", this.Values);
+        this.setParamSimple(map, prefix + "IgnoreCase", this.IgnoreCase);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "IgnoreNameCase", this.IgnoreNameCase);
 
     }
 }
