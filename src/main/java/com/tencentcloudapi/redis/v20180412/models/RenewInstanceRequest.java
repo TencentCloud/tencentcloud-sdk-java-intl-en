@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class RenewInstanceRequest extends AbstractModel{
 
     /**
-    * Length of purchase in months
+    * Validity period in months
     */
     @SerializedName("Period")
     @Expose
@@ -37,16 +37,23 @@ public class RenewInstanceRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-     * Get Length of purchase in months 
-     * @return Period Length of purchase in months
+    * The parameter used to determine whether to modify the billing mode. <ul><li>If you want to change the billing mode from pay-as-you-go to monthly subscription, specify this parameter as <b>prepaid</b>. </li><li>If the current instance is monthly subscribed, this parameter is not required. </li></ul>
+    */
+    @SerializedName("ModifyPayMode")
+    @Expose
+    private String ModifyPayMode;
+
+    /**
+     * Get Validity period in months 
+     * @return Period Validity period in months
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Length of purchase in months
-     * @param Period Length of purchase in months
+     * Set Validity period in months
+     * @param Period Validity period in months
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
@@ -68,6 +75,22 @@ public class RenewInstanceRequest extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get The parameter used to determine whether to modify the billing mode. <ul><li>If you want to change the billing mode from pay-as-you-go to monthly subscription, specify this parameter as <b>prepaid</b>. </li><li>If the current instance is monthly subscribed, this parameter is not required. </li></ul> 
+     * @return ModifyPayMode The parameter used to determine whether to modify the billing mode. <ul><li>If you want to change the billing mode from pay-as-you-go to monthly subscription, specify this parameter as <b>prepaid</b>. </li><li>If the current instance is monthly subscribed, this parameter is not required. </li></ul>
+     */
+    public String getModifyPayMode() {
+        return this.ModifyPayMode;
+    }
+
+    /**
+     * Set The parameter used to determine whether to modify the billing mode. <ul><li>If you want to change the billing mode from pay-as-you-go to monthly subscription, specify this parameter as <b>prepaid</b>. </li><li>If the current instance is monthly subscribed, this parameter is not required. </li></ul>
+     * @param ModifyPayMode The parameter used to determine whether to modify the billing mode. <ul><li>If you want to change the billing mode from pay-as-you-go to monthly subscription, specify this parameter as <b>prepaid</b>. </li><li>If the current instance is monthly subscribed, this parameter is not required. </li></ul>
+     */
+    public void setModifyPayMode(String ModifyPayMode) {
+        this.ModifyPayMode = ModifyPayMode;
+    }
+
     public RenewInstanceRequest() {
     }
 
@@ -82,6 +105,9 @@ public class RenewInstanceRequest extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.ModifyPayMode != null) {
+            this.ModifyPayMode = new String(source.ModifyPayMode);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class RenewInstanceRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "ModifyPayMode", this.ModifyPayMode);
 
     }
 }

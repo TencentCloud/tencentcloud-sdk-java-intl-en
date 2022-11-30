@@ -93,7 +93,7 @@ public class Backup extends AbstractModel{
     private Long Strategy;
 
     /**
-    * Backup mode. 0: scheduled, 1: manual
+    * Backup Mode. Valid values: `0` (scheduled backup); `1` (manual backup); `2` (archive backup).
     */
     @SerializedName("BackupWay")
     @Expose
@@ -302,16 +302,16 @@ public class Backup extends AbstractModel{
     }
 
     /**
-     * Get Backup mode. 0: scheduled, 1: manual 
-     * @return BackupWay Backup mode. 0: scheduled, 1: manual
+     * Get Backup Mode. Valid values: `0` (scheduled backup); `1` (manual backup); `2` (archive backup). 
+     * @return BackupWay Backup Mode. Valid values: `0` (scheduled backup); `1` (manual backup); `2` (archive backup).
      */
     public Long getBackupWay() {
         return this.BackupWay;
     }
 
     /**
-     * Set Backup mode. 0: scheduled, 1: manual
-     * @param BackupWay Backup mode. 0: scheduled, 1: manual
+     * Set Backup Mode. Valid values: `0` (scheduled backup); `1` (manual backup); `2` (archive backup).
+     * @param BackupWay Backup Mode. Valid values: `0` (scheduled backup); `1` (manual backup); `2` (archive backup).
      */
     public void setBackupWay(Long BackupWay) {
         this.BackupWay = BackupWay;

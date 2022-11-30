@@ -24,17 +24,25 @@ public class ProxyNodes extends AbstractModel{
 
     /**
     * Node ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NodeId")
     @Expose
     private String NodeId;
 
     /**
+    * AZ ID
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private Long ZoneId;
+
+    /**
      * Get Node ID
-Note: This field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return NodeId Node ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getNodeId() {
         return this.NodeId;
@@ -42,12 +50,32 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Node ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param NodeId Node ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNodeId(String NodeId) {
         this.NodeId = NodeId;
+    }
+
+    /**
+     * Get AZ ID
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ZoneId AZ ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set AZ ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ZoneId AZ ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setZoneId(Long ZoneId) {
+        this.ZoneId = ZoneId;
     }
 
     public ProxyNodes() {
@@ -61,6 +89,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.NodeId != null) {
             this.NodeId = new String(source.NodeId);
         }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
     }
 
 
@@ -69,6 +100,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "NodeId", this.NodeId);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
 
     }
 }

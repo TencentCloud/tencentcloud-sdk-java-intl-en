@@ -72,7 +72,7 @@ public class DescribeBackupsRequest extends AbstractModel{
     private Long Strategy;
 
     /**
-    * Filter by backup mode. Valid values: 0 (automatic backup on a regular basis), 1 (manual backup performed by the user at any time). If this parameter is left empty, backup mode will not be used in filtering.
+    * Filter by backup mode. Valid values: `0` (scheduled backup); `1` (manual backup); `2` (archive backup). Default value: `2`.
     */
     @SerializedName("BackupWay")
     @Expose
@@ -226,16 +226,16 @@ public class DescribeBackupsRequest extends AbstractModel{
     }
 
     /**
-     * Get Filter by backup mode. Valid values: 0 (automatic backup on a regular basis), 1 (manual backup performed by the user at any time). If this parameter is left empty, backup mode will not be used in filtering. 
-     * @return BackupWay Filter by backup mode. Valid values: 0 (automatic backup on a regular basis), 1 (manual backup performed by the user at any time). If this parameter is left empty, backup mode will not be used in filtering.
+     * Get Filter by backup mode. Valid values: `0` (scheduled backup); `1` (manual backup); `2` (archive backup). Default value: `2`. 
+     * @return BackupWay Filter by backup mode. Valid values: `0` (scheduled backup); `1` (manual backup); `2` (archive backup). Default value: `2`.
      */
     public Long getBackupWay() {
         return this.BackupWay;
     }
 
     /**
-     * Set Filter by backup mode. Valid values: 0 (automatic backup on a regular basis), 1 (manual backup performed by the user at any time). If this parameter is left empty, backup mode will not be used in filtering.
-     * @param BackupWay Filter by backup mode. Valid values: 0 (automatic backup on a regular basis), 1 (manual backup performed by the user at any time). If this parameter is left empty, backup mode will not be used in filtering.
+     * Set Filter by backup mode. Valid values: `0` (scheduled backup); `1` (manual backup); `2` (archive backup). Default value: `2`.
+     * @param BackupWay Filter by backup mode. Valid values: `0` (scheduled backup); `1` (manual backup); `2` (archive backup). Default value: `2`.
      */
     public void setBackupWay(Long BackupWay) {
         this.BackupWay = BackupWay;

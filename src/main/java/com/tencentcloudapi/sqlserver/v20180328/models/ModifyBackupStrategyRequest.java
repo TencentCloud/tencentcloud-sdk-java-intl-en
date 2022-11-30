@@ -72,6 +72,41 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
     private Long BackupSaveDays;
 
     /**
+    * Archive backup status. Valid values: `enable` (enabled); `disable` (disabled). Default value: `disable`.
+    */
+    @SerializedName("RegularBackupEnable")
+    @Expose
+    private String RegularBackupEnable;
+
+    /**
+    * Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
+    */
+    @SerializedName("RegularBackupSaveDays")
+    @Expose
+    private Long RegularBackupSaveDays;
+
+    /**
+    * Archive backup policy. Valid values: `years` (yearly); `quarters (quarterly); `months` (monthly); Default value: `months`.
+    */
+    @SerializedName("RegularBackupStrategy")
+    @Expose
+    private String RegularBackupStrategy;
+
+    /**
+    * The number of retained archive backups. Default value: `1`.
+    */
+    @SerializedName("RegularBackupCounts")
+    @Expose
+    private Long RegularBackupCounts;
+
+    /**
+    * Archive backup start date in YYYY-MM-DD format, which is the current time by default.
+    */
+    @SerializedName("RegularBackupStartTime")
+    @Expose
+    private String RegularBackupStartTime;
+
+    /**
      * Get Instance ID. 
      * @return InstanceId Instance ID.
      */
@@ -183,6 +218,86 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
         this.BackupSaveDays = BackupSaveDays;
     }
 
+    /**
+     * Get Archive backup status. Valid values: `enable` (enabled); `disable` (disabled). Default value: `disable`. 
+     * @return RegularBackupEnable Archive backup status. Valid values: `enable` (enabled); `disable` (disabled). Default value: `disable`.
+     */
+    public String getRegularBackupEnable() {
+        return this.RegularBackupEnable;
+    }
+
+    /**
+     * Set Archive backup status. Valid values: `enable` (enabled); `disable` (disabled). Default value: `disable`.
+     * @param RegularBackupEnable Archive backup status. Valid values: `enable` (enabled); `disable` (disabled). Default value: `disable`.
+     */
+    public void setRegularBackupEnable(String RegularBackupEnable) {
+        this.RegularBackupEnable = RegularBackupEnable;
+    }
+
+    /**
+     * Get Archive backup retention days. Value range: 90–3650 days. Default value: 365 days. 
+     * @return RegularBackupSaveDays Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
+     */
+    public Long getRegularBackupSaveDays() {
+        return this.RegularBackupSaveDays;
+    }
+
+    /**
+     * Set Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
+     * @param RegularBackupSaveDays Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
+     */
+    public void setRegularBackupSaveDays(Long RegularBackupSaveDays) {
+        this.RegularBackupSaveDays = RegularBackupSaveDays;
+    }
+
+    /**
+     * Get Archive backup policy. Valid values: `years` (yearly); `quarters (quarterly); `months` (monthly); Default value: `months`. 
+     * @return RegularBackupStrategy Archive backup policy. Valid values: `years` (yearly); `quarters (quarterly); `months` (monthly); Default value: `months`.
+     */
+    public String getRegularBackupStrategy() {
+        return this.RegularBackupStrategy;
+    }
+
+    /**
+     * Set Archive backup policy. Valid values: `years` (yearly); `quarters (quarterly); `months` (monthly); Default value: `months`.
+     * @param RegularBackupStrategy Archive backup policy. Valid values: `years` (yearly); `quarters (quarterly); `months` (monthly); Default value: `months`.
+     */
+    public void setRegularBackupStrategy(String RegularBackupStrategy) {
+        this.RegularBackupStrategy = RegularBackupStrategy;
+    }
+
+    /**
+     * Get The number of retained archive backups. Default value: `1`. 
+     * @return RegularBackupCounts The number of retained archive backups. Default value: `1`.
+     */
+    public Long getRegularBackupCounts() {
+        return this.RegularBackupCounts;
+    }
+
+    /**
+     * Set The number of retained archive backups. Default value: `1`.
+     * @param RegularBackupCounts The number of retained archive backups. Default value: `1`.
+     */
+    public void setRegularBackupCounts(Long RegularBackupCounts) {
+        this.RegularBackupCounts = RegularBackupCounts;
+    }
+
+    /**
+     * Get Archive backup start date in YYYY-MM-DD format, which is the current time by default. 
+     * @return RegularBackupStartTime Archive backup start date in YYYY-MM-DD format, which is the current time by default.
+     */
+    public String getRegularBackupStartTime() {
+        return this.RegularBackupStartTime;
+    }
+
+    /**
+     * Set Archive backup start date in YYYY-MM-DD format, which is the current time by default.
+     * @param RegularBackupStartTime Archive backup start date in YYYY-MM-DD format, which is the current time by default.
+     */
+    public void setRegularBackupStartTime(String RegularBackupStartTime) {
+        this.RegularBackupStartTime = RegularBackupStartTime;
+    }
+
     public ModifyBackupStrategyRequest() {
     }
 
@@ -215,6 +330,21 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
         if (source.BackupSaveDays != null) {
             this.BackupSaveDays = new Long(source.BackupSaveDays);
         }
+        if (source.RegularBackupEnable != null) {
+            this.RegularBackupEnable = new String(source.RegularBackupEnable);
+        }
+        if (source.RegularBackupSaveDays != null) {
+            this.RegularBackupSaveDays = new Long(source.RegularBackupSaveDays);
+        }
+        if (source.RegularBackupStrategy != null) {
+            this.RegularBackupStrategy = new String(source.RegularBackupStrategy);
+        }
+        if (source.RegularBackupCounts != null) {
+            this.RegularBackupCounts = new Long(source.RegularBackupCounts);
+        }
+        if (source.RegularBackupStartTime != null) {
+            this.RegularBackupStartTime = new String(source.RegularBackupStartTime);
+        }
     }
 
 
@@ -229,6 +359,11 @@ public class ModifyBackupStrategyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupModel", this.BackupModel);
         this.setParamArraySimple(map, prefix + "BackupCycle.", this.BackupCycle);
         this.setParamSimple(map, prefix + "BackupSaveDays", this.BackupSaveDays);
+        this.setParamSimple(map, prefix + "RegularBackupEnable", this.RegularBackupEnable);
+        this.setParamSimple(map, prefix + "RegularBackupSaveDays", this.RegularBackupSaveDays);
+        this.setParamSimple(map, prefix + "RegularBackupStrategy", this.RegularBackupStrategy);
+        this.setParamSimple(map, prefix + "RegularBackupCounts", this.RegularBackupCounts);
+        this.setParamSimple(map, prefix + "RegularBackupStartTime", this.RegularBackupStartTime);
 
     }
 }
