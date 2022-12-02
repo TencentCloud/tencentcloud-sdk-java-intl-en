@@ -199,6 +199,26 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query COS usage details.
+     * @param req DescribeDosageCosDetailByDateRequest
+     * @return DescribeDosageCosDetailByDateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDosageCosDetailByDateResponse DescribeDosageCosDetailByDate(DescribeDosageCosDetailByDateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDosageCosDetailByDateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDosageCosDetailByDateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDosageCosDetailByDate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query vouchers.
      * @param req DescribeVoucherInfoRequest
      * @return DescribeVoucherInfoResponse
