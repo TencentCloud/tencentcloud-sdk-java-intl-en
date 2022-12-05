@@ -100,6 +100,20 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
     private Long FilterEnterpriseFlag;
 
     /**
+    * Whether it’s a Lighthouse edition
+    */
+    @SerializedName("FilterLightFlag")
+    @Expose
+    private Long FilterLightFlag;
+
+    /**
+    * Whether it’s a Channel edition
+    */
+    @SerializedName("FilterChannelFlag")
+    @Expose
+    private Long FilterChannelFlag;
+
+    /**
     * Filters by tag
     */
     @SerializedName("FilterTag")
@@ -283,6 +297,38 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get Whether it’s a Lighthouse edition 
+     * @return FilterLightFlag Whether it’s a Lighthouse edition
+     */
+    public Long getFilterLightFlag() {
+        return this.FilterLightFlag;
+    }
+
+    /**
+     * Set Whether it’s a Lighthouse edition
+     * @param FilterLightFlag Whether it’s a Lighthouse edition
+     */
+    public void setFilterLightFlag(Long FilterLightFlag) {
+        this.FilterLightFlag = FilterLightFlag;
+    }
+
+    /**
+     * Get Whether it’s a Channel edition 
+     * @return FilterChannelFlag Whether it’s a Channel edition
+     */
+    public Long getFilterChannelFlag() {
+        return this.FilterChannelFlag;
+    }
+
+    /**
+     * Set Whether it’s a Channel edition
+     * @param FilterChannelFlag Whether it’s a Channel edition
+     */
+    public void setFilterChannelFlag(Long FilterChannelFlag) {
+        this.FilterChannelFlag = FilterChannelFlag;
+    }
+
+    /**
      * Get Filters by tag 
      * @return FilterTag Filters by tag
      */
@@ -342,6 +388,12 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         if (source.FilterEnterpriseFlag != null) {
             this.FilterEnterpriseFlag = new Long(source.FilterEnterpriseFlag);
         }
+        if (source.FilterLightFlag != null) {
+            this.FilterLightFlag = new Long(source.FilterLightFlag);
+        }
+        if (source.FilterChannelFlag != null) {
+            this.FilterChannelFlag = new Long(source.FilterChannelFlag);
+        }
         if (source.FilterTag != null) {
             this.FilterTag = new TagFilter(source.FilterTag);
         }
@@ -363,6 +415,8 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FilterBoundStatus", this.FilterBoundStatus);
         this.setParamArraySimple(map, prefix + "FilterInstanceIdList.", this.FilterInstanceIdList);
         this.setParamSimple(map, prefix + "FilterEnterpriseFlag", this.FilterEnterpriseFlag);
+        this.setParamSimple(map, prefix + "FilterLightFlag", this.FilterLightFlag);
+        this.setParamSimple(map, prefix + "FilterChannelFlag", this.FilterChannelFlag);
         this.setParamObj(map, prefix + "FilterTag.", this.FilterTag);
 
     }

@@ -47,6 +47,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private GuetzliAdapter GuetzliAdapter;
 
     /**
+    * AVIF adapter configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("AvifAdapter")
+    @Expose
+    private AvifAdapter AvifAdapter;
+
+    /**
      * Get `WebpAdapter` configuration
 Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return WebpAdapter `WebpAdapter` configuration
@@ -106,6 +114,26 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.GuetzliAdapter = GuetzliAdapter;
     }
 
+    /**
+     * Get AVIF adapter configuration
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return AvifAdapter AVIF adapter configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public AvifAdapter getAvifAdapter() {
+        return this.AvifAdapter;
+    }
+
+    /**
+     * Set AVIF adapter configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param AvifAdapter AVIF adapter configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setAvifAdapter(AvifAdapter AvifAdapter) {
+        this.AvifAdapter = AvifAdapter;
+    }
+
     public ImageOptimization() {
     }
 
@@ -123,6 +151,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.GuetzliAdapter != null) {
             this.GuetzliAdapter = new GuetzliAdapter(source.GuetzliAdapter);
         }
+        if (source.AvifAdapter != null) {
+            this.AvifAdapter = new AvifAdapter(source.AvifAdapter);
+        }
     }
 
 
@@ -133,6 +164,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamObj(map, prefix + "WebpAdapter.", this.WebpAdapter);
         this.setParamObj(map, prefix + "TpgAdapter.", this.TpgAdapter);
         this.setParamObj(map, prefix + "GuetzliAdapter.", this.GuetzliAdapter);
+        this.setParamObj(map, prefix + "AvifAdapter.", this.AvifAdapter);
 
     }
 }

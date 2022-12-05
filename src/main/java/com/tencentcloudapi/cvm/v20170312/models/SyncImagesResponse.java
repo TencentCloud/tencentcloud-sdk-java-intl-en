@@ -23,11 +23,34 @@ import java.util.HashMap;
 public class SyncImagesResponse extends AbstractModel{
 
     /**
+    * 
+    */
+    @SerializedName("ImageSet")
+    @Expose
+    private SyncImage [] ImageSet;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get  
+     * @return ImageSet 
+     */
+    public SyncImage [] getImageSet() {
+        return this.ImageSet;
+    }
+
+    /**
+     * Set 
+     * @param ImageSet 
+     */
+    public void setImageSet(SyncImage [] ImageSet) {
+        this.ImageSet = ImageSet;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -53,6 +76,12 @@ public class SyncImagesResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SyncImagesResponse(SyncImagesResponse source) {
+        if (source.ImageSet != null) {
+            this.ImageSet = new SyncImage[source.ImageSet.length];
+            for (int i = 0; i < source.ImageSet.length; i++) {
+                this.ImageSet[i] = new SyncImage(source.ImageSet[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +92,7 @@ public class SyncImagesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "ImageSet.", this.ImageSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

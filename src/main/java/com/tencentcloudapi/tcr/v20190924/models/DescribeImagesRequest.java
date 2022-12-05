@@ -72,6 +72,13 @@ public class DescribeImagesRequest extends AbstractModel{
     private String Digest;
 
     /**
+    * Whether to use exact matching. Valid values: `true` (exact matching), `null` (fuzzy matching).
+    */
+    @SerializedName("ExactMatch")
+    @Expose
+    private Boolean ExactMatch;
+
+    /**
      * Get Instance ID 
      * @return RegistryId Instance ID
      */
@@ -183,6 +190,22 @@ public class DescribeImagesRequest extends AbstractModel{
         this.Digest = Digest;
     }
 
+    /**
+     * Get Whether to use exact matching. Valid values: `true` (exact matching), `null` (fuzzy matching). 
+     * @return ExactMatch Whether to use exact matching. Valid values: `true` (exact matching), `null` (fuzzy matching).
+     */
+    public Boolean getExactMatch() {
+        return this.ExactMatch;
+    }
+
+    /**
+     * Set Whether to use exact matching. Valid values: `true` (exact matching), `null` (fuzzy matching).
+     * @param ExactMatch Whether to use exact matching. Valid values: `true` (exact matching), `null` (fuzzy matching).
+     */
+    public void setExactMatch(Boolean ExactMatch) {
+        this.ExactMatch = ExactMatch;
+    }
+
     public DescribeImagesRequest() {
     }
 
@@ -212,6 +235,9 @@ public class DescribeImagesRequest extends AbstractModel{
         if (source.Digest != null) {
             this.Digest = new String(source.Digest);
         }
+        if (source.ExactMatch != null) {
+            this.ExactMatch = new Boolean(source.ExactMatch);
+        }
     }
 
 
@@ -226,6 +252,7 @@ public class DescribeImagesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Digest", this.Digest);
+        this.setParamSimple(map, prefix + "ExactMatch", this.ExactMatch);
 
     }
 }

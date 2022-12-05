@@ -66,6 +66,13 @@ public class ResetInstanceRequest extends AbstractModel{
     private String HostName;
 
     /**
+    * User data provided to the instance. This parameter needs to be encoded in base64 format with the maximum size of 16 KB. For more information on how to get the value of this parameter, see the commands you need to execute on startup for [Windows](https://intl.cloud.tencent.com/document/product/213/17526) or [Linux](https://intl.cloud.tencent.com/document/product/213/17525).
+    */
+    @SerializedName("UserData")
+    @Expose
+    private String UserData;
+
+    /**
      * Get Instance ID. To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. 
      * @return InstanceId Instance ID. To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response.
      */
@@ -165,6 +172,22 @@ public class ResetInstanceRequest extends AbstractModel{
         this.HostName = HostName;
     }
 
+    /**
+     * Get User data provided to the instance. This parameter needs to be encoded in base64 format with the maximum size of 16 KB. For more information on how to get the value of this parameter, see the commands you need to execute on startup for [Windows](https://intl.cloud.tencent.com/document/product/213/17526) or [Linux](https://intl.cloud.tencent.com/document/product/213/17525). 
+     * @return UserData User data provided to the instance. This parameter needs to be encoded in base64 format with the maximum size of 16 KB. For more information on how to get the value of this parameter, see the commands you need to execute on startup for [Windows](https://intl.cloud.tencent.com/document/product/213/17526) or [Linux](https://intl.cloud.tencent.com/document/product/213/17525).
+     */
+    public String getUserData() {
+        return this.UserData;
+    }
+
+    /**
+     * Set User data provided to the instance. This parameter needs to be encoded in base64 format with the maximum size of 16 KB. For more information on how to get the value of this parameter, see the commands you need to execute on startup for [Windows](https://intl.cloud.tencent.com/document/product/213/17526) or [Linux](https://intl.cloud.tencent.com/document/product/213/17525).
+     * @param UserData User data provided to the instance. This parameter needs to be encoded in base64 format with the maximum size of 16 KB. For more information on how to get the value of this parameter, see the commands you need to execute on startup for [Windows](https://intl.cloud.tencent.com/document/product/213/17526) or [Linux](https://intl.cloud.tencent.com/document/product/213/17525).
+     */
+    public void setUserData(String UserData) {
+        this.UserData = UserData;
+    }
+
     public ResetInstanceRequest() {
     }
 
@@ -191,6 +214,9 @@ public class ResetInstanceRequest extends AbstractModel{
         if (source.HostName != null) {
             this.HostName = new String(source.HostName);
         }
+        if (source.UserData != null) {
+            this.UserData = new String(source.UserData);
+        }
     }
 
 
@@ -204,6 +230,7 @@ public class ResetInstanceRequest extends AbstractModel{
         this.setParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
         this.setParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
         this.setParamSimple(map, prefix + "HostName", this.HostName);
+        this.setParamSimple(map, prefix + "UserData", this.UserData);
 
     }
 }

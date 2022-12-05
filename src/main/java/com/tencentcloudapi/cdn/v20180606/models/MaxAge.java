@@ -41,6 +41,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private MaxAgeRule [] MaxAgeRules;
 
     /**
+    * MaxAge status code
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("MaxAgeCodeRule")
+    @Expose
+    private MaxAgeCodeRule MaxAgeCodeRule;
+
+    /**
      * Get Browser cache configuration switch
 `on`: Enable
 `off`: Disable
@@ -88,6 +96,26 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.MaxAgeRules = MaxAgeRules;
     }
 
+    /**
+     * Get MaxAge status code
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return MaxAgeCodeRule MaxAge status code
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public MaxAgeCodeRule getMaxAgeCodeRule() {
+        return this.MaxAgeCodeRule;
+    }
+
+    /**
+     * Set MaxAge status code
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param MaxAgeCodeRule MaxAge status code
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setMaxAgeCodeRule(MaxAgeCodeRule MaxAgeCodeRule) {
+        this.MaxAgeCodeRule = MaxAgeCodeRule;
+    }
+
     public MaxAge() {
     }
 
@@ -105,6 +133,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 this.MaxAgeRules[i] = new MaxAgeRule(source.MaxAgeRules[i]);
             }
         }
+        if (source.MaxAgeCodeRule != null) {
+            this.MaxAgeCodeRule = new MaxAgeCodeRule(source.MaxAgeCodeRule);
+        }
     }
 
 
@@ -114,6 +145,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamArrayObj(map, prefix + "MaxAgeRules.", this.MaxAgeRules);
+        this.setParamObj(map, prefix + "MaxAgeCodeRule.", this.MaxAgeCodeRule);
 
     }
 }

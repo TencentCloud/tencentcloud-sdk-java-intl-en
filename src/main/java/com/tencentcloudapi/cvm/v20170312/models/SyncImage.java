@@ -13,74 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcr.v20190924.models;
+package com.tencentcloudapi.cvm.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeInstanceAllNamespacesRequest extends AbstractModel{
+public class SyncImage extends AbstractModel{
 
     /**
-    * Number of entries per page
+    * 
     */
-    @SerializedName("Limit")
+    @SerializedName("ImageId")
     @Expose
-    private Long Limit;
+    private String ImageId;
 
     /**
-    * Start position offset
+    * 
     */
-    @SerializedName("Offset")
+    @SerializedName("Region")
     @Expose
-    private Long Offset;
+    private String Region;
 
     /**
-     * Get Number of entries per page 
-     * @return Limit Number of entries per page
+     * Get  
+     * @return ImageId 
      */
-    public Long getLimit() {
-        return this.Limit;
+    public String getImageId() {
+        return this.ImageId;
     }
 
     /**
-     * Set Number of entries per page
-     * @param Limit Number of entries per page
+     * Set 
+     * @param ImageId 
      */
-    public void setLimit(Long Limit) {
-        this.Limit = Limit;
+    public void setImageId(String ImageId) {
+        this.ImageId = ImageId;
     }
 
     /**
-     * Get Start position offset 
-     * @return Offset Start position offset
+     * Get  
+     * @return Region 
      */
-    public Long getOffset() {
-        return this.Offset;
+    public String getRegion() {
+        return this.Region;
     }
 
     /**
-     * Set Start position offset
-     * @param Offset Start position offset
+     * Set 
+     * @param Region 
      */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
+    public void setRegion(String Region) {
+        this.Region = Region;
     }
 
-    public DescribeInstanceAllNamespacesRequest() {
+    public SyncImage() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeInstanceAllNamespacesRequest(DescribeInstanceAllNamespacesRequest source) {
-        if (source.Limit != null) {
-            this.Limit = new Long(source.Limit);
+    public SyncImage(SyncImage source) {
+        if (source.ImageId != null) {
+            this.ImageId = new String(source.ImageId);
         }
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
         }
     }
 
@@ -89,8 +89,8 @@ public class DescribeInstanceAllNamespacesRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "ImageId", this.ImageId);
+        this.setParamSimple(map, prefix + "Region", this.Region);
 
     }
 }

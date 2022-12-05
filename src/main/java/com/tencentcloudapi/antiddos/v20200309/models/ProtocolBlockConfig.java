@@ -58,6 +58,20 @@ public class ProtocolBlockConfig extends AbstractModel{
     private Long CheckExceptNullConnect;
 
     /**
+    * PoD protection. Values: `0` (disable), `1` (enable).
+    */
+    @SerializedName("PingOfDeath")
+    @Expose
+    private Long PingOfDeath;
+
+    /**
+    * Teardrop protection. Values: `0` (disable), `1` (enable).
+    */
+    @SerializedName("TearDrop")
+    @Expose
+    private Long TearDrop;
+
+    /**
      * Get TCP blocking. Valid values: `0` (disabled), `1`(enabled). 
      * @return DropTcp TCP blocking. Valid values: `0` (disabled), `1`(enabled).
      */
@@ -137,6 +151,38 @@ public class ProtocolBlockConfig extends AbstractModel{
         this.CheckExceptNullConnect = CheckExceptNullConnect;
     }
 
+    /**
+     * Get PoD protection. Values: `0` (disable), `1` (enable). 
+     * @return PingOfDeath PoD protection. Values: `0` (disable), `1` (enable).
+     */
+    public Long getPingOfDeath() {
+        return this.PingOfDeath;
+    }
+
+    /**
+     * Set PoD protection. Values: `0` (disable), `1` (enable).
+     * @param PingOfDeath PoD protection. Values: `0` (disable), `1` (enable).
+     */
+    public void setPingOfDeath(Long PingOfDeath) {
+        this.PingOfDeath = PingOfDeath;
+    }
+
+    /**
+     * Get Teardrop protection. Values: `0` (disable), `1` (enable). 
+     * @return TearDrop Teardrop protection. Values: `0` (disable), `1` (enable).
+     */
+    public Long getTearDrop() {
+        return this.TearDrop;
+    }
+
+    /**
+     * Set Teardrop protection. Values: `0` (disable), `1` (enable).
+     * @param TearDrop Teardrop protection. Values: `0` (disable), `1` (enable).
+     */
+    public void setTearDrop(Long TearDrop) {
+        this.TearDrop = TearDrop;
+    }
+
     public ProtocolBlockConfig() {
     }
 
@@ -160,6 +206,12 @@ public class ProtocolBlockConfig extends AbstractModel{
         if (source.CheckExceptNullConnect != null) {
             this.CheckExceptNullConnect = new Long(source.CheckExceptNullConnect);
         }
+        if (source.PingOfDeath != null) {
+            this.PingOfDeath = new Long(source.PingOfDeath);
+        }
+        if (source.TearDrop != null) {
+            this.TearDrop = new Long(source.TearDrop);
+        }
     }
 
 
@@ -172,6 +224,8 @@ public class ProtocolBlockConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "DropIcmp", this.DropIcmp);
         this.setParamSimple(map, prefix + "DropOther", this.DropOther);
         this.setParamSimple(map, prefix + "CheckExceptNullConnect", this.CheckExceptNullConnect);
+        this.setParamSimple(map, prefix + "PingOfDeath", this.PingOfDeath);
+        this.setParamSimple(map, prefix + "TearDrop", this.TearDrop);
 
     }
 }

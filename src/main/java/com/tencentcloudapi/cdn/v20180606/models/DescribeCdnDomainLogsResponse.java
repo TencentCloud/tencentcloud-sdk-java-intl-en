@@ -23,7 +23,8 @@ import java.util.HashMap;
 public class DescribeCdnDomainLogsResponse extends AbstractModel{
 
     /**
-    * Download link of the log package
+    * Download link of the log package.
+You can open the link to download a .gz log package that contains all log files without extension.
     */
     @SerializedName("DomainLogs")
     @Expose
@@ -44,16 +45,20 @@ public class DescribeCdnDomainLogsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Download link of the log package 
-     * @return DomainLogs Download link of the log package
+     * Get Download link of the log package.
+You can open the link to download a .gz log package that contains all log files without extension. 
+     * @return DomainLogs Download link of the log package.
+You can open the link to download a .gz log package that contains all log files without extension.
      */
     public DomainLog [] getDomainLogs() {
         return this.DomainLogs;
     }
 
     /**
-     * Set Download link of the log package
-     * @param DomainLogs Download link of the log package
+     * Set Download link of the log package.
+You can open the link to download a .gz log package that contains all log files without extension.
+     * @param DomainLogs Download link of the log package.
+You can open the link to download a .gz log package that contains all log files without extension.
      */
     public void setDomainLogs(DomainLog [] DomainLogs) {
         this.DomainLogs = DomainLogs;

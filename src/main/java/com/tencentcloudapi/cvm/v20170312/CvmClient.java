@@ -693,7 +693,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     }
 
     /**
-     *(Suspended) This API is used to query the information of regions. Due to platform policy, the update of this API has been temporarily stopped. Please try the new one as described in https://intl.cloud.tencent.com/document/product/1278/55255?from_cn_redirect=1
+     *This API is suspended. To query the information of regions, use [DescribeZones](https://intl.cloud.tencent.com/document/product/1596/77929?from_cn_redirect=1).
      * @param req DescribeRegionsRequest
      * @return DescribeRegionsResponse
      * @throws TencentCloudSDKException

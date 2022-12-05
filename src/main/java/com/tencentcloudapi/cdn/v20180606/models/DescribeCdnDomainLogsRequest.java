@@ -69,8 +69,8 @@ Default value: `mainland`.
     private String Area;
 
     /**
-    * The type of log to be downloaded.
-access: access logs
+    * Specifies the type of logs to download (only access logs supported).
+`access`: Access logs.
     */
     @SerializedName("LogType")
     @Expose
@@ -189,20 +189,20 @@ Default value: `mainland`.
     }
 
     /**
-     * Get The type of log to be downloaded.
-access: access logs 
-     * @return LogType The type of log to be downloaded.
-access: access logs
+     * Get Specifies the type of logs to download (only access logs supported).
+`access`: Access logs. 
+     * @return LogType Specifies the type of logs to download (only access logs supported).
+`access`: Access logs.
      */
     public String getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set The type of log to be downloaded.
-access: access logs
-     * @param LogType The type of log to be downloaded.
-access: access logs
+     * Set Specifies the type of logs to download (only access logs supported).
+`access`: Access logs.
+     * @param LogType Specifies the type of logs to download (only access logs supported).
+`access`: Access logs.
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;

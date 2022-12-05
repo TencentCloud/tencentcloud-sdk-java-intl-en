@@ -37,7 +37,7 @@ public class EnhancedService extends AbstractModel{
     private RunMonitorServiceEnabled MonitorService;
 
     /**
-    * Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
+    * Whether to enable the TAT service. If this parameter is not specified, the TAT service is enabled for public images and disabled for other images by default.
     */
     @SerializedName("AutomationService")
     @Expose
@@ -76,16 +76,16 @@ public class EnhancedService extends AbstractModel{
     }
 
     /**
-     * Get Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled. 
-     * @return AutomationService Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
+     * Get Whether to enable the TAT service. If this parameter is not specified, the TAT service is enabled for public images and disabled for other images by default. 
+     * @return AutomationService Whether to enable the TAT service. If this parameter is not specified, the TAT service is enabled for public images and disabled for other images by default.
      */
     public RunAutomationServiceEnabled getAutomationService() {
         return this.AutomationService;
     }
 
     /**
-     * Set Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
-     * @param AutomationService Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
+     * Set Whether to enable the TAT service. If this parameter is not specified, the TAT service is enabled for public images and disabled for other images by default.
+     * @param AutomationService Whether to enable the TAT service. If this parameter is not specified, the TAT service is enabled for public images and disabled for other images by default.
      */
     public void setAutomationService(RunAutomationServiceEnabled AutomationService) {
         this.AutomationService = AutomationService;

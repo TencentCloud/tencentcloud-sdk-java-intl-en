@@ -1241,6 +1241,26 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the information of pending risks at the account level.
+     * @param req DescribePendingRiskInfoRequest
+     * @return DescribePendingRiskInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePendingRiskInfoResponse DescribePendingRiskInfo(DescribePendingRiskInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePendingRiskInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePendingRiskInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePendingRiskInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to unbind an Anti-DDoS EIP.
      * @param req DisassociateDDoSEipAddressRequest
      * @return DisassociateDDoSEipAddressResponse

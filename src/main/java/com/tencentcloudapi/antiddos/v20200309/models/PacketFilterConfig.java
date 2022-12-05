@@ -213,6 +213,13 @@ When the `MatchType` is `pcre`, enter a regular expression.
     private String Id;
 
     /**
+    * Byte threshold of the packet. Packets larger than the specified size are not returned. It must be an integer larger than 1.
+    */
+    @SerializedName("PktLenGT")
+    @Expose
+    private Long PktLenGT;
+
+    /**
      * Get Protocol. Valid values: `tcp`, `udp`, `icmp`, `all`. 
      * @return Protocol Protocol. Valid values: `tcp`, `udp`, `icmp`, `all`.
      */
@@ -708,6 +715,22 @@ When the `MatchType` is `pcre`, enter a regular expression.
         this.Id = Id;
     }
 
+    /**
+     * Get Byte threshold of the packet. Packets larger than the specified size are not returned. It must be an integer larger than 1. 
+     * @return PktLenGT Byte threshold of the packet. Packets larger than the specified size are not returned. It must be an integer larger than 1.
+     */
+    public Long getPktLenGT() {
+        return this.PktLenGT;
+    }
+
+    /**
+     * Set Byte threshold of the packet. Packets larger than the specified size are not returned. It must be an integer larger than 1.
+     * @param PktLenGT Byte threshold of the packet. Packets larger than the specified size are not returned. It must be an integer larger than 1.
+     */
+    public void setPktLenGT(Long PktLenGT) {
+        this.PktLenGT = PktLenGT;
+    }
+
     public PacketFilterConfig() {
     }
 
@@ -782,6 +805,9 @@ When the `MatchType` is `pcre`, enter a regular expression.
         if (source.Id != null) {
             this.Id = new String(source.Id);
         }
+        if (source.PktLenGT != null) {
+            this.PktLenGT = new Long(source.PktLenGT);
+        }
     }
 
 
@@ -811,6 +837,7 @@ When the `MatchType` is `pcre`, enter a regular expression.
         this.setParamSimple(map, prefix + "Offset2", this.Offset2);
         this.setParamSimple(map, prefix + "IsNot2", this.IsNot2);
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "PktLenGT", this.PktLenGT);
 
     }
 }
