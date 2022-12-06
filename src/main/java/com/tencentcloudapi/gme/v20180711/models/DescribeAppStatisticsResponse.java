@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeAppStatisticsResponse extends AbstractModel{
 
     /**
-    * App usage statistics
+    * Application usage statistics
     */
     @SerializedName("Data")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeAppStatisticsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get App usage statistics 
-     * @return Data App usage statistics
+     * Get Application usage statistics 
+     * @return Data Application usage statistics
      */
     public DescribeAppStatisticsResp getData() {
         return this.Data;
     }
 
     /**
-     * Set App usage statistics
-     * @param Data App usage statistics
+     * Set Application usage statistics
+     * @param Data Application usage statistics
      */
     public void setData(DescribeAppStatisticsResp Data) {
         this.Data = Data;

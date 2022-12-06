@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class ScanDetail extends AbstractModel{
 
     /**
-    * Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>
+    * Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>.
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant
+    * Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant.
     */
     @SerializedName("Rate")
     @Expose
@@ -44,46 +44,46 @@ public class ScanDetail extends AbstractModel{
     private String KeyWord;
 
     /**
-    * Start time offset in milliseconds from 0 of keyword in audio
+    * Start time offset of keyword from 0 in audio (in milliseconds)
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * End time offset in milliseconds from 0 of keyword in audio
+    * End time offset of keyword from 0 in audio (in milliseconds)
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-     * Get Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a> 
-     * @return Label Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>
+     * Get Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>. 
+     * @return Label Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>.
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>
-     * @param Label Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>
+     * Set Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>.
+     * @param Label Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>.
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant 
-     * @return Rate Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant
+     * Get Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant. 
+     * @return Rate Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant.
      */
     public String getRate() {
         return this.Rate;
     }
 
     /**
-     * Set Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant
-     * @param Rate Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant
+     * Set Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant.
+     * @param Rate Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant.
      */
     public void setRate(String Rate) {
         this.Rate = Rate;
@@ -106,32 +106,32 @@ public class ScanDetail extends AbstractModel{
     }
 
     /**
-     * Get Start time offset in milliseconds from 0 of keyword in audio 
-     * @return StartTime Start time offset in milliseconds from 0 of keyword in audio
+     * Get Start time offset of keyword from 0 in audio (in milliseconds) 
+     * @return StartTime Start time offset of keyword from 0 in audio (in milliseconds)
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time offset in milliseconds from 0 of keyword in audio
-     * @param StartTime Start time offset in milliseconds from 0 of keyword in audio
+     * Set Start time offset of keyword from 0 in audio (in milliseconds)
+     * @param StartTime Start time offset of keyword from 0 in audio (in milliseconds)
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time offset in milliseconds from 0 of keyword in audio 
-     * @return EndTime End time offset in milliseconds from 0 of keyword in audio
+     * Get End time offset of keyword from 0 in audio (in milliseconds) 
+     * @return EndTime End time offset of keyword from 0 in audio (in milliseconds)
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time offset in milliseconds from 0 of keyword in audio
-     * @param EndTime End time offset in milliseconds from 0 of keyword in audio
+     * Set End time offset of keyword from 0 in audio (in milliseconds)
+     * @param EndTime End time offset of keyword from 0 in audio (in milliseconds)
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

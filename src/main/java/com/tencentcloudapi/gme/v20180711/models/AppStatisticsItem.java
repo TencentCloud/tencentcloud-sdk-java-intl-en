@@ -23,110 +23,222 @@ import java.util.HashMap;
 public class AppStatisticsItem extends AbstractModel{
 
     /**
-    * Voice chat statistics
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Voice Chat statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("RealtimeSpeechStatisticsItem")
     @Expose
     private RealTimeSpeechStatisticsItem RealtimeSpeechStatisticsItem;
 
     /**
-    * Voice messaging statistics
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Voice Message statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("VoiceMessageStatisticsItem")
     @Expose
     private VoiceMessageStatisticsItem VoiceMessageStatisticsItem;
 
     /**
-    * Phrase filtering statistics
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Phrase Filtering statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("VoiceFilterStatisticsItem")
     @Expose
     private VoiceFilterStatisticsItem VoiceFilterStatisticsItem;
 
     /**
-    * Statistical period
+    * Reference period
     */
     @SerializedName("Date")
     @Expose
     private String Date;
 
     /**
-     * Get Voice chat statistics
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RealtimeSpeechStatisticsItem Voice chat statistics
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Recording-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AudioTextStatisticsItem")
+    @Expose
+    private AudioTextStatisticsItem AudioTextStatisticsItem;
+
+    /**
+    * Stream-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("StreamTextStatisticsItem")
+    @Expose
+    private StreamTextStatisticsItem StreamTextStatisticsItem;
+
+    /**
+    * Usage statistics of Voice-to-Text of outside-MLC requests
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OverseaTextStatisticsItem")
+    @Expose
+    private OverseaTextStatisticsItem OverseaTextStatisticsItem;
+
+    /**
+    * Real-time Voice-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RealtimeTextStatisticsItem")
+    @Expose
+    private RealtimeTextStatisticsItem RealtimeTextStatisticsItem;
+
+    /**
+     * Get Voice Chat statistics
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return RealtimeSpeechStatisticsItem Voice Chat statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public RealTimeSpeechStatisticsItem getRealtimeSpeechStatisticsItem() {
         return this.RealtimeSpeechStatisticsItem;
     }
 
     /**
-     * Set Voice chat statistics
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RealtimeSpeechStatisticsItem Voice chat statistics
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Voice Chat statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param RealtimeSpeechStatisticsItem Voice Chat statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setRealtimeSpeechStatisticsItem(RealTimeSpeechStatisticsItem RealtimeSpeechStatisticsItem) {
         this.RealtimeSpeechStatisticsItem = RealtimeSpeechStatisticsItem;
     }
 
     /**
-     * Get Voice messaging statistics
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VoiceMessageStatisticsItem Voice messaging statistics
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Voice Message statistics
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return VoiceMessageStatisticsItem Voice Message statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public VoiceMessageStatisticsItem getVoiceMessageStatisticsItem() {
         return this.VoiceMessageStatisticsItem;
     }
 
     /**
-     * Set Voice messaging statistics
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VoiceMessageStatisticsItem Voice messaging statistics
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Voice Message statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param VoiceMessageStatisticsItem Voice Message statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setVoiceMessageStatisticsItem(VoiceMessageStatisticsItem VoiceMessageStatisticsItem) {
         this.VoiceMessageStatisticsItem = VoiceMessageStatisticsItem;
     }
 
     /**
-     * Get Phrase filtering statistics
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VoiceFilterStatisticsItem Phrase filtering statistics
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Phrase Filtering statistics
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return VoiceFilterStatisticsItem Phrase Filtering statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public VoiceFilterStatisticsItem getVoiceFilterStatisticsItem() {
         return this.VoiceFilterStatisticsItem;
     }
 
     /**
-     * Set Phrase filtering statistics
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VoiceFilterStatisticsItem Phrase filtering statistics
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Phrase Filtering statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param VoiceFilterStatisticsItem Phrase Filtering statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setVoiceFilterStatisticsItem(VoiceFilterStatisticsItem VoiceFilterStatisticsItem) {
         this.VoiceFilterStatisticsItem = VoiceFilterStatisticsItem;
     }
 
     /**
-     * Get Statistical period 
-     * @return Date Statistical period
+     * Get Reference period 
+     * @return Date Reference period
      */
     public String getDate() {
         return this.Date;
     }
 
     /**
-     * Set Statistical period
-     * @param Date Statistical period
+     * Set Reference period
+     * @param Date Reference period
      */
     public void setDate(String Date) {
         this.Date = Date;
+    }
+
+    /**
+     * Get Recording-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return AudioTextStatisticsItem Recording-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public AudioTextStatisticsItem getAudioTextStatisticsItem() {
+        return this.AudioTextStatisticsItem;
+    }
+
+    /**
+     * Set Recording-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param AudioTextStatisticsItem Recording-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setAudioTextStatisticsItem(AudioTextStatisticsItem AudioTextStatisticsItem) {
+        this.AudioTextStatisticsItem = AudioTextStatisticsItem;
+    }
+
+    /**
+     * Get Stream-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return StreamTextStatisticsItem Stream-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public StreamTextStatisticsItem getStreamTextStatisticsItem() {
+        return this.StreamTextStatisticsItem;
+    }
+
+    /**
+     * Set Stream-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param StreamTextStatisticsItem Stream-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setStreamTextStatisticsItem(StreamTextStatisticsItem StreamTextStatisticsItem) {
+        this.StreamTextStatisticsItem = StreamTextStatisticsItem;
+    }
+
+    /**
+     * Get Usage statistics of Voice-to-Text of outside-MLC requests
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return OverseaTextStatisticsItem Usage statistics of Voice-to-Text of outside-MLC requests
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public OverseaTextStatisticsItem getOverseaTextStatisticsItem() {
+        return this.OverseaTextStatisticsItem;
+    }
+
+    /**
+     * Set Usage statistics of Voice-to-Text of outside-MLC requests
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param OverseaTextStatisticsItem Usage statistics of Voice-to-Text of outside-MLC requests
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setOverseaTextStatisticsItem(OverseaTextStatisticsItem OverseaTextStatisticsItem) {
+        this.OverseaTextStatisticsItem = OverseaTextStatisticsItem;
+    }
+
+    /**
+     * Get Real-time Voice-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return RealtimeTextStatisticsItem Real-time Voice-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public RealtimeTextStatisticsItem getRealtimeTextStatisticsItem() {
+        return this.RealtimeTextStatisticsItem;
+    }
+
+    /**
+     * Set Real-time Voice-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param RealtimeTextStatisticsItem Real-time Voice-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setRealtimeTextStatisticsItem(RealtimeTextStatisticsItem RealtimeTextStatisticsItem) {
+        this.RealtimeTextStatisticsItem = RealtimeTextStatisticsItem;
     }
 
     public AppStatisticsItem() {
@@ -149,6 +261,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Date != null) {
             this.Date = new String(source.Date);
         }
+        if (source.AudioTextStatisticsItem != null) {
+            this.AudioTextStatisticsItem = new AudioTextStatisticsItem(source.AudioTextStatisticsItem);
+        }
+        if (source.StreamTextStatisticsItem != null) {
+            this.StreamTextStatisticsItem = new StreamTextStatisticsItem(source.StreamTextStatisticsItem);
+        }
+        if (source.OverseaTextStatisticsItem != null) {
+            this.OverseaTextStatisticsItem = new OverseaTextStatisticsItem(source.OverseaTextStatisticsItem);
+        }
+        if (source.RealtimeTextStatisticsItem != null) {
+            this.RealtimeTextStatisticsItem = new RealtimeTextStatisticsItem(source.RealtimeTextStatisticsItem);
+        }
     }
 
 
@@ -160,6 +284,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "VoiceMessageStatisticsItem.", this.VoiceMessageStatisticsItem);
         this.setParamObj(map, prefix + "VoiceFilterStatisticsItem.", this.VoiceFilterStatisticsItem);
         this.setParamSimple(map, prefix + "Date", this.Date);
+        this.setParamObj(map, prefix + "AudioTextStatisticsItem.", this.AudioTextStatisticsItem);
+        this.setParamObj(map, prefix + "StreamTextStatisticsItem.", this.StreamTextStatisticsItem);
+        this.setParamObj(map, prefix + "OverseaTextStatisticsItem.", this.OverseaTextStatisticsItem);
+        this.setParamObj(map, prefix + "RealtimeTextStatisticsItem.", this.RealtimeTextStatisticsItem);
 
     }
 }

@@ -23,148 +23,148 @@ import java.util.HashMap;
 public class ScanVoiceRequest extends AbstractModel{
 
     /**
-    * Application ID, which is the `AppID` obtained when you create an application in [Console > Service Management](https://console.cloud.tencent.com/gamegme)
+    * Application ID, which is obtained when you create an application in the [GME console - Service Management](https://console.cloud.tencent.com/gamegme).
     */
     @SerializedName("BizId")
     @Expose
     private Long BizId;
 
     /**
-    * Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
+    * Voice detection scenario. It must be `default`. See the <a href="#Label_Value">Label description</a> as the result.
     */
     @SerializedName("Scenes")
     @Expose
     private String [] Scenes;
 
     /**
-    * Whether it is a live stream. false: audio file detection, true: audio stream detection.
+    * Whether it is a live stream. Values: `false` (voice file), `true` (live stream).
     */
     @SerializedName("Live")
     @Expose
     private Boolean Live;
 
     /**
-    * Speech detection task list. Up to 100 tasks can be added in the list. The structure contains:
-<li>DataId: unique data ID</li>
-<li>Url: URL-encoded data file URL, which is a pull address if the detected speech is a stream</li>
+    * Voice detection task list. Up to 100 tasks can be added in the list. 
+<li>`DataId`: Unique data ID</li>
+<li>`Url`: URL-encoded data file URL, which is a pull address if the detected voice is a stream</li>
     */
     @SerializedName("Tasks")
     @Expose
     private Task [] Tasks;
 
     /**
-    * Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">callback description</a> above. (Note: if this field is empty, the detection result can only be obtained by calling the `DescribeScanResultList` API.)
+    * Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">Callback description</a> above. (Note: If this field is empty, the detection result can only be queried by calling the `DescribeScanResultList` API.)
     */
     @SerializedName("Callback")
     @Expose
     private String Callback;
 
     /**
-    * The language. `jp` represents Japanese
+    * Language. `jp`: Japanese
     */
     @SerializedName("Lang")
     @Expose
     private String Lang;
 
     /**
-     * Get Application ID, which is the `AppID` obtained when you create an application in [Console > Service Management](https://console.cloud.tencent.com/gamegme) 
-     * @return BizId Application ID, which is the `AppID` obtained when you create an application in [Console > Service Management](https://console.cloud.tencent.com/gamegme)
+     * Get Application ID, which is obtained when you create an application in the [GME console - Service Management](https://console.cloud.tencent.com/gamegme). 
+     * @return BizId Application ID, which is obtained when you create an application in the [GME console - Service Management](https://console.cloud.tencent.com/gamegme).
      */
     public Long getBizId() {
         return this.BizId;
     }
 
     /**
-     * Set Application ID, which is the `AppID` obtained when you create an application in [Console > Service Management](https://console.cloud.tencent.com/gamegme)
-     * @param BizId Application ID, which is the `AppID` obtained when you create an application in [Console > Service Management](https://console.cloud.tencent.com/gamegme)
+     * Set Application ID, which is obtained when you create an application in the [GME console - Service Management](https://console.cloud.tencent.com/gamegme).
+     * @param BizId Application ID, which is obtained when you create an application in the [GME console - Service Management](https://console.cloud.tencent.com/gamegme).
      */
     public void setBizId(Long BizId) {
         this.BizId = BizId;
     }
 
     /**
-     * Get Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above. 
-     * @return Scenes Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
+     * Get Voice detection scenario. It must be `default`. See the <a href="#Label_Value">Label description</a> as the result. 
+     * @return Scenes Voice detection scenario. It must be `default`. See the <a href="#Label_Value">Label description</a> as the result.
      */
     public String [] getScenes() {
         return this.Scenes;
     }
 
     /**
-     * Set Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
-     * @param Scenes Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
+     * Set Voice detection scenario. It must be `default`. See the <a href="#Label_Value">Label description</a> as the result.
+     * @param Scenes Voice detection scenario. It must be `default`. See the <a href="#Label_Value">Label description</a> as the result.
      */
     public void setScenes(String [] Scenes) {
         this.Scenes = Scenes;
     }
 
     /**
-     * Get Whether it is a live stream. false: audio file detection, true: audio stream detection. 
-     * @return Live Whether it is a live stream. false: audio file detection, true: audio stream detection.
+     * Get Whether it is a live stream. Values: `false` (voice file), `true` (live stream). 
+     * @return Live Whether it is a live stream. Values: `false` (voice file), `true` (live stream).
      */
     public Boolean getLive() {
         return this.Live;
     }
 
     /**
-     * Set Whether it is a live stream. false: audio file detection, true: audio stream detection.
-     * @param Live Whether it is a live stream. false: audio file detection, true: audio stream detection.
+     * Set Whether it is a live stream. Values: `false` (voice file), `true` (live stream).
+     * @param Live Whether it is a live stream. Values: `false` (voice file), `true` (live stream).
      */
     public void setLive(Boolean Live) {
         this.Live = Live;
     }
 
     /**
-     * Get Speech detection task list. Up to 100 tasks can be added in the list. The structure contains:
-<li>DataId: unique data ID</li>
-<li>Url: URL-encoded data file URL, which is a pull address if the detected speech is a stream</li> 
-     * @return Tasks Speech detection task list. Up to 100 tasks can be added in the list. The structure contains:
-<li>DataId: unique data ID</li>
-<li>Url: URL-encoded data file URL, which is a pull address if the detected speech is a stream</li>
+     * Get Voice detection task list. Up to 100 tasks can be added in the list. 
+<li>`DataId`: Unique data ID</li>
+<li>`Url`: URL-encoded data file URL, which is a pull address if the detected voice is a stream</li> 
+     * @return Tasks Voice detection task list. Up to 100 tasks can be added in the list. 
+<li>`DataId`: Unique data ID</li>
+<li>`Url`: URL-encoded data file URL, which is a pull address if the detected voice is a stream</li>
      */
     public Task [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set Speech detection task list. Up to 100 tasks can be added in the list. The structure contains:
-<li>DataId: unique data ID</li>
-<li>Url: URL-encoded data file URL, which is a pull address if the detected speech is a stream</li>
-     * @param Tasks Speech detection task list. Up to 100 tasks can be added in the list. The structure contains:
-<li>DataId: unique data ID</li>
-<li>Url: URL-encoded data file URL, which is a pull address if the detected speech is a stream</li>
+     * Set Voice detection task list. Up to 100 tasks can be added in the list. 
+<li>`DataId`: Unique data ID</li>
+<li>`Url`: URL-encoded data file URL, which is a pull address if the detected voice is a stream</li>
+     * @param Tasks Voice detection task list. Up to 100 tasks can be added in the list. 
+<li>`DataId`: Unique data ID</li>
+<li>`Url`: URL-encoded data file URL, which is a pull address if the detected voice is a stream</li>
      */
     public void setTasks(Task [] Tasks) {
         this.Tasks = Tasks;
     }
 
     /**
-     * Get Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">callback description</a> above. (Note: if this field is empty, the detection result can only be obtained by calling the `DescribeScanResultList` API.) 
-     * @return Callback Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">callback description</a> above. (Note: if this field is empty, the detection result can only be obtained by calling the `DescribeScanResultList` API.)
+     * Get Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">Callback description</a> above. (Note: If this field is empty, the detection result can only be queried by calling the `DescribeScanResultList` API.) 
+     * @return Callback Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">Callback description</a> above. (Note: If this field is empty, the detection result can only be queried by calling the `DescribeScanResultList` API.)
      */
     public String getCallback() {
         return this.Callback;
     }
 
     /**
-     * Set Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">callback description</a> above. (Note: if this field is empty, the detection result can only be obtained by calling the `DescribeScanResultList` API.)
-     * @param Callback Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">callback description</a> above. (Note: if this field is empty, the detection result can only be obtained by calling the `DescribeScanResultList` API.)
+     * Set Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">Callback description</a> above. (Note: If this field is empty, the detection result can only be queried by calling the `DescribeScanResultList` API.)
+     * @param Callback Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">Callback description</a> above. (Note: If this field is empty, the detection result can only be queried by calling the `DescribeScanResultList` API.)
      */
     public void setCallback(String Callback) {
         this.Callback = Callback;
     }
 
     /**
-     * Get The language. `jp` represents Japanese 
-     * @return Lang The language. `jp` represents Japanese
+     * Get Language. `jp`: Japanese 
+     * @return Lang Language. `jp`: Japanese
      */
     public String getLang() {
         return this.Lang;
     }
 
     /**
-     * Set The language. `jp` represents Japanese
-     * @param Lang The language. `jp` represents Japanese
+     * Set Language. `jp`: Japanese
+     * @param Lang Language. `jp`: Japanese
      */
     public void setLang(String Lang) {
         this.Lang = Lang;

@@ -30,21 +30,21 @@ public class Task extends AbstractModel{
     private String DataId;
 
     /**
-    * URL-encoded data file URL, which is a pull address if the detected speech is a stream
+    * URL-encoded data file URL, which is a pull address if the detected voice is a stream.
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * GME voice chat room ID, which is entered during speech detection by GME voice chat
+    * GME Voice Chat room ID, which is entered during voice analysis by GME Voice Chat.
     */
     @SerializedName("RoomId")
     @Expose
     private String RoomId;
 
     /**
-    * GME voice chat user ID, which is entered during speech detection by GME voice chat
+    * GME Voice Chat user ID, which is entered during voice analysis by GME Voice Chat.
     */
     @SerializedName("OpenId")
     @Expose
@@ -67,48 +67,48 @@ public class Task extends AbstractModel{
     }
 
     /**
-     * Get URL-encoded data file URL, which is a pull address if the detected speech is a stream 
-     * @return Url URL-encoded data file URL, which is a pull address if the detected speech is a stream
+     * Get URL-encoded data file URL, which is a pull address if the detected voice is a stream. 
+     * @return Url URL-encoded data file URL, which is a pull address if the detected voice is a stream.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set URL-encoded data file URL, which is a pull address if the detected speech is a stream
-     * @param Url URL-encoded data file URL, which is a pull address if the detected speech is a stream
+     * Set URL-encoded data file URL, which is a pull address if the detected voice is a stream.
+     * @param Url URL-encoded data file URL, which is a pull address if the detected voice is a stream.
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get GME voice chat room ID, which is entered during speech detection by GME voice chat 
-     * @return RoomId GME voice chat room ID, which is entered during speech detection by GME voice chat
+     * Get GME Voice Chat room ID, which is entered during voice analysis by GME Voice Chat. 
+     * @return RoomId GME Voice Chat room ID, which is entered during voice analysis by GME Voice Chat.
      */
     public String getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set GME voice chat room ID, which is entered during speech detection by GME voice chat
-     * @param RoomId GME voice chat room ID, which is entered during speech detection by GME voice chat
+     * Set GME Voice Chat room ID, which is entered during voice analysis by GME Voice Chat.
+     * @param RoomId GME Voice Chat room ID, which is entered during voice analysis by GME Voice Chat.
      */
     public void setRoomId(String RoomId) {
         this.RoomId = RoomId;
     }
 
     /**
-     * Get GME voice chat user ID, which is entered during speech detection by GME voice chat 
-     * @return OpenId GME voice chat user ID, which is entered during speech detection by GME voice chat
+     * Get GME Voice Chat user ID, which is entered during voice analysis by GME Voice Chat. 
+     * @return OpenId GME Voice Chat user ID, which is entered during voice analysis by GME Voice Chat.
      */
     public String getOpenId() {
         return this.OpenId;
     }
 
     /**
-     * Set GME voice chat user ID, which is entered during speech detection by GME voice chat
-     * @param OpenId GME voice chat user ID, which is entered during speech detection by GME voice chat
+     * Set GME Voice Chat user ID, which is entered during voice analysis by GME Voice Chat.
+     * @param OpenId GME Voice Chat user ID, which is entered during voice analysis by GME Voice Chat.
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;

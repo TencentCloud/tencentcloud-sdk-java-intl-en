@@ -37,7 +37,7 @@ public class DetachLoadBalancersRequest extends AbstractModel{
     private String [] LoadBalancerIds;
 
     /**
-    * List of application CLB IDs. Up to 50 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time.
+    * List of application CLB IDs. Up to 100 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time.
     */
     @SerializedName("ForwardLoadBalancerIdentifications")
     @Expose
@@ -76,16 +76,16 @@ public class DetachLoadBalancersRequest extends AbstractModel{
     }
 
     /**
-     * Get List of application CLB IDs. Up to 50 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time. 
-     * @return ForwardLoadBalancerIdentifications List of application CLB IDs. Up to 50 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time.
+     * Get List of application CLB IDs. Up to 100 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time. 
+     * @return ForwardLoadBalancerIdentifications List of application CLB IDs. Up to 100 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time.
      */
     public ForwardLoadBalancerIdentification [] getForwardLoadBalancerIdentifications() {
         return this.ForwardLoadBalancerIdentifications;
     }
 
     /**
-     * Set List of application CLB IDs. Up to 50 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time.
-     * @param ForwardLoadBalancerIdentifications List of application CLB IDs. Up to 50 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time.
+     * Set List of application CLB IDs. Up to 100 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time.
+     * @param ForwardLoadBalancerIdentifications List of application CLB IDs. Up to 100 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time.
      */
     public void setForwardLoadBalancerIdentifications(ForwardLoadBalancerIdentification [] ForwardLoadBalancerIdentifications) {
         this.ForwardLoadBalancerIdentifications = ForwardLoadBalancerIdentifications;

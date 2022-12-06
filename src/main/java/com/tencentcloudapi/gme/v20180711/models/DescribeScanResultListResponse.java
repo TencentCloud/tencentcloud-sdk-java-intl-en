@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class DescribeScanResultListResponse extends AbstractModel{
 
     /**
-    * Result of the speech detection task to be queried
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Result of the voice detection task to be queried
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Data")
     @Expose
@@ -38,20 +38,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Result of the speech detection task to be queried
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Data Result of the speech detection task to be queried
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Result of the voice detection task to be queried
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Data Result of the voice detection task to be queried
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public DescribeScanResult [] getData() {
         return this.Data;
     }
 
     /**
-     * Set Result of the speech detection task to be queried
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Data Result of the speech detection task to be queried
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Result of the voice detection task to be queried
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Data Result of the voice detection task to be queried
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setData(DescribeScanResult [] Data) {
         this.Data = Data;

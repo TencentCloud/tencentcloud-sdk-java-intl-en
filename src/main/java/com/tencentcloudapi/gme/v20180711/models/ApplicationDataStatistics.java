@@ -30,84 +30,84 @@ public class ApplicationDataStatistics extends AbstractModel{
     private Long BizId;
 
     /**
-    * DAU data
+    * Number of DAU metrics
     */
     @SerializedName("DauDataNum")
     @Expose
     private Long DauDataNum;
 
     /**
-    * DAU in Chinese mainland
+    * DAUs in the Chinese mainland
     */
     @SerializedName("DauDataMainland")
     @Expose
     private StatisticsItem [] DauDataMainland;
 
     /**
-    * DAU outside Chinese mainland
+    * DAUs outside the Chinese mainland
     */
     @SerializedName("DauDataOversea")
     @Expose
     private StatisticsItem [] DauDataOversea;
 
     /**
-    * Total DAU
+    * Total DAUs
     */
     @SerializedName("DauDataSum")
     @Expose
     private StatisticsItem [] DauDataSum;
 
     /**
-    * Number of voice chat metrics
+    * Number of Voice Chat metrics
     */
     @SerializedName("DurationDataNum")
     @Expose
     private Long DurationDataNum;
 
     /**
-    * Duration of voice chat in Chinese mainland in minutes
+    * Duration of Voice Chat in the Chinese mainland (in minutes)
     */
     @SerializedName("DurationDataMainland")
     @Expose
     private StatisticsItem [] DurationDataMainland;
 
     /**
-    * Duration of voice chat outside Chinese mainland in minutes
+    * Duration of Voice Chat outside the Chinese mainland (in minutes)
     */
     @SerializedName("DurationDataOversea")
     @Expose
     private StatisticsItem [] DurationDataOversea;
 
     /**
-    * Total duration of voice chat in minutes
+    * Total duration of Voice Chat (in minutes)
     */
     @SerializedName("DurationDataSum")
     @Expose
     private StatisticsItem [] DurationDataSum;
 
     /**
-    * PCU data
+    * Number of PCU metrics
     */
     @SerializedName("PcuDataNum")
     @Expose
     private Long PcuDataNum;
 
     /**
-    * PCU in Chinese mainland
+    * PCUs in the Chinese mainland
     */
     @SerializedName("PcuDataMainland")
     @Expose
     private StatisticsItem [] PcuDataMainland;
 
     /**
-    * PCU outside Chinese mainland
+    * PCUs outside the Chinese mainland
     */
     @SerializedName("PcuDataOversea")
     @Expose
     private StatisticsItem [] PcuDataOversea;
 
     /**
-    * Total PCU
+    * Total PCUs
     */
     @SerializedName("PcuDataSum")
     @Expose
@@ -130,192 +130,192 @@ public class ApplicationDataStatistics extends AbstractModel{
     }
 
     /**
-     * Get DAU data 
-     * @return DauDataNum DAU data
+     * Get Number of DAU metrics 
+     * @return DauDataNum Number of DAU metrics
      */
     public Long getDauDataNum() {
         return this.DauDataNum;
     }
 
     /**
-     * Set DAU data
-     * @param DauDataNum DAU data
+     * Set Number of DAU metrics
+     * @param DauDataNum Number of DAU metrics
      */
     public void setDauDataNum(Long DauDataNum) {
         this.DauDataNum = DauDataNum;
     }
 
     /**
-     * Get DAU in Chinese mainland 
-     * @return DauDataMainland DAU in Chinese mainland
+     * Get DAUs in the Chinese mainland 
+     * @return DauDataMainland DAUs in the Chinese mainland
      */
     public StatisticsItem [] getDauDataMainland() {
         return this.DauDataMainland;
     }
 
     /**
-     * Set DAU in Chinese mainland
-     * @param DauDataMainland DAU in Chinese mainland
+     * Set DAUs in the Chinese mainland
+     * @param DauDataMainland DAUs in the Chinese mainland
      */
     public void setDauDataMainland(StatisticsItem [] DauDataMainland) {
         this.DauDataMainland = DauDataMainland;
     }
 
     /**
-     * Get DAU outside Chinese mainland 
-     * @return DauDataOversea DAU outside Chinese mainland
+     * Get DAUs outside the Chinese mainland 
+     * @return DauDataOversea DAUs outside the Chinese mainland
      */
     public StatisticsItem [] getDauDataOversea() {
         return this.DauDataOversea;
     }
 
     /**
-     * Set DAU outside Chinese mainland
-     * @param DauDataOversea DAU outside Chinese mainland
+     * Set DAUs outside the Chinese mainland
+     * @param DauDataOversea DAUs outside the Chinese mainland
      */
     public void setDauDataOversea(StatisticsItem [] DauDataOversea) {
         this.DauDataOversea = DauDataOversea;
     }
 
     /**
-     * Get Total DAU 
-     * @return DauDataSum Total DAU
+     * Get Total DAUs 
+     * @return DauDataSum Total DAUs
      */
     public StatisticsItem [] getDauDataSum() {
         return this.DauDataSum;
     }
 
     /**
-     * Set Total DAU
-     * @param DauDataSum Total DAU
+     * Set Total DAUs
+     * @param DauDataSum Total DAUs
      */
     public void setDauDataSum(StatisticsItem [] DauDataSum) {
         this.DauDataSum = DauDataSum;
     }
 
     /**
-     * Get Number of voice chat metrics 
-     * @return DurationDataNum Number of voice chat metrics
+     * Get Number of Voice Chat metrics 
+     * @return DurationDataNum Number of Voice Chat metrics
      */
     public Long getDurationDataNum() {
         return this.DurationDataNum;
     }
 
     /**
-     * Set Number of voice chat metrics
-     * @param DurationDataNum Number of voice chat metrics
+     * Set Number of Voice Chat metrics
+     * @param DurationDataNum Number of Voice Chat metrics
      */
     public void setDurationDataNum(Long DurationDataNum) {
         this.DurationDataNum = DurationDataNum;
     }
 
     /**
-     * Get Duration of voice chat in Chinese mainland in minutes 
-     * @return DurationDataMainland Duration of voice chat in Chinese mainland in minutes
+     * Get Duration of Voice Chat in the Chinese mainland (in minutes) 
+     * @return DurationDataMainland Duration of Voice Chat in the Chinese mainland (in minutes)
      */
     public StatisticsItem [] getDurationDataMainland() {
         return this.DurationDataMainland;
     }
 
     /**
-     * Set Duration of voice chat in Chinese mainland in minutes
-     * @param DurationDataMainland Duration of voice chat in Chinese mainland in minutes
+     * Set Duration of Voice Chat in the Chinese mainland (in minutes)
+     * @param DurationDataMainland Duration of Voice Chat in the Chinese mainland (in minutes)
      */
     public void setDurationDataMainland(StatisticsItem [] DurationDataMainland) {
         this.DurationDataMainland = DurationDataMainland;
     }
 
     /**
-     * Get Duration of voice chat outside Chinese mainland in minutes 
-     * @return DurationDataOversea Duration of voice chat outside Chinese mainland in minutes
+     * Get Duration of Voice Chat outside the Chinese mainland (in minutes) 
+     * @return DurationDataOversea Duration of Voice Chat outside the Chinese mainland (in minutes)
      */
     public StatisticsItem [] getDurationDataOversea() {
         return this.DurationDataOversea;
     }
 
     /**
-     * Set Duration of voice chat outside Chinese mainland in minutes
-     * @param DurationDataOversea Duration of voice chat outside Chinese mainland in minutes
+     * Set Duration of Voice Chat outside the Chinese mainland (in minutes)
+     * @param DurationDataOversea Duration of Voice Chat outside the Chinese mainland (in minutes)
      */
     public void setDurationDataOversea(StatisticsItem [] DurationDataOversea) {
         this.DurationDataOversea = DurationDataOversea;
     }
 
     /**
-     * Get Total duration of voice chat in minutes 
-     * @return DurationDataSum Total duration of voice chat in minutes
+     * Get Total duration of Voice Chat (in minutes) 
+     * @return DurationDataSum Total duration of Voice Chat (in minutes)
      */
     public StatisticsItem [] getDurationDataSum() {
         return this.DurationDataSum;
     }
 
     /**
-     * Set Total duration of voice chat in minutes
-     * @param DurationDataSum Total duration of voice chat in minutes
+     * Set Total duration of Voice Chat (in minutes)
+     * @param DurationDataSum Total duration of Voice Chat (in minutes)
      */
     public void setDurationDataSum(StatisticsItem [] DurationDataSum) {
         this.DurationDataSum = DurationDataSum;
     }
 
     /**
-     * Get PCU data 
-     * @return PcuDataNum PCU data
+     * Get Number of PCU metrics 
+     * @return PcuDataNum Number of PCU metrics
      */
     public Long getPcuDataNum() {
         return this.PcuDataNum;
     }
 
     /**
-     * Set PCU data
-     * @param PcuDataNum PCU data
+     * Set Number of PCU metrics
+     * @param PcuDataNum Number of PCU metrics
      */
     public void setPcuDataNum(Long PcuDataNum) {
         this.PcuDataNum = PcuDataNum;
     }
 
     /**
-     * Get PCU in Chinese mainland 
-     * @return PcuDataMainland PCU in Chinese mainland
+     * Get PCUs in the Chinese mainland 
+     * @return PcuDataMainland PCUs in the Chinese mainland
      */
     public StatisticsItem [] getPcuDataMainland() {
         return this.PcuDataMainland;
     }
 
     /**
-     * Set PCU in Chinese mainland
-     * @param PcuDataMainland PCU in Chinese mainland
+     * Set PCUs in the Chinese mainland
+     * @param PcuDataMainland PCUs in the Chinese mainland
      */
     public void setPcuDataMainland(StatisticsItem [] PcuDataMainland) {
         this.PcuDataMainland = PcuDataMainland;
     }
 
     /**
-     * Get PCU outside Chinese mainland 
-     * @return PcuDataOversea PCU outside Chinese mainland
+     * Get PCUs outside the Chinese mainland 
+     * @return PcuDataOversea PCUs outside the Chinese mainland
      */
     public StatisticsItem [] getPcuDataOversea() {
         return this.PcuDataOversea;
     }
 
     /**
-     * Set PCU outside Chinese mainland
-     * @param PcuDataOversea PCU outside Chinese mainland
+     * Set PCUs outside the Chinese mainland
+     * @param PcuDataOversea PCUs outside the Chinese mainland
      */
     public void setPcuDataOversea(StatisticsItem [] PcuDataOversea) {
         this.PcuDataOversea = PcuDataOversea;
     }
 
     /**
-     * Get Total PCU 
-     * @return PcuDataSum Total PCU
+     * Get Total PCUs 
+     * @return PcuDataSum Total PCUs
      */
     public StatisticsItem [] getPcuDataSum() {
         return this.PcuDataSum;
     }
 
     /**
-     * Set Total PCU
-     * @param PcuDataSum Total PCU
+     * Set Total PCUs
+     * @param PcuDataSum Total PCUs
      */
     public void setPcuDataSum(StatisticsItem [] PcuDataSum) {
         this.PcuDataSum = PcuDataSum;

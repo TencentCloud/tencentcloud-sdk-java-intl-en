@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class VoiceFilterConf extends AbstractModel{
 
     /**
-    * Phrase filtering status. Valid values: open, close
+    * Phrase Filtering status. Valid values: `open`, `close`.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get Phrase filtering status. Valid values: open, close 
-     * @return Status Phrase filtering status. Valid values: open, close
+     * Get Phrase Filtering status. Valid values: `open`, `close`. 
+     * @return Status Phrase Filtering status. Valid values: `open`, `close`.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Phrase filtering status. Valid values: open, close
-     * @param Status Phrase filtering status. Valid values: open, close
+     * Set Phrase Filtering status. Valid values: `open`, `close`.
+     * @param Status Phrase Filtering status. Valid values: `open`, `close`.
      */
     public void setStatus(String Status) {
         this.Status = Status;

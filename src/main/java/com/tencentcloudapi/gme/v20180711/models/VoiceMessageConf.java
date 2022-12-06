@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class VoiceMessageConf extends AbstractModel{
 
     /**
-    * Voice messaging and speech-to-text status. Valid values: open, close
+    * Voice Message Service status. Valid values: `open`, `close`.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Language supported for voice messaging and speech-to-text. Valid values: all (all languages), cnen (Chinese and English). Default value: cnen
+    * Language supported for Voice Message Service. Valid values: `all` (all languages), `cnen` (Chinese and English). Default value: `cnen`.
     */
     @SerializedName("Language")
     @Expose
     private String Language;
 
     /**
-     * Get Voice messaging and speech-to-text status. Valid values: open, close 
-     * @return Status Voice messaging and speech-to-text status. Valid values: open, close
+     * Get Voice Message Service status. Valid values: `open`, `close`. 
+     * @return Status Voice Message Service status. Valid values: `open`, `close`.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Voice messaging and speech-to-text status. Valid values: open, close
-     * @param Status Voice messaging and speech-to-text status. Valid values: open, close
+     * Set Voice Message Service status. Valid values: `open`, `close`.
+     * @param Status Voice Message Service status. Valid values: `open`, `close`.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Language supported for voice messaging and speech-to-text. Valid values: all (all languages), cnen (Chinese and English). Default value: cnen 
-     * @return Language Language supported for voice messaging and speech-to-text. Valid values: all (all languages), cnen (Chinese and English). Default value: cnen
+     * Get Language supported for Voice Message Service. Valid values: `all` (all languages), `cnen` (Chinese and English). Default value: `cnen`. 
+     * @return Language Language supported for Voice Message Service. Valid values: `all` (all languages), `cnen` (Chinese and English). Default value: `cnen`.
      */
     public String getLanguage() {
         return this.Language;
     }
 
     /**
-     * Set Language supported for voice messaging and speech-to-text. Valid values: all (all languages), cnen (Chinese and English). Default value: cnen
-     * @param Language Language supported for voice messaging and speech-to-text. Valid values: all (all languages), cnen (Chinese and English). Default value: cnen
+     * Set Language supported for Voice Message Service. Valid values: `all` (all languages), `cnen` (Chinese and English). Default value: `cnen`.
+     * @param Language Language supported for Voice Message Service. Valid values: `all` (all languages), `cnen` (Chinese and English). Default value: `cnen`.
      */
     public void setLanguage(String Language) {
         this.Language = Language;

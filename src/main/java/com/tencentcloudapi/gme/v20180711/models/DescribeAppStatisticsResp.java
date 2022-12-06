@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeAppStatisticsResp extends AbstractModel{
 
     /**
-    * App usage statistics
+    * Application usage statistics
     */
     @SerializedName("AppStatistics")
     @Expose
     private AppStatisticsItem [] AppStatistics;
 
     /**
-     * Get App usage statistics 
-     * @return AppStatistics App usage statistics
+     * Get Application usage statistics 
+     * @return AppStatistics Application usage statistics
      */
     public AppStatisticsItem [] getAppStatistics() {
         return this.AppStatistics;
     }
 
     /**
-     * Set App usage statistics
-     * @param AppStatistics App usage statistics
+     * Set Application usage statistics
+     * @param AppStatistics Application usage statistics
      */
     public void setAppStatistics(AppStatisticsItem [] AppStatistics) {
         this.AppStatistics = AppStatistics;

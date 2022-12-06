@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ModifyAppStatusRequest extends AbstractModel{
 
     /**
-    * Application ID, which is generated and returned by the backend after application creation.
+    * Application ID, which is generated and returned by the backend after the application creation.
     */
     @SerializedName("BizId")
     @Expose
     private Long BizId;
 
     /**
-    * Application status. Valid values: open, close
+    * Application status. Valid values: `open`, `close`.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get Application ID, which is generated and returned by the backend after application creation. 
-     * @return BizId Application ID, which is generated and returned by the backend after application creation.
+     * Get Application ID, which is generated and returned by the backend after the application creation. 
+     * @return BizId Application ID, which is generated and returned by the backend after the application creation.
      */
     public Long getBizId() {
         return this.BizId;
     }
 
     /**
-     * Set Application ID, which is generated and returned by the backend after application creation.
-     * @param BizId Application ID, which is generated and returned by the backend after application creation.
+     * Set Application ID, which is generated and returned by the backend after the application creation.
+     * @param BizId Application ID, which is generated and returned by the backend after the application creation.
      */
     public void setBizId(Long BizId) {
         this.BizId = BizId;
     }
 
     /**
-     * Get Application status. Valid values: open, close 
-     * @return Status Application status. Valid values: open, close
+     * Get Application status. Valid values: `open`, `close`. 
+     * @return Status Application status. Valid values: `open`, `close`.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Application status. Valid values: open, close
-     * @param Status Application status. Valid values: open, close
+     * Set Application status. Valid values: `open`, `close`.
+     * @param Status Application status. Valid values: `open`, `close`.
      */
     public void setStatus(String Status) {
         this.Status = Status;

@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class ScanPiece extends AbstractModel{
 
     /**
-    * Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("DumpUrl")
     @Expose
@@ -39,30 +39,30 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Main non-compliant content type
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("MainType")
     @Expose
     private String MainType;
 
     /**
-    * Speech detection details
+    * Voice detection details
     */
     @SerializedName("ScanDetail")
     @Expose
     private ScanDetail [] ScanDetail;
 
     /**
-    * GME voice chat room ID, which is the `RoomId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained.
+    * GME Voice Chat room ID, which is the `RoomId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("RoomId")
     @Expose
     private String RoomId;
 
     /**
-    * GME voice chat user ID, which is the `OpenId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained.
+    * GME Voice Chat user ID, which is the `OpenId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("OpenId")
     @Expose
@@ -70,51 +70,51 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Info")
     @Expose
     private String Info;
 
     /**
-    * Offset time in milliseconds of segment in stream during stream detection
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Offset time of multipart in stream during stream detection (in milliseconds)
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Segment duration during stream detection
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Multipart duration during stream detection
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Duration")
     @Expose
     private Long Duration;
 
     /**
-    * Segment detection start time
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Multipart detection start time
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("PieceStartTime")
     @Expose
     private Long PieceStartTime;
 
     /**
-     * Get Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DumpUrl Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return DumpUrl Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getDumpUrl() {
         return this.DumpUrl;
     }
 
     /**
-     * Set Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DumpUrl Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param DumpUrl Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setDumpUrl(String DumpUrl) {
         this.DumpUrl = DumpUrl;
@@ -138,9 +138,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Main non-compliant content type
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return MainType Main non-compliant content type
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getMainType() {
         return this.MainType;
@@ -148,65 +148,65 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Main non-compliant content type
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param MainType Main non-compliant content type
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setMainType(String MainType) {
         this.MainType = MainType;
     }
 
     /**
-     * Get Speech detection details 
-     * @return ScanDetail Speech detection details
+     * Get Voice detection details 
+     * @return ScanDetail Voice detection details
      */
     public ScanDetail [] getScanDetail() {
         return this.ScanDetail;
     }
 
     /**
-     * Set Speech detection details
-     * @param ScanDetail Speech detection details
+     * Set Voice detection details
+     * @param ScanDetail Voice detection details
      */
     public void setScanDetail(ScanDetail [] ScanDetail) {
         this.ScanDetail = ScanDetail;
     }
 
     /**
-     * Get GME voice chat room ID, which is the `RoomId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RoomId GME voice chat room ID, which is the `RoomId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get GME Voice Chat room ID, which is the `RoomId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return RoomId GME Voice Chat room ID, which is the `RoomId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set GME voice chat room ID, which is the `RoomId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RoomId GME voice chat room ID, which is the `RoomId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set GME Voice Chat room ID, which is the `RoomId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param RoomId GME Voice Chat room ID, which is the `RoomId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setRoomId(String RoomId) {
         this.RoomId = RoomId;
     }
 
     /**
-     * Get GME voice chat user ID, which is the `OpenId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OpenId GME voice chat user ID, which is the `OpenId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get GME Voice Chat user ID, which is the `OpenId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return OpenId GME Voice Chat user ID, which is the `OpenId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getOpenId() {
         return this.OpenId;
     }
 
     /**
-     * Set GME voice chat user ID, which is the `OpenId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OpenId GME voice chat user ID, which is the `OpenId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set GME Voice Chat user ID, which is the `OpenId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param OpenId GME Voice Chat user ID, which is the `OpenId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setOpenId(String OpenId) {
         this.OpenId = OpenId;
@@ -214,9 +214,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Remarks
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return Info Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getInfo() {
         return this.Info;
@@ -224,69 +224,69 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param Info Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setInfo(String Info) {
         this.Info = Info;
     }
 
     /**
-     * Get Offset time in milliseconds of segment in stream during stream detection
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Offset Offset time in milliseconds of segment in stream during stream detection
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Offset time of multipart in stream during stream detection (in milliseconds)
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Offset Offset time of multipart in stream during stream detection (in milliseconds)
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset time in milliseconds of segment in stream during stream detection
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Offset Offset time in milliseconds of segment in stream during stream detection
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Offset time of multipart in stream during stream detection (in milliseconds)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Offset Offset time of multipart in stream during stream detection (in milliseconds)
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Segment duration during stream detection
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Duration Segment duration during stream detection
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Multipart duration during stream detection
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Duration Multipart duration during stream detection
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Segment duration during stream detection
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Duration Segment duration during stream detection
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Multipart duration during stream detection
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Duration Multipart duration during stream detection
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get Segment detection start time
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return PieceStartTime Segment detection start time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Multipart detection start time
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return PieceStartTime Multipart detection start time
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getPieceStartTime() {
         return this.PieceStartTime;
     }
 
     /**
-     * Set Segment detection start time
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PieceStartTime Segment detection start time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Multipart detection start time
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param PieceStartTime Multipart detection start time
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setPieceStartTime(Long PieceStartTime) {
         this.PieceStartTime = PieceStartTime;

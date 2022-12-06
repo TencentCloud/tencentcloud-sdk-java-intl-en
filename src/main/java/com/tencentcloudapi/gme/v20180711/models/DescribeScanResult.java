@@ -59,7 +59,7 @@ public class DescribeScanResult extends AbstractModel{
 
     /**
     * Business return description
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Msg")
     @Expose
@@ -67,7 +67,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Detection result, which will be returned if `Code` is 0
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ScanPiece")
     @Expose
@@ -81,14 +81,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long ScanStartTime;
 
     /**
-    * Speech detection scenario, which corresponds to the `Scene` at the time of request
+    * Voice detection scenario, which corresponds to the `Scene` at the time of request
     */
     @SerializedName("Scenes")
     @Expose
     private String [] Scenes;
 
     /**
-    * Speech detection task ID, which is assigned by the backend
+    * Voice detection task ID, which is assigned by the backend
     */
     @SerializedName("TaskId")
     @Expose
@@ -102,10 +102,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Url;
 
     /**
-    * Detection task execution result task. Valid values:
-<li>Start: task started</li>
-<li>Success: task ended successfully</li>
-<li>Error: exceptional</li>
+    * Detection task execution result status. Valid values:
+<li>Start: Task started</li>
+<li>Success: Task ended successfully</li>
+<li>Error: An exception occurs</li>
     */
     @SerializedName("Status")
     @Expose
@@ -200,9 +200,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Business return description
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return Msg Business return description
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getMsg() {
         return this.Msg;
@@ -210,9 +210,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Business return description
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param Msg Business return description
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;
@@ -220,9 +220,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Detection result, which will be returned if `Code` is 0
-Note: this field may return null, indicating that no valid values can be obtained. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return ScanPiece Detection result, which will be returned if `Code` is 0
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public ScanPiece [] getScanPiece() {
         return this.ScanPiece;
@@ -230,9 +230,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Detection result, which will be returned if `Code` is 0
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param ScanPiece Detection result, which will be returned if `Code` is 0
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setScanPiece(ScanPiece [] ScanPiece) {
         this.ScanPiece = ScanPiece;
@@ -255,32 +255,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Speech detection scenario, which corresponds to the `Scene` at the time of request 
-     * @return Scenes Speech detection scenario, which corresponds to the `Scene` at the time of request
+     * Get Voice detection scenario, which corresponds to the `Scene` at the time of request 
+     * @return Scenes Voice detection scenario, which corresponds to the `Scene` at the time of request
      */
     public String [] getScenes() {
         return this.Scenes;
     }
 
     /**
-     * Set Speech detection scenario, which corresponds to the `Scene` at the time of request
-     * @param Scenes Speech detection scenario, which corresponds to the `Scene` at the time of request
+     * Set Voice detection scenario, which corresponds to the `Scene` at the time of request
+     * @param Scenes Voice detection scenario, which corresponds to the `Scene` at the time of request
      */
     public void setScenes(String [] Scenes) {
         this.Scenes = Scenes;
     }
 
     /**
-     * Get Speech detection task ID, which is assigned by the backend 
-     * @return TaskId Speech detection task ID, which is assigned by the backend
+     * Get Voice detection task ID, which is assigned by the backend 
+     * @return TaskId Voice detection task ID, which is assigned by the backend
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Speech detection task ID, which is assigned by the backend
-     * @param TaskId Speech detection task ID, which is assigned by the backend
+     * Set Voice detection task ID, which is assigned by the backend
+     * @param TaskId Voice detection task ID, which is assigned by the backend
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
@@ -303,28 +303,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Detection task execution result task. Valid values:
-<li>Start: task started</li>
-<li>Success: task ended successfully</li>
-<li>Error: exceptional</li> 
-     * @return Status Detection task execution result task. Valid values:
-<li>Start: task started</li>
-<li>Success: task ended successfully</li>
-<li>Error: exceptional</li>
+     * Get Detection task execution result status. Valid values:
+<li>Start: Task started</li>
+<li>Success: Task ended successfully</li>
+<li>Error: An exception occurs</li> 
+     * @return Status Detection task execution result status. Valid values:
+<li>Start: Task started</li>
+<li>Success: Task ended successfully</li>
+<li>Error: An exception occurs</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Detection task execution result task. Valid values:
-<li>Start: task started</li>
-<li>Success: task ended successfully</li>
-<li>Error: exceptional</li>
-     * @param Status Detection task execution result task. Valid values:
-<li>Start: task started</li>
-<li>Success: task ended successfully</li>
-<li>Error: exceptional</li>
+     * Set Detection task execution result status. Valid values:
+<li>Start: Task started</li>
+<li>Success: Task ended successfully</li>
+<li>Error: An exception occurs</li>
+     * @param Status Detection task execution result status. Valid values:
+<li>Start: Task started</li>
+<li>Success: Task ended successfully</li>
+<li>Error: An exception occurs</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;

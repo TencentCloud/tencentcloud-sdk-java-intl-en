@@ -51,6 +51,21 @@ public class ParamTemplateListInfo extends AbstractModel{
     private String EngineVersion;
 
     /**
+    * Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+    */
+    @SerializedName("DbMode")
+    @Expose
+    private String DbMode;
+
+    /**
+    * Parameter template details
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ParamInfoSet")
+    @Expose
+    private TemplateParamInfo [] ParamInfoSet;
+
+    /**
      * Get Parameter template ID 
      * @return Id Parameter template ID
      */
@@ -114,6 +129,42 @@ public class ParamTemplateListInfo extends AbstractModel{
         this.EngineVersion = EngineVersion;
     }
 
+    /**
+     * Get Database Type. Valid values: `NORMAL`, `SERVERLESS`. 
+     * @return DbMode Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+     */
+    public String getDbMode() {
+        return this.DbMode;
+    }
+
+    /**
+     * Set Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+     * @param DbMode Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+     */
+    public void setDbMode(String DbMode) {
+        this.DbMode = DbMode;
+    }
+
+    /**
+     * Get Parameter template details
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ParamInfoSet Parameter template details
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public TemplateParamInfo [] getParamInfoSet() {
+        return this.ParamInfoSet;
+    }
+
+    /**
+     * Set Parameter template details
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ParamInfoSet Parameter template details
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setParamInfoSet(TemplateParamInfo [] ParamInfoSet) {
+        this.ParamInfoSet = ParamInfoSet;
+    }
+
     public ParamTemplateListInfo() {
     }
 
@@ -134,6 +185,15 @@ public class ParamTemplateListInfo extends AbstractModel{
         if (source.EngineVersion != null) {
             this.EngineVersion = new String(source.EngineVersion);
         }
+        if (source.DbMode != null) {
+            this.DbMode = new String(source.DbMode);
+        }
+        if (source.ParamInfoSet != null) {
+            this.ParamInfoSet = new TemplateParamInfo[source.ParamInfoSet.length];
+            for (int i = 0; i < source.ParamInfoSet.length; i++) {
+                this.ParamInfoSet[i] = new TemplateParamInfo(source.ParamInfoSet[i]);
+            }
+        }
     }
 
 
@@ -145,6 +205,8 @@ public class ParamTemplateListInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "TemplateName", this.TemplateName);
         this.setParamSimple(map, prefix + "TemplateDescription", this.TemplateDescription);
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
+        this.setParamSimple(map, prefix + "DbMode", this.DbMode);
+        this.setParamArrayObj(map, prefix + "ParamInfoSet.", this.ParamInfoSet);
 
     }
 }

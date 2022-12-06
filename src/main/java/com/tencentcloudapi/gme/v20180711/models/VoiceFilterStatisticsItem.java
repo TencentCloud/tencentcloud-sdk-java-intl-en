@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class VoiceFilterStatisticsItem extends AbstractModel{
 
     /**
-    * Total duration of phrase filtering
+    * Total duration of phrase filtering (in minutes)
     */
     @SerializedName("Duration")
     @Expose
     private Long Duration;
 
     /**
-     * Get Total duration of phrase filtering 
-     * @return Duration Total duration of phrase filtering
+     * Get Total duration of phrase filtering (in minutes) 
+     * @return Duration Total duration of phrase filtering (in minutes)
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Total duration of phrase filtering
-     * @param Duration Total duration of phrase filtering
+     * Set Total duration of phrase filtering (in minutes)
+     * @param Duration Total duration of phrase filtering (in minutes)
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;

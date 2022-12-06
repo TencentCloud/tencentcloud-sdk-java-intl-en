@@ -30,14 +30,14 @@ public class DescribeApplicationDataRequest extends AbstractModel{
     private Long BizId;
 
     /**
-    * Data start date in the format of yyyy-mm-dd, such as 2018-07-13
+    * Data start date in the format of yyyy-mm-dd, such as 2018-07-13.
     */
     @SerializedName("StartDate")
     @Expose
     private String StartDate;
 
     /**
-    * Data end date in the format of yyyy-mm-dd, such as 2018-07-13
+    * Data end date in the format of yyyy-mm-dd, such as 2018-07-13.
     */
     @SerializedName("EndDate")
     @Expose
@@ -60,32 +60,32 @@ public class DescribeApplicationDataRequest extends AbstractModel{
     }
 
     /**
-     * Get Data start date in the format of yyyy-mm-dd, such as 2018-07-13 
-     * @return StartDate Data start date in the format of yyyy-mm-dd, such as 2018-07-13
+     * Get Data start date in the format of yyyy-mm-dd, such as 2018-07-13. 
+     * @return StartDate Data start date in the format of yyyy-mm-dd, such as 2018-07-13.
      */
     public String getStartDate() {
         return this.StartDate;
     }
 
     /**
-     * Set Data start date in the format of yyyy-mm-dd, such as 2018-07-13
-     * @param StartDate Data start date in the format of yyyy-mm-dd, such as 2018-07-13
+     * Set Data start date in the format of yyyy-mm-dd, such as 2018-07-13.
+     * @param StartDate Data start date in the format of yyyy-mm-dd, such as 2018-07-13.
      */
     public void setStartDate(String StartDate) {
         this.StartDate = StartDate;
     }
 
     /**
-     * Get Data end date in the format of yyyy-mm-dd, such as 2018-07-13 
-     * @return EndDate Data end date in the format of yyyy-mm-dd, such as 2018-07-13
+     * Get Data end date in the format of yyyy-mm-dd, such as 2018-07-13. 
+     * @return EndDate Data end date in the format of yyyy-mm-dd, such as 2018-07-13.
      */
     public String getEndDate() {
         return this.EndDate;
     }
 
     /**
-     * Set Data end date in the format of yyyy-mm-dd, such as 2018-07-13
-     * @param EndDate Data end date in the format of yyyy-mm-dd, such as 2018-07-13
+     * Set Data end date in the format of yyyy-mm-dd, such as 2018-07-13.
+     * @param EndDate Data end date in the format of yyyy-mm-dd, such as 2018-07-13.
      */
     public void setEndDate(String EndDate) {
         this.EndDate = EndDate;

@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class ScanVoiceResponse extends AbstractModel{
 
     /**
-    * Speech detection return. The `Data` field is a JSON array where each element contains: <li>DataId: corresponding `DataId` in request.</li>
-<li>TaskID: detection task ID, which is used to poll the speech detection result.</li>
+    * Voice moderation result. <li>`DataId`: Corresponding `DataId` in request.</li>
+<li>`TaskID`: Moderation task ID, which is used to poll the voice detection result.</li>
     */
     @SerializedName("Data")
     @Expose
@@ -38,20 +38,20 @@ public class ScanVoiceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Speech detection return. The `Data` field is a JSON array where each element contains: <li>DataId: corresponding `DataId` in request.</li>
-<li>TaskID: detection task ID, which is used to poll the speech detection result.</li> 
-     * @return Data Speech detection return. The `Data` field is a JSON array where each element contains: <li>DataId: corresponding `DataId` in request.</li>
-<li>TaskID: detection task ID, which is used to poll the speech detection result.</li>
+     * Get Voice moderation result. <li>`DataId`: Corresponding `DataId` in request.</li>
+<li>`TaskID`: Moderation task ID, which is used to poll the voice detection result.</li> 
+     * @return Data Voice moderation result. <li>`DataId`: Corresponding `DataId` in request.</li>
+<li>`TaskID`: Moderation task ID, which is used to poll the voice detection result.</li>
      */
     public ScanVoiceResult [] getData() {
         return this.Data;
     }
 
     /**
-     * Set Speech detection return. The `Data` field is a JSON array where each element contains: <li>DataId: corresponding `DataId` in request.</li>
-<li>TaskID: detection task ID, which is used to poll the speech detection result.</li>
-     * @param Data Speech detection return. The `Data` field is a JSON array where each element contains: <li>DataId: corresponding `DataId` in request.</li>
-<li>TaskID: detection task ID, which is used to poll the speech detection result.</li>
+     * Set Voice moderation result. <li>`DataId`: Corresponding `DataId` in request.</li>
+<li>`TaskID`: Moderation task ID, which is used to poll the voice detection result.</li>
+     * @param Data Voice moderation result. <li>`DataId`: Corresponding `DataId` in request.</li>
+<li>`TaskID`: Moderation task ID, which is used to poll the voice detection result.</li>
      */
     public void setData(ScanVoiceResult [] Data) {
         this.Data = Data;

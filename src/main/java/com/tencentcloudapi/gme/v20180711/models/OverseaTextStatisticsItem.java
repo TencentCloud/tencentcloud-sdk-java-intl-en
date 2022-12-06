@@ -20,41 +20,46 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VoiceMessageStatisticsItem extends AbstractModel{
+public class OverseaTextStatisticsItem extends AbstractModel{
 
     /**
-    * DAUs of Voice Message Service
+    * Statistical value (in seconds)
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
-    @SerializedName("Dau")
+    @SerializedName("Data")
     @Expose
-    private Long Dau;
+    private Float Data;
 
     /**
-     * Get DAUs of Voice Message Service 
-     * @return Dau DAUs of Voice Message Service
+     * Get Statistical value (in seconds)
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Data Statistical value (in seconds)
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
-    public Long getDau() {
-        return this.Dau;
+    public Float getData() {
+        return this.Data;
     }
 
     /**
-     * Set DAUs of Voice Message Service
-     * @param Dau DAUs of Voice Message Service
+     * Set Statistical value (in seconds)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Data Statistical value (in seconds)
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
-    public void setDau(Long Dau) {
-        this.Dau = Dau;
+    public void setData(Float Data) {
+        this.Data = Data;
     }
 
-    public VoiceMessageStatisticsItem() {
+    public OverseaTextStatisticsItem() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public VoiceMessageStatisticsItem(VoiceMessageStatisticsItem source) {
-        if (source.Dau != null) {
-            this.Dau = new Long(source.Dau);
+    public OverseaTextStatisticsItem(OverseaTextStatisticsItem source) {
+        if (source.Data != null) {
+            this.Data = new Float(source.Data);
         }
     }
 
@@ -63,7 +68,7 @@ public class VoiceMessageStatisticsItem extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Dau", this.Dau);
+        this.setParamSimple(map, prefix + "Data", this.Data);
 
     }
 }

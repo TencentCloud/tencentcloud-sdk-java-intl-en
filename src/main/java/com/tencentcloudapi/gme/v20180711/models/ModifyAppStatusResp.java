@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ModifyAppStatusResp extends AbstractModel{
 
     /**
-    * GME app ID
+    * GME application ID
     */
     @SerializedName("BizId")
     @Expose
     private Long BizId;
 
     /**
-    * App status. Valid values: `open`, `close`
+    * Application status. Valid values: `open`, `close`.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get GME app ID 
-     * @return BizId GME app ID
+     * Get GME application ID 
+     * @return BizId GME application ID
      */
     public Long getBizId() {
         return this.BizId;
     }
 
     /**
-     * Set GME app ID
-     * @param BizId GME app ID
+     * Set GME application ID
+     * @param BizId GME application ID
      */
     public void setBizId(Long BizId) {
         this.BizId = BizId;
     }
 
     /**
-     * Get App status. Valid values: `open`, `close` 
-     * @return Status App status. Valid values: `open`, `close`
+     * Get Application status. Valid values: `open`, `close`. 
+     * @return Status Application status. Valid values: `open`, `close`.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set App status. Valid values: `open`, `close`
-     * @param Status App status. Valid values: `open`, `close`
+     * Set Application status. Valid values: `open`, `close`.
+     * @param Status Application status. Valid values: `open`, `close`.
      */
     public void setStatus(String Status) {
         this.Status = Status;

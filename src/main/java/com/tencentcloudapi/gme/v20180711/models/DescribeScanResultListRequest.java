@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeScanResultListRequest extends AbstractModel{
 
     /**
-    * Application ID, which is the `AppID` obtained when you create an application in the [console](https://console.cloud.tencent.com/gamegme)
+    * Application ID, which is obtained when you create an application in the [GME console](https://console.cloud.tencent.com/gamegme).
     */
     @SerializedName("BizId")
     @Expose
@@ -37,23 +37,23 @@ public class DescribeScanResultListRequest extends AbstractModel{
     private String [] TaskIdList;
 
     /**
-    * Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned
+    * Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get Application ID, which is the `AppID` obtained when you create an application in the [console](https://console.cloud.tencent.com/gamegme) 
-     * @return BizId Application ID, which is the `AppID` obtained when you create an application in the [console](https://console.cloud.tencent.com/gamegme)
+     * Get Application ID, which is obtained when you create an application in the [GME console](https://console.cloud.tencent.com/gamegme). 
+     * @return BizId Application ID, which is obtained when you create an application in the [GME console](https://console.cloud.tencent.com/gamegme).
      */
     public Long getBizId() {
         return this.BizId;
     }
 
     /**
-     * Set Application ID, which is the `AppID` obtained when you create an application in the [console](https://console.cloud.tencent.com/gamegme)
-     * @param BizId Application ID, which is the `AppID` obtained when you create an application in the [console](https://console.cloud.tencent.com/gamegme)
+     * Set Application ID, which is obtained when you create an application in the [GME console](https://console.cloud.tencent.com/gamegme).
+     * @param BizId Application ID, which is obtained when you create an application in the [GME console](https://console.cloud.tencent.com/gamegme).
      */
     public void setBizId(Long BizId) {
         this.BizId = BizId;
@@ -76,16 +76,16 @@ public class DescribeScanResultListRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned 
-     * @return Limit Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned
+     * Get Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned. 
+     * @return Limit Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned
-     * @param Limit Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned
+     * Set Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned.
+     * @param Limit Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

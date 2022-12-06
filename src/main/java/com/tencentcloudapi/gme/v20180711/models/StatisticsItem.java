@@ -30,7 +30,7 @@ public class StatisticsItem extends AbstractModel{
     private String StatDate;
 
     /**
-    * Statistics
+    * Statistical value
     */
     @SerializedName("Data")
     @Expose
@@ -53,16 +53,16 @@ public class StatisticsItem extends AbstractModel{
     }
 
     /**
-     * Get Statistics 
-     * @return Data Statistics
+     * Get Statistical value 
+     * @return Data Statistical value
      */
     public Long getData() {
         return this.Data;
     }
 
     /**
-     * Set Statistics
-     * @param Data Statistics
+     * Set Statistical value
+     * @param Data Statistical value
      */
     public void setData(Long Data) {
         this.Data = Data;

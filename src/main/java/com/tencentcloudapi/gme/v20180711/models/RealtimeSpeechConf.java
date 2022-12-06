@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class RealtimeSpeechConf extends AbstractModel{
 
     /**
-    * Voice chat status. Valid values: open, close
+    * Voice Chat status. Valid values: `open`, `close`.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Voice chat sound quality. Valid value: `high`
+    * Voice Chat sound quality. Valid value: `high`.
     */
     @SerializedName("Quality")
     @Expose
     private String Quality;
 
     /**
-     * Get Voice chat status. Valid values: open, close 
-     * @return Status Voice chat status. Valid values: open, close
+     * Get Voice Chat status. Valid values: `open`, `close`. 
+     * @return Status Voice Chat status. Valid values: `open`, `close`.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Voice chat status. Valid values: open, close
-     * @param Status Voice chat status. Valid values: open, close
+     * Set Voice Chat status. Valid values: `open`, `close`.
+     * @param Status Voice Chat status. Valid values: `open`, `close`.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Voice chat sound quality. Valid value: `high` 
-     * @return Quality Voice chat sound quality. Valid value: `high`
+     * Get Voice Chat sound quality. Valid value: `high`. 
+     * @return Quality Voice Chat sound quality. Valid value: `high`.
      */
     public String getQuality() {
         return this.Quality;
     }
 
     /**
-     * Set Voice chat sound quality. Valid value: `high`
-     * @param Quality Voice chat sound quality. Valid value: `high`
+     * Set Voice Chat sound quality. Valid value: `high`.
+     * @param Quality Voice Chat sound quality. Valid value: `high`.
      */
     public void setQuality(String Quality) {
         this.Quality = Quality;

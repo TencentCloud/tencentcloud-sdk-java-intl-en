@@ -13,84 +13,53 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gme.v20180711.models;
+package com.tencentcloudapi.as.v20180419.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class Tag extends AbstractModel{
+public class RunAutomationServiceEnabled extends AbstractModel{
 
     /**
-    * Tag key
+    * Whether to enable [TencentCloud Automation Tools](https://intl.cloud.tencent.com/document/product/1340?from_cn_redirect=1). Valid values:<br><li>`TRUE`: Enable<br><li>`FALSE`: Not enable.
 Note: This field may return `null`, indicating that no valid values can be obtained.
     */
-    @SerializedName("TagKey")
+    @SerializedName("Enabled")
     @Expose
-    private String TagKey;
+    private Boolean Enabled;
 
     /**
-    * Tag value
-Note: This field may return `null`, indicating that no valid values can be obtained.
-    */
-    @SerializedName("TagValue")
-    @Expose
-    private String TagValue;
-
-    /**
-     * Get Tag key
+     * Get Whether to enable [TencentCloud Automation Tools](https://intl.cloud.tencent.com/document/product/1340?from_cn_redirect=1). Valid values:<br><li>`TRUE`: Enable<br><li>`FALSE`: Not enable.
 Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return TagKey Tag key
+     * @return Enabled Whether to enable [TencentCloud Automation Tools](https://intl.cloud.tencent.com/document/product/1340?from_cn_redirect=1). Valid values:<br><li>`TRUE`: Enable<br><li>`FALSE`: Not enable.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
-    public String getTagKey() {
-        return this.TagKey;
+    public Boolean getEnabled() {
+        return this.Enabled;
     }
 
     /**
-     * Set Tag key
+     * Set Whether to enable [TencentCloud Automation Tools](https://intl.cloud.tencent.com/document/product/1340?from_cn_redirect=1). Valid values:<br><li>`TRUE`: Enable<br><li>`FALSE`: Not enable.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param TagKey Tag key
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     */
-    public void setTagKey(String TagKey) {
-        this.TagKey = TagKey;
-    }
-
-    /**
-     * Get Tag value
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return TagValue Tag value
+     * @param Enabled Whether to enable [TencentCloud Automation Tools](https://intl.cloud.tencent.com/document/product/1340?from_cn_redirect=1). Valid values:<br><li>`TRUE`: Enable<br><li>`FALSE`: Not enable.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
-    public String getTagValue() {
-        return this.TagValue;
+    public void setEnabled(Boolean Enabled) {
+        this.Enabled = Enabled;
     }
 
-    /**
-     * Set Tag value
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param TagValue Tag value
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     */
-    public void setTagValue(String TagValue) {
-        this.TagValue = TagValue;
-    }
-
-    public Tag() {
+    public RunAutomationServiceEnabled() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public Tag(Tag source) {
-        if (source.TagKey != null) {
-            this.TagKey = new String(source.TagKey);
-        }
-        if (source.TagValue != null) {
-            this.TagValue = new String(source.TagValue);
+    public RunAutomationServiceEnabled(RunAutomationServiceEnabled source) {
+        if (source.Enabled != null) {
+            this.Enabled = new Boolean(source.Enabled);
         }
     }
 
@@ -99,8 +68,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TagKey", this.TagKey);
-        this.setParamSimple(map, prefix + "TagValue", this.TagValue);
+        this.setParamSimple(map, prefix + "Enabled", this.Enabled);
 
     }
 }

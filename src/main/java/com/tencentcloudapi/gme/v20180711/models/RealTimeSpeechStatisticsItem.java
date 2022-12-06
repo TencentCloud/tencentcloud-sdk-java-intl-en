@@ -23,138 +23,138 @@ import java.util.HashMap;
 public class RealTimeSpeechStatisticsItem extends AbstractModel{
 
     /**
-    * DAU in Mainland China
+    * DAUs in the Chinese mainland
     */
     @SerializedName("MainLandDau")
     @Expose
     private Long MainLandDau;
 
     /**
-    * PCU in Mainland China
+    * PCUs in the Chinese mainland
     */
     @SerializedName("MainLandPcu")
     @Expose
     private Long MainLandPcu;
 
     /**
-    * Total duration of use in Mainland China in minutes
+    * Total duration of use in the Chinese mainland (in minutes)
     */
     @SerializedName("MainLandDuration")
     @Expose
     private Long MainLandDuration;
 
     /**
-    * DAU outside Mainland China
+    * DAUs outside the Chinese mainland
     */
     @SerializedName("OverseaDau")
     @Expose
     private Long OverseaDau;
 
     /**
-    * PCU outside Mainland China
+    * PCUs outside the Chinese mainland
     */
     @SerializedName("OverseaPcu")
     @Expose
     private Long OverseaPcu;
 
     /**
-    * Total duration of use outside Mainland China in minutes
+    * Total duration of use outside the Chinese mainland (in minutes)
     */
     @SerializedName("OverseaDuration")
     @Expose
     private Long OverseaDuration;
 
     /**
-     * Get DAU in Mainland China 
-     * @return MainLandDau DAU in Mainland China
+     * Get DAUs in the Chinese mainland 
+     * @return MainLandDau DAUs in the Chinese mainland
      */
     public Long getMainLandDau() {
         return this.MainLandDau;
     }
 
     /**
-     * Set DAU in Mainland China
-     * @param MainLandDau DAU in Mainland China
+     * Set DAUs in the Chinese mainland
+     * @param MainLandDau DAUs in the Chinese mainland
      */
     public void setMainLandDau(Long MainLandDau) {
         this.MainLandDau = MainLandDau;
     }
 
     /**
-     * Get PCU in Mainland China 
-     * @return MainLandPcu PCU in Mainland China
+     * Get PCUs in the Chinese mainland 
+     * @return MainLandPcu PCUs in the Chinese mainland
      */
     public Long getMainLandPcu() {
         return this.MainLandPcu;
     }
 
     /**
-     * Set PCU in Mainland China
-     * @param MainLandPcu PCU in Mainland China
+     * Set PCUs in the Chinese mainland
+     * @param MainLandPcu PCUs in the Chinese mainland
      */
     public void setMainLandPcu(Long MainLandPcu) {
         this.MainLandPcu = MainLandPcu;
     }
 
     /**
-     * Get Total duration of use in Mainland China in minutes 
-     * @return MainLandDuration Total duration of use in Mainland China in minutes
+     * Get Total duration of use in the Chinese mainland (in minutes) 
+     * @return MainLandDuration Total duration of use in the Chinese mainland (in minutes)
      */
     public Long getMainLandDuration() {
         return this.MainLandDuration;
     }
 
     /**
-     * Set Total duration of use in Mainland China in minutes
-     * @param MainLandDuration Total duration of use in Mainland China in minutes
+     * Set Total duration of use in the Chinese mainland (in minutes)
+     * @param MainLandDuration Total duration of use in the Chinese mainland (in minutes)
      */
     public void setMainLandDuration(Long MainLandDuration) {
         this.MainLandDuration = MainLandDuration;
     }
 
     /**
-     * Get DAU outside Mainland China 
-     * @return OverseaDau DAU outside Mainland China
+     * Get DAUs outside the Chinese mainland 
+     * @return OverseaDau DAUs outside the Chinese mainland
      */
     public Long getOverseaDau() {
         return this.OverseaDau;
     }
 
     /**
-     * Set DAU outside Mainland China
-     * @param OverseaDau DAU outside Mainland China
+     * Set DAUs outside the Chinese mainland
+     * @param OverseaDau DAUs outside the Chinese mainland
      */
     public void setOverseaDau(Long OverseaDau) {
         this.OverseaDau = OverseaDau;
     }
 
     /**
-     * Get PCU outside Mainland China 
-     * @return OverseaPcu PCU outside Mainland China
+     * Get PCUs outside the Chinese mainland 
+     * @return OverseaPcu PCUs outside the Chinese mainland
      */
     public Long getOverseaPcu() {
         return this.OverseaPcu;
     }
 
     /**
-     * Set PCU outside Mainland China
-     * @param OverseaPcu PCU outside Mainland China
+     * Set PCUs outside the Chinese mainland
+     * @param OverseaPcu PCUs outside the Chinese mainland
      */
     public void setOverseaPcu(Long OverseaPcu) {
         this.OverseaPcu = OverseaPcu;
     }
 
     /**
-     * Get Total duration of use outside Mainland China in minutes 
-     * @return OverseaDuration Total duration of use outside Mainland China in minutes
+     * Get Total duration of use outside the Chinese mainland (in minutes) 
+     * @return OverseaDuration Total duration of use outside the Chinese mainland (in minutes)
      */
     public Long getOverseaDuration() {
         return this.OverseaDuration;
     }
 
     /**
-     * Set Total duration of use outside Mainland China in minutes
-     * @param OverseaDuration Total duration of use outside Mainland China in minutes
+     * Set Total duration of use outside the Chinese mainland (in minutes)
+     * @param OverseaDuration Total duration of use outside the Chinese mainland (in minutes)
      */
     public void setOverseaDuration(Long OverseaDuration) {
         this.OverseaDuration = OverseaDuration;

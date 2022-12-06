@@ -30,7 +30,7 @@ public class CreateAppRequest extends AbstractModel{
     private String AppName;
 
     /**
-    * Tencent Cloud project ID. Default value: 0, which means the default project
+    * Tencent Cloud project ID. Default value: 0, which means that the default project is used.
     */
     @SerializedName("ProjectId")
     @Expose
@@ -51,21 +51,21 @@ public class CreateAppRequest extends AbstractModel{
     private String [] RegionList;
 
     /**
-    * Configuration information of voice chat
+    * Configuration information of Voice Chat
     */
     @SerializedName("RealtimeSpeechConf")
     @Expose
     private RealtimeSpeechConf RealtimeSpeechConf;
 
     /**
-    * Configuration information of voice messaging and speech-to-text
+    * Configuration information of Voice Message Service
     */
     @SerializedName("VoiceMessageConf")
     @Expose
     private VoiceMessageConf VoiceMessageConf;
 
     /**
-    * Configuration information of phrase analysis
+    * Configuration information of Voice Analysis Service
     */
     @SerializedName("VoiceFilterConf")
     @Expose
@@ -95,16 +95,16 @@ public class CreateAppRequest extends AbstractModel{
     }
 
     /**
-     * Get Tencent Cloud project ID. Default value: 0, which means the default project 
-     * @return ProjectId Tencent Cloud project ID. Default value: 0, which means the default project
+     * Get Tencent Cloud project ID. Default value: 0, which means that the default project is used. 
+     * @return ProjectId Tencent Cloud project ID. Default value: 0, which means that the default project is used.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Tencent Cloud project ID. Default value: 0, which means the default project
-     * @param ProjectId Tencent Cloud project ID. Default value: 0, which means the default project
+     * Set Tencent Cloud project ID. Default value: 0, which means that the default project is used.
+     * @param ProjectId Tencent Cloud project ID. Default value: 0, which means that the default project is used.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
@@ -143,48 +143,48 @@ public class CreateAppRequest extends AbstractModel{
     }
 
     /**
-     * Get Configuration information of voice chat 
-     * @return RealtimeSpeechConf Configuration information of voice chat
+     * Get Configuration information of Voice Chat 
+     * @return RealtimeSpeechConf Configuration information of Voice Chat
      */
     public RealtimeSpeechConf getRealtimeSpeechConf() {
         return this.RealtimeSpeechConf;
     }
 
     /**
-     * Set Configuration information of voice chat
-     * @param RealtimeSpeechConf Configuration information of voice chat
+     * Set Configuration information of Voice Chat
+     * @param RealtimeSpeechConf Configuration information of Voice Chat
      */
     public void setRealtimeSpeechConf(RealtimeSpeechConf RealtimeSpeechConf) {
         this.RealtimeSpeechConf = RealtimeSpeechConf;
     }
 
     /**
-     * Get Configuration information of voice messaging and speech-to-text 
-     * @return VoiceMessageConf Configuration information of voice messaging and speech-to-text
+     * Get Configuration information of Voice Message Service 
+     * @return VoiceMessageConf Configuration information of Voice Message Service
      */
     public VoiceMessageConf getVoiceMessageConf() {
         return this.VoiceMessageConf;
     }
 
     /**
-     * Set Configuration information of voice messaging and speech-to-text
-     * @param VoiceMessageConf Configuration information of voice messaging and speech-to-text
+     * Set Configuration information of Voice Message Service
+     * @param VoiceMessageConf Configuration information of Voice Message Service
      */
     public void setVoiceMessageConf(VoiceMessageConf VoiceMessageConf) {
         this.VoiceMessageConf = VoiceMessageConf;
     }
 
     /**
-     * Get Configuration information of phrase analysis 
-     * @return VoiceFilterConf Configuration information of phrase analysis
+     * Get Configuration information of Voice Analysis Service 
+     * @return VoiceFilterConf Configuration information of Voice Analysis Service
      */
     public VoiceFilterConf getVoiceFilterConf() {
         return this.VoiceFilterConf;
     }
 
     /**
-     * Set Configuration information of phrase analysis
-     * @param VoiceFilterConf Configuration information of phrase analysis
+     * Set Configuration information of Voice Analysis Service
+     * @param VoiceFilterConf Configuration information of Voice Analysis Service
      */
     public void setVoiceFilterConf(VoiceFilterConf VoiceFilterConf) {
         this.VoiceFilterConf = VoiceFilterConf;
