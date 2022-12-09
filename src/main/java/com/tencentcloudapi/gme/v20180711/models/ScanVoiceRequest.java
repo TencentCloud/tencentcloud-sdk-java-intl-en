@@ -60,7 +60,7 @@ public class ScanVoiceRequest extends AbstractModel{
     private String Callback;
 
     /**
-    * Language. `jp`: Japanese
+    * Language. Chinese will be used if it is left empty.
     */
     @SerializedName("Lang")
     @Expose
@@ -155,16 +155,16 @@ public class ScanVoiceRequest extends AbstractModel{
     }
 
     /**
-     * Get Language. `jp`: Japanese 
-     * @return Lang Language. `jp`: Japanese
+     * Get Language. Chinese will be used if it is left empty. 
+     * @return Lang Language. Chinese will be used if it is left empty.
      */
     public String getLang() {
         return this.Lang;
     }
 
     /**
-     * Set Language. `jp`: Japanese
-     * @param Lang Language. `jp`: Japanese
+     * Set Language. Chinese will be used if it is left empty.
+     * @param Lang Language. Chinese will be used if it is left empty.
      */
     public void setLang(String Lang) {
         this.Lang = Lang;

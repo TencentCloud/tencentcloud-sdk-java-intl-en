@@ -1,5 +1,8 @@
 package com.tencentcloudapi.faceid.v20180301;
 public enum FaceidErrorCode {
+    // CAM signature/authentication error.
+     AUTHFAILURE_INVALIDAUTHORIZATION("AuthFailure.InvalidAuthorization"),
+     
     // No motions of eye closing are detected.
      FAILEDOPERATION_ACTIONCLOSEEYE("FailedOperation.ActionCloseEye"),
      
