@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateSecurityDropPageRequest extends AbstractModel{
 
     /**
-    * The site ID.
+    * The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * The subdomain name.
+    * The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
     */
     @SerializedName("Entity")
     @Expose
@@ -69,32 +69,39 @@ public class CreateSecurityDropPageRequest extends AbstractModel{
     private String Module;
 
     /**
-     * Get The site ID. 
-     * @return ZoneId The site ID.
+    * The template ID. You must specify either this field or "ZoneId+Entity".
+    */
+    @SerializedName("TemplateId")
+    @Expose
+    private String TemplateId;
+
+    /**
+     * Get The site ID. You must specify either "ZoneId+Entity" or "TemplateId". 
+     * @return ZoneId The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set The site ID.
-     * @param ZoneId The site ID.
+     * Set The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+     * @param ZoneId The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get The subdomain name. 
-     * @return Entity The subdomain name.
+     * Get The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId". 
+     * @return Entity The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
      */
     public String getEntity() {
         return this.Entity;
     }
 
     /**
-     * Set The subdomain name.
-     * @param Entity The subdomain name.
+     * Set The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
+     * @param Entity The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
      */
     public void setEntity(String Entity) {
         this.Entity = Entity;
@@ -180,6 +187,22 @@ public class CreateSecurityDropPageRequest extends AbstractModel{
         this.Module = Module;
     }
 
+    /**
+     * Get The template ID. You must specify either this field or "ZoneId+Entity". 
+     * @return TemplateId The template ID. You must specify either this field or "ZoneId+Entity".
+     */
+    public String getTemplateId() {
+        return this.TemplateId;
+    }
+
+    /**
+     * Set The template ID. You must specify either this field or "ZoneId+Entity".
+     * @param TemplateId The template ID. You must specify either this field or "ZoneId+Entity".
+     */
+    public void setTemplateId(String TemplateId) {
+        this.TemplateId = TemplateId;
+    }
+
     public CreateSecurityDropPageRequest() {
     }
 
@@ -206,6 +229,9 @@ public class CreateSecurityDropPageRequest extends AbstractModel{
         if (source.Module != null) {
             this.Module = new String(source.Module);
         }
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
+        }
     }
 
 
@@ -219,6 +245,7 @@ public class CreateSecurityDropPageRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Module", this.Module);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
 
     }
 }

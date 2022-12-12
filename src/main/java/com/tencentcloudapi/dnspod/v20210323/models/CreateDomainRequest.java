@@ -30,7 +30,7 @@ public class CreateDomainRequest extends AbstractModel{
     private String Domain;
 
     /**
-    * Domain group ID
+    * The group ID of the domain. You can view the group information of this domain via the `DescribeDomainGroupList` API.
     */
     @SerializedName("GroupId")
     @Expose
@@ -60,16 +60,16 @@ public class CreateDomainRequest extends AbstractModel{
     }
 
     /**
-     * Get Domain group ID 
-     * @return GroupId Domain group ID
+     * Get The group ID of the domain. You can view the group information of this domain via the `DescribeDomainGroupList` API. 
+     * @return GroupId The group ID of the domain. You can view the group information of this domain via the `DescribeDomainGroupList` API.
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Domain group ID
-     * @param GroupId Domain group ID
+     * Set The group ID of the domain. You can view the group information of this domain via the `DescribeDomainGroupList` API.
+     * @param GroupId The group ID of the domain. You can view the group information of this domain via the `DescribeDomainGroupList` API.
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;

@@ -117,7 +117,7 @@ public enum TeoErrorCode {
     // Invalid parameter: The parameter has too many values.
      INVALIDPARAMETER_ERRINVALIDACTIONPARAMTOOMANYVALUES("InvalidParameter.ErrInvalidActionParamTooManyValues"),
      
-    // 
+    // Invalid action type.
      INVALIDPARAMETER_ERRINVALIDACTIONTYPE("InvalidParameter.ErrInvalidActionType"),
      
     // Invalid condition: The letter case is ignored.
@@ -135,13 +135,13 @@ public enum TeoErrorCode {
     // Invalid condition: The parameter value exceeds the limit.
      INVALIDPARAMETER_ERRINVALIDCONDITIONVALUETOOLONGVALUE("InvalidParameter.ErrInvalidConditionValueTooLongValue"),
      
-    // 
+    // Invalid condition: The parameter value is 0.
      INVALIDPARAMETER_ERRINVALIDCONDITIONVALUEZEROLENGTH("InvalidParameter.ErrInvalidConditionValueZeroLength"),
      
     // The domain name does not exist.
      INVALIDPARAMETER_HOSTNOTFOUND("InvalidParameter.HostNotFound"),
      
-    // 
+    // Invalid token authentication.
      INVALIDPARAMETER_INVALIDAUTHENTICATION("InvalidParameter.InvalidAuthentication"),
      
     // Invalid token authentication parameter.
@@ -321,7 +321,7 @@ public enum TeoErrorCode {
     // Operation failed: The L4 proxy is blocked.
      OPERATIONDENIED_L4PROXYINBANNEDSTATUS("OperationDenied.L4ProxyInBannedStatus"),
      
-    // 
+    // Unable to operate the L4 instance when it’s not running
      OPERATIONDENIED_L4STATUSNOTINONLINE("OperationDenied.L4StatusNotInOnline"),
      
     // Unable to switch to NS for multiple sites using CNAME.

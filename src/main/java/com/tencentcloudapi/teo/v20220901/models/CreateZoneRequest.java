@@ -32,7 +32,7 @@ public class CreateZoneRequest extends AbstractModel{
     /**
     * The access mode. Values:
 <li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>This field will be set to the default value `full` if not specified.
+<li>`partial`: Access through a CNAME record. Note that you should verify your site with the IdentifyZone API before starting site access.</li>If it is left empty, the default value `full` is used.
     */
     @SerializedName("Type")
     @Expose
@@ -87,10 +87,10 @@ public class CreateZoneRequest extends AbstractModel{
     /**
      * Get The access mode. Values:
 <li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>This field will be set to the default value `full` if not specified. 
+<li>`partial`: Access through a CNAME record. Note that you should verify your site with the IdentifyZone API before starting site access.</li>If it is left empty, the default value `full` is used. 
      * @return Type The access mode. Values:
 <li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>This field will be set to the default value `full` if not specified.
+<li>`partial`: Access through a CNAME record. Note that you should verify your site with the IdentifyZone API before starting site access.</li>If it is left empty, the default value `full` is used.
      */
     public String getType() {
         return this.Type;
@@ -99,10 +99,10 @@ public class CreateZoneRequest extends AbstractModel{
     /**
      * Set The access mode. Values:
 <li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>This field will be set to the default value `full` if not specified.
+<li>`partial`: Access through a CNAME record. Note that you should verify your site with the IdentifyZone API before starting site access.</li>If it is left empty, the default value `full` is used.
      * @param Type The access mode. Values:
 <li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>This field will be set to the default value `full` if not specified.
+<li>`partial`: Access through a CNAME record. Note that you should verify your site with the IdentifyZone API before starting site access.</li>If it is left empty, the default value `full` is used.
      */
     public void setType(String Type) {
         this.Type = Type;

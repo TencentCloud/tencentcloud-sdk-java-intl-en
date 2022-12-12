@@ -34,13 +34,13 @@ public class RuleCondition extends AbstractModel{
     private String Operator;
 
     /**
-    * Match type. Valid values:
+    * The match type. Values:
 <li>`filename`: File name</li>
 <li>`extension`: File extension</li>
 <li>`host`: Host</li>
 <li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
 <li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
-<li>`query_string`: Query string in the URL</li>
+<li>`query_string`: Query string in the request URL</li>
 <li>`request_header`: HTTP request header</li>
     */
     @SerializedName("Target")
@@ -54,7 +54,7 @@ public class RuleCondition extends AbstractModel{
 <li>When `Target=all`, it indicates any site request.</li>
 <li>When `Target=host`, enter the host under the current site, such as "www.maxx55.com".</li>
 <li>When `Target=url`, enter the partial URL path under the current site, such as "/example".</li>
-<li>When `Target=full_url`, enter the complete URL  under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
+<li>When `Target=full_url`, enter the complete URL under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
 <li>When `Target=client_country`, enter the ISO-3166 country/region code.</li>
 <li>When `Target=query_string`, enter the value of the query string, such as "cn" and "1" in "lang=cn&version=1".</li>
 <li>When `Target=request_header`, enter the HTTP request header value, such as "zh-CN,zh;q=0.9" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
@@ -80,7 +80,8 @@ public class RuleCondition extends AbstractModel{
     private String Name;
 
     /**
-    * 
+    * Whether the parameter name is case insensitive. Default value: `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IgnoreNameCase")
     @Expose
@@ -119,21 +120,21 @@ public class RuleCondition extends AbstractModel{
     }
 
     /**
-     * Get Match type. Valid values:
+     * Get The match type. Values:
 <li>`filename`: File name</li>
 <li>`extension`: File extension</li>
 <li>`host`: Host</li>
 <li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
 <li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
-<li>`query_string`: Query string in the URL</li>
+<li>`query_string`: Query string in the request URL</li>
 <li>`request_header`: HTTP request header</li> 
-     * @return Target Match type. Valid values:
+     * @return Target The match type. Values:
 <li>`filename`: File name</li>
 <li>`extension`: File extension</li>
 <li>`host`: Host</li>
 <li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
 <li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
-<li>`query_string`: Query string in the URL</li>
+<li>`query_string`: Query string in the request URL</li>
 <li>`request_header`: HTTP request header</li>
      */
     public String getTarget() {
@@ -141,21 +142,21 @@ public class RuleCondition extends AbstractModel{
     }
 
     /**
-     * Set Match type. Valid values:
+     * Set The match type. Values:
 <li>`filename`: File name</li>
 <li>`extension`: File extension</li>
 <li>`host`: Host</li>
 <li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
 <li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
-<li>`query_string`: Query string in the URL</li>
+<li>`query_string`: Query string in the request URL</li>
 <li>`request_header`: HTTP request header</li>
-     * @param Target Match type. Valid values:
+     * @param Target The match type. Values:
 <li>`filename`: File name</li>
 <li>`extension`: File extension</li>
 <li>`host`: Host</li>
 <li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
 <li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
-<li>`query_string`: Query string in the URL</li>
+<li>`query_string`: Query string in the request URL</li>
 <li>`request_header`: HTTP request header</li>
      */
     public void setTarget(String Target) {
@@ -169,7 +170,7 @@ public class RuleCondition extends AbstractModel{
 <li>When `Target=all`, it indicates any site request.</li>
 <li>When `Target=host`, enter the host under the current site, such as "www.maxx55.com".</li>
 <li>When `Target=url`, enter the partial URL path under the current site, such as "/example".</li>
-<li>When `Target=full_url`, enter the complete URL  under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
+<li>When `Target=full_url`, enter the complete URL under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
 <li>When `Target=client_country`, enter the ISO-3166 country/region code.</li>
 <li>When `Target=query_string`, enter the value of the query string, such as "cn" and "1" in "lang=cn&version=1".</li>
 <li>When `Target=request_header`, enter the HTTP request header value, such as "zh-CN,zh;q=0.9" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li> 
@@ -179,7 +180,7 @@ public class RuleCondition extends AbstractModel{
 <li>When `Target=all`, it indicates any site request.</li>
 <li>When `Target=host`, enter the host under the current site, such as "www.maxx55.com".</li>
 <li>When `Target=url`, enter the partial URL path under the current site, such as "/example".</li>
-<li>When `Target=full_url`, enter the complete URL  under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
+<li>When `Target=full_url`, enter the complete URL under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
 <li>When `Target=client_country`, enter the ISO-3166 country/region code.</li>
 <li>When `Target=query_string`, enter the value of the query string, such as "cn" and "1" in "lang=cn&version=1".</li>
 <li>When `Target=request_header`, enter the HTTP request header value, such as "zh-CN,zh;q=0.9" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
@@ -195,7 +196,7 @@ public class RuleCondition extends AbstractModel{
 <li>When `Target=all`, it indicates any site request.</li>
 <li>When `Target=host`, enter the host under the current site, such as "www.maxx55.com".</li>
 <li>When `Target=url`, enter the partial URL path under the current site, such as "/example".</li>
-<li>When `Target=full_url`, enter the complete URL  under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
+<li>When `Target=full_url`, enter the complete URL under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
 <li>When `Target=client_country`, enter the ISO-3166 country/region code.</li>
 <li>When `Target=query_string`, enter the value of the query string, such as "cn" and "1" in "lang=cn&version=1".</li>
 <li>When `Target=request_header`, enter the HTTP request header value, such as "zh-CN,zh;q=0.9" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
@@ -205,7 +206,7 @@ public class RuleCondition extends AbstractModel{
 <li>When `Target=all`, it indicates any site request.</li>
 <li>When `Target=host`, enter the host under the current site, such as "www.maxx55.com".</li>
 <li>When `Target=url`, enter the partial URL path under the current site, such as "/example".</li>
-<li>When `Target=full_url`, enter the complete URL  under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
+<li>When `Target=full_url`, enter the complete URL under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
 <li>When `Target=client_country`, enter the ISO-3166 country/region code.</li>
 <li>When `Target=query_string`, enter the value of the query string, such as "cn" and "1" in "lang=cn&version=1".</li>
 <li>When `Target=request_header`, enter the HTTP request header value, such as "zh-CN,zh;q=0.9" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
@@ -255,16 +256,20 @@ public class RuleCondition extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return IgnoreNameCase 
+     * Get Whether the parameter name is case insensitive. Default value: `false`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IgnoreNameCase Whether the parameter name is case insensitive. Default value: `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getIgnoreNameCase() {
         return this.IgnoreNameCase;
     }
 
     /**
-     * Set 
-     * @param IgnoreNameCase 
+     * Set Whether the parameter name is case insensitive. Default value: `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IgnoreNameCase Whether the parameter name is case insensitive. Default value: `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIgnoreNameCase(Boolean IgnoreNameCase) {
         this.IgnoreNameCase = IgnoreNameCase;

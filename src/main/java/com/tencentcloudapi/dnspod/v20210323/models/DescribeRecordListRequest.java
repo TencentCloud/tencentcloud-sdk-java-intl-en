@@ -30,7 +30,7 @@ public class DescribeRecordListRequest extends AbstractModel{
     private String Domain;
 
     /**
-    * The ID of the domain for which DNS records are to be obtained. If `DomainId` is passed in, the system will omit the parameter `Domain`.
+    * The ID of the domain whose DNS records are requested. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
     */
     @SerializedName("DomainId")
     @Expose
@@ -51,21 +51,21 @@ public class DescribeRecordListRequest extends AbstractModel{
     private String RecordType;
 
     /**
-    * The split zone name.
+    * The name of the split zone for which DNS records are requested. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
     */
     @SerializedName("RecordLine")
     @Expose
     private String RecordLine;
 
     /**
-    * The split zone ID. If `RecordLineId` is passed in, the system will omit the parameter `RecordLine`.
+    * The ID of the split zone for which DNS records are requested. If `RecordLineId` is passed in, `RecordLine` is ignored. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
     */
     @SerializedName("RecordLineId")
     @Expose
     private String RecordLineId;
 
     /**
-    * The group ID.
+    * The group ID passed in to get DNS records in the group.
     */
     @SerializedName("GroupId")
     @Expose
@@ -123,16 +123,16 @@ public class DescribeRecordListRequest extends AbstractModel{
     }
 
     /**
-     * Get The ID of the domain for which DNS records are to be obtained. If `DomainId` is passed in, the system will omit the parameter `Domain`. 
-     * @return DomainId The ID of the domain for which DNS records are to be obtained. If `DomainId` is passed in, the system will omit the parameter `Domain`.
+     * Get The ID of the domain whose DNS records are requested. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API. 
+     * @return DomainId The ID of the domain whose DNS records are requested. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
      */
     public Long getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set The ID of the domain for which DNS records are to be obtained. If `DomainId` is passed in, the system will omit the parameter `Domain`.
-     * @param DomainId The ID of the domain for which DNS records are to be obtained. If `DomainId` is passed in, the system will omit the parameter `Domain`.
+     * Set The ID of the domain whose DNS records are requested. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+     * @param DomainId The ID of the domain whose DNS records are requested. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
      */
     public void setDomainId(Long DomainId) {
         this.DomainId = DomainId;
@@ -171,48 +171,48 @@ public class DescribeRecordListRequest extends AbstractModel{
     }
 
     /**
-     * Get The split zone name. 
-     * @return RecordLine The split zone name.
+     * Get The name of the split zone for which DNS records are requested. You can view split zones allowed by this domain via the `DescribeRecordLineList` API. 
+     * @return RecordLine The name of the split zone for which DNS records are requested. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
      */
     public String getRecordLine() {
         return this.RecordLine;
     }
 
     /**
-     * Set The split zone name.
-     * @param RecordLine The split zone name.
+     * Set The name of the split zone for which DNS records are requested. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
+     * @param RecordLine The name of the split zone for which DNS records are requested. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
      */
     public void setRecordLine(String RecordLine) {
         this.RecordLine = RecordLine;
     }
 
     /**
-     * Get The split zone ID. If `RecordLineId` is passed in, the system will omit the parameter `RecordLine`. 
-     * @return RecordLineId The split zone ID. If `RecordLineId` is passed in, the system will omit the parameter `RecordLine`.
+     * Get The ID of the split zone for which DNS records are requested. If `RecordLineId` is passed in, `RecordLine` is ignored. You can view split zones allowed by this domain via the `DescribeRecordLineList` API. 
+     * @return RecordLineId The ID of the split zone for which DNS records are requested. If `RecordLineId` is passed in, `RecordLine` is ignored. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
      */
     public String getRecordLineId() {
         return this.RecordLineId;
     }
 
     /**
-     * Set The split zone ID. If `RecordLineId` is passed in, the system will omit the parameter `RecordLine`.
-     * @param RecordLineId The split zone ID. If `RecordLineId` is passed in, the system will omit the parameter `RecordLine`.
+     * Set The ID of the split zone for which DNS records are requested. If `RecordLineId` is passed in, `RecordLine` is ignored. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
+     * @param RecordLineId The ID of the split zone for which DNS records are requested. If `RecordLineId` is passed in, `RecordLine` is ignored. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
      */
     public void setRecordLineId(String RecordLineId) {
         this.RecordLineId = RecordLineId;
     }
 
     /**
-     * Get The group ID. 
-     * @return GroupId The group ID.
+     * Get The group ID passed in to get DNS records in the group. 
+     * @return GroupId The group ID passed in to get DNS records in the group.
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set The group ID.
-     * @param GroupId The group ID.
+     * Set The group ID passed in to get DNS records in the group.
+     * @param GroupId The group ID passed in to get DNS records in the group.
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
