@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InquirePriceRenewInstancesRequest extends AbstractModel{
 
     /**
-    * Instance to be renewed.
+    * IDs of the instances to be renewed. Each request can contain up to 50 instances at a time. You can get an instance ID from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API.
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -37,30 +37,30 @@ public class InquirePriceRenewInstancesRequest extends AbstractModel{
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
-    * Whether to renew the data disk
+    * Whether to renew the data disk. Default: `false`.
     */
     @SerializedName("RenewDataDisk")
     @Expose
     private Boolean RenewDataDisk;
 
     /**
-    * Whether the data disk has the same expiration time as the instance
+    * Whether to align the data disk expiration with the instance expiration time. Default: `false`.
     */
     @SerializedName("AlignInstanceExpiredTime")
     @Expose
     private Boolean AlignInstanceExpiredTime;
 
     /**
-     * Get Instance to be renewed. 
-     * @return InstanceIds Instance to be renewed.
+     * Get IDs of the instances to be renewed. Each request can contain up to 50 instances at a time. You can get an instance ID from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API. 
+     * @return InstanceIds IDs of the instances to be renewed. Each request can contain up to 50 instances at a time. You can get an instance ID from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Instance to be renewed.
-     * @param InstanceIds Instance to be renewed.
+     * Set IDs of the instances to be renewed. Each request can contain up to 50 instances at a time. You can get an instance ID from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API.
+     * @param InstanceIds IDs of the instances to be renewed. Each request can contain up to 50 instances at a time. You can get an instance ID from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
@@ -83,32 +83,32 @@ public class InquirePriceRenewInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to renew the data disk 
-     * @return RenewDataDisk Whether to renew the data disk
+     * Get Whether to renew the data disk. Default: `false`. 
+     * @return RenewDataDisk Whether to renew the data disk. Default: `false`.
      */
     public Boolean getRenewDataDisk() {
         return this.RenewDataDisk;
     }
 
     /**
-     * Set Whether to renew the data disk
-     * @param RenewDataDisk Whether to renew the data disk
+     * Set Whether to renew the data disk. Default: `false`.
+     * @param RenewDataDisk Whether to renew the data disk. Default: `false`.
      */
     public void setRenewDataDisk(Boolean RenewDataDisk) {
         this.RenewDataDisk = RenewDataDisk;
     }
 
     /**
-     * Get Whether the data disk has the same expiration time as the instance 
-     * @return AlignInstanceExpiredTime Whether the data disk has the same expiration time as the instance
+     * Get Whether to align the data disk expiration with the instance expiration time. Default: `false`. 
+     * @return AlignInstanceExpiredTime Whether to align the data disk expiration with the instance expiration time. Default: `false`.
      */
     public Boolean getAlignInstanceExpiredTime() {
         return this.AlignInstanceExpiredTime;
     }
 
     /**
-     * Set Whether the data disk has the same expiration time as the instance
-     * @param AlignInstanceExpiredTime Whether the data disk has the same expiration time as the instance
+     * Set Whether to align the data disk expiration with the instance expiration time. Default: `false`.
+     * @param AlignInstanceExpiredTime Whether to align the data disk expiration with the instance expiration time. Default: `false`.
      */
     public void setAlignInstanceExpiredTime(Boolean AlignInstanceExpiredTime) {
         this.AlignInstanceExpiredTime = AlignInstanceExpiredTime;

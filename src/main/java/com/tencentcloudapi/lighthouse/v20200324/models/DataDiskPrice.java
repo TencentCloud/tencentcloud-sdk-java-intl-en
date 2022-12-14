@@ -58,6 +58,14 @@ public class DataDiskPrice extends AbstractModel{
     private Float DiscountPrice;
 
     /**
+    * ID of the instance to which the data disk is mounted.
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get Cloud disk ID. 
      * @return DiskId Cloud disk ID.
      */
@@ -137,6 +145,26 @@ public class DataDiskPrice extends AbstractModel{
         this.DiscountPrice = DiscountPrice;
     }
 
+    /**
+     * Get ID of the instance to which the data disk is mounted.
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return InstanceId ID of the instance to which the data disk is mounted.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set ID of the instance to which the data disk is mounted.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param InstanceId ID of the instance to which the data disk is mounted.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public DataDiskPrice() {
     }
 
@@ -160,6 +188,9 @@ public class DataDiskPrice extends AbstractModel{
         if (source.DiscountPrice != null) {
             this.DiscountPrice = new Float(source.DiscountPrice);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -172,6 +203,7 @@ public class DataDiskPrice extends AbstractModel{
         this.setParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
         this.setParamSimple(map, prefix + "Discount", this.Discount);
         this.setParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

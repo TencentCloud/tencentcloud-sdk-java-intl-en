@@ -38,8 +38,8 @@ Note: This field may return `null`, indicating that no valid value can be found.
     private String Suggestion;
 
     /**
-    * This field returns the matched keywords. This parameter can include multiple returned values, which means multiple keywords are matched. If no keyword is returned but there is a `Score`, it means that the result of `Label` is determined by a semantic model.
-Note: This field may return `null`, indicating that no valid value can be found.
+    * Returns the information of keywords hit in the text. When no value is returned and `Score` is not empty, it means the `Label` is determined by the semantic-based detection model.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Keywords")
     @Expose
@@ -86,6 +86,14 @@ Note: This field may return `null`, indicating that no valid value can be found.
     private String SubLabel;
 
     /**
+    * Returns the keywords, label, sub-label and the score.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Result of the moderation. <br>`Normal`: normal content; `Porn`: pornographic content; `Abuse`: abusive content; **Ad**: advertising content; `Custom`: custom violating content 
      * @return Label Result of the moderation. <br>`Normal`: normal content; `Porn`: pornographic content; `Abuse`: abusive content; **Ad**: advertising content; `Custom`: custom violating content
      */
@@ -122,20 +130,20 @@ Note: This field may return `null`, indicating that no valid value can be found.
     }
 
     /**
-     * Get This field returns the matched keywords. This parameter can include multiple returned values, which means multiple keywords are matched. If no keyword is returned but there is a `Score`, it means that the result of `Label` is determined by a semantic model.
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return Keywords This field returns the matched keywords. This parameter can include multiple returned values, which means multiple keywords are matched. If no keyword is returned but there is a `Score`, it means that the result of `Label` is determined by a semantic model.
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Get Returns the information of keywords hit in the text. When no value is returned and `Score` is not empty, it means the `Label` is determined by the semantic-based detection model.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Keywords Returns the information of keywords hit in the text. When no value is returned and `Score` is not empty, it means the `Label` is determined by the semantic-based detection model.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getKeywords() {
         return this.Keywords;
     }
 
     /**
-     * Set This field returns the matched keywords. This parameter can include multiple returned values, which means multiple keywords are matched. If no keyword is returned but there is a `Score`, it means that the result of `Label` is determined by a semantic model.
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param Keywords This field returns the matched keywords. This parameter can include multiple returned values, which means multiple keywords are matched. If no keyword is returned but there is a `Score`, it means that the result of `Label` is determined by a semantic model.
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Set Returns the information of keywords hit in the text. When no value is returned and `Score` is not empty, it means the `Label` is determined by the semantic-based detection model.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Keywords Returns the information of keywords hit in the text. When no value is returned and `Score` is not empty, it means the `Label` is determined by the semantic-based detection model.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setKeywords(String [] Keywords) {
         this.Keywords = Keywords;
@@ -241,6 +249,26 @@ Note: This field may return `null`, indicating that no valid value can be found.
         this.SubLabel = SubLabel;
     }
 
+    /**
+     * Get Returns the keywords, label, sub-label and the score.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Tags Returns the keywords, label, sub-label and the score.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Returns the keywords, label, sub-label and the score.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Tags Returns the keywords, label, sub-label and the score.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public DetailResults() {
     }
 
@@ -276,6 +304,12 @@ Note: This field may return `null`, indicating that no valid value can be found.
         if (source.SubLabel != null) {
             this.SubLabel = new String(source.SubLabel);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -291,6 +325,7 @@ Note: This field may return `null`, indicating that no valid value can be found.
         this.setParamSimple(map, prefix + "LibId", this.LibId);
         this.setParamSimple(map, prefix + "LibName", this.LibName);
         this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

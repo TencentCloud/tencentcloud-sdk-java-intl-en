@@ -57,6 +57,20 @@ If this parameter is left empty, edge server information will be returned by def
     private Boolean Segment;
 
     /**
+    * 
+    */
+    @SerializedName("ShowIpv6")
+    @Expose
+    private Boolean ShowIpv6;
+
+    /**
+    * Whether to abbreviate the IPv6 address.
+    */
+    @SerializedName("AbbreviationIpv6")
+    @Expose
+    private Boolean AbbreviationIpv6;
+
+    /**
      * Get Acceleration domain name 
      * @return Domain Acceleration domain name
      */
@@ -144,6 +158,38 @@ If this parameter is left empty, edge server information will be returned by def
         this.Segment = Segment;
     }
 
+    /**
+     * Get  
+     * @return ShowIpv6 
+     */
+    public Boolean getShowIpv6() {
+        return this.ShowIpv6;
+    }
+
+    /**
+     * Set 
+     * @param ShowIpv6 
+     */
+    public void setShowIpv6(Boolean ShowIpv6) {
+        this.ShowIpv6 = ShowIpv6;
+    }
+
+    /**
+     * Get Whether to abbreviate the IPv6 address. 
+     * @return AbbreviationIpv6 Whether to abbreviate the IPv6 address.
+     */
+    public Boolean getAbbreviationIpv6() {
+        return this.AbbreviationIpv6;
+    }
+
+    /**
+     * Set Whether to abbreviate the IPv6 address.
+     * @param AbbreviationIpv6 Whether to abbreviate the IPv6 address.
+     */
+    public void setAbbreviationIpv6(Boolean AbbreviationIpv6) {
+        this.AbbreviationIpv6 = AbbreviationIpv6;
+    }
+
     public DescribeIpStatusRequest() {
     }
 
@@ -164,6 +210,12 @@ If this parameter is left empty, edge server information will be returned by def
         if (source.Segment != null) {
             this.Segment = new Boolean(source.Segment);
         }
+        if (source.ShowIpv6 != null) {
+            this.ShowIpv6 = new Boolean(source.ShowIpv6);
+        }
+        if (source.AbbreviationIpv6 != null) {
+            this.AbbreviationIpv6 = new Boolean(source.AbbreviationIpv6);
+        }
     }
 
 
@@ -175,6 +227,8 @@ If this parameter is left empty, edge server information will be returned by def
         this.setParamSimple(map, prefix + "Layer", this.Layer);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "Segment", this.Segment);
+        this.setParamSimple(map, prefix + "ShowIpv6", this.ShowIpv6);
+        this.setParamSimple(map, prefix + "AbbreviationIpv6", this.AbbreviationIpv6);
 
     }
 }

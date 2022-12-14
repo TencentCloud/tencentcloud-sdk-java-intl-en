@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InquirePriceRenewInstancesResponse extends AbstractModel{
 
     /**
-    * Price query information.
+    * Price information. It defaults to the price information of the first instance in the list.
     */
     @SerializedName("Price")
     @Expose
@@ -38,6 +38,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private DataDiskPrice [] DataDiskPriceSet;
 
     /**
+    * Price list of the instances to be renewed.
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("InstancePriceDetailSet")
+    @Expose
+    private InstancePriceDetail [] InstancePriceDetailSet;
+
+    /**
+    * Total price
+    */
+    @SerializedName("TotalPrice")
+    @Expose
+    private TotalPrice TotalPrice;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -45,16 +60,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Price query information. 
-     * @return Price Price query information.
+     * Get Price information. It defaults to the price information of the first instance in the list. 
+     * @return Price Price information. It defaults to the price information of the first instance in the list.
      */
     public Price getPrice() {
         return this.Price;
     }
 
     /**
-     * Set Price query information.
-     * @param Price Price query information.
+     * Set Price information. It defaults to the price information of the first instance in the list.
+     * @param Price Price information. It defaults to the price information of the first instance in the list.
      */
     public void setPrice(Price Price) {
         this.Price = Price;
@@ -78,6 +93,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setDataDiskPriceSet(DataDiskPrice [] DataDiskPriceSet) {
         this.DataDiskPriceSet = DataDiskPriceSet;
+    }
+
+    /**
+     * Get Price list of the instances to be renewed.
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return InstancePriceDetailSet Price list of the instances to be renewed.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public InstancePriceDetail [] getInstancePriceDetailSet() {
+        return this.InstancePriceDetailSet;
+    }
+
+    /**
+     * Set Price list of the instances to be renewed.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param InstancePriceDetailSet Price list of the instances to be renewed.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setInstancePriceDetailSet(InstancePriceDetail [] InstancePriceDetailSet) {
+        this.InstancePriceDetailSet = InstancePriceDetailSet;
+    }
+
+    /**
+     * Get Total price 
+     * @return TotalPrice Total price
+     */
+    public TotalPrice getTotalPrice() {
+        return this.TotalPrice;
+    }
+
+    /**
+     * Set Total price
+     * @param TotalPrice Total price
+     */
+    public void setTotalPrice(TotalPrice TotalPrice) {
+        this.TotalPrice = TotalPrice;
     }
 
     /**
@@ -113,6 +164,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.DataDiskPriceSet[i] = new DataDiskPrice(source.DataDiskPriceSet[i]);
             }
         }
+        if (source.InstancePriceDetailSet != null) {
+            this.InstancePriceDetailSet = new InstancePriceDetail[source.InstancePriceDetailSet.length];
+            for (int i = 0; i < source.InstancePriceDetailSet.length; i++) {
+                this.InstancePriceDetailSet[i] = new InstancePriceDetail(source.InstancePriceDetailSet[i]);
+            }
+        }
+        if (source.TotalPrice != null) {
+            this.TotalPrice = new TotalPrice(source.TotalPrice);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -125,6 +185,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Price.", this.Price);
         this.setParamArrayObj(map, prefix + "DataDiskPriceSet.", this.DataDiskPriceSet);
+        this.setParamArrayObj(map, prefix + "InstancePriceDetailSet.", this.InstancePriceDetailSet);
+        this.setParamObj(map, prefix + "TotalPrice.", this.TotalPrice);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

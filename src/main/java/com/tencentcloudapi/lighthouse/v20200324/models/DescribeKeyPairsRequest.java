@@ -44,14 +44,14 @@ public class DescribeKeyPairsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Filter list
+    * Filter list.
 <li>key-id</li>Filter by **key pair ID**.
 Type: String
 Required: no
-<li>key-name</li>Filter by **key pair name**.
+<li>key-name</li>Filter by the **key pair name**. Fuzzy match is supported.
 Type: String
 Required: no
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `KeyIds` and `Filters` cannot be specified at the same time.
+Each request can contain up to 10 `Filters` and up to 5 `Filter.Values` for each filter. `KeyIds` and `Filters` cannot be specified at the same time.
     */
     @SerializedName("Filters")
     @Expose
@@ -106,44 +106,44 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `KeyIds` and 
     }
 
     /**
-     * Get Filter list
+     * Get Filter list.
 <li>key-id</li>Filter by **key pair ID**.
 Type: String
 Required: no
-<li>key-name</li>Filter by **key pair name**.
+<li>key-name</li>Filter by the **key pair name**. Fuzzy match is supported.
 Type: String
 Required: no
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `KeyIds` and `Filters` cannot be specified at the same time. 
-     * @return Filters Filter list
+Each request can contain up to 10 `Filters` and up to 5 `Filter.Values` for each filter. `KeyIds` and `Filters` cannot be specified at the same time. 
+     * @return Filters Filter list.
 <li>key-id</li>Filter by **key pair ID**.
 Type: String
 Required: no
-<li>key-name</li>Filter by **key pair name**.
+<li>key-name</li>Filter by the **key pair name**. Fuzzy match is supported.
 Type: String
 Required: no
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `KeyIds` and `Filters` cannot be specified at the same time.
+Each request can contain up to 10 `Filters` and up to 5 `Filter.Values` for each filter. `KeyIds` and `Filters` cannot be specified at the same time.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter list
+     * Set Filter list.
 <li>key-id</li>Filter by **key pair ID**.
 Type: String
 Required: no
-<li>key-name</li>Filter by **key pair name**.
+<li>key-name</li>Filter by the **key pair name**. Fuzzy match is supported.
 Type: String
 Required: no
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `KeyIds` and `Filters` cannot be specified at the same time.
-     * @param Filters Filter list
+Each request can contain up to 10 `Filters` and up to 5 `Filter.Values` for each filter. `KeyIds` and `Filters` cannot be specified at the same time.
+     * @param Filters Filter list.
 <li>key-id</li>Filter by **key pair ID**.
 Type: String
 Required: no
-<li>key-name</li>Filter by **key pair name**.
+<li>key-name</li>Filter by the **key pair name**. Fuzzy match is supported.
 Type: String
 Required: no
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `KeyIds` and `Filters` cannot be specified at the same time.
+Each request can contain up to 10 `Filters` and up to 5 `Filter.Values` for each filter. `KeyIds` and `Filters` cannot be specified at the same time.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

@@ -149,7 +149,7 @@ public class UpdateDomainConfigRequest extends AbstractModel{
     private Cache Cache;
 
     /**
-    * Cross-border linkage optimization configuration
+    * (Disused) Cross-border linkage optimization\
     */
     @SerializedName("OriginPullOptimization")
     @Expose
@@ -648,16 +648,16 @@ After switching to global acceleration, configurations of the domain name will b
     }
 
     /**
-     * Get Cross-border linkage optimization configuration 
-     * @return OriginPullOptimization Cross-border linkage optimization configuration
+     * Get (Disused) Cross-border linkage optimization\ 
+     * @return OriginPullOptimization (Disused) Cross-border linkage optimization\
      */
     public OriginPullOptimization getOriginPullOptimization() {
         return this.OriginPullOptimization;
     }
 
     /**
-     * Set Cross-border linkage optimization configuration
-     * @param OriginPullOptimization Cross-border linkage optimization configuration
+     * Set (Disused) Cross-border linkage optimization\
+     * @param OriginPullOptimization (Disused) Cross-border linkage optimization\
      */
     public void setOriginPullOptimization(OriginPullOptimization OriginPullOptimization) {
         this.OriginPullOptimization = OriginPullOptimization;

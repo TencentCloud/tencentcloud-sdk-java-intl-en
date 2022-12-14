@@ -31,7 +31,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Long ConnectTimeout;
 
     /**
-    * The origin-pull receipt timeout (in seconds). Valid range: 10-60.
+    * The origin-pull receipt timeout (in seconds). Valid range: 10-300.
 Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("ReceiveTimeout")
@@ -59,9 +59,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get The origin-pull receipt timeout (in seconds). Valid range: 10-60.
+     * Get The origin-pull receipt timeout (in seconds). Valid range: 10-300.
 Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return ReceiveTimeout The origin-pull receipt timeout (in seconds). Valid range: 10-60.
+     * @return ReceiveTimeout The origin-pull receipt timeout (in seconds). Valid range: 10-300.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public Long getReceiveTimeout() {
@@ -69,9 +69,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Set The origin-pull receipt timeout (in seconds). Valid range: 10-60.
+     * Set The origin-pull receipt timeout (in seconds). Valid range: 10-300.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param ReceiveTimeout The origin-pull receipt timeout (in seconds). Valid range: 10-60.
+     * @param ReceiveTimeout The origin-pull receipt timeout (in seconds). Valid range: 10-300.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setReceiveTimeout(Long ReceiveTimeout) {

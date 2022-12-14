@@ -99,6 +99,14 @@ Note: This field may return `null`, indicating that no valid value can be found.
     private String SubLabel;
 
     /**
+    * Returns the context text.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ContextText")
+    @Expose
+    private String ContextText;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -290,6 +298,26 @@ Note: This field may return `null`, indicating that no valid value can be found.
     }
 
     /**
+     * Get Returns the context text.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ContextText Returns the context text.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getContextText() {
+        return this.ContextText;
+    }
+
+    /**
+     * Set Returns the context text.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ContextText Returns the context text.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setContextText(String ContextText) {
+        this.ContextText = ContextText;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -352,6 +380,9 @@ Note: This field may return `null`, indicating that no valid value can be found.
         if (source.SubLabel != null) {
             this.SubLabel = new String(source.SubLabel);
         }
+        if (source.ContextText != null) {
+            this.ContextText = new String(source.ContextText);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -372,6 +403,7 @@ Note: This field may return `null`, indicating that no valid value can be found.
         this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamSimple(map, prefix + "DataId", this.DataId);
         this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
+        this.setParamSimple(map, prefix + "ContextText", this.ContextText);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

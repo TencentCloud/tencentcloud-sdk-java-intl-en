@@ -92,6 +92,27 @@ Note: Up to 5 MB is supported, and the minimum resolution is 256 x 256. When it 
     private String Desc;
 
     /**
+    * Room ID of the group chat.
+    */
+    @SerializedName("RoomId")
+    @Expose
+    private String RoomId;
+
+    /**
+    * Receiver ID.
+    */
+    @SerializedName("ReceiverId")
+    @Expose
+    private String ReceiverId;
+
+    /**
+    * Generation time of the message, in ms.
+    */
+    @SerializedName("SendTime")
+    @Expose
+    private Long SendTime;
+
+    /**
      * Get This field indicates the service subscriber ID. This ID can be used to optimize the moderation result judgment based on the account's violation records, which is helpful for auxiliary judgment when there is a risk of suspected violations. 
      * @return UserId This field indicates the service subscriber ID. This ID can be used to optimize the moderation result judgment based on the account's violation records, which is helpful for auxiliary judgment when there is a risk of suspected violations.
      */
@@ -259,6 +280,54 @@ Note: Up to 5 MB is supported, and the minimum resolution is 256 x 256. When it 
         this.Desc = Desc;
     }
 
+    /**
+     * Get Room ID of the group chat. 
+     * @return RoomId Room ID of the group chat.
+     */
+    public String getRoomId() {
+        return this.RoomId;
+    }
+
+    /**
+     * Set Room ID of the group chat.
+     * @param RoomId Room ID of the group chat.
+     */
+    public void setRoomId(String RoomId) {
+        this.RoomId = RoomId;
+    }
+
+    /**
+     * Get Receiver ID. 
+     * @return ReceiverId Receiver ID.
+     */
+    public String getReceiverId() {
+        return this.ReceiverId;
+    }
+
+    /**
+     * Set Receiver ID.
+     * @param ReceiverId Receiver ID.
+     */
+    public void setReceiverId(String ReceiverId) {
+        this.ReceiverId = ReceiverId;
+    }
+
+    /**
+     * Get Generation time of the message, in ms. 
+     * @return SendTime Generation time of the message, in ms.
+     */
+    public Long getSendTime() {
+        return this.SendTime;
+    }
+
+    /**
+     * Set Generation time of the message, in ms.
+     * @param SendTime Generation time of the message, in ms.
+     */
+    public void setSendTime(Long SendTime) {
+        this.SendTime = SendTime;
+    }
+
     public User() {
     }
 
@@ -294,6 +363,15 @@ Note: Up to 5 MB is supported, and the minimum resolution is 256 x 256. When it 
         if (source.Desc != null) {
             this.Desc = new String(source.Desc);
         }
+        if (source.RoomId != null) {
+            this.RoomId = new String(source.RoomId);
+        }
+        if (source.ReceiverId != null) {
+            this.ReceiverId = new String(source.ReceiverId);
+        }
+        if (source.SendTime != null) {
+            this.SendTime = new Long(source.SendTime);
+        }
     }
 
 
@@ -310,6 +388,9 @@ Note: Up to 5 MB is supported, and the minimum resolution is 256 x 256. When it 
         this.setParamSimple(map, prefix + "Phone", this.Phone);
         this.setParamSimple(map, prefix + "HeadUrl", this.HeadUrl);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
+        this.setParamSimple(map, prefix + "RoomId", this.RoomId);
+        this.setParamSimple(map, prefix + "ReceiverId", this.ReceiverId);
+        this.setParamSimple(map, prefix + "SendTime", this.SendTime);
 
     }
 }
