@@ -74,6 +74,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String SubnetId;
 
     /**
+    * Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ProtocolType")
+    @Expose
+    private String ProtocolType;
+
+    /**
      * Get DNS domain name 
      * @return Address DNS domain name
      */
@@ -193,6 +201,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.SubnetId = SubnetId;
     }
 
+    /**
+     * Get Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ProtocolType Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getProtocolType() {
+        return this.ProtocolType;
+    }
+
+    /**
+     * Set Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ProtocolType Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setProtocolType(String ProtocolType) {
+        this.ProtocolType = ProtocolType;
+    }
+
     public DBInstanceNetInfo() {
     }
 
@@ -222,6 +250,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.SubnetId != null) {
             this.SubnetId = new String(source.SubnetId);
         }
+        if (source.ProtocolType != null) {
+            this.ProtocolType = new String(source.ProtocolType);
+        }
     }
 
 
@@ -236,6 +267,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
 
     }
 }

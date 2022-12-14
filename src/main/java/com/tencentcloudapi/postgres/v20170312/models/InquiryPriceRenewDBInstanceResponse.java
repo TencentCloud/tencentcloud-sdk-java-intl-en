@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class InquiryPriceRenewDBInstanceResponse extends AbstractModel{
 
     /**
-    * Total cost before discount; for example, 24650 indicates 246.5 CNY
+    * Published price in cents. For example, 24650 indicates 246.5 USD.
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Long OriginalPrice;
 
     /**
-    * Actual amount payable; for example, 24650 indicates 246.5 CNY
+    * Discounted total amount. For example, 24650 indicates 246.5 USD.
     */
     @SerializedName("Price")
     @Expose
@@ -51,32 +51,32 @@ public class InquiryPriceRenewDBInstanceResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Total cost before discount; for example, 24650 indicates 246.5 CNY 
-     * @return OriginalPrice Total cost before discount; for example, 24650 indicates 246.5 CNY
+     * Get Published price in cents. For example, 24650 indicates 246.5 USD. 
+     * @return OriginalPrice Published price in cents. For example, 24650 indicates 246.5 USD.
      */
     public Long getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set Total cost before discount; for example, 24650 indicates 246.5 CNY
-     * @param OriginalPrice Total cost before discount; for example, 24650 indicates 246.5 CNY
+     * Set Published price in cents. For example, 24650 indicates 246.5 USD.
+     * @param OriginalPrice Published price in cents. For example, 24650 indicates 246.5 USD.
      */
     public void setOriginalPrice(Long OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get Actual amount payable; for example, 24650 indicates 246.5 CNY 
-     * @return Price Actual amount payable; for example, 24650 indicates 246.5 CNY
+     * Get Discounted total amount. For example, 24650 indicates 246.5 USD. 
+     * @return Price Discounted total amount. For example, 24650 indicates 246.5 USD.
      */
     public Long getPrice() {
         return this.Price;
     }
 
     /**
-     * Set Actual amount payable; for example, 24650 indicates 246.5 CNY
-     * @param Price Actual amount payable; for example, 24650 indicates 246.5 CNY
+     * Set Discounted total amount. For example, 24650 indicates 246.5 USD.
+     * @param Price Discounted total amount. For example, 24650 indicates 246.5 USD.
      */
     public void setPrice(Long Price) {
         this.Price = Price;

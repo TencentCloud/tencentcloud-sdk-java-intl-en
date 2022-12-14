@@ -56,6 +56,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long TimeSpan;
 
     /**
+    * Pricing details
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PriceDetail")
+    @Expose
+    private PriceDetail [] PriceDetail;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -147,6 +155,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Pricing details
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PriceDetail Pricing details
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public PriceDetail [] getPriceDetail() {
+        return this.PriceDetail;
+    }
+
+    /**
+     * Set Pricing details
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PriceDetail Pricing details
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPriceDetail(PriceDetail [] PriceDetail) {
+        this.PriceDetail = PriceDetail;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -182,6 +210,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.TimeSpan != null) {
             this.TimeSpan = new Long(source.TimeSpan);
         }
+        if (source.PriceDetail != null) {
+            this.PriceDetail = new PriceDetail[source.PriceDetail.length];
+            for (int i = 0; i < source.PriceDetail.length; i++) {
+                this.PriceDetail[i] = new PriceDetail(source.PriceDetail[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -196,6 +230,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "DiscountCost", this.DiscountCost);
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+        this.setParamArrayObj(map, prefix + "PriceDetail.", this.PriceDetail);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -68,6 +68,13 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel{
     private String Currency;
 
     /**
+    * The resource ID list for batch configuration change.
+    */
+    @SerializedName("ResourceIdList")
+    @Expose
+    private String [] ResourceIdList;
+
+    /**
      * Get Time unit of scaling. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li> 
      * @return TimeUnit Time unit of scaling. Valid values:
@@ -175,6 +182,22 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel{
         this.Currency = Currency;
     }
 
+    /**
+     * Get The resource ID list for batch configuration change. 
+     * @return ResourceIdList The resource ID list for batch configuration change.
+     */
+    public String [] getResourceIdList() {
+        return this.ResourceIdList;
+    }
+
+    /**
+     * Set The resource ID list for batch configuration change.
+     * @param ResourceIdList The resource ID list for batch configuration change.
+     */
+    public void setResourceIdList(String [] ResourceIdList) {
+        this.ResourceIdList = ResourceIdList;
+    }
+
     public InquiryPriceUpdateInstanceRequest() {
     }
 
@@ -201,6 +224,12 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel{
         if (source.Currency != null) {
             this.Currency = new String(source.Currency);
         }
+        if (source.ResourceIdList != null) {
+            this.ResourceIdList = new String[source.ResourceIdList.length];
+            for (int i = 0; i < source.ResourceIdList.length; i++) {
+                this.ResourceIdList[i] = new String(source.ResourceIdList[i]);
+            }
+        }
     }
 
 
@@ -214,6 +243,7 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamObj(map, prefix + "Placement.", this.Placement);
         this.setParamSimple(map, prefix + "Currency", this.Currency);
+        this.setParamArraySimple(map, prefix + "ResourceIdList.", this.ResourceIdList);
 
     }
 }

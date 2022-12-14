@@ -23,49 +23,49 @@ import java.util.HashMap;
 public class Placement extends AbstractModel{
 
     /**
-    * ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the return value of the `DescribeProject` API. If 0 is entered, the default project will be used.
-    */
-    @SerializedName("ProjectId")
-    @Expose
-    private Long ProjectId;
-
-    /**
-    * AZ where the instance resides, such as ap-guangzhou-1. You can call the `DescribeZones` API and see the `Zone` field to get the value of this parameter.
+    * The ID of the availability zone where the instance resides, such as `ap-guangzhou-1`. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API and obtain this ID from the `Zone` field in the response.
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-     * Get ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the return value of the `DescribeProject` API. If 0 is entered, the default project will be used. 
-     * @return ProjectId ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the return value of the `DescribeProject` API. If 0 is entered, the default project will be used.
-     */
-    public Long getProjectId() {
-        return this.ProjectId;
-    }
+    * The ID of the project to which the instance belongs. You can call the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) and obtain this ID from the `projectId` field in the response. If this is left empty, the ID of the default project is used.
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Long ProjectId;
 
     /**
-     * Set ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the return value of the `DescribeProject` API. If 0 is entered, the default project will be used.
-     * @param ProjectId ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the return value of the `DescribeProject` API. If 0 is entered, the default project will be used.
-     */
-    public void setProjectId(Long ProjectId) {
-        this.ProjectId = ProjectId;
-    }
-
-    /**
-     * Get AZ where the instance resides, such as ap-guangzhou-1. You can call the `DescribeZones` API and see the `Zone` field to get the value of this parameter. 
-     * @return Zone AZ where the instance resides, such as ap-guangzhou-1. You can call the `DescribeZones` API and see the `Zone` field to get the value of this parameter.
+     * Get The ID of the availability zone where the instance resides, such as `ap-guangzhou-1`. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API and obtain this ID from the `Zone` field in the response. 
+     * @return Zone The ID of the availability zone where the instance resides, such as `ap-guangzhou-1`. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API and obtain this ID from the `Zone` field in the response.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ where the instance resides, such as ap-guangzhou-1. You can call the `DescribeZones` API and see the `Zone` field to get the value of this parameter.
-     * @param Zone AZ where the instance resides, such as ap-guangzhou-1. You can call the `DescribeZones` API and see the `Zone` field to get the value of this parameter.
+     * Set The ID of the availability zone where the instance resides, such as `ap-guangzhou-1`. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API and obtain this ID from the `Zone` field in the response.
+     * @param Zone The ID of the availability zone where the instance resides, such as `ap-guangzhou-1`. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API and obtain this ID from the `Zone` field in the response.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
+    }
+
+    /**
+     * Get The ID of the project to which the instance belongs. You can call the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) and obtain this ID from the `projectId` field in the response. If this is left empty, the ID of the default project is used. 
+     * @return ProjectId The ID of the project to which the instance belongs. You can call the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) and obtain this ID from the `projectId` field in the response. If this is left empty, the ID of the default project is used.
+     */
+    public Long getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set The ID of the project to which the instance belongs. You can call the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) and obtain this ID from the `projectId` field in the response. If this is left empty, the ID of the default project is used.
+     * @param ProjectId The ID of the project to which the instance belongs. You can call the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) and obtain this ID from the `projectId` field in the response. If this is left empty, the ID of the default project is used.
+     */
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
     }
 
     public Placement() {
@@ -76,11 +76,11 @@ public class Placement extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public Placement(Placement source) {
-        if (source.ProjectId != null) {
-            this.ProjectId = new Long(source.ProjectId);
-        }
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
         }
     }
 
@@ -89,8 +89,8 @@ public class Placement extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

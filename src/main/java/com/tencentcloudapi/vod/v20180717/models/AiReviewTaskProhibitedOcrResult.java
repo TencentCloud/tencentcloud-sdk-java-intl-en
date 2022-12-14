@@ -66,6 +66,13 @@ Note: This field may return `null`, indicating that no valid value can be found.
     private AiReviewProhibitedOcrTaskOutput Output;
 
     /**
+    * The progress of an OCR-based moderation task (banned content). Value range: 0-100.
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Long Progress;
+
+    /**
      * Get Task status. Valid values: PROCESSING, SUCCESS, FAIL. 
      * @return Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
      */
@@ -165,6 +172,22 @@ Note: This field may return `null`, indicating that no valid value can be found.
         this.Output = Output;
     }
 
+    /**
+     * Get The progress of an OCR-based moderation task (banned content). Value range: 0-100. 
+     * @return Progress The progress of an OCR-based moderation task (banned content). Value range: 0-100.
+     */
+    public Long getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set The progress of an OCR-based moderation task (banned content). Value range: 0-100.
+     * @param Progress The progress of an OCR-based moderation task (banned content). Value range: 0-100.
+     */
+    public void setProgress(Long Progress) {
+        this.Progress = Progress;
+    }
+
     public AiReviewTaskProhibitedOcrResult() {
     }
 
@@ -191,6 +214,9 @@ Note: This field may return `null`, indicating that no valid value can be found.
         if (source.Output != null) {
             this.Output = new AiReviewProhibitedOcrTaskOutput(source.Output);
         }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
     }
 
 
@@ -204,6 +230,7 @@ Note: This field may return `null`, indicating that no valid value can be found.
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
 
     }
 }

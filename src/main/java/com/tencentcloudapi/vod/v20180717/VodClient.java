@@ -276,6 +276,26 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
     }
 
     /**
+     *This API is used to create a custom image processing template. You can create up to 16 templates, and each template can contain up to three operations, for example, cropping, scaling, and cropping again.
+     * @param req CreateImageProcessingTemplateRequest
+     * @return CreateImageProcessingTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateImageProcessingTemplateResponse CreateImageProcessingTemplate(CreateImageProcessingTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateImageProcessingTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateImageProcessingTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateImageProcessingTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a custom image sprite generating template. Up to 16 templates can be created.
      * @param req CreateImageSpriteTemplateRequest
      * @return CreateImageSpriteTemplateResponse
@@ -635,6 +655,26 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 Type type = new TypeToken<JsonResponseModel<DeleteContentReviewTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteContentReviewTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete an image processing template.
+     * @param req DeleteImageProcessingTemplateRequest
+     * @return DeleteImageProcessingTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteImageProcessingTemplateResponse DeleteImageProcessingTemplate(DeleteImageProcessingTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteImageProcessingTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteImageProcessingTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteImageProcessingTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1121,6 +1161,26 @@ This API is used to delete a player configuration.
                 Type type = new TypeToken<JsonResponseModel<DescribeDrmKeyProviderInfoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDrmKeyProviderInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query image processing templates. You can specify the filters as well as the offset to start returning records from.
+     * @param req DescribeImageProcessingTemplatesRequest
+     * @return DescribeImageProcessingTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageProcessingTemplatesResponse DescribeImageProcessingTemplates(DescribeImageProcessingTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeImageProcessingTemplatesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeImageProcessingTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeImageProcessingTemplates");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2195,17 +2255,11 @@ This API is used to modify a player configuration.
 5. Image sprite generating
 6. Taking a screenshot to use as the thumbnail
 7. Adaptive bitrate streaming and encryption
-8. Intelligent recognition of pornographic, terrorism, and politically sensitive content
-9. Intelligent content analysis for labeling, categorization, thumbnail generation, or frame-specific labeling
-10. Recognition of opening and closing credits, faces, full text, text keywords, full speech, speech keywords, and objects
+8. Detecting pornographic, terrorist, and politically sensitive content
+9. Content analysis for labeling, categorization, thumbnail generation, or frame-specific labeling
+10. Recognition of opening and closing segments, faces, full text, text keywords, full speech, speech keywords, and objects
 
 If event notifications are used, the event type is [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1).
-
-A digital watermark has the following restrictions:
-<li>Digital watermarks can only be image watermarks.</li>
-<li>Digital watermarks must be looped.</li>
-<li>If you use digital watermarks, the output video must be in HLS format.</li>
-<li>Digital watermarks can only be displayed in the upper half of a video.</li>
      * @param req ProcessMediaRequest
      * @return ProcessMediaResponse
      * @throws TencentCloudSDKException

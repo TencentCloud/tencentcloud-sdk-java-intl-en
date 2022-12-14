@@ -407,6 +407,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ServiceClient;
 
     /**
+    * Enabling instance protection for this instance. Valid values: `true` (enable) and `false` (disable).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DisableApiTermination")
+    @Expose
+    private Boolean DisableApiTermination;
+
+    /**
+    * The billing version. Valid values: `0` (original billing) and `1` (new billing)
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TradeVersion")
+    @Expose
+    private Long TradeVersion;
+
+    /**
      * Get User `APPID`
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return AppId User `APPID`
@@ -1366,6 +1382,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ServiceClient = ServiceClient;
     }
 
+    /**
+     * Get Enabling instance protection for this instance. Valid values: `true` (enable) and `false` (disable).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DisableApiTermination Enabling instance protection for this instance. Valid values: `true` (enable) and `false` (disable).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getDisableApiTermination() {
+        return this.DisableApiTermination;
+    }
+
+    /**
+     * Set Enabling instance protection for this instance. Valid values: `true` (enable) and `false` (disable).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DisableApiTermination Enabling instance protection for this instance. Valid values: `true` (enable) and `false` (disable).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDisableApiTermination(Boolean DisableApiTermination) {
+        this.DisableApiTermination = DisableApiTermination;
+    }
+
+    /**
+     * Get The billing version. Valid values: `0` (original billing) and `1` (new billing)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TradeVersion The billing version. Valid values: `0` (original billing) and `1` (new billing)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getTradeVersion() {
+        return this.TradeVersion;
+    }
+
+    /**
+     * Set The billing version. Valid values: `0` (original billing) and `1` (new billing)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TradeVersion The billing version. Valid values: `0` (original billing) and `1` (new billing)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTradeVersion(Long TradeVersion) {
+        this.TradeVersion = TradeVersion;
+    }
+
     public NodeHardwareInfo() {
     }
 
@@ -1524,6 +1580,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ServiceClient != null) {
             this.ServiceClient = new String(source.ServiceClient);
         }
+        if (source.DisableApiTermination != null) {
+            this.DisableApiTermination = new Boolean(source.DisableApiTermination);
+        }
+        if (source.TradeVersion != null) {
+            this.TradeVersion = new Long(source.TradeVersion);
+        }
     }
 
 
@@ -1579,6 +1641,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "IsFederation", this.IsFederation);
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "ServiceClient", this.ServiceClient);
+        this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
+        this.setParamSimple(map, prefix + "TradeVersion", this.TradeVersion);
 
     }
 }

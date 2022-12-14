@@ -157,6 +157,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String SessionId;
 
     /**
+    * The operator. Valid values:
+<li>`SYSTEM`: The task is triggered by the system.</li>
+    */
+    @SerializedName("Operator")
+    @Expose
+    private String Operator;
+
+    /**
+    * The operation type. Valid values:
+<li>`TSC`: TSC-based smart bitrate reduction</li>
+    */
+    @SerializedName("OperationType")
+    @Expose
+    private String OperationType;
+
+    /**
      * Get Video processing task ID. 
      * @return TaskId Video processing task ID.
      */
@@ -500,6 +516,46 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.SessionId = SessionId;
     }
 
+    /**
+     * Get The operator. Valid values:
+<li>`SYSTEM`: The task is triggered by the system.</li> 
+     * @return Operator The operator. Valid values:
+<li>`SYSTEM`: The task is triggered by the system.</li>
+     */
+    public String getOperator() {
+        return this.Operator;
+    }
+
+    /**
+     * Set The operator. Valid values:
+<li>`SYSTEM`: The task is triggered by the system.</li>
+     * @param Operator The operator. Valid values:
+<li>`SYSTEM`: The task is triggered by the system.</li>
+     */
+    public void setOperator(String Operator) {
+        this.Operator = Operator;
+    }
+
+    /**
+     * Get The operation type. Valid values:
+<li>`TSC`: TSC-based smart bitrate reduction</li> 
+     * @return OperationType The operation type. Valid values:
+<li>`TSC`: TSC-based smart bitrate reduction</li>
+     */
+    public String getOperationType() {
+        return this.OperationType;
+    }
+
+    /**
+     * Set The operation type. Valid values:
+<li>`TSC`: TSC-based smart bitrate reduction</li>
+     * @param OperationType The operation type. Valid values:
+<li>`TSC`: TSC-based smart bitrate reduction</li>
+     */
+    public void setOperationType(String OperationType) {
+        this.OperationType = OperationType;
+    }
+
     public ProcedureTask() {
     }
 
@@ -568,6 +624,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+        if (source.OperationType != null) {
+            this.OperationType = new String(source.OperationType);
+        }
     }
 
 
@@ -591,6 +653,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "TasksNotifyMode", this.TasksNotifyMode);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "Operator", this.Operator);
+        this.setParamSimple(map, prefix + "OperationType", this.OperationType);
 
     }
 }

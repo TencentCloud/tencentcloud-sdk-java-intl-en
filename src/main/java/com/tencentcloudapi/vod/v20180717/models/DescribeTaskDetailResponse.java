@@ -34,7 +34,6 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
 <li> ReviewAudioVideo: Moderation</li>
-<li> ReduceMediaBitrate: Bitrate reduction</li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -192,12 +191,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private ReviewAudioVideoTask ReviewAudioVideoTask;
 
     /**
-    * The information of a bitrate reduction task. This parameter is valid only if `TaskType` is `ReduceMediaBitrate`.
+    * This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ReduceMediaBitrateTask")
     @Expose
     private ReduceMediaBitrateTask ReduceMediaBitrateTask;
+
+    /**
+    * 
+    */
+    @SerializedName("DescribeFileAttributesTask")
+    @Expose
+    private DescribeFileAttributesTask DescribeFileAttributesTask;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -217,8 +223,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
-<li> ReviewAudioVideo: Moderation</li>
-<li> ReduceMediaBitrate: Bitrate reduction</li> 
+<li> ReviewAudioVideo: Moderation</li> 
      * @return TaskType The task type. Valid values:
 <li>Procedure: Video processing</li>
 <li>EditMedia: Video editing</li>
@@ -230,7 +235,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
 <li> ReviewAudioVideo: Moderation</li>
-<li> ReduceMediaBitrate: Bitrate reduction</li>
      */
     public String getTaskType() {
         return this.TaskType;
@@ -248,7 +252,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
 <li> ReviewAudioVideo: Moderation</li>
-<li> ReduceMediaBitrate: Bitrate reduction</li>
      * @param TaskType The task type. Valid values:
 <li>Procedure: Video processing</li>
 <li>EditMedia: Video editing</li>
@@ -260,7 +263,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
 <li> ReviewAudioVideo: Moderation</li>
-<li> ReduceMediaBitrate: Bitrate reduction</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
@@ -643,9 +645,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The information of a bitrate reduction task. This parameter is valid only if `TaskType` is `ReduceMediaBitrate`.
+     * Get This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ReduceMediaBitrateTask The information of a bitrate reduction task. This parameter is valid only if `TaskType` is `ReduceMediaBitrate`.
+     * @return ReduceMediaBitrateTask This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ReduceMediaBitrateTask getReduceMediaBitrateTask() {
@@ -653,13 +655,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The information of a bitrate reduction task. This parameter is valid only if `TaskType` is `ReduceMediaBitrate`.
+     * Set This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReduceMediaBitrateTask The information of a bitrate reduction task. This parameter is valid only if `TaskType` is `ReduceMediaBitrate`.
+     * @param ReduceMediaBitrateTask This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setReduceMediaBitrateTask(ReduceMediaBitrateTask ReduceMediaBitrateTask) {
         this.ReduceMediaBitrateTask = ReduceMediaBitrateTask;
+    }
+
+    /**
+     * Get  
+     * @return DescribeFileAttributesTask 
+     */
+    public DescribeFileAttributesTask getDescribeFileAttributesTask() {
+        return this.DescribeFileAttributesTask;
+    }
+
+    /**
+     * Set 
+     * @param DescribeFileAttributesTask 
+     */
+    public void setDescribeFileAttributesTask(DescribeFileAttributesTask DescribeFileAttributesTask) {
+        this.DescribeFileAttributesTask = DescribeFileAttributesTask;
     }
 
     /**
@@ -749,6 +767,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ReduceMediaBitrateTask != null) {
             this.ReduceMediaBitrateTask = new ReduceMediaBitrateTask(source.ReduceMediaBitrateTask);
         }
+        if (source.DescribeFileAttributesTask != null) {
+            this.DescribeFileAttributesTask = new DescribeFileAttributesTask(source.DescribeFileAttributesTask);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -780,6 +801,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "ExtractTraceWatermarkTask.", this.ExtractTraceWatermarkTask);
         this.setParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
         this.setParamObj(map, prefix + "ReduceMediaBitrateTask.", this.ReduceMediaBitrateTask);
+        this.setParamObj(map, prefix + "DescribeFileAttributesTask.", this.DescribeFileAttributesTask);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

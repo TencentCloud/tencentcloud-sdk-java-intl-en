@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class LoginSettings extends AbstractModel{
 
     /**
-    * Password
+    * The login password of the instance, which contains 8 to 16 uppercase letters, lowercase letters, digits, and special characters (only !@%^*) and cannot start with a special character.
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * Public Key
+    * The key ID. After an instance is associated with a key, you can access it with the private key in the key pair. You can call [DescribeKeyPairs](https://intl.cloud.tencent.com/document/api/213/15699?from_cn_redirect=1) to obtain `PublicKeyId`.
     */
     @SerializedName("PublicKeyId")
     @Expose
     private String PublicKeyId;
 
     /**
-     * Get Password 
-     * @return Password Password
+     * Get The login password of the instance, which contains 8 to 16 uppercase letters, lowercase letters, digits, and special characters (only !@%^*) and cannot start with a special character. 
+     * @return Password The login password of the instance, which contains 8 to 16 uppercase letters, lowercase letters, digits, and special characters (only !@%^*) and cannot start with a special character.
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Password
-     * @param Password Password
+     * Set The login password of the instance, which contains 8 to 16 uppercase letters, lowercase letters, digits, and special characters (only !@%^*) and cannot start with a special character.
+     * @param Password The login password of the instance, which contains 8 to 16 uppercase letters, lowercase letters, digits, and special characters (only !@%^*) and cannot start with a special character.
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get Public Key 
-     * @return PublicKeyId Public Key
+     * Get The key ID. After an instance is associated with a key, you can access it with the private key in the key pair. You can call [DescribeKeyPairs](https://intl.cloud.tencent.com/document/api/213/15699?from_cn_redirect=1) to obtain `PublicKeyId`. 
+     * @return PublicKeyId The key ID. After an instance is associated with a key, you can access it with the private key in the key pair. You can call [DescribeKeyPairs](https://intl.cloud.tencent.com/document/api/213/15699?from_cn_redirect=1) to obtain `PublicKeyId`.
      */
     public String getPublicKeyId() {
         return this.PublicKeyId;
     }
 
     /**
-     * Set Public Key
-     * @param PublicKeyId Public Key
+     * Set The key ID. After an instance is associated with a key, you can access it with the private key in the key pair. You can call [DescribeKeyPairs](https://intl.cloud.tencent.com/document/api/213/15699?from_cn_redirect=1) to obtain `PublicKeyId`.
+     * @param PublicKeyId The key ID. After an instance is associated with a key, you can access it with the private key in the key pair. You can call [DescribeKeyPairs](https://intl.cloud.tencent.com/document/api/213/15699?from_cn_redirect=1) to obtain `PublicKeyId`.
      */
     public void setPublicKeyId(String PublicKeyId) {
         this.PublicKeyId = PublicKeyId;

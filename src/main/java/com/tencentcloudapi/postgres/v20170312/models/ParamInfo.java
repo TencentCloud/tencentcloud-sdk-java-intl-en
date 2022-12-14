@@ -50,8 +50,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String ParamValueType;
 
     /**
-    * Value unit of the parameter. If the parameter has no unit, this field will return an empty string.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Unit of the parameter value. If the parameter has no unit, this field will return null.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Unit")
     @Expose
@@ -74,20 +74,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String CurrentValue;
 
     /**
-    * Value range of the enum parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
-    */
-    @SerializedName("EnumValue")
-    @Expose
-    private String [] EnumValue;
-
-    /**
     * The maximum value of the `integer` or `real` parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Max")
     @Expose
     private Float Max;
+
+    /**
+    * Value range of the enum parameter
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EnumValue")
+    @Expose
+    private String [] EnumValue;
 
     /**
     * The minimum value of the `integer` or `real` parameter
@@ -162,6 +162,30 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String LastModifyTime;
 
     /**
+    * Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("StandbyRelated")
+    @Expose
+    private Long StandbyRelated;
+
+    /**
+    * Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("VersionRelationSet")
+    @Expose
+    private ParamVersionRelation [] VersionRelationSet;
+
+    /**
+    * Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SpecRelationSet")
+    @Expose
+    private ParamSpecRelation [] SpecRelationSet;
+
+    /**
      * Get Parameter ID
 Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return ID Parameter ID
@@ -234,20 +258,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Value unit of the parameter. If the parameter has no unit, this field will return an empty string.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Unit Value unit of the parameter. If the parameter has no unit, this field will return an empty string.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Unit of the parameter value. If the parameter has no unit, this field will return null.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Unit Unit of the parameter value. If the parameter has no unit, this field will return null.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUnit() {
         return this.Unit;
     }
 
     /**
-     * Set Value unit of the parameter. If the parameter has no unit, this field will return an empty string.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Unit Value unit of the parameter. If the parameter has no unit, this field will return an empty string.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Unit of the parameter value. If the parameter has no unit, this field will return null.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Unit Unit of the parameter value. If the parameter has no unit, this field will return null.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;
@@ -294,26 +318,6 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Value range of the enum parameter
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return EnumValue Value range of the enum parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     */
-    public String [] getEnumValue() {
-        return this.EnumValue;
-    }
-
-    /**
-     * Set Value range of the enum parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param EnumValue Value range of the enum parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     */
-    public void setEnumValue(String [] EnumValue) {
-        this.EnumValue = EnumValue;
-    }
-
-    /**
      * Get The maximum value of the `integer` or `real` parameter
 Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return Max The maximum value of the `integer` or `real` parameter
@@ -331,6 +335,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      */
     public void setMax(Float Max) {
         this.Max = Max;
+    }
+
+    /**
+     * Get Value range of the enum parameter
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return EnumValue Value range of the enum parameter
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String [] getEnumValue() {
+        return this.EnumValue;
+    }
+
+    /**
+     * Set Value range of the enum parameter
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param EnumValue Value range of the enum parameter
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setEnumValue(String [] EnumValue) {
+        this.EnumValue = EnumValue;
     }
 
     /**
@@ -513,6 +537,66 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.LastModifyTime = LastModifyTime;
     }
 
+    /**
+     * Get Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return StandbyRelated Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getStandbyRelated() {
+        return this.StandbyRelated;
+    }
+
+    /**
+     * Set Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param StandbyRelated Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setStandbyRelated(Long StandbyRelated) {
+        this.StandbyRelated = StandbyRelated;
+    }
+
+    /**
+     * Get Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return VersionRelationSet Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public ParamVersionRelation [] getVersionRelationSet() {
+        return this.VersionRelationSet;
+    }
+
+    /**
+     * Set Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param VersionRelationSet Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setVersionRelationSet(ParamVersionRelation [] VersionRelationSet) {
+        this.VersionRelationSet = VersionRelationSet;
+    }
+
+    /**
+     * Get Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SpecRelationSet Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public ParamSpecRelation [] getSpecRelationSet() {
+        return this.SpecRelationSet;
+    }
+
+    /**
+     * Set Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SpecRelationSet Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSpecRelationSet(ParamSpecRelation [] SpecRelationSet) {
+        this.SpecRelationSet = SpecRelationSet;
+    }
+
     public ParamInfo() {
     }
 
@@ -539,14 +623,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.CurrentValue != null) {
             this.CurrentValue = new String(source.CurrentValue);
         }
+        if (source.Max != null) {
+            this.Max = new Float(source.Max);
+        }
         if (source.EnumValue != null) {
             this.EnumValue = new String[source.EnumValue.length];
             for (int i = 0; i < source.EnumValue.length; i++) {
                 this.EnumValue[i] = new String(source.EnumValue[i]);
             }
-        }
-        if (source.Max != null) {
-            this.Max = new Float(source.Max);
         }
         if (source.Min != null) {
             this.Min = new Float(source.Min);
@@ -575,6 +659,21 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.LastModifyTime != null) {
             this.LastModifyTime = new String(source.LastModifyTime);
         }
+        if (source.StandbyRelated != null) {
+            this.StandbyRelated = new Long(source.StandbyRelated);
+        }
+        if (source.VersionRelationSet != null) {
+            this.VersionRelationSet = new ParamVersionRelation[source.VersionRelationSet.length];
+            for (int i = 0; i < source.VersionRelationSet.length; i++) {
+                this.VersionRelationSet[i] = new ParamVersionRelation(source.VersionRelationSet[i]);
+            }
+        }
+        if (source.SpecRelationSet != null) {
+            this.SpecRelationSet = new ParamSpecRelation[source.SpecRelationSet.length];
+            for (int i = 0; i < source.SpecRelationSet.length; i++) {
+                this.SpecRelationSet[i] = new ParamSpecRelation(source.SpecRelationSet[i]);
+            }
+        }
     }
 
 
@@ -588,8 +687,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Unit", this.Unit);
         this.setParamSimple(map, prefix + "DefaultValue", this.DefaultValue);
         this.setParamSimple(map, prefix + "CurrentValue", this.CurrentValue);
-        this.setParamArraySimple(map, prefix + "EnumValue.", this.EnumValue);
         this.setParamSimple(map, prefix + "Max", this.Max);
+        this.setParamArraySimple(map, prefix + "EnumValue.", this.EnumValue);
         this.setParamSimple(map, prefix + "Min", this.Min);
         this.setParamSimple(map, prefix + "ParamDescriptionCH", this.ParamDescriptionCH);
         this.setParamSimple(map, prefix + "ParamDescriptionEN", this.ParamDescriptionEN);
@@ -599,6 +698,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "SpecRelated", this.SpecRelated);
         this.setParamSimple(map, prefix + "Advanced", this.Advanced);
         this.setParamSimple(map, prefix + "LastModifyTime", this.LastModifyTime);
+        this.setParamSimple(map, prefix + "StandbyRelated", this.StandbyRelated);
+        this.setParamArrayObj(map, prefix + "VersionRelationSet.", this.VersionRelationSet);
+        this.setParamArrayObj(map, prefix + "SpecRelationSet.", this.SpecRelationSet);
 
     }
 }

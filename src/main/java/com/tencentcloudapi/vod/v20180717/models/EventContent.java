@@ -199,12 +199,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private ReviewAudioVideoTask ReviewAudioVideoCompleteEvent;
 
     /**
-    * The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+    * This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ReduceMediaBitrateCompleteEvent")
     @Expose
     private ReduceMediaBitrateTask ReduceMediaBitrateCompleteEvent;
+
+    /**
+    * 
+    */
+    @SerializedName("DescribeFileAttributesCompleteEvent")
+    @Expose
+    private DescribeFileAttributesTask DescribeFileAttributesCompleteEvent;
 
     /**
      * Get Event handler. The caller must call `ConfirmEvents` to confirm that the message has been received, and the confirmation is valid for 30 seconds. After the confirmation expires, the event can be obtained again. 
@@ -671,9 +678,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+     * Get This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ReduceMediaBitrateCompleteEvent The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+     * @return ReduceMediaBitrateCompleteEvent This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ReduceMediaBitrateTask getReduceMediaBitrateCompleteEvent() {
@@ -681,13 +688,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+     * Set This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReduceMediaBitrateCompleteEvent The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+     * @param ReduceMediaBitrateCompleteEvent This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setReduceMediaBitrateCompleteEvent(ReduceMediaBitrateTask ReduceMediaBitrateCompleteEvent) {
         this.ReduceMediaBitrateCompleteEvent = ReduceMediaBitrateCompleteEvent;
+    }
+
+    /**
+     * Get  
+     * @return DescribeFileAttributesCompleteEvent 
+     */
+    public DescribeFileAttributesTask getDescribeFileAttributesCompleteEvent() {
+        return this.DescribeFileAttributesCompleteEvent;
+    }
+
+    /**
+     * Set 
+     * @param DescribeFileAttributesCompleteEvent 
+     */
+    public void setDescribeFileAttributesCompleteEvent(DescribeFileAttributesTask DescribeFileAttributesCompleteEvent) {
+        this.DescribeFileAttributesCompleteEvent = DescribeFileAttributesCompleteEvent;
     }
 
     public EventContent() {
@@ -761,6 +784,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ReduceMediaBitrateCompleteEvent != null) {
             this.ReduceMediaBitrateCompleteEvent = new ReduceMediaBitrateTask(source.ReduceMediaBitrateCompleteEvent);
         }
+        if (source.DescribeFileAttributesCompleteEvent != null) {
+            this.DescribeFileAttributesCompleteEvent = new DescribeFileAttributesTask(source.DescribeFileAttributesCompleteEvent);
+        }
     }
 
 
@@ -789,6 +815,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "ExtractTraceWatermarkCompleteEvent.", this.ExtractTraceWatermarkCompleteEvent);
         this.setParamObj(map, prefix + "ReviewAudioVideoCompleteEvent.", this.ReviewAudioVideoCompleteEvent);
         this.setParamObj(map, prefix + "ReduceMediaBitrateCompleteEvent.", this.ReduceMediaBitrateCompleteEvent);
+        this.setParamObj(map, prefix + "DescribeFileAttributesCompleteEvent.", this.DescribeFileAttributesCompleteEvent);
 
     }
 }

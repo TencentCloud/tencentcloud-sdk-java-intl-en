@@ -80,7 +80,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to query the information of a hardware node.
+     *This API is used to query the information of nodes in a cluster.
      * @param req DescribeClusterNodesRequest
      * @return DescribeClusterNodesResponse
      * @throws TencentCloudSDKException
@@ -120,7 +120,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to query EMR instances.
+     *This API is used to query the information of instances in a cluster.
      * @param req DescribeInstancesRequest
      * @return DescribeInstancesResponse
      * @throws TencentCloudSDKException
@@ -140,7 +140,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to query EMR cluster instances.
+     *This API is used to query the cluster list.
      * @param req DescribeInstancesListRequest
      * @return DescribeInstancesListResponse
      * @throws TencentCloudSDKException
@@ -160,7 +160,7 @@ This API is used to add user lists (user management).
     }
 
     /**
-     *This API is used to get data from the YARN Resource Scheduling page.
+     *This API is used to query the data of YARN Resource Scheduling.
      * @param req DescribeResourceScheduleRequest
      * @return DescribeResourceScheduleResponse
      * @throws TencentCloudSDKException

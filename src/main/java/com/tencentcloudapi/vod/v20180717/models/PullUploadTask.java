@@ -106,6 +106,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String SessionId;
 
     /**
+    * The progress of a pull and upload task. Value range: 0-100.
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Long Progress;
+
+    /**
      * Get Pull for upload task ID. 
      * @return TaskId Pull for upload task ID.
      */
@@ -305,6 +312,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.SessionId = SessionId;
     }
 
+    /**
+     * Get The progress of a pull and upload task. Value range: 0-100. 
+     * @return Progress The progress of a pull and upload task. Value range: 0-100.
+     */
+    public Long getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set The progress of a pull and upload task. Value range: 0-100.
+     * @param Progress The progress of a pull and upload task. Value range: 0-100.
+     */
+    public void setProgress(Long Progress) {
+        this.Progress = Progress;
+    }
+
     public PullUploadTask() {
     }
 
@@ -346,6 +369,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
     }
 
 
@@ -364,6 +390,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ProcedureTaskId", this.ProcedureTaskId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
 
     }
 }

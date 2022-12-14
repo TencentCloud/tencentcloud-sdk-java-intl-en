@@ -38,6 +38,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String ErrorMsg;
 
     /**
+    * The response data.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Data")
+    @Expose
+    private String Data;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -81,6 +89,26 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
+     * Get The response data.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Data The response data.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set The response data.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Data The response data.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setData(String Data) {
+        this.Data = Data;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -110,6 +138,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.ErrorMsg != null) {
             this.ErrorMsg = new String(source.ErrorMsg);
         }
+        if (source.Data != null) {
+            this.Data = new String(source.Data);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -122,6 +153,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IsDraft", this.IsDraft);
         this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
+        this.setParamSimple(map, prefix + "Data", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
