@@ -180,6 +180,26 @@ Note: Accounts with the same username but different hosts are different accounts
     }
 
     /**
+     *This API is used to create a monthly subscribed TencentDB instance by passing in information such as instance specifications, database version number, and purchased duration.
+     * @param req CreateDCDBInstanceRequest
+     * @return CreateDCDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDCDBInstanceResponse CreateDCDBInstance(CreateDCDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDCDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDCDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDCDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create pay-as-you-go TDSQL for MySQL instances.
      * @param req CreateHourDCDBInstanceRequest
      * @return CreateHourDCDBInstanceResponse
@@ -715,6 +735,26 @@ Note: accounts with the same username but different hosts are different accounts
                 Type type = new TypeToken<JsonResponseModel<IsolateHourDCDBInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "IsolateHourDCDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to kill the specified session.
+     * @param req KillSessionRequest
+     * @return KillSessionResponse
+     * @throws TencentCloudSDKException
+     */
+    public KillSessionResponse KillSession(KillSessionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<KillSessionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<KillSessionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "KillSession");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

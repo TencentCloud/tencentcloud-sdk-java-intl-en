@@ -73,11 +73,18 @@ The default value is `0`, which means others.
     private String SourceContext;
 
     /**
-    * The format of recording files saved to VOD. 0 (default): MP4; 1: HLS.
+    * The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`).
     */
     @SerializedName("MediaType")
     @Expose
     private Long MediaType;
+
+    /**
+    * The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
+    */
+    @SerializedName("UserDefineRecordId")
+    @Expose
+    private String UserDefineRecordId;
 
     /**
      * Get The operation to perform on the media uploaded. The value of this parameter is the name of a task flow template. You can create a custom task flow template in Tencent Cloud VOD. 
@@ -196,19 +203,35 @@ The default value is `0`, which means others.
     }
 
     /**
-     * Get The format of recording files saved to VOD. 0 (default): MP4; 1: HLS. 
-     * @return MediaType The format of recording files saved to VOD. 0 (default): MP4; 1: HLS.
+     * Get The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`). 
+     * @return MediaType The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`).
      */
     public Long getMediaType() {
         return this.MediaType;
     }
 
     /**
-     * Set The format of recording files saved to VOD. 0 (default): MP4; 1: HLS.
-     * @param MediaType The format of recording files saved to VOD. 0 (default): MP4; 1: HLS.
+     * Set The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`).
+     * @param MediaType The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`).
      */
     public void setMediaType(Long MediaType) {
         this.MediaType = MediaType;
+    }
+
+    /**
+     * Get The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`. 
+     * @return UserDefineRecordId The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
+     */
+    public String getUserDefineRecordId() {
+        return this.UserDefineRecordId;
+    }
+
+    /**
+     * Set The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
+     * @param UserDefineRecordId The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
+     */
+    public void setUserDefineRecordId(String UserDefineRecordId) {
+        this.UserDefineRecordId = UserDefineRecordId;
     }
 
     public TencentVod() {
@@ -243,6 +266,9 @@ The default value is `0`, which means others.
         if (source.MediaType != null) {
             this.MediaType = new Long(source.MediaType);
         }
+        if (source.UserDefineRecordId != null) {
+            this.UserDefineRecordId = new String(source.UserDefineRecordId);
+        }
     }
 
 
@@ -258,6 +284,7 @@ The default value is `0`, which means others.
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "SourceContext", this.SourceContext);
         this.setParamSimple(map, prefix + "MediaType", this.MediaType);
+        this.setParamSimple(map, prefix + "UserDefineRecordId", this.UserDefineRecordId);
 
     }
 }

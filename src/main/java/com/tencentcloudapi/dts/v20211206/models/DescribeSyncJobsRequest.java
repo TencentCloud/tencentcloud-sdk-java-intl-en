@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeSyncJobsRequest extends AbstractModel{
 
     /**
-    * Sync task ID
+    * Sync task ID, such as `sync-werwfs23`.
     */
     @SerializedName("JobId")
     @Expose
@@ -100,16 +100,16 @@ public class DescribeSyncJobsRequest extends AbstractModel{
     private TagFilter [] TagFilters;
 
     /**
-     * Get Sync task ID 
-     * @return JobId Sync task ID
+     * Get Sync task ID, such as `sync-werwfs23`. 
+     * @return JobId Sync task ID, such as `sync-werwfs23`.
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set Sync task ID
-     * @param JobId Sync task ID
+     * Set Sync task ID, such as `sync-werwfs23`.
+     * @param JobId Sync task ID, such as `sync-werwfs23`.
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

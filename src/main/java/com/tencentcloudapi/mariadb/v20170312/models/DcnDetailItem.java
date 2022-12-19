@@ -149,6 +149,29 @@ public class DcnDetailItem extends AbstractModel{
     private Long InstanceType;
 
     /**
+    * Configuration information of DCN replication. This field is null for a primary instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ReplicaConfig")
+    @Expose
+    private DCNReplicaConfig ReplicaConfig;
+
+    /**
+    * DCN replication status. This field is null for the primary instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ReplicaStatus")
+    @Expose
+    private DCNReplicaStatus ReplicaStatus;
+
+    /**
+    * Whether KMS is enabled.
+    */
+    @SerializedName("EncryptStatus")
+    @Expose
+    private Long EncryptStatus;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -436,6 +459,62 @@ public class DcnDetailItem extends AbstractModel{
         this.InstanceType = InstanceType;
     }
 
+    /**
+     * Get Configuration information of DCN replication. This field is null for a primary instance.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ReplicaConfig Configuration information of DCN replication. This field is null for a primary instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public DCNReplicaConfig getReplicaConfig() {
+        return this.ReplicaConfig;
+    }
+
+    /**
+     * Set Configuration information of DCN replication. This field is null for a primary instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ReplicaConfig Configuration information of DCN replication. This field is null for a primary instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setReplicaConfig(DCNReplicaConfig ReplicaConfig) {
+        this.ReplicaConfig = ReplicaConfig;
+    }
+
+    /**
+     * Get DCN replication status. This field is null for the primary instance.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ReplicaStatus DCN replication status. This field is null for the primary instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public DCNReplicaStatus getReplicaStatus() {
+        return this.ReplicaStatus;
+    }
+
+    /**
+     * Set DCN replication status. This field is null for the primary instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ReplicaStatus DCN replication status. This field is null for the primary instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setReplicaStatus(DCNReplicaStatus ReplicaStatus) {
+        this.ReplicaStatus = ReplicaStatus;
+    }
+
+    /**
+     * Get Whether KMS is enabled. 
+     * @return EncryptStatus Whether KMS is enabled.
+     */
+    public Long getEncryptStatus() {
+        return this.EncryptStatus;
+    }
+
+    /**
+     * Set Whether KMS is enabled.
+     * @param EncryptStatus Whether KMS is enabled.
+     */
+    public void setEncryptStatus(Long EncryptStatus) {
+        this.EncryptStatus = EncryptStatus;
+    }
+
     public DcnDetailItem() {
     }
 
@@ -498,6 +577,15 @@ public class DcnDetailItem extends AbstractModel{
         if (source.InstanceType != null) {
             this.InstanceType = new Long(source.InstanceType);
         }
+        if (source.ReplicaConfig != null) {
+            this.ReplicaConfig = new DCNReplicaConfig(source.ReplicaConfig);
+        }
+        if (source.ReplicaStatus != null) {
+            this.ReplicaStatus = new DCNReplicaStatus(source.ReplicaStatus);
+        }
+        if (source.EncryptStatus != null) {
+            this.EncryptStatus = new Long(source.EncryptStatus);
+        }
     }
 
 
@@ -523,6 +611,9 @@ public class DcnDetailItem extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "PeriodEndTime", this.PeriodEndTime);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamObj(map, prefix + "ReplicaConfig.", this.ReplicaConfig);
+        this.setParamObj(map, prefix + "ReplicaStatus.", this.ReplicaStatus);
+        this.setParamSimple(map, prefix + "EncryptStatus", this.EncryptStatus);
 
     }
 }

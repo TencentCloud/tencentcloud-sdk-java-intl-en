@@ -58,6 +58,14 @@ public class TopicInfo extends AbstractModel{
     private Boolean Index;
 
     /**
+    * Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AssumerName")
+    @Expose
+    private String AssumerName;
+
+    /**
     * Creation time
     */
     @SerializedName("CreateTime")
@@ -110,6 +118,22 @@ Note: This field may return `null`, indicating that no valid value was found.
     @SerializedName("Period")
     @Expose
     private Long Period;
+
+    /**
+    * Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SubAssumerName")
+    @Expose
+    private String SubAssumerName;
+
+    /**
+    * Log topic description
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Describes")
+    @Expose
+    private String Describes;
 
     /**
      * Get Logset ID 
@@ -189,6 +213,26 @@ Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setIndex(Boolean Index) {
         this.Index = Index;
+    }
+
+    /**
+     * Get Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AssumerName Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getAssumerName() {
+        return this.AssumerName;
+    }
+
+    /**
+     * Set Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AssumerName Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAssumerName(String AssumerName) {
+        this.AssumerName = AssumerName;
     }
 
     /**
@@ -323,6 +367,46 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.Period = Period;
     }
 
+    /**
+     * Get Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SubAssumerName Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getSubAssumerName() {
+        return this.SubAssumerName;
+    }
+
+    /**
+     * Set Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SubAssumerName Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSubAssumerName(String SubAssumerName) {
+        this.SubAssumerName = SubAssumerName;
+    }
+
+    /**
+     * Get Log topic description
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Describes Log topic description
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDescribes() {
+        return this.Describes;
+    }
+
+    /**
+     * Set Log topic description
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Describes Log topic description
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDescribes(String Describes) {
+        this.Describes = Describes;
+    }
+
     public TopicInfo() {
     }
 
@@ -345,6 +429,9 @@ Note: This field may return `null`, indicating that no valid value was found.
         }
         if (source.Index != null) {
             this.Index = new Boolean(source.Index);
+        }
+        if (source.AssumerName != null) {
+            this.AssumerName = new String(source.AssumerName);
         }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
@@ -370,6 +457,12 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.Period != null) {
             this.Period = new Long(source.Period);
         }
+        if (source.SubAssumerName != null) {
+            this.SubAssumerName = new String(source.SubAssumerName);
+        }
+        if (source.Describes != null) {
+            this.Describes = new String(source.Describes);
+        }
     }
 
 
@@ -382,6 +475,7 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
         this.setParamSimple(map, prefix + "Index", this.Index);
+        this.setParamSimple(map, prefix + "AssumerName", this.AssumerName);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
@@ -389,6 +483,8 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "MaxSplitPartitions", this.MaxSplitPartitions);
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
         this.setParamSimple(map, prefix + "Period", this.Period);
+        this.setParamSimple(map, prefix + "SubAssumerName", this.SubAssumerName);
+        this.setParamSimple(map, prefix + "Describes", this.Describes);
 
     }
 }

@@ -51,7 +51,7 @@ public class Deal extends AbstractModel{
     private Long FlowId;
 
     /**
-    * This field is populated only for orders that create instances, indicating the ID of the created instance.
+    * The ID of the created instance, which is required only for the order that creates an instance.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceIds")
@@ -130,9 +130,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get This field is populated only for orders that create instances, indicating the ID of the created instance.
+     * Get The ID of the created instance, which is required only for the order that creates an instance.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceIds This field is populated only for orders that create instances, indicating the ID of the created instance.
+     * @return InstanceIds The ID of the created instance, which is required only for the order that creates an instance.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getInstanceIds() {
@@ -140,9 +140,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set This field is populated only for orders that create instances, indicating the ID of the created instance.
+     * Set The ID of the created instance, which is required only for the order that creates an instance.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceIds This field is populated only for orders that create instances, indicating the ID of the created instance.
+     * @param InstanceIds The ID of the created instance, which is required only for the order that creates an instance.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceIds(String [] InstanceIds) {

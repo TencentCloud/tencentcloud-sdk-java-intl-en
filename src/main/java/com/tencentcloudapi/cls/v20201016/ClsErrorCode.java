@@ -180,7 +180,7 @@ public enum ClsErrorCode {
     // The analysis feature is not enabled for the field.
      OPERATIONDENIED_ANALYSISSWITCHCLOSE("OperationDenied.AnalysisSwitchClose"),
      
-    // 
+    // New syntax is not supported.
      OPERATIONDENIED_NEWSYNTAXNOTSUPPORTED("OperationDenied.NewSyntaxNotSupported"),
      
     // The notification template is bound to an alarm and cannot be deleted.

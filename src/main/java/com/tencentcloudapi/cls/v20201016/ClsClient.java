@@ -659,7 +659,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to build a histogram.
+     *This API is used to get a log count histogram. 
      * @param req DescribeLogHistogramRequest
      * @return DescribeLogHistogramResponse
      * @throws TencentCloudSDKException

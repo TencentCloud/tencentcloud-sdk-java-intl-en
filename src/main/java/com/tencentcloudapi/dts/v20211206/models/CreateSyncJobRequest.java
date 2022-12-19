@@ -65,35 +65,35 @@ public class CreateSyncJobRequest extends AbstractModel{
     private String Specification;
 
     /**
-    * Tag
+    * Tag information
     */
     @SerializedName("Tags")
     @Expose
     private TagItem [] Tags;
 
     /**
-    * Number of sync tasks
+    * The number of sync tasks purchased at a time. Value range: [1, 10]. Default value: `1`.
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * Auto-renewal flag
+    * Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled). Default value: `0`.
     */
     @SerializedName("AutoRenew")
     @Expose
     private Long AutoRenew;
 
     /**
-    * Sync link specification
+    * Sync link specification, such as `micro`, `small`, `medium`, and `large`. Default value: `medium`.
     */
     @SerializedName("InstanceClass")
     @Expose
     private String InstanceClass;
 
     /**
-    * Sync link name
+    * Sync task name
     */
     @SerializedName("JobName")
     @Expose
@@ -203,80 +203,80 @@ public class CreateSyncJobRequest extends AbstractModel{
     }
 
     /**
-     * Get Tag 
-     * @return Tags Tag
+     * Get Tag information 
+     * @return Tags Tag information
      */
     public TagItem [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag
-     * @param Tags Tag
+     * Set Tag information
+     * @param Tags Tag information
      */
     public void setTags(TagItem [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Number of sync tasks 
-     * @return Count Number of sync tasks
+     * Get The number of sync tasks purchased at a time. Value range: [1, 10]. Default value: `1`. 
+     * @return Count The number of sync tasks purchased at a time. Value range: [1, 10]. Default value: `1`.
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set Number of sync tasks
-     * @param Count Number of sync tasks
+     * Set The number of sync tasks purchased at a time. Value range: [1, 10]. Default value: `1`.
+     * @param Count The number of sync tasks purchased at a time. Value range: [1, 10]. Default value: `1`.
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get Auto-renewal flag 
-     * @return AutoRenew Auto-renewal flag
+     * Get Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled). Default value: `0`. 
+     * @return AutoRenew Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled). Default value: `0`.
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set Auto-renewal flag
-     * @param AutoRenew Auto-renewal flag
+     * Set Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled). Default value: `0`.
+     * @param AutoRenew Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled). Default value: `0`.
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;
     }
 
     /**
-     * Get Sync link specification 
-     * @return InstanceClass Sync link specification
+     * Get Sync link specification, such as `micro`, `small`, `medium`, and `large`. Default value: `medium`. 
+     * @return InstanceClass Sync link specification, such as `micro`, `small`, `medium`, and `large`. Default value: `medium`.
      */
     public String getInstanceClass() {
         return this.InstanceClass;
     }
 
     /**
-     * Set Sync link specification
-     * @param InstanceClass Sync link specification
+     * Set Sync link specification, such as `micro`, `small`, `medium`, and `large`. Default value: `medium`.
+     * @param InstanceClass Sync link specification, such as `micro`, `small`, `medium`, and `large`. Default value: `medium`.
      */
     public void setInstanceClass(String InstanceClass) {
         this.InstanceClass = InstanceClass;
     }
 
     /**
-     * Get Sync link name 
-     * @return JobName Sync link name
+     * Get Sync task name 
+     * @return JobName Sync task name
      */
     public String getJobName() {
         return this.JobName;
     }
 
     /**
-     * Set Sync link name
-     * @param JobName Sync link name
+     * Set Sync task name
+     * @param JobName Sync task name
      */
     public void setJobName(String JobName) {
         this.JobName = JobName;

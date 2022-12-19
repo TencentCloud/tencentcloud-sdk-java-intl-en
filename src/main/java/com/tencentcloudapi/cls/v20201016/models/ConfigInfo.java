@@ -30,6 +30,14 @@ public class ConfigInfo extends AbstractModel{
     private String ConfigId;
 
     /**
+    * Name of the collection rule configuration
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
     * Log formatting method
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
@@ -113,6 +121,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;
+    }
+
+    /**
+     * Get Name of the collection rule configuration
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Name Name of the collection rule configuration
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set Name of the collection rule configuration
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Name Name of the collection rule configuration
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
@@ -298,6 +326,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.ConfigId != null) {
             this.ConfigId = new String(source.ConfigId);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
         if (source.LogFormat != null) {
             this.LogFormat = new String(source.LogFormat);
         }
@@ -336,6 +367,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ConfigId", this.ConfigId);
+        this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "LogFormat", this.LogFormat);
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "LogType", this.LogType);

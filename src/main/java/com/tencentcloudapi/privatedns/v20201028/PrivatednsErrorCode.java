@@ -117,6 +117,9 @@ public enum PrivatednsErrorCode {
     // Incorrect parameter value.
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
+    // The TTL value must be in the range of 1–86400.
+     INVALIDPARAMETERVALUE_ILLEGALTTLVALUE("InvalidParameterValue.IllegalTTLValue"),
+     
     // This is a reserved domain name and cannot be created.
      INVALIDPARAMETERVALUE_RESERVEDDOMAIN("InvalidParameterValue.ReservedDomain"),
      

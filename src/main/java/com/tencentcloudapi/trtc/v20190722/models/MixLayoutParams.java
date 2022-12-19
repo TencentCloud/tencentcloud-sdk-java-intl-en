@@ -94,7 +94,7 @@ This parameter specifies the type of the stream displayed in the big window. If 
     private Long BackgroundImageRenderMode;
 
     /**
-    * The download URL of the default background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
+    * The URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
     */
     @SerializedName("DefaultSubBackgroundImage")
     @Expose
@@ -106,6 +106,20 @@ This parameter specifies the type of the stream displayed in the big window. If 
     @SerializedName("WaterMarkList")
     @Expose
     private WaterMark [] WaterMarkList;
+
+    /**
+    * The render mode to use when the aspect ratio of a video is different from that of the window. This parameter is invalid if a custom layout is used. It is defined the same as `RenderMode` in `MixLayoufList`.
+    */
+    @SerializedName("RenderMode")
+    @Expose
+    private Long RenderMode;
+
+    /**
+    * This parameter is valid only if the screen sharing layout is used. If you set it to `1`, the large video window will appear on the right and the small window on the left. The default value is `0`.
+    */
+    @SerializedName("MaxResolutionUserAlign")
+    @Expose
+    private Long MaxResolutionUserAlign;
 
     /**
      * Get Layout mode:
@@ -296,16 +310,16 @@ This parameter specifies the type of the stream displayed in the big window. If 
     }
 
     /**
-     * Get The download URL of the default background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`. 
-     * @return DefaultSubBackgroundImage The download URL of the default background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
+     * Get The URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`. 
+     * @return DefaultSubBackgroundImage The URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
      */
     public String getDefaultSubBackgroundImage() {
         return this.DefaultSubBackgroundImage;
     }
 
     /**
-     * Set The download URL of the default background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
-     * @param DefaultSubBackgroundImage The download URL of the default background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
+     * Set The URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
+     * @param DefaultSubBackgroundImage The URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
      */
     public void setDefaultSubBackgroundImage(String DefaultSubBackgroundImage) {
         this.DefaultSubBackgroundImage = DefaultSubBackgroundImage;
@@ -325,6 +339,38 @@ This parameter specifies the type of the stream displayed in the big window. If 
      */
     public void setWaterMarkList(WaterMark [] WaterMarkList) {
         this.WaterMarkList = WaterMarkList;
+    }
+
+    /**
+     * Get The render mode to use when the aspect ratio of a video is different from that of the window. This parameter is invalid if a custom layout is used. It is defined the same as `RenderMode` in `MixLayoufList`. 
+     * @return RenderMode The render mode to use when the aspect ratio of a video is different from that of the window. This parameter is invalid if a custom layout is used. It is defined the same as `RenderMode` in `MixLayoufList`.
+     */
+    public Long getRenderMode() {
+        return this.RenderMode;
+    }
+
+    /**
+     * Set The render mode to use when the aspect ratio of a video is different from that of the window. This parameter is invalid if a custom layout is used. It is defined the same as `RenderMode` in `MixLayoufList`.
+     * @param RenderMode The render mode to use when the aspect ratio of a video is different from that of the window. This parameter is invalid if a custom layout is used. It is defined the same as `RenderMode` in `MixLayoufList`.
+     */
+    public void setRenderMode(Long RenderMode) {
+        this.RenderMode = RenderMode;
+    }
+
+    /**
+     * Get This parameter is valid only if the screen sharing layout is used. If you set it to `1`, the large video window will appear on the right and the small window on the left. The default value is `0`. 
+     * @return MaxResolutionUserAlign This parameter is valid only if the screen sharing layout is used. If you set it to `1`, the large video window will appear on the right and the small window on the left. The default value is `0`.
+     */
+    public Long getMaxResolutionUserAlign() {
+        return this.MaxResolutionUserAlign;
+    }
+
+    /**
+     * Set This parameter is valid only if the screen sharing layout is used. If you set it to `1`, the large video window will appear on the right and the small window on the left. The default value is `0`.
+     * @param MaxResolutionUserAlign This parameter is valid only if the screen sharing layout is used. If you set it to `1`, the large video window will appear on the right and the small window on the left. The default value is `0`.
+     */
+    public void setMaxResolutionUserAlign(Long MaxResolutionUserAlign) {
+        this.MaxResolutionUserAlign = MaxResolutionUserAlign;
     }
 
     public MixLayoutParams() {
@@ -371,6 +417,12 @@ This parameter specifies the type of the stream displayed in the big window. If 
                 this.WaterMarkList[i] = new WaterMark(source.WaterMarkList[i]);
             }
         }
+        if (source.RenderMode != null) {
+            this.RenderMode = new Long(source.RenderMode);
+        }
+        if (source.MaxResolutionUserAlign != null) {
+            this.MaxResolutionUserAlign = new Long(source.MaxResolutionUserAlign);
+        }
     }
 
 
@@ -388,6 +440,8 @@ This parameter specifies the type of the stream displayed in the big window. If 
         this.setParamSimple(map, prefix + "BackgroundImageRenderMode", this.BackgroundImageRenderMode);
         this.setParamSimple(map, prefix + "DefaultSubBackgroundImage", this.DefaultSubBackgroundImage);
         this.setParamArrayObj(map, prefix + "WaterMarkList.", this.WaterMarkList);
+        this.setParamSimple(map, prefix + "RenderMode", this.RenderMode);
+        this.setParamSimple(map, prefix + "MaxResolutionUserAlign", this.MaxResolutionUserAlign);
 
     }
 }

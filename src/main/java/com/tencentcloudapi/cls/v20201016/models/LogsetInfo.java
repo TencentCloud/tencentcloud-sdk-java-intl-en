@@ -44,6 +44,14 @@ public class LogsetInfo extends AbstractModel{
     private String CreateTime;
 
     /**
+    * Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AssumerName")
+    @Expose
+    private String AssumerName;
+
+    /**
     * Tag bound to logset
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
@@ -59,7 +67,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long TopicCount;
 
     /**
-    * If `AssumerUin` is not empty, it indicates the service provider who creates the logset
+    * If `AssumerName` is not empty, it indicates the service provider who creates the logset.
     */
     @SerializedName("RoleName")
     @Expose
@@ -114,6 +122,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AssumerName Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getAssumerName() {
+        return this.AssumerName;
+    }
+
+    /**
+     * Set Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AssumerName Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAssumerName(String AssumerName) {
+        this.AssumerName = AssumerName;
+    }
+
+    /**
      * Get Tag bound to logset
 Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return Tags Tag bound to logset
@@ -150,16 +178,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get If `AssumerUin` is not empty, it indicates the service provider who creates the logset 
-     * @return RoleName If `AssumerUin` is not empty, it indicates the service provider who creates the logset
+     * Get If `AssumerName` is not empty, it indicates the service provider who creates the logset. 
+     * @return RoleName If `AssumerName` is not empty, it indicates the service provider who creates the logset.
      */
     public String getRoleName() {
         return this.RoleName;
     }
 
     /**
-     * Set If `AssumerUin` is not empty, it indicates the service provider who creates the logset
-     * @param RoleName If `AssumerUin` is not empty, it indicates the service provider who creates the logset
+     * Set If `AssumerName` is not empty, it indicates the service provider who creates the logset.
+     * @param RoleName If `AssumerName` is not empty, it indicates the service provider who creates the logset.
      */
     public void setRoleName(String RoleName) {
         this.RoleName = RoleName;
@@ -181,6 +209,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.AssumerName != null) {
+            this.AssumerName = new String(source.AssumerName);
         }
         if (source.Tags != null) {
             this.Tags = new Tag[source.Tags.length];
@@ -204,6 +235,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "LogsetId", this.LogsetId);
         this.setParamSimple(map, prefix + "LogsetName", this.LogsetName);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "AssumerName", this.AssumerName);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "TopicCount", this.TopicCount);
         this.setParamSimple(map, prefix + "RoleName", this.RoleName);

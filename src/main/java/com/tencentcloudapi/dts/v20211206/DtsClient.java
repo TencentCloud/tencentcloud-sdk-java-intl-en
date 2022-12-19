@@ -82,7 +82,7 @@ If the task status queried through the `DescribeMigrationJobs` API is ready (`St
     }
 
     /**
-     *This API is used to verify a sync task by checking required parameters and peripheral information.
+     *This API is used to verify a sync task by checking required parameters and peripheral configuration.
      * @param req CreateCheckSyncJobRequest
      * @return CreateCheckSyncJobResponse
      * @throws TencentCloudSDKException
@@ -185,7 +185,7 @@ After successful check, if the migration task needs to be modified, a new check 
     }
 
     /**
-     *This API is used to delete a data consistency check task.
+     *This API is used to delete a data consistency check task, which can be called when the task status is `success`, `failed`, or `canceled`.
      * @param req DeleteCompareTaskRequest
      * @return DeleteCompareTaskResponse
      * @throws TencentCloudSDKException
@@ -307,7 +307,7 @@ If the check fails, the cause can be queried. Modify the migration configuration
     }
 
     /**
-     *This API is used to query the details of a data migration task.
+     *This API is used to query the details of a migration task.
      * @param req DescribeMigrationDetailRequest
      * @return DescribeMigrationDetailResponse
      * @throws TencentCloudSDKException
@@ -607,7 +607,7 @@ If the check fails, the cause can be queried. Modify the migration configuration
     }
 
     /**
-     *This API is used to retry a failed Redis data migration task. Note that this operation will skip the check stage and directly start the task, just like by calling `StartMigrationJob`. After calling this API, you can call the `DescribeMigrationJobs` API to query the latest task status.
+     *This API is used to retry an abnormal or failed Redis data migration task. Note that this operation will skip the check stage and directly start the task, just like by calling `StartMigrationJob`. After calling this API, you can call the `DescribeMigrationJobs` API to query the latest task status.
      * @param req ResumeMigrateJobRequest
      * @return ResumeMigrateJobResponse
      * @throws TencentCloudSDKException
@@ -748,7 +748,7 @@ After calling this API, you can call the `DescribeMigrationJobs` API to query th
     }
 
     /**
-     *This API is used to stop a sync task.
+     *This API is used to stop a sync task. After calling this API, you can call the `DescribeSyncJobs` API to query the latest task status.
      * @param req StopSyncJobRequest
      * @return StopSyncJobResponse
      * @throws TencentCloudSDKException

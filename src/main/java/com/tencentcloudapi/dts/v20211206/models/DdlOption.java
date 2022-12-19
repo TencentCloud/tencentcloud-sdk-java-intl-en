@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DdlOption extends AbstractModel{
 
     /**
-    * DDL type, such as database, table, and view.
+    * DDL type, such as database, table, view, and index.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DdlObject")
@@ -31,7 +31,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String DdlObject;
 
     /**
-    * Specific DDL value, such as `Create` or `Drop`.
+    * DDL value. Valid values: [Create,Drop,Alter] for database <br>[Create,Drop,Alter,Truncate,Rename] for table <br/>[Create,Drop] for view <br/>[Create,Drop] for index
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DdlValue")
@@ -39,9 +39,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] DdlValue;
 
     /**
-     * Get DDL type, such as database, table, and view.
+     * Get DDL type, such as database, table, view, and index.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DdlObject DDL type, such as database, table, and view.
+     * @return DdlObject DDL type, such as database, table, view, and index.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDdlObject() {
@@ -49,9 +49,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set DDL type, such as database, table, and view.
+     * Set DDL type, such as database, table, view, and index.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DdlObject DDL type, such as database, table, and view.
+     * @param DdlObject DDL type, such as database, table, view, and index.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDdlObject(String DdlObject) {
@@ -59,9 +59,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Specific DDL value, such as `Create` or `Drop`.
+     * Get DDL value. Valid values: [Create,Drop,Alter] for database <br>[Create,Drop,Alter,Truncate,Rename] for table <br/>[Create,Drop] for view <br/>[Create,Drop] for index
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DdlValue Specific DDL value, such as `Create` or `Drop`.
+     * @return DdlValue DDL value. Valid values: [Create,Drop,Alter] for database <br>[Create,Drop,Alter,Truncate,Rename] for table <br/>[Create,Drop] for view <br/>[Create,Drop] for index
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getDdlValue() {
@@ -69,9 +69,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Specific DDL value, such as `Create` or `Drop`.
+     * Set DDL value. Valid values: [Create,Drop,Alter] for database <br>[Create,Drop,Alter,Truncate,Rename] for table <br/>[Create,Drop] for view <br/>[Create,Drop] for index
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DdlValue Specific DDL value, such as `Create` or `Drop`.
+     * @param DdlValue DDL value. Valid values: [Create,Drop,Alter] for database <br>[Create,Drop,Alter,Truncate,Rename] for table <br/>[Create,Drop] for view <br/>[Create,Drop] for index
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDdlValue(String [] DdlValue) {

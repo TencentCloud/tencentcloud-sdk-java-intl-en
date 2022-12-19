@@ -92,6 +92,17 @@ The two response methods differ slightly in terms of encoding format. You are ad
     private Boolean UseNewAnalysis;
 
     /**
+    * Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
+`0`: Auto-sample.
+`0–1`: Sample by the specified sample rate, such as `0.02`.
+`1`: Precise analysis without sampling.
+Default value: `1`
+    */
+    @SerializedName("SamplingRate")
+    @Expose
+    private Float SamplingRate;
+
+    /**
      * Get ID of the log topic to be searched 
      * @return TopicId ID of the log topic to be searched
      */
@@ -271,6 +282,38 @@ The two response methods differ slightly in terms of encoding format. You are ad
         this.UseNewAnalysis = UseNewAnalysis;
     }
 
+    /**
+     * Get Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
+`0`: Auto-sample.
+`0–1`: Sample by the specified sample rate, such as `0.02`.
+`1`: Precise analysis without sampling.
+Default value: `1` 
+     * @return SamplingRate Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
+`0`: Auto-sample.
+`0–1`: Sample by the specified sample rate, such as `0.02`.
+`1`: Precise analysis without sampling.
+Default value: `1`
+     */
+    public Float getSamplingRate() {
+        return this.SamplingRate;
+    }
+
+    /**
+     * Set Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
+`0`: Auto-sample.
+`0–1`: Sample by the specified sample rate, such as `0.02`.
+`1`: Precise analysis without sampling.
+Default value: `1`
+     * @param SamplingRate Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
+`0`: Auto-sample.
+`0–1`: Sample by the specified sample rate, such as `0.02`.
+`1`: Precise analysis without sampling.
+Default value: `1`
+     */
+    public void setSamplingRate(Float SamplingRate) {
+        this.SamplingRate = SamplingRate;
+    }
+
     public SearchLogRequest() {
     }
 
@@ -303,6 +346,9 @@ The two response methods differ slightly in terms of encoding format. You are ad
         if (source.UseNewAnalysis != null) {
             this.UseNewAnalysis = new Boolean(source.UseNewAnalysis);
         }
+        if (source.SamplingRate != null) {
+            this.SamplingRate = new Float(source.SamplingRate);
+        }
     }
 
 
@@ -318,6 +364,7 @@ The two response methods differ slightly in terms of encoding format. You are ad
         this.setParamSimple(map, prefix + "Context", this.Context);
         this.setParamSimple(map, prefix + "Sort", this.Sort);
         this.setParamSimple(map, prefix + "UseNewAnalysis", this.UseNewAnalysis);
+        this.setParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
 
     }
 }

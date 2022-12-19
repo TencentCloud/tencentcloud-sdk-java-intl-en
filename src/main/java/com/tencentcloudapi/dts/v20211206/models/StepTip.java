@@ -55,6 +55,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String HelpDoc;
 
     /**
+    * Whether the current step is skipped
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SkipInfo")
+    @Expose
+    private String SkipInfo;
+
+    /**
      * Get Error code
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Code Error code
@@ -134,6 +142,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.HelpDoc = HelpDoc;
     }
 
+    /**
+     * Get Whether the current step is skipped
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SkipInfo Whether the current step is skipped
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getSkipInfo() {
+        return this.SkipInfo;
+    }
+
+    /**
+     * Set Whether the current step is skipped
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SkipInfo Whether the current step is skipped
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSkipInfo(String SkipInfo) {
+        this.SkipInfo = SkipInfo;
+    }
+
     public StepTip() {
     }
 
@@ -154,6 +182,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.HelpDoc != null) {
             this.HelpDoc = new String(source.HelpDoc);
         }
+        if (source.SkipInfo != null) {
+            this.SkipInfo = new String(source.SkipInfo);
+        }
     }
 
 
@@ -165,6 +196,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "Solution", this.Solution);
         this.setParamSimple(map, prefix + "HelpDoc", this.HelpDoc);
+        this.setParamSimple(map, prefix + "SkipInfo", this.SkipInfo);
 
     }
 }

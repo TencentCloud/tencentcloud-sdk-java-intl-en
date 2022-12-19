@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SyncJobInfo extends AbstractModel{
 
     /**
-    * Sync task ID
+    * Sync task ID, such as `sync-btso140`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("JobId")
@@ -39,7 +39,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String JobName;
 
     /**
-    * Billing mode
+    * Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PayMode")
@@ -47,7 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String PayMode;
 
     /**
-    * Running mode
+    * Running mode. Valid values: `Immediate`, `Timed`. Default value: `Immediate`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RunMode")
@@ -55,7 +55,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RunMode;
 
     /**
-    * Expected execution time
+    * Expected execution time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExpectRunTime")
@@ -103,7 +103,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Specification;
 
     /**
-    * Expiration time
+    * Expiration time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExpireTime")
@@ -111,7 +111,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ExpireTime;
 
     /**
-    * Source database region
+    * Source database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SrcRegion")
@@ -119,7 +119,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String SrcRegion;
 
     /**
-    * Source database type
+    * Source database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SrcDatabaseType")
@@ -127,7 +127,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String SrcDatabaseType;
 
     /**
-    * Source database access type
+    * Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SrcAccessType")
@@ -143,7 +143,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Endpoint SrcInfo;
 
     /**
-    * Target database region
+    * Target database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DstRegion")
@@ -151,7 +151,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String DstRegion;
 
     /**
-    * Target database type
+    * Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DstDatabaseType")
@@ -159,7 +159,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String DstDatabaseType;
 
     /**
-    * Target database access type
+    * Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DstAccessType")
@@ -175,7 +175,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Endpoint DstInfo;
 
     /**
-    * Creation time
+    * Creation time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
@@ -183,7 +183,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CreateTime;
 
     /**
-    * Start time
+    * Start time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StartTime")
@@ -191,15 +191,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String StartTime;
 
     /**
-    * End time
-Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("EndTime")
-    @Expose
-    private String EndTime;
-
-    /**
-    * Task status
+    * Task status. Valid values: `UnInitialized`, `Initialized`, `Checking`, `CheckPass`, `CheckNotPass`, `ReadyRunning`, `Running`, `Pausing`, `Paused`, `Stopping`, `Stopped`, `ResumableErr`, `Resuming`, `Failed`, `Released`, `Resetting`, `Unknown`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
@@ -207,7 +199,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Status;
 
     /**
-    * Tag
+    * End time in the format of `yyyy-mm-dd hh:mm:ss`
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
+    * Tag information
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tags")
@@ -223,9 +223,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private SyncDetailInfo Detail;
 
     /**
-     * Get Sync task ID
+    * Billing status. Valid values: `Normal`, `Resizing`, `Renewing`, `Isolating`, `Isolated`, `Offlining`, `Offlined`, `NotBilled`, `Recovering`, `PostPay2Prepaying`, `PrePay2Postpaying`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TradeStatus")
+    @Expose
+    private String TradeStatus;
+
+    /**
+    * Sync link specification, such as `micro`, `small`, `medium`, and `large`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("InstanceClass")
+    @Expose
+    private String InstanceClass;
+
+    /**
+    * Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AutoRenew")
+    @Expose
+    private Long AutoRenew;
+
+    /**
+    * Deletion time in the format of `yyyy-mm-dd hh:mm:ss`
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OfflineTime")
+    @Expose
+    private String OfflineTime;
+
+    /**
+     * Get Sync task ID, such as `sync-btso140`.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return JobId Sync task ID
+     * @return JobId Sync task ID, such as `sync-btso140`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getJobId() {
@@ -233,9 +265,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Sync task ID
+     * Set Sync task ID, such as `sync-btso140`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param JobId Sync task ID
+     * @param JobId Sync task ID, such as `sync-btso140`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setJobId(String JobId) {
@@ -263,9 +295,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Billing mode
+     * Get Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PayMode Billing mode
+     * @return PayMode Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPayMode() {
@@ -273,9 +305,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Billing mode
+     * Set Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PayMode Billing mode
+     * @param PayMode Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPayMode(String PayMode) {
@@ -283,9 +315,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Running mode
+     * Get Running mode. Valid values: `Immediate`, `Timed`. Default value: `Immediate`.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RunMode Running mode
+     * @return RunMode Running mode. Valid values: `Immediate`, `Timed`. Default value: `Immediate`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRunMode() {
@@ -293,9 +325,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Running mode
+     * Set Running mode. Valid values: `Immediate`, `Timed`. Default value: `Immediate`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RunMode Running mode
+     * @param RunMode Running mode. Valid values: `Immediate`, `Timed`. Default value: `Immediate`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRunMode(String RunMode) {
@@ -303,9 +335,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Expected execution time
+     * Get Expected execution time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExpectRunTime Expected execution time
+     * @return ExpectRunTime Expected execution time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getExpectRunTime() {
@@ -313,9 +345,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Expected execution time
+     * Set Expected execution time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExpectRunTime Expected execution time
+     * @param ExpectRunTime Expected execution time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExpectRunTime(String ExpectRunTime) {
@@ -423,9 +455,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Expiration time
+     * Get Expiration time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExpireTime Expiration time
+     * @return ExpireTime Expiration time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getExpireTime() {
@@ -433,9 +465,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Expiration time
+     * Set Expiration time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExpireTime Expiration time
+     * @param ExpireTime Expiration time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExpireTime(String ExpireTime) {
@@ -443,9 +475,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Source database region
+     * Get Source database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SrcRegion Source database region
+     * @return SrcRegion Source database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSrcRegion() {
@@ -453,9 +485,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Source database region
+     * Set Source database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SrcRegion Source database region
+     * @param SrcRegion Source database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSrcRegion(String SrcRegion) {
@@ -463,9 +495,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Source database type
+     * Get Source database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SrcDatabaseType Source database type
+     * @return SrcDatabaseType Source database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSrcDatabaseType() {
@@ -473,9 +505,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Source database type
+     * Set Source database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SrcDatabaseType Source database type
+     * @param SrcDatabaseType Source database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSrcDatabaseType(String SrcDatabaseType) {
@@ -483,9 +515,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Source database access type
+     * Get Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SrcAccessType Source database access type
+     * @return SrcAccessType Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSrcAccessType() {
@@ -493,9 +525,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Source database access type
+     * Set Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SrcAccessType Source database access type
+     * @param SrcAccessType Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSrcAccessType(String SrcAccessType) {
@@ -523,9 +555,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Target database region
+     * Get Target database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DstRegion Target database region
+     * @return DstRegion Target database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDstRegion() {
@@ -533,9 +565,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Target database region
+     * Set Target database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DstRegion Target database region
+     * @param DstRegion Target database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDstRegion(String DstRegion) {
@@ -543,9 +575,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Target database type
+     * Get Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DstDatabaseType Target database type
+     * @return DstDatabaseType Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDstDatabaseType() {
@@ -553,9 +585,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Target database type
+     * Set Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DstDatabaseType Target database type
+     * @param DstDatabaseType Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDstDatabaseType(String DstDatabaseType) {
@@ -563,9 +595,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Target database access type
+     * Get Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DstAccessType Target database access type
+     * @return DstAccessType Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDstAccessType() {
@@ -573,9 +605,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Target database access type
+     * Set Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DstAccessType Target database access type
+     * @param DstAccessType Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDstAccessType(String DstAccessType) {
@@ -603,9 +635,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Creation time
+     * Get Creation time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CreateTime Creation time
+     * @return CreateTime Creation time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateTime() {
@@ -613,9 +645,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Creation time
+     * Set Creation time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CreateTime Creation time
+     * @param CreateTime Creation time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateTime(String CreateTime) {
@@ -623,9 +655,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Start time
+     * Get Start time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StartTime Start time
+     * @return StartTime Start time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStartTime() {
@@ -633,9 +665,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Start time
+     * Set Start time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StartTime Start time
+     * @param StartTime Start time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStartTime(String StartTime) {
@@ -643,29 +675,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get End time
+     * Get Task status. Valid values: `UnInitialized`, `Initialized`, `Checking`, `CheckPass`, `CheckNotPass`, `ReadyRunning`, `Running`, `Pausing`, `Paused`, `Stopping`, `Stopped`, `ResumableErr`, `Resuming`, `Failed`, `Released`, `Resetting`, `Unknown`.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EndTime End time
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public String getEndTime() {
-        return this.EndTime;
-    }
-
-    /**
-     * Set End time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EndTime End time
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setEndTime(String EndTime) {
-        this.EndTime = EndTime;
-    }
-
-    /**
-     * Get Task status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Task status
+     * @return Status Task status. Valid values: `UnInitialized`, `Initialized`, `Checking`, `CheckPass`, `CheckNotPass`, `ReadyRunning`, `Running`, `Pausing`, `Paused`, `Stopping`, `Stopped`, `ResumableErr`, `Resuming`, `Failed`, `Released`, `Resetting`, `Unknown`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStatus() {
@@ -673,9 +685,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Task status
+     * Set Task status. Valid values: `UnInitialized`, `Initialized`, `Checking`, `CheckPass`, `CheckNotPass`, `ReadyRunning`, `Running`, `Pausing`, `Paused`, `Stopping`, `Stopped`, `ResumableErr`, `Resuming`, `Failed`, `Released`, `Resetting`, `Unknown`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Task status
+     * @param Status Task status. Valid values: `UnInitialized`, `Initialized`, `Checking`, `CheckPass`, `CheckNotPass`, `ReadyRunning`, `Running`, `Pausing`, `Paused`, `Stopping`, `Stopped`, `ResumableErr`, `Resuming`, `Failed`, `Released`, `Resetting`, `Unknown`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(String Status) {
@@ -683,9 +695,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Tag
+     * Get End time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tags Tag
+     * @return EndTime End time in the format of `yyyy-mm-dd hh:mm:ss`
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set End time in the format of `yyyy-mm-dd hh:mm:ss`
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EndTime End time in the format of `yyyy-mm-dd hh:mm:ss`
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
+     * Get Tag information
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Tags Tag information
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public TagItem [] getTags() {
@@ -693,9 +725,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Tag
+     * Set Tag information
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tags Tag
+     * @param Tags Tag information
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTags(TagItem [] Tags) {
@@ -720,6 +752,86 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setDetail(SyncDetailInfo Detail) {
         this.Detail = Detail;
+    }
+
+    /**
+     * Get Billing status. Valid values: `Normal`, `Resizing`, `Renewing`, `Isolating`, `Isolated`, `Offlining`, `Offlined`, `NotBilled`, `Recovering`, `PostPay2Prepaying`, `PrePay2Postpaying`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TradeStatus Billing status. Valid values: `Normal`, `Resizing`, `Renewing`, `Isolating`, `Isolated`, `Offlining`, `Offlined`, `NotBilled`, `Recovering`, `PostPay2Prepaying`, `PrePay2Postpaying`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getTradeStatus() {
+        return this.TradeStatus;
+    }
+
+    /**
+     * Set Billing status. Valid values: `Normal`, `Resizing`, `Renewing`, `Isolating`, `Isolated`, `Offlining`, `Offlined`, `NotBilled`, `Recovering`, `PostPay2Prepaying`, `PrePay2Postpaying`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TradeStatus Billing status. Valid values: `Normal`, `Resizing`, `Renewing`, `Isolating`, `Isolated`, `Offlining`, `Offlined`, `NotBilled`, `Recovering`, `PostPay2Prepaying`, `PrePay2Postpaying`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTradeStatus(String TradeStatus) {
+        this.TradeStatus = TradeStatus;
+    }
+
+    /**
+     * Get Sync link specification, such as `micro`, `small`, `medium`, and `large`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return InstanceClass Sync link specification, such as `micro`, `small`, `medium`, and `large`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getInstanceClass() {
+        return this.InstanceClass;
+    }
+
+    /**
+     * Set Sync link specification, such as `micro`, `small`, `medium`, and `large`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param InstanceClass Sync link specification, such as `micro`, `small`, `medium`, and `large`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setInstanceClass(String InstanceClass) {
+        this.InstanceClass = InstanceClass;
+    }
+
+    /**
+     * Get Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AutoRenew Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getAutoRenew() {
+        return this.AutoRenew;
+    }
+
+    /**
+     * Set Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AutoRenew Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAutoRenew(Long AutoRenew) {
+        this.AutoRenew = AutoRenew;
+    }
+
+    /**
+     * Get Deletion time in the format of `yyyy-mm-dd hh:mm:ss`
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OfflineTime Deletion time in the format of `yyyy-mm-dd hh:mm:ss`
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getOfflineTime() {
+        return this.OfflineTime;
+    }
+
+    /**
+     * Set Deletion time in the format of `yyyy-mm-dd hh:mm:ss`
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OfflineTime Deletion time in the format of `yyyy-mm-dd hh:mm:ss`
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setOfflineTime(String OfflineTime) {
+        this.OfflineTime = OfflineTime;
     }
 
     public SyncJobInfo() {
@@ -799,11 +911,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.StartTime != null) {
             this.StartTime = new String(source.StartTime);
         }
-        if (source.EndTime != null) {
-            this.EndTime = new String(source.EndTime);
-        }
         if (source.Status != null) {
             this.Status = new String(source.Status);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
         }
         if (source.Tags != null) {
             this.Tags = new TagItem[source.Tags.length];
@@ -813,6 +925,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
         if (source.Detail != null) {
             this.Detail = new SyncDetailInfo(source.Detail);
+        }
+        if (source.TradeStatus != null) {
+            this.TradeStatus = new String(source.TradeStatus);
+        }
+        if (source.InstanceClass != null) {
+            this.InstanceClass = new String(source.InstanceClass);
+        }
+        if (source.AutoRenew != null) {
+            this.AutoRenew = new Long(source.AutoRenew);
+        }
+        if (source.OfflineTime != null) {
+            this.OfflineTime = new String(source.OfflineTime);
         }
     }
 
@@ -842,10 +966,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "DstInfo.", this.DstInfo);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
-        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "Detail.", this.Detail);
+        this.setParamSimple(map, prefix + "TradeStatus", this.TradeStatus);
+        this.setParamSimple(map, prefix + "InstanceClass", this.InstanceClass);
+        this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
+        this.setParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
 
     }
 }

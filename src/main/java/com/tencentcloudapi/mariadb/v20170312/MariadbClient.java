@@ -502,6 +502,26 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
     }
 
     /**
+     *This API is used to query the instance price before you purchase it.
+     * @param req DescribePriceRequest
+     * @return DescribePriceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePriceResponse DescribePrice(DescribePriceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePriceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePriceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the security group details of a project.
      * @param req DescribeProjectSecurityGroupsRequest
      * @return DescribeProjectSecurityGroupsResponse

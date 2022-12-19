@@ -51,7 +51,7 @@ public class DescribeLogHistogramRequest extends AbstractModel{
     private String Query;
 
     /**
-    * Time interval in milliseconds
+    * Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
     */
     @SerializedName("Interval")
     @Expose
@@ -122,16 +122,16 @@ public class DescribeLogHistogramRequest extends AbstractModel{
     }
 
     /**
-     * Get Time interval in milliseconds 
-     * @return Interval Time interval in milliseconds
+     * Get Interval in milliseconds. Condition: (To – From) / Interval ≤ 200 
+     * @return Interval Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
      */
     public Long getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set Time interval in milliseconds
-     * @param Interval Time interval in milliseconds
+     * Set Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
+     * @param Interval Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
      */
     public void setInterval(Long Interval) {
         this.Interval = Interval;

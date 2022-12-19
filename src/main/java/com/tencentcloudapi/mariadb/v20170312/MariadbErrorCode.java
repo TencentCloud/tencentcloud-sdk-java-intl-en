@@ -39,6 +39,9 @@ public enum MariadbErrorCode {
     // Failed to unassociate the security group.
      FAILEDOPERATION_DISASSOCIATESECURITYGROUPSFAILED("FailedOperation.DisassociateSecurityGroupsFailed"),
      
+    // Failed to query the security group details
+     FAILEDOPERATION_GETSECURITYGROUPDETAILFAILED("FailedOperation.GetSecurityGroupDetailFailed"),
+     
     // Refund is not supported for the instance
      FAILEDOPERATION_INSTANCECANNOTRETURN("FailedOperation.InstanceCanNotReturn"),
      
@@ -47,6 +50,9 @@ public enum MariadbErrorCode {
      
     // Failed to modify account permissions.
      FAILEDOPERATION_MODIFYRIGHTFAILED("FailedOperation.ModifyRightFailed"),
+     
+    // Failed to isolate the instance
+     FAILEDOPERATION_OSSISOLATEINSTANCEFAILED("FailedOperation.OssIsolateInstanceFailed"),
      
     // Failed to request the backend API.
      FAILEDOPERATION_OSSOPERATIONFAILED("FailedOperation.OssOperationFailed"),
@@ -60,11 +66,17 @@ public enum MariadbErrorCode {
     // Failed to set a rule.
      FAILEDOPERATION_SETRULELOCATIONFAILED("FailedOperation.SetRuleLocationFailed"),
      
+    // Failed to publish security group rules
+     FAILEDOPERATION_SETSVCLOCATIONFAILED("FailedOperation.SetSvcLocationFailed"),
+     
     // Either tag key/value verification or tag API authentication failed.
      FAILEDOPERATION_TAGDRYRUNERROR("FailedOperation.TagDryRunError"),
      
     // Failed to update the security group information of an instance.
      FAILEDOPERATION_UPDATEINSTANCEINFOFAILED("FailedOperation.UpdateInstanceInfoFailed"),
+     
+    // Unauthenticated user
+     FAILEDOPERATION_USERNOTAUTHED("FailedOperation.UserNotAuthed"),
      
     // VIP can’t be the same.
      FAILEDOPERATION_VIPNOTCHANGE("FailedOperation.VipNotChange"),
@@ -129,6 +141,9 @@ public enum MariadbErrorCode {
     // Failed to get the account list.
      INTERNALERROR_GETUSERLISTFAILED("InternalError.GetUserListFailed"),
      
+    // Failed to get the number of security groups
+     INTERNALERROR_GETUSERSGCOUNTFAILED("InternalError.GetUserSGCountFailed"),
+     
     // Failed to query the security group quota of the user.
      INTERNALERROR_GETUSGQUOTAERROR("InternalError.GetUsgQuotaError"),
      
@@ -170,6 +185,9 @@ public enum MariadbErrorCode {
      
     // Failed to query the order information.
      INTERNALERROR_QUERYORDERFAILED("InternalError.QueryOrderFailed"),
+     
+    // Failed to query the price
+     INTERNALERROR_QUERYPRICEFAILED("InternalError.QueryPriceFailed"),
      
     // An error occurred when reading data from the database.
      INTERNALERROR_READDATABASEFAILED("InternalError.ReadDatabaseFailed"),
@@ -225,6 +243,9 @@ public enum MariadbErrorCode {
     // The instance shard does not exist.
      INVALIDPARAMETER_SHARDRESOURCEIDNOTFOUND("InvalidParameter.ShardResourceIdNotFound"),
      
+    // No purchasable specifications found
+     INVALIDPARAMETER_SPECNOTFOUND("InvalidParameter.SpecNotFound"),
+     
     // The specified VPC subnet was not found.
      INVALIDPARAMETER_SUBNETNOTFOUND("InvalidParameter.SubnetNotFound"),
      
@@ -254,6 +275,9 @@ public enum MariadbErrorCode {
      
     // Invalid account type.
      INVALIDPARAMETERVALUE_BADUSERTYPE("InvalidParameterValue.BadUserType"),
+     
+    // The number of products exceeds the upper limit.
+     INVALIDPARAMETERVALUE_ILLEGALCOUNT("InvalidParameterValue.IllegalCount"),
      
     // The dedicated cluster to which the database instance belongs was not found.
      INVALIDPARAMETERVALUE_ILLEGALEXCLUSTERID("InvalidParameterValue.IllegalExclusterID"),
@@ -303,7 +327,7 @@ public enum MariadbErrorCode {
     // Incorrect database instance status. Operations are not allowed.
      RESOURCEUNAVAILABLE_INSTANCESTATUSABNORMAL("ResourceUnavailable.InstanceStatusAbnormal"),
      
-    // 
+    // Failed to verify the security group
      RESOURCEUNAVAILABLE_SGCHECKFAIL("ResourceUnavailable.SGCheckFail"),
      
     // You have no permission to manipulate this API or resource.

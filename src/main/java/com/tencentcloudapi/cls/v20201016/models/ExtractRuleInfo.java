@@ -120,7 +120,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Syslog protocol. Valid values: `tcp`, `udp`.
-This field can be used when you create/modify collection rule configurations.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Protocol")
@@ -129,7 +129,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
-This field can be used when you create/modify collection rule configurations.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Address")
@@ -137,10 +137,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Address;
 
     /**
-    * `rfc3164`: Resolve logs by using the RFC3164 protocol during the syslog collection.
-`rfc5424`: Resolve logs by using the RFC5424 protocol during the syslog collection.
-`auto`: Automatically match either the RFC3164 or RFC5424 protocol.
-This field can be used when you create/modify collection rule configurations.
+    * `rfc3164`: Resolve logs by using the RFC 3164 protocol during the syslog collection.
+`rfc5424`: Resolve logs by using the RFC 5424 protocol during the syslog collection.
+`auto`: Automatically match either the RFC 3164 or RFC 5424 protocol.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ParseProtocol")
@@ -389,10 +389,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Syslog protocol. Valid values: `tcp`, `udp`.
-This field can be used when you create/modify collection rule configurations.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Protocol Syslog protocol. Valid values: `tcp`, `udp`.
-This field can be used when you create/modify collection rule configurations.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProtocol() {
@@ -401,10 +401,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Syslog protocol. Valid values: `tcp`, `udp`.
-This field can be used when you create/modify collection rule configurations.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param Protocol Syslog protocol. Valid values: `tcp`, `udp`.
-This field can be used when you create/modify collection rule configurations.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProtocol(String Protocol) {
@@ -413,10 +413,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
-This field can be used when you create/modify collection rule configurations.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Address Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
-This field can be used when you create/modify collection rule configurations.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAddress() {
@@ -425,10 +425,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
-This field can be used when you create/modify collection rule configurations.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param Address Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
-This field can be used when you create/modify collection rule configurations.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAddress(String Address) {
@@ -436,15 +436,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get `rfc3164`: Resolve logs by using the RFC3164 protocol during the syslog collection.
-`rfc5424`: Resolve logs by using the RFC5424 protocol during the syslog collection.
-`auto`: Automatically match either the RFC3164 or RFC5424 protocol.
-This field can be used when you create/modify collection rule configurations.
+     * Get `rfc3164`: Resolve logs by using the RFC 3164 protocol during the syslog collection.
+`rfc5424`: Resolve logs by using the RFC 5424 protocol during the syslog collection.
+`auto`: Automatically match either the RFC 3164 or RFC 5424 protocol.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ParseProtocol `rfc3164`: Resolve logs by using the RFC3164 protocol during the syslog collection.
-`rfc5424`: Resolve logs by using the RFC5424 protocol during the syslog collection.
-`auto`: Automatically match either the RFC3164 or RFC5424 protocol.
-This field can be used when you create/modify collection rule configurations.
+     * @return ParseProtocol `rfc3164`: Resolve logs by using the RFC 3164 protocol during the syslog collection.
+`rfc5424`: Resolve logs by using the RFC 5424 protocol during the syslog collection.
+`auto`: Automatically match either the RFC 3164 or RFC 5424 protocol.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getParseProtocol() {
@@ -452,15 +452,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set `rfc3164`: Resolve logs by using the RFC3164 protocol during the syslog collection.
-`rfc5424`: Resolve logs by using the RFC5424 protocol during the syslog collection.
-`auto`: Automatically match either the RFC3164 or RFC5424 protocol.
-This field can be used when you create/modify collection rule configurations.
+     * Set `rfc3164`: Resolve logs by using the RFC 3164 protocol during the syslog collection.
+`rfc5424`: Resolve logs by using the RFC 5424 protocol during the syslog collection.
+`auto`: Automatically match either the RFC 3164 or RFC 5424 protocol.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ParseProtocol `rfc3164`: Resolve logs by using the RFC3164 protocol during the syslog collection.
-`rfc5424`: Resolve logs by using the RFC5424 protocol during the syslog collection.
-`auto`: Automatically match either the RFC3164 or RFC5424 protocol.
-This field can be used when you create/modify collection rule configurations.
+     * @param ParseProtocol `rfc3164`: Resolve logs by using the RFC 3164 protocol during the syslog collection.
+`rfc5424`: Resolve logs by using the RFC 5424 protocol during the syslog collection.
+`auto`: Automatically match either the RFC 3164 or RFC 5424 protocol.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setParseProtocol(String ParseProtocol) {

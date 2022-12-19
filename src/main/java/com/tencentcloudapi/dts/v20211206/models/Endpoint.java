@@ -199,6 +199,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String TmpToken;
 
     /**
+    * External role ID
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RoleExternalId")
+    @Expose
+    private String RoleExternalId;
+
+    /**
      * Get Region name, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Region Region name, such as `ap-guangzhou`.
@@ -638,6 +646,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.TmpToken = TmpToken;
     }
 
+    /**
+     * Get External role ID
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RoleExternalId External role ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getRoleExternalId() {
+        return this.RoleExternalId;
+    }
+
+    /**
+     * Set External role ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RoleExternalId External role ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRoleExternalId(String RoleExternalId) {
+        this.RoleExternalId = RoleExternalId;
+    }
+
     public Endpoint() {
     }
 
@@ -712,6 +740,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.TmpToken != null) {
             this.TmpToken = new String(source.TmpToken);
         }
+        if (source.RoleExternalId != null) {
+            this.RoleExternalId = new String(source.RoleExternalId);
+        }
     }
 
 
@@ -741,6 +772,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "TmpSecretId", this.TmpSecretId);
         this.setParamSimple(map, prefix + "TmpSecretKey", this.TmpSecretKey);
         this.setParamSimple(map, prefix + "TmpToken", this.TmpToken);
+        this.setParamSimple(map, prefix + "RoleExternalId", this.RoleExternalId);
 
     }
 }

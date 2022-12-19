@@ -51,7 +51,7 @@ public class CreateMigrationServiceRequest extends AbstractModel{
     private String DstRegion;
 
     /**
-    * Instance specification. Valid values: `micro`, `small`, `medium`, `large`, `xlarge`, `2xlarge`.
+    * Instance specification. Valid values: `small`, `medium`, `large`, `xlarge`, `2xlarge`.
     */
     @SerializedName("InstanceClass")
     @Expose
@@ -143,16 +143,16 @@ public class CreateMigrationServiceRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance specification. Valid values: `micro`, `small`, `medium`, `large`, `xlarge`, `2xlarge`. 
-     * @return InstanceClass Instance specification. Valid values: `micro`, `small`, `medium`, `large`, `xlarge`, `2xlarge`.
+     * Get Instance specification. Valid values: `small`, `medium`, `large`, `xlarge`, `2xlarge`. 
+     * @return InstanceClass Instance specification. Valid values: `small`, `medium`, `large`, `xlarge`, `2xlarge`.
      */
     public String getInstanceClass() {
         return this.InstanceClass;
     }
 
     /**
-     * Set Instance specification. Valid values: `micro`, `small`, `medium`, `large`, `xlarge`, `2xlarge`.
-     * @param InstanceClass Instance specification. Valid values: `micro`, `small`, `medium`, `large`, `xlarge`, `2xlarge`.
+     * Set Instance specification. Valid values: `small`, `medium`, `large`, `xlarge`, `2xlarge`.
+     * @param InstanceClass Instance specification. Valid values: `small`, `medium`, `large`, `xlarge`, `2xlarge`.
      */
     public void setInstanceClass(String InstanceClass) {
         this.InstanceClass = InstanceClass;

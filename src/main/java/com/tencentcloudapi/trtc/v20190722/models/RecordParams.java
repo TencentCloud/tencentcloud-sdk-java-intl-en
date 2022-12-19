@@ -32,7 +32,7 @@ public class RecordParams extends AbstractModel{
     private Long RecordMode;
 
     /**
-    * The time period (seconds) to wait after there are no anchors in a room to stop recording automatically. The value cannot be smaller than 5 or larger than 86400 (24 hours). Default value: 30.
+    * The time period (seconds) to wait to automatically stop recording after there are no anchors (users who publish streams) in a room. Value range: 5-86400 (max 24 hours). Default value: 30.
     */
     @SerializedName("MaxIdleTime")
     @Expose
@@ -56,7 +56,7 @@ public class RecordParams extends AbstractModel{
     private SubscribeStreamUserIds SubscribeStreamUserIds;
 
     /**
-    * The output format. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
+    * The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
     */
     @SerializedName("OutputFormat")
     @Expose
@@ -68,6 +68,14 @@ public class RecordParams extends AbstractModel{
     @SerializedName("AvMerge")
     @Expose
     private Long AvMerge;
+
+    /**
+    * The maximum file duration allowed (minutes). If the output format is AAC or MP4, and the maximum file duration is exceeded, the file will be segmented. Value range: 1-1440. Default value: 1440 (24 hours). The maximum file size allowed is 2 GB. If the file size exceeds 2 GB, or the file duration exceeds 24 hours, the file will also be segmented.
+This parameter is invalid if the output format is HLS.
+    */
+    @SerializedName("MaxMediaFileDuration")
+    @Expose
+    private Long MaxMediaFileDuration;
 
     /**
      * Get The recording mode.
@@ -94,16 +102,16 @@ public class RecordParams extends AbstractModel{
     }
 
     /**
-     * Get The time period (seconds) to wait after there are no anchors in a room to stop recording automatically. The value cannot be smaller than 5 or larger than 86400 (24 hours). Default value: 30. 
-     * @return MaxIdleTime The time period (seconds) to wait after there are no anchors in a room to stop recording automatically. The value cannot be smaller than 5 or larger than 86400 (24 hours). Default value: 30.
+     * Get The time period (seconds) to wait to automatically stop recording after there are no anchors (users who publish streams) in a room. Value range: 5-86400 (max 24 hours). Default value: 30. 
+     * @return MaxIdleTime The time period (seconds) to wait to automatically stop recording after there are no anchors (users who publish streams) in a room. Value range: 5-86400 (max 24 hours). Default value: 30.
      */
     public Long getMaxIdleTime() {
         return this.MaxIdleTime;
     }
 
     /**
-     * Set The time period (seconds) to wait after there are no anchors in a room to stop recording automatically. The value cannot be smaller than 5 or larger than 86400 (24 hours). Default value: 30.
-     * @param MaxIdleTime The time period (seconds) to wait after there are no anchors in a room to stop recording automatically. The value cannot be smaller than 5 or larger than 86400 (24 hours). Default value: 30.
+     * Set The time period (seconds) to wait to automatically stop recording after there are no anchors (users who publish streams) in a room. Value range: 5-86400 (max 24 hours). Default value: 30.
+     * @param MaxIdleTime The time period (seconds) to wait to automatically stop recording after there are no anchors (users who publish streams) in a room. Value range: 5-86400 (max 24 hours). Default value: 30.
      */
     public void setMaxIdleTime(Long MaxIdleTime) {
         this.MaxIdleTime = MaxIdleTime;
@@ -154,16 +162,16 @@ public class RecordParams extends AbstractModel{
     }
 
     /**
-     * Get The output format. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`. 
-     * @return OutputFormat The output format. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
+     * Get The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`. 
+     * @return OutputFormat The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
      */
     public Long getOutputFormat() {
         return this.OutputFormat;
     }
 
     /**
-     * Set The output format. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
-     * @param OutputFormat The output format. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
+     * Set The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
+     * @param OutputFormat The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
      */
     public void setOutputFormat(Long OutputFormat) {
         this.OutputFormat = OutputFormat;
@@ -183,6 +191,26 @@ public class RecordParams extends AbstractModel{
      */
     public void setAvMerge(Long AvMerge) {
         this.AvMerge = AvMerge;
+    }
+
+    /**
+     * Get The maximum file duration allowed (minutes). If the output format is AAC or MP4, and the maximum file duration is exceeded, the file will be segmented. Value range: 1-1440. Default value: 1440 (24 hours). The maximum file size allowed is 2 GB. If the file size exceeds 2 GB, or the file duration exceeds 24 hours, the file will also be segmented.
+This parameter is invalid if the output format is HLS. 
+     * @return MaxMediaFileDuration The maximum file duration allowed (minutes). If the output format is AAC or MP4, and the maximum file duration is exceeded, the file will be segmented. Value range: 1-1440. Default value: 1440 (24 hours). The maximum file size allowed is 2 GB. If the file size exceeds 2 GB, or the file duration exceeds 24 hours, the file will also be segmented.
+This parameter is invalid if the output format is HLS.
+     */
+    public Long getMaxMediaFileDuration() {
+        return this.MaxMediaFileDuration;
+    }
+
+    /**
+     * Set The maximum file duration allowed (minutes). If the output format is AAC or MP4, and the maximum file duration is exceeded, the file will be segmented. Value range: 1-1440. Default value: 1440 (24 hours). The maximum file size allowed is 2 GB. If the file size exceeds 2 GB, or the file duration exceeds 24 hours, the file will also be segmented.
+This parameter is invalid if the output format is HLS.
+     * @param MaxMediaFileDuration The maximum file duration allowed (minutes). If the output format is AAC or MP4, and the maximum file duration is exceeded, the file will be segmented. Value range: 1-1440. Default value: 1440 (24 hours). The maximum file size allowed is 2 GB. If the file size exceeds 2 GB, or the file duration exceeds 24 hours, the file will also be segmented.
+This parameter is invalid if the output format is HLS.
+     */
+    public void setMaxMediaFileDuration(Long MaxMediaFileDuration) {
+        this.MaxMediaFileDuration = MaxMediaFileDuration;
     }
 
     public RecordParams() {
@@ -211,6 +239,9 @@ public class RecordParams extends AbstractModel{
         if (source.AvMerge != null) {
             this.AvMerge = new Long(source.AvMerge);
         }
+        if (source.MaxMediaFileDuration != null) {
+            this.MaxMediaFileDuration = new Long(source.MaxMediaFileDuration);
+        }
     }
 
 
@@ -224,6 +255,7 @@ public class RecordParams extends AbstractModel{
         this.setParamObj(map, prefix + "SubscribeStreamUserIds.", this.SubscribeStreamUserIds);
         this.setParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
         this.setParamSimple(map, prefix + "AvMerge", this.AvMerge);
+        this.setParamSimple(map, prefix + "MaxMediaFileDuration", this.MaxMediaFileDuration);
 
     }
 }
