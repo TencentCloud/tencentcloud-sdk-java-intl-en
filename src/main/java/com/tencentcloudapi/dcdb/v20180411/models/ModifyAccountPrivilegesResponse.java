@@ -13,22 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ApplyCDBProxyResponse extends AbstractModel{
+public class ModifyAccountPrivilegesResponse extends AbstractModel{
 
     /**
-    * Async request ID
-Note: this field may return `null`, indicating that no valid value can be found.
+    * Async task ID, which can be used in the [DescribeFlow](https://www.tencentcloud.com/document/product/237/16177) API to query the async task result.
     */
-    @SerializedName("AsyncRequestId")
+    @SerializedName("FlowId")
     @Expose
-    private String AsyncRequestId;
+    private Long FlowId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,23 +37,19 @@ Note: this field may return `null`, indicating that no valid value can be found.
     private String RequestId;
 
     /**
-     * Get Async request ID
-Note: this field may return `null`, indicating that no valid value can be found. 
-     * @return AsyncRequestId Async request ID
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Get Async task ID, which can be used in the [DescribeFlow](https://www.tencentcloud.com/document/product/237/16177) API to query the async task result. 
+     * @return FlowId Async task ID, which can be used in the [DescribeFlow](https://www.tencentcloud.com/document/product/237/16177) API to query the async task result.
      */
-    public String getAsyncRequestId() {
-        return this.AsyncRequestId;
+    public Long getFlowId() {
+        return this.FlowId;
     }
 
     /**
-     * Set Async request ID
-Note: this field may return `null`, indicating that no valid value can be found.
-     * @param AsyncRequestId Async request ID
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Set Async task ID, which can be used in the [DescribeFlow](https://www.tencentcloud.com/document/product/237/16177) API to query the async task result.
+     * @param FlowId Async task ID, which can be used in the [DescribeFlow](https://www.tencentcloud.com/document/product/237/16177) API to query the async task result.
      */
-    public void setAsyncRequestId(String AsyncRequestId) {
-        this.AsyncRequestId = AsyncRequestId;
+    public void setFlowId(Long FlowId) {
+        this.FlowId = FlowId;
     }
 
     /**
@@ -73,16 +68,16 @@ Note: this field may return `null`, indicating that no valid value can be found.
         this.RequestId = RequestId;
     }
 
-    public ApplyCDBProxyResponse() {
+    public ModifyAccountPrivilegesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ApplyCDBProxyResponse(ApplyCDBProxyResponse source) {
-        if (source.AsyncRequestId != null) {
-            this.AsyncRequestId = new String(source.AsyncRequestId);
+    public ModifyAccountPrivilegesResponse(ModifyAccountPrivilegesResponse source) {
+        if (source.FlowId != null) {
+            this.FlowId = new Long(source.FlowId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +89,7 @@ Note: this field may return `null`, indicating that no valid value can be found.
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

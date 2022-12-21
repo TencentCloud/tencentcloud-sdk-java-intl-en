@@ -422,6 +422,26 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
     }
 
     /**
+     *This API is used to query the price of an instance before you purchase it.
+     * @param req DescribeDCDBPriceRequest
+     * @return DescribeDCDBPriceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDCDBPriceResponse DescribeDCDBPrice(DescribeDCDBPriceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDCDBPriceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDCDBPriceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDCDBPrice");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the information of shards of a TencentDB instance.
      * @param req DescribeDCDBShardsRequest
      * @return DescribeDCDBShardsResponse
@@ -776,6 +796,31 @@ Note: accounts with the same username but different hosts are different accounts
                 Type type = new TypeToken<JsonResponseModel<ModifyAccountDescriptionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyAccountDescription");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the permissions of a TencentDB instance account.
+
+**Notes**
+- Only the SELECT permission (that is, set the permission parameter to `["SELECT"]`) of the system database `mysql` can be granted.
+- An error will be reported if read-write permissions are granted to a read-only account.
+- If the parameter is not passed in, no change will be made to the granted table permissions. To clear the granted table permissions, set `Privileges` to an empty array.
+     * @param req ModifyAccountPrivilegesRequest
+     * @return ModifyAccountPrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAccountPrivilegesResponse ModifyAccountPrivileges(ModifyAccountPrivilegesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAccountPrivilegesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAccountPrivilegesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAccountPrivileges");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

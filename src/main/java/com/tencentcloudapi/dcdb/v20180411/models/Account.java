@@ -13,48 +13,74 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.dcdb.v20180411.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyCDBProxyResponse extends AbstractModel{
+public class Account extends AbstractModel{
 
     /**
-    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+    * Account name
     */
-    @SerializedName("RequestId")
+    @SerializedName("User")
     @Expose
-    private String RequestId;
+    private String User;
 
     /**
-     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
-     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+    * Host address
+    */
+    @SerializedName("Host")
+    @Expose
+    private String Host;
+
+    /**
+     * Get Account name 
+     * @return User Account name
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getUser() {
+        return this.User;
     }
 
     /**
-     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * Set Account name
+     * @param User Account name
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setUser(String User) {
+        this.User = User;
     }
 
-    public ModifyCDBProxyResponse() {
+    /**
+     * Get Host address 
+     * @return Host Host address
+     */
+    public String getHost() {
+        return this.Host;
+    }
+
+    /**
+     * Set Host address
+     * @param Host Host address
+     */
+    public void setHost(String Host) {
+        this.Host = Host;
+    }
+
+    public Account() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyCDBProxyResponse(ModifyCDBProxyResponse source) {
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+    public Account(Account source) {
+        if (source.User != null) {
+            this.User = new String(source.User);
+        }
+        if (source.Host != null) {
+            this.Host = new String(source.Host);
         }
     }
 
@@ -63,7 +89,8 @@ public class ModifyCDBProxyResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "User", this.User);
+        this.setParamSimple(map, prefix + "Host", this.Host);
 
     }
 }

@@ -30,7 +30,7 @@ public class ModifyInstancePasswordComplexityRequest extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-    * List of parameters to be modified. Every element is a pair of `Name` (parameter name) and `CurrentValue` (new value).
+    * List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value). Valid values for `Name` of version 8.0: `validate_password.policy`, `validate_password.lengt`, `validate_password.mixed_case_coun`, `validate_password.number_coun`, `validate_password.special_char_count`. Valid values for `Name` of version 5.6 and 5.7: `validate_password_polic`, `validate_password_lengt` `validate_password_mixed_case_coun`, `validate_password_number_coun`, `validate_password_special_char_coun`.
     */
     @SerializedName("ParamList")
     @Expose
@@ -53,16 +53,16 @@ public class ModifyInstancePasswordComplexityRequest extends AbstractModel{
     }
 
     /**
-     * Get List of parameters to be modified. Every element is a pair of `Name` (parameter name) and `CurrentValue` (new value). 
-     * @return ParamList List of parameters to be modified. Every element is a pair of `Name` (parameter name) and `CurrentValue` (new value).
+     * Get List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value). Valid values for `Name` of version 8.0: `validate_password.policy`, `validate_password.lengt`, `validate_password.mixed_case_coun`, `validate_password.number_coun`, `validate_password.special_char_count`. Valid values for `Name` of version 5.6 and 5.7: `validate_password_polic`, `validate_password_lengt` `validate_password_mixed_case_coun`, `validate_password_number_coun`, `validate_password_special_char_coun`. 
+     * @return ParamList List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value). Valid values for `Name` of version 8.0: `validate_password.policy`, `validate_password.lengt`, `validate_password.mixed_case_coun`, `validate_password.number_coun`, `validate_password.special_char_count`. Valid values for `Name` of version 5.6 and 5.7: `validate_password_polic`, `validate_password_lengt` `validate_password_mixed_case_coun`, `validate_password_number_coun`, `validate_password_special_char_coun`.
      */
     public Parameter [] getParamList() {
         return this.ParamList;
     }
 
     /**
-     * Set List of parameters to be modified. Every element is a pair of `Name` (parameter name) and `CurrentValue` (new value).
-     * @param ParamList List of parameters to be modified. Every element is a pair of `Name` (parameter name) and `CurrentValue` (new value).
+     * Set List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value). Valid values for `Name` of version 8.0: `validate_password.policy`, `validate_password.lengt`, `validate_password.mixed_case_coun`, `validate_password.number_coun`, `validate_password.special_char_count`. Valid values for `Name` of version 5.6 and 5.7: `validate_password_polic`, `validate_password_lengt` `validate_password_mixed_case_coun`, `validate_password_number_coun`, `validate_password_special_char_coun`.
+     * @param ParamList List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value). Valid values for `Name` of version 8.0: `validate_password.policy`, `validate_password.lengt`, `validate_password.mixed_case_coun`, `validate_password.number_coun`, `validate_password.special_char_count`. Valid values for `Name` of version 5.6 and 5.7: `validate_password_polic`, `validate_password_lengt` `validate_password_mixed_case_coun`, `validate_password_number_coun`, `validate_password_special_char_coun`.
      */
     public void setParamList(Parameter [] ParamList) {
         this.ParamList = ParamList;

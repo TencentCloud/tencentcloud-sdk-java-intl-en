@@ -52,7 +52,7 @@ public class Deal extends AbstractModel{
 
     /**
     * The ID of the created instance, which is required only for the order that creates an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -131,9 +131,9 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get The ID of the created instance, which is required only for the order that creates an instance.
-Note: This field may return null, indicating that no valid value can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return InstanceIds The ID of the created instance, which is required only for the order that creates an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
@@ -141,9 +141,9 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set The ID of the created instance, which is required only for the order that creates an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param InstanceIds The ID of the created instance, which is required only for the order that creates an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

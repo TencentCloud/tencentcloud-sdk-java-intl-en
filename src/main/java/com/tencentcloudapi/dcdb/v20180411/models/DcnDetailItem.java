@@ -149,6 +149,13 @@ public class DcnDetailItem extends AbstractModel{
     private Long InstanceType;
 
     /**
+    * Whether KMS is enabled.
+    */
+    @SerializedName("EncryptStatus")
+    @Expose
+    private Long EncryptStatus;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -436,6 +443,22 @@ public class DcnDetailItem extends AbstractModel{
         this.InstanceType = InstanceType;
     }
 
+    /**
+     * Get Whether KMS is enabled. 
+     * @return EncryptStatus Whether KMS is enabled.
+     */
+    public Long getEncryptStatus() {
+        return this.EncryptStatus;
+    }
+
+    /**
+     * Set Whether KMS is enabled.
+     * @param EncryptStatus Whether KMS is enabled.
+     */
+    public void setEncryptStatus(Long EncryptStatus) {
+        this.EncryptStatus = EncryptStatus;
+    }
+
     public DcnDetailItem() {
     }
 
@@ -498,6 +521,9 @@ public class DcnDetailItem extends AbstractModel{
         if (source.InstanceType != null) {
             this.InstanceType = new Long(source.InstanceType);
         }
+        if (source.EncryptStatus != null) {
+            this.EncryptStatus = new Long(source.EncryptStatus);
+        }
     }
 
 
@@ -523,6 +549,7 @@ public class DcnDetailItem extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "PeriodEndTime", this.PeriodEndTime);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "EncryptStatus", this.EncryptStatus);
 
     }
 }

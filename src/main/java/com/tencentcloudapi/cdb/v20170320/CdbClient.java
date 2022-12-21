@@ -59,26 +59,6 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a database proxy group for a source instance.
-     * @param req ApplyCDBProxyRequest
-     * @return ApplyCDBProxyResponse
-     * @throws TencentCloudSDKException
-     */
-    public ApplyCDBProxyResponse ApplyCDBProxy(ApplyCDBProxyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ApplyCDBProxyResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ApplyCDBProxyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ApplyCDBProxy");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API (AssociateSecurityGroups) is used to bind security groups to instances in batches.
      * @param req AssociateSecurityGroupsRequest
      * @return AssociateSecurityGroupsResponse
@@ -1608,26 +1588,6 @@ Note that when modifying account permissions, you need to pass in the full permi
                 Type type = new TypeToken<JsonResponseModel<ModifyBackupDownloadRestrictionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyBackupDownloadRestriction");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to configure read/write separation of database proxy.
-     * @param req ModifyCDBProxyRequest
-     * @return ModifyCDBProxyResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyCDBProxyResponse ModifyCDBProxy(ModifyCDBProxyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyCDBProxyResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyCDBProxyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyCDBProxy");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

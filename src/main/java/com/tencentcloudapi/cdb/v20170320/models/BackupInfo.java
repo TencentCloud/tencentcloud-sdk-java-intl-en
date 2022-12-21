@@ -156,6 +156,14 @@ public class BackupInfo extends AbstractModel{
     private String InstanceId;
 
     /**
+    * Whether the backup file is encrypted. Valid values: `on` (encrypted), `off` (unencrypted).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EncryptionFlag")
+    @Expose
+    private String EncryptionFlag;
+
+    /**
      * Get Backup filename 
      * @return Name Backup filename
      */
@@ -459,6 +467,26 @@ public class BackupInfo extends AbstractModel{
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get Whether the backup file is encrypted. Valid values: `on` (encrypted), `off` (unencrypted).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EncryptionFlag Whether the backup file is encrypted. Valid values: `on` (encrypted), `off` (unencrypted).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getEncryptionFlag() {
+        return this.EncryptionFlag;
+    }
+
+    /**
+     * Set Whether the backup file is encrypted. Valid values: `on` (encrypted), `off` (unencrypted).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EncryptionFlag Whether the backup file is encrypted. Valid values: `on` (encrypted), `off` (unencrypted).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEncryptionFlag(String EncryptionFlag) {
+        this.EncryptionFlag = EncryptionFlag;
+    }
+
     public BackupInfo() {
     }
 
@@ -527,6 +555,9 @@ public class BackupInfo extends AbstractModel{
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.EncryptionFlag != null) {
+            this.EncryptionFlag = new String(source.EncryptionFlag);
+        }
     }
 
 
@@ -553,6 +584,7 @@ public class BackupInfo extends AbstractModel{
         this.setParamArrayObj(map, prefix + "RemoteInfo.", this.RemoteInfo);
         this.setParamSimple(map, prefix + "CosStorageType", this.CosStorageType);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "EncryptionFlag", this.EncryptionFlag);
 
     }
 }
