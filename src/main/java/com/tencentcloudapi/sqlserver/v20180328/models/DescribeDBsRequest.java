@@ -44,6 +44,20 @@ public class DescribeDBsRequest extends AbstractModel{
     private Long Offset;
 
     /**
+    * Database name
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
+    */
+    @SerializedName("OrderByType")
+    @Expose
+    private String OrderByType;
+
+    /**
      * Get Instance ID 
      * @return InstanceIdSet Instance ID
      */
@@ -91,6 +105,38 @@ public class DescribeDBsRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    /**
+     * Get Database name 
+     * @return Name Database name
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set Database name
+     * @param Name Database name
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`. 
+     * @return OrderByType Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
+     */
+    public String getOrderByType() {
+        return this.OrderByType;
+    }
+
+    /**
+     * Set Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
+     * @param OrderByType Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
+     */
+    public void setOrderByType(String OrderByType) {
+        this.OrderByType = OrderByType;
+    }
+
     public DescribeDBsRequest() {
     }
 
@@ -111,6 +157,12 @@ public class DescribeDBsRequest extends AbstractModel{
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.OrderByType != null) {
+            this.OrderByType = new String(source.OrderByType);
+        }
     }
 
 
@@ -121,6 +173,8 @@ public class DescribeDBsRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
 
     }
 }

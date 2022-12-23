@@ -380,6 +380,21 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String TimeZone;
 
     /**
+    * Whether the instance is deployed across AZs
+    */
+    @SerializedName("IsDrZone")
+    @Expose
+    private Boolean IsDrZone;
+
+    /**
+    * Replica AZ information
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SlaveZones")
+    @Expose
+    private SlaveZones SlaveZones;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -1207,6 +1222,42 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.TimeZone = TimeZone;
     }
 
+    /**
+     * Get Whether the instance is deployed across AZs 
+     * @return IsDrZone Whether the instance is deployed across AZs
+     */
+    public Boolean getIsDrZone() {
+        return this.IsDrZone;
+    }
+
+    /**
+     * Set Whether the instance is deployed across AZs
+     * @param IsDrZone Whether the instance is deployed across AZs
+     */
+    public void setIsDrZone(Boolean IsDrZone) {
+        this.IsDrZone = IsDrZone;
+    }
+
+    /**
+     * Get Replica AZ information
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SlaveZones Replica AZ information
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public SlaveZones getSlaveZones() {
+        return this.SlaveZones;
+    }
+
+    /**
+     * Set Replica AZ information
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SlaveZones Replica AZ information
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSlaveZones(SlaveZones SlaveZones) {
+        this.SlaveZones = SlaveZones;
+    }
+
     public DBInstance() {
     }
 
@@ -1374,6 +1425,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.TimeZone != null) {
             this.TimeZone = new String(source.TimeZone);
         }
+        if (source.IsDrZone != null) {
+            this.IsDrZone = new Boolean(source.IsDrZone);
+        }
+        if (source.SlaveZones != null) {
+            this.SlaveZones = new SlaveZones(source.SlaveZones);
+        }
     }
 
 
@@ -1431,6 +1488,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "TgwWanVPort", this.TgwWanVPort);
         this.setParamSimple(map, prefix + "Collation", this.Collation);
         this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
+        this.setParamSimple(map, prefix + "IsDrZone", this.IsDrZone);
+        this.setParamObj(map, prefix + "SlaveZones.", this.SlaveZones);
 
     }
 }

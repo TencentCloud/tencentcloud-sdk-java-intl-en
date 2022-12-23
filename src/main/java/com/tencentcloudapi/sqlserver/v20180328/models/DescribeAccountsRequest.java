@@ -44,6 +44,27 @@ public class DescribeAccountsRequest extends AbstractModel{
     private Long Offset;
 
     /**
+    * Account ID
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * Sorting by `createTime`, `updateTime`, or `passTime`. Default value: `createTime` (desc).
+    */
+    @SerializedName("OrderBy")
+    @Expose
+    private String OrderBy;
+
+    /**
+    * Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
+    */
+    @SerializedName("OrderByType")
+    @Expose
+    private String OrderByType;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -91,6 +112,54 @@ public class DescribeAccountsRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    /**
+     * Get Account ID 
+     * @return Name Account ID
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set Account ID
+     * @param Name Account ID
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get Sorting by `createTime`, `updateTime`, or `passTime`. Default value: `createTime` (desc). 
+     * @return OrderBy Sorting by `createTime`, `updateTime`, or `passTime`. Default value: `createTime` (desc).
+     */
+    public String getOrderBy() {
+        return this.OrderBy;
+    }
+
+    /**
+     * Set Sorting by `createTime`, `updateTime`, or `passTime`. Default value: `createTime` (desc).
+     * @param OrderBy Sorting by `createTime`, `updateTime`, or `passTime`. Default value: `createTime` (desc).
+     */
+    public void setOrderBy(String OrderBy) {
+        this.OrderBy = OrderBy;
+    }
+
+    /**
+     * Get Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`. 
+     * @return OrderByType Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
+     */
+    public String getOrderByType() {
+        return this.OrderByType;
+    }
+
+    /**
+     * Set Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
+     * @param OrderByType Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
+     */
+    public void setOrderByType(String OrderByType) {
+        this.OrderByType = OrderByType;
+    }
+
     public DescribeAccountsRequest() {
     }
 
@@ -108,6 +177,15 @@ public class DescribeAccountsRequest extends AbstractModel{
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.OrderByType != null) {
+            this.OrderByType = new String(source.OrderByType);
+        }
     }
 
 
@@ -118,6 +196,9 @@ public class DescribeAccountsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
+        this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
 
     }
 }
