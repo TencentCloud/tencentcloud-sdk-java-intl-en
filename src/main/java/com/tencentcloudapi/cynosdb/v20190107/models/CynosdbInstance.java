@@ -320,6 +320,45 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     private Long StoragePayMode;
 
     /**
+    * Physical zone
+    */
+    @SerializedName("PhysicalZone")
+    @Expose
+    private String PhysicalZone;
+
+    /**
+    * Business type
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("BusinessType")
+    @Expose
+    private String BusinessType;
+
+    /**
+    * Task
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Tasks")
+    @Expose
+    private ObjectTask [] Tasks;
+
+    /**
+    * Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsFreeze")
+    @Expose
+    private String IsFreeze;
+
+    /**
+    * The resource tag
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private Tag [] ResourceTags;
+
+    /**
      * Get User `Uin` 
      * @return Uin User `Uin`
      */
@@ -1003,6 +1042,102 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         this.StoragePayMode = StoragePayMode;
     }
 
+    /**
+     * Get Physical zone 
+     * @return PhysicalZone Physical zone
+     */
+    public String getPhysicalZone() {
+        return this.PhysicalZone;
+    }
+
+    /**
+     * Set Physical zone
+     * @param PhysicalZone Physical zone
+     */
+    public void setPhysicalZone(String PhysicalZone) {
+        this.PhysicalZone = PhysicalZone;
+    }
+
+    /**
+     * Get Business type
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return BusinessType Business type
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getBusinessType() {
+        return this.BusinessType;
+    }
+
+    /**
+     * Set Business type
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param BusinessType Business type
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setBusinessType(String BusinessType) {
+        this.BusinessType = BusinessType;
+    }
+
+    /**
+     * Get Task
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Tasks Task
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public ObjectTask [] getTasks() {
+        return this.Tasks;
+    }
+
+    /**
+     * Set Task
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Tasks Task
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTasks(ObjectTask [] Tasks) {
+        this.Tasks = Tasks;
+    }
+
+    /**
+     * Get Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsFreeze Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getIsFreeze() {
+        return this.IsFreeze;
+    }
+
+    /**
+     * Set Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsFreeze Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIsFreeze(String IsFreeze) {
+        this.IsFreeze = IsFreeze;
+    }
+
+    /**
+     * Get The resource tag
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ResourceTags The resource tag
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Tag [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set The resource tag
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ResourceTags The resource tag
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setResourceTags(Tag [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
     public CynosdbInstance() {
     }
 
@@ -1137,6 +1272,27 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         if (source.StoragePayMode != null) {
             this.StoragePayMode = new Long(source.StoragePayMode);
         }
+        if (source.PhysicalZone != null) {
+            this.PhysicalZone = new String(source.PhysicalZone);
+        }
+        if (source.BusinessType != null) {
+            this.BusinessType = new String(source.BusinessType);
+        }
+        if (source.Tasks != null) {
+            this.Tasks = new ObjectTask[source.Tasks.length];
+            for (int i = 0; i < source.Tasks.length; i++) {
+                this.Tasks[i] = new ObjectTask(source.Tasks[i]);
+            }
+        }
+        if (source.IsFreeze != null) {
+            this.IsFreeze = new String(source.IsFreeze);
+        }
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new Tag[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new Tag(source.ResourceTags[i]);
+            }
+        }
     }
 
 
@@ -1186,6 +1342,11 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
         this.setParamSimple(map, prefix + "StorageId", this.StorageId);
         this.setParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
+        this.setParamSimple(map, prefix + "PhysicalZone", this.PhysicalZone);
+        this.setParamSimple(map, prefix + "BusinessType", this.BusinessType);
+        this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
+        this.setParamSimple(map, prefix + "IsFreeze", this.IsFreeze);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
 
     }
 }

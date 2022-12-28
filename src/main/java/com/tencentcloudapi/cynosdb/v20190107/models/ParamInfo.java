@@ -101,6 +101,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Description;
 
     /**
+    * Whether it is global parameter
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsGlobal")
+    @Expose
+    private Long IsGlobal;
+
+    /**
+    * Whether the parameter can be modified
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ModifiableInfo")
+    @Expose
+    private ModifiableInfo ModifiableInfo;
+
+    /**
+    * Whether it is a function
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsFunc")
+    @Expose
+    private Boolean IsFunc;
+
+    /**
+    * Function
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Func")
+    @Expose
+    private String Func;
+
+    /**
      * Get Current value 
      * @return CurrentValue Current value
      */
@@ -280,6 +312,86 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Description = Description;
     }
 
+    /**
+     * Get Whether it is global parameter
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsGlobal Whether it is global parameter
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getIsGlobal() {
+        return this.IsGlobal;
+    }
+
+    /**
+     * Set Whether it is global parameter
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsGlobal Whether it is global parameter
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIsGlobal(Long IsGlobal) {
+        this.IsGlobal = IsGlobal;
+    }
+
+    /**
+     * Get Whether the parameter can be modified
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ModifiableInfo Whether the parameter can be modified
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public ModifiableInfo getModifiableInfo() {
+        return this.ModifiableInfo;
+    }
+
+    /**
+     * Set Whether the parameter can be modified
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ModifiableInfo Whether the parameter can be modified
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setModifiableInfo(ModifiableInfo ModifiableInfo) {
+        this.ModifiableInfo = ModifiableInfo;
+    }
+
+    /**
+     * Get Whether it is a function
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsFunc Whether it is a function
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getIsFunc() {
+        return this.IsFunc;
+    }
+
+    /**
+     * Set Whether it is a function
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsFunc Whether it is a function
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIsFunc(Boolean IsFunc) {
+        this.IsFunc = IsFunc;
+    }
+
+    /**
+     * Get Function
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Func Function
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getFunc() {
+        return this.Func;
+    }
+
+    /**
+     * Set Function
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Func Function
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setFunc(String Func) {
+        this.Func = Func;
+    }
+
     public ParamInfo() {
     }
 
@@ -324,6 +436,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.IsGlobal != null) {
+            this.IsGlobal = new Long(source.IsGlobal);
+        }
+        if (source.ModifiableInfo != null) {
+            this.ModifiableInfo = new ModifiableInfo(source.ModifiableInfo);
+        }
+        if (source.IsFunc != null) {
+            this.IsFunc = new Boolean(source.IsFunc);
+        }
+        if (source.Func != null) {
+            this.Func = new String(source.Func);
+        }
     }
 
 
@@ -342,6 +466,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "MatchType", this.MatchType);
         this.setParamSimple(map, prefix + "MatchValue", this.MatchValue);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "IsGlobal", this.IsGlobal);
+        this.setParamObj(map, prefix + "ModifiableInfo.", this.ModifiableInfo);
+        this.setParamSimple(map, prefix + "IsFunc", this.IsFunc);
+        this.setParamSimple(map, prefix + "Func", this.Func);
 
     }
 }

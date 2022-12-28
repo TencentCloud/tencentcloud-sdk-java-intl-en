@@ -79,6 +79,13 @@ public class UpgradeInstanceRequest extends AbstractModel{
     private Long DealMode;
 
     /**
+    * Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
+    */
+    @SerializedName("UpgradeMode")
+    @Expose
+    private String UpgradeMode;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -206,6 +213,22 @@ public class UpgradeInstanceRequest extends AbstractModel{
         this.DealMode = DealMode;
     }
 
+    /**
+     * Get Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated. 
+     * @return UpgradeMode Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
+     */
+    public String getUpgradeMode() {
+        return this.UpgradeMode;
+    }
+
+    /**
+     * Set Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
+     * @param UpgradeMode Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
+     */
+    public void setUpgradeMode(String UpgradeMode) {
+        this.UpgradeMode = UpgradeMode;
+    }
+
     public UpgradeInstanceRequest() {
     }
 
@@ -238,6 +261,9 @@ public class UpgradeInstanceRequest extends AbstractModel{
         if (source.DealMode != null) {
             this.DealMode = new Long(source.DealMode);
         }
+        if (source.UpgradeMode != null) {
+            this.UpgradeMode = new String(source.UpgradeMode);
+        }
     }
 
 
@@ -253,6 +279,7 @@ public class UpgradeInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamSimple(map, prefix + "DbType", this.DbType);
         this.setParamSimple(map, prefix + "DealMode", this.DealMode);
+        this.setParamSimple(map, prefix + "UpgradeMode", this.UpgradeMode);
 
     }
 }

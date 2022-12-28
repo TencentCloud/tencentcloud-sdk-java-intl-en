@@ -24,10 +24,18 @@ public class DescribeAccountsResponse extends AbstractModel{
 
     /**
     * Database account list
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AccountSet")
     @Expose
     private Account [] AccountSet;
+
+    /**
+    * Total number of accounts
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,8 +45,10 @@ public class DescribeAccountsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Database account list 
+     * Get Database account list
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return AccountSet Database account list
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Account [] getAccountSet() {
         return this.AccountSet;
@@ -46,10 +56,28 @@ public class DescribeAccountsResponse extends AbstractModel{
 
     /**
      * Set Database account list
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param AccountSet Database account list
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAccountSet(Account [] AccountSet) {
         this.AccountSet = AccountSet;
+    }
+
+    /**
+     * Get Total number of accounts 
+     * @return TotalCount Total number of accounts
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set Total number of accounts
+     * @param TotalCount Total number of accounts
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -82,6 +110,9 @@ public class DescribeAccountsResponse extends AbstractModel{
                 this.AccountSet[i] = new Account(source.AccountSet[i]);
             }
         }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -93,6 +124,7 @@ public class DescribeAccountsResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "AccountSet.", this.AccountSet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

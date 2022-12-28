@@ -31,6 +31,7 @@ public class DescribeClusterParamsResponse extends AbstractModel{
 
     /**
     * Instance parameter list
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Items")
     @Expose
@@ -60,8 +61,10 @@ public class DescribeClusterParamsResponse extends AbstractModel{
     }
 
     /**
-     * Get Instance parameter list 
+     * Get Instance parameter list
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Items Instance parameter list
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ParamInfo [] getItems() {
         return this.Items;
@@ -69,7 +72,9 @@ public class DescribeClusterParamsResponse extends AbstractModel{
 
     /**
      * Set Instance parameter list
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Items Instance parameter list
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setItems(ParamInfo [] Items) {
         this.Items = Items;

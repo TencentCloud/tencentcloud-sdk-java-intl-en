@@ -39,10 +39,32 @@ public class DescribeAccountsRequest extends AbstractModel{
     /**
     * Database type. Valid values: 
 <li> MYSQL </li>
+This parameter has been disused.
     */
     @SerializedName("DbType")
     @Expose
     private String DbType;
+
+    /**
+    * List of accounts to be filtered
+    */
+    @SerializedName("Hosts")
+    @Expose
+    private String [] Hosts;
+
+    /**
+    * Maximum entries returned per page
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * Offset
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
      * Get Cluster ID 
@@ -78,9 +100,11 @@ public class DescribeAccountsRequest extends AbstractModel{
 
     /**
      * Get Database type. Valid values: 
-<li> MYSQL </li> 
+<li> MYSQL </li>
+This parameter has been disused. 
      * @return DbType Database type. Valid values: 
 <li> MYSQL </li>
+This parameter has been disused.
      */
     public String getDbType() {
         return this.DbType;
@@ -89,11 +113,61 @@ public class DescribeAccountsRequest extends AbstractModel{
     /**
      * Set Database type. Valid values: 
 <li> MYSQL </li>
+This parameter has been disused.
      * @param DbType Database type. Valid values: 
 <li> MYSQL </li>
+This parameter has been disused.
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
+    }
+
+    /**
+     * Get List of accounts to be filtered 
+     * @return Hosts List of accounts to be filtered
+     */
+    public String [] getHosts() {
+        return this.Hosts;
+    }
+
+    /**
+     * Set List of accounts to be filtered
+     * @param Hosts List of accounts to be filtered
+     */
+    public void setHosts(String [] Hosts) {
+        this.Hosts = Hosts;
+    }
+
+    /**
+     * Get Maximum entries returned per page 
+     * @return Limit Maximum entries returned per page
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set Maximum entries returned per page
+     * @param Limit Maximum entries returned per page
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get Offset 
+     * @return Offset Offset
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set Offset
+     * @param Offset Offset
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
     }
 
     public DescribeAccountsRequest() {
@@ -116,6 +190,18 @@ public class DescribeAccountsRequest extends AbstractModel{
         if (source.DbType != null) {
             this.DbType = new String(source.DbType);
         }
+        if (source.Hosts != null) {
+            this.Hosts = new String[source.Hosts.length];
+            for (int i = 0; i < source.Hosts.length; i++) {
+                this.Hosts[i] = new String(source.Hosts[i]);
+            }
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
     }
 
 
@@ -126,6 +212,9 @@ public class DescribeAccountsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArraySimple(map, prefix + "AccountNames.", this.AccountNames);
         this.setParamSimple(map, prefix + "DbType", this.DbType);
+        this.setParamArraySimple(map, prefix + "Hosts.", this.Hosts);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

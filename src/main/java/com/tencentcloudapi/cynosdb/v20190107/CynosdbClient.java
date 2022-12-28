@@ -959,6 +959,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to reset the password of a TencentDB instance account.
+     * @param req ResetAccountPasswordRequest
+     * @return ResetAccountPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetAccountPasswordResponse ResetAccountPassword(ResetAccountPasswordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResetAccountPasswordResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResetAccountPasswordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ResetAccountPassword");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to resume a serverless cluster.
      * @param req ResumeServerlessRequest
      * @return ResumeServerlessResponse
@@ -971,6 +991,46 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ResumeServerlessResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ResumeServerless");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to search the list of cluster databases.
+     * @param req SearchClusterDatabasesRequest
+     * @return SearchClusterDatabasesResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchClusterDatabasesResponse SearchClusterDatabases(SearchClusterDatabasesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SearchClusterDatabasesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SearchClusterDatabasesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SearchClusterDatabases");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to search the list of cluster data tables.
+     * @param req SearchClusterTablesRequest
+     * @return SearchClusterTablesResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchClusterTablesResponse SearchClusterTables(SearchClusterTablesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SearchClusterTablesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SearchClusterTablesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SearchClusterTables");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1011,6 +1071,26 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SwitchClusterZoneResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SwitchClusterZone");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the database proxy VPC.
+     * @param req SwitchProxyVpcRequest
+     * @return SwitchProxyVpcResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchProxyVpcResponse SwitchProxyVpc(SwitchProxyVpcRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SwitchProxyVpcResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SwitchProxyVpcResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SwitchProxyVpc");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -20,21 +20,15 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
+public class SearchClusterTablesResponse extends AbstractModel{
 
     /**
-    * Security group details
+    * Data table list
+Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("Groups")
+    @SerializedName("Tables")
     @Expose
-    private SecurityGroup [] Groups;
-
-    /**
-    * The total number of groups
-    */
-    @SerializedName("Total")
-    @Expose
-    private Long Total;
+    private DatabaseTables [] Tables;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +38,23 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Security group details 
-     * @return Groups Security group details
+     * Get Data table list
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Tables Data table list
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public SecurityGroup [] getGroups() {
-        return this.Groups;
+    public DatabaseTables [] getTables() {
+        return this.Tables;
     }
 
     /**
-     * Set Security group details
-     * @param Groups Security group details
+     * Set Data table list
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Tables Data table list
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setGroups(SecurityGroup [] Groups) {
-        this.Groups = Groups;
-    }
-
-    /**
-     * Get The total number of groups 
-     * @return Total The total number of groups
-     */
-    public Long getTotal() {
-        return this.Total;
-    }
-
-    /**
-     * Set The total number of groups
-     * @param Total The total number of groups
-     */
-    public void setTotal(Long Total) {
-        this.Total = Total;
+    public void setTables(DatabaseTables [] Tables) {
+        this.Tables = Tables;
     }
 
     /**
@@ -91,22 +73,19 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeProjectSecurityGroupsResponse() {
+    public SearchClusterTablesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeProjectSecurityGroupsResponse(DescribeProjectSecurityGroupsResponse source) {
-        if (source.Groups != null) {
-            this.Groups = new SecurityGroup[source.Groups.length];
-            for (int i = 0; i < source.Groups.length; i++) {
-                this.Groups[i] = new SecurityGroup(source.Groups[i]);
+    public SearchClusterTablesResponse(SearchClusterTablesResponse source) {
+        if (source.Tables != null) {
+            this.Tables = new DatabaseTables[source.Tables.length];
+            for (int i = 0; i < source.Tables.length; i++) {
+                this.Tables[i] = new DatabaseTables(source.Tables[i]);
             }
-        }
-        if (source.Total != null) {
-            this.Total = new Long(source.Total);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +97,7 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Groups.", this.Groups);
-        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "Tables.", this.Tables);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

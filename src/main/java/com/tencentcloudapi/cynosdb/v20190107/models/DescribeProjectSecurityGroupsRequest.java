@@ -30,6 +30,27 @@ public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
     private Long ProjectId;
 
     /**
+    * Maximum entries returned per page
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * Offset
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * Search by keyword
+    */
+    @SerializedName("SearchKey")
+    @Expose
+    private String SearchKey;
+
+    /**
      * Get Project ID 
      * @return ProjectId Project ID
      */
@@ -45,6 +66,54 @@ public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get Maximum entries returned per page 
+     * @return Limit Maximum entries returned per page
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set Maximum entries returned per page
+     * @param Limit Maximum entries returned per page
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get Offset 
+     * @return Offset Offset
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set Offset
+     * @param Offset Offset
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get Search by keyword 
+     * @return SearchKey Search by keyword
+     */
+    public String getSearchKey() {
+        return this.SearchKey;
+    }
+
+    /**
+     * Set Search by keyword
+     * @param SearchKey Search by keyword
+     */
+    public void setSearchKey(String SearchKey) {
+        this.SearchKey = SearchKey;
+    }
+
     public DescribeProjectSecurityGroupsRequest() {
     }
 
@@ -56,6 +125,15 @@ public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
         }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.SearchKey != null) {
+            this.SearchKey = new String(source.SearchKey);
+        }
     }
 
 
@@ -64,6 +142,9 @@ public class DescribeProjectSecurityGroupsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "SearchKey", this.SearchKey);
 
     }
 }

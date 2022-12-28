@@ -20,21 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
-
-    /**
-    * Security group details
-    */
-    @SerializedName("Groups")
-    @Expose
-    private SecurityGroup [] Groups;
-
-    /**
-    * The total number of groups
-    */
-    @SerializedName("Total")
-    @Expose
-    private Long Total;
+public class ResetAccountPasswordResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -42,38 +28,6 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get Security group details 
-     * @return Groups Security group details
-     */
-    public SecurityGroup [] getGroups() {
-        return this.Groups;
-    }
-
-    /**
-     * Set Security group details
-     * @param Groups Security group details
-     */
-    public void setGroups(SecurityGroup [] Groups) {
-        this.Groups = Groups;
-    }
-
-    /**
-     * Get The total number of groups 
-     * @return Total The total number of groups
-     */
-    public Long getTotal() {
-        return this.Total;
-    }
-
-    /**
-     * Set The total number of groups
-     * @param Total The total number of groups
-     */
-    public void setTotal(Long Total) {
-        this.Total = Total;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -91,23 +45,14 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeProjectSecurityGroupsResponse() {
+    public ResetAccountPasswordResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeProjectSecurityGroupsResponse(DescribeProjectSecurityGroupsResponse source) {
-        if (source.Groups != null) {
-            this.Groups = new SecurityGroup[source.Groups.length];
-            for (int i = 0; i < source.Groups.length; i++) {
-                this.Groups[i] = new SecurityGroup(source.Groups[i]);
-            }
-        }
-        if (source.Total != null) {
-            this.Total = new Long(source.Total);
-        }
+    public ResetAccountPasswordResponse(ResetAccountPasswordResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,8 +63,6 @@ public class DescribeProjectSecurityGroupsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Groups.", this.Groups);
-        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

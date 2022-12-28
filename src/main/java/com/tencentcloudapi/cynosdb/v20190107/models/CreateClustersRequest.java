@@ -296,7 +296,7 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
     private String [] AlarmPolicyIds;
 
     /**
-    * Array of parameters
+    * Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
     */
     @SerializedName("ClusterParams")
     @Expose
@@ -322,6 +322,13 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
     @SerializedName("SlaveZone")
     @Expose
     private String SlaveZone;
+
+    /**
+    * 
+    */
+    @SerializedName("InstanceInitInfos")
+    @Expose
+    private InstanceInitInfo [] InstanceInitInfos;
 
     /**
      * Get AZ 
@@ -984,16 +991,16 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
     }
 
     /**
-     * Get Array of parameters 
-     * @return ClusterParams Array of parameters
+     * Get Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive). 
+     * @return ClusterParams Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
      */
     public ParamItem [] getClusterParams() {
         return this.ClusterParams;
     }
 
     /**
-     * Set Array of parameters
-     * @param ClusterParams Array of parameters
+     * Set Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
+     * @param ClusterParams Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
      */
     public void setClusterParams(ParamItem [] ClusterParams) {
         this.ClusterParams = ClusterParams;
@@ -1045,6 +1052,22 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
      */
     public void setSlaveZone(String SlaveZone) {
         this.SlaveZone = SlaveZone;
+    }
+
+    /**
+     * Get  
+     * @return InstanceInitInfos 
+     */
+    public InstanceInitInfo [] getInstanceInitInfos() {
+        return this.InstanceInitInfos;
+    }
+
+    /**
+     * Set 
+     * @param InstanceInitInfos 
+     */
+    public void setInstanceInitInfos(InstanceInitInfo [] InstanceInitInfos) {
+        this.InstanceInitInfos = InstanceInitInfos;
     }
 
     public CreateClustersRequest() {
@@ -1187,6 +1210,12 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
         if (source.SlaveZone != null) {
             this.SlaveZone = new String(source.SlaveZone);
         }
+        if (source.InstanceInitInfos != null) {
+            this.InstanceInitInfos = new InstanceInitInfo[source.InstanceInitInfos.length];
+            for (int i = 0; i < source.InstanceInitInfos.length; i++) {
+                this.InstanceInitInfos[i] = new InstanceInitInfo(source.InstanceInitInfos[i]);
+            }
+        }
     }
 
 
@@ -1234,6 +1263,7 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
         this.setParamSimple(map, prefix + "DealMode", this.DealMode);
         this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
         this.setParamSimple(map, prefix + "SlaveZone", this.SlaveZone);
+        this.setParamArrayObj(map, prefix + "InstanceInitInfos.", this.InstanceInitInfos);
 
     }
 }

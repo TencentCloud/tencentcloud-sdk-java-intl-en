@@ -123,6 +123,9 @@ public enum CynosdbErrorCode {
     // Invalid parameter value.
      INVALIDPARAMETERVALUE_INVALIDPARAMETERVALUEERROR("InvalidParameterValue.InvalidParameterValueError"),
      
+    // The password is invalid.
+     INVALIDPARAMETERVALUE_INVALIDPASSWORDVALUEERROR("InvalidParameterValue.InvalidPasswordValueError"),
+     
     // The region is invalid.
      INVALIDPARAMETERVALUE_INVALIDREGIONIDERROR("InvalidParameterValue.InvalidRegionIdError"),
      
@@ -167,6 +170,9 @@ public enum CynosdbErrorCode {
      
     // For the instance in this status, the operation is not allowed.
      OPERATIONDENIED_INSTANCESTATUSDENIEDERROR("OperationDenied.InstanceStatusDeniedError"),
+     
+    // The instance is not running.
+     OPERATIONDENIED_INSTANCESTATUSLIMITERROR("OperationDenied.InstanceStatusLimitError"),
      
     // Insufficient account balance.
      OPERATIONDENIED_INSUFFICIENTBALANCEERROR("OperationDenied.InsufficientBalanceError"),

@@ -24,6 +24,7 @@ public class DescribeRollbackTimeRangeResponse extends AbstractModel{
 
     /**
     * Start time of valid rollback time range (disused)
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TimeRangeStart")
     @Expose
@@ -31,6 +32,7 @@ public class DescribeRollbackTimeRangeResponse extends AbstractModel{
 
     /**
     * End time of valid rollback time range (disused)
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TimeRangeEnd")
     @Expose
@@ -51,8 +53,10 @@ public class DescribeRollbackTimeRangeResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Start time of valid rollback time range (disused) 
+     * Get Start time of valid rollback time range (disused)
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return TimeRangeStart Start time of valid rollback time range (disused)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTimeRangeStart() {
         return this.TimeRangeStart;
@@ -60,15 +64,19 @@ public class DescribeRollbackTimeRangeResponse extends AbstractModel{
 
     /**
      * Set Start time of valid rollback time range (disused)
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param TimeRangeStart Start time of valid rollback time range (disused)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTimeRangeStart(String TimeRangeStart) {
         this.TimeRangeStart = TimeRangeStart;
     }
 
     /**
-     * Get End time of valid rollback time range (disused) 
+     * Get End time of valid rollback time range (disused)
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return TimeRangeEnd End time of valid rollback time range (disused)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTimeRangeEnd() {
         return this.TimeRangeEnd;
@@ -76,7 +84,9 @@ public class DescribeRollbackTimeRangeResponse extends AbstractModel{
 
     /**
      * Set End time of valid rollback time range (disused)
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param TimeRangeEnd End time of valid rollback time range (disused)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTimeRangeEnd(String TimeRangeEnd) {
         this.TimeRangeEnd = TimeRangeEnd;

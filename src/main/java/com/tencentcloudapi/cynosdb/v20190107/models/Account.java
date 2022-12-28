@@ -58,6 +58,13 @@ public class Account extends AbstractModel{
     private String Host;
 
     /**
+    * The max connections
+    */
+    @SerializedName("MaxUserConnections")
+    @Expose
+    private Long MaxUserConnections;
+
+    /**
      * Get Database account name 
      * @return AccountName Database account name
      */
@@ -137,6 +144,22 @@ public class Account extends AbstractModel{
         this.Host = Host;
     }
 
+    /**
+     * Get The max connections 
+     * @return MaxUserConnections The max connections
+     */
+    public Long getMaxUserConnections() {
+        return this.MaxUserConnections;
+    }
+
+    /**
+     * Set The max connections
+     * @param MaxUserConnections The max connections
+     */
+    public void setMaxUserConnections(Long MaxUserConnections) {
+        this.MaxUserConnections = MaxUserConnections;
+    }
+
     public Account() {
     }
 
@@ -160,6 +183,9 @@ public class Account extends AbstractModel{
         if (source.Host != null) {
             this.Host = new String(source.Host);
         }
+        if (source.MaxUserConnections != null) {
+            this.MaxUserConnections = new Long(source.MaxUserConnections);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class Account extends AbstractModel{
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "Host", this.Host);
+        this.setParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
 
     }
 }
