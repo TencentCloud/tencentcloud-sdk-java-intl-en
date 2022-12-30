@@ -37,6 +37,14 @@ public class ReviewAudioVideoRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
+    * The moderation template ID. Valid values:
+<li>`10` (default): The preset template, which can detect inappropriate information with labels including pornographic (`Porn`), terrorist (`Terror`), and politically sensitive (`Polity`).</li>
+    */
+    @SerializedName("Definition")
+    @Expose
+    private Long Definition;
+
+    /**
     * The priority of a task flow. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
     */
     @SerializedName("TasksPriority")
@@ -94,6 +102,26 @@ public class ReviewAudioVideoRequest extends AbstractModel{
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
+    }
+
+    /**
+     * Get The moderation template ID. Valid values:
+<li>`10` (default): The preset template, which can detect inappropriate information with labels including pornographic (`Porn`), terrorist (`Terror`), and politically sensitive (`Polity`).</li> 
+     * @return Definition The moderation template ID. Valid values:
+<li>`10` (default): The preset template, which can detect inappropriate information with labels including pornographic (`Porn`), terrorist (`Terror`), and politically sensitive (`Polity`).</li>
+     */
+    public Long getDefinition() {
+        return this.Definition;
+    }
+
+    /**
+     * Set The moderation template ID. Valid values:
+<li>`10` (default): The preset template, which can detect inappropriate information with labels including pornographic (`Porn`), terrorist (`Terror`), and politically sensitive (`Polity`).</li>
+     * @param Definition The moderation template ID. Valid values:
+<li>`10` (default): The preset template, which can detect inappropriate information with labels including pornographic (`Porn`), terrorist (`Terror`), and politically sensitive (`Polity`).</li>
+     */
+    public void setDefinition(Long Definition) {
+        this.Definition = Definition;
     }
 
     /**
@@ -174,6 +202,9 @@ public class ReviewAudioVideoRequest extends AbstractModel{
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
         }
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
         if (source.TasksPriority != null) {
             this.TasksPriority = new Long(source.TasksPriority);
         }
@@ -195,6 +226,7 @@ public class ReviewAudioVideoRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
+        this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);

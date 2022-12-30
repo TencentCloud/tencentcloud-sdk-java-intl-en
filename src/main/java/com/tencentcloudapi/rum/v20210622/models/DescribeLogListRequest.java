@@ -65,7 +65,7 @@ public class DescribeLogListRequest extends AbstractModel{
     private String Context;
 
     /**
-    * Query statement, which is required and can contain up to 4,096 characters.
+    * Query statement, which is required and can contain up to 4,096 characters, such as "id:120001 AND type:\"log\"".
     */
     @SerializedName("Query")
     @Expose
@@ -175,16 +175,16 @@ public class DescribeLogListRequest extends AbstractModel{
     }
 
     /**
-     * Get Query statement, which is required and can contain up to 4,096 characters. 
-     * @return Query Query statement, which is required and can contain up to 4,096 characters.
+     * Get Query statement, which is required and can contain up to 4,096 characters, such as "id:120001 AND type:\"log\"". 
+     * @return Query Query statement, which is required and can contain up to 4,096 characters, such as "id:120001 AND type:\"log\"".
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set Query statement, which is required and can contain up to 4,096 characters.
-     * @param Query Query statement, which is required and can contain up to 4,096 characters.
+     * Set Query statement, which is required and can contain up to 4,096 characters, such as "id:120001 AND type:\"log\"".
+     * @param Query Query statement, which is required and can contain up to 4,096 characters, such as "id:120001 AND type:\"log\"".
      */
     public void setQuery(String Query) {
         this.Query = Query;

@@ -115,6 +115,21 @@ Valid values when `Form` is `Voice` and `Label` is `Porn`:
     private String [] KeywordSet;
 
     /**
+    * The URL of a suspected image (which will be deleted
+ after `PicUrlExpireTime`).
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
+
+    /**
+    * The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    */
+    @SerializedName("PicUrlExpireTime")
+    @Expose
+    private String PicUrlExpireTime;
+
+    /**
      * Get The start time offset (seconds) of the segment. 
      * @return StartTimeOffset The start time offset (seconds) of the segment.
      */
@@ -362,6 +377,42 @@ Valid values when `Form` is `Voice` and `Label` is `Porn`:
         this.KeywordSet = KeywordSet;
     }
 
+    /**
+     * Get The URL of a suspected image (which will be deleted
+ after `PicUrlExpireTime`). 
+     * @return Url The URL of a suspected image (which will be deleted
+ after `PicUrlExpireTime`).
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set The URL of a suspected image (which will be deleted
+ after `PicUrlExpireTime`).
+     * @param Url The URL of a suspected image (which will be deleted
+ after `PicUrlExpireTime`).
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
+    /**
+     * Get The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return PicUrlExpireTime The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     */
+    public String getPicUrlExpireTime() {
+        return this.PicUrlExpireTime;
+    }
+
+    /**
+     * Set The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param PicUrlExpireTime The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     */
+    public void setPicUrlExpireTime(String PicUrlExpireTime) {
+        this.PicUrlExpireTime = PicUrlExpireTime;
+    }
+
     public ReviewAudioVideoSegmentItem() {
     }
 
@@ -406,6 +457,12 @@ Valid values when `Form` is `Voice` and `Label` is `Porn`:
                 this.KeywordSet[i] = new String(source.KeywordSet[i]);
             }
         }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.PicUrlExpireTime != null) {
+            this.PicUrlExpireTime = new String(source.PicUrlExpireTime);
+        }
     }
 
 
@@ -423,6 +480,8 @@ Valid values when `Form` is `Voice` and `Label` is `Porn`:
         this.setParamArraySimple(map, prefix + "AreaCoordSet.", this.AreaCoordSet);
         this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamArraySimple(map, prefix + "KeywordSet.", this.KeywordSet);
+        this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "PicUrlExpireTime", this.PicUrlExpireTime);
 
     }
 }

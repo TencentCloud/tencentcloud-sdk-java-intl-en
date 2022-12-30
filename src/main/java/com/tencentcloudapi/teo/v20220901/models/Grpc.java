@@ -20,41 +20,51 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyLoadBalancingResponse extends AbstractModel{
+public class Grpc extends AbstractModel{
 
     /**
-    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+    * Whether to enable gRPC support
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
     */
-    @SerializedName("RequestId")
+    @SerializedName("Switch")
     @Expose
-    private String RequestId;
+    private String Switch;
 
     /**
-     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
-     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * Get Whether to enable gRPC support
+<li>`on`: Enable</li>
+<li>`off`: Disable</li> 
+     * @return Switch Whether to enable gRPC support
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
      */
-    public String getRequestId() {
-        return this.RequestId;
+    public String getSwitch() {
+        return this.Switch;
     }
 
     /**
-     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * Set Whether to enable gRPC support
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+     * @param Switch Whether to enable gRPC support
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
      */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
+    public void setSwitch(String Switch) {
+        this.Switch = Switch;
     }
 
-    public ModifyLoadBalancingResponse() {
+    public Grpc() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyLoadBalancingResponse(ModifyLoadBalancingResponse source) {
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+    public Grpc(Grpc source) {
+        if (source.Switch != null) {
+            this.Switch = new String(source.Switch);
         }
     }
 
@@ -63,7 +73,7 @@ public class ModifyLoadBalancingResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "Switch", this.Switch);
 
     }
 }

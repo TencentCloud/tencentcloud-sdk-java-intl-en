@@ -13,28 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.teo.v20220901.models;
+package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDnsRecordsResponse extends AbstractModel{
+public class CreateClusterResponse extends AbstractModel{
 
     /**
-    * Total number of DNS records.
+    * The instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("TotalCount")
+    @SerializedName("InstanceId")
     @Expose
-    private Long TotalCount;
-
-    /**
-    * List of DNS records
-    */
-    @SerializedName("DnsRecords")
-    @Expose
-    private DnsRecord [] DnsRecords;
+    private String InstanceId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +38,23 @@ public class DescribeDnsRecordsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Total number of DNS records. 
-     * @return TotalCount Total number of DNS records.
+     * Get The instance ID.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return InstanceId The instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public Long getTotalCount() {
-        return this.TotalCount;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set Total number of DNS records.
-     * @param TotalCount Total number of DNS records.
+     * Set The instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param InstanceId The instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get List of DNS records 
-     * @return DnsRecords List of DNS records
-     */
-    public DnsRecord [] getDnsRecords() {
-        return this.DnsRecords;
-    }
-
-    /**
-     * Set List of DNS records
-     * @param DnsRecords List of DNS records
-     */
-    public void setDnsRecords(DnsRecord [] DnsRecords) {
-        this.DnsRecords = DnsRecords;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
     /**
@@ -91,22 +73,16 @@ public class DescribeDnsRecordsResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeDnsRecordsResponse() {
+    public CreateClusterResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDnsRecordsResponse(DescribeDnsRecordsResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.DnsRecords != null) {
-            this.DnsRecords = new DnsRecord[source.DnsRecords.length];
-            for (int i = 0; i < source.DnsRecords.length; i++) {
-                this.DnsRecords[i] = new DnsRecord(source.DnsRecords[i]);
-            }
+    public CreateClusterResponse(CreateClusterResponse source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +94,7 @@ public class DescribeDnsRecordsResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "DnsRecords.", this.DnsRecords);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

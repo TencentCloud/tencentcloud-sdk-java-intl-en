@@ -20,17 +20,17 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeTimingL4DataRequest extends AbstractModel{
+public class DescribeTimingL4AccessDataRequest extends AbstractModel{
 
     /**
-    * The start time.
+    * Query start time
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * The end time.
+    * Query end time
     */
     @SerializedName("EndTime")
     @Expose
@@ -38,36 +38,25 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
 
     /**
     * Metric to query. Values:
-<li>`l4Flow_connections`: Access connections;</li>
-<li>`l4Flow_flux`: Access traffic;</li>
-<li>`l4Flow_inFlux`: Inbound traffic;</li>
-<li>`l4Flow_outFlux`: Outbound traffic;</li>
-<li>`l4Flow_outPkt`: Outbound packets.</li>
+<li>`l4Flow_connections`: Number of connections</li>
     */
     @SerializedName("MetricNames")
     @Expose
     private String [] MetricNames;
 
     /**
-    * List of sites to be queried. All sites will be selected if this field is not specified.
+    * IDs of sites to be queried. All sites will be selected if this field is not specified.
     */
     @SerializedName("ZoneIds")
     @Expose
     private String [] ZoneIds;
 
     /**
-    * List of L4 proxy IDs. All L4 proxies will be selected if this field is not specified.
-    */
-    @SerializedName("ProxyIds")
-    @Expose
-    private String [] ProxyIds;
-
-    /**
-    * The query time granularity. Values:
-<li>`min`: 1 minute;</li>
-<li>`5min`: 5 minute;</li>
-<li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
+    * The query granularity. Values:
+<li>`min`: 1 minute</li>
+<li>`5min`: 5 minutes</li>
+<li>`hour`: 1 hour</li>
+<li>`day`: 1 day</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
     */
     @SerializedName("Interval")
     @Expose
@@ -78,9 +67,9 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
 <li>`ruleId`:<br>   Filter by the <strong>forwarding rule ID</strong><br>   Type: String<br>   Required: No</li>
 <li>`proxyId`:<br>   Filter by the <strong>L4 proxy ID</strong><br>   Type: String<br>   Required: No</li>
     */
-    @SerializedName("Filters")
+    @SerializedName("QueryConditions")
     @Expose
-    private QueryCondition [] Filters;
+    private QueryCondition [] QueryConditions;
 
     /**
     * Geolocation scope. Values:
@@ -93,32 +82,32 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
     private String Area;
 
     /**
-     * Get The start time. 
-     * @return StartTime The start time.
+     * Get Query start time 
+     * @return StartTime Query start time
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set The start time.
-     * @param StartTime The start time.
+     * Set Query start time
+     * @param StartTime Query start time
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get The end time. 
-     * @return EndTime The end time.
+     * Get Query end time 
+     * @return EndTime Query end time
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set The end time.
-     * @param EndTime The end time.
+     * Set Query end time
+     * @param EndTime Query end time
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -126,17 +115,9 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
 
     /**
      * Get Metric to query. Values:
-<li>`l4Flow_connections`: Access connections;</li>
-<li>`l4Flow_flux`: Access traffic;</li>
-<li>`l4Flow_inFlux`: Inbound traffic;</li>
-<li>`l4Flow_outFlux`: Outbound traffic;</li>
-<li>`l4Flow_outPkt`: Outbound packets.</li> 
+<li>`l4Flow_connections`: Number of connections</li> 
      * @return MetricNames Metric to query. Values:
-<li>`l4Flow_connections`: Access connections;</li>
-<li>`l4Flow_flux`: Access traffic;</li>
-<li>`l4Flow_inFlux`: Inbound traffic;</li>
-<li>`l4Flow_outFlux`: Outbound traffic;</li>
-<li>`l4Flow_outPkt`: Outbound packets.</li>
+<li>`l4Flow_connections`: Number of connections</li>
      */
     public String [] getMetricNames() {
         return this.MetricNames;
@@ -144,81 +125,57 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
 
     /**
      * Set Metric to query. Values:
-<li>`l4Flow_connections`: Access connections;</li>
-<li>`l4Flow_flux`: Access traffic;</li>
-<li>`l4Flow_inFlux`: Inbound traffic;</li>
-<li>`l4Flow_outFlux`: Outbound traffic;</li>
-<li>`l4Flow_outPkt`: Outbound packets.</li>
+<li>`l4Flow_connections`: Number of connections</li>
      * @param MetricNames Metric to query. Values:
-<li>`l4Flow_connections`: Access connections;</li>
-<li>`l4Flow_flux`: Access traffic;</li>
-<li>`l4Flow_inFlux`: Inbound traffic;</li>
-<li>`l4Flow_outFlux`: Outbound traffic;</li>
-<li>`l4Flow_outPkt`: Outbound packets.</li>
+<li>`l4Flow_connections`: Number of connections</li>
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;
     }
 
     /**
-     * Get List of sites to be queried. All sites will be selected if this field is not specified. 
-     * @return ZoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+     * Get IDs of sites to be queried. All sites will be selected if this field is not specified. 
+     * @return ZoneIds IDs of sites to be queried. All sites will be selected if this field is not specified.
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set List of sites to be queried. All sites will be selected if this field is not specified.
-     * @param ZoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+     * Set IDs of sites to be queried. All sites will be selected if this field is not specified.
+     * @param ZoneIds IDs of sites to be queried. All sites will be selected if this field is not specified.
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get List of L4 proxy IDs. All L4 proxies will be selected if this field is not specified. 
-     * @return ProxyIds List of L4 proxy IDs. All L4 proxies will be selected if this field is not specified.
-     */
-    public String [] getProxyIds() {
-        return this.ProxyIds;
-    }
-
-    /**
-     * Set List of L4 proxy IDs. All L4 proxies will be selected if this field is not specified.
-     * @param ProxyIds List of L4 proxy IDs. All L4 proxies will be selected if this field is not specified.
-     */
-    public void setProxyIds(String [] ProxyIds) {
-        this.ProxyIds = ProxyIds;
-    }
-
-    /**
-     * Get The query time granularity. Values:
-<li>`min`: 1 minute;</li>
-<li>`5min`: 5 minute;</li>
-<li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days. 
-     * @return Interval The query time granularity. Values:
-<li>`min`: 1 minute;</li>
-<li>`5min`: 5 minute;</li>
-<li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
+     * Get The query granularity. Values:
+<li>`min`: 1 minute</li>
+<li>`5min`: 5 minutes</li>
+<li>`hour`: 1 hour</li>
+<li>`day`: 1 day</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days. 
+     * @return Interval The query granularity. Values:
+<li>`min`: 1 minute</li>
+<li>`5min`: 5 minutes</li>
+<li>`hour`: 1 hour</li>
+<li>`day`: 1 day</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
      */
     public String getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set The query time granularity. Values:
-<li>`min`: 1 minute;</li>
-<li>`5min`: 5 minute;</li>
-<li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
-     * @param Interval The query time granularity. Values:
-<li>`min`: 1 minute;</li>
-<li>`5min`: 5 minute;</li>
-<li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
+     * Set The query granularity. Values:
+<li>`min`: 1 minute</li>
+<li>`5min`: 5 minutes</li>
+<li>`hour`: 1 hour</li>
+<li>`day`: 1 day</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
+     * @param Interval The query granularity. Values:
+<li>`min`: 1 minute</li>
+<li>`5min`: 5 minutes</li>
+<li>`hour`: 1 hour</li>
+<li>`day`: 1 day</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;
@@ -228,24 +185,24 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
      * Get Filter conditions. See below for details: 
 <li>`ruleId`:<br>   Filter by the <strong>forwarding rule ID</strong><br>   Type: String<br>   Required: No</li>
 <li>`proxyId`:<br>   Filter by the <strong>L4 proxy ID</strong><br>   Type: String<br>   Required: No</li> 
-     * @return Filters Filter conditions. See below for details: 
+     * @return QueryConditions Filter conditions. See below for details: 
 <li>`ruleId`:<br>   Filter by the <strong>forwarding rule ID</strong><br>   Type: String<br>   Required: No</li>
 <li>`proxyId`:<br>   Filter by the <strong>L4 proxy ID</strong><br>   Type: String<br>   Required: No</li>
      */
-    public QueryCondition [] getFilters() {
-        return this.Filters;
+    public QueryCondition [] getQueryConditions() {
+        return this.QueryConditions;
     }
 
     /**
      * Set Filter conditions. See below for details: 
 <li>`ruleId`:<br>   Filter by the <strong>forwarding rule ID</strong><br>   Type: String<br>   Required: No</li>
 <li>`proxyId`:<br>   Filter by the <strong>L4 proxy ID</strong><br>   Type: String<br>   Required: No</li>
-     * @param Filters Filter conditions. See below for details: 
+     * @param QueryConditions Filter conditions. See below for details: 
 <li>`ruleId`:<br>   Filter by the <strong>forwarding rule ID</strong><br>   Type: String<br>   Required: No</li>
 <li>`proxyId`:<br>   Filter by the <strong>L4 proxy ID</strong><br>   Type: String<br>   Required: No</li>
      */
-    public void setFilters(QueryCondition [] Filters) {
-        this.Filters = Filters;
+    public void setQueryConditions(QueryCondition [] QueryConditions) {
+        this.QueryConditions = QueryConditions;
     }
 
     /**
@@ -276,14 +233,14 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
         this.Area = Area;
     }
 
-    public DescribeTimingL4DataRequest() {
+    public DescribeTimingL4AccessDataRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeTimingL4DataRequest(DescribeTimingL4DataRequest source) {
+    public DescribeTimingL4AccessDataRequest(DescribeTimingL4AccessDataRequest source) {
         if (source.StartTime != null) {
             this.StartTime = new String(source.StartTime);
         }
@@ -302,19 +259,13 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
                 this.ZoneIds[i] = new String(source.ZoneIds[i]);
             }
         }
-        if (source.ProxyIds != null) {
-            this.ProxyIds = new String[source.ProxyIds.length];
-            for (int i = 0; i < source.ProxyIds.length; i++) {
-                this.ProxyIds[i] = new String(source.ProxyIds[i]);
-            }
-        }
         if (source.Interval != null) {
             this.Interval = new String(source.Interval);
         }
-        if (source.Filters != null) {
-            this.Filters = new QueryCondition[source.Filters.length];
-            for (int i = 0; i < source.Filters.length; i++) {
-                this.Filters[i] = new QueryCondition(source.Filters[i]);
+        if (source.QueryConditions != null) {
+            this.QueryConditions = new QueryCondition[source.QueryConditions.length];
+            for (int i = 0; i < source.QueryConditions.length; i++) {
+                this.QueryConditions[i] = new QueryCondition(source.QueryConditions[i]);
             }
         }
         if (source.Area != null) {
@@ -331,9 +282,8 @@ public class DescribeTimingL4DataRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArraySimple(map, prefix + "MetricNames.", this.MetricNames);
         this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
-        this.setParamArraySimple(map, prefix + "ProxyIds.", this.ProxyIds);
         this.setParamSimple(map, prefix + "Interval", this.Interval);
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamArrayObj(map, prefix + "QueryConditions.", this.QueryConditions);
         this.setParamSimple(map, prefix + "Area", this.Area);
 
     }

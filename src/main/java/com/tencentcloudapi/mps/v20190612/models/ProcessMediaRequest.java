@@ -113,6 +113,15 @@ Note 3: The trigger configured for a scheme is for automatically starting a sche
     private Long ScheduleId;
 
     /**
+    * The task type.
+<li> `Online` (default): A task that is executed immediately.</li>
+<li> `Offline`: A task that is executed when the system is idle (within three days by default).</li>
+    */
+    @SerializedName("TaskType")
+    @Expose
+    private String TaskType;
+
+    /**
      * Get The information of the file to process. 
      * @return InputInfo The information of the file to process.
      */
@@ -328,6 +337,30 @@ Note 3: The trigger configured for a scheme is for automatically starting a sche
         this.ScheduleId = ScheduleId;
     }
 
+    /**
+     * Get The task type.
+<li> `Online` (default): A task that is executed immediately.</li>
+<li> `Offline`: A task that is executed when the system is idle (within three days by default).</li> 
+     * @return TaskType The task type.
+<li> `Online` (default): A task that is executed immediately.</li>
+<li> `Offline`: A task that is executed when the system is idle (within three days by default).</li>
+     */
+    public String getTaskType() {
+        return this.TaskType;
+    }
+
+    /**
+     * Set The task type.
+<li> `Online` (default): A task that is executed immediately.</li>
+<li> `Offline`: A task that is executed when the system is idle (within three days by default).</li>
+     * @param TaskType The task type.
+<li> `Online` (default): A task that is executed immediately.</li>
+<li> `Offline`: A task that is executed when the system is idle (within three days by default).</li>
+     */
+    public void setTaskType(String TaskType) {
+        this.TaskType = TaskType;
+    }
+
     public ProcessMediaRequest() {
     }
 
@@ -372,6 +405,9 @@ Note 3: The trigger configured for a scheme is for automatically starting a sche
         if (source.ScheduleId != null) {
             this.ScheduleId = new Long(source.ScheduleId);
         }
+        if (source.TaskType != null) {
+            this.TaskType = new String(source.TaskType);
+        }
     }
 
 
@@ -391,6 +427,7 @@ Note 3: The trigger configured for a scheme is for automatically starting a sche
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
+        this.setParamSimple(map, prefix + "TaskType", this.TaskType);
 
     }
 }

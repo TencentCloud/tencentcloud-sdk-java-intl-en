@@ -30,6 +30,13 @@ public class CreateWhitelistResponse extends AbstractModel{
     private String Msg;
 
     /**
+    * Allowlist ID
+    */
+    @SerializedName("ID")
+    @Expose
+    private Long ID;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -50,6 +57,22 @@ public class CreateWhitelistResponse extends AbstractModel{
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;
+    }
+
+    /**
+     * Get Allowlist ID 
+     * @return ID Allowlist ID
+     */
+    public Long getID() {
+        return this.ID;
+    }
+
+    /**
+     * Set Allowlist ID
+     * @param ID Allowlist ID
+     */
+    public void setID(Long ID) {
+        this.ID = ID;
     }
 
     /**
@@ -79,6 +102,9 @@ public class CreateWhitelistResponse extends AbstractModel{
         if (source.Msg != null) {
             this.Msg = new String(source.Msg);
         }
+        if (source.ID != null) {
+            this.ID = new Long(source.ID);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +116,7 @@ public class CreateWhitelistResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Msg", this.Msg);
+        this.setParamSimple(map, prefix + "ID", this.ID);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -1169,6 +1169,28 @@ This API is used to delete a player configuration.
     }
 
     /**
+     *This API is used to get file attributes asynchronously.
+- Currently, this API can only get the MD5 hash of a file.
+- If the file queried is in HLS or DASH format, the attributes of the index file will be returned.
+     * @param req DescribeFileAttributesRequest
+     * @return DescribeFileAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFileAttributesResponse DescribeFileAttributes(DescribeFileAttributesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFileAttributesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFileAttributesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFileAttributes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query image processing templates. You can specify the filters as well as the offset to start returning records from.
      * @param req DescribeImageProcessingTemplatesRequest
      * @return DescribeImageProcessingTemplatesResponse

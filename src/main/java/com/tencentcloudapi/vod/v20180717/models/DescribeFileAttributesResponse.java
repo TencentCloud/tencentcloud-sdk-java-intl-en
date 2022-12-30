@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.teo.v20220901.models;
+package com.tencentcloudapi.vod.v20180717.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateDnsRecordResponse extends AbstractModel{
+public class DescribeFileAttributesResponse extends AbstractModel{
 
     /**
-    * The DNS record ID.
+    * The task ID.
     */
-    @SerializedName("DnsRecordId")
+    @SerializedName("TaskId")
     @Expose
-    private String DnsRecordId;
+    private String TaskId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +37,19 @@ public class CreateDnsRecordResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The DNS record ID. 
-     * @return DnsRecordId The DNS record ID.
+     * Get The task ID. 
+     * @return TaskId The task ID.
      */
-    public String getDnsRecordId() {
-        return this.DnsRecordId;
+    public String getTaskId() {
+        return this.TaskId;
     }
 
     /**
-     * Set The DNS record ID.
-     * @param DnsRecordId The DNS record ID.
+     * Set The task ID.
+     * @param TaskId The task ID.
      */
-    public void setDnsRecordId(String DnsRecordId) {
-        this.DnsRecordId = DnsRecordId;
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -68,16 +68,16 @@ public class CreateDnsRecordResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateDnsRecordResponse() {
+    public DescribeFileAttributesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateDnsRecordResponse(CreateDnsRecordResponse source) {
-        if (source.DnsRecordId != null) {
-            this.DnsRecordId = new String(source.DnsRecordId);
+    public DescribeFileAttributesResponse(DescribeFileAttributesResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +89,7 @@ public class CreateDnsRecordResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DnsRecordId", this.DnsRecordId);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

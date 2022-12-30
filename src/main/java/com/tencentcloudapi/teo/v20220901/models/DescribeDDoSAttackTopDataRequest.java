@@ -38,12 +38,12 @@ public class DescribeDDoSAttackTopDataRequest extends AbstractModel{
 
     /**
     * The statistical metric. Values:
-<li>`ddos_attackFlux_protocol`: Top-ranked protocols by DDoS attack traffic.</li>
-<li>`ddos_attackPackageNum_protocol`: Top-ranked protocols by DDoS attack packets.</li>
-<li>`ddos_attackNum_attackType`: Top-ranked attack types by DDoS attacks.</li>
-<li>`ddos_attackNum_sregion`: Top-ranked attack source regions by DDoS attacks.</li>
-<li>`ddos_attackFlux_sip`: Top-ranked attacker IPs by DDoS attack traffic.</li>
-<li>`ddos_attackFlux_sregion`: Top-ranked attack source regions by DDoS attack traffic.</li>
+<li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
+<li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
+<li>`ddos_attackNum_attackType`: Rank attack types by the number of attacks.</li>
+<li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
+<li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
+<li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
     */
     @SerializedName("MetricName")
     @Expose
@@ -140,19 +140,19 @@ public class DescribeDDoSAttackTopDataRequest extends AbstractModel{
 
     /**
      * Get The statistical metric. Values:
-<li>`ddos_attackFlux_protocol`: Top-ranked protocols by DDoS attack traffic.</li>
-<li>`ddos_attackPackageNum_protocol`: Top-ranked protocols by DDoS attack packets.</li>
-<li>`ddos_attackNum_attackType`: Top-ranked attack types by DDoS attacks.</li>
-<li>`ddos_attackNum_sregion`: Top-ranked attack source regions by DDoS attacks.</li>
-<li>`ddos_attackFlux_sip`: Top-ranked attacker IPs by DDoS attack traffic.</li>
-<li>`ddos_attackFlux_sregion`: Top-ranked attack source regions by DDoS attack traffic.</li> 
+<li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
+<li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
+<li>`ddos_attackNum_attackType`: Rank attack types by the number of attacks.</li>
+<li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
+<li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
+<li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li> 
      * @return MetricName The statistical metric. Values:
-<li>`ddos_attackFlux_protocol`: Top-ranked protocols by DDoS attack traffic.</li>
-<li>`ddos_attackPackageNum_protocol`: Top-ranked protocols by DDoS attack packets.</li>
-<li>`ddos_attackNum_attackType`: Top-ranked attack types by DDoS attacks.</li>
-<li>`ddos_attackNum_sregion`: Top-ranked attack source regions by DDoS attacks.</li>
-<li>`ddos_attackFlux_sip`: Top-ranked attacker IPs by DDoS attack traffic.</li>
-<li>`ddos_attackFlux_sregion`: Top-ranked attack source regions by DDoS attack traffic.</li>
+<li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
+<li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
+<li>`ddos_attackNum_attackType`: Rank attack types by the number of attacks.</li>
+<li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
+<li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
+<li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
      */
     public String getMetricName() {
         return this.MetricName;
@@ -160,19 +160,19 @@ public class DescribeDDoSAttackTopDataRequest extends AbstractModel{
 
     /**
      * Set The statistical metric. Values:
-<li>`ddos_attackFlux_protocol`: Top-ranked protocols by DDoS attack traffic.</li>
-<li>`ddos_attackPackageNum_protocol`: Top-ranked protocols by DDoS attack packets.</li>
-<li>`ddos_attackNum_attackType`: Top-ranked attack types by DDoS attacks.</li>
-<li>`ddos_attackNum_sregion`: Top-ranked attack source regions by DDoS attacks.</li>
-<li>`ddos_attackFlux_sip`: Top-ranked attacker IPs by DDoS attack traffic.</li>
-<li>`ddos_attackFlux_sregion`: Top-ranked attack source regions by DDoS attack traffic.</li>
+<li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
+<li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
+<li>`ddos_attackNum_attackType`: Rank attack types by the number of attacks.</li>
+<li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
+<li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
+<li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
      * @param MetricName The statistical metric. Values:
-<li>`ddos_attackFlux_protocol`: Top-ranked protocols by DDoS attack traffic.</li>
-<li>`ddos_attackPackageNum_protocol`: Top-ranked protocols by DDoS attack packets.</li>
-<li>`ddos_attackNum_attackType`: Top-ranked attack types by DDoS attacks.</li>
-<li>`ddos_attackNum_sregion`: Top-ranked attack source regions by DDoS attacks.</li>
-<li>`ddos_attackFlux_sip`: Top-ranked attacker IPs by DDoS attack traffic.</li>
-<li>`ddos_attackFlux_sregion`: Top-ranked attack source regions by DDoS attack traffic.</li>
+<li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
+<li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
+<li>`ddos_attackNum_attackType`: Rank attack types by the number of attacks.</li>
+<li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
+<li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
+<li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;

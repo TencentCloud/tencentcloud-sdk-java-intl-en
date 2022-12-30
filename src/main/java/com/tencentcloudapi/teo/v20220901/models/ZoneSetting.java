@@ -175,6 +175,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private ClientIpCountry ClientIpCountry;
 
     /**
+    * Configuration of gRPC support
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Grpc")
+    @Expose
+    private Grpc Grpc;
+
+    /**
      * Get Name of the site 
      * @return ZoneName Name of the site
      */
@@ -554,6 +562,26 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.ClientIpCountry = ClientIpCountry;
     }
 
+    /**
+     * Get Configuration of gRPC support
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Grpc Configuration of gRPC support
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Grpc getGrpc() {
+        return this.Grpc;
+    }
+
+    /**
+     * Set Configuration of gRPC support
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Grpc Configuration of gRPC support
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setGrpc(Grpc Grpc) {
+        this.Grpc = Grpc;
+    }
+
     public ZoneSetting() {
     }
 
@@ -619,6 +647,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.ClientIpCountry != null) {
             this.ClientIpCountry = new ClientIpCountry(source.ClientIpCountry);
         }
+        if (source.Grpc != null) {
+            this.Grpc = new Grpc(source.Grpc);
+        }
     }
 
 
@@ -645,6 +676,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamObj(map, prefix + "Ipv6.", this.Ipv6);
         this.setParamObj(map, prefix + "Https.", this.Https);
         this.setParamObj(map, prefix + "ClientIpCountry.", this.ClientIpCountry);
+        this.setParamObj(map, prefix + "Grpc.", this.Grpc);
 
     }
 }

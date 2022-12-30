@@ -24,16 +24,17 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 
     /**
     * The task type. Valid values:
-<li>Procedure: Video processing</li>
-<li>EditMedia: Video editing</li>
-<li>SplitMedia: Video splitting</li>
-<li>ComposeMedia: Media file production</li>
-<li>WechatPublish: WeChat publishing</li>
-<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
-<li>PullUpload: Pulling media files for upload</li>
-<li>FastClipMedia: Quick clipping</li>
-<li>RemoveWatermarkTask: Watermark removal</li>
-<li> ReviewAudioVideo: Moderation</li>
+<li>`Procedure`: Video processing</li>
+<li>`EditMedia`: Video editing</li>
+<li>`SplitMedia`: Video splitting</li>
+<li>`ComposeMedia`: Media file production</li>
+<li>`WechatPublish`: WeChat publishing</li>
+<li>`WechatMiniProgramPublish`: Publishing videos on WeChat Mini Program</li>
+<li>`PullUpload`: Pulling media files for upload</li>
+<li>`FastClipMedia`: Quick clipping</li>
+<li>`RemoveWatermarkTask`: Watermark removal</li>
+<li>`DescribeFileAttributesTask`: Getting file attributes</li>
+<li> `ReviewAudioVideo`: Moderation</li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -199,7 +200,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private ReduceMediaBitrateTask ReduceMediaBitrateTask;
 
     /**
-    * 
+    * The information of a task to get file attributes. This parameter is valid only if `TaskType` is `DescribeFileAttributes`.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DescribeFileAttributesTask")
     @Expose
@@ -214,27 +216,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get The task type. Valid values:
-<li>Procedure: Video processing</li>
-<li>EditMedia: Video editing</li>
-<li>SplitMedia: Video splitting</li>
-<li>ComposeMedia: Media file production</li>
-<li>WechatPublish: WeChat publishing</li>
-<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
-<li>PullUpload: Pulling media files for upload</li>
-<li>FastClipMedia: Quick clipping</li>
-<li>RemoveWatermarkTask: Watermark removal</li>
-<li> ReviewAudioVideo: Moderation</li> 
+<li>`Procedure`: Video processing</li>
+<li>`EditMedia`: Video editing</li>
+<li>`SplitMedia`: Video splitting</li>
+<li>`ComposeMedia`: Media file production</li>
+<li>`WechatPublish`: WeChat publishing</li>
+<li>`WechatMiniProgramPublish`: Publishing videos on WeChat Mini Program</li>
+<li>`PullUpload`: Pulling media files for upload</li>
+<li>`FastClipMedia`: Quick clipping</li>
+<li>`RemoveWatermarkTask`: Watermark removal</li>
+<li>`DescribeFileAttributesTask`: Getting file attributes</li>
+<li> `ReviewAudioVideo`: Moderation</li> 
      * @return TaskType The task type. Valid values:
-<li>Procedure: Video processing</li>
-<li>EditMedia: Video editing</li>
-<li>SplitMedia: Video splitting</li>
-<li>ComposeMedia: Media file production</li>
-<li>WechatPublish: WeChat publishing</li>
-<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
-<li>PullUpload: Pulling media files for upload</li>
-<li>FastClipMedia: Quick clipping</li>
-<li>RemoveWatermarkTask: Watermark removal</li>
-<li> ReviewAudioVideo: Moderation</li>
+<li>`Procedure`: Video processing</li>
+<li>`EditMedia`: Video editing</li>
+<li>`SplitMedia`: Video splitting</li>
+<li>`ComposeMedia`: Media file production</li>
+<li>`WechatPublish`: WeChat publishing</li>
+<li>`WechatMiniProgramPublish`: Publishing videos on WeChat Mini Program</li>
+<li>`PullUpload`: Pulling media files for upload</li>
+<li>`FastClipMedia`: Quick clipping</li>
+<li>`RemoveWatermarkTask`: Watermark removal</li>
+<li>`DescribeFileAttributesTask`: Getting file attributes</li>
+<li> `ReviewAudioVideo`: Moderation</li>
      */
     public String getTaskType() {
         return this.TaskType;
@@ -242,27 +246,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set The task type. Valid values:
-<li>Procedure: Video processing</li>
-<li>EditMedia: Video editing</li>
-<li>SplitMedia: Video splitting</li>
-<li>ComposeMedia: Media file production</li>
-<li>WechatPublish: WeChat publishing</li>
-<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
-<li>PullUpload: Pulling media files for upload</li>
-<li>FastClipMedia: Quick clipping</li>
-<li>RemoveWatermarkTask: Watermark removal</li>
-<li> ReviewAudioVideo: Moderation</li>
+<li>`Procedure`: Video processing</li>
+<li>`EditMedia`: Video editing</li>
+<li>`SplitMedia`: Video splitting</li>
+<li>`ComposeMedia`: Media file production</li>
+<li>`WechatPublish`: WeChat publishing</li>
+<li>`WechatMiniProgramPublish`: Publishing videos on WeChat Mini Program</li>
+<li>`PullUpload`: Pulling media files for upload</li>
+<li>`FastClipMedia`: Quick clipping</li>
+<li>`RemoveWatermarkTask`: Watermark removal</li>
+<li>`DescribeFileAttributesTask`: Getting file attributes</li>
+<li> `ReviewAudioVideo`: Moderation</li>
      * @param TaskType The task type. Valid values:
-<li>Procedure: Video processing</li>
-<li>EditMedia: Video editing</li>
-<li>SplitMedia: Video splitting</li>
-<li>ComposeMedia: Media file production</li>
-<li>WechatPublish: WeChat publishing</li>
-<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
-<li>PullUpload: Pulling media files for upload</li>
-<li>FastClipMedia: Quick clipping</li>
-<li>RemoveWatermarkTask: Watermark removal</li>
-<li> ReviewAudioVideo: Moderation</li>
+<li>`Procedure`: Video processing</li>
+<li>`EditMedia`: Video editing</li>
+<li>`SplitMedia`: Video splitting</li>
+<li>`ComposeMedia`: Media file production</li>
+<li>`WechatPublish`: WeChat publishing</li>
+<li>`WechatMiniProgramPublish`: Publishing videos on WeChat Mini Program</li>
+<li>`PullUpload`: Pulling media files for upload</li>
+<li>`FastClipMedia`: Quick clipping</li>
+<li>`RemoveWatermarkTask`: Watermark removal</li>
+<li>`DescribeFileAttributesTask`: Getting file attributes</li>
+<li> `ReviewAudioVideo`: Moderation</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
@@ -665,16 +671,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return DescribeFileAttributesTask 
+     * Get The information of a task to get file attributes. This parameter is valid only if `TaskType` is `DescribeFileAttributes`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DescribeFileAttributesTask The information of a task to get file attributes. This parameter is valid only if `TaskType` is `DescribeFileAttributes`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DescribeFileAttributesTask getDescribeFileAttributesTask() {
         return this.DescribeFileAttributesTask;
     }
 
     /**
-     * Set 
-     * @param DescribeFileAttributesTask 
+     * Set The information of a task to get file attributes. This parameter is valid only if `TaskType` is `DescribeFileAttributes`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DescribeFileAttributesTask The information of a task to get file attributes. This parameter is valid only if `TaskType` is `DescribeFileAttributes`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDescribeFileAttributesTask(DescribeFileAttributesTask DescribeFileAttributesTask) {
         this.DescribeFileAttributesTask = DescribeFileAttributesTask;

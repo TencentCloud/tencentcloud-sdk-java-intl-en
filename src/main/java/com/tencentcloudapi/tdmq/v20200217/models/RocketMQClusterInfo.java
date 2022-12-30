@@ -97,6 +97,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean IsVip;
 
     /**
+    * TDMQ for RocketMQ cluster type flag
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RocketMQFlag")
+    @Expose
+    private Boolean RocketMQFlag;
+
+    /**
+    * 
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * 
+    */
+    @SerializedName("IsolateTime")
+    @Expose
+    private Long IsolateTime;
+
+    /**
+    * 
+    */
+    @SerializedName("HttpPublicEndpoint")
+    @Expose
+    private String HttpPublicEndpoint;
+
+    /**
+    * 
+    */
+    @SerializedName("HttpVpcEndpoint")
+    @Expose
+    private String HttpVpcEndpoint;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -272,6 +308,90 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.IsVip = IsVip;
     }
 
+    /**
+     * Get TDMQ for RocketMQ cluster type flag
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RocketMQFlag TDMQ for RocketMQ cluster type flag
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getRocketMQFlag() {
+        return this.RocketMQFlag;
+    }
+
+    /**
+     * Set TDMQ for RocketMQ cluster type flag
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RocketMQFlag TDMQ for RocketMQ cluster type flag
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRocketMQFlag(Boolean RocketMQFlag) {
+        this.RocketMQFlag = RocketMQFlag;
+    }
+
+    /**
+     * Get  
+     * @return Status 
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 
+     * @param Status 
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get  
+     * @return IsolateTime 
+     */
+    public Long getIsolateTime() {
+        return this.IsolateTime;
+    }
+
+    /**
+     * Set 
+     * @param IsolateTime 
+     */
+    public void setIsolateTime(Long IsolateTime) {
+        this.IsolateTime = IsolateTime;
+    }
+
+    /**
+     * Get  
+     * @return HttpPublicEndpoint 
+     */
+    public String getHttpPublicEndpoint() {
+        return this.HttpPublicEndpoint;
+    }
+
+    /**
+     * Set 
+     * @param HttpPublicEndpoint 
+     */
+    public void setHttpPublicEndpoint(String HttpPublicEndpoint) {
+        this.HttpPublicEndpoint = HttpPublicEndpoint;
+    }
+
+    /**
+     * Get  
+     * @return HttpVpcEndpoint 
+     */
+    public String getHttpVpcEndpoint() {
+        return this.HttpVpcEndpoint;
+    }
+
+    /**
+     * Set 
+     * @param HttpVpcEndpoint 
+     */
+    public void setHttpVpcEndpoint(String HttpVpcEndpoint) {
+        this.HttpVpcEndpoint = HttpVpcEndpoint;
+    }
+
     public RocketMQClusterInfo() {
     }
 
@@ -313,6 +433,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.IsVip != null) {
             this.IsVip = new Boolean(source.IsVip);
         }
+        if (source.RocketMQFlag != null) {
+            this.RocketMQFlag = new Boolean(source.RocketMQFlag);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.IsolateTime != null) {
+            this.IsolateTime = new Long(source.IsolateTime);
+        }
+        if (source.HttpPublicEndpoint != null) {
+            this.HttpPublicEndpoint = new String(source.HttpPublicEndpoint);
+        }
+        if (source.HttpVpcEndpoint != null) {
+            this.HttpVpcEndpoint = new String(source.HttpVpcEndpoint);
+        }
     }
 
 
@@ -330,6 +465,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "SupportNamespaceEndpoint", this.SupportNamespaceEndpoint);
         this.setParamArrayObj(map, prefix + "Vpcs.", this.Vpcs);
         this.setParamSimple(map, prefix + "IsVip", this.IsVip);
+        this.setParamSimple(map, prefix + "RocketMQFlag", this.RocketMQFlag);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
+        this.setParamSimple(map, prefix + "HttpPublicEndpoint", this.HttpPublicEndpoint);
+        this.setParamSimple(map, prefix + "HttpVpcEndpoint", this.HttpVpcEndpoint);
 
     }
 }

@@ -61,6 +61,26 @@ This API is used to add user lists (user management).
 
     /**
      *This API is used to create an EMR cluster instance.
+     * @param req CreateClusterRequest
+     * @return CreateClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClusterResponse CreateCluster(CreateClusterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateClusterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateClusterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCluster");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create an EMR cluster instance.
      * @param req CreateInstanceRequest
      * @return CreateInstanceResponse
      * @throws TencentCloudSDKException
@@ -313,6 +333,26 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
                 Type type = new TypeToken<JsonResponseModel<ModifyResourceSchedulerResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyResourceScheduler");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to scale out a cluster.
+     * @param req ScaleOutClusterRequest
+     * @return ScaleOutClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScaleOutClusterResponse ScaleOutCluster(ScaleOutClusterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ScaleOutClusterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ScaleOutClusterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ScaleOutCluster");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

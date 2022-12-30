@@ -20,21 +20,22 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeLoadBalancingResponse extends AbstractModel{
+public class DescribeDistributionL4AccessDataResponse extends AbstractModel{
 
     /**
-    * Total number of records.
+    * Total number of query results.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Load balancer information.
+    * Distribution of connection duration
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
-    @SerializedName("Data")
+    @SerializedName("TopDataRecords")
     @Expose
-    private LoadBalancing [] Data;
+    private TopDataRecord [] TopDataRecords;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +45,39 @@ public class DescribeLoadBalancingResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Total number of records. 
-     * @return TotalCount Total number of records.
+     * Get Total number of query results. 
+     * @return TotalCount Total number of query results.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of records.
-     * @param TotalCount Total number of records.
+     * Set Total number of query results.
+     * @param TotalCount Total number of query results.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Load balancer information. 
-     * @return Data Load balancer information.
+     * Get Distribution of connection duration
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return TopDataRecords Distribution of connection duration
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
-    public LoadBalancing [] getData() {
-        return this.Data;
+    public TopDataRecord [] getTopDataRecords() {
+        return this.TopDataRecords;
     }
 
     /**
-     * Set Load balancer information.
-     * @param Data Load balancer information.
+     * Set Distribution of connection duration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param TopDataRecords Distribution of connection duration
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
-    public void setData(LoadBalancing [] Data) {
-        this.Data = Data;
+    public void setTopDataRecords(TopDataRecord [] TopDataRecords) {
+        this.TopDataRecords = TopDataRecords;
     }
 
     /**
@@ -91,21 +96,21 @@ public class DescribeLoadBalancingResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeLoadBalancingResponse() {
+    public DescribeDistributionL4AccessDataResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeLoadBalancingResponse(DescribeLoadBalancingResponse source) {
+    public DescribeDistributionL4AccessDataResponse(DescribeDistributionL4AccessDataResponse source) {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.Data != null) {
-            this.Data = new LoadBalancing[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new LoadBalancing(source.Data[i]);
+        if (source.TopDataRecords != null) {
+            this.TopDataRecords = new TopDataRecord[source.TopDataRecords.length];
+            for (int i = 0; i < source.TopDataRecords.length; i++) {
+                this.TopDataRecords[i] = new TopDataRecord(source.TopDataRecords[i]);
             }
         }
         if (source.RequestId != null) {
@@ -119,7 +124,7 @@ public class DescribeLoadBalancingResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamArrayObj(map, prefix + "TopDataRecords.", this.TopDataRecords);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

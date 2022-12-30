@@ -111,6 +111,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Float AudioDuration;
 
     /**
+    * The MD5 hash of the file.
+<li><font color=red>Note</font>: To get the MD5 hash of a file, call the `DescribeFileAttributes` API. The information will be returned after the task is completed.</li>
+    */
+    @SerializedName("Md5")
+    @Expose
+    private String Md5;
+
+    /**
      * Get Size of uploaded media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Size Size of uploaded media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
@@ -330,6 +338,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.AudioDuration = AudioDuration;
     }
 
+    /**
+     * Get The MD5 hash of the file.
+<li><font color=red>Note</font>: To get the MD5 hash of a file, call the `DescribeFileAttributes` API. The information will be returned after the task is completed.</li> 
+     * @return Md5 The MD5 hash of the file.
+<li><font color=red>Note</font>: To get the MD5 hash of a file, call the `DescribeFileAttributes` API. The information will be returned after the task is completed.</li>
+     */
+    public String getMd5() {
+        return this.Md5;
+    }
+
+    /**
+     * Set The MD5 hash of the file.
+<li><font color=red>Note</font>: To get the MD5 hash of a file, call the `DescribeFileAttributes` API. The information will be returned after the task is completed.</li>
+     * @param Md5 The MD5 hash of the file.
+<li><font color=red>Note</font>: To get the MD5 hash of a file, call the `DescribeFileAttributes` API. The information will be returned after the task is completed.</li>
+     */
+    public void setMd5(String Md5) {
+        this.Md5 = Md5;
+    }
+
     public MediaMetaData() {
     }
 
@@ -377,6 +405,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.AudioDuration != null) {
             this.AudioDuration = new Float(source.AudioDuration);
         }
+        if (source.Md5 != null) {
+            this.Md5 = new String(source.Md5);
+        }
     }
 
 
@@ -395,6 +426,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
         this.setParamSimple(map, prefix + "VideoDuration", this.VideoDuration);
         this.setParamSimple(map, prefix + "AudioDuration", this.AudioDuration);
+        this.setParamSimple(map, prefix + "Md5", this.Md5);
 
     }
 }

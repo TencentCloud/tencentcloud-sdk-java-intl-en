@@ -48,6 +48,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String DefaultCache;
 
     /**
+    * Specifies whether to use the default caching policy when Cache-Control is not returned from the origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("DefaultCacheStrategy")
+    @Expose
+    private String DefaultCacheStrategy;
+
+    /**
      * Get Whether to enable the configuration of following the origin server. Valid values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li> 
@@ -111,6 +119,26 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.DefaultCache = DefaultCache;
     }
 
+    /**
+     * Get Specifies whether to use the default caching policy when Cache-Control is not returned from the origin
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return DefaultCacheStrategy Specifies whether to use the default caching policy when Cache-Control is not returned from the origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getDefaultCacheStrategy() {
+        return this.DefaultCacheStrategy;
+    }
+
+    /**
+     * Set Specifies whether to use the default caching policy when Cache-Control is not returned from the origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param DefaultCacheStrategy Specifies whether to use the default caching policy when Cache-Control is not returned from the origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setDefaultCacheStrategy(String DefaultCacheStrategy) {
+        this.DefaultCacheStrategy = DefaultCacheStrategy;
+    }
+
     public FollowOrigin() {
     }
 
@@ -128,6 +156,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.DefaultCache != null) {
             this.DefaultCache = new String(source.DefaultCache);
         }
+        if (source.DefaultCacheStrategy != null) {
+            this.DefaultCacheStrategy = new String(source.DefaultCacheStrategy);
+        }
     }
 
 
@@ -138,6 +169,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamSimple(map, prefix + "DefaultCacheTime", this.DefaultCacheTime);
         this.setParamSimple(map, prefix + "DefaultCache", this.DefaultCache);
+        this.setParamSimple(map, prefix + "DefaultCacheStrategy", this.DefaultCacheStrategy);
 
     }
 }

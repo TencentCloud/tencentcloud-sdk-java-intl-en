@@ -179,26 +179,6 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a DNS record.
-     * @param req CreateDnsRecordRequest
-     * @return CreateDnsRecordResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateDnsRecordResponse CreateDnsRecord(CreateDnsRecordRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateDnsRecordResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateDnsRecordResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateDnsRecord");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to create an IP blocklist/allowlist.
      * @param req CreateIpTableListRequest
      * @return CreateIpTableListResponse
@@ -211,26 +191,6 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateIpTableListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateIpTableList");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to create a CLB instance.
-     * @param req CreateLoadBalancingRequest
-     * @return CreateLoadBalancingResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateLoadBalancingResponse CreateLoadBalancing(CreateLoadBalancingRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateLoadBalancingResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateLoadBalancingResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateLoadBalancing");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -511,46 +471,6 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteApplicationProxyRuleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteApplicationProxyRule");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to delete DNS records in batches.
-     * @param req DeleteDnsRecordsRequest
-     * @return DeleteDnsRecordsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteDnsRecordsResponse DeleteDnsRecords(DeleteDnsRecordsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteDnsRecordsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteDnsRecordsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteDnsRecords");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to delete a CLB instance.
-     * @param req DeleteLoadBalancingRequest
-     * @return DeleteLoadBalancingResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteLoadBalancingResponse DeleteLoadBalancing(DeleteLoadBalancingRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DeleteLoadBalancingResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DeleteLoadBalancingResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DeleteLoadBalancing");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1059,6 +979,26 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the data of L4 connection duration over time.
+     * @param req DescribeDistributionL4AccessDataRequest
+     * @return DescribeDistributionL4AccessDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDistributionL4AccessDataResponse DescribeDistributionL4AccessData(DescribeDistributionL4AccessDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDistributionL4AccessDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDistributionL4AccessDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDistributionL4AccessData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get DNS requests.
      * @param req DescribeDnsDataRequest
      * @return DescribeDnsDataResponse
@@ -1071,26 +1011,6 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeDnsDataResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeDnsData");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to query DNS records. Paging, sorting and filtering are supported.
-     * @param req DescribeDnsRecordsRequest
-     * @return DescribeDnsRecordsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDnsRecordsResponse DescribeDnsRecords(DescribeDnsRecordsRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeDnsRecordsResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeDnsRecordsResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeDnsRecords");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1151,26 +1071,6 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeIdentificationsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeIdentifications");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to obtain a list of CLB instances.
-     * @param req DescribeLoadBalancingRequest
-     * @return DescribeLoadBalancingResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeLoadBalancingResponse DescribeLoadBalancing(DescribeLoadBalancingRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeLoadBalancingResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeLoadBalancingResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeLoadBalancing");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1571,6 +1471,26 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeSpeedTestingQuotaResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeSpeedTestingQuota");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the number of L4 connections over time.
+     * @param req DescribeTimingL4AccessDataRequest
+     * @return DescribeTimingL4AccessDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTimingL4AccessDataResponse DescribeTimingL4AccessData(DescribeTimingL4AccessDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTimingL4AccessDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTimingL4AccessDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTimingL4AccessData");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2179,26 +2099,6 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify DNS records.
-     * @param req ModifyDnsRecordRequest
-     * @return ModifyDnsRecordResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyDnsRecordResponse ModifyDnsRecord(ModifyDnsRecordRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyDnsRecordResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyDnsRecordResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyDnsRecord");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to modify the DNSSEC status of a site.
      * @param req ModifyDnssecRequest
      * @return ModifyDnssecResponse
@@ -2231,46 +2131,6 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyHostsCertificateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyHostsCertificate");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to modify a CLB instance.
-     * @param req ModifyLoadBalancingRequest
-     * @return ModifyLoadBalancingResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyLoadBalancingResponse ModifyLoadBalancing(ModifyLoadBalancingRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLoadBalancingResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLoadBalancingResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLoadBalancing");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *This API is used to modify the status of a CLB instance.
-     * @param req ModifyLoadBalancingStatusRequest
-     * @return ModifyLoadBalancingStatusResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyLoadBalancingStatusResponse ModifyLoadBalancingStatus(ModifyLoadBalancingStatusRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<ModifyLoadBalancingStatusResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<ModifyLoadBalancingStatusResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "ModifyLoadBalancingStatus");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -3,7 +3,7 @@ public enum EmrErrorCode {
     // Operation failed.
      FAILEDOPERATION("FailedOperation"),
      
-    // 
+    // Operation failed.
      FAILEDOPERATION_CHECKIFSUPPORTPODSTRETCH("FailedOperation.CheckIfSupportPodStretch"),
      
     // Duplicate order. Please check the EMR console.
@@ -90,6 +90,9 @@ public enum EmrErrorCode {
     // The number of master nodes is invalid.
      INVALIDPARAMETER_INCORRECTMASTERCOUNT("InvalidParameter.IncorrectMasterCount"),
      
+    // Invalid `AllNodeResourceSpec`.
+     INVALIDPARAMETER_INVALIDALLNODERESOURCESPEC("InvalidParameter.InvalidAllNodeResourceSpec"),
+     
     // Invalid `AppId`.
      INVALIDPARAMETER_INVALIDAPPID("InvalidParameter.InvalidAppId"),
      
@@ -123,6 +126,9 @@ public enum EmrErrorCode {
     // Error message: Invalid PodParameter.
      INVALIDPARAMETER_INVALIDCUSTOMIZEDPODPARAM("InvalidParameter.InvalidCustomizedPodParam"),
      
+    // Conflict between`DependService` and `EnableKerberos`.
+     INVALIDPARAMETER_INVALIDDEPENDSERVICEANDENABLEKERBEROSCONFLICT("InvalidParameter.InvalidDependServiceAndEnableKerberosConflict"),
+     
     // Invalid disk size.
      INVALIDPARAMETER_INVALIDDISKSIZE("InvalidParameter.InvalidDiskSize"),
      
@@ -131,6 +137,9 @@ public enum EmrErrorCode {
      
     // Invalid `CustomConfig`.
      INVALIDPARAMETER_INVALIDEXTENDFIELD("InvalidParameter.InvalidExtendField"),
+     
+    // Invalid instance billing mode.
+     INVALIDPARAMETER_INVALIDINSTANCECHARGETYPE("InvalidParameter.InvalidInstanceChargeType"),
      
     // Invalid cluster name.
      INVALIDPARAMETER_INVALIDINSTANCENAME("InvalidParameter.InvalidInstanceName"),
@@ -168,14 +177,23 @@ public enum EmrErrorCode {
     // Invalid product ID.
      INVALIDPARAMETER_INVALIDPRODUCTID("InvalidParameter.InvalidProductId"),
      
+    // Invalid product version.
+     INVALIDPARAMETER_INVALIDPRODUCTVERSION("InvalidParameter.InvalidProductVersion"),
+     
     // Invalid project ID.
      INVALIDPARAMETER_INVALIDPROJECTID("InvalidParameter.InvalidProjectId"),
+     
+    // Invalid auto-renewal identifier.
+     INVALIDPARAMETER_INVALIDRENEWFLAG("InvalidParameter.InvalidRenewFlag"),
      
     // Invalid resource ID.
      INVALIDPARAMETER_INVALIDRESOURCEIDS("InvalidParameter.InvalidResourceIds"),
      
     // Invalid resource specification.
      INVALIDPARAMETER_INVALIDRESOURCESPEC("InvalidParameter.InvalidResourceSpec"),
+     
+    // Invalid bootstrap script execution parameter.
+     INVALIDPARAMETER_INVALIDSCRIPTBOOTSTRAPACTIONCONFIG("InvalidParameter.InvalidScriptBootstrapActionConfig"),
      
     // This EMR version does not support the security mode.
      INVALIDPARAMETER_INVALIDSECURITYSUPPORT("InvalidParameter.InvalidSecuritySupport"),
@@ -230,6 +248,9 @@ public enum EmrErrorCode {
      
     // Invalid AZ.
      INVALIDPARAMETER_INVALIDZONE("InvalidParameter.InvalidZone"),
+     
+    // Invalid identifier for Kerberos support.
+     INVALIDPARAMETER_KERBEROSSUPPORT("InvalidParameter.KerberosSupport"),
      
     // Invalid parameter. Necessary components are missing.
      INVALIDPARAMETER_NOTCONTAINMUSTSELECTSOFTWARE("InvalidParameter.NotContainMustSelectSoftware"),

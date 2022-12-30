@@ -86,6 +86,20 @@ public class CreateTawInstanceRequest extends AbstractModel{
     private String BuyingChannel;
 
     /**
+    * 
+    */
+    @SerializedName("ResourcePackageType")
+    @Expose
+    private Long ResourcePackageType;
+
+    /**
+    * 
+    */
+    @SerializedName("ResourcePackageNum")
+    @Expose
+    private Long ResourcePackageNum;
+
+    /**
      * Get Region ID (at least greater than 0) 
      * @return AreaId Region ID (at least greater than 0)
      */
@@ -229,6 +243,38 @@ public class CreateTawInstanceRequest extends AbstractModel{
         this.BuyingChannel = BuyingChannel;
     }
 
+    /**
+     * Get  
+     * @return ResourcePackageType 
+     */
+    public Long getResourcePackageType() {
+        return this.ResourcePackageType;
+    }
+
+    /**
+     * Set 
+     * @param ResourcePackageType 
+     */
+    public void setResourcePackageType(Long ResourcePackageType) {
+        this.ResourcePackageType = ResourcePackageType;
+    }
+
+    /**
+     * Get  
+     * @return ResourcePackageNum 
+     */
+    public Long getResourcePackageNum() {
+        return this.ResourcePackageNum;
+    }
+
+    /**
+     * Set 
+     * @param ResourcePackageNum 
+     */
+    public void setResourcePackageNum(Long ResourcePackageNum) {
+        this.ResourcePackageNum = ResourcePackageNum;
+    }
+
     public CreateTawInstanceRequest() {
     }
 
@@ -267,6 +313,12 @@ public class CreateTawInstanceRequest extends AbstractModel{
         if (source.BuyingChannel != null) {
             this.BuyingChannel = new String(source.BuyingChannel);
         }
+        if (source.ResourcePackageType != null) {
+            this.ResourcePackageType = new Long(source.ResourcePackageType);
+        }
+        if (source.ResourcePackageNum != null) {
+            this.ResourcePackageNum = new Long(source.ResourcePackageNum);
+        }
     }
 
 
@@ -283,6 +335,8 @@ public class CreateTawInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CountNum", this.CountNum);
         this.setParamSimple(map, prefix + "PeriodRetain", this.PeriodRetain);
         this.setParamSimple(map, prefix + "BuyingChannel", this.BuyingChannel);
+        this.setParamSimple(map, prefix + "ResourcePackageType", this.ResourcePackageType);
+        this.setParamSimple(map, prefix + "ResourcePackageNum", this.ResourcePackageNum);
 
     }
 }

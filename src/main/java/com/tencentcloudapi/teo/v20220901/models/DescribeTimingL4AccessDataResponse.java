@@ -20,14 +20,22 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateLoadBalancingResponse extends AbstractModel{
+public class DescribeTimingL4AccessDataResponse extends AbstractModel{
 
     /**
-    * The load balancer ID.
+    * Total number of query results.
     */
-    @SerializedName("LoadBalancingId")
+    @SerializedName("TotalCount")
     @Expose
-    private String LoadBalancingId;
+    private Long TotalCount;
+
+    /**
+    * Number of L4 connections over time
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TimingDataRecords")
+    @Expose
+    private TimingDataRecord [] TimingDataRecords;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +45,39 @@ public class CreateLoadBalancingResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The load balancer ID. 
-     * @return LoadBalancingId The load balancer ID.
+     * Get Total number of query results. 
+     * @return TotalCount Total number of query results.
      */
-    public String getLoadBalancingId() {
-        return this.LoadBalancingId;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set The load balancer ID.
-     * @param LoadBalancingId The load balancer ID.
+     * Set Total number of query results.
+     * @param TotalCount Total number of query results.
      */
-    public void setLoadBalancingId(String LoadBalancingId) {
-        this.LoadBalancingId = LoadBalancingId;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get Number of L4 connections over time
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return TimingDataRecords Number of L4 connections over time
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public TimingDataRecord [] getTimingDataRecords() {
+        return this.TimingDataRecords;
+    }
+
+    /**
+     * Set Number of L4 connections over time
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param TimingDataRecords Number of L4 connections over time
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTimingDataRecords(TimingDataRecord [] TimingDataRecords) {
+        this.TimingDataRecords = TimingDataRecords;
     }
 
     /**
@@ -68,16 +96,22 @@ public class CreateLoadBalancingResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateLoadBalancingResponse() {
+    public DescribeTimingL4AccessDataResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateLoadBalancingResponse(CreateLoadBalancingResponse source) {
-        if (source.LoadBalancingId != null) {
-            this.LoadBalancingId = new String(source.LoadBalancingId);
+    public DescribeTimingL4AccessDataResponse(DescribeTimingL4AccessDataResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.TimingDataRecords != null) {
+            this.TimingDataRecords = new TimingDataRecord[source.TimingDataRecords.length];
+            for (int i = 0; i < source.TimingDataRecords.length; i++) {
+                this.TimingDataRecords[i] = new TimingDataRecord(source.TimingDataRecords[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +123,8 @@ public class CreateLoadBalancingResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "LoadBalancingId", this.LoadBalancingId);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "TimingDataRecords.", this.TimingDataRecords);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

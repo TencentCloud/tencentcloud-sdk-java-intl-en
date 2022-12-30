@@ -58,7 +58,7 @@ public class DescribeInstancesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Sort by field <li>1: instance ID </li><li>2: instance name </li><li>3: AZ </li><li>4: creation time </li>If `orderKey` is not passed in, sort by creation time in descending order
+    * The sorting field. <li>1: Instance ID </li><li>2: Instance name </li><li>3: AZ </li><li>4: Creation time </li>If `OrderByKey` is not passed in, sorting is performed by creation time in descending order.
     */
     @SerializedName("OrderByKey")
     @Expose
@@ -93,7 +93,7 @@ public class DescribeInstancesRequest extends AbstractModel{
     private String [] ZoneList;
 
     /**
-    * Health status filter list
+    * The health status filter. Valid values: `0` (green), `1` (yellow), `2` (red), `-1` (unknown).
     */
     @SerializedName("HealthStatus")
     @Expose
@@ -187,16 +187,16 @@ public class DescribeInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Sort by field <li>1: instance ID </li><li>2: instance name </li><li>3: AZ </li><li>4: creation time </li>If `orderKey` is not passed in, sort by creation time in descending order 
-     * @return OrderByKey Sort by field <li>1: instance ID </li><li>2: instance name </li><li>3: AZ </li><li>4: creation time </li>If `orderKey` is not passed in, sort by creation time in descending order
+     * Get The sorting field. <li>1: Instance ID </li><li>2: Instance name </li><li>3: AZ </li><li>4: Creation time </li>If `OrderByKey` is not passed in, sorting is performed by creation time in descending order. 
+     * @return OrderByKey The sorting field. <li>1: Instance ID </li><li>2: Instance name </li><li>3: AZ </li><li>4: Creation time </li>If `OrderByKey` is not passed in, sorting is performed by creation time in descending order.
      */
     public Long getOrderByKey() {
         return this.OrderByKey;
     }
 
     /**
-     * Set Sort by field <li>1: instance ID </li><li>2: instance name </li><li>3: AZ </li><li>4: creation time </li>If `orderKey` is not passed in, sort by creation time in descending order
-     * @param OrderByKey Sort by field <li>1: instance ID </li><li>2: instance name </li><li>3: AZ </li><li>4: creation time </li>If `orderKey` is not passed in, sort by creation time in descending order
+     * Set The sorting field. <li>1: Instance ID </li><li>2: Instance name </li><li>3: AZ </li><li>4: Creation time </li>If `OrderByKey` is not passed in, sorting is performed by creation time in descending order.
+     * @param OrderByKey The sorting field. <li>1: Instance ID </li><li>2: Instance name </li><li>3: AZ </li><li>4: Creation time </li>If `OrderByKey` is not passed in, sorting is performed by creation time in descending order.
      */
     public void setOrderByKey(Long OrderByKey) {
         this.OrderByKey = OrderByKey;
@@ -267,16 +267,16 @@ public class DescribeInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Health status filter list 
-     * @return HealthStatus Health status filter list
+     * Get The health status filter. Valid values: `0` (green), `1` (yellow), `2` (red), `-1` (unknown). 
+     * @return HealthStatus The health status filter. Valid values: `0` (green), `1` (yellow), `2` (red), `-1` (unknown).
      */
     public Long [] getHealthStatus() {
         return this.HealthStatus;
     }
 
     /**
-     * Set Health status filter list
-     * @param HealthStatus Health status filter list
+     * Set The health status filter. Valid values: `0` (green), `1` (yellow), `2` (red), `-1` (unknown).
+     * @param HealthStatus The health status filter. Valid values: `0` (green), `1` (yellow), `2` (red), `-1` (unknown).
      */
     public void setHealthStatus(Long [] HealthStatus) {
         this.HealthStatus = HealthStatus;

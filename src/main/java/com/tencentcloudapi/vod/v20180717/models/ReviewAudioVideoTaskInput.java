@@ -30,6 +30,13 @@ public class ReviewAudioVideoTaskInput extends AbstractModel{
     private String FileId;
 
     /**
+    * The moderation template ID.
+    */
+    @SerializedName("Definition")
+    @Expose
+    private Long Definition;
+
+    /**
      * Get The ID of the media file. 
      * @return FileId The ID of the media file.
      */
@@ -45,6 +52,22 @@ public class ReviewAudioVideoTaskInput extends AbstractModel{
         this.FileId = FileId;
     }
 
+    /**
+     * Get The moderation template ID. 
+     * @return Definition The moderation template ID.
+     */
+    public Long getDefinition() {
+        return this.Definition;
+    }
+
+    /**
+     * Set The moderation template ID.
+     * @param Definition The moderation template ID.
+     */
+    public void setDefinition(Long Definition) {
+        this.Definition = Definition;
+    }
+
     public ReviewAudioVideoTaskInput() {
     }
 
@@ -56,6 +79,9 @@ public class ReviewAudioVideoTaskInput extends AbstractModel{
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
         }
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class ReviewAudioVideoTaskInput extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamSimple(map, prefix + "Definition", this.Definition);
 
     }
 }

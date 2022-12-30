@@ -84,22 +84,23 @@ public class DescribeOverviewL7DataRequest extends AbstractModel{
     private String Interval;
 
     /**
-    * Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
-    */
-    @SerializedName("Area")
-    @Expose
-    private String Area;
-
-    /**
-    * Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`tagKey`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
-<li>`tagValue`<br>  Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
+    * Filter conditions. See below for details: 
+<li>`tagKey`:<br>   Filter by the <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
+<li>`tagValue`<br>  Filter by the <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
     */
     @SerializedName("Filters")
     @Expose
     private QueryCondition [] Filters;
+
+    /**
+    * Geolocation scope. Values:
+<li>`overseas`: Regions outside the Chinese mainland</li>
+<li>`mainland`: Chinese mainland</li>
+<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
 
     /**
      * Get The start time. 
@@ -262,51 +263,55 @@ public class DescribeOverviewL7DataRequest extends AbstractModel{
     }
 
     /**
-     * Get Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location. 
-     * @return Area Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
-     */
-    public String getArea() {
-        return this.Area;
-    }
-
-    /**
-     * Set Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
-     * @param Area Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
-     */
-    public void setArea(String Area) {
-        this.Area = Area;
-    }
-
-    /**
-     * Get Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`tagKey`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
-<li>`tagValue`<br>  Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li> 
-     * @return Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`tagKey`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
-<li>`tagValue`<br>  Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
+     * Get Filter conditions. See below for details: 
+<li>`tagKey`:<br>   Filter by the <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
+<li>`tagValue`<br>  Filter by the <strong>tag value</strong><br>   Type: String<br>   Required: No</li> 
+     * @return Filters Filter conditions. See below for details: 
+<li>`tagKey`:<br>   Filter by the <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
+<li>`tagValue`<br>  Filter by the <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
      */
     public QueryCondition [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`tagKey`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
-<li>`tagValue`<br>  Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
-     * @param Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`tagKey`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
-<li>`tagValue`<br>  Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
+     * Set Filter conditions. See below for details: 
+<li>`tagKey`:<br>   Filter by the <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
+<li>`tagValue`<br>  Filter by the <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
+     * @param Filters Filter conditions. See below for details: 
+<li>`tagKey`:<br>   Filter by the <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
+<li>`tagValue`<br>  Filter by the <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
      */
     public void setFilters(QueryCondition [] Filters) {
         this.Filters = Filters;
+    }
+
+    /**
+     * Get Geolocation scope. Values:
+<li>`overseas`: Regions outside the Chinese mainland</li>
+<li>`mainland`: Chinese mainland</li>
+<li>`global`: Global</li>If this field is not specified, the default value `global` is used. 
+     * @return Area Geolocation scope. Values:
+<li>`overseas`: Regions outside the Chinese mainland</li>
+<li>`mainland`: Chinese mainland</li>
+<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set Geolocation scope. Values:
+<li>`overseas`: Regions outside the Chinese mainland</li>
+<li>`mainland`: Chinese mainland</li>
+<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+     * @param Area Geolocation scope. Values:
+<li>`overseas`: Regions outside the Chinese mainland</li>
+<li>`mainland`: Chinese mainland</li>
+<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
     }
 
     public DescribeOverviewL7DataRequest() {
@@ -347,14 +352,14 @@ public class DescribeOverviewL7DataRequest extends AbstractModel{
         if (source.Interval != null) {
             this.Interval = new String(source.Interval);
         }
-        if (source.Area != null) {
-            this.Area = new String(source.Area);
-        }
         if (source.Filters != null) {
             this.Filters = new QueryCondition[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
                 this.Filters[i] = new QueryCondition(source.Filters[i]);
             }
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
         }
     }
 
@@ -370,8 +375,8 @@ public class DescribeOverviewL7DataRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "Interval", this.Interval);
-        this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

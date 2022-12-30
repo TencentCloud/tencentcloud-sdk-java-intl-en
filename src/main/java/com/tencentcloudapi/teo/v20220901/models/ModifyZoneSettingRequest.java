@@ -166,6 +166,14 @@ The original configuration will apply if this field is not specified.
     private ClientIpCountry ClientIpCountry;
 
     /**
+    * Configuration of gRPC support
+The original configuration will apply if this field is not specified.
+    */
+    @SerializedName("Grpc")
+    @Expose
+    private Grpc Grpc;
+
+    /**
      * Get The site ID to be modified. 
      * @return ZoneId The site ID to be modified.
      */
@@ -521,6 +529,26 @@ The original configuration will apply if this field is not specified.
         this.ClientIpCountry = ClientIpCountry;
     }
 
+    /**
+     * Get Configuration of gRPC support
+The original configuration will apply if this field is not specified. 
+     * @return Grpc Configuration of gRPC support
+The original configuration will apply if this field is not specified.
+     */
+    public Grpc getGrpc() {
+        return this.Grpc;
+    }
+
+    /**
+     * Set Configuration of gRPC support
+The original configuration will apply if this field is not specified.
+     * @param Grpc Configuration of gRPC support
+The original configuration will apply if this field is not specified.
+     */
+    public void setGrpc(Grpc Grpc) {
+        this.Grpc = Grpc;
+    }
+
     public ModifyZoneSettingRequest() {
     }
 
@@ -583,6 +611,9 @@ The original configuration will apply if this field is not specified.
         if (source.ClientIpCountry != null) {
             this.ClientIpCountry = new ClientIpCountry(source.ClientIpCountry);
         }
+        if (source.Grpc != null) {
+            this.Grpc = new Grpc(source.Grpc);
+        }
     }
 
 
@@ -608,6 +639,7 @@ The original configuration will apply if this field is not specified.
         this.setParamObj(map, prefix + "CachePrefresh.", this.CachePrefresh);
         this.setParamObj(map, prefix + "Ipv6.", this.Ipv6);
         this.setParamObj(map, prefix + "ClientIpCountry.", this.ClientIpCountry);
+        this.setParamObj(map, prefix + "Grpc.", this.Grpc);
 
     }
 }

@@ -127,6 +127,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Long AppId;
 
     /**
+    * The number of index docs.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IndexDocs")
+    @Expose
+    private Long IndexDocs;
+
+    /**
      * Get Index type
 Note: This field may return `null`, indicating that no valid value can be obtained. 
      * @return IndexType Index type
@@ -386,6 +394,26 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.AppId = AppId;
     }
 
+    /**
+     * Get The number of index docs.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IndexDocs The number of index docs.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getIndexDocs() {
+        return this.IndexDocs;
+    }
+
+    /**
+     * Set The number of index docs.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IndexDocs The number of index docs.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIndexDocs(Long IndexDocs) {
+        this.IndexDocs = IndexDocs;
+    }
+
     public IndexMetaField() {
     }
 
@@ -436,6 +464,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.AppId != null) {
             this.AppId = new Long(source.AppId);
         }
+        if (source.IndexDocs != null) {
+            this.IndexDocs = new Long(source.IndexDocs);
+        }
     }
 
 
@@ -456,6 +487,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamObj(map, prefix + "IndexOptionsField.", this.IndexOptionsField);
         this.setParamObj(map, prefix + "IndexSettingsField.", this.IndexSettingsField);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "IndexDocs", this.IndexDocs);
 
     }
 }

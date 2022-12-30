@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeFileAttributesTaskOutput extends AbstractModel{
 
     /**
-    * 
+    * The MD5 hash of the file.
     */
     @SerializedName("Md5")
     @Expose
     private String Md5;
 
     /**
-     * Get  
-     * @return Md5 
+     * Get The MD5 hash of the file. 
+     * @return Md5 The MD5 hash of the file.
      */
     public String getMd5() {
         return this.Md5;
     }
 
     /**
-     * Set 
-     * @param Md5 
+     * Set The MD5 hash of the file.
+     * @param Md5 The MD5 hash of the file.
      */
     public void setMd5(String Md5) {
         this.Md5 = Md5;

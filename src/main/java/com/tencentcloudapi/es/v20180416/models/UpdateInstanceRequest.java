@@ -59,7 +59,7 @@ Number of nodes (2-50)
     private String Password;
 
     /**
-    * Access control list
+    * The policy for visual component (Kibana and Cerebro) access over public network.
     */
     @SerializedName("EsAcl")
     @Expose
@@ -127,7 +127,9 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     private NodeInfo [] NodeInfoList;
 
     /**
-    * Public network access status
+    * The status of ES cluster access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
     */
     @SerializedName("PublicAccess")
     @Expose
@@ -141,14 +143,18 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     private EsPublicAcl EsPublicAcl;
 
     /**
-    * Public network access status of Kibana
+    * The status of Kibana access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
     */
     @SerializedName("KibanaPublicAccess")
     @Expose
     private String KibanaPublicAccess;
 
     /**
-    * Private network access status of Kibana
+    * The status of Kibana access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
     */
     @SerializedName("KibanaPrivateAccess")
     @Expose
@@ -218,14 +224,18 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     private Boolean EnableCerebro;
 
     /**
-    * Cerebro public network access status
+    * The status of Cerebro access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
     */
     @SerializedName("CerebroPublicAccess")
     @Expose
     private String CerebroPublicAccess;
 
     /**
-    * Cerebro private network access status
+    * The status of Cerebro access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
     */
     @SerializedName("CerebroPrivateAccess")
     @Expose
@@ -247,6 +257,8 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
 
     /**
     * Whether to enable the option for sending alerting messages over the public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
     */
     @SerializedName("KibanaAlteringPublicAccess")
     @Expose
@@ -337,16 +349,16 @@ Number of nodes (2-50)
     }
 
     /**
-     * Get Access control list 
-     * @return EsAcl Access control list
+     * Get The policy for visual component (Kibana and Cerebro) access over public network. 
+     * @return EsAcl The policy for visual component (Kibana and Cerebro) access over public network.
      */
     public EsAcl getEsAcl() {
         return this.EsAcl;
     }
 
     /**
-     * Set Access control list
-     * @param EsAcl Access control list
+     * Set The policy for visual component (Kibana and Cerebro) access over public network.
+     * @param EsAcl The policy for visual component (Kibana and Cerebro) access over public network.
      */
     public void setEsAcl(EsAcl EsAcl) {
         this.EsAcl = EsAcl;
@@ -501,16 +513,24 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     }
 
     /**
-     * Get Public network access status 
-     * @return PublicAccess Public network access status
+     * Get The status of ES cluster access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled. 
+     * @return PublicAccess The status of ES cluster access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
      */
     public String getPublicAccess() {
         return this.PublicAccess;
     }
 
     /**
-     * Set Public network access status
-     * @param PublicAccess Public network access status
+     * Set The status of ES cluster access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
+     * @param PublicAccess The status of ES cluster access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
      */
     public void setPublicAccess(String PublicAccess) {
         this.PublicAccess = PublicAccess;
@@ -533,32 +553,48 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     }
 
     /**
-     * Get Public network access status of Kibana 
-     * @return KibanaPublicAccess Public network access status of Kibana
+     * Get The status of Kibana access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled. 
+     * @return KibanaPublicAccess The status of Kibana access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
      */
     public String getKibanaPublicAccess() {
         return this.KibanaPublicAccess;
     }
 
     /**
-     * Set Public network access status of Kibana
-     * @param KibanaPublicAccess Public network access status of Kibana
+     * Set The status of Kibana access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
+     * @param KibanaPublicAccess The status of Kibana access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
      */
     public void setKibanaPublicAccess(String KibanaPublicAccess) {
         this.KibanaPublicAccess = KibanaPublicAccess;
     }
 
     /**
-     * Get Private network access status of Kibana 
-     * @return KibanaPrivateAccess Private network access status of Kibana
+     * Get The status of Kibana access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled. 
+     * @return KibanaPrivateAccess The status of Kibana access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
      */
     public String getKibanaPrivateAccess() {
         return this.KibanaPrivateAccess;
     }
 
     /**
-     * Set Private network access status of Kibana
-     * @param KibanaPrivateAccess Private network access status of Kibana
+     * Set The status of Kibana access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
+     * @param KibanaPrivateAccess The status of Kibana access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
      */
     public void setKibanaPrivateAccess(String KibanaPrivateAccess) {
         this.KibanaPrivateAccess = KibanaPrivateAccess;
@@ -709,32 +745,48 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     }
 
     /**
-     * Get Cerebro public network access status 
-     * @return CerebroPublicAccess Cerebro public network access status
+     * Get The status of Cerebro access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled. 
+     * @return CerebroPublicAccess The status of Cerebro access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
      */
     public String getCerebroPublicAccess() {
         return this.CerebroPublicAccess;
     }
 
     /**
-     * Set Cerebro public network access status
-     * @param CerebroPublicAccess Cerebro public network access status
+     * Set The status of Cerebro access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
+     * @param CerebroPublicAccess The status of Cerebro access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
      */
     public void setCerebroPublicAccess(String CerebroPublicAccess) {
         this.CerebroPublicAccess = CerebroPublicAccess;
     }
 
     /**
-     * Get Cerebro private network access status 
-     * @return CerebroPrivateAccess Cerebro private network access status
+     * Get The status of Cerebro access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled. 
+     * @return CerebroPrivateAccess The status of Cerebro access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
      */
     public String getCerebroPrivateAccess() {
         return this.CerebroPrivateAccess;
     }
 
     /**
-     * Set Cerebro private network access status
-     * @param CerebroPrivateAccess Cerebro private network access status
+     * Set The status of Cerebro access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
+     * @param CerebroPrivateAccess The status of Cerebro access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
      */
     public void setCerebroPrivateAccess(String CerebroPrivateAccess) {
         this.CerebroPrivateAccess = CerebroPrivateAccess;
@@ -773,8 +825,12 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     }
 
     /**
-     * Get Whether to enable the option for sending alerting messages over the public network. 
+     * Get Whether to enable the option for sending alerting messages over the public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled. 
      * @return KibanaAlteringPublicAccess Whether to enable the option for sending alerting messages over the public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
      */
     public String getKibanaAlteringPublicAccess() {
         return this.KibanaAlteringPublicAccess;
@@ -782,7 +838,11 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
 
     /**
      * Set Whether to enable the option for sending alerting messages over the public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
      * @param KibanaAlteringPublicAccess Whether to enable the option for sending alerting messages over the public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
      */
     public void setKibanaAlteringPublicAccess(String KibanaAlteringPublicAccess) {
         this.KibanaAlteringPublicAccess = KibanaAlteringPublicAccess;
