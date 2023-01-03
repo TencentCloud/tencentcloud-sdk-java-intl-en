@@ -324,7 +324,7 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
     private String SlaveZone;
 
     /**
-    * 
+    * Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
     */
     @SerializedName("InstanceInitInfos")
     @Expose
@@ -1055,16 +1055,16 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
     }
 
     /**
-     * Get  
-     * @return InstanceInitInfos 
+     * Get Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster. 
+     * @return InstanceInitInfos Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
      */
     public InstanceInitInfo [] getInstanceInitInfos() {
         return this.InstanceInitInfos;
     }
 
     /**
-     * Set 
-     * @param InstanceInitInfos 
+     * Set Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
+     * @param InstanceInitInfos Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
      */
     public void setInstanceInitInfos(InstanceInitInfo [] InstanceInitInfos) {
         this.InstanceInitInfos = InstanceInitInfos;

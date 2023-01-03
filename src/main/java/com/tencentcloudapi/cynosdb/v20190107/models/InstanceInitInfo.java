@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class InstanceInitInfo extends AbstractModel{
 
     /**
-    * 
+    * Instance CPU
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 
+    * Instance memory
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 
+    * Instance type. Valid values:`rw`, `ro`.
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 
+    * Number of the instances. Value range: 1-15.
     */
     @SerializedName("InstanceCount")
     @Expose
     private Long InstanceCount;
 
     /**
-     * Get  
-     * @return Cpu 
+     * Get Instance CPU 
+     * @return Cpu Instance CPU
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 
-     * @param Cpu 
+     * Set Instance CPU
+     * @param Cpu Instance CPU
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get  
-     * @return Memory 
+     * Get Instance memory 
+     * @return Memory Instance memory
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 
-     * @param Memory 
+     * Set Instance memory
+     * @param Memory Instance memory
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get  
-     * @return InstanceType 
+     * Get Instance type. Valid values:`rw`, `ro`. 
+     * @return InstanceType Instance type. Valid values:`rw`, `ro`.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 
-     * @param InstanceType 
+     * Set Instance type. Valid values:`rw`, `ro`.
+     * @param InstanceType Instance type. Valid values:`rw`, `ro`.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get  
-     * @return InstanceCount 
+     * Get Number of the instances. Value range: 1-15. 
+     * @return InstanceCount Number of the instances. Value range: 1-15.
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set 
-     * @param InstanceCount 
+     * Set Number of the instances. Value range: 1-15.
+     * @param InstanceCount Number of the instances. Value range: 1-15.
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
