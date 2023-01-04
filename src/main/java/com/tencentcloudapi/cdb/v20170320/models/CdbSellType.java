@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CdbSellType extends AbstractModel{
 
     /**
-    * Name of the purchasable instance
+    * Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
     */
     @SerializedName("TypeName")
     @Expose
@@ -44,16 +44,16 @@ public class CdbSellType extends AbstractModel{
     private Long [] ConfigIds;
 
     /**
-     * Get Name of the purchasable instance 
-     * @return TypeName Name of the purchasable instance
+     * Get Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`). 
+     * @return TypeName Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
      */
     public String getTypeName() {
         return this.TypeName;
     }
 
     /**
-     * Set Name of the purchasable instance
-     * @param TypeName Name of the purchasable instance
+     * Set Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
+     * @param TypeName Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
      */
     public void setTypeName(String TypeName) {
         this.TypeName = TypeName;

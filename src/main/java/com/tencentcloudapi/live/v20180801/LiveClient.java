@@ -185,9 +185,9 @@ Best practice: https://intl.cloud.tencent.com/document/product/267/45566?from_cn
     }
 
     /**
-     *After a callback template is created and a template ID is successfully returned, you need to call the [CreateLiveCallbackRule](https://intl.cloud.tencent.com/document/product/267/32638?from_cn_redirect=1) API and bind the template ID to the domain name/path.
-<br>Callback protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
-Note: at least enter one callback URL.
+     *This API is used to create a callback template. Up to 50 templates can be created. After the template ID is returned, you need to call the [CreateLiveCallbackRule](https://intl.cloud.tencent.com/document/product/267/32638?from_cn_redirect=1) API to bind the template ID to a domain name/path.
+<br>For information about callback protocols, see [How to Receive Event Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+Note: You need to specify at least one callback URL.
      * @param req CreateLiveCallbackTemplateRequest
      * @return CreateLiveCallbackTemplateResponse
      * @throws TencentCloudSDKException
@@ -721,6 +721,26 @@ Notes:
                 Type type = new TypeToken<JsonResponseModel<DeleteRecordTaskResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteRecordTask");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the playback data of all streams at a specified time point (accurate to the minute).
+     * @param req DescribeAllStreamPlayInfoListRequest
+     * @return DescribeAllStreamPlayInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllStreamPlayInfoListResponse DescribeAllStreamPlayInfoList(DescribeAllStreamPlayInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAllStreamPlayInfoListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAllStreamPlayInfoListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAllStreamPlayInfoList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1651,6 +1671,26 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamPlayInfoListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeStreamPlayInfoList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the push data of a stream, including the audio/video frame rate, bitrate, elapsed time, and codec.
+     * @param req DescribeStreamPushInfoListRequest
+     * @return DescribeStreamPushInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStreamPushInfoListResponse DescribeStreamPushInfoList(DescribeStreamPushInfoListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeStreamPushInfoListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeStreamPushInfoListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeStreamPushInfoList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

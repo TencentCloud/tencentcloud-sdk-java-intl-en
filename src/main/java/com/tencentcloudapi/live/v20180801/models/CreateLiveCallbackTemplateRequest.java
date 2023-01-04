@@ -96,6 +96,13 @@ Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/d
     private String StreamMixNotifyUrl;
 
     /**
+    * The push error callback URL.
+    */
+    @SerializedName("PushExceptionNotifyUrl")
+    @Expose
+    private String PushExceptionNotifyUrl;
+
+    /**
      * Get Template name.
 Maximum length: 255 bytes.
 Only letters, digits, underscores, and hyphens can be contained. 
@@ -279,6 +286,22 @@ Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/d
         this.StreamMixNotifyUrl = StreamMixNotifyUrl;
     }
 
+    /**
+     * Get The push error callback URL. 
+     * @return PushExceptionNotifyUrl The push error callback URL.
+     */
+    public String getPushExceptionNotifyUrl() {
+        return this.PushExceptionNotifyUrl;
+    }
+
+    /**
+     * Set The push error callback URL.
+     * @param PushExceptionNotifyUrl The push error callback URL.
+     */
+    public void setPushExceptionNotifyUrl(String PushExceptionNotifyUrl) {
+        this.PushExceptionNotifyUrl = PushExceptionNotifyUrl;
+    }
+
     public CreateLiveCallbackTemplateRequest() {
     }
 
@@ -314,6 +337,9 @@ Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/d
         if (source.StreamMixNotifyUrl != null) {
             this.StreamMixNotifyUrl = new String(source.StreamMixNotifyUrl);
         }
+        if (source.PushExceptionNotifyUrl != null) {
+            this.PushExceptionNotifyUrl = new String(source.PushExceptionNotifyUrl);
+        }
     }
 
 
@@ -330,6 +356,7 @@ Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/d
         this.setParamSimple(map, prefix + "PornCensorshipNotifyUrl", this.PornCensorshipNotifyUrl);
         this.setParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
         this.setParamSimple(map, prefix + "StreamMixNotifyUrl", this.StreamMixNotifyUrl);
+        this.setParamSimple(map, prefix + "PushExceptionNotifyUrl", this.PushExceptionNotifyUrl);
 
     }
 }

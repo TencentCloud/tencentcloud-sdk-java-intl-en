@@ -87,6 +87,13 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
     private String CallbackKey;
 
     /**
+    * The push error callback URL.
+    */
+    @SerializedName("PushExceptionNotifyUrl")
+    @Expose
+    private String PushExceptionNotifyUrl;
+
+    /**
      * Get Template ID returned by the `DescribeLiveCallbackTemplates` API. 
      * @return TemplateId Template ID returned by the `DescribeLiveCallbackTemplates` API.
      */
@@ -234,6 +241,22 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
         this.CallbackKey = CallbackKey;
     }
 
+    /**
+     * Get The push error callback URL. 
+     * @return PushExceptionNotifyUrl The push error callback URL.
+     */
+    public String getPushExceptionNotifyUrl() {
+        return this.PushExceptionNotifyUrl;
+    }
+
+    /**
+     * Set The push error callback URL.
+     * @param PushExceptionNotifyUrl The push error callback URL.
+     */
+    public void setPushExceptionNotifyUrl(String PushExceptionNotifyUrl) {
+        this.PushExceptionNotifyUrl = PushExceptionNotifyUrl;
+    }
+
     public ModifyLiveCallbackTemplateRequest() {
     }
 
@@ -269,6 +292,9 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
         if (source.CallbackKey != null) {
             this.CallbackKey = new String(source.CallbackKey);
         }
+        if (source.PushExceptionNotifyUrl != null) {
+            this.PushExceptionNotifyUrl = new String(source.PushExceptionNotifyUrl);
+        }
     }
 
 
@@ -285,6 +311,7 @@ public class ModifyLiveCallbackTemplateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SnapshotNotifyUrl", this.SnapshotNotifyUrl);
         this.setParamSimple(map, prefix + "PornCensorshipNotifyUrl", this.PornCensorshipNotifyUrl);
         this.setParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
+        this.setParamSimple(map, prefix + "PushExceptionNotifyUrl", this.PushExceptionNotifyUrl);
 
     }
 }

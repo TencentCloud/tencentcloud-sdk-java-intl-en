@@ -65,6 +65,20 @@ public class DescribeBinlogBackupOverviewResponse extends AbstractModel{
     private Long BinlogArchiveCount;
 
     /**
+    * Log backup capacity of standard storage in bytes
+    */
+    @SerializedName("BinlogStandbyVolume")
+    @Expose
+    private Long BinlogStandbyVolume;
+
+    /**
+    * Number of log backups of standard storage
+    */
+    @SerializedName("BinlogStandbyCount")
+    @Expose
+    private Long BinlogStandbyCount;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -168,6 +182,38 @@ public class DescribeBinlogBackupOverviewResponse extends AbstractModel{
     }
 
     /**
+     * Get Log backup capacity of standard storage in bytes 
+     * @return BinlogStandbyVolume Log backup capacity of standard storage in bytes
+     */
+    public Long getBinlogStandbyVolume() {
+        return this.BinlogStandbyVolume;
+    }
+
+    /**
+     * Set Log backup capacity of standard storage in bytes
+     * @param BinlogStandbyVolume Log backup capacity of standard storage in bytes
+     */
+    public void setBinlogStandbyVolume(Long BinlogStandbyVolume) {
+        this.BinlogStandbyVolume = BinlogStandbyVolume;
+    }
+
+    /**
+     * Get Number of log backups of standard storage 
+     * @return BinlogStandbyCount Number of log backups of standard storage
+     */
+    public Long getBinlogStandbyCount() {
+        return this.BinlogStandbyCount;
+    }
+
+    /**
+     * Set Number of log backups of standard storage
+     * @param BinlogStandbyCount Number of log backups of standard storage
+     */
+    public void setBinlogStandbyCount(Long BinlogStandbyCount) {
+        this.BinlogStandbyCount = BinlogStandbyCount;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -209,6 +255,12 @@ public class DescribeBinlogBackupOverviewResponse extends AbstractModel{
         if (source.BinlogArchiveCount != null) {
             this.BinlogArchiveCount = new Long(source.BinlogArchiveCount);
         }
+        if (source.BinlogStandbyVolume != null) {
+            this.BinlogStandbyVolume = new Long(source.BinlogStandbyVolume);
+        }
+        if (source.BinlogStandbyCount != null) {
+            this.BinlogStandbyCount = new Long(source.BinlogStandbyCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -225,6 +277,8 @@ public class DescribeBinlogBackupOverviewResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "RemoteBinlogCount", this.RemoteBinlogCount);
         this.setParamSimple(map, prefix + "BinlogArchiveVolume", this.BinlogArchiveVolume);
         this.setParamSimple(map, prefix + "BinlogArchiveCount", this.BinlogArchiveCount);
+        this.setParamSimple(map, prefix + "BinlogStandbyVolume", this.BinlogStandbyVolume);
+        this.setParamSimple(map, prefix + "BinlogStandbyCount", this.BinlogStandbyCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

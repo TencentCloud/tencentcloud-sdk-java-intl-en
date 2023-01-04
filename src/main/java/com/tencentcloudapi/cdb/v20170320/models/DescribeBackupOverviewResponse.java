@@ -67,6 +67,14 @@ Note: This field may return null, indicating that no valid value can be obtained
     private Long BackupArchiveVolume;
 
     /**
+    * Backup capacity of standard storage, which includes data backups and log backups.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("BackupStandbyVolume")
+    @Expose
+    private Long BackupStandbyVolume;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -178,6 +186,26 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
+     * Get Backup capacity of standard storage, which includes data backups and log backups.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return BackupStandbyVolume Backup capacity of standard storage, which includes data backups and log backups.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public Long getBackupStandbyVolume() {
+        return this.BackupStandbyVolume;
+    }
+
+    /**
+     * Set Backup capacity of standard storage, which includes data backups and log backups.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param BackupStandbyVolume Backup capacity of standard storage, which includes data backups and log backups.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setBackupStandbyVolume(Long BackupStandbyVolume) {
+        this.BackupStandbyVolume = BackupStandbyVolume;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -219,6 +247,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.BackupArchiveVolume != null) {
             this.BackupArchiveVolume = new Long(source.BackupArchiveVolume);
         }
+        if (source.BackupStandbyVolume != null) {
+            this.BackupStandbyVolume = new Long(source.BackupStandbyVolume);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -235,6 +266,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "FreeVolume", this.FreeVolume);
         this.setParamSimple(map, prefix + "RemoteBackupVolume", this.RemoteBackupVolume);
         this.setParamSimple(map, prefix + "BackupArchiveVolume", this.BackupArchiveVolume);
+        this.setParamSimple(map, prefix + "BackupStandbyVolume", this.BackupStandbyVolume);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

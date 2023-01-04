@@ -104,11 +104,19 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
     private String EndTime;
 
     /**
-    * The region of the source (please choose the nearest region).
-ap-beijing: North China (Beijing)
-ap-shanghai: East China (Shanghai)
-ap-guangzhou: South China (Guangzhou)
-ap-mumbai: India
+    * The region where the task was created.
+`ap-beijing`: North China (Beijing)
+`ap-shanghai`: East China (Shanghai)
+`ap-guangzhou`: South China (Guangzhou)
+`ap-mumbai`: India
+`ap-hongkong`: Hong Kong
+`eu-frankfurt`: Germany
+`ap-seoul`: Korea
+`ap-bangkok`: Thailand
+`ap-singapore`: Singapore
+`na-siliconvalley`: Western US
+`na-ashburn`: Eastern US
+`ap-tokyo`: Japan
     */
     @SerializedName("Region")
     @Expose
@@ -483,32 +491,64 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
     }
 
     /**
-     * Get The region of the source (please choose the nearest region).
-ap-beijing: North China (Beijing)
-ap-shanghai: East China (Shanghai)
-ap-guangzhou: South China (Guangzhou)
-ap-mumbai: India 
-     * @return Region The region of the source (please choose the nearest region).
-ap-beijing: North China (Beijing)
-ap-shanghai: East China (Shanghai)
-ap-guangzhou: South China (Guangzhou)
-ap-mumbai: India
+     * Get The region where the task was created.
+`ap-beijing`: North China (Beijing)
+`ap-shanghai`: East China (Shanghai)
+`ap-guangzhou`: South China (Guangzhou)
+`ap-mumbai`: India
+`ap-hongkong`: Hong Kong
+`eu-frankfurt`: Germany
+`ap-seoul`: Korea
+`ap-bangkok`: Thailand
+`ap-singapore`: Singapore
+`na-siliconvalley`: Western US
+`na-ashburn`: Eastern US
+`ap-tokyo`: Japan 
+     * @return Region The region where the task was created.
+`ap-beijing`: North China (Beijing)
+`ap-shanghai`: East China (Shanghai)
+`ap-guangzhou`: South China (Guangzhou)
+`ap-mumbai`: India
+`ap-hongkong`: Hong Kong
+`eu-frankfurt`: Germany
+`ap-seoul`: Korea
+`ap-bangkok`: Thailand
+`ap-singapore`: Singapore
+`na-siliconvalley`: Western US
+`na-ashburn`: Eastern US
+`ap-tokyo`: Japan
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set The region of the source (please choose the nearest region).
-ap-beijing: North China (Beijing)
-ap-shanghai: East China (Shanghai)
-ap-guangzhou: South China (Guangzhou)
-ap-mumbai: India
-     * @param Region The region of the source (please choose the nearest region).
-ap-beijing: North China (Beijing)
-ap-shanghai: East China (Shanghai)
-ap-guangzhou: South China (Guangzhou)
-ap-mumbai: India
+     * Set The region where the task was created.
+`ap-beijing`: North China (Beijing)
+`ap-shanghai`: East China (Shanghai)
+`ap-guangzhou`: South China (Guangzhou)
+`ap-mumbai`: India
+`ap-hongkong`: Hong Kong
+`eu-frankfurt`: Germany
+`ap-seoul`: Korea
+`ap-bangkok`: Thailand
+`ap-singapore`: Singapore
+`na-siliconvalley`: Western US
+`na-ashburn`: Eastern US
+`ap-tokyo`: Japan
+     * @param Region The region where the task was created.
+`ap-beijing`: North China (Beijing)
+`ap-shanghai`: East China (Shanghai)
+`ap-guangzhou`: South China (Guangzhou)
+`ap-mumbai`: India
+`ap-hongkong`: Hong Kong
+`eu-frankfurt`: Germany
+`ap-seoul`: Korea
+`ap-bangkok`: Thailand
+`ap-singapore`: Singapore
+`na-siliconvalley`: Western US
+`na-ashburn`: Eastern US
+`ap-tokyo`: Japan
      */
     public void setRegion(String Region) {
         this.Region = Region;

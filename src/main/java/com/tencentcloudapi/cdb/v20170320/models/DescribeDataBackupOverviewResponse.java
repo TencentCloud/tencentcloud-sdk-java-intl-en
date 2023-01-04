@@ -93,6 +93,20 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
     private Long DataBackupArchiveCount;
 
     /**
+    * Total backup capacity of standard storage in current region
+    */
+    @SerializedName("DataBackupStandbyVolume")
+    @Expose
+    private Long DataBackupStandbyVolume;
+
+    /**
+    * Total number of standard storage backups in current region
+    */
+    @SerializedName("DataBackupStandbyCount")
+    @Expose
+    private Long DataBackupStandbyCount;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -260,6 +274,38 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
     }
 
     /**
+     * Get Total backup capacity of standard storage in current region 
+     * @return DataBackupStandbyVolume Total backup capacity of standard storage in current region
+     */
+    public Long getDataBackupStandbyVolume() {
+        return this.DataBackupStandbyVolume;
+    }
+
+    /**
+     * Set Total backup capacity of standard storage in current region
+     * @param DataBackupStandbyVolume Total backup capacity of standard storage in current region
+     */
+    public void setDataBackupStandbyVolume(Long DataBackupStandbyVolume) {
+        this.DataBackupStandbyVolume = DataBackupStandbyVolume;
+    }
+
+    /**
+     * Get Total number of standard storage backups in current region 
+     * @return DataBackupStandbyCount Total number of standard storage backups in current region
+     */
+    public Long getDataBackupStandbyCount() {
+        return this.DataBackupStandbyCount;
+    }
+
+    /**
+     * Set Total number of standard storage backups in current region
+     * @param DataBackupStandbyCount Total number of standard storage backups in current region
+     */
+    public void setDataBackupStandbyCount(Long DataBackupStandbyCount) {
+        this.DataBackupStandbyCount = DataBackupStandbyCount;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -313,6 +359,12 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
         if (source.DataBackupArchiveCount != null) {
             this.DataBackupArchiveCount = new Long(source.DataBackupArchiveCount);
         }
+        if (source.DataBackupStandbyVolume != null) {
+            this.DataBackupStandbyVolume = new Long(source.DataBackupStandbyVolume);
+        }
+        if (source.DataBackupStandbyCount != null) {
+            this.DataBackupStandbyCount = new Long(source.DataBackupStandbyCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -333,6 +385,8 @@ public class DescribeDataBackupOverviewResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "RemoteBackupCount", this.RemoteBackupCount);
         this.setParamSimple(map, prefix + "DataBackupArchiveVolume", this.DataBackupArchiveVolume);
         this.setParamSimple(map, prefix + "DataBackupArchiveCount", this.DataBackupArchiveCount);
+        this.setParamSimple(map, prefix + "DataBackupStandbyVolume", this.DataBackupStandbyVolume);
+        this.setParamSimple(map, prefix + "DataBackupStandbyCount", this.DataBackupStandbyCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

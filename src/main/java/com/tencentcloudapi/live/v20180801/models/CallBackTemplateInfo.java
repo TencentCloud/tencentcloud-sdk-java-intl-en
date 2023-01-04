@@ -93,6 +93,14 @@ public class CallBackTemplateInfo extends AbstractModel{
     private String CallbackKey;
 
     /**
+    * The push error callback URL.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PushExceptionNotifyUrl")
+    @Expose
+    private String PushExceptionNotifyUrl;
+
+    /**
      * Get Template ID. 
      * @return TemplateId Template ID.
      */
@@ -252,6 +260,26 @@ public class CallBackTemplateInfo extends AbstractModel{
         this.CallbackKey = CallbackKey;
     }
 
+    /**
+     * Get The push error callback URL.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PushExceptionNotifyUrl The push error callback URL.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getPushExceptionNotifyUrl() {
+        return this.PushExceptionNotifyUrl;
+    }
+
+    /**
+     * Set The push error callback URL.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PushExceptionNotifyUrl The push error callback URL.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPushExceptionNotifyUrl(String PushExceptionNotifyUrl) {
+        this.PushExceptionNotifyUrl = PushExceptionNotifyUrl;
+    }
+
     public CallBackTemplateInfo() {
     }
 
@@ -290,6 +318,9 @@ public class CallBackTemplateInfo extends AbstractModel{
         if (source.CallbackKey != null) {
             this.CallbackKey = new String(source.CallbackKey);
         }
+        if (source.PushExceptionNotifyUrl != null) {
+            this.PushExceptionNotifyUrl = new String(source.PushExceptionNotifyUrl);
+        }
     }
 
 
@@ -307,6 +338,7 @@ public class CallBackTemplateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "SnapshotNotifyUrl", this.SnapshotNotifyUrl);
         this.setParamSimple(map, prefix + "PornCensorshipNotifyUrl", this.PornCensorshipNotifyUrl);
         this.setParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
+        this.setParamSimple(map, prefix + "PushExceptionNotifyUrl", this.PushExceptionNotifyUrl);
 
     }
 }

@@ -128,6 +128,34 @@ public class DescribeBackupConfigResponse extends AbstractModel{
     private Long BinlogArchiveDays;
 
     /**
+    * Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+    */
+    @SerializedName("EnableBackupStandby")
+    @Expose
+    private String EnableBackupStandby;
+
+    /**
+    * The period (in days) of how long a data backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
+    */
+    @SerializedName("BackupStandbyDays")
+    @Expose
+    private Long BackupStandbyDays;
+
+    /**
+    * Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+    */
+    @SerializedName("EnableBinlogStandby")
+    @Expose
+    private String EnableBinlogStandby;
+
+    /**
+    * The period (in days) of how long a log backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
+    */
+    @SerializedName("BinlogStandbyDays")
+    @Expose
+    private Long BinlogStandbyDays;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -375,6 +403,70 @@ public class DescribeBackupConfigResponse extends AbstractModel{
     }
 
     /**
+     * Get Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`. 
+     * @return EnableBackupStandby Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     */
+    public String getEnableBackupStandby() {
+        return this.EnableBackupStandby;
+    }
+
+    /**
+     * Set Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     * @param EnableBackupStandby Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     */
+    public void setEnableBackupStandby(String EnableBackupStandby) {
+        this.EnableBackupStandby = EnableBackupStandby;
+    }
+
+    /**
+     * Get The period (in days) of how long a data backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period. 
+     * @return BackupStandbyDays The period (in days) of how long a data backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
+     */
+    public Long getBackupStandbyDays() {
+        return this.BackupStandbyDays;
+    }
+
+    /**
+     * Set The period (in days) of how long a data backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
+     * @param BackupStandbyDays The period (in days) of how long a data backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
+     */
+    public void setBackupStandbyDays(Long BackupStandbyDays) {
+        this.BackupStandbyDays = BackupStandbyDays;
+    }
+
+    /**
+     * Get Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`. 
+     * @return EnableBinlogStandby Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     */
+    public String getEnableBinlogStandby() {
+        return this.EnableBinlogStandby;
+    }
+
+    /**
+     * Set Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     * @param EnableBinlogStandby Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     */
+    public void setEnableBinlogStandby(String EnableBinlogStandby) {
+        this.EnableBinlogStandby = EnableBinlogStandby;
+    }
+
+    /**
+     * Get The period (in days) of how long a log backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period. 
+     * @return BinlogStandbyDays The period (in days) of how long a log backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
+     */
+    public Long getBinlogStandbyDays() {
+        return this.BinlogStandbyDays;
+    }
+
+    /**
+     * Set The period (in days) of how long a log backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
+     * @param BinlogStandbyDays The period (in days) of how long a log backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
+     */
+    public void setBinlogStandbyDays(Long BinlogStandbyDays) {
+        this.BinlogStandbyDays = BinlogStandbyDays;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -443,6 +535,18 @@ public class DescribeBackupConfigResponse extends AbstractModel{
         if (source.BinlogArchiveDays != null) {
             this.BinlogArchiveDays = new Long(source.BinlogArchiveDays);
         }
+        if (source.EnableBackupStandby != null) {
+            this.EnableBackupStandby = new String(source.EnableBackupStandby);
+        }
+        if (source.BackupStandbyDays != null) {
+            this.BackupStandbyDays = new Long(source.BackupStandbyDays);
+        }
+        if (source.EnableBinlogStandby != null) {
+            this.EnableBinlogStandby = new String(source.EnableBinlogStandby);
+        }
+        if (source.BinlogStandbyDays != null) {
+            this.BinlogStandbyDays = new Long(source.BinlogStandbyDays);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -468,6 +572,10 @@ public class DescribeBackupConfigResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "BackupArchiveDays", this.BackupArchiveDays);
         this.setParamSimple(map, prefix + "EnableBinlogArchive", this.EnableBinlogArchive);
         this.setParamSimple(map, prefix + "BinlogArchiveDays", this.BinlogArchiveDays);
+        this.setParamSimple(map, prefix + "EnableBackupStandby", this.EnableBackupStandby);
+        this.setParamSimple(map, prefix + "BackupStandbyDays", this.BackupStandbyDays);
+        this.setParamSimple(map, prefix + "EnableBinlogStandby", this.EnableBinlogStandby);
+        this.setParamSimple(map, prefix + "BinlogStandbyDays", this.BinlogStandbyDays);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

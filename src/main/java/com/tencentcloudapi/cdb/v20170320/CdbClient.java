@@ -1152,6 +1152,26 @@ Note: the HTTP response packet will be very large if it contain a single large e
     }
 
     /**
+     *This API is used to query the configuration information of a remote TencentDB instance backup.
+     * @param req DescribeRemoteBackupConfigRequest
+     * @return DescribeRemoteBackupConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRemoteBackupConfigResponse DescribeRemoteBackupConfig(DescribeRemoteBackupConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRemoteBackupConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRemoteBackupConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRemoteBackupConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the information of all RO groups of a TencentDB instance.
      * @param req DescribeRoGroupsRequest
      * @return DescribeRoGroupsResponse
@@ -1848,6 +1868,26 @@ Note that when modifying account permissions, you need to pass in the full permi
                 Type type = new TypeToken<JsonResponseModel<ModifyParamTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyParamTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the configuration information of a remote TencentDB instance backup.
+     * @param req ModifyRemoteBackupConfigRequest
+     * @return ModifyRemoteBackupConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRemoteBackupConfigResponse ModifyRemoteBackupConfig(ModifyRemoteBackupConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRemoteBackupConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRemoteBackupConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRemoteBackupConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
