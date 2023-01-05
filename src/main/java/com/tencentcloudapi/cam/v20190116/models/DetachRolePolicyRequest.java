@@ -30,14 +30,14 @@ public class DetachRolePolicyRequest extends AbstractModel{
     private Long PolicyId;
 
     /**
-    * Role ID, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
+    * Role ID, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
     */
     @SerializedName("DetachRoleId")
     @Expose
     private String DetachRoleId;
 
     /**
-    * Role name, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
+    * Role name, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
     */
     @SerializedName("DetachRoleName")
     @Expose
@@ -67,32 +67,32 @@ public class DetachRolePolicyRequest extends AbstractModel{
     }
 
     /**
-     * Get Role ID, used to specify a role. Input either `AttachRoleId` or `AttachRoleName` 
-     * @return DetachRoleId Role ID, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
+     * Get Role ID, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`. 
+     * @return DetachRoleId Role ID, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
      */
     public String getDetachRoleId() {
         return this.DetachRoleId;
     }
 
     /**
-     * Set Role ID, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
-     * @param DetachRoleId Role ID, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
+     * Set Role ID, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
+     * @param DetachRoleId Role ID, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
      */
     public void setDetachRoleId(String DetachRoleId) {
         this.DetachRoleId = DetachRoleId;
     }
 
     /**
-     * Get Role name, used to specify a role. Input either `AttachRoleId` or `AttachRoleName` 
-     * @return DetachRoleName Role name, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
+     * Get Role name, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`. 
+     * @return DetachRoleName Role name, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
      */
     public String getDetachRoleName() {
         return this.DetachRoleName;
     }
 
     /**
-     * Set Role name, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
-     * @param DetachRoleName Role name, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
+     * Set Role name, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
+     * @param DetachRoleName Role name, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
      */
     public void setDetachRoleName(String DetachRoleName) {
         this.DetachRoleName = DetachRoleName;

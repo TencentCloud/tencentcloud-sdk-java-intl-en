@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateClusterNodePoolFromExistingAsgRequest extends AbstractModel{
+public class DescribeEdgeClusterUpgradeInfoRequest extends AbstractModel{
 
     /**
     * Cluster ID
@@ -30,11 +30,11 @@ public class CreateClusterNodePoolFromExistingAsgRequest extends AbstractModel{
     private String ClusterId;
 
     /**
-    * Scaling group ID
+    * Target TKEEdge version
     */
-    @SerializedName("AutoscalingGroupId")
+    @SerializedName("EdgeVersion")
     @Expose
-    private String AutoscalingGroupId;
+    private String EdgeVersion;
 
     /**
      * Get Cluster ID 
@@ -53,34 +53,34 @@ public class CreateClusterNodePoolFromExistingAsgRequest extends AbstractModel{
     }
 
     /**
-     * Get Scaling group ID 
-     * @return AutoscalingGroupId Scaling group ID
+     * Get Target TKEEdge version 
+     * @return EdgeVersion Target TKEEdge version
      */
-    public String getAutoscalingGroupId() {
-        return this.AutoscalingGroupId;
+    public String getEdgeVersion() {
+        return this.EdgeVersion;
     }
 
     /**
-     * Set Scaling group ID
-     * @param AutoscalingGroupId Scaling group ID
+     * Set Target TKEEdge version
+     * @param EdgeVersion Target TKEEdge version
      */
-    public void setAutoscalingGroupId(String AutoscalingGroupId) {
-        this.AutoscalingGroupId = AutoscalingGroupId;
+    public void setEdgeVersion(String EdgeVersion) {
+        this.EdgeVersion = EdgeVersion;
     }
 
-    public CreateClusterNodePoolFromExistingAsgRequest() {
+    public DescribeEdgeClusterUpgradeInfoRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateClusterNodePoolFromExistingAsgRequest(CreateClusterNodePoolFromExistingAsgRequest source) {
+    public DescribeEdgeClusterUpgradeInfoRequest(DescribeEdgeClusterUpgradeInfoRequest source) {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
-        if (source.AutoscalingGroupId != null) {
-            this.AutoscalingGroupId = new String(source.AutoscalingGroupId);
+        if (source.EdgeVersion != null) {
+            this.EdgeVersion = new String(source.EdgeVersion);
         }
     }
 
@@ -90,7 +90,7 @@ public class CreateClusterNodePoolFromExistingAsgRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
-        this.setParamSimple(map, prefix + "AutoscalingGroupId", this.AutoscalingGroupId);
+        this.setParamSimple(map, prefix + "EdgeVersion", this.EdgeVersion);
 
     }
 }

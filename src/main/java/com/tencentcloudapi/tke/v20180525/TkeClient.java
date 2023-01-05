@@ -259,26 +259,6 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *This API is used to upgrade a scaling group to a node pool.
-     * @param req CreateClusterNodePoolFromExistingAsgRequest
-     * @return CreateClusterNodePoolFromExistingAsgResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateClusterNodePoolFromExistingAsgResponse CreateClusterNodePoolFromExistingAsg(CreateClusterNodePoolFromExistingAsgRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<CreateClusterNodePoolFromExistingAsgResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<CreateClusterNodePoolFromExistingAsgResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "CreateClusterNodePoolFromExistingAsg");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to create a cluster route table.
      * @param req CreateClusterRouteTableRequest
      * @return CreateClusterRouteTableResponse
@@ -1159,6 +1139,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the upgrade information of an edge cluster, including the upgradeable components, the current upgrade status, and errors occur during the upgrade.
+     * @param req DescribeEdgeClusterUpgradeInfoRequest
+     * @return DescribeEdgeClusterUpgradeInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEdgeClusterUpgradeInfoResponse DescribeEdgeClusterUpgradeInfo(DescribeEdgeClusterUpgradeInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeEdgeClusterUpgradeInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeEdgeClusterUpgradeInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeEdgeClusterUpgradeInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the status of events, audits and logs.
      * @param req DescribeEdgeLogSwitchesRequest
      * @return DescribeEdgeLogSwitchesResponse
@@ -1831,6 +1831,26 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpdateClusterVersionResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpdateClusterVersion");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to upgrade an edge cluster component to a TKE Edge version.
+     * @param req UpdateEdgeClusterVersionRequest
+     * @return UpdateEdgeClusterVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateEdgeClusterVersionResponse UpdateEdgeClusterVersion(UpdateEdgeClusterVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateEdgeClusterVersionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateEdgeClusterVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateEdgeClusterVersion");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -30,14 +30,14 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
     private String ClusterId;
 
     /**
-    * AS group parameters
+    * AS group parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20440?from_cn_redirect=1
     */
     @SerializedName("AutoScalingGroupPara")
     @Expose
     private String AutoScalingGroupPara;
 
     /**
-    * Running parameters
+    * Running parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20447?from_cn_redirect=1
     */
     @SerializedName("LaunchConfigurePara")
     @Expose
@@ -137,32 +137,32 @@ public class CreateClusterNodePoolRequest extends AbstractModel{
     }
 
     /**
-     * Get AS group parameters 
-     * @return AutoScalingGroupPara AS group parameters
+     * Get AS group parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20440?from_cn_redirect=1 
+     * @return AutoScalingGroupPara AS group parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20440?from_cn_redirect=1
      */
     public String getAutoScalingGroupPara() {
         return this.AutoScalingGroupPara;
     }
 
     /**
-     * Set AS group parameters
-     * @param AutoScalingGroupPara AS group parameters
+     * Set AS group parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20440?from_cn_redirect=1
+     * @param AutoScalingGroupPara AS group parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20440?from_cn_redirect=1
      */
     public void setAutoScalingGroupPara(String AutoScalingGroupPara) {
         this.AutoScalingGroupPara = AutoScalingGroupPara;
     }
 
     /**
-     * Get Running parameters 
-     * @return LaunchConfigurePara Running parameters
+     * Get Running parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20447?from_cn_redirect=1 
+     * @return LaunchConfigurePara Running parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20447?from_cn_redirect=1
      */
     public String getLaunchConfigurePara() {
         return this.LaunchConfigurePara;
     }
 
     /**
-     * Set Running parameters
-     * @param LaunchConfigurePara Running parameters
+     * Set Running parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20447?from_cn_redirect=1
+     * @param LaunchConfigurePara Running parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20447?from_cn_redirect=1
      */
     public void setLaunchConfigurePara(String LaunchConfigurePara) {
         this.LaunchConfigurePara = LaunchConfigurePara;

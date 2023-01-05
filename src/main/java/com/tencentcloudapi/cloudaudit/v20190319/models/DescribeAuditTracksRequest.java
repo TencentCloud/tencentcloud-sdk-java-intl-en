@@ -22,6 +22,52 @@ import java.util.HashMap;
 
 public class DescribeAuditTracksRequest extends AbstractModel{
 
+    /**
+    * Page number
+    */
+    @SerializedName("PageNumber")
+    @Expose
+    private Long PageNumber;
+
+    /**
+    * The number of tracking sets per page
+    */
+    @SerializedName("PageSize")
+    @Expose
+    private Long PageSize;
+
+    /**
+     * Get Page number 
+     * @return PageNumber Page number
+     */
+    public Long getPageNumber() {
+        return this.PageNumber;
+    }
+
+    /**
+     * Set Page number
+     * @param PageNumber Page number
+     */
+    public void setPageNumber(Long PageNumber) {
+        this.PageNumber = PageNumber;
+    }
+
+    /**
+     * Get The number of tracking sets per page 
+     * @return PageSize The number of tracking sets per page
+     */
+    public Long getPageSize() {
+        return this.PageSize;
+    }
+
+    /**
+     * Set The number of tracking sets per page
+     * @param PageSize The number of tracking sets per page
+     */
+    public void setPageSize(Long PageSize) {
+        this.PageSize = PageSize;
+    }
+
     public DescribeAuditTracksRequest() {
     }
 
@@ -30,6 +76,12 @@ public class DescribeAuditTracksRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAuditTracksRequest(DescribeAuditTracksRequest source) {
+        if (source.PageNumber != null) {
+            this.PageNumber = new Long(source.PageNumber);
+        }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
     }
 
 
@@ -37,6 +89,8 @@ public class DescribeAuditTracksRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
+        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
 
     }
 }

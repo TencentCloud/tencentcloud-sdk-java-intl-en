@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAuditTrackResponse extends AbstractModel{
+public class DescribeAuditTrackRequest extends AbstractModel{
 
     /**
     * Tracking set ID
@@ -28,13 +28,6 @@ public class CreateAuditTrackResponse extends AbstractModel{
     @SerializedName("TrackId")
     @Expose
     private Long TrackId;
-
-    /**
-    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-    */
-    @SerializedName("RequestId")
-    @Expose
-    private String RequestId;
 
     /**
      * Get Tracking set ID 
@@ -52,35 +45,16 @@ public class CreateAuditTrackResponse extends AbstractModel{
         this.TrackId = TrackId;
     }
 
-    /**
-     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
-     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-     */
-    public String getRequestId() {
-        return this.RequestId;
-    }
-
-    /**
-     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-     */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
-    }
-
-    public CreateAuditTrackResponse() {
+    public DescribeAuditTrackRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateAuditTrackResponse(CreateAuditTrackResponse source) {
+    public DescribeAuditTrackRequest(DescribeAuditTrackRequest source) {
         if (source.TrackId != null) {
             this.TrackId = new Long(source.TrackId);
-        }
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -90,7 +64,6 @@ public class CreateAuditTrackResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TrackId", this.TrackId);
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cloudaudit.v20190319.models;
+package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteAuditTrackRequest extends AbstractModel{
+public class DescribePrometheusZonesRequest extends AbstractModel{
 
     /**
-    * Tracking set ID
+    * Region ID
     */
-    @SerializedName("TrackId")
+    @SerializedName("RegionId")
     @Expose
-    private Long TrackId;
+    private Long RegionId;
 
     /**
-     * Get Tracking set ID 
-     * @return TrackId Tracking set ID
+     * Get Region ID 
+     * @return RegionId Region ID
      */
-    public Long getTrackId() {
-        return this.TrackId;
+    public Long getRegionId() {
+        return this.RegionId;
     }
 
     /**
-     * Set Tracking set ID
-     * @param TrackId Tracking set ID
+     * Set Region ID
+     * @param RegionId Region ID
      */
-    public void setTrackId(Long TrackId) {
-        this.TrackId = TrackId;
+    public void setRegionId(Long RegionId) {
+        this.RegionId = RegionId;
     }
 
-    public DeleteAuditTrackRequest() {
+    public DescribePrometheusZonesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteAuditTrackRequest(DeleteAuditTrackRequest source) {
-        if (source.TrackId != null) {
-            this.TrackId = new Long(source.TrackId);
+    public DescribePrometheusZonesRequest(DescribePrometheusZonesRequest source) {
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
         }
     }
 
@@ -63,7 +63,7 @@ public class DeleteAuditTrackRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TrackId", this.TrackId);
+        this.setParamSimple(map, prefix + "RegionId", this.RegionId);
 
     }
 }

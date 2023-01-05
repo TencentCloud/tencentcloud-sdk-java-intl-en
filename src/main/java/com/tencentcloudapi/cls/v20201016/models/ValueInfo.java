@@ -30,10 +30,10 @@ public class ValueInfo extends AbstractModel{
     private String Type;
 
     /**
-    * Separator of fields. Each character represents a separator;
-Supports only English punctuation marks and (\n\t\r);
-`long` and `double` fields need to be null;
-We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\\) as separators for `text` fields;
+    * Separator of fields. Each character represents a separator.
+Only symbols, \n\t\r, and escape character \ are supported.
+`long` and `double` fields need to be null.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
     */
     @SerializedName("Tokenizer")
     @Expose
@@ -71,28 +71,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Separator of fields. Each character represents a separator;
-Supports only English punctuation marks and (\n\t\r);
-`long` and `double` fields need to be null;
-We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\\) as separators for `text` fields; 
-     * @return Tokenizer Separator of fields. Each character represents a separator;
-Supports only English punctuation marks and (\n\t\r);
-`long` and `double` fields need to be null;
-We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\\) as separators for `text` fields;
+     * Get Separator of fields. Each character represents a separator.
+Only symbols, \n\t\r, and escape character \ are supported.
+`long` and `double` fields need to be null.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. 
+     * @return Tokenizer Separator of fields. Each character represents a separator.
+Only symbols, \n\t\r, and escape character \ are supported.
+`long` and `double` fields need to be null.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
      */
     public String getTokenizer() {
         return this.Tokenizer;
     }
 
     /**
-     * Set Separator of fields. Each character represents a separator;
-Supports only English punctuation marks and (\n\t\r);
-`long` and `double` fields need to be null;
-We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\\) as separators for `text` fields;
-     * @param Tokenizer Separator of fields. Each character represents a separator;
-Supports only English punctuation marks and (\n\t\r);
-`long` and `double` fields need to be null;
-We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\\) as separators for `text` fields;
+     * Set Separator of fields. Each character represents a separator.
+Only symbols, \n\t\r, and escape character \ are supported.
+`long` and `double` fields need to be null.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
+     * @param Tokenizer Separator of fields. Each character represents a separator.
+Only symbols, \n\t\r, and escape character \ are supported.
+`long` and `double` fields need to be null.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
      */
     public void setTokenizer(String Tokenizer) {
         this.Tokenizer = Tokenizer;

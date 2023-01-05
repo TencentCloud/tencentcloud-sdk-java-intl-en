@@ -143,6 +143,26 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the CloudAudit tracking set details.
+     * @param req DescribeAuditTrackRequest
+     * @return DescribeAuditTrackResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditTrackResponse DescribeAuditTrack(DescribeAuditTrackRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAuditTrackResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAuditTrackResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAuditTrack");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the CloudAudit tracking set list.
      * @param req DescribeAuditTracksRequest
      * @return DescribeAuditTracksResponse

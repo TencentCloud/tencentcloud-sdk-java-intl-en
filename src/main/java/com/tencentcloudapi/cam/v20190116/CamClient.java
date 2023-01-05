@@ -159,6 +159,26 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create an access key for a CAM user.
+     * @param req CreateAccessKeyRequest
+     * @return CreateAccessKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAccessKeyResponse CreateAccessKey(CreateAccessKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAccessKeyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAccessKeyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAccessKey");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a user group.
      * @param req CreateGroupRequest
      * @return CreateGroupResponse
@@ -331,6 +351,27 @@ public class CamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateUserSAMLConfigResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateUserSAMLConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete an access key for a CAM user.
+Calling this API is a high-risk operation because the key cannot be recovered once deleted and Tencent Cloud will deny all requests that use this key. Proceed with caution.
+     * @param req DeleteAccessKeyRequest
+     * @return DeleteAccessKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAccessKeyResponse DeleteAccessKey(DeleteAccessKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAccessKeyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAccessKeyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteAccessKey");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1391,6 +1432,26 @@ public class CamClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UntagRoleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UntagRole");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to update an access key for a CAM user.
+     * @param req UpdateAccessKeyRequest
+     * @return UpdateAccessKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAccessKeyResponse UpdateAccessKey(UpdateAccessKeyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateAccessKeyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateAccessKeyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateAccessKey");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

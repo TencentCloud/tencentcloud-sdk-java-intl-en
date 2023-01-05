@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeEventsResponse extends AbstractModel{
 
     /**
-    * Whether the logset ends.
+    * Whether the log list has come to an end. `true`: Yes. Pagination is not required.
     */
     @SerializedName("ListOver")
     @Expose
@@ -45,8 +45,8 @@ Note: `null` may be returned for this field, indicating that no valid values can
     private Event [] Events;
 
     /**
-    * Total number of events.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * This parameter has been deprecated. Please use `ListOver` and `NextToken` for pagination, and read data of the next page when the value of `ListOver` is `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -60,16 +60,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get Whether the logset ends. 
-     * @return ListOver Whether the logset ends.
+     * Get Whether the log list has come to an end. `true`: Yes. Pagination is not required. 
+     * @return ListOver Whether the log list has come to an end. `true`: Yes. Pagination is not required.
      */
     public Boolean getListOver() {
         return this.ListOver;
     }
 
     /**
-     * Set Whether the logset ends.
-     * @param ListOver Whether the logset ends.
+     * Set Whether the log list has come to an end. `true`: Yes. Pagination is not required.
+     * @param ListOver Whether the log list has come to an end. `true`: Yes. Pagination is not required.
      */
     public void setListOver(Boolean ListOver) {
         this.ListOver = ListOver;
@@ -112,20 +112,20 @@ Note: `null` may be returned for this field, indicating that no valid values can
     }
 
     /**
-     * Get Total number of events.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return TotalCount Total number of events.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get This parameter has been deprecated. Please use `ListOver` and `NextToken` for pagination, and read data of the next page when the value of `ListOver` is `false`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TotalCount This parameter has been deprecated. Please use `ListOver` and `NextToken` for pagination, and read data of the next page when the value of `ListOver` is `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of events.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param TotalCount Total number of events.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set This parameter has been deprecated. Please use `ListOver` and `NextToken` for pagination, and read data of the next page when the value of `ListOver` is `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TotalCount This parameter has been deprecated. Please use `ListOver` and `NextToken` for pagination, and read data of the next page when the value of `ListOver` is `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

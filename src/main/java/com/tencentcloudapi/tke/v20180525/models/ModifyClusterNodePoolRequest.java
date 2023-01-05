@@ -93,6 +93,27 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
     private String OsCustomizeType;
 
     /**
+    * GPU driver version, CUDA version, cuDNN version and wether to enable MIG
+    */
+    @SerializedName("GPUArgs")
+    @Expose
+    private GPUArgs GPUArgs;
+
+    /**
+    * Base64-encoded custom script
+    */
+    @SerializedName("UserScript")
+    @Expose
+    private String UserScript;
+
+    /**
+    * Ignore existing nodes when update `Label` and `Taint`
+    */
+    @SerializedName("IgnoreExistedNode")
+    @Expose
+    private Boolean IgnoreExistedNode;
+
+    /**
     * Node custom parameter
     */
     @SerializedName("ExtraArgs")
@@ -119,6 +140,13 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
     @SerializedName("DeletionProtection")
     @Expose
     private Boolean DeletionProtection;
+
+    /**
+    * Specified value of dockerd --graph. Default value: /var/lib/docker
+    */
+    @SerializedName("DockerGraphPath")
+    @Expose
+    private String DockerGraphPath;
 
     /**
      * Get Cluster ID 
@@ -281,6 +309,54 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
     }
 
     /**
+     * Get GPU driver version, CUDA version, cuDNN version and wether to enable MIG 
+     * @return GPUArgs GPU driver version, CUDA version, cuDNN version and wether to enable MIG
+     */
+    public GPUArgs getGPUArgs() {
+        return this.GPUArgs;
+    }
+
+    /**
+     * Set GPU driver version, CUDA version, cuDNN version and wether to enable MIG
+     * @param GPUArgs GPU driver version, CUDA version, cuDNN version and wether to enable MIG
+     */
+    public void setGPUArgs(GPUArgs GPUArgs) {
+        this.GPUArgs = GPUArgs;
+    }
+
+    /**
+     * Get Base64-encoded custom script 
+     * @return UserScript Base64-encoded custom script
+     */
+    public String getUserScript() {
+        return this.UserScript;
+    }
+
+    /**
+     * Set Base64-encoded custom script
+     * @param UserScript Base64-encoded custom script
+     */
+    public void setUserScript(String UserScript) {
+        this.UserScript = UserScript;
+    }
+
+    /**
+     * Get Ignore existing nodes when update `Label` and `Taint` 
+     * @return IgnoreExistedNode Ignore existing nodes when update `Label` and `Taint`
+     */
+    public Boolean getIgnoreExistedNode() {
+        return this.IgnoreExistedNode;
+    }
+
+    /**
+     * Set Ignore existing nodes when update `Label` and `Taint`
+     * @param IgnoreExistedNode Ignore existing nodes when update `Label` and `Taint`
+     */
+    public void setIgnoreExistedNode(Boolean IgnoreExistedNode) {
+        this.IgnoreExistedNode = IgnoreExistedNode;
+    }
+
+    /**
      * Get Node custom parameter 
      * @return ExtraArgs Node custom parameter
      */
@@ -344,6 +420,22 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         this.DeletionProtection = DeletionProtection;
     }
 
+    /**
+     * Get Specified value of dockerd --graph. Default value: /var/lib/docker 
+     * @return DockerGraphPath Specified value of dockerd --graph. Default value: /var/lib/docker
+     */
+    public String getDockerGraphPath() {
+        return this.DockerGraphPath;
+    }
+
+    /**
+     * Set Specified value of dockerd --graph. Default value: /var/lib/docker
+     * @param DockerGraphPath Specified value of dockerd --graph. Default value: /var/lib/docker
+     */
+    public void setDockerGraphPath(String DockerGraphPath) {
+        this.DockerGraphPath = DockerGraphPath;
+    }
+
     public ModifyClusterNodePoolRequest() {
     }
 
@@ -388,6 +480,15 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         if (source.OsCustomizeType != null) {
             this.OsCustomizeType = new String(source.OsCustomizeType);
         }
+        if (source.GPUArgs != null) {
+            this.GPUArgs = new GPUArgs(source.GPUArgs);
+        }
+        if (source.UserScript != null) {
+            this.UserScript = new String(source.UserScript);
+        }
+        if (source.IgnoreExistedNode != null) {
+            this.IgnoreExistedNode = new Boolean(source.IgnoreExistedNode);
+        }
         if (source.ExtraArgs != null) {
             this.ExtraArgs = new InstanceExtraArgs(source.ExtraArgs);
         }
@@ -402,6 +503,9 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         }
         if (source.DeletionProtection != null) {
             this.DeletionProtection = new Boolean(source.DeletionProtection);
+        }
+        if (source.DockerGraphPath != null) {
+            this.DockerGraphPath = new String(source.DockerGraphPath);
         }
     }
 
@@ -420,10 +524,14 @@ public class ModifyClusterNodePoolRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "EnableAutoscale", this.EnableAutoscale);
         this.setParamSimple(map, prefix + "OsName", this.OsName);
         this.setParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
+        this.setParamObj(map, prefix + "GPUArgs.", this.GPUArgs);
+        this.setParamSimple(map, prefix + "UserScript", this.UserScript);
+        this.setParamSimple(map, prefix + "IgnoreExistedNode", this.IgnoreExistedNode);
         this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Unschedulable", this.Unschedulable);
         this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+        this.setParamSimple(map, prefix + "DockerGraphPath", this.DockerGraphPath);
 
     }
 }

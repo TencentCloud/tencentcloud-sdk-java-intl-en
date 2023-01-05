@@ -30,9 +30,9 @@ public class FullTextInfo extends AbstractModel{
     private Boolean CaseSensitive;
 
     /**
-    * Separator of the full-text index. Each character represents a separator;
-Supports only English punctuation marks and (\n\t\r);
-We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
+    * Separator of the full-text index. Each character represents a separator.
+Only symbols, \n\t\r, and escape character \ are supported.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
     */
     @SerializedName("Tokenizer")
     @Expose
@@ -63,24 +63,24 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Separator of the full-text index. Each character represents a separator;
-Supports only English punctuation marks and (\n\t\r);
-We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators; 
-     * @return Tokenizer Separator of the full-text index. Each character represents a separator;
-Supports only English punctuation marks and (\n\t\r);
-We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
+     * Get Separator of the full-text index. Each character represents a separator.
+Only symbols, \n\t\r, and escape character \ are supported.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. 
+     * @return Tokenizer Separator of the full-text index. Each character represents a separator.
+Only symbols, \n\t\r, and escape character \ are supported.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
      */
     public String getTokenizer() {
         return this.Tokenizer;
     }
 
     /**
-     * Set Separator of the full-text index. Each character represents a separator;
-Supports only English punctuation marks and (\n\t\r);
-We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
-     * @param Tokenizer Separator of the full-text index. Each character represents a separator;
-Supports only English punctuation marks and (\n\t\r);
-We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
+     * Set Separator of the full-text index. Each character represents a separator.
+Only symbols, \n\t\r, and escape character \ are supported.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
+     * @param Tokenizer Separator of the full-text index. Each character represents a separator.
+Only symbols, \n\t\r, and escape character \ are supported.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
      */
     public void setTokenizer(String Tokenizer) {
         this.Tokenizer = Tokenizer;

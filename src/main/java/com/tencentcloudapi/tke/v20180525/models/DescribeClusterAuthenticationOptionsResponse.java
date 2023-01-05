@@ -39,6 +39,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String LatestOperationState;
 
     /**
+    * OIDC authentication configurations
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("OIDCConfig")
+    @Expose
+    private OIDCConfigAuthenticationOptions OIDCConfig;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -86,6 +94,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get OIDC authentication configurations
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return OIDCConfig OIDC authentication configurations
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public OIDCConfigAuthenticationOptions getOIDCConfig() {
+        return this.OIDCConfig;
+    }
+
+    /**
+     * Set OIDC authentication configurations
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param OIDCConfig OIDC authentication configurations
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setOIDCConfig(OIDCConfigAuthenticationOptions OIDCConfig) {
+        this.OIDCConfig = OIDCConfig;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -115,6 +143,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.LatestOperationState != null) {
             this.LatestOperationState = new String(source.LatestOperationState);
         }
+        if (source.OIDCConfig != null) {
+            this.OIDCConfig = new OIDCConfigAuthenticationOptions(source.OIDCConfig);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -127,6 +158,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "ServiceAccounts.", this.ServiceAccounts);
         this.setParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
+        this.setParamObj(map, prefix + "OIDCConfig.", this.OIDCConfig);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

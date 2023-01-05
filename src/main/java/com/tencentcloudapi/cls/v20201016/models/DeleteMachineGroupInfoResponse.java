@@ -13,21 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tke.v20180525.models;
+package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateClusterNodePoolFromExistingAsgResponse extends AbstractModel{
-
-    /**
-    * Node pool ID
-    */
-    @SerializedName("NodePoolId")
-    @Expose
-    private String NodePoolId;
+public class DeleteMachineGroupInfoResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -35,22 +28,6 @@ public class CreateClusterNodePoolFromExistingAsgResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get Node pool ID 
-     * @return NodePoolId Node pool ID
-     */
-    public String getNodePoolId() {
-        return this.NodePoolId;
-    }
-
-    /**
-     * Set Node pool ID
-     * @param NodePoolId Node pool ID
-     */
-    public void setNodePoolId(String NodePoolId) {
-        this.NodePoolId = NodePoolId;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -68,17 +45,14 @@ public class CreateClusterNodePoolFromExistingAsgResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateClusterNodePoolFromExistingAsgResponse() {
+    public DeleteMachineGroupInfoResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateClusterNodePoolFromExistingAsgResponse(CreateClusterNodePoolFromExistingAsgResponse source) {
-        if (source.NodePoolId != null) {
-            this.NodePoolId = new String(source.NodePoolId);
-        }
+    public DeleteMachineGroupInfoResponse(DeleteMachineGroupInfoResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -89,7 +63,6 @@ public class CreateClusterNodePoolFromExistingAsgResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "NodePoolId", this.NodePoolId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

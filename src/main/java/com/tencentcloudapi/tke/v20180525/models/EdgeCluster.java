@@ -109,6 +109,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private EdgeClusterAdvancedSettings ClusterAdvancedSettings;
 
     /**
+    * TKE edge cluster level
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Level")
+    @Expose
+    private String Level;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -308,6 +316,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.ClusterAdvancedSettings = ClusterAdvancedSettings;
     }
 
+    /**
+     * Get TKE edge cluster level
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Level TKE edge cluster level
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getLevel() {
+        return this.Level;
+    }
+
+    /**
+     * Set TKE edge cluster level
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Level TKE edge cluster level
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setLevel(String Level) {
+        this.Level = Level;
+    }
+
     public EdgeCluster() {
     }
 
@@ -352,6 +380,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.ClusterAdvancedSettings != null) {
             this.ClusterAdvancedSettings = new EdgeClusterAdvancedSettings(source.ClusterAdvancedSettings);
         }
+        if (source.Level != null) {
+            this.Level = new String(source.Level);
+        }
     }
 
 
@@ -371,6 +402,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "EdgeClusterVersion", this.EdgeClusterVersion);
         this.setParamSimple(map, prefix + "MaxNodePodNum", this.MaxNodePodNum);
         this.setParamObj(map, prefix + "ClusterAdvancedSettings.", this.ClusterAdvancedSettings);
+        this.setParamSimple(map, prefix + "Level", this.Level);
 
     }
 }

@@ -20,10 +20,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateAuditTrackRequest extends AbstractModel{
+public class Tracks extends AbstractModel{
 
     /**
-    * Tracking set name, which can only contain 3-48 letters, digits, hyphens, and underscores.
+    * Tracking set name
     */
     @SerializedName("Name")
     @Expose
@@ -37,7 +37,7 @@ public class CreateAuditTrackRequest extends AbstractModel{
     private String ActionType;
 
     /**
-    * The product to which the tracking set event belongs. The value can be a single product such as `cos`, or `*` that indicates all products.
+    * The product to which the tracking set event belongs, such as `cos`, or `*` that indicates all products
     */
     @SerializedName("ResourceType")
     @Expose
@@ -51,7 +51,7 @@ public class CreateAuditTrackRequest extends AbstractModel{
     private Long Status;
 
     /**
-    * The list of API names of tracking set events. When `ResourceType` is `*`, the value of `EventNames` must be `*`. When `ResourceType` is a specified product, the value of `EventNames` can be `*`. When `ResourceType` is `cos` or `cls`, up to 10 APIs are supported.
+    * The list of API names of tracking set events (`*`: All)
     */
     @SerializedName("EventNames")
     @Expose
@@ -65,23 +65,30 @@ public class CreateAuditTrackRequest extends AbstractModel{
     private Storage Storage;
 
     /**
-    * Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
+    * Creation time of the tracking set
     */
-    @SerializedName("TrackForAllMembers")
+    @SerializedName("CreateTime")
     @Expose
-    private Long TrackForAllMembers;
+    private String CreateTime;
 
     /**
-     * Get Tracking set name, which can only contain 3-48 letters, digits, hyphens, and underscores. 
-     * @return Name Tracking set name, which can only contain 3-48 letters, digits, hyphens, and underscores.
+    * Tracking set ID
+    */
+    @SerializedName("TrackId")
+    @Expose
+    private Long TrackId;
+
+    /**
+     * Get Tracking set name 
+     * @return Name Tracking set name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Tracking set name, which can only contain 3-48 letters, digits, hyphens, and underscores.
-     * @param Name Tracking set name, which can only contain 3-48 letters, digits, hyphens, and underscores.
+     * Set Tracking set name
+     * @param Name Tracking set name
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -104,16 +111,16 @@ public class CreateAuditTrackRequest extends AbstractModel{
     }
 
     /**
-     * Get The product to which the tracking set event belongs. The value can be a single product such as `cos`, or `*` that indicates all products. 
-     * @return ResourceType The product to which the tracking set event belongs. The value can be a single product such as `cos`, or `*` that indicates all products.
+     * Get The product to which the tracking set event belongs, such as `cos`, or `*` that indicates all products 
+     * @return ResourceType The product to which the tracking set event belongs, such as `cos`, or `*` that indicates all products
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set The product to which the tracking set event belongs. The value can be a single product such as `cos`, or `*` that indicates all products.
-     * @param ResourceType The product to which the tracking set event belongs. The value can be a single product such as `cos`, or `*` that indicates all products.
+     * Set The product to which the tracking set event belongs, such as `cos`, or `*` that indicates all products
+     * @param ResourceType The product to which the tracking set event belongs, such as `cos`, or `*` that indicates all products
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;
@@ -136,16 +143,16 @@ public class CreateAuditTrackRequest extends AbstractModel{
     }
 
     /**
-     * Get The list of API names of tracking set events. When `ResourceType` is `*`, the value of `EventNames` must be `*`. When `ResourceType` is a specified product, the value of `EventNames` can be `*`. When `ResourceType` is `cos` or `cls`, up to 10 APIs are supported. 
-     * @return EventNames The list of API names of tracking set events. When `ResourceType` is `*`, the value of `EventNames` must be `*`. When `ResourceType` is a specified product, the value of `EventNames` can be `*`. When `ResourceType` is `cos` or `cls`, up to 10 APIs are supported.
+     * Get The list of API names of tracking set events (`*`: All) 
+     * @return EventNames The list of API names of tracking set events (`*`: All)
      */
     public String [] getEventNames() {
         return this.EventNames;
     }
 
     /**
-     * Set The list of API names of tracking set events. When `ResourceType` is `*`, the value of `EventNames` must be `*`. When `ResourceType` is a specified product, the value of `EventNames` can be `*`. When `ResourceType` is `cos` or `cls`, up to 10 APIs are supported.
-     * @param EventNames The list of API names of tracking set events. When `ResourceType` is `*`, the value of `EventNames` must be `*`. When `ResourceType` is a specified product, the value of `EventNames` can be `*`. When `ResourceType` is `cos` or `cls`, up to 10 APIs are supported.
+     * Set The list of API names of tracking set events (`*`: All)
+     * @param EventNames The list of API names of tracking set events (`*`: All)
      */
     public void setEventNames(String [] EventNames) {
         this.EventNames = EventNames;
@@ -168,29 +175,45 @@ public class CreateAuditTrackRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account) 
-     * @return TrackForAllMembers Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
+     * Get Creation time of the tracking set 
+     * @return CreateTime Creation time of the tracking set
      */
-    public Long getTrackForAllMembers() {
-        return this.TrackForAllMembers;
+    public String getCreateTime() {
+        return this.CreateTime;
     }
 
     /**
-     * Set Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
-     * @param TrackForAllMembers Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
+     * Set Creation time of the tracking set
+     * @param CreateTime Creation time of the tracking set
      */
-    public void setTrackForAllMembers(Long TrackForAllMembers) {
-        this.TrackForAllMembers = TrackForAllMembers;
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
     }
 
-    public CreateAuditTrackRequest() {
+    /**
+     * Get Tracking set ID 
+     * @return TrackId Tracking set ID
+     */
+    public Long getTrackId() {
+        return this.TrackId;
+    }
+
+    /**
+     * Set Tracking set ID
+     * @param TrackId Tracking set ID
+     */
+    public void setTrackId(Long TrackId) {
+        this.TrackId = TrackId;
+    }
+
+    public Tracks() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateAuditTrackRequest(CreateAuditTrackRequest source) {
+    public Tracks(Tracks source) {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
@@ -212,8 +235,11 @@ public class CreateAuditTrackRequest extends AbstractModel{
         if (source.Storage != null) {
             this.Storage = new Storage(source.Storage);
         }
-        if (source.TrackForAllMembers != null) {
-            this.TrackForAllMembers = new Long(source.TrackForAllMembers);
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.TrackId != null) {
+            this.TrackId = new Long(source.TrackId);
         }
     }
 
@@ -228,7 +254,8 @@ public class CreateAuditTrackRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArraySimple(map, prefix + "EventNames.", this.EventNames);
         this.setParamObj(map, prefix + "Storage.", this.Storage);
-        this.setParamSimple(map, prefix + "TrackForAllMembers", this.TrackForAllMembers);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "TrackId", this.TrackId);
 
     }
 }

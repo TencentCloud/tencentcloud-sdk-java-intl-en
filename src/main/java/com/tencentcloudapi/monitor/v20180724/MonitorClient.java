@@ -1269,6 +1269,26 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     }
 
     /**
+     *This API is used to list the AZs of Tencent Managed Service for Prometheus (TMP).
+     * @param req DescribePrometheusZonesRequest
+     * @return DescribePrometheusZonesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusZonesResponse DescribePrometheusZones(DescribePrometheusZonesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusZonesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusZonesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusZones");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query Prometheus recording rules by filter.
      * @param req DescribeRecordingRulesRequest
      * @return DescribeRecordingRulesResponse

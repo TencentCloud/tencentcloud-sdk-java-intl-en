@@ -13,28 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cloudaudit.v20190319.models;
+package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAuditTracksResponse extends AbstractModel{
+public class DescribePrometheusZonesResponse extends AbstractModel{
 
     /**
-    * Tracking set list
+    * Region list
+Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("Tracks")
+    @SerializedName("ZoneSet")
     @Expose
-    private Tracks [] Tracks;
-
-    /**
-    * Total number of tracking sets
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+    private PrometheusZoneItem [] ZoneSet;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +38,23 @@ public class DescribeAuditTracksResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Tracking set list 
-     * @return Tracks Tracking set list
+     * Get Region list
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ZoneSet Region list
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public Tracks [] getTracks() {
-        return this.Tracks;
+    public PrometheusZoneItem [] getZoneSet() {
+        return this.ZoneSet;
     }
 
     /**
-     * Set Tracking set list
-     * @param Tracks Tracking set list
+     * Set Region list
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ZoneSet Region list
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setTracks(Tracks [] Tracks) {
-        this.Tracks = Tracks;
-    }
-
-    /**
-     * Get Total number of tracking sets 
-     * @return TotalCount Total number of tracking sets
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set Total number of tracking sets
-     * @param TotalCount Total number of tracking sets
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
+    public void setZoneSet(PrometheusZoneItem [] ZoneSet) {
+        this.ZoneSet = ZoneSet;
     }
 
     /**
@@ -91,22 +73,19 @@ public class DescribeAuditTracksResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeAuditTracksResponse() {
+    public DescribePrometheusZonesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAuditTracksResponse(DescribeAuditTracksResponse source) {
-        if (source.Tracks != null) {
-            this.Tracks = new Tracks[source.Tracks.length];
-            for (int i = 0; i < source.Tracks.length; i++) {
-                this.Tracks[i] = new Tracks(source.Tracks[i]);
+    public DescribePrometheusZonesResponse(DescribePrometheusZonesResponse source) {
+        if (source.ZoneSet != null) {
+            this.ZoneSet = new PrometheusZoneItem[source.ZoneSet.length];
+            for (int i = 0; i < source.ZoneSet.length; i++) {
+                this.ZoneSet[i] = new PrometheusZoneItem(source.ZoneSet[i]);
             }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +97,7 @@ public class DescribeAuditTracksResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Tracks.", this.Tracks);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "ZoneSet.", this.ZoneSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

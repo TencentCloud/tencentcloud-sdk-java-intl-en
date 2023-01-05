@@ -39,6 +39,26 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add machine group information.
+     * @param req AddMachineGroupInfoRequest
+     * @return AddMachineGroupInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddMachineGroupInfoResponse AddMachineGroupInfo(AddMachineGroupInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddMachineGroupInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddMachineGroupInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddMachineGroupInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to apply the collection configuration to the specified machine group.
      * @param req ApplyConfigToMachineGroupRequest
      * @return ApplyConfigToMachineGroupResponse
@@ -451,6 +471,26 @@ public class ClsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteMachineGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteMachineGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete machine group information.
+     * @param req DeleteMachineGroupInfoRequest
+     * @return DeleteMachineGroupInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMachineGroupInfoResponse DeleteMachineGroupInfo(DeleteMachineGroupInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteMachineGroupInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteMachineGroupInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteMachineGroupInfo");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
