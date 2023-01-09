@@ -13,29 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.rum.v20210622.models;
+package com.tencentcloudapi.postgres.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTawInstanceResponse extends AbstractModel{
+public class DescribeDBInstanceSecurityGroupsResponse extends AbstractModel{
 
     /**
-    * Instance ID
+    * Information of security groups in array
     */
-    @SerializedName("InstanceId")
+    @SerializedName("SecurityGroupSet")
     @Expose
-    private String InstanceId;
-
-    /**
-    * ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("DealName")
-    @Expose
-    private String DealName;
+    private SecurityGroup [] SecurityGroupSet;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,39 +37,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Information of security groups in array 
+     * @return SecurityGroupSet Information of security groups in array
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public SecurityGroup [] getSecurityGroupSet() {
+        return this.SecurityGroupSet;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Information of security groups in array
+     * @param SecurityGroupSet Information of security groups in array
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
-    }
-
-    /**
-     * Get ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DealName ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public String getDealName() {
-        return this.DealName;
-    }
-
-    /**
-     * Set ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DealName ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setDealName(String DealName) {
-        this.DealName = DealName;
+    public void setSecurityGroupSet(SecurityGroup [] SecurityGroupSet) {
+        this.SecurityGroupSet = SecurityGroupSet;
     }
 
     /**
@@ -96,19 +68,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public CreateTawInstanceResponse() {
+    public DescribeDBInstanceSecurityGroupsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateTawInstanceResponse(CreateTawInstanceResponse source) {
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
-        }
-        if (source.DealName != null) {
-            this.DealName = new String(source.DealName);
+    public DescribeDBInstanceSecurityGroupsResponse(DescribeDBInstanceSecurityGroupsResponse source) {
+        if (source.SecurityGroupSet != null) {
+            this.SecurityGroupSet = new SecurityGroup[source.SecurityGroupSet.length];
+            for (int i = 0; i < source.SecurityGroupSet.length; i++) {
+                this.SecurityGroupSet[i] = new SecurityGroup(source.SecurityGroupSet[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -120,8 +92,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "DealName", this.DealName);
+        this.setParamArrayObj(map, prefix + "SecurityGroupSet.", this.SecurityGroupSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -206,4 +206,64 @@ Notes:<br>
         return rsp.response;
     }
 
+    /**
+     *This API is used to query the voucher quota based on the customer UIN.
+     * @param req QueryVoucherAmountByUinRequest
+     * @return QueryVoucherAmountByUinResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryVoucherAmountByUinResponse QueryVoucherAmountByUin(QueryVoucherAmountByUinRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryVoucherAmountByUinResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryVoucherAmountByUinResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryVoucherAmountByUin");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the voucher list based on the customer UIN.
+     * @param req QueryVoucherListByUinRequest
+     * @return QueryVoucherListByUinResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryVoucherListByUinResponse QueryVoucherListByUin(QueryVoucherListByUinRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryVoucherListByUinResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryVoucherListByUinResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryVoucherListByUin");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the voucher quota pool.
+     * @param req QueryVoucherPoolRequest
+     * @return QueryVoucherPoolResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryVoucherPoolResponse QueryVoucherPool(QueryVoucherPoolRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryVoucherPoolResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryVoucherPoolResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryVoucherPool");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

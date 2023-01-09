@@ -139,6 +139,26 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a pay-as-you-go instance.
+     * @param req CreateInstancePostRequest
+     * @return CreateInstancePostResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInstancePostResponse CreateInstancePost(CreateInstancePostRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateInstancePostResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateInstancePostResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateInstancePost");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to add a partition in a topic.
      * @param req CreatePartitionRequest
      * @return CreatePartitionResponse
@@ -753,6 +773,26 @@ This API is used to get the list of topics in a CKafka instance of a user.
                 Type type = new TypeToken<JsonResponseModel<FetchMessageListByOffsetResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "FetchMessageListByOffset");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to purchase a CKafka instance or query the instance renewal price.
+     * @param req InquireCkafkaPriceRequest
+     * @return InquireCkafkaPriceResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquireCkafkaPriceResponse InquireCkafkaPrice(InquireCkafkaPriceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<InquireCkafkaPriceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<InquireCkafkaPriceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "InquireCkafkaPrice");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

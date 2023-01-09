@@ -13,29 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.rum.v20210622.models;
+package com.tencentcloudapi.postgres.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTawInstanceResponse extends AbstractModel{
+public class DescribeDefaultParametersResponse extends AbstractModel{
 
     /**
-    * Instance ID
+    * Number of parameters
     */
-    @SerializedName("InstanceId")
+    @SerializedName("TotalCount")
     @Expose
-    private String InstanceId;
+    private Long TotalCount;
 
     /**
-    * ID of prepaid order
+    * Parameter information
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("DealName")
+    @SerializedName("ParamInfoSet")
     @Expose
-    private String DealName;
+    private ParamInfo [] ParamInfoSet;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,39 +45,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Number of parameters 
+     * @return TotalCount Number of parameters
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Number of parameters
+     * @param TotalCount Number of parameters
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get ID of prepaid order
+     * Get Parameter information
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DealName ID of prepaid order
+     * @return ParamInfoSet Parameter information
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getDealName() {
-        return this.DealName;
+    public ParamInfo [] getParamInfoSet() {
+        return this.ParamInfoSet;
     }
 
     /**
-     * Set ID of prepaid order
+     * Set Parameter information
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DealName ID of prepaid order
+     * @param ParamInfoSet Parameter information
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setDealName(String DealName) {
-        this.DealName = DealName;
+    public void setParamInfoSet(ParamInfo [] ParamInfoSet) {
+        this.ParamInfoSet = ParamInfoSet;
     }
 
     /**
@@ -96,19 +96,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public CreateTawInstanceResponse() {
+    public DescribeDefaultParametersResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateTawInstanceResponse(CreateTawInstanceResponse source) {
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
+    public DescribeDefaultParametersResponse(DescribeDefaultParametersResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.DealName != null) {
-            this.DealName = new String(source.DealName);
+        if (source.ParamInfoSet != null) {
+            this.ParamInfoSet = new ParamInfo[source.ParamInfoSet.length];
+            for (int i = 0; i < source.ParamInfoSet.length; i++) {
+                this.ParamInfoSet[i] = new ParamInfo(source.ParamInfoSet[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -120,8 +123,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "DealName", this.DealName);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "ParamInfoSet.", this.ParamInfoSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

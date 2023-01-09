@@ -13,29 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.rum.v20210622.models;
+package com.tencentcloudapi.postgres.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTawInstanceResponse extends AbstractModel{
+public class CreateParameterTemplateResponse extends AbstractModel{
 
     /**
-    * Instance ID
+    * Parameter template ID, which uniquely identifies a parameter template.
     */
-    @SerializedName("InstanceId")
+    @SerializedName("TemplateId")
     @Expose
-    private String InstanceId;
-
-    /**
-    * ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("DealName")
-    @Expose
-    private String DealName;
+    private String TemplateId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,39 +37,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Parameter template ID, which uniquely identifies a parameter template. 
+     * @return TemplateId Parameter template ID, which uniquely identifies a parameter template.
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public String getTemplateId() {
+        return this.TemplateId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Parameter template ID, which uniquely identifies a parameter template.
+     * @param TemplateId Parameter template ID, which uniquely identifies a parameter template.
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
-    }
-
-    /**
-     * Get ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DealName ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public String getDealName() {
-        return this.DealName;
-    }
-
-    /**
-     * Set ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DealName ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setDealName(String DealName) {
-        this.DealName = DealName;
+    public void setTemplateId(String TemplateId) {
+        this.TemplateId = TemplateId;
     }
 
     /**
@@ -96,19 +68,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public CreateTawInstanceResponse() {
+    public CreateParameterTemplateResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateTawInstanceResponse(CreateTawInstanceResponse source) {
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
-        }
-        if (source.DealName != null) {
-            this.DealName = new String(source.DealName);
+    public CreateParameterTemplateResponse(CreateParameterTemplateResponse source) {
+        if (source.TemplateId != null) {
+            this.TemplateId = new String(source.TemplateId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -120,8 +89,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "DealName", this.DealName);
+        this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -13,29 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.rum.v20210622.models;
+package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTawInstanceResponse extends AbstractModel{
+public class CreateInstancePostResponse extends AbstractModel{
 
     /**
-    * Instance ID
+    * Returned result
     */
-    @SerializedName("InstanceId")
+    @SerializedName("Result")
     @Expose
-    private String InstanceId;
-
-    /**
-    * ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("DealName")
-    @Expose
-    private String DealName;
+    private JgwOperateResponse Result;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,39 +37,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get Returned result 
+     * @return Result Returned result
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public JgwOperateResponse getResult() {
+        return this.Result;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set Returned result
+     * @param Result Returned result
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
-    }
-
-    /**
-     * Get ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DealName ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public String getDealName() {
-        return this.DealName;
-    }
-
-    /**
-     * Set ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DealName ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setDealName(String DealName) {
-        this.DealName = DealName;
+    public void setResult(JgwOperateResponse Result) {
+        this.Result = Result;
     }
 
     /**
@@ -96,19 +68,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public CreateTawInstanceResponse() {
+    public CreateInstancePostResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateTawInstanceResponse(CreateTawInstanceResponse source) {
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
-        }
-        if (source.DealName != null) {
-            this.DealName = new String(source.DealName);
+    public CreateInstancePostResponse(CreateInstancePostResponse source) {
+        if (source.Result != null) {
+            this.Result = new JgwOperateResponse(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -120,8 +89,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "DealName", this.DealName);
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

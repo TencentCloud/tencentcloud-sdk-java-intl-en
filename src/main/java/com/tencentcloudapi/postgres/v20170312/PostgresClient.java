@@ -179,6 +179,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a parameter template.
+     * @param req CreateParameterTemplateRequest
+     * @return CreateParameterTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateParameterTemplateResponse CreateParameterTemplate(CreateParameterTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateParameterTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateParameterTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateParameterTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create read-only replicas.
      * @param req CreateReadOnlyDBInstanceRequest
      * @return CreateReadOnlyDBInstanceResponse
@@ -271,6 +291,26 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteDBInstanceNetworkAccessResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteDBInstanceNetworkAccess");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a parameter template.
+     * @param req DeleteParameterTemplateRequest
+     * @return DeleteParameterTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteParameterTemplateResponse DeleteParameterTemplate(DeleteParameterTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteParameterTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteParameterTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteParameterTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -499,6 +539,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the security group information of an instance.
+     * @param req DescribeDBInstanceSecurityGroupsRequest
+     * @return DescribeDBInstanceSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstanceSecurityGroupsResponse DescribeDBInstanceSecurityGroups(DescribeDBInstanceSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBInstanceSecurityGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBInstanceSecurityGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBInstanceSecurityGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the details of one or more instances.
      * @param req DescribeDBInstancesRequest
      * @return DescribeDBInstancesResponse
@@ -579,6 +639,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query all parameters supported by a database version and engine.
+     * @param req DescribeDefaultParametersRequest
+     * @return DescribeDefaultParametersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDefaultParametersResponse DescribeDefaultParameters(DescribeDefaultParametersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDefaultParametersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDefaultParametersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDefaultParameters");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get instance key list.
      * @param req DescribeEncryptionKeysRequest
      * @return DescribeEncryptionKeysResponse
@@ -611,6 +691,46 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeOrdersResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeOrders");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the details of a parameter template, including basic information and parameter information.
+     * @param req DescribeParameterTemplateAttributesRequest
+     * @return DescribeParameterTemplateAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeParameterTemplateAttributesResponse DescribeParameterTemplateAttributes(DescribeParameterTemplateAttributesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeParameterTemplateAttributesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeParameterTemplateAttributesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeParameterTemplateAttributes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of parameter templates.
+     * @param req DescribeParameterTemplatesRequest
+     * @return DescribeParameterTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeParameterTemplatesResponse DescribeParameterTemplates(DescribeParameterTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeParameterTemplatesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeParameterTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeParameterTemplates");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1039,6 +1159,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify the security group of an instance.
+     * @param req ModifyDBInstanceSecurityGroupsRequest
+     * @return ModifyDBInstanceSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(ModifyDBInstanceSecurityGroupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDBInstanceSecurityGroups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify instance specifications including memory and disk size.
      * @param req ModifyDBInstanceSpecRequest
      * @return ModifyDBInstanceSpecResponse
@@ -1071,6 +1211,26 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyDBInstancesProjectResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyDBInstancesProject");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the parameter template name and description, and add or delete parameter template parameters.
+     * @param req ModifyParameterTemplateRequest
+     * @return ModifyParameterTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyParameterTemplateResponse ModifyParameterTemplate(ModifyParameterTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyParameterTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyParameterTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyParameterTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

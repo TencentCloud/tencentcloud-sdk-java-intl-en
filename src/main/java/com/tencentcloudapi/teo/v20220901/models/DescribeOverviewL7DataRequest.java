@@ -48,7 +48,8 @@ public class DescribeOverviewL7DataRequest extends AbstractModel{
     private String [] MetricNames;
 
     /**
-    * List of sites to be queried. All sites will be selected if this field is not specified.
+    * List of sites
+Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it's not specified, all sites are selected by default, and the query period must be within the last 30 days. 
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -66,27 +67,27 @@ public class DescribeOverviewL7DataRequest extends AbstractModel{
 <li>`http`: HTTP protocol;</li>
 <li>`https`: HTTPS protocol;</li>
 <li>`http2`: HTTP2 protocol;</li>
-<li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified.
+<li>`all`:   All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * The query time granularity. Values:
+    * The query granularity. Values:
 <li>`min`: 1 minute;</li>
-<li>`5min`: 5 minute;</li>
+<li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
+<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
     */
     @SerializedName("Interval")
     @Expose
     private String Interval;
 
     /**
-    * Filter conditions. See below for details: 
-<li>`tagKey`:<br>   Filter by the <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
-<li>`tagValue`<br>   Filter by the <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
+    * Filters
+<li>tagKey<br>   Filter by the specified <strong>tag key</strong></li>
+<li>tagValue<br>   Filter by the specified <strong>tag value</strong></li>
     */
     @SerializedName("Filters")
     @Expose
@@ -167,16 +168,20 @@ public class DescribeOverviewL7DataRequest extends AbstractModel{
     }
 
     /**
-     * Get List of sites to be queried. All sites will be selected if this field is not specified. 
-     * @return ZoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+     * Get List of sites
+Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it's not specified, all sites are selected by default, and the query period must be within the last 30 days.  
+     * @return ZoneIds List of sites
+Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it's not specified, all sites are selected by default, and the query period must be within the last 30 days. 
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set List of sites to be queried. All sites will be selected if this field is not specified.
-     * @param ZoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+     * Set List of sites
+Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it's not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+     * @param ZoneIds List of sites
+Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it's not specified, all sites are selected by default, and the query period must be within the last 30 days. 
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;
@@ -203,12 +208,12 @@ public class DescribeOverviewL7DataRequest extends AbstractModel{
 <li>`http`: HTTP protocol;</li>
 <li>`https`: HTTPS protocol;</li>
 <li>`http2`: HTTP2 protocol;</li>
-<li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified. 
+<li>`all`:   All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now. 
      * @return Protocol The protocol type. Values:
 <li>`http`: HTTP protocol;</li>
 <li>`https`: HTTPS protocol;</li>
 <li>`http2`: HTTP2 protocol;</li>
-<li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified.
+<li>`all`:   All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
      */
     public String getProtocol() {
         return this.Protocol;
@@ -219,68 +224,68 @@ public class DescribeOverviewL7DataRequest extends AbstractModel{
 <li>`http`: HTTP protocol;</li>
 <li>`https`: HTTPS protocol;</li>
 <li>`http2`: HTTP2 protocol;</li>
-<li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified.
+<li>`all`:   All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
      * @param Protocol The protocol type. Values:
 <li>`http`: HTTP protocol;</li>
 <li>`https`: HTTPS protocol;</li>
 <li>`http2`: HTTP2 protocol;</li>
-<li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified.
+<li>`all`:   All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get The query time granularity. Values:
+     * Get The query granularity. Values:
 <li>`min`: 1 minute;</li>
-<li>`5min`: 5 minute;</li>
+<li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days. 
-     * @return Interval The query time granularity. Values:
+<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`. 
+     * @return Interval The query granularity. Values:
 <li>`min`: 1 minute;</li>
-<li>`5min`: 5 minute;</li>
+<li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
+<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
      */
     public String getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set The query time granularity. Values:
+     * Set The query granularity. Values:
 <li>`min`: 1 minute;</li>
-<li>`5min`: 5 minute;</li>
+<li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
-     * @param Interval The query time granularity. Values:
+<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+     * @param Interval The query granularity. Values:
 <li>`min`: 1 minute;</li>
-<li>`5min`: 5 minute;</li>
+<li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
+<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get Filter conditions. See below for details: 
-<li>`tagKey`:<br>   Filter by the <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
-<li>`tagValue`<br>   Filter by the <strong>tag value</strong><br>   Type: String<br>   Required: No</li> 
-     * @return Filters Filter conditions. See below for details: 
-<li>`tagKey`:<br>   Filter by the <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
-<li>`tagValue`<br>   Filter by the <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
+     * Get Filters
+<li>tagKey<br>   Filter by the specified <strong>tag key</strong></li>
+<li>tagValue<br>   Filter by the specified <strong>tag value</strong></li> 
+     * @return Filters Filters
+<li>tagKey<br>   Filter by the specified <strong>tag key</strong></li>
+<li>tagValue<br>   Filter by the specified <strong>tag value</strong></li>
      */
     public QueryCondition [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter conditions. See below for details: 
-<li>`tagKey`:<br>   Filter by the <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
-<li>`tagValue`<br>   Filter by the <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
-     * @param Filters Filter conditions. See below for details: 
-<li>`tagKey`:<br>   Filter by the <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
-<li>`tagValue`<br>   Filter by the <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
+     * Set Filters
+<li>tagKey<br>   Filter by the specified <strong>tag key</strong></li>
+<li>tagValue<br>   Filter by the specified <strong>tag value</strong></li>
+     * @param Filters Filters
+<li>tagKey<br>   Filter by the specified <strong>tag key</strong></li>
+<li>tagValue<br>   Filter by the specified <strong>tag value</strong></li>
      */
     public void setFilters(QueryCondition [] Filters) {
         this.Filters = Filters;

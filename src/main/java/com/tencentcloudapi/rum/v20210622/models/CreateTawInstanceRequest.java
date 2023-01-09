@@ -86,14 +86,14 @@ public class CreateTawInstanceRequest extends AbstractModel{
     private String BuyingChannel;
 
     /**
-    * 
+    * Type of prepaid resource pack (only required for prepaid mode)
     */
     @SerializedName("ResourcePackageType")
     @Expose
     private Long ResourcePackageType;
 
     /**
-    * 
+    * The number of prepaid resource packs (only required for prepaid mode)
     */
     @SerializedName("ResourcePackageNum")
     @Expose
@@ -244,32 +244,32 @@ public class CreateTawInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return ResourcePackageType 
+     * Get Type of prepaid resource pack (only required for prepaid mode) 
+     * @return ResourcePackageType Type of prepaid resource pack (only required for prepaid mode)
      */
     public Long getResourcePackageType() {
         return this.ResourcePackageType;
     }
 
     /**
-     * Set 
-     * @param ResourcePackageType 
+     * Set Type of prepaid resource pack (only required for prepaid mode)
+     * @param ResourcePackageType Type of prepaid resource pack (only required for prepaid mode)
      */
     public void setResourcePackageType(Long ResourcePackageType) {
         this.ResourcePackageType = ResourcePackageType;
     }
 
     /**
-     * Get  
-     * @return ResourcePackageNum 
+     * Get The number of prepaid resource packs (only required for prepaid mode) 
+     * @return ResourcePackageNum The number of prepaid resource packs (only required for prepaid mode)
      */
     public Long getResourcePackageNum() {
         return this.ResourcePackageNum;
     }
 
     /**
-     * Set 
-     * @param ResourcePackageNum 
+     * Set The number of prepaid resource packs (only required for prepaid mode)
+     * @param ResourcePackageNum The number of prepaid resource packs (only required for prepaid mode)
      */
     public void setResourcePackageNum(Long ResourcePackageNum) {
         this.ResourcePackageNum = ResourcePackageNum;

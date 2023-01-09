@@ -13,29 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.rum.v20210622.models;
+package com.tencentcloudapi.postgres.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTawInstanceResponse extends AbstractModel{
+public class DescribeParameterTemplatesResponse extends AbstractModel{
 
     /**
-    * Instance ID
+    * The total number of eligible parameter templates
     */
-    @SerializedName("InstanceId")
+    @SerializedName("TotalCount")
     @Expose
-    private String InstanceId;
+    private Long TotalCount;
 
     /**
-    * ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Parameter template list
     */
-    @SerializedName("DealName")
+    @SerializedName("ParameterTemplateSet")
     @Expose
-    private String DealName;
+    private ParameterTemplate [] ParameterTemplateSet;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,39 +44,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get The total number of eligible parameter templates 
+     * @return TotalCount The total number of eligible parameter templates
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set The total number of eligible parameter templates
+     * @param TotalCount The total number of eligible parameter templates
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
-     * Get ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DealName ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Parameter template list 
+     * @return ParameterTemplateSet Parameter template list
      */
-    public String getDealName() {
-        return this.DealName;
+    public ParameterTemplate [] getParameterTemplateSet() {
+        return this.ParameterTemplateSet;
     }
 
     /**
-     * Set ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DealName ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Parameter template list
+     * @param ParameterTemplateSet Parameter template list
      */
-    public void setDealName(String DealName) {
-        this.DealName = DealName;
+    public void setParameterTemplateSet(ParameterTemplate [] ParameterTemplateSet) {
+        this.ParameterTemplateSet = ParameterTemplateSet;
     }
 
     /**
@@ -96,19 +91,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public CreateTawInstanceResponse() {
+    public DescribeParameterTemplatesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateTawInstanceResponse(CreateTawInstanceResponse source) {
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
+    public DescribeParameterTemplatesResponse(DescribeParameterTemplatesResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
         }
-        if (source.DealName != null) {
-            this.DealName = new String(source.DealName);
+        if (source.ParameterTemplateSet != null) {
+            this.ParameterTemplateSet = new ParameterTemplate[source.ParameterTemplateSet.length];
+            for (int i = 0; i < source.ParameterTemplateSet.length; i++) {
+                this.ParameterTemplateSet[i] = new ParameterTemplate(source.ParameterTemplateSet[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -120,8 +118,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "DealName", this.DealName);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "ParameterTemplateSet.", this.ParameterTemplateSet);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

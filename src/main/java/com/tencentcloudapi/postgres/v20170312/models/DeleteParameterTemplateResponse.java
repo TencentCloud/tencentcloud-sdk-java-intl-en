@@ -13,29 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.rum.v20210622.models;
+package com.tencentcloudapi.postgres.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateTawInstanceResponse extends AbstractModel{
-
-    /**
-    * Instance ID
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private String InstanceId;
-
-    /**
-    * ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("DealName")
-    @Expose
-    private String DealName;
+public class DeleteParameterTemplateResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -43,42 +28,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
-     */
-    public String getInstanceId() {
-        return this.InstanceId;
-    }
-
-    /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
-     */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
-    }
-
-    /**
-     * Get ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DealName ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public String getDealName() {
-        return this.DealName;
-    }
-
-    /**
-     * Set ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DealName ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setDealName(String DealName) {
-        this.DealName = DealName;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -96,20 +45,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public CreateTawInstanceResponse() {
+    public DeleteParameterTemplateResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateTawInstanceResponse(CreateTawInstanceResponse source) {
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
-        }
-        if (source.DealName != null) {
-            this.DealName = new String(source.DealName);
-        }
+    public DeleteParameterTemplateResponse(DeleteParameterTemplateResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -120,8 +63,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "DealName", this.DealName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
