@@ -501,6 +501,26 @@ Default API request rate limit: 1 request/sec.
     }
 
     /**
+     *This API is used to set the SMTP password. Initially, no SMTP password is set for your email address, so emails cannot be sent over SMTP. To send emails over SMTP, you must set the SMTP password. The set password can be changed subsequently.
+     * @param req UpdateEmailSmtpPassWordRequest
+     * @return UpdateEmailSmtpPassWordResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateEmailSmtpPassWordResponse UpdateEmailSmtpPassWord(UpdateEmailSmtpPassWordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateEmailSmtpPassWordResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateEmailSmtpPassWordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateEmailSmtpPassWord");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to update an email template. An updated template must be approved again before it can be used.
      * @param req UpdateEmailTemplateRequest
      * @return UpdateEmailTemplateResponse
