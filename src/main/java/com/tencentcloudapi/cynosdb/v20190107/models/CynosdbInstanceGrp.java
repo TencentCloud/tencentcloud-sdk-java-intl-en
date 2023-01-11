@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CynosdbInstanceGrp extends AbstractModel{
 
     /**
-    * appId
+    * User `appId`
     */
     @SerializedName("AppId")
     @Expose
@@ -128,16 +128,61 @@ public class CynosdbInstanceGrp extends AbstractModel{
     private CynosdbInstance [] InstanceSet;
 
     /**
-     * Get appId 
-     * @return AppId appId
+    * VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("UniqVpcId")
+    @Expose
+    private String UniqVpcId;
+
+    /**
+    * Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("UniqSubnetId")
+    @Expose
+    private String UniqSubnetId;
+
+    /**
+    * Information of the old IP
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OldAddrInfo")
+    @Expose
+    private OldAddrInfo OldAddrInfo;
+
+    /**
+    * Task in progress
+    */
+    @SerializedName("ProcessingTasks")
+    @Expose
+    private String [] ProcessingTasks;
+
+    /**
+    * Task list
+    */
+    @SerializedName("Tasks")
+    @Expose
+    private ObjectTask [] Tasks;
+
+    /**
+    * biz_net_service table ID
+    */
+    @SerializedName("NetServiceId")
+    @Expose
+    private Long NetServiceId;
+
+    /**
+     * Get User `appId` 
+     * @return AppId User `appId`
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set appId
-     * @param AppId appId
+     * Set User `appId`
+     * @param AppId User `appId`
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
@@ -367,6 +412,114 @@ public class CynosdbInstanceGrp extends AbstractModel{
         this.InstanceSet = InstanceSet;
     }
 
+    /**
+     * Get VPC ID
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return UniqVpcId VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getUniqVpcId() {
+        return this.UniqVpcId;
+    }
+
+    /**
+     * Set VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param UniqVpcId VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setUniqVpcId(String UniqVpcId) {
+        this.UniqVpcId = UniqVpcId;
+    }
+
+    /**
+     * Get Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return UniqSubnetId Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getUniqSubnetId() {
+        return this.UniqSubnetId;
+    }
+
+    /**
+     * Set Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param UniqSubnetId Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setUniqSubnetId(String UniqSubnetId) {
+        this.UniqSubnetId = UniqSubnetId;
+    }
+
+    /**
+     * Get Information of the old IP
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OldAddrInfo Information of the old IP
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public OldAddrInfo getOldAddrInfo() {
+        return this.OldAddrInfo;
+    }
+
+    /**
+     * Set Information of the old IP
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OldAddrInfo Information of the old IP
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setOldAddrInfo(OldAddrInfo OldAddrInfo) {
+        this.OldAddrInfo = OldAddrInfo;
+    }
+
+    /**
+     * Get Task in progress 
+     * @return ProcessingTasks Task in progress
+     */
+    public String [] getProcessingTasks() {
+        return this.ProcessingTasks;
+    }
+
+    /**
+     * Set Task in progress
+     * @param ProcessingTasks Task in progress
+     */
+    public void setProcessingTasks(String [] ProcessingTasks) {
+        this.ProcessingTasks = ProcessingTasks;
+    }
+
+    /**
+     * Get Task list 
+     * @return Tasks Task list
+     */
+    public ObjectTask [] getTasks() {
+        return this.Tasks;
+    }
+
+    /**
+     * Set Task list
+     * @param Tasks Task list
+     */
+    public void setTasks(ObjectTask [] Tasks) {
+        this.Tasks = Tasks;
+    }
+
+    /**
+     * Get biz_net_service table ID 
+     * @return NetServiceId biz_net_service table ID
+     */
+    public Long getNetServiceId() {
+        return this.NetServiceId;
+    }
+
+    /**
+     * Set biz_net_service table ID
+     * @param NetServiceId biz_net_service table ID
+     */
+    public void setNetServiceId(Long NetServiceId) {
+        this.NetServiceId = NetServiceId;
+    }
+
     public CynosdbInstanceGrp() {
     }
 
@@ -423,6 +576,30 @@ public class CynosdbInstanceGrp extends AbstractModel{
                 this.InstanceSet[i] = new CynosdbInstance(source.InstanceSet[i]);
             }
         }
+        if (source.UniqVpcId != null) {
+            this.UniqVpcId = new String(source.UniqVpcId);
+        }
+        if (source.UniqSubnetId != null) {
+            this.UniqSubnetId = new String(source.UniqSubnetId);
+        }
+        if (source.OldAddrInfo != null) {
+            this.OldAddrInfo = new OldAddrInfo(source.OldAddrInfo);
+        }
+        if (source.ProcessingTasks != null) {
+            this.ProcessingTasks = new String[source.ProcessingTasks.length];
+            for (int i = 0; i < source.ProcessingTasks.length; i++) {
+                this.ProcessingTasks[i] = new String(source.ProcessingTasks[i]);
+            }
+        }
+        if (source.Tasks != null) {
+            this.Tasks = new ObjectTask[source.Tasks.length];
+            for (int i = 0; i < source.Tasks.length; i++) {
+                this.Tasks[i] = new ObjectTask(source.Tasks[i]);
+            }
+        }
+        if (source.NetServiceId != null) {
+            this.NetServiceId = new Long(source.NetServiceId);
+        }
     }
 
 
@@ -445,6 +622,12 @@ public class CynosdbInstanceGrp extends AbstractModel{
         this.setParamSimple(map, prefix + "WanPort", this.WanPort);
         this.setParamSimple(map, prefix + "WanStatus", this.WanStatus);
         this.setParamArrayObj(map, prefix + "InstanceSet.", this.InstanceSet);
+        this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+        this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+        this.setParamObj(map, prefix + "OldAddrInfo.", this.OldAddrInfo);
+        this.setParamArraySimple(map, prefix + "ProcessingTasks.", this.ProcessingTasks);
+        this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
+        this.setParamSimple(map, prefix + "NetServiceId", this.NetServiceId);
 
     }
 }

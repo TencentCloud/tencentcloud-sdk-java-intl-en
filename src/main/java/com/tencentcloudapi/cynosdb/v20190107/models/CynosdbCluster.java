@@ -88,7 +88,8 @@ deleted
     private Long InstanceNum;
 
     /**
-    * User `uin`
+    * User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Uin")
     @Expose
@@ -96,6 +97,7 @@ deleted
 
     /**
     * Engine type
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DbType")
     @Expose
@@ -103,6 +105,7 @@ deleted
 
     /**
     * User `appid`
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AppId")
     @Expose
@@ -110,6 +113,7 @@ deleted
 
     /**
     * Cluster status description
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StatusDesc")
     @Expose
@@ -117,13 +121,15 @@ deleted
 
     /**
     * Cluster creation time
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Billing mode. 0: pay-as-you-go; 1: monthly subscription
+    * Billing mode. `0`: Pay-as-you-go; `1`: Monthly subscription.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PayMode")
     @Expose
@@ -131,6 +137,7 @@ deleted
 
     /**
     * End time
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PeriodEndTime")
     @Expose
@@ -138,6 +145,7 @@ deleted
 
     /**
     * Cluster read-write VIP
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Vip")
     @Expose
@@ -145,6 +153,7 @@ deleted
 
     /**
     * Cluster read-write vport
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Vport")
     @Expose
@@ -152,6 +161,7 @@ deleted
 
     /**
     * Project ID
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProjectID")
     @Expose
@@ -159,6 +169,7 @@ deleted
 
     /**
     * VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VpcId")
     @Expose
@@ -166,6 +177,7 @@ deleted
 
     /**
     * Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SubnetId")
     @Expose
@@ -173,6 +185,7 @@ deleted
 
     /**
     * TDSQL-C kernel version
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CynosVersion")
     @Expose
@@ -180,6 +193,7 @@ deleted
 
     /**
     * Storage capacity
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StorageLimit")
     @Expose
@@ -187,6 +201,7 @@ deleted
 
     /**
     * Renewal flag
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -194,27 +209,31 @@ deleted
 
     /**
     * Task in progress
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProcessingTask")
     @Expose
     private String ProcessingTask;
 
     /**
-    * Array of tasks in cluster
+    * Array of tasks in the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tasks")
     @Expose
     private ObjectTask [] Tasks;
 
     /**
-    * Array of tags bound to cluster
+    * Array of tags bound to the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ResourceTags")
     @Expose
     private Tag [] ResourceTags;
 
     /**
-    * Database type (`NORMAL` or `SERVERLESS`)
+    * Database type. Valid values: `NORMAL`, `SERVERLESS`.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DbMode")
     @Expose
@@ -222,15 +241,17 @@ deleted
 
     /**
     * Serverless cluster status when the database type is `SERVERLESS`. Valid values:
-resume
-pause
+`resume`
+`pause`
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServerlessStatus")
     @Expose
     private String ServerlessStatus;
 
     /**
-    * Prepaid cluster storage
+    * Prepaid cluster storage capacity
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Storage")
     @Expose
@@ -238,27 +259,31 @@ pause
 
     /**
     * Cluster storage ID used in prepaid storage modification
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StorageId")
     @Expose
     private String StorageId;
 
     /**
-    * Billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid)
+    * Billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription).
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StoragePayMode")
     @Expose
     private Long StoragePayMode;
 
     /**
-    * The minimum storage corresponding to the compute specifications of the cluster
+    * The minimum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MinStorageSize")
     @Expose
     private Long MinStorageSize;
 
     /**
-    * The maximum storage corresponding to the compute specifications of the cluster
+    * The maximum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MaxStorageSize")
     @Expose
@@ -266,10 +291,75 @@ pause
 
     /**
     * Network information of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NetAddrs")
     @Expose
     private NetAddr [] NetAddrs;
+
+    /**
+    * Physical AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PhysicalZone")
+    @Expose
+    private String PhysicalZone;
+
+    /**
+    * Primary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MasterZone")
+    @Expose
+    private String MasterZone;
+
+    /**
+    * Whether there is a secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("HasSlaveZone")
+    @Expose
+    private String HasSlaveZone;
+
+    /**
+    * Secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SlaveZones")
+    @Expose
+    private String [] SlaveZones;
+
+    /**
+    * Business type
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BusinessType")
+    @Expose
+    private String BusinessType;
+
+    /**
+    * Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsFreeze")
+    @Expose
+    private String IsFreeze;
+
+    /**
+    * Order source
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OrderSource")
+    @Expose
+    private String OrderSource;
+
+    /**
+    * Capability
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Ability")
+    @Expose
+    private Ability Ability;
 
     /**
      * Get Cluster status. Valid values are as follows:
@@ -436,24 +526,30 @@ deleted
     }
 
     /**
-     * Get User `uin` 
-     * @return Uin User `uin`
+     * Get User UIN
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Uin User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set User `uin`
-     * @param Uin User `uin`
+     * Set User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Uin User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get Engine type 
+     * Get Engine type
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return DbType Engine type
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDbType() {
         return this.DbType;
@@ -461,15 +557,19 @@ deleted
 
     /**
      * Set Engine type
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param DbType Engine type
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
     }
 
     /**
-     * Get User `appid` 
+     * Get User `appid`
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return AppId User `appid`
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getAppId() {
         return this.AppId;
@@ -477,15 +577,19 @@ deleted
 
     /**
      * Set User `appid`
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param AppId User `appid`
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get Cluster status description 
+     * Get Cluster status description
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return StatusDesc Cluster status description
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStatusDesc() {
         return this.StatusDesc;
@@ -493,15 +597,19 @@ deleted
 
     /**
      * Set Cluster status description
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param StatusDesc Cluster status description
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
     }
 
     /**
-     * Get Cluster creation time 
+     * Get Cluster creation time
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return CreateTime Cluster creation time
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -509,31 +617,39 @@ deleted
 
     /**
      * Set Cluster creation time
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateTime Cluster creation time
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Billing mode. 0: pay-as-you-go; 1: monthly subscription 
-     * @return PayMode Billing mode. 0: pay-as-you-go; 1: monthly subscription
+     * Get Billing mode. `0`: Pay-as-you-go; `1`: Monthly subscription.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PayMode Billing mode. `0`: Pay-as-you-go; `1`: Monthly subscription.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Billing mode. 0: pay-as-you-go; 1: monthly subscription
-     * @param PayMode Billing mode. 0: pay-as-you-go; 1: monthly subscription
+     * Set Billing mode. `0`: Pay-as-you-go; `1`: Monthly subscription.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PayMode Billing mode. `0`: Pay-as-you-go; `1`: Monthly subscription.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get End time 
+     * Get End time
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return PeriodEndTime End time
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPeriodEndTime() {
         return this.PeriodEndTime;
@@ -541,15 +657,19 @@ deleted
 
     /**
      * Set End time
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param PeriodEndTime End time
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPeriodEndTime(String PeriodEndTime) {
         this.PeriodEndTime = PeriodEndTime;
     }
 
     /**
-     * Get Cluster read-write VIP 
+     * Get Cluster read-write VIP
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Vip Cluster read-write VIP
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVip() {
         return this.Vip;
@@ -557,15 +677,19 @@ deleted
 
     /**
      * Set Cluster read-write VIP
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Vip Cluster read-write VIP
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get Cluster read-write vport 
+     * Get Cluster read-write vport
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Vport Cluster read-write vport
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getVport() {
         return this.Vport;
@@ -573,15 +697,19 @@ deleted
 
     /**
      * Set Cluster read-write vport
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Vport Cluster read-write vport
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get Project ID 
+     * Get Project ID
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ProjectID Project ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getProjectID() {
         return this.ProjectID;
@@ -589,15 +717,19 @@ deleted
 
     /**
      * Set Project ID
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ProjectID Project ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProjectID(Long ProjectID) {
         this.ProjectID = ProjectID;
     }
 
     /**
-     * Get VPC ID 
+     * Get VPC ID
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return VpcId VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVpcId() {
         return this.VpcId;
@@ -605,15 +737,19 @@ deleted
 
     /**
      * Set VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param VpcId VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet ID 
+     * Get Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return SubnetId Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -621,15 +757,19 @@ deleted
 
     /**
      * Set Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param SubnetId Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get TDSQL-C kernel version 
+     * Get TDSQL-C kernel version
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return CynosVersion TDSQL-C kernel version
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCynosVersion() {
         return this.CynosVersion;
@@ -637,15 +777,19 @@ deleted
 
     /**
      * Set TDSQL-C kernel version
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param CynosVersion TDSQL-C kernel version
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCynosVersion(String CynosVersion) {
         this.CynosVersion = CynosVersion;
     }
 
     /**
-     * Get Storage capacity 
+     * Get Storage capacity
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return StorageLimit Storage capacity
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
@@ -653,15 +797,19 @@ deleted
 
     /**
      * Set Storage capacity
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param StorageLimit Storage capacity
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
     }
 
     /**
-     * Get Renewal flag 
+     * Get Renewal flag
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return RenewFlag Renewal flag
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
@@ -669,15 +817,19 @@ deleted
 
     /**
      * Set Renewal flag
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param RenewFlag Renewal flag
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get Task in progress 
+     * Get Task in progress
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ProcessingTask Task in progress
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProcessingTask() {
         return this.ProcessingTask;
@@ -685,55 +837,69 @@ deleted
 
     /**
      * Set Task in progress
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ProcessingTask Task in progress
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProcessingTask(String ProcessingTask) {
         this.ProcessingTask = ProcessingTask;
     }
 
     /**
-     * Get Array of tasks in cluster 
-     * @return Tasks Array of tasks in cluster
+     * Get Array of tasks in the cluster
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Tasks Array of tasks in the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ObjectTask [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set Array of tasks in cluster
-     * @param Tasks Array of tasks in cluster
+     * Set Array of tasks in the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Tasks Array of tasks in the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTasks(ObjectTask [] Tasks) {
         this.Tasks = Tasks;
     }
 
     /**
-     * Get Array of tags bound to cluster 
-     * @return ResourceTags Array of tags bound to cluster
+     * Get Array of tags bound to the cluster
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ResourceTags Array of tags bound to the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Tag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set Array of tags bound to cluster
-     * @param ResourceTags Array of tags bound to cluster
+     * Set Array of tags bound to the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ResourceTags Array of tags bound to the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setResourceTags(Tag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get Database type (`NORMAL` or `SERVERLESS`) 
-     * @return DbMode Database type (`NORMAL` or `SERVERLESS`)
+     * Get Database type. Valid values: `NORMAL`, `SERVERLESS`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DbMode Database type. Valid values: `NORMAL`, `SERVERLESS`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDbMode() {
         return this.DbMode;
     }
 
     /**
-     * Set Database type (`NORMAL` or `SERVERLESS`)
-     * @param DbMode Database type (`NORMAL` or `SERVERLESS`)
+     * Set Database type. Valid values: `NORMAL`, `SERVERLESS`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DbMode Database type. Valid values: `NORMAL`, `SERVERLESS`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDbMode(String DbMode) {
         this.DbMode = DbMode;
@@ -741,11 +907,13 @@ deleted
 
     /**
      * Get Serverless cluster status when the database type is `SERVERLESS`. Valid values:
-resume
-pause 
+`resume`
+`pause`
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ServerlessStatus Serverless cluster status when the database type is `SERVERLESS`. Valid values:
-resume
-pause
+`resume`
+`pause`
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getServerlessStatus() {
         return this.ServerlessStatus;
@@ -753,35 +921,43 @@ pause
 
     /**
      * Set Serverless cluster status when the database type is `SERVERLESS`. Valid values:
-resume
-pause
+`resume`
+`pause`
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ServerlessStatus Serverless cluster status when the database type is `SERVERLESS`. Valid values:
-resume
-pause
+`resume`
+`pause`
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setServerlessStatus(String ServerlessStatus) {
         this.ServerlessStatus = ServerlessStatus;
     }
 
     /**
-     * Get Prepaid cluster storage 
-     * @return Storage Prepaid cluster storage
+     * Get Prepaid cluster storage capacity
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Storage Prepaid cluster storage capacity
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set Prepaid cluster storage
-     * @param Storage Prepaid cluster storage
+     * Set Prepaid cluster storage capacity
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Storage Prepaid cluster storage capacity
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get Cluster storage ID used in prepaid storage modification 
+     * Get Cluster storage ID used in prepaid storage modification
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return StorageId Cluster storage ID used in prepaid storage modification
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStorageId() {
         return this.StorageId;
@@ -789,63 +965,79 @@ pause
 
     /**
      * Set Cluster storage ID used in prepaid storage modification
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param StorageId Cluster storage ID used in prepaid storage modification
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStorageId(String StorageId) {
         this.StorageId = StorageId;
     }
 
     /**
-     * Get Billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid) 
-     * @return StoragePayMode Billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid)
+     * Get Billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return StoragePayMode Billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getStoragePayMode() {
         return this.StoragePayMode;
     }
 
     /**
-     * Set Billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid)
-     * @param StoragePayMode Billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid)
+     * Set Billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param StoragePayMode Billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStoragePayMode(Long StoragePayMode) {
         this.StoragePayMode = StoragePayMode;
     }
 
     /**
-     * Get The minimum storage corresponding to the compute specifications of the cluster 
-     * @return MinStorageSize The minimum storage corresponding to the compute specifications of the cluster
+     * Get The minimum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MinStorageSize The minimum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMinStorageSize() {
         return this.MinStorageSize;
     }
 
     /**
-     * Set The minimum storage corresponding to the compute specifications of the cluster
-     * @param MinStorageSize The minimum storage corresponding to the compute specifications of the cluster
+     * Set The minimum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MinStorageSize The minimum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMinStorageSize(Long MinStorageSize) {
         this.MinStorageSize = MinStorageSize;
     }
 
     /**
-     * Get The maximum storage corresponding to the compute specifications of the cluster 
-     * @return MaxStorageSize The maximum storage corresponding to the compute specifications of the cluster
+     * Get The maximum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MaxStorageSize The maximum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMaxStorageSize() {
         return this.MaxStorageSize;
     }
 
     /**
-     * Set The maximum storage corresponding to the compute specifications of the cluster
-     * @param MaxStorageSize The maximum storage corresponding to the compute specifications of the cluster
+     * Set The maximum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MaxStorageSize The maximum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMaxStorageSize(Long MaxStorageSize) {
         this.MaxStorageSize = MaxStorageSize;
     }
 
     /**
-     * Get Network information of the cluster 
+     * Get Network information of the cluster
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return NetAddrs Network information of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public NetAddr [] getNetAddrs() {
         return this.NetAddrs;
@@ -853,10 +1045,172 @@ pause
 
     /**
      * Set Network information of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param NetAddrs Network information of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNetAddrs(NetAddr [] NetAddrs) {
         this.NetAddrs = NetAddrs;
+    }
+
+    /**
+     * Get Physical AZ
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PhysicalZone Physical AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getPhysicalZone() {
+        return this.PhysicalZone;
+    }
+
+    /**
+     * Set Physical AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PhysicalZone Physical AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPhysicalZone(String PhysicalZone) {
+        this.PhysicalZone = PhysicalZone;
+    }
+
+    /**
+     * Get Primary AZ
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MasterZone Primary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getMasterZone() {
+        return this.MasterZone;
+    }
+
+    /**
+     * Set Primary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MasterZone Primary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMasterZone(String MasterZone) {
+        this.MasterZone = MasterZone;
+    }
+
+    /**
+     * Get Whether there is a secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HasSlaveZone Whether there is a secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getHasSlaveZone() {
+        return this.HasSlaveZone;
+    }
+
+    /**
+     * Set Whether there is a secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HasSlaveZone Whether there is a secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setHasSlaveZone(String HasSlaveZone) {
+        this.HasSlaveZone = HasSlaveZone;
+    }
+
+    /**
+     * Get Secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SlaveZones Secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getSlaveZones() {
+        return this.SlaveZones;
+    }
+
+    /**
+     * Set Secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SlaveZones Secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSlaveZones(String [] SlaveZones) {
+        this.SlaveZones = SlaveZones;
+    }
+
+    /**
+     * Get Business type
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BusinessType Business type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getBusinessType() {
+        return this.BusinessType;
+    }
+
+    /**
+     * Set Business type
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BusinessType Business type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBusinessType(String BusinessType) {
+        this.BusinessType = BusinessType;
+    }
+
+    /**
+     * Get Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsFreeze Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getIsFreeze() {
+        return this.IsFreeze;
+    }
+
+    /**
+     * Set Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsFreeze Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIsFreeze(String IsFreeze) {
+        this.IsFreeze = IsFreeze;
+    }
+
+    /**
+     * Get Order source
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OrderSource Order source
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getOrderSource() {
+        return this.OrderSource;
+    }
+
+    /**
+     * Set Order source
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OrderSource Order source
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setOrderSource(String OrderSource) {
+        this.OrderSource = OrderSource;
+    }
+
+    /**
+     * Get Capability
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Ability Capability
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Ability getAbility() {
+        return this.Ability;
+    }
+
+    /**
+     * Set Capability
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Ability Capability
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAbility(Ability Ability) {
+        this.Ability = Ability;
     }
 
     public CynosdbCluster() {
@@ -978,6 +1332,33 @@ pause
                 this.NetAddrs[i] = new NetAddr(source.NetAddrs[i]);
             }
         }
+        if (source.PhysicalZone != null) {
+            this.PhysicalZone = new String(source.PhysicalZone);
+        }
+        if (source.MasterZone != null) {
+            this.MasterZone = new String(source.MasterZone);
+        }
+        if (source.HasSlaveZone != null) {
+            this.HasSlaveZone = new String(source.HasSlaveZone);
+        }
+        if (source.SlaveZones != null) {
+            this.SlaveZones = new String[source.SlaveZones.length];
+            for (int i = 0; i < source.SlaveZones.length; i++) {
+                this.SlaveZones[i] = new String(source.SlaveZones[i]);
+            }
+        }
+        if (source.BusinessType != null) {
+            this.BusinessType = new String(source.BusinessType);
+        }
+        if (source.IsFreeze != null) {
+            this.IsFreeze = new String(source.IsFreeze);
+        }
+        if (source.OrderSource != null) {
+            this.OrderSource = new String(source.OrderSource);
+        }
+        if (source.Ability != null) {
+            this.Ability = new Ability(source.Ability);
+        }
     }
 
 
@@ -1019,6 +1400,14 @@ pause
         this.setParamSimple(map, prefix + "MinStorageSize", this.MinStorageSize);
         this.setParamSimple(map, prefix + "MaxStorageSize", this.MaxStorageSize);
         this.setParamArrayObj(map, prefix + "NetAddrs.", this.NetAddrs);
+        this.setParamSimple(map, prefix + "PhysicalZone", this.PhysicalZone);
+        this.setParamSimple(map, prefix + "MasterZone", this.MasterZone);
+        this.setParamSimple(map, prefix + "HasSlaveZone", this.HasSlaveZone);
+        this.setParamArraySimple(map, prefix + "SlaveZones.", this.SlaveZones);
+        this.setParamSimple(map, prefix + "BusinessType", this.BusinessType);
+        this.setParamSimple(map, prefix + "IsFreeze", this.IsFreeze);
+        this.setParamSimple(map, prefix + "OrderSource", this.OrderSource);
+        this.setParamObj(map, prefix + "Ability.", this.Ability);
 
     }
 }

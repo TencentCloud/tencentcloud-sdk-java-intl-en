@@ -99,6 +99,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to disable the audit service for a TDSQL-C for MySQL instance.
+     * @param req CloseAuditServiceRequest
+     * @return CloseAuditServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseAuditServiceResponse CloseAuditService(CloseAuditServiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CloseAuditServiceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CloseAuditServiceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CloseAuditService");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create an account.
      * @param req CreateAccountsRequest
      * @return CreateAccountsResponse
@@ -111,6 +131,26 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateAccountsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateAccounts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create an audit rule template.
+     * @param req CreateAuditRuleTemplateRequest
+     * @return CreateAuditRuleTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAuditRuleTemplateResponse CreateAuditRuleTemplate(CreateAuditRuleTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAuditRuleTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAuditRuleTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAuditRuleTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -159,6 +199,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete an audit rule template.
+     * @param req DeleteAuditRuleTemplatesRequest
+     * @return DeleteAuditRuleTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAuditRuleTemplatesResponse DeleteAuditRuleTemplates(DeleteAuditRuleTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAuditRuleTemplatesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAuditRuleTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteAuditRuleTemplates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete the manual backup for a cluster. It cannot be used to delete the automatic backup.
      * @param req DeleteBackupRequest
      * @return DeleteBackupResponse
@@ -191,6 +251,46 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeAccountsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeAccounts");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query audit rule templates.
+     * @param req DescribeAuditRuleTemplatesRequest
+     * @return DescribeAuditRuleTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditRuleTemplatesResponse DescribeAuditRuleTemplates(DescribeAuditRuleTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAuditRuleTemplatesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAuditRuleTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAuditRuleTemplates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the audit rule templates of an instance.
+     * @param req DescribeAuditRuleWithInstanceIdsRequest
+     * @return DescribeAuditRuleWithInstanceIdsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditRuleWithInstanceIdsResponse DescribeAuditRuleWithInstanceIds(DescribeAuditRuleWithInstanceIdsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAuditRuleWithInstanceIdsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAuditRuleWithInstanceIdsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAuditRuleWithInstanceIds");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -319,7 +419,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to display cluster details.
+     *This API is used to show the details of an instance.
      * @param req DescribeClusterDetailRequest
      * @return DescribeClusterDetailResponse
      * @throws TencentCloudSDKException
@@ -719,6 +819,46 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify an audit rule template.
+     * @param req ModifyAuditRuleTemplatesRequest
+     * @return ModifyAuditRuleTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAuditRuleTemplatesResponse ModifyAuditRuleTemplates(ModifyAuditRuleTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAuditRuleTemplatesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAuditRuleTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAuditRuleTemplates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the audit configurations of an instance, such as audit log retention period and audit rule.
+     * @param req ModifyAuditServiceRequest
+     * @return ModifyAuditServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAuditServiceResponse ModifyAuditService(ModifyAuditServiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAuditServiceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAuditServiceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAuditService");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify the backup configuration of the specified cluster.
      * @param req ModifyBackupConfigRequest
      * @return ModifyBackupConfigResponse
@@ -911,6 +1051,26 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<OfflineInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "OfflineInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to enable the audit service for a TDSQL-C for MySQL instance.
+     * @param req OpenAuditServiceRequest
+     * @return OpenAuditServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenAuditServiceResponse OpenAuditService(OpenAuditServiceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OpenAuditServiceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<OpenAuditServiceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "OpenAuditService");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

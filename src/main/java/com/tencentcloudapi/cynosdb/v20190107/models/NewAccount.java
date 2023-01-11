@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class NewAccount extends AbstractModel{
 
     /**
-    * Account name
+    * Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
     */
     @SerializedName("AccountName")
     @Expose
     private String AccountName;
 
     /**
-    * Password
+    * Password, which can contain 8-64 characters.
     */
     @SerializedName("AccountPassword")
     @Expose
@@ -51,32 +51,39 @@ public class NewAccount extends AbstractModel{
     private String Description;
 
     /**
-     * Get Account name 
-     * @return AccountName Account name
+    * Maximum number of user connections, which cannot be above 10,240.
+    */
+    @SerializedName("MaxUserConnections")
+    @Expose
+    private Long MaxUserConnections;
+
+    /**
+     * Get Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit. 
+     * @return AccountName Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set Account name
-     * @param AccountName Account name
+     * Set Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
+     * @param AccountName Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
     }
 
     /**
-     * Get Password 
-     * @return AccountPassword Password
+     * Get Password, which can contain 8-64 characters. 
+     * @return AccountPassword Password, which can contain 8-64 characters.
      */
     public String getAccountPassword() {
         return this.AccountPassword;
     }
 
     /**
-     * Set Password
-     * @param AccountPassword Password
+     * Set Password, which can contain 8-64 characters.
+     * @param AccountPassword Password, which can contain 8-64 characters.
      */
     public void setAccountPassword(String AccountPassword) {
         this.AccountPassword = AccountPassword;
@@ -114,6 +121,22 @@ public class NewAccount extends AbstractModel{
         this.Description = Description;
     }
 
+    /**
+     * Get Maximum number of user connections, which cannot be above 10,240. 
+     * @return MaxUserConnections Maximum number of user connections, which cannot be above 10,240.
+     */
+    public Long getMaxUserConnections() {
+        return this.MaxUserConnections;
+    }
+
+    /**
+     * Set Maximum number of user connections, which cannot be above 10,240.
+     * @param MaxUserConnections Maximum number of user connections, which cannot be above 10,240.
+     */
+    public void setMaxUserConnections(Long MaxUserConnections) {
+        this.MaxUserConnections = MaxUserConnections;
+    }
+
     public NewAccount() {
     }
 
@@ -134,6 +157,9 @@ public class NewAccount extends AbstractModel{
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.MaxUserConnections != null) {
+            this.MaxUserConnections = new Long(source.MaxUserConnections);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class NewAccount extends AbstractModel{
         this.setParamSimple(map, prefix + "AccountPassword", this.AccountPassword);
         this.setParamSimple(map, prefix + "Host", this.Host);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
 
     }
 }

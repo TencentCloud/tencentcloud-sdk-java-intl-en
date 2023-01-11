@@ -87,6 +87,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Description;
 
     /**
+    * Public IP
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("WanIP")
+    @Expose
+    private String WanIP;
+
+    /**
+    * Public network status
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("WanStatus")
+    @Expose
+    private String WanStatus;
+
+    /**
      * Get Private network IP
 Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return Vip Private network IP
@@ -246,6 +262,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Description = Description;
     }
 
+    /**
+     * Get Public IP
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return WanIP Public IP
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getWanIP() {
+        return this.WanIP;
+    }
+
+    /**
+     * Set Public IP
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param WanIP Public IP
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setWanIP(String WanIP) {
+        this.WanIP = WanIP;
+    }
+
+    /**
+     * Get Public network status
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return WanStatus Public network status
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getWanStatus() {
+        return this.WanStatus;
+    }
+
+    /**
+     * Set Public network status
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param WanStatus Public network status
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setWanStatus(String WanStatus) {
+        this.WanStatus = WanStatus;
+    }
+
     public NetAddr() {
     }
 
@@ -278,6 +334,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.WanIP != null) {
+            this.WanIP = new String(source.WanIP);
+        }
+        if (source.WanStatus != null) {
+            this.WanStatus = new String(source.WanStatus);
+        }
     }
 
 
@@ -293,6 +355,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
         this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "WanIP", this.WanIP);
+        this.setParamSimple(map, prefix + "WanStatus", this.WanStatus);
 
     }
 }

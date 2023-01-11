@@ -195,6 +195,182 @@ pausing
     private String ServerlessStatus;
 
     /**
+    * Binlog switch. Valid values: `ON`, `OFF`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("LogBin")
+    @Expose
+    private String LogBin;
+
+    /**
+    * PITR type. Valid values: `normal`, `redo_pitr`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PitrType")
+    @Expose
+    private String PitrType;
+
+    /**
+    * Physical AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PhysicalZone")
+    @Expose
+    private String PhysicalZone;
+
+    /**
+    * Storage ID
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("StorageId")
+    @Expose
+    private String StorageId;
+
+    /**
+    * Storage capacity in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Storage")
+    @Expose
+    private Long Storage;
+
+    /**
+    * Maximum storage specification in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MaxStorageSize")
+    @Expose
+    private Long MaxStorageSize;
+
+    /**
+    * Minimum storage specification in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MinStorageSize")
+    @Expose
+    private Long MinStorageSize;
+
+    /**
+    * Storage billing mode. Valid values: `1` (monthly subscription), `0` (pay-as-you-go).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("StoragePayMode")
+    @Expose
+    private Long StoragePayMode;
+
+    /**
+    * Database type. Valid values: `normal`, `serverless`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DbMode")
+    @Expose
+    private String DbMode;
+
+    /**
+    * Maximum storage space
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("StorageLimit")
+    @Expose
+    private Long StorageLimit;
+
+    /**
+    * Features supported by the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Ability")
+    @Expose
+    private Ability Ability;
+
+    /**
+    * TDSQL-C version
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CynosVersion")
+    @Expose
+    private String CynosVersion;
+
+    /**
+    * Business type
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("BusinessType")
+    @Expose
+    private String BusinessType;
+
+    /**
+    * Whether there is a secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("HasSlaveZone")
+    @Expose
+    private String HasSlaveZone;
+
+    /**
+    * Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsFreeze")
+    @Expose
+    private String IsFreeze;
+
+    /**
+    * Task list
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Tasks")
+    @Expose
+    private ObjectTask [] Tasks;
+
+    /**
+    * Primary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MasterZone")
+    @Expose
+    private String MasterZone;
+
+    /**
+    * Secondary AZ list
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SlaveZones")
+    @Expose
+    private String [] SlaveZones;
+
+    /**
+    * Proxy status
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ProxyStatus")
+    @Expose
+    private String ProxyStatus;
+
+    /**
+    * Whether to skip the transaction
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsSkipTrade")
+    @Expose
+    private String IsSkipTrade;
+
+    /**
+    * Whether to enable password complexity
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsOpenPasswordComplexity")
+    @Expose
+    private String IsOpenPasswordComplexity;
+
+    /**
+    * Network type
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("NetworkStatus")
+    @Expose
+    private String NetworkStatus;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -594,6 +770,446 @@ pausing
         this.ServerlessStatus = ServerlessStatus;
     }
 
+    /**
+     * Get Binlog switch. Valid values: `ON`, `OFF`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LogBin Binlog switch. Valid values: `ON`, `OFF`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getLogBin() {
+        return this.LogBin;
+    }
+
+    /**
+     * Set Binlog switch. Valid values: `ON`, `OFF`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LogBin Binlog switch. Valid values: `ON`, `OFF`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setLogBin(String LogBin) {
+        this.LogBin = LogBin;
+    }
+
+    /**
+     * Get PITR type. Valid values: `normal`, `redo_pitr`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PitrType PITR type. Valid values: `normal`, `redo_pitr`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getPitrType() {
+        return this.PitrType;
+    }
+
+    /**
+     * Set PITR type. Valid values: `normal`, `redo_pitr`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PitrType PITR type. Valid values: `normal`, `redo_pitr`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPitrType(String PitrType) {
+        this.PitrType = PitrType;
+    }
+
+    /**
+     * Get Physical AZ
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PhysicalZone Physical AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getPhysicalZone() {
+        return this.PhysicalZone;
+    }
+
+    /**
+     * Set Physical AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PhysicalZone Physical AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPhysicalZone(String PhysicalZone) {
+        this.PhysicalZone = PhysicalZone;
+    }
+
+    /**
+     * Get Storage ID
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return StorageId Storage ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getStorageId() {
+        return this.StorageId;
+    }
+
+    /**
+     * Set Storage ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param StorageId Storage ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setStorageId(String StorageId) {
+        this.StorageId = StorageId;
+    }
+
+    /**
+     * Get Storage capacity in GB
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Storage Storage capacity in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getStorage() {
+        return this.Storage;
+    }
+
+    /**
+     * Set Storage capacity in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Storage Storage capacity in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setStorage(Long Storage) {
+        this.Storage = Storage;
+    }
+
+    /**
+     * Get Maximum storage specification in GB
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MaxStorageSize Maximum storage specification in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getMaxStorageSize() {
+        return this.MaxStorageSize;
+    }
+
+    /**
+     * Set Maximum storage specification in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MaxStorageSize Maximum storage specification in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMaxStorageSize(Long MaxStorageSize) {
+        this.MaxStorageSize = MaxStorageSize;
+    }
+
+    /**
+     * Get Minimum storage specification in GB
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MinStorageSize Minimum storage specification in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getMinStorageSize() {
+        return this.MinStorageSize;
+    }
+
+    /**
+     * Set Minimum storage specification in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MinStorageSize Minimum storage specification in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMinStorageSize(Long MinStorageSize) {
+        this.MinStorageSize = MinStorageSize;
+    }
+
+    /**
+     * Get Storage billing mode. Valid values: `1` (monthly subscription), `0` (pay-as-you-go).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return StoragePayMode Storage billing mode. Valid values: `1` (monthly subscription), `0` (pay-as-you-go).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getStoragePayMode() {
+        return this.StoragePayMode;
+    }
+
+    /**
+     * Set Storage billing mode. Valid values: `1` (monthly subscription), `0` (pay-as-you-go).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param StoragePayMode Storage billing mode. Valid values: `1` (monthly subscription), `0` (pay-as-you-go).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setStoragePayMode(Long StoragePayMode) {
+        this.StoragePayMode = StoragePayMode;
+    }
+
+    /**
+     * Get Database type. Valid values: `normal`, `serverless`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DbMode Database type. Valid values: `normal`, `serverless`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDbMode() {
+        return this.DbMode;
+    }
+
+    /**
+     * Set Database type. Valid values: `normal`, `serverless`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DbMode Database type. Valid values: `normal`, `serverless`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDbMode(String DbMode) {
+        this.DbMode = DbMode;
+    }
+
+    /**
+     * Get Maximum storage space
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return StorageLimit Maximum storage space
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getStorageLimit() {
+        return this.StorageLimit;
+    }
+
+    /**
+     * Set Maximum storage space
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param StorageLimit Maximum storage space
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setStorageLimit(Long StorageLimit) {
+        this.StorageLimit = StorageLimit;
+    }
+
+    /**
+     * Get Features supported by the cluster
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Ability Features supported by the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Ability getAbility() {
+        return this.Ability;
+    }
+
+    /**
+     * Set Features supported by the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Ability Features supported by the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAbility(Ability Ability) {
+        this.Ability = Ability;
+    }
+
+    /**
+     * Get TDSQL-C version
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CynosVersion TDSQL-C version
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getCynosVersion() {
+        return this.CynosVersion;
+    }
+
+    /**
+     * Set TDSQL-C version
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CynosVersion TDSQL-C version
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCynosVersion(String CynosVersion) {
+        this.CynosVersion = CynosVersion;
+    }
+
+    /**
+     * Get Business type
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BusinessType Business type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getBusinessType() {
+        return this.BusinessType;
+    }
+
+    /**
+     * Set Business type
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BusinessType Business type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBusinessType(String BusinessType) {
+        this.BusinessType = BusinessType;
+    }
+
+    /**
+     * Get Whether there is a secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HasSlaveZone Whether there is a secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getHasSlaveZone() {
+        return this.HasSlaveZone;
+    }
+
+    /**
+     * Set Whether there is a secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HasSlaveZone Whether there is a secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setHasSlaveZone(String HasSlaveZone) {
+        this.HasSlaveZone = HasSlaveZone;
+    }
+
+    /**
+     * Get Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsFreeze Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getIsFreeze() {
+        return this.IsFreeze;
+    }
+
+    /**
+     * Set Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsFreeze Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIsFreeze(String IsFreeze) {
+        this.IsFreeze = IsFreeze;
+    }
+
+    /**
+     * Get Task list
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Tasks Task list
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public ObjectTask [] getTasks() {
+        return this.Tasks;
+    }
+
+    /**
+     * Set Task list
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Tasks Task list
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTasks(ObjectTask [] Tasks) {
+        this.Tasks = Tasks;
+    }
+
+    /**
+     * Get Primary AZ
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MasterZone Primary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getMasterZone() {
+        return this.MasterZone;
+    }
+
+    /**
+     * Set Primary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MasterZone Primary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMasterZone(String MasterZone) {
+        this.MasterZone = MasterZone;
+    }
+
+    /**
+     * Get Secondary AZ list
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SlaveZones Secondary AZ list
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getSlaveZones() {
+        return this.SlaveZones;
+    }
+
+    /**
+     * Set Secondary AZ list
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SlaveZones Secondary AZ list
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSlaveZones(String [] SlaveZones) {
+        this.SlaveZones = SlaveZones;
+    }
+
+    /**
+     * Get Proxy status
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ProxyStatus Proxy status
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getProxyStatus() {
+        return this.ProxyStatus;
+    }
+
+    /**
+     * Set Proxy status
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ProxyStatus Proxy status
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setProxyStatus(String ProxyStatus) {
+        this.ProxyStatus = ProxyStatus;
+    }
+
+    /**
+     * Get Whether to skip the transaction
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsSkipTrade Whether to skip the transaction
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getIsSkipTrade() {
+        return this.IsSkipTrade;
+    }
+
+    /**
+     * Set Whether to skip the transaction
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsSkipTrade Whether to skip the transaction
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIsSkipTrade(String IsSkipTrade) {
+        this.IsSkipTrade = IsSkipTrade;
+    }
+
+    /**
+     * Get Whether to enable password complexity
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsOpenPasswordComplexity Whether to enable password complexity
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getIsOpenPasswordComplexity() {
+        return this.IsOpenPasswordComplexity;
+    }
+
+    /**
+     * Set Whether to enable password complexity
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsOpenPasswordComplexity Whether to enable password complexity
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIsOpenPasswordComplexity(String IsOpenPasswordComplexity) {
+        this.IsOpenPasswordComplexity = IsOpenPasswordComplexity;
+    }
+
+    /**
+     * Get Network type
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return NetworkStatus Network type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getNetworkStatus() {
+        return this.NetworkStatus;
+    }
+
+    /**
+     * Set Network type
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param NetworkStatus Network type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setNetworkStatus(String NetworkStatus) {
+        this.NetworkStatus = NetworkStatus;
+    }
+
     public CynosdbClusterDetail() {
     }
 
@@ -683,6 +1299,78 @@ pausing
         if (source.ServerlessStatus != null) {
             this.ServerlessStatus = new String(source.ServerlessStatus);
         }
+        if (source.LogBin != null) {
+            this.LogBin = new String(source.LogBin);
+        }
+        if (source.PitrType != null) {
+            this.PitrType = new String(source.PitrType);
+        }
+        if (source.PhysicalZone != null) {
+            this.PhysicalZone = new String(source.PhysicalZone);
+        }
+        if (source.StorageId != null) {
+            this.StorageId = new String(source.StorageId);
+        }
+        if (source.Storage != null) {
+            this.Storage = new Long(source.Storage);
+        }
+        if (source.MaxStorageSize != null) {
+            this.MaxStorageSize = new Long(source.MaxStorageSize);
+        }
+        if (source.MinStorageSize != null) {
+            this.MinStorageSize = new Long(source.MinStorageSize);
+        }
+        if (source.StoragePayMode != null) {
+            this.StoragePayMode = new Long(source.StoragePayMode);
+        }
+        if (source.DbMode != null) {
+            this.DbMode = new String(source.DbMode);
+        }
+        if (source.StorageLimit != null) {
+            this.StorageLimit = new Long(source.StorageLimit);
+        }
+        if (source.Ability != null) {
+            this.Ability = new Ability(source.Ability);
+        }
+        if (source.CynosVersion != null) {
+            this.CynosVersion = new String(source.CynosVersion);
+        }
+        if (source.BusinessType != null) {
+            this.BusinessType = new String(source.BusinessType);
+        }
+        if (source.HasSlaveZone != null) {
+            this.HasSlaveZone = new String(source.HasSlaveZone);
+        }
+        if (source.IsFreeze != null) {
+            this.IsFreeze = new String(source.IsFreeze);
+        }
+        if (source.Tasks != null) {
+            this.Tasks = new ObjectTask[source.Tasks.length];
+            for (int i = 0; i < source.Tasks.length; i++) {
+                this.Tasks[i] = new ObjectTask(source.Tasks[i]);
+            }
+        }
+        if (source.MasterZone != null) {
+            this.MasterZone = new String(source.MasterZone);
+        }
+        if (source.SlaveZones != null) {
+            this.SlaveZones = new String[source.SlaveZones.length];
+            for (int i = 0; i < source.SlaveZones.length; i++) {
+                this.SlaveZones[i] = new String(source.SlaveZones[i]);
+            }
+        }
+        if (source.ProxyStatus != null) {
+            this.ProxyStatus = new String(source.ProxyStatus);
+        }
+        if (source.IsSkipTrade != null) {
+            this.IsSkipTrade = new String(source.IsSkipTrade);
+        }
+        if (source.IsOpenPasswordComplexity != null) {
+            this.IsOpenPasswordComplexity = new String(source.IsOpenPasswordComplexity);
+        }
+        if (source.NetworkStatus != null) {
+            this.NetworkStatus = new String(source.NetworkStatus);
+        }
     }
 
 
@@ -714,6 +1402,28 @@ pausing
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
+        this.setParamSimple(map, prefix + "LogBin", this.LogBin);
+        this.setParamSimple(map, prefix + "PitrType", this.PitrType);
+        this.setParamSimple(map, prefix + "PhysicalZone", this.PhysicalZone);
+        this.setParamSimple(map, prefix + "StorageId", this.StorageId);
+        this.setParamSimple(map, prefix + "Storage", this.Storage);
+        this.setParamSimple(map, prefix + "MaxStorageSize", this.MaxStorageSize);
+        this.setParamSimple(map, prefix + "MinStorageSize", this.MinStorageSize);
+        this.setParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
+        this.setParamSimple(map, prefix + "DbMode", this.DbMode);
+        this.setParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
+        this.setParamObj(map, prefix + "Ability.", this.Ability);
+        this.setParamSimple(map, prefix + "CynosVersion", this.CynosVersion);
+        this.setParamSimple(map, prefix + "BusinessType", this.BusinessType);
+        this.setParamSimple(map, prefix + "HasSlaveZone", this.HasSlaveZone);
+        this.setParamSimple(map, prefix + "IsFreeze", this.IsFreeze);
+        this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
+        this.setParamSimple(map, prefix + "MasterZone", this.MasterZone);
+        this.setParamArraySimple(map, prefix + "SlaveZones.", this.SlaveZones);
+        this.setParamSimple(map, prefix + "ProxyStatus", this.ProxyStatus);
+        this.setParamSimple(map, prefix + "IsSkipTrade", this.IsSkipTrade);
+        this.setParamSimple(map, prefix + "IsOpenPasswordComplexity", this.IsOpenPasswordComplexity);
+        this.setParamSimple(map, prefix + "NetworkStatus", this.NetworkStatus);
 
     }
 }

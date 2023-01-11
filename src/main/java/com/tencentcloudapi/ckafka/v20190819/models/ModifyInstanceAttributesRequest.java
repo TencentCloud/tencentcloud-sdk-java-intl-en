@@ -65,7 +65,7 @@ public class ModifyInstanceAttributesRequest extends AbstractModel{
     private Long RebalanceTime;
 
     /**
-    * Timestamp
+    * Public network bandwidth
     */
     @SerializedName("PublicNetwork")
     @Expose
@@ -182,16 +182,16 @@ public class ModifyInstanceAttributesRequest extends AbstractModel{
     }
 
     /**
-     * Get Timestamp 
-     * @return PublicNetwork Timestamp
+     * Get Public network bandwidth 
+     * @return PublicNetwork Public network bandwidth
      */
     public Long getPublicNetwork() {
         return this.PublicNetwork;
     }
 
     /**
-     * Set Timestamp
-     * @param PublicNetwork Timestamp
+     * Set Public network bandwidth
+     * @param PublicNetwork Public network bandwidth
      */
     public void setPublicNetwork(Long PublicNetwork) {
         this.PublicNetwork = PublicNetwork;

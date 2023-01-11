@@ -87,6 +87,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private ZoneStockInfo [] ZoneStockInfos;
 
     /**
+    * Quantity in stock
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("StockCount")
+    @Expose
+    private Long StockCount;
+
+    /**
      * Get Number of instance CPU cores 
      * @return Cpu Number of instance CPU cores
      */
@@ -234,6 +242,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ZoneStockInfos = ZoneStockInfos;
     }
 
+    /**
+     * Get Quantity in stock
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return StockCount Quantity in stock
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getStockCount() {
+        return this.StockCount;
+    }
+
+    /**
+     * Set Quantity in stock
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param StockCount Quantity in stock
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setStockCount(Long StockCount) {
+        this.StockCount = StockCount;
+    }
+
     public InstanceSpec() {
     }
 
@@ -272,6 +300,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.ZoneStockInfos[i] = new ZoneStockInfo(source.ZoneStockInfos[i]);
             }
         }
+        if (source.StockCount != null) {
+            this.StockCount = new Long(source.StockCount);
+        }
     }
 
 
@@ -288,6 +319,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "MaxIops", this.MaxIops);
         this.setParamSimple(map, prefix + "MaxIoBandWidth", this.MaxIoBandWidth);
         this.setParamArrayObj(map, prefix + "ZoneStockInfos.", this.ZoneStockInfos);
+        this.setParamSimple(map, prefix + "StockCount", this.StockCount);
 
     }
 }

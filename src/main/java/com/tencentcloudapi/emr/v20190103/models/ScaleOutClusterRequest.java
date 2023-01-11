@@ -24,7 +24,6 @@ public class ScaleOutClusterRequest extends AbstractModel{
 
     /**
     * The node billing mode. Valid values:
-<li>`PREPAID`：The prepaid mode, namely monthly subscription.</li>
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
 <li>`SPOTPAID`: The spot instance mode (for task nodes only).</li>
     */
@@ -163,11 +162,9 @@ You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/
 
     /**
      * Get The node billing mode. Valid values:
-<li>`PREPAID`：The prepaid mode, namely monthly subscription.</li>
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
 <li>`SPOTPAID`: The spot instance mode (for task nodes only).</li> 
      * @return InstanceChargeType The node billing mode. Valid values:
-<li>`PREPAID`：The prepaid mode, namely monthly subscription.</li>
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
 <li>`SPOTPAID`: The spot instance mode (for task nodes only).</li>
      */
@@ -177,11 +174,9 @@ You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/
 
     /**
      * Set The node billing mode. Valid values:
-<li>`PREPAID`：The prepaid mode, namely monthly subscription.</li>
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
 <li>`SPOTPAID`: The spot instance mode (for task nodes only).</li>
      * @param InstanceChargeType The node billing mode. Valid values:
-<li>`PREPAID`：The prepaid mode, namely monthly subscription.</li>
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
 <li>`SPOTPAID`: The spot instance mode (for task nodes only).</li>
      */

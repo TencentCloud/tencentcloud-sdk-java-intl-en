@@ -37,6 +37,13 @@ public class ZoneStockInfo extends AbstractModel{
     private Boolean HasStock;
 
     /**
+    * Quantity in stock
+    */
+    @SerializedName("StockCount")
+    @Expose
+    private Long StockCount;
+
+    /**
      * Get AZ 
      * @return Zone AZ
      */
@@ -68,6 +75,22 @@ public class ZoneStockInfo extends AbstractModel{
         this.HasStock = HasStock;
     }
 
+    /**
+     * Get Quantity in stock 
+     * @return StockCount Quantity in stock
+     */
+    public Long getStockCount() {
+        return this.StockCount;
+    }
+
+    /**
+     * Set Quantity in stock
+     * @param StockCount Quantity in stock
+     */
+    public void setStockCount(Long StockCount) {
+        this.StockCount = StockCount;
+    }
+
     public ZoneStockInfo() {
     }
 
@@ -82,6 +105,9 @@ public class ZoneStockInfo extends AbstractModel{
         if (source.HasStock != null) {
             this.HasStock = new Boolean(source.HasStock);
         }
+        if (source.StockCount != null) {
+            this.StockCount = new Long(source.StockCount);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class ZoneStockInfo extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "HasStock", this.HasStock);
+        this.setParamSimple(map, prefix + "StockCount", this.StockCount);
 
     }
 }

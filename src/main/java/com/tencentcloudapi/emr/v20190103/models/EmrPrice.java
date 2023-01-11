@@ -20,10 +20,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquiryPriceScaleOutInstanceResponse extends AbstractModel{
+public class EmrPrice extends AbstractModel{
 
     /**
-    * Original price.
+    * The published price.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OriginalCost")
@@ -31,7 +31,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String OriginalCost;
 
     /**
-    * Discounted price.
+    * The discounted price.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DiscountCost")
@@ -39,8 +39,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String DiscountCost;
 
     /**
-    * Time unit of scale-out. Valid value:
-<li>s: Second.</li>
+    * The unit of the billable item.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Unit")
@@ -48,7 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Unit;
 
     /**
-    * Node spec queried for price.
+    * The queried spec.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PriceSpec")
@@ -56,24 +55,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private PriceResource PriceSpec;
 
     /**
-    * The inquiry results corresponding to the specs specified by the input parameter `MultipleResources`, with the result of the first spec returned by other output parameters.
+    * Whether spot instances are supported.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("MultipleEmrPrice")
+    @SerializedName("SupportSpotPaid")
     @Expose
-    private EmrPrice [] MultipleEmrPrice;
+    private Boolean SupportSpotPaid;
 
     /**
-    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-    */
-    @SerializedName("RequestId")
-    @Expose
-    private String RequestId;
-
-    /**
-     * Get Original price.
+     * Get The published price.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OriginalCost Original price.
+     * @return OriginalCost The published price.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getOriginalCost() {
@@ -81,9 +73,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Original price.
+     * Set The published price.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OriginalCost Original price.
+     * @param OriginalCost The published price.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOriginalCost(String OriginalCost) {
@@ -91,9 +83,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Discounted price.
+     * Get The discounted price.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DiscountCost Discounted price.
+     * @return DiscountCost The discounted price.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDiscountCost() {
@@ -101,9 +93,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Discounted price.
+     * Set The discounted price.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DiscountCost Discounted price.
+     * @param DiscountCost The discounted price.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDiscountCost(String DiscountCost) {
@@ -111,11 +103,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Time unit of scale-out. Valid value:
-<li>s: Second.</li>
+     * Get The unit of the billable item.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Unit Time unit of scale-out. Valid value:
-<li>s: Second.</li>
+     * @return Unit The unit of the billable item.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUnit() {
@@ -123,11 +113,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Time unit of scale-out. Valid value:
-<li>s: Second.</li>
+     * Set The unit of the billable item.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Unit Time unit of scale-out. Valid value:
-<li>s: Second.</li>
+     * @param Unit The unit of the billable item.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUnit(String Unit) {
@@ -135,9 +123,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Node spec queried for price.
+     * Get The queried spec.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PriceSpec Node spec queried for price.
+     * @return PriceSpec The queried spec.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public PriceResource getPriceSpec() {
@@ -145,9 +133,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Node spec queried for price.
+     * Set The queried spec.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PriceSpec Node spec queried for price.
+     * @param PriceSpec The queried spec.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPriceSpec(PriceResource PriceSpec) {
@@ -155,49 +143,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The inquiry results corresponding to the specs specified by the input parameter `MultipleResources`, with the result of the first spec returned by other output parameters.
+     * Get Whether spot instances are supported.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MultipleEmrPrice The inquiry results corresponding to the specs specified by the input parameter `MultipleResources`, with the result of the first spec returned by other output parameters.
+     * @return SupportSpotPaid Whether spot instances are supported.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public EmrPrice [] getMultipleEmrPrice() {
-        return this.MultipleEmrPrice;
+    public Boolean getSupportSpotPaid() {
+        return this.SupportSpotPaid;
     }
 
     /**
-     * Set The inquiry results corresponding to the specs specified by the input parameter `MultipleResources`, with the result of the first spec returned by other output parameters.
+     * Set Whether spot instances are supported.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MultipleEmrPrice The inquiry results corresponding to the specs specified by the input parameter `MultipleResources`, with the result of the first spec returned by other output parameters.
+     * @param SupportSpotPaid Whether spot instances are supported.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setMultipleEmrPrice(EmrPrice [] MultipleEmrPrice) {
-        this.MultipleEmrPrice = MultipleEmrPrice;
+    public void setSupportSpotPaid(Boolean SupportSpotPaid) {
+        this.SupportSpotPaid = SupportSpotPaid;
     }
 
-    /**
-     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
-     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-     */
-    public String getRequestId() {
-        return this.RequestId;
-    }
-
-    /**
-     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-     */
-    public void setRequestId(String RequestId) {
-        this.RequestId = RequestId;
-    }
-
-    public InquiryPriceScaleOutInstanceResponse() {
+    public EmrPrice() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InquiryPriceScaleOutInstanceResponse(InquiryPriceScaleOutInstanceResponse source) {
+    public EmrPrice(EmrPrice source) {
         if (source.OriginalCost != null) {
             this.OriginalCost = new String(source.OriginalCost);
         }
@@ -210,14 +182,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.PriceSpec != null) {
             this.PriceSpec = new PriceResource(source.PriceSpec);
         }
-        if (source.MultipleEmrPrice != null) {
-            this.MultipleEmrPrice = new EmrPrice[source.MultipleEmrPrice.length];
-            for (int i = 0; i < source.MultipleEmrPrice.length; i++) {
-                this.MultipleEmrPrice[i] = new EmrPrice(source.MultipleEmrPrice[i]);
-            }
-        }
-        if (source.RequestId != null) {
-            this.RequestId = new String(source.RequestId);
+        if (source.SupportSpotPaid != null) {
+            this.SupportSpotPaid = new Boolean(source.SupportSpotPaid);
         }
     }
 
@@ -230,8 +196,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "DiscountCost", this.DiscountCost);
         this.setParamSimple(map, prefix + "Unit", this.Unit);
         this.setParamObj(map, prefix + "PriceSpec.", this.PriceSpec);
-        this.setParamArrayObj(map, prefix + "MultipleEmrPrice.", this.MultipleEmrPrice);
-        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "SupportSpotPaid", this.SupportSpotPaid);
 
     }
 }

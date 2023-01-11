@@ -237,6 +237,14 @@ Note: This field may return null, indicating that no valid value can be obtained
     private Boolean IsHandsCluster;
 
     /**
+    * Client component information.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OutSideSoftInfo")
+    @Expose
+    private SoftDependInfo [] OutSideSoftInfo;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -756,6 +764,26 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.IsHandsCluster = IsHandsCluster;
     }
 
+    /**
+     * Get Client component information.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OutSideSoftInfo Client component information.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public SoftDependInfo [] getOutSideSoftInfo() {
+        return this.OutSideSoftInfo;
+    }
+
+    /**
+     * Set Client component information.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OutSideSoftInfo Client component information.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setOutSideSoftInfo(SoftDependInfo [] OutSideSoftInfo) {
+        this.OutSideSoftInfo = OutSideSoftInfo;
+    }
+
     public EmrListInstance() {
     }
 
@@ -851,6 +879,12 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.IsHandsCluster != null) {
             this.IsHandsCluster = new Boolean(source.IsHandsCluster);
         }
+        if (source.OutSideSoftInfo != null) {
+            this.OutSideSoftInfo = new SoftDependInfo[source.OutSideSoftInfo.length];
+            for (int i = 0; i < source.OutSideSoftInfo.length; i++) {
+                this.OutSideSoftInfo[i] = new SoftDependInfo(source.OutSideSoftInfo[i]);
+            }
+        }
     }
 
 
@@ -886,6 +920,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "ClusterClass", this.ClusterClass);
         this.setParamSimple(map, prefix + "IsMultiZoneCluster", this.IsMultiZoneCluster);
         this.setParamSimple(map, prefix + "IsHandsCluster", this.IsHandsCluster);
+        this.setParamArrayObj(map, prefix + "OutSideSoftInfo.", this.OutSideSoftInfo);
 
     }
 }

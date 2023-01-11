@@ -49,7 +49,6 @@ public class CreateClusterRequest extends AbstractModel{
 
     /**
     * The instance billing mode. Valid values:
-<li>`PREPAID`: The prepaid mode, namely monthly subscription.</li>
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
     */
     @SerializedName("InstanceChargeType")
@@ -247,10 +246,8 @@ If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `Met
 
     /**
      * Get The instance billing mode. Valid values:
-<li>`PREPAID`: The prepaid mode, namely monthly subscription.</li>
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li> 
      * @return InstanceChargeType The instance billing mode. Valid values:
-<li>`PREPAID`: The prepaid mode, namely monthly subscription.</li>
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
      */
     public String getInstanceChargeType() {
@@ -259,10 +256,8 @@ If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `Met
 
     /**
      * Set The instance billing mode. Valid values:
-<li>`PREPAID`: The prepaid mode, namely monthly subscription.</li>
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
      * @param InstanceChargeType The instance billing mode. Valid values:
-<li>`PREPAID`: The prepaid mode, namely monthly subscription.</li>
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
      */
     public void setInstanceChargeType(String InstanceChargeType) {

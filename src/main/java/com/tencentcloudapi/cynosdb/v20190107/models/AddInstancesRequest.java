@@ -115,6 +115,20 @@ public class AddInstancesRequest extends AbstractModel{
     private Long DealMode;
 
     /**
+    * Parameter template ID
+    */
+    @SerializedName("ParamTemplateId")
+    @Expose
+    private Long ParamTemplateId;
+
+    /**
+    * Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
+    */
+    @SerializedName("InstanceParams")
+    @Expose
+    private ModifyParamItem [] InstanceParams;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -326,6 +340,38 @@ public class AddInstancesRequest extends AbstractModel{
         this.DealMode = DealMode;
     }
 
+    /**
+     * Get Parameter template ID 
+     * @return ParamTemplateId Parameter template ID
+     */
+    public Long getParamTemplateId() {
+        return this.ParamTemplateId;
+    }
+
+    /**
+     * Set Parameter template ID
+     * @param ParamTemplateId Parameter template ID
+     */
+    public void setParamTemplateId(Long ParamTemplateId) {
+        this.ParamTemplateId = ParamTemplateId;
+    }
+
+    /**
+     * Get Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`. 
+     * @return InstanceParams Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
+     */
+    public ModifyParamItem [] getInstanceParams() {
+        return this.InstanceParams;
+    }
+
+    /**
+     * Set Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
+     * @param InstanceParams Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
+     */
+    public void setInstanceParams(ModifyParamItem [] InstanceParams) {
+        this.InstanceParams = InstanceParams;
+    }
+
     public AddInstancesRequest() {
     }
 
@@ -373,6 +419,15 @@ public class AddInstancesRequest extends AbstractModel{
         if (source.DealMode != null) {
             this.DealMode = new Long(source.DealMode);
         }
+        if (source.ParamTemplateId != null) {
+            this.ParamTemplateId = new Long(source.ParamTemplateId);
+        }
+        if (source.InstanceParams != null) {
+            this.InstanceParams = new ModifyParamItem[source.InstanceParams.length];
+            for (int i = 0; i < source.InstanceParams.length; i++) {
+                this.InstanceParams[i] = new ModifyParamItem(source.InstanceParams[i]);
+            }
+        }
     }
 
 
@@ -393,6 +448,8 @@ public class AddInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DbType", this.DbType);
         this.setParamSimple(map, prefix + "OrderSource", this.OrderSource);
         this.setParamSimple(map, prefix + "DealMode", this.DealMode);
+        this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
+        this.setParamArrayObj(map, prefix + "InstanceParams.", this.InstanceParams);
 
     }
 }
