@@ -30,16 +30,16 @@ public class DescribeSecurityGroupPoliciesRequest extends AbstractModel{
     private String SecurityGroupId;
 
     /**
-    * Filter conditions. `SecurityGroupId` and `Filters` cannot be specified at the same time.
-<li>security-group-id - String - Security group ID.</li>
-<li>ip - String - IP. IPV4 and IPV6 fuzzy matching is supported.</li>
-<li>address-module - String - IP address or address group template ID.</li>
-<li>service-module - String - Protocol port or port group template ID.</li>
-<li>protocol-type - String - Protocol supported by the security group policy. Valid values: `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, `ALL`.</li>
-<li>port - String - Optional - Protocol port. Fuzzy matching is supported. Query all ports when the protocol value is `ALL`.</li>
-<li>poly - String - Protocol policy. Valid values: `ALL` (means "all policies"), `ACCEPT` (means "allow") and `DROP` (means "reject").</li>
-<li>direction - String - Protocol rule. Valid values: `ALL` (means "all rules"), `INBOUND`(means "inbound rules") and `OUTBOUND` (means "outbound rules").</li>
-<li>description - String - Protocol description. Fuzzy matching is supported in this filter condition.</li>
+    * Filters
+<li>`security-group-id` - String - Security group ID in the rule.</li>
+<li>`ip` - String - IP. IPV4 and IPV6 fuzzy matching is supported.</li>
+<li>`address-module` - String - IP address or address group template ID.</li>
+<li>`service-module` - String - Protocol port or port group template ID.</li>
+<li>`protocol-type` - String - Protocol supported by the security group policy. Valid values: `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, `ALL`.</li>
+<li>`port` - String - Optional - Port. Fuzzy matching is supported. Query all ports when the protocol value is `ALL`.</li>
+<li>`poly` - String - Policy type. Valid values: `ALL`, `ACCEPT` and `DROP`.</li>
+<li>`direction` - String - Direction of the rule. Valid values: `ALL`, `INBOUND` and `OUTBOUND`.</li>
+<li>`description` - String - Policy description. Fuzzy matching is supported.</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -62,52 +62,52 @@ public class DescribeSecurityGroupPoliciesRequest extends AbstractModel{
     }
 
     /**
-     * Get Filter conditions. `SecurityGroupId` and `Filters` cannot be specified at the same time.
-<li>security-group-id - String - Security group ID.</li>
-<li>ip - String - IP. IPV4 and IPV6 fuzzy matching is supported.</li>
-<li>address-module - String - IP address or address group template ID.</li>
-<li>service-module - String - Protocol port or port group template ID.</li>
-<li>protocol-type - String - Protocol supported by the security group policy. Valid values: `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, `ALL`.</li>
-<li>port - String - Optional - Protocol port. Fuzzy matching is supported. Query all ports when the protocol value is `ALL`.</li>
-<li>poly - String - Protocol policy. Valid values: `ALL` (means "all policies"), `ACCEPT` (means "allow") and `DROP` (means "reject").</li>
-<li>direction - String - Protocol rule. Valid values: `ALL` (means "all rules"), `INBOUND`(means "inbound rules") and `OUTBOUND` (means "outbound rules").</li>
-<li>description - String - Protocol description. Fuzzy matching is supported in this filter condition.</li> 
-     * @return Filters Filter conditions. `SecurityGroupId` and `Filters` cannot be specified at the same time.
-<li>security-group-id - String - Security group ID.</li>
-<li>ip - String - IP. IPV4 and IPV6 fuzzy matching is supported.</li>
-<li>address-module - String - IP address or address group template ID.</li>
-<li>service-module - String - Protocol port or port group template ID.</li>
-<li>protocol-type - String - Protocol supported by the security group policy. Valid values: `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, `ALL`.</li>
-<li>port - String - Optional - Protocol port. Fuzzy matching is supported. Query all ports when the protocol value is `ALL`.</li>
-<li>poly - String - Protocol policy. Valid values: `ALL` (means "all policies"), `ACCEPT` (means "allow") and `DROP` (means "reject").</li>
-<li>direction - String - Protocol rule. Valid values: `ALL` (means "all rules"), `INBOUND`(means "inbound rules") and `OUTBOUND` (means "outbound rules").</li>
-<li>description - String - Protocol description. Fuzzy matching is supported in this filter condition.</li>
+     * Get Filters
+<li>`security-group-id` - String - Security group ID in the rule.</li>
+<li>`ip` - String - IP. IPV4 and IPV6 fuzzy matching is supported.</li>
+<li>`address-module` - String - IP address or address group template ID.</li>
+<li>`service-module` - String - Protocol port or port group template ID.</li>
+<li>`protocol-type` - String - Protocol supported by the security group policy. Valid values: `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, `ALL`.</li>
+<li>`port` - String - Optional - Port. Fuzzy matching is supported. Query all ports when the protocol value is `ALL`.</li>
+<li>`poly` - String - Policy type. Valid values: `ALL`, `ACCEPT` and `DROP`.</li>
+<li>`direction` - String - Direction of the rule. Valid values: `ALL`, `INBOUND` and `OUTBOUND`.</li>
+<li>`description` - String - Policy description. Fuzzy matching is supported.</li> 
+     * @return Filters Filters
+<li>`security-group-id` - String - Security group ID in the rule.</li>
+<li>`ip` - String - IP. IPV4 and IPV6 fuzzy matching is supported.</li>
+<li>`address-module` - String - IP address or address group template ID.</li>
+<li>`service-module` - String - Protocol port or port group template ID.</li>
+<li>`protocol-type` - String - Protocol supported by the security group policy. Valid values: `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, `ALL`.</li>
+<li>`port` - String - Optional - Port. Fuzzy matching is supported. Query all ports when the protocol value is `ALL`.</li>
+<li>`poly` - String - Policy type. Valid values: `ALL`, `ACCEPT` and `DROP`.</li>
+<li>`direction` - String - Direction of the rule. Valid values: `ALL`, `INBOUND` and `OUTBOUND`.</li>
+<li>`description` - String - Policy description. Fuzzy matching is supported.</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter conditions. `SecurityGroupId` and `Filters` cannot be specified at the same time.
-<li>security-group-id - String - Security group ID.</li>
-<li>ip - String - IP. IPV4 and IPV6 fuzzy matching is supported.</li>
-<li>address-module - String - IP address or address group template ID.</li>
-<li>service-module - String - Protocol port or port group template ID.</li>
-<li>protocol-type - String - Protocol supported by the security group policy. Valid values: `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, `ALL`.</li>
-<li>port - String - Optional - Protocol port. Fuzzy matching is supported. Query all ports when the protocol value is `ALL`.</li>
-<li>poly - String - Protocol policy. Valid values: `ALL` (means "all policies"), `ACCEPT` (means "allow") and `DROP` (means "reject").</li>
-<li>direction - String - Protocol rule. Valid values: `ALL` (means "all rules"), `INBOUND`(means "inbound rules") and `OUTBOUND` (means "outbound rules").</li>
-<li>description - String - Protocol description. Fuzzy matching is supported in this filter condition.</li>
-     * @param Filters Filter conditions. `SecurityGroupId` and `Filters` cannot be specified at the same time.
-<li>security-group-id - String - Security group ID.</li>
-<li>ip - String - IP. IPV4 and IPV6 fuzzy matching is supported.</li>
-<li>address-module - String - IP address or address group template ID.</li>
-<li>service-module - String - Protocol port or port group template ID.</li>
-<li>protocol-type - String - Protocol supported by the security group policy. Valid values: `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, `ALL`.</li>
-<li>port - String - Optional - Protocol port. Fuzzy matching is supported. Query all ports when the protocol value is `ALL`.</li>
-<li>poly - String - Protocol policy. Valid values: `ALL` (means "all policies"), `ACCEPT` (means "allow") and `DROP` (means "reject").</li>
-<li>direction - String - Protocol rule. Valid values: `ALL` (means "all rules"), `INBOUND`(means "inbound rules") and `OUTBOUND` (means "outbound rules").</li>
-<li>description - String - Protocol description. Fuzzy matching is supported in this filter condition.</li>
+     * Set Filters
+<li>`security-group-id` - String - Security group ID in the rule.</li>
+<li>`ip` - String - IP. IPV4 and IPV6 fuzzy matching is supported.</li>
+<li>`address-module` - String - IP address or address group template ID.</li>
+<li>`service-module` - String - Protocol port or port group template ID.</li>
+<li>`protocol-type` - String - Protocol supported by the security group policy. Valid values: `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, `ALL`.</li>
+<li>`port` - String - Optional - Port. Fuzzy matching is supported. Query all ports when the protocol value is `ALL`.</li>
+<li>`poly` - String - Policy type. Valid values: `ALL`, `ACCEPT` and `DROP`.</li>
+<li>`direction` - String - Direction of the rule. Valid values: `ALL`, `INBOUND` and `OUTBOUND`.</li>
+<li>`description` - String - Policy description. Fuzzy matching is supported.</li>
+     * @param Filters Filters
+<li>`security-group-id` - String - Security group ID in the rule.</li>
+<li>`ip` - String - IP. IPV4 and IPV6 fuzzy matching is supported.</li>
+<li>`address-module` - String - IP address or address group template ID.</li>
+<li>`service-module` - String - Protocol port or port group template ID.</li>
+<li>`protocol-type` - String - Protocol supported by the security group policy. Valid values: `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, `ALL`.</li>
+<li>`port` - String - Optional - Port. Fuzzy matching is supported. Query all ports when the protocol value is `ALL`.</li>
+<li>`poly` - String - Policy type. Valid values: `ALL`, `ACCEPT` and `DROP`.</li>
+<li>`direction` - String - Direction of the rule. Valid values: `ALL`, `INBOUND` and `OUTBOUND`.</li>
+<li>`description` - String - Policy description. Fuzzy matching is supported.</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

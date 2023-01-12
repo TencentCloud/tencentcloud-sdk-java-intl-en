@@ -119,6 +119,13 @@ Whether the Anycast EIP can be bound to CLB instances.
     private String AddressName;
 
     /**
+    * Network egress. It defaults to `center_egress1`.
+    */
+    @SerializedName("Egress")
+    @Expose
+    private String Egress;
+
+    /**
      * Get The number of EIPs. Default: 1. 
      * @return AddressCount The number of EIPs. Default: 1.
      */
@@ -370,6 +377,22 @@ Whether the Anycast EIP can be bound to CLB instances.
         this.AddressName = AddressName;
     }
 
+    /**
+     * Get Network egress. It defaults to `center_egress1`. 
+     * @return Egress Network egress. It defaults to `center_egress1`.
+     */
+    public String getEgress() {
+        return this.Egress;
+    }
+
+    /**
+     * Set Network egress. It defaults to `center_egress1`.
+     * @param Egress Network egress. It defaults to `center_egress1`.
+     */
+    public void setEgress(String Egress) {
+        this.Egress = Egress;
+    }
+
     public AllocateAddressesRequest() {
     }
 
@@ -414,6 +437,9 @@ Whether the Anycast EIP can be bound to CLB instances.
         if (source.AddressName != null) {
             this.AddressName = new String(source.AddressName);
         }
+        if (source.Egress != null) {
+            this.Egress = new String(source.Egress);
+        }
     }
 
 
@@ -432,6 +458,7 @@ Whether the Anycast EIP can be bound to CLB instances.
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
         this.setParamSimple(map, prefix + "AddressName", this.AddressName);
+        this.setParamSimple(map, prefix + "Egress", this.Egress);
 
     }
 }

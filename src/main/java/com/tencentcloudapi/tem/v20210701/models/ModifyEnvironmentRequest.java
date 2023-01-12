@@ -65,6 +65,13 @@ public class ModifyEnvironmentRequest extends AbstractModel{
     private Long SourceChannel;
 
     /**
+    * Environment type. Values: `test`, `pre`, `prod`
+    */
+    @SerializedName("EnvType")
+    @Expose
+    private String EnvType;
+
+    /**
      * Get Environment ID 
      * @return EnvironmentId Environment ID
      */
@@ -160,6 +167,22 @@ public class ModifyEnvironmentRequest extends AbstractModel{
         this.SourceChannel = SourceChannel;
     }
 
+    /**
+     * Get Environment type. Values: `test`, `pre`, `prod` 
+     * @return EnvType Environment type. Values: `test`, `pre`, `prod`
+     */
+    public String getEnvType() {
+        return this.EnvType;
+    }
+
+    /**
+     * Set Environment type. Values: `test`, `pre`, `prod`
+     * @param EnvType Environment type. Values: `test`, `pre`, `prod`
+     */
+    public void setEnvType(String EnvType) {
+        this.EnvType = EnvType;
+    }
+
     public ModifyEnvironmentRequest() {
     }
 
@@ -189,6 +212,9 @@ public class ModifyEnvironmentRequest extends AbstractModel{
         if (source.SourceChannel != null) {
             this.SourceChannel = new Long(source.SourceChannel);
         }
+        if (source.EnvType != null) {
+            this.EnvType = new String(source.EnvType);
+        }
     }
 
 
@@ -202,6 +228,7 @@ public class ModifyEnvironmentRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Vpc", this.Vpc);
         this.setParamArraySimple(map, prefix + "SubnetIds.", this.SubnetIds);
         this.setParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
+        this.setParamSimple(map, prefix + "EnvType", this.EnvType);
 
     }
 }

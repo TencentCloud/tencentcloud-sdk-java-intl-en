@@ -98,6 +98,54 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String ContainerState;
 
     /**
+    * Information of the node whether the instance locates
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("NodeInfo")
+    @Expose
+    private NodeInfo NodeInfo;
+
+    /**
+    * Start time
+Note: this field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * Whether the status is unhealthy or healthy
+Note: this field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Unhealthy")
+    @Expose
+    private Boolean Unhealthy;
+
+    /**
+    * Warning message when the result is unhealthy
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("UnhealthyWarningMsg")
+    @Expose
+    private String UnhealthyWarningMsg;
+
+    /**
+    * Version ID
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("VersionId")
+    @Expose
+    private String VersionId;
+
+    /**
+    * Application name
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ApplicationName")
+    @Expose
+    private String ApplicationName;
+
+    /**
      * Get Shell address 
      * @return Webshell Shell address
      */
@@ -277,6 +325,126 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.ContainerState = ContainerState;
     }
 
+    /**
+     * Get Information of the node whether the instance locates
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return NodeInfo Information of the node whether the instance locates
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public NodeInfo getNodeInfo() {
+        return this.NodeInfo;
+    }
+
+    /**
+     * Set Information of the node whether the instance locates
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param NodeInfo Information of the node whether the instance locates
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setNodeInfo(NodeInfo NodeInfo) {
+        this.NodeInfo = NodeInfo;
+    }
+
+    /**
+     * Get Start time
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return StartTime Start time
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set Start time
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param StartTime Start time
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get Whether the status is unhealthy or healthy
+Note: this field may return `null`, indicating that no valid value can be obtained. 
+     * @return Unhealthy Whether the status is unhealthy or healthy
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Boolean getUnhealthy() {
+        return this.Unhealthy;
+    }
+
+    /**
+     * Set Whether the status is unhealthy or healthy
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param Unhealthy Whether the status is unhealthy or healthy
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setUnhealthy(Boolean Unhealthy) {
+        this.Unhealthy = Unhealthy;
+    }
+
+    /**
+     * Get Warning message when the result is unhealthy
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return UnhealthyWarningMsg Warning message when the result is unhealthy
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getUnhealthyWarningMsg() {
+        return this.UnhealthyWarningMsg;
+    }
+
+    /**
+     * Set Warning message when the result is unhealthy
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param UnhealthyWarningMsg Warning message when the result is unhealthy
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setUnhealthyWarningMsg(String UnhealthyWarningMsg) {
+        this.UnhealthyWarningMsg = UnhealthyWarningMsg;
+    }
+
+    /**
+     * Get Version ID
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return VersionId Version ID
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getVersionId() {
+        return this.VersionId;
+    }
+
+    /**
+     * Set Version ID
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param VersionId Version ID
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setVersionId(String VersionId) {
+        this.VersionId = VersionId;
+    }
+
+    /**
+     * Get Application name
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return ApplicationName Application name
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getApplicationName() {
+        return this.ApplicationName;
+    }
+
+    /**
+     * Set Application name
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ApplicationName Application name
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setApplicationName(String ApplicationName) {
+        this.ApplicationName = ApplicationName;
+    }
+
     public RunVersionPod() {
     }
 
@@ -315,6 +483,24 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.ContainerState != null) {
             this.ContainerState = new String(source.ContainerState);
         }
+        if (source.NodeInfo != null) {
+            this.NodeInfo = new NodeInfo(source.NodeInfo);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.Unhealthy != null) {
+            this.Unhealthy = new Boolean(source.Unhealthy);
+        }
+        if (source.UnhealthyWarningMsg != null) {
+            this.UnhealthyWarningMsg = new String(source.UnhealthyWarningMsg);
+        }
+        if (source.VersionId != null) {
+            this.VersionId = new String(source.VersionId);
+        }
+        if (source.ApplicationName != null) {
+            this.ApplicationName = new String(source.ApplicationName);
+        }
     }
 
 
@@ -332,6 +518,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "RestartCount", this.RestartCount);
         this.setParamSimple(map, prefix + "Ready", this.Ready);
         this.setParamSimple(map, prefix + "ContainerState", this.ContainerState);
+        this.setParamObj(map, prefix + "NodeInfo.", this.NodeInfo);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "Unhealthy", this.Unhealthy);
+        this.setParamSimple(map, prefix + "UnhealthyWarningMsg", this.UnhealthyWarningMsg);
+        this.setParamSimple(map, prefix + "VersionId", this.VersionId);
+        this.setParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
 
     }
 }

@@ -310,14 +310,14 @@ If `konajdk` is selected, the value can be:
     private String OsFlavour;
 
     /**
-    * Specifies whether to enable Prometheus metric
+    * Configuration of metrics of this application
     */
     @SerializedName("EnablePrometheusConf")
     @Expose
     private EnablePrometheusConf EnablePrometheusConf;
 
     /**
-    * `1`: Enable APM tracing (Skywalking)
+    * `1`: Automatically enable APM tracing (Skywalking)
 `0`: Disable APM tracing
     */
     @SerializedName("EnableTracing")
@@ -325,28 +325,29 @@ If `konajdk` is selected, the value can be:
     private Long EnableTracing;
 
     /**
-    * 
+    * `1`: Automatically enable metrics collection (open-telemetry)
+`0`: Disable metrics collection
     */
     @SerializedName("EnableMetrics")
     @Expose
     private Long EnableMetrics;
 
     /**
-    * 
+    * ID of the TCR instance used for image deployment
     */
     @SerializedName("TcrInstanceId")
     @Expose
     private String TcrInstanceId;
 
     /**
-    * 
+    * Image server address for image deployment
     */
     @SerializedName("RepoServer")
     @Expose
     private String RepoServer;
 
     /**
-    * 
+    * Type of the repository. `0`: TCR Personal; `1`: TCR Enterprise; `2`: Public repository; `3`: TEM hosted repository; `4`: Demo repository
     */
     @SerializedName("RepoType")
     @Expose
@@ -1033,25 +1034,25 @@ If `konajdk` is selected, the value can be:
     }
 
     /**
-     * Get Specifies whether to enable Prometheus metric 
-     * @return EnablePrometheusConf Specifies whether to enable Prometheus metric
+     * Get Configuration of metrics of this application 
+     * @return EnablePrometheusConf Configuration of metrics of this application
      */
     public EnablePrometheusConf getEnablePrometheusConf() {
         return this.EnablePrometheusConf;
     }
 
     /**
-     * Set Specifies whether to enable Prometheus metric
-     * @param EnablePrometheusConf Specifies whether to enable Prometheus metric
+     * Set Configuration of metrics of this application
+     * @param EnablePrometheusConf Configuration of metrics of this application
      */
     public void setEnablePrometheusConf(EnablePrometheusConf EnablePrometheusConf) {
         this.EnablePrometheusConf = EnablePrometheusConf;
     }
 
     /**
-     * Get `1`: Enable APM tracing (Skywalking)
+     * Get `1`: Automatically enable APM tracing (Skywalking)
 `0`: Disable APM tracing 
-     * @return EnableTracing `1`: Enable APM tracing (Skywalking)
+     * @return EnableTracing `1`: Automatically enable APM tracing (Skywalking)
 `0`: Disable APM tracing
      */
     public Long getEnableTracing() {
@@ -1059,9 +1060,9 @@ If `konajdk` is selected, the value can be:
     }
 
     /**
-     * Set `1`: Enable APM tracing (Skywalking)
+     * Set `1`: Automatically enable APM tracing (Skywalking)
 `0`: Disable APM tracing
-     * @param EnableTracing `1`: Enable APM tracing (Skywalking)
+     * @param EnableTracing `1`: Automatically enable APM tracing (Skywalking)
 `0`: Disable APM tracing
      */
     public void setEnableTracing(Long EnableTracing) {
@@ -1069,64 +1070,68 @@ If `konajdk` is selected, the value can be:
     }
 
     /**
-     * Get  
-     * @return EnableMetrics 
+     * Get `1`: Automatically enable metrics collection (open-telemetry)
+`0`: Disable metrics collection 
+     * @return EnableMetrics `1`: Automatically enable metrics collection (open-telemetry)
+`0`: Disable metrics collection
      */
     public Long getEnableMetrics() {
         return this.EnableMetrics;
     }
 
     /**
-     * Set 
-     * @param EnableMetrics 
+     * Set `1`: Automatically enable metrics collection (open-telemetry)
+`0`: Disable metrics collection
+     * @param EnableMetrics `1`: Automatically enable metrics collection (open-telemetry)
+`0`: Disable metrics collection
      */
     public void setEnableMetrics(Long EnableMetrics) {
         this.EnableMetrics = EnableMetrics;
     }
 
     /**
-     * Get  
-     * @return TcrInstanceId 
+     * Get ID of the TCR instance used for image deployment 
+     * @return TcrInstanceId ID of the TCR instance used for image deployment
      */
     public String getTcrInstanceId() {
         return this.TcrInstanceId;
     }
 
     /**
-     * Set 
-     * @param TcrInstanceId 
+     * Set ID of the TCR instance used for image deployment
+     * @param TcrInstanceId ID of the TCR instance used for image deployment
      */
     public void setTcrInstanceId(String TcrInstanceId) {
         this.TcrInstanceId = TcrInstanceId;
     }
 
     /**
-     * Get  
-     * @return RepoServer 
+     * Get Image server address for image deployment 
+     * @return RepoServer Image server address for image deployment
      */
     public String getRepoServer() {
         return this.RepoServer;
     }
 
     /**
-     * Set 
-     * @param RepoServer 
+     * Set Image server address for image deployment
+     * @param RepoServer Image server address for image deployment
      */
     public void setRepoServer(String RepoServer) {
         this.RepoServer = RepoServer;
     }
 
     /**
-     * Get  
-     * @return RepoType 
+     * Get Type of the repository. `0`: TCR Personal; `1`: TCR Enterprise; `2`: Public repository; `3`: TEM hosted repository; `4`: Demo repository 
+     * @return RepoType Type of the repository. `0`: TCR Personal; `1`: TCR Enterprise; `2`: Public repository; `3`: TEM hosted repository; `4`: Demo repository
      */
     public Long getRepoType() {
         return this.RepoType;
     }
 
     /**
-     * Set 
-     * @param RepoType 
+     * Set Type of the repository. `0`: TCR Personal; `1`: TCR Enterprise; `2`: Public repository; `3`: TEM hosted repository; `4`: Demo repository
+     * @param RepoType Type of the repository. `0`: TCR Personal; `1`: TCR Enterprise; `2`: Public repository; `3`: TEM hosted repository; `4`: Demo repository
      */
     public void setRepoType(Long RepoType) {
         this.RepoType = RepoType;

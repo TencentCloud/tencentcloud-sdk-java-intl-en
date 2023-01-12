@@ -95,6 +95,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String CreateTime;
 
     /**
+    * Mounted PaaS service type. Values: `CLB`, `CDB`, `CRS`
+    */
+    @SerializedName("ServiceType")
+    @Expose
+    private String ServiceType;
+
+    /**
      * Get Endpoint service ID 
      * @return EndPointServiceId Endpoint service ID
      */
@@ -262,6 +269,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get Mounted PaaS service type. Values: `CLB`, `CDB`, `CRS` 
+     * @return ServiceType Mounted PaaS service type. Values: `CLB`, `CDB`, `CRS`
+     */
+    public String getServiceType() {
+        return this.ServiceType;
+    }
+
+    /**
+     * Set Mounted PaaS service type. Values: `CLB`, `CDB`, `CRS`
+     * @param ServiceType Mounted PaaS service type. Values: `CLB`, `CDB`, `CRS`
+     */
+    public void setServiceType(String ServiceType) {
+        this.ServiceType = ServiceType;
+    }
+
     public EndPointService() {
     }
 
@@ -303,6 +326,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.ServiceType != null) {
+            this.ServiceType = new String(source.ServiceType);
+        }
     }
 
 
@@ -320,6 +346,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "EndPointCount", this.EndPointCount);
         this.setParamArrayObj(map, prefix + "EndPointSet.", this.EndPointSet);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
 
     }
 }

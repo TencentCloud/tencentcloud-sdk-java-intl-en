@@ -111,6 +111,46 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private PortMapping [] PortMappings;
 
     /**
+    * Details of each type of access configuration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ServicePortMappingList")
+    @Expose
+    private ServicePortMapping [] ServicePortMappingList;
+
+    /**
+    * Flush all types
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("FlushAll")
+    @Expose
+    private Boolean FlushAll;
+
+    /**
+    * `0`: Do not inject. `1`: Inject registry information automatically for the next deployment
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EnableRegistryNextDeploy")
+    @Expose
+    private Long EnableRegistryNextDeploy;
+
+    /**
+    * The application ID returned.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ApplicationId")
+    @Expose
+    private String ApplicationId;
+
+    /**
+    * Whether all the application IPs are ready
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AllIpDone")
+    @Expose
+    private Boolean AllIpDone;
+
+    /**
      * Get Service name 
      * @return Name Service name
      */
@@ -330,6 +370,106 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.PortMappings = PortMappings;
     }
 
+    /**
+     * Get Details of each type of access configuration
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ServicePortMappingList Details of each type of access configuration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public ServicePortMapping [] getServicePortMappingList() {
+        return this.ServicePortMappingList;
+    }
+
+    /**
+     * Set Details of each type of access configuration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ServicePortMappingList Details of each type of access configuration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setServicePortMappingList(ServicePortMapping [] ServicePortMappingList) {
+        this.ServicePortMappingList = ServicePortMappingList;
+    }
+
+    /**
+     * Get Flush all types
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return FlushAll Flush all types
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Boolean getFlushAll() {
+        return this.FlushAll;
+    }
+
+    /**
+     * Set Flush all types
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param FlushAll Flush all types
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setFlushAll(Boolean FlushAll) {
+        this.FlushAll = FlushAll;
+    }
+
+    /**
+     * Get `0`: Do not inject. `1`: Inject registry information automatically for the next deployment
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return EnableRegistryNextDeploy `0`: Do not inject. `1`: Inject registry information automatically for the next deployment
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getEnableRegistryNextDeploy() {
+        return this.EnableRegistryNextDeploy;
+    }
+
+    /**
+     * Set `0`: Do not inject. `1`: Inject registry information automatically for the next deployment
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param EnableRegistryNextDeploy `0`: Do not inject. `1`: Inject registry information automatically for the next deployment
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setEnableRegistryNextDeploy(Long EnableRegistryNextDeploy) {
+        this.EnableRegistryNextDeploy = EnableRegistryNextDeploy;
+    }
+
+    /**
+     * Get The application ID returned.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ApplicationId The application ID returned.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getApplicationId() {
+        return this.ApplicationId;
+    }
+
+    /**
+     * Set The application ID returned.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ApplicationId The application ID returned.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setApplicationId(String ApplicationId) {
+        this.ApplicationId = ApplicationId;
+    }
+
+    /**
+     * Get Whether all the application IPs are ready
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return AllIpDone Whether all the application IPs are ready
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Boolean getAllIpDone() {
+        return this.AllIpDone;
+    }
+
+    /**
+     * Set Whether all the application IPs are ready
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param AllIpDone Whether all the application IPs are ready
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setAllIpDone(Boolean AllIpDone) {
+        this.AllIpDone = AllIpDone;
+    }
+
     public EksService() {
     }
 
@@ -380,6 +520,24 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.PortMappings[i] = new PortMapping(source.PortMappings[i]);
             }
         }
+        if (source.ServicePortMappingList != null) {
+            this.ServicePortMappingList = new ServicePortMapping[source.ServicePortMappingList.length];
+            for (int i = 0; i < source.ServicePortMappingList.length; i++) {
+                this.ServicePortMappingList[i] = new ServicePortMapping(source.ServicePortMappingList[i]);
+            }
+        }
+        if (source.FlushAll != null) {
+            this.FlushAll = new Boolean(source.FlushAll);
+        }
+        if (source.EnableRegistryNextDeploy != null) {
+            this.EnableRegistryNextDeploy = new Long(source.EnableRegistryNextDeploy);
+        }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.AllIpDone != null) {
+            this.AllIpDone = new Boolean(source.AllIpDone);
+        }
     }
 
 
@@ -398,6 +556,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "LoadBalanceId", this.LoadBalanceId);
         this.setParamArrayObj(map, prefix + "PortMappings.", this.PortMappings);
+        this.setParamArrayObj(map, prefix + "ServicePortMappingList.", this.ServicePortMappingList);
+        this.setParamSimple(map, prefix + "FlushAll", this.FlushAll);
+        this.setParamSimple(map, prefix + "EnableRegistryNextDeploy", this.EnableRegistryNextDeploy);
+        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+        this.setParamSimple(map, prefix + "AllIpDone", this.AllIpDone);
 
     }
 }

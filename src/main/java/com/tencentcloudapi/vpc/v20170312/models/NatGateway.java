@@ -157,6 +157,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long ExclusiveGatewayBandwidth;
 
     /**
+    * Whether the NAT gateway is blocked. Values: `NORMAL`, `RESTRICTED`
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RestrictState")
+    @Expose
+    private String RestrictState;
+
+    /**
      * Get NAT gateway ID. 
      * @return NatGatewayId NAT gateway ID.
      */
@@ -476,6 +484,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.ExclusiveGatewayBandwidth = ExclusiveGatewayBandwidth;
     }
 
+    /**
+     * Get Whether the NAT gateway is blocked. Values: `NORMAL`, `RESTRICTED`
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RestrictState Whether the NAT gateway is blocked. Values: `NORMAL`, `RESTRICTED`
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getRestrictState() {
+        return this.RestrictState;
+    }
+
+    /**
+     * Set Whether the NAT gateway is blocked. Values: `NORMAL`, `RESTRICTED`
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RestrictState Whether the NAT gateway is blocked. Values: `NORMAL`, `RESTRICTED`
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRestrictState(String RestrictState) {
+        this.RestrictState = RestrictState;
+    }
+
     public NatGateway() {
     }
 
@@ -556,6 +584,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.ExclusiveGatewayBandwidth != null) {
             this.ExclusiveGatewayBandwidth = new Long(source.ExclusiveGatewayBandwidth);
         }
+        if (source.RestrictState != null) {
+            this.RestrictState = new String(source.RestrictState);
+        }
     }
 
 
@@ -581,6 +612,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamArrayObj(map, prefix + "SourceIpTranslationNatRuleSet.", this.SourceIpTranslationNatRuleSet);
         this.setParamSimple(map, prefix + "IsExclusive", this.IsExclusive);
         this.setParamSimple(map, prefix + "ExclusiveGatewayBandwidth", this.ExclusiveGatewayBandwidth);
+        this.setParamSimple(map, prefix + "RestrictState", this.RestrictState);
 
     }
 }

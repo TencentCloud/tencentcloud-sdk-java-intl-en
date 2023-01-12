@@ -47,7 +47,6 @@ public class Route extends AbstractModel{
 
     /**
     * Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
-Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
     */
     @SerializedName("GatewayId")
     @Expose
@@ -191,10 +190,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
-Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0` 
+     * Get Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address. 
      * @return GatewayId Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
-Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
      */
     public String getGatewayId() {
         return this.GatewayId;
@@ -202,9 +199,7 @@ Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
 
     /**
      * Set Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
-Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
      * @param GatewayId Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
-Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;

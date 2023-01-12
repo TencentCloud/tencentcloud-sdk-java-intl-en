@@ -51,11 +51,18 @@ public class CreateVpcEndPointServiceRequest extends AbstractModel{
     private String ServiceInstanceId;
 
     /**
-    * Whether it is of the type `PassService`. Valid values: true: yes; false: no. Default value: false
+    * (Disused) Whether it’s a PaaS service
     */
     @SerializedName("IsPassService")
     @Expose
     private Boolean IsPassService;
+
+    /**
+    * Mounted PaaS service type. Values: `CLB` (default), `CDB`, `CRS`
+    */
+    @SerializedName("ServiceType")
+    @Expose
+    private String ServiceType;
 
     /**
      * Get VPC instance ID 
@@ -122,19 +129,35 @@ public class CreateVpcEndPointServiceRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether it is of the type `PassService`. Valid values: true: yes; false: no. Default value: false 
-     * @return IsPassService Whether it is of the type `PassService`. Valid values: true: yes; false: no. Default value: false
+     * Get (Disused) Whether it’s a PaaS service 
+     * @return IsPassService (Disused) Whether it’s a PaaS service
      */
     public Boolean getIsPassService() {
         return this.IsPassService;
     }
 
     /**
-     * Set Whether it is of the type `PassService`. Valid values: true: yes; false: no. Default value: false
-     * @param IsPassService Whether it is of the type `PassService`. Valid values: true: yes; false: no. Default value: false
+     * Set (Disused) Whether it’s a PaaS service
+     * @param IsPassService (Disused) Whether it’s a PaaS service
      */
     public void setIsPassService(Boolean IsPassService) {
         this.IsPassService = IsPassService;
+    }
+
+    /**
+     * Get Mounted PaaS service type. Values: `CLB` (default), `CDB`, `CRS` 
+     * @return ServiceType Mounted PaaS service type. Values: `CLB` (default), `CDB`, `CRS`
+     */
+    public String getServiceType() {
+        return this.ServiceType;
+    }
+
+    /**
+     * Set Mounted PaaS service type. Values: `CLB` (default), `CDB`, `CRS`
+     * @param ServiceType Mounted PaaS service type. Values: `CLB` (default), `CDB`, `CRS`
+     */
+    public void setServiceType(String ServiceType) {
+        this.ServiceType = ServiceType;
     }
 
     public CreateVpcEndPointServiceRequest() {
@@ -160,6 +183,9 @@ public class CreateVpcEndPointServiceRequest extends AbstractModel{
         if (source.IsPassService != null) {
             this.IsPassService = new Boolean(source.IsPassService);
         }
+        if (source.ServiceType != null) {
+            this.ServiceType = new String(source.ServiceType);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class CreateVpcEndPointServiceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoAcceptFlag", this.AutoAcceptFlag);
         this.setParamSimple(map, prefix + "ServiceInstanceId", this.ServiceInstanceId);
         this.setParamSimple(map, prefix + "IsPassService", this.IsPassService);
+        this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
 
     }
 }

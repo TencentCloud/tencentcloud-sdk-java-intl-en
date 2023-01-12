@@ -130,6 +130,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean UnderDeploying;
 
     /**
+    * Status of batch deployment
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("BatchDeployStatus")
+    @Expose
+    private String BatchDeployStatus;
+
+    /**
+    * Availability zones
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("Zones")
+    @Expose
+    private String [] Zones;
+
+    /**
+    * Node information
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("NodeInfos")
+    @Expose
+    private NodeInfo [] NodeInfos;
+
+    /**
+    * Pod information
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("PodList")
+    @Expose
+    private DescribeRunPodPage PodList;
+
+    /**
+    * Workload information
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("WorkloadInfo")
+    @Expose
+    private WorkloadInfo WorkloadInfo;
+
+    /**
+    * Creation time
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("CreateDate")
+    @Expose
+    private String CreateDate;
+
+    /**
      * Get Version name 
      * @return VersionName Version name
      */
@@ -389,6 +437,126 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.UnderDeploying = UnderDeploying;
     }
 
+    /**
+     * Get Status of batch deployment
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return BatchDeployStatus Status of batch deployment
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getBatchDeployStatus() {
+        return this.BatchDeployStatus;
+    }
+
+    /**
+     * Set Status of batch deployment
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param BatchDeployStatus Status of batch deployment
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setBatchDeployStatus(String BatchDeployStatus) {
+        this.BatchDeployStatus = BatchDeployStatus;
+    }
+
+    /**
+     * Get Availability zones
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return Zones Availability zones
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String [] getZones() {
+        return this.Zones;
+    }
+
+    /**
+     * Set Availability zones
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param Zones Availability zones
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setZones(String [] Zones) {
+        this.Zones = Zones;
+    }
+
+    /**
+     * Get Node information
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return NodeInfos Node information
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public NodeInfo [] getNodeInfos() {
+        return this.NodeInfos;
+    }
+
+    /**
+     * Set Node information
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param NodeInfos Node information
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setNodeInfos(NodeInfo [] NodeInfos) {
+        this.NodeInfos = NodeInfos;
+    }
+
+    /**
+     * Get Pod information
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return PodList Pod information
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public DescribeRunPodPage getPodList() {
+        return this.PodList;
+    }
+
+    /**
+     * Set Pod information
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param PodList Pod information
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setPodList(DescribeRunPodPage PodList) {
+        this.PodList = PodList;
+    }
+
+    /**
+     * Get Workload information
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return WorkloadInfo Workload information
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public WorkloadInfo getWorkloadInfo() {
+        return this.WorkloadInfo;
+    }
+
+    /**
+     * Set Workload information
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param WorkloadInfo Workload information
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setWorkloadInfo(WorkloadInfo WorkloadInfo) {
+        this.WorkloadInfo = WorkloadInfo;
+    }
+
+    /**
+     * Get Creation time
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return CreateDate Creation time
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getCreateDate() {
+        return this.CreateDate;
+    }
+
+    /**
+     * Set Creation time
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param CreateDate Creation time
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setCreateDate(String CreateDate) {
+        this.CreateDate = CreateDate;
+    }
+
     public ServiceVersionBrief() {
     }
 
@@ -439,6 +607,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.UnderDeploying != null) {
             this.UnderDeploying = new Boolean(source.UnderDeploying);
         }
+        if (source.BatchDeployStatus != null) {
+            this.BatchDeployStatus = new String(source.BatchDeployStatus);
+        }
+        if (source.Zones != null) {
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
+        }
+        if (source.NodeInfos != null) {
+            this.NodeInfos = new NodeInfo[source.NodeInfos.length];
+            for (int i = 0; i < source.NodeInfos.length; i++) {
+                this.NodeInfos[i] = new NodeInfo(source.NodeInfos[i]);
+            }
+        }
+        if (source.PodList != null) {
+            this.PodList = new DescribeRunPodPage(source.PodList);
+        }
+        if (source.WorkloadInfo != null) {
+            this.WorkloadInfo = new WorkloadInfo(source.WorkloadInfo);
+        }
+        if (source.CreateDate != null) {
+            this.CreateDate = new String(source.CreateDate);
+        }
     }
 
 
@@ -460,6 +652,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
         this.setParamSimple(map, prefix + "UnderDeploying", this.UnderDeploying);
+        this.setParamSimple(map, prefix + "BatchDeployStatus", this.BatchDeployStatus);
+        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
+        this.setParamArrayObj(map, prefix + "NodeInfos.", this.NodeInfos);
+        this.setParamObj(map, prefix + "PodList.", this.PodList);
+        this.setParamObj(map, prefix + "WorkloadInfo.", this.WorkloadInfo);
+        this.setParamSimple(map, prefix + "CreateDate", this.CreateDate);
 
     }
 }

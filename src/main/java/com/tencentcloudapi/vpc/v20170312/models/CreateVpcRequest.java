@@ -30,7 +30,7 @@ public class CreateVpcRequest extends AbstractModel{
     private String VpcName;
 
     /**
-    * VPC CIDR blocks, which must fall within the following three private network IP ranges: 10.0.0.0/16, 172.16.0.0/16 and 192.168.0.0/16.
+    * VPC CIDR block, which must fall within the following three private network IP ranges: 10.0.0.0/12, 172.16.0.0/12, and 192.168.0.0/16.
     */
     @SerializedName("CidrBlock")
     @Expose
@@ -81,16 +81,16 @@ public class CreateVpcRequest extends AbstractModel{
     }
 
     /**
-     * Get VPC CIDR blocks, which must fall within the following three private network IP ranges: 10.0.0.0/16, 172.16.0.0/16 and 192.168.0.0/16. 
-     * @return CidrBlock VPC CIDR blocks, which must fall within the following three private network IP ranges: 10.0.0.0/16, 172.16.0.0/16 and 192.168.0.0/16.
+     * Get VPC CIDR block, which must fall within the following three private network IP ranges: 10.0.0.0/12, 172.16.0.0/12, and 192.168.0.0/16. 
+     * @return CidrBlock VPC CIDR block, which must fall within the following three private network IP ranges: 10.0.0.0/12, 172.16.0.0/12, and 192.168.0.0/16.
      */
     public String getCidrBlock() {
         return this.CidrBlock;
     }
 
     /**
-     * Set VPC CIDR blocks, which must fall within the following three private network IP ranges: 10.0.0.0/16, 172.16.0.0/16 and 192.168.0.0/16.
-     * @param CidrBlock VPC CIDR blocks, which must fall within the following three private network IP ranges: 10.0.0.0/16, 172.16.0.0/16 and 192.168.0.0/16.
+     * Set VPC CIDR block, which must fall within the following three private network IP ranges: 10.0.0.0/12, 172.16.0.0/12, and 192.168.0.0/16.
+     * @param CidrBlock VPC CIDR block, which must fall within the following three private network IP ranges: 10.0.0.0/12, 172.16.0.0/12, and 192.168.0.0/16.
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;

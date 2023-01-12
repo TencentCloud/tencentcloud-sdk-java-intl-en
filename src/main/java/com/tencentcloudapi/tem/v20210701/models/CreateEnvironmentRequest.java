@@ -72,6 +72,27 @@ public class CreateEnvironmentRequest extends AbstractModel{
     private Boolean EnableTswTraceService;
 
     /**
+    * Tag
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * Environment type. Values: `test`, `pre`, `prod`
+    */
+    @SerializedName("EnvType")
+    @Expose
+    private String EnvType;
+
+    /**
+    * The region to create the environment
+    */
+    @SerializedName("CreateRegion")
+    @Expose
+    private String CreateRegion;
+
+    /**
      * Get Environment name 
      * @return EnvironmentName Environment name
      */
@@ -183,6 +204,54 @@ public class CreateEnvironmentRequest extends AbstractModel{
         this.EnableTswTraceService = EnableTswTraceService;
     }
 
+    /**
+     * Get Tag 
+     * @return Tags Tag
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag
+     * @param Tags Tag
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get Environment type. Values: `test`, `pre`, `prod` 
+     * @return EnvType Environment type. Values: `test`, `pre`, `prod`
+     */
+    public String getEnvType() {
+        return this.EnvType;
+    }
+
+    /**
+     * Set Environment type. Values: `test`, `pre`, `prod`
+     * @param EnvType Environment type. Values: `test`, `pre`, `prod`
+     */
+    public void setEnvType(String EnvType) {
+        this.EnvType = EnvType;
+    }
+
+    /**
+     * Get The region to create the environment 
+     * @return CreateRegion The region to create the environment
+     */
+    public String getCreateRegion() {
+        return this.CreateRegion;
+    }
+
+    /**
+     * Set The region to create the environment
+     * @param CreateRegion The region to create the environment
+     */
+    public void setCreateRegion(String CreateRegion) {
+        this.CreateRegion = CreateRegion;
+    }
+
     public CreateEnvironmentRequest() {
     }
 
@@ -215,6 +284,18 @@ public class CreateEnvironmentRequest extends AbstractModel{
         if (source.EnableTswTraceService != null) {
             this.EnableTswTraceService = new Boolean(source.EnableTswTraceService);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.EnvType != null) {
+            this.EnvType = new String(source.EnvType);
+        }
+        if (source.CreateRegion != null) {
+            this.CreateRegion = new String(source.CreateRegion);
+        }
     }
 
 
@@ -229,6 +310,9 @@ public class CreateEnvironmentRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "K8sVersion", this.K8sVersion);
         this.setParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
         this.setParamSimple(map, prefix + "EnableTswTraceService", this.EnableTswTraceService);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "EnvType", this.EnvType);
+        this.setParamSimple(map, prefix + "CreateRegion", this.CreateRegion);
 
     }
 }

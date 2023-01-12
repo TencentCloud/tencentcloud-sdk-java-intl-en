@@ -417,10 +417,10 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
-     *This API (CheckAssistantCidr) is used to check overlapping of a secondary CIDR block with inventory routing, peering connection (opposite VPC CIDR block), and any other resources. If an overlap is present, the overlapped resources are returned. (To use this API that is in Beta, please submit a ticket.)
-* Check whether the secondary CIDR block overlaps with a primary or secondary CIDR block of the current VPC.
+     *This API is used to check whether the secondary CIDR block conflicts with existing routes, peering connections (peer VPC CIDR blocks), and other resources. 
+* Check whether the secondary CIDR block overlaps with the primary/secondary CIDR block of the current VPC.
 * Check whether the secondary CIDR block overlaps with the routing destination of the current VPC.
-* Check whether the secondary CIDR block is peer-connected to the current VPC, and whether it overlaps with a main or secondary CIDR block of the opposite VPC.
+* If the current VPC is used in a peering connection, check whether the secondary CIDR block overlaps with the primary/secondary CIDR block of the peer VPC.
      * @param req CheckAssistantCidrRequest
      * @return CheckAssistantCidrResponse
      * @throws TencentCloudSDKException
@@ -547,7 +547,7 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
-     *This API is used to batch create secondary CIDR blocks. This API is in beta test. To use it, please submit a ticket.
+     *This API is used to batch create secondary CIDR blocks.
      * @param req CreateAssistantCidrRequest
      * @return CreateAssistantCidrResponse
      * @throws TencentCloudSDKException
@@ -587,9 +587,9 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
-     *This API is used to create a Cloud Connect Network (CCN).<br />
-* You can bind a tag when creating a CCN instance. The tag list in the response indicates the tags that have been successfully added.
-Each account can only create a limited number of CCN instances. For more information, see product documentation. To create more instances, contact the online customer service.
+     *This API is used to create a CCN instance.
+* You can add tags to a CCN instance upon the creation. The tags are added successfully if they are listed in the response.
+* There is a quota of CCN instances for each account. For more information, see product documentation. To increase the quota, please submit a ticket.
      * @param req CreateCcnRequest
      * @return CreateCcnResponse
      * @throws TencentCloudSDKException
@@ -972,19 +972,19 @@ Before taking actions on a NAT gateway, ensure that it has been successfully cre
     }
 
     /**
-     *This API is used to create security group policies.
+     *This API is used to create security group policies (`SecurityGroupPolicy`).
 
-For parameters of SecurityGroupPolicySet,
+For parameters of `SecurityGroupPolicySet`,
 <ul>
 <li>`Version`: The version number of a security group policy, which automatically increases by one each time you update the security policy, to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored.</li>
 <li>When creating the `Egress` and `Ingress` polices,<ul>
-<li>`Protocol`: `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, or `ALL`.</li>
-<li>`CidrBlock`: A CIDR block in the correct format. </li>For 
-<li>`Ipv6CidrBlock`: An IPv6 CIDR block in the correct format. In a classic network, if an `Ipv6CidrBlock` contains private IPv6 addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
-<li>`SecurityGroupId`: ID of the security group. It can be the ID of security group to be modified, or the ID of other security group in the same project. All private IPs of all CVMs under the security group will be covered. If this field is used, the policy will automatically change according to the CVM associated with the group ID while being used to match network messages. You don’t need to change it manually.</li>
-<li>`Port`: A single port number such as 80, or a port range in the format of "8000-8010". This parameter is only available when the `Protocol` is `TCP` or `UDP`. Otherwise, `Protocol` and `Port` are mutually exclusive.</li>
+<li>`Protocol`: Allows `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE` and `ALL`.</li>
+<li>`CidrBlock`: For the classic network, the `CidrBlock` can contain private IPs of Tencent Cloud resources that are not under your account. It does not mean that you can access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
+<li>`Ipv6CidrBlock`: For the classic network, `Ipv6CidrBlock` can contain private IPv6 addresses of Tencent Cloud resources that are not under your account. It does not mean that you can access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
+<li>`SecurityGroupId`: ID of the security group to create policies. </li>
+<li>`Port`: A single port (“80”) or a port range ("8000-8010"). This parameter is only available when `Protocol` is `TCP` or `UDP`.</li>
 <li>`Action`: `ACCEPT` or `DROP`.</li>
-<li>`CidrBlock`, `Ipv6CidrBlock`, `SecurityGroupId`, and `AddressTemplate` are mutually exclusive. `Protocol` + `Port` and `ServiceTemplate` are mutually exclusive.</li>
+<li><code>CidrBlock</code>, <code>Ipv6CidrBlock</code>, <code>SecurityGroupId</code>, and <code>AddressTemplate</code> are mutually exclusive. <code>Protocol</code> + <code>Port</code> and <code>ServiceTemplate</code> are mutually exclusive. <code>IPv6CidrBlock</code> and <code>ICMP</code> are mutually exclusive; to use them, enter <code>ICMPV6</code>.</li>
 <li>You can only create policies in one direction in each request. To specify the `PolicyIndex` parameter, use the same index number in policies. If you want to insert a rule before the first rule, enter 0; if you want to add a rule after the last rule, leave it empty.</li>
 </ul></li></ul>
      * @param req CreateSecurityGroupPoliciesRequest
@@ -1132,8 +1132,8 @@ Description:
 
     /**
      *This API is used to create a VPC instance.
-* The subnet mask of the smallest IP address range that can be created is 28 (16 IP addresses), and that of the largest IP address range is 16 (65,536 IP addresses). For more information on how to plan VPC IP ranges, see [Network Planning](https://intl.cloud.tencent.com/document/product/215/30313?from_cn_redirect=1).
-* The number of VPC instances that can be created in a region is limited. For more information, see <a href="https://intl.cloud.tencent.com/doc/product/215/537?from_cn_redirect=1" title="VPC Use Limits">VPC Use Limits</a>. To request more resources, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+* The subnet mask of the smallest IP address range that can be created is 28 (16 IP addresses), that of the largest IP address ranges 10.0.0.0/12 and 172.16.0.0/12 is 12 (1,048,576 IP addresses), and that of the largest IP address range 192.168.0.0/16 is 16 (65,536 IP addresses). For more information on how to plan VPC IP ranges, see [Network Planning](https://intl.cloud.tencent.com/document/product/215/30313?from_cn_redirect=1).
+* The number of VPC instances that can be created in a region is limited. For more information, see <a href="https://intl.cloud.tencent.com/doc/product/215/537?from_cn_redirect=1" title="VPC Use Limits">VPC Use Limits</a>. To request more resources, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
 * You can bind tags when creating a VPC instance. The tag list in the response indicates the tags that have been successfully added.
      * @param req CreateVpcRequest
      * @return CreateVpcResponse
@@ -1316,7 +1316,7 @@ Description:
     }
 
     /**
-     *This API is used to delete secondary CIDR blocks. This API is in beta test. To use it, please submit a ticket.
+     *This API is used to delete a secondary CIDR block.
      * @param req DeleteAssistantCidrRequest
      * @return DeleteAssistantCidrResponse
      * @throws TencentCloudSDKException
@@ -2038,7 +2038,7 @@ Before deleting a subnet, you need to remove all resources in the subnet, includ
     }
 
     /**
-     *This API (DescribeAssistantCidr) is used to query a list of secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
+     *This API is used to query the list of secondary CIDR blocks.
      * @param req DescribeAssistantCidrRequest
      * @return DescribeAssistantCidrResponse
      * @throws TencentCloudSDKException
@@ -2875,6 +2875,26 @@ This API is only available for existing customers. For any questions, please [su
                 Type type = new TypeToken<JsonResponseModel<DescribeTaskResultResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeTaskResult");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the details of shared traffic packages.
+     * @param req DescribeTrafficPackagesRequest
+     * @return DescribeTrafficPackagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTrafficPackagesResponse DescribeTrafficPackages(DescribeTrafficPackagesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTrafficPackagesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTrafficPackagesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTrafficPackages");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -3763,7 +3783,7 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
-     *This API is used to modify (add or delete) secondary CIDR blocks in batch. This API is in beta test. To use it, please submit a ticket.
+     *This API is used to batch modify (add or delete) secondary CIDR blocks.
      * @param req ModifyAssistantCidrRequest
      * @return ModifyAssistantCidrResponse
      * @throws TencentCloudSDKException
@@ -4789,6 +4809,27 @@ Note: When this API is called, all routing policies in the current route table a
     }
 
     /**
+     *This API is used to unbind and release public IPs. 
+Note: Starting from Dec 15, 2022, CAM authorization is required for a sub-account to call this API. For more details, see [Authorization Guide](https://intl.cloud.tencent.com/document/product/598/34545?from_cn_redirect=1).
+     * @param req ReturnNormalAddressesRequest
+     * @return ReturnNormalAddressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReturnNormalAddressesResponse ReturnNormalAddresses(ReturnNormalAddressesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReturnNormalAddressesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReturnNormalAddressesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReturnNormalAddresses");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (SetCcnRegionBandwidthLimits) is used to set the outbound bandwidth cap for CCNs in each region. This API can only set the outbound bandwidth cap for regions in the network instances that have already been associated.
      * @param req SetCcnRegionBandwidthLimitsRequest
      * @return SetCcnRegionBandwidthLimitsResponse
@@ -4801,6 +4842,26 @@ Note: When this API is called, all routing policies in the current route table a
                 Type type = new TypeToken<JsonResponseModel<SetCcnRegionBandwidthLimitsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SetCcnRegionBandwidthLimits");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to specify whether to enable auto-renewal for the VPN gateway.
+     * @param req SetVpnGatewaysRenewFlagRequest
+     * @return SetVpnGatewaysRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetVpnGatewaysRenewFlagResponse SetVpnGatewaysRenewFlag(SetVpnGatewaysRenewFlagRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetVpnGatewaysRenewFlagResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetVpnGatewaysRenewFlagResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetVpnGatewaysRenewFlag");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

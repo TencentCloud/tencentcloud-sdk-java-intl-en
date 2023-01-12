@@ -23,11 +23,57 @@ import java.util.HashMap;
 public class TransformAddressResponse extends AbstractModel{
 
     /**
+    * 
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private Long TaskId;
+
+    /**
+    * 
+    */
+    @SerializedName("AddressId")
+    @Expose
+    private String AddressId;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get  
+     * @return TaskId 
+     */
+    public Long getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 
+     * @param TaskId 
+     */
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
+    }
+
+    /**
+     * Get  
+     * @return AddressId 
+     */
+    public String getAddressId() {
+        return this.AddressId;
+    }
+
+    /**
+     * Set 
+     * @param AddressId 
+     */
+    public void setAddressId(String AddressId) {
+        this.AddressId = AddressId;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -53,6 +99,12 @@ public class TransformAddressResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public TransformAddressResponse(TransformAddressResponse source) {
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
+        if (source.AddressId != null) {
+            this.AddressId = new String(source.AddressId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +115,8 @@ public class TransformAddressResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "AddressId", this.AddressId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

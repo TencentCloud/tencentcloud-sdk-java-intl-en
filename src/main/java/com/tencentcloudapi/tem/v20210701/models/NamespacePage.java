@@ -51,6 +51,14 @@ public class NamespacePage extends AbstractModel{
     private Long Pages;
 
     /**
+    * Current entry
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Current")
+    @Expose
+    private Long Current;
+
+    /**
      * Get Details of the returned records 
      * @return Records Details of the returned records
      */
@@ -114,6 +122,26 @@ public class NamespacePage extends AbstractModel{
         this.Pages = Pages;
     }
 
+    /**
+     * Get Current entry
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Current Current entry
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getCurrent() {
+        return this.Current;
+    }
+
+    /**
+     * Set Current entry
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Current Current entry
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCurrent(Long Current) {
+        this.Current = Current;
+    }
+
     public NamespacePage() {
     }
 
@@ -137,6 +165,9 @@ public class NamespacePage extends AbstractModel{
         if (source.Pages != null) {
             this.Pages = new Long(source.Pages);
         }
+        if (source.Current != null) {
+            this.Current = new Long(source.Current);
+        }
     }
 
 
@@ -148,6 +179,7 @@ public class NamespacePage extends AbstractModel{
         this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "Pages", this.Pages);
+        this.setParamSimple(map, prefix + "Current", this.Current);
 
     }
 }

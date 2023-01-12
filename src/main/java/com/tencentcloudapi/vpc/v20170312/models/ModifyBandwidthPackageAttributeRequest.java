@@ -37,18 +37,12 @@ public class ModifyBandwidthPackageAttributeRequest extends AbstractModel{
     private String BandwidthPackageName;
 
     /**
-    * The billing mode of the bandwidth package.
+    * The billing mode of the bandwidth package. Values: 
+`TOP5_POSTPAID_BY_MONTH`: Bill by the top 5 bandwidth value of the current month in a postpaid manner
     */
     @SerializedName("ChargeType")
     @Expose
     private String ChargeType;
-
-    /**
-    * When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
-    */
-    @SerializedName("MigrateOnRefund")
-    @Expose
-    private Boolean MigrateOnRefund;
 
     /**
      * Get The unique ID of the bandwidth package. 
@@ -83,35 +77,23 @@ public class ModifyBandwidthPackageAttributeRequest extends AbstractModel{
     }
 
     /**
-     * Get The billing mode of the bandwidth package. 
-     * @return ChargeType The billing mode of the bandwidth package.
+     * Get The billing mode of the bandwidth package. Values: 
+`TOP5_POSTPAID_BY_MONTH`: Bill by the top 5 bandwidth value of the current month in a postpaid manner 
+     * @return ChargeType The billing mode of the bandwidth package. Values: 
+`TOP5_POSTPAID_BY_MONTH`: Bill by the top 5 bandwidth value of the current month in a postpaid manner
      */
     public String getChargeType() {
         return this.ChargeType;
     }
 
     /**
-     * Set The billing mode of the bandwidth package.
-     * @param ChargeType The billing mode of the bandwidth package.
+     * Set The billing mode of the bandwidth package. Values: 
+`TOP5_POSTPAID_BY_MONTH`: Bill by the top 5 bandwidth value of the current month in a postpaid manner
+     * @param ChargeType The billing mode of the bandwidth package. Values: 
+`TOP5_POSTPAID_BY_MONTH`: Bill by the top 5 bandwidth value of the current month in a postpaid manner
      */
     public void setChargeType(String ChargeType) {
         this.ChargeType = ChargeType;
-    }
-
-    /**
-     * Get When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No` 
-     * @return MigrateOnRefund When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
-     */
-    public Boolean getMigrateOnRefund() {
-        return this.MigrateOnRefund;
-    }
-
-    /**
-     * Set When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
-     * @param MigrateOnRefund When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
-     */
-    public void setMigrateOnRefund(Boolean MigrateOnRefund) {
-        this.MigrateOnRefund = MigrateOnRefund;
     }
 
     public ModifyBandwidthPackageAttributeRequest() {
@@ -131,9 +113,6 @@ public class ModifyBandwidthPackageAttributeRequest extends AbstractModel{
         if (source.ChargeType != null) {
             this.ChargeType = new String(source.ChargeType);
         }
-        if (source.MigrateOnRefund != null) {
-            this.MigrateOnRefund = new Boolean(source.MigrateOnRefund);
-        }
     }
 
 
@@ -144,7 +123,6 @@ public class ModifyBandwidthPackageAttributeRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
         this.setParamSimple(map, prefix + "BandwidthPackageName", this.BandwidthPackageName);
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
-        this.setParamSimple(map, prefix + "MigrateOnRefund", this.MigrateOnRefund);
 
     }
 }

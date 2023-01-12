@@ -100,7 +100,7 @@ public class Address extends AbstractModel{
     private Boolean IsEipDirectConnection;
 
     /**
-    * EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (elastic IP) and `AnycastEIP` (accelerated EIP).
+    * IP type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (general elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (Anti DDoS EIP).
     */
     @SerializedName("AddressType")
     @Expose
@@ -345,16 +345,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (elastic IP) and `AnycastEIP` (accelerated EIP). 
-     * @return AddressType EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (elastic IP) and `AnycastEIP` (accelerated EIP).
+     * Get IP type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (general elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (Anti DDoS EIP). 
+     * @return AddressType IP type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (general elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (Anti DDoS EIP).
      */
     public String getAddressType() {
         return this.AddressType;
     }
 
     /**
-     * Set EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (elastic IP) and `AnycastEIP` (accelerated EIP).
-     * @param AddressType EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (elastic IP) and `AnycastEIP` (accelerated EIP).
+     * Set IP type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (general elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (Anti DDoS EIP).
+     * @param AddressType IP type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (general elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (Anti DDoS EIP).
      */
     public void setAddressType(String AddressType) {
         this.AddressType = AddressType;

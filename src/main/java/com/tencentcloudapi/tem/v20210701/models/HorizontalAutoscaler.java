@@ -37,14 +37,28 @@ public class HorizontalAutoscaler extends AbstractModel{
     private Long MaxReplicas;
 
     /**
-    * Metrics (CPU or memory)
+    * Metric measurement
+`CPU`: CPU utilization (%)
+`MEMORY`: Memory utilization (%)
+`CPU_CORE_USED`: CPU usage (core)
+`MEMORY_SIZE_USED`: Memory usage (MiB)
+`NETWORK_BANDWIDTH_RECEIVE`: Network bandwidth in (Mbps)
+`NETWORK_BANDWIDTH_TRANSMIT`: Network bandwidth out (Mbps)
+`NETWORK_TRAFFIC_RECEIVE`: Network traffic in (MiB/s)
+`NETWORK_TRAFFIC_TRANSMIT`: Network traffic  out (MiB/s)
+`NETWORK_PACKETS_RECEIVE`: Network packets in (packets/sec)
+`NETWORK_PACKETS_TRANSMIT`: Network packets out (packets/sec)
+`FS_IOPS_WRITE`: Disk writes (count/sec)
+`FS_IOPS_READ`: Disk reads (count/sec)
+`FS_SIZE_WRITE`: Disk write size (MiB/s)
+`FS_SIZE_READ`: Disk read size (MiB/s)
     */
     @SerializedName("Metrics")
     @Expose
     private String Metrics;
 
     /**
-    * Threshold (percentage)
+    * The value of threshold (integer)
     */
     @SerializedName("Threshold")
     @Expose
@@ -56,6 +70,14 @@ public class HorizontalAutoscaler extends AbstractModel{
     @SerializedName("Enabled")
     @Expose
     private Boolean Enabled;
+
+    /**
+    * The value of threshold (demical)
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DoubleThreshold")
+    @Expose
+    private Float DoubleThreshold;
 
     /**
      * Get (Optional) Minimum number of instances 
@@ -90,32 +112,88 @@ public class HorizontalAutoscaler extends AbstractModel{
     }
 
     /**
-     * Get Metrics (CPU or memory) 
-     * @return Metrics Metrics (CPU or memory)
+     * Get Metric measurement
+`CPU`: CPU utilization (%)
+`MEMORY`: Memory utilization (%)
+`CPU_CORE_USED`: CPU usage (core)
+`MEMORY_SIZE_USED`: Memory usage (MiB)
+`NETWORK_BANDWIDTH_RECEIVE`: Network bandwidth in (Mbps)
+`NETWORK_BANDWIDTH_TRANSMIT`: Network bandwidth out (Mbps)
+`NETWORK_TRAFFIC_RECEIVE`: Network traffic in (MiB/s)
+`NETWORK_TRAFFIC_TRANSMIT`: Network traffic  out (MiB/s)
+`NETWORK_PACKETS_RECEIVE`: Network packets in (packets/sec)
+`NETWORK_PACKETS_TRANSMIT`: Network packets out (packets/sec)
+`FS_IOPS_WRITE`: Disk writes (count/sec)
+`FS_IOPS_READ`: Disk reads (count/sec)
+`FS_SIZE_WRITE`: Disk write size (MiB/s)
+`FS_SIZE_READ`: Disk read size (MiB/s) 
+     * @return Metrics Metric measurement
+`CPU`: CPU utilization (%)
+`MEMORY`: Memory utilization (%)
+`CPU_CORE_USED`: CPU usage (core)
+`MEMORY_SIZE_USED`: Memory usage (MiB)
+`NETWORK_BANDWIDTH_RECEIVE`: Network bandwidth in (Mbps)
+`NETWORK_BANDWIDTH_TRANSMIT`: Network bandwidth out (Mbps)
+`NETWORK_TRAFFIC_RECEIVE`: Network traffic in (MiB/s)
+`NETWORK_TRAFFIC_TRANSMIT`: Network traffic  out (MiB/s)
+`NETWORK_PACKETS_RECEIVE`: Network packets in (packets/sec)
+`NETWORK_PACKETS_TRANSMIT`: Network packets out (packets/sec)
+`FS_IOPS_WRITE`: Disk writes (count/sec)
+`FS_IOPS_READ`: Disk reads (count/sec)
+`FS_SIZE_WRITE`: Disk write size (MiB/s)
+`FS_SIZE_READ`: Disk read size (MiB/s)
      */
     public String getMetrics() {
         return this.Metrics;
     }
 
     /**
-     * Set Metrics (CPU or memory)
-     * @param Metrics Metrics (CPU or memory)
+     * Set Metric measurement
+`CPU`: CPU utilization (%)
+`MEMORY`: Memory utilization (%)
+`CPU_CORE_USED`: CPU usage (core)
+`MEMORY_SIZE_USED`: Memory usage (MiB)
+`NETWORK_BANDWIDTH_RECEIVE`: Network bandwidth in (Mbps)
+`NETWORK_BANDWIDTH_TRANSMIT`: Network bandwidth out (Mbps)
+`NETWORK_TRAFFIC_RECEIVE`: Network traffic in (MiB/s)
+`NETWORK_TRAFFIC_TRANSMIT`: Network traffic  out (MiB/s)
+`NETWORK_PACKETS_RECEIVE`: Network packets in (packets/sec)
+`NETWORK_PACKETS_TRANSMIT`: Network packets out (packets/sec)
+`FS_IOPS_WRITE`: Disk writes (count/sec)
+`FS_IOPS_READ`: Disk reads (count/sec)
+`FS_SIZE_WRITE`: Disk write size (MiB/s)
+`FS_SIZE_READ`: Disk read size (MiB/s)
+     * @param Metrics Metric measurement
+`CPU`: CPU utilization (%)
+`MEMORY`: Memory utilization (%)
+`CPU_CORE_USED`: CPU usage (core)
+`MEMORY_SIZE_USED`: Memory usage (MiB)
+`NETWORK_BANDWIDTH_RECEIVE`: Network bandwidth in (Mbps)
+`NETWORK_BANDWIDTH_TRANSMIT`: Network bandwidth out (Mbps)
+`NETWORK_TRAFFIC_RECEIVE`: Network traffic in (MiB/s)
+`NETWORK_TRAFFIC_TRANSMIT`: Network traffic  out (MiB/s)
+`NETWORK_PACKETS_RECEIVE`: Network packets in (packets/sec)
+`NETWORK_PACKETS_TRANSMIT`: Network packets out (packets/sec)
+`FS_IOPS_WRITE`: Disk writes (count/sec)
+`FS_IOPS_READ`: Disk reads (count/sec)
+`FS_SIZE_WRITE`: Disk write size (MiB/s)
+`FS_SIZE_READ`: Disk read size (MiB/s)
      */
     public void setMetrics(String Metrics) {
         this.Metrics = Metrics;
     }
 
     /**
-     * Get Threshold (percentage) 
-     * @return Threshold Threshold (percentage)
+     * Get The value of threshold (integer) 
+     * @return Threshold The value of threshold (integer)
      */
     public Long getThreshold() {
         return this.Threshold;
     }
 
     /**
-     * Set Threshold (percentage)
-     * @param Threshold Threshold (percentage)
+     * Set The value of threshold (integer)
+     * @param Threshold The value of threshold (integer)
      */
     public void setThreshold(Long Threshold) {
         this.Threshold = Threshold;
@@ -135,6 +213,26 @@ public class HorizontalAutoscaler extends AbstractModel{
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;
+    }
+
+    /**
+     * Get The value of threshold (demical)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DoubleThreshold The value of threshold (demical)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Float getDoubleThreshold() {
+        return this.DoubleThreshold;
+    }
+
+    /**
+     * Set The value of threshold (demical)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DoubleThreshold The value of threshold (demical)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDoubleThreshold(Float DoubleThreshold) {
+        this.DoubleThreshold = DoubleThreshold;
     }
 
     public HorizontalAutoscaler() {
@@ -160,6 +258,9 @@ public class HorizontalAutoscaler extends AbstractModel{
         if (source.Enabled != null) {
             this.Enabled = new Boolean(source.Enabled);
         }
+        if (source.DoubleThreshold != null) {
+            this.DoubleThreshold = new Float(source.DoubleThreshold);
+        }
     }
 
 
@@ -172,6 +273,7 @@ public class HorizontalAutoscaler extends AbstractModel{
         this.setParamSimple(map, prefix + "Metrics", this.Metrics);
         this.setParamSimple(map, prefix + "Threshold", this.Threshold);
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
+        this.setParamSimple(map, prefix + "DoubleThreshold", this.DoubleThreshold);
 
     }
 }

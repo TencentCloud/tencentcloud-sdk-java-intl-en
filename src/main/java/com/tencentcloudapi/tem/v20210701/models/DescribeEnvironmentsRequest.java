@@ -44,6 +44,27 @@ public class DescribeEnvironmentsRequest extends AbstractModel{
     private Long SourceChannel;
 
     /**
+    * Filters for query 
+    */
+    @SerializedName("Filters")
+    @Expose
+    private QueryFilter [] Filters;
+
+    /**
+    * Sorting field
+    */
+    @SerializedName("SortInfo")
+    @Expose
+    private SortType SortInfo;
+
+    /**
+    * Environment ID
+    */
+    @SerializedName("EnvironmentId")
+    @Expose
+    private String EnvironmentId;
+
+    /**
      * Get Pagination limit 
      * @return Limit Pagination limit
      */
@@ -91,6 +112,54 @@ public class DescribeEnvironmentsRequest extends AbstractModel{
         this.SourceChannel = SourceChannel;
     }
 
+    /**
+     * Get Filters for query  
+     * @return Filters Filters for query 
+     */
+    public QueryFilter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set Filters for query 
+     * @param Filters Filters for query 
+     */
+    public void setFilters(QueryFilter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
+     * Get Sorting field 
+     * @return SortInfo Sorting field
+     */
+    public SortType getSortInfo() {
+        return this.SortInfo;
+    }
+
+    /**
+     * Set Sorting field
+     * @param SortInfo Sorting field
+     */
+    public void setSortInfo(SortType SortInfo) {
+        this.SortInfo = SortInfo;
+    }
+
+    /**
+     * Get Environment ID 
+     * @return EnvironmentId Environment ID
+     */
+    public String getEnvironmentId() {
+        return this.EnvironmentId;
+    }
+
+    /**
+     * Set Environment ID
+     * @param EnvironmentId Environment ID
+     */
+    public void setEnvironmentId(String EnvironmentId) {
+        this.EnvironmentId = EnvironmentId;
+    }
+
     public DescribeEnvironmentsRequest() {
     }
 
@@ -108,6 +177,18 @@ public class DescribeEnvironmentsRequest extends AbstractModel{
         if (source.SourceChannel != null) {
             this.SourceChannel = new Long(source.SourceChannel);
         }
+        if (source.Filters != null) {
+            this.Filters = new QueryFilter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new QueryFilter(source.Filters[i]);
+            }
+        }
+        if (source.SortInfo != null) {
+            this.SortInfo = new SortType(source.SortInfo);
+        }
+        if (source.EnvironmentId != null) {
+            this.EnvironmentId = new String(source.EnvironmentId);
+        }
     }
 
 
@@ -118,6 +199,9 @@ public class DescribeEnvironmentsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamObj(map, prefix + "SortInfo.", this.SortInfo);
+        this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
 
     }
 }

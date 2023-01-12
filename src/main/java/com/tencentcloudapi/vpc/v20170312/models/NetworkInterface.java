@@ -165,6 +165,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long AttachType;
 
     /**
+    * The ID of resource to retain the ENI primary IP. It’s used as the request parameters for deleting an ENI.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
+    * Service level
+<li>`DEFAULT`: Default level</lil>
+<li>`PT`: Gold</li>
+<li>`AU`: Silver</li>
+<li>`AG`: Bronze</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("QosLevel")
+    @Expose
+    private String QosLevel;
+
+    /**
      * Get The ID of the ENI instance, such as `eni-f1xjkw1b`. 
      * @return NetworkInterfaceId The ID of the ENI instance, such as `eni-f1xjkw1b`.
      */
@@ -504,6 +524,62 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.AttachType = AttachType;
     }
 
+    /**
+     * Get The ID of resource to retain the ENI primary IP. It’s used as the request parameters for deleting an ENI.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ResourceId The ID of resource to retain the ENI primary IP. It’s used as the request parameters for deleting an ENI.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set The ID of resource to retain the ENI primary IP. It’s used as the request parameters for deleting an ENI.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ResourceId The ID of resource to retain the ENI primary IP. It’s used as the request parameters for deleting an ENI.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
+    /**
+     * Get Service level
+<li>`DEFAULT`: Default level</lil>
+<li>`PT`: Gold</li>
+<li>`AU`: Silver</li>
+<li>`AG`: Bronze</li>
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return QosLevel Service level
+<li>`DEFAULT`: Default level</lil>
+<li>`PT`: Gold</li>
+<li>`AU`: Silver</li>
+<li>`AG`: Bronze</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getQosLevel() {
+        return this.QosLevel;
+    }
+
+    /**
+     * Set Service level
+<li>`DEFAULT`: Default level</lil>
+<li>`PT`: Gold</li>
+<li>`AU`: Silver</li>
+<li>`AG`: Bronze</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param QosLevel Service level
+<li>`DEFAULT`: Default level</lil>
+<li>`PT`: Gold</li>
+<li>`AU`: Silver</li>
+<li>`AG`: Bronze</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setQosLevel(String QosLevel) {
+        this.QosLevel = QosLevel;
+    }
+
     public NetworkInterface() {
     }
 
@@ -581,6 +657,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.AttachType != null) {
             this.AttachType = new Long(source.AttachType);
         }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.QosLevel != null) {
+            this.QosLevel = new String(source.QosLevel);
+        }
     }
 
 
@@ -607,6 +689,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Business", this.Business);
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
         this.setParamSimple(map, prefix + "AttachType", this.AttachType);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamSimple(map, prefix + "QosLevel", this.QosLevel);
 
     }
 }

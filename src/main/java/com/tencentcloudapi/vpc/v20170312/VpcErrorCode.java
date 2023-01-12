@@ -111,6 +111,9 @@ public enum VpcErrorCode {
     // The IP address is not available now.
      INVALIDPARAMETERVALUE_ADDRESSIPNOTAVAILABLE("InvalidParameterValue.AddressIpNotAvailable"),
      
+    // Failed to query the address.
+     INVALIDPARAMETERVALUE_ADDRESSIPSNOTFOUND("InvalidParameterValue.AddressIpsNotFound"),
+     
     // An EIP cannot be bound with this type of instance.
      INVALIDPARAMETERVALUE_ADDRESSNOTAPPLICABLE("InvalidParameterValue.AddressNotApplicable"),
      
@@ -222,6 +225,15 @@ public enum VpcErrorCode {
     // A request cannot contain IP addresses with different cluster types.
      INVALIDPARAMETERVALUE_MIXEDADDRESSIPSETTYPE("InvalidParameterValue.MixedAddressIpSetType"),
      
+    // The DNAT forwarding rule of the NAT gateway already exists.
+     INVALIDPARAMETERVALUE_NATGATEWAYDNATRULEEXISTED("InvalidParameterValue.NatGatewayDnatRuleExisted"),
+     
+    // The DNAT forwarding rule of the NAT gateway does not exist.
+     INVALIDPARAMETERVALUE_NATGATEWAYDNATRULENOTEXISTS("InvalidParameterValue.NatGatewayDnatRuleNotExists"),
+     
+    // The private IP of the DNAT translation rule must be an IP used by the ENI of the virtual machine.
+     INVALIDPARAMETERVALUE_NATGATEWAYDNATRULEPIPNEEDVM("InvalidParameterValue.NatGatewayDnatRulePipNeedVm"),
+     
     // The SNAT forwarding rule of the NAT gateway does not exist.
      INVALIDPARAMETERVALUE_NATGATEWAYSNATRULENOTEXISTS("InvalidParameterValue.NatGatewaySnatRuleNotExists"),
      
@@ -236,6 +248,9 @@ public enum VpcErrorCode {
      
     // The detection destination IP address is the same as that of another network detection instance under the same subnet in the same VPC.
      INVALIDPARAMETERVALUE_NETDETECTSAMEIP("InvalidParameterValue.NetDetectSameIp"),
+     
+    // Incorrect network interface ID.
+     INVALIDPARAMETERVALUE_NETWORKINTERFACEIDMALFORMED("InvalidParameterValue.NetworkInterfaceIdMalformed"),
      
     // The network interface ID was not found. The private IP address may not be configured on the network interface.
      INVALIDPARAMETERVALUE_NETWORKINTERFACENOTFOUND("InvalidParameterValue.NetworkInterfaceNotFound"),
@@ -317,6 +332,9 @@ public enum VpcErrorCode {
      
     // Invalid parameter value. The parameter value is too long.
      INVALIDPARAMETERVALUE_TOOLONG("InvalidParameterValue.TooLong"),
+     
+    // The traffic package ID is invalid.
+     INVALIDPARAMETERVALUE_TRAFFICPACKAGEIDMALFORMED("InvalidParameterValue.TrafficPackageIdMalformed"),
      
     // This availability zone is unavailable.
      INVALIDPARAMETERVALUE_UNAVAILABLEZONE("InvalidParameterValue.UnavailableZone"),
@@ -458,6 +476,9 @@ public enum VpcErrorCode {
      
     // The IP range resources are insufficient.
      RESOURCEINSUFFICIENT_CIDRBLOCK("ResourceInsufficient.CidrBlock"),
+     
+    // The subnet does not have sufficient IPs.
+     RESOURCEINSUFFICIENT_SUBNET("ResourceInsufficient.Subnet"),
      
     // The resource does not exist.
      RESOURCENOTFOUND("ResourceNotFound"),
@@ -651,10 +672,13 @@ public enum VpcErrorCode {
     // The resource mutual exclusion operation is being executed.
      UNSUPPORTEDOPERATION_MUTEXOPERATIONTASKRUNNING("UnsupportedOperation.MutexOperationTaskRunning"),
      
+    // The public IP of the NAT gateway does not exist. 
+     UNSUPPORTEDOPERATION_NATGATEWAYEIPNOTEXISTS("UnsupportedOperation.NatGatewayEipNotExists"),
+     
     // The private IP specified in the SNAT/DNAT forwarding rule has been bound with another rule.
      UNSUPPORTEDOPERATION_NATGATEWAYRULEPIPEXISTS("UnsupportedOperation.NatGatewayRulePipExists"),
      
-    // 
+    // The private IP of the SNAT translation rule must be within the IP range of the VM ENI.
      UNSUPPORTEDOPERATION_NATGATEWAYSNATPIPNEEDVM("UnsupportedOperation.NatGatewaySnatPipNeedVm"),
      
     // The specified NAT Gateway type does not support configuring a SNAT rule.
@@ -669,14 +693,23 @@ public enum VpcErrorCode {
     // This operation is not allowed because the current instance is blocked.
      UNSUPPORTEDOPERATION_NOTLOCKEDINSTANCEOPERATION("UnsupportedOperation.NotLockedInstanceOperation"),
      
+    // 
+     UNSUPPORTEDOPERATION_NOTMATCHTARGETSERVICE("UnsupportedOperation.NotMatchTargetService"),
+     
     // Unsupported operation: the current CCN instance is not in “Applying” status.
      UNSUPPORTEDOPERATION_NOTPENDINGCCNINSTANCE("UnsupportedOperation.NotPendingCcnInstance"),
      
     // Unsupported operation: the current CCN instance is not billed on a pay-as-you-go basis.
      UNSUPPORTEDOPERATION_NOTPOSTPAIDCCNOPERATION("UnsupportedOperation.NotPostpaidCcnOperation"),
      
+    // A CCN instance cannot be associated with an edge instance and a cross-boarder instance at the same time. 
+     UNSUPPORTEDOPERATION_NOTSUPPORTATTACHEDGEANDCROSSBORDERINSTANCE("UnsupportedOperation.NotSupportAttachEdgeAndCrossBorderInstance"),
+     
     // The default route table cannot be deleted.
      UNSUPPORTEDOPERATION_NOTSUPPORTDELETEDEFAULTROUTETABLE("UnsupportedOperation.NotSupportDeleteDefaultRouteTable"),
+     
+    // This type of addresses cannot be released.
+     UNSUPPORTEDOPERATION_NOTSUPPORTEDADDRESSIPSCHARGETYPE("UnsupportedOperation.NotSupportedAddressIpsChargeType"),
      
     // The current CCN instance does not support publishing update routes.
      UNSUPPORTEDOPERATION_NOTSUPPORTEDUPDATECCNROUTEPUBLISH("UnsupportedOperation.NotSupportedUpdateCcnRoutePublish"),
@@ -725,6 +758,9 @@ public enum VpcErrorCode {
      
     // The routing table is bound to a subnet.
      UNSUPPORTEDOPERATION_ROUTETABLEHASSUBNETRULE("UnsupportedOperation.RouteTableHasSubnetRule"),
+     
+    // The SNAT subnet does not support assigning IPs.
+     UNSUPPORTEDOPERATION_SNATSUBNET("UnsupportedOperation.SnatSubnet"),
      
     // The endpoint created by the specified endpoint service cannot be bound to a security group.
      UNSUPPORTEDOPERATION_SPECIALENDPOINTSERVICE("UnsupportedOperation.SpecialEndPointService"),

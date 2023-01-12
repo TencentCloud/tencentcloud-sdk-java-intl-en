@@ -143,6 +143,70 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long Locked;
 
     /**
+    * User AppId
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AppId")
+    @Expose
+    private String AppId;
+
+    /**
+    * User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Uin")
+    @Expose
+    private String Uin;
+
+    /**
+    * The UIN of sub-account
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SubAccountUin")
+    @Expose
+    private String SubAccountUin;
+
+    /**
+    * Application ID
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * Tag.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * Whether it’s authorized to access the resource
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("HasAuthority")
+    @Expose
+    private Boolean HasAuthority;
+
+    /**
+    * Environment type. Values: `test`, `pre`, `prod`
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("EnvType")
+    @Expose
+    private String EnvType;
+
+    /**
+    * Region code
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("RegionId")
+    @Expose
+    private String RegionId;
+
+    /**
      * Get Environment ID 
      * @return EnvironmentId Environment ID
      */
@@ -418,6 +482,166 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.Locked = Locked;
     }
 
+    /**
+     * Get User AppId
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AppId User AppId
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getAppId() {
+        return this.AppId;
+    }
+
+    /**
+     * Set User AppId
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AppId User AppId
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAppId(String AppId) {
+        this.AppId = AppId;
+    }
+
+    /**
+     * Get User UIN
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Uin User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getUin() {
+        return this.Uin;
+    }
+
+    /**
+     * Set User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Uin User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setUin(String Uin) {
+        this.Uin = Uin;
+    }
+
+    /**
+     * Get The UIN of sub-account
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SubAccountUin The UIN of sub-account
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getSubAccountUin() {
+        return this.SubAccountUin;
+    }
+
+    /**
+     * Set The UIN of sub-account
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SubAccountUin The UIN of sub-account
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSubAccountUin(String SubAccountUin) {
+        this.SubAccountUin = SubAccountUin;
+    }
+
+    /**
+     * Get Application ID
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ClusterId Application ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set Application ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ClusterId Application ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get Tag.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return Tags Tag.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Tags Tag.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get Whether it’s authorized to access the resource
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HasAuthority Whether it’s authorized to access the resource
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getHasAuthority() {
+        return this.HasAuthority;
+    }
+
+    /**
+     * Set Whether it’s authorized to access the resource
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HasAuthority Whether it’s authorized to access the resource
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setHasAuthority(Boolean HasAuthority) {
+        this.HasAuthority = HasAuthority;
+    }
+
+    /**
+     * Get Environment type. Values: `test`, `pre`, `prod`
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return EnvType Environment type. Values: `test`, `pre`, `prod`
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getEnvType() {
+        return this.EnvType;
+    }
+
+    /**
+     * Set Environment type. Values: `test`, `pre`, `prod`
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param EnvType Environment type. Values: `test`, `pre`, `prod`
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setEnvType(String EnvType) {
+        this.EnvType = EnvType;
+    }
+
+    /**
+     * Get Region code
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return RegionId Region code
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getRegionId() {
+        return this.RegionId;
+    }
+
+    /**
+     * Set Region code
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param RegionId Region code
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setRegionId(String RegionId) {
+        this.RegionId = RegionId;
+    }
+
     public TemNamespaceInfo() {
     }
 
@@ -477,6 +701,33 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.Locked != null) {
             this.Locked = new Long(source.Locked);
         }
+        if (source.AppId != null) {
+            this.AppId = new String(source.AppId);
+        }
+        if (source.Uin != null) {
+            this.Uin = new String(source.Uin);
+        }
+        if (source.SubAccountUin != null) {
+            this.SubAccountUin = new String(source.SubAccountUin);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.HasAuthority != null) {
+            this.HasAuthority = new Boolean(source.HasAuthority);
+        }
+        if (source.EnvType != null) {
+            this.EnvType = new String(source.EnvType);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new String(source.RegionId);
+        }
     }
 
 
@@ -501,6 +752,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
         this.setParamSimple(map, prefix + "EnableTswTraceService", this.EnableTswTraceService);
         this.setParamSimple(map, prefix + "Locked", this.Locked);
+        this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "Uin", this.Uin);
+        this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "HasAuthority", this.HasAuthority);
+        this.setParamSimple(map, prefix + "EnvType", this.EnvType);
+        this.setParamSimple(map, prefix + "RegionId", this.RegionId);
 
     }
 }
