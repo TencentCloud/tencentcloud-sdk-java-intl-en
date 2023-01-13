@@ -87,8 +87,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Alias;
 
     /**
-    * Status value. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: OV/EV certificate, information to be submitted; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
     @Expose
@@ -263,6 +263,70 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Tags [] Tags;
 
     /**
+    * Whether the expiration notification was ignored
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsIgnore")
+    @Expose
+    private Boolean IsIgnore;
+
+    /**
+    * Whether the certificate is a Chinese SM certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsSM")
+    @Expose
+    private Boolean IsSM;
+
+    /**
+    * Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EncryptAlgorithm")
+    @Expose
+    private String EncryptAlgorithm;
+
+    /**
+    * Encryption algorithm of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CAEncryptAlgorithms")
+    @Expose
+    private String [] CAEncryptAlgorithms;
+
+    /**
+    * Expiration time of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CAEndTimes")
+    @Expose
+    private String [] CAEndTimes;
+
+    /**
+    * Generic name of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CACommonNames")
+    @Expose
+    private String [] CACommonNames;
+
+    /**
+    * Prereview information of the certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PreAuditInfo")
+    @Expose
+    private PreAuditInfo PreAuditInfo;
+
+    /**
+    * Whether auto-renewal is enabled.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("AutoRenewFlag")
+    @Expose
+    private Long AutoRenewFlag;
+
+    /**
      * Get User UIN
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return OwnerUin User UIN
@@ -423,20 +487,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Status value. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: OV/EV certificate, information to be submitted; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Status Status value. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: OV/EV certificate, information to be submitted; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Status Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status value. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: OV/EV certificate, information to be submitted; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Status Status value. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: OV/EV certificate, information to be submitted; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Status Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -862,6 +926,166 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.Tags = Tags;
     }
 
+    /**
+     * Get Whether the expiration notification was ignored
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsIgnore Whether the expiration notification was ignored
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getIsIgnore() {
+        return this.IsIgnore;
+    }
+
+    /**
+     * Set Whether the expiration notification was ignored
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsIgnore Whether the expiration notification was ignored
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIsIgnore(Boolean IsIgnore) {
+        this.IsIgnore = IsIgnore;
+    }
+
+    /**
+     * Get Whether the certificate is a Chinese SM certificate
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsSM Whether the certificate is a Chinese SM certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getIsSM() {
+        return this.IsSM;
+    }
+
+    /**
+     * Set Whether the certificate is a Chinese SM certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsSM Whether the certificate is a Chinese SM certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIsSM(Boolean IsSM) {
+        this.IsSM = IsSM;
+    }
+
+    /**
+     * Get Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EncryptAlgorithm Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getEncryptAlgorithm() {
+        return this.EncryptAlgorithm;
+    }
+
+    /**
+     * Set Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EncryptAlgorithm Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEncryptAlgorithm(String EncryptAlgorithm) {
+        this.EncryptAlgorithm = EncryptAlgorithm;
+    }
+
+    /**
+     * Get Encryption algorithm of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CAEncryptAlgorithms Encryption algorithm of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getCAEncryptAlgorithms() {
+        return this.CAEncryptAlgorithms;
+    }
+
+    /**
+     * Set Encryption algorithm of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CAEncryptAlgorithms Encryption algorithm of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCAEncryptAlgorithms(String [] CAEncryptAlgorithms) {
+        this.CAEncryptAlgorithms = CAEncryptAlgorithms;
+    }
+
+    /**
+     * Get Expiration time of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CAEndTimes Expiration time of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getCAEndTimes() {
+        return this.CAEndTimes;
+    }
+
+    /**
+     * Set Expiration time of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CAEndTimes Expiration time of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCAEndTimes(String [] CAEndTimes) {
+        this.CAEndTimes = CAEndTimes;
+    }
+
+    /**
+     * Get Generic name of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CACommonNames Generic name of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getCACommonNames() {
+        return this.CACommonNames;
+    }
+
+    /**
+     * Set Generic name of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CACommonNames Generic name of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCACommonNames(String [] CACommonNames) {
+        this.CACommonNames = CACommonNames;
+    }
+
+    /**
+     * Get Prereview information of the certificate
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PreAuditInfo Prereview information of the certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public PreAuditInfo getPreAuditInfo() {
+        return this.PreAuditInfo;
+    }
+
+    /**
+     * Set Prereview information of the certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PreAuditInfo Prereview information of the certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPreAuditInfo(PreAuditInfo PreAuditInfo) {
+        this.PreAuditInfo = PreAuditInfo;
+    }
+
+    /**
+     * Get Whether auto-renewal is enabled.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return AutoRenewFlag Whether auto-renewal is enabled.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public Long getAutoRenewFlag() {
+        return this.AutoRenewFlag;
+    }
+
+    /**
+     * Set Whether auto-renewal is enabled.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param AutoRenewFlag Whether auto-renewal is enabled.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setAutoRenewFlag(Long AutoRenewFlag) {
+        this.AutoRenewFlag = AutoRenewFlag;
+    }
+
     public Certificates() {
     }
 
@@ -969,6 +1193,39 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.Tags[i] = new Tags(source.Tags[i]);
             }
         }
+        if (source.IsIgnore != null) {
+            this.IsIgnore = new Boolean(source.IsIgnore);
+        }
+        if (source.IsSM != null) {
+            this.IsSM = new Boolean(source.IsSM);
+        }
+        if (source.EncryptAlgorithm != null) {
+            this.EncryptAlgorithm = new String(source.EncryptAlgorithm);
+        }
+        if (source.CAEncryptAlgorithms != null) {
+            this.CAEncryptAlgorithms = new String[source.CAEncryptAlgorithms.length];
+            for (int i = 0; i < source.CAEncryptAlgorithms.length; i++) {
+                this.CAEncryptAlgorithms[i] = new String(source.CAEncryptAlgorithms[i]);
+            }
+        }
+        if (source.CAEndTimes != null) {
+            this.CAEndTimes = new String[source.CAEndTimes.length];
+            for (int i = 0; i < source.CAEndTimes.length; i++) {
+                this.CAEndTimes[i] = new String(source.CAEndTimes[i]);
+            }
+        }
+        if (source.CACommonNames != null) {
+            this.CACommonNames = new String[source.CACommonNames.length];
+            for (int i = 0; i < source.CACommonNames.length; i++) {
+                this.CACommonNames[i] = new String(source.CACommonNames[i]);
+            }
+        }
+        if (source.PreAuditInfo != null) {
+            this.PreAuditInfo = new PreAuditInfo(source.PreAuditInfo);
+        }
+        if (source.AutoRenewFlag != null) {
+            this.AutoRenewFlag = new Long(source.AutoRenewFlag);
+        }
     }
 
 
@@ -1006,6 +1263,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamArraySimple(map, prefix + "BoundResource.", this.BoundResource);
         this.setParamSimple(map, prefix + "Deployable", this.Deployable);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "IsIgnore", this.IsIgnore);
+        this.setParamSimple(map, prefix + "IsSM", this.IsSM);
+        this.setParamSimple(map, prefix + "EncryptAlgorithm", this.EncryptAlgorithm);
+        this.setParamArraySimple(map, prefix + "CAEncryptAlgorithms.", this.CAEncryptAlgorithms);
+        this.setParamArraySimple(map, prefix + "CAEndTimes.", this.CAEndTimes);
+        this.setParamArraySimple(map, prefix + "CACommonNames.", this.CACommonNames);
+        this.setParamObj(map, prefix + "PreAuditInfo.", this.PreAuditInfo);
+        this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
 
     }
 }

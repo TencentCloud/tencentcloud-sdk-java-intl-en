@@ -107,6 +107,20 @@ public class ApplyCertificateRequest extends AbstractModel{
     private String OldCertificateId;
 
     /**
+    * Benefit package ID, which is used to expand the free certificate package
+    */
+    @SerializedName("PackageId")
+    @Expose
+    private String PackageId;
+
+    /**
+    * Whether to delete the automatic domain name verification record after issuance, which is no by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type.
+    */
+    @SerializedName("DeleteDnsAutoRecord")
+    @Expose
+    private Boolean DeleteDnsAutoRecord;
+
+    /**
      * Get Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation 
      * @return DvAuthMethod Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
      */
@@ -298,6 +312,38 @@ public class ApplyCertificateRequest extends AbstractModel{
         this.OldCertificateId = OldCertificateId;
     }
 
+    /**
+     * Get Benefit package ID, which is used to expand the free certificate package 
+     * @return PackageId Benefit package ID, which is used to expand the free certificate package
+     */
+    public String getPackageId() {
+        return this.PackageId;
+    }
+
+    /**
+     * Set Benefit package ID, which is used to expand the free certificate package
+     * @param PackageId Benefit package ID, which is used to expand the free certificate package
+     */
+    public void setPackageId(String PackageId) {
+        this.PackageId = PackageId;
+    }
+
+    /**
+     * Get Whether to delete the automatic domain name verification record after issuance, which is no by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type. 
+     * @return DeleteDnsAutoRecord Whether to delete the automatic domain name verification record after issuance, which is no by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type.
+     */
+    public Boolean getDeleteDnsAutoRecord() {
+        return this.DeleteDnsAutoRecord;
+    }
+
+    /**
+     * Set Whether to delete the automatic domain name verification record after issuance, which is no by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type.
+     * @param DeleteDnsAutoRecord Whether to delete the automatic domain name verification record after issuance, which is no by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type.
+     */
+    public void setDeleteDnsAutoRecord(Boolean DeleteDnsAutoRecord) {
+        this.DeleteDnsAutoRecord = DeleteDnsAutoRecord;
+    }
+
     public ApplyCertificateRequest() {
     }
 
@@ -342,6 +388,12 @@ public class ApplyCertificateRequest extends AbstractModel{
         if (source.OldCertificateId != null) {
             this.OldCertificateId = new String(source.OldCertificateId);
         }
+        if (source.PackageId != null) {
+            this.PackageId = new String(source.PackageId);
+        }
+        if (source.DeleteDnsAutoRecord != null) {
+            this.DeleteDnsAutoRecord = new Boolean(source.DeleteDnsAutoRecord);
+        }
     }
 
 
@@ -361,6 +413,8 @@ public class ApplyCertificateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "CsrKeyPassword", this.CsrKeyPassword);
         this.setParamSimple(map, prefix + "Alias", this.Alias);
         this.setParamSimple(map, prefix + "OldCertificateId", this.OldCertificateId);
+        this.setParamSimple(map, prefix + "PackageId", this.PackageId);
+        this.setParamSimple(map, prefix + "DeleteDnsAutoRecord", this.DeleteDnsAutoRecord);
 
     }
 }

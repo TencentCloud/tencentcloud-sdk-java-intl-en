@@ -181,6 +181,13 @@ Note: This field is default to empty
     private String HpcClusterId;
 
     /**
+    * IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
+    */
+    @SerializedName("IPv6InternetAccessible")
+    @Expose
+    private IPv6InternetAccessible IPv6InternetAccessible;
+
+    /**
      * Get Launch configuration ID 
      * @return LaunchConfigurationId Launch configuration ID
      */
@@ -584,6 +591,22 @@ Note: This field is default to empty
         this.HpcClusterId = HpcClusterId;
     }
 
+    /**
+     * Get IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0. 
+     * @return IPv6InternetAccessible IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
+     */
+    public IPv6InternetAccessible getIPv6InternetAccessible() {
+        return this.IPv6InternetAccessible;
+    }
+
+    /**
+     * Set IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
+     * @param IPv6InternetAccessible IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
+     */
+    public void setIPv6InternetAccessible(IPv6InternetAccessible IPv6InternetAccessible) {
+        this.IPv6InternetAccessible = IPv6InternetAccessible;
+    }
+
     public ModifyLaunchConfigurationAttributesRequest() {
     }
 
@@ -658,6 +681,9 @@ Note: This field is default to empty
         if (source.HpcClusterId != null) {
             this.HpcClusterId = new String(source.HpcClusterId);
         }
+        if (source.IPv6InternetAccessible != null) {
+            this.IPv6InternetAccessible = new IPv6InternetAccessible(source.IPv6InternetAccessible);
+        }
     }
 
 
@@ -684,6 +710,7 @@ Note: This field is default to empty
         this.setParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
         this.setParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
         this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
+        this.setParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
 
     }
 }

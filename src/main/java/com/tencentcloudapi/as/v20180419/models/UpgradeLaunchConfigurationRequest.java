@@ -179,6 +179,13 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
     private String DiskTypePolicy;
 
     /**
+    * IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
+    */
+    @SerializedName("IPv6InternetAccessible")
+    @Expose
+    private IPv6InternetAccessible IPv6InternetAccessible;
+
+    /**
      * Get Launch configuration ID. 
      * @return LaunchConfigurationId Launch configuration ID.
      */
@@ -550,6 +557,22 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
         this.DiskTypePolicy = DiskTypePolicy;
     }
 
+    /**
+     * Get IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0. 
+     * @return IPv6InternetAccessible IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
+     */
+    public IPv6InternetAccessible getIPv6InternetAccessible() {
+        return this.IPv6InternetAccessible;
+    }
+
+    /**
+     * Set IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
+     * @param IPv6InternetAccessible IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
+     */
+    public void setIPv6InternetAccessible(IPv6InternetAccessible IPv6InternetAccessible) {
+        this.IPv6InternetAccessible = IPv6InternetAccessible;
+    }
+
     public UpgradeLaunchConfigurationRequest() {
     }
 
@@ -633,6 +656,9 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
         if (source.DiskTypePolicy != null) {
             this.DiskTypePolicy = new String(source.DiskTypePolicy);
         }
+        if (source.IPv6InternetAccessible != null) {
+            this.IPv6InternetAccessible = new IPv6InternetAccessible(source.IPv6InternetAccessible);
+        }
     }
 
 
@@ -661,6 +687,7 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
         this.setParamObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
         this.setParamSimple(map, prefix + "DiskTypePolicy", this.DiskTypePolicy);
+        this.setParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
 
     }
 }

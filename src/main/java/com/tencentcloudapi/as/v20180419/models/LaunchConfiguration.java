@@ -234,6 +234,13 @@ Note: This field is default to empty
     private String HpcClusterId;
 
     /**
+    * IPv6 public network bandwidth configuration.
+    */
+    @SerializedName("IPv6InternetAccessible")
+    @Expose
+    private IPv6InternetAccessible IPv6InternetAccessible;
+
+    /**
      * Get Project ID of the instance. 
      * @return ProjectId Project ID of the instance.
      */
@@ -729,6 +736,22 @@ Note: This field is default to empty
         this.HpcClusterId = HpcClusterId;
     }
 
+    /**
+     * Get IPv6 public network bandwidth configuration. 
+     * @return IPv6InternetAccessible IPv6 public network bandwidth configuration.
+     */
+    public IPv6InternetAccessible getIPv6InternetAccessible() {
+        return this.IPv6InternetAccessible;
+    }
+
+    /**
+     * Set IPv6 public network bandwidth configuration.
+     * @param IPv6InternetAccessible IPv6 public network bandwidth configuration.
+     */
+    public void setIPv6InternetAccessible(IPv6InternetAccessible IPv6InternetAccessible) {
+        this.IPv6InternetAccessible = IPv6InternetAccessible;
+    }
+
     public LaunchConfiguration() {
     }
 
@@ -842,6 +865,9 @@ Note: This field is default to empty
         if (source.HpcClusterId != null) {
             this.HpcClusterId = new String(source.HpcClusterId);
         }
+        if (source.IPv6InternetAccessible != null) {
+            this.IPv6InternetAccessible = new IPv6InternetAccessible(source.IPv6InternetAccessible);
+        }
     }
 
 
@@ -878,6 +904,7 @@ Note: This field is default to empty
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
         this.setParamSimple(map, prefix + "DiskTypePolicy", this.DiskTypePolicy);
         this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
+        this.setParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
 
     }
 }

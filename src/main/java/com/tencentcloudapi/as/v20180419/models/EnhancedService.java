@@ -44,7 +44,7 @@ public class EnhancedService extends AbstractModel{
     private RunAutomationServiceEnabled [] AutomationService;
 
     /**
-    * 
+    * Enable TAT service. If this parameter is not specified, the default logic is the same as that of the CVM instance. Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("AutomationToolsService")
     @Expose
@@ -99,16 +99,16 @@ public class EnhancedService extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return AutomationToolsService 
+     * Get Enable TAT service. If this parameter is not specified, the default logic is the same as that of the CVM instance. Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return AutomationToolsService Enable TAT service. If this parameter is not specified, the default logic is the same as that of the CVM instance. Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public RunAutomationServiceEnabled getAutomationToolsService() {
         return this.AutomationToolsService;
     }
 
     /**
-     * Set 
-     * @param AutomationToolsService 
+     * Set Enable TAT service. If this parameter is not specified, the default logic is the same as that of the CVM instance. Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param AutomationToolsService Enable TAT service. If this parameter is not specified, the default logic is the same as that of the CVM instance. Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setAutomationToolsService(RunAutomationServiceEnabled AutomationToolsService) {
         this.AutomationToolsService = AutomationToolsService;

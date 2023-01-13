@@ -223,16 +223,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String StatusName;
 
     /**
-    * Domain names associated with the certificate (including the primary domain name)
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Multiple domain names included in the certificate (excluding the primary domain name, which uses the `Domain` field)
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SubjectAltName")
     @Expose
     private String [] SubjectAltName;
 
     /**
-    * Whether the customer is a VIP customer
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Whether the certificate is a paid one.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsVip")
     @Expose
@@ -271,8 +271,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private SubmittedData SubmittedData;
 
     /**
-    * Whether the certificate can be reissued
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Whether the certificate can be renewed.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RenewAble")
     @Expose
@@ -293,6 +293,54 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     @SerializedName("Tags")
     @Expose
     private Tags [] Tags;
+
+    /**
+    * Root certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RootCert")
+    @Expose
+    private RootCertificates RootCert;
+
+    /**
+    * Chinese SM encryption certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EncryptCert")
+    @Expose
+    private String EncryptCert;
+
+    /**
+    * Private key of Chinese SM encryption
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EncryptPrivateKey")
+    @Expose
+    private String EncryptPrivateKey;
+
+    /**
+    * SHA1 fingerprint of the signature certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CertFingerprint")
+    @Expose
+    private String CertFingerprint;
+
+    /**
+    * SHA1 fingerprint of the encryption certificate (for Chinese SM certificates only)
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EncryptCertFingerprint")
+    @Expose
+    private String EncryptCertFingerprint;
+
+    /**
+    * Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EncryptAlgorithm")
+    @Expose
+    private String EncryptAlgorithm;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -802,40 +850,40 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Domain names associated with the certificate (including the primary domain name)
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SubjectAltName Domain names associated with the certificate (including the primary domain name)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Multiple domain names included in the certificate (excluding the primary domain name, which uses the `Domain` field)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SubjectAltName Multiple domain names included in the certificate (excluding the primary domain name, which uses the `Domain` field)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getSubjectAltName() {
         return this.SubjectAltName;
     }
 
     /**
-     * Set Domain names associated with the certificate (including the primary domain name)
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SubjectAltName Domain names associated with the certificate (including the primary domain name)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Multiple domain names included in the certificate (excluding the primary domain name, which uses the `Domain` field)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SubjectAltName Multiple domain names included in the certificate (excluding the primary domain name, which uses the `Domain` field)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSubjectAltName(String [] SubjectAltName) {
         this.SubjectAltName = SubjectAltName;
     }
 
     /**
-     * Get Whether the customer is a VIP customer
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IsVip Whether the customer is a VIP customer
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Whether the certificate is a paid one.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsVip Whether the certificate is a paid one.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getIsVip() {
         return this.IsVip;
     }
 
     /**
-     * Set Whether the customer is a VIP customer
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IsVip Whether the customer is a VIP customer
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Whether the certificate is a paid one.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsVip Whether the certificate is a paid one.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsVip(Boolean IsVip) {
         this.IsVip = IsVip;
@@ -922,20 +970,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether the certificate can be reissued
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return RenewAble Whether the certificate can be reissued
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Whether the certificate can be renewed.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RenewAble Whether the certificate can be renewed.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getRenewAble() {
         return this.RenewAble;
     }
 
     /**
-     * Set Whether the certificate can be reissued
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RenewAble Whether the certificate can be reissued
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Whether the certificate can be renewed.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RenewAble Whether the certificate can be renewed.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRenewAble(Boolean RenewAble) {
         this.RenewAble = RenewAble;
@@ -979,6 +1027,126 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      */
     public void setTags(Tags [] Tags) {
         this.Tags = Tags;
+    }
+
+    /**
+     * Get Root certificate.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RootCert Root certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public RootCertificates getRootCert() {
+        return this.RootCert;
+    }
+
+    /**
+     * Set Root certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RootCert Root certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRootCert(RootCertificates RootCert) {
+        this.RootCert = RootCert;
+    }
+
+    /**
+     * Get Chinese SM encryption certificate
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EncryptCert Chinese SM encryption certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getEncryptCert() {
+        return this.EncryptCert;
+    }
+
+    /**
+     * Set Chinese SM encryption certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EncryptCert Chinese SM encryption certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEncryptCert(String EncryptCert) {
+        this.EncryptCert = EncryptCert;
+    }
+
+    /**
+     * Get Private key of Chinese SM encryption
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EncryptPrivateKey Private key of Chinese SM encryption
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getEncryptPrivateKey() {
+        return this.EncryptPrivateKey;
+    }
+
+    /**
+     * Set Private key of Chinese SM encryption
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EncryptPrivateKey Private key of Chinese SM encryption
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEncryptPrivateKey(String EncryptPrivateKey) {
+        this.EncryptPrivateKey = EncryptPrivateKey;
+    }
+
+    /**
+     * Get SHA1 fingerprint of the signature certificate
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CertFingerprint SHA1 fingerprint of the signature certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getCertFingerprint() {
+        return this.CertFingerprint;
+    }
+
+    /**
+     * Set SHA1 fingerprint of the signature certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CertFingerprint SHA1 fingerprint of the signature certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCertFingerprint(String CertFingerprint) {
+        this.CertFingerprint = CertFingerprint;
+    }
+
+    /**
+     * Get SHA1 fingerprint of the encryption certificate (for Chinese SM certificates only)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EncryptCertFingerprint SHA1 fingerprint of the encryption certificate (for Chinese SM certificates only)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getEncryptCertFingerprint() {
+        return this.EncryptCertFingerprint;
+    }
+
+    /**
+     * Set SHA1 fingerprint of the encryption certificate (for Chinese SM certificates only)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EncryptCertFingerprint SHA1 fingerprint of the encryption certificate (for Chinese SM certificates only)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEncryptCertFingerprint(String EncryptCertFingerprint) {
+        this.EncryptCertFingerprint = EncryptCertFingerprint;
+    }
+
+    /**
+     * Get Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EncryptAlgorithm Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getEncryptAlgorithm() {
+        return this.EncryptAlgorithm;
+    }
+
+    /**
+     * Set Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EncryptAlgorithm Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEncryptAlgorithm(String EncryptAlgorithm) {
+        this.EncryptAlgorithm = EncryptAlgorithm;
     }
 
     /**
@@ -1113,6 +1281,24 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.Tags[i] = new Tags(source.Tags[i]);
             }
         }
+        if (source.RootCert != null) {
+            this.RootCert = new RootCertificates(source.RootCert);
+        }
+        if (source.EncryptCert != null) {
+            this.EncryptCert = new String(source.EncryptCert);
+        }
+        if (source.EncryptPrivateKey != null) {
+            this.EncryptPrivateKey = new String(source.EncryptPrivateKey);
+        }
+        if (source.CertFingerprint != null) {
+            this.CertFingerprint = new String(source.CertFingerprint);
+        }
+        if (source.EncryptCertFingerprint != null) {
+            this.EncryptCertFingerprint = new String(source.EncryptCertFingerprint);
+        }
+        if (source.EncryptAlgorithm != null) {
+            this.EncryptAlgorithm = new String(source.EncryptAlgorithm);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1157,6 +1343,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "RenewAble", this.RenewAble);
         this.setParamSimple(map, prefix + "Deployable", this.Deployable);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamObj(map, prefix + "RootCert.", this.RootCert);
+        this.setParamSimple(map, prefix + "EncryptCert", this.EncryptCert);
+        this.setParamSimple(map, prefix + "EncryptPrivateKey", this.EncryptPrivateKey);
+        this.setParamSimple(map, prefix + "CertFingerprint", this.CertFingerprint);
+        this.setParamSimple(map, prefix + "EncryptCertFingerprint", this.EncryptCertFingerprint);
+        this.setParamSimple(map, prefix + "EncryptAlgorithm", this.EncryptAlgorithm);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

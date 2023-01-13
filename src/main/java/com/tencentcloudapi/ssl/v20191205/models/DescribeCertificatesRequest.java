@@ -30,7 +30,7 @@ public class DescribeCertificatesRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * Number of certificates on each page. The default value is 20.
+    * Number of entries per page. Default value: `20`. Maximum value: `1000`.
     */
     @SerializedName("Limit")
     @Expose
@@ -65,7 +65,7 @@ public class DescribeCertificatesRequest extends AbstractModel{
     private String ExpirationSort;
 
     /**
-    * Certificate status
+    * Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate.
     */
     @SerializedName("CertificateStatus")
     @Expose
@@ -77,6 +77,41 @@ public class DescribeCertificatesRequest extends AbstractModel{
     @SerializedName("Deployable")
     @Expose
     private Long Deployable;
+
+    /**
+    * Whether to filter uploaded hosted certificates. `1`: Yes; `0`: No.
+    */
+    @SerializedName("Upload")
+    @Expose
+    private Long Upload;
+
+    /**
+    * Whether to filter renewable certificates. `1`: Yes; `0`: No.
+    */
+    @SerializedName("Renew")
+    @Expose
+    private Long Renew;
+
+    /**
+    * Filter by source. `upload`: Uploaded certificate; `buy`: Tencent Cloud certificate. If this parameter is left empty, all certificates will be queried.
+    */
+    @SerializedName("FilterSource")
+    @Expose
+    private String FilterSource;
+
+    /**
+    * Whether to filter Chinese SM certificates. `1`: Yes; `0`: No.
+    */
+    @SerializedName("IsSM")
+    @Expose
+    private Long IsSM;
+
+    /**
+    * Whether to filter expiring certificates. `1`: Yes; `0`: No.
+    */
+    @SerializedName("FilterExpiring")
+    @Expose
+    private Long FilterExpiring;
 
     /**
      * Get Pagination offset, starting from 0 
@@ -95,16 +130,16 @@ public class DescribeCertificatesRequest extends AbstractModel{
     }
 
     /**
-     * Get Number of certificates on each page. The default value is 20. 
-     * @return Limit Number of certificates on each page. The default value is 20.
+     * Get Number of entries per page. Default value: `20`. Maximum value: `1000`. 
+     * @return Limit Number of entries per page. Default value: `20`. Maximum value: `1000`.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of certificates on each page. The default value is 20.
-     * @param Limit Number of certificates on each page. The default value is 20.
+     * Set Number of entries per page. Default value: `20`. Maximum value: `1000`.
+     * @param Limit Number of entries per page. Default value: `20`. Maximum value: `1000`.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -175,16 +210,16 @@ public class DescribeCertificatesRequest extends AbstractModel{
     }
 
     /**
-     * Get Certificate status 
-     * @return CertificateStatus Certificate status
+     * Get Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate. 
+     * @return CertificateStatus Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate.
      */
     public Long [] getCertificateStatus() {
         return this.CertificateStatus;
     }
 
     /**
-     * Set Certificate status
-     * @param CertificateStatus Certificate status
+     * Set Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate.
+     * @param CertificateStatus Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate.
      */
     public void setCertificateStatus(Long [] CertificateStatus) {
         this.CertificateStatus = CertificateStatus;
@@ -204,6 +239,86 @@ public class DescribeCertificatesRequest extends AbstractModel{
      */
     public void setDeployable(Long Deployable) {
         this.Deployable = Deployable;
+    }
+
+    /**
+     * Get Whether to filter uploaded hosted certificates. `1`: Yes; `0`: No. 
+     * @return Upload Whether to filter uploaded hosted certificates. `1`: Yes; `0`: No.
+     */
+    public Long getUpload() {
+        return this.Upload;
+    }
+
+    /**
+     * Set Whether to filter uploaded hosted certificates. `1`: Yes; `0`: No.
+     * @param Upload Whether to filter uploaded hosted certificates. `1`: Yes; `0`: No.
+     */
+    public void setUpload(Long Upload) {
+        this.Upload = Upload;
+    }
+
+    /**
+     * Get Whether to filter renewable certificates. `1`: Yes; `0`: No. 
+     * @return Renew Whether to filter renewable certificates. `1`: Yes; `0`: No.
+     */
+    public Long getRenew() {
+        return this.Renew;
+    }
+
+    /**
+     * Set Whether to filter renewable certificates. `1`: Yes; `0`: No.
+     * @param Renew Whether to filter renewable certificates. `1`: Yes; `0`: No.
+     */
+    public void setRenew(Long Renew) {
+        this.Renew = Renew;
+    }
+
+    /**
+     * Get Filter by source. `upload`: Uploaded certificate; `buy`: Tencent Cloud certificate. If this parameter is left empty, all certificates will be queried. 
+     * @return FilterSource Filter by source. `upload`: Uploaded certificate; `buy`: Tencent Cloud certificate. If this parameter is left empty, all certificates will be queried.
+     */
+    public String getFilterSource() {
+        return this.FilterSource;
+    }
+
+    /**
+     * Set Filter by source. `upload`: Uploaded certificate; `buy`: Tencent Cloud certificate. If this parameter is left empty, all certificates will be queried.
+     * @param FilterSource Filter by source. `upload`: Uploaded certificate; `buy`: Tencent Cloud certificate. If this parameter is left empty, all certificates will be queried.
+     */
+    public void setFilterSource(String FilterSource) {
+        this.FilterSource = FilterSource;
+    }
+
+    /**
+     * Get Whether to filter Chinese SM certificates. `1`: Yes; `0`: No. 
+     * @return IsSM Whether to filter Chinese SM certificates. `1`: Yes; `0`: No.
+     */
+    public Long getIsSM() {
+        return this.IsSM;
+    }
+
+    /**
+     * Set Whether to filter Chinese SM certificates. `1`: Yes; `0`: No.
+     * @param IsSM Whether to filter Chinese SM certificates. `1`: Yes; `0`: No.
+     */
+    public void setIsSM(Long IsSM) {
+        this.IsSM = IsSM;
+    }
+
+    /**
+     * Get Whether to filter expiring certificates. `1`: Yes; `0`: No. 
+     * @return FilterExpiring Whether to filter expiring certificates. `1`: Yes; `0`: No.
+     */
+    public Long getFilterExpiring() {
+        return this.FilterExpiring;
+    }
+
+    /**
+     * Set Whether to filter expiring certificates. `1`: Yes; `0`: No.
+     * @param FilterExpiring Whether to filter expiring certificates. `1`: Yes; `0`: No.
+     */
+    public void setFilterExpiring(Long FilterExpiring) {
+        this.FilterExpiring = FilterExpiring;
     }
 
     public DescribeCertificatesRequest() {
@@ -241,6 +356,21 @@ public class DescribeCertificatesRequest extends AbstractModel{
         if (source.Deployable != null) {
             this.Deployable = new Long(source.Deployable);
         }
+        if (source.Upload != null) {
+            this.Upload = new Long(source.Upload);
+        }
+        if (source.Renew != null) {
+            this.Renew = new Long(source.Renew);
+        }
+        if (source.FilterSource != null) {
+            this.FilterSource = new String(source.FilterSource);
+        }
+        if (source.IsSM != null) {
+            this.IsSM = new Long(source.IsSM);
+        }
+        if (source.FilterExpiring != null) {
+            this.FilterExpiring = new Long(source.FilterExpiring);
+        }
     }
 
 
@@ -256,6 +386,11 @@ public class DescribeCertificatesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ExpirationSort", this.ExpirationSort);
         this.setParamArraySimple(map, prefix + "CertificateStatus.", this.CertificateStatus);
         this.setParamSimple(map, prefix + "Deployable", this.Deployable);
+        this.setParamSimple(map, prefix + "Upload", this.Upload);
+        this.setParamSimple(map, prefix + "Renew", this.Renew);
+        this.setParamSimple(map, prefix + "FilterSource", this.FilterSource);
+        this.setParamSimple(map, prefix + "IsSM", this.IsSM);
+        this.setParamSimple(map, prefix + "FilterExpiring", this.FilterExpiring);
 
     }
 }
