@@ -39,17 +39,17 @@ public class SearchMediaRequest extends AbstractModel{
     private String [] FileIds;
 
     /**
-    * Filename set. Filenames of media files are fuzzily matched. The higher the match rate, the higher-ranked the result.
-<li>Filename length limit: 40 characters.</li>
-<li>Array length limit: 10.</li>
+    * The file names to use for fuzzy search, which are sorted by relevance in descending order.
+<li>Name length limit: 100 characters.</li>
+<li>Array length limit: 10</li>
     */
     @SerializedName("Names")
     @Expose
     private String [] Names;
 
     /**
-    * Filename prefix, which matches the filenames of media files.
-<li>Filename prefix length limit: 20 characters.</li>
+    * The file name prefixes to search.
+<li>Prefix length limit: 100 characters.</li>
 <li>Array length limit: 10.</li>
     */
     @SerializedName("NamePrefixes")
@@ -74,9 +74,9 @@ public class SearchMediaRequest extends AbstractModel{
     private Long [] ClassIds;
 
     /**
-    * The tag set. A file is considered a match if it has any of the tags in the tag set.
-<li>Tag length limit: 16 characters.</li>
-<li>Array length limit: 10.</li>
+    * The tags to search. A file is considered a match if it has any of the tags specified.
+<li>Tag length limit: 32 characters.</li>
+<li>Array length limit: 16.</li>
     */
     @SerializedName("Tags")
     @Expose
@@ -304,35 +304,35 @@ End time in the creation time range.
     }
 
     /**
-     * Get Filename set. Filenames of media files are fuzzily matched. The higher the match rate, the higher-ranked the result.
-<li>Filename length limit: 40 characters.</li>
-<li>Array length limit: 10.</li> 
-     * @return Names Filename set. Filenames of media files are fuzzily matched. The higher the match rate, the higher-ranked the result.
-<li>Filename length limit: 40 characters.</li>
-<li>Array length limit: 10.</li>
+     * Get The file names to use for fuzzy search, which are sorted by relevance in descending order.
+<li>Name length limit: 100 characters.</li>
+<li>Array length limit: 10</li> 
+     * @return Names The file names to use for fuzzy search, which are sorted by relevance in descending order.
+<li>Name length limit: 100 characters.</li>
+<li>Array length limit: 10</li>
      */
     public String [] getNames() {
         return this.Names;
     }
 
     /**
-     * Set Filename set. Filenames of media files are fuzzily matched. The higher the match rate, the higher-ranked the result.
-<li>Filename length limit: 40 characters.</li>
-<li>Array length limit: 10.</li>
-     * @param Names Filename set. Filenames of media files are fuzzily matched. The higher the match rate, the higher-ranked the result.
-<li>Filename length limit: 40 characters.</li>
-<li>Array length limit: 10.</li>
+     * Set The file names to use for fuzzy search, which are sorted by relevance in descending order.
+<li>Name length limit: 100 characters.</li>
+<li>Array length limit: 10</li>
+     * @param Names The file names to use for fuzzy search, which are sorted by relevance in descending order.
+<li>Name length limit: 100 characters.</li>
+<li>Array length limit: 10</li>
      */
     public void setNames(String [] Names) {
         this.Names = Names;
     }
 
     /**
-     * Get Filename prefix, which matches the filenames of media files.
-<li>Filename prefix length limit: 20 characters.</li>
+     * Get The file name prefixes to search.
+<li>Prefix length limit: 100 characters.</li>
 <li>Array length limit: 10.</li> 
-     * @return NamePrefixes Filename prefix, which matches the filenames of media files.
-<li>Filename prefix length limit: 20 characters.</li>
+     * @return NamePrefixes The file name prefixes to search.
+<li>Prefix length limit: 100 characters.</li>
 <li>Array length limit: 10.</li>
      */
     public String [] getNamePrefixes() {
@@ -340,11 +340,11 @@ End time in the creation time range.
     }
 
     /**
-     * Set Filename prefix, which matches the filenames of media files.
-<li>Filename prefix length limit: 20 characters.</li>
+     * Set The file name prefixes to search.
+<li>Prefix length limit: 100 characters.</li>
 <li>Array length limit: 10.</li>
-     * @param NamePrefixes Filename prefix, which matches the filenames of media files.
-<li>Filename prefix length limit: 20 characters.</li>
+     * @param NamePrefixes The file name prefixes to search.
+<li>Prefix length limit: 100 characters.</li>
 <li>Array length limit: 10.</li>
      */
     public void setNamePrefixes(String [] NamePrefixes) {
@@ -396,24 +396,24 @@ End time in the creation time range.
     }
 
     /**
-     * Get The tag set. A file is considered a match if it has any of the tags in the tag set.
-<li>Tag length limit: 16 characters.</li>
-<li>Array length limit: 10.</li> 
-     * @return Tags The tag set. A file is considered a match if it has any of the tags in the tag set.
-<li>Tag length limit: 16 characters.</li>
-<li>Array length limit: 10.</li>
+     * Get The tags to search. A file is considered a match if it has any of the tags specified.
+<li>Tag length limit: 32 characters.</li>
+<li>Array length limit: 16.</li> 
+     * @return Tags The tags to search. A file is considered a match if it has any of the tags specified.
+<li>Tag length limit: 32 characters.</li>
+<li>Array length limit: 16.</li>
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set The tag set. A file is considered a match if it has any of the tags in the tag set.
-<li>Tag length limit: 16 characters.</li>
-<li>Array length limit: 10.</li>
-     * @param Tags The tag set. A file is considered a match if it has any of the tags in the tag set.
-<li>Tag length limit: 16 characters.</li>
-<li>Array length limit: 10.</li>
+     * Set The tags to search. A file is considered a match if it has any of the tags specified.
+<li>Tag length limit: 32 characters.</li>
+<li>Array length limit: 16.</li>
+     * @param Tags The tags to search. A file is considered a match if it has any of the tags specified.
+<li>Tag length limit: 32 characters.</li>
+<li>Array length limit: 16.</li>
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;

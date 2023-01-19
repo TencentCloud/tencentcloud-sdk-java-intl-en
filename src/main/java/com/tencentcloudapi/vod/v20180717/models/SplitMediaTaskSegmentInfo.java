@@ -38,11 +38,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private TaskOutputMediaInfo Output;
 
     /**
-    * If a video processing flow is specified when a video splitting task is initiated, this field will be the task flow ID.
+    * The task ID for the task type `Procedure`. If a task flow (`ProcedureName`) is specified by [SplitMedia](https://intl.cloud.tencent.com/document/api/266/51098?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
     */
     @SerializedName("ProcedureTaskId")
     @Expose
     private String ProcedureTaskId;
+
+    /**
+    * The task ID for the task type `ReviewAudioVideo`. If a task flow (`ProcedureName`) is specified by [SplitMedia](https://intl.cloud.tencent.com/document/api/266/51098?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+    */
+    @SerializedName("ReviewAudioVideoTaskId")
+    @Expose
+    private String ReviewAudioVideoTaskId;
 
     /**
      * Get Input information of a video splitting task. 
@@ -81,19 +88,35 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get If a video processing flow is specified when a video splitting task is initiated, this field will be the task flow ID. 
-     * @return ProcedureTaskId If a video processing flow is specified when a video splitting task is initiated, this field will be the task flow ID.
+     * Get The task ID for the task type `Procedure`. If a task flow (`ProcedureName`) is specified by [SplitMedia](https://intl.cloud.tencent.com/document/api/266/51098?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed. 
+     * @return ProcedureTaskId The task ID for the task type `Procedure`. If a task flow (`ProcedureName`) is specified by [SplitMedia](https://intl.cloud.tencent.com/document/api/266/51098?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
      */
     public String getProcedureTaskId() {
         return this.ProcedureTaskId;
     }
 
     /**
-     * Set If a video processing flow is specified when a video splitting task is initiated, this field will be the task flow ID.
-     * @param ProcedureTaskId If a video processing flow is specified when a video splitting task is initiated, this field will be the task flow ID.
+     * Set The task ID for the task type `Procedure`. If a task flow (`ProcedureName`) is specified by [SplitMedia](https://intl.cloud.tencent.com/document/api/266/51098?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
+     * @param ProcedureTaskId The task ID for the task type `Procedure`. If a task flow (`ProcedureName`) is specified by [SplitMedia](https://intl.cloud.tencent.com/document/api/266/51098?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
      */
     public void setProcedureTaskId(String ProcedureTaskId) {
         this.ProcedureTaskId = ProcedureTaskId;
+    }
+
+    /**
+     * Get The task ID for the task type `ReviewAudioVideo`. If a task flow (`ProcedureName`) is specified by [SplitMedia](https://intl.cloud.tencent.com/document/api/266/51098?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed. 
+     * @return ReviewAudioVideoTaskId The task ID for the task type `ReviewAudioVideo`. If a task flow (`ProcedureName`) is specified by [SplitMedia](https://intl.cloud.tencent.com/document/api/266/51098?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+     */
+    public String getReviewAudioVideoTaskId() {
+        return this.ReviewAudioVideoTaskId;
+    }
+
+    /**
+     * Set The task ID for the task type `ReviewAudioVideo`. If a task flow (`ProcedureName`) is specified by [SplitMedia](https://intl.cloud.tencent.com/document/api/266/51098?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+     * @param ReviewAudioVideoTaskId The task ID for the task type `ReviewAudioVideo`. If a task flow (`ProcedureName`) is specified by [SplitMedia](https://intl.cloud.tencent.com/document/api/266/51098?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+     */
+    public void setReviewAudioVideoTaskId(String ReviewAudioVideoTaskId) {
+        this.ReviewAudioVideoTaskId = ReviewAudioVideoTaskId;
     }
 
     public SplitMediaTaskSegmentInfo() {
@@ -113,6 +136,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.ProcedureTaskId != null) {
             this.ProcedureTaskId = new String(source.ProcedureTaskId);
         }
+        if (source.ReviewAudioVideoTaskId != null) {
+            this.ReviewAudioVideoTaskId = new String(source.ReviewAudioVideoTaskId);
+        }
     }
 
 
@@ -123,6 +149,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
         this.setParamSimple(map, prefix + "ProcedureTaskId", this.ProcedureTaskId);
+        this.setParamSimple(map, prefix + "ReviewAudioVideoTaskId", this.ReviewAudioVideoTaskId);
 
     }
 }

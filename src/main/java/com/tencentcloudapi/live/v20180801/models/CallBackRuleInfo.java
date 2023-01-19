@@ -23,14 +23,16 @@ import java.util.HashMap;
 public class CallBackRuleInfo extends AbstractModel{
 
     /**
-    * Rule creation time.
+    * The rule creation time.
+Note: Beijing time (UTC+8) is used.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Rule update time.
+    * The rule update time.
+Note: Beijing time (UTC+8) is used.
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -58,32 +60,40 @@ public class CallBackRuleInfo extends AbstractModel{
     private String AppName;
 
     /**
-     * Get Rule creation time. 
-     * @return CreateTime Rule creation time.
+     * Get The rule creation time.
+Note: Beijing time (UTC+8) is used. 
+     * @return CreateTime The rule creation time.
+Note: Beijing time (UTC+8) is used.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Rule creation time.
-     * @param CreateTime Rule creation time.
+     * Set The rule creation time.
+Note: Beijing time (UTC+8) is used.
+     * @param CreateTime The rule creation time.
+Note: Beijing time (UTC+8) is used.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Rule update time. 
-     * @return UpdateTime Rule update time.
+     * Get The rule update time.
+Note: Beijing time (UTC+8) is used. 
+     * @return UpdateTime The rule update time.
+Note: Beijing time (UTC+8) is used.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Rule update time.
-     * @param UpdateTime Rule update time.
+     * Set The rule update time.
+Note: Beijing time (UTC+8) is used.
+     * @param UpdateTime The rule update time.
+Note: Beijing time (UTC+8) is used.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

@@ -65,7 +65,8 @@ public class WatermarkInfo extends AbstractModel{
     private Long Status;
 
     /**
-    * Creation time.
+    * The time when the watermark was added.
+Note: Beijing time (UTC+8) is used.
     */
     @SerializedName("CreateTime")
     @Expose
@@ -182,16 +183,20 @@ public class WatermarkInfo extends AbstractModel{
     }
 
     /**
-     * Get Creation time. 
-     * @return CreateTime Creation time.
+     * Get The time when the watermark was added.
+Note: Beijing time (UTC+8) is used. 
+     * @return CreateTime The time when the watermark was added.
+Note: Beijing time (UTC+8) is used.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time.
-     * @param CreateTime Creation time.
+     * Set The time when the watermark was added.
+Note: Beijing time (UTC+8) is used.
+     * @param CreateTime The time when the watermark was added.
+Note: Beijing time (UTC+8) is used.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

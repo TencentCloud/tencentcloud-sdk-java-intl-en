@@ -37,8 +37,17 @@ public class ReviewAudioVideoRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-    * The moderation template ID. Valid values:
-<li>`10` (default): The preset template, which can detect inappropriate information with labels including pornographic (`Porn`), terrorist (`Terror`), and politically sensitive (`Polity`).</li>
+    * The type of moderated content. Valid values:
+<li>`Media`: The original audio/video.</li>
+<li>`Cover`: Thumbnails.</li>
+If this parameter is not specified or an empty array is passed in, `Media` will be used.
+    */
+    @SerializedName("ReviewContents")
+    @Expose
+    private String [] ReviewContents;
+
+    /**
+    * The moderation template ID. Valid values: <li>10 (default): The preset template, whose violation labels are `Porn` and `Terror`.</li>
     */
     @SerializedName("Definition")
     @Expose
@@ -105,20 +114,44 @@ public class ReviewAudioVideoRequest extends AbstractModel{
     }
 
     /**
-     * Get The moderation template ID. Valid values:
-<li>`10` (default): The preset template, which can detect inappropriate information with labels including pornographic (`Porn`), terrorist (`Terror`), and politically sensitive (`Polity`).</li> 
-     * @return Definition The moderation template ID. Valid values:
-<li>`10` (default): The preset template, which can detect inappropriate information with labels including pornographic (`Porn`), terrorist (`Terror`), and politically sensitive (`Polity`).</li>
+     * Get The type of moderated content. Valid values:
+<li>`Media`: The original audio/video.</li>
+<li>`Cover`: Thumbnails.</li>
+If this parameter is not specified or an empty array is passed in, `Media` will be used. 
+     * @return ReviewContents The type of moderated content. Valid values:
+<li>`Media`: The original audio/video.</li>
+<li>`Cover`: Thumbnails.</li>
+If this parameter is not specified or an empty array is passed in, `Media` will be used.
+     */
+    public String [] getReviewContents() {
+        return this.ReviewContents;
+    }
+
+    /**
+     * Set The type of moderated content. Valid values:
+<li>`Media`: The original audio/video.</li>
+<li>`Cover`: Thumbnails.</li>
+If this parameter is not specified or an empty array is passed in, `Media` will be used.
+     * @param ReviewContents The type of moderated content. Valid values:
+<li>`Media`: The original audio/video.</li>
+<li>`Cover`: Thumbnails.</li>
+If this parameter is not specified or an empty array is passed in, `Media` will be used.
+     */
+    public void setReviewContents(String [] ReviewContents) {
+        this.ReviewContents = ReviewContents;
+    }
+
+    /**
+     * Get The moderation template ID. Valid values: <li>10 (default): The preset template, whose violation labels are `Porn` and `Terror`.</li> 
+     * @return Definition The moderation template ID. Valid values: <li>10 (default): The preset template, whose violation labels are `Porn` and `Terror`.</li>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set The moderation template ID. Valid values:
-<li>`10` (default): The preset template, which can detect inappropriate information with labels including pornographic (`Porn`), terrorist (`Terror`), and politically sensitive (`Polity`).</li>
-     * @param Definition The moderation template ID. Valid values:
-<li>`10` (default): The preset template, which can detect inappropriate information with labels including pornographic (`Porn`), terrorist (`Terror`), and politically sensitive (`Polity`).</li>
+     * Set The moderation template ID. Valid values: <li>10 (default): The preset template, whose violation labels are `Porn` and `Terror`.</li>
+     * @param Definition The moderation template ID. Valid values: <li>10 (default): The preset template, whose violation labels are `Porn` and `Terror`.</li>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
@@ -202,6 +235,12 @@ public class ReviewAudioVideoRequest extends AbstractModel{
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
         }
+        if (source.ReviewContents != null) {
+            this.ReviewContents = new String[source.ReviewContents.length];
+            for (int i = 0; i < source.ReviewContents.length; i++) {
+                this.ReviewContents[i] = new String(source.ReviewContents[i]);
+            }
+        }
         if (source.Definition != null) {
             this.Definition = new Long(source.Definition);
         }
@@ -226,6 +265,7 @@ public class ReviewAudioVideoRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
+        this.setParamArraySimple(map, prefix + "ReviewContents.", this.ReviewContents);
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);

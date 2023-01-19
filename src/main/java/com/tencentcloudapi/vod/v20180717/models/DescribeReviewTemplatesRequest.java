@@ -20,7 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeProcedureTemplatesRequest extends AbstractModel{
+public class DescribeReviewTemplatesRequest extends AbstractModel{
 
     /**
     * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
@@ -30,30 +30,30 @@ public class DescribeProcedureTemplatesRequest extends AbstractModel{
     private Long SubAppId;
 
     /**
-    * Name filter of task flow template. Array length limit: 100.
+    * The IDs of the moderation templates to query. Array length limit: 100.
     */
-    @SerializedName("Names")
+    @SerializedName("Definitions")
     @Expose
-    private String [] Names;
+    private Long [] Definitions;
 
     /**
-    * Filter of task flow template types. Valid values:
-<li>Preset: preset task flow template;</li>
-<li>Custom: custom task flow template.</li>
+    * The template type. Valid values:
+<li>Preset</li>
+<li>Custom</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Pagination offset. Default value: 0.
+    * The pagination offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of returned entries. Default value: 10. Maximum value: 100.
+    * The number of records to return. Default value: 10. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
@@ -76,92 +76,92 @@ public class DescribeProcedureTemplatesRequest extends AbstractModel{
     }
 
     /**
-     * Get Name filter of task flow template. Array length limit: 100. 
-     * @return Names Name filter of task flow template. Array length limit: 100.
+     * Get The IDs of the moderation templates to query. Array length limit: 100. 
+     * @return Definitions The IDs of the moderation templates to query. Array length limit: 100.
      */
-    public String [] getNames() {
-        return this.Names;
+    public Long [] getDefinitions() {
+        return this.Definitions;
     }
 
     /**
-     * Set Name filter of task flow template. Array length limit: 100.
-     * @param Names Name filter of task flow template. Array length limit: 100.
+     * Set The IDs of the moderation templates to query. Array length limit: 100.
+     * @param Definitions The IDs of the moderation templates to query. Array length limit: 100.
      */
-    public void setNames(String [] Names) {
-        this.Names = Names;
+    public void setDefinitions(Long [] Definitions) {
+        this.Definitions = Definitions;
     }
 
     /**
-     * Get Filter of task flow template types. Valid values:
-<li>Preset: preset task flow template;</li>
-<li>Custom: custom task flow template.</li> 
-     * @return Type Filter of task flow template types. Valid values:
-<li>Preset: preset task flow template;</li>
-<li>Custom: custom task flow template.</li>
+     * Get The template type. Valid values:
+<li>Preset</li>
+<li>Custom</li> 
+     * @return Type The template type. Valid values:
+<li>Preset</li>
+<li>Custom</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Filter of task flow template types. Valid values:
-<li>Preset: preset task flow template;</li>
-<li>Custom: custom task flow template.</li>
-     * @param Type Filter of task flow template types. Valid values:
-<li>Preset: preset task flow template;</li>
-<li>Custom: custom task flow template.</li>
+     * Set The template type. Valid values:
+<li>Preset</li>
+<li>Custom</li>
+     * @param Type The template type. Valid values:
+<li>Preset</li>
+<li>Custom</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Pagination offset. Default value: 0. 
-     * @return Offset Pagination offset. Default value: 0.
+     * Get The pagination offset. Default value: 0. 
+     * @return Offset The pagination offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset. Default value: 0.
-     * @param Offset Pagination offset. Default value: 0.
+     * Set The pagination offset. Default value: 0.
+     * @param Offset The pagination offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of returned entries. Default value: 10. Maximum value: 100. 
-     * @return Limit Number of returned entries. Default value: 10. Maximum value: 100.
+     * Get The number of records to return. Default value: 10. Maximum value: 100. 
+     * @return Limit The number of records to return. Default value: 10. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned entries. Default value: 10. Maximum value: 100.
-     * @param Limit Number of returned entries. Default value: 10. Maximum value: 100.
+     * Set The number of records to return. Default value: 10. Maximum value: 100.
+     * @param Limit The number of records to return. Default value: 10. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
-    public DescribeProcedureTemplatesRequest() {
+    public DescribeReviewTemplatesRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeProcedureTemplatesRequest(DescribeProcedureTemplatesRequest source) {
+    public DescribeReviewTemplatesRequest(DescribeReviewTemplatesRequest source) {
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
         }
-        if (source.Names != null) {
-            this.Names = new String[source.Names.length];
-            for (int i = 0; i < source.Names.length; i++) {
-                this.Names[i] = new String(source.Names[i]);
+        if (source.Definitions != null) {
+            this.Definitions = new Long[source.Definitions.length];
+            for (int i = 0; i < source.Definitions.length; i++) {
+                this.Definitions[i] = new Long(source.Definitions[i]);
             }
         }
         if (source.Type != null) {
@@ -181,7 +181,7 @@ public class DescribeProcedureTemplatesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
-        this.setParamArraySimple(map, prefix + "Names.", this.Names);
+        this.setParamArraySimple(map, prefix + "Definitions.", this.Definitions);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);

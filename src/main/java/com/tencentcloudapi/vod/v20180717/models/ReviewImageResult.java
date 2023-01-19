@@ -20,10 +20,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReviewAudioVideoTaskOutput extends AbstractModel{
+public class ReviewImageResult extends AbstractModel{
 
     /**
-    * The handling suggestion. Valid values:
+    * The suggestion. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -33,20 +33,16 @@ public class ReviewAudioVideoTaskOutput extends AbstractModel{
     private String Suggestion;
 
     /**
-    * The most likely label for the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>Porn</li>
-<li>Terrorism</li>
+    * The most likely label for the suspicious content. This parameter is valid if `Suggestion` is `review` or `block`. Valid values: <li>`Porn`</li> <li>`Terror`</li>
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * The most likely format of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li>
+    * The most likely type of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
+<li>`Image` (people or icons in images)</li>
+<li>`OCR` (text in images)</li>
     */
     @SerializedName("Form")
     @Expose
@@ -58,7 +54,7 @@ public class ReviewAudioVideoTaskOutput extends AbstractModel{
     */
     @SerializedName("SegmentSet")
     @Expose
-    private ReviewAudioVideoSegmentItem [] SegmentSet;
+    private ReviewImageSegmentItem [] SegmentSet;
 
     /**
     * The URL of the file that contains suspicious segments. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time (`SegmentSetFileUrlExpireTime`).
@@ -75,19 +71,11 @@ public class ReviewAudioVideoTaskOutput extends AbstractModel{
     private String SegmentSetFileUrlExpireTime;
 
     /**
-    * The thumbnail moderation result.
-Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("CoverReviewResult")
-    @Expose
-    private ReviewImageResult CoverReviewResult;
-
-    /**
-     * Get The handling suggestion. Valid values:
+     * Get The suggestion. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li> 
-     * @return Suggestion The handling suggestion. Valid values:
+     * @return Suggestion The suggestion. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -97,11 +85,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The handling suggestion. Valid values:
+     * Set The suggestion. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-     * @param Suggestion The handling suggestion. Valid values:
+     * @param Suggestion The suggestion. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -111,56 +99,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The most likely label for the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>Porn</li>
-<li>Terrorism</li> 
-     * @return Label The most likely label for the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>Porn</li>
-<li>Terrorism</li>
+     * Get The most likely label for the suspicious content. This parameter is valid if `Suggestion` is `review` or `block`. Valid values: <li>`Porn`</li> <li>`Terror`</li> 
+     * @return Label The most likely label for the suspicious content. This parameter is valid if `Suggestion` is `review` or `block`. Valid values: <li>`Porn`</li> <li>`Terror`</li>
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set The most likely label for the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>Porn</li>
-<li>Terrorism</li>
-     * @param Label The most likely label for the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>Porn</li>
-<li>Terrorism</li>
+     * Set The most likely label for the suspicious content. This parameter is valid if `Suggestion` is `review` or `block`. Valid values: <li>`Porn`</li> <li>`Terror`</li>
+     * @param Label The most likely label for the suspicious content. This parameter is valid if `Suggestion` is `review` or `block`. Valid values: <li>`Porn`</li> <li>`Terror`</li>
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get The most likely format of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li> 
-     * @return Form The most likely format of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li>
+     * Get The most likely type of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
+<li>`Image` (people or icons in images)</li>
+<li>`OCR` (text in images)</li> 
+     * @return Form The most likely type of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
+<li>`Image` (people or icons in images)</li>
+<li>`OCR` (text in images)</li>
      */
     public String getForm() {
         return this.Form;
     }
 
     /**
-     * Set The most likely format of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li>
-     * @param Form The most likely format of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li>
+     * Set The most likely type of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
+<li>`Image` (people or icons in images)</li>
+<li>`OCR` (text in images)</li>
+     * @param Form The most likely type of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
+<li>`Image` (people or icons in images)</li>
+<li>`OCR` (text in images)</li>
      */
     public void setForm(String Form) {
         this.Form = Form;
@@ -172,7 +144,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @return SegmentSet A list of the suspicious segments detected.
 <font color=red>Note</font>: Only the first 10 results will be returned at most. You can get all the results from the file specified by `SegmentSetFileUrl`.
      */
-    public ReviewAudioVideoSegmentItem [] getSegmentSet() {
+    public ReviewImageSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
@@ -182,7 +154,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param SegmentSet A list of the suspicious segments detected.
 <font color=red>Note</font>: Only the first 10 results will be returned at most. You can get all the results from the file specified by `SegmentSetFileUrl`.
      */
-    public void setSegmentSet(ReviewAudioVideoSegmentItem [] SegmentSet) {
+    public void setSegmentSet(ReviewImageSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
     }
 
@@ -218,34 +190,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.SegmentSetFileUrlExpireTime = SegmentSetFileUrlExpireTime;
     }
 
-    /**
-     * Get The thumbnail moderation result.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CoverReviewResult The thumbnail moderation result.
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public ReviewImageResult getCoverReviewResult() {
-        return this.CoverReviewResult;
-    }
-
-    /**
-     * Set The thumbnail moderation result.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CoverReviewResult The thumbnail moderation result.
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setCoverReviewResult(ReviewImageResult CoverReviewResult) {
-        this.CoverReviewResult = CoverReviewResult;
-    }
-
-    public ReviewAudioVideoTaskOutput() {
+    public ReviewImageResult() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ReviewAudioVideoTaskOutput(ReviewAudioVideoTaskOutput source) {
+    public ReviewImageResult(ReviewImageResult source) {
         if (source.Suggestion != null) {
             this.Suggestion = new String(source.Suggestion);
         }
@@ -256,9 +208,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
             this.Form = new String(source.Form);
         }
         if (source.SegmentSet != null) {
-            this.SegmentSet = new ReviewAudioVideoSegmentItem[source.SegmentSet.length];
+            this.SegmentSet = new ReviewImageSegmentItem[source.SegmentSet.length];
             for (int i = 0; i < source.SegmentSet.length; i++) {
-                this.SegmentSet[i] = new ReviewAudioVideoSegmentItem(source.SegmentSet[i]);
+                this.SegmentSet[i] = new ReviewImageSegmentItem(source.SegmentSet[i]);
             }
         }
         if (source.SegmentSetFileUrl != null) {
@@ -266,9 +218,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
         if (source.SegmentSetFileUrlExpireTime != null) {
             this.SegmentSetFileUrlExpireTime = new String(source.SegmentSetFileUrlExpireTime);
-        }
-        if (source.CoverReviewResult != null) {
-            this.CoverReviewResult = new ReviewImageResult(source.CoverReviewResult);
         }
     }
 
@@ -283,7 +232,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
         this.setParamSimple(map, prefix + "SegmentSetFileUrl", this.SegmentSetFileUrl);
         this.setParamSimple(map, prefix + "SegmentSetFileUrlExpireTime", this.SegmentSetFileUrlExpireTime);
-        this.setParamObj(map, prefix + "CoverReviewResult.", this.CoverReviewResult);
 
     }
 }

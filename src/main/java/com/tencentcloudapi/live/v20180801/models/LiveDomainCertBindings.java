@@ -55,7 +55,8 @@ public class LiveDomainCertBindings extends AbstractModel{
     private Long Status;
 
     /**
-    * The expiration time of the certificate.
+    * The certificate expiration time.
+Note: Beijing time (UTC+8) is used.
     */
     @SerializedName("CertExpireTime")
     @Expose
@@ -77,6 +78,7 @@ public class LiveDomainCertBindings extends AbstractModel{
 
     /**
     * The last updated time.
+Note: Beijing time (UTC+8) is used.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
@@ -164,16 +166,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The expiration time of the certificate. 
-     * @return CertExpireTime The expiration time of the certificate.
+     * Get The certificate expiration time.
+Note: Beijing time (UTC+8) is used. 
+     * @return CertExpireTime The certificate expiration time.
+Note: Beijing time (UTC+8) is used.
      */
     public String getCertExpireTime() {
         return this.CertExpireTime;
     }
 
     /**
-     * Set The expiration time of the certificate.
-     * @param CertExpireTime The expiration time of the certificate.
+     * Set The certificate expiration time.
+Note: Beijing time (UTC+8) is used.
+     * @param CertExpireTime The certificate expiration time.
+Note: Beijing time (UTC+8) is used.
      */
     public void setCertExpireTime(String CertExpireTime) {
         this.CertExpireTime = CertExpireTime;
@@ -213,8 +219,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get The last updated time.
+Note: Beijing time (UTC+8) is used.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return UpdateTime The last updated time.
+Note: Beijing time (UTC+8) is used.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
@@ -223,8 +231,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set The last updated time.
+Note: Beijing time (UTC+8) is used.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param UpdateTime The last updated time.
+Note: Beijing time (UTC+8) is used.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {

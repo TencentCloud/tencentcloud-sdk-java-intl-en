@@ -44,7 +44,8 @@ public class CertInfo extends AbstractModel{
     private String Description;
 
     /**
-    * Creation time in UTC format.
+    * The creation time in UTC format.
+Note: Beijing time (UTC+8) is used.
     */
     @SerializedName("CreateTime")
     @Expose
@@ -67,7 +68,8 @@ public class CertInfo extends AbstractModel{
     private Long CertType;
 
     /**
-    * Certificate expiration time in UTC format.
+    * The certificate expiration time in UTC format.
+Note: Beijing time (UTC+8) is used.
     */
     @SerializedName("CertExpireTime")
     @Expose
@@ -129,16 +131,20 @@ public class CertInfo extends AbstractModel{
     }
 
     /**
-     * Get Creation time in UTC format. 
-     * @return CreateTime Creation time in UTC format.
+     * Get The creation time in UTC format.
+Note: Beijing time (UTC+8) is used. 
+     * @return CreateTime The creation time in UTC format.
+Note: Beijing time (UTC+8) is used.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time in UTC format.
-     * @param CreateTime Creation time in UTC format.
+     * Set The creation time in UTC format.
+Note: Beijing time (UTC+8) is used.
+     * @param CreateTime The creation time in UTC format.
+Note: Beijing time (UTC+8) is used.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -185,16 +191,20 @@ public class CertInfo extends AbstractModel{
     }
 
     /**
-     * Get Certificate expiration time in UTC format. 
-     * @return CertExpireTime Certificate expiration time in UTC format.
+     * Get The certificate expiration time in UTC format.
+Note: Beijing time (UTC+8) is used. 
+     * @return CertExpireTime The certificate expiration time in UTC format.
+Note: Beijing time (UTC+8) is used.
      */
     public String getCertExpireTime() {
         return this.CertExpireTime;
     }
 
     /**
-     * Set Certificate expiration time in UTC format.
-     * @param CertExpireTime Certificate expiration time in UTC format.
+     * Set The certificate expiration time in UTC format.
+Note: Beijing time (UTC+8) is used.
+     * @param CertExpireTime The certificate expiration time in UTC format.
+Note: Beijing time (UTC+8) is used.
      */
     public void setCertExpireTime(String CertExpireTime) {
         this.CertExpireTime = CertExpireTime;

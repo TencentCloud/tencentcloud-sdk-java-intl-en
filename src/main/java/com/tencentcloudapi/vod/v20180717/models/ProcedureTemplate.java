@@ -54,8 +54,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private MediaProcessTaskInput MediaProcessTask;
 
     /**
-    * Intelligent recognition task
-Note: This field may return `null`, indicating that no valid value can be found.
+    * The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AiContentReviewTask")
     @Expose
@@ -84,6 +85,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     @SerializedName("MiniProgramPublishTask")
     @Expose
     private WechatMiniProgramPublishTaskInput MiniProgramPublishTask;
+
+    /**
+    * The information of the moderation task.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ReviewAudioVideoTask")
+    @Expose
+    private ProcedureReviewAudioVideoTaskInput ReviewAudioVideoTask;
 
     /**
     * Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
@@ -176,20 +185,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Intelligent recognition task
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return AiContentReviewTask Intelligent recognition task
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Get The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AiContentReviewTask The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
         return this.AiContentReviewTask;
     }
 
     /**
-     * Set Intelligent recognition task
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param AiContentReviewTask Intelligent recognition task
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Set The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiContentReviewTask The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
         this.AiContentReviewTask = AiContentReviewTask;
@@ -256,6 +269,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get The information of the moderation task.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ReviewAudioVideoTask The information of the moderation task.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public ProcedureReviewAudioVideoTaskInput getReviewAudioVideoTask() {
+        return this.ReviewAudioVideoTask;
+    }
+
+    /**
+     * Set The information of the moderation task.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ReviewAudioVideoTask The information of the moderation task.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setReviewAudioVideoTask(ProcedureReviewAudioVideoTaskInput ReviewAudioVideoTask) {
+        this.ReviewAudioVideoTask = ReviewAudioVideoTask;
+    }
+
+    /**
      * Get Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
      * @return CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
@@ -319,6 +352,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.MiniProgramPublishTask != null) {
             this.MiniProgramPublishTask = new WechatMiniProgramPublishTaskInput(source.MiniProgramPublishTask);
         }
+        if (source.ReviewAudioVideoTask != null) {
+            this.ReviewAudioVideoTask = new ProcedureReviewAudioVideoTaskInput(source.ReviewAudioVideoTask);
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
@@ -340,6 +376,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
         this.setParamObj(map, prefix + "MiniProgramPublishTask.", this.MiniProgramPublishTask);
+        this.setParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 

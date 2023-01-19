@@ -256,7 +256,8 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
     }
 
     /**
-     *This API is used to create custom intelligent video content recognition templates. Up to 50 templates can be created.
+     *We have <font color=red>stopped updating</font> this API. Our new moderation templates can moderate audio/video as well as images. For details, see [CreateReviewTemplate](https://intl.cloud.tencent.com/document/api/266/84391?from_cn_redirect=1).
+This API is used to create a custom audio/video moderation template. Up to 50 templates can be created in total.
      * @param req CreateContentReviewTemplateRequest
      * @return CreateContentReviewTemplateResponse
      * @throws TencentCloudSDKException
@@ -348,6 +349,27 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
                 Type type = new TypeToken<JsonResponseModel<CreateProcedureTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateProcedureTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a custom moderation template. Up to 50 templates can be created in total.
+> The templates can only be used by the APIs [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) and [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1).
+     * @param req CreateReviewTemplateRequest
+     * @return CreateReviewTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateReviewTemplateResponse CreateReviewTemplate(CreateReviewTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateReviewTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateReviewTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateReviewTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -643,7 +665,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *This API is used to delete custom intelligent video content recognition templates.
+     *We have <font color=red>stopped updating</font> this API. Our new moderation templates can moderate audio/video as well as images. For details, see [DeleteReviewTemplate](https://intl.cloud.tencent.com/document/api/266/84390?from_cn_redirect=1).
+This API is used to delete a custom audio/video moderation template.
      * @param req DeleteContentReviewTemplateRequest
      * @return DeleteContentReviewTemplateResponse
      * @throws TencentCloudSDKException
@@ -757,6 +780,27 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 Type type = new TypeToken<JsonResponseModel<DeleteProcedureTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteProcedureTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a custom moderation template.
+> The templates can only be used by the APIs [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) and [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1).
+     * @param req DeleteReviewTemplateRequest
+     * @return DeleteReviewTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteReviewTemplateResponse DeleteReviewTemplate(DeleteReviewTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteReviewTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteReviewTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteReviewTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1102,7 +1146,8 @@ This API is used to delete a player configuration.
     }
 
     /**
-     *This API is used to get the list of intelligent video content recognition template details according to unique template IDs. The return result includes all eligible custom and [preset intelligent video content recognition templates](https://intl.cloud.tencent.com/document/product/266/33932).
+     *We have <font color=red>stopped updating</font> this API. Our new moderation templates can moderate audio/video as well as images. For details, see [DescribeReviewTemplates](https://intl.cloud.tencent.com/document/api/266/84389?from_cn_redirect=1).
+This API is used to get the information of custom and [preset](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.AE.A1.E6.A0.B8.E6.A8.A1.E6.9D.BF) audio/video moderation templates based on template IDs.
      * @param req DescribeContentReviewTemplatesRequest
      * @return DescribeContentReviewTemplatesResponse
      * @throws TencentCloudSDKException
@@ -1279,17 +1324,18 @@ This API is used to delete a player configuration.
     }
 
     /**
-     *1. This API can get multiple types of information of multiple media files, including:
-    1. Basic information (basicInfo): media name, category, playback address, cover image, etc.
-    2. Metadata (metaData): size, duration, video stream information, audio stream information, etc.
-    3. Information of the transcoding result (transcodeInfo): addresses, video stream parameters, and audio stream parameters of the media files with various specifications generated by transcoding a media file.
-    4. Information of the animated image generating result (animatedGraphicsInfo): information of an animated image (such as .gif) generated from a video.
-    5. Information of a sampled screenshot (sampleSnapshotInfo): information of a sampled screenshot of a video.
-    6. Information of an image sprite (imageSpriteInfo): information of an image sprite generated from a video.
-    7. Information of a time point screenshot (snapshotByTimeOffsetInfo): information of a time point screenshot of a video.
-    8. Information of a timestamp (keyFrameDescInfo): information of a timestamp set for a video.
-    9. Information of transcoding to adaptive bitrate streaming (adaptiveDynamicStreamingInfo): specification, encryption type, container format, etc.
-2. The return packet can be configured to only contain certain information.
+     *1. This API is used to get the information of multiple media files. Specifically, the information returned is as follows:
+    1. `basicInfo`: Basic information including the file name, category, playback URL, and thumbnail.
+    2. `metaData`: Metadata including the file size, duration, video stream information, and audio stream information.
+    3. `transcodeInfo`: Transcoding information including the URLs, video stream parameters, and audio stream parameters of transcoding outputs.
+    4. `animatedGraphicsInfo`: The information of the animated images (such as GIF images) generated.
+    5. `sampleSnapshotInfo`: The information of the sampled screenshots generated.
+    6. `imageSpriteInfo`: The information of the image sprites generated.
+    7. `snapshotByTimeOffsetInfo`: The information of the time point screenshots generated.
+    8. `keyFrameDescInfo`: The video timestamp information.
+    9. `adaptiveDynamicStreamingInfo`: Adaptive bitrate information including the specifications, encryption type, and formats of the streams.
+    10. `reviewInfo`: Moderation details for audio/video content and thumbnails.
+2. You can specify what information to return.
      * @param req DescribeMediaInfosRequest
      * @return DescribeMediaInfosResponse
      * @throws TencentCloudSDKException
@@ -1411,6 +1457,27 @@ This API returns the video content duration for intelligent recognition in secon
                 Type type = new TypeToken<JsonResponseModel<DescribeReviewDetailsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeReviewDetails");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the information of moderation templates.
+> The templates can only be used by the APIs [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) and [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1).
+     * @param req DescribeReviewTemplatesRequest
+     * @return DescribeReviewTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReviewTemplatesResponse DescribeReviewTemplates(DescribeReviewTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeReviewTemplatesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeReviewTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeReviewTemplates");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1914,7 +1981,8 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     }
 
     /**
-     *This API is used to modify custom intelligent video content recognition templates.
+     *We have <font color=red>stopped updating</font> this API. Our new moderation templates can moderate audio/video as well as images. For details, see [ModifyReviewTemplate](https://intl.cloud.tencent.com/document/api/266/84388?from_cn_redirect=1).
+This API is used to modify a custom audio/video moderation template.
      * @param req ModifyContentReviewTemplateRequest
      * @return ModifyContentReviewTemplateResponse
      * @throws TencentCloudSDKException
@@ -2038,6 +2106,27 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
                 Type type = new TypeToken<JsonResponseModel<ModifyPersonSampleResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyPersonSample");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a custom moderation template.
+> The templates can only be used by the APIs [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) and [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1).
+     * @param req ModifyReviewTemplateRequest
+     * @return ModifyReviewTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyReviewTemplateResponse ModifyReviewTemplate(ModifyReviewTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyReviewTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyReviewTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyReviewTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2277,8 +2366,8 @@ This API is used to modify a player configuration.
 5. Image sprite generating
 6. Taking a screenshot to use as the thumbnail
 7. Adaptive bitrate streaming and encryption
-8. Detecting pornographic, terrorist, and politically sensitive content
-9. Content analysis for labeling, categorization, thumbnail generation, or frame-specific labeling
+8. Moderation (pornographic, terrorist, and politically sensitive content). We <font color=red>do not recommend</font> using this API to initiate a moderation task. Please use [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) instead.
+9. Content analysis for labeling, categorization, thumbnail generation, or labeling by frame.
 10. Recognition of opening and closing segments, faces, full text, text keywords, full speech, speech keywords, and objects
 
 If event notifications are used, the event type is [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1).
@@ -2301,10 +2390,12 @@ If event notifications are used, the event type is [ProcedureStateChanged](https
     }
 
     /**
-     *This API is used to initiate a processing task for a VOD video with a task flow template.
+     *This API is used to start a task flow on a video.
 There are two ways to create a task flow template:
 1. Create and modify a task flow template in the console;
-2. Create a task flow template through the task flow template API.
+2. Create a task flow template using the `CreateProcedureTemplate` API.
+
+If event notifications are used, the event type for moderation tasks is [ReviewAudioVideoComplete](https://intl.cloud.tencent.com/document/product/266/81258?from_cn_redirect=1), and that for other tasks is [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1).
      * @param req ProcessMediaByProcedureRequest
      * @return ProcessMediaByProcedureResponse
      * @throws TencentCloudSDKException
@@ -2455,7 +2546,7 @@ There are two ways to create a task flow template:
     }
 
     /**
-     *This API is used to reset a custom task flow template.  
+     *This API is used to modify a custom task flow template.
      * @param req ResetProcedureTemplateRequest
      * @return ResetProcedureTemplateResponse
      * @throws TencentCloudSDKException
@@ -2498,7 +2589,6 @@ There are two ways to create a task flow template:
      *This API is used to start a moderation task on a file stored in VOD to detect non-compliant content in images, text, speech, and voice.
 
 If event notifications are used, the event type is [ReviewAudioVideoComplete](https://intl.cloud.tencent.com/document/product/266/81258?from_cn_redirect=1).
-
      * @param req ReviewAudioVideoRequest
      * @return ReviewAudioVideoResponse
      * @throws TencentCloudSDKException
@@ -2510,6 +2600,26 @@ If event notifications are used, the event type is [ReviewAudioVideoComplete](ht
                 Type type = new TypeToken<JsonResponseModel<ReviewAudioVideoResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ReviewAudioVideo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to moderate an image stored in VOD (detect pornographic and terrorist content).><li>The image file must be smaller than 5 MB.</li> ><li>To ensure the accuracy of moderation results, the image resolution must be higher than 256 x 256 px.</li> ><li>The format must be PNG, JPG, JPEG, BMP, GIF, or WEBP.</li>
+     * @param req ReviewImageRequest
+     * @return ReviewImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReviewImageResponse ReviewImage(ReviewImageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ReviewImageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ReviewImageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ReviewImage");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

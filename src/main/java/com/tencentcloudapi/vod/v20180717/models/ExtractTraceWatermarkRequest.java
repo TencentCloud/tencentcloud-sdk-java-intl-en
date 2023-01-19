@@ -30,6 +30,14 @@ public class ExtractTraceWatermarkRequest extends AbstractModel{
     private String Url;
 
     /**
+    * The ID of the file specified by `Url`.
+<li><font color=red>Note</font>: This parameter is required.</li>
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
     * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
     */
     @SerializedName("SubAppId")
@@ -78,6 +86,26 @@ public class ExtractTraceWatermarkRequest extends AbstractModel{
      */
     public void setUrl(String Url) {
         this.Url = Url;
+    }
+
+    /**
+     * Get The ID of the file specified by `Url`.
+<li><font color=red>Note</font>: This parameter is required.</li> 
+     * @return FileId The ID of the file specified by `Url`.
+<li><font color=red>Note</font>: This parameter is required.</li>
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set The ID of the file specified by `Url`.
+<li><font color=red>Note</font>: This parameter is required.</li>
+     * @param FileId The ID of the file specified by `Url`.
+<li><font color=red>Note</font>: This parameter is required.</li>
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
     }
 
     /**
@@ -171,6 +199,9 @@ public class ExtractTraceWatermarkRequest extends AbstractModel{
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.FileId != null) {
+            this.FileId = new String(source.FileId);
+        }
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
         }
@@ -194,6 +225,7 @@ public class ExtractTraceWatermarkRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);

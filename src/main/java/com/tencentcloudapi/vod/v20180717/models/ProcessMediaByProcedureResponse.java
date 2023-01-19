@@ -23,11 +23,18 @@ import java.util.HashMap;
 public class ProcessMediaByProcedureResponse extends AbstractModel{
 
     /**
-    * Task ID.
+    * The task ID for the task type `Procedure`, if the task flow specified by `ProcedureName` includes one or more of `MediaProcessTask`, `AiAnalysisTask`, `AiRecognitionTask`, the task specified by this parameter will be executed.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
+
+    /**
+    * The task ID for the task type `ReviewAudioVideo`, if the task flow specified by `ProcedureName` includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+    */
+    @SerializedName("ReviewAudioVideoTaskId")
+    @Expose
+    private String ReviewAudioVideoTaskId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +44,35 @@ public class ProcessMediaByProcedureResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Task ID. 
-     * @return TaskId Task ID.
+     * Get The task ID for the task type `Procedure`, if the task flow specified by `ProcedureName` includes one or more of `MediaProcessTask`, `AiAnalysisTask`, `AiRecognitionTask`, the task specified by this parameter will be executed. 
+     * @return TaskId The task ID for the task type `Procedure`, if the task flow specified by `ProcedureName` includes one or more of `MediaProcessTask`, `AiAnalysisTask`, `AiRecognitionTask`, the task specified by this parameter will be executed.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID.
-     * @param TaskId Task ID.
+     * Set The task ID for the task type `Procedure`, if the task flow specified by `ProcedureName` includes one or more of `MediaProcessTask`, `AiAnalysisTask`, `AiRecognitionTask`, the task specified by this parameter will be executed.
+     * @param TaskId The task ID for the task type `Procedure`, if the task flow specified by `ProcedureName` includes one or more of `MediaProcessTask`, `AiAnalysisTask`, `AiRecognitionTask`, the task specified by this parameter will be executed.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
+    }
+
+    /**
+     * Get The task ID for the task type `ReviewAudioVideo`, if the task flow specified by `ProcedureName` includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed. 
+     * @return ReviewAudioVideoTaskId The task ID for the task type `ReviewAudioVideo`, if the task flow specified by `ProcedureName` includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+     */
+    public String getReviewAudioVideoTaskId() {
+        return this.ReviewAudioVideoTaskId;
+    }
+
+    /**
+     * Set The task ID for the task type `ReviewAudioVideo`, if the task flow specified by `ProcedureName` includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+     * @param ReviewAudioVideoTaskId The task ID for the task type `ReviewAudioVideo`, if the task flow specified by `ProcedureName` includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+     */
+    public void setReviewAudioVideoTaskId(String ReviewAudioVideoTaskId) {
+        this.ReviewAudioVideoTaskId = ReviewAudioVideoTaskId;
     }
 
     /**
@@ -79,6 +102,9 @@ public class ProcessMediaByProcedureResponse extends AbstractModel{
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
+        if (source.ReviewAudioVideoTaskId != null) {
+            this.ReviewAudioVideoTaskId = new String(source.ReviewAudioVideoTaskId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +116,7 @@ public class ProcessMediaByProcedureResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "ReviewAudioVideoTaskId", this.ReviewAudioVideoTaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

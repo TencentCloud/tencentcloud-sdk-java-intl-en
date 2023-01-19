@@ -45,16 +45,17 @@ public class TaskSimpleInfo extends AbstractModel{
 
     /**
     * The task type. Valid values:
-<li>Procedure: Video processing</li>
-<li>EditMedia: Video editing</li>
-<li> ReduceMediaBitrate: Bitrate reduction</li>
-<li>WechatDistribute: Publishing to WeChat</li>
+<li>`Procedure`: Video processing</li>
+<li>`EditMedia`: Video editing</li>
+<li>`ReduceMediaBitrate`: Bitrate reduction</li>
+<li>`WechatDistribute`: Publishing to Weixin</li>
+<li> `ReviewAudioVideo`: Moderation</li>
 Task types for v2017:
-<li>Transcode: Transcoding</li>
-<li>SnapshotByTimeOffset: Screencapturing</li>
-<li>Concat: Video splicing</li>
-<li>Clip: Video clipping</li>
-<li>ImageSprites: Image sprite generating</li>
+<li>`Transcode`: Transcoding</li>
+<li>`SnapshotByTimeOffset`: Screencapturing</li>
+<li>`Concat`: Video splicing</li>
+<li>`Clip`: Video clipping</li>
+<li>`ImageSprites`: Image sprite generating</li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -145,27 +146,29 @@ Task types for v2017:
 
     /**
      * Get The task type. Valid values:
-<li>Procedure: Video processing</li>
-<li>EditMedia: Video editing</li>
-<li> ReduceMediaBitrate: Bitrate reduction</li>
-<li>WechatDistribute: Publishing to WeChat</li>
+<li>`Procedure`: Video processing</li>
+<li>`EditMedia`: Video editing</li>
+<li>`ReduceMediaBitrate`: Bitrate reduction</li>
+<li>`WechatDistribute`: Publishing to Weixin</li>
+<li> `ReviewAudioVideo`: Moderation</li>
 Task types for v2017:
-<li>Transcode: Transcoding</li>
-<li>SnapshotByTimeOffset: Screencapturing</li>
-<li>Concat: Video splicing</li>
-<li>Clip: Video clipping</li>
-<li>ImageSprites: Image sprite generating</li> 
+<li>`Transcode`: Transcoding</li>
+<li>`SnapshotByTimeOffset`: Screencapturing</li>
+<li>`Concat`: Video splicing</li>
+<li>`Clip`: Video clipping</li>
+<li>`ImageSprites`: Image sprite generating</li> 
      * @return TaskType The task type. Valid values:
-<li>Procedure: Video processing</li>
-<li>EditMedia: Video editing</li>
-<li> ReduceMediaBitrate: Bitrate reduction</li>
-<li>WechatDistribute: Publishing to WeChat</li>
+<li>`Procedure`: Video processing</li>
+<li>`EditMedia`: Video editing</li>
+<li>`ReduceMediaBitrate`: Bitrate reduction</li>
+<li>`WechatDistribute`: Publishing to Weixin</li>
+<li> `ReviewAudioVideo`: Moderation</li>
 Task types for v2017:
-<li>Transcode: Transcoding</li>
-<li>SnapshotByTimeOffset: Screencapturing</li>
-<li>Concat: Video splicing</li>
-<li>Clip: Video clipping</li>
-<li>ImageSprites: Image sprite generating</li>
+<li>`Transcode`: Transcoding</li>
+<li>`SnapshotByTimeOffset`: Screencapturing</li>
+<li>`Concat`: Video splicing</li>
+<li>`Clip`: Video clipping</li>
+<li>`ImageSprites`: Image sprite generating</li>
      */
     public String getTaskType() {
         return this.TaskType;
@@ -173,27 +176,29 @@ Task types for v2017:
 
     /**
      * Set The task type. Valid values:
-<li>Procedure: Video processing</li>
-<li>EditMedia: Video editing</li>
-<li> ReduceMediaBitrate: Bitrate reduction</li>
-<li>WechatDistribute: Publishing to WeChat</li>
+<li>`Procedure`: Video processing</li>
+<li>`EditMedia`: Video editing</li>
+<li>`ReduceMediaBitrate`: Bitrate reduction</li>
+<li>`WechatDistribute`: Publishing to Weixin</li>
+<li> `ReviewAudioVideo`: Moderation</li>
 Task types for v2017:
-<li>Transcode: Transcoding</li>
-<li>SnapshotByTimeOffset: Screencapturing</li>
-<li>Concat: Video splicing</li>
-<li>Clip: Video clipping</li>
-<li>ImageSprites: Image sprite generating</li>
+<li>`Transcode`: Transcoding</li>
+<li>`SnapshotByTimeOffset`: Screencapturing</li>
+<li>`Concat`: Video splicing</li>
+<li>`Clip`: Video clipping</li>
+<li>`ImageSprites`: Image sprite generating</li>
      * @param TaskType The task type. Valid values:
-<li>Procedure: Video processing</li>
-<li>EditMedia: Video editing</li>
-<li> ReduceMediaBitrate: Bitrate reduction</li>
-<li>WechatDistribute: Publishing to WeChat</li>
+<li>`Procedure`: Video processing</li>
+<li>`EditMedia`: Video editing</li>
+<li>`ReduceMediaBitrate`: Bitrate reduction</li>
+<li>`WechatDistribute`: Publishing to Weixin</li>
+<li> `ReviewAudioVideo`: Moderation</li>
 Task types for v2017:
-<li>Transcode: Transcoding</li>
-<li>SnapshotByTimeOffset: Screencapturing</li>
-<li>Concat: Video splicing</li>
-<li>Clip: Video clipping</li>
-<li>ImageSprites: Image sprite generating</li>
+<li>`Transcode`: Transcoding</li>
+<li>`SnapshotByTimeOffset`: Screencapturing</li>
+<li>`Concat`: Video splicing</li>
+<li>`Clip`: Video clipping</li>
+<li>`ImageSprites`: Image sprite generating</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;

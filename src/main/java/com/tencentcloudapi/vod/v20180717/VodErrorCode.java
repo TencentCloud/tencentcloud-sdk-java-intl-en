@@ -90,6 +90,9 @@ public enum VodErrorCode {
     // Incorrect parameter value: expiration time.
      INVALIDPARAMETER_EXPIRETIME("InvalidParameter.ExpireTime"),
      
+    // Parameter error: Invalid label.
+     INVALIDPARAMETER_LABELS("InvalidParameter.Labels"),
+     
     // The task flow template name does not exist.
      INVALIDPARAMETER_PROCEDURENAMENOTEXIST("InvalidParameter.ProcedureNameNotExist"),
      
@@ -321,6 +324,9 @@ public enum VodErrorCode {
     // Incorrect parameter value: the value of the `LabelSet` parameter is invalid.
      INVALIDPARAMETERVALUE_LABELSET("InvalidParameterValue.LabelSet"),
      
+    // Parameter error: Invalid label.
+     INVALIDPARAMETERVALUE_LABELS("InvalidParameterValue.Labels"),
+     
     // Invalid parameter: Limit.
      INVALIDPARAMETERVALUE_LIMIT("InvalidParameterValue.Limit"),
      
@@ -336,7 +342,7 @@ public enum VodErrorCode {
     // Incorrect parameter value: media file URL.
      INVALIDPARAMETERVALUE_MEDIAURL("InvalidParameterValue.MediaUrl"),
      
-    // Invalid `Metric`.
+    // Parameter error: Invalid metric.
      INVALIDPARAMETERVALUE_METRIC("InvalidParameterValue.Metric"),
      
     // Incorrect parameter value: the default template cannot be modified.
@@ -584,6 +590,9 @@ public enum VodErrorCode {
      
     // Missing parameter.
      MISSINGPARAMETER("MissingParameter"),
+     
+    // Too many requests.
+     REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
     // The resource does not exist.
      RESOURCENOTFOUND("ResourceNotFound"),

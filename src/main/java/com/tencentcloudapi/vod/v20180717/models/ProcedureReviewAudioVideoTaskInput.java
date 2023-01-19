@@ -20,14 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ReviewAudioVideoTaskInput extends AbstractModel{
-
-    /**
-    * The ID of the media file.
-    */
-    @SerializedName("FileId")
-    @Expose
-    private String FileId;
+public class ProcedureReviewAudioVideoTaskInput extends AbstractModel{
 
     /**
     * The moderation template ID.
@@ -40,26 +33,11 @@ public class ReviewAudioVideoTaskInput extends AbstractModel{
     * The type of moderated content. Valid values:
 <li>`Media`: The original audio/video.</li>
 <li>`Cover`: Thumbnails.</li>
+If this parameter is not specified or an empty array is passed in, `Media` will be used.
     */
     @SerializedName("ReviewContents")
     @Expose
     private String [] ReviewContents;
-
-    /**
-     * Get The ID of the media file. 
-     * @return FileId The ID of the media file.
-     */
-    public String getFileId() {
-        return this.FileId;
-    }
-
-    /**
-     * Set The ID of the media file.
-     * @param FileId The ID of the media file.
-     */
-    public void setFileId(String FileId) {
-        this.FileId = FileId;
-    }
 
     /**
      * Get The moderation template ID. 
@@ -80,10 +58,12 @@ public class ReviewAudioVideoTaskInput extends AbstractModel{
     /**
      * Get The type of moderated content. Valid values:
 <li>`Media`: The original audio/video.</li>
-<li>`Cover`: Thumbnails.</li> 
+<li>`Cover`: Thumbnails.</li>
+If this parameter is not specified or an empty array is passed in, `Media` will be used. 
      * @return ReviewContents The type of moderated content. Valid values:
 <li>`Media`: The original audio/video.</li>
 <li>`Cover`: Thumbnails.</li>
+If this parameter is not specified or an empty array is passed in, `Media` will be used.
      */
     public String [] getReviewContents() {
         return this.ReviewContents;
@@ -93,25 +73,24 @@ public class ReviewAudioVideoTaskInput extends AbstractModel{
      * Set The type of moderated content. Valid values:
 <li>`Media`: The original audio/video.</li>
 <li>`Cover`: Thumbnails.</li>
+If this parameter is not specified or an empty array is passed in, `Media` will be used.
      * @param ReviewContents The type of moderated content. Valid values:
 <li>`Media`: The original audio/video.</li>
 <li>`Cover`: Thumbnails.</li>
+If this parameter is not specified or an empty array is passed in, `Media` will be used.
      */
     public void setReviewContents(String [] ReviewContents) {
         this.ReviewContents = ReviewContents;
     }
 
-    public ReviewAudioVideoTaskInput() {
+    public ProcedureReviewAudioVideoTaskInput() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ReviewAudioVideoTaskInput(ReviewAudioVideoTaskInput source) {
-        if (source.FileId != null) {
-            this.FileId = new String(source.FileId);
-        }
+    public ProcedureReviewAudioVideoTaskInput(ProcedureReviewAudioVideoTaskInput source) {
         if (source.Definition != null) {
             this.Definition = new Long(source.Definition);
         }
@@ -128,7 +107,6 @@ public class ReviewAudioVideoTaskInput extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamArraySimple(map, prefix + "ReviewContents.", this.ReviewContents);
 

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class PullUploadTask extends AbstractModel{
 
     /**
-    * Pull for upload task ID.
+    * The task ID.
     */
     @SerializedName("TaskId")
     @Expose
@@ -56,15 +56,15 @@ public class PullUploadTask extends AbstractModel{
     private String Message;
 
     /**
-    * ID of video generated after pull for upload is completed.
+    * The ID of the uploaded file.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Basic information of media file generated after pull for upload is completed.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The basic information of the uploaded file.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MediaBasicInfo")
     @Expose
@@ -78,21 +78,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private MediaMetaData MetaData;
 
     /**
-    * Playback address generated after pull for upload is completed.
+    * The playback address of the uploaded file.
     */
     @SerializedName("FileUrl")
     @Expose
     private String FileUrl;
 
     /**
-    * If a video processing flow is specified when a video is pulled for upload, this parameter will be the ID of the task flow.
+    * The task ID for the task type `Procedure`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
     */
     @SerializedName("ProcedureTaskId")
     @Expose
     private String ProcedureTaskId;
 
     /**
-    * The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+    * The task ID for the task type `ReviewAudioVideo`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+    */
+    @SerializedName("ReviewAudioVideoTaskId")
+    @Expose
+    private String ReviewAudioVideoTaskId;
+
+    /**
+    * The source context, which is used to pass through user request information. The [PullComplete](https://intl.cloud.tencent.com/document/product/266/7831?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters.
     */
     @SerializedName("SessionContext")
     @Expose
@@ -106,23 +113,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String SessionId;
 
     /**
-    * The progress of a pull and upload task. Value range: 0-100.
+    * The progress of the pull and upload task. Value range: 1-100.
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-     * Get Pull for upload task ID. 
-     * @return TaskId Pull for upload task ID.
+     * Get The task ID. 
+     * @return TaskId The task ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Pull for upload task ID.
-     * @param TaskId Pull for upload task ID.
+     * Set The task ID.
+     * @param TaskId The task ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
@@ -197,36 +204,36 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get ID of video generated after pull for upload is completed. 
-     * @return FileId ID of video generated after pull for upload is completed.
+     * Get The ID of the uploaded file. 
+     * @return FileId The ID of the uploaded file.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set ID of video generated after pull for upload is completed.
-     * @param FileId ID of video generated after pull for upload is completed.
+     * Set The ID of the uploaded file.
+     * @param FileId The ID of the uploaded file.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Basic information of media file generated after pull for upload is completed.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MediaBasicInfo Basic information of media file generated after pull for upload is completed.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get The basic information of the uploaded file.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MediaBasicInfo The basic information of the uploaded file.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public MediaBasicInfo getMediaBasicInfo() {
         return this.MediaBasicInfo;
     }
 
     /**
-     * Set Basic information of media file generated after pull for upload is completed.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MediaBasicInfo Basic information of media file generated after pull for upload is completed.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set The basic information of the uploaded file.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MediaBasicInfo The basic information of the uploaded file.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMediaBasicInfo(MediaBasicInfo MediaBasicInfo) {
         this.MediaBasicInfo = MediaBasicInfo;
@@ -249,48 +256,64 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Playback address generated after pull for upload is completed. 
-     * @return FileUrl Playback address generated after pull for upload is completed.
+     * Get The playback address of the uploaded file. 
+     * @return FileUrl The playback address of the uploaded file.
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * Set Playback address generated after pull for upload is completed.
-     * @param FileUrl Playback address generated after pull for upload is completed.
+     * Set The playback address of the uploaded file.
+     * @param FileUrl The playback address of the uploaded file.
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
     }
 
     /**
-     * Get If a video processing flow is specified when a video is pulled for upload, this parameter will be the ID of the task flow. 
-     * @return ProcedureTaskId If a video processing flow is specified when a video is pulled for upload, this parameter will be the ID of the task flow.
+     * Get The task ID for the task type `Procedure`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed. 
+     * @return ProcedureTaskId The task ID for the task type `Procedure`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
      */
     public String getProcedureTaskId() {
         return this.ProcedureTaskId;
     }
 
     /**
-     * Set If a video processing flow is specified when a video is pulled for upload, this parameter will be the ID of the task flow.
-     * @param ProcedureTaskId If a video processing flow is specified when a video is pulled for upload, this parameter will be the ID of the task flow.
+     * Set The task ID for the task type `Procedure`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
+     * @param ProcedureTaskId The task ID for the task type `Procedure`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
      */
     public void setProcedureTaskId(String ProcedureTaskId) {
         this.ProcedureTaskId = ProcedureTaskId;
     }
 
     /**
-     * Get The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters. 
-     * @return SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+     * Get The task ID for the task type `ReviewAudioVideo`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed. 
+     * @return ReviewAudioVideoTaskId The task ID for the task type `ReviewAudioVideo`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+     */
+    public String getReviewAudioVideoTaskId() {
+        return this.ReviewAudioVideoTaskId;
+    }
+
+    /**
+     * Set The task ID for the task type `ReviewAudioVideo`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+     * @param ReviewAudioVideoTaskId The task ID for the task type `ReviewAudioVideo`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+     */
+    public void setReviewAudioVideoTaskId(String ReviewAudioVideoTaskId) {
+        this.ReviewAudioVideoTaskId = ReviewAudioVideoTaskId;
+    }
+
+    /**
+     * Get The source context, which is used to pass through user request information. The [PullComplete](https://intl.cloud.tencent.com/document/product/266/7831?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters. 
+     * @return SessionContext The source context, which is used to pass through user request information. The [PullComplete](https://intl.cloud.tencent.com/document/product/266/7831?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-     * @param SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+     * Set The source context, which is used to pass through user request information. The [PullComplete](https://intl.cloud.tencent.com/document/product/266/7831?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters.
+     * @param SessionContext The source context, which is used to pass through user request information. The [PullComplete](https://intl.cloud.tencent.com/document/product/266/7831?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
@@ -313,16 +336,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The progress of a pull and upload task. Value range: 0-100. 
-     * @return Progress The progress of a pull and upload task. Value range: 0-100.
+     * Get The progress of the pull and upload task. Value range: 1-100. 
+     * @return Progress The progress of the pull and upload task. Value range: 1-100.
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set The progress of a pull and upload task. Value range: 0-100.
-     * @param Progress The progress of a pull and upload task. Value range: 0-100.
+     * Set The progress of the pull and upload task. Value range: 1-100.
+     * @param Progress The progress of the pull and upload task. Value range: 1-100.
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
@@ -363,6 +386,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.ProcedureTaskId != null) {
             this.ProcedureTaskId = new String(source.ProcedureTaskId);
         }
+        if (source.ReviewAudioVideoTaskId != null) {
+            this.ReviewAudioVideoTaskId = new String(source.ReviewAudioVideoTaskId);
+        }
         if (source.SessionContext != null) {
             this.SessionContext = new String(source.SessionContext);
         }
@@ -388,6 +414,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "MetaData.", this.MetaData);
         this.setParamSimple(map, prefix + "FileUrl", this.FileUrl);
         this.setParamSimple(map, prefix + "ProcedureTaskId", this.ProcedureTaskId);
+        this.setParamSimple(map, prefix + "ReviewAudioVideoTaskId", this.ReviewAudioVideoTaskId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "Progress", this.Progress);

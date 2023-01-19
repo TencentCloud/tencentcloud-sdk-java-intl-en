@@ -30,6 +30,13 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
     private String Name;
 
     /**
+    * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * Template description. Length limit: 256 characters.
     */
     @SerializedName("Comment")
@@ -44,7 +51,8 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
     private MediaProcessTaskInput MediaProcessTask;
 
     /**
-    * Intelligent recognition task
+    * The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
     */
     @SerializedName("AiContentReviewTask")
     @Expose
@@ -65,11 +73,11 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
     private AiRecognitionTaskInput AiRecognitionTask;
 
     /**
-    * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+    * The information of the moderation task.
     */
-    @SerializedName("SubAppId")
+    @SerializedName("ReviewAudioVideoTask")
     @Expose
-    private Long SubAppId;
+    private ProcedureReviewAudioVideoTaskInput ReviewAudioVideoTask;
 
     /**
      * Get Task flow name (up to 20 characters). 
@@ -85,6 +93,22 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
      */
     public void setName(String Name) {
         this.Name = Name;
+    }
+
+    /**
+     * Get [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty. 
+     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -120,16 +144,20 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get Intelligent recognition task 
-     * @return AiContentReviewTask Intelligent recognition task
+     * Get The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font>  
+     * @return AiContentReviewTask The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
         return this.AiContentReviewTask;
     }
 
     /**
-     * Set Intelligent recognition task
-     * @param AiContentReviewTask Intelligent recognition task
+     * Set The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
+     * @param AiContentReviewTask The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
         this.AiContentReviewTask = AiContentReviewTask;
@@ -168,19 +196,19 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
     }
 
     /**
-     * Get [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty. 
-     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+     * Get The information of the moderation task. 
+     * @return ReviewAudioVideoTask The information of the moderation task.
      */
-    public Long getSubAppId() {
-        return this.SubAppId;
+    public ProcedureReviewAudioVideoTaskInput getReviewAudioVideoTask() {
+        return this.ReviewAudioVideoTask;
     }
 
     /**
-     * Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+     * Set The information of the moderation task.
+     * @param ReviewAudioVideoTask The information of the moderation task.
      */
-    public void setSubAppId(Long SubAppId) {
-        this.SubAppId = SubAppId;
+    public void setReviewAudioVideoTask(ProcedureReviewAudioVideoTaskInput ReviewAudioVideoTask) {
+        this.ReviewAudioVideoTask = ReviewAudioVideoTask;
     }
 
     public CreateProcedureTemplateRequest() {
@@ -193,6 +221,9 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
     public CreateProcedureTemplateRequest(CreateProcedureTemplateRequest source) {
         if (source.Name != null) {
             this.Name = new String(source.Name);
+        }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
         }
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
@@ -209,8 +240,8 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
         if (source.AiRecognitionTask != null) {
             this.AiRecognitionTask = new AiRecognitionTaskInput(source.AiRecognitionTask);
         }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
+        if (source.ReviewAudioVideoTask != null) {
+            this.ReviewAudioVideoTask = new ProcedureReviewAudioVideoTaskInput(source.ReviewAudioVideoTask);
         }
     }
 
@@ -220,12 +251,13 @@ public class CreateProcedureTemplateRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamObj(map, prefix + "MediaProcessTask.", this.MediaProcessTask);
         this.setParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
         this.setParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
+        this.setParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
 
     }
 }

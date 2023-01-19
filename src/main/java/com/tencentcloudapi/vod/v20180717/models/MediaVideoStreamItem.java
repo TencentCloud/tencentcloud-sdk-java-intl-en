@@ -70,6 +70,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String CodecTag;
 
     /**
+    * Dynamic range information.
+<li><font color=red>Note</font>: This parameter is valid for transcoding files generated after 2023-01-10T00:00:00Z.</li>
+    */
+    @SerializedName("DynamicRangeInfo")
+    @Expose
+    private DynamicRangeInfo DynamicRangeInfo;
+
+    /**
      * Get Bitrate of video stream in bps.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Bitrate Bitrate of video stream in bps.
@@ -185,6 +193,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.CodecTag = CodecTag;
     }
 
+    /**
+     * Get Dynamic range information.
+<li><font color=red>Note</font>: This parameter is valid for transcoding files generated after 2023-01-10T00:00:00Z.</li> 
+     * @return DynamicRangeInfo Dynamic range information.
+<li><font color=red>Note</font>: This parameter is valid for transcoding files generated after 2023-01-10T00:00:00Z.</li>
+     */
+    public DynamicRangeInfo getDynamicRangeInfo() {
+        return this.DynamicRangeInfo;
+    }
+
+    /**
+     * Set Dynamic range information.
+<li><font color=red>Note</font>: This parameter is valid for transcoding files generated after 2023-01-10T00:00:00Z.</li>
+     * @param DynamicRangeInfo Dynamic range information.
+<li><font color=red>Note</font>: This parameter is valid for transcoding files generated after 2023-01-10T00:00:00Z.</li>
+     */
+    public void setDynamicRangeInfo(DynamicRangeInfo DynamicRangeInfo) {
+        this.DynamicRangeInfo = DynamicRangeInfo;
+    }
+
     public MediaVideoStreamItem() {
     }
 
@@ -211,6 +239,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.CodecTag != null) {
             this.CodecTag = new String(source.CodecTag);
         }
+        if (source.DynamicRangeInfo != null) {
+            this.DynamicRangeInfo = new DynamicRangeInfo(source.DynamicRangeInfo);
+        }
     }
 
 
@@ -224,6 +255,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Codec", this.Codec);
         this.setParamSimple(map, prefix + "Fps", this.Fps);
         this.setParamSimple(map, prefix + "CodecTag", this.CodecTag);
+        this.setParamObj(map, prefix + "DynamicRangeInfo.", this.DynamicRangeInfo);
 
     }
 }

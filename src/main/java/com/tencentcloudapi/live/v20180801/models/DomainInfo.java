@@ -48,7 +48,8 @@ public class DomainInfo extends AbstractModel{
     private Long Status;
 
     /**
-    * Creation time.
+    * The time when the domain was added.
+Note: Beijing time (UTC+8) is used.
     */
     @SerializedName("CreateTime")
     @Expose
@@ -104,7 +105,8 @@ public class DomainInfo extends AbstractModel{
     private Long RentTag;
 
     /**
-    * Disused parameter, which can be ignored.
+    * A disused parameter.
+Note: Beijing time (UTC+8) is used.
     */
     @SerializedName("RentExpireTime")
     @Expose
@@ -184,16 +186,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Creation time. 
-     * @return CreateTime Creation time.
+     * Get The time when the domain was added.
+Note: Beijing time (UTC+8) is used. 
+     * @return CreateTime The time when the domain was added.
+Note: Beijing time (UTC+8) is used.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time.
-     * @param CreateTime Creation time.
+     * Set The time when the domain was added.
+Note: Beijing time (UTC+8) is used.
+     * @param CreateTime The time when the domain was added.
+Note: Beijing time (UTC+8) is used.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -324,16 +330,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Disused parameter, which can be ignored. 
-     * @return RentExpireTime Disused parameter, which can be ignored.
+     * Get A disused parameter.
+Note: Beijing time (UTC+8) is used. 
+     * @return RentExpireTime A disused parameter.
+Note: Beijing time (UTC+8) is used.
      */
     public String getRentExpireTime() {
         return this.RentExpireTime;
     }
 
     /**
-     * Set Disused parameter, which can be ignored.
-     * @param RentExpireTime Disused parameter, which can be ignored.
+     * Set A disused parameter.
+Note: Beijing time (UTC+8) is used.
+     * @param RentExpireTime A disused parameter.
+Note: Beijing time (UTC+8) is used.
      */
     public void setRentExpireTime(String RentExpireTime) {
         this.RentExpireTime = RentExpireTime;

@@ -118,6 +118,14 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private String FileId;
 
     /**
+    * Moderation details.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ReviewInfo")
+    @Expose
+    private FileReviewInfo ReviewInfo;
+
+    /**
      * Get Basic information, such as video name, category, playback address, and cover image.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return BasicInfo Basic information, such as video name, category, playback address, and cover image.
@@ -353,6 +361,26 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.FileId = FileId;
     }
 
+    /**
+     * Get Moderation details.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ReviewInfo Moderation details.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public FileReviewInfo getReviewInfo() {
+        return this.ReviewInfo;
+    }
+
+    /**
+     * Set Moderation details.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ReviewInfo Moderation details.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setReviewInfo(FileReviewInfo ReviewInfo) {
+        this.ReviewInfo = ReviewInfo;
+    }
+
     public MediaInfo() {
     }
 
@@ -397,6 +425,9 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
         }
+        if (source.ReviewInfo != null) {
+            this.ReviewInfo = new FileReviewInfo(source.ReviewInfo);
+        }
     }
 
 
@@ -416,6 +447,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.setParamObj(map, prefix + "MiniProgramReviewInfo.", this.MiniProgramReviewInfo);
         this.setParamObj(map, prefix + "SubtitleInfo.", this.SubtitleInfo);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamObj(map, prefix + "ReviewInfo.", this.ReviewInfo);
 
     }
 }

@@ -30,14 +30,16 @@ public class ForbidStreamInfo extends AbstractModel{
     private String StreamName;
 
     /**
-    * Creation time.
+    * The creation time.
+Note: Beijing time (UTC+8) is used.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Forbidding expiration time.
+    * The end time.
+Note: Beijing time (UTC+8) is used.
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -76,32 +78,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Creation time. 
-     * @return CreateTime Creation time.
+     * Get The creation time.
+Note: Beijing time (UTC+8) is used. 
+     * @return CreateTime The creation time.
+Note: Beijing time (UTC+8) is used.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time.
-     * @param CreateTime Creation time.
+     * Set The creation time.
+Note: Beijing time (UTC+8) is used.
+     * @param CreateTime The creation time.
+Note: Beijing time (UTC+8) is used.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Forbidding expiration time. 
-     * @return ExpireTime Forbidding expiration time.
+     * Get The end time.
+Note: Beijing time (UTC+8) is used. 
+     * @return ExpireTime The end time.
+Note: Beijing time (UTC+8) is used.
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Forbidding expiration time.
-     * @param ExpireTime Forbidding expiration time.
+     * Set The end time.
+Note: Beijing time (UTC+8) is used.
+     * @param ExpireTime The end time.
+Note: Beijing time (UTC+8) is used.
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
