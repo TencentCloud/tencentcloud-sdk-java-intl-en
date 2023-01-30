@@ -1,0 +1,124 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.tcss.v20201101.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class DescribeVulScanAuthorizedImageSummaryResponse extends AbstractModel{
+
+    /**
+    * Number of all licensed local images
+    */
+    @SerializedName("AllAuthorizedImageCount")
+    @Expose
+    private Long AllAuthorizedImageCount;
+
+    /**
+    * Number of licensed but not scanned local images
+    */
+    @SerializedName("UnScanAuthorizedImageCount")
+    @Expose
+    private Long UnScanAuthorizedImageCount;
+
+    /**
+    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+    */
+    @SerializedName("RequestId")
+    @Expose
+    private String RequestId;
+
+    /**
+     * Get Number of all licensed local images 
+     * @return AllAuthorizedImageCount Number of all licensed local images
+     */
+    public Long getAllAuthorizedImageCount() {
+        return this.AllAuthorizedImageCount;
+    }
+
+    /**
+     * Set Number of all licensed local images
+     * @param AllAuthorizedImageCount Number of all licensed local images
+     */
+    public void setAllAuthorizedImageCount(Long AllAuthorizedImageCount) {
+        this.AllAuthorizedImageCount = AllAuthorizedImageCount;
+    }
+
+    /**
+     * Get Number of licensed but not scanned local images 
+     * @return UnScanAuthorizedImageCount Number of licensed but not scanned local images
+     */
+    public Long getUnScanAuthorizedImageCount() {
+        return this.UnScanAuthorizedImageCount;
+    }
+
+    /**
+     * Set Number of licensed but not scanned local images
+     * @param UnScanAuthorizedImageCount Number of licensed but not scanned local images
+     */
+    public void setUnScanAuthorizedImageCount(Long UnScanAuthorizedImageCount) {
+        this.UnScanAuthorizedImageCount = UnScanAuthorizedImageCount;
+    }
+
+    /**
+     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
+     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     */
+    public String getRequestId() {
+        return this.RequestId;
+    }
+
+    /**
+     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     */
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
+    }
+
+    public DescribeVulScanAuthorizedImageSummaryResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeVulScanAuthorizedImageSummaryResponse(DescribeVulScanAuthorizedImageSummaryResponse source) {
+        if (source.AllAuthorizedImageCount != null) {
+            this.AllAuthorizedImageCount = new Long(source.AllAuthorizedImageCount);
+        }
+        if (source.UnScanAuthorizedImageCount != null) {
+            this.UnScanAuthorizedImageCount = new Long(source.UnScanAuthorizedImageCount);
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "AllAuthorizedImageCount", this.AllAuthorizedImageCount);
+        this.setParamSimple(map, prefix + "UnScanAuthorizedImageCount", this.UnScanAuthorizedImageCount);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+
+    }
+}
+
