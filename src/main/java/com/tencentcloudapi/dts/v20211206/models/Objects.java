@@ -47,6 +47,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] AdvancedObjects;
 
     /**
+    * 
+    */
+    @SerializedName("OnlineDDL")
+    @Expose
+    private OnlineDDL OnlineDDL;
+
+    /**
      * Get Migration object type, such as `Partial`.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Mode Migration object type, such as `Partial`.
@@ -106,6 +113,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.AdvancedObjects = AdvancedObjects;
     }
 
+    /**
+     * Get  
+     * @return OnlineDDL 
+     */
+    public OnlineDDL getOnlineDDL() {
+        return this.OnlineDDL;
+    }
+
+    /**
+     * Set 
+     * @param OnlineDDL 
+     */
+    public void setOnlineDDL(OnlineDDL OnlineDDL) {
+        this.OnlineDDL = OnlineDDL;
+    }
+
     public Objects() {
     }
 
@@ -129,6 +152,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.AdvancedObjects[i] = new String(source.AdvancedObjects[i]);
             }
         }
+        if (source.OnlineDDL != null) {
+            this.OnlineDDL = new OnlineDDL(source.OnlineDDL);
+        }
     }
 
 
@@ -139,6 +165,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamArrayObj(map, prefix + "Databases.", this.Databases);
         this.setParamArraySimple(map, prefix + "AdvancedObjects.", this.AdvancedObjects);
+        this.setParamObj(map, prefix + "OnlineDDL.", this.OnlineDDL);
 
     }
 }

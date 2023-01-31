@@ -51,7 +51,7 @@ public class RuleInput extends AbstractModel{
     private HealthCheck HealthCheck;
 
     /**
-    * Certificate information
+    * Certificate information. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
     */
     @SerializedName("Certificate")
     @Expose
@@ -122,6 +122,13 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     private String [] Domains;
 
     /**
+    * Certificate information. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+    */
+    @SerializedName("MultiCertInfo")
+    @Expose
+    private MultiCertInfo MultiCertInfo;
+
+    /**
      * Get Forwarding rule path. Length: 1-200. 
      * @return Url Forwarding rule path. Length: 1-200.
      */
@@ -186,16 +193,16 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     }
 
     /**
-     * Get Certificate information 
-     * @return Certificate Certificate information
+     * Get Certificate information. `Certificate` and `MultiCertInfo` cannot be specified at the same time.  
+     * @return Certificate Certificate information. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
      */
     public CertificateInput getCertificate() {
         return this.Certificate;
     }
 
     /**
-     * Set Certificate information
-     * @param Certificate Certificate information
+     * Set Certificate information. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+     * @param Certificate Certificate information. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
      */
     public void setCertificate(CertificateInput Certificate) {
         this.Certificate = Certificate;
@@ -349,6 +356,22 @@ They represent weighted round robin, least connections, and IP hash, respectivel
         this.Domains = Domains;
     }
 
+    /**
+     * Get Certificate information. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time.  
+     * @return MultiCertInfo Certificate information. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+     */
+    public MultiCertInfo getMultiCertInfo() {
+        return this.MultiCertInfo;
+    }
+
+    /**
+     * Set Certificate information. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+     * @param MultiCertInfo Certificate information. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+     */
+    public void setMultiCertInfo(MultiCertInfo MultiCertInfo) {
+        this.MultiCertInfo = MultiCertInfo;
+    }
+
     public RuleInput() {
     }
 
@@ -402,6 +425,9 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                 this.Domains[i] = new String(source.Domains[i]);
             }
         }
+        if (source.MultiCertInfo != null) {
+            this.MultiCertInfo = new MultiCertInfo(source.MultiCertInfo);
+        }
     }
 
 
@@ -423,6 +449,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
         this.setParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
         this.setParamSimple(map, prefix + "Quic", this.Quic);
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
+        this.setParamObj(map, prefix + "MultiCertInfo.", this.MultiCertInfo);
 
     }
 }

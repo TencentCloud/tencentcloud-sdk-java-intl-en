@@ -127,6 +127,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] Procedures;
 
     /**
+    * Trigger migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TriggerMode")
+    @Expose
+    private String TriggerMode;
+
+    /**
+    * This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Triggers")
+    @Expose
+    private String [] Triggers;
+
+    /**
+    * Event migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EventMode")
+    @Expose
+    private String EventMode;
+
+    /**
+    * This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Events")
+    @Expose
+    private String [] Events;
+
+    /**
      * Get Name of the database to be migrated or synced, which is required if `ObjectMode` is `Partial`.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return DbName Name of the database to be migrated or synced, which is required if `ObjectMode` is `Partial`.
@@ -386,6 +418,86 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Procedures = Procedures;
     }
 
+    /**
+     * Get Trigger migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TriggerMode Trigger migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getTriggerMode() {
+        return this.TriggerMode;
+    }
+
+    /**
+     * Set Trigger migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TriggerMode Trigger migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTriggerMode(String TriggerMode) {
+        this.TriggerMode = TriggerMode;
+    }
+
+    /**
+     * Get This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Triggers This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getTriggers() {
+        return this.Triggers;
+    }
+
+    /**
+     * Set This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Triggers This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTriggers(String [] Triggers) {
+        this.Triggers = Triggers;
+    }
+
+    /**
+     * Get Event migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EventMode Event migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getEventMode() {
+        return this.EventMode;
+    }
+
+    /**
+     * Set Event migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EventMode Event migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEventMode(String EventMode) {
+        this.EventMode = EventMode;
+    }
+
+    /**
+     * Get This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Events This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getEvents() {
+        return this.Events;
+    }
+
+    /**
+     * Set This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Events This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEvents(String [] Events) {
+        this.Events = Events;
+    }
+
     public Database() {
     }
 
@@ -445,6 +557,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.Procedures[i] = new String(source.Procedures[i]);
             }
         }
+        if (source.TriggerMode != null) {
+            this.TriggerMode = new String(source.TriggerMode);
+        }
+        if (source.Triggers != null) {
+            this.Triggers = new String[source.Triggers.length];
+            for (int i = 0; i < source.Triggers.length; i++) {
+                this.Triggers[i] = new String(source.Triggers[i]);
+            }
+        }
+        if (source.EventMode != null) {
+            this.EventMode = new String(source.EventMode);
+        }
+        if (source.Events != null) {
+            this.Events = new String[source.Events.length];
+            for (int i = 0; i < source.Events.length; i++) {
+                this.Events[i] = new String(source.Events[i]);
+            }
+        }
     }
 
 
@@ -465,6 +595,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArraySimple(map, prefix + "Functions.", this.Functions);
         this.setParamSimple(map, prefix + "ProcedureMode", this.ProcedureMode);
         this.setParamArraySimple(map, prefix + "Procedures.", this.Procedures);
+        this.setParamSimple(map, prefix + "TriggerMode", this.TriggerMode);
+        this.setParamArraySimple(map, prefix + "Triggers.", this.Triggers);
+        this.setParamSimple(map, prefix + "EventMode", this.EventMode);
+        this.setParamArraySimple(map, prefix + "Events.", this.Events);
 
     }
 }

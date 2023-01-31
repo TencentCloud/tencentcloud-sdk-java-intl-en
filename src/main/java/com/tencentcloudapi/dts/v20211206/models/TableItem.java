@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class TableItem extends AbstractModel{
 
     /**
-    * Name of the table to be migrated
+    * Name of the migrated table, which is case-sensitive
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TableName")
@@ -55,9 +55,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String TableEditMode;
 
     /**
-     * Get Name of the table to be migrated
+     * Get Name of the migrated table, which is case-sensitive
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TableName Name of the table to be migrated
+     * @return TableName Name of the migrated table, which is case-sensitive
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTableName() {
@@ -65,9 +65,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Name of the table to be migrated
+     * Set Name of the migrated table, which is case-sensitive
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TableName Name of the table to be migrated
+     * @param TableName Name of the migrated table, which is case-sensitive
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTableName(String TableName) {

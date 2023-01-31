@@ -58,7 +58,7 @@ public class ModifyListenerRequest extends AbstractModel{
     private HealthCheck HealthCheck;
 
     /**
-    * Certificate information. This parameter is applicable only to HTTPS and TCP_SSL listeners.
+    * Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
     */
     @SerializedName("Certificate")
     @Expose
@@ -106,6 +106,27 @@ They represent weighted round robin and least connections, respectively. Default
     @SerializedName("SessionType")
     @Expose
     private String SessionType;
+
+    /**
+    * Certificate information. You can specify multiple server-side certificates with different algorithm types. This parameter is only applicable to HTTPS listeners with the SNI feature not enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+    */
+    @SerializedName("MultiCertInfo")
+    @Expose
+    private MultiCertInfo MultiCertInfo;
+
+    /**
+    * 
+    */
+    @SerializedName("MaxConn")
+    @Expose
+    private Long MaxConn;
+
+    /**
+    * 
+    */
+    @SerializedName("MaxCps")
+    @Expose
+    private Long MaxCps;
 
     /**
      * Get CLB instance ID 
@@ -188,16 +209,16 @@ They represent weighted round robin and least connections, respectively. Default
     }
 
     /**
-     * Get Certificate information. This parameter is applicable only to HTTPS and TCP_SSL listeners. 
-     * @return Certificate Certificate information. This parameter is applicable only to HTTPS and TCP_SSL listeners.
+     * Get Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time.  
+     * @return Certificate Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
      */
     public CertificateInput getCertificate() {
         return this.Certificate;
     }
 
     /**
-     * Set Certificate information. This parameter is applicable only to HTTPS and TCP_SSL listeners.
-     * @param Certificate Certificate information. This parameter is applicable only to HTTPS and TCP_SSL listeners.
+     * Set Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+     * @param Certificate Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
      */
     public void setCertificate(CertificateInput Certificate) {
         this.Certificate = Certificate;
@@ -303,6 +324,54 @@ They represent weighted round robin and least connections, respectively. Default
         this.SessionType = SessionType;
     }
 
+    /**
+     * Get Certificate information. You can specify multiple server-side certificates with different algorithm types. This parameter is only applicable to HTTPS listeners with the SNI feature not enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time.  
+     * @return MultiCertInfo Certificate information. You can specify multiple server-side certificates with different algorithm types. This parameter is only applicable to HTTPS listeners with the SNI feature not enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+     */
+    public MultiCertInfo getMultiCertInfo() {
+        return this.MultiCertInfo;
+    }
+
+    /**
+     * Set Certificate information. You can specify multiple server-side certificates with different algorithm types. This parameter is only applicable to HTTPS listeners with the SNI feature not enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+     * @param MultiCertInfo Certificate information. You can specify multiple server-side certificates with different algorithm types. This parameter is only applicable to HTTPS listeners with the SNI feature not enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+     */
+    public void setMultiCertInfo(MultiCertInfo MultiCertInfo) {
+        this.MultiCertInfo = MultiCertInfo;
+    }
+
+    /**
+     * Get  
+     * @return MaxConn 
+     */
+    public Long getMaxConn() {
+        return this.MaxConn;
+    }
+
+    /**
+     * Set 
+     * @param MaxConn 
+     */
+    public void setMaxConn(Long MaxConn) {
+        this.MaxConn = MaxConn;
+    }
+
+    /**
+     * Get  
+     * @return MaxCps 
+     */
+    public Long getMaxCps() {
+        return this.MaxCps;
+    }
+
+    /**
+     * Set 
+     * @param MaxCps 
+     */
+    public void setMaxCps(Long MaxCps) {
+        this.MaxCps = MaxCps;
+    }
+
     public ModifyListenerRequest() {
     }
 
@@ -347,6 +416,15 @@ They represent weighted round robin and least connections, respectively. Default
         if (source.SessionType != null) {
             this.SessionType = new String(source.SessionType);
         }
+        if (source.MultiCertInfo != null) {
+            this.MultiCertInfo = new MultiCertInfo(source.MultiCertInfo);
+        }
+        if (source.MaxConn != null) {
+            this.MaxConn = new Long(source.MaxConn);
+        }
+        if (source.MaxCps != null) {
+            this.MaxCps = new Long(source.MaxCps);
+        }
     }
 
 
@@ -366,6 +444,9 @@ They represent weighted round robin and least connections, respectively. Default
         this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
         this.setParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
         this.setParamSimple(map, prefix + "SessionType", this.SessionType);
+        this.setParamObj(map, prefix + "MultiCertInfo.", this.MultiCertInfo);
+        this.setParamSimple(map, prefix + "MaxConn", this.MaxConn);
+        this.setParamSimple(map, prefix + "MaxCps", this.MaxCps);
 
     }
 }

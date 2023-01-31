@@ -66,14 +66,14 @@ OPEN: public network; INTERNAL: private network.
     private String [] LoadBalancerVips;
 
     /**
-    * Public IP of the real server bound to a CLB.
+    * Public IPs of the backend services bound with the load balancer. Only the public IPs of CVMs are supported now.
     */
     @SerializedName("BackendPublicIps")
     @Expose
     private String [] BackendPublicIps;
 
     /**
-    * Private IP of the real server bound to a CLB.
+    * Private IPs of the backend services bound with the load balancer. Only the private IPs of CVMs are supported now.
     */
     @SerializedName("BackendPrivateIps")
     @Expose
@@ -259,32 +259,32 @@ OPEN: public network; INTERNAL: private network.
     }
 
     /**
-     * Get Public IP of the real server bound to a CLB. 
-     * @return BackendPublicIps Public IP of the real server bound to a CLB.
+     * Get Public IPs of the backend services bound with the load balancer. Only the public IPs of CVMs are supported now. 
+     * @return BackendPublicIps Public IPs of the backend services bound with the load balancer. Only the public IPs of CVMs are supported now.
      */
     public String [] getBackendPublicIps() {
         return this.BackendPublicIps;
     }
 
     /**
-     * Set Public IP of the real server bound to a CLB.
-     * @param BackendPublicIps Public IP of the real server bound to a CLB.
+     * Set Public IPs of the backend services bound with the load balancer. Only the public IPs of CVMs are supported now.
+     * @param BackendPublicIps Public IPs of the backend services bound with the load balancer. Only the public IPs of CVMs are supported now.
      */
     public void setBackendPublicIps(String [] BackendPublicIps) {
         this.BackendPublicIps = BackendPublicIps;
     }
 
     /**
-     * Get Private IP of the real server bound to a CLB. 
-     * @return BackendPrivateIps Private IP of the real server bound to a CLB.
+     * Get Private IPs of the backend services bound with the load balancer. Only the private IPs of CVMs are supported now. 
+     * @return BackendPrivateIps Private IPs of the backend services bound with the load balancer. Only the private IPs of CVMs are supported now.
      */
     public String [] getBackendPrivateIps() {
         return this.BackendPrivateIps;
     }
 
     /**
-     * Set Private IP of the real server bound to a CLB.
-     * @param BackendPrivateIps Private IP of the real server bound to a CLB.
+     * Set Private IPs of the backend services bound with the load balancer. Only the private IPs of CVMs are supported now.
+     * @param BackendPrivateIps Private IPs of the backend services bound with the load balancer. Only the private IPs of CVMs are supported now.
      */
     public void setBackendPrivateIps(String [] BackendPrivateIps) {
         this.BackendPrivateIps = BackendPrivateIps;

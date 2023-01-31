@@ -135,7 +135,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String SrcAccessType;
 
     /**
-    * Source database information
+    * Source database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SrcInfo")
@@ -167,7 +167,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String DstAccessType;
 
     /**
-    * Target database information
+    * Target database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DstInfo")
@@ -253,6 +253,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("OfflineTime")
     @Expose
     private String OfflineTime;
+
+    /**
+    * Settings of automatic retry time
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AutoRetryTimeRangeMinutes")
+    @Expose
+    private Long AutoRetryTimeRangeMinutes;
 
     /**
      * Get Sync task ID, such as `sync-btso140`.
@@ -535,9 +543,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Source database information
+     * Get Source database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SrcInfo Source database information
+     * @return SrcInfo Source database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Endpoint getSrcInfo() {
@@ -545,9 +553,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Source database information
+     * Set Source database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SrcInfo Source database information
+     * @param SrcInfo Source database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSrcInfo(Endpoint SrcInfo) {
@@ -615,9 +623,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Target database information
+     * Get Target database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DstInfo Target database information
+     * @return DstInfo Target database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Endpoint getDstInfo() {
@@ -625,9 +633,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Target database information
+     * Set Target database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DstInfo Target database information
+     * @param DstInfo Target database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDstInfo(Endpoint DstInfo) {
@@ -834,6 +842,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.OfflineTime = OfflineTime;
     }
 
+    /**
+     * Get Settings of automatic retry time
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AutoRetryTimeRangeMinutes Settings of automatic retry time
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getAutoRetryTimeRangeMinutes() {
+        return this.AutoRetryTimeRangeMinutes;
+    }
+
+    /**
+     * Set Settings of automatic retry time
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AutoRetryTimeRangeMinutes Settings of automatic retry time
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAutoRetryTimeRangeMinutes(Long AutoRetryTimeRangeMinutes) {
+        this.AutoRetryTimeRangeMinutes = AutoRetryTimeRangeMinutes;
+    }
+
     public SyncJobInfo() {
     }
 
@@ -938,6 +966,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.OfflineTime != null) {
             this.OfflineTime = new String(source.OfflineTime);
         }
+        if (source.AutoRetryTimeRangeMinutes != null) {
+            this.AutoRetryTimeRangeMinutes = new Long(source.AutoRetryTimeRangeMinutes);
+        }
     }
 
 
@@ -974,6 +1005,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "InstanceClass", this.InstanceClass);
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         this.setParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
+        this.setParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
 
     }
 }

@@ -51,7 +51,7 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
     private String NewDomain;
 
     /**
-    * Domain name certificate information. Note: This is only applicable to SNI-enabled listeners.
+    * Certificate information of the domain name. It is only applicable to listeners with SNI enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
     */
     @SerializedName("Certificate")
     @Expose
@@ -84,6 +84,13 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
     @SerializedName("NewDomains")
     @Expose
     private String [] NewDomains;
+
+    /**
+    * Certificate information of the domain name. It is only applicable to listeners with SNI enabled. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+    */
+    @SerializedName("MultiCertInfo")
+    @Expose
+    private MultiCertInfo MultiCertInfo;
 
     /**
      * Get CLB instance ID 
@@ -150,16 +157,16 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
     }
 
     /**
-     * Get Domain name certificate information. Note: This is only applicable to SNI-enabled listeners. 
-     * @return Certificate Domain name certificate information. Note: This is only applicable to SNI-enabled listeners.
+     * Get Certificate information of the domain name. It is only applicable to listeners with SNI enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time.  
+     * @return Certificate Certificate information of the domain name. It is only applicable to listeners with SNI enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
      */
     public CertificateInput getCertificate() {
         return this.Certificate;
     }
 
     /**
-     * Set Domain name certificate information. Note: This is only applicable to SNI-enabled listeners.
-     * @param Certificate Domain name certificate information. Note: This is only applicable to SNI-enabled listeners.
+     * Set Certificate information of the domain name. It is only applicable to listeners with SNI enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+     * @param Certificate Certificate information of the domain name. It is only applicable to listeners with SNI enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
      */
     public void setCertificate(CertificateInput Certificate) {
         this.Certificate = Certificate;
@@ -229,6 +236,22 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
         this.NewDomains = NewDomains;
     }
 
+    /**
+     * Get Certificate information of the domain name. It is only applicable to listeners with SNI enabled. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time.  
+     * @return MultiCertInfo Certificate information of the domain name. It is only applicable to listeners with SNI enabled. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+     */
+    public MultiCertInfo getMultiCertInfo() {
+        return this.MultiCertInfo;
+    }
+
+    /**
+     * Set Certificate information of the domain name. It is only applicable to listeners with SNI enabled. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+     * @param MultiCertInfo Certificate information of the domain name. It is only applicable to listeners with SNI enabled. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+     */
+    public void setMultiCertInfo(MultiCertInfo MultiCertInfo) {
+        this.MultiCertInfo = MultiCertInfo;
+    }
+
     public ModifyDomainAttributesRequest() {
     }
 
@@ -267,6 +290,9 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
                 this.NewDomains[i] = new String(source.NewDomains[i]);
             }
         }
+        if (source.MultiCertInfo != null) {
+            this.MultiCertInfo = new MultiCertInfo(source.MultiCertInfo);
+        }
     }
 
 
@@ -283,6 +309,7 @@ public class ModifyDomainAttributesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
         this.setParamSimple(map, prefix + "NewDefaultServerDomain", this.NewDefaultServerDomain);
         this.setParamArraySimple(map, prefix + "NewDomains.", this.NewDomains);
+        this.setParamObj(map, prefix + "MultiCertInfo.", this.MultiCertInfo);
 
     }
 }

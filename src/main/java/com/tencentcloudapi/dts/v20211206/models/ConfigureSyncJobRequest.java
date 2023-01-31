@@ -37,25 +37,11 @@ public class ConfigureSyncJobRequest extends AbstractModel{
     private String SrcAccessType;
 
     /**
-    * Source database information
-    */
-    @SerializedName("SrcInfo")
-    @Expose
-    private Endpoint SrcInfo;
-
-    /**
     * Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
     */
     @SerializedName("DstAccessType")
     @Expose
     private String DstAccessType;
-
-    /**
-    * Target database information
-    */
-    @SerializedName("DstInfo")
-    @Expose
-    private Endpoint DstInfo;
 
     /**
     * Sync task options
@@ -79,6 +65,13 @@ public class ConfigureSyncJobRequest extends AbstractModel{
     private String JobName;
 
     /**
+    * Enumerated values: `liteMode`: Lite mode; `fullMode`: Standard mode
+    */
+    @SerializedName("JobMode")
+    @Expose
+    private String JobMode;
+
+    /**
     * Running mode. Valid values: `Immediate`, `Timed`. Default value: `Immediate`.
     */
     @SerializedName("RunMode")
@@ -91,6 +84,27 @@ public class ConfigureSyncJobRequest extends AbstractModel{
     @SerializedName("ExpectRunTime")
     @Expose
     private String ExpectRunTime;
+
+    /**
+    * Source database information. This parameter is used by single-node databases.
+    */
+    @SerializedName("SrcInfo")
+    @Expose
+    private Endpoint SrcInfo;
+
+    /**
+    * Target database information. This parameter is used by single-node databases.
+    */
+    @SerializedName("DstInfo")
+    @Expose
+    private Endpoint DstInfo;
+
+    /**
+    * Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
+    */
+    @SerializedName("AutoRetryTimeRangeMinutes")
+    @Expose
+    private Long AutoRetryTimeRangeMinutes;
 
     /**
      * Get Sync task instance ID in the format of `sync-werwfs23`, which is used to identify a sync task. 
@@ -125,22 +139,6 @@ public class ConfigureSyncJobRequest extends AbstractModel{
     }
 
     /**
-     * Get Source database information 
-     * @return SrcInfo Source database information
-     */
-    public Endpoint getSrcInfo() {
-        return this.SrcInfo;
-    }
-
-    /**
-     * Set Source database information
-     * @param SrcInfo Source database information
-     */
-    public void setSrcInfo(Endpoint SrcInfo) {
-        this.SrcInfo = SrcInfo;
-    }
-
-    /**
      * Get Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link. 
      * @return DstAccessType Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
      */
@@ -154,22 +152,6 @@ public class ConfigureSyncJobRequest extends AbstractModel{
      */
     public void setDstAccessType(String DstAccessType) {
         this.DstAccessType = DstAccessType;
-    }
-
-    /**
-     * Get Target database information 
-     * @return DstInfo Target database information
-     */
-    public Endpoint getDstInfo() {
-        return this.DstInfo;
-    }
-
-    /**
-     * Set Target database information
-     * @param DstInfo Target database information
-     */
-    public void setDstInfo(Endpoint DstInfo) {
-        this.DstInfo = DstInfo;
     }
 
     /**
@@ -221,6 +203,22 @@ public class ConfigureSyncJobRequest extends AbstractModel{
     }
 
     /**
+     * Get Enumerated values: `liteMode`: Lite mode; `fullMode`: Standard mode 
+     * @return JobMode Enumerated values: `liteMode`: Lite mode; `fullMode`: Standard mode
+     */
+    public String getJobMode() {
+        return this.JobMode;
+    }
+
+    /**
+     * Set Enumerated values: `liteMode`: Lite mode; `fullMode`: Standard mode
+     * @param JobMode Enumerated values: `liteMode`: Lite mode; `fullMode`: Standard mode
+     */
+    public void setJobMode(String JobMode) {
+        this.JobMode = JobMode;
+    }
+
+    /**
      * Get Running mode. Valid values: `Immediate`, `Timed`. Default value: `Immediate`. 
      * @return RunMode Running mode. Valid values: `Immediate`, `Timed`. Default value: `Immediate`.
      */
@@ -252,6 +250,54 @@ public class ConfigureSyncJobRequest extends AbstractModel{
         this.ExpectRunTime = ExpectRunTime;
     }
 
+    /**
+     * Get Source database information. This parameter is used by single-node databases. 
+     * @return SrcInfo Source database information. This parameter is used by single-node databases.
+     */
+    public Endpoint getSrcInfo() {
+        return this.SrcInfo;
+    }
+
+    /**
+     * Set Source database information. This parameter is used by single-node databases.
+     * @param SrcInfo Source database information. This parameter is used by single-node databases.
+     */
+    public void setSrcInfo(Endpoint SrcInfo) {
+        this.SrcInfo = SrcInfo;
+    }
+
+    /**
+     * Get Target database information. This parameter is used by single-node databases. 
+     * @return DstInfo Target database information. This parameter is used by single-node databases.
+     */
+    public Endpoint getDstInfo() {
+        return this.DstInfo;
+    }
+
+    /**
+     * Set Target database information. This parameter is used by single-node databases.
+     * @param DstInfo Target database information. This parameter is used by single-node databases.
+     */
+    public void setDstInfo(Endpoint DstInfo) {
+        this.DstInfo = DstInfo;
+    }
+
+    /**
+     * Get Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled. 
+     * @return AutoRetryTimeRangeMinutes Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
+     */
+    public Long getAutoRetryTimeRangeMinutes() {
+        return this.AutoRetryTimeRangeMinutes;
+    }
+
+    /**
+     * Set Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
+     * @param AutoRetryTimeRangeMinutes Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
+     */
+    public void setAutoRetryTimeRangeMinutes(Long AutoRetryTimeRangeMinutes) {
+        this.AutoRetryTimeRangeMinutes = AutoRetryTimeRangeMinutes;
+    }
+
     public ConfigureSyncJobRequest() {
     }
 
@@ -266,14 +312,8 @@ public class ConfigureSyncJobRequest extends AbstractModel{
         if (source.SrcAccessType != null) {
             this.SrcAccessType = new String(source.SrcAccessType);
         }
-        if (source.SrcInfo != null) {
-            this.SrcInfo = new Endpoint(source.SrcInfo);
-        }
         if (source.DstAccessType != null) {
             this.DstAccessType = new String(source.DstAccessType);
-        }
-        if (source.DstInfo != null) {
-            this.DstInfo = new Endpoint(source.DstInfo);
         }
         if (source.Options != null) {
             this.Options = new Options(source.Options);
@@ -284,11 +324,23 @@ public class ConfigureSyncJobRequest extends AbstractModel{
         if (source.JobName != null) {
             this.JobName = new String(source.JobName);
         }
+        if (source.JobMode != null) {
+            this.JobMode = new String(source.JobMode);
+        }
         if (source.RunMode != null) {
             this.RunMode = new String(source.RunMode);
         }
         if (source.ExpectRunTime != null) {
             this.ExpectRunTime = new String(source.ExpectRunTime);
+        }
+        if (source.SrcInfo != null) {
+            this.SrcInfo = new Endpoint(source.SrcInfo);
+        }
+        if (source.DstInfo != null) {
+            this.DstInfo = new Endpoint(source.DstInfo);
+        }
+        if (source.AutoRetryTimeRangeMinutes != null) {
+            this.AutoRetryTimeRangeMinutes = new Long(source.AutoRetryTimeRangeMinutes);
         }
     }
 
@@ -299,14 +351,16 @@ public class ConfigureSyncJobRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "SrcAccessType", this.SrcAccessType);
-        this.setParamObj(map, prefix + "SrcInfo.", this.SrcInfo);
         this.setParamSimple(map, prefix + "DstAccessType", this.DstAccessType);
-        this.setParamObj(map, prefix + "DstInfo.", this.DstInfo);
         this.setParamObj(map, prefix + "Options.", this.Options);
         this.setParamObj(map, prefix + "Objects.", this.Objects);
         this.setParamSimple(map, prefix + "JobName", this.JobName);
+        this.setParamSimple(map, prefix + "JobMode", this.JobMode);
         this.setParamSimple(map, prefix + "RunMode", this.RunMode);
         this.setParamSimple(map, prefix + "ExpectRunTime", this.ExpectRunTime);
+        this.setParamObj(map, prefix + "SrcInfo.", this.SrcInfo);
+        this.setParamObj(map, prefix + "DstInfo.", this.DstInfo);
+        this.setParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
 
     }
 }

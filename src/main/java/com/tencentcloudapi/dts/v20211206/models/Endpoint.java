@@ -31,6 +31,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Region;
 
     /**
+    * Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Role")
+    @Expose
+    private String Role;
+
+    /**
     * Database kernel type, which is used to distinguish between different kernels in TDSQL. Valid values: `percona`, `mariadb`, `mysql`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -151,14 +159,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String EngineVersion;
 
     /**
-    * The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("AccountMode")
-    @Expose
-    private String AccountMode;
-
-    /**
     * Instance account, which is required if the operation is performed across accounts.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -167,12 +167,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Account;
 
     /**
+    * The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AccountMode")
+    @Expose
+    private String AccountMode;
+
+    /**
     * The role used for cross-account sync, which can contain [a-zA-Z0-9\-\_]+ and is required if the operation is performed across accounts.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AccountRole")
     @Expose
     private String AccountRole;
+
+    /**
+    * External role ID
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RoleExternalId")
+    @Expose
+    private String RoleExternalId;
 
     /**
     * ID of the temporary key, which is required if the operation is performed across accounts.
@@ -199,12 +215,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String TmpToken;
 
     /**
-    * External role ID
+    * Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("RoleExternalId")
+    @SerializedName("EncryptConn")
     @Expose
-    private String RoleExternalId;
+    private String EncryptConn;
 
     /**
      * Get Region name, such as `ap-guangzhou`.
@@ -224,6 +240,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setRegion(String Region) {
         this.Region = Region;
+    }
+
+    /**
+     * Get Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Role Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getRole() {
+        return this.Role;
+    }
+
+    /**
+     * Set Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Role Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRole(String Role) {
+        this.Role = Role;
     }
 
     /**
@@ -527,26 +563,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AccountMode The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public String getAccountMode() {
-        return this.AccountMode;
-    }
-
-    /**
-     * Set The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AccountMode The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setAccountMode(String AccountMode) {
-        this.AccountMode = AccountMode;
-    }
-
-    /**
      * Get Instance account, which is required if the operation is performed across accounts.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Account Instance account, which is required if the operation is performed across accounts.
@@ -567,6 +583,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AccountMode The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getAccountMode() {
+        return this.AccountMode;
+    }
+
+    /**
+     * Set The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AccountMode The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAccountMode(String AccountMode) {
+        this.AccountMode = AccountMode;
+    }
+
+    /**
      * Get The role used for cross-account sync, which can contain [a-zA-Z0-9\-\_]+ and is required if the operation is performed across accounts.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return AccountRole The role used for cross-account sync, which can contain [a-zA-Z0-9\-\_]+ and is required if the operation is performed across accounts.
@@ -584,6 +620,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setAccountRole(String AccountRole) {
         this.AccountRole = AccountRole;
+    }
+
+    /**
+     * Get External role ID
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RoleExternalId External role ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getRoleExternalId() {
+        return this.RoleExternalId;
+    }
+
+    /**
+     * Set External role ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RoleExternalId External role ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRoleExternalId(String RoleExternalId) {
+        this.RoleExternalId = RoleExternalId;
     }
 
     /**
@@ -647,23 +703,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get External role ID
+     * Get Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RoleExternalId External role ID
+     * @return EncryptConn Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getRoleExternalId() {
-        return this.RoleExternalId;
+    public String getEncryptConn() {
+        return this.EncryptConn;
     }
 
     /**
-     * Set External role ID
+     * Set Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RoleExternalId External role ID
+     * @param EncryptConn Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setRoleExternalId(String RoleExternalId) {
-        this.RoleExternalId = RoleExternalId;
+    public void setEncryptConn(String EncryptConn) {
+        this.EncryptConn = EncryptConn;
     }
 
     public Endpoint() {
@@ -676,6 +732,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public Endpoint(Endpoint source) {
         if (source.Region != null) {
             this.Region = new String(source.Region);
+        }
+        if (source.Role != null) {
+            this.Role = new String(source.Role);
         }
         if (source.DbKernel != null) {
             this.DbKernel = new String(source.DbKernel);
@@ -722,14 +781,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.EngineVersion != null) {
             this.EngineVersion = new String(source.EngineVersion);
         }
-        if (source.AccountMode != null) {
-            this.AccountMode = new String(source.AccountMode);
-        }
         if (source.Account != null) {
             this.Account = new String(source.Account);
         }
+        if (source.AccountMode != null) {
+            this.AccountMode = new String(source.AccountMode);
+        }
         if (source.AccountRole != null) {
             this.AccountRole = new String(source.AccountRole);
+        }
+        if (source.RoleExternalId != null) {
+            this.RoleExternalId = new String(source.RoleExternalId);
         }
         if (source.TmpSecretId != null) {
             this.TmpSecretId = new String(source.TmpSecretId);
@@ -740,8 +802,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.TmpToken != null) {
             this.TmpToken = new String(source.TmpToken);
         }
-        if (source.RoleExternalId != null) {
-            this.RoleExternalId = new String(source.RoleExternalId);
+        if (source.EncryptConn != null) {
+            this.EncryptConn = new String(source.EncryptConn);
         }
     }
 
@@ -751,6 +813,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "Role", this.Role);
         this.setParamSimple(map, prefix + "DbKernel", this.DbKernel);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Ip", this.Ip);
@@ -766,13 +829,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "CcnId", this.CcnId);
         this.setParamSimple(map, prefix + "Supplier", this.Supplier);
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
-        this.setParamSimple(map, prefix + "AccountMode", this.AccountMode);
         this.setParamSimple(map, prefix + "Account", this.Account);
+        this.setParamSimple(map, prefix + "AccountMode", this.AccountMode);
         this.setParamSimple(map, prefix + "AccountRole", this.AccountRole);
+        this.setParamSimple(map, prefix + "RoleExternalId", this.RoleExternalId);
         this.setParamSimple(map, prefix + "TmpSecretId", this.TmpSecretId);
         this.setParamSimple(map, prefix + "TmpSecretKey", this.TmpSecretKey);
         this.setParamSimple(map, prefix + "TmpToken", this.TmpToken);
-        this.setParamSimple(map, prefix + "RoleExternalId", this.RoleExternalId);
+        this.setParamSimple(map, prefix + "EncryptConn", this.EncryptConn);
 
     }
 }

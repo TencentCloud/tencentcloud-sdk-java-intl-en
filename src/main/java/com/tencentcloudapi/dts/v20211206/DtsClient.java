@@ -647,6 +647,46 @@ If the check fails, the cause can be queried. Modify the migration configuration
     }
 
     /**
+     *This API is used for the backend to skip a failed check item. Theoretically, to execute a migration task normally, any check step cannot be skipped, and the check must be passed. For products or links that support check item skipping, see [Check Item Overview](https://www.tencentcloud.com/document/product/571/42551).
+     * @param req SkipCheckItemRequest
+     * @return SkipCheckItemResponse
+     * @throws TencentCloudSDKException
+     */
+    public SkipCheckItemResponse SkipCheckItem(SkipCheckItemRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SkipCheckItemResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SkipCheckItemResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SkipCheckItem");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used for the backend to skip a failed check item. Theoretically, to execute a sync task normally, any check step cannot be skipped, and the check must be passed. For products or links that support check item skipping, see [Check Item Overview](https://www.tencentcloud.com/document/product/571/42551).
+     * @param req SkipSyncCheckItemRequest
+     * @return SkipSyncCheckItemResponse
+     * @throws TencentCloudSDKException
+     */
+    public SkipSyncCheckItemResponse SkipSyncCheckItem(SkipSyncCheckItemRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SkipSyncCheckItemResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SkipSyncCheckItemResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SkipSyncCheckItem");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to start a data consistency check task after creating it by calling the `CreateCompareTask` API. After calling this API, you can call the `DescribeCompareTasks` API to query the latest task status.
      * @param req StartCompareRequest
      * @return StartCompareResponse

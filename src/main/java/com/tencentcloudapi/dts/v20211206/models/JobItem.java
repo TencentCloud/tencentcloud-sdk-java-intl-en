@@ -159,6 +159,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private TagItem [] Tags;
 
     /**
+    * Information of automatic retry time
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AutoRetryTimeRangeMinutes")
+    @Expose
+    private Long AutoRetryTimeRangeMinutes;
+
+    /**
      * Get Data migration task ID
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return JobId Data migration task ID
@@ -498,6 +506,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Tags = Tags;
     }
 
+    /**
+     * Get Information of automatic retry time
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AutoRetryTimeRangeMinutes Information of automatic retry time
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getAutoRetryTimeRangeMinutes() {
+        return this.AutoRetryTimeRangeMinutes;
+    }
+
+    /**
+     * Set Information of automatic retry time
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AutoRetryTimeRangeMinutes Information of automatic retry time
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAutoRetryTimeRangeMinutes(Long AutoRetryTimeRangeMinutes) {
+        this.AutoRetryTimeRangeMinutes = AutoRetryTimeRangeMinutes;
+    }
+
     public JobItem() {
     }
 
@@ -560,6 +588,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.Tags[i] = new TagItem(source.Tags[i]);
             }
         }
+        if (source.AutoRetryTimeRangeMinutes != null) {
+            this.AutoRetryTimeRangeMinutes = new Long(source.AutoRetryTimeRangeMinutes);
+        }
     }
 
 
@@ -584,6 +615,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "CompareTask.", this.CompareTask);
         this.setParamObj(map, prefix + "TradeInfo.", this.TradeInfo);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
 
     }
 }

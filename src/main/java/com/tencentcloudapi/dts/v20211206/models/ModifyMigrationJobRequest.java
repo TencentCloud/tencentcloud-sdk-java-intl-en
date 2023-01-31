@@ -79,6 +79,13 @@ public class ModifyMigrationJobRequest extends AbstractModel{
     private TagItem [] Tags;
 
     /**
+    * Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
+    */
+    @SerializedName("AutoRetryTimeRangeMinutes")
+    @Expose
+    private Long AutoRetryTimeRangeMinutes;
+
+    /**
      * Get Task ID 
      * @return JobId Task ID
      */
@@ -206,6 +213,22 @@ public class ModifyMigrationJobRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled. 
+     * @return AutoRetryTimeRangeMinutes Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
+     */
+    public Long getAutoRetryTimeRangeMinutes() {
+        return this.AutoRetryTimeRangeMinutes;
+    }
+
+    /**
+     * Set Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
+     * @param AutoRetryTimeRangeMinutes Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
+     */
+    public void setAutoRetryTimeRangeMinutes(Long AutoRetryTimeRangeMinutes) {
+        this.AutoRetryTimeRangeMinutes = AutoRetryTimeRangeMinutes;
+    }
+
     public ModifyMigrationJobRequest() {
     }
 
@@ -241,6 +264,9 @@ public class ModifyMigrationJobRequest extends AbstractModel{
                 this.Tags[i] = new TagItem(source.Tags[i]);
             }
         }
+        if (source.AutoRetryTimeRangeMinutes != null) {
+            this.AutoRetryTimeRangeMinutes = new Long(source.AutoRetryTimeRangeMinutes);
+        }
     }
 
 
@@ -256,6 +282,7 @@ public class ModifyMigrationJobRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "JobName", this.JobName);
         this.setParamSimple(map, prefix + "ExpectRunTime", this.ExpectRunTime);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
 
     }
 }
