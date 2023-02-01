@@ -65,6 +65,20 @@ public class CreateRocketMQGroupRequest extends AbstractModel{
     private String Remark;
 
     /**
+    * Group type (`TCP`, `HTTP`)
+    */
+    @SerializedName("GroupType")
+    @Expose
+    private String GroupType;
+
+    /**
+    * The maximum number of retries for a group
+    */
+    @SerializedName("RetryMaxTimes")
+    @Expose
+    private Long RetryMaxTimes;
+
+    /**
      * Get Group name (8–64 characters) 
      * @return GroupId Group name (8–64 characters)
      */
@@ -160,6 +174,38 @@ public class CreateRocketMQGroupRequest extends AbstractModel{
         this.Remark = Remark;
     }
 
+    /**
+     * Get Group type (`TCP`, `HTTP`) 
+     * @return GroupType Group type (`TCP`, `HTTP`)
+     */
+    public String getGroupType() {
+        return this.GroupType;
+    }
+
+    /**
+     * Set Group type (`TCP`, `HTTP`)
+     * @param GroupType Group type (`TCP`, `HTTP`)
+     */
+    public void setGroupType(String GroupType) {
+        this.GroupType = GroupType;
+    }
+
+    /**
+     * Get The maximum number of retries for a group 
+     * @return RetryMaxTimes The maximum number of retries for a group
+     */
+    public Long getRetryMaxTimes() {
+        return this.RetryMaxTimes;
+    }
+
+    /**
+     * Set The maximum number of retries for a group
+     * @param RetryMaxTimes The maximum number of retries for a group
+     */
+    public void setRetryMaxTimes(Long RetryMaxTimes) {
+        this.RetryMaxTimes = RetryMaxTimes;
+    }
+
     public CreateRocketMQGroupRequest() {
     }
 
@@ -189,6 +235,12 @@ public class CreateRocketMQGroupRequest extends AbstractModel{
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.GroupType != null) {
+            this.GroupType = new String(source.GroupType);
+        }
+        if (source.RetryMaxTimes != null) {
+            this.RetryMaxTimes = new Long(source.RetryMaxTimes);
+        }
     }
 
 
@@ -202,6 +254,8 @@ public class CreateRocketMQGroupRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "BroadcastEnable", this.BroadcastEnable);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "GroupType", this.GroupType);
+        this.setParamSimple(map, prefix + "RetryMaxTimes", this.RetryMaxTimes);
 
     }
 }

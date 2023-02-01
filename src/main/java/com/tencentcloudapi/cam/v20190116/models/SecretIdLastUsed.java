@@ -38,6 +38,14 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     private String LastUsedDate;
 
     /**
+    * The most recent date the key was accessed
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("LastSecretUsedDate")
+    @Expose
+    private Long LastSecretUsedDate;
+
+    /**
      * Get Key ID. 
      * @return SecretId Key ID.
      */
@@ -73,6 +81,26 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         this.LastUsedDate = LastUsedDate;
     }
 
+    /**
+     * Get The most recent date the key was accessed
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LastSecretUsedDate The most recent date the key was accessed
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getLastSecretUsedDate() {
+        return this.LastSecretUsedDate;
+    }
+
+    /**
+     * Set The most recent date the key was accessed
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LastSecretUsedDate The most recent date the key was accessed
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setLastSecretUsedDate(Long LastSecretUsedDate) {
+        this.LastSecretUsedDate = LastSecretUsedDate;
+    }
+
     public SecretIdLastUsed() {
     }
 
@@ -87,6 +115,9 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         if (source.LastUsedDate != null) {
             this.LastUsedDate = new String(source.LastUsedDate);
         }
+        if (source.LastSecretUsedDate != null) {
+            this.LastSecretUsedDate = new Long(source.LastSecretUsedDate);
+        }
     }
 
 
@@ -96,6 +127,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SecretId", this.SecretId);
         this.setParamSimple(map, prefix + "LastUsedDate", this.LastUsedDate);
+        this.setParamSimple(map, prefix + "LastSecretUsedDate", this.LastSecretUsedDate);
 
     }
 }

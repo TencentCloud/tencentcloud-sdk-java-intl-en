@@ -421,6 +421,46 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
+     *This API is used to export abnormal process rules.
+     * @param req CreateAbnormalProcessRulesExportJobRequest
+     * @return CreateAbnormalProcessRulesExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAbnormalProcessRulesExportJobResponse CreateAbnormalProcessRulesExportJob(CreateAbnormalProcessRulesExportJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAbnormalProcessRulesExportJobResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAbnormalProcessRulesExportJobResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAbnormalProcessRulesExportJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to export file tampering detection rules.
+     * @param req CreateAccessControlsRuleExportJobRequest
+     * @return CreateAccessControlsRuleExportJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAccessControlsRuleExportJobResponse CreateAccessControlsRuleExportJob(CreateAccessControlsRuleExportJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAccessControlsRuleExportJobResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAccessControlsRuleExportJobResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAccessControlsRuleExportJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create an image scan task for an image repository.
      * @param req CreateAssetImageRegistryScanTaskRequest
      * @return CreateAssetImageRegistryScanTaskResponse

@@ -117,6 +117,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean BroadcastEnabled;
 
     /**
+    * Group type
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("GroupType")
+    @Expose
+    private String GroupType;
+
+    /**
+    * The number of retries
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RetryMaxTimes")
+    @Expose
+    private Long RetryMaxTimes;
+
+    /**
      * Get Consumer group name. 
      * @return Name Consumer group name.
      */
@@ -336,6 +352,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.BroadcastEnabled = BroadcastEnabled;
     }
 
+    /**
+     * Get Group type
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return GroupType Group type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getGroupType() {
+        return this.GroupType;
+    }
+
+    /**
+     * Set Group type
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param GroupType Group type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setGroupType(String GroupType) {
+        this.GroupType = GroupType;
+    }
+
+    /**
+     * Get The number of retries
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RetryMaxTimes The number of retries
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getRetryMaxTimes() {
+        return this.RetryMaxTimes;
+    }
+
+    /**
+     * Set The number of retries
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RetryMaxTimes The number of retries
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRetryMaxTimes(Long RetryMaxTimes) {
+        this.RetryMaxTimes = RetryMaxTimes;
+    }
+
     public RocketMQGroup() {
     }
 
@@ -383,6 +439,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.BroadcastEnabled != null) {
             this.BroadcastEnabled = new Boolean(source.BroadcastEnabled);
         }
+        if (source.GroupType != null) {
+            this.GroupType = new String(source.GroupType);
+        }
+        if (source.RetryMaxTimes != null) {
+            this.RetryMaxTimes = new Long(source.RetryMaxTimes);
+        }
     }
 
 
@@ -403,6 +465,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "ConsumerType", this.ConsumerType);
         this.setParamSimple(map, prefix + "BroadcastEnabled", this.BroadcastEnabled);
+        this.setParamSimple(map, prefix + "GroupType", this.GroupType);
+        this.setParamSimple(map, prefix + "RetryMaxTimes", this.RetryMaxTimes);
 
     }
 }

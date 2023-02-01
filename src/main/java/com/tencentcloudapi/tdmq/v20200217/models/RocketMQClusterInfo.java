@@ -105,28 +105,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean RocketMQFlag;
 
     /**
-    * 
+    * Billing status (`1`: Normal; `2`: Service suspended; `3`: Terminated)
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 
+    * Service suspension time in milliseconds
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsolateTime")
     @Expose
     private Long IsolateTime;
 
     /**
-    * 
+    * HTTP-based public network access address
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HttpPublicEndpoint")
     @Expose
     private String HttpPublicEndpoint;
 
     /**
-    * 
+    * HTTP-based VPC access address
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HttpVpcEndpoint")
     @Expose
@@ -329,64 +333,80 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Billing status (`1`: Normal; `2`: Service suspended; `3`: Terminated)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Status Billing status (`1`: Normal; `2`: Service suspended; `3`: Terminated)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Billing status (`1`: Normal; `2`: Service suspended; `3`: Terminated)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Status Billing status (`1`: Normal; `2`: Service suspended; `3`: Terminated)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return IsolateTime 
+     * Get Service suspension time in milliseconds
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsolateTime Service suspension time in milliseconds
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsolateTime() {
         return this.IsolateTime;
     }
 
     /**
-     * Set 
-     * @param IsolateTime 
+     * Set Service suspension time in milliseconds
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsolateTime Service suspension time in milliseconds
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsolateTime(Long IsolateTime) {
         this.IsolateTime = IsolateTime;
     }
 
     /**
-     * Get  
-     * @return HttpPublicEndpoint 
+     * Get HTTP-based public network access address
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HttpPublicEndpoint HTTP-based public network access address
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHttpPublicEndpoint() {
         return this.HttpPublicEndpoint;
     }
 
     /**
-     * Set 
-     * @param HttpPublicEndpoint 
+     * Set HTTP-based public network access address
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HttpPublicEndpoint HTTP-based public network access address
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHttpPublicEndpoint(String HttpPublicEndpoint) {
         this.HttpPublicEndpoint = HttpPublicEndpoint;
     }
 
     /**
-     * Get  
-     * @return HttpVpcEndpoint 
+     * Get HTTP-based VPC access address
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HttpVpcEndpoint HTTP-based VPC access address
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHttpVpcEndpoint() {
         return this.HttpVpcEndpoint;
     }
 
     /**
-     * Set 
-     * @param HttpVpcEndpoint 
+     * Set HTTP-based VPC access address
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HttpVpcEndpoint HTTP-based VPC access address
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHttpVpcEndpoint(String HttpVpcEndpoint) {
         this.HttpVpcEndpoint = HttpVpcEndpoint;

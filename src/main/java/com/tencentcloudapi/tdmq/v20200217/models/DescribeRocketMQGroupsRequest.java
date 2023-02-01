@@ -86,6 +86,13 @@ public class DescribeRocketMQGroupsRequest extends AbstractModel{
     private String FilterOneGroup;
 
     /**
+    * Group type
+    */
+    @SerializedName("Types")
+    @Expose
+    private String [] Types;
+
+    /**
      * Get Cluster ID. 
      * @return ClusterId Cluster ID.
      */
@@ -229,6 +236,22 @@ public class DescribeRocketMQGroupsRequest extends AbstractModel{
         this.FilterOneGroup = FilterOneGroup;
     }
 
+    /**
+     * Get Group type 
+     * @return Types Group type
+     */
+    public String [] getTypes() {
+        return this.Types;
+    }
+
+    /**
+     * Set Group type
+     * @param Types Group type
+     */
+    public void setTypes(String [] Types) {
+        this.Types = Types;
+    }
+
     public DescribeRocketMQGroupsRequest() {
     }
 
@@ -264,6 +287,12 @@ public class DescribeRocketMQGroupsRequest extends AbstractModel{
         if (source.FilterOneGroup != null) {
             this.FilterOneGroup = new String(source.FilterOneGroup);
         }
+        if (source.Types != null) {
+            this.Types = new String[source.Types.length];
+            for (int i = 0; i < source.Types.length; i++) {
+                this.Types[i] = new String(source.Types[i]);
+            }
+        }
     }
 
 
@@ -280,6 +309,7 @@ public class DescribeRocketMQGroupsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "SortedBy", this.SortedBy);
         this.setParamSimple(map, prefix + "SortOrder", this.SortOrder);
         this.setParamSimple(map, prefix + "FilterOneGroup", this.FilterOneGroup);
+        this.setParamArraySimple(map, prefix + "Types.", this.Types);
 
     }
 }

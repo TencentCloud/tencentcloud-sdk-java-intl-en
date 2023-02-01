@@ -30,6 +30,20 @@ public class RocketMQTopic extends AbstractModel{
     private String Name;
 
     /**
+    * Topic type. Enumerated values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`, `Retry`, and `DeadLetter`.
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * The number of subscription groups
+    */
+    @SerializedName("GroupNum")
+    @Expose
+    private Long GroupNum;
+
+    /**
     * Description.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -72,6 +86,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setName(String Name) {
         this.Name = Name;
+    }
+
+    /**
+     * Get Topic type. Enumerated values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`, `Retry`, and `DeadLetter`. 
+     * @return Type Topic type. Enumerated values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`, `Retry`, and `DeadLetter`.
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set Topic type. Enumerated values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`, `Retry`, and `DeadLetter`.
+     * @param Type Topic type. Enumerated values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`, `Retry`, and `DeadLetter`.
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get The number of subscription groups 
+     * @return GroupNum The number of subscription groups
+     */
+    public Long getGroupNum() {
+        return this.GroupNum;
+    }
+
+    /**
+     * Set The number of subscription groups
+     * @param GroupNum The number of subscription groups
+     */
+    public void setGroupNum(Long GroupNum) {
+        this.GroupNum = GroupNum;
     }
 
     /**
@@ -153,6 +199,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.GroupNum != null) {
+            this.GroupNum = new Long(source.GroupNum);
+        }
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
@@ -173,6 +225,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "GroupNum", this.GroupNum);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "PartitionNum", this.PartitionNum);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);

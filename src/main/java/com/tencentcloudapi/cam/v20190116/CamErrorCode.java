@@ -111,6 +111,9 @@ public enum CamErrorCode {
     // There were too many entities in one operation.
      INVALIDPARAMETER_OPERATEENTITIESOVERLIMIT("InvalidParameter.OperateEntitiesOverLimit"),
      
+    // 
+     INVALIDPARAMETER_ORGANIZATIONROLEOPERATEERROR("InvalidParameter.OrganizationRoleOperateError"),
+     
     // Invalid input parameter.
      INVALIDPARAMETER_PARAMERROR("InvalidParameter.ParamError"),
      
@@ -186,7 +189,7 @@ public enum CamErrorCode {
     // `Scope` field invalid.
      INVALIDPARAMETER_SCOPEERROR("InvalidParameter.ScopeError"),
      
-    // 
+    // An error occurred while querying the keyword length.
      INVALIDPARAMETER_SEARCHKEYWORDLENGTHERROR("InvalidParameter.SearchKeywordLengthError"),
      
     // Service policies cannot be used for permission boundaries.
