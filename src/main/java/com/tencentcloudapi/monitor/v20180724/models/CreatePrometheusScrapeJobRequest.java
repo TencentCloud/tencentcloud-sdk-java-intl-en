@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class CreatePrometheusScrapeJobRequest extends AbstractModel{
 
     /**
-    * Instance ID
+    * TMP instance ID, such as “prom-abcd1234”.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Agent ID
+    * Agent ID, such as “agent-abcd1234”. It can be obtained on the **Agent Management** page in the console.
     */
     @SerializedName("AgentId")
     @Expose
     private String AgentId;
 
     /**
-    * Task content
+    * Scrape task ID in the format of “job_name:xx”
     */
     @SerializedName("Config")
     @Expose
     private String Config;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get TMP instance ID, such as “prom-abcd1234”. 
+     * @return InstanceId TMP instance ID, such as “prom-abcd1234”.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set TMP instance ID, such as “prom-abcd1234”.
+     * @param InstanceId TMP instance ID, such as “prom-abcd1234”.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Agent ID 
-     * @return AgentId Agent ID
+     * Get Agent ID, such as “agent-abcd1234”. It can be obtained on the **Agent Management** page in the console. 
+     * @return AgentId Agent ID, such as “agent-abcd1234”. It can be obtained on the **Agent Management** page in the console.
      */
     public String getAgentId() {
         return this.AgentId;
     }
 
     /**
-     * Set Agent ID
-     * @param AgentId Agent ID
+     * Set Agent ID, such as “agent-abcd1234”. It can be obtained on the **Agent Management** page in the console.
+     * @param AgentId Agent ID, such as “agent-abcd1234”. It can be obtained on the **Agent Management** page in the console.
      */
     public void setAgentId(String AgentId) {
         this.AgentId = AgentId;
     }
 
     /**
-     * Get Task content 
-     * @return Config Task content
+     * Get Scrape task ID in the format of “job_name:xx” 
+     * @return Config Scrape task ID in the format of “job_name:xx”
      */
     public String getConfig() {
         return this.Config;
     }
 
     /**
-     * Set Task content
-     * @param Config Task content
+     * Set Scrape task ID in the format of “job_name:xx”
+     * @param Config Scrape task ID in the format of “job_name:xx”
      */
     public void setConfig(String Config) {
         this.Config = Config;

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class EnableGrafanaSSORequest extends AbstractModel{
 
     /**
-    * Whether to enable SSO
+    * Whether to enable SSO (`true`: Yes; `false`: No)
     */
     @SerializedName("EnableSSO")
     @Expose
     private Boolean EnableSSO;
 
     /**
-    * Instance ID
+    * TCMG instance ID, such as “grafana-abcdefgh”.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Whether to enable SSO 
-     * @return EnableSSO Whether to enable SSO
+     * Get Whether to enable SSO (`true`: Yes; `false`: No) 
+     * @return EnableSSO Whether to enable SSO (`true`: Yes; `false`: No)
      */
     public Boolean getEnableSSO() {
         return this.EnableSSO;
     }
 
     /**
-     * Set Whether to enable SSO
-     * @param EnableSSO Whether to enable SSO
+     * Set Whether to enable SSO (`true`: Yes; `false`: No)
+     * @param EnableSSO Whether to enable SSO (`true`: Yes; `false`: No)
      */
     public void setEnableSSO(Boolean EnableSSO) {
         this.EnableSSO = EnableSSO;
     }
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get TCMG instance ID, such as “grafana-abcdefgh”. 
+     * @return InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set TCMG instance ID, such as “grafana-abcdefgh”.
+     * @param InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

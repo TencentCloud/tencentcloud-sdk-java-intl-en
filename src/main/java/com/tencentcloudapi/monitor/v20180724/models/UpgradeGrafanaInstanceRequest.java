@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class UpgradeGrafanaInstanceRequest extends AbstractModel{
 
     /**
-    * Instance ID.
+    * TCMG instance ID, such as “grafana-12345678”.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Version alias
+    * Version alias, such as v7.4.2.
     */
     @SerializedName("Alias")
     @Expose
     private String Alias;
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+     * Get TCMG instance ID, such as “grafana-12345678”. 
+     * @return InstanceId TCMG instance ID, such as “grafana-12345678”.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set TCMG instance ID, such as “grafana-12345678”.
+     * @param InstanceId TCMG instance ID, such as “grafana-12345678”.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Version alias 
-     * @return Alias Version alias
+     * Get Version alias, such as v7.4.2. 
+     * @return Alias Version alias, such as v7.4.2.
      */
     public String getAlias() {
         return this.Alias;
     }
 
     /**
-     * Set Version alias
-     * @param Alias Version alias
+     * Set Version alias, such as v7.4.2.
+     * @param Alias Version alias, such as v7.4.2.
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;

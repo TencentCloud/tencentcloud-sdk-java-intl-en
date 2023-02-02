@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class CreateGrafanaIntegrationRequest extends AbstractModel{
 
     /**
-    * Instance ID.
+    * TCMG instance ID, such as “grafana-abcdefgh”.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Type
+    * Integration type, such as “tencent-cloud-prometheus”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
     */
     @SerializedName("Kind")
     @Expose
     private String Kind;
 
     /**
-    * Configuration
+    * Integration configuration
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+     * Get TCMG instance ID, such as “grafana-abcdefgh”. 
+     * @return InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set TCMG instance ID, such as “grafana-abcdefgh”.
+     * @param InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Type 
-     * @return Kind Type
+     * Get Integration type, such as “tencent-cloud-prometheus”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**. 
+     * @return Kind Integration type, such as “tencent-cloud-prometheus”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
      */
     public String getKind() {
         return this.Kind;
     }
 
     /**
-     * Set Type
-     * @param Kind Type
+     * Set Integration type, such as “tencent-cloud-prometheus”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
+     * @param Kind Integration type, such as “tencent-cloud-prometheus”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
      */
     public void setKind(String Kind) {
         this.Kind = Kind;
     }
 
     /**
-     * Get Configuration 
-     * @return Content Configuration
+     * Get Integration configuration 
+     * @return Content Integration configuration
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set Configuration
-     * @param Content Configuration
+     * Set Integration configuration
+     * @param Content Integration configuration
      */
     public void setContent(String Content) {
         this.Content = Content;

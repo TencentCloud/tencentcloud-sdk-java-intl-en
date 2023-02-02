@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DescribeSSOAccountRequest extends AbstractModel{
 
     /**
-    * Instance ID
+    * TCMG instance ID, such as “grafana-abcdefgh”.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Filter by account UIN
+    * Filter by account ID such as “10000”
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get TCMG instance ID, such as “grafana-abcdefgh”. 
+     * @return InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set TCMG instance ID, such as “grafana-abcdefgh”.
+     * @param InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Filter by account UIN 
-     * @return UserId Filter by account UIN
+     * Get Filter by account ID such as “10000” 
+     * @return UserId Filter by account ID such as “10000”
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set Filter by account UIN
-     * @param UserId Filter by account UIN
+     * Set Filter by account ID such as “10000”
+     * @param UserId Filter by account ID such as “10000”
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;

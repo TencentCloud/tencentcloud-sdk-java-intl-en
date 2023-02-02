@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class UpdatePrometheusAgentStatusRequest extends AbstractModel{
 
     /**
-    * Instance ID
+    * TMP instance ID, such as “prom-abcd1234”.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * List of agent IDs
+    * List of agent IDs such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console.
     */
     @SerializedName("AgentIds")
     @Expose
@@ -46,32 +46,32 @@ public class UpdatePrometheusAgentStatusRequest extends AbstractModel{
     private Long Status;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get TMP instance ID, such as “prom-abcd1234”. 
+     * @return InstanceId TMP instance ID, such as “prom-abcd1234”.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set TMP instance ID, such as “prom-abcd1234”.
+     * @param InstanceId TMP instance ID, such as “prom-abcd1234”.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get List of agent IDs 
-     * @return AgentIds List of agent IDs
+     * Get List of agent IDs such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console. 
+     * @return AgentIds List of agent IDs such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console.
      */
     public String [] getAgentIds() {
         return this.AgentIds;
     }
 
     /**
-     * Set List of agent IDs
-     * @param AgentIds List of agent IDs
+     * Set List of agent IDs such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console.
+     * @param AgentIds List of agent IDs such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console.
      */
     public void setAgentIds(String [] AgentIds) {
         this.AgentIds = AgentIds;

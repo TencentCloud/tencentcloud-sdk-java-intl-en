@@ -1225,6 +1225,26 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     }
 
     /**
+     * This API is used to query the usage of a pay-as-you-go Tencent Managed Service for Prometheus (TMP) instance.
+     * @param req DescribePrometheusInstanceUsageRequest
+     * @return DescribePrometheusInstanceUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusInstanceUsageResponse DescribePrometheusInstanceUsage(DescribePrometheusInstanceUsageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusInstanceUsageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusInstanceUsageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusInstanceUsage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the details of one or multiple instances.
 <ul>
 <li>You can query the details of an instance by its ID, name, or status.</li>

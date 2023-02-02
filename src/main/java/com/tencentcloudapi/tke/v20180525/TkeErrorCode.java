@@ -75,6 +75,9 @@ public enum TkeErrorCode {
     // Unknown Kubernetes error.
      FAILEDOPERATION_KUBERNETESINTERNAL("FailedOperation.KubernetesInternal"),
      
+    // Failed to obtain the kubernetes resource list.
+     FAILEDOPERATION_KUBERNETESLISTOPERATIONERROR("FailedOperation.KubernetesListOperationError"),
+     
     // An unknown error occurs while calling the underlying CLB.
      FAILEDOPERATION_LBCOMMON("FailedOperation.LbCommon"),
      
@@ -87,7 +90,7 @@ public enum TkeErrorCode {
     // Invalid parameter.
      FAILEDOPERATION_PARAM("FailedOperation.Param"),
      
-    // 
+    // GPE error.
      FAILEDOPERATION_POLICYSERVERCOMMONERROR("FailedOperation.PolicyServerCommonError"),
      
     // Reached the quota limit.
@@ -240,6 +243,9 @@ public enum TkeErrorCode {
     // Unknown Kubernetes error
      INTERNALERROR_KUBERNETESINTERNAL("InternalError.KubernetesInternal"),
      
+    // Failed to obtain the kubernetes resource list.
+     INTERNALERROR_KUBERNETESLISTOPERATIONERROR("InternalError.KubernetesListOperationError"),
+     
     // An error occurs while calling the underlying CLB
      INTERNALERROR_LBCOMMON("InternalError.LbCommon"),
      
@@ -369,6 +375,12 @@ public enum TkeErrorCode {
     // Route table is not empty.
      INVALIDPARAMETER_ROUTETABLENOTEMPTY("InvalidParameter.RouteTableNotEmpty"),
      
+    // Invalid subnet.
+     INVALIDPARAMETER_SUBNETINVALIDERROR("InvalidParameter.SubnetInvalidError"),
+     
+    // The subnet does not exist.
+     INVALIDPARAMETER_SUBNETNOTEXIST("InvalidParameter.SubnetNotExist"),
+     
     // Quota limit is exceeded.
      LIMITEXCEEDED("LimitExceeded"),
      
@@ -384,8 +396,14 @@ public enum TkeErrorCode {
     // The resource is occupied.
      RESOURCEINUSE("ResourceInUse"),
      
+    // A running Pod exists.
+     RESOURCEINUSE_EXISTRUNNINGPOD("ResourceInUse.ExistRunningPod"),
+     
     // The resource already exists.
      RESOURCEINUSE_RESOURCEEXISTALREADY("ResourceInUse.ResourceExistAlready"),
+     
+    // The subnet already exists.
+     RESOURCEINUSE_SUBNETALREADYEXIST("ResourceInUse.SubnetAlreadyExist"),
      
     // Insufficient CVM resources.
      RESOURCEINSUFFICIENT_SPECIFIEDINSTANCETYPE("ResourceInsufficient.SpecifiedInstanceType"),
@@ -414,6 +432,9 @@ public enum TkeErrorCode {
     // The cluster’s status does support this operation.
      RESOURCEUNAVAILABLE_CLUSTERSTATE("ResourceUnavailable.ClusterState"),
      
+    // The node pool is in an abnormal status.
+     RESOURCEUNAVAILABLE_NODEPOOLSTATENOTNORMAL("ResourceUnavailable.NodePoolStateNotNormal"),
+     
     // Unauthorized operation.
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
@@ -433,7 +454,10 @@ public enum TkeErrorCode {
      UNSUPPORTEDOPERATION_CLUSTERNOTSUITENABLEVPCCNI("UnsupportedOperation.ClusterNotSuitEnableVPCCNI"),
      
     // The user is not in the allowlist.
-     UNSUPPORTEDOPERATION_NOTINWHITELIST("UnsupportedOperation.NotInWhitelist");
+     UNSUPPORTEDOPERATION_NOTINWHITELIST("UnsupportedOperation.NotInWhitelist"),
+     
+    // Virtual nodes cannot be installed.
+     UNSUPPORTEDOPERATION_NOTSUPPORTINSTALLVIRTUALKUBELET("UnsupportedOperation.NotSupportInstallVirtualKubelet");
      
     private String value;
     private TkeErrorCode (String value){

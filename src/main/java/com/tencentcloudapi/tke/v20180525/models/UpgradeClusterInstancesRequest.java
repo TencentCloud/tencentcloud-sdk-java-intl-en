@@ -78,6 +78,13 @@ major: in-place upgrade of major version
     private Float MaxNotReadyPercent;
 
     /**
+    * Whether to upgrade node runtime. Values: `true`, `false` (default).
+    */
+    @SerializedName("UpgradeRunTime")
+    @Expose
+    private Boolean UpgradeRunTime;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -213,6 +220,22 @@ major: in-place upgrade of major version
         this.MaxNotReadyPercent = MaxNotReadyPercent;
     }
 
+    /**
+     * Get Whether to upgrade node runtime. Values: `true`, `false` (default). 
+     * @return UpgradeRunTime Whether to upgrade node runtime. Values: `true`, `false` (default).
+     */
+    public Boolean getUpgradeRunTime() {
+        return this.UpgradeRunTime;
+    }
+
+    /**
+     * Set Whether to upgrade node runtime. Values: `true`, `false` (default).
+     * @param UpgradeRunTime Whether to upgrade node runtime. Values: `true`, `false` (default).
+     */
+    public void setUpgradeRunTime(Boolean UpgradeRunTime) {
+        this.UpgradeRunTime = UpgradeRunTime;
+    }
+
     public UpgradeClusterInstancesRequest() {
     }
 
@@ -245,6 +268,9 @@ major: in-place upgrade of major version
         if (source.MaxNotReadyPercent != null) {
             this.MaxNotReadyPercent = new Float(source.MaxNotReadyPercent);
         }
+        if (source.UpgradeRunTime != null) {
+            this.UpgradeRunTime = new Boolean(source.UpgradeRunTime);
+        }
     }
 
 
@@ -259,6 +285,7 @@ major: in-place upgrade of major version
         this.setParamObj(map, prefix + "ResetParam.", this.ResetParam);
         this.setParamSimple(map, prefix + "SkipPreCheck", this.SkipPreCheck);
         this.setParamSimple(map, prefix + "MaxNotReadyPercent", this.MaxNotReadyPercent);
+        this.setParamSimple(map, prefix + "UpgradeRunTime", this.UpgradeRunTime);
 
     }
 }

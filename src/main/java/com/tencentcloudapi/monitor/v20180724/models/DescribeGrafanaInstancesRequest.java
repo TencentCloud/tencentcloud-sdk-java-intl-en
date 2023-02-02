@@ -37,14 +37,14 @@ public class DescribeGrafanaInstancesRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Array of instance IDs
+    * Array of TCMG instance IDs
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * Instance name, which supports fuzzy search by prefix.
+    * TCMG instance name, which can be fuzzily matched by prefix.
     */
     @SerializedName("InstanceName")
     @Expose
@@ -97,32 +97,32 @@ public class DescribeGrafanaInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Array of instance IDs 
-     * @return InstanceIds Array of instance IDs
+     * Get Array of TCMG instance IDs 
+     * @return InstanceIds Array of TCMG instance IDs
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Array of instance IDs
-     * @param InstanceIds Array of instance IDs
+     * Set Array of TCMG instance IDs
+     * @param InstanceIds Array of TCMG instance IDs
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get Instance name, which supports fuzzy search by prefix. 
-     * @return InstanceName Instance name, which supports fuzzy search by prefix.
+     * Get TCMG instance name, which can be fuzzily matched by prefix. 
+     * @return InstanceName TCMG instance name, which can be fuzzily matched by prefix.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name, which supports fuzzy search by prefix.
-     * @param InstanceName Instance name, which supports fuzzy search by prefix.
+     * Set TCMG instance name, which can be fuzzily matched by prefix.
+     * @param InstanceName TCMG instance name, which can be fuzzily matched by prefix.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

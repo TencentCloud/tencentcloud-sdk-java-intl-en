@@ -279,6 +279,46 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a virtual node.
+     * @param req CreateClusterVirtualNodeRequest
+     * @return CreateClusterVirtualNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClusterVirtualNodeResponse CreateClusterVirtualNode(CreateClusterVirtualNodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateClusterVirtualNodeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateClusterVirtualNodeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateClusterVirtualNode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a virtual node pool.
+     * @param req CreateClusterVirtualNodePoolRequest
+     * @return CreateClusterVirtualNodePoolResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClusterVirtualNodePoolResponse CreateClusterVirtualNodePool(CreateClusterVirtualNodePoolRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateClusterVirtualNodePoolResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateClusterVirtualNodePoolResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateClusterVirtualNodePool");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create an ECM instance.
      * @param req CreateECMInstancesRequest
      * @return CreateECMInstancesResponse
@@ -531,6 +571,46 @@ public class TkeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteClusterRouteTableResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteClusterRouteTable");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a virtual node.
+     * @param req DeleteClusterVirtualNodeRequest
+     * @return DeleteClusterVirtualNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteClusterVirtualNodeResponse DeleteClusterVirtualNode(DeleteClusterVirtualNodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteClusterVirtualNodeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteClusterVirtualNodeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteClusterVirtualNode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a virtual node pool.
+     * @param req DeleteClusterVirtualNodePoolRequest
+     * @return DeleteClusterVirtualNodePoolResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteClusterVirtualNodePoolResponse DeleteClusterVirtualNodePool(DeleteClusterVirtualNodePoolRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteClusterVirtualNodePoolResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteClusterVirtualNodePoolResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteClusterVirtualNodePool");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1019,6 +1099,46 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the list of virtual nodes.
+     * @param req DescribeClusterVirtualNodeRequest
+     * @return DescribeClusterVirtualNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterVirtualNodeResponse DescribeClusterVirtualNode(DescribeClusterVirtualNodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterVirtualNodeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterVirtualNodeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterVirtualNode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of virtual node pools.
+     * @param req DescribeClusterVirtualNodePoolsRequest
+     * @return DescribeClusterVirtualNodePoolsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterVirtualNodePoolsResponse DescribeClusterVirtualNodePools(DescribeClusterVirtualNodePoolsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClusterVirtualNodePoolsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClusterVirtualNodePoolsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClusterVirtualNodePools");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query clusters list.
      * @param req DescribeClustersRequest
      * @return DescribeClustersResponse
@@ -1479,6 +1599,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to drain a virtual node.
+     * @param req DrainClusterVirtualNodeRequest
+     * @return DrainClusterVirtualNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DrainClusterVirtualNodeResponse DrainClusterVirtualNode(DrainClusterVirtualNodeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DrainClusterVirtualNodeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DrainClusterVirtualNodeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DrainClusterVirtualNode");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to enable cluster deletion protection.
      * @param req EnableClusterDeletionProtectionRequest
      * @return EnableClusterDeletionProtectionResponse
@@ -1719,6 +1859,26 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify a virtual node pool.
+     * @param req ModifyClusterVirtualNodePoolRequest
+     * @return ModifyClusterVirtualNodePoolResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterVirtualNodePoolResponse ModifyClusterVirtualNodePool(ModifyClusterVirtualNodePoolRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyClusterVirtualNodePoolResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyClusterVirtualNodePoolResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyClusterVirtualNodePool");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify the model of instances in a node pool.
      * @param req ModifyNodePoolInstanceTypesRequest
      * @return ModifyNodePoolInstanceTypesResponse
@@ -1859,7 +2019,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *This API is used to upgrade one or more work nodes in the cluster. 
+     *This API is used to upgrade work nodes in a cluster.
      * @param req UpgradeClusterInstancesRequest
      * @return UpgradeClusterInstancesResponse
      * @throws TencentCloudSDKException

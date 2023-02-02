@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class UninstallGrafanaPluginsRequest extends AbstractModel{
 
     /**
-    * Array of plugin IDs
+    * Array of plugin IDs, such as "PluginIds": [ "grafana-clock-panel" ]. The plugin ID can be obtained through the `DescribePluginOverviews` API.
     */
     @SerializedName("PluginIds")
     @Expose
     private String [] PluginIds;
 
     /**
-    * Instance ID
+    * TCMG instance ID, such as “grafana-abcdefg”.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Array of plugin IDs 
-     * @return PluginIds Array of plugin IDs
+     * Get Array of plugin IDs, such as "PluginIds": [ "grafana-clock-panel" ]. The plugin ID can be obtained through the `DescribePluginOverviews` API. 
+     * @return PluginIds Array of plugin IDs, such as "PluginIds": [ "grafana-clock-panel" ]. The plugin ID can be obtained through the `DescribePluginOverviews` API.
      */
     public String [] getPluginIds() {
         return this.PluginIds;
     }
 
     /**
-     * Set Array of plugin IDs
-     * @param PluginIds Array of plugin IDs
+     * Set Array of plugin IDs, such as "PluginIds": [ "grafana-clock-panel" ]. The plugin ID can be obtained through the `DescribePluginOverviews` API.
+     * @param PluginIds Array of plugin IDs, such as "PluginIds": [ "grafana-clock-panel" ]. The plugin ID can be obtained through the `DescribePluginOverviews` API.
      */
     public void setPluginIds(String [] PluginIds) {
         this.PluginIds = PluginIds;
     }
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get TCMG instance ID, such as “grafana-abcdefg”. 
+     * @return InstanceId TCMG instance ID, such as “grafana-abcdefg”.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set TCMG instance ID, such as “grafana-abcdefg”.
+     * @param InstanceId TCMG instance ID, such as “grafana-abcdefg”.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

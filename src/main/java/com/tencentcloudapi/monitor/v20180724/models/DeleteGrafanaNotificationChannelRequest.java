@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DeleteGrafanaNotificationChannelRequest extends AbstractModel{
 
     /**
-    * Array of channel IDs
+    * Array of channel IDs, such as “nchannel-abcd1234”.
     */
     @SerializedName("ChannelIDs")
     @Expose
     private String [] ChannelIDs;
 
     /**
-    * Instance name
+    * TCMG instance ID, such as “grafana-abcdefgh”.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Array of channel IDs 
-     * @return ChannelIDs Array of channel IDs
+     * Get Array of channel IDs, such as “nchannel-abcd1234”. 
+     * @return ChannelIDs Array of channel IDs, such as “nchannel-abcd1234”.
      */
     public String [] getChannelIDs() {
         return this.ChannelIDs;
     }
 
     /**
-     * Set Array of channel IDs
-     * @param ChannelIDs Array of channel IDs
+     * Set Array of channel IDs, such as “nchannel-abcd1234”.
+     * @param ChannelIDs Array of channel IDs, such as “nchannel-abcd1234”.
      */
     public void setChannelIDs(String [] ChannelIDs) {
         this.ChannelIDs = ChannelIDs;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceId Instance name
+     * Get TCMG instance ID, such as “grafana-abcdefgh”. 
+     * @return InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceId Instance name
+     * Set TCMG instance ID, such as “grafana-abcdefgh”.
+     * @param InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeGrafanaEnvironmentsRequest extends AbstractModel{
 
     /**
-    * Instance ID.
+    * TCMG instance ID, such as “grafana-abcdefgh”.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+     * Get TCMG instance ID, such as “grafana-abcdefgh”. 
+     * @return InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set TCMG instance ID, such as “grafana-abcdefgh”.
+     * @param InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

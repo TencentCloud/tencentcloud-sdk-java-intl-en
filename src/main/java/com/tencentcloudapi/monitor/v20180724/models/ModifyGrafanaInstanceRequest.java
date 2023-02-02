@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class ModifyGrafanaInstanceRequest extends AbstractModel{
 
     /**
-    * Instance ID
+    * TCMG instance ID, such as “grafana-abcdefgh”.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance name
+    * TCMG instance name, such as “test”.
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get TCMG instance ID, such as “grafana-abcdefgh”. 
+     * @return InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set TCMG instance ID, such as “grafana-abcdefgh”.
+     * @param InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get TCMG instance name, such as “test”. 
+     * @return InstanceName TCMG instance name, such as “test”.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set TCMG instance name, such as “test”.
+     * @param InstanceName TCMG instance name, such as “test”.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

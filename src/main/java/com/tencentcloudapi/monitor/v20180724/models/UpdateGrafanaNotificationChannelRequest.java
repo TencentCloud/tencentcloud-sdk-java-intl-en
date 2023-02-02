@@ -23,21 +23,21 @@ import java.util.HashMap;
 public class UpdateGrafanaNotificationChannelRequest extends AbstractModel{
 
     /**
-    * Channel ID
+    * Channel ID, such as “nchannel-abcd1234”.
     */
     @SerializedName("ChannelId")
     @Expose
     private String ChannelId;
 
     /**
-    * Instance ID.
+    * TCMG instance ID, such as “grafana-12345678”.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Channel name
+    * Alert channel name, such as “test”.
     */
     @SerializedName("ChannelName")
     @Expose
@@ -65,48 +65,48 @@ public class UpdateGrafanaNotificationChannelRequest extends AbstractModel{
     private String [] OrganizationIds;
 
     /**
-     * Get Channel ID 
-     * @return ChannelId Channel ID
+     * Get Channel ID, such as “nchannel-abcd1234”. 
+     * @return ChannelId Channel ID, such as “nchannel-abcd1234”.
      */
     public String getChannelId() {
         return this.ChannelId;
     }
 
     /**
-     * Set Channel ID
-     * @param ChannelId Channel ID
+     * Set Channel ID, such as “nchannel-abcd1234”.
+     * @param ChannelId Channel ID, such as “nchannel-abcd1234”.
      */
     public void setChannelId(String ChannelId) {
         this.ChannelId = ChannelId;
     }
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+     * Get TCMG instance ID, such as “grafana-12345678”. 
+     * @return InstanceId TCMG instance ID, such as “grafana-12345678”.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set TCMG instance ID, such as “grafana-12345678”.
+     * @param InstanceId TCMG instance ID, such as “grafana-12345678”.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Channel name 
-     * @return ChannelName Channel name
+     * Get Alert channel name, such as “test”. 
+     * @return ChannelName Alert channel name, such as “test”.
      */
     public String getChannelName() {
         return this.ChannelName;
     }
 
     /**
-     * Set Channel name
-     * @param ChannelName Channel name
+     * Set Alert channel name, such as “test”.
+     * @param ChannelName Alert channel name, such as “test”.
      */
     public void setChannelName(String ChannelName) {
         this.ChannelName = ChannelName;

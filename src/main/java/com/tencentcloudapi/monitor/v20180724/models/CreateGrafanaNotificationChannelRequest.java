@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class CreateGrafanaNotificationChannelRequest extends AbstractModel{
 
     /**
-    * Instance ID.
+    * TCMG instance ID, such as “grafana-abcdefgh”.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Channel name
+    * Alert channel name, such as “test”.
     */
     @SerializedName("ChannelName")
     @Expose
@@ -65,32 +65,32 @@ public class CreateGrafanaNotificationChannelRequest extends AbstractModel{
     private String [] OrganizationIds;
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+     * Get TCMG instance ID, such as “grafana-abcdefgh”. 
+     * @return InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set TCMG instance ID, such as “grafana-abcdefgh”.
+     * @param InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Channel name 
-     * @return ChannelName Channel name
+     * Get Alert channel name, such as “test”. 
+     * @return ChannelName Alert channel name, such as “test”.
      */
     public String getChannelName() {
         return this.ChannelName;
     }
 
     /**
-     * Set Channel name
-     * @param ChannelName Channel name
+     * Set Alert channel name, such as “test”.
+     * @param ChannelName Alert channel name, such as “test”.
      */
     public void setChannelName(String ChannelName) {
         this.ChannelName = ChannelName;

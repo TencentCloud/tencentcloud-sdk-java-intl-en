@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class UpdatePrometheusScrapeJobRequest extends AbstractModel{
 
     /**
-    * Instance ID
+    * TMP instance ID, such as “prom-abcd1234”.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Agent ID
+    * Agent ID such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console
     */
     @SerializedName("AgentId")
     @Expose
     private String AgentId;
 
     /**
-    * Scrape task ID
+    * Scrape task ID such as “job-abcd1234”. You can go to the **Agent Management** page and obtain the ID in the pop-up **Create Scrape Task** window.
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * Scrape task configuration
+    * Scrape task ID in the format of “job_name:xx”
     */
     @SerializedName("Config")
     @Expose
     private String Config;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get TMP instance ID, such as “prom-abcd1234”. 
+     * @return InstanceId TMP instance ID, such as “prom-abcd1234”.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set TMP instance ID, such as “prom-abcd1234”.
+     * @param InstanceId TMP instance ID, such as “prom-abcd1234”.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Agent ID 
-     * @return AgentId Agent ID
+     * Get Agent ID such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console 
+     * @return AgentId Agent ID such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console
      */
     public String getAgentId() {
         return this.AgentId;
     }
 
     /**
-     * Set Agent ID
-     * @param AgentId Agent ID
+     * Set Agent ID such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console
+     * @param AgentId Agent ID such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console
      */
     public void setAgentId(String AgentId) {
         this.AgentId = AgentId;
     }
 
     /**
-     * Get Scrape task ID 
-     * @return JobId Scrape task ID
+     * Get Scrape task ID such as “job-abcd1234”. You can go to the **Agent Management** page and obtain the ID in the pop-up **Create Scrape Task** window. 
+     * @return JobId Scrape task ID such as “job-abcd1234”. You can go to the **Agent Management** page and obtain the ID in the pop-up **Create Scrape Task** window.
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set Scrape task ID
-     * @param JobId Scrape task ID
+     * Set Scrape task ID such as “job-abcd1234”. You can go to the **Agent Management** page and obtain the ID in the pop-up **Create Scrape Task** window.
+     * @param JobId Scrape task ID such as “job-abcd1234”. You can go to the **Agent Management** page and obtain the ID in the pop-up **Create Scrape Task** window.
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get Scrape task configuration 
-     * @return Config Scrape task configuration
+     * Get Scrape task ID in the format of “job_name:xx” 
+     * @return Config Scrape task ID in the format of “job_name:xx”
      */
     public String getConfig() {
         return this.Config;
     }
 
     /**
-     * Set Scrape task configuration
-     * @param Config Scrape task configuration
+     * Set Scrape task ID in the format of “job_name:xx”
+     * @param Config Scrape task ID in the format of “job_name:xx”
      */
     public void setConfig(String Config) {
         this.Config = Config;

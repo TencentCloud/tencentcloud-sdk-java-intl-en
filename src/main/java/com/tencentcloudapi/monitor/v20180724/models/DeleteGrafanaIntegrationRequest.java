@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DeleteGrafanaIntegrationRequest extends AbstractModel{
 
     /**
-    * Instance ID
+    * TCMG instance ID, such as “grafana-12345678”.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Integration ID
+    * Integration ID, such as “integration-abcd1234”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
     */
     @SerializedName("IntegrationId")
     @Expose
     private String IntegrationId;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get TCMG instance ID, such as “grafana-12345678”. 
+     * @return InstanceId TCMG instance ID, such as “grafana-12345678”.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set TCMG instance ID, such as “grafana-12345678”.
+     * @param InstanceId TCMG instance ID, such as “grafana-12345678”.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Integration ID 
-     * @return IntegrationId Integration ID
+     * Get Integration ID, such as “integration-abcd1234”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**. 
+     * @return IntegrationId Integration ID, such as “integration-abcd1234”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
      */
     public String getIntegrationId() {
         return this.IntegrationId;
     }
 
     /**
-     * Set Integration ID
-     * @param IntegrationId Integration ID
+     * Set Integration ID, such as “integration-abcd1234”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
+     * @param IntegrationId Integration ID, such as “integration-abcd1234”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
      */
     public void setIntegrationId(String IntegrationId) {
         this.IntegrationId = IntegrationId;

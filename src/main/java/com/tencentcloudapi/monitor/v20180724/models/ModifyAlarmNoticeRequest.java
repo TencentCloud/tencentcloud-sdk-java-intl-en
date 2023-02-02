@@ -79,6 +79,13 @@ public class ModifyAlarmNoticeRequest extends AbstractModel{
     private CLSNotice [] CLSNotices;
 
     /**
+    * List of IDs of the alerting rules bound to an alarm notification template
+    */
+    @SerializedName("PolicyIds")
+    @Expose
+    private String [] PolicyIds;
+
+    /**
      * Get Module name. Enter "monitor" here 
      * @return Module Module name. Enter "monitor" here
      */
@@ -206,6 +213,22 @@ public class ModifyAlarmNoticeRequest extends AbstractModel{
         this.CLSNotices = CLSNotices;
     }
 
+    /**
+     * Get List of IDs of the alerting rules bound to an alarm notification template 
+     * @return PolicyIds List of IDs of the alerting rules bound to an alarm notification template
+     */
+    public String [] getPolicyIds() {
+        return this.PolicyIds;
+    }
+
+    /**
+     * Set List of IDs of the alerting rules bound to an alarm notification template
+     * @param PolicyIds List of IDs of the alerting rules bound to an alarm notification template
+     */
+    public void setPolicyIds(String [] PolicyIds) {
+        this.PolicyIds = PolicyIds;
+    }
+
     public ModifyAlarmNoticeRequest() {
     }
 
@@ -247,6 +270,12 @@ public class ModifyAlarmNoticeRequest extends AbstractModel{
                 this.CLSNotices[i] = new CLSNotice(source.CLSNotices[i]);
             }
         }
+        if (source.PolicyIds != null) {
+            this.PolicyIds = new String[source.PolicyIds.length];
+            for (int i = 0; i < source.PolicyIds.length; i++) {
+                this.PolicyIds[i] = new String(source.PolicyIds[i]);
+            }
+        }
     }
 
 
@@ -262,6 +291,7 @@ public class ModifyAlarmNoticeRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "UserNotices.", this.UserNotices);
         this.setParamArrayObj(map, prefix + "URLNotices.", this.URLNotices);
         this.setParamArrayObj(map, prefix + "CLSNotices.", this.CLSNotices);
+        this.setParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
 
     }
 }

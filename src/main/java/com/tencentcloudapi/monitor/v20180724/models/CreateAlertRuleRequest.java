@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateAlertRuleRequest extends AbstractModel{
 
     /**
-    * Prometheus instance ID
+    * TMP instance ID, such as “prom-abcd1234”.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -37,7 +37,7 @@ public class CreateAlertRuleRequest extends AbstractModel{
     private String RuleName;
 
     /**
-    * Rule expression
+    * Alerting rule expression. For more information, see <a href="https://www.tencentcloud.com/document/product/1116/43192?lang=en&pg=">Alerting Rule Description</a>
     */
     @SerializedName("Expr")
     @Expose
@@ -90,16 +90,16 @@ Alert object and alert message are special fields of Prometheus Rule Annotations
     private String Type;
 
     /**
-     * Get Prometheus instance ID 
-     * @return InstanceId Prometheus instance ID
+     * Get TMP instance ID, such as “prom-abcd1234”. 
+     * @return InstanceId TMP instance ID, such as “prom-abcd1234”.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Prometheus instance ID
-     * @param InstanceId Prometheus instance ID
+     * Set TMP instance ID, such as “prom-abcd1234”.
+     * @param InstanceId TMP instance ID, such as “prom-abcd1234”.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -122,16 +122,16 @@ Alert object and alert message are special fields of Prometheus Rule Annotations
     }
 
     /**
-     * Get Rule expression 
-     * @return Expr Rule expression
+     * Get Alerting rule expression. For more information, see <a href="https://www.tencentcloud.com/document/product/1116/43192?lang=en&pg=">Alerting Rule Description</a> 
+     * @return Expr Alerting rule expression. For more information, see <a href="https://www.tencentcloud.com/document/product/1116/43192?lang=en&pg=">Alerting Rule Description</a>
      */
     public String getExpr() {
         return this.Expr;
     }
 
     /**
-     * Set Rule expression
-     * @param Expr Rule expression
+     * Set Alerting rule expression. For more information, see <a href="https://www.tencentcloud.com/document/product/1116/43192?lang=en&pg=">Alerting Rule Description</a>
+     * @param Expr Alerting rule expression. For more information, see <a href="https://www.tencentcloud.com/document/product/1116/43192?lang=en&pg=">Alerting Rule Description</a>
      */
     public void setExpr(String Expr) {
         this.Expr = Expr;

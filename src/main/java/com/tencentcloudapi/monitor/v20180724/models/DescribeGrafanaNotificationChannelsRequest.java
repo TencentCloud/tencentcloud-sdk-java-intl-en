@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeGrafanaNotificationChannelsRequest extends AbstractModel{
 
     /**
-    * Instance ID.
+    * TCMG instance ID, such as “grafana-12345678”.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -44,37 +44,37 @@ public class DescribeGrafanaNotificationChannelsRequest extends AbstractModel{
     private Long Limit;
 
     /**
-    * Channel name
+    * Alert channel name, such as “test”.
     */
     @SerializedName("ChannelName")
     @Expose
     private String ChannelName;
 
     /**
-    * Channel ID
+    * Alert channel ID, such as “nchannel-abcd1234”.
     */
     @SerializedName("ChannelIDs")
     @Expose
     private String [] ChannelIDs;
 
     /**
-    * Status
+    * Alert channel status
     */
     @SerializedName("ChannelState")
     @Expose
     private Long ChannelState;
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+     * Get TCMG instance ID, such as “grafana-12345678”. 
+     * @return InstanceId TCMG instance ID, such as “grafana-12345678”.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set TCMG instance ID, such as “grafana-12345678”.
+     * @param InstanceId TCMG instance ID, such as “grafana-12345678”.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -113,48 +113,48 @@ public class DescribeGrafanaNotificationChannelsRequest extends AbstractModel{
     }
 
     /**
-     * Get Channel name 
-     * @return ChannelName Channel name
+     * Get Alert channel name, such as “test”. 
+     * @return ChannelName Alert channel name, such as “test”.
      */
     public String getChannelName() {
         return this.ChannelName;
     }
 
     /**
-     * Set Channel name
-     * @param ChannelName Channel name
+     * Set Alert channel name, such as “test”.
+     * @param ChannelName Alert channel name, such as “test”.
      */
     public void setChannelName(String ChannelName) {
         this.ChannelName = ChannelName;
     }
 
     /**
-     * Get Channel ID 
-     * @return ChannelIDs Channel ID
+     * Get Alert channel ID, such as “nchannel-abcd1234”. 
+     * @return ChannelIDs Alert channel ID, such as “nchannel-abcd1234”.
      */
     public String [] getChannelIDs() {
         return this.ChannelIDs;
     }
 
     /**
-     * Set Channel ID
-     * @param ChannelIDs Channel ID
+     * Set Alert channel ID, such as “nchannel-abcd1234”.
+     * @param ChannelIDs Alert channel ID, such as “nchannel-abcd1234”.
      */
     public void setChannelIDs(String [] ChannelIDs) {
         this.ChannelIDs = ChannelIDs;
     }
 
     /**
-     * Get Status 
-     * @return ChannelState Status
+     * Get Alert channel status 
+     * @return ChannelState Alert channel status
      */
     public Long getChannelState() {
         return this.ChannelState;
     }
 
     /**
-     * Set Status
-     * @param ChannelState Status
+     * Set Alert channel status
+     * @param ChannelState Alert channel status
      */
     public void setChannelState(Long ChannelState) {
         this.ChannelState = ChannelState;

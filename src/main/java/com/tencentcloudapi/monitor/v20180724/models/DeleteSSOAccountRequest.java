@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DeleteSSOAccountRequest extends AbstractModel{
 
     /**
-    * Instance ID
+    * TCMG instance ID, such as “grafana-abcdefgh”.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * User account ID
+    * User account ID, such as “10000000”.
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get TCMG instance ID, such as “grafana-abcdefgh”. 
+     * @return InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set TCMG instance ID, such as “grafana-abcdefgh”.
+     * @param InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get User account ID 
-     * @return UserId User account ID
+     * Get User account ID, such as “10000000”. 
+     * @return UserId User account ID, such as “10000000”.
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set User account ID
-     * @param UserId User account ID
+     * Set User account ID, such as “10000000”.
+     * @param UserId User account ID, such as “10000000”.
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;

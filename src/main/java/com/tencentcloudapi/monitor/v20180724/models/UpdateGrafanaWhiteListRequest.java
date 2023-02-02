@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class UpdateGrafanaWhiteListRequest extends AbstractModel{
 
     /**
-    * Instance name
+    * TCMG instance ID, such as “grafana-abcdefgh”.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Allowlist in array
+    * Array of public IPs (such as “127.0.0.1”) in the allowlist, which can be viewed through the `DescribeGrafanaWhiteList` API.
     */
     @SerializedName("Whitelist")
     @Expose
     private String [] Whitelist;
 
     /**
-     * Get Instance name 
-     * @return InstanceId Instance name
+     * Get TCMG instance ID, such as “grafana-abcdefgh”. 
+     * @return InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceId Instance name
+     * Set TCMG instance ID, such as “grafana-abcdefgh”.
+     * @param InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Allowlist in array 
-     * @return Whitelist Allowlist in array
+     * Get Array of public IPs (such as “127.0.0.1”) in the allowlist, which can be viewed through the `DescribeGrafanaWhiteList` API. 
+     * @return Whitelist Array of public IPs (such as “127.0.0.1”) in the allowlist, which can be viewed through the `DescribeGrafanaWhiteList` API.
      */
     public String [] getWhitelist() {
         return this.Whitelist;
     }
 
     /**
-     * Set Allowlist in array
-     * @param Whitelist Allowlist in array
+     * Set Array of public IPs (such as “127.0.0.1”) in the allowlist, which can be viewed through the `DescribeGrafanaWhiteList` API.
+     * @param Whitelist Array of public IPs (such as “127.0.0.1”) in the allowlist, which can be viewed through the `DescribeGrafanaWhiteList` API.
      */
     public void setWhitelist(String [] Whitelist) {
         this.Whitelist = Whitelist;

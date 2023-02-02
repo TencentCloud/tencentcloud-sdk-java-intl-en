@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class DescribeInstalledPluginsRequest extends AbstractModel{
 
     /**
-    * Instance ID
+    * TCMG instance ID, such as “grafana-kleu3gt0”.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Filter by plugin ID
+    * Filter by plugin ID such as “grafana-piechart-panel”. You can view the IDs of installed plugins through the `DescribeInstalledPlugins` API.
     */
     @SerializedName("PluginId")
     @Expose
     private String PluginId;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get TCMG instance ID, such as “grafana-kleu3gt0”. 
+     * @return InstanceId TCMG instance ID, such as “grafana-kleu3gt0”.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set TCMG instance ID, such as “grafana-kleu3gt0”.
+     * @param InstanceId TCMG instance ID, such as “grafana-kleu3gt0”.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Filter by plugin ID 
-     * @return PluginId Filter by plugin ID
+     * Get Filter by plugin ID such as “grafana-piechart-panel”. You can view the IDs of installed plugins through the `DescribeInstalledPlugins` API. 
+     * @return PluginId Filter by plugin ID such as “grafana-piechart-panel”. You can view the IDs of installed plugins through the `DescribeInstalledPlugins` API.
      */
     public String getPluginId() {
         return this.PluginId;
     }
 
     /**
-     * Set Filter by plugin ID
-     * @param PluginId Filter by plugin ID
+     * Set Filter by plugin ID such as “grafana-piechart-panel”. You can view the IDs of installed plugins through the `DescribeInstalledPlugins` API.
+     * @param PluginId Filter by plugin ID such as “grafana-piechart-panel”. You can view the IDs of installed plugins through the `DescribeInstalledPlugins` API.
      */
     public void setPluginId(String PluginId) {
         this.PluginId = PluginId;

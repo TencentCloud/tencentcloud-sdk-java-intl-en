@@ -58,6 +58,20 @@ public class UnBindingPolicyObjectRequest extends AbstractModel{
     private String PolicyId;
 
     /**
+    * The alert configured for an event
+    */
+    @SerializedName("EbSubject")
+    @Expose
+    private String EbSubject;
+
+    /**
+    * Whether the event alert has been configured
+    */
+    @SerializedName("EbEventFlag")
+    @Expose
+    private Long EbEventFlag;
+
+    /**
      * Get The value is fixed to monitor. 
      * @return Module The value is fixed to monitor.
      */
@@ -137,6 +151,38 @@ public class UnBindingPolicyObjectRequest extends AbstractModel{
         this.PolicyId = PolicyId;
     }
 
+    /**
+     * Get The alert configured for an event 
+     * @return EbSubject The alert configured for an event
+     */
+    public String getEbSubject() {
+        return this.EbSubject;
+    }
+
+    /**
+     * Set The alert configured for an event
+     * @param EbSubject The alert configured for an event
+     */
+    public void setEbSubject(String EbSubject) {
+        this.EbSubject = EbSubject;
+    }
+
+    /**
+     * Get Whether the event alert has been configured 
+     * @return EbEventFlag Whether the event alert has been configured
+     */
+    public Long getEbEventFlag() {
+        return this.EbEventFlag;
+    }
+
+    /**
+     * Set Whether the event alert has been configured
+     * @param EbEventFlag Whether the event alert has been configured
+     */
+    public void setEbEventFlag(Long EbEventFlag) {
+        this.EbEventFlag = EbEventFlag;
+    }
+
     public UnBindingPolicyObjectRequest() {
     }
 
@@ -163,6 +209,12 @@ public class UnBindingPolicyObjectRequest extends AbstractModel{
         if (source.PolicyId != null) {
             this.PolicyId = new String(source.PolicyId);
         }
+        if (source.EbSubject != null) {
+            this.EbSubject = new String(source.EbSubject);
+        }
+        if (source.EbEventFlag != null) {
+            this.EbEventFlag = new Long(source.EbEventFlag);
+        }
     }
 
 
@@ -175,6 +227,8 @@ public class UnBindingPolicyObjectRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "UniqueId.", this.UniqueId);
         this.setParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
         this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
+        this.setParamSimple(map, prefix + "EbSubject", this.EbSubject);
+        this.setParamSimple(map, prefix + "EbEventFlag", this.EbEventFlag);
 
     }
 }

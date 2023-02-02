@@ -149,6 +149,13 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
     private Long MigrateFlag;
 
     /**
+    * The alert configured for an event
+    */
+    @SerializedName("EbSubject")
+    @Expose
+    private String EbSubject;
+
+    /**
      * Get Value fixed at "monitor" 
      * @return Module Value fixed at "monitor"
      */
@@ -436,6 +443,22 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
         this.MigrateFlag = MigrateFlag;
     }
 
+    /**
+     * Get The alert configured for an event 
+     * @return EbSubject The alert configured for an event
+     */
+    public String getEbSubject() {
+        return this.EbSubject;
+    }
+
+    /**
+     * Set The alert configured for an event
+     * @param EbSubject The alert configured for an event
+     */
+    public void setEbSubject(String EbSubject) {
+        this.EbSubject = EbSubject;
+    }
+
     public CreateAlarmPolicyRequest() {
     }
 
@@ -513,6 +536,9 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
         if (source.MigrateFlag != null) {
             this.MigrateFlag = new Long(source.MigrateFlag);
         }
+        if (source.EbSubject != null) {
+            this.EbSubject = new String(source.EbSubject);
+        }
     }
 
 
@@ -538,6 +564,7 @@ public class CreateAlarmPolicyRequest extends AbstractModel{
         this.setParamObj(map, prefix + "LogAlarmReqInfo.", this.LogAlarmReqInfo);
         this.setParamArrayObj(map, prefix + "HierarchicalNotices.", this.HierarchicalNotices);
         this.setParamSimple(map, prefix + "MigrateFlag", this.MigrateFlag);
+        this.setParamSimple(map, prefix + "EbSubject", this.EbSubject);
 
     }
 }

@@ -79,6 +79,34 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
     private LogAlarmReq LogAlarmReqInfo;
 
     /**
+    * Template ID, which is dedicated to TMP.
+    */
+    @SerializedName("NoticeIds")
+    @Expose
+    private String [] NoticeIds;
+
+    /**
+    * Status (`0`: Disabled; `1`: Enabled)
+    */
+    @SerializedName("Enable")
+    @Expose
+    private Long Enable;
+
+    /**
+    * Name of the policy dedicated to TMP
+    */
+    @SerializedName("PolicyName")
+    @Expose
+    private String PolicyName;
+
+    /**
+    * The alert configured for an event
+    */
+    @SerializedName("EbSubject")
+    @Expose
+    private String EbSubject;
+
+    /**
      * Get Module name, which is fixed at "monitor" 
      * @return Module Module name, which is fixed at "monitor"
      */
@@ -206,6 +234,70 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
         this.LogAlarmReqInfo = LogAlarmReqInfo;
     }
 
+    /**
+     * Get Template ID, which is dedicated to TMP. 
+     * @return NoticeIds Template ID, which is dedicated to TMP.
+     */
+    public String [] getNoticeIds() {
+        return this.NoticeIds;
+    }
+
+    /**
+     * Set Template ID, which is dedicated to TMP.
+     * @param NoticeIds Template ID, which is dedicated to TMP.
+     */
+    public void setNoticeIds(String [] NoticeIds) {
+        this.NoticeIds = NoticeIds;
+    }
+
+    /**
+     * Get Status (`0`: Disabled; `1`: Enabled) 
+     * @return Enable Status (`0`: Disabled; `1`: Enabled)
+     */
+    public Long getEnable() {
+        return this.Enable;
+    }
+
+    /**
+     * Set Status (`0`: Disabled; `1`: Enabled)
+     * @param Enable Status (`0`: Disabled; `1`: Enabled)
+     */
+    public void setEnable(Long Enable) {
+        this.Enable = Enable;
+    }
+
+    /**
+     * Get Name of the policy dedicated to TMP 
+     * @return PolicyName Name of the policy dedicated to TMP
+     */
+    public String getPolicyName() {
+        return this.PolicyName;
+    }
+
+    /**
+     * Set Name of the policy dedicated to TMP
+     * @param PolicyName Name of the policy dedicated to TMP
+     */
+    public void setPolicyName(String PolicyName) {
+        this.PolicyName = PolicyName;
+    }
+
+    /**
+     * Get The alert configured for an event 
+     * @return EbSubject The alert configured for an event
+     */
+    public String getEbSubject() {
+        return this.EbSubject;
+    }
+
+    /**
+     * Set The alert configured for an event
+     * @param EbSubject The alert configured for an event
+     */
+    public void setEbSubject(String EbSubject) {
+        this.EbSubject = EbSubject;
+    }
+
     public ModifyAlarmPolicyConditionRequest() {
     }
 
@@ -241,6 +333,21 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
         if (source.LogAlarmReqInfo != null) {
             this.LogAlarmReqInfo = new LogAlarmReq(source.LogAlarmReqInfo);
         }
+        if (source.NoticeIds != null) {
+            this.NoticeIds = new String[source.NoticeIds.length];
+            for (int i = 0; i < source.NoticeIds.length; i++) {
+                this.NoticeIds[i] = new String(source.NoticeIds[i]);
+            }
+        }
+        if (source.Enable != null) {
+            this.Enable = new Long(source.Enable);
+        }
+        if (source.PolicyName != null) {
+            this.PolicyName = new String(source.PolicyName);
+        }
+        if (source.EbSubject != null) {
+            this.EbSubject = new String(source.EbSubject);
+        }
     }
 
 
@@ -256,6 +363,10 @@ public class ModifyAlarmPolicyConditionRequest extends AbstractModel{
         this.setParamObj(map, prefix + "Filter.", this.Filter);
         this.setParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
         this.setParamObj(map, prefix + "LogAlarmReqInfo.", this.LogAlarmReqInfo);
+        this.setParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
+        this.setParamSimple(map, prefix + "Enable", this.Enable);
+        this.setParamSimple(map, prefix + "PolicyName", this.PolicyName);
+        this.setParamSimple(map, prefix + "EbSubject", this.EbSubject);
 
     }
 }

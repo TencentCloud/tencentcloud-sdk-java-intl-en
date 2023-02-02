@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class EnableGrafanaInternetRequest extends AbstractModel{
 
     /**
-    * Instance ID
+    * TCMG instance ID, such as “grafana-kleu3gt0”.
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-    * Enable or disable
+    * Whether to enable public network access (`true`: Yes; `false`: No)
     */
     @SerializedName("EnableInternet")
     @Expose
     private Boolean EnableInternet;
 
     /**
-     * Get Instance ID 
-     * @return InstanceID Instance ID
+     * Get TCMG instance ID, such as “grafana-kleu3gt0”. 
+     * @return InstanceID TCMG instance ID, such as “grafana-kleu3gt0”.
      */
     public String getInstanceID() {
         return this.InstanceID;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceID Instance ID
+     * Set TCMG instance ID, such as “grafana-kleu3gt0”.
+     * @param InstanceID TCMG instance ID, such as “grafana-kleu3gt0”.
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get Enable or disable 
-     * @return EnableInternet Enable or disable
+     * Get Whether to enable public network access (`true`: Yes; `false`: No) 
+     * @return EnableInternet Whether to enable public network access (`true`: Yes; `false`: No)
      */
     public Boolean getEnableInternet() {
         return this.EnableInternet;
     }
 
     /**
-     * Set Enable or disable
-     * @param EnableInternet Enable or disable
+     * Set Whether to enable public network access (`true`: Yes; `false`: No)
+     * @param EnableInternet Whether to enable public network access (`true`: Yes; `false`: No)
      */
     public void setEnableInternet(Boolean EnableInternet) {
         this.EnableInternet = EnableInternet;

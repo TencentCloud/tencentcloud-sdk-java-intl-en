@@ -37,6 +37,13 @@ public class DeleteAlarmNoticesRequest extends AbstractModel{
     private String [] NoticeIds;
 
     /**
+    * Binding between a notification template and a policy
+    */
+    @SerializedName("NoticeBindPolicys")
+    @Expose
+    private NoticeBindPolicys [] NoticeBindPolicys;
+
+    /**
      * Get Module name. Enter "monitor" here 
      * @return Module Module name. Enter "monitor" here
      */
@@ -68,6 +75,22 @@ public class DeleteAlarmNoticesRequest extends AbstractModel{
         this.NoticeIds = NoticeIds;
     }
 
+    /**
+     * Get Binding between a notification template and a policy 
+     * @return NoticeBindPolicys Binding between a notification template and a policy
+     */
+    public NoticeBindPolicys [] getNoticeBindPolicys() {
+        return this.NoticeBindPolicys;
+    }
+
+    /**
+     * Set Binding between a notification template and a policy
+     * @param NoticeBindPolicys Binding between a notification template and a policy
+     */
+    public void setNoticeBindPolicys(NoticeBindPolicys [] NoticeBindPolicys) {
+        this.NoticeBindPolicys = NoticeBindPolicys;
+    }
+
     public DeleteAlarmNoticesRequest() {
     }
 
@@ -85,6 +108,12 @@ public class DeleteAlarmNoticesRequest extends AbstractModel{
                 this.NoticeIds[i] = new String(source.NoticeIds[i]);
             }
         }
+        if (source.NoticeBindPolicys != null) {
+            this.NoticeBindPolicys = new NoticeBindPolicys[source.NoticeBindPolicys.length];
+            for (int i = 0; i < source.NoticeBindPolicys.length; i++) {
+                this.NoticeBindPolicys[i] = new NoticeBindPolicys(source.NoticeBindPolicys[i]);
+            }
+        }
     }
 
 
@@ -94,6 +123,7 @@ public class DeleteAlarmNoticesRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Module", this.Module);
         this.setParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
+        this.setParamArrayObj(map, prefix + "NoticeBindPolicys.", this.NoticeBindPolicys);
 
     }
 }

@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class EnableSSOCamCheckRequest extends AbstractModel{
 
     /**
-    * Instance ID
+    * TCMG instance ID, such as “grafana-abcdefgh”.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Whether to enable CAM authentication
+    * Whether to enable CAM authentication (`true`: Yes; `false`: No)
     */
     @SerializedName("EnableSSOCamCheck")
     @Expose
     private Boolean EnableSSOCamCheck;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get TCMG instance ID, such as “grafana-abcdefgh”. 
+     * @return InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set TCMG instance ID, such as “grafana-abcdefgh”.
+     * @param InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Whether to enable CAM authentication 
-     * @return EnableSSOCamCheck Whether to enable CAM authentication
+     * Get Whether to enable CAM authentication (`true`: Yes; `false`: No) 
+     * @return EnableSSOCamCheck Whether to enable CAM authentication (`true`: Yes; `false`: No)
      */
     public Boolean getEnableSSOCamCheck() {
         return this.EnableSSOCamCheck;
     }
 
     /**
-     * Set Whether to enable CAM authentication
-     * @param EnableSSOCamCheck Whether to enable CAM authentication
+     * Set Whether to enable CAM authentication (`true`: Yes; `false`: No)
+     * @param EnableSSOCamCheck Whether to enable CAM authentication (`true`: Yes; `false`: No)
      */
     public void setEnableSSOCamCheck(Boolean EnableSSOCamCheck) {
         this.EnableSSOCamCheck = EnableSSOCamCheck;
