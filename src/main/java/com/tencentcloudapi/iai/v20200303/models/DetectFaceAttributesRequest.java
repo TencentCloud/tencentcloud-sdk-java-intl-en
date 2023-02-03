@@ -55,11 +55,11 @@ PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
 
     /**
     * Whether to return attributes such as age, gender, and emotion. 
-Valid values (case-insensitive): None, Age, Beauty, Emotion, Eye, Eyebrow, 
-Gender, Hair, Hat, Headpose, Mask, Mouth, Moustache, Nose, Shape, Skin, Smile. 
-Default value: None, indicating that no attributes need to be returned. 
-You need to combine the attributes into a string and separate them with commas. The sequence of the attributes is not limited. 
-For more information on the attributes, please see the output parameters as described below. 
+Valid values (case-insensitive): None, Age, Beauty, Emotion, Eye, Eyebrow, Gender, Hair, Hat, Headpose, Mask, Mouth, Moustache, Nose, Shape, Skin, Smile. 
+  
+`None` indicates that no attributes need to be returned, which is the default value; that is, if the `FaceAttributesType` attribute is empty, the values of all attributes will be `0`.
+You need to combine the attributes into a string and separate them by comma. The sequence of the attributes is not limited. 
+For more information on the attributes, see the output parameters as described below. 
 The face attribute information of up to 5 largest faces in the image will be returned, and `AttributesInfo` of the 6th and rest faces is meaningless.
     */
     @SerializedName("FaceAttributesType")
@@ -170,18 +170,18 @@ PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
 
     /**
      * Get Whether to return attributes such as age, gender, and emotion. 
-Valid values (case-insensitive): None, Age, Beauty, Emotion, Eye, Eyebrow, 
-Gender, Hair, Hat, Headpose, Mask, Mouth, Moustache, Nose, Shape, Skin, Smile. 
-Default value: None, indicating that no attributes need to be returned. 
-You need to combine the attributes into a string and separate them with commas. The sequence of the attributes is not limited. 
-For more information on the attributes, please see the output parameters as described below. 
+Valid values (case-insensitive): None, Age, Beauty, Emotion, Eye, Eyebrow, Gender, Hair, Hat, Headpose, Mask, Mouth, Moustache, Nose, Shape, Skin, Smile. 
+  
+`None` indicates that no attributes need to be returned, which is the default value; that is, if the `FaceAttributesType` attribute is empty, the values of all attributes will be `0`.
+You need to combine the attributes into a string and separate them by comma. The sequence of the attributes is not limited. 
+For more information on the attributes, see the output parameters as described below. 
 The face attribute information of up to 5 largest faces in the image will be returned, and `AttributesInfo` of the 6th and rest faces is meaningless. 
      * @return FaceAttributesType Whether to return attributes such as age, gender, and emotion. 
-Valid values (case-insensitive): None, Age, Beauty, Emotion, Eye, Eyebrow, 
-Gender, Hair, Hat, Headpose, Mask, Mouth, Moustache, Nose, Shape, Skin, Smile. 
-Default value: None, indicating that no attributes need to be returned. 
-You need to combine the attributes into a string and separate them with commas. The sequence of the attributes is not limited. 
-For more information on the attributes, please see the output parameters as described below. 
+Valid values (case-insensitive): None, Age, Beauty, Emotion, Eye, Eyebrow, Gender, Hair, Hat, Headpose, Mask, Mouth, Moustache, Nose, Shape, Skin, Smile. 
+  
+`None` indicates that no attributes need to be returned, which is the default value; that is, if the `FaceAttributesType` attribute is empty, the values of all attributes will be `0`.
+You need to combine the attributes into a string and separate them by comma. The sequence of the attributes is not limited. 
+For more information on the attributes, see the output parameters as described below. 
 The face attribute information of up to 5 largest faces in the image will be returned, and `AttributesInfo` of the 6th and rest faces is meaningless.
      */
     public String getFaceAttributesType() {
@@ -190,18 +190,18 @@ The face attribute information of up to 5 largest faces in the image will be ret
 
     /**
      * Set Whether to return attributes such as age, gender, and emotion. 
-Valid values (case-insensitive): None, Age, Beauty, Emotion, Eye, Eyebrow, 
-Gender, Hair, Hat, Headpose, Mask, Mouth, Moustache, Nose, Shape, Skin, Smile. 
-Default value: None, indicating that no attributes need to be returned. 
-You need to combine the attributes into a string and separate them with commas. The sequence of the attributes is not limited. 
-For more information on the attributes, please see the output parameters as described below. 
+Valid values (case-insensitive): None, Age, Beauty, Emotion, Eye, Eyebrow, Gender, Hair, Hat, Headpose, Mask, Mouth, Moustache, Nose, Shape, Skin, Smile. 
+  
+`None` indicates that no attributes need to be returned, which is the default value; that is, if the `FaceAttributesType` attribute is empty, the values of all attributes will be `0`.
+You need to combine the attributes into a string and separate them by comma. The sequence of the attributes is not limited. 
+For more information on the attributes, see the output parameters as described below. 
 The face attribute information of up to 5 largest faces in the image will be returned, and `AttributesInfo` of the 6th and rest faces is meaningless.
      * @param FaceAttributesType Whether to return attributes such as age, gender, and emotion. 
-Valid values (case-insensitive): None, Age, Beauty, Emotion, Eye, Eyebrow, 
-Gender, Hair, Hat, Headpose, Mask, Mouth, Moustache, Nose, Shape, Skin, Smile. 
-Default value: None, indicating that no attributes need to be returned. 
-You need to combine the attributes into a string and separate them with commas. The sequence of the attributes is not limited. 
-For more information on the attributes, please see the output parameters as described below. 
+Valid values (case-insensitive): None, Age, Beauty, Emotion, Eye, Eyebrow, Gender, Hair, Hat, Headpose, Mask, Mouth, Moustache, Nose, Shape, Skin, Smile. 
+  
+`None` indicates that no attributes need to be returned, which is the default value; that is, if the `FaceAttributesType` attribute is empty, the values of all attributes will be `0`.
+You need to combine the attributes into a string and separate them by comma. The sequence of the attributes is not limited. 
+For more information on the attributes, see the output parameters as described below. 
 The face attribute information of up to 5 largest faces in the image will be returned, and `AttributesInfo` of the 6th and rest faces is meaningless.
      */
     public void setFaceAttributesType(String FaceAttributesType) {

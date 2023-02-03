@@ -34,14 +34,14 @@ The 0.1%, 0.01%, and 0.001% FARs on v2.0 correspond to scores of 70, 80, and 90,
     private Float Score;
 
     /**
-    * Whether the person in the image matches the `PersonId`.
+    * Whether the person is the one in the image. The fixed threshold score is 60. If you want to adjust the threshold more flexibly, you can take the returned `Score` parameter value for judgment.
     */
     @SerializedName("IsMatch")
     @Expose
     private Boolean IsMatch;
 
     /**
-    * Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created. For more information, please see [Algorithm Model Version](https://intl.cloud.tencent.com/document/product/867/40042?from_cn_redirect=1)
+    * Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created.
     */
     @SerializedName("FaceModelVersion")
     @Expose
@@ -87,32 +87,32 @@ The 0.1%, 0.01%, and 0.001% FARs on v2.0 correspond to scores of 70, 80, and 90,
     }
 
     /**
-     * Get Whether the person in the image matches the `PersonId`. 
-     * @return IsMatch Whether the person in the image matches the `PersonId`.
+     * Get Whether the person is the one in the image. The fixed threshold score is 60. If you want to adjust the threshold more flexibly, you can take the returned `Score` parameter value for judgment. 
+     * @return IsMatch Whether the person is the one in the image. The fixed threshold score is 60. If you want to adjust the threshold more flexibly, you can take the returned `Score` parameter value for judgment.
      */
     public Boolean getIsMatch() {
         return this.IsMatch;
     }
 
     /**
-     * Set Whether the person in the image matches the `PersonId`.
-     * @param IsMatch Whether the person in the image matches the `PersonId`.
+     * Set Whether the person is the one in the image. The fixed threshold score is 60. If you want to adjust the threshold more flexibly, you can take the returned `Score` parameter value for judgment.
+     * @param IsMatch Whether the person is the one in the image. The fixed threshold score is 60. If you want to adjust the threshold more flexibly, you can take the returned `Score` parameter value for judgment.
      */
     public void setIsMatch(Boolean IsMatch) {
         this.IsMatch = IsMatch;
     }
 
     /**
-     * Get Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created. For more information, please see [Algorithm Model Version](https://intl.cloud.tencent.com/document/product/867/40042?from_cn_redirect=1) 
-     * @return FaceModelVersion Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created. For more information, please see [Algorithm Model Version](https://intl.cloud.tencent.com/document/product/867/40042?from_cn_redirect=1)
+     * Get Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created. 
+     * @return FaceModelVersion Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created.
      */
     public String getFaceModelVersion() {
         return this.FaceModelVersion;
     }
 
     /**
-     * Set Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created. For more information, please see [Algorithm Model Version](https://intl.cloud.tencent.com/document/product/867/40042?from_cn_redirect=1)
-     * @param FaceModelVersion Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created. For more information, please see [Algorithm Model Version](https://intl.cloud.tencent.com/document/product/867/40042?from_cn_redirect=1)
+     * Set Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created.
+     * @param FaceModelVersion Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created.
      */
     public void setFaceModelVersion(String FaceModelVersion) {
         this.FaceModelVersion = FaceModelVersion;

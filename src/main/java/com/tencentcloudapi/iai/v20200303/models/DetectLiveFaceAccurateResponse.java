@@ -20,24 +20,17 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class VerifyPersonResponse extends AbstractModel{
+public class DetectLiveFaceAccurateResponse extends AbstractModel{
 
     /**
-    * Similarity between given face image and `PersonId`. If there are multiple faces under the `PersonId`, their information will be fused for verification.
+    * Liveness score. Value range: [0, 100]. You can set several thresholds such as 5, 10, 40, 70 and 90 to determine whether the image is photographed. We recommend you use the threshold of 40.
     */
     @SerializedName("Score")
     @Expose
     private Float Score;
 
     /**
-    * Whether the person in the image matches the `PersonId`.
-    */
-    @SerializedName("IsMatch")
-    @Expose
-    private Boolean IsMatch;
-
-    /**
-    * Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created.
+    * Algorithm model version used for face recognition.
     */
     @SerializedName("FaceModelVersion")
     @Expose
@@ -51,48 +44,32 @@ public class VerifyPersonResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Similarity between given face image and `PersonId`. If there are multiple faces under the `PersonId`, their information will be fused for verification. 
-     * @return Score Similarity between given face image and `PersonId`. If there are multiple faces under the `PersonId`, their information will be fused for verification.
+     * Get Liveness score. Value range: [0, 100]. You can set several thresholds such as 5, 10, 40, 70 and 90 to determine whether the image is photographed. We recommend you use the threshold of 40. 
+     * @return Score Liveness score. Value range: [0, 100]. You can set several thresholds such as 5, 10, 40, 70 and 90 to determine whether the image is photographed. We recommend you use the threshold of 40.
      */
     public Float getScore() {
         return this.Score;
     }
 
     /**
-     * Set Similarity between given face image and `PersonId`. If there are multiple faces under the `PersonId`, their information will be fused for verification.
-     * @param Score Similarity between given face image and `PersonId`. If there are multiple faces under the `PersonId`, their information will be fused for verification.
+     * Set Liveness score. Value range: [0, 100]. You can set several thresholds such as 5, 10, 40, 70 and 90 to determine whether the image is photographed. We recommend you use the threshold of 40.
+     * @param Score Liveness score. Value range: [0, 100]. You can set several thresholds such as 5, 10, 40, 70 and 90 to determine whether the image is photographed. We recommend you use the threshold of 40.
      */
     public void setScore(Float Score) {
         this.Score = Score;
     }
 
     /**
-     * Get Whether the person in the image matches the `PersonId`. 
-     * @return IsMatch Whether the person in the image matches the `PersonId`.
-     */
-    public Boolean getIsMatch() {
-        return this.IsMatch;
-    }
-
-    /**
-     * Set Whether the person in the image matches the `PersonId`.
-     * @param IsMatch Whether the person in the image matches the `PersonId`.
-     */
-    public void setIsMatch(Boolean IsMatch) {
-        this.IsMatch = IsMatch;
-    }
-
-    /**
-     * Get Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created. 
-     * @return FaceModelVersion Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created.
+     * Get Algorithm model version used for face recognition. 
+     * @return FaceModelVersion Algorithm model version used for face recognition.
      */
     public String getFaceModelVersion() {
         return this.FaceModelVersion;
     }
 
     /**
-     * Set Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created.
-     * @param FaceModelVersion Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created.
+     * Set Algorithm model version used for face recognition.
+     * @param FaceModelVersion Algorithm model version used for face recognition.
      */
     public void setFaceModelVersion(String FaceModelVersion) {
         this.FaceModelVersion = FaceModelVersion;
@@ -114,19 +91,16 @@ public class VerifyPersonResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public VerifyPersonResponse() {
+    public DetectLiveFaceAccurateResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public VerifyPersonResponse(VerifyPersonResponse source) {
+    public DetectLiveFaceAccurateResponse(DetectLiveFaceAccurateResponse source) {
         if (source.Score != null) {
             this.Score = new Float(source.Score);
-        }
-        if (source.IsMatch != null) {
-            this.IsMatch = new Boolean(source.IsMatch);
         }
         if (source.FaceModelVersion != null) {
             this.FaceModelVersion = new String(source.FaceModelVersion);
@@ -142,7 +116,6 @@ public class VerifyPersonResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Score", this.Score);
-        this.setParamSimple(map, prefix + "IsMatch", this.IsMatch);
         this.setParamSimple(map, prefix + "FaceModelVersion", this.FaceModelVersion);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

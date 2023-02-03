@@ -30,7 +30,7 @@ public class Candidate extends AbstractModel{
     private String PersonId;
 
     /**
-    * Face ID
+    * Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
     */
     @SerializedName("FaceId")
     @Expose
@@ -90,16 +90,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Face ID 
-     * @return FaceId Face ID
+     * Get Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless. 
+     * @return FaceId Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
      */
     public String getFaceId() {
         return this.FaceId;
     }
 
     /**
-     * Set Face ID
-     * @param FaceId Face ID
+     * Set Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
+     * @param FaceId Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
      */
     public void setFaceId(String FaceId) {
         this.FaceId = FaceId;
