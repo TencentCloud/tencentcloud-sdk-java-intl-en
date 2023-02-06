@@ -278,4 +278,24 @@ public class DlcClient extends AbstractClient{
         return rsp.response;
     }
 
+    /**
+     *This API is used to suspend or resume a data engine.
+     * @param req SuspendResumeDataEngineRequest
+     * @return SuspendResumeDataEngineResponse
+     * @throws TencentCloudSDKException
+     */
+    public SuspendResumeDataEngineResponse SuspendResumeDataEngine(SuspendResumeDataEngineRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SuspendResumeDataEngineResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SuspendResumeDataEngineResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SuspendResumeDataEngine");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }

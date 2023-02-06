@@ -247,6 +247,20 @@ public class DescribeDBInstancesRequest extends AbstractModel{
     private Tag [] Tags;
 
     /**
+    * Database proxy IP
+    */
+    @SerializedName("ProxyVips")
+    @Expose
+    private String [] ProxyVips;
+
+    /**
+    * Database proxy ID
+    */
+    @SerializedName("ProxyIds")
+    @Expose
+    private String [] ProxyIds;
+
+    /**
      * Get Project ID. 
      * @return ProjectId Project ID.
      */
@@ -758,6 +772,38 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get Database proxy IP 
+     * @return ProxyVips Database proxy IP
+     */
+    public String [] getProxyVips() {
+        return this.ProxyVips;
+    }
+
+    /**
+     * Set Database proxy IP
+     * @param ProxyVips Database proxy IP
+     */
+    public void setProxyVips(String [] ProxyVips) {
+        this.ProxyVips = ProxyVips;
+    }
+
+    /**
+     * Get Database proxy ID 
+     * @return ProxyIds Database proxy ID
+     */
+    public String [] getProxyIds() {
+        return this.ProxyIds;
+    }
+
+    /**
+     * Set Database proxy ID
+     * @param ProxyIds Database proxy ID
+     */
+    public void setProxyIds(String [] ProxyIds) {
+        this.ProxyIds = ProxyIds;
+    }
+
     public DescribeDBInstancesRequest() {
     }
 
@@ -919,6 +965,18 @@ public class DescribeDBInstancesRequest extends AbstractModel{
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.ProxyVips != null) {
+            this.ProxyVips = new String[source.ProxyVips.length];
+            for (int i = 0; i < source.ProxyVips.length; i++) {
+                this.ProxyVips[i] = new String(source.ProxyVips[i]);
+            }
+        }
+        if (source.ProxyIds != null) {
+            this.ProxyIds = new String[source.ProxyIds.length];
+            for (int i = 0; i < source.ProxyIds.length; i++) {
+                this.ProxyIds[i] = new String(source.ProxyIds[i]);
+            }
+        }
     }
 
 
@@ -958,6 +1016,8 @@ public class DescribeDBInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "UniqueVpcIds.", this.UniqueVpcIds);
         this.setParamArraySimple(map, prefix + "UniqSubnetIds.", this.UniqSubnetIds);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArraySimple(map, prefix + "ProxyVips.", this.ProxyVips);
+        this.setParamArraySimple(map, prefix + "ProxyIds.", this.ProxyIds);
 
     }
 }

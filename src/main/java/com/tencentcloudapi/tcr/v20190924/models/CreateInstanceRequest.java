@@ -51,6 +51,13 @@ public class CreateInstanceRequest extends AbstractModel{
     private Long RegistryChargeType;
 
     /**
+    * Auto-renewal setting and purchase period
+    */
+    @SerializedName("RegistryChargePrepaid")
+    @Expose
+    private RegistryChargePrepaid RegistryChargePrepaid;
+
+    /**
     * Whether to sync TCR cloud tags to the COS bucket
     */
     @SerializedName("SyncTag")
@@ -122,6 +129,22 @@ public class CreateInstanceRequest extends AbstractModel{
     }
 
     /**
+     * Get Auto-renewal setting and purchase period 
+     * @return RegistryChargePrepaid Auto-renewal setting and purchase period
+     */
+    public RegistryChargePrepaid getRegistryChargePrepaid() {
+        return this.RegistryChargePrepaid;
+    }
+
+    /**
+     * Set Auto-renewal setting and purchase period
+     * @param RegistryChargePrepaid Auto-renewal setting and purchase period
+     */
+    public void setRegistryChargePrepaid(RegistryChargePrepaid RegistryChargePrepaid) {
+        this.RegistryChargePrepaid = RegistryChargePrepaid;
+    }
+
+    /**
      * Get Whether to sync TCR cloud tags to the COS bucket 
      * @return SyncTag Whether to sync TCR cloud tags to the COS bucket
      */
@@ -157,6 +180,9 @@ public class CreateInstanceRequest extends AbstractModel{
         if (source.RegistryChargeType != null) {
             this.RegistryChargeType = new Long(source.RegistryChargeType);
         }
+        if (source.RegistryChargePrepaid != null) {
+            this.RegistryChargePrepaid = new RegistryChargePrepaid(source.RegistryChargePrepaid);
+        }
         if (source.SyncTag != null) {
             this.SyncTag = new Boolean(source.SyncTag);
         }
@@ -171,6 +197,7 @@ public class CreateInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RegistryType", this.RegistryType);
         this.setParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
         this.setParamSimple(map, prefix + "RegistryChargeType", this.RegistryChargeType);
+        this.setParamObj(map, prefix + "RegistryChargePrepaid.", this.RegistryChargePrepaid);
         this.setParamSimple(map, prefix + "SyncTag", this.SyncTag);
 
     }

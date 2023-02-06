@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class SessionItem extends AbstractModel{
 
     /**
-    * 
+    * Access source
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 
+    * The number of active connections from the current access source
     */
     @SerializedName("ActiveConn")
     @Expose
     private String ActiveConn;
 
     /**
-    * 
+    * The total number of connections from the current access source
     */
     @SerializedName("AllConn")
     @Expose
     private Long AllConn;
 
     /**
-     * Get  
-     * @return Ip 
+     * Get Access source 
+     * @return Ip Access source
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 
-     * @param Ip 
+     * Set Access source
+     * @param Ip Access source
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get  
-     * @return ActiveConn 
+     * Get The number of active connections from the current access source 
+     * @return ActiveConn The number of active connections from the current access source
      */
     public String getActiveConn() {
         return this.ActiveConn;
     }
 
     /**
-     * Set 
-     * @param ActiveConn 
+     * Set The number of active connections from the current access source
+     * @param ActiveConn The number of active connections from the current access source
      */
     public void setActiveConn(String ActiveConn) {
         this.ActiveConn = ActiveConn;
     }
 
     /**
-     * Get  
-     * @return AllConn 
+     * Get The total number of connections from the current access source 
+     * @return AllConn The total number of connections from the current access source
      */
     public Long getAllConn() {
         return this.AllConn;
     }
 
     /**
-     * Set 
-     * @param AllConn 
+     * Set The total number of connections from the current access source
+     * @param AllConn The total number of connections from the current access source
      */
     public void setAllConn(Long AllConn) {
         this.AllConn = AllConn;

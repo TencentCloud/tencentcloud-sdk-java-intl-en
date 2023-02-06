@@ -23,69 +23,69 @@ import java.util.HashMap;
 public class ProcessStatistic extends AbstractModel{
 
     /**
-    * 
+    * Array of session details
     */
     @SerializedName("Items")
     @Expose
     private SessionItem [] Items;
 
     /**
-    * 
+    * The total number of connections
     */
     @SerializedName("AllConnSum")
     @Expose
     private Long AllConnSum;
 
     /**
-    * 
+    * The total number of active connections
     */
     @SerializedName("ActiveConnSum")
     @Expose
     private Long ActiveConnSum;
 
     /**
-     * Get  
-     * @return Items 
+     * Get Array of session details 
+     * @return Items Array of session details
      */
     public SessionItem [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set 
-     * @param Items 
+     * Set Array of session details
+     * @param Items Array of session details
      */
     public void setItems(SessionItem [] Items) {
         this.Items = Items;
     }
 
     /**
-     * Get  
-     * @return AllConnSum 
+     * Get The total number of connections 
+     * @return AllConnSum The total number of connections
      */
     public Long getAllConnSum() {
         return this.AllConnSum;
     }
 
     /**
-     * Set 
-     * @param AllConnSum 
+     * Set The total number of connections
+     * @param AllConnSum The total number of connections
      */
     public void setAllConnSum(Long AllConnSum) {
         this.AllConnSum = AllConnSum;
     }
 
     /**
-     * Get  
-     * @return ActiveConnSum 
+     * Get The total number of active connections 
+     * @return ActiveConnSum The total number of active connections
      */
     public Long getActiveConnSum() {
         return this.ActiveConnSum;
     }
 
     /**
-     * Set 
-     * @param ActiveConnSum 
+     * Set The total number of active connections
+     * @param ActiveConnSum The total number of active connections
      */
     public void setActiveConnSum(Long ActiveConnSum) {
         this.ActiveConnSum = ActiveConnSum;

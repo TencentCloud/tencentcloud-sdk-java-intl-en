@@ -30,7 +30,7 @@ public class DescribeProxyProcessStatisticsRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * `ProxyID` under the current instance.
+    * The proxy ID you want to query under the instance
     */
     @SerializedName("InstanceProxyId")
     @Expose
@@ -88,16 +88,16 @@ public class DescribeProxyProcessStatisticsRequest extends AbstractModel{
     }
 
     /**
-     * Get `ProxyID` under the current instance. 
-     * @return InstanceProxyId `ProxyID` under the current instance.
+     * Get The proxy ID you want to query under the instance 
+     * @return InstanceProxyId The proxy ID you want to query under the instance
      */
     public String getInstanceProxyId() {
         return this.InstanceProxyId;
     }
 
     /**
-     * Set `ProxyID` under the current instance.
-     * @param InstanceProxyId `ProxyID` under the current instance.
+     * Set The proxy ID you want to query under the instance
+     * @param InstanceProxyId The proxy ID you want to query under the instance
      */
     public void setInstanceProxyId(String InstanceProxyId) {
         this.InstanceProxyId = InstanceProxyId;

@@ -72,6 +72,27 @@ public class CommonTimeWindow extends AbstractModel{
     private String Sunday;
 
     /**
+    * Non-archive backup retention policy. Valid values: `weekly` (back up by week), monthly (back up by month), default value: `weekly`.
+    */
+    @SerializedName("BackupPeriodStrategy")
+    @Expose
+    private String BackupPeriodStrategy;
+
+    /**
+    * If `BackupPeriodStrategy` is `monthly`, you need to pass in the specific backup dates. The time interval between any two adjacent dates cannot exceed 2 days, for example, [1,4,7,9,11,14,17,19,22,25,28,30,31].
+    */
+    @SerializedName("Days")
+    @Expose
+    private Long [] Days;
+
+    /**
+    * Backup time by month in the format of 02:00–06:00, which is required when `BackupPeriodStrategy` is `monthly`.
+    */
+    @SerializedName("BackupPeriodTime")
+    @Expose
+    private String BackupPeriodTime;
+
+    /**
      * Get Time window on Monday in the format of 02:00-06:00 
      * @return Monday Time window on Monday in the format of 02:00-06:00
      */
@@ -183,6 +204,54 @@ public class CommonTimeWindow extends AbstractModel{
         this.Sunday = Sunday;
     }
 
+    /**
+     * Get Non-archive backup retention policy. Valid values: `weekly` (back up by week), monthly (back up by month), default value: `weekly`. 
+     * @return BackupPeriodStrategy Non-archive backup retention policy. Valid values: `weekly` (back up by week), monthly (back up by month), default value: `weekly`.
+     */
+    public String getBackupPeriodStrategy() {
+        return this.BackupPeriodStrategy;
+    }
+
+    /**
+     * Set Non-archive backup retention policy. Valid values: `weekly` (back up by week), monthly (back up by month), default value: `weekly`.
+     * @param BackupPeriodStrategy Non-archive backup retention policy. Valid values: `weekly` (back up by week), monthly (back up by month), default value: `weekly`.
+     */
+    public void setBackupPeriodStrategy(String BackupPeriodStrategy) {
+        this.BackupPeriodStrategy = BackupPeriodStrategy;
+    }
+
+    /**
+     * Get If `BackupPeriodStrategy` is `monthly`, you need to pass in the specific backup dates. The time interval between any two adjacent dates cannot exceed 2 days, for example, [1,4,7,9,11,14,17,19,22,25,28,30,31]. 
+     * @return Days If `BackupPeriodStrategy` is `monthly`, you need to pass in the specific backup dates. The time interval between any two adjacent dates cannot exceed 2 days, for example, [1,4,7,9,11,14,17,19,22,25,28,30,31].
+     */
+    public Long [] getDays() {
+        return this.Days;
+    }
+
+    /**
+     * Set If `BackupPeriodStrategy` is `monthly`, you need to pass in the specific backup dates. The time interval between any two adjacent dates cannot exceed 2 days, for example, [1,4,7,9,11,14,17,19,22,25,28,30,31].
+     * @param Days If `BackupPeriodStrategy` is `monthly`, you need to pass in the specific backup dates. The time interval between any two adjacent dates cannot exceed 2 days, for example, [1,4,7,9,11,14,17,19,22,25,28,30,31].
+     */
+    public void setDays(Long [] Days) {
+        this.Days = Days;
+    }
+
+    /**
+     * Get Backup time by month in the format of 02:00–06:00, which is required when `BackupPeriodStrategy` is `monthly`. 
+     * @return BackupPeriodTime Backup time by month in the format of 02:00–06:00, which is required when `BackupPeriodStrategy` is `monthly`.
+     */
+    public String getBackupPeriodTime() {
+        return this.BackupPeriodTime;
+    }
+
+    /**
+     * Set Backup time by month in the format of 02:00–06:00, which is required when `BackupPeriodStrategy` is `monthly`.
+     * @param BackupPeriodTime Backup time by month in the format of 02:00–06:00, which is required when `BackupPeriodStrategy` is `monthly`.
+     */
+    public void setBackupPeriodTime(String BackupPeriodTime) {
+        this.BackupPeriodTime = BackupPeriodTime;
+    }
+
     public CommonTimeWindow() {
     }
 
@@ -212,6 +281,18 @@ public class CommonTimeWindow extends AbstractModel{
         if (source.Sunday != null) {
             this.Sunday = new String(source.Sunday);
         }
+        if (source.BackupPeriodStrategy != null) {
+            this.BackupPeriodStrategy = new String(source.BackupPeriodStrategy);
+        }
+        if (source.Days != null) {
+            this.Days = new Long[source.Days.length];
+            for (int i = 0; i < source.Days.length; i++) {
+                this.Days[i] = new Long(source.Days[i]);
+            }
+        }
+        if (source.BackupPeriodTime != null) {
+            this.BackupPeriodTime = new String(source.BackupPeriodTime);
+        }
     }
 
 
@@ -226,6 +307,9 @@ public class CommonTimeWindow extends AbstractModel{
         this.setParamSimple(map, prefix + "Friday", this.Friday);
         this.setParamSimple(map, prefix + "Saturday", this.Saturday);
         this.setParamSimple(map, prefix + "Sunday", this.Sunday);
+        this.setParamSimple(map, prefix + "BackupPeriodStrategy", this.BackupPeriodStrategy);
+        this.setParamArraySimple(map, prefix + "Days.", this.Days);
+        this.setParamSimple(map, prefix + "BackupPeriodTime", this.BackupPeriodTime);
 
     }
 }

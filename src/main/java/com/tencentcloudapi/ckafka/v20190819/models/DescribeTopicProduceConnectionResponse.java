@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tcr.v20190924.models;
+package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSecurityPoliciesResponse extends AbstractModel{
+public class DescribeTopicProduceConnectionResponse extends AbstractModel{
 
     /**
-    * Instance ID
+    * Result set of returned connection information
     */
-    @SerializedName("RegistryId")
+    @SerializedName("Result")
     @Expose
-    private String RegistryId;
+    private DescribeConnectInfoResultDTO [] Result;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,19 +37,19 @@ public class CreateSecurityPoliciesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Instance ID 
-     * @return RegistryId Instance ID
+     * Get Result set of returned connection information 
+     * @return Result Result set of returned connection information
      */
-    public String getRegistryId() {
-        return this.RegistryId;
+    public DescribeConnectInfoResultDTO [] getResult() {
+        return this.Result;
     }
 
     /**
-     * Set Instance ID
-     * @param RegistryId Instance ID
+     * Set Result set of returned connection information
+     * @param Result Result set of returned connection information
      */
-    public void setRegistryId(String RegistryId) {
-        this.RegistryId = RegistryId;
+    public void setResult(DescribeConnectInfoResultDTO [] Result) {
+        this.Result = Result;
     }
 
     /**
@@ -68,16 +68,19 @@ public class CreateSecurityPoliciesResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateSecurityPoliciesResponse() {
+    public DescribeTopicProduceConnectionResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateSecurityPoliciesResponse(CreateSecurityPoliciesResponse source) {
-        if (source.RegistryId != null) {
-            this.RegistryId = new String(source.RegistryId);
+    public DescribeTopicProduceConnectionResponse(DescribeTopicProduceConnectionResponse source) {
+        if (source.Result != null) {
+            this.Result = new DescribeConnectInfoResultDTO[source.Result.length];
+            for (int i = 0; i < source.Result.length; i++) {
+                this.Result[i] = new DescribeConnectInfoResultDTO(source.Result[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -89,7 +92,7 @@ public class CreateSecurityPoliciesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
+        this.setParamArrayObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

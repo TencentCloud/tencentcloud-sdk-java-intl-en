@@ -681,6 +681,26 @@ This API is used to get the list of topics in a CKafka instance of a user.
     }
 
     /**
+     *This API is used to query the connection information of the topic producer.
+     * @param req DescribeTopicProduceConnectionRequest
+     * @return DescribeTopicProduceConnectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopicProduceConnectionResponse DescribeTopicProduceConnection(DescribeTopicProduceConnectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTopicProduceConnectionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTopicProduceConnectionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTopicProduceConnection");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to search and subscribe the message group information of a topic.
      * @param req DescribeTopicSubscribeGroupRequest
      * @return DescribeTopicSubscribeGroupResponse
