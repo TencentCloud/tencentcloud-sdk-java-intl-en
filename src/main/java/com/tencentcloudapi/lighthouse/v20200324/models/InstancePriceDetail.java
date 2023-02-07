@@ -39,7 +39,8 @@ Note: This field may return `null`, indicating that no valid value was found.
     private InstancePrice InstancePrice;
 
     /**
-    * 
+    * Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("DiscountDetail")
     @Expose
@@ -86,16 +87,20 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get  
-     * @return DiscountDetail 
+     * Get Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return DiscountDetail Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public DiscountDetail [] getDiscountDetail() {
         return this.DiscountDetail;
     }
 
     /**
-     * Set 
-     * @param DiscountDetail 
+     * Set Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param DiscountDetail Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setDiscountDetail(DiscountDetail [] DiscountDetail) {
         this.DiscountDetail = DiscountDetail;

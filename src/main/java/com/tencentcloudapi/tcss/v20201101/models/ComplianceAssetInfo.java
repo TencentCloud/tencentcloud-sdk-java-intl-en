@@ -115,7 +115,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CheckResult;
 
     /**
-    * 
+    * Node instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -358,16 +359,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return InstanceId 
+     * Get Node instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return InstanceId Node instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 
-     * @param InstanceId 
+     * Set Node instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param InstanceId Node instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

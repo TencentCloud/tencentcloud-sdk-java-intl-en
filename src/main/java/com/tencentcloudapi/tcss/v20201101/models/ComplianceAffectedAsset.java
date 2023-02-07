@@ -110,7 +110,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String VerifyInfo;
 
     /**
-    * 
+    * Instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -345,16 +346,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return InstanceId 
+     * Get Instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return InstanceId Instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 
-     * @param InstanceId 
+     * Set Instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param InstanceId Instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -3682,7 +3682,7 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the list of ranges in K8sApi abnormal rules.
+     *This API is used to query rules for K8s API exceptions. 
      * @param req DescribeK8sApiAbnormalRuleScopeListRequest
      * @return DescribeK8sApiAbnormalRuleScopeListResponse
      * @throws TencentCloudSDKException

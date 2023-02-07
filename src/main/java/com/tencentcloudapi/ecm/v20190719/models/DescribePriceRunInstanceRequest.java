@@ -51,6 +51,17 @@ public class DescribePriceRunInstanceRequest extends AbstractModel{
     private DataDisk [] DataDisk;
 
     /**
+    * Instance billing type. Valid values:
+`0`: Bill by daily resource usage peak (CPU, memory, and disk). It applies only to non-GNR models;
+`1`: Bill by usage hours of an instance. It applies only to GNR models. It’s available to beta users now. To enable it, submit a ticket;
+`2`: Bill by usage month of an instance. It applies only to GNR models.
+If this field is left empty, `0` is selected by default for non-GNR models, and `2` is selected by default for GNR models.
+    */
+    @SerializedName("InstanceChargeType")
+    @Expose
+    private Long InstanceChargeType;
+
+    /**
      * Get Instance model information 
      * @return InstanceType Instance model information
      */
@@ -114,6 +125,38 @@ public class DescribePriceRunInstanceRequest extends AbstractModel{
         this.DataDisk = DataDisk;
     }
 
+    /**
+     * Get Instance billing type. Valid values:
+`0`: Bill by daily resource usage peak (CPU, memory, and disk). It applies only to non-GNR models;
+`1`: Bill by usage hours of an instance. It applies only to GNR models. It’s available to beta users now. To enable it, submit a ticket;
+`2`: Bill by usage month of an instance. It applies only to GNR models.
+If this field is left empty, `0` is selected by default for non-GNR models, and `2` is selected by default for GNR models. 
+     * @return InstanceChargeType Instance billing type. Valid values:
+`0`: Bill by daily resource usage peak (CPU, memory, and disk). It applies only to non-GNR models;
+`1`: Bill by usage hours of an instance. It applies only to GNR models. It’s available to beta users now. To enable it, submit a ticket;
+`2`: Bill by usage month of an instance. It applies only to GNR models.
+If this field is left empty, `0` is selected by default for non-GNR models, and `2` is selected by default for GNR models.
+     */
+    public Long getInstanceChargeType() {
+        return this.InstanceChargeType;
+    }
+
+    /**
+     * Set Instance billing type. Valid values:
+`0`: Bill by daily resource usage peak (CPU, memory, and disk). It applies only to non-GNR models;
+`1`: Bill by usage hours of an instance. It applies only to GNR models. It’s available to beta users now. To enable it, submit a ticket;
+`2`: Bill by usage month of an instance. It applies only to GNR models.
+If this field is left empty, `0` is selected by default for non-GNR models, and `2` is selected by default for GNR models.
+     * @param InstanceChargeType Instance billing type. Valid values:
+`0`: Bill by daily resource usage peak (CPU, memory, and disk). It applies only to non-GNR models;
+`1`: Bill by usage hours of an instance. It applies only to GNR models. It’s available to beta users now. To enable it, submit a ticket;
+`2`: Bill by usage month of an instance. It applies only to GNR models.
+If this field is left empty, `0` is selected by default for non-GNR models, and `2` is selected by default for GNR models.
+     */
+    public void setInstanceChargeType(Long InstanceChargeType) {
+        this.InstanceChargeType = InstanceChargeType;
+    }
+
     public DescribePriceRunInstanceRequest() {
     }
 
@@ -137,6 +180,9 @@ public class DescribePriceRunInstanceRequest extends AbstractModel{
                 this.DataDisk[i] = new DataDisk(source.DataDisk[i]);
             }
         }
+        if (source.InstanceChargeType != null) {
+            this.InstanceChargeType = new Long(source.InstanceChargeType);
+        }
     }
 
 
@@ -148,6 +194,7 @@ public class DescribePriceRunInstanceRequest extends AbstractModel{
         this.setParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamArrayObj(map, prefix + "DataDisk.", this.DataDisk);
+        this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
 
     }
 }

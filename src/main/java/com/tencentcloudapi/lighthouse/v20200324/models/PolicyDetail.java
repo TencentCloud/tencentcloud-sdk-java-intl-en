@@ -44,6 +44,23 @@ public class PolicyDetail extends AbstractModel{
     private Long FinalDiscount;
 
     /**
+    * Activity discount. The value `null` indicates no discount.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ActivityDiscount")
+    @Expose
+    private Float ActivityDiscount;
+
+    /**
+    * Discount type.
+Valid values: `user` (user discount), `common` (discount displayed on the official website), `activity` (activity discount), `null` (no discount).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DiscountType")
+    @Expose
+    private String DiscountType;
+
+    /**
      * Get User discount. 
      * @return UserDiscount User discount.
      */
@@ -91,6 +108,50 @@ public class PolicyDetail extends AbstractModel{
         this.FinalDiscount = FinalDiscount;
     }
 
+    /**
+     * Get Activity discount. The value `null` indicates no discount.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ActivityDiscount Activity discount. The value `null` indicates no discount.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Float getActivityDiscount() {
+        return this.ActivityDiscount;
+    }
+
+    /**
+     * Set Activity discount. The value `null` indicates no discount.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ActivityDiscount Activity discount. The value `null` indicates no discount.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setActivityDiscount(Float ActivityDiscount) {
+        this.ActivityDiscount = ActivityDiscount;
+    }
+
+    /**
+     * Get Discount type.
+Valid values: `user` (user discount), `common` (discount displayed on the official website), `activity` (activity discount), `null` (no discount).
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return DiscountType Discount type.
+Valid values: `user` (user discount), `common` (discount displayed on the official website), `activity` (activity discount), `null` (no discount).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getDiscountType() {
+        return this.DiscountType;
+    }
+
+    /**
+     * Set Discount type.
+Valid values: `user` (user discount), `common` (discount displayed on the official website), `activity` (activity discount), `null` (no discount).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param DiscountType Discount type.
+Valid values: `user` (user discount), `common` (discount displayed on the official website), `activity` (activity discount), `null` (no discount).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDiscountType(String DiscountType) {
+        this.DiscountType = DiscountType;
+    }
+
     public PolicyDetail() {
     }
 
@@ -108,6 +169,12 @@ public class PolicyDetail extends AbstractModel{
         if (source.FinalDiscount != null) {
             this.FinalDiscount = new Long(source.FinalDiscount);
         }
+        if (source.ActivityDiscount != null) {
+            this.ActivityDiscount = new Float(source.ActivityDiscount);
+        }
+        if (source.DiscountType != null) {
+            this.DiscountType = new String(source.DiscountType);
+        }
     }
 
 
@@ -118,6 +185,8 @@ public class PolicyDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "UserDiscount", this.UserDiscount);
         this.setParamSimple(map, prefix + "CommonDiscount", this.CommonDiscount);
         this.setParamSimple(map, prefix + "FinalDiscount", this.FinalDiscount);
+        this.setParamSimple(map, prefix + "ActivityDiscount", this.ActivityDiscount);
+        this.setParamSimple(map, prefix + "DiscountType", this.DiscountType);
 
     }
 }

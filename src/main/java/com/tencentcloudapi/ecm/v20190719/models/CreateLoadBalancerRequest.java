@@ -87,6 +87,20 @@ Note: if the name of the new CLB instance already exists, a default name will be
     private String [] SecurityGroups;
 
     /**
+    * IP version. Valid values: `IPV4` (default), `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
+    */
+    @SerializedName("AddressIPVersion")
+    @Expose
+    private String AddressIPVersion;
+
+    /**
+    * Subnet ID. This parameter is required for IPv6 CLB instances.
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
      * Get ECM region, such as `ap-xian-ecm`. 
      * @return EcmRegion ECM region, such as `ap-xian-ecm`.
      */
@@ -234,6 +248,38 @@ Note: if the name of the new CLB instance already exists, a default name will be
         this.SecurityGroups = SecurityGroups;
     }
 
+    /**
+     * Get IP version. Valid values: `IPV4` (default), `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances. 
+     * @return AddressIPVersion IP version. Valid values: `IPV4` (default), `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
+     */
+    public String getAddressIPVersion() {
+        return this.AddressIPVersion;
+    }
+
+    /**
+     * Set IP version. Valid values: `IPV4` (default), `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
+     * @param AddressIPVersion IP version. Valid values: `IPV4` (default), `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
+     */
+    public void setAddressIPVersion(String AddressIPVersion) {
+        this.AddressIPVersion = AddressIPVersion;
+    }
+
+    /**
+     * Get Subnet ID. This parameter is required for IPv6 CLB instances. 
+     * @return SubnetId Subnet ID. This parameter is required for IPv6 CLB instances.
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set Subnet ID. This parameter is required for IPv6 CLB instances.
+     * @param SubnetId Subnet ID. This parameter is required for IPv6 CLB instances.
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
     public CreateLoadBalancerRequest() {
     }
 
@@ -275,6 +321,12 @@ Note: if the name of the new CLB instance already exists, a default name will be
                 this.SecurityGroups[i] = new String(source.SecurityGroups[i]);
             }
         }
+        if (source.AddressIPVersion != null) {
+            this.AddressIPVersion = new String(source.AddressIPVersion);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
     }
 
 
@@ -291,6 +343,8 @@ Note: if the name of the new CLB instance already exists, a default name will be
         this.setParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
+        this.setParamSimple(map, prefix + "AddressIPVersion", this.AddressIPVersion);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }
 }

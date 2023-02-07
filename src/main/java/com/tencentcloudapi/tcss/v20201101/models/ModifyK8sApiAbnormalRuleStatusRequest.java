@@ -30,7 +30,7 @@ public class ModifyK8sApiAbnormalRuleStatusRequest extends AbstractModel{
     private String RuleID;
 
     /**
-    * Status (true: Enable; false: Disable)
+    * Status of the rule. Values: `true` (Enabled), `false` (Disabled)
     */
     @SerializedName("Status")
     @Expose
@@ -53,16 +53,16 @@ public class ModifyK8sApiAbnormalRuleStatusRequest extends AbstractModel{
     }
 
     /**
-     * Get Status (true: Enable; false: Disable) 
-     * @return Status Status (true: Enable; false: Disable)
+     * Get Status of the rule. Values: `true` (Enabled), `false` (Disabled) 
+     * @return Status Status of the rule. Values: `true` (Enabled), `false` (Disabled)
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status (true: Enable; false: Disable)
-     * @param Status Status (true: Enable; false: Disable)
+     * Set Status of the rule. Values: `true` (Enabled), `false` (Disabled)
+     * @param Status Status of the rule. Values: `true` (Enabled), `false` (Disabled)
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;

@@ -51,6 +51,14 @@ public class InstancePrice extends AbstractModel{
     private Float DiscountPrice;
 
     /**
+    * Currency unit. Valid values: `CNY` and `USD`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Currency")
+    @Expose
+    private String Currency;
+
+    /**
      * Get Original package unit price. 
      * @return OriginalBundlePrice Original package unit price.
      */
@@ -114,6 +122,26 @@ public class InstancePrice extends AbstractModel{
         this.DiscountPrice = DiscountPrice;
     }
 
+    /**
+     * Get Currency unit. Valid values: `CNY` and `USD`.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Currency Currency unit. Valid values: `CNY` and `USD`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getCurrency() {
+        return this.Currency;
+    }
+
+    /**
+     * Set Currency unit. Valid values: `CNY` and `USD`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Currency Currency unit. Valid values: `CNY` and `USD`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setCurrency(String Currency) {
+        this.Currency = Currency;
+    }
+
     public InstancePrice() {
     }
 
@@ -134,6 +162,9 @@ public class InstancePrice extends AbstractModel{
         if (source.DiscountPrice != null) {
             this.DiscountPrice = new Float(source.DiscountPrice);
         }
+        if (source.Currency != null) {
+            this.Currency = new String(source.Currency);
+        }
     }
 
 
@@ -145,6 +176,7 @@ public class InstancePrice extends AbstractModel{
         this.setParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
         this.setParamSimple(map, prefix + "Discount", this.Discount);
         this.setParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
+        this.setParamSimple(map, prefix + "Currency", this.Currency);
 
     }
 }

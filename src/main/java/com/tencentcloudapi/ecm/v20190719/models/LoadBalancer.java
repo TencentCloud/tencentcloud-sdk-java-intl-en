@@ -144,6 +144,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Boolean LoadBalancerPassToTarget;
 
     /**
+    * IPv6 address of a CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AddressIPv6")
+    @Expose
+    private String AddressIPv6;
+
+    /**
      * Get Region.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Region Region.
@@ -447,6 +455,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.LoadBalancerPassToTarget = LoadBalancerPassToTarget;
     }
 
+    /**
+     * Get IPv6 address of a CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return AddressIPv6 IPv6 address of a CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getAddressIPv6() {
+        return this.AddressIPv6;
+    }
+
+    /**
+     * Set IPv6 address of a CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param AddressIPv6 IPv6 address of a CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setAddressIPv6(String AddressIPv6) {
+        this.AddressIPv6 = AddressIPv6;
+    }
+
     public LoadBalancer() {
     }
 
@@ -509,6 +537,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.LoadBalancerPassToTarget != null) {
             this.LoadBalancerPassToTarget = new Boolean(source.LoadBalancerPassToTarget);
         }
+        if (source.AddressIPv6 != null) {
+            this.AddressIPv6 = new String(source.AddressIPv6);
+        }
     }
 
 
@@ -531,6 +562,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "NetworkAttributes.", this.NetworkAttributes);
         this.setParamArraySimple(map, prefix + "SecureGroups.", this.SecureGroups);
         this.setParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
+        this.setParamSimple(map, prefix + "AddressIPv6", this.AddressIPv6);
 
     }
 }
