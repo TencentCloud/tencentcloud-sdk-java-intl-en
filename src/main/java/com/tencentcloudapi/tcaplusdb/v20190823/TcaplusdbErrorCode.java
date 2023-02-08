@@ -42,6 +42,9 @@ public enum TcaplusdbErrorCode {
     // Invalid time format.
      INVALIDPARAMETERVALUE_INVALIDTIMEVALUE("InvalidParameterValue.InvalidTimeValue"),
      
+    // Invalid AZ name
+     INVALIDPARAMETERVALUE_INVALIDZONENAME("InvalidParameterValue.InvalidZoneName"),
+     
     // Unsupported application data description type.
      INVALIDPARAMETERVALUE_UNSUPPORTIDLTYPE("InvalidParameterValue.UnsupportIdlType"),
      

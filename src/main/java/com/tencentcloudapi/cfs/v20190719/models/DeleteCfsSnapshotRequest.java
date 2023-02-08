@@ -30,6 +30,13 @@ public class DeleteCfsSnapshotRequest extends AbstractModel{
     private String SnapshotId;
 
     /**
+    * The list of the IDs of the file system snapshots to be deleted. At least one of `SnapshotId` and `SnapshotIds` must be specified.
+    */
+    @SerializedName("SnapshotIds")
+    @Expose
+    private String [] SnapshotIds;
+
+    /**
      * Get File system snapshot ID 
      * @return SnapshotId File system snapshot ID
      */
@@ -45,6 +52,22 @@ public class DeleteCfsSnapshotRequest extends AbstractModel{
         this.SnapshotId = SnapshotId;
     }
 
+    /**
+     * Get The list of the IDs of the file system snapshots to be deleted. At least one of `SnapshotId` and `SnapshotIds` must be specified. 
+     * @return SnapshotIds The list of the IDs of the file system snapshots to be deleted. At least one of `SnapshotId` and `SnapshotIds` must be specified.
+     */
+    public String [] getSnapshotIds() {
+        return this.SnapshotIds;
+    }
+
+    /**
+     * Set The list of the IDs of the file system snapshots to be deleted. At least one of `SnapshotId` and `SnapshotIds` must be specified.
+     * @param SnapshotIds The list of the IDs of the file system snapshots to be deleted. At least one of `SnapshotId` and `SnapshotIds` must be specified.
+     */
+    public void setSnapshotIds(String [] SnapshotIds) {
+        this.SnapshotIds = SnapshotIds;
+    }
+
     public DeleteCfsSnapshotRequest() {
     }
 
@@ -56,6 +79,12 @@ public class DeleteCfsSnapshotRequest extends AbstractModel{
         if (source.SnapshotId != null) {
             this.SnapshotId = new String(source.SnapshotId);
         }
+        if (source.SnapshotIds != null) {
+            this.SnapshotIds = new String[source.SnapshotIds.length];
+            for (int i = 0; i < source.SnapshotIds.length; i++) {
+                this.SnapshotIds[i] = new String(source.SnapshotIds[i]);
+            }
+        }
     }
 
 
@@ -64,6 +93,7 @@ public class DeleteCfsSnapshotRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
+        this.setParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);
 
     }
 }

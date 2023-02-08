@@ -51,6 +51,13 @@ public class DescribeSnapshotsRequest extends AbstractModel{
     private String SnapshotName;
 
     /**
+    * The list of snapshots pulled in batches
+    */
+    @SerializedName("SelectedTables")
+    @Expose
+    private SelectedTableInfoNew [] SelectedTables;
+
+    /**
      * Get The ID of the cluster where the table resides 
      * @return ClusterId The ID of the cluster where the table resides
      */
@@ -114,6 +121,22 @@ public class DescribeSnapshotsRequest extends AbstractModel{
         this.SnapshotName = SnapshotName;
     }
 
+    /**
+     * Get The list of snapshots pulled in batches 
+     * @return SelectedTables The list of snapshots pulled in batches
+     */
+    public SelectedTableInfoNew [] getSelectedTables() {
+        return this.SelectedTables;
+    }
+
+    /**
+     * Set The list of snapshots pulled in batches
+     * @param SelectedTables The list of snapshots pulled in batches
+     */
+    public void setSelectedTables(SelectedTableInfoNew [] SelectedTables) {
+        this.SelectedTables = SelectedTables;
+    }
+
     public DescribeSnapshotsRequest() {
     }
 
@@ -134,6 +157,12 @@ public class DescribeSnapshotsRequest extends AbstractModel{
         if (source.SnapshotName != null) {
             this.SnapshotName = new String(source.SnapshotName);
         }
+        if (source.SelectedTables != null) {
+            this.SelectedTables = new SelectedTableInfoNew[source.SelectedTables.length];
+            for (int i = 0; i < source.SelectedTables.length; i++) {
+                this.SelectedTables[i] = new SelectedTableInfoNew(source.SelectedTables[i]);
+            }
+        }
     }
 
 
@@ -145,6 +174,7 @@ public class DescribeSnapshotsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TableGroupId", this.TableGroupId);
         this.setParamSimple(map, prefix + "TableName", this.TableName);
         this.setParamSimple(map, prefix + "SnapshotName", this.SnapshotName);
+        this.setParamArrayObj(map, prefix + "SelectedTables.", this.SelectedTables);
 
     }
 }
