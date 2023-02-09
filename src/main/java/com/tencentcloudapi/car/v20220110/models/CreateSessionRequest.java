@@ -30,7 +30,7 @@ public class CreateSessionRequest extends AbstractModel{
     private String UserId;
 
     /**
-    * The user’s IP address.
+    * Public IP of user’s application client, which is used for nearby scheduling.
     */
     @SerializedName("UserIp")
     @Expose
@@ -69,16 +69,16 @@ Empty string (default): Keep the application running on the cloud only when ther
     }
 
     /**
-     * Get The user’s IP address. 
-     * @return UserIp The user’s IP address.
+     * Get Public IP of user’s application client, which is used for nearby scheduling. 
+     * @return UserIp Public IP of user’s application client, which is used for nearby scheduling.
      */
     public String getUserIp() {
         return this.UserIp;
     }
 
     /**
-     * Set The user’s IP address.
-     * @param UserIp The user’s IP address.
+     * Set Public IP of user’s application client, which is used for nearby scheduling.
+     * @param UserIp Public IP of user’s application client, which is used for nearby scheduling.
      */
     public void setUserIp(String UserIp) {
         this.UserIp = UserIp;

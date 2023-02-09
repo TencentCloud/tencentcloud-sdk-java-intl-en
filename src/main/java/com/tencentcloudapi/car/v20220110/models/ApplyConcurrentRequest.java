@@ -30,7 +30,7 @@ public class ApplyConcurrentRequest extends AbstractModel{
     private String UserId;
 
     /**
-    * The user’s IP address.
+    * Public IP of user’s application client, which is used for nearby scheduling.
     */
     @SerializedName("UserIp")
     @Expose
@@ -51,6 +51,13 @@ public class ApplyConcurrentRequest extends AbstractModel{
     private String ApplicationVersionId;
 
     /**
+    * Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used.
+    */
+    @SerializedName("ApplicationId")
+    @Expose
+    private String ApplicationId;
+
+    /**
      * Get The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application. 
      * @return UserId The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
      */
@@ -67,16 +74,16 @@ public class ApplyConcurrentRequest extends AbstractModel{
     }
 
     /**
-     * Get The user’s IP address. 
-     * @return UserIp The user’s IP address.
+     * Get Public IP of user’s application client, which is used for nearby scheduling. 
+     * @return UserIp Public IP of user’s application client, which is used for nearby scheduling.
      */
     public String getUserIp() {
         return this.UserIp;
     }
 
     /**
-     * Set The user’s IP address.
-     * @param UserIp The user’s IP address.
+     * Set Public IP of user’s application client, which is used for nearby scheduling.
+     * @param UserIp Public IP of user’s application client, which is used for nearby scheduling.
      */
     public void setUserIp(String UserIp) {
         this.UserIp = UserIp;
@@ -114,6 +121,22 @@ public class ApplyConcurrentRequest extends AbstractModel{
         this.ApplicationVersionId = ApplicationVersionId;
     }
 
+    /**
+     * Get Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used. 
+     * @return ApplicationId Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used.
+     */
+    public String getApplicationId() {
+        return this.ApplicationId;
+    }
+
+    /**
+     * Set Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used.
+     * @param ApplicationId Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used.
+     */
+    public void setApplicationId(String ApplicationId) {
+        this.ApplicationId = ApplicationId;
+    }
+
     public ApplyConcurrentRequest() {
     }
 
@@ -134,6 +157,9 @@ public class ApplyConcurrentRequest extends AbstractModel{
         if (source.ApplicationVersionId != null) {
             this.ApplicationVersionId = new String(source.ApplicationVersionId);
         }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class ApplyConcurrentRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "UserIp", this.UserIp);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "ApplicationVersionId", this.ApplicationVersionId);
+        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
 
     }
 }
