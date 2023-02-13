@@ -117,6 +117,9 @@ public enum MariadbErrorCode {
     // Failed to query the information of a dedicated cluster.
      INTERNALERROR_FENCEERROR("InternalError.FenceError"),
      
+    // Failed to get the database encryption key
+     INTERNALERROR_GETCIPHERTEXTFAILED("InternalError.GetCipherTextFailed"),
+     
     // Failed to get database instance parameters.
      INTERNALERROR_GETDBCONFIGFAILED("InternalError.GetDbConfigFailed"),
      

@@ -58,6 +58,21 @@ public class HlsRemuxSettingsInfo extends AbstractModel{
     private String Scheme;
 
     /**
+    * The segment type. Valid values: `ts` (default), `fmp4`.
+Currently, fMP4 segments do not support DRM or time shifting.
+    */
+    @SerializedName("SegmentType")
+    @Expose
+    private String SegmentType;
+
+    /**
+    * The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+    */
+    @SerializedName("H265PackageType")
+    @Expose
+    private String H265PackageType;
+
+    /**
      * Get Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000. 
      * @return SegmentDuration Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
      */
@@ -137,6 +152,42 @@ public class HlsRemuxSettingsInfo extends AbstractModel{
         this.Scheme = Scheme;
     }
 
+    /**
+     * Get The segment type. Valid values: `ts` (default), `fmp4`.
+Currently, fMP4 segments do not support DRM or time shifting. 
+     * @return SegmentType The segment type. Valid values: `ts` (default), `fmp4`.
+Currently, fMP4 segments do not support DRM or time shifting.
+     */
+    public String getSegmentType() {
+        return this.SegmentType;
+    }
+
+    /**
+     * Set The segment type. Valid values: `ts` (default), `fmp4`.
+Currently, fMP4 segments do not support DRM or time shifting.
+     * @param SegmentType The segment type. Valid values: `ts` (default), `fmp4`.
+Currently, fMP4 segments do not support DRM or time shifting.
+     */
+    public void setSegmentType(String SegmentType) {
+        this.SegmentType = SegmentType;
+    }
+
+    /**
+     * Get The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default). 
+     * @return H265PackageType The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+     */
+    public String getH265PackageType() {
+        return this.H265PackageType;
+    }
+
+    /**
+     * Set The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+     * @param H265PackageType The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+     */
+    public void setH265PackageType(String H265PackageType) {
+        this.H265PackageType = H265PackageType;
+    }
+
     public HlsRemuxSettingsInfo() {
     }
 
@@ -160,6 +211,12 @@ public class HlsRemuxSettingsInfo extends AbstractModel{
         if (source.Scheme != null) {
             this.Scheme = new String(source.Scheme);
         }
+        if (source.SegmentType != null) {
+            this.SegmentType = new String(source.SegmentType);
+        }
+        if (source.H265PackageType != null) {
+            this.H265PackageType = new String(source.H265PackageType);
+        }
     }
 
 
@@ -172,6 +229,8 @@ public class HlsRemuxSettingsInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "PdtInsertion", this.PdtInsertion);
         this.setParamSimple(map, prefix + "PdtDuration", this.PdtDuration);
         this.setParamSimple(map, prefix + "Scheme", this.Scheme);
+        this.setParamSimple(map, prefix + "SegmentType", this.SegmentType);
+        this.setParamSimple(map, prefix + "H265PackageType", this.H265PackageType);
 
     }
 }

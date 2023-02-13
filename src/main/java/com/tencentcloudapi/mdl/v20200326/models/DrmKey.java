@@ -60,6 +60,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String Iv;
 
     /**
+    * The URI of the license server when AES-128 is used. This parameter may be empty.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("KeyUri")
+    @Expose
+    private String KeyUri;
+
+    /**
      * Get DRM key, which is a 32-bit hexadecimal string.
 Note: uppercase letters in the string will be automatically converted to lowercase ones. 
      * @return Key DRM key, which is a 32-bit hexadecimal string.
@@ -159,6 +167,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Iv = Iv;
     }
 
+    /**
+     * Get The URI of the license server when AES-128 is used. This parameter may be empty.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return KeyUri The URI of the license server when AES-128 is used. This parameter may be empty.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getKeyUri() {
+        return this.KeyUri;
+    }
+
+    /**
+     * Set The URI of the license server when AES-128 is used. This parameter may be empty.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param KeyUri The URI of the license server when AES-128 is used. This parameter may be empty.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setKeyUri(String KeyUri) {
+        this.KeyUri = KeyUri;
+    }
+
     public DrmKey() {
     }
 
@@ -179,6 +207,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.Iv != null) {
             this.Iv = new String(source.Iv);
         }
+        if (source.KeyUri != null) {
+            this.KeyUri = new String(source.KeyUri);
+        }
     }
 
 
@@ -190,6 +221,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Track", this.Track);
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);
         this.setParamSimple(map, prefix + "Iv", this.Iv);
+        this.setParamSimple(map, prefix + "KeyUri", this.KeyUri);
 
     }
 }

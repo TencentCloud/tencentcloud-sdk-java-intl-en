@@ -261,6 +261,26 @@ Note: Accounts with the same username but different hosts are different accounts
     }
 
     /**
+     *This API is used to query the encryption status of the instance data.
+     * @param req DescribeDBEncryptAttributesRequest
+     * @return DescribeDBEncryptAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBEncryptAttributesResponse DescribeDBEncryptAttributes(DescribeDBEncryptAttributesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBEncryptAttributesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBEncryptAttributesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBEncryptAttributes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the TencentDB instance list. It supports filtering instances by project ID, instance ID, private address, and instance name.
 If no filter is specified, 20 instances will be returned by default. Up to 100 instances can be returned for a single request.
      * @param req DescribeDBInstancesRequest

@@ -90,6 +90,14 @@ Note: This field may return `null`, indicating that no valid value was found.
     private PlanSettings PlanSettings;
 
     /**
+    * The callback settings.
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("EventNotifySettings")
+    @Expose
+    private EventNotifySetting EventNotifySettings;
+
+    /**
      * Get Channel ID 
      * @return Id Channel ID
      */
@@ -249,6 +257,26 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.PlanSettings = PlanSettings;
     }
 
+    /**
+     * Get The callback settings.
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return EventNotifySettings The callback settings.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public EventNotifySetting getEventNotifySettings() {
+        return this.EventNotifySettings;
+    }
+
+    /**
+     * Set The callback settings.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param EventNotifySettings The callback settings.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setEventNotifySettings(EventNotifySetting EventNotifySettings) {
+        this.EventNotifySettings = EventNotifySettings;
+    }
+
     public StreamLiveChannelInfo() {
     }
 
@@ -299,6 +327,9 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.PlanSettings != null) {
             this.PlanSettings = new PlanSettings(source.PlanSettings);
         }
+        if (source.EventNotifySettings != null) {
+            this.EventNotifySettings = new EventNotifySetting(source.EventNotifySettings);
+        }
     }
 
 
@@ -315,6 +346,7 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamArrayObj(map, prefix + "VideoTemplates.", this.VideoTemplates);
         this.setParamArrayObj(map, prefix + "AVTemplates.", this.AVTemplates);
         this.setParamObj(map, prefix + "PlanSettings.", this.PlanSettings);
+        this.setParamObj(map, prefix + "EventNotifySettings.", this.EventNotifySettings);
 
     }
 }

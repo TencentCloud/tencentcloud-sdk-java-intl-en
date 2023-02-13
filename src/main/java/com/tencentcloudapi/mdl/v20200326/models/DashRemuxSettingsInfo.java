@@ -44,6 +44,13 @@ public class DashRemuxSettingsInfo extends AbstractModel{
     private String PeriodTriggers;
 
     /**
+    * The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+    */
+    @SerializedName("H265PackageType")
+    @Expose
+    private String H265PackageType;
+
+    /**
      * Get Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000. 
      * @return SegmentDuration Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
      */
@@ -91,6 +98,22 @@ public class DashRemuxSettingsInfo extends AbstractModel{
         this.PeriodTriggers = PeriodTriggers;
     }
 
+    /**
+     * Get The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default). 
+     * @return H265PackageType The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+     */
+    public String getH265PackageType() {
+        return this.H265PackageType;
+    }
+
+    /**
+     * Set The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+     * @param H265PackageType The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+     */
+    public void setH265PackageType(String H265PackageType) {
+        this.H265PackageType = H265PackageType;
+    }
+
     public DashRemuxSettingsInfo() {
     }
 
@@ -108,6 +131,9 @@ public class DashRemuxSettingsInfo extends AbstractModel{
         if (source.PeriodTriggers != null) {
             this.PeriodTriggers = new String(source.PeriodTriggers);
         }
+        if (source.H265PackageType != null) {
+            this.H265PackageType = new String(source.H265PackageType);
+        }
     }
 
 
@@ -118,6 +144,7 @@ public class DashRemuxSettingsInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "SegmentDuration", this.SegmentDuration);
         this.setParamSimple(map, prefix + "SegmentNumber", this.SegmentNumber);
         this.setParamSimple(map, prefix + "PeriodTriggers", this.PeriodTriggers);
+        this.setParamSimple(map, prefix + "H265PackageType", this.H265PackageType);
 
     }
 }

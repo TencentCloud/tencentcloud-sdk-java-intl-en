@@ -519,6 +519,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query task flow information.
+     * @param req DescribeFlowRequest
+     * @return DescribeFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFlowResponse DescribeFlow(DescribeFlowRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeFlowResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeFlowResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeFlow");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query instance details.
      * @param req DescribeInstanceDetailRequest
      * @return DescribeInstanceDetailResponse
@@ -1131,6 +1151,26 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ResetAccountPasswordResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ResetAccountPassword");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to restart an instance.
+     * @param req RestartInstanceRequest
+     * @return RestartInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartInstanceResponse RestartInstance(RestartInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RestartInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RestartInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RestartInstance");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -72,6 +72,13 @@ public class CreateStreamLiveChannelRequest extends AbstractModel{
     private PlanSettings PlanSettings;
 
     /**
+    * The callback settings.
+    */
+    @SerializedName("EventNotifySettings")
+    @Expose
+    private EventNotifySetting EventNotifySettings;
+
+    /**
      * Get Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level 
      * @return Name Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
      */
@@ -183,6 +190,22 @@ public class CreateStreamLiveChannelRequest extends AbstractModel{
         this.PlanSettings = PlanSettings;
     }
 
+    /**
+     * Get The callback settings. 
+     * @return EventNotifySettings The callback settings.
+     */
+    public EventNotifySetting getEventNotifySettings() {
+        return this.EventNotifySettings;
+    }
+
+    /**
+     * Set The callback settings.
+     * @param EventNotifySettings The callback settings.
+     */
+    public void setEventNotifySettings(EventNotifySetting EventNotifySettings) {
+        this.EventNotifySettings = EventNotifySettings;
+    }
+
     public CreateStreamLiveChannelRequest() {
     }
 
@@ -227,6 +250,9 @@ public class CreateStreamLiveChannelRequest extends AbstractModel{
         if (source.PlanSettings != null) {
             this.PlanSettings = new PlanSettings(source.PlanSettings);
         }
+        if (source.EventNotifySettings != null) {
+            this.EventNotifySettings = new EventNotifySetting(source.EventNotifySettings);
+        }
     }
 
 
@@ -241,6 +267,7 @@ public class CreateStreamLiveChannelRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "VideoTemplates.", this.VideoTemplates);
         this.setParamArrayObj(map, prefix + "AVTemplates.", this.AVTemplates);
         this.setParamObj(map, prefix + "PlanSettings.", this.PlanSettings);
+        this.setParamObj(map, prefix + "EventNotifySettings.", this.EventNotifySettings);
 
     }
 }

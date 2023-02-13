@@ -64,6 +64,14 @@ Note: This field may return `null`, indicating that no valid value was found.
     private SDMCSettingsInfo SDMCSettings;
 
     /**
+    * The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`. For HLS, this can be `FAIRPLAY` or `AES128`. For DASH, this can only be `WIDEVINE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DrmType")
+    @Expose
+    private String DrmType;
+
+    /**
      * Get Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
 DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs. 
      * @return State Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
@@ -167,6 +175,26 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.SDMCSettings = SDMCSettings;
     }
 
+    /**
+     * Get The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`. For HLS, this can be `FAIRPLAY` or `AES128`. For DASH, this can only be `WIDEVINE`.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return DrmType The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`. For HLS, this can be `FAIRPLAY` or `AES128`. For DASH, this can only be `WIDEVINE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getDrmType() {
+        return this.DrmType;
+    }
+
+    /**
+     * Set The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`. For HLS, this can be `FAIRPLAY` or `AES128`. For DASH, this can only be `WIDEVINE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param DrmType The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`. For HLS, this can be `FAIRPLAY` or `AES128`. For DASH, this can only be `WIDEVINE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDrmType(String DrmType) {
+        this.DrmType = DrmType;
+    }
+
     public DrmSettingsInfo() {
     }
 
@@ -193,6 +221,9 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.SDMCSettings != null) {
             this.SDMCSettings = new SDMCSettingsInfo(source.SDMCSettings);
         }
+        if (source.DrmType != null) {
+            this.DrmType = new String(source.DrmType);
+        }
     }
 
 
@@ -205,6 +236,7 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "ContentId", this.ContentId);
         this.setParamArrayObj(map, prefix + "Keys.", this.Keys);
         this.setParamObj(map, prefix + "SDMCSettings.", this.SDMCSettings);
+        this.setParamSimple(map, prefix + "DrmType", this.DrmType);
 
     }
 }

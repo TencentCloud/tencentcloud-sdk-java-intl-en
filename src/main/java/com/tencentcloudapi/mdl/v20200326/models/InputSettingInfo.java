@@ -73,6 +73,30 @@ Note: This field may return `null`, indicating that no valid value was found.
     private Long DelayTime;
 
     /**
+    * The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("InputDomain")
+    @Expose
+    private String InputDomain;
+
+    /**
+    * The username, which is used for authentication.
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("UserName")
+    @Expose
+    private String UserName;
+
+    /**
+    * The password, which is used for authentication.
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("Password")
+    @Expose
+    private String Password;
+
+    /**
      * Get Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
 Note: This field may return `null`, indicating that no valid value was found. 
      * @return AppName Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
@@ -200,6 +224,66 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.DelayTime = DelayTime;
     }
 
+    /**
+     * Get The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return InputDomain The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getInputDomain() {
+        return this.InputDomain;
+    }
+
+    /**
+     * Set The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param InputDomain The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setInputDomain(String InputDomain) {
+        this.InputDomain = InputDomain;
+    }
+
+    /**
+     * Get The username, which is used for authentication.
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return UserName The username, which is used for authentication.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getUserName() {
+        return this.UserName;
+    }
+
+    /**
+     * Set The username, which is used for authentication.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param UserName The username, which is used for authentication.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
+    }
+
+    /**
+     * Get The password, which is used for authentication.
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return Password The password, which is used for authentication.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getPassword() {
+        return this.Password;
+    }
+
+    /**
+     * Set The password, which is used for authentication.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param Password The password, which is used for authentication.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
+
     public InputSettingInfo() {
     }
 
@@ -226,6 +310,15 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.DelayTime != null) {
             this.DelayTime = new Long(source.DelayTime);
         }
+        if (source.InputDomain != null) {
+            this.InputDomain = new String(source.InputDomain);
+        }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
     }
 
 
@@ -239,6 +332,9 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "InputAddress", this.InputAddress);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
         this.setParamSimple(map, prefix + "DelayTime", this.DelayTime);
+        this.setParamSimple(map, prefix + "InputDomain", this.InputDomain);
+        this.setParamSimple(map, prefix + "UserName", this.UserName);
+        this.setParamSimple(map, prefix + "Password", this.Password);
 
     }
 }

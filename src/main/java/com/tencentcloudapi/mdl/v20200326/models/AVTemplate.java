@@ -122,6 +122,26 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
     private String WatermarkId;
 
     /**
+    * Whether to convert audio to text. `0` (default): No; `1`: Yes.
+    */
+    @SerializedName("SmartSubtitles")
+    @Expose
+    private Long SmartSubtitles;
+
+    /**
+    * The subtitle settings. Currently, the following subtitles are supported:
+`eng2eng`: English speech to English text.
+`eng2chs`: English speech to Chinese text. 
+`eng2chseng`: English speech to English and Chinese text. 
+`chs2chs`: Chinese speech to Chinese text.   
+`chs2eng`: Chinese speech to English text. 
+`chs2chseng`: Chinese speech to Chinese and English text.
+    */
+    @SerializedName("SubtitleConfiguration")
+    @Expose
+    private String SubtitleConfiguration;
+
+    /**
      * Get Name of an audio/video transcoding template, which can contain 1-20 case-sensitive letters and digits 
      * @return Name Name of an audio/video transcoding template, which can contain 1-20 case-sensitive letters and digits
      */
@@ -349,6 +369,62 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
         this.WatermarkId = WatermarkId;
     }
 
+    /**
+     * Get Whether to convert audio to text. `0` (default): No; `1`: Yes. 
+     * @return SmartSubtitles Whether to convert audio to text. `0` (default): No; `1`: Yes.
+     */
+    public Long getSmartSubtitles() {
+        return this.SmartSubtitles;
+    }
+
+    /**
+     * Set Whether to convert audio to text. `0` (default): No; `1`: Yes.
+     * @param SmartSubtitles Whether to convert audio to text. `0` (default): No; `1`: Yes.
+     */
+    public void setSmartSubtitles(Long SmartSubtitles) {
+        this.SmartSubtitles = SmartSubtitles;
+    }
+
+    /**
+     * Get The subtitle settings. Currently, the following subtitles are supported:
+`eng2eng`: English speech to English text.
+`eng2chs`: English speech to Chinese text. 
+`eng2chseng`: English speech to English and Chinese text. 
+`chs2chs`: Chinese speech to Chinese text.   
+`chs2eng`: Chinese speech to English text. 
+`chs2chseng`: Chinese speech to Chinese and English text. 
+     * @return SubtitleConfiguration The subtitle settings. Currently, the following subtitles are supported:
+`eng2eng`: English speech to English text.
+`eng2chs`: English speech to Chinese text. 
+`eng2chseng`: English speech to English and Chinese text. 
+`chs2chs`: Chinese speech to Chinese text.   
+`chs2eng`: Chinese speech to English text. 
+`chs2chseng`: Chinese speech to Chinese and English text.
+     */
+    public String getSubtitleConfiguration() {
+        return this.SubtitleConfiguration;
+    }
+
+    /**
+     * Set The subtitle settings. Currently, the following subtitles are supported:
+`eng2eng`: English speech to English text.
+`eng2chs`: English speech to Chinese text. 
+`eng2chseng`: English speech to English and Chinese text. 
+`chs2chs`: Chinese speech to Chinese text.   
+`chs2eng`: Chinese speech to English text. 
+`chs2chseng`: Chinese speech to Chinese and English text.
+     * @param SubtitleConfiguration The subtitle settings. Currently, the following subtitles are supported:
+`eng2eng`: English speech to English text.
+`eng2chs`: English speech to Chinese text. 
+`eng2chseng`: English speech to English and Chinese text. 
+`chs2chs`: Chinese speech to Chinese text.   
+`chs2eng`: Chinese speech to English text. 
+`chs2chseng`: Chinese speech to Chinese and English text.
+     */
+    public void setSubtitleConfiguration(String SubtitleConfiguration) {
+        this.SubtitleConfiguration = SubtitleConfiguration;
+    }
+
     public AVTemplate() {
     }
 
@@ -399,6 +475,12 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
         if (source.WatermarkId != null) {
             this.WatermarkId = new String(source.WatermarkId);
         }
+        if (source.SmartSubtitles != null) {
+            this.SmartSubtitles = new Long(source.SmartSubtitles);
+        }
+        if (source.SubtitleConfiguration != null) {
+            this.SubtitleConfiguration = new String(source.SubtitleConfiguration);
+        }
     }
 
 
@@ -420,6 +502,8 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
         this.setParamSimple(map, prefix + "VideoBitrate", this.VideoBitrate);
         this.setParamSimple(map, prefix + "RateControlMode", this.RateControlMode);
         this.setParamSimple(map, prefix + "WatermarkId", this.WatermarkId);
+        this.setParamSimple(map, prefix + "SmartSubtitles", this.SmartSubtitles);
+        this.setParamSimple(map, prefix + "SubtitleConfiguration", this.SubtitleConfiguration);
 
     }
 }

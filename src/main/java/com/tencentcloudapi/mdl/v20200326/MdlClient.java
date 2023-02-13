@@ -619,6 +619,26 @@ public class MdlClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the stream status of a StreamLive input.
+     * @param req QueryInputStreamStateRequest
+     * @return QueryInputStreamStateResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryInputStreamStateResponse QueryInputStreamState(QueryInputStreamStateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<QueryInputStreamStateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<QueryInputStreamStateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "QueryInputStreamState");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to start a StreamLive channel.
      * @param req StartStreamLiveChannelRequest
      * @return StartStreamLiveChannelResponse
