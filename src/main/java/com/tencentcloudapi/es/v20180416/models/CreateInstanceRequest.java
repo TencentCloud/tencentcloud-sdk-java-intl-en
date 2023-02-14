@@ -262,6 +262,13 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
     private Long DiskEnhance;
 
     /**
+    * Whether to enable smart inspection.
+    */
+    @SerializedName("EnableDiagnose")
+    @Expose
+    private Boolean EnableDiagnose;
+
+    /**
      * Get Availability Zone 
      * @return Zone Availability Zone
      */
@@ -821,6 +828,22 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
         this.DiskEnhance = DiskEnhance;
     }
 
+    /**
+     * Get Whether to enable smart inspection. 
+     * @return EnableDiagnose Whether to enable smart inspection.
+     */
+    public Boolean getEnableDiagnose() {
+        return this.EnableDiagnose;
+    }
+
+    /**
+     * Set Whether to enable smart inspection.
+     * @param EnableDiagnose Whether to enable smart inspection.
+     */
+    public void setEnableDiagnose(Boolean EnableDiagnose) {
+        this.EnableDiagnose = EnableDiagnose;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -940,6 +963,9 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
         if (source.DiskEnhance != null) {
             this.DiskEnhance = new Long(source.DiskEnhance);
         }
+        if (source.EnableDiagnose != null) {
+            this.EnableDiagnose = new Boolean(source.EnableDiagnose);
+        }
     }
 
 
@@ -980,6 +1006,7 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
         this.setParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
         this.setParamSimple(map, prefix + "EnableHybridStorage", this.EnableHybridStorage);
         this.setParamSimple(map, prefix + "DiskEnhance", this.DiskEnhance);
+        this.setParamSimple(map, prefix + "EnableDiagnose", this.EnableDiagnose);
 
     }
 }
