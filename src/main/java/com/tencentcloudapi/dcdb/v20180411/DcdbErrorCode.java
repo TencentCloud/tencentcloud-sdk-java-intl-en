@@ -96,6 +96,9 @@ public enum DcdbErrorCode {
     // Backup filename signature failed.
      INTERNALERROR_COSSIGNURL("InternalError.CosSignUrl"),
      
+    // Failed to create a process
+     INTERNALERROR_CREATEFLOWERROR("InternalError.CreateFlowError"),
+     
     // No database data has changed.
      INTERNALERROR_DBROWSAFFECTEDERROR("InternalError.DBRowsAffectedError"),
      
@@ -224,6 +227,9 @@ public enum DcdbErrorCode {
      
     // Failed to find the requested instance.
      INVALIDPARAMETER_INSTANCENOTFOUND("InvalidParameter.InstanceNotFound"),
+     
+    // The API doesn’t support instances of this payment mode
+     INVALIDPARAMETER_NOTSUPPORTEDPAYMODE("InvalidParameter.NotSupportedPayMode"),
      
     // You have no permission to manipulate this API or resource.
      INVALIDPARAMETER_PERMISSIONDENIED("InvalidParameter.PermissionDenied"),

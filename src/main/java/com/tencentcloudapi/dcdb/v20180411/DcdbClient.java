@@ -1049,4 +1049,24 @@ Note: accounts with the same username but different hosts are different accounts
         return rsp.response;
     }
 
+    /**
+     *This API is used to upgrade a pay-as-you-go TDSQL for MySQL instance.
+     * @param req UpgradeHourDCDBInstanceRequest
+     * @return UpgradeHourDCDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeHourDCDBInstanceResponse UpgradeHourDCDBInstance(UpgradeHourDCDBInstanceRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeHourDCDBInstanceResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeHourDCDBInstanceResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpgradeHourDCDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
 }
