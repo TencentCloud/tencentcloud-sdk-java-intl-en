@@ -59,7 +59,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Memory;
 
     /**
-    * Instance status. Value range: 0 (creating), 1 (running), 4 (isolating), 5 (isolated)
+    * Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
     */
     @SerializedName("Status")
     @Expose
@@ -433,16 +433,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance status. Value range: 0 (creating), 1 (running), 4 (isolating), 5 (isolated) 
-     * @return Status Instance status. Value range: 0 (creating), 1 (running), 4 (isolating), 5 (isolated)
+     * Get Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated). 
+     * @return Status Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status. Value range: 0 (creating), 1 (running), 4 (isolating), 5 (isolated)
-     * @param Status Instance status. Value range: 0 (creating), 1 (running), 4 (isolating), 5 (isolated)
+     * Set Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
+     * @param Status Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
      */
     public void setStatus(Long Status) {
         this.Status = Status;

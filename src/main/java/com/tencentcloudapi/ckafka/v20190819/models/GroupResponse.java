@@ -39,6 +39,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private DescribeGroup [] GroupList;
 
     /**
+    * Consumer group quota
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("GroupCountQuota")
+    @Expose
+    private Long GroupCountQuota;
+
+    /**
      * Get Count
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return TotalCount Count
@@ -78,6 +86,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.GroupList = GroupList;
     }
 
+    /**
+     * Get Consumer group quota
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return GroupCountQuota Consumer group quota
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getGroupCountQuota() {
+        return this.GroupCountQuota;
+    }
+
+    /**
+     * Set Consumer group quota
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param GroupCountQuota Consumer group quota
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setGroupCountQuota(Long GroupCountQuota) {
+        this.GroupCountQuota = GroupCountQuota;
+    }
+
     public GroupResponse() {
     }
 
@@ -95,6 +123,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 this.GroupList[i] = new DescribeGroup(source.GroupList[i]);
             }
         }
+        if (source.GroupCountQuota != null) {
+            this.GroupCountQuota = new Long(source.GroupCountQuota);
+        }
     }
 
 
@@ -104,6 +135,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "GroupList.", this.GroupList);
+        this.setParamSimple(map, prefix + "GroupCountQuota", this.GroupCountQuota);
 
     }
 }

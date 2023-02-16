@@ -30,7 +30,7 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * (Filter) filter by instance name. Fuzzy search is supported
+    * Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
     */
     @SerializedName("SearchWord")
     @Expose
@@ -102,16 +102,16 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
     }
 
     /**
-     * Get (Filter) filter by instance name. Fuzzy search is supported 
-     * @return SearchWord (Filter) filter by instance name. Fuzzy search is supported
+     * Get Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported. 
+     * @return SearchWord Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set (Filter) filter by instance name. Fuzzy search is supported
-     * @param SearchWord (Filter) filter by instance name. Fuzzy search is supported
+     * Set Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
+     * @param SearchWord Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
