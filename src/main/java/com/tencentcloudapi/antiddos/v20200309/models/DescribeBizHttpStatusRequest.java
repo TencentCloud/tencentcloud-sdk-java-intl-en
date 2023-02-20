@@ -20,10 +20,10 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeBizTrendRequest extends AbstractModel{
+public class DescribeBizHttpStatusRequest extends AbstractModel{
 
     /**
-    * Statistical method. Valid values: `max`, `min`, `avg`, `sum`. It can only be `max` if the statistical dimension is traffic rate or packet rate.
+    * Statistical mode. Value: `sum`.
     */
     @SerializedName("Statistics")
     @Expose
@@ -37,42 +37,35 @@ public class DescribeBizTrendRequest extends AbstractModel{
     private String Business;
 
     /**
-    * Sampling interval in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, `86400`
+    * Statistical period in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, and `86400`.
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * Beginning of the time range for the query, such as `2020-09-22 00:00:00`.
+    * Statistics start time, such as `2020-02-01 12:04:12`
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End of the time range for the query, such as `2020-09-22 00:00:00`.
+    * Statistics end time, such as `2020-02-03 18:03:23`
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Instance ID
+    * The resource ID.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Metric. Valid values: `connum`, `new_conn`, `inactive_conn`, `intraffic`, `outtraffic`, `inpkg`, `outpkg`, `qps`
-    */
-    @SerializedName("MetricName")
-    @Expose
-    private String MetricName;
-
-    /**
-    * You can query data by specifying a domain name when the metric is `qps`.
+    * Specific domain name query
     */
     @SerializedName("Domain")
     @Expose
@@ -86,16 +79,16 @@ public class DescribeBizTrendRequest extends AbstractModel{
     private ProtocolPort [] ProtoInfo;
 
     /**
-     * Get Statistical method. Valid values: `max`, `min`, `avg`, `sum`. It can only be `max` if the statistical dimension is traffic rate or packet rate. 
-     * @return Statistics Statistical method. Valid values: `max`, `min`, `avg`, `sum`. It can only be `max` if the statistical dimension is traffic rate or packet rate.
+     * Get Statistical mode. Value: `sum`. 
+     * @return Statistics Statistical mode. Value: `sum`.
      */
     public String getStatistics() {
         return this.Statistics;
     }
 
     /**
-     * Set Statistical method. Valid values: `max`, `min`, `avg`, `sum`. It can only be `max` if the statistical dimension is traffic rate or packet rate.
-     * @param Statistics Statistical method. Valid values: `max`, `min`, `avg`, `sum`. It can only be `max` if the statistical dimension is traffic rate or packet rate.
+     * Set Statistical mode. Value: `sum`.
+     * @param Statistics Statistical mode. Value: `sum`.
      */
     public void setStatistics(String Statistics) {
         this.Statistics = Statistics;
@@ -118,96 +111,80 @@ public class DescribeBizTrendRequest extends AbstractModel{
     }
 
     /**
-     * Get Sampling interval in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, `86400` 
-     * @return Period Sampling interval in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, `86400`
+     * Get Statistical period in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, and `86400`. 
+     * @return Period Statistical period in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, and `86400`.
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Sampling interval in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, `86400`
-     * @param Period Sampling interval in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, `86400`
+     * Set Statistical period in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, and `86400`.
+     * @param Period Statistical period in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, and `86400`.
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get Beginning of the time range for the query, such as `2020-09-22 00:00:00`. 
-     * @return StartTime Beginning of the time range for the query, such as `2020-09-22 00:00:00`.
+     * Get Statistics start time, such as `2020-02-01 12:04:12` 
+     * @return StartTime Statistics start time, such as `2020-02-01 12:04:12`
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Beginning of the time range for the query, such as `2020-09-22 00:00:00`.
-     * @param StartTime Beginning of the time range for the query, such as `2020-09-22 00:00:00`.
+     * Set Statistics start time, such as `2020-02-01 12:04:12`
+     * @param StartTime Statistics start time, such as `2020-02-01 12:04:12`
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End of the time range for the query, such as `2020-09-22 00:00:00`. 
-     * @return EndTime End of the time range for the query, such as `2020-09-22 00:00:00`.
+     * Get Statistics end time, such as `2020-02-03 18:03:23` 
+     * @return EndTime Statistics end time, such as `2020-02-03 18:03:23`
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End of the time range for the query, such as `2020-09-22 00:00:00`.
-     * @param EndTime End of the time range for the query, such as `2020-09-22 00:00:00`.
+     * Set Statistics end time, such as `2020-02-03 18:03:23`
+     * @param EndTime Statistics end time, such as `2020-02-03 18:03:23`
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Instance ID 
-     * @return Id Instance ID
+     * Get The resource ID. 
+     * @return Id The resource ID.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Instance ID
-     * @param Id Instance ID
+     * Set The resource ID.
+     * @param Id The resource ID.
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Metric. Valid values: `connum`, `new_conn`, `inactive_conn`, `intraffic`, `outtraffic`, `inpkg`, `outpkg`, `qps` 
-     * @return MetricName Metric. Valid values: `connum`, `new_conn`, `inactive_conn`, `intraffic`, `outtraffic`, `inpkg`, `outpkg`, `qps`
-     */
-    public String getMetricName() {
-        return this.MetricName;
-    }
-
-    /**
-     * Set Metric. Valid values: `connum`, `new_conn`, `inactive_conn`, `intraffic`, `outtraffic`, `inpkg`, `outpkg`, `qps`
-     * @param MetricName Metric. Valid values: `connum`, `new_conn`, `inactive_conn`, `intraffic`, `outtraffic`, `inpkg`, `outpkg`, `qps`
-     */
-    public void setMetricName(String MetricName) {
-        this.MetricName = MetricName;
-    }
-
-    /**
-     * Get You can query data by specifying a domain name when the metric is `qps`. 
-     * @return Domain You can query data by specifying a domain name when the metric is `qps`.
+     * Get Specific domain name query 
+     * @return Domain Specific domain name query
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set You can query data by specifying a domain name when the metric is `qps`.
-     * @param Domain You can query data by specifying a domain name when the metric is `qps`.
+     * Set Specific domain name query
+     * @param Domain Specific domain name query
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
@@ -229,14 +206,14 @@ public class DescribeBizTrendRequest extends AbstractModel{
         this.ProtoInfo = ProtoInfo;
     }
 
-    public DescribeBizTrendRequest() {
+    public DescribeBizHttpStatusRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeBizTrendRequest(DescribeBizTrendRequest source) {
+    public DescribeBizHttpStatusRequest(DescribeBizHttpStatusRequest source) {
         if (source.Statistics != null) {
             this.Statistics = new String(source.Statistics);
         }
@@ -254,9 +231,6 @@ public class DescribeBizTrendRequest extends AbstractModel{
         }
         if (source.Id != null) {
             this.Id = new String(source.Id);
-        }
-        if (source.MetricName != null) {
-            this.MetricName = new String(source.MetricName);
         }
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
@@ -280,7 +254,6 @@ public class DescribeBizTrendRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Id", this.Id);
-        this.setParamSimple(map, prefix + "MetricName", this.MetricName);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamArrayObj(map, prefix + "ProtoInfo.", this.ProtoInfo);
 

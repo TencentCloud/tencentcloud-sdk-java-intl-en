@@ -206,6 +206,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long ErrCode;
 
     /**
+    * Version
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Version")
+    @Expose
+    private Long Version;
+
+    /**
      * Get Forwarding protocol. Valid values: `http` and `https`. 
      * @return Protocol Forwarding protocol. Valid values: `http` and `https`.
      */
@@ -625,6 +633,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.ErrCode = ErrCode;
     }
 
+    /**
+     * Get Version
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Version Version
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set Version
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Version Version
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setVersion(Long Version) {
+        this.Version = Version;
+    }
+
     public NewL7RuleEntry() {
     }
 
@@ -714,6 +742,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.ErrCode != null) {
             this.ErrCode = new Long(source.ErrCode);
         }
+        if (source.Version != null) {
+            this.Version = new Long(source.Version);
+        }
     }
 
 
@@ -747,6 +778,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "VirtualPort", this.VirtualPort);
         this.setParamSimple(map, prefix + "RewriteHttps", this.RewriteHttps);
         this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
+        this.setParamSimple(map, prefix + "Version", this.Version);
 
     }
 }

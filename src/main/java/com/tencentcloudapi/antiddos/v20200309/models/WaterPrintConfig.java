@@ -64,6 +64,14 @@ public class WaterPrintConfig extends AbstractModel{
     private String Verify;
 
     /**
+    * Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CloudSdkProxy")
+    @Expose
+    private Long CloudSdkProxy;
+
+    /**
      * Get Watermark offset. Value range: [0, 100). 
      * @return Offset Watermark offset. Value range: [0, 100).
      */
@@ -167,6 +175,26 @@ public class WaterPrintConfig extends AbstractModel{
         this.Verify = Verify;
     }
 
+    /**
+     * Get Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CloudSdkProxy Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getCloudSdkProxy() {
+        return this.CloudSdkProxy;
+    }
+
+    /**
+     * Set Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CloudSdkProxy Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCloudSdkProxy(Long CloudSdkProxy) {
+        this.CloudSdkProxy = CloudSdkProxy;
+    }
+
     public WaterPrintConfig() {
     }
 
@@ -196,6 +224,9 @@ public class WaterPrintConfig extends AbstractModel{
         if (source.Verify != null) {
             this.Verify = new String(source.Verify);
         }
+        if (source.CloudSdkProxy != null) {
+            this.CloudSdkProxy = new Long(source.CloudSdkProxy);
+        }
     }
 
 
@@ -208,6 +239,7 @@ public class WaterPrintConfig extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Listeners.", this.Listeners);
         this.setParamArrayObj(map, prefix + "Keys.", this.Keys);
         this.setParamSimple(map, prefix + "Verify", this.Verify);
+        this.setParamSimple(map, prefix + "CloudSdkProxy", this.CloudSdkProxy);
 
     }
 }

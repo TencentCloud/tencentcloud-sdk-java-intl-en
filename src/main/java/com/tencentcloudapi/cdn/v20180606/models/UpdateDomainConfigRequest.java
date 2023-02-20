@@ -360,6 +360,13 @@ After switching to global acceleration, configurations of the domain name will b
     private QnPrivateAccess QnPrivateAccess;
 
     /**
+    * HTTPS service
+    */
+    @SerializedName("HttpsBilling")
+    @Expose
+    private HttpsBilling HttpsBilling;
+
+    /**
      * Get Domain name 
      * @return Domain Domain name
      */
@@ -1143,6 +1150,22 @@ After switching to global acceleration, configurations of the domain name will b
         this.QnPrivateAccess = QnPrivateAccess;
     }
 
+    /**
+     * Get HTTPS service 
+     * @return HttpsBilling HTTPS service
+     */
+    public HttpsBilling getHttpsBilling() {
+        return this.HttpsBilling;
+    }
+
+    /**
+     * Set HTTPS service
+     * @param HttpsBilling HTTPS service
+     */
+    public void setHttpsBilling(HttpsBilling HttpsBilling) {
+        this.HttpsBilling = HttpsBilling;
+    }
+
     public UpdateDomainConfigRequest() {
     }
 
@@ -1295,6 +1318,9 @@ After switching to global acceleration, configurations of the domain name will b
         if (source.QnPrivateAccess != null) {
             this.QnPrivateAccess = new QnPrivateAccess(source.QnPrivateAccess);
         }
+        if (source.HttpsBilling != null) {
+            this.HttpsBilling = new HttpsBilling(source.HttpsBilling);
+        }
     }
 
 
@@ -1349,6 +1375,7 @@ After switching to global acceleration, configurations of the domain name will b
         this.setParamObj(map, prefix + "ShareCname.", this.ShareCname);
         this.setParamObj(map, prefix + "HwPrivateAccess.", this.HwPrivateAccess);
         this.setParamObj(map, prefix + "QnPrivateAccess.", this.QnPrivateAccess);
+        this.setParamObj(map, prefix + "HttpsBilling.", this.HttpsBilling);
 
     }
 }

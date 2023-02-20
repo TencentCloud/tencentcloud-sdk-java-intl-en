@@ -552,6 +552,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private QnPrivateAccess QnPrivateAccess;
 
     /**
+    * HTTPS service
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("HttpsBilling")
+    @Expose
+    private HttpsBilling HttpsBilling;
+
+    /**
      * Get Domain name ID 
      * @return ResourceId Domain name ID
      */
@@ -1899,6 +1907,26 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.QnPrivateAccess = QnPrivateAccess;
     }
 
+    /**
+     * Get HTTPS service
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HttpsBilling HTTPS service
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public HttpsBilling getHttpsBilling() {
+        return this.HttpsBilling;
+    }
+
+    /**
+     * Set HTTPS service
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HttpsBilling HTTPS service
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setHttpsBilling(HttpsBilling HttpsBilling) {
+        this.HttpsBilling = HttpsBilling;
+    }
+
     public DetailDomain() {
     }
 
@@ -2108,6 +2136,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.QnPrivateAccess != null) {
             this.QnPrivateAccess = new QnPrivateAccess(source.QnPrivateAccess);
         }
+        if (source.HttpsBilling != null) {
+            this.HttpsBilling = new HttpsBilling(source.HttpsBilling);
+        }
     }
 
 
@@ -2179,6 +2210,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "ParentHost", this.ParentHost);
         this.setParamObj(map, prefix + "HwPrivateAccess.", this.HwPrivateAccess);
         this.setParamObj(map, prefix + "QnPrivateAccess.", this.QnPrivateAccess);
+        this.setParamObj(map, prefix + "HttpsBilling.", this.HttpsBilling);
 
     }
 }

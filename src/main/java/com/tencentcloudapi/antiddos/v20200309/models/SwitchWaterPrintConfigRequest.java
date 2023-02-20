@@ -37,6 +37,13 @@ public class SwitchWaterPrintConfigRequest extends AbstractModel{
     private Long OpenStatus;
 
     /**
+    * Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+    */
+    @SerializedName("CloudSdkProxy")
+    @Expose
+    private Long CloudSdkProxy;
+
+    /**
      * Get Anti-DDoS instance ID 
      * @return InstanceId Anti-DDoS instance ID
      */
@@ -68,6 +75,22 @@ public class SwitchWaterPrintConfigRequest extends AbstractModel{
         this.OpenStatus = OpenStatus;
     }
 
+    /**
+     * Get Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required) 
+     * @return CloudSdkProxy Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+     */
+    public Long getCloudSdkProxy() {
+        return this.CloudSdkProxy;
+    }
+
+    /**
+     * Set Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+     * @param CloudSdkProxy Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+     */
+    public void setCloudSdkProxy(Long CloudSdkProxy) {
+        this.CloudSdkProxy = CloudSdkProxy;
+    }
+
     public SwitchWaterPrintConfigRequest() {
     }
 
@@ -82,6 +105,9 @@ public class SwitchWaterPrintConfigRequest extends AbstractModel{
         if (source.OpenStatus != null) {
             this.OpenStatus = new Long(source.OpenStatus);
         }
+        if (source.CloudSdkProxy != null) {
+            this.CloudSdkProxy = new Long(source.CloudSdkProxy);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class SwitchWaterPrintConfigRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "OpenStatus", this.OpenStatus);
+        this.setParamSimple(map, prefix + "CloudSdkProxy", this.CloudSdkProxy);
 
     }
 }

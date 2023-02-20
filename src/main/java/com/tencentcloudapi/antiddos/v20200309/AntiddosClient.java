@@ -679,6 +679,26 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get the statistics on the status codes of business traffic.
+     * @param req DescribeBizHttpStatusRequest
+     * @return DescribeBizHttpStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBizHttpStatusResponse DescribeBizHttpStatus(DescribeBizHttpStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBizHttpStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBizHttpStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBizHttpStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the traffic flow data collected in the specified period.
      * @param req DescribeBizTrendRequest
      * @return DescribeBizTrendResponse
@@ -940,8 +960,7 @@ public class AntiddosClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get a list of Anti-DDoS Pro instances.
-
+     *This API is used to get the list of Anti-DDoS Pro instances.
      * @param req DescribeListBGPInstancesRequest
      * @return DescribeListBGPInstancesResponse
      * @throws TencentCloudSDKException

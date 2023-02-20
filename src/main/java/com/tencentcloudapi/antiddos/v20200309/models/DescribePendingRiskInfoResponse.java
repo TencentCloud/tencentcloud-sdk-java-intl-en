@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribePendingRiskInfoResponse extends AbstractModel{
 
     /**
-    * Whether the user is a paid user
+    * Whether the user is a paid user. Values: `true`, `false`.
     */
     @SerializedName("IsPaidUsr")
     @Expose
@@ -65,16 +65,16 @@ public class DescribePendingRiskInfoResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Whether the user is a paid user 
-     * @return IsPaidUsr Whether the user is a paid user
+     * Get Whether the user is a paid user. Values: `true`, `false`. 
+     * @return IsPaidUsr Whether the user is a paid user. Values: `true`, `false`.
      */
     public Boolean getIsPaidUsr() {
         return this.IsPaidUsr;
     }
 
     /**
-     * Set Whether the user is a paid user
-     * @param IsPaidUsr Whether the user is a paid user
+     * Set Whether the user is a paid user. Values: `true`, `false`.
+     * @param IsPaidUsr Whether the user is a paid user. Values: `true`, `false`.
      */
     public void setIsPaidUsr(Boolean IsPaidUsr) {
         this.IsPaidUsr = IsPaidUsr;

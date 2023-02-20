@@ -99,7 +99,7 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
     private Long FilterDamDDoSStatus;
 
     /**
-    * Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+    * Filters by the status of bound resources. Values: `idle` (normal), `attacking` (being attacked), `blocking` (being blocked), `trial` (in trial)
     */
     @SerializedName("FilterStatus")
     @Expose
@@ -132,6 +132,13 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
     @SerializedName("FilterPackType")
     @Expose
     private String [] FilterPackType;
+
+    /**
+    * Filters out Convoy instances
+    */
+    @SerializedName("FilterConvoy")
+    @Expose
+    private Long FilterConvoy;
 
     /**
      * Get Starting offset of the page. Value: (number of pages – 1) * items per page. 
@@ -318,16 +325,16 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked 
-     * @return FilterStatus Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+     * Get Filters by the status of bound resources. Values: `idle` (normal), `attacking` (being attacked), `blocking` (being blocked), `trial` (in trial) 
+     * @return FilterStatus Filters by the status of bound resources. Values: `idle` (normal), `attacking` (being attacked), `blocking` (being blocked), `trial` (in trial)
      */
     public String getFilterStatus() {
         return this.FilterStatus;
     }
 
     /**
-     * Set Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
-     * @param FilterStatus Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+     * Set Filters by the status of bound resources. Values: `idle` (normal), `attacking` (being attacked), `blocking` (being blocked), `trial` (in trial)
+     * @param FilterStatus Filters by the status of bound resources. Values: `idle` (normal), `attacking` (being attacked), `blocking` (being blocked), `trial` (in trial)
      */
     public void setFilterStatus(String FilterStatus) {
         this.FilterStatus = FilterStatus;
@@ -397,6 +404,22 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
         this.FilterPackType = FilterPackType;
     }
 
+    /**
+     * Get Filters out Convoy instances 
+     * @return FilterConvoy Filters out Convoy instances
+     */
+    public Long getFilterConvoy() {
+        return this.FilterConvoy;
+    }
+
+    /**
+     * Set Filters out Convoy instances
+     * @param FilterConvoy Filters out Convoy instances
+     */
+    public void setFilterConvoy(Long FilterConvoy) {
+        this.FilterConvoy = FilterConvoy;
+    }
+
     public DescribeListBGPIPInstancesRequest() {
     }
 
@@ -459,6 +482,9 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
                 this.FilterPackType[i] = new String(source.FilterPackType[i]);
             }
         }
+        if (source.FilterConvoy != null) {
+            this.FilterConvoy = new Long(source.FilterConvoy);
+        }
     }
 
 
@@ -481,6 +507,7 @@ public class DescribeListBGPIPInstancesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "FilterInstanceIdList.", this.FilterInstanceIdList);
         this.setParamObj(map, prefix + "FilterTag.", this.FilterTag);
         this.setParamArraySimple(map, prefix + "FilterPackType.", this.FilterPackType);
+        this.setParamSimple(map, prefix + "FilterConvoy", this.FilterConvoy);
 
     }
 }

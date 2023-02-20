@@ -147,6 +147,21 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Long VitalityVersion;
 
     /**
+    * Network line
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Line")
+    @Expose
+    private Long Line;
+
+    /**
+    * Whether to enable elastic bandwidth
+    */
+    @SerializedName("ElasticServiceBandwidth")
+    @Expose
+    private Long ElasticServiceBandwidth;
+
+    /**
      * Get Details of the Anti-DDoS Pro instance 
      * @return InstanceDetail Details of the Anti-DDoS Pro instance
      */
@@ -450,6 +465,42 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.VitalityVersion = VitalityVersion;
     }
 
+    /**
+     * Get Network line
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Line Network line
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getLine() {
+        return this.Line;
+    }
+
+    /**
+     * Set Network line
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Line Network line
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setLine(Long Line) {
+        this.Line = Line;
+    }
+
+    /**
+     * Get Whether to enable elastic bandwidth 
+     * @return ElasticServiceBandwidth Whether to enable elastic bandwidth
+     */
+    public Long getElasticServiceBandwidth() {
+        return this.ElasticServiceBandwidth;
+    }
+
+    /**
+     * Set Whether to enable elastic bandwidth
+     * @param ElasticServiceBandwidth Whether to enable elastic bandwidth
+     */
+    public void setElasticServiceBandwidth(Long ElasticServiceBandwidth) {
+        this.ElasticServiceBandwidth = ElasticServiceBandwidth;
+    }
+
     public BGPInstance() {
     }
 
@@ -512,6 +563,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.VitalityVersion != null) {
             this.VitalityVersion = new Long(source.VitalityVersion);
         }
+        if (source.Line != null) {
+            this.Line = new Long(source.Line);
+        }
+        if (source.ElasticServiceBandwidth != null) {
+            this.ElasticServiceBandwidth = new Long(source.ElasticServiceBandwidth);
+        }
     }
 
 
@@ -535,6 +592,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
         this.setParamSimple(map, prefix + "IpCountNewFlag", this.IpCountNewFlag);
         this.setParamSimple(map, prefix + "VitalityVersion", this.VitalityVersion);
+        this.setParamSimple(map, prefix + "Line", this.Line);
+        this.setParamSimple(map, prefix + "ElasticServiceBandwidth", this.ElasticServiceBandwidth);
 
     }
 }

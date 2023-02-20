@@ -51,7 +51,7 @@ public class CreateCcGeoIPBlockConfigRequest extends AbstractModel{
     private String Protocol;
 
     /**
-    * Region blocking configuration. The configuration ID should be cleared when you set this parameter.
+    * CC regional blocking configuration
     */
     @SerializedName("CcGeoIPBlockConfig")
     @Expose
@@ -122,16 +122,16 @@ public class CreateCcGeoIPBlockConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get Region blocking configuration. The configuration ID should be cleared when you set this parameter. 
-     * @return CcGeoIPBlockConfig Region blocking configuration. The configuration ID should be cleared when you set this parameter.
+     * Get CC regional blocking configuration 
+     * @return CcGeoIPBlockConfig CC regional blocking configuration
      */
     public CcGeoIPBlockConfig getCcGeoIPBlockConfig() {
         return this.CcGeoIPBlockConfig;
     }
 
     /**
-     * Set Region blocking configuration. The configuration ID should be cleared when you set this parameter.
-     * @param CcGeoIPBlockConfig Region blocking configuration. The configuration ID should be cleared when you set this parameter.
+     * Set CC regional blocking configuration
+     * @param CcGeoIPBlockConfig CC regional blocking configuration
      */
     public void setCcGeoIPBlockConfig(CcGeoIPBlockConfig CcGeoIPBlockConfig) {
         this.CcGeoIPBlockConfig = CcGeoIPBlockConfig;

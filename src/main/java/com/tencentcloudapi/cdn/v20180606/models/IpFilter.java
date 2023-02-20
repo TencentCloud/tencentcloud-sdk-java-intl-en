@@ -60,9 +60,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private IpFilterPathRule [] FilterRules;
 
     /**
-    * HTTP code returned when the IP allowlist/blocklist verification fails
-Valid values: 400-499
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * [Unavailable soon] The code returned when the IP blocklist/allowlist verification fails.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ReturnCode")
     @Expose
@@ -169,24 +168,20 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get HTTP code returned when the IP allowlist/blocklist verification fails
-Valid values: 400-499
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return ReturnCode HTTP code returned when the IP allowlist/blocklist verification fails
-Valid values: 400-499
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get [Unavailable soon] The code returned when the IP blocklist/allowlist verification fails.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ReturnCode [Unavailable soon] The code returned when the IP blocklist/allowlist verification fails.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getReturnCode() {
         return this.ReturnCode;
     }
 
     /**
-     * Set HTTP code returned when the IP allowlist/blocklist verification fails
-Valid values: 400-499
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param ReturnCode HTTP code returned when the IP allowlist/blocklist verification fails
-Valid values: 400-499
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set [Unavailable soon] The code returned when the IP blocklist/allowlist verification fails.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ReturnCode [Unavailable soon] The code returned when the IP blocklist/allowlist verification fails.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setReturnCode(Long ReturnCode) {
         this.ReturnCode = ReturnCode;

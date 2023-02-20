@@ -39,8 +39,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String Reorder;
 
     /**
-    * Include/exclude query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeAll`
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Action")
     @Expose
@@ -95,20 +95,20 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Include/exclude query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeAll`
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Action Include/exclude query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeAll`
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Action Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set Include/exclude query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeAll`
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Action Include/exclude query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeAll`
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Action Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAction(String Action) {
         this.Action = Action;

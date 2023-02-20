@@ -209,6 +209,30 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Long InstanceVersion;
 
     /**
+    * Convoy instance ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("ConvoyId")
+    @Expose
+    private String ConvoyId;
+
+    /**
+    * Pay-as-you-go bandwidth
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("ElasticBandwidth")
+    @Expose
+    private Long ElasticBandwidth;
+
+    /**
+    * Whether it’s the IP broadcasted by EdgeOne. Values: `1` (yes), `0` (no)
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EOFlag")
+    @Expose
+    private Long EOFlag;
+
+    /**
      * Get Anti-DDoS instance details 
      * @return InstanceDetail Anti-DDoS instance details
      */
@@ -676,6 +700,66 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.InstanceVersion = InstanceVersion;
     }
 
+    /**
+     * Get Convoy instance ID
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return ConvoyId Convoy instance ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getConvoyId() {
+        return this.ConvoyId;
+    }
+
+    /**
+     * Set Convoy instance ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param ConvoyId Convoy instance ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setConvoyId(String ConvoyId) {
+        this.ConvoyId = ConvoyId;
+    }
+
+    /**
+     * Get Pay-as-you-go bandwidth
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return ElasticBandwidth Pay-as-you-go bandwidth
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Long getElasticBandwidth() {
+        return this.ElasticBandwidth;
+    }
+
+    /**
+     * Set Pay-as-you-go bandwidth
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param ElasticBandwidth Pay-as-you-go bandwidth
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setElasticBandwidth(Long ElasticBandwidth) {
+        this.ElasticBandwidth = ElasticBandwidth;
+    }
+
+    /**
+     * Get Whether it’s the IP broadcasted by EdgeOne. Values: `1` (yes), `0` (no)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EOFlag Whether it’s the IP broadcasted by EdgeOne. Values: `1` (yes), `0` (no)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getEOFlag() {
+        return this.EOFlag;
+    }
+
+    /**
+     * Set Whether it’s the IP broadcasted by EdgeOne. Values: `1` (yes), `0` (no)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EOFlag Whether it’s the IP broadcasted by EdgeOne. Values: `1` (yes), `0` (no)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEOFlag(Long EOFlag) {
+        this.EOFlag = EOFlag;
+    }
+
     public BGPIPInstance() {
     }
 
@@ -756,6 +840,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.InstanceVersion != null) {
             this.InstanceVersion = new Long(source.InstanceVersion);
         }
+        if (source.ConvoyId != null) {
+            this.ConvoyId = new String(source.ConvoyId);
+        }
+        if (source.ElasticBandwidth != null) {
+            this.ElasticBandwidth = new Long(source.ElasticBandwidth);
+        }
+        if (source.EOFlag != null) {
+            this.EOFlag = new Long(source.EOFlag);
+        }
     }
 
 
@@ -786,6 +879,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
         this.setParamObj(map, prefix + "AnycastOutPackRelation.", this.AnycastOutPackRelation);
         this.setParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
+        this.setParamSimple(map, prefix + "ConvoyId", this.ConvoyId);
+        this.setParamSimple(map, prefix + "ElasticBandwidth", this.ElasticBandwidth);
+        this.setParamSimple(map, prefix + "EOFlag", this.EOFlag);
 
     }
 }

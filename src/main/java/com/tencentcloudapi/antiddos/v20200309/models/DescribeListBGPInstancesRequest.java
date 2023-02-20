@@ -93,7 +93,7 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
     private String [] FilterInstanceIdList;
 
     /**
-    * Filters by Enterprise edition
+    * Enterprise edition. Values: `1` (the Convoy package included), `2` (the Convoy package not included)
     */
     @SerializedName("FilterEnterpriseFlag")
     @Expose
@@ -119,6 +119,27 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
     @SerializedName("FilterTag")
     @Expose
     private TagFilter FilterTag;
+
+    /**
+    * Filters out trial instances. Values: `1` (emergency protection instances), `2` (PLG instances)
+    */
+    @SerializedName("FilterTrialFlag")
+    @Expose
+    private Long FilterTrialFlag;
+
+    /**
+    * Filters out Convoy instances
+    */
+    @SerializedName("FilterConvoy")
+    @Expose
+    private Long FilterConvoy;
+
+    /**
+    * Whether to exclude the advanced information (such as `InstanceList[0].Usage`). Values: `true` (exclude), `false` (do not exclude). The default value is `false`.
+    */
+    @SerializedName("ExcludeAdvancedInfo")
+    @Expose
+    private Boolean ExcludeAdvancedInfo;
 
     /**
      * Get Starting offset of the page. Value: (number of pages – 1) * items per page. 
@@ -281,16 +302,16 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Filters by Enterprise edition 
-     * @return FilterEnterpriseFlag Filters by Enterprise edition
+     * Get Enterprise edition. Values: `1` (the Convoy package included), `2` (the Convoy package not included) 
+     * @return FilterEnterpriseFlag Enterprise edition. Values: `1` (the Convoy package included), `2` (the Convoy package not included)
      */
     public Long getFilterEnterpriseFlag() {
         return this.FilterEnterpriseFlag;
     }
 
     /**
-     * Set Filters by Enterprise edition
-     * @param FilterEnterpriseFlag Filters by Enterprise edition
+     * Set Enterprise edition. Values: `1` (the Convoy package included), `2` (the Convoy package not included)
+     * @param FilterEnterpriseFlag Enterprise edition. Values: `1` (the Convoy package included), `2` (the Convoy package not included)
      */
     public void setFilterEnterpriseFlag(Long FilterEnterpriseFlag) {
         this.FilterEnterpriseFlag = FilterEnterpriseFlag;
@@ -342,6 +363,54 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
      */
     public void setFilterTag(TagFilter FilterTag) {
         this.FilterTag = FilterTag;
+    }
+
+    /**
+     * Get Filters out trial instances. Values: `1` (emergency protection instances), `2` (PLG instances) 
+     * @return FilterTrialFlag Filters out trial instances. Values: `1` (emergency protection instances), `2` (PLG instances)
+     */
+    public Long getFilterTrialFlag() {
+        return this.FilterTrialFlag;
+    }
+
+    /**
+     * Set Filters out trial instances. Values: `1` (emergency protection instances), `2` (PLG instances)
+     * @param FilterTrialFlag Filters out trial instances. Values: `1` (emergency protection instances), `2` (PLG instances)
+     */
+    public void setFilterTrialFlag(Long FilterTrialFlag) {
+        this.FilterTrialFlag = FilterTrialFlag;
+    }
+
+    /**
+     * Get Filters out Convoy instances 
+     * @return FilterConvoy Filters out Convoy instances
+     */
+    public Long getFilterConvoy() {
+        return this.FilterConvoy;
+    }
+
+    /**
+     * Set Filters out Convoy instances
+     * @param FilterConvoy Filters out Convoy instances
+     */
+    public void setFilterConvoy(Long FilterConvoy) {
+        this.FilterConvoy = FilterConvoy;
+    }
+
+    /**
+     * Get Whether to exclude the advanced information (such as `InstanceList[0].Usage`). Values: `true` (exclude), `false` (do not exclude). The default value is `false`. 
+     * @return ExcludeAdvancedInfo Whether to exclude the advanced information (such as `InstanceList[0].Usage`). Values: `true` (exclude), `false` (do not exclude). The default value is `false`.
+     */
+    public Boolean getExcludeAdvancedInfo() {
+        return this.ExcludeAdvancedInfo;
+    }
+
+    /**
+     * Set Whether to exclude the advanced information (such as `InstanceList[0].Usage`). Values: `true` (exclude), `false` (do not exclude). The default value is `false`.
+     * @param ExcludeAdvancedInfo Whether to exclude the advanced information (such as `InstanceList[0].Usage`). Values: `true` (exclude), `false` (do not exclude). The default value is `false`.
+     */
+    public void setExcludeAdvancedInfo(Boolean ExcludeAdvancedInfo) {
+        this.ExcludeAdvancedInfo = ExcludeAdvancedInfo;
     }
 
     public DescribeListBGPInstancesRequest() {
@@ -397,6 +466,15 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         if (source.FilterTag != null) {
             this.FilterTag = new TagFilter(source.FilterTag);
         }
+        if (source.FilterTrialFlag != null) {
+            this.FilterTrialFlag = new Long(source.FilterTrialFlag);
+        }
+        if (source.FilterConvoy != null) {
+            this.FilterConvoy = new Long(source.FilterConvoy);
+        }
+        if (source.ExcludeAdvancedInfo != null) {
+            this.ExcludeAdvancedInfo = new Boolean(source.ExcludeAdvancedInfo);
+        }
     }
 
 
@@ -418,6 +496,9 @@ public class DescribeListBGPInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "FilterLightFlag", this.FilterLightFlag);
         this.setParamSimple(map, prefix + "FilterChannelFlag", this.FilterChannelFlag);
         this.setParamObj(map, prefix + "FilterTag.", this.FilterTag);
+        this.setParamSimple(map, prefix + "FilterTrialFlag", this.FilterTrialFlag);
+        this.setParamSimple(map, prefix + "FilterConvoy", this.FilterConvoy);
+        this.setParamSimple(map, prefix + "ExcludeAdvancedInfo", this.ExcludeAdvancedInfo);
 
     }
 }
