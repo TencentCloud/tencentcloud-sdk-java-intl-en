@@ -68,6 +68,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long Timestamp;
 
     /**
+    * Message headers
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Headers")
+    @Expose
+    private String Headers;
+
+    /**
      * Get Topic name 
      * @return Topic Topic name
      */
@@ -175,6 +183,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.Timestamp = Timestamp;
     }
 
+    /**
+     * Get Message headers
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Headers Message headers
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getHeaders() {
+        return this.Headers;
+    }
+
+    /**
+     * Set Message headers
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Headers Message headers
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setHeaders(String Headers) {
+        this.Headers = Headers;
+    }
+
     public ConsumerRecord() {
     }
 
@@ -201,6 +229,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.Timestamp != null) {
             this.Timestamp = new Long(source.Timestamp);
         }
+        if (source.Headers != null) {
+            this.Headers = new String(source.Headers);
+        }
     }
 
 
@@ -214,6 +245,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Key", this.Key);
         this.setParamSimple(map, prefix + "Value", this.Value);
         this.setParamSimple(map, prefix + "Timestamp", this.Timestamp);
+        this.setParamSimple(map, prefix + "Headers", this.Headers);
 
     }
 }
