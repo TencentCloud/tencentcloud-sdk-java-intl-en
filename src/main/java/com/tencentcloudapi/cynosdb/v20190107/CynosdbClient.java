@@ -739,6 +739,26 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the AZ information in a purchasable region.
+     * @param req DescribeZonesRequest
+     * @return DescribeZonesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeZonesResponse DescribeZones(DescribeZonesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeZonesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeZonesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeZones");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to export the slow logs of an instance.
      * @param req ExportInstanceSlowQueriesRequest
      * @return ExportInstanceSlowQueriesResponse
@@ -1251,6 +1271,26 @@ public class CynosdbClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SetRenewFlagResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SetRenewFlag");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the cluster VPC.
+     * @param req SwitchClusterVpcRequest
+     * @return SwitchClusterVpcResponse
+     * @throws TencentCloudSDKException
+     */
+    public SwitchClusterVpcResponse SwitchClusterVpc(SwitchClusterVpcRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SwitchClusterVpcResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SwitchClusterVpcResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SwitchClusterVpc");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

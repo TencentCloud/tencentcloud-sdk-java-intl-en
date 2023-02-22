@@ -41,8 +41,8 @@ If this value is 1, `output_stream_id` cannot appear in `input_stram_list`, and 
     private Long OutputStreamType;
 
     /**
-    * Output stream bitrate. Value range: [1,50000].
-If this parameter is left empty, the system will automatically determine.
+    * The output bitrate. Value range: 1-10000.
+If you do not specify this, the system will select a bitrate automatically.
     */
     @SerializedName("OutputStreamBitRate")
     @Expose
@@ -144,20 +144,20 @@ If this value is 1, `output_stream_id` cannot appear in `input_stram_list`, and 
     }
 
     /**
-     * Get Output stream bitrate. Value range: [1,50000].
-If this parameter is left empty, the system will automatically determine. 
-     * @return OutputStreamBitRate Output stream bitrate. Value range: [1,50000].
-If this parameter is left empty, the system will automatically determine.
+     * Get The output bitrate. Value range: 1-10000.
+If you do not specify this, the system will select a bitrate automatically. 
+     * @return OutputStreamBitRate The output bitrate. Value range: 1-10000.
+If you do not specify this, the system will select a bitrate automatically.
      */
     public Long getOutputStreamBitRate() {
         return this.OutputStreamBitRate;
     }
 
     /**
-     * Set Output stream bitrate. Value range: [1,50000].
-If this parameter is left empty, the system will automatically determine.
-     * @param OutputStreamBitRate Output stream bitrate. Value range: [1,50000].
-If this parameter is left empty, the system will automatically determine.
+     * Set The output bitrate. Value range: 1-10000.
+If you do not specify this, the system will select a bitrate automatically.
+     * @param OutputStreamBitRate The output bitrate. Value range: 1-10000.
+If you do not specify this, the system will select a bitrate automatically.
      */
     public void setOutputStreamBitRate(Long OutputStreamBitRate) {
         this.OutputStreamBitRate = OutputStreamBitRate;

@@ -354,6 +354,47 @@ Note: only one screencapturing template can be associated with one domain name.
     }
 
     /**
+     *This API is used to create a time shifting rule. You need to first call the [CreateLiveTranscodeTemplate](https://intl.cloud.tencent.com/document/product/267/86169?from_cn_redirect=1) API to create a time shifting template, and then call this API to bind the template ID returned to a stream.
+<br>More about time shifting: [Time Shifting](https://intl.cloud.tencent.com/document/product/267/86134?from_cn_redirect=1).
+     * @param req CreateLiveTimeShiftRuleRequest
+     * @return CreateLiveTimeShiftRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLiveTimeShiftRuleResponse CreateLiveTimeShiftRule(CreateLiveTimeShiftRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLiveTimeShiftRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLiveTimeShiftRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateLiveTimeShiftRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a time shifting template.
+     * @param req CreateLiveTimeShiftTemplateRequest
+     * @return CreateLiveTimeShiftTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLiveTimeShiftTemplateResponse CreateLiveTimeShiftTemplate(CreateLiveTimeShiftTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateLiveTimeShiftTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateLiveTimeShiftTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateLiveTimeShiftTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *To create a transcoding rule, you need to first call the [CreateLiveTranscodeTemplate](https://intl.cloud.tencent.com/document/product/267/32646?from_cn_redirect=1) API to create a transcoding template and bind the returned template ID to the stream.
 <br>Transcoding-related document: [LVB Remuxing and Transcoding](https://intl.cloud.tencent.com/document/product/267/32736?from_cn_redirect=1).
      * @param req CreateLiveTranscodeRuleRequest
@@ -620,6 +661,46 @@ Notes:
                 Type type = new TypeToken<JsonResponseModel<DeleteLiveSnapshotTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteLiveSnapshotTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a time shifting rule.
+     * @param req DeleteLiveTimeShiftRuleRequest
+     * @return DeleteLiveTimeShiftRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveTimeShiftRuleResponse DeleteLiveTimeShiftRule(DeleteLiveTimeShiftRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLiveTimeShiftRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLiveTimeShiftRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteLiveTimeShiftRule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a time shifting template.
+     * @param req DeleteLiveTimeShiftTemplateRequest
+     * @return DeleteLiveTimeShiftTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveTimeShiftTemplateResponse DeleteLiveTimeShiftTemplate(DeleteLiveTimeShiftTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLiveTimeShiftTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLiveTimeShiftTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteLiveTimeShiftTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1393,7 +1474,47 @@ This API allows you to query the status of a stream in real time. Given external
     }
 
     /**
-     *This API is used to query the details of transcoding on a specified day or in a specified period of time.
+     *This API is used to query time shifting rules.
+     * @param req DescribeLiveTimeShiftRulesRequest
+     * @return DescribeLiveTimeShiftRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveTimeShiftRulesResponse DescribeLiveTimeShiftRules(DescribeLiveTimeShiftRulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveTimeShiftRulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveTimeShiftRulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLiveTimeShiftRules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query time shifting templates.
+     * @param req DescribeLiveTimeShiftTemplatesRequest
+     * @return DescribeLiveTimeShiftTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveTimeShiftTemplatesResponse DescribeLiveTimeShiftTemplates(DescribeLiveTimeShiftTemplatesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLiveTimeShiftTemplatesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLiveTimeShiftTemplatesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLiveTimeShiftTemplates");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the transcoding details of a particular day or a specific time period. Querying may fail if the amount of data queried is too large. In such cases, try shortening the time period.
      * @param req DescribeLiveTranscodeDetailInfoRequest
      * @return DescribeLiveTranscodeDetailInfoResponse
      * @throws TencentCloudSDKException
@@ -1691,6 +1812,46 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
                 Type type = new TypeToken<JsonResponseModel<DescribeStreamPushInfoListResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeStreamPushInfoList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the time shifting details of a specific time period (up to 24 hours). You need to call `DescribeTimeShiftStreamList` first to get the request parameters of this API.
+     * @param req DescribeTimeShiftRecordDetailRequest
+     * @return DescribeTimeShiftRecordDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTimeShiftRecordDetailResponse DescribeTimeShiftRecordDetail(DescribeTimeShiftRecordDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTimeShiftRecordDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTimeShiftRecordDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTimeShiftRecordDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the time shifted streams in a specific time period (up to 24 hours).
+     * @param req DescribeTimeShiftStreamListRequest
+     * @return DescribeTimeShiftStreamListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTimeShiftStreamListResponse DescribeTimeShiftStreamList(DescribeTimeShiftStreamListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTimeShiftStreamListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTimeShiftStreamListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTimeShiftStreamList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2036,6 +2197,26 @@ Referer information is included in HTTP requests. After you enable referer confi
                 Type type = new TypeToken<JsonResponseModel<ModifyLiveSnapshotTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyLiveSnapshotTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a standby stream template.
+     * @param req ModifyLiveTimeShiftTemplateRequest
+     * @return ModifyLiveTimeShiftTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLiveTimeShiftTemplateResponse ModifyLiveTimeShiftTemplate(ModifyLiveTimeShiftTemplateRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyLiveTimeShiftTemplateResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyLiveTimeShiftTemplateResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyLiveTimeShiftTemplate");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

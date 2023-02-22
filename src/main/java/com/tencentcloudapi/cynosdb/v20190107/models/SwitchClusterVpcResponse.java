@@ -13,22 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gme.v20180711.models;
+package com.tencentcloudapi.cynosdb.v20190107.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeScanResultListResponse extends AbstractModel{
+public class SwitchClusterVpcResponse extends AbstractModel{
 
     /**
-    * Result of the voice detection task to be queried
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Async task ID
     */
-    @SerializedName("Data")
+    @SerializedName("FlowId")
     @Expose
-    private DescribeScanResult [] Data;
+    private Long FlowId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,23 +37,19 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get Result of the voice detection task to be queried
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Data Result of the voice detection task to be queried
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Async task ID 
+     * @return FlowId Async task ID
      */
-    public DescribeScanResult [] getData() {
-        return this.Data;
+    public Long getFlowId() {
+        return this.FlowId;
     }
 
     /**
-     * Set Result of the voice detection task to be queried
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Data Result of the voice detection task to be queried
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Async task ID
+     * @param FlowId Async task ID
      */
-    public void setData(DescribeScanResult [] Data) {
-        this.Data = Data;
+    public void setFlowId(Long FlowId) {
+        this.FlowId = FlowId;
     }
 
     /**
@@ -73,19 +68,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.RequestId = RequestId;
     }
 
-    public DescribeScanResultListResponse() {
+    public SwitchClusterVpcResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeScanResultListResponse(DescribeScanResultListResponse source) {
-        if (source.Data != null) {
-            this.Data = new DescribeScanResult[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new DescribeScanResult(source.Data[i]);
-            }
+    public SwitchClusterVpcResponse(SwitchClusterVpcResponse source) {
+        if (source.FlowId != null) {
+            this.FlowId = new Long(source.FlowId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -97,7 +89,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

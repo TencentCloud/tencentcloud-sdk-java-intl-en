@@ -13,22 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gme.v20180711.models;
+package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScanVoiceResponse extends AbstractModel{
-
-    /**
-    * Voice moderation result. <li>`DataId`: Corresponding `DataId` in request.</li>
-<li>`TaskID`: Moderation task ID, which is used to poll the voice detection result.</li>
-    */
-    @SerializedName("Data")
-    @Expose
-    private ScanVoiceResult [] Data;
+public class CreateLiveTimeShiftRuleResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -36,26 +28,6 @@ public class ScanVoiceResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get Voice moderation result. <li>`DataId`: Corresponding `DataId` in request.</li>
-<li>`TaskID`: Moderation task ID, which is used to poll the voice detection result.</li> 
-     * @return Data Voice moderation result. <li>`DataId`: Corresponding `DataId` in request.</li>
-<li>`TaskID`: Moderation task ID, which is used to poll the voice detection result.</li>
-     */
-    public ScanVoiceResult [] getData() {
-        return this.Data;
-    }
-
-    /**
-     * Set Voice moderation result. <li>`DataId`: Corresponding `DataId` in request.</li>
-<li>`TaskID`: Moderation task ID, which is used to poll the voice detection result.</li>
-     * @param Data Voice moderation result. <li>`DataId`: Corresponding `DataId` in request.</li>
-<li>`TaskID`: Moderation task ID, which is used to poll the voice detection result.</li>
-     */
-    public void setData(ScanVoiceResult [] Data) {
-        this.Data = Data;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -73,20 +45,14 @@ public class ScanVoiceResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public ScanVoiceResponse() {
+    public CreateLiveTimeShiftRuleResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ScanVoiceResponse(ScanVoiceResponse source) {
-        if (source.Data != null) {
-            this.Data = new ScanVoiceResult[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new ScanVoiceResult(source.Data[i]);
-            }
-        }
+    public CreateLiveTimeShiftRuleResponse(CreateLiveTimeShiftRuleResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -97,7 +63,6 @@ public class ScanVoiceResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

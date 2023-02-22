@@ -13,74 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.gme.v20180711.models;
+package com.tencentcloudapi.live.v20180801.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ScanVoiceResult extends AbstractModel{
+public class DeleteLiveTimeShiftTemplateResponse extends AbstractModel{
 
     /**
-    * Data ID
+    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
-    @SerializedName("DataId")
+    @SerializedName("RequestId")
     @Expose
-    private String DataId;
+    private String RequestId;
 
     /**
-    * Task ID
-    */
-    @SerializedName("TaskId")
-    @Expose
-    private String TaskId;
-
-    /**
-     * Get Data ID 
-     * @return DataId Data ID
+     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
+     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public String getDataId() {
-        return this.DataId;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set Data ID
-     * @param DataId Data ID
+     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public void setDataId(String DataId) {
-        this.DataId = DataId;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    /**
-     * Get Task ID 
-     * @return TaskId Task ID
-     */
-    public String getTaskId() {
-        return this.TaskId;
-    }
-
-    /**
-     * Set Task ID
-     * @param TaskId Task ID
-     */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
-    }
-
-    public ScanVoiceResult() {
+    public DeleteLiveTimeShiftTemplateResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ScanVoiceResult(ScanVoiceResult source) {
-        if (source.DataId != null) {
-            this.DataId = new String(source.DataId);
-        }
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
+    public DeleteLiveTimeShiftTemplateResponse(DeleteLiveTimeShiftTemplateResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -89,8 +63,7 @@ public class ScanVoiceResult extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DataId", this.DataId);
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }
