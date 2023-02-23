@@ -378,6 +378,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Boolean IsMultiZoneCluster;
 
     /**
+    * Whether the feature of automatic abnormal node replacement is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IsCvmReplace")
+    @Expose
+    private Boolean IsCvmReplace;
+
+    /**
      * Get ID
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return Id ID
@@ -1305,6 +1313,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.IsMultiZoneCluster = IsMultiZoneCluster;
     }
 
+    /**
+     * Get Whether the feature of automatic abnormal node replacement is enabled.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsCvmReplace Whether the feature of automatic abnormal node replacement is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getIsCvmReplace() {
+        return this.IsCvmReplace;
+    }
+
+    /**
+     * Set Whether the feature of automatic abnormal node replacement is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsCvmReplace Whether the feature of automatic abnormal node replacement is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIsCvmReplace(Boolean IsCvmReplace) {
+        this.IsCvmReplace = IsCvmReplace;
+    }
+
     public ClusterInstancesInfo() {
     }
 
@@ -1445,6 +1473,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.IsMultiZoneCluster != null) {
             this.IsMultiZoneCluster = new Boolean(source.IsMultiZoneCluster);
         }
+        if (source.IsCvmReplace != null) {
+            this.IsCvmReplace = new Boolean(source.IsCvmReplace);
+        }
     }
 
 
@@ -1493,6 +1524,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
         this.setParamArrayObj(map, prefix + "TopologyInfoList.", this.TopologyInfoList);
         this.setParamSimple(map, prefix + "IsMultiZoneCluster", this.IsMultiZoneCluster);
+        this.setParamSimple(map, prefix + "IsCvmReplace", this.IsCvmReplace);
 
     }
 }

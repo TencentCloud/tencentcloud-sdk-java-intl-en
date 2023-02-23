@@ -119,6 +119,46 @@ public class GmeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query a recording task.
+     * @param req DescribeRecordInfoRequest
+     * @return DescribeRecordInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRecordInfoResponse DescribeRecordInfo(DescribeRecordInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRecordInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRecordInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRecordInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the recording task in a room.
+     * @param req DescribeTaskInfoRequest
+     * @return DescribeTaskInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskInfoResponse DescribeTaskInfo(DescribeTaskInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTaskInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTaskInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTaskInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to change the status of an application.
      * @param req ModifyAppStatusRequest
      * @return ModifyAppStatusResponse
@@ -131,6 +171,67 @@ public class GmeClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyAppStatusResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyAppStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify recording configurations.
+     * @param req ModifyRecordInfoRequest
+     * @return ModifyRecordInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRecordInfoResponse ModifyRecordInfo(ModifyRecordInfoRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRecordInfoResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRecordInfoResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRecordInfo");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to start recording.
+     * @param req StartRecordRequest
+     * @return StartRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartRecordResponse StartRecord(StartRecordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StartRecordResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StartRecordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StartRecord");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to stop recording.
+
+     * @param req StopRecordRequest
+     * @return StopRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopRecordResponse StopRecord(StopRecordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<StopRecordResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<StopRecordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "StopRecord");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

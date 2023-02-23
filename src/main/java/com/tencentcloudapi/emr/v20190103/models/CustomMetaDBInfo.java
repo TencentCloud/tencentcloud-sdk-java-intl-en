@@ -45,8 +45,8 @@ public class CustomMetaDBInfo extends AbstractModel{
 
     /**
     * The Hive-shared metadatabase type. Valid values:
-<li>`EMR_NEW_META`: The cluster creates a metadatabase by default.</li>
-<li>`EMR_EXIST_META`: The cluster uses a specified EMR-MetaDB instance.</li>
+<li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
+<li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
 <li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li>
     */
     @SerializedName("MetaType")
@@ -110,12 +110,12 @@ public class CustomMetaDBInfo extends AbstractModel{
 
     /**
      * Get The Hive-shared metadatabase type. Valid values:
-<li>`EMR_NEW_META`: The cluster creates a metadatabase by default.</li>
-<li>`EMR_EXIST_META`: The cluster uses a specified EMR-MetaDB instance.</li>
+<li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
+<li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
 <li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li> 
      * @return MetaType The Hive-shared metadatabase type. Valid values:
-<li>`EMR_NEW_META`: The cluster creates a metadatabase by default.</li>
-<li>`EMR_EXIST_META`: The cluster uses a specified EMR-MetaDB instance.</li>
+<li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
+<li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
 <li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li>
      */
     public String getMetaType() {
@@ -124,12 +124,12 @@ public class CustomMetaDBInfo extends AbstractModel{
 
     /**
      * Set The Hive-shared metadatabase type. Valid values:
-<li>`EMR_NEW_META`: The cluster creates a metadatabase by default.</li>
-<li>`EMR_EXIST_META`: The cluster uses a specified EMR-MetaDB instance.</li>
+<li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
+<li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
 <li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li>
      * @param MetaType The Hive-shared metadatabase type. Valid values:
-<li>`EMR_NEW_META`: The cluster creates a metadatabase by default.</li>
-<li>`EMR_EXIST_META`: The cluster uses a specified EMR-MetaDB instance.</li>
+<li>`EMR_DEFAULT_META`: The cluster creates one by default.</li>
+<li>`EMR_EXIST_META`: The cluster uses the specified EMR metadatabase instance.</li>
 <li>`USER_CUSTOM_META`: The cluster uses a custom metadatabase instance.</li>
      */
     public void setMetaType(String MetaType) {
