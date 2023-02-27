@@ -37,7 +37,7 @@ public class CreateRocketMQTopicRequest extends AbstractModel{
     private String [] Namespaces;
 
     /**
-    * Topic type. Valid values: Normal, GlobalOrder, PartitionedOrder.
+    * Topic type. Valid values: `Normal`, `PartitionedOrder`, `Transaction`, `DelayScheduled`.
     */
     @SerializedName("Type")
     @Expose
@@ -97,16 +97,16 @@ public class CreateRocketMQTopicRequest extends AbstractModel{
     }
 
     /**
-     * Get Topic type. Valid values: Normal, GlobalOrder, PartitionedOrder. 
-     * @return Type Topic type. Valid values: Normal, GlobalOrder, PartitionedOrder.
+     * Get Topic type. Valid values: `Normal`, `PartitionedOrder`, `Transaction`, `DelayScheduled`. 
+     * @return Type Topic type. Valid values: `Normal`, `PartitionedOrder`, `Transaction`, `DelayScheduled`.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Topic type. Valid values: Normal, GlobalOrder, PartitionedOrder.
-     * @param Type Topic type. Valid values: Normal, GlobalOrder, PartitionedOrder.
+     * Set Topic type. Valid values: `Normal`, `PartitionedOrder`, `Transaction`, `DelayScheduled`.
+     * @param Type Topic type. Valid values: `Normal`, `PartitionedOrder`, `Transaction`, `DelayScheduled`.
      */
     public void setType(String Type) {
         this.Type = Type;

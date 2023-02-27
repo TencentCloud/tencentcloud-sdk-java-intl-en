@@ -44,6 +44,40 @@ public class DescribeRabbitMQNodeListRequest extends AbstractModel{
     private Long Limit;
 
     /**
+    * Node name for fuzzy search
+    */
+    @SerializedName("NodeName")
+    @Expose
+    private String NodeName;
+
+    /**
+    * Name and value of a filter.
+Currently, only the `nodeStatus` filter is supported.
+Valid values: `running`, `down`.
+It is an array type and can contain multiple filters.
+
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
+    * Sorting by a specified element.
+Valid values: `cpuUsage`, `diskUsage`.
+    */
+    @SerializedName("SortElement")
+    @Expose
+    private String SortElement;
+
+    /**
+    * Sorting order.
+Valid values: `ascend`, `descend`.
+    */
+    @SerializedName("SortOrder")
+    @Expose
+    private String SortOrder;
+
+    /**
      * Get TDMQ for RabbitMQ cluster ID 
      * @return InstanceId TDMQ for RabbitMQ cluster ID
      */
@@ -91,6 +125,94 @@ public class DescribeRabbitMQNodeListRequest extends AbstractModel{
         this.Limit = Limit;
     }
 
+    /**
+     * Get Node name for fuzzy search 
+     * @return NodeName Node name for fuzzy search
+     */
+    public String getNodeName() {
+        return this.NodeName;
+    }
+
+    /**
+     * Set Node name for fuzzy search
+     * @param NodeName Node name for fuzzy search
+     */
+    public void setNodeName(String NodeName) {
+        this.NodeName = NodeName;
+    }
+
+    /**
+     * Get Name and value of a filter.
+Currently, only the `nodeStatus` filter is supported.
+Valid values: `running`, `down`.
+It is an array type and can contain multiple filters.
+ 
+     * @return Filters Name and value of a filter.
+Currently, only the `nodeStatus` filter is supported.
+Valid values: `running`, `down`.
+It is an array type and can contain multiple filters.
+
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set Name and value of a filter.
+Currently, only the `nodeStatus` filter is supported.
+Valid values: `running`, `down`.
+It is an array type and can contain multiple filters.
+
+     * @param Filters Name and value of a filter.
+Currently, only the `nodeStatus` filter is supported.
+Valid values: `running`, `down`.
+It is an array type and can contain multiple filters.
+
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
+     * Get Sorting by a specified element.
+Valid values: `cpuUsage`, `diskUsage`. 
+     * @return SortElement Sorting by a specified element.
+Valid values: `cpuUsage`, `diskUsage`.
+     */
+    public String getSortElement() {
+        return this.SortElement;
+    }
+
+    /**
+     * Set Sorting by a specified element.
+Valid values: `cpuUsage`, `diskUsage`.
+     * @param SortElement Sorting by a specified element.
+Valid values: `cpuUsage`, `diskUsage`.
+     */
+    public void setSortElement(String SortElement) {
+        this.SortElement = SortElement;
+    }
+
+    /**
+     * Get Sorting order.
+Valid values: `ascend`, `descend`. 
+     * @return SortOrder Sorting order.
+Valid values: `ascend`, `descend`.
+     */
+    public String getSortOrder() {
+        return this.SortOrder;
+    }
+
+    /**
+     * Set Sorting order.
+Valid values: `ascend`, `descend`.
+     * @param SortOrder Sorting order.
+Valid values: `ascend`, `descend`.
+     */
+    public void setSortOrder(String SortOrder) {
+        this.SortOrder = SortOrder;
+    }
+
     public DescribeRabbitMQNodeListRequest() {
     }
 
@@ -108,6 +230,21 @@ public class DescribeRabbitMQNodeListRequest extends AbstractModel{
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.NodeName != null) {
+            this.NodeName = new String(source.NodeName);
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.SortElement != null) {
+            this.SortElement = new String(source.SortElement);
+        }
+        if (source.SortOrder != null) {
+            this.SortOrder = new String(source.SortOrder);
+        }
     }
 
 
@@ -118,6 +255,10 @@ public class DescribeRabbitMQNodeListRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "NodeName", this.NodeName);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "SortElement", this.SortElement);
+        this.setParamSimple(map, prefix + "SortOrder", this.SortOrder);
 
     }
 }

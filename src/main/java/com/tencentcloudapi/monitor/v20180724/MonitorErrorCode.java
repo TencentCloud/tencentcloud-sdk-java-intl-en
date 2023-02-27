@@ -108,6 +108,9 @@ public enum MonitorErrorCode {
     // The dividend is zero.
      FAILEDOPERATION_DIVISIONBYZERO("FailedOperation.DivisionByZero"),
      
+    // 
+     FAILEDOPERATION_DOHTTPTRANSFERFAILED("FailedOperation.DoHTTPTransferFailed"),
+     
     // Failed to query analysis data.
      FAILEDOPERATION_DRUIDQUERYFAILED("FailedOperation.DruidQueryFailed"),
      
@@ -275,6 +278,9 @@ public enum MonitorErrorCode {
      
     // The resource is in use.
      RESOURCEINUSE("ResourceInUse"),
+     
+    // ResourceInUse.ResourceExistAlready
+     RESOURCEINUSE_RESOURCEEXISTALREADY("ResourceInUse.ResourceExistAlready"),
      
     // Insufficient resources.
      RESOURCEINSUFFICIENT("ResourceInsufficient"),

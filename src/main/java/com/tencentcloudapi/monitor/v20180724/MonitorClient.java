@@ -301,6 +301,86 @@ Note that alert object and alert message are special fields of Prometheus Rule A
     }
 
     /**
+     *This API is used to create an alerting rule.
+     * @param req CreatePrometheusAlertPolicyRequest
+     * @return CreatePrometheusAlertPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePrometheusAlertPolicyResponse CreatePrometheusAlertPolicy(CreatePrometheusAlertPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePrometheusAlertPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePrometheusAlertPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreatePrometheusAlertPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to associate a Cloud Monitor (CM)-integrated Tencent Managed Service for Prometheus (TMP) 2.0 instance with a cluster.
+     * @param req CreatePrometheusClusterAgentRequest
+     * @return CreatePrometheusClusterAgentResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePrometheusClusterAgentResponse CreatePrometheusClusterAgent(CreatePrometheusClusterAgentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePrometheusClusterAgentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePrometheusClusterAgentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreatePrometheusClusterAgent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create Prometheus configurations.
+     * @param req CreatePrometheusConfigRequest
+     * @return CreatePrometheusConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePrometheusConfigResponse CreatePrometheusConfig(CreatePrometheusConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePrometheusConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePrometheusConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreatePrometheusConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a global alert notification channel.
+     * @param req CreatePrometheusGlobalNotificationRequest
+     * @return CreatePrometheusGlobalNotificationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePrometheusGlobalNotificationResponse CreatePrometheusGlobalNotification(CreatePrometheusGlobalNotificationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreatePrometheusGlobalNotificationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreatePrometheusGlobalNotificationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreatePrometheusGlobalNotification");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a pay-as-you-go Prometheus instance.
      * @param req CreatePrometheusMultiTenantInstancePostPayModeRequest
      * @return CreatePrometheusMultiTenantInstancePostPayModeResponse
@@ -595,6 +675,66 @@ Note that alert object and alert message are special fields of Prometheus Rule A
                 Type type = new TypeToken<JsonResponseModel<DeletePolicyGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeletePolicyGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a TMP 2.0 instance alerting rule.
+     * @param req DeletePrometheusAlertPolicyRequest
+     * @return DeletePrometheusAlertPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePrometheusAlertPolicyResponse DeletePrometheusAlertPolicy(DeletePrometheusAlertPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePrometheusAlertPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePrometheusAlertPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeletePrometheusAlertPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to disassociate a TMP instance from a cluster.
+     * @param req DeletePrometheusClusterAgentRequest
+     * @return DeletePrometheusClusterAgentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePrometheusClusterAgentResponse DeletePrometheusClusterAgent(DeletePrometheusClusterAgentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePrometheusClusterAgentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePrometheusClusterAgentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeletePrometheusClusterAgent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete Prometheus configurations. If the target cluster does not exist, a result indicating success will be returned.
+     * @param req DeletePrometheusConfigRequest
+     * @return DeletePrometheusConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePrometheusConfigResponse DeletePrometheusConfig(DeletePrometheusConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeletePrometheusConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeletePrometheusConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeletePrometheusConfig");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1385,6 +1525,26 @@ Note: **If you use a sub-account, you can only query the alarm records of author
     }
 
     /**
+     *This API is used to get the list of clusters associated with the TMP instance.
+     * @param req DescribePrometheusClusterAgentsRequest
+     * @return DescribePrometheusClusterAgentsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusClusterAgentsResponse DescribePrometheusClusterAgents(DescribePrometheusClusterAgentsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusClusterAgentsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusClusterAgentsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusClusterAgents");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the Prometheus configuration.
      * @param req DescribePrometheusConfigRequest
      * @return DescribePrometheusConfigResponse
@@ -1397,6 +1557,46 @@ Note: **If you use a sub-account, you can only query the alarm records of author
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusConfigResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribePrometheusConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the instance-level scrape configurations.
+     * @param req DescribePrometheusGlobalConfigRequest
+     * @return DescribePrometheusGlobalConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusGlobalConfigResponse DescribePrometheusGlobalConfig(DescribePrometheusGlobalConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusGlobalConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusGlobalConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusGlobalConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the global alert notification channel.
+     * @param req DescribePrometheusGlobalNotificationRequest
+     * @return DescribePrometheusGlobalNotificationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusGlobalNotificationResponse DescribePrometheusGlobalNotification(DescribePrometheusGlobalNotificationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusGlobalNotificationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusGlobalNotificationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusGlobalNotification");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1561,6 +1761,26 @@ Note: **If you use a sub-account, you can only query the alarm records of author
                 Type type = new TypeToken<JsonResponseModel<DescribePrometheusScrapeJobsResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribePrometheusScrapeJobs");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the targets information.
+     * @param req DescribePrometheusTargetsTMPRequest
+     * @return DescribePrometheusTargetsTMPResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrometheusTargetsTMPResponse DescribePrometheusTargetsTMP(DescribePrometheusTargetsTMPRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribePrometheusTargetsTMPResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribePrometheusTargetsTMPResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribePrometheusTargetsTMP");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -2027,6 +2247,86 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
                 Type type = new TypeToken<JsonResponseModel<ModifyPolicyGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyPolicyGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the external labels of the associated cluster.
+     * @param req ModifyPrometheusAgentExternalLabelsRequest
+     * @return ModifyPrometheusAgentExternalLabelsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPrometheusAgentExternalLabelsResponse ModifyPrometheusAgentExternalLabels(ModifyPrometheusAgentExternalLabelsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPrometheusAgentExternalLabelsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPrometheusAgentExternalLabelsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyPrometheusAgentExternalLabels");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a TMP 2.0 instance alerting rule.
+     * @param req ModifyPrometheusAlertPolicyRequest
+     * @return ModifyPrometheusAlertPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPrometheusAlertPolicyResponse ModifyPrometheusAlertPolicy(ModifyPrometheusAlertPolicyRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPrometheusAlertPolicyResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPrometheusAlertPolicyResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyPrometheusAlertPolicy");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the Prometheus configuration. If there are no configuration items, one will be added.
+     * @param req ModifyPrometheusConfigRequest
+     * @return ModifyPrometheusConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPrometheusConfigResponse ModifyPrometheusConfig(ModifyPrometheusConfigRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPrometheusConfigResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPrometheusConfigResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyPrometheusConfig");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify the global alert notification channel.
+     * @param req ModifyPrometheusGlobalNotificationRequest
+     * @return ModifyPrometheusGlobalNotificationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPrometheusGlobalNotificationResponse ModifyPrometheusGlobalNotification(ModifyPrometheusGlobalNotificationRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyPrometheusGlobalNotificationResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyPrometheusGlobalNotificationResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyPrometheusGlobalNotification");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -13,22 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cdb.v20170320.models;
+package com.tencentcloudapi.monitor.v20180724.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class UpgradeCDBProxyResponse extends AbstractModel{
+public class DescribePrometheusGlobalNotificationResponse extends AbstractModel{
 
     /**
-    * Async request ID
-Note: this field may return `null`, indicating that no valid value can be found.
+    * Global alert notification channel
+Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("AsyncRequestId")
+    @SerializedName("Notification")
     @Expose
-    private String AsyncRequestId;
+    private PrometheusNotificationItem Notification;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,23 +38,23 @@ Note: this field may return `null`, indicating that no valid value can be found.
     private String RequestId;
 
     /**
-     * Get Async request ID
-Note: this field may return `null`, indicating that no valid value can be found. 
-     * @return AsyncRequestId Async request ID
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Get Global alert notification channel
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Notification Global alert notification channel
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getAsyncRequestId() {
-        return this.AsyncRequestId;
+    public PrometheusNotificationItem getNotification() {
+        return this.Notification;
     }
 
     /**
-     * Set Async request ID
-Note: this field may return `null`, indicating that no valid value can be found.
-     * @param AsyncRequestId Async request ID
-Note: this field may return `null`, indicating that no valid value can be found.
+     * Set Global alert notification channel
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Notification Global alert notification channel
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setAsyncRequestId(String AsyncRequestId) {
-        this.AsyncRequestId = AsyncRequestId;
+    public void setNotification(PrometheusNotificationItem Notification) {
+        this.Notification = Notification;
     }
 
     /**
@@ -73,16 +73,16 @@ Note: this field may return `null`, indicating that no valid value can be found.
         this.RequestId = RequestId;
     }
 
-    public UpgradeCDBProxyResponse() {
+    public DescribePrometheusGlobalNotificationResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public UpgradeCDBProxyResponse(UpgradeCDBProxyResponse source) {
-        if (source.AsyncRequestId != null) {
-            this.AsyncRequestId = new String(source.AsyncRequestId);
+    public DescribePrometheusGlobalNotificationResponse(DescribePrometheusGlobalNotificationResponse source) {
+        if (source.Notification != null) {
+            this.Notification = new PrometheusNotificationItem(source.Notification);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +94,7 @@ Note: this field may return `null`, indicating that no valid value can be found.
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AsyncRequestId", this.AsyncRequestId);
+        this.setParamObj(map, prefix + "Notification.", this.Notification);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

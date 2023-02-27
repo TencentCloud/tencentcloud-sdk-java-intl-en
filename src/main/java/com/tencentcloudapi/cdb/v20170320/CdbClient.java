@@ -558,6 +558,26 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     }
 
     /**
+     *This API is used to query the default encryption status of an instance backup.
+     * @param req DescribeBackupEncryptionStatusRequest
+     * @return DescribeBackupEncryptionStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupEncryptionStatusResponse DescribeBackupEncryptionStatus(DescribeBackupEncryptionStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupEncryptionStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupEncryptionStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupEncryptionStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the backup overview of a user. It will return the user's current total number of backups, total capacity used by backups, capacity in the free tier, and paid capacity (all capacity values are in bytes).
      * @param req DescribeBackupOverviewRequest
      * @return DescribeBackupOverviewResponse
@@ -1665,6 +1685,26 @@ Note that when modifying account permissions, you need to pass in the full permi
     }
 
     /**
+     *This API is used to set the default encryption status of an instance backup. 
+     * @param req ModifyBackupEncryptionStatusRequest
+     * @return ModifyBackupEncryptionStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBackupEncryptionStatusResponse ModifyBackupEncryptionStatus(ModifyBackupEncryptionStatusRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyBackupEncryptionStatusResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyBackupEncryptionStatusResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyBackupEncryptionStatus");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to configure the connection pool of database proxy. You can use the `DescribeProxyConnectionPoolConf` API to query the supported connection pool configurations.
      * @param req ModifyCDBProxyConnectionPoolRequest
      * @return ModifyCDBProxyConnectionPoolResponse
@@ -2029,6 +2069,36 @@ Note that once an instance is deactivated, its resources and data will not be re
     }
 
     /**
+     *This API is used to enable the encryption feature for instance data storage, and custom keys are supported.
+
+Note: Before enabling data storage encryption for an instance, you need to perform the following operations:
+
+1. [Initialize an instance](https://intl.cloud.tencent.com/document/api/236/15873?from_cn_redirect=1).
+
+2. Enable [KMS service](https://console.cloud.tencent.com/kms2)
+
+3. [Grant permission to access KMS](https://console.cloud.tencent.com/cam/role) for TencentDB for MySQL. The role name is `MySQL_QCSRole`, and the preset policy name is `QcloudAccessForMySQLRole`.
+
+This API calling may take up to 10 seconds, causing the client to time out. If it returns `InternalError`, call `DescribeDBInstanceInfo` to confirm whether the backend encryption is enabled successfully.
+     * @param req OpenDBInstanceEncryptionRequest
+     * @return OpenDBInstanceEncryptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenDBInstanceEncryptionResponse OpenDBInstanceEncryption(OpenDBInstanceEncryptionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<OpenDBInstanceEncryptionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<OpenDBInstanceEncryptionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "OpenDBInstanceEncryption");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (OpenDBInstanceGTID) is used to enable GTID for a TencentDB instance. Only instances on or above version 5.6 are supported.
      * @param req OpenDBInstanceGTIDRequest
      * @return OpenDBInstanceGTIDResponse
@@ -2367,28 +2437,6 @@ Note:
                 Type type = new TypeToken<JsonResponseModel<SwitchForUpgradeResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SwitchForUpgrade");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
-     *接口已经废弃，请使用AdjustCdbProxy进行数据库代理的配置
-
-This API is used to upgrade the configuration of database proxy.
-     * @param req UpgradeCDBProxyRequest
-     * @return UpgradeCDBProxyResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpgradeCDBProxyResponse UpgradeCDBProxy(UpgradeCDBProxyRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<UpgradeCDBProxyResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<UpgradeCDBProxyResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "UpgradeCDBProxy");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

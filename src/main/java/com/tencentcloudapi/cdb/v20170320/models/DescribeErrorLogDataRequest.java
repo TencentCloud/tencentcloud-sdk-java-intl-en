@@ -30,14 +30,14 @@ public class DescribeErrorLogDataRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Start timestamp.
+    * Start timestamp, such as 1585142640.
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * End timestamp.
+    * End timestamp, such as 1585142640.
     */
     @SerializedName("EndTime")
     @Expose
@@ -88,32 +88,32 @@ public class DescribeErrorLogDataRequest extends AbstractModel{
     }
 
     /**
-     * Get Start timestamp. 
-     * @return StartTime Start timestamp.
+     * Get Start timestamp, such as 1585142640. 
+     * @return StartTime Start timestamp, such as 1585142640.
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start timestamp.
-     * @param StartTime Start timestamp.
+     * Set Start timestamp, such as 1585142640.
+     * @param StartTime Start timestamp, such as 1585142640.
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End timestamp. 
-     * @return EndTime End timestamp.
+     * Get End timestamp, such as 1585142640. 
+     * @return EndTime End timestamp, such as 1585142640.
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End timestamp.
-     * @param EndTime End timestamp.
+     * Set End timestamp, such as 1585142640.
+     * @param EndTime End timestamp, such as 1585142640.
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

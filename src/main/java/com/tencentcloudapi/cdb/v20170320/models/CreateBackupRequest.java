@@ -30,7 +30,7 @@ public class CreateBackupRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Backup method of target instance. Value range: logical (logical cold backup), physical (physical cold backup).
+    * Target backup method. Valid values: `logical` (logical cold backup), `physical` (physical cold backup), `snapshot` (snapshot backup). Basic Edition instances only support snapshot backups.
     */
     @SerializedName("BackupMethod")
     @Expose
@@ -68,16 +68,16 @@ For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you sh
     }
 
     /**
-     * Get Backup method of target instance. Value range: logical (logical cold backup), physical (physical cold backup). 
-     * @return BackupMethod Backup method of target instance. Value range: logical (logical cold backup), physical (physical cold backup).
+     * Get Target backup method. Valid values: `logical` (logical cold backup), `physical` (physical cold backup), `snapshot` (snapshot backup). Basic Edition instances only support snapshot backups. 
+     * @return BackupMethod Target backup method. Valid values: `logical` (logical cold backup), `physical` (physical cold backup), `snapshot` (snapshot backup). Basic Edition instances only support snapshot backups.
      */
     public String getBackupMethod() {
         return this.BackupMethod;
     }
 
     /**
-     * Set Backup method of target instance. Value range: logical (logical cold backup), physical (physical cold backup).
-     * @param BackupMethod Backup method of target instance. Value range: logical (logical cold backup), physical (physical cold backup).
+     * Set Target backup method. Valid values: `logical` (logical cold backup), `physical` (physical cold backup), `snapshot` (snapshot backup). Basic Edition instances only support snapshot backups.
+     * @param BackupMethod Target backup method. Valid values: `logical` (logical cold backup), `physical` (physical cold backup), `snapshot` (snapshot backup). Basic Edition instances only support snapshot backups.
      */
     public void setBackupMethod(String BackupMethod) {
         this.BackupMethod = BackupMethod;

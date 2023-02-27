@@ -86,6 +86,14 @@ public class RocketMQClusterConfig extends AbstractModel{
     private Long MaxLatencyTime;
 
     /**
+    * The maximum number of queues in a single topic
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MaxQueuesPerTopic")
+    @Expose
+    private Long MaxQueuesPerTopic;
+
+    /**
      * Get Maximum TPS per namespace 
      * @return MaxTpsPerNamespace Maximum TPS per namespace
      */
@@ -229,6 +237,26 @@ public class RocketMQClusterConfig extends AbstractModel{
         this.MaxLatencyTime = MaxLatencyTime;
     }
 
+    /**
+     * Get The maximum number of queues in a single topic
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MaxQueuesPerTopic The maximum number of queues in a single topic
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getMaxQueuesPerTopic() {
+        return this.MaxQueuesPerTopic;
+    }
+
+    /**
+     * Set The maximum number of queues in a single topic
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MaxQueuesPerTopic The maximum number of queues in a single topic
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMaxQueuesPerTopic(Long MaxQueuesPerTopic) {
+        this.MaxQueuesPerTopic = MaxQueuesPerTopic;
+    }
+
     public RocketMQClusterConfig() {
     }
 
@@ -264,6 +292,9 @@ public class RocketMQClusterConfig extends AbstractModel{
         if (source.MaxLatencyTime != null) {
             this.MaxLatencyTime = new Long(source.MaxLatencyTime);
         }
+        if (source.MaxQueuesPerTopic != null) {
+            this.MaxQueuesPerTopic = new Long(source.MaxQueuesPerTopic);
+        }
     }
 
 
@@ -280,6 +311,7 @@ public class RocketMQClusterConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "UsedGroupNum", this.UsedGroupNum);
         this.setParamSimple(map, prefix + "MaxRetentionTime", this.MaxRetentionTime);
         this.setParamSimple(map, prefix + "MaxLatencyTime", this.MaxLatencyTime);
+        this.setParamSimple(map, prefix + "MaxQueuesPerTopic", this.MaxQueuesPerTopic);
 
     }
 }

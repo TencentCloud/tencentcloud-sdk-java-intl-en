@@ -20,41 +20,70 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGrafanaEnvironmentsRequest extends AbstractModel{
+public class CreatePrometheusClusterAgentRequest extends AbstractModel{
 
     /**
-    * ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+    * Instance ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”. 
-     * @return InstanceId ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+    * Agent list
+    */
+    @SerializedName("Agents")
+    @Expose
+    private PrometheusClusterAgentBasic [] Agents;
+
+    /**
+     * Get Instance ID 
+     * @return InstanceId Instance ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
-     * @param InstanceId ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+     * Set Instance ID
+     * @param InstanceId Instance ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
-    public DescribeGrafanaEnvironmentsRequest() {
+    /**
+     * Get Agent list 
+     * @return Agents Agent list
+     */
+    public PrometheusClusterAgentBasic [] getAgents() {
+        return this.Agents;
+    }
+
+    /**
+     * Set Agent list
+     * @param Agents Agent list
+     */
+    public void setAgents(PrometheusClusterAgentBasic [] Agents) {
+        this.Agents = Agents;
+    }
+
+    public CreatePrometheusClusterAgentRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeGrafanaEnvironmentsRequest(DescribeGrafanaEnvironmentsRequest source) {
+    public CreatePrometheusClusterAgentRequest(CreatePrometheusClusterAgentRequest source) {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Agents != null) {
+            this.Agents = new PrometheusClusterAgentBasic[source.Agents.length];
+            for (int i = 0; i < source.Agents.length; i++) {
+                this.Agents[i] = new PrometheusClusterAgentBasic(source.Agents[i]);
+            }
         }
     }
 
@@ -64,6 +93,7 @@ public class DescribeGrafanaEnvironmentsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamArrayObj(map, prefix + "Agents.", this.Agents);
 
     }
 }

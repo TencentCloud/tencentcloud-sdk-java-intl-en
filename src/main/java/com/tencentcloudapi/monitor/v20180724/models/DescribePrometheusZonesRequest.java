@@ -23,26 +23,49 @@ import java.util.HashMap;
 public class DescribePrometheusZonesRequest extends AbstractModel{
 
     /**
-    * Region ID
+    * Region ID. You only need to specify the value of either `RegionId` or `RegionName`.
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-     * Get Region ID 
-     * @return RegionId Region ID
+    * Region name. You only need to specify the value of either `RegionId` or `RegionName`.
+    */
+    @SerializedName("RegionName")
+    @Expose
+    private String RegionName;
+
+    /**
+     * Get Region ID. You only need to specify the value of either `RegionId` or `RegionName`. 
+     * @return RegionId Region ID. You only need to specify the value of either `RegionId` or `RegionName`.
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set Region ID
-     * @param RegionId Region ID
+     * Set Region ID. You only need to specify the value of either `RegionId` or `RegionName`.
+     * @param RegionId Region ID. You only need to specify the value of either `RegionId` or `RegionName`.
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
+    }
+
+    /**
+     * Get Region name. You only need to specify the value of either `RegionId` or `RegionName`. 
+     * @return RegionName Region name. You only need to specify the value of either `RegionId` or `RegionName`.
+     */
+    public String getRegionName() {
+        return this.RegionName;
+    }
+
+    /**
+     * Set Region name. You only need to specify the value of either `RegionId` or `RegionName`.
+     * @param RegionName Region name. You only need to specify the value of either `RegionId` or `RegionName`.
+     */
+    public void setRegionName(String RegionName) {
+        this.RegionName = RegionName;
     }
 
     public DescribePrometheusZonesRequest() {
@@ -56,6 +79,9 @@ public class DescribePrometheusZonesRequest extends AbstractModel{
         if (source.RegionId != null) {
             this.RegionId = new Long(source.RegionId);
         }
+        if (source.RegionName != null) {
+            this.RegionName = new String(source.RegionName);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class DescribePrometheusZonesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
+        this.setParamSimple(map, prefix + "RegionName", this.RegionName);
 
     }
 }

@@ -123,6 +123,14 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String SpecName;
 
     /**
+    * Cluster exception
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ExceptionInformation")
+    @Expose
+    private String ExceptionInformation;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -354,6 +362,26 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.SpecName = SpecName;
     }
 
+    /**
+     * Get Cluster exception
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ExceptionInformation Cluster exception
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getExceptionInformation() {
+        return this.ExceptionInformation;
+    }
+
+    /**
+     * Set Cluster exception
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ExceptionInformation Cluster exception
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setExceptionInformation(String ExceptionInformation) {
+        this.ExceptionInformation = ExceptionInformation;
+    }
+
     public RabbitMQVipInstance() {
     }
 
@@ -404,6 +432,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.SpecName != null) {
             this.SpecName = new String(source.SpecName);
         }
+        if (source.ExceptionInformation != null) {
+            this.ExceptionInformation = new String(source.ExceptionInformation);
+        }
     }
 
 
@@ -425,6 +456,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "SpecName", this.SpecName);
+        this.setParamSimple(map, prefix + "ExceptionInformation", this.ExceptionInformation);
 
     }
 }

@@ -20,41 +20,93 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGrafanaEnvironmentsRequest extends AbstractModel{
+public class DescribePrometheusClusterAgentsRequest extends AbstractModel{
 
     /**
-    * ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+    * Instance ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”. 
-     * @return InstanceId ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+    * Page offset
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * Page limit
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+     * Get Instance ID 
+     * @return InstanceId Instance ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
-     * @param InstanceId ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+     * Set Instance ID
+     * @param InstanceId Instance ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
-    public DescribeGrafanaEnvironmentsRequest() {
+    /**
+     * Get Page offset 
+     * @return Offset Page offset
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set Page offset
+     * @param Offset Page offset
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get Page limit 
+     * @return Limit Page limit
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set Page limit
+     * @param Limit Page limit
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    public DescribePrometheusClusterAgentsRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeGrafanaEnvironmentsRequest(DescribeGrafanaEnvironmentsRequest source) {
+    public DescribePrometheusClusterAgentsRequest(DescribePrometheusClusterAgentsRequest source) {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
         }
     }
 
@@ -64,6 +116,8 @@ public class DescribeGrafanaEnvironmentsRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

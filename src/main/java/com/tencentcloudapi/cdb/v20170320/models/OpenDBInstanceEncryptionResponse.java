@@ -13,48 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.monitor.v20180724.models;
+package com.tencentcloudapi.cdb.v20170320.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeGrafanaEnvironmentsRequest extends AbstractModel{
+public class OpenDBInstanceEncryptionResponse extends AbstractModel{
 
     /**
-    * ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
-    @SerializedName("InstanceId")
+    @SerializedName("RequestId")
     @Expose
-    private String InstanceId;
+    private String RequestId;
 
     /**
-     * Get ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”. 
-     * @return InstanceId ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
+     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
-     * @param InstanceId ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public DescribeGrafanaEnvironmentsRequest() {
+    public OpenDBInstanceEncryptionResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeGrafanaEnvironmentsRequest(DescribeGrafanaEnvironmentsRequest source) {
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
+    public OpenDBInstanceEncryptionResponse(OpenDBInstanceEncryptionResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -63,7 +63,7 @@ public class DescribeGrafanaEnvironmentsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }
