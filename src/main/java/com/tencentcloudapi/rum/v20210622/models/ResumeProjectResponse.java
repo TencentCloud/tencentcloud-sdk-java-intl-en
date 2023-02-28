@@ -13,29 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.kms.v20190118.models;
+package com.tencentcloudapi.rum.v20210622.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeWhiteBoxKeyDetailsResponse extends AbstractModel{
-
-    /**
-    * White-box key information list
-    */
-    @SerializedName("KeyInfos")
-    @Expose
-    private WhiteboxKeyInfo [] KeyInfos;
-
-    /**
-    * Total white-box keys.
-Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
+public class ResumeProjectResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -43,42 +28,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get White-box key information list 
-     * @return KeyInfos White-box key information list
-     */
-    public WhiteboxKeyInfo [] getKeyInfos() {
-        return this.KeyInfos;
-    }
-
-    /**
-     * Set White-box key information list
-     * @param KeyInfos White-box key information list
-     */
-    public void setKeyInfos(WhiteboxKeyInfo [] KeyInfos) {
-        this.KeyInfos = KeyInfos;
-    }
-
-    /**
-     * Get Total white-box keys.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Total white-box keys.
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set Total white-box keys.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Total white-box keys.
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -96,23 +45,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public DescribeWhiteBoxKeyDetailsResponse() {
+    public ResumeProjectResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeWhiteBoxKeyDetailsResponse(DescribeWhiteBoxKeyDetailsResponse source) {
-        if (source.KeyInfos != null) {
-            this.KeyInfos = new WhiteboxKeyInfo[source.KeyInfos.length];
-            for (int i = 0; i < source.KeyInfos.length; i++) {
-                this.KeyInfos[i] = new WhiteboxKeyInfo(source.KeyInfos[i]);
-            }
-        }
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
+    public ResumeProjectResponse(ResumeProjectResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -123,8 +63,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "KeyInfos.", this.KeyInfos);
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

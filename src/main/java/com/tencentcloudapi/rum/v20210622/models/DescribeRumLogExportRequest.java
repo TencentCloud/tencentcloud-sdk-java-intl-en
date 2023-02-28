@@ -20,35 +20,21 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRumLogListRequest extends AbstractModel{
+public class DescribeRumLogExportRequest extends AbstractModel{
 
     /**
-    * Sorting order (required). Valid values: `desc`, `asc`.
+    * Export identifier name
     */
-    @SerializedName("OrderBy")
+    @SerializedName("Name")
     @Expose
-    private String OrderBy;
+    private String Name;
 
     /**
-    * Start time in milliseconds. It is in timestamp format and is required.
+    * Start time (required)
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
-
-    /**
-    * The number of raw logs returned for a single query. This parameter is required. Maximum value: `100`.
-    */
-    @SerializedName("Limit")
-    @Expose
-    private Long Limit;
-
-    /**
-    * Page number
-    */
-    @SerializedName("Page")
-    @Expose
-    private Long Page;
 
     /**
     * Query statement, which is required and can contain up to 4,096 characters.
@@ -58,7 +44,7 @@ public class DescribeRumLogListRequest extends AbstractModel{
     private String Query;
 
     /**
-    * End time in milliseconds. It is in timestamp format and is required.
+    * End time (required)
     */
     @SerializedName("EndTime")
     @Expose
@@ -72,67 +58,42 @@ public class DescribeRumLogListRequest extends AbstractModel{
     private Long ID;
 
     /**
-     * Get Sorting order (required). Valid values: `desc`, `asc`. 
-     * @return OrderBy Sorting order (required). Valid values: `desc`, `asc`.
+    * Filter field
+    */
+    @SerializedName("Fields")
+    @Expose
+    private String [] Fields;
+
+    /**
+     * Get Export identifier name 
+     * @return Name Export identifier name
      */
-    public String getOrderBy() {
-        return this.OrderBy;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set Sorting order (required). Valid values: `desc`, `asc`.
-     * @param OrderBy Sorting order (required). Valid values: `desc`, `asc`.
+     * Set Export identifier name
+     * @param Name Export identifier name
      */
-    public void setOrderBy(String OrderBy) {
-        this.OrderBy = OrderBy;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     /**
-     * Get Start time in milliseconds. It is in timestamp format and is required. 
-     * @return StartTime Start time in milliseconds. It is in timestamp format and is required.
+     * Get Start time (required) 
+     * @return StartTime Start time (required)
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time in milliseconds. It is in timestamp format and is required.
-     * @param StartTime Start time in milliseconds. It is in timestamp format and is required.
+     * Set Start time (required)
+     * @param StartTime Start time (required)
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
-    }
-
-    /**
-     * Get The number of raw logs returned for a single query. This parameter is required. Maximum value: `100`. 
-     * @return Limit The number of raw logs returned for a single query. This parameter is required. Maximum value: `100`.
-     */
-    public Long getLimit() {
-        return this.Limit;
-    }
-
-    /**
-     * Set The number of raw logs returned for a single query. This parameter is required. Maximum value: `100`.
-     * @param Limit The number of raw logs returned for a single query. This parameter is required. Maximum value: `100`.
-     */
-    public void setLimit(Long Limit) {
-        this.Limit = Limit;
-    }
-
-    /**
-     * Get Page number 
-     * @return Page Page number
-     */
-    public Long getPage() {
-        return this.Page;
-    }
-
-    /**
-     * Set Page number
-     * @param Page Page number
-     */
-    public void setPage(Long Page) {
-        this.Page = Page;
     }
 
     /**
@@ -152,16 +113,16 @@ public class DescribeRumLogListRequest extends AbstractModel{
     }
 
     /**
-     * Get End time in milliseconds. It is in timestamp format and is required. 
-     * @return EndTime End time in milliseconds. It is in timestamp format and is required.
+     * Get End time (required) 
+     * @return EndTime End time (required)
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time in milliseconds. It is in timestamp format and is required.
-     * @param EndTime End time in milliseconds. It is in timestamp format and is required.
+     * Set End time (required)
+     * @param EndTime End time (required)
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -183,25 +144,35 @@ public class DescribeRumLogListRequest extends AbstractModel{
         this.ID = ID;
     }
 
-    public DescribeRumLogListRequest() {
+    /**
+     * Get Filter field 
+     * @return Fields Filter field
+     */
+    public String [] getFields() {
+        return this.Fields;
+    }
+
+    /**
+     * Set Filter field
+     * @param Fields Filter field
+     */
+    public void setFields(String [] Fields) {
+        this.Fields = Fields;
+    }
+
+    public DescribeRumLogExportRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRumLogListRequest(DescribeRumLogListRequest source) {
-        if (source.OrderBy != null) {
-            this.OrderBy = new String(source.OrderBy);
+    public DescribeRumLogExportRequest(DescribeRumLogExportRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
         if (source.StartTime != null) {
             this.StartTime = new String(source.StartTime);
-        }
-        if (source.Limit != null) {
-            this.Limit = new Long(source.Limit);
-        }
-        if (source.Page != null) {
-            this.Page = new Long(source.Page);
         }
         if (source.Query != null) {
             this.Query = new String(source.Query);
@@ -212,6 +183,12 @@ public class DescribeRumLogListRequest extends AbstractModel{
         if (source.ID != null) {
             this.ID = new Long(source.ID);
         }
+        if (source.Fields != null) {
+            this.Fields = new String[source.Fields.length];
+            for (int i = 0; i < source.Fields.length; i++) {
+                this.Fields[i] = new String(source.Fields[i]);
+            }
+        }
     }
 
 
@@ -219,13 +196,12 @@ public class DescribeRumLogListRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
+        this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
-        this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "Page", this.Page);
         this.setParamSimple(map, prefix + "Query", this.Query);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "ID", this.ID);
+        this.setParamArraySimple(map, prefix + "Fields.", this.Fields);
 
     }
 }

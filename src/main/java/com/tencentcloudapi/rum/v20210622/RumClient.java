@@ -83,7 +83,7 @@ Default API request rate limit: 20 requests/sec.
     }
 
     /**
-     *This API is used to create a project (owned by the specified team).
+     *This API is used to create a RUM application which belongs to a specific team.
      * @param req CreateProjectRequest
      * @return CreateProjectResponse
      * @throws TencentCloudSDKException
@@ -143,7 +143,7 @@ Default API request rate limit: 20 requests/sec.
     }
 
     /**
-     *This API is used to create a RUM instance.
+     *This API is used to create a RUM business system.
      * @param req CreateTawInstanceRequest
      * @return CreateTawInstanceResponse
      * @throws TencentCloudSDKException
@@ -752,7 +752,7 @@ Default API request rate limit: 20 requests/sec.
     }
 
     /**
-     *This API is used to get the list of logs in a project (created by an instance).
+     *This API is used to get the log list. It has been deprecated. Use `DescribeRumLogList` instead.
      * @param req DescribeLogListRequest
      * @return DescribeLogListResponse
      * @throws TencentCloudSDKException
@@ -832,7 +832,7 @@ Default API request rate limit: 20 requests/sec.
     }
 
     /**
-     *This API is used to get the list of project reporting rates.
+     *This API is used to get the sampling information of an application’s reporting APIs.
      * @param req DescribeProjectLimitsRequest
      * @return DescribeProjectLimitsResponse
      * @throws TencentCloudSDKException
@@ -912,7 +912,7 @@ Default API request rate limit: 20 requests/sec.
     }
 
     /**
-     *This API is used to get the list of sourcemap files of a project.
+     *This API is used to get the list of source maps of an application.
      * @param req DescribeReleaseFilesRequest
      * @return DescribeReleaseFilesResponse
      * @throws TencentCloudSDKException
@@ -944,6 +944,46 @@ Default API request rate limit: 20 requests/sec.
                 Type type = new TypeToken<JsonResponseModel<DescribeRumGroupLogResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeRumGroupLog");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the list of logs in a project (created by an instance).
+     * @param req DescribeRumLogExportRequest
+     * @return DescribeRumLogExportResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRumLogExportResponse DescribeRumLogExport(DescribeRumLogExportRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRumLogExportResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRumLogExportResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRumLogExport");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the list of exported logs in a project.
+     * @param req DescribeRumLogExportsRequest
+     * @return DescribeRumLogExportsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRumLogExportsResponse DescribeRumLogExports(DescribeRumLogExportsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRumLogExportsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRumLogExportsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRumLogExports");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1072,7 +1112,7 @@ Default API request rate limit: 20 requests/sec.
     }
 
     /**
-     *This API is used to modify an instance.
+     *This API is used to modify a RUM business system.
      * @param req ModifyInstanceRequest
      * @return ModifyInstanceResponse
      * @throws TencentCloudSDKException
@@ -1092,7 +1132,7 @@ Default API request rate limit: 20 requests/sec.
     }
 
     /**
-     *This API is used to modify a RUM project.
+     *This API is used to modify the RUM application information.
      * @param req ModifyProjectRequest
      * @return ModifyProjectResponse
      * @throws TencentCloudSDKException
@@ -1132,7 +1172,7 @@ Default API request rate limit: 20 requests/sec.
     }
 
     /**
-     *This API is used to resume an instance.
+     *This API is used to recover a RUM business system so that you can use the application to report data normally.
      * @param req ResumeInstanceRequest
      * @return ResumeInstanceResponse
      * @throws TencentCloudSDKException
@@ -1144,6 +1184,26 @@ Default API request rate limit: 20 requests/sec.
                 Type type = new TypeToken<JsonResponseModel<ResumeInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ResumeInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to recover an application and resume data reporting.
+     * @param req ResumeProjectRequest
+     * @return ResumeProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResumeProjectResponse ResumeProject(ResumeProjectRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ResumeProjectResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ResumeProjectResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ResumeProject");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

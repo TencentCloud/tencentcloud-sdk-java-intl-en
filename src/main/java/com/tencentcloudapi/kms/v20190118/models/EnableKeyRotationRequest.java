@@ -30,6 +30,13 @@ public class EnableKeyRotationRequest extends AbstractModel{
     private String KeyId;
 
     /**
+    * The interval between each key rotation in days. Value range: 7 - 365 (default).
+    */
+    @SerializedName("RotateDays")
+    @Expose
+    private Long RotateDays;
+
+    /**
      * Get Unique CMK ID 
      * @return KeyId Unique CMK ID
      */
@@ -45,6 +52,22 @@ public class EnableKeyRotationRequest extends AbstractModel{
         this.KeyId = KeyId;
     }
 
+    /**
+     * Get The interval between each key rotation in days. Value range: 7 - 365 (default). 
+     * @return RotateDays The interval between each key rotation in days. Value range: 7 - 365 (default).
+     */
+    public Long getRotateDays() {
+        return this.RotateDays;
+    }
+
+    /**
+     * Set The interval between each key rotation in days. Value range: 7 - 365 (default).
+     * @param RotateDays The interval between each key rotation in days. Value range: 7 - 365 (default).
+     */
+    public void setRotateDays(Long RotateDays) {
+        this.RotateDays = RotateDays;
+    }
+
     public EnableKeyRotationRequest() {
     }
 
@@ -56,6 +79,9 @@ public class EnableKeyRotationRequest extends AbstractModel{
         if (source.KeyId != null) {
             this.KeyId = new String(source.KeyId);
         }
+        if (source.RotateDays != null) {
+            this.RotateDays = new Long(source.RotateDays);
+        }
     }
 
 
@@ -64,6 +90,7 @@ public class EnableKeyRotationRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);
+        this.setParamSimple(map, prefix + "RotateDays", this.RotateDays);
 
     }
 }

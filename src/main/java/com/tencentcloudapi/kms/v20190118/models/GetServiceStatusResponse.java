@@ -44,8 +44,8 @@ public class GetServiceStatusResponse extends AbstractModel{
     private Long UserLevel;
 
     /**
-    * Ultimate Edition expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Expiration time of the KMS Ultimate edition. It’s represented in a Unix Epoch timestamp.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProExpireTime")
     @Expose
@@ -139,20 +139,20 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get Ultimate Edition expiration time
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ProExpireTime Ultimate Edition expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Expiration time of the KMS Ultimate edition. It’s represented in a Unix Epoch timestamp.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ProExpireTime Expiration time of the KMS Ultimate edition. It’s represented in a Unix Epoch timestamp.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getProExpireTime() {
         return this.ProExpireTime;
     }
 
     /**
-     * Set Ultimate Edition expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ProExpireTime Ultimate Edition expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Expiration time of the KMS Ultimate edition. It’s represented in a Unix Epoch timestamp.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ProExpireTime Expiration time of the KMS Ultimate edition. It’s represented in a Unix Epoch timestamp.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProExpireTime(Long ProExpireTime) {
         this.ProExpireTime = ProExpireTime;

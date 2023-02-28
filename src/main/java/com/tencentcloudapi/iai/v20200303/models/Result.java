@@ -37,8 +37,7 @@ public class Result extends AbstractModel{
     private FaceRect FaceRect;
 
     /**
-    * Status return code of detected face image. 0: normal. 
--1601: the image quality control requirement is not met; in this case, `Candidate` is empty.
+    * The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
     */
     @SerializedName("RetCode")
     @Expose
@@ -77,20 +76,16 @@ public class Result extends AbstractModel{
     }
 
     /**
-     * Get Status return code of detected face image. 0: normal. 
--1601: the image quality control requirement is not met; in this case, `Candidate` is empty. 
-     * @return RetCode Status return code of detected face image. 0: normal. 
--1601: the image quality control requirement is not met; in this case, `Candidate` is empty.
+     * Get The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`. 
+     * @return RetCode The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
      */
     public Long getRetCode() {
         return this.RetCode;
     }
 
     /**
-     * Set Status return code of detected face image. 0: normal. 
--1601: the image quality control requirement is not met; in this case, `Candidate` is empty.
-     * @param RetCode Status return code of detected face image. 0: normal. 
--1601: the image quality control requirement is not met; in this case, `Candidate` is empty.
+     * Set The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
+     * @param RetCode The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
      */
     public void setRetCode(Long RetCode) {
         this.RetCode = RetCode;
