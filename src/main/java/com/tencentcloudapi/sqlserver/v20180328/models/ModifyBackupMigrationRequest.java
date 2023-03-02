@@ -65,6 +65,13 @@ public class ModifyBackupMigrationRequest extends AbstractModel{
     private String [] BackupFiles;
 
     /**
+    * Name set of databases to be renamed
+    */
+    @SerializedName("DBRename")
+    @Expose
+    private RenameRestoreDatabase [] DBRename;
+
+    /**
      * Get ID of imported target instance 
      * @return InstanceId ID of imported target instance
      */
@@ -160,6 +167,22 @@ public class ModifyBackupMigrationRequest extends AbstractModel{
         this.BackupFiles = BackupFiles;
     }
 
+    /**
+     * Get Name set of databases to be renamed 
+     * @return DBRename Name set of databases to be renamed
+     */
+    public RenameRestoreDatabase [] getDBRename() {
+        return this.DBRename;
+    }
+
+    /**
+     * Set Name set of databases to be renamed
+     * @param DBRename Name set of databases to be renamed
+     */
+    public void setDBRename(RenameRestoreDatabase [] DBRename) {
+        this.DBRename = DBRename;
+    }
+
     public ModifyBackupMigrationRequest() {
     }
 
@@ -189,6 +212,12 @@ public class ModifyBackupMigrationRequest extends AbstractModel{
                 this.BackupFiles[i] = new String(source.BackupFiles[i]);
             }
         }
+        if (source.DBRename != null) {
+            this.DBRename = new RenameRestoreDatabase[source.DBRename.length];
+            for (int i = 0; i < source.DBRename.length; i++) {
+                this.DBRename[i] = new RenameRestoreDatabase(source.DBRename[i]);
+            }
+        }
     }
 
 
@@ -202,6 +231,7 @@ public class ModifyBackupMigrationRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RecoveryType", this.RecoveryType);
         this.setParamSimple(map, prefix + "UploadType", this.UploadType);
         this.setParamArraySimple(map, prefix + "BackupFiles.", this.BackupFiles);
+        this.setParamArrayObj(map, prefix + "DBRename.", this.DBRename);
 
     }
 }

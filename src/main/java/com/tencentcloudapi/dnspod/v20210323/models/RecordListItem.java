@@ -116,6 +116,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long MX;
 
     /**
+    * Whether it is a default NS record.
+    */
+    @SerializedName("DefaultNS")
+    @Expose
+    private Boolean DefaultNS;
+
+    /**
      * Get The record ID. 
      * @return RecordId The record ID.
      */
@@ -331,6 +338,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.MX = MX;
     }
 
+    /**
+     * Get Whether it is a default NS record. 
+     * @return DefaultNS Whether it is a default NS record.
+     */
+    public Boolean getDefaultNS() {
+        return this.DefaultNS;
+    }
+
+    /**
+     * Set Whether it is a default NS record.
+     * @param DefaultNS Whether it is a default NS record.
+     */
+    public void setDefaultNS(Boolean DefaultNS) {
+        this.DefaultNS = DefaultNS;
+    }
+
     public RecordListItem() {
     }
 
@@ -378,6 +401,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.MX != null) {
             this.MX = new Long(source.MX);
         }
+        if (source.DefaultNS != null) {
+            this.DefaultNS = new Boolean(source.DefaultNS);
+        }
     }
 
 
@@ -398,6 +424,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "TTL", this.TTL);
         this.setParamSimple(map, prefix + "MX", this.MX);
+        this.setParamSimple(map, prefix + "DefaultNS", this.DefaultNS);
 
     }
 }

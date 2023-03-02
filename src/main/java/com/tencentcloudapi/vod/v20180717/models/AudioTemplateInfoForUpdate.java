@@ -24,22 +24,24 @@ public class AudioTemplateInfoForUpdate extends AbstractModel{
 
     /**
     * The audio codec.
-If `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame</li>
+If `Container` is `mp3`, the valid value is:
+<li>`libmp3lame`</li>
 If `Container` is `ogg` or `flac`, the valid value is:
-<li>flac</li>
+<li>`flac`</li>
 If `Container` is `m4a`, the valid values are:
-<li>libfdk_aac</li>
-<li>libmp3lame</li>
-<li>ac3</li>
+<li>`libfdk_aac`</li>
+<li>`libmp3lame`</li>
+<li>`ac3`</li>
 If `Container` is `mp4` or `flv`, the valid values are:
-<li>libfdk_aac: more suitable for mp4</li>
-<li>libmp3lame: More suitable for flv</li>
-<li>mp2</li>
-If `Container` is `hls`, the valid values are:
-<li>libfdk_aac</li>
-If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
-<li>libfdk_aac</li>
+<li>`libfdk_aac` (Recommended for MP4)</li>
+<li>`libmp3lame` (Recommended for FLV)</li>
+<li>`mp2`</li>
+If `Container` is `hls`, the valid value is:
+<li>`libfdk_aac`</li>
+If `Format` is `HLS` or `MPEG-DASH`, the valid value is:
+<li>`libfdk_aac`</li>
+If `Container` is `wav`, the valid value is:
+<li>`pcm16`</li>
     */
     @SerializedName("Codec")
     @Expose
@@ -53,11 +55,12 @@ If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
     private Long Bitrate;
 
     /**
-    * Audio stream sample rate. Valid values:
-<li>32,000</li>
-<li>44,100</li>
-<li>48,000</li>
-In Hz.
+    * The audio sample rate. Valid values:
+<li>`16000` (valid only if `Codec` is `pcm16`)</li>
+<li>`32000`</li>
+<li>`44100`</li>
+<li>`48000`</li>
+Unit: Hz.
     */
     @SerializedName("SampleRate")
     @Expose
@@ -76,39 +79,43 @@ You cannot set the sound channel as stereo for media files in container formats 
 
     /**
      * Get The audio codec.
-If `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame</li>
+If `Container` is `mp3`, the valid value is:
+<li>`libmp3lame`</li>
 If `Container` is `ogg` or `flac`, the valid value is:
-<li>flac</li>
+<li>`flac`</li>
 If `Container` is `m4a`, the valid values are:
-<li>libfdk_aac</li>
-<li>libmp3lame</li>
-<li>ac3</li>
+<li>`libfdk_aac`</li>
+<li>`libmp3lame`</li>
+<li>`ac3`</li>
 If `Container` is `mp4` or `flv`, the valid values are:
-<li>libfdk_aac: more suitable for mp4</li>
-<li>libmp3lame: More suitable for flv</li>
-<li>mp2</li>
-If `Container` is `hls`, the valid values are:
-<li>libfdk_aac</li>
-If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
-<li>libfdk_aac</li> 
+<li>`libfdk_aac` (Recommended for MP4)</li>
+<li>`libmp3lame` (Recommended for FLV)</li>
+<li>`mp2`</li>
+If `Container` is `hls`, the valid value is:
+<li>`libfdk_aac`</li>
+If `Format` is `HLS` or `MPEG-DASH`, the valid value is:
+<li>`libfdk_aac`</li>
+If `Container` is `wav`, the valid value is:
+<li>`pcm16`</li> 
      * @return Codec The audio codec.
-If `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame</li>
+If `Container` is `mp3`, the valid value is:
+<li>`libmp3lame`</li>
 If `Container` is `ogg` or `flac`, the valid value is:
-<li>flac</li>
+<li>`flac`</li>
 If `Container` is `m4a`, the valid values are:
-<li>libfdk_aac</li>
-<li>libmp3lame</li>
-<li>ac3</li>
+<li>`libfdk_aac`</li>
+<li>`libmp3lame`</li>
+<li>`ac3`</li>
 If `Container` is `mp4` or `flv`, the valid values are:
-<li>libfdk_aac: more suitable for mp4</li>
-<li>libmp3lame: More suitable for flv</li>
-<li>mp2</li>
-If `Container` is `hls`, the valid values are:
-<li>libfdk_aac</li>
-If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
-<li>libfdk_aac</li>
+<li>`libfdk_aac` (Recommended for MP4)</li>
+<li>`libmp3lame` (Recommended for FLV)</li>
+<li>`mp2`</li>
+If `Container` is `hls`, the valid value is:
+<li>`libfdk_aac`</li>
+If `Format` is `HLS` or `MPEG-DASH`, the valid value is:
+<li>`libfdk_aac`</li>
+If `Container` is `wav`, the valid value is:
+<li>`pcm16`</li>
      */
     public String getCodec() {
         return this.Codec;
@@ -116,39 +123,43 @@ If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
 
     /**
      * Set The audio codec.
-If `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame</li>
+If `Container` is `mp3`, the valid value is:
+<li>`libmp3lame`</li>
 If `Container` is `ogg` or `flac`, the valid value is:
-<li>flac</li>
+<li>`flac`</li>
 If `Container` is `m4a`, the valid values are:
-<li>libfdk_aac</li>
-<li>libmp3lame</li>
-<li>ac3</li>
+<li>`libfdk_aac`</li>
+<li>`libmp3lame`</li>
+<li>`ac3`</li>
 If `Container` is `mp4` or `flv`, the valid values are:
-<li>libfdk_aac: more suitable for mp4</li>
-<li>libmp3lame: More suitable for flv</li>
-<li>mp2</li>
-If `Container` is `hls`, the valid values are:
-<li>libfdk_aac</li>
-If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
-<li>libfdk_aac</li>
+<li>`libfdk_aac` (Recommended for MP4)</li>
+<li>`libmp3lame` (Recommended for FLV)</li>
+<li>`mp2`</li>
+If `Container` is `hls`, the valid value is:
+<li>`libfdk_aac`</li>
+If `Format` is `HLS` or `MPEG-DASH`, the valid value is:
+<li>`libfdk_aac`</li>
+If `Container` is `wav`, the valid value is:
+<li>`pcm16`</li>
      * @param Codec The audio codec.
-If `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame</li>
+If `Container` is `mp3`, the valid value is:
+<li>`libmp3lame`</li>
 If `Container` is `ogg` or `flac`, the valid value is:
-<li>flac</li>
+<li>`flac`</li>
 If `Container` is `m4a`, the valid values are:
-<li>libfdk_aac</li>
-<li>libmp3lame</li>
-<li>ac3</li>
+<li>`libfdk_aac`</li>
+<li>`libmp3lame`</li>
+<li>`ac3`</li>
 If `Container` is `mp4` or `flv`, the valid values are:
-<li>libfdk_aac: more suitable for mp4</li>
-<li>libmp3lame: More suitable for flv</li>
-<li>mp2</li>
-If `Container` is `hls`, the valid values are:
-<li>libfdk_aac</li>
-If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
-<li>libfdk_aac</li>
+<li>`libfdk_aac` (Recommended for MP4)</li>
+<li>`libmp3lame` (Recommended for FLV)</li>
+<li>`mp2`</li>
+If `Container` is `hls`, the valid value is:
+<li>`libfdk_aac`</li>
+If `Format` is `HLS` or `MPEG-DASH`, the valid value is:
+<li>`libfdk_aac`</li>
+If `Container` is `wav`, the valid value is:
+<li>`pcm16`</li>
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
@@ -171,32 +182,36 @@ If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
     }
 
     /**
-     * Get Audio stream sample rate. Valid values:
-<li>32,000</li>
-<li>44,100</li>
-<li>48,000</li>
-In Hz. 
-     * @return SampleRate Audio stream sample rate. Valid values:
-<li>32,000</li>
-<li>44,100</li>
-<li>48,000</li>
-In Hz.
+     * Get The audio sample rate. Valid values:
+<li>`16000` (valid only if `Codec` is `pcm16`)</li>
+<li>`32000`</li>
+<li>`44100`</li>
+<li>`48000`</li>
+Unit: Hz. 
+     * @return SampleRate The audio sample rate. Valid values:
+<li>`16000` (valid only if `Codec` is `pcm16`)</li>
+<li>`32000`</li>
+<li>`44100`</li>
+<li>`48000`</li>
+Unit: Hz.
      */
     public Long getSampleRate() {
         return this.SampleRate;
     }
 
     /**
-     * Set Audio stream sample rate. Valid values:
-<li>32,000</li>
-<li>44,100</li>
-<li>48,000</li>
-In Hz.
-     * @param SampleRate Audio stream sample rate. Valid values:
-<li>32,000</li>
-<li>44,100</li>
-<li>48,000</li>
-In Hz.
+     * Set The audio sample rate. Valid values:
+<li>`16000` (valid only if `Codec` is `pcm16`)</li>
+<li>`32000`</li>
+<li>`44100`</li>
+<li>`48000`</li>
+Unit: Hz.
+     * @param SampleRate The audio sample rate. Valid values:
+<li>`16000` (valid only if `Codec` is `pcm16`)</li>
+<li>`32000`</li>
+<li>`44100`</li>
+<li>`48000`</li>
+Unit: Hz.
      */
     public void setSampleRate(Long SampleRate) {
         this.SampleRate = SampleRate;

@@ -378,6 +378,28 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
     }
 
     /**
+     *This API is used to create a playlist. You can create at most 100 playlists.
+For each video on the list, you can either use the original file or a transcoding file.
+The files must be in HLS format. Preferably, they should have the same bitrate and resolution.
+     * @param req CreateRoundPlayRequest
+     * @return CreateRoundPlayResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRoundPlayResponse CreateRoundPlay(CreateRoundPlayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateRoundPlayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateRoundPlayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateRoundPlay");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a custom sampled screencapturing template. Up to 16 templates can be created.
      * @param req CreateSampleSnapshotTemplateRequest
      * @return CreateSampleSnapshotTemplateResponse
@@ -801,6 +823,26 @@ This API is used to delete a custom audio/video moderation template.
                 Type type = new TypeToken<JsonResponseModel<DeleteReviewTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteReviewTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a playlist.
+     * @param req DeleteRoundPlayRequest
+     * @return DeleteRoundPlayResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRoundPlayResponse DeleteRoundPlay(DeleteRoundPlayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRoundPlayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRoundPlayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRoundPlay");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1486,6 +1528,26 @@ This API returns the video content duration for intelligent recognition in secon
     }
 
     /**
+     *This API is used to query playlists.
+     * @param req DescribeRoundPlaysRequest
+     * @return DescribeRoundPlaysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRoundPlaysResponse DescribeRoundPlays(DescribeRoundPlaysRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRoundPlaysResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRoundPlaysResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRoundPlays");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the list of sampled screencapturing templates and supports paged queries by filters.
      * @param req DescribeSampleSnapshotTemplatesRequest
      * @return DescribeSampleSnapshotTemplatesResponse
@@ -2135,6 +2197,27 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
     }
 
     /**
+     *This API is used to modify a playlist.
+The modification will only take effect for new playback requests. For ongoing playback, the old playlist will be playable for seven days after the modification.
+     * @param req ModifyRoundPlayRequest
+     * @return ModifyRoundPlayResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRoundPlayResponse ModifyRoundPlay(ModifyRoundPlayRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRoundPlayResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRoundPlayResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRoundPlay");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify a custom sampled screencapturing template.
      * @param req ModifySampleSnapshotTemplateRequest
      * @return ModifySampleSnapshotTemplateResponse
@@ -2495,6 +2578,26 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
                 Type type = new TypeToken<JsonResponseModel<PushUrlCacheResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "PushUrlCache");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to remaster audio/video.
+     * @param req RebuildMediaRequest
+     * @return RebuildMediaResponse
+     * @throws TencentCloudSDKException
+     */
+    public RebuildMediaResponse RebuildMedia(RebuildMediaRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RebuildMediaResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RebuildMediaResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RebuildMedia");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

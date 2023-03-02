@@ -28,12 +28,13 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>`EditMedia`: Video editing</li>
 <li>`SplitMedia`: Video splitting</li>
 <li>`ComposeMedia`: Media file production</li>
-<li>`WechatPublish`: WeChat publishing</li>
-<li>`WechatMiniProgramPublish`: Publishing videos on WeChat Mini Program</li>
+<li>`WechatPublish`: Weixin publishing</li>
+<li>`WechatMiniProgramPublish`: Publishing videos on Weixin Mini Program</li>
 <li>`PullUpload`: Pulling media files for upload</li>
 <li>`FastClipMedia`: Quick clipping</li>
 <li>`RemoveWatermarkTask`: Watermark removal</li>
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
+<li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
     */
     @SerializedName("TaskType")
@@ -176,6 +177,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private RemoveWatermarkTask RemoveWatermarkTask;
 
     /**
+    * The information of an audio/video remastering task. This parameter is valid only if `TaskType` is `RebuildMedia`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RebuildMediaTask")
+    @Expose
+    private RebuildMediaTask RebuildMediaTask;
+
+    /**
     * The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -220,24 +229,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`EditMedia`: Video editing</li>
 <li>`SplitMedia`: Video splitting</li>
 <li>`ComposeMedia`: Media file production</li>
-<li>`WechatPublish`: WeChat publishing</li>
-<li>`WechatMiniProgramPublish`: Publishing videos on WeChat Mini Program</li>
+<li>`WechatPublish`: Weixin publishing</li>
+<li>`WechatMiniProgramPublish`: Publishing videos on Weixin Mini Program</li>
 <li>`PullUpload`: Pulling media files for upload</li>
 <li>`FastClipMedia`: Quick clipping</li>
 <li>`RemoveWatermarkTask`: Watermark removal</li>
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
+<li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li> 
      * @return TaskType The task type. Valid values:
 <li>`Procedure`: Video processing</li>
 <li>`EditMedia`: Video editing</li>
 <li>`SplitMedia`: Video splitting</li>
 <li>`ComposeMedia`: Media file production</li>
-<li>`WechatPublish`: WeChat publishing</li>
-<li>`WechatMiniProgramPublish`: Publishing videos on WeChat Mini Program</li>
+<li>`WechatPublish`: Weixin publishing</li>
+<li>`WechatMiniProgramPublish`: Publishing videos on Weixin Mini Program</li>
 <li>`PullUpload`: Pulling media files for upload</li>
 <li>`FastClipMedia`: Quick clipping</li>
 <li>`RemoveWatermarkTask`: Watermark removal</li>
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
+<li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
      */
     public String getTaskType() {
@@ -250,24 +261,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`EditMedia`: Video editing</li>
 <li>`SplitMedia`: Video splitting</li>
 <li>`ComposeMedia`: Media file production</li>
-<li>`WechatPublish`: WeChat publishing</li>
-<li>`WechatMiniProgramPublish`: Publishing videos on WeChat Mini Program</li>
+<li>`WechatPublish`: Weixin publishing</li>
+<li>`WechatMiniProgramPublish`: Publishing videos on Weixin Mini Program</li>
 <li>`PullUpload`: Pulling media files for upload</li>
 <li>`FastClipMedia`: Quick clipping</li>
 <li>`RemoveWatermarkTask`: Watermark removal</li>
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
+<li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
      * @param TaskType The task type. Valid values:
 <li>`Procedure`: Video processing</li>
 <li>`EditMedia`: Video editing</li>
 <li>`SplitMedia`: Video splitting</li>
 <li>`ComposeMedia`: Media file production</li>
-<li>`WechatPublish`: WeChat publishing</li>
-<li>`WechatMiniProgramPublish`: Publishing videos on WeChat Mini Program</li>
+<li>`WechatPublish`: Weixin publishing</li>
+<li>`WechatMiniProgramPublish`: Publishing videos on Weixin Mini Program</li>
 <li>`PullUpload`: Pulling media files for upload</li>
 <li>`FastClipMedia`: Quick clipping</li>
 <li>`RemoveWatermarkTask`: Watermark removal</li>
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
+<li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
      */
     public void setTaskType(String TaskType) {
@@ -611,6 +624,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get The information of an audio/video remastering task. This parameter is valid only if `TaskType` is `RebuildMedia`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RebuildMediaTask The information of an audio/video remastering task. This parameter is valid only if `TaskType` is `RebuildMedia`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public RebuildMediaTask getRebuildMediaTask() {
+        return this.RebuildMediaTask;
+    }
+
+    /**
+     * Set The information of an audio/video remastering task. This parameter is valid only if `TaskType` is `RebuildMedia`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RebuildMediaTask The information of an audio/video remastering task. This parameter is valid only if `TaskType` is `RebuildMedia`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRebuildMediaTask(RebuildMediaTask RebuildMediaTask) {
+        this.RebuildMediaTask = RebuildMediaTask;
+    }
+
+    /**
      * Get The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ExtractTraceWatermarkTask The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
@@ -768,6 +801,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RemoveWatermarkTask != null) {
             this.RemoveWatermarkTask = new RemoveWatermarkTask(source.RemoveWatermarkTask);
         }
+        if (source.RebuildMediaTask != null) {
+            this.RebuildMediaTask = new RebuildMediaTask(source.RebuildMediaTask);
+        }
         if (source.ExtractTraceWatermarkTask != null) {
             this.ExtractTraceWatermarkTask = new ExtractTraceWatermarkTask(source.ExtractTraceWatermarkTask);
         }
@@ -808,6 +844,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "CreateImageSpriteTask.", this.CreateImageSpriteTask);
         this.setParamObj(map, prefix + "SnapshotByTimeOffsetTask.", this.SnapshotByTimeOffsetTask);
         this.setParamObj(map, prefix + "RemoveWatermarkTask.", this.RemoveWatermarkTask);
+        this.setParamObj(map, prefix + "RebuildMediaTask.", this.RebuildMediaTask);
         this.setParamObj(map, prefix + "ExtractTraceWatermarkTask.", this.ExtractTraceWatermarkTask);
         this.setParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
         this.setParamObj(map, prefix + "ReduceMediaBitrateTask.", this.ReduceMediaBitrateTask);

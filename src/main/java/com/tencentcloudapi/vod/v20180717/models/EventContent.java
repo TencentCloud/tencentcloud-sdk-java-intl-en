@@ -34,13 +34,14 @@ public class EventContent extends AbstractModel{
 <li>`NewFileUpload`: Video uploaded.</li>
 <li>`ProcedureStateChanged`: Task flow status changed.</li>
 <li>`FileDeleted`: Video deleted.</li>
+<li>`RestoreMediaComplete`: Video retrieved.</li>
 <li>`PullComplete`: Finished video pulling.</li>
 <li>`EditMediaComplete`: Finished video editing.</li>
 <li>`SplitMediaComplete`: Finished video splitting.</li>
-<li>`WechatPublishComplete`: Published to WeChat.</li>
 <li>`ComposeMediaComplete`: Finished producing the media file.</li>
-<li>`WechatMiniProgramPublishComplete`: Finished publishing on WeChat Mini Program.</li>
-<li>`FastClipMediaComplete`: Finished quick clipping.</li>
+<li>`WechatMiniProgramPublishComplete`: Finished publishing on Weixin Mini Program.</li>
+<li>`RemoveWatermark`: Watermark removed.</li>
+<li>`RebuildMediaComplete`: Finished audio/video remastering.</li>
 <li>`ReviewAudioVideoComplete`: Finished moderation.</li>
 <li>`ExtractTraceWatermarkComplete`: Finished digital watermark extraction.</li>
 <li>`DescribeFileAttributesComplete`: Finished getting file attributes.</li>
@@ -96,8 +97,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private EditMediaTask EditMediaCompleteEvent;
 
     /**
-    * Video splitting completion event, which is valid if the event type is `EditMediaComplete`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * The notification for completing video splitting, which is valid if the event type is `SplitMediaComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SplitMediaCompleteEvent")
     @Expose
@@ -168,23 +169,31 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private WechatMiniProgramPublishTask WechatMiniProgramPublishCompleteEvent;
 
     /**
-    * Watermark removal completion event. This parameter is valid only if `TaskType` is `RemoveWatermark`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * The notification for completing watermark removal. This parameter is valid only if the event type is `RemoveWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RemoveWatermarkCompleteEvent")
     @Expose
     private RemoveWatermarkTask RemoveWatermarkCompleteEvent;
 
     /**
-    * Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * The notification for completing video retrieval. This parameter is valid if the event type is `RestoreMediaComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RestoreMediaCompleteEvent")
     @Expose
     private RestoreMediaTask RestoreMediaCompleteEvent;
 
     /**
-    * The callback for the completion of digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
+    * The notification for completing audio/video remastering. This parameter is valid only if the event type is `RebuildMediaComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RebuildMediaCompleteEvent")
+    @Expose
+    private RebuildMediaTask RebuildMediaCompleteEvent;
+
+    /**
+    * The notification for completing digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExtractTraceWatermarkCompleteEvent")
@@ -236,13 +245,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`NewFileUpload`: Video uploaded.</li>
 <li>`ProcedureStateChanged`: Task flow status changed.</li>
 <li>`FileDeleted`: Video deleted.</li>
+<li>`RestoreMediaComplete`: Video retrieved.</li>
 <li>`PullComplete`: Finished video pulling.</li>
 <li>`EditMediaComplete`: Finished video editing.</li>
 <li>`SplitMediaComplete`: Finished video splitting.</li>
-<li>`WechatPublishComplete`: Published to WeChat.</li>
 <li>`ComposeMediaComplete`: Finished producing the media file.</li>
-<li>`WechatMiniProgramPublishComplete`: Finished publishing on WeChat Mini Program.</li>
-<li>`FastClipMediaComplete`: Finished quick clipping.</li>
+<li>`WechatMiniProgramPublishComplete`: Finished publishing on Weixin Mini Program.</li>
+<li>`RemoveWatermark`: Watermark removed.</li>
+<li>`RebuildMediaComplete`: Finished audio/video remastering.</li>
 <li>`ReviewAudioVideoComplete`: Finished moderation.</li>
 <li>`ExtractTraceWatermarkComplete`: Finished digital watermark extraction.</li>
 <li>`DescribeFileAttributesComplete`: Finished getting file attributes.</li>
@@ -256,13 +266,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`NewFileUpload`: Video uploaded.</li>
 <li>`ProcedureStateChanged`: Task flow status changed.</li>
 <li>`FileDeleted`: Video deleted.</li>
+<li>`RestoreMediaComplete`: Video retrieved.</li>
 <li>`PullComplete`: Finished video pulling.</li>
 <li>`EditMediaComplete`: Finished video editing.</li>
 <li>`SplitMediaComplete`: Finished video splitting.</li>
-<li>`WechatPublishComplete`: Published to WeChat.</li>
 <li>`ComposeMediaComplete`: Finished producing the media file.</li>
-<li>`WechatMiniProgramPublishComplete`: Finished publishing on WeChat Mini Program.</li>
-<li>`FastClipMediaComplete`: Finished quick clipping.</li>
+<li>`WechatMiniProgramPublishComplete`: Finished publishing on Weixin Mini Program.</li>
+<li>`RemoveWatermark`: Watermark removed.</li>
+<li>`RebuildMediaComplete`: Finished audio/video remastering.</li>
 <li>`ReviewAudioVideoComplete`: Finished moderation.</li>
 <li>`ExtractTraceWatermarkComplete`: Finished digital watermark extraction.</li>
 <li>`DescribeFileAttributesComplete`: Finished getting file attributes.</li>
@@ -282,13 +293,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`NewFileUpload`: Video uploaded.</li>
 <li>`ProcedureStateChanged`: Task flow status changed.</li>
 <li>`FileDeleted`: Video deleted.</li>
+<li>`RestoreMediaComplete`: Video retrieved.</li>
 <li>`PullComplete`: Finished video pulling.</li>
 <li>`EditMediaComplete`: Finished video editing.</li>
 <li>`SplitMediaComplete`: Finished video splitting.</li>
-<li>`WechatPublishComplete`: Published to WeChat.</li>
 <li>`ComposeMediaComplete`: Finished producing the media file.</li>
-<li>`WechatMiniProgramPublishComplete`: Finished publishing on WeChat Mini Program.</li>
-<li>`FastClipMediaComplete`: Finished quick clipping.</li>
+<li>`WechatMiniProgramPublishComplete`: Finished publishing on Weixin Mini Program.</li>
+<li>`RemoveWatermark`: Watermark removed.</li>
+<li>`RebuildMediaComplete`: Finished audio/video remastering.</li>
 <li>`ReviewAudioVideoComplete`: Finished moderation.</li>
 <li>`ExtractTraceWatermarkComplete`: Finished digital watermark extraction.</li>
 <li>`DescribeFileAttributesComplete`: Finished getting file attributes.</li>
@@ -302,13 +314,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`NewFileUpload`: Video uploaded.</li>
 <li>`ProcedureStateChanged`: Task flow status changed.</li>
 <li>`FileDeleted`: Video deleted.</li>
+<li>`RestoreMediaComplete`: Video retrieved.</li>
 <li>`PullComplete`: Finished video pulling.</li>
 <li>`EditMediaComplete`: Finished video editing.</li>
 <li>`SplitMediaComplete`: Finished video splitting.</li>
-<li>`WechatPublishComplete`: Published to WeChat.</li>
 <li>`ComposeMediaComplete`: Finished producing the media file.</li>
-<li>`WechatMiniProgramPublishComplete`: Finished publishing on WeChat Mini Program.</li>
-<li>`FastClipMediaComplete`: Finished quick clipping.</li>
+<li>`WechatMiniProgramPublishComplete`: Finished publishing on Weixin Mini Program.</li>
+<li>`RemoveWatermark`: Watermark removed.</li>
+<li>`RebuildMediaComplete`: Finished audio/video remastering.</li>
 <li>`ReviewAudioVideoComplete`: Finished moderation.</li>
 <li>`ExtractTraceWatermarkComplete`: Finished digital watermark extraction.</li>
 <li>`DescribeFileAttributesComplete`: Finished getting file attributes.</li>
@@ -424,20 +437,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Video splitting completion event, which is valid if the event type is `EditMediaComplete`.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return SplitMediaCompleteEvent Video splitting completion event, which is valid if the event type is `EditMediaComplete`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get The notification for completing video splitting, which is valid if the event type is `SplitMediaComplete`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SplitMediaCompleteEvent The notification for completing video splitting, which is valid if the event type is `SplitMediaComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SplitMediaTask getSplitMediaCompleteEvent() {
         return this.SplitMediaCompleteEvent;
     }
 
     /**
-     * Set Video splitting completion event, which is valid if the event type is `EditMediaComplete`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param SplitMediaCompleteEvent Video splitting completion event, which is valid if the event type is `EditMediaComplete`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set The notification for completing video splitting, which is valid if the event type is `SplitMediaComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SplitMediaCompleteEvent The notification for completing video splitting, which is valid if the event type is `SplitMediaComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSplitMediaCompleteEvent(SplitMediaTask SplitMediaCompleteEvent) {
         this.SplitMediaCompleteEvent = SplitMediaCompleteEvent;
@@ -604,49 +617,69 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Watermark removal completion event. This parameter is valid only if `TaskType` is `RemoveWatermark`.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return RemoveWatermarkCompleteEvent Watermark removal completion event. This parameter is valid only if `TaskType` is `RemoveWatermark`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get The notification for completing watermark removal. This parameter is valid only if the event type is `RemoveWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RemoveWatermarkCompleteEvent The notification for completing watermark removal. This parameter is valid only if the event type is `RemoveWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public RemoveWatermarkTask getRemoveWatermarkCompleteEvent() {
         return this.RemoveWatermarkCompleteEvent;
     }
 
     /**
-     * Set Watermark removal completion event. This parameter is valid only if `TaskType` is `RemoveWatermark`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param RemoveWatermarkCompleteEvent Watermark removal completion event. This parameter is valid only if `TaskType` is `RemoveWatermark`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set The notification for completing watermark removal. This parameter is valid only if the event type is `RemoveWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RemoveWatermarkCompleteEvent The notification for completing watermark removal. This parameter is valid only if the event type is `RemoveWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRemoveWatermarkCompleteEvent(RemoveWatermarkTask RemoveWatermarkCompleteEvent) {
         this.RemoveWatermarkCompleteEvent = RemoveWatermarkCompleteEvent;
     }
 
     /**
-     * Get Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return RestoreMediaCompleteEvent Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get The notification for completing video retrieval. This parameter is valid if the event type is `RestoreMediaComplete`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RestoreMediaCompleteEvent The notification for completing video retrieval. This parameter is valid if the event type is `RestoreMediaComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public RestoreMediaTask getRestoreMediaCompleteEvent() {
         return this.RestoreMediaCompleteEvent;
     }
 
     /**
-     * Set Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param RestoreMediaCompleteEvent Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set The notification for completing video retrieval. This parameter is valid if the event type is `RestoreMediaComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RestoreMediaCompleteEvent The notification for completing video retrieval. This parameter is valid if the event type is `RestoreMediaComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRestoreMediaCompleteEvent(RestoreMediaTask RestoreMediaCompleteEvent) {
         this.RestoreMediaCompleteEvent = RestoreMediaCompleteEvent;
     }
 
     /**
-     * Get The callback for the completion of digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
+     * Get The notification for completing audio/video remastering. This parameter is valid only if the event type is `RebuildMediaComplete`.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExtractTraceWatermarkCompleteEvent The callback for the completion of digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
+     * @return RebuildMediaCompleteEvent The notification for completing audio/video remastering. This parameter is valid only if the event type is `RebuildMediaComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public RebuildMediaTask getRebuildMediaCompleteEvent() {
+        return this.RebuildMediaCompleteEvent;
+    }
+
+    /**
+     * Set The notification for completing audio/video remastering. This parameter is valid only if the event type is `RebuildMediaComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RebuildMediaCompleteEvent The notification for completing audio/video remastering. This parameter is valid only if the event type is `RebuildMediaComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRebuildMediaCompleteEvent(RebuildMediaTask RebuildMediaCompleteEvent) {
+        this.RebuildMediaCompleteEvent = RebuildMediaCompleteEvent;
+    }
+
+    /**
+     * Get The notification for completing digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ExtractTraceWatermarkCompleteEvent The notification for completing digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ExtractTraceWatermarkTask getExtractTraceWatermarkCompleteEvent() {
@@ -654,9 +687,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The callback for the completion of digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
+     * Set The notification for completing digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExtractTraceWatermarkCompleteEvent The callback for the completion of digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
+     * @param ExtractTraceWatermarkCompleteEvent The notification for completing digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExtractTraceWatermarkCompleteEvent(ExtractTraceWatermarkTask ExtractTraceWatermarkCompleteEvent) {
@@ -785,6 +818,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RestoreMediaCompleteEvent != null) {
             this.RestoreMediaCompleteEvent = new RestoreMediaTask(source.RestoreMediaCompleteEvent);
         }
+        if (source.RebuildMediaCompleteEvent != null) {
+            this.RebuildMediaCompleteEvent = new RebuildMediaTask(source.RebuildMediaCompleteEvent);
+        }
         if (source.ExtractTraceWatermarkCompleteEvent != null) {
             this.ExtractTraceWatermarkCompleteEvent = new ExtractTraceWatermarkTask(source.ExtractTraceWatermarkCompleteEvent);
         }
@@ -822,6 +858,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "WechatMiniProgramPublishCompleteEvent.", this.WechatMiniProgramPublishCompleteEvent);
         this.setParamObj(map, prefix + "RemoveWatermarkCompleteEvent.", this.RemoveWatermarkCompleteEvent);
         this.setParamObj(map, prefix + "RestoreMediaCompleteEvent.", this.RestoreMediaCompleteEvent);
+        this.setParamObj(map, prefix + "RebuildMediaCompleteEvent.", this.RebuildMediaCompleteEvent);
         this.setParamObj(map, prefix + "ExtractTraceWatermarkCompleteEvent.", this.ExtractTraceWatermarkCompleteEvent);
         this.setParamObj(map, prefix + "ReviewAudioVideoCompleteEvent.", this.ReviewAudioVideoCompleteEvent);
         this.setParamObj(map, prefix + "ReduceMediaBitrateCompleteEvent.", this.ReduceMediaBitrateCompleteEvent);

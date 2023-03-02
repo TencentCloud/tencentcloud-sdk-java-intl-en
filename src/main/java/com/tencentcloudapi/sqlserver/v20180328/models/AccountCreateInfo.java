@@ -51,7 +51,7 @@ public class AccountCreateInfo extends AbstractModel{
     private String Remark;
 
     /**
-    * Whether it is an admin account. Default value: no
+    * Whether it is an admin account. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. It is a standard account when `AccountType` is `L3`.)
     */
     @SerializedName("IsAdmin")
     @Expose
@@ -63,6 +63,13 @@ public class AccountCreateInfo extends AbstractModel{
     @SerializedName("Authentication")
     @Expose
     private String Authentication;
+
+    /**
+    * Account type, which is an extension field of `IsAdmin`. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account, default)
+    */
+    @SerializedName("AccountType")
+    @Expose
+    private String AccountType;
 
     /**
      * Get Instance username 
@@ -129,16 +136,16 @@ public class AccountCreateInfo extends AbstractModel{
     }
 
     /**
-     * Get Whether it is an admin account. Default value: no 
-     * @return IsAdmin Whether it is an admin account. Default value: no
+     * Get Whether it is an admin account. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. It is a standard account when `AccountType` is `L3`.) 
+     * @return IsAdmin Whether it is an admin account. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. It is a standard account when `AccountType` is `L3`.)
      */
     public Boolean getIsAdmin() {
         return this.IsAdmin;
     }
 
     /**
-     * Set Whether it is an admin account. Default value: no
-     * @param IsAdmin Whether it is an admin account. Default value: no
+     * Set Whether it is an admin account. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. It is a standard account when `AccountType` is `L3`.)
+     * @param IsAdmin Whether it is an admin account. Valid values: `true` (Yes. It is an admin account when the instance is a basic edition type and `AccountType` is `L0`; it is a privileged account when the instance is a dual-server high availability edition type and `AccountType` is `L1`.), `false` (No. It is a standard account when `AccountType` is `L3`.)
      */
     public void setIsAdmin(Boolean IsAdmin) {
         this.IsAdmin = IsAdmin;
@@ -158,6 +165,22 @@ public class AccountCreateInfo extends AbstractModel{
      */
     public void setAuthentication(String Authentication) {
         this.Authentication = Authentication;
+    }
+
+    /**
+     * Get Account type, which is an extension field of `IsAdmin`. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account, default) 
+     * @return AccountType Account type, which is an extension field of `IsAdmin`. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account, default)
+     */
+    public String getAccountType() {
+        return this.AccountType;
+    }
+
+    /**
+     * Set Account type, which is an extension field of `IsAdmin`. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account, default)
+     * @param AccountType Account type, which is an extension field of `IsAdmin`. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account, default)
+     */
+    public void setAccountType(String AccountType) {
+        this.AccountType = AccountType;
     }
 
     public AccountCreateInfo() {
@@ -189,6 +212,9 @@ public class AccountCreateInfo extends AbstractModel{
         if (source.Authentication != null) {
             this.Authentication = new String(source.Authentication);
         }
+        if (source.AccountType != null) {
+            this.AccountType = new String(source.AccountType);
+        }
     }
 
 
@@ -202,6 +228,7 @@ public class AccountCreateInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
         this.setParamSimple(map, prefix + "Authentication", this.Authentication);
+        this.setParamSimple(map, prefix + "AccountType", this.AccountType);
 
     }
 }

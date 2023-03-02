@@ -137,6 +137,14 @@ Note: this field may return ‘null’, indicating that no valid values can be o
     private String IsRecovery;
 
     /**
+    * Name set of renamed databases
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DBRename")
+    @Expose
+    private DBRenameRes [] DBRename;
+
+    /**
      * Get Backup import task ID or incremental import task ID 
      * @return MigrationId Backup import task ID or incremental import task ID
      */
@@ -400,6 +408,26 @@ Note: this field may return ‘null’, indicating that no valid values can be o
         this.IsRecovery = IsRecovery;
     }
 
+    /**
+     * Get Name set of renamed databases
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DBRename Name set of renamed databases
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public DBRenameRes [] getDBRename() {
+        return this.DBRename;
+    }
+
+    /**
+     * Set Name set of renamed databases
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DBRename Name set of renamed databases
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDBRename(DBRenameRes [] DBRename) {
+        this.DBRename = DBRename;
+    }
+
     public Migration() {
     }
 
@@ -459,6 +487,12 @@ Note: this field may return ‘null’, indicating that no valid values can be o
         if (source.IsRecovery != null) {
             this.IsRecovery = new String(source.IsRecovery);
         }
+        if (source.DBRename != null) {
+            this.DBRename = new DBRenameRes[source.DBRename.length];
+            for (int i = 0; i < source.DBRename.length; i++) {
+                this.DBRename[i] = new DBRenameRes(source.DBRename[i]);
+            }
+        }
     }
 
 
@@ -482,6 +516,7 @@ Note: this field may return ‘null’, indicating that no valid values can be o
         this.setParamObj(map, prefix + "Detail.", this.Detail);
         this.setParamObj(map, prefix + "Action.", this.Action);
         this.setParamSimple(map, prefix + "IsRecovery", this.IsRecovery);
+        this.setParamArrayObj(map, prefix + "DBRename.", this.DBRename);
 
     }
 }

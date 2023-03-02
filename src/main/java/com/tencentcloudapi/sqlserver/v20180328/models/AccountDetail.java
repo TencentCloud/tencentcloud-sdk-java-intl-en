@@ -100,6 +100,13 @@ public class AccountDetail extends AbstractModel{
     private String Host;
 
     /**
+    * Account type. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+    */
+    @SerializedName("AccountType")
+    @Expose
+    private String AccountType;
+
+    /**
      * Get Account name 
      * @return Name Account name
      */
@@ -275,6 +282,22 @@ public class AccountDetail extends AbstractModel{
         this.Host = Host;
     }
 
+    /**
+     * Get Account type. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account). 
+     * @return AccountType Account type. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+     */
+    public String getAccountType() {
+        return this.AccountType;
+    }
+
+    /**
+     * Set Account type. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+     * @param AccountType Account type. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+     */
+    public void setAccountType(String AccountType) {
+        this.AccountType = AccountType;
+    }
+
     public AccountDetail() {
     }
 
@@ -319,6 +342,9 @@ public class AccountDetail extends AbstractModel{
         if (source.Host != null) {
             this.Host = new String(source.Host);
         }
+        if (source.AccountType != null) {
+            this.AccountType = new String(source.AccountType);
+        }
     }
 
 
@@ -337,6 +363,7 @@ public class AccountDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
         this.setParamSimple(map, prefix + "Authentication", this.Authentication);
         this.setParamSimple(map, prefix + "Host", this.Host);
+        this.setParamSimple(map, prefix + "AccountType", this.AccountType);
 
     }
 }

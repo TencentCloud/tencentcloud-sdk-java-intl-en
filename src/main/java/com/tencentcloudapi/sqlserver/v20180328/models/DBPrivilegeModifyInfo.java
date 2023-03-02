@@ -30,7 +30,7 @@ public class DBPrivilegeModifyInfo extends AbstractModel{
     private String DBName;
 
     /**
-    * Permission change information. ReadWrite: read/write, ReadOnly: read-only, Delete: the account has the permission to delete this database
+    * Permission modification information. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the account's permission to this database), `DBOwner` (owner).
     */
     @SerializedName("Privilege")
     @Expose
@@ -53,16 +53,16 @@ public class DBPrivilegeModifyInfo extends AbstractModel{
     }
 
     /**
-     * Get Permission change information. ReadWrite: read/write, ReadOnly: read-only, Delete: the account has the permission to delete this database 
-     * @return Privilege Permission change information. ReadWrite: read/write, ReadOnly: read-only, Delete: the account has the permission to delete this database
+     * Get Permission modification information. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the account's permission to this database), `DBOwner` (owner). 
+     * @return Privilege Permission modification information. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the account's permission to this database), `DBOwner` (owner).
      */
     public String getPrivilege() {
         return this.Privilege;
     }
 
     /**
-     * Set Permission change information. ReadWrite: read/write, ReadOnly: read-only, Delete: the account has the permission to delete this database
-     * @param Privilege Permission change information. ReadWrite: read/write, ReadOnly: read-only, Delete: the account has the permission to delete this database
+     * Set Permission modification information. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the account's permission to this database), `DBOwner` (owner).
+     * @param Privilege Permission modification information. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the account's permission to this database), `DBOwner` (owner).
      */
     public void setPrivilege(String Privilege) {
         this.Privilege = Privilege;

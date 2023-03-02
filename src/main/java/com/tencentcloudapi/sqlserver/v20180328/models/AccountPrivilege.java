@@ -30,11 +30,18 @@ public class AccountPrivilege extends AbstractModel{
     private String UserName;
 
     /**
-    * Database permissions. ReadWrite: read/write, ReadOnly: read-only
+    * Database permission. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the database permissions of this account), `DBOwner` (owner).
     */
     @SerializedName("Privilege")
     @Expose
     private String Privilege;
+
+    /**
+    * Account name. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+    */
+    @SerializedName("AccountType")
+    @Expose
+    private String AccountType;
 
     /**
      * Get Database username 
@@ -53,19 +60,35 @@ public class AccountPrivilege extends AbstractModel{
     }
 
     /**
-     * Get Database permissions. ReadWrite: read/write, ReadOnly: read-only 
-     * @return Privilege Database permissions. ReadWrite: read/write, ReadOnly: read-only
+     * Get Database permission. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the database permissions of this account), `DBOwner` (owner). 
+     * @return Privilege Database permission. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the database permissions of this account), `DBOwner` (owner).
      */
     public String getPrivilege() {
         return this.Privilege;
     }
 
     /**
-     * Set Database permissions. ReadWrite: read/write, ReadOnly: read-only
-     * @param Privilege Database permissions. ReadWrite: read/write, ReadOnly: read-only
+     * Set Database permission. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the database permissions of this account), `DBOwner` (owner).
+     * @param Privilege Database permission. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the database permissions of this account), `DBOwner` (owner).
      */
     public void setPrivilege(String Privilege) {
         this.Privilege = Privilege;
+    }
+
+    /**
+     * Get Account name. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account). 
+     * @return AccountType Account name. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+     */
+    public String getAccountType() {
+        return this.AccountType;
+    }
+
+    /**
+     * Set Account name. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+     * @param AccountType Account name. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+     */
+    public void setAccountType(String AccountType) {
+        this.AccountType = AccountType;
     }
 
     public AccountPrivilege() {
@@ -82,6 +105,9 @@ public class AccountPrivilege extends AbstractModel{
         if (source.Privilege != null) {
             this.Privilege = new String(source.Privilege);
         }
+        if (source.AccountType != null) {
+            this.AccountType = new String(source.AccountType);
+        }
     }
 
 
@@ -91,6 +117,7 @@ public class AccountPrivilege extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "Privilege", this.Privilege);
+        this.setParamSimple(map, prefix + "AccountType", this.AccountType);
 
     }
 }

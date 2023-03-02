@@ -49,10 +49,9 @@ public class ReviewInfo extends AbstractModel{
 `Label` indicates the violation label. Valid values:
 <li>`Porn` (pornographic content)</li>
 <li>`Terror` (terrorist content)</li>
-<li>Polity (politically sensitive content)</li>
-<li>`Ad`</li>
+<li>`Polity` (politically sensitive content)</li>
+<li>`Ad` (advertisement)</li>
 <li>`Illegal` (illegal content)</li>
-<li>`Religion`</li>
 <li>`Abuse`</li>
 <li>`Moan`</li>
     */
@@ -121,10 +120,9 @@ public class ReviewInfo extends AbstractModel{
 `Label` indicates the violation label. Valid values:
 <li>`Porn` (pornographic content)</li>
 <li>`Terror` (terrorist content)</li>
-<li>Polity (politically sensitive content)</li>
-<li>`Ad`</li>
+<li>`Polity` (politically sensitive content)</li>
+<li>`Ad` (advertisement)</li>
 <li>`Illegal` (illegal content)</li>
-<li>`Religion`</li>
 <li>`Abuse`</li>
 <li>`Moan`</li> 
      * @return TypeSet The moderation type in the format of `Form.Label`. This parameter is valid if `Suggestion` is `review` or `block`.
@@ -136,10 +134,9 @@ public class ReviewInfo extends AbstractModel{
 `Label` indicates the violation label. Valid values:
 <li>`Porn` (pornographic content)</li>
 <li>`Terror` (terrorist content)</li>
-<li>Polity (politically sensitive content)</li>
-<li>`Ad`</li>
+<li>`Polity` (politically sensitive content)</li>
+<li>`Ad` (advertisement)</li>
 <li>`Illegal` (illegal content)</li>
-<li>`Religion`</li>
 <li>`Abuse`</li>
 <li>`Moan`</li>
      */
@@ -157,10 +154,9 @@ public class ReviewInfo extends AbstractModel{
 `Label` indicates the violation label. Valid values:
 <li>`Porn` (pornographic content)</li>
 <li>`Terror` (terrorist content)</li>
-<li>Polity (politically sensitive content)</li>
-<li>`Ad`</li>
+<li>`Polity` (politically sensitive content)</li>
+<li>`Ad` (advertisement)</li>
 <li>`Illegal` (illegal content)</li>
-<li>`Religion`</li>
 <li>`Abuse`</li>
 <li>`Moan`</li>
      * @param TypeSet The moderation type in the format of `Form.Label`. This parameter is valid if `Suggestion` is `review` or `block`.
@@ -172,10 +168,9 @@ public class ReviewInfo extends AbstractModel{
 `Label` indicates the violation label. Valid values:
 <li>`Porn` (pornographic content)</li>
 <li>`Terror` (terrorist content)</li>
-<li>Polity (politically sensitive content)</li>
-<li>`Ad`</li>
+<li>`Polity` (politically sensitive content)</li>
+<li>`Ad` (advertisement)</li>
 <li>`Illegal` (illegal content)</li>
-<li>`Religion`</li>
 <li>`Abuse`</li>
 <li>`Moan`</li>
      */

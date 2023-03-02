@@ -30,7 +30,7 @@ public class DBPrivilege extends AbstractModel{
     private String DBName;
 
     /**
-    * Database permissions. ReadWrite: read/write, ReadOnly: read-only
+    * Database permissions. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `DBOwner` (owner)
     */
     @SerializedName("Privilege")
     @Expose
@@ -53,16 +53,16 @@ public class DBPrivilege extends AbstractModel{
     }
 
     /**
-     * Get Database permissions. ReadWrite: read/write, ReadOnly: read-only 
-     * @return Privilege Database permissions. ReadWrite: read/write, ReadOnly: read-only
+     * Get Database permissions. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `DBOwner` (owner) 
+     * @return Privilege Database permissions. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `DBOwner` (owner)
      */
     public String getPrivilege() {
         return this.Privilege;
     }
 
     /**
-     * Set Database permissions. ReadWrite: read/write, ReadOnly: read-only
-     * @param Privilege Database permissions. ReadWrite: read/write, ReadOnly: read-only
+     * Set Database permissions. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `DBOwner` (owner)
+     * @param Privilege Database permissions. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `DBOwner` (owner)
      */
     public void setPrivilege(String Privilege) {
         this.Privilege = Privilege;

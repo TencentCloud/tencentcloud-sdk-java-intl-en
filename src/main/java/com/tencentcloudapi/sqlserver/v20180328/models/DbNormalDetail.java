@@ -149,6 +149,13 @@ public class DbNormalDetail extends AbstractModel{
     private String UserAccessDesc;
 
     /**
+    * Database creation time
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
      * Get Whether it is subscribed. Valid values: `0` (no), `1` (yes) 
      * @return IsSubscribed Whether it is subscribed. Valid values: `0` (no), `1` (yes)
      */
@@ -436,6 +443,22 @@ public class DbNormalDetail extends AbstractModel{
         this.UserAccessDesc = UserAccessDesc;
     }
 
+    /**
+     * Get Database creation time 
+     * @return CreateTime Database creation time
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set Database creation time
+     * @param CreateTime Database creation time
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public DbNormalDetail() {
     }
 
@@ -498,6 +521,9 @@ public class DbNormalDetail extends AbstractModel{
         if (source.UserAccessDesc != null) {
             this.UserAccessDesc = new String(source.UserAccessDesc);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
     }
 
 
@@ -523,6 +549,7 @@ public class DbNormalDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "RetentionPeriod", this.RetentionPeriod);
         this.setParamSimple(map, prefix + "StateDesc", this.StateDesc);
         this.setParamSimple(map, prefix + "UserAccessDesc", this.UserAccessDesc);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }
