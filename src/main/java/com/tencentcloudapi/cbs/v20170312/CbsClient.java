@@ -179,6 +179,26 @@ public class CbsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a backup point for a cloud disk.
+     * @param req CreateDiskBackupRequest
+     * @return CreateDiskBackupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDiskBackupResponse CreateDiskBackup(CreateDiskBackupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateDiskBackupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateDiskBackupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateDiskBackup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create cloud disks.
 
 * This API supports creating a cloud disk with a data disk snapshot so that the snapshot data can be copied to the purchased cloud disk.
@@ -378,7 +398,9 @@ If the parameter is empty, a certain number (as specified by `Limit` and 20 by d
     }
 
     /**
-     *This API (DescribeDiskOperationLogs) is used to query a list of cloud disk operation logs.
+     *接口已废弃，切换至云审计接口。见https://tapd.woa.com/pro/prong/stories/view/1010114221880719007
+
+This API (DescribeDiskOperationLogs) is used to query a list of cloud disk operation logs.
 
 This can be filtered according to the cloud disk ID. The format of cloud disk IDs is as follows: disk-a1kmcp13.
 
@@ -446,9 +468,9 @@ This can be filtered according to the cloud disk ID. The format of cloud disk ID
     }
 
     /**
-     *This API (DescribeSnapshotOperationLogs) is used to query a list of snapshot operation logs.
+     *接口已废弃，切换至云审计接口。见https://tapd.woa.com/pro/prong/stories/view/1010114221880719007
 
-You can filter according to the snapshot ID. The snapshot ID format is as follows: snap-a1kmcp13.
+This API is used to query the operation logs of a snapshot. It will be disused soon. Use [LookUpEvents](https://intl.cloud.tencent.com/document/product/629/12359?from_cn_redirect=1) instead.
 
      * @param req DescribeSnapshotOperationLogsRequest
      * @return DescribeSnapshotOperationLogsResponse

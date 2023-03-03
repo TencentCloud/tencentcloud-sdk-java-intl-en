@@ -65,14 +65,14 @@ public class CreateRoomRequest extends AbstractModel{
     private Long MaxMicNumber;
 
     /**
-    * Room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher
+    * The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only. 
     */
     @SerializedName("SubType")
     @Expose
     private String SubType;
 
     /**
-    * Teacher ID, which is the `UserId` obtained by the `RegisterUser` API.
+    * The user ID of the teacher. User IDs are returned by the user registration APIs. The user specified will have teacher permissions in the room created.
     */
     @SerializedName("TeacherId")
     @Expose
@@ -100,7 +100,7 @@ public class CreateRoomRequest extends AbstractModel{
     private Long DisableRecord;
 
     /**
-    * Teacher assistant IDs, which are the `UserId` obtained by the `RegisterUser` API.
+    * The user IDs of the teaching assistants. User IDs are returned by the user registration APIs. The users specified will have teaching assistant permissions in the room created.
     */
     @SerializedName("Assistants")
     @Expose
@@ -112,6 +112,13 @@ public class CreateRoomRequest extends AbstractModel{
     @SerializedName("RecordLayout")
     @Expose
     private Long RecordLayout;
+
+    /**
+    * The ID of the group to bind. If you specify this parameter, only members of the group can enter this room.
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
 
     /**
      * Get Room name 
@@ -210,32 +217,32 @@ public class CreateRoomRequest extends AbstractModel{
     }
 
     /**
-     * Get Room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher 
-     * @return SubType Room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher
+     * Get The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only.  
+     * @return SubType The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only. 
      */
     public String getSubType() {
         return this.SubType;
     }
 
     /**
-     * Set Room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher
-     * @param SubType Room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher
+     * Set The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only. 
+     * @param SubType The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only. 
      */
     public void setSubType(String SubType) {
         this.SubType = SubType;
     }
 
     /**
-     * Get Teacher ID, which is the `UserId` obtained by the `RegisterUser` API. 
-     * @return TeacherId Teacher ID, which is the `UserId` obtained by the `RegisterUser` API.
+     * Get The user ID of the teacher. User IDs are returned by the user registration APIs. The user specified will have teacher permissions in the room created. 
+     * @return TeacherId The user ID of the teacher. User IDs are returned by the user registration APIs. The user specified will have teacher permissions in the room created.
      */
     public String getTeacherId() {
         return this.TeacherId;
     }
 
     /**
-     * Set Teacher ID, which is the `UserId` obtained by the `RegisterUser` API.
-     * @param TeacherId Teacher ID, which is the `UserId` obtained by the `RegisterUser` API.
+     * Set The user ID of the teacher. User IDs are returned by the user registration APIs. The user specified will have teacher permissions in the room created.
+     * @param TeacherId The user ID of the teacher. User IDs are returned by the user registration APIs. The user specified will have teacher permissions in the room created.
      */
     public void setTeacherId(String TeacherId) {
         this.TeacherId = TeacherId;
@@ -290,16 +297,16 @@ public class CreateRoomRequest extends AbstractModel{
     }
 
     /**
-     * Get Teacher assistant IDs, which are the `UserId` obtained by the `RegisterUser` API. 
-     * @return Assistants Teacher assistant IDs, which are the `UserId` obtained by the `RegisterUser` API.
+     * Get The user IDs of the teaching assistants. User IDs are returned by the user registration APIs. The users specified will have teaching assistant permissions in the room created. 
+     * @return Assistants The user IDs of the teaching assistants. User IDs are returned by the user registration APIs. The users specified will have teaching assistant permissions in the room created.
      */
     public String [] getAssistants() {
         return this.Assistants;
     }
 
     /**
-     * Set Teacher assistant IDs, which are the `UserId` obtained by the `RegisterUser` API.
-     * @param Assistants Teacher assistant IDs, which are the `UserId` obtained by the `RegisterUser` API.
+     * Set The user IDs of the teaching assistants. User IDs are returned by the user registration APIs. The users specified will have teaching assistant permissions in the room created.
+     * @param Assistants The user IDs of the teaching assistants. User IDs are returned by the user registration APIs. The users specified will have teaching assistant permissions in the room created.
      */
     public void setAssistants(String [] Assistants) {
         this.Assistants = Assistants;
@@ -319,6 +326,22 @@ public class CreateRoomRequest extends AbstractModel{
      */
     public void setRecordLayout(Long RecordLayout) {
         this.RecordLayout = RecordLayout;
+    }
+
+    /**
+     * Get The ID of the group to bind. If you specify this parameter, only members of the group can enter this room. 
+     * @return GroupId The ID of the group to bind. If you specify this parameter, only members of the group can enter this room.
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set The ID of the group to bind. If you specify this parameter, only members of the group can enter this room.
+     * @param GroupId The ID of the group to bind. If you specify this parameter, only members of the group can enter this room.
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
     }
 
     public CreateRoomRequest() {
@@ -371,6 +394,9 @@ public class CreateRoomRequest extends AbstractModel{
         if (source.RecordLayout != null) {
             this.RecordLayout = new Long(source.RecordLayout);
         }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
     }
 
 
@@ -391,6 +417,7 @@ public class CreateRoomRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DisableRecord", this.DisableRecord);
         this.setParamArraySimple(map, prefix + "Assistants.", this.Assistants);
         this.setParamSimple(map, prefix + "RecordLayout", this.RecordLayout);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

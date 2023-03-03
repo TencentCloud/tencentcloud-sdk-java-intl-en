@@ -86,7 +86,7 @@ public class DescribeRoomResponse extends AbstractModel{
     private Long AudioQuality;
 
     /**
-    * Room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher	
+    * The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only.
     */
     @SerializedName("SubType")
     @Expose
@@ -114,6 +114,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("RecordUrl")
     @Expose
     private String RecordUrl;
+
+    /**
+    * The class status. `0`: The class has not started. `1`: The class has started. `2`: The class ended. `3`: The class expired.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * 
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -267,16 +283,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher	 
-     * @return SubType Room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher	
+     * Get The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only. 
+     * @return SubType The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only.
      */
     public String getSubType() {
         return this.SubType;
     }
 
     /**
-     * Set Room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher	
-     * @param SubType Room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher	
+     * Set The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only.
+     * @param SubType The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only.
      */
     public void setSubType(String SubType) {
         this.SubType = SubType;
@@ -336,6 +352,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setRecordUrl(String RecordUrl) {
         this.RecordUrl = RecordUrl;
+    }
+
+    /**
+     * Get The class status. `0`: The class has not started. `1`: The class has started. `2`: The class ended. `3`: The class expired.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Status The class status. `0`: The class has not started. `1`: The class has started. `2`: The class ended. `3`: The class expired.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set The class status. `0`: The class has not started. `1`: The class has started. `2`: The class ended. `3`: The class expired.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Status The class status. `0`: The class has not started. `1`: The class has started. `2`: The class ended. `3`: The class expired.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return GroupId 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param GroupId 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
     }
 
     /**
@@ -404,6 +460,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RecordUrl != null) {
             this.RecordUrl = new String(source.RecordUrl);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -427,6 +489,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "DisableRecord", this.DisableRecord);
         this.setParamArraySimple(map, prefix + "Assistants.", this.Assistants);
         this.setParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -23,35 +23,6 @@ import java.util.HashMap;
 public class SnapshotOperationLog extends AbstractModel{
 
     /**
-    * UIN of operator.
-Note: This field may return null, indicating that no valid value was found.
-    */
-    @SerializedName("Operator")
-    @Expose
-    private String Operator;
-
-    /**
-    * Operation type. Value range:
-SNAP_OPERATION_DELETE: Delete snapshot
-SNAP_OPERATION_ROLLBACK: Roll back snapshot
-SNAP_OPERATION_MODIFY: Modify snapshot attributes
-SNAP_OPERATION_CREATE: Create snapshot
-SNAP_OPERATION_COPY: Cross-region replication of snapshot
-ASP_OPERATION_CREATE_SNAP: Create snapshot with scheduled snapshot policy
-ASP_OPERATION_DELETE_SNAP: Delete snapshot from scheduled snapshot policy
-    */
-    @SerializedName("Operation")
-    @Expose
-    private String Operation;
-
-    /**
-    * ID of snapshot being operated.
-    */
-    @SerializedName("SnapshotId")
-    @Expose
-    private String SnapshotId;
-
-    /**
     * Status of operation. Value range:
 SUCCESS: Operation successful 
 FAILED: Operation failed 
@@ -69,11 +40,84 @@ PROCESSING: Operation in process
     private String StartTime;
 
     /**
+    * UIN of operator.
+Note: This field may return null, indicating that no valid value was found.
+    */
+    @SerializedName("Operator")
+    @Expose
+    private String Operator;
+
+    /**
+    * ID of snapshot being operated.
+    */
+    @SerializedName("SnapshotId")
+    @Expose
+    private String SnapshotId;
+
+    /**
+    * Operation type. Value range:
+SNAP_OPERATION_DELETE: Delete snapshot
+SNAP_OPERATION_ROLLBACK: Roll back snapshot
+SNAP_OPERATION_MODIFY: Modify snapshot attributes
+SNAP_OPERATION_CREATE: Create snapshot
+SNAP_OPERATION_COPY: Cross-region replication of snapshot
+ASP_OPERATION_CREATE_SNAP: Create snapshot with scheduled snapshot policy
+ASP_OPERATION_DELETE_SNAP: Delete snapshot from scheduled snapshot policy
+    */
+    @SerializedName("Operation")
+    @Expose
+    private String Operation;
+
+    /**
     * End time
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
+
+    /**
+     * Get Status of operation. Value range:
+SUCCESS: Operation successful 
+FAILED: Operation failed 
+PROCESSING: Operation in process 
+     * @return OperationState Status of operation. Value range:
+SUCCESS: Operation successful 
+FAILED: Operation failed 
+PROCESSING: Operation in process
+     */
+    public String getOperationState() {
+        return this.OperationState;
+    }
+
+    /**
+     * Set Status of operation. Value range:
+SUCCESS: Operation successful 
+FAILED: Operation failed 
+PROCESSING: Operation in process
+     * @param OperationState Status of operation. Value range:
+SUCCESS: Operation successful 
+FAILED: Operation failed 
+PROCESSING: Operation in process
+     */
+    public void setOperationState(String OperationState) {
+        this.OperationState = OperationState;
+    }
+
+    /**
+     * Get Start time 
+     * @return StartTime Start time
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set Start time
+     * @param StartTime Start time
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
 
     /**
      * Get UIN of operator.
@@ -93,6 +137,22 @@ Note: This field may return null, indicating that no valid value was found.
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
+    }
+
+    /**
+     * Get ID of snapshot being operated. 
+     * @return SnapshotId ID of snapshot being operated.
+     */
+    public String getSnapshotId() {
+        return this.SnapshotId;
+    }
+
+    /**
+     * Set ID of snapshot being operated.
+     * @param SnapshotId ID of snapshot being operated.
+     */
+    public void setSnapshotId(String SnapshotId) {
+        this.SnapshotId = SnapshotId;
     }
 
     /**
@@ -140,66 +200,6 @@ ASP_OPERATION_DELETE_SNAP: Delete snapshot from scheduled snapshot policy
     }
 
     /**
-     * Get ID of snapshot being operated. 
-     * @return SnapshotId ID of snapshot being operated.
-     */
-    public String getSnapshotId() {
-        return this.SnapshotId;
-    }
-
-    /**
-     * Set ID of snapshot being operated.
-     * @param SnapshotId ID of snapshot being operated.
-     */
-    public void setSnapshotId(String SnapshotId) {
-        this.SnapshotId = SnapshotId;
-    }
-
-    /**
-     * Get Status of operation. Value range:
-SUCCESS: Operation successful 
-FAILED: Operation failed 
-PROCESSING: Operation in process 
-     * @return OperationState Status of operation. Value range:
-SUCCESS: Operation successful 
-FAILED: Operation failed 
-PROCESSING: Operation in process
-     */
-    public String getOperationState() {
-        return this.OperationState;
-    }
-
-    /**
-     * Set Status of operation. Value range:
-SUCCESS: Operation successful 
-FAILED: Operation failed 
-PROCESSING: Operation in process
-     * @param OperationState Status of operation. Value range:
-SUCCESS: Operation successful 
-FAILED: Operation failed 
-PROCESSING: Operation in process
-     */
-    public void setOperationState(String OperationState) {
-        this.OperationState = OperationState;
-    }
-
-    /**
-     * Get Start time 
-     * @return StartTime Start time
-     */
-    public String getStartTime() {
-        return this.StartTime;
-    }
-
-    /**
-     * Set Start time
-     * @param StartTime Start time
-     */
-    public void setStartTime(String StartTime) {
-        this.StartTime = StartTime;
-    }
-
-    /**
      * Get End time 
      * @return EndTime End time
      */
@@ -223,20 +223,20 @@ PROCESSING: Operation in process
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SnapshotOperationLog(SnapshotOperationLog source) {
-        if (source.Operator != null) {
-            this.Operator = new String(source.Operator);
-        }
-        if (source.Operation != null) {
-            this.Operation = new String(source.Operation);
-        }
-        if (source.SnapshotId != null) {
-            this.SnapshotId = new String(source.SnapshotId);
-        }
         if (source.OperationState != null) {
             this.OperationState = new String(source.OperationState);
         }
         if (source.StartTime != null) {
             this.StartTime = new String(source.StartTime);
+        }
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
+        }
+        if (source.SnapshotId != null) {
+            this.SnapshotId = new String(source.SnapshotId);
+        }
+        if (source.Operation != null) {
+            this.Operation = new String(source.Operation);
         }
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
@@ -248,11 +248,11 @@ PROCESSING: Operation in process
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Operator", this.Operator);
-        this.setParamSimple(map, prefix + "Operation", this.Operation);
-        this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
         this.setParamSimple(map, prefix + "OperationState", this.OperationState);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "Operator", this.Operator);
+        this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
+        this.setParamSimple(map, prefix + "Operation", this.Operation);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }

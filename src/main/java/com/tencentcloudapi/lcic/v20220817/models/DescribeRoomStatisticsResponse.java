@@ -51,6 +51,36 @@ public class DescribeRoomStatisticsResponse extends AbstractModel{
     private MemberRecord [] MemberRecords;
 
     /**
+    * The actual start time of the room, in Unix timestamp, accurate to seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RealStartTime")
+    @Expose
+    private Long RealStartTime;
+
+    /**
+    * The actual end time of the room, in Unix timestamp, accurate to seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RealEndTime")
+    @Expose
+    private Long RealEndTime;
+
+    /**
+    * The total number of room messages.
+    */
+    @SerializedName("MessageCount")
+    @Expose
+    private Long MessageCount;
+
+    /**
+    * The total number of mics in the room.
+    */
+    @SerializedName("MicCount")
+    @Expose
+    private Long MicCount;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -122,6 +152,78 @@ public class DescribeRoomStatisticsResponse extends AbstractModel{
     }
 
     /**
+     * Get The actual start time of the room, in Unix timestamp, accurate to seconds.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RealStartTime The actual start time of the room, in Unix timestamp, accurate to seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getRealStartTime() {
+        return this.RealStartTime;
+    }
+
+    /**
+     * Set The actual start time of the room, in Unix timestamp, accurate to seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RealStartTime The actual start time of the room, in Unix timestamp, accurate to seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRealStartTime(Long RealStartTime) {
+        this.RealStartTime = RealStartTime;
+    }
+
+    /**
+     * Get The actual end time of the room, in Unix timestamp, accurate to seconds.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RealEndTime The actual end time of the room, in Unix timestamp, accurate to seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getRealEndTime() {
+        return this.RealEndTime;
+    }
+
+    /**
+     * Set The actual end time of the room, in Unix timestamp, accurate to seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RealEndTime The actual end time of the room, in Unix timestamp, accurate to seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRealEndTime(Long RealEndTime) {
+        this.RealEndTime = RealEndTime;
+    }
+
+    /**
+     * Get The total number of room messages. 
+     * @return MessageCount The total number of room messages.
+     */
+    public Long getMessageCount() {
+        return this.MessageCount;
+    }
+
+    /**
+     * Set The total number of room messages.
+     * @param MessageCount The total number of room messages.
+     */
+    public void setMessageCount(Long MessageCount) {
+        this.MessageCount = MessageCount;
+    }
+
+    /**
+     * Get The total number of mics in the room. 
+     * @return MicCount The total number of mics in the room.
+     */
+    public Long getMicCount() {
+        return this.MicCount;
+    }
+
+    /**
+     * Set The total number of mics in the room.
+     * @param MicCount The total number of mics in the room.
+     */
+    public void setMicCount(Long MicCount) {
+        this.MicCount = MicCount;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -160,6 +262,18 @@ public class DescribeRoomStatisticsResponse extends AbstractModel{
                 this.MemberRecords[i] = new MemberRecord(source.MemberRecords[i]);
             }
         }
+        if (source.RealStartTime != null) {
+            this.RealStartTime = new Long(source.RealStartTime);
+        }
+        if (source.RealEndTime != null) {
+            this.RealEndTime = new Long(source.RealEndTime);
+        }
+        if (source.MessageCount != null) {
+            this.MessageCount = new Long(source.MessageCount);
+        }
+        if (source.MicCount != null) {
+            this.MicCount = new Long(source.MicCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -174,6 +288,10 @@ public class DescribeRoomStatisticsResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "MemberNumber", this.MemberNumber);
         this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamArrayObj(map, prefix + "MemberRecords.", this.MemberRecords);
+        this.setParamSimple(map, prefix + "RealStartTime", this.RealStartTime);
+        this.setParamSimple(map, prefix + "RealEndTime", this.RealEndTime);
+        this.setParamSimple(map, prefix + "MessageCount", this.MessageCount);
+        this.setParamSimple(map, prefix + "MicCount", this.MicCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

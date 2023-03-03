@@ -20,93 +20,70 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ModifyAppRequest extends AbstractModel{
+public class BatchCreateRoomRequest extends AbstractModel{
 
     /**
-    * LCIC SdkAppId
+    * The SDKAppID assigned by LCIC.
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * Callback URL. Currently, only port 80 and port 443 are supported.
+    * The information of the rooms to create.
     */
-    @SerializedName("Callback")
+    @SerializedName("RoomInfos")
     @Expose
-    private String Callback;
+    private RoomInfo [] RoomInfos;
 
     /**
-    * The callback key.
-    */
-    @SerializedName("CallbackKey")
-    @Expose
-    private String CallbackKey;
-
-    /**
-     * Get LCIC SdkAppId 
-     * @return SdkAppId LCIC SdkAppId
+     * Get The SDKAppID assigned by LCIC. 
+     * @return SdkAppId The SDKAppID assigned by LCIC.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set LCIC SdkAppId
-     * @param SdkAppId LCIC SdkAppId
+     * Set The SDKAppID assigned by LCIC.
+     * @param SdkAppId The SDKAppID assigned by LCIC.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get Callback URL. Currently, only port 80 and port 443 are supported. 
-     * @return Callback Callback URL. Currently, only port 80 and port 443 are supported.
+     * Get The information of the rooms to create. 
+     * @return RoomInfos The information of the rooms to create.
      */
-    public String getCallback() {
-        return this.Callback;
+    public RoomInfo [] getRoomInfos() {
+        return this.RoomInfos;
     }
 
     /**
-     * Set Callback URL. Currently, only port 80 and port 443 are supported.
-     * @param Callback Callback URL. Currently, only port 80 and port 443 are supported.
+     * Set The information of the rooms to create.
+     * @param RoomInfos The information of the rooms to create.
      */
-    public void setCallback(String Callback) {
-        this.Callback = Callback;
+    public void setRoomInfos(RoomInfo [] RoomInfos) {
+        this.RoomInfos = RoomInfos;
     }
 
-    /**
-     * Get The callback key. 
-     * @return CallbackKey The callback key.
-     */
-    public String getCallbackKey() {
-        return this.CallbackKey;
-    }
-
-    /**
-     * Set The callback key.
-     * @param CallbackKey The callback key.
-     */
-    public void setCallbackKey(String CallbackKey) {
-        this.CallbackKey = CallbackKey;
-    }
-
-    public ModifyAppRequest() {
+    public BatchCreateRoomRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ModifyAppRequest(ModifyAppRequest source) {
+    public BatchCreateRoomRequest(BatchCreateRoomRequest source) {
         if (source.SdkAppId != null) {
             this.SdkAppId = new Long(source.SdkAppId);
         }
-        if (source.Callback != null) {
-            this.Callback = new String(source.Callback);
-        }
-        if (source.CallbackKey != null) {
-            this.CallbackKey = new String(source.CallbackKey);
+        if (source.RoomInfos != null) {
+            this.RoomInfos = new RoomInfo[source.RoomInfos.length];
+            for (int i = 0; i < source.RoomInfos.length; i++) {
+                this.RoomInfos[i] = new RoomInfo(source.RoomInfos[i]);
+            }
         }
     }
 
@@ -116,8 +93,7 @@ public class ModifyAppRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-        this.setParamSimple(map, prefix + "Callback", this.Callback);
-        this.setParamSimple(map, prefix + "CallbackKey", this.CallbackKey);
+        this.setParamArrayObj(map, prefix + "RoomInfos.", this.RoomInfos);
 
     }
 }

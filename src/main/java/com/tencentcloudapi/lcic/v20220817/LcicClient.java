@@ -39,6 +39,146 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add users to a group.
+     * @param req AddGroupMemberRequest
+     * @return AddGroupMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddGroupMemberResponse AddGroupMember(AddGroupMemberRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<AddGroupMemberResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<AddGroupMemberResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "AddGroupMember");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to add users to multiple groups at a time.
+     * @param req BatchAddGroupMemberRequest
+     * @return BatchAddGroupMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchAddGroupMemberResponse BatchAddGroupMember(BatchAddGroupMemberRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchAddGroupMemberResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchAddGroupMemberResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchAddGroupMember");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create multiple groups at a time.
+     * @param req BatchCreateGroupWithMembersRequest
+     * @return BatchCreateGroupWithMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchCreateGroupWithMembersResponse BatchCreateGroupWithMembers(BatchCreateGroupWithMembersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchCreateGroupWithMembersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchCreateGroupWithMembersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchCreateGroupWithMembers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create multiple rooms at a time.
+     * @param req BatchCreateRoomRequest
+     * @return BatchCreateRoomResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchCreateRoomResponse BatchCreateRoom(BatchCreateRoomRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchCreateRoomResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchCreateRoomResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchCreateRoom");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to remove users from multiple groups at a time.
+     * @param req BatchDeleteGroupMemberRequest
+     * @return BatchDeleteGroupMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchDeleteGroupMemberResponse BatchDeleteGroupMember(BatchDeleteGroupMemberRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchDeleteGroupMemberResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchDeleteGroupMemberResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchDeleteGroupMember");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete the recordings of multiple rooms.
+     * @param req BatchDeleteRecordRequest
+     * @return BatchDeleteRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchDeleteRecordResponse BatchDeleteRecord(BatchDeleteRecordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchDeleteRecordResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchDeleteRecordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchDeleteRecord");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to register multiple users (up to 1,000) at a time. If a user ID already exists, the existing one will be overwritten.
+     * @param req BatchRegisterRequest
+     * @return BatchRegisterResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchRegisterResponse BatchRegister(BatchRegisterRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<BatchRegisterResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<BatchRegisterResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "BatchRegister");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to bind a document to a room.
      * @param req BindDocumentToRoomRequest
      * @return BindDocumentToRoomResponse
@@ -71,6 +211,46 @@ public class LcicClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<CreateDocumentResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "CreateDocument");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a group and specify its members.
+     * @param req CreateGroupWithMembersRequest
+     * @return CreateGroupWithMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGroupWithMembersResponse CreateGroupWithMembers(CreateGroupWithMembersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateGroupWithMembersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateGroupWithMembersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateGroupWithMembers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to merge groups.
+     * @param req CreateGroupWithSubGroupRequest
+     * @return CreateGroupWithSubGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGroupWithSubGroupResponse CreateGroupWithSubGroup(CreateGroupWithSubGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateGroupWithSubGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateGroupWithSubGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateGroupWithSubGroup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -119,6 +299,86 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete a document.
+     * @param req DeleteDocumentRequest
+     * @return DeleteDocumentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDocumentResponse DeleteDocument(DeleteDocumentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteDocumentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteDocumentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteDocument");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete one or multiple groups.
+     * @param req DeleteGroupRequest
+     * @return DeleteGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGroupResponse DeleteGroup(DeleteGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to remove users from a group.
+     * @param req DeleteGroupMemberRequest
+     * @return DeleteGroupMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGroupMemberResponse DeleteGroupMember(DeleteGroupMemberRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteGroupMemberResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteGroupMemberResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteGroupMember");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This example shows you how to delete the recording files of a specific room.
+     * @param req DeleteRecordRequest
+     * @return DeleteRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRecordResponse DeleteRecord(DeleteRecordRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteRecordResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteRecordResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteRecord");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a room.
      * @param req DeleteRoomRequest
      * @return DeleteRoomResponse
@@ -131,6 +391,126 @@ public class LcicClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteRoomResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteRoom");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the user list of a room. This API will not work if a room has ended or expired.
+     * @param req DescribeCurrentMemberListRequest
+     * @return DescribeCurrentMemberListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCurrentMemberListResponse DescribeCurrentMemberList(DescribeCurrentMemberListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCurrentMemberListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCurrentMemberListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCurrentMemberList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the information of a specific document.
+     * @param req DescribeDocumentRequest
+     * @return DescribeDocumentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDocumentResponse DescribeDocument(DescribeDocumentRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDocumentResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDocumentResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDocument");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the document list of a specific room.
+     * @param req DescribeDocumentsByRoomRequest
+     * @return DescribeDocumentsByRoomResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDocumentsByRoomResponse DescribeDocumentsByRoom(DescribeDocumentsByRoomRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDocumentsByRoomResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDocumentsByRoomResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDocumentsByRoom");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the details of a group.
+     * @param req DescribeGroupRequest
+     * @return DescribeGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGroupResponse DescribeGroup(DescribeGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query groups.
+     * @param req DescribeGroupListRequest
+     * @return DescribeGroupListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGroupListResponse DescribeGroupList(DescribeGroupListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGroupListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGroupListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGroupList");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get the members of a group.
+     * @param req DescribeGroupMemberListRequest
+     * @return DescribeGroupMemberListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGroupMemberListResponse DescribeGroupMemberList(DescribeGroupMemberListRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeGroupMemberListResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeGroupMemberListResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeGroupMemberList");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -179,6 +559,26 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get the user list of a specific application.
+     * @param req DescribeSdkAppIdUsersRequest
+     * @return DescribeSdkAppIdUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSdkAppIdUsersResponse DescribeSdkAppIdUsers(DescribeSdkAppIdUsersRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSdkAppIdUsersResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSdkAppIdUsersResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSdkAppIdUsers");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to obtain user profile.
      * @param req DescribeUserRequest
      * @return DescribeUserResponse
@@ -191,6 +591,26 @@ public class LcicClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeUserResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeUser");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to get watermark settings.
+     * @param req GetWatermarkRequest
+     * @return GetWatermarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetWatermarkResponse GetWatermark(GetWatermarkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetWatermarkResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetWatermarkResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetWatermark");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -259,6 +679,66 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify a group.
+     * @param req ModifyGroupRequest
+     * @return ModifyGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGroupResponse ModifyGroup(ModifyGroupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyGroupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyGroupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a room.
+     * @param req ModifyRoomRequest
+     * @return ModifyRoomResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRoomResponse ModifyRoom(ModifyRoomRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyRoomResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyRoomResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyRoom");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a user profile such as the nickname and profile photo.
+     * @param req ModifyUserProfileRequest
+     * @return ModifyUserProfileResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserProfileResponse ModifyUserProfile(ModifyUserProfileRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyUserProfileResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyUserProfileResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyUserProfile");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to register a user.
      * @param req RegisterUserRequest
      * @return RegisterUserResponse
@@ -291,6 +771,26 @@ public class LcicClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<SetAppCustomContentResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "SetAppCustomContent");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to configure watermarks.
+     * @param req SetWatermarkRequest
+     * @return SetWatermarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetWatermarkResponse SetWatermark(SetWatermarkRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<SetWatermarkResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<SetWatermarkResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "SetWatermark");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

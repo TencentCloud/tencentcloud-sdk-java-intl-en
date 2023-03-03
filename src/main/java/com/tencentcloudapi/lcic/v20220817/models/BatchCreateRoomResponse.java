@@ -1,0 +1,100 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.lcic.v20220817.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class BatchCreateRoomResponse extends AbstractModel{
+
+    /**
+    * The IDs of the rooms created, which are in the same order as they are passed in.
+    */
+    @SerializedName("RoomIds")
+    @Expose
+    private Long [] RoomIds;
+
+    /**
+    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+    */
+    @SerializedName("RequestId")
+    @Expose
+    private String RequestId;
+
+    /**
+     * Get The IDs of the rooms created, which are in the same order as they are passed in. 
+     * @return RoomIds The IDs of the rooms created, which are in the same order as they are passed in.
+     */
+    public Long [] getRoomIds() {
+        return this.RoomIds;
+    }
+
+    /**
+     * Set The IDs of the rooms created, which are in the same order as they are passed in.
+     * @param RoomIds The IDs of the rooms created, which are in the same order as they are passed in.
+     */
+    public void setRoomIds(Long [] RoomIds) {
+        this.RoomIds = RoomIds;
+    }
+
+    /**
+     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
+     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     */
+    public String getRequestId() {
+        return this.RequestId;
+    }
+
+    /**
+     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     */
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
+    }
+
+    public BatchCreateRoomResponse() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public BatchCreateRoomResponse(BatchCreateRoomResponse source) {
+        if (source.RoomIds != null) {
+            this.RoomIds = new Long[source.RoomIds.length];
+            for (int i = 0; i < source.RoomIds.length; i++) {
+                this.RoomIds[i] = new Long(source.RoomIds[i]);
+            }
+        }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "RoomIds.", this.RoomIds);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+
+    }
+}
+

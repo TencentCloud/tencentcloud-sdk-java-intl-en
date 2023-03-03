@@ -100,6 +100,41 @@ public class MemberRecord extends AbstractModel{
     private Long Rewords;
 
     /**
+    * The user’s IP address.
+    */
+    @SerializedName("IPAddress")
+    @Expose
+    private String IPAddress;
+
+    /**
+    * The user’s location.
+    */
+    @SerializedName("Location")
+    @Expose
+    private String Location;
+
+    /**
+    * The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program.
+    */
+    @SerializedName("Device")
+    @Expose
+    private Long Device;
+
+    /**
+    * The number of times each member mics.
+    */
+    @SerializedName("PerMemberMicCount")
+    @Expose
+    private Long PerMemberMicCount;
+
+    /**
+    * The number of messages sent by each member.
+    */
+    @SerializedName("PerMemberMessageCount")
+    @Expose
+    private Long PerMemberMessageCount;
+
+    /**
      * Get User ID 
      * @return UserId User ID
      */
@@ -275,6 +310,86 @@ public class MemberRecord extends AbstractModel{
         this.Rewords = Rewords;
     }
 
+    /**
+     * Get The user’s IP address. 
+     * @return IPAddress The user’s IP address.
+     */
+    public String getIPAddress() {
+        return this.IPAddress;
+    }
+
+    /**
+     * Set The user’s IP address.
+     * @param IPAddress The user’s IP address.
+     */
+    public void setIPAddress(String IPAddress) {
+        this.IPAddress = IPAddress;
+    }
+
+    /**
+     * Get The user’s location. 
+     * @return Location The user’s location.
+     */
+    public String getLocation() {
+        return this.Location;
+    }
+
+    /**
+     * Set The user’s location.
+     * @param Location The user’s location.
+     */
+    public void setLocation(String Location) {
+        this.Location = Location;
+    }
+
+    /**
+     * Get The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program. 
+     * @return Device The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program.
+     */
+    public Long getDevice() {
+        return this.Device;
+    }
+
+    /**
+     * Set The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program.
+     * @param Device The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program.
+     */
+    public void setDevice(Long Device) {
+        this.Device = Device;
+    }
+
+    /**
+     * Get The number of times each member mics. 
+     * @return PerMemberMicCount The number of times each member mics.
+     */
+    public Long getPerMemberMicCount() {
+        return this.PerMemberMicCount;
+    }
+
+    /**
+     * Set The number of times each member mics.
+     * @param PerMemberMicCount The number of times each member mics.
+     */
+    public void setPerMemberMicCount(Long PerMemberMicCount) {
+        this.PerMemberMicCount = PerMemberMicCount;
+    }
+
+    /**
+     * Get The number of messages sent by each member. 
+     * @return PerMemberMessageCount The number of messages sent by each member.
+     */
+    public Long getPerMemberMessageCount() {
+        return this.PerMemberMessageCount;
+    }
+
+    /**
+     * Set The number of messages sent by each member.
+     * @param PerMemberMessageCount The number of messages sent by each member.
+     */
+    public void setPerMemberMessageCount(Long PerMemberMessageCount) {
+        this.PerMemberMessageCount = PerMemberMessageCount;
+    }
+
     public MemberRecord() {
     }
 
@@ -316,6 +431,21 @@ public class MemberRecord extends AbstractModel{
         if (source.Rewords != null) {
             this.Rewords = new Long(source.Rewords);
         }
+        if (source.IPAddress != null) {
+            this.IPAddress = new String(source.IPAddress);
+        }
+        if (source.Location != null) {
+            this.Location = new String(source.Location);
+        }
+        if (source.Device != null) {
+            this.Device = new Long(source.Device);
+        }
+        if (source.PerMemberMicCount != null) {
+            this.PerMemberMicCount = new Long(source.PerMemberMicCount);
+        }
+        if (source.PerMemberMessageCount != null) {
+            this.PerMemberMessageCount = new Long(source.PerMemberMessageCount);
+        }
     }
 
 
@@ -334,6 +464,11 @@ public class MemberRecord extends AbstractModel{
         this.setParamSimple(map, prefix + "FirstJoinTimestamp", this.FirstJoinTimestamp);
         this.setParamSimple(map, prefix + "LastQuitTimestamp", this.LastQuitTimestamp);
         this.setParamSimple(map, prefix + "Rewords", this.Rewords);
+        this.setParamSimple(map, prefix + "IPAddress", this.IPAddress);
+        this.setParamSimple(map, prefix + "Location", this.Location);
+        this.setParamSimple(map, prefix + "Device", this.Device);
+        this.setParamSimple(map, prefix + "PerMemberMicCount", this.PerMemberMicCount);
+        this.setParamSimple(map, prefix + "PerMemberMessageCount", this.PerMemberMessageCount);
 
     }
 }

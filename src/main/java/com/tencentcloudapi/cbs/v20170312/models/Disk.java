@@ -288,6 +288,13 @@ Note: This field may return null, indicating that no valid value was found.
     private Long DeleteSnapshot;
 
     /**
+    * Quota of cloud disk backup points, i.e., the maximum number of backup points that a cloud disk can have.
+    */
+    @SerializedName("DiskBackupQuota")
+    @Expose
+    private Long DiskBackupQuota;
+
+    /**
     * Number of used cloud disk backups.
     */
     @SerializedName("DiskBackupCount")
@@ -300,6 +307,20 @@ Note: This field may return null, indicating that no valid value was found.
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
+
+    /**
+    * 
+    */
+    @SerializedName("LastAttachInsId")
+    @Expose
+    private String LastAttachInsId;
+
+    /**
+    * 
+    */
+    @SerializedName("ErrorPrompt")
+    @Expose
+    private String ErrorPrompt;
 
     /**
      * Get Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
@@ -930,6 +951,22 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
+     * Get Quota of cloud disk backup points, i.e., the maximum number of backup points that a cloud disk can have. 
+     * @return DiskBackupQuota Quota of cloud disk backup points, i.e., the maximum number of backup points that a cloud disk can have.
+     */
+    public Long getDiskBackupQuota() {
+        return this.DiskBackupQuota;
+    }
+
+    /**
+     * Set Quota of cloud disk backup points, i.e., the maximum number of backup points that a cloud disk can have.
+     * @param DiskBackupQuota Quota of cloud disk backup points, i.e., the maximum number of backup points that a cloud disk can have.
+     */
+    public void setDiskBackupQuota(Long DiskBackupQuota) {
+        this.DiskBackupQuota = DiskBackupQuota;
+    }
+
+    /**
      * Get Number of used cloud disk backups. 
      * @return DiskBackupCount Number of used cloud disk backups.
      */
@@ -959,6 +996,38 @@ Note: This field may return null, indicating that no valid value was found.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get  
+     * @return LastAttachInsId 
+     */
+    public String getLastAttachInsId() {
+        return this.LastAttachInsId;
+    }
+
+    /**
+     * Set 
+     * @param LastAttachInsId 
+     */
+    public void setLastAttachInsId(String LastAttachInsId) {
+        this.LastAttachInsId = LastAttachInsId;
+    }
+
+    /**
+     * Get  
+     * @return ErrorPrompt 
+     */
+    public String getErrorPrompt() {
+        return this.ErrorPrompt;
+    }
+
+    /**
+     * Set 
+     * @param ErrorPrompt 
+     */
+    public void setErrorPrompt(String ErrorPrompt) {
+        this.ErrorPrompt = ErrorPrompt;
     }
 
     public Disk() {
@@ -1086,11 +1155,20 @@ Note: This field may return null, indicating that no valid value was found.
         if (source.DeleteSnapshot != null) {
             this.DeleteSnapshot = new Long(source.DeleteSnapshot);
         }
+        if (source.DiskBackupQuota != null) {
+            this.DiskBackupQuota = new Long(source.DiskBackupQuota);
+        }
         if (source.DiskBackupCount != null) {
             this.DiskBackupCount = new Long(source.DiskBackupCount);
         }
         if (source.InstanceType != null) {
             this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.LastAttachInsId != null) {
+            this.LastAttachInsId = new String(source.LastAttachInsId);
+        }
+        if (source.ErrorPrompt != null) {
+            this.ErrorPrompt = new String(source.ErrorPrompt);
         }
     }
 
@@ -1135,8 +1213,11 @@ Note: This field may return null, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "Shareable", this.Shareable);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "DeleteSnapshot", this.DeleteSnapshot);
+        this.setParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
         this.setParamSimple(map, prefix + "DiskBackupCount", this.DiskBackupCount);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "LastAttachInsId", this.LastAttachInsId);
+        this.setParamSimple(map, prefix + "ErrorPrompt", this.ErrorPrompt);
 
     }
 }

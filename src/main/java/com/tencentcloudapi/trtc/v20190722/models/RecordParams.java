@@ -78,6 +78,14 @@ This parameter is invalid if the output format is HLS.
     private Long MaxMediaFileDuration;
 
     /**
+    * The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MediaId")
+    @Expose
+    private Long MediaId;
+
+    /**
      * Get The recording mode.
 1: Single-stream recording. Records the audio and video of each subscribed user (`UserId`) in a room and saves the recording files to the cloud.
 2: Mixed-stream recording. Mixes the audios and videos of subscribed users (`UserId`) in a room, records the mixed stream, and saves the recording files to the cloud. 
@@ -213,6 +221,26 @@ This parameter is invalid if the output format is HLS.
         this.MaxMediaFileDuration = MaxMediaFileDuration;
     }
 
+    /**
+     * Get The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MediaId The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getMediaId() {
+        return this.MediaId;
+    }
+
+    /**
+     * Set The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MediaId The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMediaId(Long MediaId) {
+        this.MediaId = MediaId;
+    }
+
     public RecordParams() {
     }
 
@@ -242,6 +270,9 @@ This parameter is invalid if the output format is HLS.
         if (source.MaxMediaFileDuration != null) {
             this.MaxMediaFileDuration = new Long(source.MaxMediaFileDuration);
         }
+        if (source.MediaId != null) {
+            this.MediaId = new Long(source.MediaId);
+        }
     }
 
 
@@ -256,6 +287,7 @@ This parameter is invalid if the output format is HLS.
         this.setParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
         this.setParamSimple(map, prefix + "AvMerge", this.AvMerge);
         this.setParamSimple(map, prefix + "MaxMediaFileDuration", this.MaxMediaFileDuration);
+        this.setParamSimple(map, prefix + "MediaId", this.MediaId);
 
     }
 }
