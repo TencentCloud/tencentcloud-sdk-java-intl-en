@@ -769,6 +769,26 @@ Note: accounts with the same username but different hosts are different accounts
     }
 
     /**
+     *This API is used to modify the instance data encryption.
+     * @param req ModifyDBEncryptAttributesRequest
+     * @return ModifyDBEncryptAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBEncryptAttributesResponse ModifyDBEncryptAttributes(ModifyDBEncryptAttributesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyDBEncryptAttributesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyDBEncryptAttributesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyDBEncryptAttributes");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify the project to which TencentDB instances belong.
      * @param req ModifyDBInstancesProjectRequest
      * @return ModifyDBInstancesProjectResponse
