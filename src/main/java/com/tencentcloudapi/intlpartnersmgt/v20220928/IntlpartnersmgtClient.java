@@ -87,6 +87,46 @@ Notes:<br>
     }
 
     /**
+     *This API is used to query the customer bill details.
+     * @param req DescribeCustomerBillDetailRequest
+     * @return DescribeCustomerBillDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomerBillDetailResponse DescribeCustomerBillDetail(DescribeCustomerBillDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCustomerBillDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCustomerBillDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCustomerBillDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the total amount of customer bills.
+     * @param req DescribeCustomerBillSummaryRequest
+     * @return DescribeCustomerBillSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomerBillSummaryResponse DescribeCustomerBillSummary(DescribeCustomerBillSummaryRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCustomerBillSummaryResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCustomerBillSummaryResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCustomerBillSummary");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to obtain country/region codes.
      * @param req GetCountryCodesRequest
      * @return GetCountryCodesResponse

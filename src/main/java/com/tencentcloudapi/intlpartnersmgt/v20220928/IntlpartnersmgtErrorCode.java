@@ -66,11 +66,17 @@ public enum IntlpartnersmgtErrorCode {
     // Operation denied.
      OPERATIONDENIED("OperationDenied"),
      
+    // System busy. Please try again later.
+     OPERATIONDENIED_SERVICEBUSY("OperationDenied.ServiceBusy"),
+     
     // Too many requests.
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
     // Unauthorized operation.
-     UNAUTHORIZEDOPERATION("UnauthorizedOperation");
+     UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
+     
+    // The current user doesn’t have permission for the operation.
+     UNAUTHORIZEDOPERATION_UINNOAUTH("UnauthorizedOperation.UinNoAuth");
      
     private String value;
     private IntlpartnersmgtErrorCode (String value){
