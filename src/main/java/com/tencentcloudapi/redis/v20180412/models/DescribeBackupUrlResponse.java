@@ -45,7 +45,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] Filenames;
 
     /**
-    * List of backup file information
+    * List of backup file information.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BackupInfos")
@@ -112,9 +112,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of backup file information
+     * Get List of backup file information.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BackupInfos List of backup file information
+     * @return BackupInfos List of backup file information.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public BackupDownloadInfo [] getBackupInfos() {
@@ -122,9 +122,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set List of backup file information
+     * Set List of backup file information.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BackupInfos List of backup file information
+     * @param BackupInfos List of backup file information.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBackupInfos(BackupDownloadInfo [] BackupInfos) {

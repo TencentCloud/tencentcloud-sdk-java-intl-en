@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeInstancesRequest extends AbstractModel{
 
     /**
-    * Number of instances. Default value: 20. Maximum value: 1000.
+    * Number of instances returned per page. Default value: `20`. Maximum value: `1000`.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset, which is an integral multiple of `Limit`.
+    * Pagination offset, which is an integral multiple of `Limit`.
     */
     @SerializedName("Offset")
     @Expose
@@ -212,32 +212,32 @@ public class DescribeInstancesRequest extends AbstractModel{
     private String AzMode;
 
     /**
-     * Get Number of instances. Default value: 20. Maximum value: 1000. 
-     * @return Limit Number of instances. Default value: 20. Maximum value: 1000.
+     * Get Number of instances returned per page. Default value: `20`. Maximum value: `1000`. 
+     * @return Limit Number of instances returned per page. Default value: `20`. Maximum value: `1000`.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of instances. Default value: 20. Maximum value: 1000.
-     * @param Limit Number of instances. Default value: 20. Maximum value: 1000.
+     * Set Number of instances returned per page. Default value: `20`. Maximum value: `1000`.
+     * @param Limit Number of instances returned per page. Default value: `20`. Maximum value: `1000`.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset, which is an integral multiple of `Limit`. 
-     * @return Offset Offset, which is an integral multiple of `Limit`.
+     * Get Pagination offset, which is an integral multiple of `Limit`. 
+     * @return Offset Pagination offset, which is an integral multiple of `Limit`.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset, which is an integral multiple of `Limit`.
-     * @param Offset Offset, which is an integral multiple of `Limit`.
+     * Set Pagination offset, which is an integral multiple of `Limit`.
+     * @param Offset Pagination offset, which is an integral multiple of `Limit`.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

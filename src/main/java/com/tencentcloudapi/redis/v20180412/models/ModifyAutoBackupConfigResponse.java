@@ -30,14 +30,14 @@ public class ModifyAutoBackupConfigResponse extends AbstractModel{
     private Long AutoBackupType;
 
     /**
-    * Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
+    * Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
     */
     @SerializedName("WeekDays")
     @Expose
     private String [] WeekDays;
 
     /**
-    * Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
+    * Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
     */
     @SerializedName("TimePeriod")
     @Expose
@@ -74,32 +74,32 @@ public class ModifyAutoBackupConfigResponse extends AbstractModel{
     }
 
     /**
-     * Get Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. 
-     * @return WeekDays Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
+     * Get Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. 
+     * @return WeekDays Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
      */
     public String [] getWeekDays() {
         return this.WeekDays;
     }
 
     /**
-     * Set Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
-     * @param WeekDays Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
+     * Set Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
+     * @param WeekDays Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
      */
     public void setWeekDays(String [] WeekDays) {
         this.WeekDays = WeekDays;
     }
 
     /**
-     * Get Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00 
-     * @return TimePeriod Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
+     * Get Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00. 
+     * @return TimePeriod Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
      */
     public String getTimePeriod() {
         return this.TimePeriod;
     }
 
     /**
-     * Set Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
-     * @param TimePeriod Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
+     * Set Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
+     * @param TimePeriod Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
      */
     public void setTimePeriod(String TimePeriod) {
         this.TimePeriod = TimePeriod;

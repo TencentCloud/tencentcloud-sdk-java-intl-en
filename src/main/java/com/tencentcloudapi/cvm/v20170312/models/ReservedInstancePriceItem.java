@@ -66,8 +66,8 @@ Unit: second
     private Long Duration;
 
     /**
-    * The operating system of the reserved instance, such as `linux`.
-Valid value: linux.
+    * The operating system of the reserved instance, such as `Linux`.
+Valid value: `Linux`.
     */
     @SerializedName("ProductDescription")
     @Expose
@@ -174,20 +174,20 @@ Unit: second
     }
 
     /**
-     * Get The operating system of the reserved instance, such as `linux`.
-Valid value: linux. 
-     * @return ProductDescription The operating system of the reserved instance, such as `linux`.
-Valid value: linux.
+     * Get The operating system of the reserved instance, such as `Linux`.
+Valid value: `Linux`. 
+     * @return ProductDescription The operating system of the reserved instance, such as `Linux`.
+Valid value: `Linux`.
      */
     public String getProductDescription() {
         return this.ProductDescription;
     }
 
     /**
-     * Set The operating system of the reserved instance, such as `linux`.
-Valid value: linux.
-     * @param ProductDescription The operating system of the reserved instance, such as `linux`.
-Valid value: linux.
+     * Set The operating system of the reserved instance, such as `Linux`.
+Valid value: `Linux`.
+     * @param ProductDescription The operating system of the reserved instance, such as `Linux`.
+Valid value: `Linux`.
      */
     public void setProductDescription(String ProductDescription) {
         this.ProductDescription = ProductDescription;

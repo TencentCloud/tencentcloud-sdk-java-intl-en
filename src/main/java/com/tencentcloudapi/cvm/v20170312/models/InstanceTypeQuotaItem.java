@@ -165,6 +165,20 @@ Note: this field may return null, indicating that no valid value is obtained.
     private String Remark;
 
     /**
+    * 
+    */
+    @SerializedName("GpuCount")
+    @Expose
+    private Float GpuCount;
+
+    /**
+    * CPU clock rate of the instance
+    */
+    @SerializedName("Frequency")
+    @Expose
+    private String Frequency;
+
+    /**
      * Get Availability zone. 
      * @return Zone Availability zone.
      */
@@ -492,6 +506,38 @@ Note: this field may return null, indicating that no valid value is obtained.
         this.Remark = Remark;
     }
 
+    /**
+     * Get  
+     * @return GpuCount 
+     */
+    public Float getGpuCount() {
+        return this.GpuCount;
+    }
+
+    /**
+     * Set 
+     * @param GpuCount 
+     */
+    public void setGpuCount(Float GpuCount) {
+        this.GpuCount = GpuCount;
+    }
+
+    /**
+     * Get CPU clock rate of the instance 
+     * @return Frequency CPU clock rate of the instance
+     */
+    public String getFrequency() {
+        return this.Frequency;
+    }
+
+    /**
+     * Set CPU clock rate of the instance
+     * @param Frequency CPU clock rate of the instance
+     */
+    public void setFrequency(String Frequency) {
+        this.Frequency = Frequency;
+    }
+
     public InstanceTypeQuotaItem() {
     }
 
@@ -563,6 +609,12 @@ Note: this field may return null, indicating that no valid value is obtained.
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.GpuCount != null) {
+            this.GpuCount = new Float(source.GpuCount);
+        }
+        if (source.Frequency != null) {
+            this.Frequency = new String(source.Frequency);
+        }
     }
 
 
@@ -590,6 +642,8 @@ Note: this field may return null, indicating that no valid value is obtained.
         this.setParamSimple(map, prefix + "Gpu", this.Gpu);
         this.setParamSimple(map, prefix + "Fpga", this.Fpga);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "GpuCount", this.GpuCount);
+        this.setParamSimple(map, prefix + "Frequency", this.Frequency);
 
     }
 }

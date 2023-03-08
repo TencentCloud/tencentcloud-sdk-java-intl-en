@@ -23,92 +23,92 @@ import java.util.HashMap;
 public class RedisNodeInfo extends AbstractModel{
 
     /**
-    * Node type. 0: master node; 1: replica node
+    * Node type. <ul><li>`0`: Master node.</li><li>`1`: Replica node.</li></ul>
     */
     @SerializedName("NodeType")
     @Expose
     private Long NodeType;
 
     /**
-    * ID of the master or replica node, which is not required during instance creation
+    * Master or replica node ID. <ul><li>This parameter is optional when the [CreateInstances](https://intl.cloud.tencent.com/document/product/239/20026?from_cn_redirect=1) API is used to create a TencentDB for Redis instance, but it is required when the [UpgradeInstance](https://intl.cloud.tencent.com/document/product/239/20013?from_cn_redirect=1) API is used to adjust the configuration of an instance. </li><li>You can use the [DescribeInstances](https://intl.cloud.tencent.com/document/product/239/20018?from_cn_redirect=1) API to get the node ID of integer type. </li></ul>
     */
     @SerializedName("NodeId")
     @Expose
     private Long NodeId;
 
     /**
-    * AZ ID of the master or replica node
+    * ID of the AZ of the master or replica node
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * AZ name of the master or replica node
+    * Name of the AZ of the master or replica node
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-     * Get Node type. 0: master node; 1: replica node 
-     * @return NodeType Node type. 0: master node; 1: replica node
+     * Get Node type. <ul><li>`0`: Master node.</li><li>`1`: Replica node.</li></ul> 
+     * @return NodeType Node type. <ul><li>`0`: Master node.</li><li>`1`: Replica node.</li></ul>
      */
     public Long getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set Node type. 0: master node; 1: replica node
-     * @param NodeType Node type. 0: master node; 1: replica node
+     * Set Node type. <ul><li>`0`: Master node.</li><li>`1`: Replica node.</li></ul>
+     * @param NodeType Node type. <ul><li>`0`: Master node.</li><li>`1`: Replica node.</li></ul>
      */
     public void setNodeType(Long NodeType) {
         this.NodeType = NodeType;
     }
 
     /**
-     * Get ID of the master or replica node, which is not required during instance creation 
-     * @return NodeId ID of the master or replica node, which is not required during instance creation
+     * Get Master or replica node ID. <ul><li>This parameter is optional when the [CreateInstances](https://intl.cloud.tencent.com/document/product/239/20026?from_cn_redirect=1) API is used to create a TencentDB for Redis instance, but it is required when the [UpgradeInstance](https://intl.cloud.tencent.com/document/product/239/20013?from_cn_redirect=1) API is used to adjust the configuration of an instance. </li><li>You can use the [DescribeInstances](https://intl.cloud.tencent.com/document/product/239/20018?from_cn_redirect=1) API to get the node ID of integer type. </li></ul> 
+     * @return NodeId Master or replica node ID. <ul><li>This parameter is optional when the [CreateInstances](https://intl.cloud.tencent.com/document/product/239/20026?from_cn_redirect=1) API is used to create a TencentDB for Redis instance, but it is required when the [UpgradeInstance](https://intl.cloud.tencent.com/document/product/239/20013?from_cn_redirect=1) API is used to adjust the configuration of an instance. </li><li>You can use the [DescribeInstances](https://intl.cloud.tencent.com/document/product/239/20018?from_cn_redirect=1) API to get the node ID of integer type. </li></ul>
      */
     public Long getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set ID of the master or replica node, which is not required during instance creation
-     * @param NodeId ID of the master or replica node, which is not required during instance creation
+     * Set Master or replica node ID. <ul><li>This parameter is optional when the [CreateInstances](https://intl.cloud.tencent.com/document/product/239/20026?from_cn_redirect=1) API is used to create a TencentDB for Redis instance, but it is required when the [UpgradeInstance](https://intl.cloud.tencent.com/document/product/239/20013?from_cn_redirect=1) API is used to adjust the configuration of an instance. </li><li>You can use the [DescribeInstances](https://intl.cloud.tencent.com/document/product/239/20018?from_cn_redirect=1) API to get the node ID of integer type. </li></ul>
+     * @param NodeId Master or replica node ID. <ul><li>This parameter is optional when the [CreateInstances](https://intl.cloud.tencent.com/document/product/239/20026?from_cn_redirect=1) API is used to create a TencentDB for Redis instance, but it is required when the [UpgradeInstance](https://intl.cloud.tencent.com/document/product/239/20013?from_cn_redirect=1) API is used to adjust the configuration of an instance. </li><li>You can use the [DescribeInstances](https://intl.cloud.tencent.com/document/product/239/20018?from_cn_redirect=1) API to get the node ID of integer type. </li></ul>
      */
     public void setNodeId(Long NodeId) {
         this.NodeId = NodeId;
     }
 
     /**
-     * Get AZ ID of the master or replica node 
-     * @return ZoneId AZ ID of the master or replica node
+     * Get ID of the AZ of the master or replica node 
+     * @return ZoneId ID of the AZ of the master or replica node
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set AZ ID of the master or replica node
-     * @param ZoneId AZ ID of the master or replica node
+     * Set ID of the AZ of the master or replica node
+     * @param ZoneId ID of the AZ of the master or replica node
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get AZ name of the master or replica node 
-     * @return ZoneName AZ name of the master or replica node
+     * Get Name of the AZ of the master or replica node 
+     * @return ZoneName Name of the AZ of the master or replica node
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set AZ name of the master or replica node
-     * @param ZoneName AZ name of the master or replica node
+     * Set Name of the AZ of the master or replica node
+     * @param ZoneName Name of the AZ of the master or replica node
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;

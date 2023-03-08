@@ -51,6 +51,13 @@ public class SyncImagesRequest extends AbstractModel{
     private String ImageName;
 
     /**
+    * Whether to return the ID of image created in the destination region
+    */
+    @SerializedName("ImageSetRequired")
+    @Expose
+    private Boolean ImageSetRequired;
+
+    /**
      * Get List of image IDs. You can obtain the image IDs in two ways: <br><li>Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API and find the value of `ImageId` in the response. <br><li>Find the image IDs in the [Image Console](https://console.cloud.tencent.com/cvm/image). <br>The specified images must meet the following requirement: <br><li>the images must be in the `NORMAL` state. <br>For more information on image status, see [Image Data Table](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#Image). 
      * @return ImageIds List of image IDs. You can obtain the image IDs in two ways: <br><li>Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API and find the value of `ImageId` in the response. <br><li>Find the image IDs in the [Image Console](https://console.cloud.tencent.com/cvm/image). <br>The specified images must meet the following requirement: <br><li>the images must be in the `NORMAL` state. <br>For more information on image status, see [Image Data Table](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#Image).
      */
@@ -114,6 +121,22 @@ public class SyncImagesRequest extends AbstractModel{
         this.ImageName = ImageName;
     }
 
+    /**
+     * Get Whether to return the ID of image created in the destination region 
+     * @return ImageSetRequired Whether to return the ID of image created in the destination region
+     */
+    public Boolean getImageSetRequired() {
+        return this.ImageSetRequired;
+    }
+
+    /**
+     * Set Whether to return the ID of image created in the destination region
+     * @param ImageSetRequired Whether to return the ID of image created in the destination region
+     */
+    public void setImageSetRequired(Boolean ImageSetRequired) {
+        this.ImageSetRequired = ImageSetRequired;
+    }
+
     public SyncImagesRequest() {
     }
 
@@ -140,6 +163,9 @@ public class SyncImagesRequest extends AbstractModel{
         if (source.ImageName != null) {
             this.ImageName = new String(source.ImageName);
         }
+        if (source.ImageSetRequired != null) {
+            this.ImageSetRequired = new Boolean(source.ImageSetRequired);
+        }
     }
 
 
@@ -151,6 +177,7 @@ public class SyncImagesRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "DestinationRegions.", this.DestinationRegions);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
         this.setParamSimple(map, prefix + "ImageName", this.ImageName);
+        this.setParamSimple(map, prefix + "ImageSetRequired", this.ImageSetRequired);
 
     }
 }

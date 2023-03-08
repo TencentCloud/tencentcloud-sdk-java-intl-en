@@ -30,6 +30,13 @@ public class ExportImagesResponse extends AbstractModel{
     private Long TaskId;
 
     /**
+    * List of COS filenames of the exported images
+    */
+    @SerializedName("CosPaths")
+    @Expose
+    private String [] CosPaths;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -50,6 +57,22 @@ public class ExportImagesResponse extends AbstractModel{
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
+    }
+
+    /**
+     * Get List of COS filenames of the exported images 
+     * @return CosPaths List of COS filenames of the exported images
+     */
+    public String [] getCosPaths() {
+        return this.CosPaths;
+    }
+
+    /**
+     * Set List of COS filenames of the exported images
+     * @param CosPaths List of COS filenames of the exported images
+     */
+    public void setCosPaths(String [] CosPaths) {
+        this.CosPaths = CosPaths;
     }
 
     /**
@@ -79,6 +102,12 @@ public class ExportImagesResponse extends AbstractModel{
         if (source.TaskId != null) {
             this.TaskId = new Long(source.TaskId);
         }
+        if (source.CosPaths != null) {
+            this.CosPaths = new String[source.CosPaths.length];
+            for (int i = 0; i < source.CosPaths.length; i++) {
+                this.CosPaths[i] = new String(source.CosPaths[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +119,7 @@ public class ExportImagesResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamArraySimple(map, prefix + "CosPaths.", this.CosPaths);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

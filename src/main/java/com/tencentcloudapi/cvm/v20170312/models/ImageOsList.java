@@ -24,7 +24,7 @@ public class ImageOsList extends AbstractModel{
 
     /**
     * Supported Windows OS
-Note: This field may return null, indicating that no valid value is found.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Windows")
     @Expose
@@ -32,7 +32,7 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
     * Supported Linux OS
-Note: This field may return null, indicating that no valid value is found.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Linux")
     @Expose
@@ -40,9 +40,9 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
      * Get Supported Windows OS
-Note: This field may return null, indicating that no valid value is found. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return Windows Supported Windows OS
-Note: This field may return null, indicating that no valid value is found.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String [] getWindows() {
         return this.Windows;
@@ -50,9 +50,9 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
      * Set Supported Windows OS
-Note: This field may return null, indicating that no valid value is found.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param Windows Supported Windows OS
-Note: This field may return null, indicating that no valid value is found.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setWindows(String [] Windows) {
         this.Windows = Windows;
@@ -60,9 +60,9 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
      * Get Supported Linux OS
-Note: This field may return null, indicating that no valid value is found. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return Linux Supported Linux OS
-Note: This field may return null, indicating that no valid value is found.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String [] getLinux() {
         return this.Linux;
@@ -70,9 +70,9 @@ Note: This field may return null, indicating that no valid value is found.
 
     /**
      * Set Supported Linux OS
-Note: This field may return null, indicating that no valid value is found.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param Linux Supported Linux OS
-Note: This field may return null, indicating that no valid value is found.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setLinux(String [] Linux) {
         this.Linux = Linux;

@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeReplicationGroupRequest extends AbstractModel{
 
     /**
-    * Instance list size. Default value: 20
+    * Number of instances returned per page. Default value: `20`.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset, which is an integral multiple of `Limit`
+    * Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
     */
     @SerializedName("Offset")
     @Expose
@@ -44,39 +44,39 @@ public class DescribeReplicationGroupRequest extends AbstractModel{
     private String GroupId;
 
     /**
-    * Instance ID/name. Fuzzy query is supported.
+    * Keyword for fuzzy search, which can be an instance name or instance ID.
     */
     @SerializedName("SearchKey")
     @Expose
     private String SearchKey;
 
     /**
-     * Get Instance list size. Default value: 20 
-     * @return Limit Instance list size. Default value: 20
+     * Get Number of instances returned per page. Default value: `20`. 
+     * @return Limit Number of instances returned per page. Default value: `20`.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Instance list size. Default value: 20
-     * @param Limit Instance list size. Default value: 20
+     * Set Number of instances returned per page. Default value: `20`.
+     * @param Limit Number of instances returned per page. Default value: `20`.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset, which is an integral multiple of `Limit` 
-     * @return Offset Offset, which is an integral multiple of `Limit`
+     * Get Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1). 
+     * @return Offset Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset, which is an integral multiple of `Limit`
-     * @param Offset Offset, which is an integral multiple of `Limit`
+     * Set Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
+     * @param Offset Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -99,16 +99,16 @@ public class DescribeReplicationGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance ID/name. Fuzzy query is supported. 
-     * @return SearchKey Instance ID/name. Fuzzy query is supported.
+     * Get Keyword for fuzzy search, which can be an instance name or instance ID. 
+     * @return SearchKey Keyword for fuzzy search, which can be an instance name or instance ID.
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set Instance ID/name. Fuzzy query is supported.
-     * @param SearchKey Instance ID/name. Fuzzy query is supported.
+     * Set Keyword for fuzzy search, which can be an instance name or instance ID.
+     * @param SearchKey Keyword for fuzzy search, which can be an instance name or instance ID.
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;

@@ -23,32 +23,39 @@ import java.util.HashMap;
 public class ModifyNetworkConfigResponse extends AbstractModel{
 
     /**
-    * Execution status: true or false
+    * Execution status. Ignore this parameter.
     */
     @SerializedName("Status")
     @Expose
     private Boolean Status;
 
     /**
-    * Subnet ID
+    * New subnet ID of the instance
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * VPC ID
+    * New VPC ID of the instance
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * VIP address
+    * New private IPv4 address of the instance
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
+
+    /**
+    * Task ID, which can be used to query the task execution status through the `DescribeTaskInfo` API.
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private Long TaskId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -58,67 +65,83 @@ public class ModifyNetworkConfigResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Execution status: true or false 
-     * @return Status Execution status: true or false
+     * Get Execution status. Ignore this parameter. 
+     * @return Status Execution status. Ignore this parameter.
      */
     public Boolean getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Execution status: true or false
-     * @param Status Execution status: true or false
+     * Set Execution status. Ignore this parameter.
+     * @param Status Execution status. Ignore this parameter.
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Subnet ID 
-     * @return SubnetId Subnet ID
+     * Get New subnet ID of the instance 
+     * @return SubnetId New subnet ID of the instance
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID
-     * @param SubnetId Subnet ID
+     * Set New subnet ID of the instance
+     * @param SubnetId New subnet ID of the instance
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get VPC ID 
-     * @return VpcId VPC ID
+     * Get New VPC ID of the instance 
+     * @return VpcId New VPC ID of the instance
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID
-     * @param VpcId VPC ID
+     * Set New VPC ID of the instance
+     * @param VpcId New VPC ID of the instance
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get VIP address 
-     * @return Vip VIP address
+     * Get New private IPv4 address of the instance 
+     * @return Vip New private IPv4 address of the instance
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set VIP address
-     * @param Vip VIP address
+     * Set New private IPv4 address of the instance
+     * @param Vip New private IPv4 address of the instance
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
+    }
+
+    /**
+     * Get Task ID, which can be used to query the task execution status through the `DescribeTaskInfo` API. 
+     * @return TaskId Task ID, which can be used to query the task execution status through the `DescribeTaskInfo` API.
+     */
+    public Long getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set Task ID, which can be used to query the task execution status through the `DescribeTaskInfo` API.
+     * @param TaskId Task ID, which can be used to query the task execution status through the `DescribeTaskInfo` API.
+     */
+    public void setTaskId(Long TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -157,6 +180,9 @@ public class ModifyNetworkConfigResponse extends AbstractModel{
         if (source.Vip != null) {
             this.Vip = new String(source.Vip);
         }
+        if (source.TaskId != null) {
+            this.TaskId = new Long(source.TaskId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -171,6 +197,7 @@ public class ModifyNetworkConfigResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -23,25 +23,25 @@ import java.util.HashMap;
 public class DescribeInstanceBackupsRequest extends AbstractModel{
 
     /**
-    * ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private String InstanceId;
-
-    /**
-    * Instance list size. Default value: 20
+    * Number of backups returned per page. Default value: `20`. Maximum value: `100`.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset, which is an integral multiple of `Limit`.
+    * Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
+
+    /**
+    * ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
 
     /**
     * Start time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 16:46:34. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
@@ -58,11 +58,56 @@ public class DescribeInstanceBackupsRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * 1: backup in process; 2: backing up normally; 3: converting from backup to RDB file; 4: RDB conversion completed; -1: backup expired; -2: backup deleted.
+    * Backup task status:
+`1`: The backup is in the process.
+`2`: The backup is normal.
+`3`: The backup is being converted to an RDB file.
+`4`: Conversion to RDB has been completed.
+`-1`: The backup expired.
+`-2`: The backup has been deleted.
     */
     @SerializedName("Status")
     @Expose
     private Long [] Status;
+
+    /**
+    * Instance name, which can be fuzzily searched.
+    */
+    @SerializedName("InstanceName")
+    @Expose
+    private String InstanceName;
+
+    /**
+     * Get Number of backups returned per page. Default value: `20`. Maximum value: `100`. 
+     * @return Limit Number of backups returned per page. Default value: `20`. Maximum value: `100`.
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set Number of backups returned per page. Default value: `20`. Maximum value: `100`.
+     * @param Limit Number of backups returned per page. Default value: `20`. Maximum value: `100`.
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1). 
+     * @return Offset Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
+     * @param Offset Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
 
     /**
      * Get ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API. 
@@ -78,38 +123,6 @@ public class DescribeInstanceBackupsRequest extends AbstractModel{
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
-    }
-
-    /**
-     * Get Instance list size. Default value: 20 
-     * @return Limit Instance list size. Default value: 20
-     */
-    public Long getLimit() {
-        return this.Limit;
-    }
-
-    /**
-     * Set Instance list size. Default value: 20
-     * @param Limit Instance list size. Default value: 20
-     */
-    public void setLimit(Long Limit) {
-        this.Limit = Limit;
-    }
-
-    /**
-     * Get Offset, which is an integral multiple of `Limit`. 
-     * @return Offset Offset, which is an integral multiple of `Limit`.
-     */
-    public Long getOffset() {
-        return this.Offset;
-    }
-
-    /**
-     * Set Offset, which is an integral multiple of `Limit`.
-     * @param Offset Offset, which is an integral multiple of `Limit`.
-     */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
     }
 
     /**
@@ -145,19 +158,59 @@ public class DescribeInstanceBackupsRequest extends AbstractModel{
     }
 
     /**
-     * Get 1: backup in process; 2: backing up normally; 3: converting from backup to RDB file; 4: RDB conversion completed; -1: backup expired; -2: backup deleted. 
-     * @return Status 1: backup in process; 2: backing up normally; 3: converting from backup to RDB file; 4: RDB conversion completed; -1: backup expired; -2: backup deleted.
+     * Get Backup task status:
+`1`: The backup is in the process.
+`2`: The backup is normal.
+`3`: The backup is being converted to an RDB file.
+`4`: Conversion to RDB has been completed.
+`-1`: The backup expired.
+`-2`: The backup has been deleted. 
+     * @return Status Backup task status:
+`1`: The backup is in the process.
+`2`: The backup is normal.
+`3`: The backup is being converted to an RDB file.
+`4`: Conversion to RDB has been completed.
+`-1`: The backup expired.
+`-2`: The backup has been deleted.
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 1: backup in process; 2: backing up normally; 3: converting from backup to RDB file; 4: RDB conversion completed; -1: backup expired; -2: backup deleted.
-     * @param Status 1: backup in process; 2: backing up normally; 3: converting from backup to RDB file; 4: RDB conversion completed; -1: backup expired; -2: backup deleted.
+     * Set Backup task status:
+`1`: The backup is in the process.
+`2`: The backup is normal.
+`3`: The backup is being converted to an RDB file.
+`4`: Conversion to RDB has been completed.
+`-1`: The backup expired.
+`-2`: The backup has been deleted.
+     * @param Status Backup task status:
+`1`: The backup is in the process.
+`2`: The backup is normal.
+`3`: The backup is being converted to an RDB file.
+`4`: Conversion to RDB has been completed.
+`-1`: The backup expired.
+`-2`: The backup has been deleted.
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get Instance name, which can be fuzzily searched. 
+     * @return InstanceName Instance name, which can be fuzzily searched.
+     */
+    public String getInstanceName() {
+        return this.InstanceName;
+    }
+
+    /**
+     * Set Instance name, which can be fuzzily searched.
+     * @param InstanceName Instance name, which can be fuzzily searched.
+     */
+    public void setInstanceName(String InstanceName) {
+        this.InstanceName = InstanceName;
     }
 
     public DescribeInstanceBackupsRequest() {
@@ -168,14 +221,14 @@ public class DescribeInstanceBackupsRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeInstanceBackupsRequest(DescribeInstanceBackupsRequest source) {
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
-        }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
         if (source.BeginTime != null) {
             this.BeginTime = new String(source.BeginTime);
@@ -189,6 +242,9 @@ public class DescribeInstanceBackupsRequest extends AbstractModel{
                 this.Status[i] = new Long(source.Status[i]);
             }
         }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
     }
 
 
@@ -196,12 +252,13 @@ public class DescribeInstanceBackupsRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArraySimple(map, prefix + "Status.", this.Status);
+        this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
 
     }
 }

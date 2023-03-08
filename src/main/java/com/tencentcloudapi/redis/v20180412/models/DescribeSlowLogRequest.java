@@ -44,7 +44,7 @@ public class DescribeSlowLogRequest extends AbstractModel{
     private String EndTime;
 
     /**
-    * The average execution time threshold of slow query in microseconds
+    * The average execution time threshold of slow query in ms.
     */
     @SerializedName("MinQueryTime")
     @Expose
@@ -120,16 +120,16 @@ public class DescribeSlowLogRequest extends AbstractModel{
     }
 
     /**
-     * Get The average execution time threshold of slow query in microseconds 
-     * @return MinQueryTime The average execution time threshold of slow query in microseconds
+     * Get The average execution time threshold of slow query in ms. 
+     * @return MinQueryTime The average execution time threshold of slow query in ms.
      */
     public Long getMinQueryTime() {
         return this.MinQueryTime;
     }
 
     /**
-     * Set The average execution time threshold of slow query in microseconds
-     * @param MinQueryTime The average execution time threshold of slow query in microseconds
+     * Set The average execution time threshold of slow query in ms.
+     * @param MinQueryTime The average execution time threshold of slow query in ms.
      */
     public void setMinQueryTime(Long MinQueryTime) {
         this.MinQueryTime = MinQueryTime;

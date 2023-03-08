@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeInstanceBackupsResponse extends AbstractModel{
 
     /**
-    * Total number of backups
+    * Total number of backups.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Array of instance backups
+    * Array of instance backups.
     */
     @SerializedName("BackupSet")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeInstanceBackupsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Total number of backups 
-     * @return TotalCount Total number of backups
+     * Get Total number of backups. 
+     * @return TotalCount Total number of backups.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of backups
-     * @param TotalCount Total number of backups
+     * Set Total number of backups.
+     * @param TotalCount Total number of backups.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Array of instance backups 
-     * @return BackupSet Array of instance backups
+     * Get Array of instance backups. 
+     * @return BackupSet Array of instance backups.
      */
     public RedisBackupSet [] getBackupSet() {
         return this.BackupSet;
     }
 
     /**
-     * Set Array of instance backups
-     * @param BackupSet Array of instance backups
+     * Set Array of instance backups.
+     * @param BackupSet Array of instance backups.
      */
     public void setBackupSet(RedisBackupSet [] BackupSet) {
         this.BackupSet = BackupSet;

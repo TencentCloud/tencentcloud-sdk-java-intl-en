@@ -30,21 +30,21 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel{
     private String InstanceId;
 
     /**
-    * Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter cannot be modified for now.
+    * Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
     */
     @SerializedName("WeekDays")
     @Expose
     private String [] WeekDays;
 
     /**
-    * Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
+    * Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
     */
     @SerializedName("TimePeriod")
     @Expose
     private String TimePeriod;
 
     /**
-    * Automatic backup type: 1 (scheduled rollback)
+    * Automatic backup type. `1`: Scheduled rollback.
     */
     @SerializedName("AutoBackupType")
     @Expose
@@ -67,48 +67,48 @@ public class ModifyAutoBackupConfigRequest extends AbstractModel{
     }
 
     /**
-     * Get Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter cannot be modified for now. 
-     * @return WeekDays Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter cannot be modified for now.
+     * Get Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified. 
+     * @return WeekDays Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
      */
     public String [] getWeekDays() {
         return this.WeekDays;
     }
 
     /**
-     * Set Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter cannot be modified for now.
-     * @param WeekDays Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter cannot be modified for now.
+     * Set Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
+     * @param WeekDays Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
      */
     public void setWeekDays(String [] WeekDays) {
         this.WeekDays = WeekDays;
     }
 
     /**
-     * Get Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00 
-     * @return TimePeriod Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
+     * Get Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00. 
+     * @return TimePeriod Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
      */
     public String getTimePeriod() {
         return this.TimePeriod;
     }
 
     /**
-     * Set Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
-     * @param TimePeriod Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
+     * Set Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
+     * @param TimePeriod Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
      */
     public void setTimePeriod(String TimePeriod) {
         this.TimePeriod = TimePeriod;
     }
 
     /**
-     * Get Automatic backup type: 1 (scheduled rollback) 
-     * @return AutoBackupType Automatic backup type: 1 (scheduled rollback)
+     * Get Automatic backup type. `1`: Scheduled rollback. 
+     * @return AutoBackupType Automatic backup type. `1`: Scheduled rollback.
      */
     public Long getAutoBackupType() {
         return this.AutoBackupType;
     }
 
     /**
-     * Set Automatic backup type: 1 (scheduled rollback)
-     * @param AutoBackupType Automatic backup type: 1 (scheduled rollback)
+     * Set Automatic backup type. `1`: Scheduled rollback.
+     * @param AutoBackupType Automatic backup type. `1`: Scheduled rollback.
      */
     public void setAutoBackupType(Long AutoBackupType) {
         this.AutoBackupType = AutoBackupType;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class InstanceProxySlowlogDetail extends AbstractModel{
 
     /**
-    * Slow query duration
+    * Duration of the slow query in ms.
     */
     @SerializedName("Duration")
     @Expose
@@ -58,16 +58,16 @@ public class InstanceProxySlowlogDetail extends AbstractModel{
     private String ExecuteTime;
 
     /**
-     * Get Slow query duration 
-     * @return Duration Slow query duration
+     * Get Duration of the slow query in ms. 
+     * @return Duration Duration of the slow query in ms.
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Slow query duration
-     * @param Duration Slow query duration
+     * Set Duration of the slow query in ms.
+     * @param Duration Duration of the slow query in ms.
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;

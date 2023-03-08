@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class AllocateHostsResponse extends AbstractModel{
 
     /**
-    * The ID list of the CVM instances newly created on the CDH.
+    * IDs of created instances
     */
     @SerializedName("HostIdSet")
     @Expose
@@ -37,16 +37,16 @@ public class AllocateHostsResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The ID list of the CVM instances newly created on the CDH. 
-     * @return HostIdSet The ID list of the CVM instances newly created on the CDH.
+     * Get IDs of created instances 
+     * @return HostIdSet IDs of created instances
      */
     public String [] getHostIdSet() {
         return this.HostIdSet;
     }
 
     /**
-     * Set The ID list of the CVM instances newly created on the CDH.
-     * @param HostIdSet The ID list of the CVM instances newly created on the CDH.
+     * Set IDs of created instances
+     * @param HostIdSet IDs of created instances
      */
     public void setHostIdSet(String [] HostIdSet) {
         this.HostIdSet = HostIdSet;

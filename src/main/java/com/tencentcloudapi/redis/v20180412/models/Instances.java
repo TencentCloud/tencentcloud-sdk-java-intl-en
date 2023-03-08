@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Instances extends AbstractModel{
 
     /**
-    * User App ID
+    * User AppID
     */
     @SerializedName("AppId")
     @Expose
@@ -44,7 +44,7 @@ public class Instances extends AbstractModel{
     private String InstanceName;
 
     /**
-    * Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley)
+    * Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li> <li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li> </ul>
     */
     @SerializedName("RegionId")
     @Expose
@@ -72,7 +72,7 @@ public class Instances extends AbstractModel{
     private Long RedisShardNum;
 
     /**
-    * Shard size
+    * Shard memory size.
     */
     @SerializedName("RedisShardSize")
     @Expose
@@ -87,14 +87,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long DiskSize;
 
     /**
-    * Engine: Redis community edition, Tencent Cloud CKV
+    * Engine: Redis Community Edition, Tencent Cloud CKV.
     */
     @SerializedName("Engine")
     @Expose
     private String Engine;
 
     /**
-    * Instance role. Valid values: `rw` (read-write), `r`( read-only)
+    * Read-write permission of the instance. <ul><li>`rw`: Read/Write. </li><li>`r`: Read-only. </li></ul>
     */
     @SerializedName("Role")
     @Expose
@@ -109,28 +109,28 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Internal parameter, which can be ignored.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Vip6")
     @Expose
     private String Vip6;
 
     /**
-    * VPC ID, such as 75101
+    * VPC ID, such as `75101`.
     */
     @SerializedName("VpcID")
     @Expose
     private Long VpcID;
 
     /**
-    * Instance Port
+    * Instance port
     */
     @SerializedName("VPort")
     @Expose
     private Long VPort;
 
     /**
-    * Instance status. 0: to be initialized; 1: in process; 2: running; -2: isolated; -3: to be deleted
+    * Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
     */
     @SerializedName("Status")
     @Expose
@@ -144,37 +144,37 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long GrocerySysId;
 
     /**
-    * Instance type. Valid values: `1` (Redis 2.8 memory edition in cluster architecture), `2` (Redis 2.8 memory edition in standard architecture), `3` (CKV 3.2 memory edition in standard architecture), `4` (CKV 3.2 memory edition in cluster architecture), `5` (Redis 2.8 memory edition in standalone architecture), `6` (Redis 4.0 memory edition in standard architecture), `7` (Redis 4.0 memory edition in cluster architecture), `8` (Redis 5.0 memory edition in standard architecture), `9` (Redis 5.0 memory edition in cluster architecture)
+    * Instance type. <ul><li>`1`: Redis 2.8 Memory Edition (Cluster Architecture). </li><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`5`: Redis 2.8 Standalone Edition. </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li></ul>
     */
     @SerializedName("ProductType")
     @Expose
     private Long ProductType;
 
     /**
-    * Creation time
+    * The time when the instance was added to the replication group.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Update time
+    * The time when instances in the replication group were updated.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get User App ID 
-     * @return AppId User App ID
+     * Get User AppID 
+     * @return AppId User AppID
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User App ID
-     * @param AppId User App ID
+     * Set User AppID
+     * @param AppId User AppID
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
@@ -213,16 +213,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley) 
-     * @return RegionId Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley)
+     * Get Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li> <li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li> </ul> 
+     * @return RegionId Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li> <li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li> </ul>
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley)
-     * @param RegionId Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley)
+     * Set Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li> <li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li> </ul>
+     * @param RegionId Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li> <li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li> </ul>
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
@@ -277,16 +277,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Shard size 
-     * @return RedisShardSize Shard size
+     * Get Shard memory size. 
+     * @return RedisShardSize Shard memory size.
      */
     public Long getRedisShardSize() {
         return this.RedisShardSize;
     }
 
     /**
-     * Set Shard size
-     * @param RedisShardSize Shard size
+     * Set Shard memory size.
+     * @param RedisShardSize Shard memory size.
      */
     public void setRedisShardSize(Long RedisShardSize) {
         this.RedisShardSize = RedisShardSize;
@@ -313,32 +313,32 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Engine: Redis community edition, Tencent Cloud CKV 
-     * @return Engine Engine: Redis community edition, Tencent Cloud CKV
+     * Get Engine: Redis Community Edition, Tencent Cloud CKV. 
+     * @return Engine Engine: Redis Community Edition, Tencent Cloud CKV.
      */
     public String getEngine() {
         return this.Engine;
     }
 
     /**
-     * Set Engine: Redis community edition, Tencent Cloud CKV
-     * @param Engine Engine: Redis community edition, Tencent Cloud CKV
+     * Set Engine: Redis Community Edition, Tencent Cloud CKV.
+     * @param Engine Engine: Redis Community Edition, Tencent Cloud CKV.
      */
     public void setEngine(String Engine) {
         this.Engine = Engine;
     }
 
     /**
-     * Get Instance role. Valid values: `rw` (read-write), `r`( read-only) 
-     * @return Role Instance role. Valid values: `rw` (read-write), `r`( read-only)
+     * Get Read-write permission of the instance. <ul><li>`rw`: Read/Write. </li><li>`r`: Read-only. </li></ul> 
+     * @return Role Read-write permission of the instance. <ul><li>`rw`: Read/Write. </li><li>`r`: Read-only. </li></ul>
      */
     public String getRole() {
         return this.Role;
     }
 
     /**
-     * Set Instance role. Valid values: `rw` (read-write), `r`( read-only)
-     * @param Role Instance role. Valid values: `rw` (read-write), `r`( read-only)
+     * Set Read-write permission of the instance. <ul><li>`rw`: Read/Write. </li><li>`r`: Read-only. </li></ul>
+     * @param Role Read-write permission of the instance. <ul><li>`rw`: Read/Write. </li><li>`r`: Read-only. </li></ul>
      */
     public void setRole(String Role) {
         this.Role = Role;
@@ -362,9 +362,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Internal parameter, which can be ignored.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
+Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Vip6 Internal parameter, which can be ignored.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVip6() {
         return this.Vip6;
@@ -372,57 +372,57 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Internal parameter, which can be ignored.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param Vip6 Internal parameter, which can be ignored.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVip6(String Vip6) {
         this.Vip6 = Vip6;
     }
 
     /**
-     * Get VPC ID, such as 75101 
-     * @return VpcID VPC ID, such as 75101
+     * Get VPC ID, such as `75101`. 
+     * @return VpcID VPC ID, such as `75101`.
      */
     public Long getVpcID() {
         return this.VpcID;
     }
 
     /**
-     * Set VPC ID, such as 75101
-     * @param VpcID VPC ID, such as 75101
+     * Set VPC ID, such as `75101`.
+     * @param VpcID VPC ID, such as `75101`.
      */
     public void setVpcID(Long VpcID) {
         this.VpcID = VpcID;
     }
 
     /**
-     * Get Instance Port 
-     * @return VPort Instance Port
+     * Get Instance port 
+     * @return VPort Instance port
      */
     public Long getVPort() {
         return this.VPort;
     }
 
     /**
-     * Set Instance Port
-     * @param VPort Instance Port
+     * Set Instance port
+     * @param VPort Instance port
      */
     public void setVPort(Long VPort) {
         this.VPort = VPort;
     }
 
     /**
-     * Get Instance status. 0: to be initialized; 1: in process; 2: running; -2: isolated; -3: to be deleted 
-     * @return Status Instance status. 0: to be initialized; 1: in process; 2: running; -2: isolated; -3: to be deleted
+     * Get Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul> 
+     * @return Status Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status. 0: to be initialized; 1: in process; 2: running; -2: isolated; -3: to be deleted
-     * @param Status Instance status. 0: to be initialized; 1: in process; 2: running; -2: isolated; -3: to be deleted
+     * Set Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
+     * @param Status Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -445,48 +445,48 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Instance type. Valid values: `1` (Redis 2.8 memory edition in cluster architecture), `2` (Redis 2.8 memory edition in standard architecture), `3` (CKV 3.2 memory edition in standard architecture), `4` (CKV 3.2 memory edition in cluster architecture), `5` (Redis 2.8 memory edition in standalone architecture), `6` (Redis 4.0 memory edition in standard architecture), `7` (Redis 4.0 memory edition in cluster architecture), `8` (Redis 5.0 memory edition in standard architecture), `9` (Redis 5.0 memory edition in cluster architecture) 
-     * @return ProductType Instance type. Valid values: `1` (Redis 2.8 memory edition in cluster architecture), `2` (Redis 2.8 memory edition in standard architecture), `3` (CKV 3.2 memory edition in standard architecture), `4` (CKV 3.2 memory edition in cluster architecture), `5` (Redis 2.8 memory edition in standalone architecture), `6` (Redis 4.0 memory edition in standard architecture), `7` (Redis 4.0 memory edition in cluster architecture), `8` (Redis 5.0 memory edition in standard architecture), `9` (Redis 5.0 memory edition in cluster architecture)
+     * Get Instance type. <ul><li>`1`: Redis 2.8 Memory Edition (Cluster Architecture). </li><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`5`: Redis 2.8 Standalone Edition. </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li></ul> 
+     * @return ProductType Instance type. <ul><li>`1`: Redis 2.8 Memory Edition (Cluster Architecture). </li><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`5`: Redis 2.8 Standalone Edition. </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li></ul>
      */
     public Long getProductType() {
         return this.ProductType;
     }
 
     /**
-     * Set Instance type. Valid values: `1` (Redis 2.8 memory edition in cluster architecture), `2` (Redis 2.8 memory edition in standard architecture), `3` (CKV 3.2 memory edition in standard architecture), `4` (CKV 3.2 memory edition in cluster architecture), `5` (Redis 2.8 memory edition in standalone architecture), `6` (Redis 4.0 memory edition in standard architecture), `7` (Redis 4.0 memory edition in cluster architecture), `8` (Redis 5.0 memory edition in standard architecture), `9` (Redis 5.0 memory edition in cluster architecture)
-     * @param ProductType Instance type. Valid values: `1` (Redis 2.8 memory edition in cluster architecture), `2` (Redis 2.8 memory edition in standard architecture), `3` (CKV 3.2 memory edition in standard architecture), `4` (CKV 3.2 memory edition in cluster architecture), `5` (Redis 2.8 memory edition in standalone architecture), `6` (Redis 4.0 memory edition in standard architecture), `7` (Redis 4.0 memory edition in cluster architecture), `8` (Redis 5.0 memory edition in standard architecture), `9` (Redis 5.0 memory edition in cluster architecture)
+     * Set Instance type. <ul><li>`1`: Redis 2.8 Memory Edition (Cluster Architecture). </li><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`5`: Redis 2.8 Standalone Edition. </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li></ul>
+     * @param ProductType Instance type. <ul><li>`1`: Redis 2.8 Memory Edition (Cluster Architecture). </li><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`5`: Redis 2.8 Standalone Edition. </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li></ul>
      */
     public void setProductType(Long ProductType) {
         this.ProductType = ProductType;
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get The time when the instance was added to the replication group. 
+     * @return CreateTime The time when the instance was added to the replication group.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set The time when the instance was added to the replication group.
+     * @param CreateTime The time when the instance was added to the replication group.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Update time 
-     * @return UpdateTime Update time
+     * Get The time when instances in the replication group were updated. 
+     * @return UpdateTime The time when instances in the replication group were updated.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update time
-     * @param UpdateTime Update time
+     * Set The time when instances in the replication group were updated.
+     * @param UpdateTime The time when instances in the replication group were updated.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

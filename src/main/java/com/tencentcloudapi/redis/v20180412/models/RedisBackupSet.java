@@ -37,14 +37,23 @@ public class RedisBackupSet extends AbstractModel{
     private String BackupId;
 
     /**
-    * Backup type. 1: manual backup initiated by the user; 0: automatic backup in the early morning initiated by the system
+    * Backup type
+
+- `1`: Manual backup initiated by the user.
+- `0`: Automatic backup in the early morning initiated by the system.
     */
     @SerializedName("BackupType")
     @Expose
     private String BackupType;
 
     /**
-    * Backup status. 1: backup is locked by another process; 2: backup is normal and not locked by any process; -1: backup has expired; 3: backup is being exported; 4: backup is exported successfully
+    * Backup status 
+
+- `1`: The backup is locked by another process.
+- `2`: The backup is normal and not locked by any process.
+- `-1`: The backup expired.
+- `3`: The backup is being exported.
+- `4`: The backup was exported successfully.
     */
     @SerializedName("Status")
     @Expose
@@ -58,7 +67,10 @@ public class RedisBackupSet extends AbstractModel{
     private String Remark;
 
     /**
-    * Whether a backup is locked. 0: no; 1: yes.
+    * Whether the backup is locked
+
+- `0`: Not locked.
+- `1`: Locked.
     */
     @SerializedName("Locked")
     @Expose
@@ -87,6 +99,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("InstanceType")
     @Expose
     private Long InstanceType;
+
+    /**
+    * Instance ID
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * Instance name
+    */
+    @SerializedName("InstanceName")
+    @Expose
+    private String InstanceName;
+
+    /**
+    * The region where the local backup resides.
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+    * Backup end time
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
+    * Backup file type
+    */
+    @SerializedName("FileType")
+    @Expose
+    private String FileType;
+
+    /**
+    * Backup file expiration time
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private String ExpireTime;
 
     /**
      * Get Backup start time 
@@ -121,32 +175,68 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Backup type. 1: manual backup initiated by the user; 0: automatic backup in the early morning initiated by the system 
-     * @return BackupType Backup type. 1: manual backup initiated by the user; 0: automatic backup in the early morning initiated by the system
+     * Get Backup type
+
+- `1`: Manual backup initiated by the user.
+- `0`: Automatic backup in the early morning initiated by the system. 
+     * @return BackupType Backup type
+
+- `1`: Manual backup initiated by the user.
+- `0`: Automatic backup in the early morning initiated by the system.
      */
     public String getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set Backup type. 1: manual backup initiated by the user; 0: automatic backup in the early morning initiated by the system
-     * @param BackupType Backup type. 1: manual backup initiated by the user; 0: automatic backup in the early morning initiated by the system
+     * Set Backup type
+
+- `1`: Manual backup initiated by the user.
+- `0`: Automatic backup in the early morning initiated by the system.
+     * @param BackupType Backup type
+
+- `1`: Manual backup initiated by the user.
+- `0`: Automatic backup in the early morning initiated by the system.
      */
     public void setBackupType(String BackupType) {
         this.BackupType = BackupType;
     }
 
     /**
-     * Get Backup status. 1: backup is locked by another process; 2: backup is normal and not locked by any process; -1: backup has expired; 3: backup is being exported; 4: backup is exported successfully 
-     * @return Status Backup status. 1: backup is locked by another process; 2: backup is normal and not locked by any process; -1: backup has expired; 3: backup is being exported; 4: backup is exported successfully
+     * Get Backup status 
+
+- `1`: The backup is locked by another process.
+- `2`: The backup is normal and not locked by any process.
+- `-1`: The backup expired.
+- `3`: The backup is being exported.
+- `4`: The backup was exported successfully. 
+     * @return Status Backup status 
+
+- `1`: The backup is locked by another process.
+- `2`: The backup is normal and not locked by any process.
+- `-1`: The backup expired.
+- `3`: The backup is being exported.
+- `4`: The backup was exported successfully.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Backup status. 1: backup is locked by another process; 2: backup is normal and not locked by any process; -1: backup has expired; 3: backup is being exported; 4: backup is exported successfully
-     * @param Status Backup status. 1: backup is locked by another process; 2: backup is normal and not locked by any process; -1: backup has expired; 3: backup is being exported; 4: backup is exported successfully
+     * Set Backup status 
+
+- `1`: The backup is locked by another process.
+- `2`: The backup is normal and not locked by any process.
+- `-1`: The backup expired.
+- `3`: The backup is being exported.
+- `4`: The backup was exported successfully.
+     * @param Status Backup status 
+
+- `1`: The backup is locked by another process.
+- `2`: The backup is normal and not locked by any process.
+- `-1`: The backup expired.
+- `3`: The backup is being exported.
+- `4`: The backup was exported successfully.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -169,16 +259,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether a backup is locked. 0: no; 1: yes. 
-     * @return Locked Whether a backup is locked. 0: no; 1: yes.
+     * Get Whether the backup is locked
+
+- `0`: Not locked.
+- `1`: Locked. 
+     * @return Locked Whether the backup is locked
+
+- `0`: Not locked.
+- `1`: Locked.
      */
     public Long getLocked() {
         return this.Locked;
     }
 
     /**
-     * Set Whether a backup is locked. 0: no; 1: yes.
-     * @param Locked Whether a backup is locked. 0: no; 1: yes.
+     * Set Whether the backup is locked
+
+- `0`: Not locked.
+- `1`: Locked.
+     * @param Locked Whether the backup is locked
+
+- `0`: Not locked.
+- `1`: Locked.
      */
     public void setLocked(Long Locked) {
         this.Locked = Locked;
@@ -244,6 +346,102 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.InstanceType = InstanceType;
     }
 
+    /**
+     * Get Instance ID 
+     * @return InstanceId Instance ID
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set Instance ID
+     * @param InstanceId Instance ID
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get Instance name 
+     * @return InstanceName Instance name
+     */
+    public String getInstanceName() {
+        return this.InstanceName;
+    }
+
+    /**
+     * Set Instance name
+     * @param InstanceName Instance name
+     */
+    public void setInstanceName(String InstanceName) {
+        this.InstanceName = InstanceName;
+    }
+
+    /**
+     * Get The region where the local backup resides. 
+     * @return Region The region where the local backup resides.
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set The region where the local backup resides.
+     * @param Region The region where the local backup resides.
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * Get Backup end time 
+     * @return EndTime Backup end time
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set Backup end time
+     * @param EndTime Backup end time
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
+    /**
+     * Get Backup file type 
+     * @return FileType Backup file type
+     */
+    public String getFileType() {
+        return this.FileType;
+    }
+
+    /**
+     * Set Backup file type
+     * @param FileType Backup file type
+     */
+    public void setFileType(String FileType) {
+        this.FileType = FileType;
+    }
+
+    /**
+     * Get Backup file expiration time 
+     * @return ExpireTime Backup file expiration time
+     */
+    public String getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set Backup file expiration time
+     * @param ExpireTime Backup file expiration time
+     */
+    public void setExpireTime(String ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
     public RedisBackupSet() {
     }
 
@@ -279,6 +477,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.InstanceType != null) {
             this.InstanceType = new Long(source.InstanceType);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
+        if (source.FileType != null) {
+            this.FileType = new String(source.FileType);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
     }
 
 
@@ -295,6 +511,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "BackupSize", this.BackupSize);
         this.setParamSimple(map, prefix + "FullBackup", this.FullBackup);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "FileType", this.FileType);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
 
     }
 }

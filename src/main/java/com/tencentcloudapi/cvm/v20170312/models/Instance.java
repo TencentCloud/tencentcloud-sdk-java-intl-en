@@ -292,6 +292,28 @@ Note: this field may return null, indicating that no valid value was found.
     private Boolean DisableApiTermination;
 
     /**
+    * Default login user
+    */
+    @SerializedName("DefaultLoginUser")
+    @Expose
+    private String DefaultLoginUser;
+
+    /**
+    * Default login port
+    */
+    @SerializedName("DefaultLoginPort")
+    @Expose
+    private Long DefaultLoginPort;
+
+    /**
+    * Latest operation errors of the instance.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("LatestOperationErrorMsg")
+    @Expose
+    private String LatestOperationErrorMsg;
+
+    /**
      * Get Location of the instance 
      * @return Placement Location of the instance
      */
@@ -923,6 +945,58 @@ Note: this field may return null, indicating that no valid value was found.
         this.DisableApiTermination = DisableApiTermination;
     }
 
+    /**
+     * Get Default login user 
+     * @return DefaultLoginUser Default login user
+     */
+    public String getDefaultLoginUser() {
+        return this.DefaultLoginUser;
+    }
+
+    /**
+     * Set Default login user
+     * @param DefaultLoginUser Default login user
+     */
+    public void setDefaultLoginUser(String DefaultLoginUser) {
+        this.DefaultLoginUser = DefaultLoginUser;
+    }
+
+    /**
+     * Get Default login port 
+     * @return DefaultLoginPort Default login port
+     */
+    public Long getDefaultLoginPort() {
+        return this.DefaultLoginPort;
+    }
+
+    /**
+     * Set Default login port
+     * @param DefaultLoginPort Default login port
+     */
+    public void setDefaultLoginPort(Long DefaultLoginPort) {
+        this.DefaultLoginPort = DefaultLoginPort;
+    }
+
+    /**
+     * Get Latest operation errors of the instance.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return LatestOperationErrorMsg Latest operation errors of the instance.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getLatestOperationErrorMsg() {
+        return this.LatestOperationErrorMsg;
+    }
+
+    /**
+     * Set Latest operation errors of the instance.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param LatestOperationErrorMsg Latest operation errors of the instance.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setLatestOperationErrorMsg(String LatestOperationErrorMsg) {
+        this.LatestOperationErrorMsg = LatestOperationErrorMsg;
+    }
+
     public Instance() {
     }
 
@@ -1063,6 +1137,15 @@ Note: this field may return null, indicating that no valid value was found.
         if (source.DisableApiTermination != null) {
             this.DisableApiTermination = new Boolean(source.DisableApiTermination);
         }
+        if (source.DefaultLoginUser != null) {
+            this.DefaultLoginUser = new String(source.DefaultLoginUser);
+        }
+        if (source.DefaultLoginPort != null) {
+            this.DefaultLoginPort = new Long(source.DefaultLoginPort);
+        }
+        if (source.LatestOperationErrorMsg != null) {
+            this.LatestOperationErrorMsg = new String(source.LatestOperationErrorMsg);
+        }
     }
 
 
@@ -1107,6 +1190,9 @@ Note: this field may return null, indicating that no valid value was found.
         this.setParamObj(map, prefix + "GPUInfo.", this.GPUInfo);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
         this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
+        this.setParamSimple(map, prefix + "DefaultLoginUser", this.DefaultLoginUser);
+        this.setParamSimple(map, prefix + "DefaultLoginPort", this.DefaultLoginPort);
+        this.setParamSimple(map, prefix + "LatestOperationErrorMsg", this.LatestOperationErrorMsg);
 
     }
 }

@@ -61,7 +61,7 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
     private String Sysprep;
 
     /**
-    * Specified data disk ID included in the full image created from the instance.
+    * IDs of data disks included in the image. 
     */
     @SerializedName("DataDiskIds")
     @Expose
@@ -181,16 +181,16 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
     }
 
     /**
-     * Get Specified data disk ID included in the full image created from the instance. 
-     * @return DataDiskIds Specified data disk ID included in the full image created from the instance.
+     * Get IDs of data disks included in the image.  
+     * @return DataDiskIds IDs of data disks included in the image. 
      */
     public String [] getDataDiskIds() {
         return this.DataDiskIds;
     }
 
     /**
-     * Set Specified data disk ID included in the full image created from the instance.
-     * @param DataDiskIds Specified data disk ID included in the full image created from the instance.
+     * Set IDs of data disks included in the image. 
+     * @param DataDiskIds IDs of data disks included in the image. 
      */
     public void setDataDiskIds(String [] DataDiskIds) {
         this.DataDiskIds = DataDiskIds;

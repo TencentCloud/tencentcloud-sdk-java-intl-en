@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class SyncImagesResponse extends AbstractModel{
 
     /**
-    * 
+    * ID of the image created in the destination region
     */
     @SerializedName("ImageSet")
     @Expose
@@ -37,16 +37,16 @@ public class SyncImagesResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get  
-     * @return ImageSet 
+     * Get ID of the image created in the destination region 
+     * @return ImageSet ID of the image created in the destination region
      */
     public SyncImage [] getImageSet() {
         return this.ImageSet;
     }
 
     /**
-     * Set 
-     * @param ImageSet 
+     * Set ID of the image created in the destination region
+     * @param ImageSet ID of the image created in the destination region
      */
     public void setImageSet(SyncImage [] ImageSet) {
         this.ImageSet = ImageSet;

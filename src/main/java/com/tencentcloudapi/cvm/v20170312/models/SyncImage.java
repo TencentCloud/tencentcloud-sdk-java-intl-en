@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class SyncImage extends AbstractModel{
 
     /**
-    * 
+    * Image ID
     */
     @SerializedName("ImageId")
     @Expose
     private String ImageId;
 
     /**
-    * 
+    * Region
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-     * Get  
-     * @return ImageId 
+     * Get Image ID 
+     * @return ImageId Image ID
      */
     public String getImageId() {
         return this.ImageId;
     }
 
     /**
-     * Set 
-     * @param ImageId 
+     * Set Image ID
+     * @param ImageId Image ID
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;
     }
 
     /**
-     * Get  
-     * @return Region 
+     * Get Region 
+     * @return Region Region
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 
-     * @param Region 
+     * Set Region
+     * @param Region Region
      */
     public void setRegion(String Region) {
         this.Region = Region;

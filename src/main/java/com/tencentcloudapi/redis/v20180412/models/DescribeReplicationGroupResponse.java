@@ -23,14 +23,14 @@ import java.util.HashMap;
 public class DescribeReplicationGroupResponse extends AbstractModel{
 
     /**
-    * Number of replication group
+    * Number of replication groups
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Replication group info
+    * Replication group information
     */
     @SerializedName("Groups")
     @Expose
@@ -44,32 +44,32 @@ public class DescribeReplicationGroupResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Number of replication group 
-     * @return TotalCount Number of replication group
+     * Get Number of replication groups 
+     * @return TotalCount Number of replication groups
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of replication group
-     * @param TotalCount Number of replication group
+     * Set Number of replication groups
+     * @param TotalCount Number of replication groups
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Replication group info 
-     * @return Groups Replication group info
+     * Get Replication group information 
+     * @return Groups Replication group information
      */
     public Groups [] getGroups() {
         return this.Groups;
     }
 
     /**
-     * Set Replication group info
-     * @param Groups Replication group info
+     * Set Replication group information
+     * @param Groups Replication group information
      */
     public void setGroups(Groups [] Groups) {
         this.Groups = Groups;

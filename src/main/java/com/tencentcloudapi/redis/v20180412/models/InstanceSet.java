@@ -37,7 +37,7 @@ public class InstanceSet extends AbstractModel{
     private String InstanceId;
 
     /**
-    * User's Appid
+    * User AppID
     */
     @SerializedName("Appid")
     @Expose
@@ -51,7 +51,7 @@ public class InstanceSet extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan.
+    * Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
     */
     @SerializedName("RegionId")
     @Expose
@@ -65,14 +65,14 @@ public class InstanceSet extends AbstractModel{
     private Long ZoneId;
 
     /**
-    * VPC ID, such as 75101.
+    * VPC ID, such as `75101`.
     */
     @SerializedName("VpcId")
     @Expose
     private Long VpcId;
 
     /**
-    * VPC subnet ID, such as 46315.
+    * Subnet ID, such as `46315`.
     */
     @SerializedName("SubnetId")
     @Expose
@@ -114,7 +114,7 @@ public class InstanceSet extends AbstractModel{
     private Float Size;
 
     /**
-    * This field has been disused
+    * This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
     */
     @SerializedName("SizeUsed")
     @Expose
@@ -342,8 +342,8 @@ Note: This field may return null, indicating that no valid value can be obtained
     private Long DiskSize;
 
     /**
-    * Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity). </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MonitorVersion")
     @Expose
@@ -462,16 +462,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get User's Appid 
-     * @return Appid User's Appid
+     * Get User AppID 
+     * @return Appid User AppID
      */
     public Long getAppid() {
         return this.Appid;
     }
 
     /**
-     * Set User's Appid
-     * @param Appid User's Appid
+     * Set User AppID
+     * @param Appid User AppID
      */
     public void setAppid(Long Appid) {
         this.Appid = Appid;
@@ -494,16 +494,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan. 
-     * @return RegionId Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan.
+     * Get Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul> 
+     * @return RegionId Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan.
-     * @param RegionId Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan.
+     * Set Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
+     * @param RegionId Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
@@ -526,32 +526,32 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get VPC ID, such as 75101. 
-     * @return VpcId VPC ID, such as 75101.
+     * Get VPC ID, such as `75101`. 
+     * @return VpcId VPC ID, such as `75101`.
      */
     public Long getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID, such as 75101.
-     * @param VpcId VPC ID, such as 75101.
+     * Set VPC ID, such as `75101`.
+     * @param VpcId VPC ID, such as `75101`.
      */
     public void setVpcId(Long VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get VPC subnet ID, such as 46315. 
-     * @return SubnetId VPC subnet ID, such as 46315.
+     * Get Subnet ID, such as `46315`. 
+     * @return SubnetId Subnet ID, such as `46315`.
      */
     public Long getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set VPC subnet ID, such as 46315.
-     * @param SubnetId VPC subnet ID, such as 46315.
+     * Set Subnet ID, such as `46315`.
+     * @param SubnetId Subnet ID, such as `46315`.
      */
     public void setSubnetId(Long SubnetId) {
         this.SubnetId = SubnetId;
@@ -638,16 +638,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get This field has been disused 
-     * @return SizeUsed This field has been disused
+     * Get This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance. 
+     * @return SizeUsed This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
      */
     public Float getSizeUsed() {
         return this.SizeUsed;
     }
 
     /**
-     * Set This field has been disused
-     * @param SizeUsed This field has been disused
+     * Set This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
+     * @param SizeUsed This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
      */
     public void setSizeUsed(Float SizeUsed) {
         this.SizeUsed = SizeUsed;
@@ -1178,20 +1178,20 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity). </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return MonitorVersion Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity). </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MonitorVersion Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMonitorVersion() {
         return this.MonitorVersion;
     }
 
     /**
-     * Set Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity). </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param MonitorVersion Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity). </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MonitorVersion Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMonitorVersion(String MonitorVersion) {
         this.MonitorVersion = MonitorVersion;

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeProductInfoResponse extends AbstractModel{
 
     /**
-    * Sale information of a region
+    * Sale information of a region.
     */
     @SerializedName("RegionSet")
     @Expose
@@ -37,16 +37,16 @@ public class DescribeProductInfoResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get Sale information of a region 
-     * @return RegionSet Sale information of a region
+     * Get Sale information of a region. 
+     * @return RegionSet Sale information of a region.
      */
     public RegionConf [] getRegionSet() {
         return this.RegionSet;
     }
 
     /**
-     * Set Sale information of a region
-     * @param RegionSet Sale information of a region
+     * Set Sale information of a region.
+     * @param RegionSet Sale information of a region.
      */
     public void setRegionSet(RegionConf [] RegionSet) {
         this.RegionSet = RegionSet;
