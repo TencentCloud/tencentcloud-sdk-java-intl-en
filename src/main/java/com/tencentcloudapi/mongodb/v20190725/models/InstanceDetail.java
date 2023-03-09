@@ -51,7 +51,7 @@ public class InstanceDetail extends AbstractModel{
     private Long ProjectId;
 
     /**
-    * Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance),
+    * Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
     */
     @SerializedName("ClusterType")
     @Expose
@@ -93,7 +93,7 @@ public class InstanceDetail extends AbstractModel{
     private String SubnetId;
 
     /**
-    * Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (running), -2 (expired)
+    * Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
     */
     @SerializedName("Status")
     @Expose
@@ -177,7 +177,7 @@ public class InstanceDetail extends AbstractModel{
     private Long ReplicationSetNum;
 
     /**
-    * Instance auto-renewal flag. Valid values: 0 (manual renewal), 1 (auto-renewal), 2 (no renewal upon expiration)
+    * Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -191,14 +191,14 @@ public class InstanceDetail extends AbstractModel{
     private Long UsedVolume;
 
     /**
-    * Start time of the maintenance time window
+    * Start time of the maintenance time
     */
     @SerializedName("MaintenanceStart")
     @Expose
     private String MaintenanceStart;
 
     /**
-    * End time of the maintenance time window
+    * End time of the maintenance time
     */
     @SerializedName("MaintenanceEnd")
     @Expose
@@ -233,7 +233,7 @@ public class InstanceDetail extends AbstractModel{
     private DBInstanceInfo [] CloneInstances;
 
     /**
-    * Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
+    * Information of associated instances. For a regular instance, this field represents the information of its temp instance; for a temp instance, this field represents the information of its regular instance; and for a read-only instance or a disaster recovery instance, this field represents the information of its primary instance.
     */
     @SerializedName("RelatedInstance")
     @Expose
@@ -247,21 +247,21 @@ public class InstanceDetail extends AbstractModel{
     private TagInfo [] Tags;
 
     /**
-    * Instance version tag
+    * Instance version
     */
     @SerializedName("InstanceVer")
     @Expose
     private Long InstanceVer;
 
     /**
-    * Instance version tag
+    * Instance version
     */
     @SerializedName("ClusterVer")
     @Expose
     private Long ClusterVer;
 
     /**
-    * Protocol information. Valid values: 1 (mongodb), 2 (dynamodb)
+    * Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
     */
     @SerializedName("Protocol")
     @Expose
@@ -287,6 +287,70 @@ public class InstanceDetail extends AbstractModel{
     @SerializedName("RealInstanceId")
     @Expose
     private String RealInstanceId;
+
+    /**
+    * Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MongosNodeNum")
+    @Expose
+    private Long MongosNodeNum;
+
+    /**
+    * mongos node memory
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MongosMemory")
+    @Expose
+    private Long MongosMemory;
+
+    /**
+    * Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MongosCpuNum")
+    @Expose
+    private Long MongosCpuNum;
+
+    /**
+    * Number of ConfigServer nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ConfigServerNodeNum")
+    @Expose
+    private Long ConfigServerNodeNum;
+
+    /**
+    * Memory of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ConfigServerMemory")
+    @Expose
+    private Long ConfigServerMemory;
+
+    /**
+    * Disk size of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ConfigServerVolume")
+    @Expose
+    private Long ConfigServerVolume;
+
+    /**
+    * CPU number of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ConfigServerCpuNum")
+    @Expose
+    private Long ConfigServerCpuNum;
+
+    /**
+    * Number of read-only nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ReadonlyNodeNum")
+    @Expose
+    private Long ReadonlyNodeNum;
 
     /**
      * Get Instance ID 
@@ -353,16 +417,16 @@ public class InstanceDetail extends AbstractModel{
     }
 
     /**
-     * Get Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance), 
-     * @return ClusterType Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance),
+     * Get Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance). 
+     * @return ClusterType Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
      */
     public Long getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance),
-     * @param ClusterType Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance),
+     * Set Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
+     * @param ClusterType Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
      */
     public void setClusterType(Long ClusterType) {
         this.ClusterType = ClusterType;
@@ -449,16 +513,16 @@ public class InstanceDetail extends AbstractModel{
     }
 
     /**
-     * Get Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (running), -2 (expired) 
-     * @return Status Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (running), -2 (expired)
+     * Get Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired). 
+     * @return Status Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (running), -2 (expired)
-     * @param Status Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (running), -2 (expired)
+     * Set Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
+     * @param Status Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -641,16 +705,16 @@ public class InstanceDetail extends AbstractModel{
     }
 
     /**
-     * Get Instance auto-renewal flag. Valid values: 0 (manual renewal), 1 (auto-renewal), 2 (no renewal upon expiration) 
-     * @return AutoRenewFlag Instance auto-renewal flag. Valid values: 0 (manual renewal), 1 (auto-renewal), 2 (no renewal upon expiration)
+     * Get Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration) 
+     * @return AutoRenewFlag Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set Instance auto-renewal flag. Valid values: 0 (manual renewal), 1 (auto-renewal), 2 (no renewal upon expiration)
-     * @param AutoRenewFlag Instance auto-renewal flag. Valid values: 0 (manual renewal), 1 (auto-renewal), 2 (no renewal upon expiration)
+     * Set Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
+     * @param AutoRenewFlag Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
@@ -673,32 +737,32 @@ public class InstanceDetail extends AbstractModel{
     }
 
     /**
-     * Get Start time of the maintenance time window 
-     * @return MaintenanceStart Start time of the maintenance time window
+     * Get Start time of the maintenance time 
+     * @return MaintenanceStart Start time of the maintenance time
      */
     public String getMaintenanceStart() {
         return this.MaintenanceStart;
     }
 
     /**
-     * Set Start time of the maintenance time window
-     * @param MaintenanceStart Start time of the maintenance time window
+     * Set Start time of the maintenance time
+     * @param MaintenanceStart Start time of the maintenance time
      */
     public void setMaintenanceStart(String MaintenanceStart) {
         this.MaintenanceStart = MaintenanceStart;
     }
 
     /**
-     * Get End time of the maintenance time window 
-     * @return MaintenanceEnd End time of the maintenance time window
+     * Get End time of the maintenance time 
+     * @return MaintenanceEnd End time of the maintenance time
      */
     public String getMaintenanceEnd() {
         return this.MaintenanceEnd;
     }
 
     /**
-     * Set End time of the maintenance time window
-     * @param MaintenanceEnd End time of the maintenance time window
+     * Set End time of the maintenance time
+     * @param MaintenanceEnd End time of the maintenance time
      */
     public void setMaintenanceEnd(String MaintenanceEnd) {
         this.MaintenanceEnd = MaintenanceEnd;
@@ -769,16 +833,16 @@ public class InstanceDetail extends AbstractModel{
     }
 
     /**
-     * Get Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance 
-     * @return RelatedInstance Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
+     * Get Information of associated instances. For a regular instance, this field represents the information of its temp instance; for a temp instance, this field represents the information of its regular instance; and for a read-only instance or a disaster recovery instance, this field represents the information of its primary instance. 
+     * @return RelatedInstance Information of associated instances. For a regular instance, this field represents the information of its temp instance; for a temp instance, this field represents the information of its regular instance; and for a read-only instance or a disaster recovery instance, this field represents the information of its primary instance.
      */
     public DBInstanceInfo getRelatedInstance() {
         return this.RelatedInstance;
     }
 
     /**
-     * Set Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
-     * @param RelatedInstance Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
+     * Set Information of associated instances. For a regular instance, this field represents the information of its temp instance; for a temp instance, this field represents the information of its regular instance; and for a read-only instance or a disaster recovery instance, this field represents the information of its primary instance.
+     * @param RelatedInstance Information of associated instances. For a regular instance, this field represents the information of its temp instance; for a temp instance, this field represents the information of its regular instance; and for a read-only instance or a disaster recovery instance, this field represents the information of its primary instance.
      */
     public void setRelatedInstance(DBInstanceInfo RelatedInstance) {
         this.RelatedInstance = RelatedInstance;
@@ -801,48 +865,48 @@ public class InstanceDetail extends AbstractModel{
     }
 
     /**
-     * Get Instance version tag 
-     * @return InstanceVer Instance version tag
+     * Get Instance version 
+     * @return InstanceVer Instance version
      */
     public Long getInstanceVer() {
         return this.InstanceVer;
     }
 
     /**
-     * Set Instance version tag
-     * @param InstanceVer Instance version tag
+     * Set Instance version
+     * @param InstanceVer Instance version
      */
     public void setInstanceVer(Long InstanceVer) {
         this.InstanceVer = InstanceVer;
     }
 
     /**
-     * Get Instance version tag 
-     * @return ClusterVer Instance version tag
+     * Get Instance version 
+     * @return ClusterVer Instance version
      */
     public Long getClusterVer() {
         return this.ClusterVer;
     }
 
     /**
-     * Set Instance version tag
-     * @param ClusterVer Instance version tag
+     * Set Instance version
+     * @param ClusterVer Instance version
      */
     public void setClusterVer(Long ClusterVer) {
         this.ClusterVer = ClusterVer;
     }
 
     /**
-     * Get Protocol information. Valid values: 1 (mongodb), 2 (dynamodb) 
-     * @return Protocol Protocol information. Valid values: 1 (mongodb), 2 (dynamodb)
+     * Get Protocol information. Valid values: `1` (mongodb), `2` (dynamodb). 
+     * @return Protocol Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
      */
     public Long getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Protocol information. Valid values: 1 (mongodb), 2 (dynamodb)
-     * @param Protocol Protocol information. Valid values: 1 (mongodb), 2 (dynamodb)
+     * Set Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
+     * @param Protocol Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
      */
     public void setProtocol(Long Protocol) {
         this.Protocol = Protocol;
@@ -894,6 +958,166 @@ public class InstanceDetail extends AbstractModel{
      */
     public void setRealInstanceId(String RealInstanceId) {
         this.RealInstanceId = RealInstanceId;
+    }
+
+    /**
+     * Get Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MongosNodeNum Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getMongosNodeNum() {
+        return this.MongosNodeNum;
+    }
+
+    /**
+     * Set Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MongosNodeNum Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMongosNodeNum(Long MongosNodeNum) {
+        this.MongosNodeNum = MongosNodeNum;
+    }
+
+    /**
+     * Get mongos node memory
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MongosMemory mongos node memory
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getMongosMemory() {
+        return this.MongosMemory;
+    }
+
+    /**
+     * Set mongos node memory
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MongosMemory mongos node memory
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMongosMemory(Long MongosMemory) {
+        this.MongosMemory = MongosMemory;
+    }
+
+    /**
+     * Get Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MongosCpuNum Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getMongosCpuNum() {
+        return this.MongosCpuNum;
+    }
+
+    /**
+     * Set Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MongosCpuNum Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMongosCpuNum(Long MongosCpuNum) {
+        this.MongosCpuNum = MongosCpuNum;
+    }
+
+    /**
+     * Get Number of ConfigServer nodes
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ConfigServerNodeNum Number of ConfigServer nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getConfigServerNodeNum() {
+        return this.ConfigServerNodeNum;
+    }
+
+    /**
+     * Set Number of ConfigServer nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ConfigServerNodeNum Number of ConfigServer nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setConfigServerNodeNum(Long ConfigServerNodeNum) {
+        this.ConfigServerNodeNum = ConfigServerNodeNum;
+    }
+
+    /**
+     * Get Memory of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ConfigServerMemory Memory of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getConfigServerMemory() {
+        return this.ConfigServerMemory;
+    }
+
+    /**
+     * Set Memory of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ConfigServerMemory Memory of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setConfigServerMemory(Long ConfigServerMemory) {
+        this.ConfigServerMemory = ConfigServerMemory;
+    }
+
+    /**
+     * Get Disk size of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ConfigServerVolume Disk size of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getConfigServerVolume() {
+        return this.ConfigServerVolume;
+    }
+
+    /**
+     * Set Disk size of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ConfigServerVolume Disk size of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setConfigServerVolume(Long ConfigServerVolume) {
+        this.ConfigServerVolume = ConfigServerVolume;
+    }
+
+    /**
+     * Get CPU number of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ConfigServerCpuNum CPU number of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getConfigServerCpuNum() {
+        return this.ConfigServerCpuNum;
+    }
+
+    /**
+     * Set CPU number of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ConfigServerCpuNum CPU number of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setConfigServerCpuNum(Long ConfigServerCpuNum) {
+        this.ConfigServerCpuNum = ConfigServerCpuNum;
+    }
+
+    /**
+     * Get Number of read-only nodes
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ReadonlyNodeNum Number of read-only nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getReadonlyNodeNum() {
+        return this.ReadonlyNodeNum;
+    }
+
+    /**
+     * Set Number of read-only nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ReadonlyNodeNum Number of read-only nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setReadonlyNodeNum(Long ReadonlyNodeNum) {
+        this.ReadonlyNodeNum = ReadonlyNodeNum;
     }
 
     public InstanceDetail() {
@@ -1033,6 +1257,30 @@ public class InstanceDetail extends AbstractModel{
         if (source.RealInstanceId != null) {
             this.RealInstanceId = new String(source.RealInstanceId);
         }
+        if (source.MongosNodeNum != null) {
+            this.MongosNodeNum = new Long(source.MongosNodeNum);
+        }
+        if (source.MongosMemory != null) {
+            this.MongosMemory = new Long(source.MongosMemory);
+        }
+        if (source.MongosCpuNum != null) {
+            this.MongosCpuNum = new Long(source.MongosCpuNum);
+        }
+        if (source.ConfigServerNodeNum != null) {
+            this.ConfigServerNodeNum = new Long(source.ConfigServerNodeNum);
+        }
+        if (source.ConfigServerMemory != null) {
+            this.ConfigServerMemory = new Long(source.ConfigServerMemory);
+        }
+        if (source.ConfigServerVolume != null) {
+            this.ConfigServerVolume = new Long(source.ConfigServerVolume);
+        }
+        if (source.ConfigServerCpuNum != null) {
+            this.ConfigServerCpuNum = new Long(source.ConfigServerCpuNum);
+        }
+        if (source.ReadonlyNodeNum != null) {
+            this.ReadonlyNodeNum = new Long(source.ReadonlyNodeNum);
+        }
     }
 
 
@@ -1078,6 +1326,14 @@ public class InstanceDetail extends AbstractModel{
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "InstanceStatusDesc", this.InstanceStatusDesc);
         this.setParamSimple(map, prefix + "RealInstanceId", this.RealInstanceId);
+        this.setParamSimple(map, prefix + "MongosNodeNum", this.MongosNodeNum);
+        this.setParamSimple(map, prefix + "MongosMemory", this.MongosMemory);
+        this.setParamSimple(map, prefix + "MongosCpuNum", this.MongosCpuNum);
+        this.setParamSimple(map, prefix + "ConfigServerNodeNum", this.ConfigServerNodeNum);
+        this.setParamSimple(map, prefix + "ConfigServerMemory", this.ConfigServerMemory);
+        this.setParamSimple(map, prefix + "ConfigServerVolume", this.ConfigServerVolume);
+        this.setParamSimple(map, prefix + "ConfigServerCpuNum", this.ConfigServerCpuNum);
+        this.setParamSimple(map, prefix + "ReadonlyNodeNum", this.ReadonlyNodeNum);
 
     }
 }

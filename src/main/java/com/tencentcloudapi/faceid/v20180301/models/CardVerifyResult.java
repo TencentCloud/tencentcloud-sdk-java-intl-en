@@ -48,47 +48,65 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
     * The OCR result (in JSON) of the identity document image. If authentication or OCR fails, this parameter is left empty. The URL is valid for 10 minutes.
 When the value of `IdCardType` is `HK`:
-- CnName string: Chinese name
-- EnName string: English name
-- TelexCode string: The code corresponding to the Chinese name
-- Sex string: Gender. Valid values: `M` (male) and `F` (female).
-- Birthday string: Date of birth.
-- Permanent int: Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
-- IdNum string: ID number.
-- Symbol string: The ID symbol below the date of birth, such as "***AZ".
-- FirstIssueDate string: The date of first issuance.
-- CurrentIssueDate string: The date of latest issuance.
+- CnName (string): Chinese name.
+- EnName (string): English name.
+- TelexCode (string): The code corresponding to the Chinese name.
+- Sex (string): Gender. Valid values: `M` (male) and `F` (female).
+- Birthday (string): Date of birth.
+- Permanent (int): Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
+- IdNum (string): ID number.
+- Symbol (string): The ID symbol below the date of birth, such as "***AZ".
+- FirstIssueDate (string): The date of first issuance.
+- CurrentIssueDate (string): The date of latest issuance.
 
 When the value of `IdCardType` is `ML`:
-- Sex string: `LELAKI` (male) and `PEREMPUAN` (female).
-- Birthday string: Date of birth.
-- ID string: ID number.
-- Name string: Name.
-- Address string: Address.
-- Type string: Identity document type.
+- Sex (string): `LELAKI` (male) and `PEREMPUAN` (female).
+- Birthday (string): Date of birth.
+- ID (string): ID number.
+- Name (string): Name.
+- Address (string): Address.
+- Type (string): Identity document type.
 
 When the value of `IdCardType` is `PhilippinesVoteID`:
-- Birthday string: Date of birth.
-- Address string: Address.
-- LastName string: Family name.
-- FirstName string: First name.
-- VIN string: VIN number.
-- CivilStatus string: Marital status.
-- Citizenship string: Citizenship.
-- PrecinctNo string: Region.
+- Birthday (string): Date of birth.
+- Address (string): Address.
+- LastName (string): Family name.
+- FirstName (string): First name.
+- VIN (string): VIN number.
+- CivilStatus (string): Marital status.
+- Citizenship (string): Citizenship.
+- PrecinctNo (string): Region.
 
 When the value of `IdCardType` is `PhilippinesDrivingLicense`:
-- Sex string: Gender.
-- Birthday string: Date of birth.
-- Name string: Name.
-- Address string: Address.
-- LastName string: Family name.
-- FirstName string: First name.
-- MiddleName string: Middle name.
-- Nationality string: Nationality.
-- LicenseNo string: License number.
-- ExpiresDate string: Validity period.
-- AgencyCode string: Agency code.
+- Sex (string): Gender.
+- Birthday (string): Date of birth.
+- Name (string): Name.
+- Address (string): Address.
+- LastName (string): Family name.
+- FirstName (string): First name.
+- MiddleName (string): Middle name.
+- Nationality (string): Nationality.
+- LicenseNo (string): License number.
+- ExpiresDate (string): Validity period.
+- AgencyCode (string): Agency code.
+
+When the value of `IdCardType` is `IndonesiaIDCard`:
+- NIK (string): Identity document No.
+- Nama (string): Name.
+- TempatTglLahir (string): Place/Date of birth.
+- JenisKelamin (string): Gender.
+- GolDarah (string): Blood type.
+- Alamat (string): Address.
+- RTRW (string): Street.
+- KelDesa (string): Village.
+- Kecamatan (string): Region.
+- Agama (string): Religion.
+- StatusPerkawinan (string): Marital status.
+- Perkerjaan (string): Profession.
+- KewargaNegaraan (string): Nationality.
+- BerlakuHingga (string): Expiry date of the identity document.
+- IssuedDate (string): Date of issuance.
+
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CardInfoOcrJson")
@@ -161,91 +179,127 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get The OCR result (in JSON) of the identity document image. If authentication or OCR fails, this parameter is left empty. The URL is valid for 10 minutes.
 When the value of `IdCardType` is `HK`:
-- CnName string: Chinese name
-- EnName string: English name
-- TelexCode string: The code corresponding to the Chinese name
-- Sex string: Gender. Valid values: `M` (male) and `F` (female).
-- Birthday string: Date of birth.
-- Permanent int: Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
-- IdNum string: ID number.
-- Symbol string: The ID symbol below the date of birth, such as "***AZ".
-- FirstIssueDate string: The date of first issuance.
-- CurrentIssueDate string: The date of latest issuance.
+- CnName (string): Chinese name.
+- EnName (string): English name.
+- TelexCode (string): The code corresponding to the Chinese name.
+- Sex (string): Gender. Valid values: `M` (male) and `F` (female).
+- Birthday (string): Date of birth.
+- Permanent (int): Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
+- IdNum (string): ID number.
+- Symbol (string): The ID symbol below the date of birth, such as "***AZ".
+- FirstIssueDate (string): The date of first issuance.
+- CurrentIssueDate (string): The date of latest issuance.
 
 When the value of `IdCardType` is `ML`:
-- Sex string: `LELAKI` (male) and `PEREMPUAN` (female).
-- Birthday string: Date of birth.
-- ID string: ID number.
-- Name string: Name.
-- Address string: Address.
-- Type string: Identity document type.
+- Sex (string): `LELAKI` (male) and `PEREMPUAN` (female).
+- Birthday (string): Date of birth.
+- ID (string): ID number.
+- Name (string): Name.
+- Address (string): Address.
+- Type (string): Identity document type.
 
 When the value of `IdCardType` is `PhilippinesVoteID`:
-- Birthday string: Date of birth.
-- Address string: Address.
-- LastName string: Family name.
-- FirstName string: First name.
-- VIN string: VIN number.
-- CivilStatus string: Marital status.
-- Citizenship string: Citizenship.
-- PrecinctNo string: Region.
+- Birthday (string): Date of birth.
+- Address (string): Address.
+- LastName (string): Family name.
+- FirstName (string): First name.
+- VIN (string): VIN number.
+- CivilStatus (string): Marital status.
+- Citizenship (string): Citizenship.
+- PrecinctNo (string): Region.
 
 When the value of `IdCardType` is `PhilippinesDrivingLicense`:
-- Sex string: Gender.
-- Birthday string: Date of birth.
-- Name string: Name.
-- Address string: Address.
-- LastName string: Family name.
-- FirstName string: First name.
-- MiddleName string: Middle name.
-- Nationality string: Nationality.
-- LicenseNo string: License number.
-- ExpiresDate string: Validity period.
-- AgencyCode string: Agency code.
+- Sex (string): Gender.
+- Birthday (string): Date of birth.
+- Name (string): Name.
+- Address (string): Address.
+- LastName (string): Family name.
+- FirstName (string): First name.
+- MiddleName (string): Middle name.
+- Nationality (string): Nationality.
+- LicenseNo (string): License number.
+- ExpiresDate (string): Validity period.
+- AgencyCode (string): Agency code.
+
+When the value of `IdCardType` is `IndonesiaIDCard`:
+- NIK (string): Identity document No.
+- Nama (string): Name.
+- TempatTglLahir (string): Place/Date of birth.
+- JenisKelamin (string): Gender.
+- GolDarah (string): Blood type.
+- Alamat (string): Address.
+- RTRW (string): Street.
+- KelDesa (string): Village.
+- Kecamatan (string): Region.
+- Agama (string): Religion.
+- StatusPerkawinan (string): Marital status.
+- Perkerjaan (string): Profession.
+- KewargaNegaraan (string): Nationality.
+- BerlakuHingga (string): Expiry date of the identity document.
+- IssuedDate (string): Date of issuance.
+
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return CardInfoOcrJson The OCR result (in JSON) of the identity document image. If authentication or OCR fails, this parameter is left empty. The URL is valid for 10 minutes.
 When the value of `IdCardType` is `HK`:
-- CnName string: Chinese name
-- EnName string: English name
-- TelexCode string: The code corresponding to the Chinese name
-- Sex string: Gender. Valid values: `M` (male) and `F` (female).
-- Birthday string: Date of birth.
-- Permanent int: Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
-- IdNum string: ID number.
-- Symbol string: The ID symbol below the date of birth, such as "***AZ".
-- FirstIssueDate string: The date of first issuance.
-- CurrentIssueDate string: The date of latest issuance.
+- CnName (string): Chinese name.
+- EnName (string): English name.
+- TelexCode (string): The code corresponding to the Chinese name.
+- Sex (string): Gender. Valid values: `M` (male) and `F` (female).
+- Birthday (string): Date of birth.
+- Permanent (int): Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
+- IdNum (string): ID number.
+- Symbol (string): The ID symbol below the date of birth, such as "***AZ".
+- FirstIssueDate (string): The date of first issuance.
+- CurrentIssueDate (string): The date of latest issuance.
 
 When the value of `IdCardType` is `ML`:
-- Sex string: `LELAKI` (male) and `PEREMPUAN` (female).
-- Birthday string: Date of birth.
-- ID string: ID number.
-- Name string: Name.
-- Address string: Address.
-- Type string: Identity document type.
+- Sex (string): `LELAKI` (male) and `PEREMPUAN` (female).
+- Birthday (string): Date of birth.
+- ID (string): ID number.
+- Name (string): Name.
+- Address (string): Address.
+- Type (string): Identity document type.
 
 When the value of `IdCardType` is `PhilippinesVoteID`:
-- Birthday string: Date of birth.
-- Address string: Address.
-- LastName string: Family name.
-- FirstName string: First name.
-- VIN string: VIN number.
-- CivilStatus string: Marital status.
-- Citizenship string: Citizenship.
-- PrecinctNo string: Region.
+- Birthday (string): Date of birth.
+- Address (string): Address.
+- LastName (string): Family name.
+- FirstName (string): First name.
+- VIN (string): VIN number.
+- CivilStatus (string): Marital status.
+- Citizenship (string): Citizenship.
+- PrecinctNo (string): Region.
 
 When the value of `IdCardType` is `PhilippinesDrivingLicense`:
-- Sex string: Gender.
-- Birthday string: Date of birth.
-- Name string: Name.
-- Address string: Address.
-- LastName string: Family name.
-- FirstName string: First name.
-- MiddleName string: Middle name.
-- Nationality string: Nationality.
-- LicenseNo string: License number.
-- ExpiresDate string: Validity period.
-- AgencyCode string: Agency code.
+- Sex (string): Gender.
+- Birthday (string): Date of birth.
+- Name (string): Name.
+- Address (string): Address.
+- LastName (string): Family name.
+- FirstName (string): First name.
+- MiddleName (string): Middle name.
+- Nationality (string): Nationality.
+- LicenseNo (string): License number.
+- ExpiresDate (string): Validity period.
+- AgencyCode (string): Agency code.
+
+When the value of `IdCardType` is `IndonesiaIDCard`:
+- NIK (string): Identity document No.
+- Nama (string): Name.
+- TempatTglLahir (string): Place/Date of birth.
+- JenisKelamin (string): Gender.
+- GolDarah (string): Blood type.
+- Alamat (string): Address.
+- RTRW (string): Street.
+- KelDesa (string): Village.
+- Kecamatan (string): Region.
+- Agama (string): Religion.
+- StatusPerkawinan (string): Marital status.
+- Perkerjaan (string): Profession.
+- KewargaNegaraan (string): Nationality.
+- BerlakuHingga (string): Expiry date of the identity document.
+- IssuedDate (string): Date of issuance.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public FileInfo getCardInfoOcrJson() {
@@ -255,91 +309,127 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set The OCR result (in JSON) of the identity document image. If authentication or OCR fails, this parameter is left empty. The URL is valid for 10 minutes.
 When the value of `IdCardType` is `HK`:
-- CnName string: Chinese name
-- EnName string: English name
-- TelexCode string: The code corresponding to the Chinese name
-- Sex string: Gender. Valid values: `M` (male) and `F` (female).
-- Birthday string: Date of birth.
-- Permanent int: Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
-- IdNum string: ID number.
-- Symbol string: The ID symbol below the date of birth, such as "***AZ".
-- FirstIssueDate string: The date of first issuance.
-- CurrentIssueDate string: The date of latest issuance.
+- CnName (string): Chinese name.
+- EnName (string): English name.
+- TelexCode (string): The code corresponding to the Chinese name.
+- Sex (string): Gender. Valid values: `M` (male) and `F` (female).
+- Birthday (string): Date of birth.
+- Permanent (int): Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
+- IdNum (string): ID number.
+- Symbol (string): The ID symbol below the date of birth, such as "***AZ".
+- FirstIssueDate (string): The date of first issuance.
+- CurrentIssueDate (string): The date of latest issuance.
 
 When the value of `IdCardType` is `ML`:
-- Sex string: `LELAKI` (male) and `PEREMPUAN` (female).
-- Birthday string: Date of birth.
-- ID string: ID number.
-- Name string: Name.
-- Address string: Address.
-- Type string: Identity document type.
+- Sex (string): `LELAKI` (male) and `PEREMPUAN` (female).
+- Birthday (string): Date of birth.
+- ID (string): ID number.
+- Name (string): Name.
+- Address (string): Address.
+- Type (string): Identity document type.
 
 When the value of `IdCardType` is `PhilippinesVoteID`:
-- Birthday string: Date of birth.
-- Address string: Address.
-- LastName string: Family name.
-- FirstName string: First name.
-- VIN string: VIN number.
-- CivilStatus string: Marital status.
-- Citizenship string: Citizenship.
-- PrecinctNo string: Region.
+- Birthday (string): Date of birth.
+- Address (string): Address.
+- LastName (string): Family name.
+- FirstName (string): First name.
+- VIN (string): VIN number.
+- CivilStatus (string): Marital status.
+- Citizenship (string): Citizenship.
+- PrecinctNo (string): Region.
 
 When the value of `IdCardType` is `PhilippinesDrivingLicense`:
-- Sex string: Gender.
-- Birthday string: Date of birth.
-- Name string: Name.
-- Address string: Address.
-- LastName string: Family name.
-- FirstName string: First name.
-- MiddleName string: Middle name.
-- Nationality string: Nationality.
-- LicenseNo string: License number.
-- ExpiresDate string: Validity period.
-- AgencyCode string: Agency code.
+- Sex (string): Gender.
+- Birthday (string): Date of birth.
+- Name (string): Name.
+- Address (string): Address.
+- LastName (string): Family name.
+- FirstName (string): First name.
+- MiddleName (string): Middle name.
+- Nationality (string): Nationality.
+- LicenseNo (string): License number.
+- ExpiresDate (string): Validity period.
+- AgencyCode (string): Agency code.
+
+When the value of `IdCardType` is `IndonesiaIDCard`:
+- NIK (string): Identity document No.
+- Nama (string): Name.
+- TempatTglLahir (string): Place/Date of birth.
+- JenisKelamin (string): Gender.
+- GolDarah (string): Blood type.
+- Alamat (string): Address.
+- RTRW (string): Street.
+- KelDesa (string): Village.
+- Kecamatan (string): Region.
+- Agama (string): Religion.
+- StatusPerkawinan (string): Marital status.
+- Perkerjaan (string): Profession.
+- KewargaNegaraan (string): Nationality.
+- BerlakuHingga (string): Expiry date of the identity document.
+- IssuedDate (string): Date of issuance.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param CardInfoOcrJson The OCR result (in JSON) of the identity document image. If authentication or OCR fails, this parameter is left empty. The URL is valid for 10 minutes.
 When the value of `IdCardType` is `HK`:
-- CnName string: Chinese name
-- EnName string: English name
-- TelexCode string: The code corresponding to the Chinese name
-- Sex string: Gender. Valid values: `M` (male) and `F` (female).
-- Birthday string: Date of birth.
-- Permanent int: Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
-- IdNum string: ID number.
-- Symbol string: The ID symbol below the date of birth, such as "***AZ".
-- FirstIssueDate string: The date of first issuance.
-- CurrentIssueDate string: The date of latest issuance.
+- CnName (string): Chinese name.
+- EnName (string): English name.
+- TelexCode (string): The code corresponding to the Chinese name.
+- Sex (string): Gender. Valid values: `M` (male) and `F` (female).
+- Birthday (string): Date of birth.
+- Permanent (int): Whether it is a permanent residence identity card. Valid values: `0` (non-permanent), `1` (permanent), and `-1` (unknown).
+- IdNum (string): ID number.
+- Symbol (string): The ID symbol below the date of birth, such as "***AZ".
+- FirstIssueDate (string): The date of first issuance.
+- CurrentIssueDate (string): The date of latest issuance.
 
 When the value of `IdCardType` is `ML`:
-- Sex string: `LELAKI` (male) and `PEREMPUAN` (female).
-- Birthday string: Date of birth.
-- ID string: ID number.
-- Name string: Name.
-- Address string: Address.
-- Type string: Identity document type.
+- Sex (string): `LELAKI` (male) and `PEREMPUAN` (female).
+- Birthday (string): Date of birth.
+- ID (string): ID number.
+- Name (string): Name.
+- Address (string): Address.
+- Type (string): Identity document type.
 
 When the value of `IdCardType` is `PhilippinesVoteID`:
-- Birthday string: Date of birth.
-- Address string: Address.
-- LastName string: Family name.
-- FirstName string: First name.
-- VIN string: VIN number.
-- CivilStatus string: Marital status.
-- Citizenship string: Citizenship.
-- PrecinctNo string: Region.
+- Birthday (string): Date of birth.
+- Address (string): Address.
+- LastName (string): Family name.
+- FirstName (string): First name.
+- VIN (string): VIN number.
+- CivilStatus (string): Marital status.
+- Citizenship (string): Citizenship.
+- PrecinctNo (string): Region.
 
 When the value of `IdCardType` is `PhilippinesDrivingLicense`:
-- Sex string: Gender.
-- Birthday string: Date of birth.
-- Name string: Name.
-- Address string: Address.
-- LastName string: Family name.
-- FirstName string: First name.
-- MiddleName string: Middle name.
-- Nationality string: Nationality.
-- LicenseNo string: License number.
-- ExpiresDate string: Validity period.
-- AgencyCode string: Agency code.
+- Sex (string): Gender.
+- Birthday (string): Date of birth.
+- Name (string): Name.
+- Address (string): Address.
+- LastName (string): Family name.
+- FirstName (string): First name.
+- MiddleName (string): Middle name.
+- Nationality (string): Nationality.
+- LicenseNo (string): License number.
+- ExpiresDate (string): Validity period.
+- AgencyCode (string): Agency code.
+
+When the value of `IdCardType` is `IndonesiaIDCard`:
+- NIK (string): Identity document No.
+- Nama (string): Name.
+- TempatTglLahir (string): Place/Date of birth.
+- JenisKelamin (string): Gender.
+- GolDarah (string): Blood type.
+- Alamat (string): Address.
+- RTRW (string): Street.
+- KelDesa (string): Village.
+- Kecamatan (string): Region.
+- Agama (string): Religion.
+- StatusPerkawinan (string): Marital status.
+- Perkerjaan (string): Profession.
+- KewargaNegaraan (string): Nationality.
+- BerlakuHingga (string): Expiry date of the identity document.
+- IssuedDate (string): Date of issuance.
+
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCardInfoOcrJson(FileInfo CardInfoOcrJson) {

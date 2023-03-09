@@ -160,30 +160,6 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *备份下载功能已调整，此接口即将下线
-
-TencentDB will soon stop supporting this API as the backup download feature has been modified.
-
-This API is used to get the permission to download a backup file. The detailed backup file information can be obtained through the `DescribeDBBackups` API.
-     * @param req DescribeBackupAccessRequest
-     * @return DescribeBackupAccessResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeBackupAccessResponse DescribeBackupAccess(DescribeBackupAccessRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeBackupAccessResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeBackupAccessResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeBackupAccess");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to query backup download task information.
      * @param req DescribeBackupDownloadTaskRequest
      * @return DescribeBackupDownloadTaskResponse

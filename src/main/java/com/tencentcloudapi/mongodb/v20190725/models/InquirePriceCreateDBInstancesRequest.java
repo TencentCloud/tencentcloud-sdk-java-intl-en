@@ -30,7 +30,7 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel{
     private String Zone;
 
     /**
-    * The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
+    * Number of primary and secondary nodes per shard. <br>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and the `MinNodeNum` and `MaxNodeNum` parameters are the minimal and maximum value respectively.</li></ul>
     */
     @SerializedName("NodeNum")
     @Expose
@@ -44,14 +44,14 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel{
     private Long Memory;
 
     /**
-    * Instance disk size in GB.
+    *  Instance disk size. <ul><li>Unit: GB</li><li>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and `MinStorage` and `MaxStorage` parameters are the minimal and maximum value of the disk size respectively.</br>
     */
     @SerializedName("Volume")
     @Expose
     private Long Volume;
 
     /**
-    * Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
+    * Instance version information. <ul><li>For specific supported versions, query through the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, the returned parameter `MongoVersionCode` in data structure `SpecItems` is the supported version information. </li><li>The correspondences between parameters and versions are as follows <ul><li>MONGO_3_WT: MongoDB 3.2 WiredTiger storage engine version. </li><li>MONGO_3_ROCKS: MongoDB 3.2 RocksDB storage engine version. </li><li>MONGO_36_WT: MongoDB 3.6 WiredTiger storage engine version. </li><li>MONGO_40_WT: MongoDB 4.0 WiredTiger storage engine version. </li><li>MONGO_42_WT: MongoDB 4.2 WiredTiger storage engine version. </li><li>MONGO_44_WT: MongoDB 4.4 WiredTiger storage engine version. </li></ul>
     */
     @SerializedName("MongoVersion")
     @Expose
@@ -72,13 +72,6 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel{
     private Long GoodsNum;
 
     /**
-    * Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
-    */
-    @SerializedName("Period")
-    @Expose
-    private Long Period;
-
-    /**
     * Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
     */
     @SerializedName("ClusterType")
@@ -91,6 +84,62 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel{
     @SerializedName("ReplicateSetNum")
     @Expose
     private Long ReplicateSetNum;
+
+    /**
+    * Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
+    */
+    @SerializedName("Period")
+    @Expose
+    private Long Period;
+
+    /**
+    * 
+    */
+    @SerializedName("InstanceChargeType")
+    @Expose
+    private String InstanceChargeType;
+
+    /**
+    * 
+    */
+    @SerializedName("MongosCpu")
+    @Expose
+    private Long MongosCpu;
+
+    /**
+    * 
+    */
+    @SerializedName("MongosMemory")
+    @Expose
+    private Long MongosMemory;
+
+    /**
+    * 
+    */
+    @SerializedName("MongosNum")
+    @Expose
+    private Long MongosNum;
+
+    /**
+    * 
+    */
+    @SerializedName("ConfigServerCpu")
+    @Expose
+    private Long ConfigServerCpu;
+
+    /**
+    * 
+    */
+    @SerializedName("ConfigServerMemory")
+    @Expose
+    private Long ConfigServerMemory;
+
+    /**
+    * 
+    */
+    @SerializedName("ConfigServerVolume")
+    @Expose
+    private Long ConfigServerVolume;
 
     /**
      * Get Instance region name in the format of ap-guangzhou-2. 
@@ -109,16 +158,16 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API. 
-     * @return NodeNum The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
+     * Get Number of primary and secondary nodes per shard. <br>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and the `MinNodeNum` and `MaxNodeNum` parameters are the minimal and maximum value respectively.</li></ul> 
+     * @return NodeNum Number of primary and secondary nodes per shard. <br>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and the `MinNodeNum` and `MaxNodeNum` parameters are the minimal and maximum value respectively.</li></ul>
      */
     public Long getNodeNum() {
         return this.NodeNum;
     }
 
     /**
-     * Set The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
-     * @param NodeNum The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
+     * Set Number of primary and secondary nodes per shard. <br>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and the `MinNodeNum` and `MaxNodeNum` parameters are the minimal and maximum value respectively.</li></ul>
+     * @param NodeNum Number of primary and secondary nodes per shard. <br>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and the `MinNodeNum` and `MaxNodeNum` parameters are the minimal and maximum value respectively.</li></ul>
      */
     public void setNodeNum(Long NodeNum) {
         this.NodeNum = NodeNum;
@@ -141,32 +190,32 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance disk size in GB. 
-     * @return Volume Instance disk size in GB.
+     * Get  Instance disk size. <ul><li>Unit: GB</li><li>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and `MinStorage` and `MaxStorage` parameters are the minimal and maximum value of the disk size respectively.</br> 
+     * @return Volume  Instance disk size. <ul><li>Unit: GB</li><li>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and `MinStorage` and `MaxStorage` parameters are the minimal and maximum value of the disk size respectively.</br>
      */
     public Long getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set Instance disk size in GB.
-     * @param Volume Instance disk size in GB.
+     * Set  Instance disk size. <ul><li>Unit: GB</li><li>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and `MinStorage` and `MaxStorage` parameters are the minimal and maximum value of the disk size respectively.</br>
+     * @param Volume  Instance disk size. <ul><li>Unit: GB</li><li>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and `MinStorage` and `MaxStorage` parameters are the minimal and maximum value of the disk size respectively.</br>
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;
     }
 
     /**
-     * Get Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition. 
-     * @return MongoVersion Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
+     * Get Instance version information. <ul><li>For specific supported versions, query through the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, the returned parameter `MongoVersionCode` in data structure `SpecItems` is the supported version information. </li><li>The correspondences between parameters and versions are as follows <ul><li>MONGO_3_WT: MongoDB 3.2 WiredTiger storage engine version. </li><li>MONGO_3_ROCKS: MongoDB 3.2 RocksDB storage engine version. </li><li>MONGO_36_WT: MongoDB 3.6 WiredTiger storage engine version. </li><li>MONGO_40_WT: MongoDB 4.0 WiredTiger storage engine version. </li><li>MONGO_42_WT: MongoDB 4.2 WiredTiger storage engine version. </li><li>MONGO_44_WT: MongoDB 4.4 WiredTiger storage engine version. </li></ul> 
+     * @return MongoVersion Instance version information. <ul><li>For specific supported versions, query through the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, the returned parameter `MongoVersionCode` in data structure `SpecItems` is the supported version information. </li><li>The correspondences between parameters and versions are as follows <ul><li>MONGO_3_WT: MongoDB 3.2 WiredTiger storage engine version. </li><li>MONGO_3_ROCKS: MongoDB 3.2 RocksDB storage engine version. </li><li>MONGO_36_WT: MongoDB 3.6 WiredTiger storage engine version. </li><li>MONGO_40_WT: MongoDB 4.0 WiredTiger storage engine version. </li><li>MONGO_42_WT: MongoDB 4.2 WiredTiger storage engine version. </li><li>MONGO_44_WT: MongoDB 4.4 WiredTiger storage engine version. </li></ul>
      */
     public String getMongoVersion() {
         return this.MongoVersion;
     }
 
     /**
-     * Set Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
-     * @param MongoVersion Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
+     * Set Instance version information. <ul><li>For specific supported versions, query through the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, the returned parameter `MongoVersionCode` in data structure `SpecItems` is the supported version information. </li><li>The correspondences between parameters and versions are as follows <ul><li>MONGO_3_WT: MongoDB 3.2 WiredTiger storage engine version. </li><li>MONGO_3_ROCKS: MongoDB 3.2 RocksDB storage engine version. </li><li>MONGO_36_WT: MongoDB 3.6 WiredTiger storage engine version. </li><li>MONGO_40_WT: MongoDB 4.0 WiredTiger storage engine version. </li><li>MONGO_42_WT: MongoDB 4.2 WiredTiger storage engine version. </li><li>MONGO_44_WT: MongoDB 4.4 WiredTiger storage engine version. </li></ul>
+     * @param MongoVersion Instance version information. <ul><li>For specific supported versions, query through the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, the returned parameter `MongoVersionCode` in data structure `SpecItems` is the supported version information. </li><li>The correspondences between parameters and versions are as follows <ul><li>MONGO_3_WT: MongoDB 3.2 WiredTiger storage engine version. </li><li>MONGO_3_ROCKS: MongoDB 3.2 RocksDB storage engine version. </li><li>MONGO_36_WT: MongoDB 3.6 WiredTiger storage engine version. </li><li>MONGO_40_WT: MongoDB 4.0 WiredTiger storage engine version. </li><li>MONGO_42_WT: MongoDB 4.2 WiredTiger storage engine version. </li><li>MONGO_44_WT: MongoDB 4.4 WiredTiger storage engine version. </li></ul>
      */
     public void setMongoVersion(String MongoVersion) {
         this.MongoVersion = MongoVersion;
@@ -205,22 +254,6 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36. 
-     * @return Period Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
-     */
-    public Long getPeriod() {
-        return this.Period;
-    }
-
-    /**
-     * Set Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
-     * @param Period Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
-     */
-    public void setPeriod(Long Period) {
-        this.Period = Period;
-    }
-
-    /**
      * Get Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node). 
      * @return ClusterType Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
      */
@@ -252,6 +285,134 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel{
         this.ReplicateSetNum = ReplicateSetNum;
     }
 
+    /**
+     * Get Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36. 
+     * @return Period Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
+     */
+    public Long getPeriod() {
+        return this.Period;
+    }
+
+    /**
+     * Set Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
+     * @param Period Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
+     */
+    public void setPeriod(Long Period) {
+        this.Period = Period;
+    }
+
+    /**
+     * Get  
+     * @return InstanceChargeType 
+     */
+    public String getInstanceChargeType() {
+        return this.InstanceChargeType;
+    }
+
+    /**
+     * Set 
+     * @param InstanceChargeType 
+     */
+    public void setInstanceChargeType(String InstanceChargeType) {
+        this.InstanceChargeType = InstanceChargeType;
+    }
+
+    /**
+     * Get  
+     * @return MongosCpu 
+     */
+    public Long getMongosCpu() {
+        return this.MongosCpu;
+    }
+
+    /**
+     * Set 
+     * @param MongosCpu 
+     */
+    public void setMongosCpu(Long MongosCpu) {
+        this.MongosCpu = MongosCpu;
+    }
+
+    /**
+     * Get  
+     * @return MongosMemory 
+     */
+    public Long getMongosMemory() {
+        return this.MongosMemory;
+    }
+
+    /**
+     * Set 
+     * @param MongosMemory 
+     */
+    public void setMongosMemory(Long MongosMemory) {
+        this.MongosMemory = MongosMemory;
+    }
+
+    /**
+     * Get  
+     * @return MongosNum 
+     */
+    public Long getMongosNum() {
+        return this.MongosNum;
+    }
+
+    /**
+     * Set 
+     * @param MongosNum 
+     */
+    public void setMongosNum(Long MongosNum) {
+        this.MongosNum = MongosNum;
+    }
+
+    /**
+     * Get  
+     * @return ConfigServerCpu 
+     */
+    public Long getConfigServerCpu() {
+        return this.ConfigServerCpu;
+    }
+
+    /**
+     * Set 
+     * @param ConfigServerCpu 
+     */
+    public void setConfigServerCpu(Long ConfigServerCpu) {
+        this.ConfigServerCpu = ConfigServerCpu;
+    }
+
+    /**
+     * Get  
+     * @return ConfigServerMemory 
+     */
+    public Long getConfigServerMemory() {
+        return this.ConfigServerMemory;
+    }
+
+    /**
+     * Set 
+     * @param ConfigServerMemory 
+     */
+    public void setConfigServerMemory(Long ConfigServerMemory) {
+        this.ConfigServerMemory = ConfigServerMemory;
+    }
+
+    /**
+     * Get  
+     * @return ConfigServerVolume 
+     */
+    public Long getConfigServerVolume() {
+        return this.ConfigServerVolume;
+    }
+
+    /**
+     * Set 
+     * @param ConfigServerVolume 
+     */
+    public void setConfigServerVolume(Long ConfigServerVolume) {
+        this.ConfigServerVolume = ConfigServerVolume;
+    }
+
     public InquirePriceCreateDBInstancesRequest() {
     }
 
@@ -281,14 +442,35 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel{
         if (source.GoodsNum != null) {
             this.GoodsNum = new Long(source.GoodsNum);
         }
-        if (source.Period != null) {
-            this.Period = new Long(source.Period);
-        }
         if (source.ClusterType != null) {
             this.ClusterType = new String(source.ClusterType);
         }
         if (source.ReplicateSetNum != null) {
             this.ReplicateSetNum = new Long(source.ReplicateSetNum);
+        }
+        if (source.Period != null) {
+            this.Period = new Long(source.Period);
+        }
+        if (source.InstanceChargeType != null) {
+            this.InstanceChargeType = new String(source.InstanceChargeType);
+        }
+        if (source.MongosCpu != null) {
+            this.MongosCpu = new Long(source.MongosCpu);
+        }
+        if (source.MongosMemory != null) {
+            this.MongosMemory = new Long(source.MongosMemory);
+        }
+        if (source.MongosNum != null) {
+            this.MongosNum = new Long(source.MongosNum);
+        }
+        if (source.ConfigServerCpu != null) {
+            this.ConfigServerCpu = new Long(source.ConfigServerCpu);
+        }
+        if (source.ConfigServerMemory != null) {
+            this.ConfigServerMemory = new Long(source.ConfigServerMemory);
+        }
+        if (source.ConfigServerVolume != null) {
+            this.ConfigServerVolume = new Long(source.ConfigServerVolume);
         }
     }
 
@@ -304,9 +486,16 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MongoVersion", this.MongoVersion);
         this.setParamSimple(map, prefix + "MachineCode", this.MachineCode);
         this.setParamSimple(map, prefix + "GoodsNum", this.GoodsNum);
-        this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
         this.setParamSimple(map, prefix + "ReplicateSetNum", this.ReplicateSetNum);
+        this.setParamSimple(map, prefix + "Period", this.Period);
+        this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+        this.setParamSimple(map, prefix + "MongosCpu", this.MongosCpu);
+        this.setParamSimple(map, prefix + "MongosMemory", this.MongosMemory);
+        this.setParamSimple(map, prefix + "MongosNum", this.MongosNum);
+        this.setParamSimple(map, prefix + "ConfigServerCpu", this.ConfigServerCpu);
+        this.setParamSimple(map, prefix + "ConfigServerMemory", this.ConfigServerMemory);
+        this.setParamSimple(map, prefix + "ConfigServerVolume", this.ConfigServerVolume);
 
     }
 }

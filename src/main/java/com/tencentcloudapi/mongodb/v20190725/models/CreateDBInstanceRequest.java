@@ -114,7 +114,7 @@ public class CreateDBInstanceRequest extends AbstractModel{
     private String SubnetId;
 
     /**
-    * Instance password, which must contain 8 to 16 characters and comprise at least two of the following types: letters, digits, and symbols (!@#%^*()). If it is left empty, the password is in the format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001".
+    * Instance password. If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_).
     */
     @SerializedName("Password")
     @Expose
@@ -203,6 +203,27 @@ public class CreateDBInstanceRequest extends AbstractModel{
     @SerializedName("MongosNodeNum")
     @Expose
     private Long MongosNodeNum;
+
+    /**
+    * Number of read-only nodes. Value range: 2-7.
+    */
+    @SerializedName("ReadonlyNodeNum")
+    @Expose
+    private Long ReadonlyNodeNum;
+
+    /**
+    * The AZ where the read-only node is deployed
+    */
+    @SerializedName("ReadonlyNodeAvailabilityZoneList")
+    @Expose
+    private String [] ReadonlyNodeAvailabilityZoneList;
+
+    /**
+    * The AZ where the hidden node resides. It is required for cross-AZ instances.
+    */
+    @SerializedName("HiddenZone")
+    @Expose
+    private String HiddenZone;
 
     /**
      * Get The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API. 
@@ -413,16 +434,16 @@ public class CreateDBInstanceRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance password, which must contain 8 to 16 characters and comprise at least two of the following types: letters, digits, and symbols (!@#%^*()). If it is left empty, the password is in the format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". 
-     * @return Password Instance password, which must contain 8 to 16 characters and comprise at least two of the following types: letters, digits, and symbols (!@#%^*()). If it is left empty, the password is in the format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001".
+     * Get Instance password. If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_). 
+     * @return Password Instance password. If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_).
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Instance password, which must contain 8 to 16 characters and comprise at least two of the following types: letters, digits, and symbols (!@#%^*()). If it is left empty, the password is in the format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001".
-     * @param Password Instance password, which must contain 8 to 16 characters and comprise at least two of the following types: letters, digits, and symbols (!@#%^*()). If it is left empty, the password is in the format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001".
+     * Set Instance password. If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_).
+     * @param Password Instance password. If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_).
      */
     public void setPassword(String Password) {
         this.Password = Password;
@@ -620,6 +641,54 @@ public class CreateDBInstanceRequest extends AbstractModel{
         this.MongosNodeNum = MongosNodeNum;
     }
 
+    /**
+     * Get Number of read-only nodes. Value range: 2-7. 
+     * @return ReadonlyNodeNum Number of read-only nodes. Value range: 2-7.
+     */
+    public Long getReadonlyNodeNum() {
+        return this.ReadonlyNodeNum;
+    }
+
+    /**
+     * Set Number of read-only nodes. Value range: 2-7.
+     * @param ReadonlyNodeNum Number of read-only nodes. Value range: 2-7.
+     */
+    public void setReadonlyNodeNum(Long ReadonlyNodeNum) {
+        this.ReadonlyNodeNum = ReadonlyNodeNum;
+    }
+
+    /**
+     * Get The AZ where the read-only node is deployed 
+     * @return ReadonlyNodeAvailabilityZoneList The AZ where the read-only node is deployed
+     */
+    public String [] getReadonlyNodeAvailabilityZoneList() {
+        return this.ReadonlyNodeAvailabilityZoneList;
+    }
+
+    /**
+     * Set The AZ where the read-only node is deployed
+     * @param ReadonlyNodeAvailabilityZoneList The AZ where the read-only node is deployed
+     */
+    public void setReadonlyNodeAvailabilityZoneList(String [] ReadonlyNodeAvailabilityZoneList) {
+        this.ReadonlyNodeAvailabilityZoneList = ReadonlyNodeAvailabilityZoneList;
+    }
+
+    /**
+     * Get The AZ where the hidden node resides. It is required for cross-AZ instances. 
+     * @return HiddenZone The AZ where the hidden node resides. It is required for cross-AZ instances.
+     */
+    public String getHiddenZone() {
+        return this.HiddenZone;
+    }
+
+    /**
+     * Set The AZ where the hidden node resides. It is required for cross-AZ instances.
+     * @param HiddenZone The AZ where the hidden node resides. It is required for cross-AZ instances.
+     */
+    public void setHiddenZone(String HiddenZone) {
+        this.HiddenZone = HiddenZone;
+    }
+
     public CreateDBInstanceRequest() {
     }
 
@@ -715,6 +784,18 @@ public class CreateDBInstanceRequest extends AbstractModel{
         if (source.MongosNodeNum != null) {
             this.MongosNodeNum = new Long(source.MongosNodeNum);
         }
+        if (source.ReadonlyNodeNum != null) {
+            this.ReadonlyNodeNum = new Long(source.ReadonlyNodeNum);
+        }
+        if (source.ReadonlyNodeAvailabilityZoneList != null) {
+            this.ReadonlyNodeAvailabilityZoneList = new String[source.ReadonlyNodeAvailabilityZoneList.length];
+            for (int i = 0; i < source.ReadonlyNodeAvailabilityZoneList.length; i++) {
+                this.ReadonlyNodeAvailabilityZoneList[i] = new String(source.ReadonlyNodeAvailabilityZoneList[i]);
+            }
+        }
+        if (source.HiddenZone != null) {
+            this.HiddenZone = new String(source.HiddenZone);
+        }
     }
 
 
@@ -748,6 +829,9 @@ public class CreateDBInstanceRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "MongosCpu", this.MongosCpu);
         this.setParamSimple(map, prefix + "MongosMemory", this.MongosMemory);
         this.setParamSimple(map, prefix + "MongosNodeNum", this.MongosNodeNum);
+        this.setParamSimple(map, prefix + "ReadonlyNodeNum", this.ReadonlyNodeNum);
+        this.setParamArraySimple(map, prefix + "ReadonlyNodeAvailabilityZoneList.", this.ReadonlyNodeAvailabilityZoneList);
+        this.setParamSimple(map, prefix + "HiddenZone", this.HiddenZone);
 
     }
 }
