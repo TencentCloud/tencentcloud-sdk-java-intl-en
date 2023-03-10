@@ -459,6 +459,46 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get the DataHub topic attributes.
+     * @param req DescribeDatahubTopicRequest
+     * @return DescribeDatahubTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatahubTopicResponse DescribeDatahubTopic(DescribeDatahubTopicRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDatahubTopicResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDatahubTopicResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDatahubTopic");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the DataHub topic list.
+     * @param req DescribeDatahubTopicsRequest
+     * @return DescribeDatahubTopicsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatahubTopicsResponse DescribeDatahubTopics(DescribeDatahubTopicsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDatahubTopicsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDatahubTopicsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDatahubTopics");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to enumerate consumer groups (simplified).
      * @param req DescribeGroupRequest
      * @return DescribeGroupResponse

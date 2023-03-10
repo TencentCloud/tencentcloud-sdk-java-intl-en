@@ -85,6 +85,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String AttackContent;
 
     /**
+    * The rule type. Values:
+<li>`waf`: Tencent Cloud-managed rule</li>
+<li>`acl`: Custom rule</li>
+<li>`rate`: Rate limiting rule</li>
+<li>`bot`: Bot rule</li>
+    */
+    @SerializedName("RuleType")
+    @Expose
+    private String RuleType;
+
+    /**
+    * Whether to enable the rule
+    */
+    @SerializedName("RuleEnabled")
+    @Expose
+    private Boolean RuleEnabled;
+
+    /**
+    * Whether the rule is deleted. Values: 
+<li>`true`: The rule has been deleted (does not exist).</li>
+<li>`false`: The rule is not deleted (exists).</li>
+    */
+    @SerializedName("RuleDeleted")
+    @Expose
+    private Boolean RuleDeleted;
+
+    /**
+    * Whether to enable alerting for this rule
+    */
+    @SerializedName("AlarmEnabled")
+    @Expose
+    private Boolean AlarmEnabled;
+
+    /**
      * Get The rule ID. 
      * @return RuleId The rule ID.
      */
@@ -248,6 +282,94 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.AttackContent = AttackContent;
     }
 
+    /**
+     * Get The rule type. Values:
+<li>`waf`: Tencent Cloud-managed rule</li>
+<li>`acl`: Custom rule</li>
+<li>`rate`: Rate limiting rule</li>
+<li>`bot`: Bot rule</li> 
+     * @return RuleType The rule type. Values:
+<li>`waf`: Tencent Cloud-managed rule</li>
+<li>`acl`: Custom rule</li>
+<li>`rate`: Rate limiting rule</li>
+<li>`bot`: Bot rule</li>
+     */
+    public String getRuleType() {
+        return this.RuleType;
+    }
+
+    /**
+     * Set The rule type. Values:
+<li>`waf`: Tencent Cloud-managed rule</li>
+<li>`acl`: Custom rule</li>
+<li>`rate`: Rate limiting rule</li>
+<li>`bot`: Bot rule</li>
+     * @param RuleType The rule type. Values:
+<li>`waf`: Tencent Cloud-managed rule</li>
+<li>`acl`: Custom rule</li>
+<li>`rate`: Rate limiting rule</li>
+<li>`bot`: Bot rule</li>
+     */
+    public void setRuleType(String RuleType) {
+        this.RuleType = RuleType;
+    }
+
+    /**
+     * Get Whether to enable the rule 
+     * @return RuleEnabled Whether to enable the rule
+     */
+    public Boolean getRuleEnabled() {
+        return this.RuleEnabled;
+    }
+
+    /**
+     * Set Whether to enable the rule
+     * @param RuleEnabled Whether to enable the rule
+     */
+    public void setRuleEnabled(Boolean RuleEnabled) {
+        this.RuleEnabled = RuleEnabled;
+    }
+
+    /**
+     * Get Whether the rule is deleted. Values: 
+<li>`true`: The rule has been deleted (does not exist).</li>
+<li>`false`: The rule is not deleted (exists).</li> 
+     * @return RuleDeleted Whether the rule is deleted. Values: 
+<li>`true`: The rule has been deleted (does not exist).</li>
+<li>`false`: The rule is not deleted (exists).</li>
+     */
+    public Boolean getRuleDeleted() {
+        return this.RuleDeleted;
+    }
+
+    /**
+     * Set Whether the rule is deleted. Values: 
+<li>`true`: The rule has been deleted (does not exist).</li>
+<li>`false`: The rule is not deleted (exists).</li>
+     * @param RuleDeleted Whether the rule is deleted. Values: 
+<li>`true`: The rule has been deleted (does not exist).</li>
+<li>`false`: The rule is not deleted (exists).</li>
+     */
+    public void setRuleDeleted(Boolean RuleDeleted) {
+        this.RuleDeleted = RuleDeleted;
+    }
+
+    /**
+     * Get Whether to enable alerting for this rule 
+     * @return AlarmEnabled Whether to enable alerting for this rule
+     */
+    public Boolean getAlarmEnabled() {
+        return this.AlarmEnabled;
+    }
+
+    /**
+     * Set Whether to enable alerting for this rule
+     * @param AlarmEnabled Whether to enable alerting for this rule
+     */
+    public void setAlarmEnabled(Boolean AlarmEnabled) {
+        this.AlarmEnabled = AlarmEnabled;
+    }
+
     public SecRuleRelatedInfo() {
     }
 
@@ -277,6 +399,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.AttackContent != null) {
             this.AttackContent = new String(source.AttackContent);
         }
+        if (source.RuleType != null) {
+            this.RuleType = new String(source.RuleType);
+        }
+        if (source.RuleEnabled != null) {
+            this.RuleEnabled = new Boolean(source.RuleEnabled);
+        }
+        if (source.RuleDeleted != null) {
+            this.RuleDeleted = new Boolean(source.RuleDeleted);
+        }
+        if (source.AlarmEnabled != null) {
+            this.AlarmEnabled = new Boolean(source.AlarmEnabled);
+        }
     }
 
 
@@ -291,6 +425,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "RuleTypeName", this.RuleTypeName);
         this.setParamSimple(map, prefix + "AttackContent", this.AttackContent);
+        this.setParamSimple(map, prefix + "RuleType", this.RuleType);
+        this.setParamSimple(map, prefix + "RuleEnabled", this.RuleEnabled);
+        this.setParamSimple(map, prefix + "RuleDeleted", this.RuleDeleted);
+        this.setParamSimple(map, prefix + "AlarmEnabled", this.AlarmEnabled);
 
     }
 }

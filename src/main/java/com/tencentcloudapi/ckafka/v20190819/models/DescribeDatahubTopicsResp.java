@@ -13,53 +13,82 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dts.v20211206.models;
+package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OnlineDDL extends AbstractModel{
+public class DescribeDatahubTopicsResp extends AbstractModel{
 
     /**
-    * Status
+    * Total count
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
+    * Topic list
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("Status")
+    @SerializedName("TopicList")
     @Expose
-    private String Status;
+    private DatahubTopicDTO [] TopicList;
 
     /**
-     * Get Status
+     * Get Total count 
+     * @return TotalCount Total count
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set Total count
+     * @param TotalCount Total count
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get Topic list
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Status
+     * @return TopicList Topic list
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getStatus() {
-        return this.Status;
+    public DatahubTopicDTO [] getTopicList() {
+        return this.TopicList;
     }
 
     /**
-     * Set Status
+     * Set Topic list
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Status
+     * @param TopicList Topic list
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setStatus(String Status) {
-        this.Status = Status;
+    public void setTopicList(DatahubTopicDTO [] TopicList) {
+        this.TopicList = TopicList;
     }
 
-    public OnlineDDL() {
+    public DescribeDatahubTopicsResp() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public OnlineDDL(OnlineDDL source) {
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
+    public DescribeDatahubTopicsResp(DescribeDatahubTopicsResp source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.TopicList != null) {
+            this.TopicList = new DatahubTopicDTO[source.TopicList.length];
+            for (int i = 0; i < source.TopicList.length; i++) {
+                this.TopicList[i] = new DatahubTopicDTO(source.TopicList[i]);
+            }
         }
     }
 
@@ -68,7 +97,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "TopicList.", this.TopicList);
 
     }
 }

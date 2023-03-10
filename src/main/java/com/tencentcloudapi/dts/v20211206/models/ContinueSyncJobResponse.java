@@ -20,46 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OnlineDDL extends AbstractModel{
+public class ContinueSyncJobResponse extends AbstractModel{
 
     /**
-    * Status
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
-    @SerializedName("Status")
+    @SerializedName("RequestId")
     @Expose
-    private String Status;
+    private String RequestId;
 
     /**
-     * Get Status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
+     * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public String getStatus() {
-        return this.Status;
+    public String getRequestId() {
+        return this.RequestId;
     }
 
     /**
-     * Set Status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public void setStatus(String Status) {
-        this.Status = Status;
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
     }
 
-    public OnlineDDL() {
+    public ContinueSyncJobResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public OnlineDDL(OnlineDDL source) {
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
+    public ContinueSyncJobResponse(ContinueSyncJobResponse source) {
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
         }
     }
 
@@ -68,7 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
 }

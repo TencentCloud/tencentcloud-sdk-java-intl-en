@@ -45,9 +45,8 @@ public class CreateAliasDomainRequest extends AbstractModel{
 
     /**
     * Certificate configuration. Values:
-<li>`none`: Off</li>
+<li>`none`: (Default) Do not configure</li>
 <li>`hosting`: Managed SSL certificate</li>
-<li>`apply`: Free certificate</li>Default value: none
     */
     @SerializedName("CertType")
     @Expose
@@ -110,13 +109,11 @@ public class CreateAliasDomainRequest extends AbstractModel{
 
     /**
      * Get Certificate configuration. Values:
-<li>`none`: Off</li>
-<li>`hosting`: Managed SSL certificate</li>
-<li>`apply`: Free certificate</li>Default value: none 
+<li>`none`: (Default) Do not configure</li>
+<li>`hosting`: Managed SSL certificate</li> 
      * @return CertType Certificate configuration. Values:
-<li>`none`: Off</li>
+<li>`none`: (Default) Do not configure</li>
 <li>`hosting`: Managed SSL certificate</li>
-<li>`apply`: Free certificate</li>Default value: none
      */
     public String getCertType() {
         return this.CertType;
@@ -124,13 +121,11 @@ public class CreateAliasDomainRequest extends AbstractModel{
 
     /**
      * Set Certificate configuration. Values:
-<li>`none`: Off</li>
+<li>`none`: (Default) Do not configure</li>
 <li>`hosting`: Managed SSL certificate</li>
-<li>`apply`: Free certificate</li>Default value: none
      * @param CertType Certificate configuration. Values:
-<li>`none`: Off</li>
+<li>`none`: (Default) Do not configure</li>
 <li>`hosting`: Managed SSL certificate</li>
-<li>`apply`: Free certificate</li>Default value: none
      */
     public void setCertType(String CertType) {
         this.CertType = CertType;

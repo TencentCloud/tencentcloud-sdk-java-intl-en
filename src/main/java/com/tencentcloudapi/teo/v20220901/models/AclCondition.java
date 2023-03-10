@@ -34,6 +34,7 @@ public class AclCondition extends AbstractModel{
 <li>`accept`: Request content type</li>
 <li>`method`: Request method</li>
 <li>`header`: Request header</li>
+<li>`app_proto`: Application layer protocol</li>
 <li>`sip_proto`: Network layer protocol</li>
     */
     @SerializedName("MatchFrom")
@@ -89,6 +90,7 @@ public class AclCondition extends AbstractModel{
 <li>`accept`: Request content type</li>
 <li>`method`: Request method</li>
 <li>`header`: Request header</li>
+<li>`app_proto`: Application layer protocol</li>
 <li>`sip_proto`: Network layer protocol</li> 
      * @return MatchFrom The field to match. Values:
 <li>`host`: Request domain name</li>
@@ -101,6 +103,7 @@ public class AclCondition extends AbstractModel{
 <li>`accept`: Request content type</li>
 <li>`method`: Request method</li>
 <li>`header`: Request header</li>
+<li>`app_proto`: Application layer protocol</li>
 <li>`sip_proto`: Network layer protocol</li>
      */
     public String getMatchFrom() {
@@ -119,6 +122,7 @@ public class AclCondition extends AbstractModel{
 <li>`accept`: Request content type</li>
 <li>`method`: Request method</li>
 <li>`header`: Request header</li>
+<li>`app_proto`: Application layer protocol</li>
 <li>`sip_proto`: Network layer protocol</li>
      * @param MatchFrom The field to match. Values:
 <li>`host`: Request domain name</li>
@@ -131,6 +135,7 @@ public class AclCondition extends AbstractModel{
 <li>`accept`: Request content type</li>
 <li>`method`: Request method</li>
 <li>`header`: Request header</li>
+<li>`app_proto`: Application layer protocol</li>
 <li>`sip_proto`: Network layer protocol</li>
      */
     public void setMatchFrom(String MatchFrom) {

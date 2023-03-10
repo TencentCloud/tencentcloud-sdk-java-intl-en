@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CompareTaskItem extends AbstractModel{
 
     /**
-    * Migration task ID
+    * Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("JobId")
@@ -111,9 +111,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String FinishedAt;
 
     /**
-     * Get Migration task ID
+    * Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Method")
+    @Expose
+    private String Method;
+
+    /**
+    * Configuration information of the comparison task
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Options")
+    @Expose
+    private CompareOptions Options;
+
+    /**
+    * Consistency check prompt message
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Message")
+    @Expose
+    private String Message;
+
+    /**
+     * Get Task ID
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return JobId Migration task ID
+     * @return JobId Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getJobId() {
@@ -121,9 +145,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Migration task ID
+     * Set Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param JobId Migration task ID
+     * @param JobId Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setJobId(String JobId) {
@@ -330,6 +354,66 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.FinishedAt = FinishedAt;
     }
 
+    /**
+     * Get Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Method Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getMethod() {
+        return this.Method;
+    }
+
+    /**
+     * Set Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Method Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMethod(String Method) {
+        this.Method = Method;
+    }
+
+    /**
+     * Get Configuration information of the comparison task
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Options Configuration information of the comparison task
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public CompareOptions getOptions() {
+        return this.Options;
+    }
+
+    /**
+     * Set Configuration information of the comparison task
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Options Configuration information of the comparison task
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setOptions(CompareOptions Options) {
+        this.Options = Options;
+    }
+
+    /**
+     * Get Consistency check prompt message
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Message Consistency check prompt message
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * Set Consistency check prompt message
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Message Consistency check prompt message
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMessage(String Message) {
+        this.Message = Message;
+    }
+
     public CompareTaskItem() {
     }
 
@@ -371,6 +455,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.FinishedAt != null) {
             this.FinishedAt = new String(source.FinishedAt);
         }
+        if (source.Method != null) {
+            this.Method = new String(source.Method);
+        }
+        if (source.Options != null) {
+            this.Options = new CompareOptions(source.Options);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
     }
 
 
@@ -389,6 +482,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "StartedAt", this.StartedAt);
         this.setParamSimple(map, prefix + "FinishedAt", this.FinishedAt);
+        this.setParamSimple(map, prefix + "Method", this.Method);
+        this.setParamObj(map, prefix + "Options.", this.Options);
+        this.setParamSimple(map, prefix + "Message", this.Message);
 
     }
 }

@@ -44,6 +44,20 @@ public class DescribeCompareTasksRequest extends AbstractModel{
     private Long Offset;
 
     /**
+    * Check task ID
+    */
+    @SerializedName("CompareTaskId")
+    @Expose
+    private String CompareTaskId;
+
+    /**
+    * Data consistency check task status. Valid values: `created`, `readyRun`, `running`, `success`, `stopping`, `failed`, `canceled`.
+    */
+    @SerializedName("Status")
+    @Expose
+    private String [] Status;
+
+    /**
      * Get Migration task ID 
      * @return JobId Migration task ID
      */
@@ -91,6 +105,38 @@ public class DescribeCompareTasksRequest extends AbstractModel{
         this.Offset = Offset;
     }
 
+    /**
+     * Get Check task ID 
+     * @return CompareTaskId Check task ID
+     */
+    public String getCompareTaskId() {
+        return this.CompareTaskId;
+    }
+
+    /**
+     * Set Check task ID
+     * @param CompareTaskId Check task ID
+     */
+    public void setCompareTaskId(String CompareTaskId) {
+        this.CompareTaskId = CompareTaskId;
+    }
+
+    /**
+     * Get Data consistency check task status. Valid values: `created`, `readyRun`, `running`, `success`, `stopping`, `failed`, `canceled`. 
+     * @return Status Data consistency check task status. Valid values: `created`, `readyRun`, `running`, `success`, `stopping`, `failed`, `canceled`.
+     */
+    public String [] getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Data consistency check task status. Valid values: `created`, `readyRun`, `running`, `success`, `stopping`, `failed`, `canceled`.
+     * @param Status Data consistency check task status. Valid values: `created`, `readyRun`, `running`, `success`, `stopping`, `failed`, `canceled`.
+     */
+    public void setStatus(String [] Status) {
+        this.Status = Status;
+    }
+
     public DescribeCompareTasksRequest() {
     }
 
@@ -108,6 +154,15 @@ public class DescribeCompareTasksRequest extends AbstractModel{
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.CompareTaskId != null) {
+            this.CompareTaskId = new String(source.CompareTaskId);
+        }
+        if (source.Status != null) {
+            this.Status = new String[source.Status.length];
+            for (int i = 0; i < source.Status.length; i++) {
+                this.Status[i] = new String(source.Status[i]);
+            }
+        }
     }
 
 
@@ -118,6 +173,8 @@ public class DescribeCompareTasksRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "CompareTaskId", this.CompareTaskId);
+        this.setParamArraySimple(map, prefix + "Status.", this.Status);
 
     }
 }

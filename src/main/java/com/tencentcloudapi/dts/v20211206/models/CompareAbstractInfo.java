@@ -23,6 +23,22 @@ import java.util.HashMap;
 public class CompareAbstractInfo extends AbstractModel{
 
     /**
+    * Configuration parameters of the check task
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Options")
+    @Expose
+    private CompareOptions Options;
+
+    /**
+    * Consistency check objects
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Objects")
+    @Expose
+    private CompareObject Objects;
+
+    /**
     * Comparison conclusion. Valid values: `same`, `different`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -71,12 +87,92 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long SkippedTables;
 
     /**
+    * The estimated number of tables
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("NearlyTableCount")
+    @Expose
+    private Long NearlyTableCount;
+
+    /**
     * Number of inconsistent data rows
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DifferentRows")
     @Expose
     private Long DifferentRows;
+
+    /**
+    * Source database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SrcSampleRows")
+    @Expose
+    private Long SrcSampleRows;
+
+    /**
+    * Target database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DstSampleRows")
+    @Expose
+    private Long DstSampleRows;
+
+    /**
+    * Start time
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("StartedAt")
+    @Expose
+    private String StartedAt;
+
+    /**
+    * End time
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("FinishedAt")
+    @Expose
+    private String FinishedAt;
+
+    /**
+     * Get Configuration parameters of the check task
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Options Configuration parameters of the check task
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public CompareOptions getOptions() {
+        return this.Options;
+    }
+
+    /**
+     * Set Configuration parameters of the check task
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Options Configuration parameters of the check task
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setOptions(CompareOptions Options) {
+        this.Options = Options;
+    }
+
+    /**
+     * Get Consistency check objects
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Objects Consistency check objects
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public CompareObject getObjects() {
+        return this.Objects;
+    }
+
+    /**
+     * Set Consistency check objects
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Objects Consistency check objects
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setObjects(CompareObject Objects) {
+        this.Objects = Objects;
+    }
 
     /**
      * Get Comparison conclusion. Valid values: `same`, `different`.
@@ -199,6 +295,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get The estimated number of tables
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return NearlyTableCount The estimated number of tables
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getNearlyTableCount() {
+        return this.NearlyTableCount;
+    }
+
+    /**
+     * Set The estimated number of tables
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param NearlyTableCount The estimated number of tables
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setNearlyTableCount(Long NearlyTableCount) {
+        this.NearlyTableCount = NearlyTableCount;
+    }
+
+    /**
      * Get Number of inconsistent data rows
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return DifferentRows Number of inconsistent data rows
@@ -218,6 +334,86 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.DifferentRows = DifferentRows;
     }
 
+    /**
+     * Get Source database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SrcSampleRows Source database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getSrcSampleRows() {
+        return this.SrcSampleRows;
+    }
+
+    /**
+     * Set Source database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SrcSampleRows Source database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSrcSampleRows(Long SrcSampleRows) {
+        this.SrcSampleRows = SrcSampleRows;
+    }
+
+    /**
+     * Get Target database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DstSampleRows Target database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getDstSampleRows() {
+        return this.DstSampleRows;
+    }
+
+    /**
+     * Set Target database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DstSampleRows Target database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDstSampleRows(Long DstSampleRows) {
+        this.DstSampleRows = DstSampleRows;
+    }
+
+    /**
+     * Get Start time
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return StartedAt Start time
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getStartedAt() {
+        return this.StartedAt;
+    }
+
+    /**
+     * Set Start time
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param StartedAt Start time
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setStartedAt(String StartedAt) {
+        this.StartedAt = StartedAt;
+    }
+
+    /**
+     * Get End time
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return FinishedAt End time
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getFinishedAt() {
+        return this.FinishedAt;
+    }
+
+    /**
+     * Set End time
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param FinishedAt End time
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setFinishedAt(String FinishedAt) {
+        this.FinishedAt = FinishedAt;
+    }
+
     public CompareAbstractInfo() {
     }
 
@@ -226,6 +422,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CompareAbstractInfo(CompareAbstractInfo source) {
+        if (source.Options != null) {
+            this.Options = new CompareOptions(source.Options);
+        }
+        if (source.Objects != null) {
+            this.Objects = new CompareObject(source.Objects);
+        }
         if (source.Conclusion != null) {
             this.Conclusion = new String(source.Conclusion);
         }
@@ -244,8 +446,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.SkippedTables != null) {
             this.SkippedTables = new Long(source.SkippedTables);
         }
+        if (source.NearlyTableCount != null) {
+            this.NearlyTableCount = new Long(source.NearlyTableCount);
+        }
         if (source.DifferentRows != null) {
             this.DifferentRows = new Long(source.DifferentRows);
+        }
+        if (source.SrcSampleRows != null) {
+            this.SrcSampleRows = new Long(source.SrcSampleRows);
+        }
+        if (source.DstSampleRows != null) {
+            this.DstSampleRows = new Long(source.DstSampleRows);
+        }
+        if (source.StartedAt != null) {
+            this.StartedAt = new String(source.StartedAt);
+        }
+        if (source.FinishedAt != null) {
+            this.FinishedAt = new String(source.FinishedAt);
         }
     }
 
@@ -254,13 +471,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Options.", this.Options);
+        this.setParamObj(map, prefix + "Objects.", this.Objects);
         this.setParamSimple(map, prefix + "Conclusion", this.Conclusion);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "TotalTables", this.TotalTables);
         this.setParamSimple(map, prefix + "CheckedTables", this.CheckedTables);
         this.setParamSimple(map, prefix + "DifferentTables", this.DifferentTables);
         this.setParamSimple(map, prefix + "SkippedTables", this.SkippedTables);
+        this.setParamSimple(map, prefix + "NearlyTableCount", this.NearlyTableCount);
         this.setParamSimple(map, prefix + "DifferentRows", this.DifferentRows);
+        this.setParamSimple(map, prefix + "SrcSampleRows", this.SrcSampleRows);
+        this.setParamSimple(map, prefix + "DstSampleRows", this.DstSampleRows);
+        this.setParamSimple(map, prefix + "StartedAt", this.StartedAt);
+        this.setParamSimple(map, prefix + "FinishedAt", this.FinishedAt);
 
     }
 }

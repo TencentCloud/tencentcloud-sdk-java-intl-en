@@ -51,6 +51,9 @@ public enum TeoErrorCode {
     // Too many attempts. Please try again later.
      INVALIDPARAMETER_ACTIONINPROGRESS("InvalidParameter.ActionInProgress"),
      
+    // 
+     INVALIDPARAMETER_CACHEKEYQUERYSTRINGTOOMANYVALUE("InvalidParameter.CacheKeyQueryStringTooManyValue"),
+     
     // HTTPS certificate chain error.
      INVALIDPARAMETER_CERTCHAINERROR("InvalidParameter.CertChainError"),
      
@@ -93,6 +96,9 @@ public enum TeoErrorCode {
     // Certificate error.
      INVALIDPARAMETER_CERTUNSUPPORTEDTYPE("InvalidParameter.CertUnsupportedType"),
      
+    // 
+     INVALIDPARAMETER_CNAMEWILDHOSTNOTALLOWAPPLYCERTIFICATE("InvalidParameter.CnameWildHostNotAllowApplyCertificate"),
+     
     // The domain name does not exist or is not belong to this account.
      INVALIDPARAMETER_DOMAINNOTFOUND("InvalidParameter.DomainNotFound"),
      
@@ -106,10 +112,16 @@ public enum TeoErrorCode {
      INVALIDPARAMETER_ERRINVALIDACTIONPARAM("InvalidParameter.ErrInvalidActionParam"),
      
     // 
+     INVALIDPARAMETER_ERRINVALIDACTIONPARAMACTION("InvalidParameter.ErrInvalidActionParamAction"),
+     
+    // Invalid value type for the parameter "action".
      INVALIDPARAMETER_ERRINVALIDACTIONPARAMBADVALUETYPE("InvalidParameter.ErrInvalidActionParamBadValueType"),
      
     // Invalid parameter: Duplicate parameter names.
      INVALIDPARAMETER_ERRINVALIDACTIONPARAMDUPLICATENAME("InvalidParameter.ErrInvalidActionParamDuplicateName"),
+     
+    // 
+     INVALIDPARAMETER_ERRINVALIDACTIONPARAMNAME("InvalidParameter.ErrInvalidActionParamName"),
      
     // Invalid parameter: The parameter has too many values.
      INVALIDPARAMETER_ERRINVALIDACTIONPARAMTOOMANYVALUES("InvalidParameter.ErrInvalidActionParamTooManyValues"),
@@ -120,11 +132,17 @@ public enum TeoErrorCode {
     // Invalid condition: The letter case is ignored.
      INVALIDPARAMETER_ERRINVALIDCONDITIONIGNORECASE("InvalidParameter.ErrInvalidConditionIgnoreCase"),
      
+    // 
+     INVALIDPARAMETER_ERRINVALIDCONDITIONNAMEBADNAME("InvalidParameter.ErrInvalidConditionNameBadName"),
+     
     // Invalid condition: The match type is not supported by this parameter.
      INVALIDPARAMETER_ERRINVALIDCONDITIONNAMETARGETNOTSUPPORTNAME("InvalidParameter.ErrInvalidConditionNameTargetNotSupportName"),
      
-    // 
+    // Invalid condition: Invalid regular expression for the parameter value.
      INVALIDPARAMETER_ERRINVALIDCONDITIONVALUEBADREGULAR("InvalidParameter.ErrInvalidConditionValueBadRegular"),
+     
+    // 
+     INVALIDPARAMETER_ERRINVALIDCONDITIONVALUEBADURL("InvalidParameter.ErrInvalidConditionValueBadUrl"),
      
     // Invalid condition: The parameter value is invalid.
      INVALIDPARAMETER_ERRINVALIDCONDITIONVALUEBADVALUE("InvalidParameter.ErrInvalidConditionValueBadValue"),
@@ -136,6 +154,9 @@ public enum TeoErrorCode {
      INVALIDPARAMETER_ERRINVALIDCONDITIONVALUETOOLONGVALUE("InvalidParameter.ErrInvalidConditionValueTooLongValue"),
      
     // 
+     INVALIDPARAMETER_ERRINVALIDCONDITIONVALUETOOMANYREGULAR("InvalidParameter.ErrInvalidConditionValueTooManyRegular"),
+     
+    // Invalid condition: Too many wildcards in the parameter.
      INVALIDPARAMETER_ERRINVALIDCONDITIONVALUETOOMANYWILDCARD("InvalidParameter.ErrInvalidConditionValueTooManyWildcard"),
      
     // Invalid condition: The parameter value is 0.
@@ -147,16 +168,25 @@ public enum TeoErrorCode {
     // The domain name does not exist.
      INVALIDPARAMETER_HOSTNOTFOUND("InvalidParameter.HostNotFound"),
      
-    // 
+    // CNAME is not switched or the origin is not routed to the EdgeOne server.
      INVALIDPARAMETER_HOSTSTATUSNOTALLOWAPPLYCERTIFICATE("InvalidParameter.HostStatusNotAllowApplyCertificate"),
      
     // Invalid token authentication.
      INVALIDPARAMETER_INVALIDAUTHENTICATION("InvalidParameter.InvalidAuthentication"),
      
+    // 
+     INVALIDPARAMETER_INVALIDAUTHENTICATIONTYPESECRETKEY("InvalidParameter.InvalidAuthenticationTypeSecretKey"),
+     
     // Invalid token authentication parameter.
      INVALIDPARAMETER_INVALIDAUTHENTICATIONTYPESIGNPARAM("InvalidParameter.InvalidAuthenticationTypeSignParam"),
      
     // 
+     INVALIDPARAMETER_INVALIDBACKUPSERVERNAME("InvalidParameter.InvalidBackupServerName"),
+     
+    // 
+     INVALIDPARAMETER_INVALIDCACHECONFIGCACHE("InvalidParameter.InvalidCacheConfigCache"),
+     
+    // Invalid node cache. The origin behavior is followed.
      INVALIDPARAMETER_INVALIDCACHECONFIGFOLLOWORIGIN("InvalidParameter.InvalidCacheConfigFollowOrigin"),
      
     // Invalid cache key.
@@ -168,7 +198,7 @@ public enum TeoErrorCode {
     // Invalid node cache.
      INVALIDPARAMETER_INVALIDCACHEONLYONSWITCH("InvalidParameter.InvalidCacheOnlyOnSwitch"),
      
-    // 
+    // Invalid node cache validity.
      INVALIDPARAMETER_INVALIDCACHETIME("InvalidParameter.InvalidCacheTime"),
      
     // Incorrect certificate information.
@@ -180,7 +210,7 @@ public enum TeoErrorCode {
     // Invalid smart acceleration.
      INVALIDPARAMETER_INVALIDDYNAMICROUTINE("InvalidParameter.InvalidDynamicRoutine"),
      
-    // 
+    // The package does not support Smart Acceleration.
      INVALIDPARAMETER_INVALIDDYNAMICROUTINEBILLING("InvalidParameter.InvalidDynamicRoutineBilling"),
      
     // Invalid custom error page.
@@ -210,11 +240,17 @@ public enum TeoErrorCode {
     // Invalid request header.
      INVALIDPARAMETER_INVALIDREQUESTHEADERNAME("InvalidParameter.InvalidRequestHeaderName"),
      
+    // 
+     INVALIDPARAMETER_INVALIDREQUESTHEADERNAMEXFF("InvalidParameter.InvalidRequestHeaderNameXff"),
+     
     // You have not purchased a plan yet.
      INVALIDPARAMETER_INVALIDRESOURCEIDBILLING("InvalidParameter.InvalidResourceIdBilling"),
      
     // Invalid response header.
      INVALIDPARAMETER_INVALIDRESPONSEHEADERNAME("InvalidParameter.InvalidResponseHeaderName"),
+     
+    // 
+     INVALIDPARAMETER_INVALIDRESPONSEHEADERVALUE("InvalidParameter.InvalidResponseHeaderValue"),
      
     // Invalid rule engine settings.
      INVALIDPARAMETER_INVALIDRULEENGINE("InvalidParameter.InvalidRuleEngine"),
@@ -252,11 +288,17 @@ public enum TeoErrorCode {
     // Maximum parameter length exceeded.
      INVALIDPARAMETER_LENGTHEXCEEDSLIMIT("InvalidParameter.LengthExceedsLimit"),
      
+    // 
+     INVALIDPARAMETER_ORIGINORIGINGROUPIDISREQUIRED("InvalidParameter.OriginOriginGroupIdIsRequired"),
+     
     // Parameter error.
      INVALIDPARAMETER_PARAMETERERROR("InvalidParameter.ParameterError"),
      
     // The plan doesn’t exist.
      INVALIDPARAMETER_PLANNOTFOUND("InvalidParameter.PlanNotFound"),
+     
+    // 
+     INVALIDPARAMETER_POSTMAXSIZELIMITEXCEEDED("InvalidParameter.PostMaxSizeLimitExceeded"),
      
     // Invalid parameter.
      INVALIDPARAMETER_SECURITY("InvalidParameter.Security"),
@@ -270,7 +312,7 @@ public enum TeoErrorCode {
     // Failed to create the task
      INVALIDPARAMETER_TASKNOTGENERATED("InvalidParameter.TaskNotGenerated"),
      
-    // 
+    // Internal error.
      INVALIDPARAMETER_TASKSYSTEMERROR("InvalidParameter.TaskSystemError"),
      
     // Invalid file upload link.
@@ -288,6 +330,9 @@ public enum TeoErrorCode {
     // Invalid domain name. Please check the status.
      INVALIDPARAMETERVALUE_INVALIDDOMAINSTATUS("InvalidParameterValue.InvalidDomainStatus"),
      
+    // 
+     INVALIDPARAMETERVALUE_ZONESAMEASNAME("InvalidParameterValue.ZoneSameAsName"),
+     
     // The quota limit has been reached.
      LIMITEXCEEDED("LimitExceeded"),
      
@@ -296,6 +341,9 @@ public enum TeoErrorCode {
      
     // Reached the daily upper limit of resource number
      LIMITEXCEEDED_DAILYQUOTA("LimitExceeded.DailyQuota"),
+     
+    // 
+     LIMITEXCEEDED_QUERYTIMELIMITEXCEEDED("LimitExceeded.QueryTimeLimitExceeded"),
      
     // Reached the API rate limit.
      LIMITEXCEEDED_RATELIMITEXCEEDED("LimitExceeded.RateLimitExceeded"),
@@ -315,11 +363,17 @@ public enum TeoErrorCode {
     // Unable to operate the L4 instance when it’s not running
      OPERATIONDENIED_L4STATUSNOTINONLINE("OperationDenied.L4StatusNotInOnline"),
      
+    // The current intermediate IP is of the latest version. 
+     OPERATIONDENIED_LATESTVERSIONNOW("OperationDenied.LatestVersionNow"),
+     
     // Unable to switch to NS for multiple sites using CNAME.
      OPERATIONDENIED_MULTIPLECNAMEZONE("OperationDenied.MultipleCnameZone"),
      
     // Domain traffic scheduling is not supported in NS access mode.
      OPERATIONDENIED_NSNOTALLOWTRAFFICSTRATEGY("OperationDenied.NSNotAllowTrafficStrategy"),
+     
+    // 
+     OPERATIONDENIED_RECORDISFORBIDDEN("OperationDenied.RecordIsForbidden"),
      
     // The resource is occupied.
      RESOURCEINUSE("ResourceInUse"),

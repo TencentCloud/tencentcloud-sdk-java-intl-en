@@ -13,53 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dts.v20211206.models;
+package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OnlineDDL extends AbstractModel{
+public class DescribeDatahubTopicRequest extends AbstractModel{
 
     /**
-    * Status
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Name
     */
-    @SerializedName("Status")
+    @SerializedName("Name")
     @Expose
-    private String Status;
+    private String Name;
 
     /**
-     * Get Status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Name 
+     * @return Name Name
      */
-    public String getStatus() {
-        return this.Status;
+    public String getName() {
+        return this.Name;
     }
 
     /**
-     * Set Status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Name
+     * @param Name Name
      */
-    public void setStatus(String Status) {
-        this.Status = Status;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
-    public OnlineDDL() {
+    public DescribeDatahubTopicRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public OnlineDDL(OnlineDDL source) {
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
+    public DescribeDatahubTopicRequest(DescribeDatahubTopicRequest source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
         }
     }
 
@@ -68,7 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

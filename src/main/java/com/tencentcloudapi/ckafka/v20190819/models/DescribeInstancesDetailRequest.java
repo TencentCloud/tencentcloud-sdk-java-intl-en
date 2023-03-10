@@ -86,6 +86,13 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
     private String [] InstanceIdList;
 
     /**
+    * Filter instances by a set of tags
+    */
+    @SerializedName("TagList")
+    @Expose
+    private Tag [] TagList;
+
+    /**
      * Get (Filter) filter by instance ID 
      * @return InstanceId (Filter) filter by instance ID
      */
@@ -229,6 +236,22 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
         this.InstanceIdList = InstanceIdList;
     }
 
+    /**
+     * Get Filter instances by a set of tags 
+     * @return TagList Filter instances by a set of tags
+     */
+    public Tag [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set Filter instances by a set of tags
+     * @param TagList Filter instances by a set of tags
+     */
+    public void setTagList(Tag [] TagList) {
+        this.TagList = TagList;
+    }
+
     public DescribeInstancesDetailRequest() {
     }
 
@@ -273,6 +296,12 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
                 this.InstanceIdList[i] = new String(source.InstanceIdList[i]);
             }
         }
+        if (source.TagList != null) {
+            this.TagList = new Tag[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new Tag(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -289,6 +318,7 @@ public class DescribeInstancesDetailRequest extends AbstractModel{
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "InstanceIds", this.InstanceIds);
         this.setParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

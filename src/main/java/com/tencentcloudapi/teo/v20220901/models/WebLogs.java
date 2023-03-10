@@ -30,11 +30,11 @@ public class WebLogs extends AbstractModel{
     private String EventId;
 
     /**
-    * The attacker IP.
+    * The HTTP log content.
     */
-    @SerializedName("AttackIp")
+    @SerializedName("HttpLog")
     @Expose
-    private String AttackIp;
+    private String HttpLog;
 
     /**
     * The attacked subdomain name.
@@ -44,11 +44,11 @@ public class WebLogs extends AbstractModel{
     private String Domain;
 
     /**
-    * The HTTP log content.
+    * The attacker IP.
     */
-    @SerializedName("HttpLog")
+    @SerializedName("AttackIp")
     @Expose
-    private String HttpLog;
+    private String AttackIp;
 
     /**
     * The country code of the attacker IP, which is defined in ISO-3166 alpha-2. For the list of country codes, see [ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json).
@@ -56,6 +56,20 @@ public class WebLogs extends AbstractModel{
     @SerializedName("SipCountryCode")
     @Expose
     private String SipCountryCode;
+
+    /**
+    * 
+    */
+    @SerializedName("RealClientIp")
+    @Expose
+    private String RealClientIp;
+
+    /**
+    * 
+    */
+    @SerializedName("RealClientIpCountryCode")
+    @Expose
+    private String RealClientIpCountryCode;
 
     /**
     * The attack time recorded in seconds using UNIX timestamp.
@@ -72,12 +86,12 @@ public class WebLogs extends AbstractModel{
     private String RequestUri;
 
     /**
-    * The attack content.
+    * The request type.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("AttackContent")
+    @SerializedName("ReqMethod")
     @Expose
-    private String AttackContent;
+    private String ReqMethod;
 
     /**
     * The security rule information.
@@ -88,12 +102,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private SecRuleRelatedInfo [] RuleDetailList;
 
     /**
-    * The request type.
+    * The attack content.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("ReqMethod")
+    @SerializedName("AttackContent")
     @Expose
-    private String ReqMethod;
+    private String AttackContent;
+
+    /**
+    * Log region
+Note: This field may return `null`, indicating that no valid value was found.
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
 
     /**
      * Get The attack event ID. 
@@ -109,38 +131,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setEventId(String EventId) {
         this.EventId = EventId;
-    }
-
-    /**
-     * Get The attacker IP. 
-     * @return AttackIp The attacker IP.
-     */
-    public String getAttackIp() {
-        return this.AttackIp;
-    }
-
-    /**
-     * Set The attacker IP.
-     * @param AttackIp The attacker IP.
-     */
-    public void setAttackIp(String AttackIp) {
-        this.AttackIp = AttackIp;
-    }
-
-    /**
-     * Get The attacked subdomain name. 
-     * @return Domain The attacked subdomain name.
-     */
-    public String getDomain() {
-        return this.Domain;
-    }
-
-    /**
-     * Set The attacked subdomain name.
-     * @param Domain The attacked subdomain name.
-     */
-    public void setDomain(String Domain) {
-        this.Domain = Domain;
     }
 
     /**
@@ -160,6 +150,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get The attacked subdomain name. 
+     * @return Domain The attacked subdomain name.
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set The attacked subdomain name.
+     * @param Domain The attacked subdomain name.
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
+    /**
+     * Get The attacker IP. 
+     * @return AttackIp The attacker IP.
+     */
+    public String getAttackIp() {
+        return this.AttackIp;
+    }
+
+    /**
+     * Set The attacker IP.
+     * @param AttackIp The attacker IP.
+     */
+    public void setAttackIp(String AttackIp) {
+        this.AttackIp = AttackIp;
+    }
+
+    /**
      * Get The country code of the attacker IP, which is defined in ISO-3166 alpha-2. For the list of country codes, see [ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json). 
      * @return SipCountryCode The country code of the attacker IP, which is defined in ISO-3166 alpha-2. For the list of country codes, see [ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json).
      */
@@ -173,6 +195,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setSipCountryCode(String SipCountryCode) {
         this.SipCountryCode = SipCountryCode;
+    }
+
+    /**
+     * Get  
+     * @return RealClientIp 
+     */
+    public String getRealClientIp() {
+        return this.RealClientIp;
+    }
+
+    /**
+     * Set 
+     * @param RealClientIp 
+     */
+    public void setRealClientIp(String RealClientIp) {
+        this.RealClientIp = RealClientIp;
+    }
+
+    /**
+     * Get  
+     * @return RealClientIpCountryCode 
+     */
+    public String getRealClientIpCountryCode() {
+        return this.RealClientIpCountryCode;
+    }
+
+    /**
+     * Set 
+     * @param RealClientIpCountryCode 
+     */
+    public void setRealClientIpCountryCode(String RealClientIpCountryCode) {
+        this.RealClientIpCountryCode = RealClientIpCountryCode;
     }
 
     /**
@@ -208,23 +262,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The attack content.
+     * Get The request type.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AttackContent The attack content.
+     * @return ReqMethod The request type.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getAttackContent() {
-        return this.AttackContent;
+    public String getReqMethod() {
+        return this.ReqMethod;
     }
 
     /**
-     * Set The attack content.
+     * Set The request type.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AttackContent The attack content.
+     * @param ReqMethod The request type.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setAttackContent(String AttackContent) {
-        this.AttackContent = AttackContent;
+    public void setReqMethod(String ReqMethod) {
+        this.ReqMethod = ReqMethod;
     }
 
     /**
@@ -248,23 +302,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The request type.
+     * Get The attack content.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ReqMethod The request type.
+     * @return AttackContent The attack content.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getReqMethod() {
-        return this.ReqMethod;
+    public String getAttackContent() {
+        return this.AttackContent;
     }
 
     /**
-     * Set The request type.
+     * Set The attack content.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReqMethod The request type.
+     * @param AttackContent The attack content.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setReqMethod(String ReqMethod) {
-        this.ReqMethod = ReqMethod;
+    public void setAttackContent(String AttackContent) {
+        this.AttackContent = AttackContent;
+    }
+
+    /**
+     * Get Log region
+Note: This field may return `null`, indicating that no valid value was found. 
+     * @return Area Log region
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set Log region
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param Area Log region
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
     }
 
     public WebLogs() {
@@ -278,17 +352,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.EventId != null) {
             this.EventId = new String(source.EventId);
         }
-        if (source.AttackIp != null) {
-            this.AttackIp = new String(source.AttackIp);
+        if (source.HttpLog != null) {
+            this.HttpLog = new String(source.HttpLog);
         }
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
-        if (source.HttpLog != null) {
-            this.HttpLog = new String(source.HttpLog);
+        if (source.AttackIp != null) {
+            this.AttackIp = new String(source.AttackIp);
         }
         if (source.SipCountryCode != null) {
             this.SipCountryCode = new String(source.SipCountryCode);
+        }
+        if (source.RealClientIp != null) {
+            this.RealClientIp = new String(source.RealClientIp);
+        }
+        if (source.RealClientIpCountryCode != null) {
+            this.RealClientIpCountryCode = new String(source.RealClientIpCountryCode);
         }
         if (source.AttackTime != null) {
             this.AttackTime = new Long(source.AttackTime);
@@ -296,8 +376,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RequestUri != null) {
             this.RequestUri = new String(source.RequestUri);
         }
-        if (source.AttackContent != null) {
-            this.AttackContent = new String(source.AttackContent);
+        if (source.ReqMethod != null) {
+            this.ReqMethod = new String(source.ReqMethod);
         }
         if (source.RuleDetailList != null) {
             this.RuleDetailList = new SecRuleRelatedInfo[source.RuleDetailList.length];
@@ -305,8 +385,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.RuleDetailList[i] = new SecRuleRelatedInfo(source.RuleDetailList[i]);
             }
         }
-        if (source.ReqMethod != null) {
-            this.ReqMethod = new String(source.ReqMethod);
+        if (source.AttackContent != null) {
+            this.AttackContent = new String(source.AttackContent);
+        }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
         }
     }
 
@@ -316,15 +399,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EventId", this.EventId);
-        this.setParamSimple(map, prefix + "AttackIp", this.AttackIp);
-        this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "HttpLog", this.HttpLog);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "AttackIp", this.AttackIp);
         this.setParamSimple(map, prefix + "SipCountryCode", this.SipCountryCode);
+        this.setParamSimple(map, prefix + "RealClientIp", this.RealClientIp);
+        this.setParamSimple(map, prefix + "RealClientIpCountryCode", this.RealClientIpCountryCode);
         this.setParamSimple(map, prefix + "AttackTime", this.AttackTime);
         this.setParamSimple(map, prefix + "RequestUri", this.RequestUri);
-        this.setParamSimple(map, prefix + "AttackContent", this.AttackContent);
-        this.setParamArrayObj(map, prefix + "RuleDetailList.", this.RuleDetailList);
         this.setParamSimple(map, prefix + "ReqMethod", this.ReqMethod);
+        this.setParamArrayObj(map, prefix + "RuleDetailList.", this.RuleDetailList);
+        this.setParamSimple(map, prefix + "AttackContent", this.AttackContent);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

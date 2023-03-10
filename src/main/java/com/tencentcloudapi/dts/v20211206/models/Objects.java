@@ -47,7 +47,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] AdvancedObjects;
 
     /**
-    * 
+    * A redundant field that specifies the online DDL type
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OnlineDDL")
     @Expose
@@ -114,16 +115,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return OnlineDDL 
+     * Get A redundant field that specifies the online DDL type
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OnlineDDL A redundant field that specifies the online DDL type
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public OnlineDDL getOnlineDDL() {
         return this.OnlineDDL;
     }
 
     /**
-     * Set 
-     * @param OnlineDDL 
+     * Set A redundant field that specifies the online DDL type
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OnlineDDL A redundant field that specifies the online DDL type
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOnlineDDL(OnlineDDL OnlineDDL) {
         this.OnlineDDL = OnlineDDL;

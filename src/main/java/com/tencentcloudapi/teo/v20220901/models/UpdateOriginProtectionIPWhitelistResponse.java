@@ -13,22 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dts.v20211206.models;
+package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SkipCheckItemResponse extends AbstractModel{
-
-    /**
-    * Message prompted for skipping the check item
-Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("Message")
-    @Expose
-    private String Message;
+public class UpdateOriginProtectionIPWhitelistResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -36,26 +28,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get Message prompted for skipping the check item
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Message Message prompted for skipping the check item
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public String getMessage() {
-        return this.Message;
-    }
-
-    /**
-     * Set Message prompted for skipping the check item
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Message Message prompted for skipping the check item
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setMessage(String Message) {
-        this.Message = Message;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -73,17 +45,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public SkipCheckItemResponse() {
+    public UpdateOriginProtectionIPWhitelistResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SkipCheckItemResponse(SkipCheckItemResponse source) {
-        if (source.Message != null) {
-            this.Message = new String(source.Message);
-        }
+    public UpdateOriginProtectionIPWhitelistResponse(UpdateOriginProtectionIPWhitelistResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,7 +63,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

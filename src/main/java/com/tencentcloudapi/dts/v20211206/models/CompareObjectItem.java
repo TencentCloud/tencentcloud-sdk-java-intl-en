@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CompareObjectItem extends AbstractModel{
 
     /**
-    * The database to be migrated
+    * Database name
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DbName")
@@ -39,7 +39,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String DbMode;
 
     /**
-    * The schema to be migrated
+    * Schema name
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SchemaName")
@@ -79,9 +79,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private CompareViewItem [] Views;
 
     /**
-     * Get The database to be migrated
+     * Get Database name
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DbName The database to be migrated
+     * @return DbName Database name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDbName() {
@@ -89,9 +89,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The database to be migrated
+     * Set Database name
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DbName The database to be migrated
+     * @param DbName Database name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDbName(String DbName) {
@@ -119,9 +119,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The schema to be migrated
+     * Get Schema name
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SchemaName The schema to be migrated
+     * @return SchemaName Schema name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSchemaName() {
@@ -129,9 +129,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The schema to be migrated
+     * Set Schema name
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SchemaName The schema to be migrated
+     * @param SchemaName Schema name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSchemaName(String SchemaName) {

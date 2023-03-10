@@ -13,53 +13,48 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dts.v20211206.models;
+package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OnlineDDL extends AbstractModel{
+public class UpdateOriginProtectionIPWhitelistRequest extends AbstractModel{
 
     /**
-    * Status
-Note: This field may return null, indicating that no valid values can be obtained.
+    * ID of the site.
     */
-    @SerializedName("Status")
+    @SerializedName("ZoneId")
     @Expose
-    private String Status;
+    private String ZoneId;
 
     /**
-     * Get Status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get ID of the site. 
+     * @return ZoneId ID of the site.
      */
-    public String getStatus() {
-        return this.Status;
+    public String getZoneId() {
+        return this.ZoneId;
     }
 
     /**
-     * Set Status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set ID of the site.
+     * @param ZoneId ID of the site.
      */
-    public void setStatus(String Status) {
-        this.Status = Status;
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
     }
 
-    public OnlineDDL() {
+    public UpdateOriginProtectionIPWhitelistRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public OnlineDDL(OnlineDDL source) {
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
+    public UpdateOriginProtectionIPWhitelistRequest(UpdateOriginProtectionIPWhitelistRequest source) {
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
         }
     }
 
@@ -68,7 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
 
     }
 }

@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CreateCompareTaskRequest extends AbstractModel{
 
     /**
-    * Migration task ID
+    * Task ID
     */
     @SerializedName("JobId")
     @Expose
@@ -51,16 +51,23 @@ public class CreateCompareTaskRequest extends AbstractModel{
     private CompareObject Objects;
 
     /**
-     * Get Migration task ID 
-     * @return JobId Migration task ID
+    * Consistency check options
+    */
+    @SerializedName("Options")
+    @Expose
+    private CompareOptions Options;
+
+    /**
+     * Get Task ID 
+     * @return JobId Task ID
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set Migration task ID
-     * @param JobId Migration task ID
+     * Set Task ID
+     * @param JobId Task ID
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
@@ -114,6 +121,22 @@ public class CreateCompareTaskRequest extends AbstractModel{
         this.Objects = Objects;
     }
 
+    /**
+     * Get Consistency check options 
+     * @return Options Consistency check options
+     */
+    public CompareOptions getOptions() {
+        return this.Options;
+    }
+
+    /**
+     * Set Consistency check options
+     * @param Options Consistency check options
+     */
+    public void setOptions(CompareOptions Options) {
+        this.Options = Options;
+    }
+
     public CreateCompareTaskRequest() {
     }
 
@@ -134,6 +157,9 @@ public class CreateCompareTaskRequest extends AbstractModel{
         if (source.Objects != null) {
             this.Objects = new CompareObject(source.Objects);
         }
+        if (source.Options != null) {
+            this.Options = new CompareOptions(source.Options);
+        }
     }
 
 
@@ -145,6 +171,7 @@ public class CreateCompareTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
         this.setParamSimple(map, prefix + "ObjectMode", this.ObjectMode);
         this.setParamObj(map, prefix + "Objects.", this.Objects);
+        this.setParamObj(map, prefix + "Options.", this.Options);
 
     }
 }

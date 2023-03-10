@@ -30,8 +30,8 @@ public class DescribeRulesRequest extends AbstractModel{
     private String ZoneId;
 
     /**
-    * Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: string<br>   Required: No
+    * Filter conditions. Each filter condition can have up to 20 entries. See below for details:
+<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -54,20 +54,20 @@ public class DescribeRulesRequest extends AbstractModel{
     }
 
     /**
-     * Get Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: string<br>   Required: No 
-     * @return Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: string<br>   Required: No
+     * Get Filter conditions. Each filter condition can have up to 20 entries. See below for details:
+<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li> 
+     * @return Filters Filter conditions. Each filter condition can have up to 20 entries. See below for details:
+<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: string<br>   Required: No
-     * @param Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: string<br>   Required: No
+     * Set Filter conditions. Each filter condition can have up to 20 entries. See below for details:
+<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
+     * @param Filters Filter conditions. Each filter condition can have up to 20 entries. See below for details:
+<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

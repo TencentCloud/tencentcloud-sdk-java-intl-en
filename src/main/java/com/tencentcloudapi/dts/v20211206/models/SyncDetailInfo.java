@@ -87,6 +87,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private StepInfo [] StepInfos;
 
     /**
+    * Cause of the failure of initiating data consistency check
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CauseOfCompareDisable")
+    @Expose
+    private String CauseOfCompareDisable;
+
+    /**
      * Get Total number of steps
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return StepAll Total number of steps
@@ -246,6 +254,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.StepInfos = StepInfos;
     }
 
+    /**
+     * Get Cause of the failure of initiating data consistency check
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CauseOfCompareDisable Cause of the failure of initiating data consistency check
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getCauseOfCompareDisable() {
+        return this.CauseOfCompareDisable;
+    }
+
+    /**
+     * Set Cause of the failure of initiating data consistency check
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CauseOfCompareDisable Cause of the failure of initiating data consistency check
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCauseOfCompareDisable(String CauseOfCompareDisable) {
+        this.CauseOfCompareDisable = CauseOfCompareDisable;
+    }
+
     public SyncDetailInfo() {
     }
 
@@ -281,6 +309,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.StepInfos[i] = new StepInfo(source.StepInfos[i]);
             }
         }
+        if (source.CauseOfCompareDisable != null) {
+            this.CauseOfCompareDisable = new String(source.CauseOfCompareDisable);
+        }
     }
 
 
@@ -296,6 +327,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "SecondsBehindMaster", this.SecondsBehindMaster);
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamArrayObj(map, prefix + "StepInfos.", this.StepInfos);
+        this.setParamSimple(map, prefix + "CauseOfCompareDisable", this.CauseOfCompareDisable);
 
     }
 }

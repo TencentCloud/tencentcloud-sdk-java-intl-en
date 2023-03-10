@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class CompareObject extends AbstractModel{
 
     /**
-    * Object migration mode. Valid values: `all`, `partial`.
+    * Data comparison object mode (`all`: Entire instance; `partial`: Some objects)
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ObjectMode")
@@ -31,7 +31,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ObjectMode;
 
     /**
-    * Migration database/table configuration
+    * Object list
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ObjectItems")
@@ -39,9 +39,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private CompareObjectItem [] ObjectItems;
 
     /**
-     * Get Object migration mode. Valid values: `all`, `partial`.
+    * Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AdvancedObjects")
+    @Expose
+    private String [] AdvancedObjects;
+
+    /**
+     * Get Data comparison object mode (`all`: Entire instance; `partial`: Some objects)
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ObjectMode Object migration mode. Valid values: `all`, `partial`.
+     * @return ObjectMode Data comparison object mode (`all`: Entire instance; `partial`: Some objects)
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getObjectMode() {
@@ -49,9 +57,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Object migration mode. Valid values: `all`, `partial`.
+     * Set Data comparison object mode (`all`: Entire instance; `partial`: Some objects)
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ObjectMode Object migration mode. Valid values: `all`, `partial`.
+     * @param ObjectMode Data comparison object mode (`all`: Entire instance; `partial`: Some objects)
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setObjectMode(String ObjectMode) {
@@ -59,9 +67,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Migration database/table configuration
+     * Get Object list
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ObjectItems Migration database/table configuration
+     * @return ObjectItems Object list
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public CompareObjectItem [] getObjectItems() {
@@ -69,13 +77,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Migration database/table configuration
+     * Set Object list
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ObjectItems Migration database/table configuration
+     * @param ObjectItems Object list
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setObjectItems(CompareObjectItem [] ObjectItems) {
         this.ObjectItems = ObjectItems;
+    }
+
+    /**
+     * Get Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AdvancedObjects Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String [] getAdvancedObjects() {
+        return this.AdvancedObjects;
+    }
+
+    /**
+     * Set Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AdvancedObjects Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAdvancedObjects(String [] AdvancedObjects) {
+        this.AdvancedObjects = AdvancedObjects;
     }
 
     public CompareObject() {
@@ -95,6 +123,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.ObjectItems[i] = new CompareObjectItem(source.ObjectItems[i]);
             }
         }
+        if (source.AdvancedObjects != null) {
+            this.AdvancedObjects = new String[source.AdvancedObjects.length];
+            for (int i = 0; i < source.AdvancedObjects.length; i++) {
+                this.AdvancedObjects[i] = new String(source.AdvancedObjects[i]);
+            }
+        }
     }
 
 
@@ -104,6 +138,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ObjectMode", this.ObjectMode);
         this.setParamArrayObj(map, prefix + "ObjectItems.", this.ObjectItems);
+        this.setParamArraySimple(map, prefix + "AdvancedObjects.", this.AdvancedObjects);
 
     }
 }

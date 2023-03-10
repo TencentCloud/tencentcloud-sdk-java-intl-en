@@ -223,6 +223,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String EncryptConn;
 
     /**
+    * Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DatabaseNetEnv")
+    @Expose
+    private String DatabaseNetEnv;
+
+    /**
      * Get Region name, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Region Region name, such as `ap-guangzhou`.
@@ -722,6 +730,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.EncryptConn = EncryptConn;
     }
 
+    /**
+     * Get Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DatabaseNetEnv Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDatabaseNetEnv() {
+        return this.DatabaseNetEnv;
+    }
+
+    /**
+     * Set Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DatabaseNetEnv Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDatabaseNetEnv(String DatabaseNetEnv) {
+        this.DatabaseNetEnv = DatabaseNetEnv;
+    }
+
     public Endpoint() {
     }
 
@@ -805,6 +833,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.EncryptConn != null) {
             this.EncryptConn = new String(source.EncryptConn);
         }
+        if (source.DatabaseNetEnv != null) {
+            this.DatabaseNetEnv = new String(source.DatabaseNetEnv);
+        }
     }
 
 
@@ -837,6 +868,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "TmpSecretKey", this.TmpSecretKey);
         this.setParamSimple(map, prefix + "TmpToken", this.TmpToken);
         this.setParamSimple(map, prefix + "EncryptConn", this.EncryptConn);
+        this.setParamSimple(map, prefix + "DatabaseNetEnv", this.DatabaseNetEnv);
 
     }
 }

@@ -559,6 +559,26 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the time-series data of DDoS attacks.
+     * @param req DescribeDDoSAttackDataRequest
+     * @return DescribeDDoSAttackDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDDoSAttackDataResponse DescribeDDoSAttackData(DescribeDDoSAttackDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDDoSAttackDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDDoSAttackDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDDoSAttackData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the top-ranked DDoS attack data.
      * @param req DescribeDDoSAttackTopDataRequest
      * @return DescribeDDoSAttackTopDataResponse
@@ -711,6 +731,26 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeOriginGroupResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeOriginGroup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the origin protection configuration.
+     * @param req DescribeOriginProtectionRequest
+     * @return DescribeOriginProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOriginProtectionResponse DescribeOriginProtection(DescribeOriginProtectionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeOriginProtectionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeOriginProtectionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeOriginProtection");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1591,6 +1631,26 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ReclaimZoneResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ReclaimZone");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to update the list of intermediate IPs.
+     * @param req UpdateOriginProtectionIPWhitelistRequest
+     * @return UpdateOriginProtectionIPWhitelistResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateOriginProtectionIPWhitelistResponse UpdateOriginProtectionIPWhitelist(UpdateOriginProtectionIPWhitelistRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpdateOriginProtectionIPWhitelistResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpdateOriginProtectionIPWhitelistResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpdateOriginProtectionIPWhitelist");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

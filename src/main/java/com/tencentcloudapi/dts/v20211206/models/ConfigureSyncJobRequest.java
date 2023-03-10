@@ -30,25 +30,18 @@ public class ConfigureSyncJobRequest extends AbstractModel{
     private String JobId;
 
     /**
-    * Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
+    * Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet). Note that the valid values are subject to the current link.
     */
     @SerializedName("SrcAccessType")
     @Expose
     private String SrcAccessType;
 
     /**
-    * Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
+    * Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `ckafka` (CKafka instance). Note that the valid values are subject to the current link.
     */
     @SerializedName("DstAccessType")
     @Expose
     private String DstAccessType;
-
-    /**
-    * Sync task options
-    */
-    @SerializedName("Options")
-    @Expose
-    private Options Options;
 
     /**
     * Information of synced database/table objects
@@ -86,7 +79,7 @@ public class ConfigureSyncJobRequest extends AbstractModel{
     private String ExpectRunTime;
 
     /**
-    * Source database information. This parameter is used by single-node databases.
+    * Source database information. This parameter only applies to single-node databases, and `SrcNodeType` must be `single`.
     */
     @SerializedName("SrcInfo")
     @Expose
@@ -98,6 +91,13 @@ public class ConfigureSyncJobRequest extends AbstractModel{
     @SerializedName("DstInfo")
     @Expose
     private Endpoint DstInfo;
+
+    /**
+    * Sync task options
+    */
+    @SerializedName("Options")
+    @Expose
+    private Options Options;
 
     /**
     * Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
@@ -123,51 +123,35 @@ public class ConfigureSyncJobRequest extends AbstractModel{
     }
 
     /**
-     * Get Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link. 
-     * @return SrcAccessType Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
+     * Get Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet). Note that the valid values are subject to the current link. 
+     * @return SrcAccessType Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet). Note that the valid values are subject to the current link.
      */
     public String getSrcAccessType() {
         return this.SrcAccessType;
     }
 
     /**
-     * Set Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
-     * @param SrcAccessType Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
+     * Set Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet). Note that the valid values are subject to the current link.
+     * @param SrcAccessType Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet). Note that the valid values are subject to the current link.
      */
     public void setSrcAccessType(String SrcAccessType) {
         this.SrcAccessType = SrcAccessType;
     }
 
     /**
-     * Get Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link. 
-     * @return DstAccessType Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
+     * Get Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `ckafka` (CKafka instance). Note that the valid values are subject to the current link. 
+     * @return DstAccessType Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `ckafka` (CKafka instance). Note that the valid values are subject to the current link.
      */
     public String getDstAccessType() {
         return this.DstAccessType;
     }
 
     /**
-     * Set Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
-     * @param DstAccessType Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
+     * Set Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `ckafka` (CKafka instance). Note that the valid values are subject to the current link.
+     * @param DstAccessType Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `ckafka` (CKafka instance). Note that the valid values are subject to the current link.
      */
     public void setDstAccessType(String DstAccessType) {
         this.DstAccessType = DstAccessType;
-    }
-
-    /**
-     * Get Sync task options 
-     * @return Options Sync task options
-     */
-    public Options getOptions() {
-        return this.Options;
-    }
-
-    /**
-     * Set Sync task options
-     * @param Options Sync task options
-     */
-    public void setOptions(Options Options) {
-        this.Options = Options;
     }
 
     /**
@@ -251,16 +235,16 @@ public class ConfigureSyncJobRequest extends AbstractModel{
     }
 
     /**
-     * Get Source database information. This parameter is used by single-node databases. 
-     * @return SrcInfo Source database information. This parameter is used by single-node databases.
+     * Get Source database information. This parameter only applies to single-node databases, and `SrcNodeType` must be `single`. 
+     * @return SrcInfo Source database information. This parameter only applies to single-node databases, and `SrcNodeType` must be `single`.
      */
     public Endpoint getSrcInfo() {
         return this.SrcInfo;
     }
 
     /**
-     * Set Source database information. This parameter is used by single-node databases.
-     * @param SrcInfo Source database information. This parameter is used by single-node databases.
+     * Set Source database information. This parameter only applies to single-node databases, and `SrcNodeType` must be `single`.
+     * @param SrcInfo Source database information. This parameter only applies to single-node databases, and `SrcNodeType` must be `single`.
      */
     public void setSrcInfo(Endpoint SrcInfo) {
         this.SrcInfo = SrcInfo;
@@ -280,6 +264,22 @@ public class ConfigureSyncJobRequest extends AbstractModel{
      */
     public void setDstInfo(Endpoint DstInfo) {
         this.DstInfo = DstInfo;
+    }
+
+    /**
+     * Get Sync task options 
+     * @return Options Sync task options
+     */
+    public Options getOptions() {
+        return this.Options;
+    }
+
+    /**
+     * Set Sync task options
+     * @param Options Sync task options
+     */
+    public void setOptions(Options Options) {
+        this.Options = Options;
     }
 
     /**
@@ -315,9 +315,6 @@ public class ConfigureSyncJobRequest extends AbstractModel{
         if (source.DstAccessType != null) {
             this.DstAccessType = new String(source.DstAccessType);
         }
-        if (source.Options != null) {
-            this.Options = new Options(source.Options);
-        }
         if (source.Objects != null) {
             this.Objects = new Objects(source.Objects);
         }
@@ -339,6 +336,9 @@ public class ConfigureSyncJobRequest extends AbstractModel{
         if (source.DstInfo != null) {
             this.DstInfo = new Endpoint(source.DstInfo);
         }
+        if (source.Options != null) {
+            this.Options = new Options(source.Options);
+        }
         if (source.AutoRetryTimeRangeMinutes != null) {
             this.AutoRetryTimeRangeMinutes = new Long(source.AutoRetryTimeRangeMinutes);
         }
@@ -352,7 +352,6 @@ public class ConfigureSyncJobRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "SrcAccessType", this.SrcAccessType);
         this.setParamSimple(map, prefix + "DstAccessType", this.DstAccessType);
-        this.setParamObj(map, prefix + "Options.", this.Options);
         this.setParamObj(map, prefix + "Objects.", this.Objects);
         this.setParamSimple(map, prefix + "JobName", this.JobName);
         this.setParamSimple(map, prefix + "JobMode", this.JobMode);
@@ -360,6 +359,7 @@ public class ConfigureSyncJobRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ExpectRunTime", this.ExpectRunTime);
         this.setParamObj(map, prefix + "SrcInfo.", this.SrcInfo);
         this.setParamObj(map, prefix + "DstInfo.", this.DstInfo);
+        this.setParamObj(map, prefix + "Options.", this.Options);
         this.setParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
 
     }

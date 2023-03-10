@@ -13,22 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dts.v20211206.models;
+package com.tencentcloudapi.ckafka.v20190819.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SkipCheckItemResponse extends AbstractModel{
+public class DescribeDatahubTopicsResponse extends AbstractModel{
 
     /**
-    * Message prompted for skipping the check item
+    * Topic list
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("Message")
+    @SerializedName("Result")
     @Expose
-    private String Message;
+    private DescribeDatahubTopicsResp Result;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,23 +38,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Message prompted for skipping the check item
+     * Get Topic list
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Message Message prompted for skipping the check item
+     * @return Result Topic list
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getMessage() {
-        return this.Message;
+    public DescribeDatahubTopicsResp getResult() {
+        return this.Result;
     }
 
     /**
-     * Set Message prompted for skipping the check item
+     * Set Topic list
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Message Message prompted for skipping the check item
+     * @param Result Topic list
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setMessage(String Message) {
-        this.Message = Message;
+    public void setResult(DescribeDatahubTopicsResp Result) {
+        this.Result = Result;
     }
 
     /**
@@ -73,16 +73,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public SkipCheckItemResponse() {
+    public DescribeDatahubTopicsResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SkipCheckItemResponse(SkipCheckItemResponse source) {
-        if (source.Message != null) {
-            this.Message = new String(source.Message);
+    public DescribeDatahubTopicsResponse(DescribeDatahubTopicsResponse source) {
+        if (source.Result != null) {
+            this.Result = new DescribeDatahubTopicsResp(source.Result);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +94,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

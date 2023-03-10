@@ -82,6 +82,46 @@ If the task status queried through the `DescribeMigrationJobs` API is ready (`St
     }
 
     /**
+     *This API is used to resume a paused migration task.
+     * @param req ContinueMigrateJobRequest
+     * @return ContinueMigrateJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public ContinueMigrateJobResponse ContinueMigrateJob(ContinueMigrateJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ContinueMigrateJobResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ContinueMigrateJobResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ContinueMigrateJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to resume a paused data sync task.
+     * @param req ContinueSyncJobRequest
+     * @return ContinueSyncJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public ContinueSyncJobResponse ContinueSyncJob(ContinueSyncJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ContinueSyncJobResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ContinueSyncJobResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ContinueSyncJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to verify a sync task by checking required parameters and peripheral configuration.
      * @param req CreateCheckSyncJobRequest
      * @return CreateCheckSyncJobResponse
@@ -539,6 +579,46 @@ If the check fails, the cause can be queried. Modify the migration configuration
                 Type type = new TypeToken<JsonResponseModel<ModifyMigrationJobResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyMigrationJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to pause a migration task.
+     * @param req PauseMigrateJobRequest
+     * @return PauseMigrateJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public PauseMigrateJobResponse PauseMigrateJob(PauseMigrateJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PauseMigrateJobResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PauseMigrateJobResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PauseMigrateJob");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to pause a data sync task.
+     * @param req PauseSyncJobRequest
+     * @return PauseSyncJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public PauseSyncJobResponse PauseSyncJob(PauseSyncJobRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<PauseSyncJobResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<PauseSyncJobResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "PauseSyncJob");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -41,6 +41,13 @@ public class RateLimitIntelligence extends AbstractModel{
     private String Action;
 
     /**
+    * The rule ID, which is only used as a response parameter.
+    */
+    @SerializedName("RuleId")
+    @Expose
+    private Long RuleId;
+
+    /**
      * Get Whether to enable configuration. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li> 
@@ -88,6 +95,22 @@ public class RateLimitIntelligence extends AbstractModel{
         this.Action = Action;
     }
 
+    /**
+     * Get The rule ID, which is only used as a response parameter. 
+     * @return RuleId The rule ID, which is only used as a response parameter.
+     */
+    public Long getRuleId() {
+        return this.RuleId;
+    }
+
+    /**
+     * Set The rule ID, which is only used as a response parameter.
+     * @param RuleId The rule ID, which is only used as a response parameter.
+     */
+    public void setRuleId(Long RuleId) {
+        this.RuleId = RuleId;
+    }
+
     public RateLimitIntelligence() {
     }
 
@@ -102,6 +125,9 @@ public class RateLimitIntelligence extends AbstractModel{
         if (source.Action != null) {
             this.Action = new String(source.Action);
         }
+        if (source.RuleId != null) {
+            this.RuleId = new Long(source.RuleId);
+        }
     }
 
 
@@ -111,6 +137,7 @@ public class RateLimitIntelligence extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamSimple(map, prefix + "Action", this.Action);
+        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
 
     }
 }

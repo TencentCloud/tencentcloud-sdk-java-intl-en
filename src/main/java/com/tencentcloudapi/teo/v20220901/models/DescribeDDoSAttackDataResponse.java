@@ -13,22 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dts.v20211206.models;
+package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SkipCheckItemResponse extends AbstractModel{
+public class DescribeDDoSAttackDataResponse extends AbstractModel{
 
     /**
-    * Message prompted for skipping the check item
+    * Total number of query results.
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
+    * List of DDoS attack data.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("Message")
+    @SerializedName("Data")
     @Expose
-    private String Message;
+    private SecEntry [] Data;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,23 +45,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Message prompted for skipping the check item
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Message Message prompted for skipping the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total number of query results. 
+     * @return TotalCount Total number of query results.
      */
-    public String getMessage() {
-        return this.Message;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set Message prompted for skipping the check item
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Message Message prompted for skipping the check item
+     * Set Total number of query results.
+     * @param TotalCount Total number of query results.
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get List of DDoS attack data.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Data List of DDoS attack data.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setMessage(String Message) {
-        this.Message = Message;
+    public SecEntry [] getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set List of DDoS attack data.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Data List of DDoS attack data.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setData(SecEntry [] Data) {
+        this.Data = Data;
     }
 
     /**
@@ -73,16 +96,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public SkipCheckItemResponse() {
+    public DescribeDDoSAttackDataResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SkipCheckItemResponse(SkipCheckItemResponse source) {
-        if (source.Message != null) {
-            this.Message = new String(source.Message);
+    public DescribeDDoSAttackDataResponse(DescribeDDoSAttackDataResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Data != null) {
+            this.Data = new SecEntry[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new SecEntry(source.Data[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +123,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

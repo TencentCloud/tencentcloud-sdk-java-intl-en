@@ -20,46 +20,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class OnlineDDL extends AbstractModel{
+public class ContinueMigrateJobRequest extends AbstractModel{
 
     /**
-    * Status
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Data migration task ID
     */
-    @SerializedName("Status")
+    @SerializedName("JobId")
     @Expose
-    private String Status;
+    private String JobId;
 
     /**
-     * Get Status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Data migration task ID 
+     * @return JobId Data migration task ID
      */
-    public String getStatus() {
-        return this.Status;
+    public String getJobId() {
+        return this.JobId;
     }
 
     /**
-     * Set Status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Data migration task ID
+     * @param JobId Data migration task ID
      */
-    public void setStatus(String Status) {
-        this.Status = Status;
+    public void setJobId(String JobId) {
+        this.JobId = JobId;
     }
 
-    public OnlineDDL() {
+    public ContinueMigrateJobRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public OnlineDDL(OnlineDDL source) {
-        if (source.Status != null) {
-            this.Status = new String(source.Status);
+    public ContinueMigrateJobRequest(ContinueMigrateJobRequest source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
         }
     }
 
@@ -68,7 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
 
     }
 }

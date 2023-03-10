@@ -23,6 +23,13 @@ import java.util.HashMap;
 public class SecHitRuleInfo extends AbstractModel{
 
     /**
+    * The site ID.
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private String ZoneId;
+
+    /**
     * The rule ID.
     */
     @SerializedName("RuleId")
@@ -35,20 +42,6 @@ public class SecHitRuleInfo extends AbstractModel{
     @SerializedName("RuleTypeName")
     @Expose
     private String RuleTypeName;
-
-    /**
-    * Action. Values:
-<li>`trans`: Allow;</li>
-<li>`alg`: Algorithm challenge;</li>
-<li>`drop`: Discard;</li>
-<li>`ban`: Block the source IP;</li>
-<li>`redirect`: Redirect;</li>
-<li>`page`: Return to the specified page;</li>
-<li>`monitor`: Observe.</li>
-    */
-    @SerializedName("Action")
-    @Expose
-    private String Action;
 
     /**
     * The hit time recorded in seconds using UNIX timestamp.
@@ -79,6 +72,20 @@ public class SecHitRuleInfo extends AbstractModel{
     private String Domain;
 
     /**
+    * Action. Values:
+<li>`trans`: Allow;</li>
+<li>`alg`: Algorithm challenge;</li>
+<li>`drop`: Discard;</li>
+<li>`ban`: Block the source IP;</li>
+<li>`redirect`: Redirect;</li>
+<li>`page`: Return to the specified page;</li>
+<li>`monitor`: Observe.</li>
+    */
+    @SerializedName("Action")
+    @Expose
+    private String Action;
+
+    /**
     * The bot tag. Values:
 <li>`evil_bot`: Malicious bot</li>
 <li>`suspect_bot`: Suspected bot</li>
@@ -89,6 +96,45 @@ public class SecHitRuleInfo extends AbstractModel{
     @SerializedName("BotLabel")
     @Expose
     private String BotLabel;
+
+    /**
+    * Whether to enable the rule
+    */
+    @SerializedName("RuleEnabled")
+    @Expose
+    private Boolean RuleEnabled;
+
+    /**
+    * Whether to enable alerting for this rule
+    */
+    @SerializedName("AlarmEnabled")
+    @Expose
+    private Boolean AlarmEnabled;
+
+    /**
+    * Whether the rule is deleted. Values: 
+<li>`true`: The rule has been deleted (does not exist).</li>
+<li>`false`: The rule is not deleted (exists).</li>
+    */
+    @SerializedName("RuleDeleted")
+    @Expose
+    private Boolean RuleDeleted;
+
+    /**
+     * Get The site ID. 
+     * @return ZoneId The site ID.
+     */
+    public String getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set The site ID.
+     * @param ZoneId The site ID.
+     */
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
+    }
 
     /**
      * Get The rule ID. 
@@ -120,50 +166,6 @@ public class SecHitRuleInfo extends AbstractModel{
      */
     public void setRuleTypeName(String RuleTypeName) {
         this.RuleTypeName = RuleTypeName;
-    }
-
-    /**
-     * Get Action. Values:
-<li>`trans`: Allow;</li>
-<li>`alg`: Algorithm challenge;</li>
-<li>`drop`: Discard;</li>
-<li>`ban`: Block the source IP;</li>
-<li>`redirect`: Redirect;</li>
-<li>`page`: Return to the specified page;</li>
-<li>`monitor`: Observe.</li> 
-     * @return Action Action. Values:
-<li>`trans`: Allow;</li>
-<li>`alg`: Algorithm challenge;</li>
-<li>`drop`: Discard;</li>
-<li>`ban`: Block the source IP;</li>
-<li>`redirect`: Redirect;</li>
-<li>`page`: Return to the specified page;</li>
-<li>`monitor`: Observe.</li>
-     */
-    public String getAction() {
-        return this.Action;
-    }
-
-    /**
-     * Set Action. Values:
-<li>`trans`: Allow;</li>
-<li>`alg`: Algorithm challenge;</li>
-<li>`drop`: Discard;</li>
-<li>`ban`: Block the source IP;</li>
-<li>`redirect`: Redirect;</li>
-<li>`page`: Return to the specified page;</li>
-<li>`monitor`: Observe.</li>
-     * @param Action Action. Values:
-<li>`trans`: Allow;</li>
-<li>`alg`: Algorithm challenge;</li>
-<li>`drop`: Discard;</li>
-<li>`ban`: Block the source IP;</li>
-<li>`redirect`: Redirect;</li>
-<li>`page`: Return to the specified page;</li>
-<li>`monitor`: Observe.</li>
-     */
-    public void setAction(String Action) {
-        this.Action = Action;
     }
 
     /**
@@ -231,6 +233,50 @@ public class SecHitRuleInfo extends AbstractModel{
     }
 
     /**
+     * Get Action. Values:
+<li>`trans`: Allow;</li>
+<li>`alg`: Algorithm challenge;</li>
+<li>`drop`: Discard;</li>
+<li>`ban`: Block the source IP;</li>
+<li>`redirect`: Redirect;</li>
+<li>`page`: Return to the specified page;</li>
+<li>`monitor`: Observe.</li> 
+     * @return Action Action. Values:
+<li>`trans`: Allow;</li>
+<li>`alg`: Algorithm challenge;</li>
+<li>`drop`: Discard;</li>
+<li>`ban`: Block the source IP;</li>
+<li>`redirect`: Redirect;</li>
+<li>`page`: Return to the specified page;</li>
+<li>`monitor`: Observe.</li>
+     */
+    public String getAction() {
+        return this.Action;
+    }
+
+    /**
+     * Set Action. Values:
+<li>`trans`: Allow;</li>
+<li>`alg`: Algorithm challenge;</li>
+<li>`drop`: Discard;</li>
+<li>`ban`: Block the source IP;</li>
+<li>`redirect`: Redirect;</li>
+<li>`page`: Return to the specified page;</li>
+<li>`monitor`: Observe.</li>
+     * @param Action Action. Values:
+<li>`trans`: Allow;</li>
+<li>`alg`: Algorithm challenge;</li>
+<li>`drop`: Discard;</li>
+<li>`ban`: Block the source IP;</li>
+<li>`redirect`: Redirect;</li>
+<li>`page`: Return to the specified page;</li>
+<li>`monitor`: Observe.</li>
+     */
+    public void setAction(String Action) {
+        this.Action = Action;
+    }
+
+    /**
      * Get The bot tag. Values:
 <li>`evil_bot`: Malicious bot</li>
 <li>`suspect_bot`: Suspected bot</li>
@@ -266,6 +312,62 @@ public class SecHitRuleInfo extends AbstractModel{
         this.BotLabel = BotLabel;
     }
 
+    /**
+     * Get Whether to enable the rule 
+     * @return RuleEnabled Whether to enable the rule
+     */
+    public Boolean getRuleEnabled() {
+        return this.RuleEnabled;
+    }
+
+    /**
+     * Set Whether to enable the rule
+     * @param RuleEnabled Whether to enable the rule
+     */
+    public void setRuleEnabled(Boolean RuleEnabled) {
+        this.RuleEnabled = RuleEnabled;
+    }
+
+    /**
+     * Get Whether to enable alerting for this rule 
+     * @return AlarmEnabled Whether to enable alerting for this rule
+     */
+    public Boolean getAlarmEnabled() {
+        return this.AlarmEnabled;
+    }
+
+    /**
+     * Set Whether to enable alerting for this rule
+     * @param AlarmEnabled Whether to enable alerting for this rule
+     */
+    public void setAlarmEnabled(Boolean AlarmEnabled) {
+        this.AlarmEnabled = AlarmEnabled;
+    }
+
+    /**
+     * Get Whether the rule is deleted. Values: 
+<li>`true`: The rule has been deleted (does not exist).</li>
+<li>`false`: The rule is not deleted (exists).</li> 
+     * @return RuleDeleted Whether the rule is deleted. Values: 
+<li>`true`: The rule has been deleted (does not exist).</li>
+<li>`false`: The rule is not deleted (exists).</li>
+     */
+    public Boolean getRuleDeleted() {
+        return this.RuleDeleted;
+    }
+
+    /**
+     * Set Whether the rule is deleted. Values: 
+<li>`true`: The rule has been deleted (does not exist).</li>
+<li>`false`: The rule is not deleted (exists).</li>
+     * @param RuleDeleted Whether the rule is deleted. Values: 
+<li>`true`: The rule has been deleted (does not exist).</li>
+<li>`false`: The rule is not deleted (exists).</li>
+     */
+    public void setRuleDeleted(Boolean RuleDeleted) {
+        this.RuleDeleted = RuleDeleted;
+    }
+
     public SecHitRuleInfo() {
     }
 
@@ -274,14 +376,14 @@ public class SecHitRuleInfo extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SecHitRuleInfo(SecHitRuleInfo source) {
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
+        }
         if (source.RuleId != null) {
             this.RuleId = new Long(source.RuleId);
         }
         if (source.RuleTypeName != null) {
             this.RuleTypeName = new String(source.RuleTypeName);
-        }
-        if (source.Action != null) {
-            this.Action = new String(source.Action);
         }
         if (source.HitTime != null) {
             this.HitTime = new Long(source.HitTime);
@@ -295,8 +397,20 @@ public class SecHitRuleInfo extends AbstractModel{
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
+        if (source.Action != null) {
+            this.Action = new String(source.Action);
+        }
         if (source.BotLabel != null) {
             this.BotLabel = new String(source.BotLabel);
+        }
+        if (source.RuleEnabled != null) {
+            this.RuleEnabled = new Boolean(source.RuleEnabled);
+        }
+        if (source.AlarmEnabled != null) {
+            this.AlarmEnabled = new Boolean(source.AlarmEnabled);
+        }
+        if (source.RuleDeleted != null) {
+            this.RuleDeleted = new Boolean(source.RuleDeleted);
         }
     }
 
@@ -305,14 +419,18 @@ public class SecHitRuleInfo extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "RuleTypeName", this.RuleTypeName);
-        this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "HitTime", this.HitTime);
         this.setParamSimple(map, prefix + "RequestNum", this.RequestNum);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "BotLabel", this.BotLabel);
+        this.setParamSimple(map, prefix + "RuleEnabled", this.RuleEnabled);
+        this.setParamSimple(map, prefix + "AlarmEnabled", this.AlarmEnabled);
+        this.setParamSimple(map, prefix + "RuleDeleted", this.RuleDeleted);
 
     }
 }

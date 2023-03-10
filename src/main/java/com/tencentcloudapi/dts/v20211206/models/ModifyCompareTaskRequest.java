@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class ModifyCompareTaskRequest extends AbstractModel{
 
     /**
-    * Migration task ID
+    * Task ID
     */
     @SerializedName("JobId")
     @Expose
@@ -44,7 +44,7 @@ public class ModifyCompareTaskRequest extends AbstractModel{
     private String TaskName;
 
     /**
-    * Data comparison object mode. Valid values: `sameAsMigrate` (all migration objects); `custom` (custom mode). Default value: `sameAsMigrate`.
+    * Data comparison object mode. Valid values: `sameAsMigrate` (All migration objects), `custom` (Custom mode. The custom comparison objects must be a subset of the migration objects). Default value: `sameAsMigrate`.
     */
     @SerializedName("ObjectMode")
     @Expose
@@ -58,16 +58,23 @@ public class ModifyCompareTaskRequest extends AbstractModel{
     private CompareObject Objects;
 
     /**
-     * Get Migration task ID 
-     * @return JobId Migration task ID
+    * Consistency check options
+    */
+    @SerializedName("Options")
+    @Expose
+    private CompareOptions Options;
+
+    /**
+     * Get Task ID 
+     * @return JobId Task ID
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set Migration task ID
-     * @param JobId Migration task ID
+     * Set Task ID
+     * @param JobId Task ID
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
@@ -106,16 +113,16 @@ public class ModifyCompareTaskRequest extends AbstractModel{
     }
 
     /**
-     * Get Data comparison object mode. Valid values: `sameAsMigrate` (all migration objects); `custom` (custom mode). Default value: `sameAsMigrate`. 
-     * @return ObjectMode Data comparison object mode. Valid values: `sameAsMigrate` (all migration objects); `custom` (custom mode). Default value: `sameAsMigrate`.
+     * Get Data comparison object mode. Valid values: `sameAsMigrate` (All migration objects), `custom` (Custom mode. The custom comparison objects must be a subset of the migration objects). Default value: `sameAsMigrate`. 
+     * @return ObjectMode Data comparison object mode. Valid values: `sameAsMigrate` (All migration objects), `custom` (Custom mode. The custom comparison objects must be a subset of the migration objects). Default value: `sameAsMigrate`.
      */
     public String getObjectMode() {
         return this.ObjectMode;
     }
 
     /**
-     * Set Data comparison object mode. Valid values: `sameAsMigrate` (all migration objects); `custom` (custom mode). Default value: `sameAsMigrate`.
-     * @param ObjectMode Data comparison object mode. Valid values: `sameAsMigrate` (all migration objects); `custom` (custom mode). Default value: `sameAsMigrate`.
+     * Set Data comparison object mode. Valid values: `sameAsMigrate` (All migration objects), `custom` (Custom mode. The custom comparison objects must be a subset of the migration objects). Default value: `sameAsMigrate`.
+     * @param ObjectMode Data comparison object mode. Valid values: `sameAsMigrate` (All migration objects), `custom` (Custom mode. The custom comparison objects must be a subset of the migration objects). Default value: `sameAsMigrate`.
      */
     public void setObjectMode(String ObjectMode) {
         this.ObjectMode = ObjectMode;
@@ -135,6 +142,22 @@ public class ModifyCompareTaskRequest extends AbstractModel{
      */
     public void setObjects(CompareObject Objects) {
         this.Objects = Objects;
+    }
+
+    /**
+     * Get Consistency check options 
+     * @return Options Consistency check options
+     */
+    public CompareOptions getOptions() {
+        return this.Options;
+    }
+
+    /**
+     * Set Consistency check options
+     * @param Options Consistency check options
+     */
+    public void setOptions(CompareOptions Options) {
+        this.Options = Options;
     }
 
     public ModifyCompareTaskRequest() {
@@ -160,6 +183,9 @@ public class ModifyCompareTaskRequest extends AbstractModel{
         if (source.Objects != null) {
             this.Objects = new CompareObject(source.Objects);
         }
+        if (source.Options != null) {
+            this.Options = new CompareOptions(source.Options);
+        }
     }
 
 
@@ -172,6 +198,7 @@ public class ModifyCompareTaskRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "TaskName", this.TaskName);
         this.setParamSimple(map, prefix + "ObjectMode", this.ObjectMode);
         this.setParamObj(map, prefix + "Objects.", this.Objects);
+        this.setParamObj(map, prefix + "Options.", this.Options);
 
     }
 }

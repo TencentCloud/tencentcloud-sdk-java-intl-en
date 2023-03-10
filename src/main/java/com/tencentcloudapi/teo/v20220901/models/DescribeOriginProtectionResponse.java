@@ -13,22 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dts.v20211206.models;
+package com.tencentcloudapi.teo.v20220901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SkipCheckItemResponse extends AbstractModel{
+public class DescribeOriginProtectionResponse extends AbstractModel{
 
     /**
-    * Message prompted for skipping the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Origin protection configuration.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
-    @SerializedName("Message")
+    @SerializedName("OriginProtectionInfo")
     @Expose
-    private String Message;
+    private OriginProtectionInfo [] OriginProtectionInfo;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,23 +38,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Message prompted for skipping the check item
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Message Message prompted for skipping the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Origin protection configuration.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return OriginProtectionInfo Origin protection configuration.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
-    public String getMessage() {
-        return this.Message;
+    public OriginProtectionInfo [] getOriginProtectionInfo() {
+        return this.OriginProtectionInfo;
     }
 
     /**
-     * Set Message prompted for skipping the check item
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Message Message prompted for skipping the check item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Origin protection configuration.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param OriginProtectionInfo Origin protection configuration.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
-    public void setMessage(String Message) {
-        this.Message = Message;
+    public void setOriginProtectionInfo(OriginProtectionInfo [] OriginProtectionInfo) {
+        this.OriginProtectionInfo = OriginProtectionInfo;
     }
 
     /**
@@ -73,16 +73,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public SkipCheckItemResponse() {
+    public DescribeOriginProtectionResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SkipCheckItemResponse(SkipCheckItemResponse source) {
-        if (source.Message != null) {
-            this.Message = new String(source.Message);
+    public DescribeOriginProtectionResponse(DescribeOriginProtectionResponse source) {
+        if (source.OriginProtectionInfo != null) {
+            this.OriginProtectionInfo = new OriginProtectionInfo[source.OriginProtectionInfo.length];
+            for (int i = 0; i < source.OriginProtectionInfo.length; i++) {
+                this.OriginProtectionInfo[i] = new OriginProtectionInfo(source.OriginProtectionInfo[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +97,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamArrayObj(map, prefix + "OriginProtectionInfo.", this.OriginProtectionInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

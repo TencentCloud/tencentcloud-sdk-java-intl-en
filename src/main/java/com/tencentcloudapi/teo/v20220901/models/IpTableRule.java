@@ -42,11 +42,19 @@ public class IpTableRule extends AbstractModel{
     private String MatchFrom;
 
     /**
-    * The matching content.
+    * Matching method. It defaults to `equal` if it’s left empty.
+Values: 
+<li>`is_empty`: The field is empty.</li>
+<li>`not_exists`: The configuration item does not exist.</li>
+<li>`include`: Include</li>
+<li>`not_include`: Do not include</li>
+<li>`equal`: Equal to</li>
+<li>`not_equal`: Not equal to</li>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("MatchContent")
+    @SerializedName("Operator")
     @Expose
-    private String MatchContent;
+    private String Operator;
 
     /**
     * The rule ID, which is only used as an output parameter.
@@ -71,6 +79,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("Status")
     @Expose
     private String Status;
+
+    /**
+    * The rule name.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RuleName")
+    @Expose
+    private String RuleName;
+
+    /**
+    * Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
+    */
+    @SerializedName("MatchContent")
+    @Expose
+    private String MatchContent;
 
     /**
      * Get The action. Values:
@@ -125,19 +148,51 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The matching content. 
-     * @return MatchContent The matching content.
+     * Get Matching method. It defaults to `equal` if it’s left empty.
+Values: 
+<li>`is_empty`: The field is empty.</li>
+<li>`not_exists`: The configuration item does not exist.</li>
+<li>`include`: Include</li>
+<li>`not_include`: Do not include</li>
+<li>`equal`: Equal to</li>
+<li>`not_equal`: Not equal to</li>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Operator Matching method. It defaults to `equal` if it’s left empty.
+Values: 
+<li>`is_empty`: The field is empty.</li>
+<li>`not_exists`: The configuration item does not exist.</li>
+<li>`include`: Include</li>
+<li>`not_include`: Do not include</li>
+<li>`equal`: Equal to</li>
+<li>`not_equal`: Not equal to</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public String getMatchContent() {
-        return this.MatchContent;
+    public String getOperator() {
+        return this.Operator;
     }
 
     /**
-     * Set The matching content.
-     * @param MatchContent The matching content.
+     * Set Matching method. It defaults to `equal` if it’s left empty.
+Values: 
+<li>`is_empty`: The field is empty.</li>
+<li>`not_exists`: The configuration item does not exist.</li>
+<li>`include`: Include</li>
+<li>`not_include`: Do not include</li>
+<li>`equal`: Equal to</li>
+<li>`not_equal`: Not equal to</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Operator Matching method. It defaults to `equal` if it’s left empty.
+Values: 
+<li>`is_empty`: The field is empty.</li>
+<li>`not_exists`: The configuration item does not exist.</li>
+<li>`include`: Include</li>
+<li>`not_include`: Do not include</li>
+<li>`equal`: Equal to</li>
+<li>`not_equal`: Not equal to</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setMatchContent(String MatchContent) {
-        this.MatchContent = MatchContent;
+    public void setOperator(String Operator) {
+        this.Operator = Operator;
     }
 
     /**
@@ -200,6 +255,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Status = Status;
     }
 
+    /**
+     * Get The rule name.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RuleName The rule name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getRuleName() {
+        return this.RuleName;
+    }
+
+    /**
+     * Set The rule name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RuleName The rule name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRuleName(String RuleName) {
+        this.RuleName = RuleName;
+    }
+
+    /**
+     * Get Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`.  
+     * @return MatchContent Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
+     */
+    public String getMatchContent() {
+        return this.MatchContent;
+    }
+
+    /**
+     * Set Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
+     * @param MatchContent Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
+     */
+    public void setMatchContent(String MatchContent) {
+        this.MatchContent = MatchContent;
+    }
+
     public IpTableRule() {
     }
 
@@ -214,8 +305,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.MatchFrom != null) {
             this.MatchFrom = new String(source.MatchFrom);
         }
-        if (source.MatchContent != null) {
-            this.MatchContent = new String(source.MatchContent);
+        if (source.Operator != null) {
+            this.Operator = new String(source.Operator);
         }
         if (source.RuleID != null) {
             this.RuleID = new Long(source.RuleID);
@@ -226,6 +317,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.RuleName != null) {
+            this.RuleName = new String(source.RuleName);
+        }
+        if (source.MatchContent != null) {
+            this.MatchContent = new String(source.MatchContent);
+        }
     }
 
 
@@ -235,10 +332,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "MatchFrom", this.MatchFrom);
-        this.setParamSimple(map, prefix + "MatchContent", this.MatchContent);
+        this.setParamSimple(map, prefix + "Operator", this.Operator);
         this.setParamSimple(map, prefix + "RuleID", this.RuleID);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "RuleName", this.RuleName);
+        this.setParamSimple(map, prefix + "MatchContent", this.MatchContent);
 
     }
 }
