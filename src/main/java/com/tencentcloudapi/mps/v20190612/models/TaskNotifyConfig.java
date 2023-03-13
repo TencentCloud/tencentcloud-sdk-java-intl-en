@@ -63,6 +63,7 @@ public class TaskNotifyConfig extends AbstractModel{
 <li>`TDMQ-CMQ`: Message queue</li>
 <li>`URL`: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
 <li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
+<li>`AWS-SQS`: AWS queue. This type is only supported for AWS tasks, and the queue must be in the same region as the AWS bucket.</li>
 <font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
     */
     @SerializedName("NotifyType")
@@ -75,6 +76,15 @@ public class TaskNotifyConfig extends AbstractModel{
     @SerializedName("NotifyUrl")
     @Expose
     private String NotifyUrl;
+
+    /**
+    * The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AwsSQS")
+    @Expose
+    private AwsSQS AwsSQS;
 
     /**
      * Get The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic. 
@@ -162,12 +172,14 @@ public class TaskNotifyConfig extends AbstractModel{
 <li>`TDMQ-CMQ`: Message queue</li>
 <li>`URL`: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
 <li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
+<li>`AWS-SQS`: AWS queue. This type is only supported for AWS tasks, and the queue must be in the same region as the AWS bucket.</li>
 <font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font> 
      * @return NotifyType The notification type. Valid values:
 <li>`CMQ`: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
 <li>`TDMQ-CMQ`: Message queue</li>
 <li>`URL`: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
 <li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
+<li>`AWS-SQS`: AWS queue. This type is only supported for AWS tasks, and the queue must be in the same region as the AWS bucket.</li>
 <font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
      */
     public String getNotifyType() {
@@ -180,12 +192,14 @@ public class TaskNotifyConfig extends AbstractModel{
 <li>`TDMQ-CMQ`: Message queue</li>
 <li>`URL`: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
 <li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
+<li>`AWS-SQS`: AWS queue. This type is only supported for AWS tasks, and the queue must be in the same region as the AWS bucket.</li>
 <font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
      * @param NotifyType The notification type. Valid values:
 <li>`CMQ`: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
 <li>`TDMQ-CMQ`: Message queue</li>
 <li>`URL`: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
 <li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
+<li>`AWS-SQS`: AWS queue. This type is only supported for AWS tasks, and the queue must be in the same region as the AWS bucket.</li>
 <font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
      */
     public void setNotifyType(String NotifyType) {
@@ -206,6 +220,30 @@ public class TaskNotifyConfig extends AbstractModel{
      */
     public void setNotifyUrl(String NotifyUrl) {
         this.NotifyUrl = NotifyUrl;
+    }
+
+    /**
+     * Get The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
+
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AwsSQS The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public AwsSQS getAwsSQS() {
+        return this.AwsSQS;
+    }
+
+    /**
+     * Set The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AwsSQS The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAwsSQS(AwsSQS AwsSQS) {
+        this.AwsSQS = AwsSQS;
     }
 
     public TaskNotifyConfig() {
@@ -237,6 +275,9 @@ public class TaskNotifyConfig extends AbstractModel{
         if (source.NotifyUrl != null) {
             this.NotifyUrl = new String(source.NotifyUrl);
         }
+        if (source.AwsSQS != null) {
+            this.AwsSQS = new AwsSQS(source.AwsSQS);
+        }
     }
 
 
@@ -251,6 +292,7 @@ public class TaskNotifyConfig extends AbstractModel{
         this.setParamSimple(map, prefix + "NotifyMode", this.NotifyMode);
         this.setParamSimple(map, prefix + "NotifyType", this.NotifyType);
         this.setParamSimple(map, prefix + "NotifyUrl", this.NotifyUrl);
+        this.setParamObj(map, prefix + "AwsSQS.", this.AwsSQS);
 
     }
 }

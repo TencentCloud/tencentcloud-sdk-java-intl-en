@@ -199,6 +199,37 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a scheme for media files uploaded to a specified COS bucket. A scheme may include the following tasks:
+1. Video transcoding (with watermark)
+2. Animated screenshot generating
+3. Time point screencapturing
+4. Sampled screencapturing
+5. Image sprite generating
+6. Adaptive bitrate streaming
+7. Intelligent content moderation (detection of pornographic and sensitive content)
+8. Intelligent content analysis (labeling, categorization, thumbnail generation, labeling by frame)
+9. Intelligent content recognition (face, full text, text keyword, full speech, and speech keyword)
+
+Note: A scheme is disabled upon creation. You need to manually enable it.
+     * @param req CreateScheduleRequest
+     * @return CreateScheduleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateScheduleResponse CreateSchedule(CreateScheduleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateScheduleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateScheduleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateSchedule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a custom time point screencapturing template. Up to 16 templates can be created.
      * @param req CreateSnapshotByTimeOffsetTemplateRequest
      * @return CreateSnapshotByTimeOffsetTemplateResponse
@@ -464,6 +495,26 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 Type type = new TypeToken<JsonResponseModel<DeleteSampleSnapshotTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteSampleSnapshotTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete a scheme.
+     * @param req DeleteScheduleRequest
+     * @return DeleteScheduleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteScheduleResponse DeleteSchedule(DeleteScheduleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteScheduleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteScheduleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteSchedule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -752,6 +803,26 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *This API is used to query a scheme.
+     * @param req DescribeSchedulesRequest
+     * @return DescribeSchedulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSchedulesResponse DescribeSchedules(DescribeSchedulesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeSchedulesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeSchedulesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeSchedules");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the list of time point screencapturing templates and supports paged queries by filters.
      * @param req DescribeSnapshotByTimeOffsetTemplatesRequest
      * @return DescribeSnapshotByTimeOffsetTemplatesResponse
@@ -894,6 +965,26 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *This API is used to disable a scheme.
+     * @param req DisableScheduleRequest
+     * @return DisableScheduleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableScheduleResponse DisableSchedule(DisableScheduleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DisableScheduleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DisableScheduleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DisableSchedule");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to disable a workflow.
      * @param req DisableWorkflowRequest
      * @return DisableWorkflowResponse
@@ -930,6 +1021,26 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 Type type = new TypeToken<JsonResponseModel<EditMediaResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "EditMedia");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to enable a scheme.
+     * @param req EnableScheduleRequest
+     * @return EnableScheduleResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableScheduleResponse EnableSchedule(EnableScheduleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<EnableScheduleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<EnableScheduleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "EnableSchedule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1152,6 +1263,26 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
                 Type type = new TypeToken<JsonResponseModel<ModifySampleSnapshotTemplateResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifySampleSnapshotTemplate");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a scheme.
+     * @param req ModifyScheduleRequest
+     * @return ModifyScheduleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyScheduleResponse ModifySchedule(ModifyScheduleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyScheduleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyScheduleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifySchedule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

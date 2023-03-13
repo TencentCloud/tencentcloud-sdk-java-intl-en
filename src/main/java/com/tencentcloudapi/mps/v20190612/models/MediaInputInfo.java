@@ -23,7 +23,10 @@ import java.util.HashMap;
 public class MediaInputInfo extends AbstractModel{
 
     /**
-    * The input type, which can be `COS` or `URL`.
+    * The input type. Valid values:
+<li>`COS`: A COS bucket address.</li>
+<li> `URL`: A URL.</li>
+<li> `AWS-S3`: An AWS S3 bucket address. Currently, this type is only supported for transcoding tasks.</li>
     */
     @SerializedName("Type")
     @Expose
@@ -45,16 +48,36 @@ Note: This field may return null, indicating that no valid value can be obtained
     private UrlInputInfo UrlInputInfo;
 
     /**
-     * Get The input type, which can be `COS` or `URL`. 
-     * @return Type The input type, which can be `COS` or `URL`.
+    * The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("S3InputInfo")
+    @Expose
+    private S3InputInfo S3InputInfo;
+
+    /**
+     * Get The input type. Valid values:
+<li>`COS`: A COS bucket address.</li>
+<li> `URL`: A URL.</li>
+<li> `AWS-S3`: An AWS S3 bucket address. Currently, this type is only supported for transcoding tasks.</li> 
+     * @return Type The input type. Valid values:
+<li>`COS`: A COS bucket address.</li>
+<li> `URL`: A URL.</li>
+<li> `AWS-S3`: An AWS S3 bucket address. Currently, this type is only supported for transcoding tasks.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The input type, which can be `COS` or `URL`.
-     * @param Type The input type, which can be `COS` or `URL`.
+     * Set The input type. Valid values:
+<li>`COS`: A COS bucket address.</li>
+<li> `URL`: A URL.</li>
+<li> `AWS-S3`: An AWS S3 bucket address. Currently, this type is only supported for transcoding tasks.</li>
+     * @param Type The input type. Valid values:
+<li>`COS`: A COS bucket address.</li>
+<li> `URL`: A URL.</li>
+<li> `AWS-S3`: An AWS S3 bucket address. Currently, this type is only supported for transcoding tasks.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -96,6 +119,26 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.UrlInputInfo = UrlInputInfo;
     }
 
+    /**
+     * Get The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return S3InputInfo The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public S3InputInfo getS3InputInfo() {
+        return this.S3InputInfo;
+    }
+
+    /**
+     * Set The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param S3InputInfo The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setS3InputInfo(S3InputInfo S3InputInfo) {
+        this.S3InputInfo = S3InputInfo;
+    }
+
     public MediaInputInfo() {
     }
 
@@ -113,6 +156,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.UrlInputInfo != null) {
             this.UrlInputInfo = new UrlInputInfo(source.UrlInputInfo);
         }
+        if (source.S3InputInfo != null) {
+            this.S3InputInfo = new S3InputInfo(source.S3InputInfo);
+        }
     }
 
 
@@ -123,6 +169,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "CosInputInfo.", this.CosInputInfo);
         this.setParamObj(map, prefix + "UrlInputInfo.", this.UrlInputInfo);
+        this.setParamObj(map, prefix + "S3InputInfo.", this.S3InputInfo);
 
     }
 }

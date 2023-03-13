@@ -23,7 +23,9 @@ import java.util.HashMap;
 public class TaskOutputStorage extends AbstractModel{
 
     /**
-    * The type of storage location for the media processing output object. Only COS is supported currently.
+    * The storage type for a media processing output file. Valid values:
+<li>`COS`: Tencent Cloud COS</li>
+<li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
     */
     @SerializedName("Type")
     @Expose
@@ -38,16 +40,32 @@ Note: This field may return null, indicating that no valid value can be obtained
     private CosOutputStorage CosOutputStorage;
 
     /**
-     * Get The type of storage location for the media processing output object. Only COS is supported currently. 
-     * @return Type The type of storage location for the media processing output object. Only COS is supported currently.
+    * The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("S3OutputStorage")
+    @Expose
+    private S3OutputStorage S3OutputStorage;
+
+    /**
+     * Get The storage type for a media processing output file. Valid values:
+<li>`COS`: Tencent Cloud COS</li>
+<li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li> 
+     * @return Type The storage type for a media processing output file. Valid values:
+<li>`COS`: Tencent Cloud COS</li>
+<li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The type of storage location for the media processing output object. Only COS is supported currently.
-     * @param Type The type of storage location for the media processing output object. Only COS is supported currently.
+     * Set The storage type for a media processing output file. Valid values:
+<li>`COS`: Tencent Cloud COS</li>
+<li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+     * @param Type The storage type for a media processing output file. Valid values:
+<li>`COS`: Tencent Cloud COS</li>
+<li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -73,6 +91,26 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.CosOutputStorage = CosOutputStorage;
     }
 
+    /**
+     * Get The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return S3OutputStorage The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public S3OutputStorage getS3OutputStorage() {
+        return this.S3OutputStorage;
+    }
+
+    /**
+     * Set The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param S3OutputStorage The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setS3OutputStorage(S3OutputStorage S3OutputStorage) {
+        this.S3OutputStorage = S3OutputStorage;
+    }
+
     public TaskOutputStorage() {
     }
 
@@ -87,6 +125,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.CosOutputStorage != null) {
             this.CosOutputStorage = new CosOutputStorage(source.CosOutputStorage);
         }
+        if (source.S3OutputStorage != null) {
+            this.S3OutputStorage = new S3OutputStorage(source.S3OutputStorage);
+        }
     }
 
 
@@ -96,6 +137,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "CosOutputStorage.", this.CosOutputStorage);
+        this.setParamObj(map, prefix + "S3OutputStorage.", this.S3OutputStorage);
 
     }
 }

@@ -23,7 +23,11 @@ import java.util.HashMap;
 public class WorkflowTrigger extends AbstractModel{
 
     /**
-    * Trigger type. Only `CosFileUpload` is supported currently.
+    * The trigger type. Valid values:
+<li>`CosFileUpload`: Tencent Cloud COS trigger.</li>
+<li>`AwsS3FileUpload`: AWS S3 trigger. Currently, this type is only supported for transcoding tasks and schemes (not supported for workflows).</li>
+
+
     */
     @SerializedName("Type")
     @Expose
@@ -38,16 +42,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private CosFileUploadTrigger CosFileUploadTrigger;
 
     /**
-     * Get Trigger type. Only `CosFileUpload` is supported currently. 
-     * @return Type Trigger type. Only `CosFileUpload` is supported currently.
+    * The AWS S3 trigger. This parameter is valid and required if `Type` is `AwsS3FileUpload`.
+
+Note: Currently, the key for the AWS S3 bucket, the trigger SQS queue, and the callback SQS queue must be the same.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AwsS3FileUploadTrigger")
+    @Expose
+    private AwsS3FileUploadTrigger AwsS3FileUploadTrigger;
+
+    /**
+     * Get The trigger type. Valid values:
+<li>`CosFileUpload`: Tencent Cloud COS trigger.</li>
+<li>`AwsS3FileUpload`: AWS S3 trigger. Currently, this type is only supported for transcoding tasks and schemes (not supported for workflows).</li>
+
+ 
+     * @return Type The trigger type. Valid values:
+<li>`CosFileUpload`: Tencent Cloud COS trigger.</li>
+<li>`AwsS3FileUpload`: AWS S3 trigger. Currently, this type is only supported for transcoding tasks and schemes (not supported for workflows).</li>
+
+
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Trigger type. Only `CosFileUpload` is supported currently.
-     * @param Type Trigger type. Only `CosFileUpload` is supported currently.
+     * Set The trigger type. Valid values:
+<li>`CosFileUpload`: Tencent Cloud COS trigger.</li>
+<li>`AwsS3FileUpload`: AWS S3 trigger. Currently, this type is only supported for transcoding tasks and schemes (not supported for workflows).</li>
+
+
+     * @param Type The trigger type. Valid values:
+<li>`CosFileUpload`: Tencent Cloud COS trigger.</li>
+<li>`AwsS3FileUpload`: AWS S3 trigger. Currently, this type is only supported for transcoding tasks and schemes (not supported for workflows).</li>
+
+
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -73,6 +103,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.CosFileUploadTrigger = CosFileUploadTrigger;
     }
 
+    /**
+     * Get The AWS S3 trigger. This parameter is valid and required if `Type` is `AwsS3FileUpload`.
+
+Note: Currently, the key for the AWS S3 bucket, the trigger SQS queue, and the callback SQS queue must be the same.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AwsS3FileUploadTrigger The AWS S3 trigger. This parameter is valid and required if `Type` is `AwsS3FileUpload`.
+
+Note: Currently, the key for the AWS S3 bucket, the trigger SQS queue, and the callback SQS queue must be the same.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public AwsS3FileUploadTrigger getAwsS3FileUploadTrigger() {
+        return this.AwsS3FileUploadTrigger;
+    }
+
+    /**
+     * Set The AWS S3 trigger. This parameter is valid and required if `Type` is `AwsS3FileUpload`.
+
+Note: Currently, the key for the AWS S3 bucket, the trigger SQS queue, and the callback SQS queue must be the same.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AwsS3FileUploadTrigger The AWS S3 trigger. This parameter is valid and required if `Type` is `AwsS3FileUpload`.
+
+Note: Currently, the key for the AWS S3 bucket, the trigger SQS queue, and the callback SQS queue must be the same.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAwsS3FileUploadTrigger(AwsS3FileUploadTrigger AwsS3FileUploadTrigger) {
+        this.AwsS3FileUploadTrigger = AwsS3FileUploadTrigger;
+    }
+
     public WorkflowTrigger() {
     }
 
@@ -87,6 +145,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.CosFileUploadTrigger != null) {
             this.CosFileUploadTrigger = new CosFileUploadTrigger(source.CosFileUploadTrigger);
         }
+        if (source.AwsS3FileUploadTrigger != null) {
+            this.AwsS3FileUploadTrigger = new AwsS3FileUploadTrigger(source.AwsS3FileUploadTrigger);
+        }
     }
 
 
@@ -96,6 +157,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "CosFileUploadTrigger.", this.CosFileUploadTrigger);
+        this.setParamObj(map, prefix + "AwsS3FileUploadTrigger.", this.AwsS3FileUploadTrigger);
 
     }
 }
