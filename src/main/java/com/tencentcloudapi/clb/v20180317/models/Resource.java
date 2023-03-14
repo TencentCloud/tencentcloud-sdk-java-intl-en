@@ -37,6 +37,14 @@ public class Resource extends AbstractModel{
     private String Isp;
 
     /**
+    * Available resources
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AvailabilitySet")
+    @Expose
+    private ResourceAvailability [] AvailabilitySet;
+
+    /**
      * Get Specific ISP resource information, Vaules: `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`. 
      * @return Type Specific ISP resource information, Vaules: `CMCC`, `CUCC`, `CTCC`, `BGP`, and `INTERNAL`.
      */
@@ -68,6 +76,26 @@ public class Resource extends AbstractModel{
         this.Isp = Isp;
     }
 
+    /**
+     * Get Available resources
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return AvailabilitySet Available resources
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public ResourceAvailability [] getAvailabilitySet() {
+        return this.AvailabilitySet;
+    }
+
+    /**
+     * Set Available resources
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param AvailabilitySet Available resources
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setAvailabilitySet(ResourceAvailability [] AvailabilitySet) {
+        this.AvailabilitySet = AvailabilitySet;
+    }
+
     public Resource() {
     }
 
@@ -85,6 +113,12 @@ public class Resource extends AbstractModel{
         if (source.Isp != null) {
             this.Isp = new String(source.Isp);
         }
+        if (source.AvailabilitySet != null) {
+            this.AvailabilitySet = new ResourceAvailability[source.AvailabilitySet.length];
+            for (int i = 0; i < source.AvailabilitySet.length; i++) {
+                this.AvailabilitySet[i] = new ResourceAvailability(source.AvailabilitySet[i]);
+            }
+        }
     }
 
 
@@ -94,6 +128,7 @@ public class Resource extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Type.", this.Type);
         this.setParamSimple(map, prefix + "Isp", this.Isp);
+        this.setParamArrayObj(map, prefix + "AvailabilitySet.", this.AvailabilitySet);
 
     }
 }

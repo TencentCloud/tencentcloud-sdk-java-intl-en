@@ -45,6 +45,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CertCaId;
 
     /**
+    * IDs of extra server certificates
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ExtCertIds")
+    @Expose
+    private String [] ExtCertIds;
+
+    /**
      * Get Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication) 
      * @return SSLMode Authentication type. Value range: UNIDIRECTIONAL (unidirectional authentication), MUTUAL (mutual authentication)
      */
@@ -96,6 +104,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.CertCaId = CertCaId;
     }
 
+    /**
+     * Get IDs of extra server certificates
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ExtCertIds IDs of extra server certificates
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String [] getExtCertIds() {
+        return this.ExtCertIds;
+    }
+
+    /**
+     * Set IDs of extra server certificates
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ExtCertIds IDs of extra server certificates
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setExtCertIds(String [] ExtCertIds) {
+        this.ExtCertIds = ExtCertIds;
+    }
+
     public CertificateOutput() {
     }
 
@@ -113,6 +141,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.CertCaId != null) {
             this.CertCaId = new String(source.CertCaId);
         }
+        if (source.ExtCertIds != null) {
+            this.ExtCertIds = new String[source.ExtCertIds.length];
+            for (int i = 0; i < source.ExtCertIds.length; i++) {
+                this.ExtCertIds[i] = new String(source.ExtCertIds[i]);
+            }
+        }
     }
 
 
@@ -123,6 +157,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "SSLMode", this.SSLMode);
         this.setParamSimple(map, prefix + "CertId", this.CertId);
         this.setParamSimple(map, prefix + "CertCaId", this.CertCaId);
+        this.setParamArraySimple(map, prefix + "ExtCertIds.", this.ExtCertIds);
 
     }
 }

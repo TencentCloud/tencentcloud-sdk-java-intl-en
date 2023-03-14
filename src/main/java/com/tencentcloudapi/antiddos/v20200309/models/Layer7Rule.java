@@ -58,6 +58,20 @@ public class Layer7Rule extends AbstractModel{
     private RuleInstanceRelation [] InstanceDetailRule;
 
     /**
+    * Protocol
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
+
+    /**
+    * Port number
+    */
+    @SerializedName("Vport")
+    @Expose
+    private Long Vport;
+
+    /**
      * Get Domain name 
      * @return Domain Domain name
      */
@@ -137,6 +151,38 @@ public class Layer7Rule extends AbstractModel{
         this.InstanceDetailRule = InstanceDetailRule;
     }
 
+    /**
+     * Get Protocol 
+     * @return Protocol Protocol
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set Protocol
+     * @param Protocol Protocol
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
+    /**
+     * Get Port number 
+     * @return Vport Port number
+     */
+    public Long getVport() {
+        return this.Vport;
+    }
+
+    /**
+     * Set Port number
+     * @param Vport Port number
+     */
+    public void setVport(Long Vport) {
+        this.Vport = Vport;
+    }
+
     public Layer7Rule() {
     }
 
@@ -172,6 +218,12 @@ public class Layer7Rule extends AbstractModel{
                 this.InstanceDetailRule[i] = new RuleInstanceRelation(source.InstanceDetailRule[i]);
             }
         }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.Vport != null) {
+            this.Vport = new Long(source.Vport);
+        }
     }
 
 
@@ -184,6 +236,8 @@ public class Layer7Rule extends AbstractModel{
         this.setParamArrayObj(map, prefix + "RealServers.", this.RealServers);
         this.setParamArrayObj(map, prefix + "InstanceDetails.", this.InstanceDetails);
         this.setParamArrayObj(map, prefix + "InstanceDetailRule.", this.InstanceDetailRule);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamSimple(map, prefix + "Vport", this.Vport);
 
     }
 }

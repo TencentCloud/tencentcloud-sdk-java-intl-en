@@ -463,6 +463,37 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
+     *This API is used to unbind a SCF function with a CLB forwarding rule. For L7 listeners, you need to specify the forwarding rule by using `LocationId` or `Domain+Url`. 
+This is an async API. After it is returned successfully, you can call the [DescribeTaskStatus](https://intl.cloud.tencent.com/document/product/214/30683?from_cn_redirect=1) API with the returned RequestID to check whether this task is successful.
+<br/>Limits: 
+
+- Binding with SCF is only available in Guangzhou, Shenzhen Finance, Shanghai, Shanghai Finance, Beijing, Chengdu, Hong Kong (China), Singapore, Mumbai, Tokyo, and Silicon Valley.
+- SCF functions can only be bound with CLB instances of bill-by-IP accounts but not with bill-by-CVM accounts. If you are using a bill-by-CVM account, we recommend upgrading it to a bill-by-IP account. For more information, please see [Checking Account Type](https://intl.cloud.tencent.com/document/product/1199/49090?from_cn_redirect=1).
+- SCF functions cannot be bound with classic CLB instances.
+- SCF functions cannot be bound with classic network-based CLB instances.
+- SCF functions in the same region can be bound with CLB instances. SCF functions can only be bound across VPCs but not regions.
+- SCF functions can only be bound with IPv4 and IPv6 NAT64 CLB instances, but currently not with IPv6 CLB instances.
+- SCF functions can only be bound with layer-7 HTTP and HTTPS listeners, but not with layer-7 QUIC listeners or layer-4 (TCP, UDP, and TCP SSL) listeners.
+- Only SCF event-triggered functions can be bound with CLB instances.
+     * @param req DeregisterFunctionTargetsRequest
+     * @return DeregisterFunctionTargetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeregisterFunctionTargetsResponse DeregisterFunctionTargets(DeregisterFunctionTargetsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeregisterFunctionTargetsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeregisterFunctionTargetsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeregisterFunctionTargets");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to unbind a server from a target group.
 This is an async API. After it is returned successfully, you can call the API `DescribeTaskStatus` with the returned RequestId as an input parameter to check whether this task is successful.
      * @param req DeregisterTargetGroupInstancesRequest
@@ -1370,6 +1401,36 @@ This is an async API. After it is returned successfully, you can call the Descri
                 Type type = new TypeToken<JsonResponseModel<ModifyTargetWeightResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyTargetWeight");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to bind an SCF function with the L7 forwarding rule of a CLB instance. Note that you need to create an L7 listener (HTTP, HTTPS) and forwarding rule first.
+This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.<br/>
+**Limits:**
+- Binding with SCF is only available in Guangzhou, Shenzhen Finance, Shanghai, Shanghai Finance, Beijing, Chengdu, Hong Kong (China), Singapore, Mumbai, Tokyo, and Silicon Valley.
+- SCF functions can only be bound with CLB instances of bill-by-IP accounts but not with bill-by-CVM accounts. If you are using a bill-by-CVM account, we recommend upgrading it to a bill-by-IP account. For more information, please see [Checking Account Type](https://intl.cloud.tencent.com/document/product/1199/49090?from_cn_redirect=1). 
+- SCF functions cannot be bound with classic CLB instances.
+- SCF functions cannot be bound with classic network-based CLB instances.
+- SCF functions in the same region can be bound with CLB instances. SCF functions can only be bound across VPCs but not regions.
+- SCF functions can only be bound with IPv4 and IPv6 NAT64 CLB instances, but currently not with IPv6 CLB instances.
+- SCF functions can only be bound with layer-7 HTTP and HTTPS listeners, but not with layer-7 QUIC listeners or layer-4 (TCP, UDP, and TCP SSL) listeners.
+- Only SCF event-triggered functions can be bound with CLB instances.
+     * @param req RegisterFunctionTargetsRequest
+     * @return RegisterFunctionTargetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public RegisterFunctionTargetsResponse RegisterFunctionTargets(RegisterFunctionTargetsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<RegisterFunctionTargetsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<RegisterFunctionTargetsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "RegisterFunctionTargets");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

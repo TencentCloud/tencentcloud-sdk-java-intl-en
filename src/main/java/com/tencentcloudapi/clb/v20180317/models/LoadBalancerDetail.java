@@ -295,6 +295,37 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String Domains;
 
     /**
+    * The secondary zone of multi-AZ CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SlaveZone")
+    @Expose
+    private String [] SlaveZone;
+
+    /**
+    * The AZ of private CLB instance. This is only available for beta users.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Zones")
+    @Expose
+    private String [] Zones;
+
+    /**
+    * Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SniSwitch")
+    @Expose
+    private Long SniSwitch;
+
+    /**
+    * 
+    */
+    @SerializedName("LoadBalancerDomain")
+    @Expose
+    private String LoadBalancerDomain;
+
+    /**
      * Get CLB instance ID. 
      * @return LoadBalancerId CLB instance ID.
      */
@@ -974,6 +1005,82 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.Domains = Domains;
     }
 
+    /**
+     * Get The secondary zone of multi-AZ CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return SlaveZone The secondary zone of multi-AZ CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String [] getSlaveZone() {
+        return this.SlaveZone;
+    }
+
+    /**
+     * Set The secondary zone of multi-AZ CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param SlaveZone The secondary zone of multi-AZ CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setSlaveZone(String [] SlaveZone) {
+        this.SlaveZone = SlaveZone;
+    }
+
+    /**
+     * Get The AZ of private CLB instance. This is only available for beta users.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Zones The AZ of private CLB instance. This is only available for beta users.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String [] getZones() {
+        return this.Zones;
+    }
+
+    /**
+     * Set The AZ of private CLB instance. This is only available for beta users.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Zones The AZ of private CLB instance. This is only available for beta users.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setZones(String [] Zones) {
+        this.Zones = Zones;
+    }
+
+    /**
+     * Get Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return SniSwitch Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getSniSwitch() {
+        return this.SniSwitch;
+    }
+
+    /**
+     * Set Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param SniSwitch Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setSniSwitch(Long SniSwitch) {
+        this.SniSwitch = SniSwitch;
+    }
+
+    /**
+     * Get  
+     * @return LoadBalancerDomain 
+     */
+    public String getLoadBalancerDomain() {
+        return this.LoadBalancerDomain;
+    }
+
+    /**
+     * Set 
+     * @param LoadBalancerDomain 
+     */
+    public void setLoadBalancerDomain(String LoadBalancerDomain) {
+        this.LoadBalancerDomain = LoadBalancerDomain;
+    }
+
     public LoadBalancerDetail() {
     }
 
@@ -1090,6 +1197,24 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.Domains != null) {
             this.Domains = new String(source.Domains);
         }
+        if (source.SlaveZone != null) {
+            this.SlaveZone = new String[source.SlaveZone.length];
+            for (int i = 0; i < source.SlaveZone.length; i++) {
+                this.SlaveZone[i] = new String(source.SlaveZone[i]);
+            }
+        }
+        if (source.Zones != null) {
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
+        }
+        if (source.SniSwitch != null) {
+            this.SniSwitch = new Long(source.SniSwitch);
+        }
+        if (source.LoadBalancerDomain != null) {
+            this.LoadBalancerDomain = new String(source.LoadBalancerDomain);
+        }
     }
 
 
@@ -1131,6 +1256,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
         this.setParamSimple(map, prefix + "TargetHealth", this.TargetHealth);
         this.setParamSimple(map, prefix + "Domains", this.Domains);
+        this.setParamArraySimple(map, prefix + "SlaveZone.", this.SlaveZone);
+        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
+        this.setParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
+        this.setParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
 
     }
 }

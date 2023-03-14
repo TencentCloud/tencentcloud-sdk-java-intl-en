@@ -188,6 +188,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String [] Domains;
 
     /**
+    * List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TargetGroupList")
+    @Expose
+    private BasicTargetGroupInfo [] TargetGroupList;
+
+    /**
      * Get Forwarding rule ID 
      * @return LocationId Forwarding rule ID
      */
@@ -583,6 +591,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.Domains = Domains;
     }
 
+    /**
+     * Get List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return TargetGroupList List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public BasicTargetGroupInfo [] getTargetGroupList() {
+        return this.TargetGroupList;
+    }
+
+    /**
+     * Set List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param TargetGroupList List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTargetGroupList(BasicTargetGroupInfo [] TargetGroupList) {
+        this.TargetGroupList = TargetGroupList;
+    }
+
     public RuleOutput() {
     }
 
@@ -660,6 +688,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 this.Domains[i] = new String(source.Domains[i]);
             }
         }
+        if (source.TargetGroupList != null) {
+            this.TargetGroupList = new BasicTargetGroupInfo[source.TargetGroupList.length];
+            for (int i = 0; i < source.TargetGroupList.length; i++) {
+                this.TargetGroupList[i] = new BasicTargetGroupInfo(source.TargetGroupList[i]);
+            }
+        }
     }
 
 
@@ -689,6 +723,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
         this.setParamSimple(map, prefix + "QuicStatus", this.QuicStatus);
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
+        this.setParamArrayObj(map, prefix + "TargetGroupList.", this.TargetGroupList);
 
     }
 }

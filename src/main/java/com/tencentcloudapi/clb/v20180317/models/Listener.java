@@ -172,6 +172,30 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String [] AttrFlags;
 
     /**
+    * List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TargetGroupList")
+    @Expose
+    private BasicTargetGroupInfo [] TargetGroupList;
+
+    /**
+    * Maximum number of concurrent listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MaxConn")
+    @Expose
+    private Long MaxConn;
+
+    /**
+    * Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MaxCps")
+    @Expose
+    private Long MaxCps;
+
+    /**
      * Get CLB listener ID 
      * @return ListenerId CLB listener ID
      */
@@ -539,6 +563,66 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.AttrFlags = AttrFlags;
     }
 
+    /**
+     * Get List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return TargetGroupList List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public BasicTargetGroupInfo [] getTargetGroupList() {
+        return this.TargetGroupList;
+    }
+
+    /**
+     * Set List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param TargetGroupList List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setTargetGroupList(BasicTargetGroupInfo [] TargetGroupList) {
+        this.TargetGroupList = TargetGroupList;
+    }
+
+    /**
+     * Get Maximum number of concurrent listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return MaxConn Maximum number of concurrent listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getMaxConn() {
+        return this.MaxConn;
+    }
+
+    /**
+     * Set Maximum number of concurrent listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param MaxConn Maximum number of concurrent listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setMaxConn(Long MaxConn) {
+        this.MaxConn = MaxConn;
+    }
+
+    /**
+     * Get Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return MaxCps Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getMaxCps() {
+        return this.MaxCps;
+    }
+
+    /**
+     * Set Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param MaxCps Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setMaxCps(Long MaxCps) {
+        this.MaxCps = MaxCps;
+    }
+
     public Listener() {
     }
 
@@ -610,6 +694,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 this.AttrFlags[i] = new String(source.AttrFlags[i]);
             }
         }
+        if (source.TargetGroupList != null) {
+            this.TargetGroupList = new BasicTargetGroupInfo[source.TargetGroupList.length];
+            for (int i = 0; i < source.TargetGroupList.length; i++) {
+                this.TargetGroupList[i] = new BasicTargetGroupInfo(source.TargetGroupList[i]);
+            }
+        }
+        if (source.MaxConn != null) {
+            this.MaxConn = new Long(source.MaxConn);
+        }
+        if (source.MaxCps != null) {
+            this.MaxCps = new Long(source.MaxCps);
+        }
     }
 
 
@@ -636,6 +732,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Toa", this.Toa);
         this.setParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
         this.setParamArraySimple(map, prefix + "AttrFlags.", this.AttrFlags);
+        this.setParamArrayObj(map, prefix + "TargetGroupList.", this.TargetGroupList);
+        this.setParamSimple(map, prefix + "MaxConn", this.MaxConn);
+        this.setParamSimple(map, prefix + "MaxCps", this.MaxCps);
 
     }
 }

@@ -162,6 +162,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long ElasticServiceBandwidth;
 
     /**
+    * Bandwidth quota given away by Tencent Cloud
+    */
+    @SerializedName("GiftServiceBandWidth")
+    @Expose
+    private Long GiftServiceBandWidth;
+
+    /**
      * Get Details of the Anti-DDoS Pro instance 
      * @return InstanceDetail Details of the Anti-DDoS Pro instance
      */
@@ -501,6 +508,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ElasticServiceBandwidth = ElasticServiceBandwidth;
     }
 
+    /**
+     * Get Bandwidth quota given away by Tencent Cloud 
+     * @return GiftServiceBandWidth Bandwidth quota given away by Tencent Cloud
+     */
+    public Long getGiftServiceBandWidth() {
+        return this.GiftServiceBandWidth;
+    }
+
+    /**
+     * Set Bandwidth quota given away by Tencent Cloud
+     * @param GiftServiceBandWidth Bandwidth quota given away by Tencent Cloud
+     */
+    public void setGiftServiceBandWidth(Long GiftServiceBandWidth) {
+        this.GiftServiceBandWidth = GiftServiceBandWidth;
+    }
+
     public BGPInstance() {
     }
 
@@ -569,6 +592,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ElasticServiceBandwidth != null) {
             this.ElasticServiceBandwidth = new Long(source.ElasticServiceBandwidth);
         }
+        if (source.GiftServiceBandWidth != null) {
+            this.GiftServiceBandWidth = new Long(source.GiftServiceBandWidth);
+        }
     }
 
 
@@ -594,6 +620,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "VitalityVersion", this.VitalityVersion);
         this.setParamSimple(map, prefix + "Line", this.Line);
         this.setParamSimple(map, prefix + "ElasticServiceBandwidth", this.ElasticServiceBandwidth);
+        this.setParamSimple(map, prefix + "GiftServiceBandWidth", this.GiftServiceBandWidth);
 
     }
 }

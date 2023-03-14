@@ -67,6 +67,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean LocalZone;
 
     /**
+    * Type of resources in the zone. Values: `SHARED`, `EXCLUSIVE`
+    */
+    @SerializedName("ZoneResourceType")
+    @Expose
+    private String ZoneResourceType;
+
+    /**
+    * Whether the AZ is an edge zone. Values: `true`, `false`.
+    */
+    @SerializedName("EdgeZone")
+    @Expose
+    private Boolean EdgeZone;
+
+    /**
      * Get Primary AZ, such as "ap-guangzhou-1". 
      * @return MasterZone Primary AZ, such as "ap-guangzhou-1".
      */
@@ -170,6 +184,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.LocalZone = LocalZone;
     }
 
+    /**
+     * Get Type of resources in the zone. Values: `SHARED`, `EXCLUSIVE` 
+     * @return ZoneResourceType Type of resources in the zone. Values: `SHARED`, `EXCLUSIVE`
+     */
+    public String getZoneResourceType() {
+        return this.ZoneResourceType;
+    }
+
+    /**
+     * Set Type of resources in the zone. Values: `SHARED`, `EXCLUSIVE`
+     * @param ZoneResourceType Type of resources in the zone. Values: `SHARED`, `EXCLUSIVE`
+     */
+    public void setZoneResourceType(String ZoneResourceType) {
+        this.ZoneResourceType = ZoneResourceType;
+    }
+
+    /**
+     * Get Whether the AZ is an edge zone. Values: `true`, `false`. 
+     * @return EdgeZone Whether the AZ is an edge zone. Values: `true`, `false`.
+     */
+    public Boolean getEdgeZone() {
+        return this.EdgeZone;
+    }
+
+    /**
+     * Set Whether the AZ is an edge zone. Values: `true`, `false`.
+     * @param EdgeZone Whether the AZ is an edge zone. Values: `true`, `false`.
+     */
+    public void setEdgeZone(Boolean EdgeZone) {
+        this.EdgeZone = EdgeZone;
+    }
+
     public ZoneResource() {
     }
 
@@ -199,6 +245,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.LocalZone != null) {
             this.LocalZone = new Boolean(source.LocalZone);
         }
+        if (source.ZoneResourceType != null) {
+            this.ZoneResourceType = new String(source.ZoneResourceType);
+        }
+        if (source.EdgeZone != null) {
+            this.EdgeZone = new Boolean(source.EdgeZone);
+        }
     }
 
 
@@ -212,6 +264,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "IPVersion", this.IPVersion);
         this.setParamSimple(map, prefix + "ZoneRegion", this.ZoneRegion);
         this.setParamSimple(map, prefix + "LocalZone", this.LocalZone);
+        this.setParamSimple(map, prefix + "ZoneResourceType", this.ZoneResourceType);
+        this.setParamSimple(map, prefix + "EdgeZone", this.EdgeZone);
 
     }
 }

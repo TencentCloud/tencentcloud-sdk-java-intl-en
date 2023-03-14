@@ -128,6 +128,13 @@ public class L7RuleHealth extends AbstractModel{
     private Long PassiveStatusCode;
 
     /**
+    * Configuration status of the passive health check. Values: `0` (Normal), `1` (configuration in progress) and `2` (configuration failed).
+    */
+    @SerializedName("PassiveStatus")
+    @Expose
+    private Long PassiveStatus;
+
+    /**
      * Get Configuration status. Values: `0` (normal), `1` (configuration in progress) and `2` (configuration failed). 
      * @return Status Configuration status. Values: `0` (normal), `1` (configuration in progress) and `2` (configuration failed).
      */
@@ -367,6 +374,22 @@ public class L7RuleHealth extends AbstractModel{
         this.PassiveStatusCode = PassiveStatusCode;
     }
 
+    /**
+     * Get Configuration status of the passive health check. Values: `0` (Normal), `1` (configuration in progress) and `2` (configuration failed). 
+     * @return PassiveStatus Configuration status of the passive health check. Values: `0` (Normal), `1` (configuration in progress) and `2` (configuration failed).
+     */
+    public Long getPassiveStatus() {
+        return this.PassiveStatus;
+    }
+
+    /**
+     * Set Configuration status of the passive health check. Values: `0` (Normal), `1` (configuration in progress) and `2` (configuration failed).
+     * @param PassiveStatus Configuration status of the passive health check. Values: `0` (Normal), `1` (configuration in progress) and `2` (configuration failed).
+     */
+    public void setPassiveStatus(Long PassiveStatus) {
+        this.PassiveStatus = PassiveStatus;
+    }
+
     public L7RuleHealth() {
     }
 
@@ -420,6 +443,9 @@ public class L7RuleHealth extends AbstractModel{
         if (source.PassiveStatusCode != null) {
             this.PassiveStatusCode = new Long(source.PassiveStatusCode);
         }
+        if (source.PassiveStatus != null) {
+            this.PassiveStatus = new Long(source.PassiveStatus);
+        }
     }
 
 
@@ -442,6 +468,7 @@ public class L7RuleHealth extends AbstractModel{
         this.setParamSimple(map, prefix + "FailedCountInter", this.FailedCountInter);
         this.setParamSimple(map, prefix + "FailedThreshold", this.FailedThreshold);
         this.setParamSimple(map, prefix + "PassiveStatusCode", this.PassiveStatusCode);
+        this.setParamSimple(map, prefix + "PassiveStatus", this.PassiveStatus);
 
     }
 }

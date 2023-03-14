@@ -63,6 +63,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Boolean LocalZone;
 
     /**
+    * Whether the AZ is an edge zone. Values: `true`, `false`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EdgeZone")
+    @Expose
+    private Boolean EdgeZone;
+
+    /**
      * Get Unique AZ ID in a numeric form, such as 100001
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return ZoneId Unique AZ ID in a numeric form, such as 100001
@@ -162,6 +170,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.LocalZone = LocalZone;
     }
 
+    /**
+     * Get Whether the AZ is an edge zone. Values: `true`, `false`.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return EdgeZone Whether the AZ is an edge zone. Values: `true`, `false`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Boolean getEdgeZone() {
+        return this.EdgeZone;
+    }
+
+    /**
+     * Set Whether the AZ is an edge zone. Values: `true`, `false`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param EdgeZone Whether the AZ is an edge zone. Values: `true`, `false`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setEdgeZone(Boolean EdgeZone) {
+        this.EdgeZone = EdgeZone;
+    }
+
     public ZoneInfo() {
     }
 
@@ -185,6 +213,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.LocalZone != null) {
             this.LocalZone = new Boolean(source.LocalZone);
         }
+        if (source.EdgeZone != null) {
+            this.EdgeZone = new Boolean(source.EdgeZone);
+        }
     }
 
 
@@ -197,6 +228,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
         this.setParamSimple(map, prefix + "ZoneRegion", this.ZoneRegion);
         this.setParamSimple(map, prefix + "LocalZone", this.LocalZone);
+        this.setParamSimple(map, prefix + "EdgeZone", this.EdgeZone);
 
     }
 }

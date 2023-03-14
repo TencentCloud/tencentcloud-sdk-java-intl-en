@@ -129,14 +129,14 @@ They represent weighted round robin and least connections, respectively. Default
     private MultiCertInfo MultiCertInfo;
 
     /**
-    * 
+    * Maximum number of concurrent listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
     */
     @SerializedName("MaxConn")
     @Expose
     private Long MaxConn;
 
     /**
-    * 
+    * Maximum number of new listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
     */
     @SerializedName("MaxCps")
     @Expose
@@ -387,32 +387,32 @@ They represent weighted round robin and least connections, respectively. Default
     }
 
     /**
-     * Get  
-     * @return MaxConn 
+     * Get Maximum number of concurrent listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited.  
+     * @return MaxConn Maximum number of concurrent listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
      */
     public Long getMaxConn() {
         return this.MaxConn;
     }
 
     /**
-     * Set 
-     * @param MaxConn 
+     * Set Maximum number of concurrent listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
+     * @param MaxConn Maximum number of concurrent listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
      */
     public void setMaxConn(Long MaxConn) {
         this.MaxConn = MaxConn;
     }
 
     /**
-     * Get  
-     * @return MaxCps 
+     * Get Maximum number of new listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited.  
+     * @return MaxCps Maximum number of new listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
      */
     public Long getMaxCps() {
         return this.MaxCps;
     }
 
     /**
-     * Set 
-     * @param MaxCps 
+     * Set Maximum number of new listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
+     * @param MaxCps Maximum number of new listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
      */
     public void setMaxCps(Long MaxCps) {
         this.MaxCps = MaxCps;

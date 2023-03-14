@@ -37,14 +37,14 @@ public class CertInfo extends AbstractModel{
     private String CertName;
 
     /**
-    * Public key of the uploaded certificate. It's required if `CertId` is not specified.
+    * Public key of the uploaded certificate. This is required if `CertId` is not specified.
     */
     @SerializedName("CertContent")
     @Expose
     private String CertContent;
 
     /**
-    * Private key of the uploaded server certificate. It's required if `CertId` is not specified.
+    * Private key of the uploaded server certificate. This is required if `CertId` is not specified.
     */
     @SerializedName("CertKey")
     @Expose
@@ -83,32 +83,32 @@ public class CertInfo extends AbstractModel{
     }
 
     /**
-     * Get Public key of the uploaded certificate. It's required if `CertId` is not specified. 
-     * @return CertContent Public key of the uploaded certificate. It's required if `CertId` is not specified.
+     * Get Public key of the uploaded certificate. This is required if `CertId` is not specified. 
+     * @return CertContent Public key of the uploaded certificate. This is required if `CertId` is not specified.
      */
     public String getCertContent() {
         return this.CertContent;
     }
 
     /**
-     * Set Public key of the uploaded certificate. It's required if `CertId` is not specified.
-     * @param CertContent Public key of the uploaded certificate. It's required if `CertId` is not specified.
+     * Set Public key of the uploaded certificate. This is required if `CertId` is not specified.
+     * @param CertContent Public key of the uploaded certificate. This is required if `CertId` is not specified.
      */
     public void setCertContent(String CertContent) {
         this.CertContent = CertContent;
     }
 
     /**
-     * Get Private key of the uploaded server certificate. It's required if `CertId` is not specified. 
-     * @return CertKey Private key of the uploaded server certificate. It's required if `CertId` is not specified.
+     * Get Private key of the uploaded server certificate. This is required if `CertId` is not specified. 
+     * @return CertKey Private key of the uploaded server certificate. This is required if `CertId` is not specified.
      */
     public String getCertKey() {
         return this.CertKey;
     }
 
     /**
-     * Set Private key of the uploaded server certificate. It's required if `CertId` is not specified.
-     * @param CertKey Private key of the uploaded server certificate. It's required if `CertId` is not specified.
+     * Set Private key of the uploaded server certificate. This is required if `CertId` is not specified.
+     * @param CertKey Private key of the uploaded server certificate. This is required if `CertId` is not specified.
      */
     public void setCertKey(String CertKey) {
         this.CertKey = CertKey;
