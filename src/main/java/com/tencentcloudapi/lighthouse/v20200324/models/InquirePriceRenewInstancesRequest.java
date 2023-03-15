@@ -30,7 +30,7 @@ public class InquirePriceRenewInstancesRequest extends AbstractModel{
     private String [] InstanceIds;
 
     /**
-    * Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
+    * Parameter setting for prepaid mode. This parameter can specify the renewal period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
     */
     @SerializedName("InstanceChargePrepaid")
     @Expose
@@ -67,16 +67,16 @@ public class InquirePriceRenewInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances. 
-     * @return InstanceChargePrepaid Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
+     * Get Parameter setting for prepaid mode. This parameter can specify the renewal period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances. 
+     * @return InstanceChargePrepaid Parameter setting for prepaid mode. This parameter can specify the renewal period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
      */
     public InstanceChargePrepaid getInstanceChargePrepaid() {
         return this.InstanceChargePrepaid;
     }
 
     /**
-     * Set Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
-     * @param InstanceChargePrepaid Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
+     * Set Parameter setting for prepaid mode. This parameter can specify the renewal period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
+     * @param InstanceChargePrepaid Parameter setting for prepaid mode. This parameter can specify the renewal period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
      */
     public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
         this.InstanceChargePrepaid = InstanceChargePrepaid;

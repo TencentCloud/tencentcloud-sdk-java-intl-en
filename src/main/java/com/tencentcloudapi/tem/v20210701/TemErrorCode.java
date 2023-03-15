@@ -1,13 +1,31 @@
 package com.tencentcloudapi.tem.v20210701;
 public enum TemErrorCode {
-    // 
+    // Request timed out
+     FAILEDOPERATION_ACTIONREADTIMEOUT("FailedOperation.ActionReadTimeout"),
+     
+    // Failed to create the service.
      FAILEDOPERATION_CREATESERVICEERROR("FailedOperation.CreateServiceError"),
      
-    // 
+    // The server is busy. Retry later.
      FAILEDOPERATION_DEFAULTINTERNALERROR("FailedOperation.DefaultInternalError"),
      
-    // 
+    // Failed to delete the application
      FAILEDOPERATION_DELETESERVICEERROR("FailedOperation.DeleteServiceError"),
+     
+    // Failed to query the ingress list
+     FAILEDOPERATION_DESCRIBEINGRESSLISTERROR("FailedOperation.DescribeIngressListError"),
+     
+    // Failed to query the instance information
+     FAILEDOPERATION_DESCRIBERUNPODLISTERROR("FailedOperation.DescribeRunPodListError"),
+     
+    // Failed to query the service.
+     FAILEDOPERATION_DESCRIBESERVICEERROR("FailedOperation.DescribeServiceError"),
+     
+    // Failed to query the service list
+     FAILEDOPERATION_DESCRIBESERVICELISTERROR("FailedOperation.DescribeServiceListError"),
+     
+    // 
+     FAILEDOPERATION_UPDATEINGRESSERROR("FailedOperation.UpdateIngressError"),
      
     // Request timed out
      INTERNALERROR_ACTIONREADTIMEOUT("InternalError.ActionReadTimeout"),
@@ -110,6 +128,12 @@ public enum TemErrorCode {
      
     // Reached the upper limit of PortMapping rules. 
      INVALIDPARAMETER_TOOMANYPORTMAPPINGRULES("InvalidParameter.TooManyPortMappingRules"),
+     
+    // Not authorized or role not configured
+     INVALIDPARAMETER_UNAUTHORIZEDORMISSINGROLE("InvalidParameter.UnauthorizedOrMissingRole"),
+     
+    // Auto-creation failed because the VPC upper limit is reached.
+     INVALIDPARAMETER_VPCOVERQUOTA("InvalidParameter.VpcOverQuota"),
      
     // The APM is not bound with the current environment.
      INVALIDPARAMETERVALUE_APMNOTBIND("InvalidParameterValue.ApmNotBind"),
@@ -222,6 +246,9 @@ public enum TemErrorCode {
     // The application port is a reserved port.
      INVALIDPARAMETERVALUE_PORTISRESERVED("InvalidParameterValue.PortIsReserved"),
      
+    // Invalid post start
+     INVALIDPARAMETERVALUE_POSTSTARTNOTVALID("InvalidParameterValue.PostStartNotValid"),
+     
     // Public image parameter error
      INVALIDPARAMETERVALUE_PUBLICREPOTYPEPARAMETERERROR("InvalidParameterValue.PublicRepoTypeParameterError"),
      
@@ -270,7 +297,7 @@ public enum TemErrorCode {
     // There is still traffic routed to this version.
      INVALIDPARAMETERVALUE_VERSIONROUTERATENOTZERO("InvalidParameterValue.VersionRouteRateNotZero"),
      
-    // 
+    // Invalid VPC. It should be the same as the environment VPC.
      INVALIDPARAMETERVALUE_VPCINVALID("InvalidParameterValue.VpcInvalid"),
      
     // The scaling rule name cannot be empty
@@ -284,6 +311,9 @@ public enum TemErrorCode {
      
     // The environment name is required.
      MISSINGPARAMETER_ENVIRONMENTNAMENULL("MissingParameter.EnvironmentNameNull"),
+     
+    // 
+     MISSINGPARAMETER_IMGREPONULL("MissingParameter.ImgRepoNull"),
      
     // The `logset` and `topic` are required.
      MISSINGPARAMETER_LOGSETORTOPICNULL("MissingParameter.LogsetOrTopicNull"),
@@ -330,8 +360,14 @@ public enum TemErrorCode {
     // The application is being deployed.
      RESOURCEINUSE_SERVICEDEPLOYING("ResourceInUse.ServiceDeploying"),
      
+    // Configuration does no exist
+     RESOURCENOTFOUND_CONFIGDATANOTFOUND("ResourceNotFound.ConfigDataNotFound"),
+     
     // This API is not available.
      RESOURCENOTFOUND_INTERFACENOTFOUND("ResourceNotFound.InterfaceNotFound"),
+     
+    // The log configuration does not exist.
+     RESOURCENOTFOUND_LOGCONFIGNOTFOUND("ResourceNotFound.LogConfigNotFound"),
      
     // The target microservice is offline.
      RESOURCENOTFOUND_MICROSERVICEOFFLINE("ResourceNotFound.MicroserviceOffline"),

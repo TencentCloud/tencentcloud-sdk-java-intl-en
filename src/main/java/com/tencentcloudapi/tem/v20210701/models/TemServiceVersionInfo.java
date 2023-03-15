@@ -693,6 +693,22 @@ Note: This field may return `null`, indicating that no valid value was found.
     private Tag [] Tags;
 
     /**
+    * Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PreStopEncoded")
+    @Expose
+    private String PreStopEncoded;
+
+    /**
+    * Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PostStartEncoded")
+    @Expose
+    private String PostStartEncoded;
+
+    /**
      * Get Version ID 
      * @return VersionId Version ID
      */
@@ -2340,6 +2356,46 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.Tags = Tags;
     }
 
+    /**
+     * Get Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PreStopEncoded Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getPreStopEncoded() {
+        return this.PreStopEncoded;
+    }
+
+    /**
+     * Set Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PreStopEncoded Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPreStopEncoded(String PreStopEncoded) {
+        this.PreStopEncoded = PreStopEncoded;
+    }
+
+    /**
+     * Get Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PostStartEncoded Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getPostStartEncoded() {
+        return this.PostStartEncoded;
+    }
+
+    /**
+     * Set Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PostStartEncoded Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPostStartEncoded(String PostStartEncoded) {
+        this.PostStartEncoded = PostStartEncoded;
+    }
+
     public TemServiceVersionInfo() {
     }
 
@@ -2645,6 +2701,12 @@ Note: This field may return `null`, indicating that no valid value was found.
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.PreStopEncoded != null) {
+            this.PreStopEncoded = new String(source.PreStopEncoded);
+        }
+        if (source.PostStartEncoded != null) {
+            this.PostStartEncoded = new String(source.PostStartEncoded);
+        }
     }
 
 
@@ -2738,6 +2800,8 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamObj(map, prefix + "PodList.", this.PodList);
         this.setParamSimple(map, prefix + "ConfEdited", this.ConfEdited);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "PreStopEncoded", this.PreStopEncoded);
+        this.setParamSimple(map, prefix + "PostStartEncoded", this.PostStartEncoded);
 
     }
 }

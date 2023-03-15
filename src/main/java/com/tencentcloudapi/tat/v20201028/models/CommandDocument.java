@@ -58,6 +58,20 @@ public class CommandDocument extends AbstractModel{
     private String Username;
 
     /**
+    * URL of the COS bucket to store the output
+    */
+    @SerializedName("OutputCOSBucketUrl")
+    @Expose
+    private String OutputCOSBucketUrl;
+
+    /**
+    * Prefix of the output file name 
+    */
+    @SerializedName("OutputCOSKeyPrefix")
+    @Expose
+    private String OutputCOSKeyPrefix;
+
+    /**
      * Get Base64-encoded command. 
      * @return Content Base64-encoded command.
      */
@@ -137,6 +151,38 @@ public class CommandDocument extends AbstractModel{
         this.Username = Username;
     }
 
+    /**
+     * Get URL of the COS bucket to store the output 
+     * @return OutputCOSBucketUrl URL of the COS bucket to store the output
+     */
+    public String getOutputCOSBucketUrl() {
+        return this.OutputCOSBucketUrl;
+    }
+
+    /**
+     * Set URL of the COS bucket to store the output
+     * @param OutputCOSBucketUrl URL of the COS bucket to store the output
+     */
+    public void setOutputCOSBucketUrl(String OutputCOSBucketUrl) {
+        this.OutputCOSBucketUrl = OutputCOSBucketUrl;
+    }
+
+    /**
+     * Get Prefix of the output file name  
+     * @return OutputCOSKeyPrefix Prefix of the output file name 
+     */
+    public String getOutputCOSKeyPrefix() {
+        return this.OutputCOSKeyPrefix;
+    }
+
+    /**
+     * Set Prefix of the output file name 
+     * @param OutputCOSKeyPrefix Prefix of the output file name 
+     */
+    public void setOutputCOSKeyPrefix(String OutputCOSKeyPrefix) {
+        this.OutputCOSKeyPrefix = OutputCOSKeyPrefix;
+    }
+
     public CommandDocument() {
     }
 
@@ -160,6 +206,12 @@ public class CommandDocument extends AbstractModel{
         if (source.Username != null) {
             this.Username = new String(source.Username);
         }
+        if (source.OutputCOSBucketUrl != null) {
+            this.OutputCOSBucketUrl = new String(source.OutputCOSBucketUrl);
+        }
+        if (source.OutputCOSKeyPrefix != null) {
+            this.OutputCOSKeyPrefix = new String(source.OutputCOSKeyPrefix);
+        }
     }
 
 
@@ -172,6 +224,8 @@ public class CommandDocument extends AbstractModel{
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamSimple(map, prefix + "WorkingDirectory", this.WorkingDirectory);
         this.setParamSimple(map, prefix + "Username", this.Username);
+        this.setParamSimple(map, prefix + "OutputCOSBucketUrl", this.OutputCOSBucketUrl);
+        this.setParamSimple(map, prefix + "OutputCOSKeyPrefix", this.OutputCOSKeyPrefix);
 
     }
 }

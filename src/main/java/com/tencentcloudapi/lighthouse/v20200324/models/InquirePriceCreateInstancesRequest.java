@@ -30,18 +30,18 @@ public class InquirePriceCreateInstancesRequest extends AbstractModel{
     private String BundleId;
 
     /**
+    * Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
+    */
+    @SerializedName("InstanceChargePrepaid")
+    @Expose
+    private InstanceChargePrepaid InstanceChargePrepaid;
+
+    /**
     * Number of instances to be created. Default value: 1.
     */
     @SerializedName("InstanceCount")
     @Expose
     private Long InstanceCount;
-
-    /**
-    * Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
-    */
-    @SerializedName("InstanceChargePrepaid")
-    @Expose
-    private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
     * Application image ID, which is required if a paid application image is used and can be obtained from the `BlueprintId` returned by the [DescribeBlueprints](https://intl.cloud.tencent.com/document/product/1207/47689?from_cn_redirect=1) API.
@@ -67,6 +67,22 @@ public class InquirePriceCreateInstancesRequest extends AbstractModel{
     }
 
     /**
+     * Get Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances. 
+     * @return InstanceChargePrepaid Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
+     */
+    public InstanceChargePrepaid getInstanceChargePrepaid() {
+        return this.InstanceChargePrepaid;
+    }
+
+    /**
+     * Set Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
+     * @param InstanceChargePrepaid Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
+     */
+    public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
+        this.InstanceChargePrepaid = InstanceChargePrepaid;
+    }
+
+    /**
      * Get Number of instances to be created. Default value: 1. 
      * @return InstanceCount Number of instances to be created. Default value: 1.
      */
@@ -80,22 +96,6 @@ public class InquirePriceCreateInstancesRequest extends AbstractModel{
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
-    }
-
-    /**
-     * Get Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances. 
-     * @return InstanceChargePrepaid Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
-     */
-    public InstanceChargePrepaid getInstanceChargePrepaid() {
-        return this.InstanceChargePrepaid;
-    }
-
-    /**
-     * Set Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
-     * @param InstanceChargePrepaid Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
-     */
-    public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
-        this.InstanceChargePrepaid = InstanceChargePrepaid;
     }
 
     /**
@@ -125,11 +125,11 @@ public class InquirePriceCreateInstancesRequest extends AbstractModel{
         if (source.BundleId != null) {
             this.BundleId = new String(source.BundleId);
         }
-        if (source.InstanceCount != null) {
-            this.InstanceCount = new Long(source.InstanceCount);
-        }
         if (source.InstanceChargePrepaid != null) {
             this.InstanceChargePrepaid = new InstanceChargePrepaid(source.InstanceChargePrepaid);
+        }
+        if (source.InstanceCount != null) {
+            this.InstanceCount = new Long(source.InstanceCount);
         }
         if (source.BlueprintId != null) {
             this.BlueprintId = new String(source.BlueprintId);
@@ -142,8 +142,8 @@ public class InquirePriceCreateInstancesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BundleId", this.BundleId);
-        this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
+        this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamSimple(map, prefix + "BlueprintId", this.BlueprintId);
 
     }

@@ -140,6 +140,7 @@ public class Disk extends AbstractModel{
     /**
     * Creation time according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -459,9 +460,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Creation time according to ISO 8601 standard. UTC time is used. 
-Format: YYYY-MM-DDThh:mm:ssZ. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return CreatedTime Creation time according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
@@ -470,8 +473,10 @@ Format: YYYY-MM-DDThh:mm:ssZ.
     /**
      * Set Creation time according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param CreatedTime Creation time according to ISO 8601 standard. UTC time is used. 
 Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

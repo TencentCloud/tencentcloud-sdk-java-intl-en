@@ -105,6 +105,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Snapshot creation time.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -315,8 +316,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Snapshot creation time. 
+     * Get Snapshot creation time.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return CreatedTime Snapshot creation time.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
@@ -324,7 +327,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Snapshot creation time.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param CreatedTime Snapshot creation time.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;

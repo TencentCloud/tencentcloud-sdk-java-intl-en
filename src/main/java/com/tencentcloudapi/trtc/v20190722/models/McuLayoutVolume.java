@@ -37,6 +37,22 @@ public class McuLayoutVolume extends AbstractModel{
     private Long PayloadType;
 
     /**
+    * The SEI sending interval (milliseconds). The default value is 1000.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Interval")
+    @Expose
+    private Long Interval;
+
+    /**
+    * Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("FollowIdr")
+    @Expose
+    private Long FollowIdr;
+
+    /**
      * Get The application data, which will be embedded in the `app_data` field of the custom SEI. It must be shorter than 4,096 characters. 
      * @return AppData The application data, which will be embedded in the `app_data` field of the custom SEI. It must be shorter than 4,096 characters.
      */
@@ -68,6 +84,46 @@ public class McuLayoutVolume extends AbstractModel{
         this.PayloadType = PayloadType;
     }
 
+    /**
+     * Get The SEI sending interval (milliseconds). The default value is 1000.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Interval The SEI sending interval (milliseconds). The default value is 1000.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getInterval() {
+        return this.Interval;
+    }
+
+    /**
+     * Set The SEI sending interval (milliseconds). The default value is 1000.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Interval The SEI sending interval (milliseconds). The default value is 1000.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setInterval(Long Interval) {
+        this.Interval = Interval;
+    }
+
+    /**
+     * Get Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return FollowIdr Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getFollowIdr() {
+        return this.FollowIdr;
+    }
+
+    /**
+     * Set Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param FollowIdr Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setFollowIdr(Long FollowIdr) {
+        this.FollowIdr = FollowIdr;
+    }
+
     public McuLayoutVolume() {
     }
 
@@ -82,6 +138,12 @@ public class McuLayoutVolume extends AbstractModel{
         if (source.PayloadType != null) {
             this.PayloadType = new Long(source.PayloadType);
         }
+        if (source.Interval != null) {
+            this.Interval = new Long(source.Interval);
+        }
+        if (source.FollowIdr != null) {
+            this.FollowIdr = new Long(source.FollowIdr);
+        }
     }
 
 
@@ -91,6 +153,8 @@ public class McuLayoutVolume extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppData", this.AppData);
         this.setParamSimple(map, prefix + "PayloadType", this.PayloadType);
+        this.setParamSimple(map, prefix + "Interval", this.Interval);
+        this.setParamSimple(map, prefix + "FollowIdr", this.FollowIdr);
 
     }
 }

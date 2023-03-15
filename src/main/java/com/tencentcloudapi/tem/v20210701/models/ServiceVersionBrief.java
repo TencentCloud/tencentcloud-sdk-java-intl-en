@@ -178,6 +178,14 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String CreateDate;
 
     /**
+    * Region ID
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RegionId")
+    @Expose
+    private String RegionId;
+
+    /**
      * Get Version name 
      * @return VersionName Version name
      */
@@ -557,6 +565,26 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.CreateDate = CreateDate;
     }
 
+    /**
+     * Get Region ID
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RegionId Region ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getRegionId() {
+        return this.RegionId;
+    }
+
+    /**
+     * Set Region ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RegionId Region ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRegionId(String RegionId) {
+        this.RegionId = RegionId;
+    }
+
     public ServiceVersionBrief() {
     }
 
@@ -631,6 +659,9 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.CreateDate != null) {
             this.CreateDate = new String(source.CreateDate);
         }
+        if (source.RegionId != null) {
+            this.RegionId = new String(source.RegionId);
+        }
     }
 
 
@@ -658,6 +689,7 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamObj(map, prefix + "PodList.", this.PodList);
         this.setParamObj(map, prefix + "WorkloadInfo.", this.WorkloadInfo);
         this.setParamSimple(map, prefix + "CreateDate", this.CreateDate);
+        this.setParamSimple(map, prefix + "RegionId", this.RegionId);
 
     }
 }

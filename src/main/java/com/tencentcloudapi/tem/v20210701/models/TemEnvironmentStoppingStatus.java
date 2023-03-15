@@ -39,6 +39,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long StoppedApplicationNum;
 
     /**
+    * Number of applications failed to be stopped
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("StopFailedApplicationNum")
+    @Expose
+    private Long StopFailedApplicationNum;
+
+    /**
      * Get Number of applications to stop
 Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return ApplicationNumNeedToStop Number of applications to stop
@@ -78,6 +86,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.StoppedApplicationNum = StoppedApplicationNum;
     }
 
+    /**
+     * Get Number of applications failed to be stopped
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return StopFailedApplicationNum Number of applications failed to be stopped
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getStopFailedApplicationNum() {
+        return this.StopFailedApplicationNum;
+    }
+
+    /**
+     * Set Number of applications failed to be stopped
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param StopFailedApplicationNum Number of applications failed to be stopped
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setStopFailedApplicationNum(Long StopFailedApplicationNum) {
+        this.StopFailedApplicationNum = StopFailedApplicationNum;
+    }
+
     public TemEnvironmentStoppingStatus() {
     }
 
@@ -92,6 +120,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.StoppedApplicationNum != null) {
             this.StoppedApplicationNum = new Long(source.StoppedApplicationNum);
         }
+        if (source.StopFailedApplicationNum != null) {
+            this.StopFailedApplicationNum = new Long(source.StopFailedApplicationNum);
+        }
     }
 
 
@@ -101,6 +132,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationNumNeedToStop", this.ApplicationNumNeedToStop);
         this.setParamSimple(map, prefix + "StoppedApplicationNum", this.StoppedApplicationNum);
+        this.setParamSimple(map, prefix + "StopFailedApplicationNum", this.StopFailedApplicationNum);
 
     }
 }

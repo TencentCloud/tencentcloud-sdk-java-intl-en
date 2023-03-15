@@ -73,7 +73,7 @@ This parameter specifies the type of the stream displayed in the big window. If 
     private Long MediaId;
 
     /**
-    * The download URL of the background image for the canvas, which must be in JPG or PNG format and cannot be larger than 5 MB.
+    * The URL of the background image, which cannot contain Chinese characters. The image must be in JPG or PNG format and cannot be larger than 5 MB.
     */
     @SerializedName("BackgroundImageUrl")
     @Expose
@@ -262,16 +262,16 @@ This parameter specifies the type of the stream displayed in the big window. If 
     }
 
     /**
-     * Get The download URL of the background image for the canvas, which must be in JPG or PNG format and cannot be larger than 5 MB. 
-     * @return BackgroundImageUrl The download URL of the background image for the canvas, which must be in JPG or PNG format and cannot be larger than 5 MB.
+     * Get The URL of the background image, which cannot contain Chinese characters. The image must be in JPG or PNG format and cannot be larger than 5 MB. 
+     * @return BackgroundImageUrl The URL of the background image, which cannot contain Chinese characters. The image must be in JPG or PNG format and cannot be larger than 5 MB.
      */
     public String getBackgroundImageUrl() {
         return this.BackgroundImageUrl;
     }
 
     /**
-     * Set The download URL of the background image for the canvas, which must be in JPG or PNG format and cannot be larger than 5 MB.
-     * @param BackgroundImageUrl The download URL of the background image for the canvas, which must be in JPG or PNG format and cannot be larger than 5 MB.
+     * Set The URL of the background image, which cannot contain Chinese characters. The image must be in JPG or PNG format and cannot be larger than 5 MB.
+     * @param BackgroundImageUrl The URL of the background image, which cannot contain Chinese characters. The image must be in JPG or PNG format and cannot be larger than 5 MB.
      */
     public void setBackgroundImageUrl(String BackgroundImageUrl) {
         this.BackgroundImageUrl = BackgroundImageUrl;

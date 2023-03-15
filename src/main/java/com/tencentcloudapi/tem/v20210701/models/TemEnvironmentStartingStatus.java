@@ -39,6 +39,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long StartedApplicationNum;
 
     /**
+    * Number of applications failed to be started
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("StartFailedApplicationNum")
+    @Expose
+    private Long StartFailedApplicationNum;
+
+    /**
      * Get Number of applications to start
 Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return ApplicationNumNeedToStart Number of applications to start
@@ -78,6 +86,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.StartedApplicationNum = StartedApplicationNum;
     }
 
+    /**
+     * Get Number of applications failed to be started
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return StartFailedApplicationNum Number of applications failed to be started
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Long getStartFailedApplicationNum() {
+        return this.StartFailedApplicationNum;
+    }
+
+    /**
+     * Set Number of applications failed to be started
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param StartFailedApplicationNum Number of applications failed to be started
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setStartFailedApplicationNum(Long StartFailedApplicationNum) {
+        this.StartFailedApplicationNum = StartFailedApplicationNum;
+    }
+
     public TemEnvironmentStartingStatus() {
     }
 
@@ -92,6 +120,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.StartedApplicationNum != null) {
             this.StartedApplicationNum = new Long(source.StartedApplicationNum);
         }
+        if (source.StartFailedApplicationNum != null) {
+            this.StartFailedApplicationNum = new Long(source.StartFailedApplicationNum);
+        }
     }
 
 
@@ -101,6 +132,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationNumNeedToStart", this.ApplicationNumNeedToStart);
         this.setParamSimple(map, prefix + "StartedApplicationNum", this.StartedApplicationNum);
+        this.setParamSimple(map, prefix + "StartFailedApplicationNum", this.StartFailedApplicationNum);
 
     }
 }

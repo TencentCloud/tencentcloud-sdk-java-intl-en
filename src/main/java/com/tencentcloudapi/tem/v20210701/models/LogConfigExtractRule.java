@@ -95,6 +95,22 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String UnMatchedKey;
 
     /**
+    * tracking
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Backtracking")
+    @Expose
+    private String Backtracking;
+
+    /**
+    * Separator
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Delimiter")
+    @Expose
+    private String Delimiter;
+
+    /**
      * Get First line regex
 Note: This field may return `null`, indicating that no valid value was found. 
      * @return BeginningRegex First line regex
@@ -274,6 +290,46 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.UnMatchedKey = UnMatchedKey;
     }
 
+    /**
+     * Get tracking
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Backtracking tracking
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getBacktracking() {
+        return this.Backtracking;
+    }
+
+    /**
+     * Set tracking
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Backtracking tracking
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setBacktracking(String Backtracking) {
+        this.Backtracking = Backtracking;
+    }
+
+    /**
+     * Get Separator
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Delimiter Separator
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDelimiter() {
+        return this.Delimiter;
+    }
+
+    /**
+     * Set Separator
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Delimiter Separator
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDelimiter(String Delimiter) {
+        this.Delimiter = Delimiter;
+    }
+
     public LogConfigExtractRule() {
     }
 
@@ -318,6 +374,12 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.UnMatchedKey != null) {
             this.UnMatchedKey = new String(source.UnMatchedKey);
         }
+        if (source.Backtracking != null) {
+            this.Backtracking = new String(source.Backtracking);
+        }
+        if (source.Delimiter != null) {
+            this.Delimiter = new String(source.Delimiter);
+        }
     }
 
 
@@ -334,6 +396,8 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "TimeFormat", this.TimeFormat);
         this.setParamSimple(map, prefix + "UnMatchUpload", this.UnMatchUpload);
         this.setParamSimple(map, prefix + "UnMatchedKey", this.UnMatchedKey);
+        this.setParamSimple(map, prefix + "Backtracking", this.Backtracking);
+        this.setParamSimple(map, prefix + "Delimiter", this.Delimiter);
 
     }
 }

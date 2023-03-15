@@ -45,6 +45,7 @@ public class Blueprint extends AbstractModel{
 
     /**
     * Image description information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("Description")
     @Expose
@@ -160,6 +161,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String [] SceneIdSet;
 
     /**
+    * Docker version.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DockerVersion")
+    @Expose
+    private String DockerVersion;
+
+    /**
      * Get Image ID, which is the unique identifier of `Blueprint`. 
      * @return BlueprintId Image ID, which is the unique identifier of `Blueprint`.
      */
@@ -208,8 +217,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Image description information. 
+     * Get Image description information.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return Description Image description information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public String getDescription() {
         return this.Description;
@@ -217,7 +228,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Image description information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param Description Image description information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -479,6 +492,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.SceneIdSet = SceneIdSet;
     }
 
+    /**
+     * Get Docker version.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return DockerVersion Docker version.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getDockerVersion() {
+        return this.DockerVersion;
+    }
+
+    /**
+     * Set Docker version.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param DockerVersion Docker version.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDockerVersion(String DockerVersion) {
+        this.DockerVersion = DockerVersion;
+    }
+
     public Blueprint() {
     }
 
@@ -547,6 +580,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 this.SceneIdSet[i] = new String(source.SceneIdSet[i]);
             }
         }
+        if (source.DockerVersion != null) {
+            this.DockerVersion = new String(source.DockerVersion);
+        }
     }
 
 
@@ -573,6 +609,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "CommunityUrl", this.CommunityUrl);
         this.setParamSimple(map, prefix + "GuideUrl", this.GuideUrl);
         this.setParamArraySimple(map, prefix + "SceneIdSet.", this.SceneIdSet);
+        this.setParamSimple(map, prefix + "DockerVersion", this.DockerVersion);
 
     }
 }

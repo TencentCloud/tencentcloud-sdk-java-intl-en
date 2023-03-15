@@ -1059,6 +1059,26 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get the information of a specific TDMQ for RocketMQ exclusive cluster.
+     * @param req DescribeRocketMQVipInstanceDetailRequest
+     * @return DescribeRocketMQVipInstanceDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQVipInstanceDetailResponse DescribeRocketMQVipInstanceDetail(DescribeRocketMQVipInstanceDetailRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeRocketMQVipInstanceDetailResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeRocketMQVipInstanceDetailResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeRocketMQVipInstanceDetail");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the list of the purchased TDMQ for RocketMQ exclusive instances.
      * @param req DescribeRocketMQVipInstancesRequest
      * @return DescribeRocketMQVipInstancesResponse

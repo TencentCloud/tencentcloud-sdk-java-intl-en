@@ -24,7 +24,7 @@ public class CloudStorage extends AbstractModel{
 
     /**
     * The cloud storage provider.
-0: Tencent Cloud COS. The storage services of other providers are not supported currently.
+`0`: Tencent Cloud COS; `1`: AWS storage. Other vendors are not supported currently.
     */
     @SerializedName("Vendor")
     @Expose
@@ -67,9 +67,9 @@ public class CloudStorage extends AbstractModel{
 
     /**
      * Get The cloud storage provider.
-0: Tencent Cloud COS. The storage services of other providers are not supported currently. 
+`0`: Tencent Cloud COS; `1`: AWS storage. Other vendors are not supported currently. 
      * @return Vendor The cloud storage provider.
-0: Tencent Cloud COS. The storage services of other providers are not supported currently.
+`0`: Tencent Cloud COS; `1`: AWS storage. Other vendors are not supported currently.
      */
     public Long getVendor() {
         return this.Vendor;
@@ -77,9 +77,9 @@ public class CloudStorage extends AbstractModel{
 
     /**
      * Set The cloud storage provider.
-0: Tencent Cloud COS. The storage services of other providers are not supported currently.
+`0`: Tencent Cloud COS; `1`: AWS storage. Other vendors are not supported currently.
      * @param Vendor The cloud storage provider.
-0: Tencent Cloud COS. The storage services of other providers are not supported currently.
+`0`: Tencent Cloud COS; `1`: AWS storage. Other vendors are not supported currently.
      */
     public void setVendor(Long Vendor) {
         this.Vendor = Vendor;
