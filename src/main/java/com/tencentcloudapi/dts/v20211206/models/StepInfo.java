@@ -47,7 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String StepId;
 
     /**
-    * Current status
+    * Status of the current step. Valid values: `notStarted`, `running`, `failed`, `finished, `skipped`, `paused`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
@@ -55,7 +55,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Status;
 
     /**
-    * Step start time
+    * Step start time, which may be null.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StartTime")
@@ -79,7 +79,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private StepTip [] Warnings;
 
     /**
-    * Progress of the current step
+    * Progress of the current step. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Progress")
@@ -147,9 +147,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Current status
+     * Get Status of the current step. Valid values: `notStarted`, `running`, `failed`, `finished, `skipped`, `paused`.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Current status
+     * @return Status Status of the current step. Valid values: `notStarted`, `running`, `failed`, `finished, `skipped`, `paused`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStatus() {
@@ -157,9 +157,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Current status
+     * Set Status of the current step. Valid values: `notStarted`, `running`, `failed`, `finished, `skipped`, `paused`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Current status
+     * @param Status Status of the current step. Valid values: `notStarted`, `running`, `failed`, `finished, `skipped`, `paused`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(String Status) {
@@ -167,9 +167,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Step start time
+     * Get Step start time, which may be null.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StartTime Step start time
+     * @return StartTime Step start time, which may be null.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStartTime() {
@@ -177,9 +177,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Step start time
+     * Set Step start time, which may be null.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StartTime Step start time
+     * @param StartTime Step start time, which may be null.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStartTime(String StartTime) {
@@ -227,9 +227,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Progress of the current step
+     * Get Progress of the current step. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Progress Progress of the current step
+     * @return Progress Progress of the current step. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getProgress() {
@@ -237,9 +237,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Progress of the current step
+     * Set Progress of the current step. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Progress Progress of the current step
+     * @param Progress Progress of the current step. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProgress(Long Progress) {

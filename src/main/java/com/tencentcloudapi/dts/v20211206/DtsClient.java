@@ -245,7 +245,7 @@ After successful check, if the migration task needs to be modified, a new check 
     }
 
     /**
-     *This API is used to query the result of a sync check task.
+     *This API is used to query the result of the sync check task and check the required parameters and peripheral configurations.
      * @param req DescribeCheckSyncJobResultRequest
      * @return DescribeCheckSyncJobResultResponse
      * @throws TencentCloudSDKException

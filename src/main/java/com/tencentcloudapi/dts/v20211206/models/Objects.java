@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Objects extends AbstractModel{
 
     /**
-    * Migration object type, such as `Partial`.
+    * Sync object type. Valid value: `Partial` (default).
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Mode")
@@ -55,9 +55,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private OnlineDDL OnlineDDL;
 
     /**
-     * Get Migration object type, such as `Partial`.
+     * Get Sync object type. Valid value: `Partial` (default).
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Mode Migration object type, such as `Partial`.
+     * @return Mode Sync object type. Valid value: `Partial` (default).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMode() {
@@ -65,9 +65,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Migration object type, such as `Partial`.
+     * Set Sync object type. Valid value: `Partial` (default).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Mode Migration object type, such as `Partial`.
+     * @param Mode Sync object type. Valid value: `Partial` (default).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMode(String Mode) {

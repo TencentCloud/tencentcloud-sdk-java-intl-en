@@ -53,6 +53,14 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private Long Total;
 
     /**
+    * Reason why the upgrade is not available
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("UnavailableVersionReason")
+    @Expose
+    private UnavailableReason [] UnavailableVersionReason;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -132,6 +140,26 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     }
 
     /**
+     * Get Reason why the upgrade is not available
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return UnavailableVersionReason Reason why the upgrade is not available
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public UnavailableReason [] getUnavailableVersionReason() {
+        return this.UnavailableVersionReason;
+    }
+
+    /**
+     * Set Reason why the upgrade is not available
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param UnavailableVersionReason Reason why the upgrade is not available
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setUnavailableVersionReason(UnavailableReason [] UnavailableVersionReason) {
+        this.UnavailableVersionReason = UnavailableVersionReason;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -170,6 +198,12 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         if (source.Total != null) {
             this.Total = new Long(source.Total);
         }
+        if (source.UnavailableVersionReason != null) {
+            this.UnavailableVersionReason = new UnavailableReason[source.UnavailableVersionReason.length];
+            for (int i = 0; i < source.UnavailableVersionReason.length; i++) {
+                this.UnavailableVersionReason[i] = new UnavailableReason(source.UnavailableVersionReason[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -184,6 +218,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.setParamSimple(map, prefix + "LatestVersion", this.LatestVersion);
         this.setParamArrayObj(map, prefix + "UpgradeAbleInstances.", this.UpgradeAbleInstances);
         this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "UnavailableVersionReason.", this.UnavailableVersionReason);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

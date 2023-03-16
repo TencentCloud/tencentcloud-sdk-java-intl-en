@@ -39,7 +39,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String NewDbName;
 
     /**
-    * Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter.
+    * Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DbMode")
@@ -63,7 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String NewSchemaName;
 
     /**
-    * Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`.
+    * Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TableMode")
@@ -79,7 +79,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Table [] Tables;
 
     /**
-    * View selection mode. Valid values: `All`, `Partial`.
+    * View selection mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ViewMode")
@@ -95,7 +95,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private View [] Views;
 
     /**
-    * Sync mode. Valid values: `Partial`, `All`.
+    * Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FunctionMode")
@@ -111,7 +111,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] Functions;
 
     /**
-    * Sync mode. Valid values: `Partial`, `All`.
+    * Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProcedureMode")
@@ -127,7 +127,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] Procedures;
 
     /**
-    * Trigger migration mode (`all`: All objects; `partial`: Some objects)
+    * Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “trigger” is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TriggerMode")
@@ -143,7 +143,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] Triggers;
 
     /**
-    * Event migration mode (`all`: All objects; `partial`: Some objects)
+    * Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “event” is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EventMode")
@@ -199,9 +199,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter.
+     * Get Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DbMode Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter.
+     * @return DbMode Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDbMode() {
@@ -209,9 +209,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter.
+     * Set Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DbMode Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter.
+     * @param DbMode Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDbMode(String DbMode) {
@@ -259,9 +259,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`.
+     * Get Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TableMode Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`.
+     * @return TableMode Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTableMode() {
@@ -269,9 +269,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`.
+     * Set Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TableMode Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`.
+     * @param TableMode Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTableMode(String TableMode) {
@@ -299,9 +299,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get View selection mode. Valid values: `All`, `Partial`.
+     * Get View selection mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ViewMode View selection mode. Valid values: `All`, `Partial`.
+     * @return ViewMode View selection mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getViewMode() {
@@ -309,9 +309,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set View selection mode. Valid values: `All`, `Partial`.
+     * Set View selection mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ViewMode View selection mode. Valid values: `All`, `Partial`.
+     * @param ViewMode View selection mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setViewMode(String ViewMode) {
@@ -339,9 +339,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Sync mode. Valid values: `Partial`, `All`.
+     * Get Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FunctionMode Sync mode. Valid values: `Partial`, `All`.
+     * @return FunctionMode Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFunctionMode() {
@@ -349,9 +349,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Sync mode. Valid values: `Partial`, `All`.
+     * Set Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FunctionMode Sync mode. Valid values: `Partial`, `All`.
+     * @param FunctionMode Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFunctionMode(String FunctionMode) {
@@ -379,9 +379,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Sync mode. Valid values: `Partial`, `All`.
+     * Get Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProcedureMode Sync mode. Valid values: `Partial`, `All`.
+     * @return ProcedureMode Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProcedureMode() {
@@ -389,9 +389,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Sync mode. Valid values: `Partial`, `All`.
+     * Set Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProcedureMode Sync mode. Valid values: `Partial`, `All`.
+     * @param ProcedureMode Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProcedureMode(String ProcedureMode) {
@@ -419,9 +419,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Trigger migration mode (`all`: All objects; `partial`: Some objects)
+     * Get Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “trigger” is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TriggerMode Trigger migration mode (`all`: All objects; `partial`: Some objects)
+     * @return TriggerMode Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “trigger” is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTriggerMode() {
@@ -429,9 +429,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Trigger migration mode (`all`: All objects; `partial`: Some objects)
+     * Set Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “trigger” is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TriggerMode Trigger migration mode (`all`: All objects; `partial`: Some objects)
+     * @param TriggerMode Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “trigger” is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTriggerMode(String TriggerMode) {
@@ -459,9 +459,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Event migration mode (`all`: All objects; `partial`: Some objects)
+     * Get Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “event” is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EventMode Event migration mode (`all`: All objects; `partial`: Some objects)
+     * @return EventMode Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “event” is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getEventMode() {
@@ -469,9 +469,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Event migration mode (`all`: All objects; `partial`: Some objects)
+     * Set Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “event” is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EventMode Event migration mode (`all`: All objects; `partial`: Some objects)
+     * @param EventMode Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “event” is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEventMode(String EventMode) {

@@ -27,6 +27,9 @@ public enum TkeErrorCode {
     // The version of the cluster node is too old.
      FAILEDOPERATION_CLUSTERUPGRADENODEVERSION("FailedOperation.ClusterUpgradeNodeVersion"),
      
+    // Internal client error.
+     FAILEDOPERATION_COMPONENTCLIENTCOMMON("FailedOperation.ComponentClientCommon"),
+     
     // Internal HTTP client error.
      FAILEDOPERATION_COMPONENTCLIENTHTTP("FailedOperation.ComponentClientHttp"),
      
@@ -110,6 +113,9 @@ public enum TkeErrorCode {
      
     // A same task is in progress.
      FAILEDOPERATION_TASKALREADYRUNNING("FailedOperation.TaskAlreadyRunning"),
+     
+    // 
+     FAILEDOPERATION_TASKLIFESTATEERROR("FailedOperation.TaskLifeStateError"),
      
     // Query failed.
      FAILEDOPERATION_TRADECOMMON("FailedOperation.TradeCommon"),

@@ -45,6 +45,20 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     private String LatestVersion;
 
     /**
+    * RuntimeVersion
+    */
+    @SerializedName("RuntimeVersion")
+    @Expose
+    private String RuntimeVersion;
+
+    /**
+    * RuntimeLatestVersion
+    */
+    @SerializedName("RuntimeLatestVersion")
+    @Expose
+    private String RuntimeLatestVersion;
+
+    /**
      * Get Node ID 
      * @return InstanceId Node ID
      */
@@ -96,6 +110,38 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.LatestVersion = LatestVersion;
     }
 
+    /**
+     * Get RuntimeVersion 
+     * @return RuntimeVersion RuntimeVersion
+     */
+    public String getRuntimeVersion() {
+        return this.RuntimeVersion;
+    }
+
+    /**
+     * Set RuntimeVersion
+     * @param RuntimeVersion RuntimeVersion
+     */
+    public void setRuntimeVersion(String RuntimeVersion) {
+        this.RuntimeVersion = RuntimeVersion;
+    }
+
+    /**
+     * Get RuntimeLatestVersion 
+     * @return RuntimeLatestVersion RuntimeLatestVersion
+     */
+    public String getRuntimeLatestVersion() {
+        return this.RuntimeLatestVersion;
+    }
+
+    /**
+     * Set RuntimeLatestVersion
+     * @param RuntimeLatestVersion RuntimeLatestVersion
+     */
+    public void setRuntimeLatestVersion(String RuntimeLatestVersion) {
+        this.RuntimeLatestVersion = RuntimeLatestVersion;
+    }
+
     public UpgradeAbleInstancesItem() {
     }
 
@@ -113,6 +159,12 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         if (source.LatestVersion != null) {
             this.LatestVersion = new String(source.LatestVersion);
         }
+        if (source.RuntimeVersion != null) {
+            this.RuntimeVersion = new String(source.RuntimeVersion);
+        }
+        if (source.RuntimeLatestVersion != null) {
+            this.RuntimeLatestVersion = new String(source.RuntimeLatestVersion);
+        }
     }
 
 
@@ -123,6 +175,8 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "LatestVersion", this.LatestVersion);
+        this.setParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
+        this.setParamSimple(map, prefix + "RuntimeLatestVersion", this.RuntimeLatestVersion);
 
     }
 }

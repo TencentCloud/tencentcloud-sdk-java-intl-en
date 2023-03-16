@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DescribeCheckSyncJobResultResponse extends AbstractModel{
 
     /**
-    * Check result
+    * Execution status of the check task. Valid values: `notStarted`, `running`, `failed`, `success`.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
@@ -47,7 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long StepCur;
 
     /**
-    * Overall progress
+    * Overall progress. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Progress")
@@ -70,9 +70,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Check result
+     * Get Execution status of the check task. Valid values: `notStarted`, `running`, `failed`, `success`.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Check result
+     * @return Status Execution status of the check task. Valid values: `notStarted`, `running`, `failed`, `success`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStatus() {
@@ -80,9 +80,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Check result
+     * Set Execution status of the check task. Valid values: `notStarted`, `running`, `failed`, `success`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Check result
+     * @param Status Execution status of the check task. Valid values: `notStarted`, `running`, `failed`, `success`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(String Status) {
@@ -130,9 +130,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Overall progress
+     * Get Overall progress. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Progress Overall progress
+     * @return Progress Overall progress. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getProgress() {
@@ -140,9 +140,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Overall progress
+     * Set Overall progress. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Progress Overall progress
+     * @param Progress Overall progress. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProgress(Long Progress) {

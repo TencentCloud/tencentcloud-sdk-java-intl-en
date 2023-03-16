@@ -80,6 +80,22 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String Email;
 
     /**
+    * Last login IP
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RecentlyLoginIP")
+    @Expose
+    private String RecentlyLoginIP;
+
+    /**
+    * Last login time
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RecentlyLoginTime")
+    @Expose
+    private String RecentlyLoginTime;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -219,6 +235,46 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get Last login IP
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RecentlyLoginIP Last login IP
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getRecentlyLoginIP() {
+        return this.RecentlyLoginIP;
+    }
+
+    /**
+     * Set Last login IP
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RecentlyLoginIP Last login IP
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRecentlyLoginIP(String RecentlyLoginIP) {
+        this.RecentlyLoginIP = RecentlyLoginIP;
+    }
+
+    /**
+     * Get Last login time
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RecentlyLoginTime Last login time
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getRecentlyLoginTime() {
+        return this.RecentlyLoginTime;
+    }
+
+    /**
+     * Set Last login time
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RecentlyLoginTime Last login time
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRecentlyLoginTime(String RecentlyLoginTime) {
+        this.RecentlyLoginTime = RecentlyLoginTime;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -266,6 +322,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.Email != null) {
             this.Email = new String(source.Email);
         }
+        if (source.RecentlyLoginIP != null) {
+            this.RecentlyLoginIP = new String(source.RecentlyLoginIP);
+        }
+        if (source.RecentlyLoginTime != null) {
+            this.RecentlyLoginTime = new String(source.RecentlyLoginTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -284,6 +346,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "PhoneNum", this.PhoneNum);
         this.setParamSimple(map, prefix + "CountryCode", this.CountryCode);
         this.setParamSimple(map, prefix + "Email", this.Email);
+        this.setParamSimple(map, prefix + "RecentlyLoginIP", this.RecentlyLoginIP);
+        this.setParamSimple(map, prefix + "RecentlyLoginTime", this.RecentlyLoginTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

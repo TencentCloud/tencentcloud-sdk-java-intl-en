@@ -111,7 +111,7 @@ public enum CamErrorCode {
     // There were too many entities in one operation.
      INVALIDPARAMETER_OPERATEENTITIESOVERLIMIT("InvalidParameter.OperateEntitiesOverLimit"),
      
-    // 
+    // The current role can only be operated by the organization admin. To modify it, contact the admin.
      INVALIDPARAMETER_ORGANIZATIONROLEOPERATEERROR("InvalidParameter.OrganizationRoleOperateError"),
      
     // Invalid input parameter.

@@ -139,7 +139,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *This API is used to check which nodes can be upgraded in the given node list. 
+     *This API is used to query nodes eligible for an upgrade in the given node list.
      * @param req CheckInstancesUpgradeAbleRequest
      * @return CheckInstancesUpgradeAbleResponse
      * @throws TencentCloudSDKException
@@ -899,7 +899,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     * This API is used to query information of one or more instances in a cluster. 
+     *This API is used to query information of node instances in a cluster.
      * @param req DescribeClusterInstancesRequest
      * @return DescribeClusterInstancesResponse
      * @throws TencentCloudSDKException
@@ -1699,7 +1699,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *This API is used to obtain the current progress of the node upgrade. 
+     *This API is used to obtain the current progress of the node upgrade.
      * @param req GetUpgradeInstanceProgressRequest
      * @return GetUpgradeInstanceProgressResponse
      * @throws TencentCloudSDKException
@@ -1899,7 +1899,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify an alarm rule. 
+     *This API is used to modify an alert rule.
      * @param req ModifyPrometheusAlertRuleRequest
      * @return ModifyPrometheusAlertRuleResponse
      * @throws TencentCloudSDKException

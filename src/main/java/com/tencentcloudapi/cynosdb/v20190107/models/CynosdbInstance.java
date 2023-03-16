@@ -359,6 +359,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Tag [] ResourceTags;
 
     /**
+    * Source AZ
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("MasterZone")
+    @Expose
+    private String MasterZone;
+
+    /**
+    * Replica AZ
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("SlaveZones")
+    @Expose
+    private String [] SlaveZones;
+
+    /**
+    * 
+    */
+    @SerializedName("InstanceNetInfo")
+    @Expose
+    private InstanceNetInfo [] InstanceNetInfo;
+
+    /**
      * Get User `Uin` 
      * @return Uin User `Uin`
      */
@@ -1138,6 +1161,62 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ResourceTags = ResourceTags;
     }
 
+    /**
+     * Get Source AZ
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return MasterZone Source AZ
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String getMasterZone() {
+        return this.MasterZone;
+    }
+
+    /**
+     * Set Source AZ
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param MasterZone Source AZ
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setMasterZone(String MasterZone) {
+        this.MasterZone = MasterZone;
+    }
+
+    /**
+     * Get Replica AZ
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return SlaveZones Replica AZ
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public String [] getSlaveZones() {
+        return this.SlaveZones;
+    }
+
+    /**
+     * Set Replica AZ
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param SlaveZones Replica AZ
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setSlaveZones(String [] SlaveZones) {
+        this.SlaveZones = SlaveZones;
+    }
+
+    /**
+     * Get  
+     * @return InstanceNetInfo 
+     */
+    public InstanceNetInfo [] getInstanceNetInfo() {
+        return this.InstanceNetInfo;
+    }
+
+    /**
+     * Set 
+     * @param InstanceNetInfo 
+     */
+    public void setInstanceNetInfo(InstanceNetInfo [] InstanceNetInfo) {
+        this.InstanceNetInfo = InstanceNetInfo;
+    }
+
     public CynosdbInstance() {
     }
 
@@ -1293,6 +1372,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.ResourceTags[i] = new Tag(source.ResourceTags[i]);
             }
         }
+        if (source.MasterZone != null) {
+            this.MasterZone = new String(source.MasterZone);
+        }
+        if (source.SlaveZones != null) {
+            this.SlaveZones = new String[source.SlaveZones.length];
+            for (int i = 0; i < source.SlaveZones.length; i++) {
+                this.SlaveZones[i] = new String(source.SlaveZones[i]);
+            }
+        }
+        if (source.InstanceNetInfo != null) {
+            this.InstanceNetInfo = new InstanceNetInfo[source.InstanceNetInfo.length];
+            for (int i = 0; i < source.InstanceNetInfo.length; i++) {
+                this.InstanceNetInfo[i] = new InstanceNetInfo(source.InstanceNetInfo[i]);
+            }
+        }
     }
 
 
@@ -1347,6 +1441,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
         this.setParamSimple(map, prefix + "IsFreeze", this.IsFreeze);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamSimple(map, prefix + "MasterZone", this.MasterZone);
+        this.setParamArraySimple(map, prefix + "SlaveZones.", this.SlaveZones);
+        this.setParamArrayObj(map, prefix + "InstanceNetInfo.", this.InstanceNetInfo);
 
     }
 }

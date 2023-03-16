@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class DescribeCheckSyncJobResultRequest extends AbstractModel{
 
     /**
-    * Sync task ID
+    * Sync task instance ID in the format of `sync-werwfs23`, which is used to identify a sync task. This parameter is required.
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-     * Get Sync task ID 
-     * @return JobId Sync task ID
+     * Get Sync task instance ID in the format of `sync-werwfs23`, which is used to identify a sync task. This parameter is required. 
+     * @return JobId Sync task instance ID in the format of `sync-werwfs23`, which is used to identify a sync task. This parameter is required.
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set Sync task ID
-     * @param JobId Sync task ID
+     * Set Sync task instance ID in the format of `sync-werwfs23`, which is used to identify a sync task. This parameter is required.
+     * @param JobId Sync task instance ID in the format of `sync-werwfs23`, which is used to identify a sync task. This parameter is required.
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

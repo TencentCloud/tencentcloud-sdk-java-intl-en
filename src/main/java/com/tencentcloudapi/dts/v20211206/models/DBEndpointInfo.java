@@ -80,6 +80,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private KeyValuePairOption [] ExtraAttr;
 
     /**
+    * Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DatabaseNetEnv")
+    @Expose
+    private String DatabaseNetEnv;
+
+    /**
      * Get Instance region
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return Region Instance region
@@ -223,6 +231,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ExtraAttr = ExtraAttr;
     }
 
+    /**
+     * Get Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DatabaseNetEnv Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDatabaseNetEnv() {
+        return this.DatabaseNetEnv;
+    }
+
+    /**
+     * Set Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DatabaseNetEnv Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDatabaseNetEnv(String DatabaseNetEnv) {
+        this.DatabaseNetEnv = DatabaseNetEnv;
+    }
+
     public DBEndpointInfo() {
     }
 
@@ -258,6 +286,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.ExtraAttr[i] = new KeyValuePairOption(source.ExtraAttr[i]);
             }
         }
+        if (source.DatabaseNetEnv != null) {
+            this.DatabaseNetEnv = new String(source.DatabaseNetEnv);
+        }
     }
 
 
@@ -272,6 +303,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "Info.", this.Info);
         this.setParamSimple(map, prefix + "Supplier", this.Supplier);
         this.setParamArrayObj(map, prefix + "ExtraAttr.", this.ExtraAttr);
+        this.setParamSimple(map, prefix + "DatabaseNetEnv", this.DatabaseNetEnv);
 
     }
 }

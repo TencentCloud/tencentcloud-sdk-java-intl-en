@@ -23,6 +23,38 @@ import java.util.HashMap;
 public class InstanceAdvancedSettings extends AbstractModel{
 
     /**
+    * When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DesiredPodNumber")
+    @Expose
+    private Long DesiredPodNumber;
+
+    /**
+    * GPU driver parameters
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("GPUArgs")
+    @Expose
+    private GPUArgs GPUArgs;
+
+    /**
+    * Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("PreStartUserScript")
+    @Expose
+    private String PreStartUserScript;
+
+    /**
+    * Node taint
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Taints")
+    @Expose
+    private Taint [] Taints;
+
+    /**
     * Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 (xfs for tlinux system) and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
 Note: in multi-disk scenarios, use the DataDisks data structure below to set the corresponding information, such as cloud disk type, cloud disk size, mount path, and whether to perform formatting.
 Note: this field may return `null`, indicating that no valid values can be obtained.
@@ -79,36 +111,84 @@ Note: This field may return null, indicating that no valid value was found.
     private InstanceExtraArgs ExtraArgs;
 
     /**
-    * When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+     * Get When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return DesiredPodNumber When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-    */
-    @SerializedName("DesiredPodNumber")
-    @Expose
-    private Long DesiredPodNumber;
+     */
+    public Long getDesiredPodNumber() {
+        return this.DesiredPodNumber;
+    }
 
     /**
-    * GPU driver parameters
-Note: This field may return `null`, indicating that no valid value can be obtained.
-    */
-    @SerializedName("GPUArgs")
-    @Expose
-    private GPUArgs GPUArgs;
-
-    /**
-    * Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
+     * Set When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-    */
-    @SerializedName("PreStartUserScript")
-    @Expose
-    private String PreStartUserScript;
+     * @param DesiredPodNumber When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDesiredPodNumber(Long DesiredPodNumber) {
+        this.DesiredPodNumber = DesiredPodNumber;
+    }
 
     /**
-    * Node taint
+     * Get GPU driver parameters
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return GPUArgs GPU driver parameters
 Note: This field may return `null`, indicating that no valid value can be obtained.
-    */
-    @SerializedName("Taints")
-    @Expose
-    private Taint [] Taints;
+     */
+    public GPUArgs getGPUArgs() {
+        return this.GPUArgs;
+    }
+
+    /**
+     * Set GPU driver parameters
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param GPUArgs GPU driver parameters
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setGPUArgs(GPUArgs GPUArgs) {
+        this.GPUArgs = GPUArgs;
+    }
+
+    /**
+     * Get Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return PreStartUserScript Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getPreStartUserScript() {
+        return this.PreStartUserScript;
+    }
+
+    /**
+     * Set Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param PreStartUserScript Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setPreStartUserScript(String PreStartUserScript) {
+        this.PreStartUserScript = PreStartUserScript;
+    }
+
+    /**
+     * Get Node taint
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Taints Node taint
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Taint [] getTaints() {
+        return this.Taints;
+    }
+
+    /**
+     * Set Node taint
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Taints Node taint
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setTaints(Taint [] Taints) {
+        this.Taints = Taints;
+    }
 
     /**
      * Get Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 (xfs for tlinux system) and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
@@ -250,86 +330,6 @@ Note: This field may return null, indicating that no valid value was found.
         this.ExtraArgs = ExtraArgs;
     }
 
-    /**
-     * Get When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return DesiredPodNumber When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     */
-    public Long getDesiredPodNumber() {
-        return this.DesiredPodNumber;
-    }
-
-    /**
-     * Set When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param DesiredPodNumber When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     */
-    public void setDesiredPodNumber(Long DesiredPodNumber) {
-        this.DesiredPodNumber = DesiredPodNumber;
-    }
-
-    /**
-     * Get GPU driver parameters
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return GPUArgs GPU driver parameters
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     */
-    public GPUArgs getGPUArgs() {
-        return this.GPUArgs;
-    }
-
-    /**
-     * Set GPU driver parameters
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param GPUArgs GPU driver parameters
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     */
-    public void setGPUArgs(GPUArgs GPUArgs) {
-        this.GPUArgs = GPUArgs;
-    }
-
-    /**
-     * Get Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return PreStartUserScript Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     */
-    public String getPreStartUserScript() {
-        return this.PreStartUserScript;
-    }
-
-    /**
-     * Set Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param PreStartUserScript Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     */
-    public void setPreStartUserScript(String PreStartUserScript) {
-        this.PreStartUserScript = PreStartUserScript;
-    }
-
-    /**
-     * Get Node taint
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return Taints Node taint
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     */
-    public Taint [] getTaints() {
-        return this.Taints;
-    }
-
-    /**
-     * Set Node taint
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param Taints Node taint
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     */
-    public void setTaints(Taint [] Taints) {
-        this.Taints = Taints;
-    }
-
     public InstanceAdvancedSettings() {
     }
 
@@ -338,6 +338,21 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public InstanceAdvancedSettings(InstanceAdvancedSettings source) {
+        if (source.DesiredPodNumber != null) {
+            this.DesiredPodNumber = new Long(source.DesiredPodNumber);
+        }
+        if (source.GPUArgs != null) {
+            this.GPUArgs = new GPUArgs(source.GPUArgs);
+        }
+        if (source.PreStartUserScript != null) {
+            this.PreStartUserScript = new String(source.PreStartUserScript);
+        }
+        if (source.Taints != null) {
+            this.Taints = new Taint[source.Taints.length];
+            for (int i = 0; i < source.Taints.length; i++) {
+                this.Taints[i] = new Taint(source.Taints[i]);
+            }
+        }
         if (source.MountTarget != null) {
             this.MountTarget = new String(source.MountTarget);
         }
@@ -365,21 +380,6 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.ExtraArgs != null) {
             this.ExtraArgs = new InstanceExtraArgs(source.ExtraArgs);
         }
-        if (source.DesiredPodNumber != null) {
-            this.DesiredPodNumber = new Long(source.DesiredPodNumber);
-        }
-        if (source.GPUArgs != null) {
-            this.GPUArgs = new GPUArgs(source.GPUArgs);
-        }
-        if (source.PreStartUserScript != null) {
-            this.PreStartUserScript = new String(source.PreStartUserScript);
-        }
-        if (source.Taints != null) {
-            this.Taints = new Taint[source.Taints.length];
-            for (int i = 0; i < source.Taints.length; i++) {
-                this.Taints[i] = new Taint(source.Taints[i]);
-            }
-        }
     }
 
 
@@ -387,6 +387,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DesiredPodNumber", this.DesiredPodNumber);
+        this.setParamObj(map, prefix + "GPUArgs.", this.GPUArgs);
+        this.setParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
+        this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
         this.setParamSimple(map, prefix + "MountTarget", this.MountTarget);
         this.setParamSimple(map, prefix + "DockerGraphPath", this.DockerGraphPath);
         this.setParamSimple(map, prefix + "UserScript", this.UserScript);
@@ -394,10 +398,6 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         this.setParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
-        this.setParamSimple(map, prefix + "DesiredPodNumber", this.DesiredPodNumber);
-        this.setParamObj(map, prefix + "GPUArgs.", this.GPUArgs);
-        this.setParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
-        this.setParamArrayObj(map, prefix + "Taints.", this.Taints);
 
     }
 }

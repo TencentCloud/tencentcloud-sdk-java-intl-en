@@ -620,7 +620,7 @@ Calling this API is a high-risk operation because the key cannot be recovered on
     }
 
     /**
-     *This API is used to query security settings.
+     *This API is used to get a sub-account’s security settings.
      * @param req DescribeSafeAuthFlagCollRequest
      * @return DescribeSafeAuthFlagCollResponse
      * @throws TencentCloudSDKException
