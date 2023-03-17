@@ -51,7 +51,14 @@ public class TargetHealth extends AbstractModel{
     private String TargetId;
 
     /**
-    * Detailed information of the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+    * Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+    */
+    @SerializedName("HealthStatusDetail")
+    @Expose
+    private String HealthStatusDetail;
+
+    /**
+    * Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status. This parameter will be discarded soon. We recommend that you use the HealthStatusDetail parameter.
     */
     @SerializedName("HealthStatusDetial")
     @Expose
@@ -122,16 +129,32 @@ public class TargetHealth extends AbstractModel{
     }
 
     /**
-     * Get Detailed information of the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status. 
-     * @return HealthStatusDetial Detailed information of the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+     * Get Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status. 
+     * @return HealthStatusDetail Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+     */
+    public String getHealthStatusDetail() {
+        return this.HealthStatusDetail;
+    }
+
+    /**
+     * Set Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+     * @param HealthStatusDetail Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+     */
+    public void setHealthStatusDetail(String HealthStatusDetail) {
+        this.HealthStatusDetail = HealthStatusDetail;
+    }
+
+    /**
+     * Get Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status. This parameter will be discarded soon. We recommend that you use the HealthStatusDetail parameter. 
+     * @return HealthStatusDetial Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status. This parameter will be discarded soon. We recommend that you use the HealthStatusDetail parameter.
      */
     public String getHealthStatusDetial() {
         return this.HealthStatusDetial;
     }
 
     /**
-     * Set Detailed information of the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
-     * @param HealthStatusDetial Detailed information of the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+     * Set Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status. This parameter will be discarded soon. We recommend that you use the HealthStatusDetail parameter.
+     * @param HealthStatusDetial Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status. This parameter will be discarded soon. We recommend that you use the HealthStatusDetail parameter.
      */
     public void setHealthStatusDetial(String HealthStatusDetial) {
         this.HealthStatusDetial = HealthStatusDetial;
@@ -157,6 +180,9 @@ public class TargetHealth extends AbstractModel{
         if (source.TargetId != null) {
             this.TargetId = new String(source.TargetId);
         }
+        if (source.HealthStatusDetail != null) {
+            this.HealthStatusDetail = new String(source.HealthStatusDetail);
+        }
         if (source.HealthStatusDetial != null) {
             this.HealthStatusDetial = new String(source.HealthStatusDetial);
         }
@@ -171,6 +197,7 @@ public class TargetHealth extends AbstractModel{
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
         this.setParamSimple(map, prefix + "TargetId", this.TargetId);
+        this.setParamSimple(map, prefix + "HealthStatusDetail", this.HealthStatusDetail);
         this.setParamSimple(map, prefix + "HealthStatusDetial", this.HealthStatusDetial);
 
     }

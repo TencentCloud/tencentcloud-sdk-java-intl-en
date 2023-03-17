@@ -95,6 +95,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private TemplateConfig TemplateConfig;
 
     /**
+    * Slow attack defense configuration. If it is `null`, the previous setting is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("SlowPostConfig")
+    @Expose
+    private SlowPostConfig SlowPostConfig;
+
+    /**
      * Get The settings of the managed rule. If it is null, the settings that were last configured will be used.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return WafConfig The settings of the managed rule. If it is null, the settings that were last configured will be used.
@@ -274,6 +282,26 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.TemplateConfig = TemplateConfig;
     }
 
+    /**
+     * Get Slow attack defense configuration. If it is `null`, the previous setting is used.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return SlowPostConfig Slow attack defense configuration. If it is `null`, the previous setting is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public SlowPostConfig getSlowPostConfig() {
+        return this.SlowPostConfig;
+    }
+
+    /**
+     * Set Slow attack defense configuration. If it is `null`, the previous setting is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param SlowPostConfig Slow attack defense configuration. If it is `null`, the previous setting is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setSlowPostConfig(SlowPostConfig SlowPostConfig) {
+        this.SlowPostConfig = SlowPostConfig;
+    }
+
     public SecurityConfig() {
     }
 
@@ -309,6 +337,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.TemplateConfig != null) {
             this.TemplateConfig = new TemplateConfig(source.TemplateConfig);
         }
+        if (source.SlowPostConfig != null) {
+            this.SlowPostConfig = new SlowPostConfig(source.SlowPostConfig);
+        }
     }
 
 
@@ -325,6 +356,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamObj(map, prefix + "ExceptConfig.", this.ExceptConfig);
         this.setParamObj(map, prefix + "DropPageConfig.", this.DropPageConfig);
         this.setParamObj(map, prefix + "TemplateConfig.", this.TemplateConfig);
+        this.setParamObj(map, prefix + "SlowPostConfig.", this.SlowPostConfig);
 
     }
 }

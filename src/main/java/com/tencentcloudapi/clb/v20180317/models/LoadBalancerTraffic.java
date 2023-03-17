@@ -58,6 +58,14 @@ public class LoadBalancerTraffic extends AbstractModel{
     private Float OutBandwidth;
 
     /**
+    * CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
      * Get CLB instance ID 
      * @return LoadBalancerId CLB instance ID
      */
@@ -137,6 +145,26 @@ public class LoadBalancerTraffic extends AbstractModel{
         this.OutBandwidth = OutBandwidth;
     }
 
+    /**
+     * Get CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return Domain CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param Domain CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
     public LoadBalancerTraffic() {
     }
 
@@ -160,6 +188,9 @@ public class LoadBalancerTraffic extends AbstractModel{
         if (source.OutBandwidth != null) {
             this.OutBandwidth = new Float(source.OutBandwidth);
         }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
     }
 
 
@@ -172,6 +203,7 @@ public class LoadBalancerTraffic extends AbstractModel{
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "OutBandwidth", this.OutBandwidth);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }

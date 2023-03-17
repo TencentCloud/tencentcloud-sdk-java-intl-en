@@ -159,8 +159,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private ExtraInfo ExtraInfo;
 
     /**
-    * Custom configuration ID at the CLB instance level.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Custom configuration IDs of CLB instances. Multiple IDs must be separated by commas (,).
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ConfigId")
     @Expose
@@ -319,7 +319,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Long SniSwitch;
 
     /**
-    * 
+    * Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LoadBalancerDomain")
     @Expose
@@ -666,20 +667,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Custom configuration ID at the CLB instance level.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ConfigId Custom configuration ID at the CLB instance level.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Custom configuration IDs of CLB instances. Multiple IDs must be separated by commas (,).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ConfigId Custom configuration IDs of CLB instances. Multiple IDs must be separated by commas (,).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getConfigId() {
         return this.ConfigId;
     }
 
     /**
-     * Set Custom configuration ID at the CLB instance level.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ConfigId Custom configuration ID at the CLB instance level.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Custom configuration IDs of CLB instances. Multiple IDs must be separated by commas (,).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ConfigId Custom configuration IDs of CLB instances. Multiple IDs must be separated by commas (,).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setConfigId(String ConfigId) {
         this.ConfigId = ConfigId;
@@ -1066,16 +1067,20 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get  
-     * @return LoadBalancerDomain 
+     * Get Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LoadBalancerDomain Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLoadBalancerDomain() {
         return this.LoadBalancerDomain;
     }
 
     /**
-     * Set 
-     * @param LoadBalancerDomain 
+     * Set Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LoadBalancerDomain Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLoadBalancerDomain(String LoadBalancerDomain) {
         this.LoadBalancerDomain = LoadBalancerDomain;

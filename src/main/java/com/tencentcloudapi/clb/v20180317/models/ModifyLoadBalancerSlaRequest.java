@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class ModifyLoadBalancerSlaRequest extends AbstractModel{
 
     /**
-    * CLB instance information
+    * CLB instance information.
     */
     @SerializedName("LoadBalancerSla")
     @Expose
     private SlaUpdateParam [] LoadBalancerSla;
 
     /**
-     * Get CLB instance information 
-     * @return LoadBalancerSla CLB instance information
+     * Get CLB instance information. 
+     * @return LoadBalancerSla CLB instance information.
      */
     public SlaUpdateParam [] getLoadBalancerSla() {
         return this.LoadBalancerSla;
     }
 
     /**
-     * Set CLB instance information
-     * @param LoadBalancerSla CLB instance information
+     * Set CLB instance information.
+     * @param LoadBalancerSla CLB instance information.
      */
     public void setLoadBalancerSla(SlaUpdateParam [] LoadBalancerSla) {
         this.LoadBalancerSla = LoadBalancerSla;

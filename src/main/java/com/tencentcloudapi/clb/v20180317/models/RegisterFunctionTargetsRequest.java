@@ -23,138 +23,138 @@ import java.util.HashMap;
 public class RegisterFunctionTargetsRequest extends AbstractModel{
 
     /**
-    * 
+    * CLB instance ID.
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 
+    * CLB listener ID.
     */
     @SerializedName("ListenerId")
     @Expose
     private String ListenerId;
 
     /**
-    * 
+    * SCF functions to be bound.
     */
     @SerializedName("FunctionTargets")
     @Expose
     private FunctionTarget [] FunctionTargets;
 
     /**
-    * 
+    * ID of the target forwarding rule. To bind an SCF function to a L7 forwarding rule, this parameter or `Domain+Url` is required.
     */
     @SerializedName("LocationId")
     @Expose
     private String LocationId;
 
     /**
-    * 
+    * Domain name of the target forwarding rule. It is ignored if `LocationId` is specified.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * 
+    * URL of the target forwarding rule. It is ignored if `LocationId` is specified.
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get  
-     * @return LoadBalancerId 
+     * Get CLB instance ID. 
+     * @return LoadBalancerId CLB instance ID.
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 
-     * @param LoadBalancerId 
+     * Set CLB instance ID.
+     * @param LoadBalancerId CLB instance ID.
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get  
-     * @return ListenerId 
+     * Get CLB listener ID. 
+     * @return ListenerId CLB listener ID.
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 
-     * @param ListenerId 
+     * Set CLB listener ID.
+     * @param ListenerId CLB listener ID.
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get  
-     * @return FunctionTargets 
+     * Get SCF functions to be bound. 
+     * @return FunctionTargets SCF functions to be bound.
      */
     public FunctionTarget [] getFunctionTargets() {
         return this.FunctionTargets;
     }
 
     /**
-     * Set 
-     * @param FunctionTargets 
+     * Set SCF functions to be bound.
+     * @param FunctionTargets SCF functions to be bound.
      */
     public void setFunctionTargets(FunctionTarget [] FunctionTargets) {
         this.FunctionTargets = FunctionTargets;
     }
 
     /**
-     * Get  
-     * @return LocationId 
+     * Get ID of the target forwarding rule. To bind an SCF function to a L7 forwarding rule, this parameter or `Domain+Url` is required. 
+     * @return LocationId ID of the target forwarding rule. To bind an SCF function to a L7 forwarding rule, this parameter or `Domain+Url` is required.
      */
     public String getLocationId() {
         return this.LocationId;
     }
 
     /**
-     * Set 
-     * @param LocationId 
+     * Set ID of the target forwarding rule. To bind an SCF function to a L7 forwarding rule, this parameter or `Domain+Url` is required.
+     * @param LocationId ID of the target forwarding rule. To bind an SCF function to a L7 forwarding rule, this parameter or `Domain+Url` is required.
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;
     }
 
     /**
-     * Get  
-     * @return Domain 
+     * Get Domain name of the target forwarding rule. It is ignored if `LocationId` is specified. 
+     * @return Domain Domain name of the target forwarding rule. It is ignored if `LocationId` is specified.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 
-     * @param Domain 
+     * Set Domain name of the target forwarding rule. It is ignored if `LocationId` is specified.
+     * @param Domain Domain name of the target forwarding rule. It is ignored if `LocationId` is specified.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get  
-     * @return Url 
+     * Get URL of the target forwarding rule. It is ignored if `LocationId` is specified. 
+     * @return Url URL of the target forwarding rule. It is ignored if `LocationId` is specified.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set URL of the target forwarding rule. It is ignored if `LocationId` is specified.
+     * @param Url URL of the target forwarding rule. It is ignored if `LocationId` is specified.
      */
     public void setUrl(String Url) {
         this.Url = Url;

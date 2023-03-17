@@ -55,6 +55,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private RateLimitIntelligence RateLimitIntelligence;
 
     /**
+    * The custom rate limiting rules. If it is `null`, the previous settings is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("RateLimitCustomizes")
+    @Expose
+    private RateLimitUserRule [] RateLimitCustomizes;
+
+    /**
      * Get Switch. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li> 
@@ -134,6 +142,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RateLimitIntelligence = RateLimitIntelligence;
     }
 
+    /**
+     * Get The custom rate limiting rules. If it is `null`, the previous settings is used.
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return RateLimitCustomizes The custom rate limiting rules. If it is `null`, the previous settings is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public RateLimitUserRule [] getRateLimitCustomizes() {
+        return this.RateLimitCustomizes;
+    }
+
+    /**
+     * Set The custom rate limiting rules. If it is `null`, the previous settings is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param RateLimitCustomizes The custom rate limiting rules. If it is `null`, the previous settings is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setRateLimitCustomizes(RateLimitUserRule [] RateLimitCustomizes) {
+        this.RateLimitCustomizes = RateLimitCustomizes;
+    }
+
     public RateLimitConfig() {
     }
 
@@ -157,6 +185,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RateLimitIntelligence != null) {
             this.RateLimitIntelligence = new RateLimitIntelligence(source.RateLimitIntelligence);
         }
+        if (source.RateLimitCustomizes != null) {
+            this.RateLimitCustomizes = new RateLimitUserRule[source.RateLimitCustomizes.length];
+            for (int i = 0; i < source.RateLimitCustomizes.length; i++) {
+                this.RateLimitCustomizes[i] = new RateLimitUserRule(source.RateLimitCustomizes[i]);
+            }
+        }
     }
 
 
@@ -168,6 +202,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "RateLimitUserRules.", this.RateLimitUserRules);
         this.setParamObj(map, prefix + "RateLimitTemplate.", this.RateLimitTemplate);
         this.setParamObj(map, prefix + "RateLimitIntelligence.", this.RateLimitIntelligence);
+        this.setParamArrayObj(map, prefix + "RateLimitCustomizes.", this.RateLimitCustomizes);
 
     }
 }

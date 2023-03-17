@@ -37,7 +37,7 @@ public class CreateListenerRequest extends AbstractModel{
     private Long [] Ports;
 
     /**
-    * Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
+    * Listener protocol. Values: TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC
     */
     @SerializedName("Protocol")
     @Expose
@@ -175,16 +175,16 @@ They represent weighted round robin and least connections, respectively. Default
     }
 
     /**
-     * Get Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application). 
-     * @return Protocol Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
+     * Get Listener protocol. Values: TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC 
+     * @return Protocol Listener protocol. Values: TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
-     * @param Protocol Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
+     * Set Listener protocol. Values: TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC
+     * @param Protocol Listener protocol. Values: TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

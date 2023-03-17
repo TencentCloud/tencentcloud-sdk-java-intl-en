@@ -168,6 +168,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String AliasZoneName;
 
     /**
+    * Whether it’s a fake site. Values:
+<li>`0`: Non-fake site</li>
+<li>`1`: Fake site</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("IsFake")
+    @Expose
+    private Long IsFake;
+
+    /**
      * Get The site ID. 
      * @return ZoneId The site ID.
      */
@@ -531,6 +541,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.AliasZoneName = AliasZoneName;
     }
 
+    /**
+     * Get Whether it’s a fake site. Values:
+<li>`0`: Non-fake site</li>
+<li>`1`: Fake site</li>
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return IsFake Whether it’s a fake site. Values:
+<li>`0`: Non-fake site</li>
+<li>`1`: Fake site</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public Long getIsFake() {
+        return this.IsFake;
+    }
+
+    /**
+     * Set Whether it’s a fake site. Values:
+<li>`0`: Non-fake site</li>
+<li>`1`: Fake site</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param IsFake Whether it’s a fake site. Values:
+<li>`0`: Non-fake site</li>
+<li>`1`: Fake site</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setIsFake(Long IsFake) {
+        this.IsFake = IsFake;
+    }
+
     public Zone() {
     }
 
@@ -608,6 +646,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.AliasZoneName != null) {
             this.AliasZoneName = new String(source.AliasZoneName);
         }
+        if (source.IsFake != null) {
+            this.IsFake = new Long(source.IsFake);
+        }
     }
 
 
@@ -633,6 +674,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "VanityNameServersIps.", this.VanityNameServersIps);
         this.setParamSimple(map, prefix + "ActiveStatus", this.ActiveStatus);
         this.setParamSimple(map, prefix + "AliasZoneName", this.AliasZoneName);
+        this.setParamSimple(map, prefix + "IsFake", this.IsFake);
 
     }
 }

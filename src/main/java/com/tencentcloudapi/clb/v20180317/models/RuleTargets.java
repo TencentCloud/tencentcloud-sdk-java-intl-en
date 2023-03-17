@@ -52,6 +52,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Backend [] Targets;
 
     /**
+    * Information about backend SCF functions.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("FunctionTargets")
+    @Expose
+    private FunctionTarget [] FunctionTargets;
+
+    /**
      * Get Forwarding rule ID 
      * @return LocationId Forwarding rule ID
      */
@@ -119,6 +127,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Targets = Targets;
     }
 
+    /**
+     * Get Information about backend SCF functions.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return FunctionTargets Information about backend SCF functions.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public FunctionTarget [] getFunctionTargets() {
+        return this.FunctionTargets;
+    }
+
+    /**
+     * Set Information about backend SCF functions.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param FunctionTargets Information about backend SCF functions.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setFunctionTargets(FunctionTarget [] FunctionTargets) {
+        this.FunctionTargets = FunctionTargets;
+    }
+
     public RuleTargets() {
     }
 
@@ -142,6 +170,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.Targets[i] = new Backend(source.Targets[i]);
             }
         }
+        if (source.FunctionTargets != null) {
+            this.FunctionTargets = new FunctionTarget[source.FunctionTargets.length];
+            for (int i = 0; i < source.FunctionTargets.length; i++) {
+                this.FunctionTargets[i] = new FunctionTarget(source.FunctionTargets[i]);
+            }
+        }
     }
 
 
@@ -153,6 +187,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamArrayObj(map, prefix + "Targets.", this.Targets);
+        this.setParamArrayObj(map, prefix + "FunctionTargets.", this.FunctionTargets);
 
     }
 }

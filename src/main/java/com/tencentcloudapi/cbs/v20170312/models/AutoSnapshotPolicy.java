@@ -117,6 +117,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] InstanceIdSet;
 
     /**
+    * The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RetentionMonths")
+    @Expose
+    private Long RetentionMonths;
+
+    /**
+    * The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RetentionAmount")
+    @Expose
+    private Long RetentionAmount;
+
+    /**
+    * Retention policy for scheduled snapshots.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AdvancedRetentionPolicy")
+    @Expose
+    private AdvancedRetentionPolicy AdvancedRetentionPolicy;
+
+    /**
+    * 
+    */
+    @SerializedName("CopyFromAccountUin")
+    @Expose
+    private String CopyFromAccountUin;
+
+    /**
+    * 
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get The list of cloud disk IDs that the current scheduled snapshot policy is bound to. 
      * @return DiskIdSet The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
      */
@@ -336,6 +374,98 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.InstanceIdSet = InstanceIdSet;
     }
 
+    /**
+     * Get The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RetentionMonths The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getRetentionMonths() {
+        return this.RetentionMonths;
+    }
+
+    /**
+     * Set The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RetentionMonths The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRetentionMonths(Long RetentionMonths) {
+        this.RetentionMonths = RetentionMonths;
+    }
+
+    /**
+     * Get The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RetentionAmount The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getRetentionAmount() {
+        return this.RetentionAmount;
+    }
+
+    /**
+     * Set The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RetentionAmount The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRetentionAmount(Long RetentionAmount) {
+        this.RetentionAmount = RetentionAmount;
+    }
+
+    /**
+     * Get Retention policy for scheduled snapshots.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AdvancedRetentionPolicy Retention policy for scheduled snapshots.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public AdvancedRetentionPolicy getAdvancedRetentionPolicy() {
+        return this.AdvancedRetentionPolicy;
+    }
+
+    /**
+     * Set Retention policy for scheduled snapshots.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AdvancedRetentionPolicy Retention policy for scheduled snapshots.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAdvancedRetentionPolicy(AdvancedRetentionPolicy AdvancedRetentionPolicy) {
+        this.AdvancedRetentionPolicy = AdvancedRetentionPolicy;
+    }
+
+    /**
+     * Get  
+     * @return CopyFromAccountUin 
+     */
+    public String getCopyFromAccountUin() {
+        return this.CopyFromAccountUin;
+    }
+
+    /**
+     * Set 
+     * @param CopyFromAccountUin 
+     */
+    public void setCopyFromAccountUin(String CopyFromAccountUin) {
+        this.CopyFromAccountUin = CopyFromAccountUin;
+    }
+
+    /**
+     * Get  
+     * @return Tags 
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 
+     * @param Tags 
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public AutoSnapshotPolicy() {
     }
 
@@ -392,6 +522,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.InstanceIdSet[i] = new String(source.InstanceIdSet[i]);
             }
         }
+        if (source.RetentionMonths != null) {
+            this.RetentionMonths = new Long(source.RetentionMonths);
+        }
+        if (source.RetentionAmount != null) {
+            this.RetentionAmount = new Long(source.RetentionAmount);
+        }
+        if (source.AdvancedRetentionPolicy != null) {
+            this.AdvancedRetentionPolicy = new AdvancedRetentionPolicy(source.AdvancedRetentionPolicy);
+        }
+        if (source.CopyFromAccountUin != null) {
+            this.CopyFromAccountUin = new String(source.CopyFromAccountUin);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -412,6 +560,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "RetentionDays", this.RetentionDays);
         this.setParamSimple(map, prefix + "CopyToAccountUin", this.CopyToAccountUin);
         this.setParamArraySimple(map, prefix + "InstanceIdSet.", this.InstanceIdSet);
+        this.setParamSimple(map, prefix + "RetentionMonths", this.RetentionMonths);
+        this.setParamSimple(map, prefix + "RetentionAmount", this.RetentionAmount);
+        this.setParamObj(map, prefix + "AdvancedRetentionPolicy.", this.AdvancedRetentionPolicy);
+        this.setParamSimple(map, prefix + "CopyFromAccountUin", this.CopyFromAccountUin);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

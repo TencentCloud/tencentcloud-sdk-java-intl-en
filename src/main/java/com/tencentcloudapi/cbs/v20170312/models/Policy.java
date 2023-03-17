@@ -37,6 +37,20 @@ public class Policy extends AbstractModel{
     private Long [] DayOfWeek;
 
     /**
+    * Specifies the dates of the month on which a scheduled snapshot will be triggered. Value range: [1, 31]. `1` to `31` indicate the specific dates of the month; for example, `5` indicates the 5th day of the month. Note: If you set a date that does not exist in some months such as 29, 30, and 31, these months will be skipped for scheduled snapshot creation.
+    */
+    @SerializedName("DayOfMonth")
+    @Expose
+    private Long [] DayOfMonth;
+
+    /**
+    * Specifies the interval for creating scheduled snapshots in days. Value range: [1, 365]. For example, if it is set to `5`, scheduled snapshots will be created every 5 days. Note: If you choose to back up by day, the time for the first backup is theoretically the day when the backup policy is created. If the backup policy creation time on the current day is later than the set backup time, the first backup will be performed in the second backup cycle.
+    */
+    @SerializedName("IntervalDays")
+    @Expose
+    private Long IntervalDays;
+
+    /**
      * Get Specifies the time that that the scheduled snapshot policy will be triggered. The unit is hour. The value range is [0-23]. 00:00-23:00 is a total of 24 time points that can be selected. 1 indicates 01:00, and so on. 
      * @return Hour Specifies the time that that the scheduled snapshot policy will be triggered. The unit is hour. The value range is [0-23]. 00:00-23:00 is a total of 24 time points that can be selected. 1 indicates 01:00, and so on.
      */
@@ -68,6 +82,38 @@ public class Policy extends AbstractModel{
         this.DayOfWeek = DayOfWeek;
     }
 
+    /**
+     * Get Specifies the dates of the month on which a scheduled snapshot will be triggered. Value range: [1, 31]. `1` to `31` indicate the specific dates of the month; for example, `5` indicates the 5th day of the month. Note: If you set a date that does not exist in some months such as 29, 30, and 31, these months will be skipped for scheduled snapshot creation. 
+     * @return DayOfMonth Specifies the dates of the month on which a scheduled snapshot will be triggered. Value range: [1, 31]. `1` to `31` indicate the specific dates of the month; for example, `5` indicates the 5th day of the month. Note: If you set a date that does not exist in some months such as 29, 30, and 31, these months will be skipped for scheduled snapshot creation.
+     */
+    public Long [] getDayOfMonth() {
+        return this.DayOfMonth;
+    }
+
+    /**
+     * Set Specifies the dates of the month on which a scheduled snapshot will be triggered. Value range: [1, 31]. `1` to `31` indicate the specific dates of the month; for example, `5` indicates the 5th day of the month. Note: If you set a date that does not exist in some months such as 29, 30, and 31, these months will be skipped for scheduled snapshot creation.
+     * @param DayOfMonth Specifies the dates of the month on which a scheduled snapshot will be triggered. Value range: [1, 31]. `1` to `31` indicate the specific dates of the month; for example, `5` indicates the 5th day of the month. Note: If you set a date that does not exist in some months such as 29, 30, and 31, these months will be skipped for scheduled snapshot creation.
+     */
+    public void setDayOfMonth(Long [] DayOfMonth) {
+        this.DayOfMonth = DayOfMonth;
+    }
+
+    /**
+     * Get Specifies the interval for creating scheduled snapshots in days. Value range: [1, 365]. For example, if it is set to `5`, scheduled snapshots will be created every 5 days. Note: If you choose to back up by day, the time for the first backup is theoretically the day when the backup policy is created. If the backup policy creation time on the current day is later than the set backup time, the first backup will be performed in the second backup cycle. 
+     * @return IntervalDays Specifies the interval for creating scheduled snapshots in days. Value range: [1, 365]. For example, if it is set to `5`, scheduled snapshots will be created every 5 days. Note: If you choose to back up by day, the time for the first backup is theoretically the day when the backup policy is created. If the backup policy creation time on the current day is later than the set backup time, the first backup will be performed in the second backup cycle.
+     */
+    public Long getIntervalDays() {
+        return this.IntervalDays;
+    }
+
+    /**
+     * Set Specifies the interval for creating scheduled snapshots in days. Value range: [1, 365]. For example, if it is set to `5`, scheduled snapshots will be created every 5 days. Note: If you choose to back up by day, the time for the first backup is theoretically the day when the backup policy is created. If the backup policy creation time on the current day is later than the set backup time, the first backup will be performed in the second backup cycle.
+     * @param IntervalDays Specifies the interval for creating scheduled snapshots in days. Value range: [1, 365]. For example, if it is set to `5`, scheduled snapshots will be created every 5 days. Note: If you choose to back up by day, the time for the first backup is theoretically the day when the backup policy is created. If the backup policy creation time on the current day is later than the set backup time, the first backup will be performed in the second backup cycle.
+     */
+    public void setIntervalDays(Long IntervalDays) {
+        this.IntervalDays = IntervalDays;
+    }
+
     public Policy() {
     }
 
@@ -88,6 +134,15 @@ public class Policy extends AbstractModel{
                 this.DayOfWeek[i] = new Long(source.DayOfWeek[i]);
             }
         }
+        if (source.DayOfMonth != null) {
+            this.DayOfMonth = new Long[source.DayOfMonth.length];
+            for (int i = 0; i < source.DayOfMonth.length; i++) {
+                this.DayOfMonth[i] = new Long(source.DayOfMonth[i]);
+            }
+        }
+        if (source.IntervalDays != null) {
+            this.IntervalDays = new Long(source.IntervalDays);
+        }
     }
 
 
@@ -97,6 +152,8 @@ public class Policy extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Hour.", this.Hour);
         this.setParamArraySimple(map, prefix + "DayOfWeek.", this.DayOfWeek);
+        this.setParamArraySimple(map, prefix + "DayOfMonth.", this.DayOfMonth);
+        this.setParamSimple(map, prefix + "IntervalDays", this.IntervalDays);
 
     }
 }

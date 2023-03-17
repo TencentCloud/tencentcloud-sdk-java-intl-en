@@ -117,10 +117,8 @@ Note: By default, the traffic goes to the primary AZ. The secondary AZs only car
     private TagInfo [] Tags;
 
     /**
-    * Specifies a VIP for the CLB instance.
-<ul><li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.</li>
-<li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.
-</li></ul>
+    * Specifies the VIP for the application of a CLB instance. This parameter is optional. If you do not specify this parameter, the system automatically assigns a value for the parameter. IPv4 and IPv6 CLB instances support this parameter, but IPv6 NAT64 CLB instances do not.
+Note: If the specified VIP is occupied or is not within the IP range of the specified VPC subnet, you cannot use the VIP to create a CLB instance in a private network or an IPv6 BGP CLB instance in a public network.
     */
     @SerializedName("Vip")
     @Expose
@@ -134,16 +132,17 @@ Note: By default, the traffic goes to the primary AZ. The secondary AZs only car
     private String BandwidthPackageId;
 
     /**
-    * Exclusive cluster information. This parameter is required for creating exclusive clusters of CLB instances.
+    * Information about the dedicated CLB instance. You must specify this parameter when you create a dedicated CLB instance in a private network.
     */
     @SerializedName("ExclusiveCluster")
     @Expose
     private ExclusiveCluster ExclusiveCluster;
 
     /**
-    * Creates an LCU-supported CLB instance
-<ul><li>To create an LCU-supported CLB, this field is required and the value is `SLA`. LCU-supports CLBs adopt the pay-as-you-go model and their performance is guaranteed.</li>
-<li>It’s not required for a shared CLB instance.</li></ul>
+    * Creates an LCU-supported instance.
+<ul><li>To create an LCU-supported instance, set this parameter to `SLA`, which indicates that an LCU-supported instance is created with the default specification in pay-as-you-go mode.
+<ul><li>If you enable general LCU-supported instances, `SLA` corresponds to the Super Large 1 specification. General LCU-supported instances are in beta testing, [submit a ticket](https://intl.cloud.tencent.com/apply/p/hf45esx99lf?from_cn_redirect=1) for application.</li>
+<li>If you enable ultra-large LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Ultra-large LCU-supported instances are in beta testing, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.</li></ul></li><li>This parameter is not required when you create a shared instance.</li></ul>
     */
     @SerializedName("SlaType")
     @Expose
@@ -420,28 +419,20 @@ Note: By default, the traffic goes to the primary AZ. The secondary AZs only car
     }
 
     /**
-     * Get Specifies a VIP for the CLB instance.
-<ul><li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.</li>
-<li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.
-</li></ul> 
-     * @return Vip Specifies a VIP for the CLB instance.
-<ul><li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.</li>
-<li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.
-</li></ul>
+     * Get Specifies the VIP for the application of a CLB instance. This parameter is optional. If you do not specify this parameter, the system automatically assigns a value for the parameter. IPv4 and IPv6 CLB instances support this parameter, but IPv6 NAT64 CLB instances do not.
+Note: If the specified VIP is occupied or is not within the IP range of the specified VPC subnet, you cannot use the VIP to create a CLB instance in a private network or an IPv6 BGP CLB instance in a public network. 
+     * @return Vip Specifies the VIP for the application of a CLB instance. This parameter is optional. If you do not specify this parameter, the system automatically assigns a value for the parameter. IPv4 and IPv6 CLB instances support this parameter, but IPv6 NAT64 CLB instances do not.
+Note: If the specified VIP is occupied or is not within the IP range of the specified VPC subnet, you cannot use the VIP to create a CLB instance in a private network or an IPv6 BGP CLB instance in a public network.
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set Specifies a VIP for the CLB instance.
-<ul><li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.</li>
-<li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.
-</li></ul>
-     * @param Vip Specifies a VIP for the CLB instance.
-<ul><li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.</li>
-<li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.
-</li></ul>
+     * Set Specifies the VIP for the application of a CLB instance. This parameter is optional. If you do not specify this parameter, the system automatically assigns a value for the parameter. IPv4 and IPv6 CLB instances support this parameter, but IPv6 NAT64 CLB instances do not.
+Note: If the specified VIP is occupied or is not within the IP range of the specified VPC subnet, you cannot use the VIP to create a CLB instance in a private network or an IPv6 BGP CLB instance in a public network.
+     * @param Vip Specifies the VIP for the application of a CLB instance. This parameter is optional. If you do not specify this parameter, the system automatically assigns a value for the parameter. IPv4 and IPv6 CLB instances support this parameter, but IPv6 NAT64 CLB instances do not.
+Note: If the specified VIP is occupied or is not within the IP range of the specified VPC subnet, you cannot use the VIP to create a CLB instance in a private network or an IPv6 BGP CLB instance in a public network.
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
@@ -464,40 +455,44 @@ Note: By default, the traffic goes to the primary AZ. The secondary AZs only car
     }
 
     /**
-     * Get Exclusive cluster information. This parameter is required for creating exclusive clusters of CLB instances. 
-     * @return ExclusiveCluster Exclusive cluster information. This parameter is required for creating exclusive clusters of CLB instances.
+     * Get Information about the dedicated CLB instance. You must specify this parameter when you create a dedicated CLB instance in a private network. 
+     * @return ExclusiveCluster Information about the dedicated CLB instance. You must specify this parameter when you create a dedicated CLB instance in a private network.
      */
     public ExclusiveCluster getExclusiveCluster() {
         return this.ExclusiveCluster;
     }
 
     /**
-     * Set Exclusive cluster information. This parameter is required for creating exclusive clusters of CLB instances.
-     * @param ExclusiveCluster Exclusive cluster information. This parameter is required for creating exclusive clusters of CLB instances.
+     * Set Information about the dedicated CLB instance. You must specify this parameter when you create a dedicated CLB instance in a private network.
+     * @param ExclusiveCluster Information about the dedicated CLB instance. You must specify this parameter when you create a dedicated CLB instance in a private network.
      */
     public void setExclusiveCluster(ExclusiveCluster ExclusiveCluster) {
         this.ExclusiveCluster = ExclusiveCluster;
     }
 
     /**
-     * Get Creates an LCU-supported CLB instance
-<ul><li>To create an LCU-supported CLB, this field is required and the value is `SLA`. LCU-supports CLBs adopt the pay-as-you-go model and their performance is guaranteed.</li>
-<li>It’s not required for a shared CLB instance.</li></ul> 
-     * @return SlaType Creates an LCU-supported CLB instance
-<ul><li>To create an LCU-supported CLB, this field is required and the value is `SLA`. LCU-supports CLBs adopt the pay-as-you-go model and their performance is guaranteed.</li>
-<li>It’s not required for a shared CLB instance.</li></ul>
+     * Get Creates an LCU-supported instance.
+<ul><li>To create an LCU-supported instance, set this parameter to `SLA`, which indicates that an LCU-supported instance is created with the default specification in pay-as-you-go mode.
+<ul><li>If you enable general LCU-supported instances, `SLA` corresponds to the Super Large 1 specification. General LCU-supported instances are in beta testing, [submit a ticket](https://intl.cloud.tencent.com/apply/p/hf45esx99lf?from_cn_redirect=1) for application.</li>
+<li>If you enable ultra-large LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Ultra-large LCU-supported instances are in beta testing, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.</li></ul></li><li>This parameter is not required when you create a shared instance.</li></ul> 
+     * @return SlaType Creates an LCU-supported instance.
+<ul><li>To create an LCU-supported instance, set this parameter to `SLA`, which indicates that an LCU-supported instance is created with the default specification in pay-as-you-go mode.
+<ul><li>If you enable general LCU-supported instances, `SLA` corresponds to the Super Large 1 specification. General LCU-supported instances are in beta testing, [submit a ticket](https://intl.cloud.tencent.com/apply/p/hf45esx99lf?from_cn_redirect=1) for application.</li>
+<li>If you enable ultra-large LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Ultra-large LCU-supported instances are in beta testing, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.</li></ul></li><li>This parameter is not required when you create a shared instance.</li></ul>
      */
     public String getSlaType() {
         return this.SlaType;
     }
 
     /**
-     * Set Creates an LCU-supported CLB instance
-<ul><li>To create an LCU-supported CLB, this field is required and the value is `SLA`. LCU-supports CLBs adopt the pay-as-you-go model and their performance is guaranteed.</li>
-<li>It’s not required for a shared CLB instance.</li></ul>
-     * @param SlaType Creates an LCU-supported CLB instance
-<ul><li>To create an LCU-supported CLB, this field is required and the value is `SLA`. LCU-supports CLBs adopt the pay-as-you-go model and their performance is guaranteed.</li>
-<li>It’s not required for a shared CLB instance.</li></ul>
+     * Set Creates an LCU-supported instance.
+<ul><li>To create an LCU-supported instance, set this parameter to `SLA`, which indicates that an LCU-supported instance is created with the default specification in pay-as-you-go mode.
+<ul><li>If you enable general LCU-supported instances, `SLA` corresponds to the Super Large 1 specification. General LCU-supported instances are in beta testing, [submit a ticket](https://intl.cloud.tencent.com/apply/p/hf45esx99lf?from_cn_redirect=1) for application.</li>
+<li>If you enable ultra-large LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Ultra-large LCU-supported instances are in beta testing, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.</li></ul></li><li>This parameter is not required when you create a shared instance.</li></ul>
+     * @param SlaType Creates an LCU-supported instance.
+<ul><li>To create an LCU-supported instance, set this parameter to `SLA`, which indicates that an LCU-supported instance is created with the default specification in pay-as-you-go mode.
+<ul><li>If you enable general LCU-supported instances, `SLA` corresponds to the Super Large 1 specification. General LCU-supported instances are in beta testing, [submit a ticket](https://intl.cloud.tencent.com/apply/p/hf45esx99lf?from_cn_redirect=1) for application.</li>
+<li>If you enable ultra-large LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Ultra-large LCU-supported instances are in beta testing, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.</li></ul></li><li>This parameter is not required when you create a shared instance.</li></ul>
      */
     public void setSlaType(String SlaType) {
         this.SlaType = SlaType;

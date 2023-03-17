@@ -93,9 +93,10 @@ public class Resource extends AbstractModel{
     private String PlanId;
 
     /**
-    * The region. Values:
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
+    * Applicable area. Values:
+<li>`mainland`: Chinese mainland</li>
+<li>`overseas`: Regions outside the Chinese mainland</li>
+<li>`global`: Global</li>
     */
     @SerializedName("Area")
     @Expose
@@ -274,24 +275,28 @@ public class Resource extends AbstractModel{
     }
 
     /**
-     * Get The region. Values:
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li> 
-     * @return Area The region. Values:
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
+     * Get Applicable area. Values:
+<li>`mainland`: Chinese mainland</li>
+<li>`overseas`: Regions outside the Chinese mainland</li>
+<li>`global`: Global</li> 
+     * @return Area Applicable area. Values:
+<li>`mainland`: Chinese mainland</li>
+<li>`overseas`: Regions outside the Chinese mainland</li>
+<li>`global`: Global</li>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set The region. Values:
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
-     * @param Area The region. Values:
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
+     * Set Applicable area. Values:
+<li>`mainland`: Chinese mainland</li>
+<li>`overseas`: Regions outside the Chinese mainland</li>
+<li>`global`: Global</li>
+     * @param Area Applicable area. Values:
+<li>`mainland`: Chinese mainland</li>
+<li>`overseas`: Regions outside the Chinese mainland</li>
+<li>`global`: Global</li>
      */
     public void setArea(String Area) {
         this.Area = Area;

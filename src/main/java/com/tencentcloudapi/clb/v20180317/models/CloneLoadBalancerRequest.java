@@ -131,7 +131,7 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
     private String [] ClusterIds;
 
     /**
-    * Guaranteed performance specification.
+    * Specification of the LCU-supported instance.
     */
     @SerializedName("SlaType")
     @Expose
@@ -411,16 +411,16 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
     }
 
     /**
-     * Get Guaranteed performance specification. 
-     * @return SlaType Guaranteed performance specification.
+     * Get Specification of the LCU-supported instance. 
+     * @return SlaType Specification of the LCU-supported instance.
      */
     public String getSlaType() {
         return this.SlaType;
     }
 
     /**
-     * Set Guaranteed performance specification.
-     * @param SlaType Guaranteed performance specification.
+     * Set Specification of the LCU-supported instance.
+     * @param SlaType Specification of the LCU-supported instance.
      */
     public void setSlaType(String SlaType) {
         this.SlaType = SlaType;

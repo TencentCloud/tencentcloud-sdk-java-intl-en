@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class Action extends AbstractModel{
 
     /**
-    * Common feature operation. Features of this type include:
+    * Common feature operation. Values:
 <li>`AccessUrlRedirect`: Access URL rewrite</li>
 <li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
 <li>`QUIC`: QUIC</li>
@@ -47,7 +47,8 @@ public class Action extends AbstractModel{
 <li>`TlsVersion`</li>
 <li>`OcspStapling`</li>
 <li>`Http2`: HTTP/2 access</li>
-<li>`UpstreamFollowRedirect: Follow origin redirect</li>
+<li>`UpstreamFollowRedirect`: Follow origin redirect</li>
+<li>`Origin`: Origin</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
     */
     @SerializedName("NormalAction")
@@ -75,7 +76,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private CodeAction CodeAction;
 
     /**
-     * Get Common feature operation. Features of this type include:
+     * Get Common feature operation. Values:
 <li>`AccessUrlRedirect`: Access URL rewrite</li>
 <li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
 <li>`QUIC`: QUIC</li>
@@ -99,9 +100,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`TlsVersion`</li>
 <li>`OcspStapling`</li>
 <li>`Http2`: HTTP/2 access</li>
-<li>`UpstreamFollowRedirect: Follow origin redirect</li>
+<li>`UpstreamFollowRedirect`: Follow origin redirect</li>
+<li>`Origin`: Origin</li>
 Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return NormalAction Common feature operation. Features of this type include:
+     * @return NormalAction Common feature operation. Values:
 <li>`AccessUrlRedirect`: Access URL rewrite</li>
 <li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
 <li>`QUIC`: QUIC</li>
@@ -125,7 +127,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`TlsVersion`</li>
 <li>`OcspStapling`</li>
 <li>`Http2`: HTTP/2 access</li>
-<li>`UpstreamFollowRedirect: Follow origin redirect</li>
+<li>`UpstreamFollowRedirect`: Follow origin redirect</li>
+<li>`Origin`: Origin</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public NormalAction getNormalAction() {
@@ -133,7 +136,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Set Common feature operation. Features of this type include:
+     * Set Common feature operation. Values:
 <li>`AccessUrlRedirect`: Access URL rewrite</li>
 <li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
 <li>`QUIC`: QUIC</li>
@@ -157,9 +160,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`TlsVersion`</li>
 <li>`OcspStapling`</li>
 <li>`Http2`: HTTP/2 access</li>
-<li>`UpstreamFollowRedirect: Follow origin redirect</li>
+<li>`UpstreamFollowRedirect`: Follow origin redirect</li>
+<li>`Origin`: Origin</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param NormalAction Common feature operation. Features of this type include:
+     * @param NormalAction Common feature operation. Values:
 <li>`AccessUrlRedirect`: Access URL rewrite</li>
 <li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
 <li>`QUIC`: QUIC</li>
@@ -183,7 +187,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`TlsVersion`</li>
 <li>`OcspStapling`</li>
 <li>`Http2`: HTTP/2 access</li>
-<li>`UpstreamFollowRedirect: Follow origin redirect</li>
+<li>`UpstreamFollowRedirect`: Follow origin redirect</li>
+<li>`Origin`: Origin</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public void setNormalAction(NormalAction NormalAction) {

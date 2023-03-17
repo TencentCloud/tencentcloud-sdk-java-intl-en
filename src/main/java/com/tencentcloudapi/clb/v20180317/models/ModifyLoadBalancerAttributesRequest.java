@@ -37,7 +37,7 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
     private String LoadBalancerName;
 
     /**
-    * Region information of the real server bound to a CLB.
+    * The backend service information of cross-region binding 1.0
     */
     @SerializedName("TargetRegionInfo")
     @Expose
@@ -58,7 +58,7 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
     private Boolean LoadBalancerPassToTarget;
 
     /**
-    * Whether to enable SnatPro
+    * Whether to enable cross-region binding 2.0
     */
     @SerializedName("SnatPro")
     @Expose
@@ -104,16 +104,16 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
     }
 
     /**
-     * Get Region information of the real server bound to a CLB. 
-     * @return TargetRegionInfo Region information of the real server bound to a CLB.
+     * Get The backend service information of cross-region binding 1.0 
+     * @return TargetRegionInfo The backend service information of cross-region binding 1.0
      */
     public TargetRegionInfo getTargetRegionInfo() {
         return this.TargetRegionInfo;
     }
 
     /**
-     * Set Region information of the real server bound to a CLB.
-     * @param TargetRegionInfo Region information of the real server bound to a CLB.
+     * Set The backend service information of cross-region binding 1.0
+     * @param TargetRegionInfo The backend service information of cross-region binding 1.0
      */
     public void setTargetRegionInfo(TargetRegionInfo TargetRegionInfo) {
         this.TargetRegionInfo = TargetRegionInfo;
@@ -152,16 +152,16 @@ public class ModifyLoadBalancerAttributesRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to enable SnatPro 
-     * @return SnatPro Whether to enable SnatPro
+     * Get Whether to enable cross-region binding 2.0 
+     * @return SnatPro Whether to enable cross-region binding 2.0
      */
     public Boolean getSnatPro() {
         return this.SnatPro;
     }
 
     /**
-     * Set Whether to enable SnatPro
-     * @param SnatPro Whether to enable SnatPro
+     * Set Whether to enable cross-region binding 2.0
+     * @param SnatPro Whether to enable cross-region binding 2.0
      */
     public void setSnatPro(Boolean SnatPro) {
         this.SnatPro = SnatPro;

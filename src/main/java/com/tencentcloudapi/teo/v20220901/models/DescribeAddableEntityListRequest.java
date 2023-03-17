@@ -43,6 +43,15 @@ public class DescribeAddableEntityListRequest extends AbstractModel{
     private String EntityType;
 
     /**
+    * The service region. Values:
+<li>`mainland`: Chinese mainland.</li>
+<li>`overseas`: Regions outside the Chinese mainland.</li>For an account registered on the Chinese site, it defaults to `mainland`. For an account registered on the international site, it defaults to `overseas`.
+    */
+    @SerializedName("Area")
+    @Expose
+    private String Area;
+
+    /**
      * Get ID of the site. 
      * @return ZoneId ID of the site.
      */
@@ -98,6 +107,30 @@ public class DescribeAddableEntityListRequest extends AbstractModel{
         this.EntityType = EntityType;
     }
 
+    /**
+     * Get The service region. Values:
+<li>`mainland`: Chinese mainland.</li>
+<li>`overseas`: Regions outside the Chinese mainland.</li>For an account registered on the Chinese site, it defaults to `mainland`. For an account registered on the international site, it defaults to `overseas`. 
+     * @return Area The service region. Values:
+<li>`mainland`: Chinese mainland.</li>
+<li>`overseas`: Regions outside the Chinese mainland.</li>For an account registered on the Chinese site, it defaults to `mainland`. For an account registered on the international site, it defaults to `overseas`.
+     */
+    public String getArea() {
+        return this.Area;
+    }
+
+    /**
+     * Set The service region. Values:
+<li>`mainland`: Chinese mainland.</li>
+<li>`overseas`: Regions outside the Chinese mainland.</li>For an account registered on the Chinese site, it defaults to `mainland`. For an account registered on the international site, it defaults to `overseas`.
+     * @param Area The service region. Values:
+<li>`mainland`: Chinese mainland.</li>
+<li>`overseas`: Regions outside the Chinese mainland.</li>For an account registered on the Chinese site, it defaults to `mainland`. For an account registered on the international site, it defaults to `overseas`.
+     */
+    public void setArea(String Area) {
+        this.Area = Area;
+    }
+
     public DescribeAddableEntityListRequest() {
     }
 
@@ -112,6 +145,9 @@ public class DescribeAddableEntityListRequest extends AbstractModel{
         if (source.EntityType != null) {
             this.EntityType = new String(source.EntityType);
         }
+        if (source.Area != null) {
+            this.Area = new String(source.Area);
+        }
     }
 
 
@@ -121,6 +157,7 @@ public class DescribeAddableEntityListRequest extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "EntityType", this.EntityType);
+        this.setParamSimple(map, prefix + "Area", this.Area);
 
     }
 }

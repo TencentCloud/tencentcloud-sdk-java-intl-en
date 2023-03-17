@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class McuWaterMarkParams extends AbstractModel{
 
     /**
-    * The watermark type. The default is 0, which indicates an image watermark.
+    * The watermark type. Valid values: `0` (default): Image; `1`: Text.
     */
     @SerializedName("WaterMarkType")
     @Expose
@@ -37,16 +37,24 @@ public class McuWaterMarkParams extends AbstractModel{
     private McuWaterMarkImage WaterMarkImage;
 
     /**
-     * Get The watermark type. The default is 0, which indicates an image watermark. 
-     * @return WaterMarkType The watermark type. The default is 0, which indicates an image watermark.
+    * The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("WaterMarkText")
+    @Expose
+    private McuWaterMarkText WaterMarkText;
+
+    /**
+     * Get The watermark type. Valid values: `0` (default): Image; `1`: Text. 
+     * @return WaterMarkType The watermark type. Valid values: `0` (default): Image; `1`: Text.
      */
     public Long getWaterMarkType() {
         return this.WaterMarkType;
     }
 
     /**
-     * Set The watermark type. The default is 0, which indicates an image watermark.
-     * @param WaterMarkType The watermark type. The default is 0, which indicates an image watermark.
+     * Set The watermark type. Valid values: `0` (default): Image; `1`: Text.
+     * @param WaterMarkType The watermark type. Valid values: `0` (default): Image; `1`: Text.
      */
     public void setWaterMarkType(Long WaterMarkType) {
         this.WaterMarkType = WaterMarkType;
@@ -68,6 +76,26 @@ public class McuWaterMarkParams extends AbstractModel{
         this.WaterMarkImage = WaterMarkImage;
     }
 
+    /**
+     * Get The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return WaterMarkText The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public McuWaterMarkText getWaterMarkText() {
+        return this.WaterMarkText;
+    }
+
+    /**
+     * Set The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param WaterMarkText The text watermark configuration. This parameter is required if `WaterMarkType` is `1`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setWaterMarkText(McuWaterMarkText WaterMarkText) {
+        this.WaterMarkText = WaterMarkText;
+    }
+
     public McuWaterMarkParams() {
     }
 
@@ -82,6 +110,9 @@ public class McuWaterMarkParams extends AbstractModel{
         if (source.WaterMarkImage != null) {
             this.WaterMarkImage = new McuWaterMarkImage(source.WaterMarkImage);
         }
+        if (source.WaterMarkText != null) {
+            this.WaterMarkText = new McuWaterMarkText(source.WaterMarkText);
+        }
     }
 
 
@@ -91,6 +122,7 @@ public class McuWaterMarkParams extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "WaterMarkType", this.WaterMarkType);
         this.setParamObj(map, prefix + "WaterMarkImage.", this.WaterMarkImage);
+        this.setParamObj(map, prefix + "WaterMarkText.", this.WaterMarkText);
 
     }
 }

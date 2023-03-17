@@ -1222,6 +1222,26 @@ This is an async API. After it is returned successfully, you can call the Descri
     }
 
     /**
+     *This API is used to modify the cloud functions associated with a load balancing forwarding rule.
+     * @param req ModifyFunctionTargetsRequest
+     * @return ModifyFunctionTargetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyFunctionTargetsResponse ModifyFunctionTargets(ModifyFunctionTargetsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyFunctionTargetsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyFunctionTargetsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyFunctionTargets");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API (ModifyListener) is used to modify the attributes of a CLB listener, such as listener name, health check parameter, certificate information, and forwarding policy.
 This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
      * @param req ModifyListenerRequest
@@ -1264,7 +1284,12 @@ This is an async API. After it is returned successfully, you can check the task 
     }
 
     /**
-     *This API is used to upgrade shared CLB instances to LCU-supported CLB instances.
+     *This API is used to upgrade a pay-as-you-go shared CLB instance to an LCU-supported CLB instance.<br/>
+Limits
+- This API can be used to upgrade only a pay-as-you-go shared instance. A monthly subscription shared instance must be upgraded in the console.
+- An LCU-supported instance cannot be rolled back to a shared instance.
+- LCU-supported instances are in beta testing. To upgrade to an LCU-supported instance, [submit a ticket](https://intl.cloud.tencent.com/apply/p/hf45esx99lf?from_cn_redirect=1) for application.
+- Classic CLB instances cannot be upgraded to LCU-supported instances.
      * @param req ModifyLoadBalancerSlaRequest
      * @return ModifyLoadBalancerSlaResponse
      * @throws TencentCloudSDKException

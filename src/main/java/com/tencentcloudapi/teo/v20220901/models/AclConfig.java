@@ -39,6 +39,14 @@ public class AclConfig extends AbstractModel{
     private AclUserRule [] AclUserRules;
 
     /**
+    * Custom managed rules
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Customizes")
+    @Expose
+    private AclUserRule [] Customizes;
+
+    /**
      * Get Switch. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li> 
@@ -78,6 +86,26 @@ public class AclConfig extends AbstractModel{
         this.AclUserRules = AclUserRules;
     }
 
+    /**
+     * Get Custom managed rules
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Customizes Custom managed rules
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public AclUserRule [] getCustomizes() {
+        return this.Customizes;
+    }
+
+    /**
+     * Set Custom managed rules
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Customizes Custom managed rules
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setCustomizes(AclUserRule [] Customizes) {
+        this.Customizes = Customizes;
+    }
+
     public AclConfig() {
     }
 
@@ -95,6 +123,12 @@ public class AclConfig extends AbstractModel{
                 this.AclUserRules[i] = new AclUserRule(source.AclUserRules[i]);
             }
         }
+        if (source.Customizes != null) {
+            this.Customizes = new AclUserRule[source.Customizes.length];
+            for (int i = 0; i < source.Customizes.length; i++) {
+                this.Customizes[i] = new AclUserRule(source.Customizes[i]);
+            }
+        }
     }
 
 
@@ -104,6 +138,7 @@ public class AclConfig extends AbstractModel{
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamArrayObj(map, prefix + "AclUserRules.", this.AclUserRules);
+        this.setParamArrayObj(map, prefix + "Customizes.", this.Customizes);
 
     }
 }

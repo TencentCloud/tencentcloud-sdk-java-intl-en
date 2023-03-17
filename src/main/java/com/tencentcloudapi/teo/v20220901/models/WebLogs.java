@@ -58,14 +58,14 @@ public class WebLogs extends AbstractModel{
     private String SipCountryCode;
 
     /**
-    * 
+    * The real client IP.
     */
     @SerializedName("RealClientIp")
     @Expose
     private String RealClientIp;
 
     /**
-    * 
+    * The ISO-3166 alpha-2 country code of the real client IP.
     */
     @SerializedName("RealClientIpCountryCode")
     @Expose
@@ -198,32 +198,32 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get  
-     * @return RealClientIp 
+     * Get The real client IP. 
+     * @return RealClientIp The real client IP.
      */
     public String getRealClientIp() {
         return this.RealClientIp;
     }
 
     /**
-     * Set 
-     * @param RealClientIp 
+     * Set The real client IP.
+     * @param RealClientIp The real client IP.
      */
     public void setRealClientIp(String RealClientIp) {
         this.RealClientIp = RealClientIp;
     }
 
     /**
-     * Get  
-     * @return RealClientIpCountryCode 
+     * Get The ISO-3166 alpha-2 country code of the real client IP. 
+     * @return RealClientIpCountryCode The ISO-3166 alpha-2 country code of the real client IP.
      */
     public String getRealClientIpCountryCode() {
         return this.RealClientIpCountryCode;
     }
 
     /**
-     * Set 
-     * @param RealClientIpCountryCode 
+     * Set The ISO-3166 alpha-2 country code of the real client IP.
+     * @param RealClientIpCountryCode The ISO-3166 alpha-2 country code of the real client IP.
      */
     public void setRealClientIpCountryCode(String RealClientIpCountryCode) {
         this.RealClientIpCountryCode = RealClientIpCountryCode;

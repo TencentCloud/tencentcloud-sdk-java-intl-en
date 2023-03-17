@@ -65,18 +65,19 @@ public class DescribeWebManagedRulesLogRequest extends AbstractModel{
     private Long Offset;
 
     /**
-    * The key of the parameter QueryCondition, which is used to specify a filter. Values:
-<li>`attackType`: Attack type;</li>
-<li>`riskLevel`: Risk level;</li>
-<li>`action`: Action;</li>
-<li>`ruleId`: Rule ID;</li>
-<li>`sipCountryCode`: Country code of the attacker IP;</li>
-<li>`attackIp`: Attacker IP;</li>
-<li>`oriDomain`: Attacked subdomain name;</li>
-<li>`eventId`: Event ID;</li>
-<li>`ua`: User agent;</li>
-<li>`requestMethod`: Request method;</li>
-<li>`uri`: Uniform resource identifier.</li>
+    * Filters for the query. Values:
+<li>`attackType`: Attack type</li>
+<li>`riskLevel`: Risk level</li>
+<li>`action`: Action</li>
+<li>`ruleId`: Rule ID</li>
+<li>`sipCountryCode`: Country code of the attacker IP</li>
+<li>`attackIp`: Attacker IP</li>
+<li>`realClientIp`: Real client IP</li>
+<li>`oriDomain`: Attacked subdomain name</li>
+<li>`eventId`: Event ID</li>
+<li>`ua`: User agent</li>
+<li>`requestMethod`: Request method</li>
+<li>`uri`: Uniform resource identifier</li>
     */
     @SerializedName("QueryCondition")
     @Expose
@@ -188,60 +189,64 @@ public class DescribeWebManagedRulesLogRequest extends AbstractModel{
     }
 
     /**
-     * Get The key of the parameter QueryCondition, which is used to specify a filter. Values:
-<li>`attackType`: Attack type;</li>
-<li>`riskLevel`: Risk level;</li>
-<li>`action`: Action;</li>
-<li>`ruleId`: Rule ID;</li>
-<li>`sipCountryCode`: Country code of the attacker IP;</li>
-<li>`attackIp`: Attacker IP;</li>
-<li>`oriDomain`: Attacked subdomain name;</li>
-<li>`eventId`: Event ID;</li>
-<li>`ua`: User agent;</li>
-<li>`requestMethod`: Request method;</li>
-<li>`uri`: Uniform resource identifier.</li> 
-     * @return QueryCondition The key of the parameter QueryCondition, which is used to specify a filter. Values:
-<li>`attackType`: Attack type;</li>
-<li>`riskLevel`: Risk level;</li>
-<li>`action`: Action;</li>
-<li>`ruleId`: Rule ID;</li>
-<li>`sipCountryCode`: Country code of the attacker IP;</li>
-<li>`attackIp`: Attacker IP;</li>
-<li>`oriDomain`: Attacked subdomain name;</li>
-<li>`eventId`: Event ID;</li>
-<li>`ua`: User agent;</li>
-<li>`requestMethod`: Request method;</li>
-<li>`uri`: Uniform resource identifier.</li>
+     * Get Filters for the query. Values:
+<li>`attackType`: Attack type</li>
+<li>`riskLevel`: Risk level</li>
+<li>`action`: Action</li>
+<li>`ruleId`: Rule ID</li>
+<li>`sipCountryCode`: Country code of the attacker IP</li>
+<li>`attackIp`: Attacker IP</li>
+<li>`realClientIp`: Real client IP</li>
+<li>`oriDomain`: Attacked subdomain name</li>
+<li>`eventId`: Event ID</li>
+<li>`ua`: User agent</li>
+<li>`requestMethod`: Request method</li>
+<li>`uri`: Uniform resource identifier</li> 
+     * @return QueryCondition Filters for the query. Values:
+<li>`attackType`: Attack type</li>
+<li>`riskLevel`: Risk level</li>
+<li>`action`: Action</li>
+<li>`ruleId`: Rule ID</li>
+<li>`sipCountryCode`: Country code of the attacker IP</li>
+<li>`attackIp`: Attacker IP</li>
+<li>`realClientIp`: Real client IP</li>
+<li>`oriDomain`: Attacked subdomain name</li>
+<li>`eventId`: Event ID</li>
+<li>`ua`: User agent</li>
+<li>`requestMethod`: Request method</li>
+<li>`uri`: Uniform resource identifier</li>
      */
     public QueryCondition [] getQueryCondition() {
         return this.QueryCondition;
     }
 
     /**
-     * Set The key of the parameter QueryCondition, which is used to specify a filter. Values:
-<li>`attackType`: Attack type;</li>
-<li>`riskLevel`: Risk level;</li>
-<li>`action`: Action;</li>
-<li>`ruleId`: Rule ID;</li>
-<li>`sipCountryCode`: Country code of the attacker IP;</li>
-<li>`attackIp`: Attacker IP;</li>
-<li>`oriDomain`: Attacked subdomain name;</li>
-<li>`eventId`: Event ID;</li>
-<li>`ua`: User agent;</li>
-<li>`requestMethod`: Request method;</li>
-<li>`uri`: Uniform resource identifier.</li>
-     * @param QueryCondition The key of the parameter QueryCondition, which is used to specify a filter. Values:
-<li>`attackType`: Attack type;</li>
-<li>`riskLevel`: Risk level;</li>
-<li>`action`: Action;</li>
-<li>`ruleId`: Rule ID;</li>
-<li>`sipCountryCode`: Country code of the attacker IP;</li>
-<li>`attackIp`: Attacker IP;</li>
-<li>`oriDomain`: Attacked subdomain name;</li>
-<li>`eventId`: Event ID;</li>
-<li>`ua`: User agent;</li>
-<li>`requestMethod`: Request method;</li>
-<li>`uri`: Uniform resource identifier.</li>
+     * Set Filters for the query. Values:
+<li>`attackType`: Attack type</li>
+<li>`riskLevel`: Risk level</li>
+<li>`action`: Action</li>
+<li>`ruleId`: Rule ID</li>
+<li>`sipCountryCode`: Country code of the attacker IP</li>
+<li>`attackIp`: Attacker IP</li>
+<li>`realClientIp`: Real client IP</li>
+<li>`oriDomain`: Attacked subdomain name</li>
+<li>`eventId`: Event ID</li>
+<li>`ua`: User agent</li>
+<li>`requestMethod`: Request method</li>
+<li>`uri`: Uniform resource identifier</li>
+     * @param QueryCondition Filters for the query. Values:
+<li>`attackType`: Attack type</li>
+<li>`riskLevel`: Risk level</li>
+<li>`action`: Action</li>
+<li>`ruleId`: Rule ID</li>
+<li>`sipCountryCode`: Country code of the attacker IP</li>
+<li>`attackIp`: Attacker IP</li>
+<li>`realClientIp`: Real client IP</li>
+<li>`oriDomain`: Attacked subdomain name</li>
+<li>`eventId`: Event ID</li>
+<li>`ua`: User agent</li>
+<li>`requestMethod`: Request method</li>
+<li>`uri`: Uniform resource identifier</li>
      */
     public void setQueryCondition(QueryCondition [] QueryCondition) {
         this.QueryCondition = QueryCondition;

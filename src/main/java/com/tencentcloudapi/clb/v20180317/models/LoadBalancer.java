@@ -52,7 +52,7 @@ OPEN: public network; INTERNAL: private network.
     private Long Forward;
 
     /**
-    * CLB instance domain name. This field is provided only to public network classic CLB instance.
+    * Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Domain")
@@ -348,8 +348,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private SnatIp [] SnatIps;
 
     /**
-    * Performance guarantee specification
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Specification of the LCU-supported instance.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SlaType")
     @Expose
@@ -427,7 +427,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String HealthLogTopicId;
 
     /**
-    * 
+    * Cluster ID.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ClusterIds")
     @Expose
@@ -440,6 +441,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     @SerializedName("AttributeFlags")
     @Expose
     private String [] AttributeFlags;
+
+    /**
+    * Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("LoadBalancerDomain")
+    @Expose
+    private String LoadBalancerDomain;
 
     /**
      * Get CLB instance ID. 
@@ -510,9 +519,9 @@ OPEN: public network; INTERNAL: private network.
     }
 
     /**
-     * Get CLB instance domain name. This field is provided only to public network classic CLB instance.
+     * Get Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Domain CLB instance domain name. This field is provided only to public network classic CLB instance.
+     * @return Domain Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDomain() {
@@ -520,9 +529,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set CLB instance domain name. This field is provided only to public network classic CLB instance.
+     * Set Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Domain CLB instance domain name. This field is provided only to public network classic CLB instance.
+     * @param Domain Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDomain(String Domain) {
@@ -1250,20 +1259,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Performance guarantee specification
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SlaType Performance guarantee specification
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Specification of the LCU-supported instance.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SlaType Specification of the LCU-supported instance.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSlaType() {
         return this.SlaType;
     }
 
     /**
-     * Set Performance guarantee specification
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SlaType Performance guarantee specification
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Specification of the LCU-supported instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SlaType Specification of the LCU-supported instance.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSlaType(String SlaType) {
         this.SlaType = SlaType;
@@ -1446,16 +1455,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get  
-     * @return ClusterIds 
+     * Get Cluster ID.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ClusterIds Cluster ID.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getClusterIds() {
         return this.ClusterIds;
     }
 
     /**
-     * Set 
-     * @param ClusterIds 
+     * Set Cluster ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ClusterIds Cluster ID.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setClusterIds(String [] ClusterIds) {
         this.ClusterIds = ClusterIds;
@@ -1479,6 +1492,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      */
     public void setAttributeFlags(String [] AttributeFlags) {
         this.AttributeFlags = AttributeFlags;
+    }
+
+    /**
+     * Get Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LoadBalancerDomain Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getLoadBalancerDomain() {
+        return this.LoadBalancerDomain;
+    }
+
+    /**
+     * Set Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LoadBalancerDomain Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setLoadBalancerDomain(String LoadBalancerDomain) {
+        this.LoadBalancerDomain = LoadBalancerDomain;
     }
 
     public LoadBalancer() {
@@ -1672,6 +1705,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 this.AttributeFlags[i] = new String(source.AttributeFlags[i]);
             }
         }
+        if (source.LoadBalancerDomain != null) {
+            this.LoadBalancerDomain = new String(source.LoadBalancerDomain);
+        }
     }
 
 
@@ -1732,6 +1768,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "HealthLogTopicId", this.HealthLogTopicId);
         this.setParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
         this.setParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
+        this.setParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
 
     }
 }

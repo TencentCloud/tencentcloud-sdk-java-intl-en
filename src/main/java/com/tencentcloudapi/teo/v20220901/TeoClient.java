@@ -79,6 +79,26 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *This API is used to connect a domain to EdgeOne.
+     * @param req CreateAccelerationDomainRequest
+     * @return CreateAccelerationDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAccelerationDomainResponse CreateAccelerationDomain(CreateAccelerationDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateAccelerationDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateAccelerationDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateAccelerationDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create an alias domain name.
      * @param req CreateAliasDomainRequest
      * @return CreateAliasDomainResponse
@@ -319,6 +339,26 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *This API is used to batch remove accelerated domain names.
+     * @param req DeleteAccelerationDomainsRequest
+     * @return DeleteAccelerationDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAccelerationDomainsResponse DeleteAccelerationDomains(DeleteAccelerationDomainsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteAccelerationDomainsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteAccelerationDomainsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteAccelerationDomains");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete an alias domain name.
      * @param req DeleteAliasDomainRequest
      * @return DeleteAliasDomainResponse
@@ -431,6 +471,26 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteZoneResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteZone");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query accelerated domain names. Paging, sorting and filtering are supported.
+     * @param req DescribeAccelerationDomainsRequest
+     * @return DescribeAccelerationDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccelerationDomainsResponse DescribeAccelerationDomains(DescribeAccelerationDomainsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeAccelerationDomainsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeAccelerationDomainsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeAccelerationDomains");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -999,6 +1059,26 @@ public class TeoClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the L7 time-series data of origin-pull.
+     * @param req DescribeTimingL7SourceDataRequest
+     * @return DescribeTimingL7SourceDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTimingL7SourceDataResponse DescribeTimingL7SourceData(DescribeTimingL7SourceDataRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTimingL7SourceDataResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTimingL7SourceDataResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTimingL7SourceData");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query the top-ranked L7 traffic data.
      * @param req DescribeTopL7AnalysisDataRequest
      * @return DescribeTopL7AnalysisDataResponse
@@ -1271,6 +1351,46 @@ public class TeoClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<IdentifyZoneResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "IdentifyZone");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify an accelerated domain name.
+     * @param req ModifyAccelerationDomainRequest
+     * @return ModifyAccelerationDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAccelerationDomainResponse ModifyAccelerationDomain(ModifyAccelerationDomainRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAccelerationDomainResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAccelerationDomainResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAccelerationDomain");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to batch modify the status of accelerated domains.
+     * @param req ModifyAccelerationDomainStatusesRequest
+     * @return ModifyAccelerationDomainStatusesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAccelerationDomainStatusesResponse ModifyAccelerationDomainStatuses(ModifyAccelerationDomainStatusesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyAccelerationDomainStatusesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyAccelerationDomainStatusesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyAccelerationDomainStatuses");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

@@ -51,6 +51,15 @@ public class DescribeTargetsRequest extends AbstractModel{
     private Long Port;
 
     /**
+    * Query the list of backend services associated with a load balancer
+<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
+<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get CLB instance ID. 
      * @return LoadBalancerId CLB instance ID.
      */
@@ -114,6 +123,30 @@ public class DescribeTargetsRequest extends AbstractModel{
         this.Port = Port;
     }
 
+    /**
+     * Get Query the list of backend services associated with a load balancer
+<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
+<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li> 
+     * @return Filters Query the list of backend services associated with a load balancer
+<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
+<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set Query the list of backend services associated with a load balancer
+<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
+<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
+     * @param Filters Query the list of backend services associated with a load balancer
+<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
+<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeTargetsRequest() {
     }
 
@@ -137,6 +170,12 @@ public class DescribeTargetsRequest extends AbstractModel{
         if (source.Port != null) {
             this.Port = new Long(source.Port);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -148,6 +187,7 @@ public class DescribeTargetsRequest extends AbstractModel{
         this.setParamArraySimple(map, prefix + "ListenerIds.", this.ListenerIds);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "Port", this.Port);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }
