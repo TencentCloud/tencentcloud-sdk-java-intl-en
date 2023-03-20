@@ -20,15 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSparkAppResponse extends AbstractModel{
+public class CreateResultDownloadResponse extends AbstractModel{
 
     /**
-    * The unique ID of the application.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The download task ID.
     */
-    @SerializedName("SparkAppId")
+    @SerializedName("DownloadId")
     @Expose
-    private String SparkAppId;
+    private String DownloadId;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,23 +37,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get The unique ID of the application.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SparkAppId The unique ID of the application.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The download task ID. 
+     * @return DownloadId The download task ID.
      */
-    public String getSparkAppId() {
-        return this.SparkAppId;
+    public String getDownloadId() {
+        return this.DownloadId;
     }
 
     /**
-     * Set The unique ID of the application.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SparkAppId The unique ID of the application.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The download task ID.
+     * @param DownloadId The download task ID.
      */
-    public void setSparkAppId(String SparkAppId) {
-        this.SparkAppId = SparkAppId;
+    public void setDownloadId(String DownloadId) {
+        this.DownloadId = DownloadId;
     }
 
     /**
@@ -73,16 +68,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public CreateSparkAppResponse() {
+    public CreateResultDownloadResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateSparkAppResponse(CreateSparkAppResponse source) {
-        if (source.SparkAppId != null) {
-            this.SparkAppId = new String(source.SparkAppId);
+    public CreateResultDownloadResponse(CreateResultDownloadResponse source) {
+        if (source.DownloadId != null) {
+            this.DownloadId = new String(source.DownloadId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -94,7 +89,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SparkAppId", this.SparkAppId);
+        this.setParamSimple(map, prefix + "DownloadId", this.DownloadId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

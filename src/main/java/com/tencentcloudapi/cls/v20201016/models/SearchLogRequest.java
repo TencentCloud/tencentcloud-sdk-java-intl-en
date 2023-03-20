@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class SearchLogRequest extends AbstractModel{
 
     /**
-    * ID of the log topic to be searched
-    */
-    @SerializedName("TopicId")
-    @Expose
-    private String TopicId;
-
-    /**
     * Start time of the log to be searched, which is a Unix timestamp in milliseconds
     */
     @SerializedName("From")
@@ -44,12 +37,20 @@ public class SearchLogRequest extends AbstractModel{
     private Long To;
 
     /**
-    * Statement for search and analysis. Maximum length: 12 KB
-A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+    * Search and analysis statement. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search criteria]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+Queries all logs using * or an empty string
     */
     @SerializedName("Query")
     @Expose
     private String Query;
+
+    /**
+    * ID of the log topic to be searched
+    */
+    @SerializedName("TopicId")
+    @Expose
+    private String TopicId;
 
     /**
     * The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
@@ -103,22 +104,6 @@ Default value: `1`
     private Float SamplingRate;
 
     /**
-     * Get ID of the log topic to be searched 
-     * @return TopicId ID of the log topic to be searched
-     */
-    public String getTopicId() {
-        return this.TopicId;
-    }
-
-    /**
-     * Set ID of the log topic to be searched
-     * @param TopicId ID of the log topic to be searched
-     */
-    public void setTopicId(String TopicId) {
-        this.TopicId = TopicId;
-    }
-
-    /**
      * Get Start time of the log to be searched, which is a Unix timestamp in milliseconds 
      * @return From Start time of the log to be searched, which is a Unix timestamp in milliseconds
      */
@@ -151,23 +136,43 @@ Default value: `1`
     }
 
     /**
-     * Get Statement for search and analysis. Maximum length: 12 KB
-A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required. 
-     * @return Query Statement for search and analysis. Maximum length: 12 KB
-A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+     * Get Search and analysis statement. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search criteria]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+Queries all logs using * or an empty string 
+     * @return Query Search and analysis statement. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search criteria]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+Queries all logs using * or an empty string
      */
     public String getQuery() {
         return this.Query;
     }
 
     /**
-     * Set Statement for search and analysis. Maximum length: 12 KB
-A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
-     * @param Query Statement for search and analysis. Maximum length: 12 KB
-A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+     * Set Search and analysis statement. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search criteria]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+Queries all logs using * or an empty string
+     * @param Query Search and analysis statement. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search criteria]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+Queries all logs using * or an empty string
      */
     public void setQuery(String Query) {
         this.Query = Query;
+    }
+
+    /**
+     * Get ID of the log topic to be searched 
+     * @return TopicId ID of the log topic to be searched
+     */
+    public String getTopicId() {
+        return this.TopicId;
+    }
+
+    /**
+     * Set ID of the log topic to be searched
+     * @param TopicId ID of the log topic to be searched
+     */
+    public void setTopicId(String TopicId) {
+        this.TopicId = TopicId;
     }
 
     /**
@@ -322,9 +327,6 @@ Default value: `1`
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SearchLogRequest(SearchLogRequest source) {
-        if (source.TopicId != null) {
-            this.TopicId = new String(source.TopicId);
-        }
         if (source.From != null) {
             this.From = new Long(source.From);
         }
@@ -333,6 +335,9 @@ Default value: `1`
         }
         if (source.Query != null) {
             this.Query = new String(source.Query);
+        }
+        if (source.TopicId != null) {
+            this.TopicId = new String(source.TopicId);
         }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
@@ -356,10 +361,10 @@ Default value: `1`
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamSimple(map, prefix + "From", this.From);
         this.setParamSimple(map, prefix + "To", this.To);
         this.setParamSimple(map, prefix + "Query", this.Query);
+        this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Context", this.Context);
         this.setParamSimple(map, prefix + "Sort", this.Sort);

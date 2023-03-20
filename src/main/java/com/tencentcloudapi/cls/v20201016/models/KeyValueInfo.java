@@ -23,7 +23,13 @@ import java.util.HashMap;
 public class KeyValueInfo extends AbstractModel{
 
     /**
-    * When a key value or metafield index needs to be configured for a field, the metafield `Key` does not need to be prefixed with `__TAG__.` and is consistent with the one when logs are uploaded. `__TAG__.` will be prefixed automatically for display in the console.
+    * Name of the field for which you want to configure a key-value or metadata field index. The name can contain letters, digits, underscores, and symbols -./@ and cannot start with an underscore.
+
+Note:
+For a metadata field, set its `Key` to be consistent with the one for log uploading, without prefixing it with `__TAG__.`. `__TAG__.` will be prefixed automatically for display in the console.
+2. The total number of keys in key-value indexes (`KeyValue`) and metadata field indexes (`Tag`) cannot exceed 300.
+3. The number of levels in `Key` cannot exceed 10. Example: a.b.c.d.e.f.g.h.j.k
+4. JSON parent and child fields (such as “a” and “a.b”) cannot be contained at the same time.
     */
     @SerializedName("Key")
     @Expose
@@ -37,16 +43,40 @@ public class KeyValueInfo extends AbstractModel{
     private ValueInfo Value;
 
     /**
-     * Get When a key value or metafield index needs to be configured for a field, the metafield `Key` does not need to be prefixed with `__TAG__.` and is consistent with the one when logs are uploaded. `__TAG__.` will be prefixed automatically for display in the console. 
-     * @return Key When a key value or metafield index needs to be configured for a field, the metafield `Key` does not need to be prefixed with `__TAG__.` and is consistent with the one when logs are uploaded. `__TAG__.` will be prefixed automatically for display in the console.
+     * Get Name of the field for which you want to configure a key-value or metadata field index. The name can contain letters, digits, underscores, and symbols -./@ and cannot start with an underscore.
+
+Note:
+For a metadata field, set its `Key` to be consistent with the one for log uploading, without prefixing it with `__TAG__.`. `__TAG__.` will be prefixed automatically for display in the console.
+2. The total number of keys in key-value indexes (`KeyValue`) and metadata field indexes (`Tag`) cannot exceed 300.
+3. The number of levels in `Key` cannot exceed 10. Example: a.b.c.d.e.f.g.h.j.k
+4. JSON parent and child fields (such as “a” and “a.b”) cannot be contained at the same time. 
+     * @return Key Name of the field for which you want to configure a key-value or metadata field index. The name can contain letters, digits, underscores, and symbols -./@ and cannot start with an underscore.
+
+Note:
+For a metadata field, set its `Key` to be consistent with the one for log uploading, without prefixing it with `__TAG__.`. `__TAG__.` will be prefixed automatically for display in the console.
+2. The total number of keys in key-value indexes (`KeyValue`) and metadata field indexes (`Tag`) cannot exceed 300.
+3. The number of levels in `Key` cannot exceed 10. Example: a.b.c.d.e.f.g.h.j.k
+4. JSON parent and child fields (such as “a” and “a.b”) cannot be contained at the same time.
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set When a key value or metafield index needs to be configured for a field, the metafield `Key` does not need to be prefixed with `__TAG__.` and is consistent with the one when logs are uploaded. `__TAG__.` will be prefixed automatically for display in the console.
-     * @param Key When a key value or metafield index needs to be configured for a field, the metafield `Key` does not need to be prefixed with `__TAG__.` and is consistent with the one when logs are uploaded. `__TAG__.` will be prefixed automatically for display in the console.
+     * Set Name of the field for which you want to configure a key-value or metadata field index. The name can contain letters, digits, underscores, and symbols -./@ and cannot start with an underscore.
+
+Note:
+For a metadata field, set its `Key` to be consistent with the one for log uploading, without prefixing it with `__TAG__.`. `__TAG__.` will be prefixed automatically for display in the console.
+2. The total number of keys in key-value indexes (`KeyValue`) and metadata field indexes (`Tag`) cannot exceed 300.
+3. The number of levels in `Key` cannot exceed 10. Example: a.b.c.d.e.f.g.h.j.k
+4. JSON parent and child fields (such as “a” and “a.b”) cannot be contained at the same time.
+     * @param Key Name of the field for which you want to configure a key-value or metadata field index. The name can contain letters, digits, underscores, and symbols -./@ and cannot start with an underscore.
+
+Note:
+For a metadata field, set its `Key` to be consistent with the one for log uploading, without prefixing it with `__TAG__.`. `__TAG__.` will be prefixed automatically for display in the console.
+2. The total number of keys in key-value indexes (`KeyValue`) and metadata field indexes (`Tag`) cannot exceed 300.
+3. The number of levels in `Key` cannot exceed 10. Example: a.b.c.d.e.f.g.h.j.k
+4. JSON parent and child fields (such as “a” and “a.b”) cannot be contained at the same time.
      */
     public void setKey(String Key) {
         this.Key = Key;

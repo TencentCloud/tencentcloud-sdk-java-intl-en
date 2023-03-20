@@ -184,6 +184,27 @@ public class CreateSparkAppRequest extends AbstractModel{
     private String AppArchives;
 
     /**
+    * The Spark image version.
+    */
+    @SerializedName("SparkImage")
+    @Expose
+    private String SparkImage;
+
+    /**
+    * The Spark image version name.
+    */
+    @SerializedName("SparkImageVersion")
+    @Expose
+    private String SparkImageVersion;
+
+    /**
+    * The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `AppExecutorNums`.
+    */
+    @SerializedName("AppExecutorMaxNumbers")
+    @Expose
+    private Long AppExecutorMaxNumbers;
+
+    /**
      * Get Spark application name 
      * @return AppName Spark application name
      */
@@ -551,6 +572,54 @@ public class CreateSparkAppRequest extends AbstractModel{
         this.AppArchives = AppArchives;
     }
 
+    /**
+     * Get The Spark image version. 
+     * @return SparkImage The Spark image version.
+     */
+    public String getSparkImage() {
+        return this.SparkImage;
+    }
+
+    /**
+     * Set The Spark image version.
+     * @param SparkImage The Spark image version.
+     */
+    public void setSparkImage(String SparkImage) {
+        this.SparkImage = SparkImage;
+    }
+
+    /**
+     * Get The Spark image version name. 
+     * @return SparkImageVersion The Spark image version name.
+     */
+    public String getSparkImageVersion() {
+        return this.SparkImageVersion;
+    }
+
+    /**
+     * Set The Spark image version name.
+     * @param SparkImageVersion The Spark image version name.
+     */
+    public void setSparkImageVersion(String SparkImageVersion) {
+        this.SparkImageVersion = SparkImageVersion;
+    }
+
+    /**
+     * Get The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `AppExecutorNums`. 
+     * @return AppExecutorMaxNumbers The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `AppExecutorNums`.
+     */
+    public Long getAppExecutorMaxNumbers() {
+        return this.AppExecutorMaxNumbers;
+    }
+
+    /**
+     * Set The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `AppExecutorNums`.
+     * @param AppExecutorMaxNumbers The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `AppExecutorNums`.
+     */
+    public void setAppExecutorMaxNumbers(Long AppExecutorMaxNumbers) {
+        this.AppExecutorMaxNumbers = AppExecutorMaxNumbers;
+    }
+
     public CreateSparkAppRequest() {
     }
 
@@ -628,6 +697,15 @@ public class CreateSparkAppRequest extends AbstractModel{
         if (source.AppArchives != null) {
             this.AppArchives = new String(source.AppArchives);
         }
+        if (source.SparkImage != null) {
+            this.SparkImage = new String(source.SparkImage);
+        }
+        if (source.SparkImageVersion != null) {
+            this.SparkImageVersion = new String(source.SparkImageVersion);
+        }
+        if (source.AppExecutorMaxNumbers != null) {
+            this.AppExecutorMaxNumbers = new Long(source.AppExecutorMaxNumbers);
+        }
     }
 
 
@@ -658,6 +736,9 @@ public class CreateSparkAppRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AppPythonFiles", this.AppPythonFiles);
         this.setParamSimple(map, prefix + "IsLocalArchives", this.IsLocalArchives);
         this.setParamSimple(map, prefix + "AppArchives", this.AppArchives);
+        this.setParamSimple(map, prefix + "SparkImage", this.SparkImage);
+        this.setParamSimple(map, prefix + "SparkImageVersion", this.SparkImageVersion);
+        this.setParamSimple(map, prefix + "AppExecutorMaxNumbers", this.AppExecutorMaxNumbers);
 
     }
 }

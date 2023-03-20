@@ -23,84 +23,84 @@ import java.util.HashMap;
 public class RuleInfo extends AbstractModel{
 
     /**
-    * Full-Text index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FullText")
     @Expose
     private FullTextInfo FullText;
 
     /**
-    * Key-Value index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("KeyValue")
     @Expose
     private RuleKeyValueInfo KeyValue;
 
     /**
-    * Metafield index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tag")
     @Expose
     private RuleTagInfo Tag;
 
     /**
-     * Get Full-Text index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return FullText Full-Text index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return FullText Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public FullTextInfo getFullText() {
         return this.FullText;
     }
 
     /**
-     * Set Full-Text index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param FullText Full-Text index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param FullText Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFullText(FullTextInfo FullText) {
         this.FullText = FullText;
     }
 
     /**
-     * Get Key-Value index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return KeyValue Key-Value index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return KeyValue Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public RuleKeyValueInfo getKeyValue() {
         return this.KeyValue;
     }
 
     /**
-     * Set Key-Value index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param KeyValue Key-Value index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param KeyValue Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setKeyValue(RuleKeyValueInfo KeyValue) {
         this.KeyValue = KeyValue;
     }
 
     /**
-     * Get Metafield index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Tag Metafield index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Tag Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public RuleTagInfo getTag() {
         return this.Tag;
     }
 
     /**
-     * Set Metafield index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Tag Metafield index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Tag Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTag(RuleTagInfo Tag) {
         this.Tag = Tag;

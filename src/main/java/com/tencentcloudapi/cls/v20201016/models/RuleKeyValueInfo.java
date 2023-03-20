@@ -30,7 +30,7 @@ public class RuleKeyValueInfo extends AbstractModel{
     private Boolean CaseSensitive;
 
     /**
-    * Key-Value pair information of the index to be created. Up to 100 key-value pairs can be configured.
+    * Key-value pair information of the index to be created
     */
     @SerializedName("KeyValues")
     @Expose
@@ -53,16 +53,16 @@ public class RuleKeyValueInfo extends AbstractModel{
     }
 
     /**
-     * Get Key-Value pair information of the index to be created. Up to 100 key-value pairs can be configured. 
-     * @return KeyValues Key-Value pair information of the index to be created. Up to 100 key-value pairs can be configured.
+     * Get Key-value pair information of the index to be created 
+     * @return KeyValues Key-value pair information of the index to be created
      */
     public KeyValueInfo [] getKeyValues() {
         return this.KeyValues;
     }
 
     /**
-     * Set Key-Value pair information of the index to be created. Up to 100 key-value pairs can be configured.
-     * @param KeyValues Key-Value pair information of the index to be created. Up to 100 key-value pairs can be configured.
+     * Set Key-value pair information of the index to be created
+     * @param KeyValues Key-value pair information of the index to be created
      */
     public void setKeyValues(KeyValueInfo [] KeyValues) {
         this.KeyValues = KeyValues;

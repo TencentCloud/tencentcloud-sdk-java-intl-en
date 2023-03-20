@@ -59,6 +59,46 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a managed internal table. It has been disused.
+     * @param req CreateInternalTableRequest
+     * @return CreateInternalTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInternalTableResponse CreateInternalTable(CreateInternalTableRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateInternalTableResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateInternalTableResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateInternalTable");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to create a query result download task.
+     * @param req CreateResultDownloadRequest
+     * @return CreateResultDownloadResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateResultDownloadResponse CreateResultDownload(CreateResultDownloadRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateResultDownloadResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateResultDownloadResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateResultDownload");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a Spark application.
      * @param req CreateSparkAppRequest
      * @return CreateSparkAppResponse
@@ -159,6 +199,26 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get a query result download task.
+     * @param req DescribeResultDownloadRequest
+     * @return DescribeResultDownloadResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResultDownloadResponse DescribeResultDownload(DescribeResultDownloadRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeResultDownloadResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeResultDownloadResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeResultDownload");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query a specific Spark application.
      * @param req DescribeSparkAppJobRequest
      * @return DescribeSparkAppJobResponse
@@ -251,6 +311,46 @@ public class DlcClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeTasksResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeTasks");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to generate SQL statements for creating a managed table.
+     * @param req GenerateCreateMangedTableSqlRequest
+     * @return GenerateCreateMangedTableSqlResponse
+     * @throws TencentCloudSDKException
+     */
+    public GenerateCreateMangedTableSqlResponse GenerateCreateMangedTableSql(GenerateCreateMangedTableSqlRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GenerateCreateMangedTableSqlResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GenerateCreateMangedTableSqlResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GenerateCreateMangedTableSql");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to change data governance event thresholds.
+     * @param req ModifyGovernEventRuleRequest
+     * @return ModifyGovernEventRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGovernEventRuleResponse ModifyGovernEventRule(ModifyGovernEventRuleRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyGovernEventRuleResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyGovernEventRuleResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyGovernEventRule");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

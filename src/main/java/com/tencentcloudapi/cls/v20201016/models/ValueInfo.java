@@ -47,8 +47,8 @@ Note: \n\t\r can be directly enclosed in double quotes as the input parameter wi
     private Boolean SqlFlag;
 
     /**
-    * Whether Chinese characters are contained
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ContainZH")
     @Expose
@@ -115,20 +115,20 @@ Note: \n\t\r can be directly enclosed in double quotes as the input parameter wi
     }
 
     /**
-     * Get Whether Chinese characters are contained
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ContainZH Whether Chinese characters are contained
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ContainZH Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getContainZH() {
         return this.ContainZH;
     }
 
     /**
-     * Set Whether Chinese characters are contained
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ContainZH Whether Chinese characters are contained
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ContainZH Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setContainZH(Boolean ContainZH) {
         this.ContainZH = ContainZH;

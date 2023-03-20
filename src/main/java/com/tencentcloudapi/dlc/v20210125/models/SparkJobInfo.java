@@ -239,6 +239,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String JobArchives;
 
     /**
+    * The Spark image version.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SparkImage")
+    @Expose
+    private String SparkImage;
+
+    /**
     * PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -261,6 +269,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("DataEngineStatus")
     @Expose
     private Long DataEngineStatus;
+
+    /**
+    * The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("JobExecutorMaxNumbers")
+    @Expose
+    private Long JobExecutorMaxNumbers;
 
     /**
      * Get Spark job ID 
@@ -767,6 +783,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get The Spark image version.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SparkImage The Spark image version.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getSparkImage() {
+        return this.SparkImage;
+    }
+
+    /**
+     * Set The Spark image version.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SparkImage The Spark image version.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSparkImage(String SparkImage) {
+        this.SparkImage = SparkImage;
+    }
+
+    /**
      * Get PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return JobPythonFiles PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
@@ -824,6 +860,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setDataEngineStatus(Long DataEngineStatus) {
         this.DataEngineStatus = DataEngineStatus;
+    }
+
+    /**
+     * Get The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return JobExecutorMaxNumbers The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getJobExecutorMaxNumbers() {
+        return this.JobExecutorMaxNumbers;
+    }
+
+    /**
+     * Set The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param JobExecutorMaxNumbers The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setJobExecutorMaxNumbers(Long JobExecutorMaxNumbers) {
+        this.JobExecutorMaxNumbers = JobExecutorMaxNumbers;
     }
 
     public SparkJobInfo() {
@@ -924,6 +980,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.JobArchives != null) {
             this.JobArchives = new String(source.JobArchives);
         }
+        if (source.SparkImage != null) {
+            this.SparkImage = new String(source.SparkImage);
+        }
         if (source.JobPythonFiles != null) {
             this.JobPythonFiles = new String(source.JobPythonFiles);
         }
@@ -932,6 +991,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
         if (source.DataEngineStatus != null) {
             this.DataEngineStatus = new Long(source.DataEngineStatus);
+        }
+        if (source.JobExecutorMaxNumbers != null) {
+            this.JobExecutorMaxNumbers = new Long(source.JobExecutorMaxNumbers);
         }
     }
 
@@ -970,9 +1032,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "AppPythonFiles", this.AppPythonFiles);
         this.setParamSimple(map, prefix + "IsLocalArchives", this.IsLocalArchives);
         this.setParamSimple(map, prefix + "JobArchives", this.JobArchives);
+        this.setParamSimple(map, prefix + "SparkImage", this.SparkImage);
         this.setParamSimple(map, prefix + "JobPythonFiles", this.JobPythonFiles);
         this.setParamSimple(map, prefix + "TaskNum", this.TaskNum);
         this.setParamSimple(map, prefix + "DataEngineStatus", this.DataEngineStatus);
+        this.setParamSimple(map, prefix + "JobExecutorMaxNumbers", this.JobExecutorMaxNumbers);
 
     }
 }

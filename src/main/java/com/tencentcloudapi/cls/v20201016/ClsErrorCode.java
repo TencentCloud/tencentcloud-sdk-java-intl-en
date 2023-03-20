@@ -120,6 +120,9 @@ public enum ClsErrorCode {
     // The number of exported logs exceeds the limit.
      LIMITEXCEEDED_EXPORT("LimitExceeded.Export"),
      
+    // 
+     LIMITEXCEEDED_INDEXOPERATING("LimitExceeded.IndexOperating"),
+     
     // The number of concurrent queries exceeds the limit, which is 15 per topic.
      LIMITEXCEEDED_LOGSEARCH("LimitExceeded.LogSearch"),
      

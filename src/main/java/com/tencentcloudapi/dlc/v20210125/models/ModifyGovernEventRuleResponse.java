@@ -20,15 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateSparkAppResponse extends AbstractModel{
-
-    /**
-    * The unique ID of the application.
-Note: This field may return null, indicating that no valid values can be obtained.
-    */
-    @SerializedName("SparkAppId")
-    @Expose
-    private String SparkAppId;
+public class ModifyGovernEventRuleResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -36,26 +28,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get The unique ID of the application.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SparkAppId The unique ID of the application.
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public String getSparkAppId() {
-        return this.SparkAppId;
-    }
-
-    /**
-     * Set The unique ID of the application.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SparkAppId The unique ID of the application.
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public void setSparkAppId(String SparkAppId) {
-        this.SparkAppId = SparkAppId;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -73,17 +45,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
-    public CreateSparkAppResponse() {
+    public ModifyGovernEventRuleResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateSparkAppResponse(CreateSparkAppResponse source) {
-        if (source.SparkAppId != null) {
-            this.SparkAppId = new String(source.SparkAppId);
-        }
+    public ModifyGovernEventRuleResponse(ModifyGovernEventRuleResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,7 +63,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SparkAppId", this.SparkAppId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
