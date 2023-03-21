@@ -30,7 +30,7 @@ public class CreateDBInstanceHourResponse extends AbstractModel{
     private String DealId;
 
     /**
-    * List of IDs of created instances
+    * List of IDs of the created instances
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -60,16 +60,16 @@ public class CreateDBInstanceHourResponse extends AbstractModel{
     }
 
     /**
-     * Get List of IDs of created instances 
-     * @return InstanceIds List of IDs of created instances
+     * Get List of IDs of the created instances 
+     * @return InstanceIds List of IDs of the created instances
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set List of IDs of created instances
-     * @param InstanceIds List of IDs of created instances
+     * Set List of IDs of the created instances
+     * @param InstanceIds List of IDs of the created instances
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

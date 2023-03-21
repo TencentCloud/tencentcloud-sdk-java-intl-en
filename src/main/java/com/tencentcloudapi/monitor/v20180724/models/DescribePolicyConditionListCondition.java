@@ -82,6 +82,14 @@ Note: This field may return null, indicating that no valid value was found.
     private String [] SupportRegions;
 
     /**
+    * Deprecated information
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DeprecatingInfo")
+    @Expose
+    private DescribePolicyConditionListResponseDeprecatingInfo DeprecatingInfo;
+
+    /**
      * Get Policy view name. 
      * @return PolicyViewName Policy view name.
      */
@@ -221,6 +229,26 @@ Note: This field may return null, indicating that no valid value was found.
         this.SupportRegions = SupportRegions;
     }
 
+    /**
+     * Get Deprecated information
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DeprecatingInfo Deprecated information
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public DescribePolicyConditionListResponseDeprecatingInfo getDeprecatingInfo() {
+        return this.DeprecatingInfo;
+    }
+
+    /**
+     * Set Deprecated information
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DeprecatingInfo Deprecated information
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDeprecatingInfo(DescribePolicyConditionListResponseDeprecatingInfo DeprecatingInfo) {
+        this.DeprecatingInfo = DeprecatingInfo;
+    }
+
     public DescribePolicyConditionListCondition() {
     }
 
@@ -262,6 +290,9 @@ Note: This field may return null, indicating that no valid value was found.
                 this.SupportRegions[i] = new String(source.SupportRegions[i]);
             }
         }
+        if (source.DeprecatingInfo != null) {
+            this.DeprecatingInfo = new DescribePolicyConditionListResponseDeprecatingInfo(source.DeprecatingInfo);
+        }
     }
 
 
@@ -277,6 +308,7 @@ Note: This field may return null, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "SortId", this.SortId);
         this.setParamSimple(map, prefix + "SupportDefault", this.SupportDefault);
         this.setParamArraySimple(map, prefix + "SupportRegions.", this.SupportRegions);
+        this.setParamObj(map, prefix + "DeprecatingInfo.", this.DeprecatingInfo);
 
     }
 }

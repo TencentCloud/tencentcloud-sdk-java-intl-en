@@ -23,8 +23,8 @@ import java.util.HashMap;
 public class AlarmPolicyCondition extends AbstractModel{
 
     /**
-    * Metric trigger condition operator. Valid values: 0 (OR), 1 (AND)
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Judgment condition of an alarm trigger condition (`0`: Any; `1`: All; `2`: Composite). When the value is set to `2` (i.e., composite trigger conditions), this parameter should be used together with `ComplexExpression`.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsUnionRule")
     @Expose
@@ -39,20 +39,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private AlarmPolicyRule [] Rules;
 
     /**
-     * Get Metric trigger condition operator. Valid values: 0 (OR), 1 (AND)
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return IsUnionRule Metric trigger condition operator. Valid values: 0 (OR), 1 (AND)
-Note: this field may return null, indicating that no valid values can be obtained.
+    * The judgment expression of composite alarm trigger conditions, which is valid when the value of `IsUnionRule` is `2`. This parameter is used to determine that an alarm condition is met only when the expression values are `True` for multiple trigger conditions.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ComplexExpression")
+    @Expose
+    private String ComplexExpression;
+
+    /**
+     * Get Judgment condition of an alarm trigger condition (`0`: Any; `1`: All; `2`: Composite). When the value is set to `2` (i.e., composite trigger conditions), this parameter should be used together with `ComplexExpression`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsUnionRule Judgment condition of an alarm trigger condition (`0`: Any; `1`: All; `2`: Composite). When the value is set to `2` (i.e., composite trigger conditions), this parameter should be used together with `ComplexExpression`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsUnionRule() {
         return this.IsUnionRule;
     }
 
     /**
-     * Set Metric trigger condition operator. Valid values: 0 (OR), 1 (AND)
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param IsUnionRule Metric trigger condition operator. Valid values: 0 (OR), 1 (AND)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Judgment condition of an alarm trigger condition (`0`: Any; `1`: All; `2`: Composite). When the value is set to `2` (i.e., composite trigger conditions), this parameter should be used together with `ComplexExpression`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsUnionRule Judgment condition of an alarm trigger condition (`0`: Any; `1`: All; `2`: Composite). When the value is set to `2` (i.e., composite trigger conditions), this parameter should be used together with `ComplexExpression`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsUnionRule(Long IsUnionRule) {
         this.IsUnionRule = IsUnionRule;
@@ -78,6 +86,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.Rules = Rules;
     }
 
+    /**
+     * Get The judgment expression of composite alarm trigger conditions, which is valid when the value of `IsUnionRule` is `2`. This parameter is used to determine that an alarm condition is met only when the expression values are `True` for multiple trigger conditions.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ComplexExpression The judgment expression of composite alarm trigger conditions, which is valid when the value of `IsUnionRule` is `2`. This parameter is used to determine that an alarm condition is met only when the expression values are `True` for multiple trigger conditions.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getComplexExpression() {
+        return this.ComplexExpression;
+    }
+
+    /**
+     * Set The judgment expression of composite alarm trigger conditions, which is valid when the value of `IsUnionRule` is `2`. This parameter is used to determine that an alarm condition is met only when the expression values are `True` for multiple trigger conditions.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ComplexExpression The judgment expression of composite alarm trigger conditions, which is valid when the value of `IsUnionRule` is `2`. This parameter is used to determine that an alarm condition is met only when the expression values are `True` for multiple trigger conditions.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setComplexExpression(String ComplexExpression) {
+        this.ComplexExpression = ComplexExpression;
+    }
+
     public AlarmPolicyCondition() {
     }
 
@@ -95,6 +123,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 this.Rules[i] = new AlarmPolicyRule(source.Rules[i]);
             }
         }
+        if (source.ComplexExpression != null) {
+            this.ComplexExpression = new String(source.ComplexExpression);
+        }
     }
 
 
@@ -104,6 +135,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IsUnionRule", this.IsUnionRule);
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
+        this.setParamSimple(map, prefix + "ComplexExpression", this.ComplexExpression);
 
     }
 }

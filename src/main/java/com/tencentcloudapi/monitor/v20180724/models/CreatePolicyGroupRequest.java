@@ -93,7 +93,7 @@ public class CreatePolicyGroupRequest extends AbstractModel{
     private CreatePolicyGroupEventCondition [] EventConditions;
 
     /**
-    * Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields.
+    * Whether it is a backend call. Rules pulled from the policy template will be used to fill in the `Conditions` and `EventConditions` fields only when the value of this parameter is `1`.
     */
     @SerializedName("BackEndCall")
     @Expose
@@ -267,16 +267,16 @@ public class CreatePolicyGroupRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields. 
-     * @return BackEndCall Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields.
+     * Get Whether it is a backend call. Rules pulled from the policy template will be used to fill in the `Conditions` and `EventConditions` fields only when the value of this parameter is `1`. 
+     * @return BackEndCall Whether it is a backend call. Rules pulled from the policy template will be used to fill in the `Conditions` and `EventConditions` fields only when the value of this parameter is `1`.
      */
     public Long getBackEndCall() {
         return this.BackEndCall;
     }
 
     /**
-     * Set Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields.
-     * @param BackEndCall Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields.
+     * Set Whether it is a backend call. Rules pulled from the policy template will be used to fill in the `Conditions` and `EventConditions` fields only when the value of this parameter is `1`.
+     * @param BackEndCall Whether it is a backend call. Rules pulled from the policy template will be used to fill in the `Conditions` and `EventConditions` fields only when the value of this parameter is `1`.
      */
     public void setBackEndCall(Long BackEndCall) {
         this.BackEndCall = BackEndCall;

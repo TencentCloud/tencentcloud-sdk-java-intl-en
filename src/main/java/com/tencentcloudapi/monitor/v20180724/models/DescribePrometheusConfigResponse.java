@@ -23,11 +23,126 @@ import java.util.HashMap;
 public class DescribePrometheusConfigResponse extends AbstractModel{
 
     /**
+    * Global configuration
+    */
+    @SerializedName("Config")
+    @Expose
+    private String Config;
+
+    /**
+    * ServiceMonitor configuration
+    */
+    @SerializedName("ServiceMonitors")
+    @Expose
+    private PrometheusConfigItem [] ServiceMonitors;
+
+    /**
+    * PodMonitor configuration
+    */
+    @SerializedName("PodMonitors")
+    @Expose
+    private PrometheusConfigItem [] PodMonitors;
+
+    /**
+    * Raw jobs
+    */
+    @SerializedName("RawJobs")
+    @Expose
+    private PrometheusConfigItem [] RawJobs;
+
+    /**
+    * 
+    */
+    @SerializedName("Probes")
+    @Expose
+    private PrometheusConfigItem [] Probes;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get Global configuration 
+     * @return Config Global configuration
+     */
+    public String getConfig() {
+        return this.Config;
+    }
+
+    /**
+     * Set Global configuration
+     * @param Config Global configuration
+     */
+    public void setConfig(String Config) {
+        this.Config = Config;
+    }
+
+    /**
+     * Get ServiceMonitor configuration 
+     * @return ServiceMonitors ServiceMonitor configuration
+     */
+    public PrometheusConfigItem [] getServiceMonitors() {
+        return this.ServiceMonitors;
+    }
+
+    /**
+     * Set ServiceMonitor configuration
+     * @param ServiceMonitors ServiceMonitor configuration
+     */
+    public void setServiceMonitors(PrometheusConfigItem [] ServiceMonitors) {
+        this.ServiceMonitors = ServiceMonitors;
+    }
+
+    /**
+     * Get PodMonitor configuration 
+     * @return PodMonitors PodMonitor configuration
+     */
+    public PrometheusConfigItem [] getPodMonitors() {
+        return this.PodMonitors;
+    }
+
+    /**
+     * Set PodMonitor configuration
+     * @param PodMonitors PodMonitor configuration
+     */
+    public void setPodMonitors(PrometheusConfigItem [] PodMonitors) {
+        this.PodMonitors = PodMonitors;
+    }
+
+    /**
+     * Get Raw jobs 
+     * @return RawJobs Raw jobs
+     */
+    public PrometheusConfigItem [] getRawJobs() {
+        return this.RawJobs;
+    }
+
+    /**
+     * Set Raw jobs
+     * @param RawJobs Raw jobs
+     */
+    public void setRawJobs(PrometheusConfigItem [] RawJobs) {
+        this.RawJobs = RawJobs;
+    }
+
+    /**
+     * Get  
+     * @return Probes 
+     */
+    public PrometheusConfigItem [] getProbes() {
+        return this.Probes;
+    }
+
+    /**
+     * Set 
+     * @param Probes 
+     */
+    public void setProbes(PrometheusConfigItem [] Probes) {
+        this.Probes = Probes;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -53,6 +168,33 @@ public class DescribePrometheusConfigResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribePrometheusConfigResponse(DescribePrometheusConfigResponse source) {
+        if (source.Config != null) {
+            this.Config = new String(source.Config);
+        }
+        if (source.ServiceMonitors != null) {
+            this.ServiceMonitors = new PrometheusConfigItem[source.ServiceMonitors.length];
+            for (int i = 0; i < source.ServiceMonitors.length; i++) {
+                this.ServiceMonitors[i] = new PrometheusConfigItem(source.ServiceMonitors[i]);
+            }
+        }
+        if (source.PodMonitors != null) {
+            this.PodMonitors = new PrometheusConfigItem[source.PodMonitors.length];
+            for (int i = 0; i < source.PodMonitors.length; i++) {
+                this.PodMonitors[i] = new PrometheusConfigItem(source.PodMonitors[i]);
+            }
+        }
+        if (source.RawJobs != null) {
+            this.RawJobs = new PrometheusConfigItem[source.RawJobs.length];
+            for (int i = 0; i < source.RawJobs.length; i++) {
+                this.RawJobs[i] = new PrometheusConfigItem(source.RawJobs[i]);
+            }
+        }
+        if (source.Probes != null) {
+            this.Probes = new PrometheusConfigItem[source.Probes.length];
+            for (int i = 0; i < source.Probes.length; i++) {
+                this.Probes[i] = new PrometheusConfigItem(source.Probes[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +205,11 @@ public class DescribePrometheusConfigResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Config", this.Config);
+        this.setParamArrayObj(map, prefix + "ServiceMonitors.", this.ServiceMonitors);
+        this.setParamArrayObj(map, prefix + "PodMonitors.", this.PodMonitors);
+        this.setParamArrayObj(map, prefix + "RawJobs.", this.RawJobs);
+        this.setParamArrayObj(map, prefix + "Probes.", this.Probes);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

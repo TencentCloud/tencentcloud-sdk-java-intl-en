@@ -30,21 +30,21 @@ public class DescribeProductEventListRequest extends AbstractModel{
     private String Module;
 
     /**
-    * Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
+    * Filter by product type. For example, "cvm" indicates Cloud Virtual Machine.
     */
     @SerializedName("ProductName")
     @Expose
     private String [] ProductName;
 
     /**
-    * Filter by product name. For example, "guest_reboot" indicates server restart.
+    * Filter by event name. For example, "guest_reboot" indicates instance restart.
     */
     @SerializedName("EventName")
     @Expose
     private String [] EventName;
 
     /**
-    * Affected object, such as "ins-19708ino"
+    * Affected object, such as "ins-19708ino".
     */
     @SerializedName("InstanceId")
     @Expose
@@ -144,48 +144,48 @@ public class DescribeProductEventListRequest extends AbstractModel{
     }
 
     /**
-     * Get Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine. 
-     * @return ProductName Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
+     * Get Filter by product type. For example, "cvm" indicates Cloud Virtual Machine. 
+     * @return ProductName Filter by product type. For example, "cvm" indicates Cloud Virtual Machine.
      */
     public String [] getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
-     * @param ProductName Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
+     * Set Filter by product type. For example, "cvm" indicates Cloud Virtual Machine.
+     * @param ProductName Filter by product type. For example, "cvm" indicates Cloud Virtual Machine.
      */
     public void setProductName(String [] ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get Filter by product name. For example, "guest_reboot" indicates server restart. 
-     * @return EventName Filter by product name. For example, "guest_reboot" indicates server restart.
+     * Get Filter by event name. For example, "guest_reboot" indicates instance restart. 
+     * @return EventName Filter by event name. For example, "guest_reboot" indicates instance restart.
      */
     public String [] getEventName() {
         return this.EventName;
     }
 
     /**
-     * Set Filter by product name. For example, "guest_reboot" indicates server restart.
-     * @param EventName Filter by product name. For example, "guest_reboot" indicates server restart.
+     * Set Filter by event name. For example, "guest_reboot" indicates instance restart.
+     * @param EventName Filter by event name. For example, "guest_reboot" indicates instance restart.
      */
     public void setEventName(String [] EventName) {
         this.EventName = EventName;
     }
 
     /**
-     * Get Affected object, such as "ins-19708ino" 
-     * @return InstanceId Affected object, such as "ins-19708ino"
+     * Get Affected object, such as "ins-19708ino". 
+     * @return InstanceId Affected object, such as "ins-19708ino".
      */
     public String [] getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Affected object, such as "ins-19708ino"
-     * @param InstanceId Affected object, such as "ins-19708ino"
+     * Set Affected object, such as "ins-19708ino".
+     * @param InstanceId Affected object, such as "ins-19708ino".
      */
     public void setInstanceId(String [] InstanceId) {
         this.InstanceId = InstanceId;

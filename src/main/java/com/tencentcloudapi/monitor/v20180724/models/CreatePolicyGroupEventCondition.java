@@ -44,7 +44,7 @@ public class CreatePolicyGroupEventCondition extends AbstractModel{
     private Long AlarmNotifyPeriod;
 
     /**
-    * If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
+    * If a metric is created based on a template, the `RuleId` of the metric in the template must be passed in.
     */
     @SerializedName("RuleId")
     @Expose
@@ -99,16 +99,16 @@ public class CreatePolicyGroupEventCondition extends AbstractModel{
     }
 
     /**
-     * Get If a metric is created based on a template, the RuleId of the metric in the template must be passed in. 
-     * @return RuleId If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
+     * Get If a metric is created based on a template, the `RuleId` of the metric in the template must be passed in. 
+     * @return RuleId If a metric is created based on a template, the `RuleId` of the metric in the template must be passed in.
      */
     public Long getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
-     * @param RuleId If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
+     * Set If a metric is created based on a template, the `RuleId` of the metric in the template must be passed in.
+     * @param RuleId If a metric is created based on a template, the `RuleId` of the metric in the template must be passed in.
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
