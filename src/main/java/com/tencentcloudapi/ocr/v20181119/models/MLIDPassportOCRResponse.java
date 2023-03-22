@@ -118,6 +118,22 @@ public class MLIDPassportOCRResponse extends AbstractModel{
     private String CodeCrc;
 
     /**
+    * The surname.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Surname")
+    @Expose
+    private String Surname;
+
+    /**
+    * The given name.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("GivenName")
+    @Expose
+    private String GivenName;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -361,6 +377,46 @@ public class MLIDPassportOCRResponse extends AbstractModel{
     }
 
     /**
+     * Get The surname.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Surname The surname.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getSurname() {
+        return this.Surname;
+    }
+
+    /**
+     * Set The surname.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Surname The surname.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSurname(String Surname) {
+        this.Surname = Surname;
+    }
+
+    /**
+     * Get The given name.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return GivenName The given name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getGivenName() {
+        return this.GivenName;
+    }
+
+    /**
+     * Set The given name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param GivenName The given name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setGivenName(String GivenName) {
+        this.GivenName = GivenName;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -423,6 +479,12 @@ public class MLIDPassportOCRResponse extends AbstractModel{
         if (source.CodeCrc != null) {
             this.CodeCrc = new String(source.CodeCrc);
         }
+        if (source.Surname != null) {
+            this.Surname = new String(source.Surname);
+        }
+        if (source.GivenName != null) {
+            this.GivenName = new String(source.GivenName);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -445,6 +507,8 @@ public class MLIDPassportOCRResponse extends AbstractModel{
         this.setParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
         this.setParamSimple(map, prefix + "CodeSet", this.CodeSet);
         this.setParamSimple(map, prefix + "CodeCrc", this.CodeCrc);
+        this.setParamSimple(map, prefix + "Surname", this.Surname);
+        this.setParamSimple(map, prefix + "GivenName", this.GivenName);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
