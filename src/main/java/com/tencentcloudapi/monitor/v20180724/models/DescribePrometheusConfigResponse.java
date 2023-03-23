@@ -51,7 +51,7 @@ public class DescribePrometheusConfigResponse extends AbstractModel{
     private PrometheusConfigItem [] RawJobs;
 
     /**
-    * 
+    * Probes
     */
     @SerializedName("Probes")
     @Expose
@@ -129,16 +129,16 @@ public class DescribePrometheusConfigResponse extends AbstractModel{
     }
 
     /**
-     * Get  
-     * @return Probes 
+     * Get Probes 
+     * @return Probes Probes
      */
     public PrometheusConfigItem [] getProbes() {
         return this.Probes;
     }
 
     /**
-     * Set 
-     * @param Probes 
+     * Set Probes
+     * @param Probes Probes
      */
     public void setProbes(PrometheusConfigItem [] Probes) {
         this.Probes = Probes;

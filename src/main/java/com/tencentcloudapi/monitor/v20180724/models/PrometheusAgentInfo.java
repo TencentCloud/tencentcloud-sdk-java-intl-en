@@ -22,6 +22,75 @@ import java.util.HashMap;
 
 public class PrometheusAgentInfo extends AbstractModel{
 
+    /**
+    * Cluster type
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private String ClusterType;
+
+    /**
+    * Cluster ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * Remarks
+    */
+    @SerializedName("Describe")
+    @Expose
+    private String Describe;
+
+    /**
+     * Get Cluster type 
+     * @return ClusterType Cluster type
+     */
+    public String getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set Cluster type
+     * @param ClusterType Cluster type
+     */
+    public void setClusterType(String ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
+    /**
+     * Get Cluster ID 
+     * @return ClusterId Cluster ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set Cluster ID
+     * @param ClusterId Cluster ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get Remarks 
+     * @return Describe Remarks
+     */
+    public String getDescribe() {
+        return this.Describe;
+    }
+
+    /**
+     * Set Remarks
+     * @param Describe Remarks
+     */
+    public void setDescribe(String Describe) {
+        this.Describe = Describe;
+    }
+
     public PrometheusAgentInfo() {
     }
 
@@ -30,6 +99,15 @@ public class PrometheusAgentInfo extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public PrometheusAgentInfo(PrometheusAgentInfo source) {
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Describe != null) {
+            this.Describe = new String(source.Describe);
+        }
     }
 
 
@@ -37,6 +115,9 @@ public class PrometheusAgentInfo extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "Describe", this.Describe);
 
     }
 }

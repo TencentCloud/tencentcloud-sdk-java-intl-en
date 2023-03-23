@@ -104,6 +104,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private InstanceQuotaConfigResp QuotaConfig;
 
     /**
+    * Number of replicas
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ReplicaNum")
+    @Expose
+    private Long ReplicaNum;
+
+    /**
      * Get Topic ID 
      * @return TopicId Topic ID
      */
@@ -295,6 +303,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.QuotaConfig = QuotaConfig;
     }
 
+    /**
+     * Get Number of replicas
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ReplicaNum Number of replicas
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getReplicaNum() {
+        return this.ReplicaNum;
+    }
+
+    /**
+     * Set Number of replicas
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ReplicaNum Number of replicas
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setReplicaNum(Long ReplicaNum) {
+        this.ReplicaNum = ReplicaNum;
+    }
+
     public TopicAttributesResponse() {
     }
 
@@ -345,6 +373,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.QuotaConfig != null) {
             this.QuotaConfig = new InstanceQuotaConfigResp(source.QuotaConfig);
         }
+        if (source.ReplicaNum != null) {
+            this.ReplicaNum = new Long(source.ReplicaNum);
+        }
     }
 
 
@@ -363,6 +394,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);
         this.setParamArrayObj(map, prefix + "AclRuleList.", this.AclRuleList);
         this.setParamObj(map, prefix + "QuotaConfig.", this.QuotaConfig);
+        this.setParamSimple(map, prefix + "ReplicaNum", this.ReplicaNum);
 
     }
 }

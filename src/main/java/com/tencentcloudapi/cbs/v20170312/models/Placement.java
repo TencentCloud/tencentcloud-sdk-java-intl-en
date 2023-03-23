@@ -45,6 +45,14 @@ Note: This field may return null, indicating that no valid value was found.
     private Long ProjectId;
 
     /**
+    * Project name of the instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ProjectName")
+    @Expose
+    private String ProjectName;
+
+    /**
     * Dedicated cluster name. When it is an input parameter, it is ignored.  When it is an output parameter, it is the name of the dedicated cluster the cloud disk belongs to, and it can be left blank.
 Note: This field may return null, indicating that no valid value was found.
     */
@@ -120,6 +128,26 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
+     * Get Project name of the instance.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ProjectName Project name of the instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getProjectName() {
+        return this.ProjectName;
+    }
+
+    /**
+     * Set Project name of the instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ProjectName Project name of the instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setProjectName(String ProjectName) {
+        this.ProjectName = ProjectName;
+    }
+
+    /**
      * Get Dedicated cluster name. When it is an input parameter, it is ignored.  When it is an output parameter, it is the name of the dedicated cluster the cloud disk belongs to, and it can be left blank.
 Note: This field may return null, indicating that no valid value was found. 
      * @return CdcName Dedicated cluster name. When it is an input parameter, it is ignored.  When it is an output parameter, it is the name of the dedicated cluster the cloud disk belongs to, and it can be left blank.
@@ -192,6 +220,9 @@ Note: This field may return null, indicating that no valid value was found.
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
         }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
         if (source.CdcName != null) {
             this.CdcName = new String(source.CdcName);
         }
@@ -211,6 +242,7 @@ Note: This field may return null, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "CageId", this.CageId);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);
         this.setParamSimple(map, prefix + "CdcName", this.CdcName);
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
         this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);

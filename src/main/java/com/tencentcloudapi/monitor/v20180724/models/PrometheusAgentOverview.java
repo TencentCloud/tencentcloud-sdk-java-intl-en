@@ -86,6 +86,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String FailedReason;
 
     /**
+    * Agent name
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get Cluster type 
      * @return ClusterType Cluster type
      */
@@ -241,6 +249,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.FailedReason = FailedReason;
     }
 
+    /**
+     * Get Agent name
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Name Agent name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set Agent name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Name Agent name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public PrometheusAgentOverview() {
     }
 
@@ -276,6 +304,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.FailedReason != null) {
             this.FailedReason = new String(source.FailedReason);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -291,6 +322,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "FailedReason", this.FailedReason);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

@@ -30,7 +30,7 @@ public class DescribeStatisticDataRequest extends AbstractModel{
     private String Module;
 
     /**
-    * Namespace. Valid values: QCE/TKE
+    * Namespace. Valid values: `QCE`, `TKE2`.
     */
     @SerializedName("Namespace")
     @Expose
@@ -100,16 +100,16 @@ Due to the storage period limit, the statistical period is subject to the time r
     }
 
     /**
-     * Get Namespace. Valid values: QCE/TKE 
-     * @return Namespace Namespace. Valid values: QCE/TKE
+     * Get Namespace. Valid values: `QCE`, `TKE2`. 
+     * @return Namespace Namespace. Valid values: `QCE`, `TKE2`.
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set Namespace. Valid values: QCE/TKE
-     * @param Namespace Namespace. Valid values: QCE/TKE
+     * Set Namespace. Valid values: `QCE`, `TKE2`.
+     * @param Namespace Namespace. Valid values: `QCE`, `TKE2`.
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;

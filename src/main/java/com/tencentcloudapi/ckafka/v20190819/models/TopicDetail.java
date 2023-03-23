@@ -126,6 +126,14 @@ Note: `null` may be returned for this field, indicating that no valid values can
     private Long Status;
 
     /**
+    * Tag list
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Topic name 
      * @return TopicName Topic name
      */
@@ -369,6 +377,26 @@ Note: `null` may be returned for this field, indicating that no valid values can
         this.Status = Status;
     }
 
+    /**
+     * Get Tag list
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Tags Tag list
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag list
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Tags Tag list
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public TopicDetail() {
     }
 
@@ -419,6 +447,12 @@ Note: `null` may be returned for this field, indicating that no valid values can
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -440,6 +474,7 @@ Note: `null` may be returned for this field, indicating that no valid values can
         this.setParamObj(map, prefix + "Config.", this.Config);
         this.setParamObj(map, prefix + "RetentionTimeConfig.", this.RetentionTimeConfig);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

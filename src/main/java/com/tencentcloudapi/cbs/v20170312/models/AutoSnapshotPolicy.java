@@ -141,14 +141,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AdvancedRetentionPolicy AdvancedRetentionPolicy;
 
     /**
-    * 
+    * Source account ID of the copied snapshot policy
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CopyFromAccountUin")
     @Expose
     private String CopyFromAccountUin;
 
     /**
-    * 
+    * Tag.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tags")
     @Expose
@@ -435,32 +437,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return CopyFromAccountUin 
+     * Get Source account ID of the copied snapshot policy
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CopyFromAccountUin Source account ID of the copied snapshot policy
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCopyFromAccountUin() {
         return this.CopyFromAccountUin;
     }
 
     /**
-     * Set 
-     * @param CopyFromAccountUin 
+     * Set Source account ID of the copied snapshot policy
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CopyFromAccountUin Source account ID of the copied snapshot policy
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCopyFromAccountUin(String CopyFromAccountUin) {
         this.CopyFromAccountUin = CopyFromAccountUin;
     }
 
     /**
-     * Get  
-     * @return Tags 
+     * Get Tag.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Tags Tag.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 
-     * @param Tags 
+     * Set Tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Tags Tag.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

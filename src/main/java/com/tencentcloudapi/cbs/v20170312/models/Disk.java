@@ -309,14 +309,16 @@ Note: This field may return null, indicating that no valid value was found.
     private String InstanceType;
 
     /**
-    * 
+    * ID of the last instance to which the cloud disk is attached
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LastAttachInsId")
     @Expose
     private String LastAttachInsId;
 
     /**
-    * 
+    * Error message for the last operation of the cloud disk
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ErrorPrompt")
     @Expose
@@ -999,32 +1001,40 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get  
-     * @return LastAttachInsId 
+     * Get ID of the last instance to which the cloud disk is attached
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LastAttachInsId ID of the last instance to which the cloud disk is attached
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getLastAttachInsId() {
         return this.LastAttachInsId;
     }
 
     /**
-     * Set 
-     * @param LastAttachInsId 
+     * Set ID of the last instance to which the cloud disk is attached
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LastAttachInsId ID of the last instance to which the cloud disk is attached
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLastAttachInsId(String LastAttachInsId) {
         this.LastAttachInsId = LastAttachInsId;
     }
 
     /**
-     * Get  
-     * @return ErrorPrompt 
+     * Get Error message for the last operation of the cloud disk
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ErrorPrompt Error message for the last operation of the cloud disk
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getErrorPrompt() {
         return this.ErrorPrompt;
     }
 
     /**
-     * Set 
-     * @param ErrorPrompt 
+     * Set Error message for the last operation of the cloud disk
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ErrorPrompt Error message for the last operation of the cloud disk
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setErrorPrompt(String ErrorPrompt) {
         this.ErrorPrompt = ErrorPrompt;

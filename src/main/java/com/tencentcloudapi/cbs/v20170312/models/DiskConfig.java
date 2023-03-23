@@ -104,6 +104,14 @@ Note: This field may return null, indicating that no valid value was found.
     private Long MaxDiskSize;
 
     /**
+    * Price of a monthly subscribed or pay-as-you-go cloud disk.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Price")
+    @Expose
+    private Price Price;
+
+    /**
      * Get Whether the configuration is available. 
      * @return Available Whether the configuration is available.
      */
@@ -295,6 +303,26 @@ Note: This field may return null, indicating that no valid value was found.
         this.MaxDiskSize = MaxDiskSize;
     }
 
+    /**
+     * Get Price of a monthly subscribed or pay-as-you-go cloud disk.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Price Price of a monthly subscribed or pay-as-you-go cloud disk.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Price getPrice() {
+        return this.Price;
+    }
+
+    /**
+     * Set Price of a monthly subscribed or pay-as-you-go cloud disk.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Price Price of a monthly subscribed or pay-as-you-go cloud disk.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setPrice(Price Price) {
+        this.Price = Price;
+    }
+
     public DiskConfig() {
     }
 
@@ -339,6 +367,9 @@ Note: This field may return null, indicating that no valid value was found.
         if (source.MaxDiskSize != null) {
             this.MaxDiskSize = new Long(source.MaxDiskSize);
         }
+        if (source.Price != null) {
+            this.Price = new Price(source.Price);
+        }
     }
 
 
@@ -357,6 +388,7 @@ Note: This field may return null, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "DiskUsage", this.DiskUsage);
         this.setParamSimple(map, prefix + "MinDiskSize", this.MinDiskSize);
         this.setParamSimple(map, prefix + "MaxDiskSize", this.MaxDiskSize);
+        this.setParamObj(map, prefix + "Price.", this.Price);
 
     }
 }

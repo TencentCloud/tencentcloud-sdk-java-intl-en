@@ -22,6 +22,52 @@ import java.util.HashMap;
 
 public class Label extends AbstractModel{
 
+    /**
+    * Label name
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * Label value
+    */
+    @SerializedName("Value")
+    @Expose
+    private String Value;
+
+    /**
+     * Get Label name 
+     * @return Name Label name
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set Label name
+     * @param Name Label name
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get Label value 
+     * @return Value Label value
+     */
+    public String getValue() {
+        return this.Value;
+    }
+
+    /**
+     * Set Label value
+     * @param Value Label value
+     */
+    public void setValue(String Value) {
+        this.Value = Value;
+    }
+
     public Label() {
     }
 
@@ -30,6 +76,12 @@ public class Label extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public Label(Label source) {
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
+        }
     }
 
 
@@ -37,6 +89,8 @@ public class Label extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Value", this.Value);
 
     }
 }
