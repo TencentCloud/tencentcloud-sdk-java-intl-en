@@ -79,6 +79,20 @@ public class CloneItem extends AbstractModel{
     private String TaskStatus;
 
     /**
+    * Clone instance region ID
+    */
+    @SerializedName("NewRegionId")
+    @Expose
+    private Long NewRegionId;
+
+    /**
+    * Source instance region ID
+    */
+    @SerializedName("SrcRegionId")
+    @Expose
+    private Long SrcRegionId;
+
+    /**
      * Get ID of the original instance in a clone task 
      * @return SrcInstanceId ID of the original instance in a clone task
      */
@@ -206,6 +220,38 @@ public class CloneItem extends AbstractModel{
         this.TaskStatus = TaskStatus;
     }
 
+    /**
+     * Get Clone instance region ID 
+     * @return NewRegionId Clone instance region ID
+     */
+    public Long getNewRegionId() {
+        return this.NewRegionId;
+    }
+
+    /**
+     * Set Clone instance region ID
+     * @param NewRegionId Clone instance region ID
+     */
+    public void setNewRegionId(Long NewRegionId) {
+        this.NewRegionId = NewRegionId;
+    }
+
+    /**
+     * Get Source instance region ID 
+     * @return SrcRegionId Source instance region ID
+     */
+    public Long getSrcRegionId() {
+        return this.SrcRegionId;
+    }
+
+    /**
+     * Set Source instance region ID
+     * @param SrcRegionId Source instance region ID
+     */
+    public void setSrcRegionId(Long SrcRegionId) {
+        this.SrcRegionId = SrcRegionId;
+    }
+
     public CloneItem() {
     }
 
@@ -238,6 +284,12 @@ public class CloneItem extends AbstractModel{
         if (source.TaskStatus != null) {
             this.TaskStatus = new String(source.TaskStatus);
         }
+        if (source.NewRegionId != null) {
+            this.NewRegionId = new Long(source.NewRegionId);
+        }
+        if (source.SrcRegionId != null) {
+            this.SrcRegionId = new Long(source.SrcRegionId);
+        }
     }
 
 
@@ -253,6 +305,8 @@ public class CloneItem extends AbstractModel{
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
+        this.setParamSimple(map, prefix + "NewRegionId", this.NewRegionId);
+        this.setParamSimple(map, prefix + "SrcRegionId", this.SrcRegionId);
 
     }
 }
