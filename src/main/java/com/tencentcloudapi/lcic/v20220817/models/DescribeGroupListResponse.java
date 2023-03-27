@@ -30,8 +30,7 @@ public class DescribeGroupListResponse extends AbstractModel{
     private Long Total;
 
     /**
-    * The information of the groups.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The information of the groups. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("GroupInfos")
     @Expose
@@ -61,20 +60,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The information of the groups.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GroupInfos The information of the groups.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The information of the groups. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return GroupInfos The information of the groups. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public GroupInfo [] getGroupInfos() {
         return this.GroupInfos;
     }
 
     /**
-     * Set The information of the groups.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GroupInfos The information of the groups.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The information of the groups. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param GroupInfos The information of the groups. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setGroupInfos(GroupInfo [] GroupInfos) {
         this.GroupInfos = GroupInfos;

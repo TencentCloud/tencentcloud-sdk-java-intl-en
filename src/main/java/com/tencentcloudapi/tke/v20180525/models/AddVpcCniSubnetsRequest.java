@@ -44,6 +44,13 @@ public class AddVpcCniSubnetsRequest extends AbstractModel{
     private String VpcId;
 
     /**
+    * Whether to skip adding the VPC IP range to `NonMasqueradeCIDRs` field of `ip-masq-agent-config`. Default value: `false`
+    */
+    @SerializedName("SkipAddingNonMasqueradeCIDRs")
+    @Expose
+    private Boolean SkipAddingNonMasqueradeCIDRs;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -91,6 +98,22 @@ public class AddVpcCniSubnetsRequest extends AbstractModel{
         this.VpcId = VpcId;
     }
 
+    /**
+     * Get Whether to skip adding the VPC IP range to `NonMasqueradeCIDRs` field of `ip-masq-agent-config`. Default value: `false` 
+     * @return SkipAddingNonMasqueradeCIDRs Whether to skip adding the VPC IP range to `NonMasqueradeCIDRs` field of `ip-masq-agent-config`. Default value: `false`
+     */
+    public Boolean getSkipAddingNonMasqueradeCIDRs() {
+        return this.SkipAddingNonMasqueradeCIDRs;
+    }
+
+    /**
+     * Set Whether to skip adding the VPC IP range to `NonMasqueradeCIDRs` field of `ip-masq-agent-config`. Default value: `false`
+     * @param SkipAddingNonMasqueradeCIDRs Whether to skip adding the VPC IP range to `NonMasqueradeCIDRs` field of `ip-masq-agent-config`. Default value: `false`
+     */
+    public void setSkipAddingNonMasqueradeCIDRs(Boolean SkipAddingNonMasqueradeCIDRs) {
+        this.SkipAddingNonMasqueradeCIDRs = SkipAddingNonMasqueradeCIDRs;
+    }
+
     public AddVpcCniSubnetsRequest() {
     }
 
@@ -111,6 +134,9 @@ public class AddVpcCniSubnetsRequest extends AbstractModel{
         if (source.VpcId != null) {
             this.VpcId = new String(source.VpcId);
         }
+        if (source.SkipAddingNonMasqueradeCIDRs != null) {
+            this.SkipAddingNonMasqueradeCIDRs = new Boolean(source.SkipAddingNonMasqueradeCIDRs);
+        }
     }
 
 
@@ -121,6 +147,7 @@ public class AddVpcCniSubnetsRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArraySimple(map, prefix + "SubnetIds.", this.SubnetIds);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "SkipAddingNonMasqueradeCIDRs", this.SkipAddingNonMasqueradeCIDRs);
 
     }
 }

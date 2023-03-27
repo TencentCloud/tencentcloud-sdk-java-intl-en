@@ -136,6 +136,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Describes;
 
     /**
+    * The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
+The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("HotPeriod")
+    @Expose
+    private Long HotPeriod;
+
+    /**
      * Get Logset ID 
      * @return LogsetId Logset ID
      */
@@ -407,6 +416,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Describes = Describes;
     }
 
+    /**
+     * Get The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
+The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HotPeriod The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
+The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getHotPeriod() {
+        return this.HotPeriod;
+    }
+
+    /**
+     * Set The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
+The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HotPeriod The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
+The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setHotPeriod(Long HotPeriod) {
+        this.HotPeriod = HotPeriod;
+    }
+
     public TopicInfo() {
     }
 
@@ -463,6 +496,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Describes != null) {
             this.Describes = new String(source.Describes);
         }
+        if (source.HotPeriod != null) {
+            this.HotPeriod = new Long(source.HotPeriod);
+        }
     }
 
 
@@ -485,6 +521,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "SubAssumerName", this.SubAssumerName);
         this.setParamSimple(map, prefix + "Describes", this.Describes);
+        this.setParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
 
     }
 }

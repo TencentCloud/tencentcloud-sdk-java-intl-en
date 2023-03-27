@@ -40,6 +40,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This API is used to add users to a group.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req AddGroupMemberRequest
      * @return AddGroupMemberResponse
      * @throws TencentCloudSDKException
@@ -60,6 +61,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This API is used to add users to multiple groups at a time.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req BatchAddGroupMemberRequest
      * @return BatchAddGroupMemberResponse
      * @throws TencentCloudSDKException
@@ -80,6 +82,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This API is used to create multiple groups at a time.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req BatchCreateGroupWithMembersRequest
      * @return BatchCreateGroupWithMembersResponse
      * @throws TencentCloudSDKException
@@ -100,6 +103,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This API is used to create multiple rooms at a time.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req BatchCreateRoomRequest
      * @return BatchCreateRoomResponse
      * @throws TencentCloudSDKException
@@ -120,6 +124,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This API is used to remove users from multiple groups at a time.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req BatchDeleteGroupMemberRequest
      * @return BatchDeleteGroupMemberResponse
      * @throws TencentCloudSDKException
@@ -140,6 +145,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This API is used to delete the recordings of multiple rooms.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req BatchDeleteRecordRequest
      * @return BatchDeleteRecordResponse
      * @throws TencentCloudSDKException
@@ -160,6 +166,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This API is used to register multiple users (up to 1,000) at a time. If a user ID already exists, the existing one will be overwritten.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req BatchRegisterRequest
      * @return BatchRegisterResponse
      * @throws TencentCloudSDKException
@@ -219,7 +226,8 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a group and specify its members.
+     *his API is used to create a group and specify its members.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req CreateGroupWithMembersRequest
      * @return CreateGroupWithMembersResponse
      * @throws TencentCloudSDKException
@@ -240,6 +248,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This API is used to merge groups.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req CreateGroupWithSubGroupRequest
      * @return CreateGroupWithSubGroupResponse
      * @throws TencentCloudSDKException
@@ -260,6 +269,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This API is used to create a room.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req CreateRoomRequest
      * @return CreateRoomResponse
      * @throws TencentCloudSDKException
@@ -300,6 +310,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This API is used to delete a document.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req DeleteDocumentRequest
      * @return DeleteDocumentResponse
      * @throws TencentCloudSDKException
@@ -320,6 +331,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This API is used to delete one or multiple groups.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req DeleteGroupRequest
      * @return DeleteGroupResponse
      * @throws TencentCloudSDKException
@@ -340,6 +352,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This API is used to remove users from a group.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req DeleteGroupMemberRequest
      * @return DeleteGroupMemberResponse
      * @throws TencentCloudSDKException
@@ -360,6 +373,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This example shows you how to delete the recording files of a specific room.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req DeleteRecordRequest
      * @return DeleteRecordResponse
      * @throws TencentCloudSDKException
@@ -400,6 +414,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This API is used to get the user list of a room. This API will not work if a room has ended or expired.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req DescribeCurrentMemberListRequest
      * @return DescribeCurrentMemberListResponse
      * @throws TencentCloudSDKException
@@ -420,6 +435,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This API is used to get the information of a specific document.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req DescribeDocumentRequest
      * @return DescribeDocumentResponse
      * @throws TencentCloudSDKException
@@ -440,6 +456,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This API is used to get the document list of a specific room.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req DescribeDocumentsByRoomRequest
      * @return DescribeDocumentsByRoomResponse
      * @throws TencentCloudSDKException
@@ -460,6 +477,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This API is used to get the details of a group.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req DescribeGroupRequest
      * @return DescribeGroupResponse
      * @throws TencentCloudSDKException
@@ -480,6 +498,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This API is used to query groups.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req DescribeGroupListRequest
      * @return DescribeGroupListResponse
      * @throws TencentCloudSDKException
@@ -500,6 +519,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This API is used to get the members of a group.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req DescribeGroupMemberListRequest
      * @return DescribeGroupMemberListResponse
      * @throws TencentCloudSDKException
@@ -520,6 +540,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This API is used to get room information.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req DescribeRoomRequest
      * @return DescribeRoomResponse
      * @throws TencentCloudSDKException
@@ -540,6 +561,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This API is used to obtain the statistics of a room. It can be called only after the room is ended.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req DescribeRoomStatisticsRequest
      * @return DescribeRoomStatisticsResponse
      * @throws TencentCloudSDKException
@@ -560,6 +582,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This API is used to get the user list of a specific application.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req DescribeSdkAppIdUsersRequest
      * @return DescribeSdkAppIdUsersResponse
      * @throws TencentCloudSDKException
@@ -599,7 +622,28 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get the message history of a room (room messages are retained for seven days).
+     * @param req GetRoomMessageRequest
+     * @return GetRoomMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRoomMessageResponse GetRoomMessage(GetRoomMessageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<GetRoomMessageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<GetRoomMessageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "GetRoomMessage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get watermark settings.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req GetWatermarkRequest
      * @return GetWatermarkResponse
      * @throws TencentCloudSDKException
@@ -660,6 +704,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This API is used to modify an application.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req ModifyAppRequest
      * @return ModifyAppResponse
      * @throws TencentCloudSDKException
@@ -680,6 +725,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This API is used to modify a group.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req ModifyGroupRequest
      * @return ModifyGroupResponse
      * @throws TencentCloudSDKException
@@ -700,6 +746,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This API is used to modify a room.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req ModifyRoomRequest
      * @return ModifyRoomResponse
      * @throws TencentCloudSDKException
@@ -720,6 +767,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This API is used to modify a user profile such as the nickname and profile photo.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req ModifyUserProfileRequest
      * @return ModifyUserProfileResponse
      * @throws TencentCloudSDKException
@@ -780,6 +828,7 @@ public class LcicClient extends AbstractClient{
 
     /**
      *This API is used to configure watermarks.
+A maximum of 20 requests can be initiated per second for this API.
      * @param req SetWatermarkRequest
      * @return SetWatermarkResponse
      * @throws TencentCloudSDKException

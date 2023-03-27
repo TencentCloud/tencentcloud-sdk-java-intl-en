@@ -103,6 +103,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private ServicePortMappingItem [] PortMappingItemList;
 
     /**
+    * CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ExternalDomain")
+    @Expose
+    private String ExternalDomain;
+
+    /**
      * Get Specifies how a layer-4 proxy is created.
 Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return Type Specifies how a layer-4 proxy is created.
@@ -302,6 +310,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.PortMappingItemList = PortMappingItemList;
     }
 
+    /**
+     * Get CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ExternalDomain CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getExternalDomain() {
+        return this.ExternalDomain;
+    }
+
+    /**
+     * Set CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ExternalDomain CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setExternalDomain(String ExternalDomain) {
+        this.ExternalDomain = ExternalDomain;
+    }
+
     public ServicePortMapping() {
     }
 
@@ -346,6 +374,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 this.PortMappingItemList[i] = new ServicePortMappingItem(source.PortMappingItemList[i]);
             }
         }
+        if (source.ExternalDomain != null) {
+            this.ExternalDomain = new String(source.ExternalDomain);
+        }
     }
 
 
@@ -363,6 +394,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Yaml", this.Yaml);
         this.setParamArraySimple(map, prefix + "Ports.", this.Ports);
         this.setParamArrayObj(map, prefix + "PortMappingItemList.", this.PortMappingItemList);
+        this.setParamSimple(map, prefix + "ExternalDomain", this.ExternalDomain);
 
     }
 }

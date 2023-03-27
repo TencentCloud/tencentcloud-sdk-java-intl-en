@@ -151,6 +151,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private Boolean AllIpDone;
 
     /**
+    * CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ExternalDomain")
+    @Expose
+    private String ExternalDomain;
+
+    /**
      * Get Service name 
      * @return Name Service name
      */
@@ -470,6 +478,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.AllIpDone = AllIpDone;
     }
 
+    /**
+     * Get CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ExternalDomain CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getExternalDomain() {
+        return this.ExternalDomain;
+    }
+
+    /**
+     * Set CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ExternalDomain CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setExternalDomain(String ExternalDomain) {
+        this.ExternalDomain = ExternalDomain;
+    }
+
     public EksService() {
     }
 
@@ -538,6 +566,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.AllIpDone != null) {
             this.AllIpDone = new Boolean(source.AllIpDone);
         }
+        if (source.ExternalDomain != null) {
+            this.ExternalDomain = new String(source.ExternalDomain);
+        }
     }
 
 
@@ -561,6 +592,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "EnableRegistryNextDeploy", this.EnableRegistryNextDeploy);
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamSimple(map, prefix + "AllIpDone", this.AllIpDone);
+        this.setParamSimple(map, prefix + "ExternalDomain", this.ExternalDomain);
 
     }
 }

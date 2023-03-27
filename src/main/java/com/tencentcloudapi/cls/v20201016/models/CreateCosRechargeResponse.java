@@ -20,14 +20,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateShipperResponse extends AbstractModel{
-
-    /**
-    * Shipping task ID.
-    */
-    @SerializedName("ShipperId")
-    @Expose
-    private String ShipperId;
+public class CreateCosRechargeResponse extends AbstractModel{
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -35,22 +28,6 @@ public class CreateShipperResponse extends AbstractModel{
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get Shipping task ID. 
-     * @return ShipperId Shipping task ID.
-     */
-    public String getShipperId() {
-        return this.ShipperId;
-    }
-
-    /**
-     * Set Shipping task ID.
-     * @param ShipperId Shipping task ID.
-     */
-    public void setShipperId(String ShipperId) {
-        this.ShipperId = ShipperId;
-    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -68,17 +45,14 @@ public class CreateShipperResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public CreateShipperResponse() {
+    public CreateCosRechargeResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateShipperResponse(CreateShipperResponse source) {
-        if (source.ShipperId != null) {
-            this.ShipperId = new String(source.ShipperId);
-        }
+    public CreateCosRechargeResponse(CreateCosRechargeResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -89,7 +63,6 @@ public class CreateShipperResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ShipperId", this.ShipperId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

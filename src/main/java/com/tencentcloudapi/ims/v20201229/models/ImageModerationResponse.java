@@ -44,7 +44,7 @@ public class ImageModerationResponse extends AbstractModel{
     private String SubLabel;
 
     /**
-    * This field is used to return the confidence under the current tag (Label). Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the text is more likely to fall into the category of the current returned tag; for example, *Porn 99* indicates that the text is highly likely to be pornographic, while *Porn 0* indicates that the text is not pornographic.
+    * Confidence score of the under the current label. Value range: 0 (**the lowest confidence**) to 100 (**the highest confidence**). For example, *Porn 99* indicates that the image is highly likely to be pornographic, while *Porn 0* indicates that the image is not pornographic.
     */
     @SerializedName("Score")
     @Expose
@@ -112,6 +112,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String FileMD5;
 
     /**
+    * Image recognition result, including the hit tags, confidence and location.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RecognitionResults")
+    @Expose
+    private RecognitionResult [] RecognitionResults;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -167,16 +175,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get This field is used to return the confidence under the current tag (Label). Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the text is more likely to fall into the category of the current returned tag; for example, *Porn 99* indicates that the text is highly likely to be pornographic, while *Porn 0* indicates that the text is not pornographic. 
-     * @return Score This field is used to return the confidence under the current tag (Label). Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the text is more likely to fall into the category of the current returned tag; for example, *Porn 99* indicates that the text is highly likely to be pornographic, while *Porn 0* indicates that the text is not pornographic.
+     * Get Confidence score of the under the current label. Value range: 0 (**the lowest confidence**) to 100 (**the highest confidence**). For example, *Porn 99* indicates that the image is highly likely to be pornographic, while *Porn 0* indicates that the image is not pornographic. 
+     * @return Score Confidence score of the under the current label. Value range: 0 (**the lowest confidence**) to 100 (**the highest confidence**). For example, *Porn 99* indicates that the image is highly likely to be pornographic, while *Porn 0* indicates that the image is not pornographic.
      */
     public Long getScore() {
         return this.Score;
     }
 
     /**
-     * Set This field is used to return the confidence under the current tag (Label). Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the text is more likely to fall into the category of the current returned tag; for example, *Porn 99* indicates that the text is highly likely to be pornographic, while *Porn 0* indicates that the text is not pornographic.
-     * @param Score This field is used to return the confidence under the current tag (Label). Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the text is more likely to fall into the category of the current returned tag; for example, *Porn 99* indicates that the text is highly likely to be pornographic, while *Porn 0* indicates that the text is not pornographic.
+     * Set Confidence score of the under the current label. Value range: 0 (**the lowest confidence**) to 100 (**the highest confidence**). For example, *Porn 99* indicates that the image is highly likely to be pornographic, while *Porn 0* indicates that the image is not pornographic.
+     * @param Score Confidence score of the under the current label. Value range: 0 (**the lowest confidence**) to 100 (**the highest confidence**). For example, *Porn 99* indicates that the image is highly likely to be pornographic, while *Porn 0* indicates that the image is not pornographic.
      */
     public void setScore(Long Score) {
         this.Score = Score;
@@ -331,6 +339,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Image recognition result, including the hit tags, confidence and location.
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return RecognitionResults Image recognition result, including the hit tags, confidence and location.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public RecognitionResult [] getRecognitionResults() {
+        return this.RecognitionResults;
+    }
+
+    /**
+     * Set Image recognition result, including the hit tags, confidence and location.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param RecognitionResults Image recognition result, including the hit tags, confidence and location.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setRecognitionResults(RecognitionResult [] RecognitionResults) {
+        this.RecognitionResults = RecognitionResults;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -402,6 +430,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.FileMD5 != null) {
             this.FileMD5 = new String(source.FileMD5);
         }
+        if (source.RecognitionResults != null) {
+            this.RecognitionResults = new RecognitionResult[source.RecognitionResults.length];
+            for (int i = 0; i < source.RecognitionResults.length; i++) {
+                this.RecognitionResults[i] = new RecognitionResult(source.RecognitionResults[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -424,6 +458,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "BizType", this.BizType);
         this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamSimple(map, prefix + "FileMD5", this.FileMD5);
+        this.setParamArrayObj(map, prefix + "RecognitionResults.", this.RecognitionResults);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

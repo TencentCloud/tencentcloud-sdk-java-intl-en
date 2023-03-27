@@ -23,23 +23,23 @@ import java.util.HashMap;
 public class GetWatermarkRequest extends AbstractModel{
 
     /**
-    * The SDKAppID assigned by LCIC.	
+    * The SDKAppID assigned by LCIC.
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-     * Get The SDKAppID assigned by LCIC.	 
-     * @return SdkAppId The SDKAppID assigned by LCIC.	
+     * Get The SDKAppID assigned by LCIC. 
+     * @return SdkAppId The SDKAppID assigned by LCIC.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set The SDKAppID assigned by LCIC.	
-     * @param SdkAppId The SDKAppID assigned by LCIC.	
+     * Set The SDKAppID assigned by LCIC.
+     * @param SdkAppId The SDKAppID assigned by LCIC.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;

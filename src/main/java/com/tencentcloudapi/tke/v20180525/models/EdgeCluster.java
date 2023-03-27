@@ -117,6 +117,22 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private String Level;
 
     /**
+    * Whether to support auto upgrade of cluster spec level
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AutoUpgradeClusterLevel")
+    @Expose
+    private Boolean AutoUpgradeClusterLevel;
+
+    /**
+    * Cluster billing mode. Valid values: `POSTPAID_BY_HOUR`, `PREPAID`
+Note: This field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ChargeType")
+    @Expose
+    private String ChargeType;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -336,6 +352,46 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.Level = Level;
     }
 
+    /**
+     * Get Whether to support auto upgrade of cluster spec level
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return AutoUpgradeClusterLevel Whether to support auto upgrade of cluster spec level
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Boolean getAutoUpgradeClusterLevel() {
+        return this.AutoUpgradeClusterLevel;
+    }
+
+    /**
+     * Set Whether to support auto upgrade of cluster spec level
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param AutoUpgradeClusterLevel Whether to support auto upgrade of cluster spec level
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setAutoUpgradeClusterLevel(Boolean AutoUpgradeClusterLevel) {
+        this.AutoUpgradeClusterLevel = AutoUpgradeClusterLevel;
+    }
+
+    /**
+     * Get Cluster billing mode. Valid values: `POSTPAID_BY_HOUR`, `PREPAID`
+Note: This field may return `null`, indicating that no valid values can be obtained. 
+     * @return ChargeType Cluster billing mode. Valid values: `POSTPAID_BY_HOUR`, `PREPAID`
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public String getChargeType() {
+        return this.ChargeType;
+    }
+
+    /**
+     * Set Cluster billing mode. Valid values: `POSTPAID_BY_HOUR`, `PREPAID`
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ChargeType Cluster billing mode. Valid values: `POSTPAID_BY_HOUR`, `PREPAID`
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setChargeType(String ChargeType) {
+        this.ChargeType = ChargeType;
+    }
+
     public EdgeCluster() {
     }
 
@@ -383,6 +439,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.Level != null) {
             this.Level = new String(source.Level);
         }
+        if (source.AutoUpgradeClusterLevel != null) {
+            this.AutoUpgradeClusterLevel = new Boolean(source.AutoUpgradeClusterLevel);
+        }
+        if (source.ChargeType != null) {
+            this.ChargeType = new String(source.ChargeType);
+        }
     }
 
 
@@ -403,6 +465,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "MaxNodePodNum", this.MaxNodePodNum);
         this.setParamObj(map, prefix + "ClusterAdvancedSettings.", this.ClusterAdvancedSettings);
         this.setParamSimple(map, prefix + "Level", this.Level);
+        this.setParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
+        this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
 
     }
 }

@@ -37,21 +37,21 @@ public class DescribeGroupListRequest extends AbstractModel{
     private Long Page;
 
     /**
-    * The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
+    * The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * The user ID of the teacher, which is used as the filter. This parameter and `MemberId` are mutually exclusive. If both are specified, only this parameter will take effect.
+    * The user ID of the teacher, which is used as the filter. This parameter and MemberId are mutually exclusive. If both are specified, only this parameter will take effect.
     */
     @SerializedName("TeacherId")
     @Expose
     private String TeacherId;
 
     /**
-    * The user ID of a member, which is used as the filter. This parameter and `TeacherId` are mutually exclusive.
+    * The user ID of a member, which is used as the filter. This parameter and TeacherId are mutually exclusive.
     */
     @SerializedName("MemberId")
     @Expose
@@ -90,48 +90,48 @@ public class DescribeGroupListRequest extends AbstractModel{
     }
 
     /**
-     * Get The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default. 
-     * @return Limit The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
+     * Get The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default. 
+     * @return Limit The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
-     * @param Limit The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
+     * Set The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
+     * @param Limit The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get The user ID of the teacher, which is used as the filter. This parameter and `MemberId` are mutually exclusive. If both are specified, only this parameter will take effect. 
-     * @return TeacherId The user ID of the teacher, which is used as the filter. This parameter and `MemberId` are mutually exclusive. If both are specified, only this parameter will take effect.
+     * Get The user ID of the teacher, which is used as the filter. This parameter and MemberId are mutually exclusive. If both are specified, only this parameter will take effect. 
+     * @return TeacherId The user ID of the teacher, which is used as the filter. This parameter and MemberId are mutually exclusive. If both are specified, only this parameter will take effect.
      */
     public String getTeacherId() {
         return this.TeacherId;
     }
 
     /**
-     * Set The user ID of the teacher, which is used as the filter. This parameter and `MemberId` are mutually exclusive. If both are specified, only this parameter will take effect.
-     * @param TeacherId The user ID of the teacher, which is used as the filter. This parameter and `MemberId` are mutually exclusive. If both are specified, only this parameter will take effect.
+     * Set The user ID of the teacher, which is used as the filter. This parameter and MemberId are mutually exclusive. If both are specified, only this parameter will take effect.
+     * @param TeacherId The user ID of the teacher, which is used as the filter. This parameter and MemberId are mutually exclusive. If both are specified, only this parameter will take effect.
      */
     public void setTeacherId(String TeacherId) {
         this.TeacherId = TeacherId;
     }
 
     /**
-     * Get The user ID of a member, which is used as the filter. This parameter and `TeacherId` are mutually exclusive. 
-     * @return MemberId The user ID of a member, which is used as the filter. This parameter and `TeacherId` are mutually exclusive.
+     * Get The user ID of a member, which is used as the filter. This parameter and TeacherId are mutually exclusive. 
+     * @return MemberId The user ID of a member, which is used as the filter. This parameter and TeacherId are mutually exclusive.
      */
     public String getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set The user ID of a member, which is used as the filter. This parameter and `TeacherId` are mutually exclusive.
-     * @param MemberId The user ID of a member, which is used as the filter. This parameter and `TeacherId` are mutually exclusive.
+     * Set The user ID of a member, which is used as the filter. This parameter and TeacherId are mutually exclusive.
+     * @param MemberId The user ID of a member, which is used as the filter. This parameter and TeacherId are mutually exclusive.
      */
     public void setMemberId(String MemberId) {
         this.MemberId = MemberId;

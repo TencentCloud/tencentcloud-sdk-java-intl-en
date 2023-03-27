@@ -23,46 +23,46 @@ import java.util.HashMap;
 public class BatchDeleteRecordRequest extends AbstractModel{
 
     /**
-    * The room IDs.	
+    * The room IDs.
     */
     @SerializedName("RoomIds")
     @Expose
     private Long [] RoomIds;
 
     /**
-    * The SDKAppID assigned by LCIC.	
+    * The SDKAppID assigned by LCIC.
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-     * Get The room IDs.	 
-     * @return RoomIds The room IDs.	
+     * Get The room IDs. 
+     * @return RoomIds The room IDs.
      */
     public Long [] getRoomIds() {
         return this.RoomIds;
     }
 
     /**
-     * Set The room IDs.	
-     * @param RoomIds The room IDs.	
+     * Set The room IDs.
+     * @param RoomIds The room IDs.
      */
     public void setRoomIds(Long [] RoomIds) {
         this.RoomIds = RoomIds;
     }
 
     /**
-     * Get The SDKAppID assigned by LCIC.	 
-     * @return SdkAppId The SDKAppID assigned by LCIC.	
+     * Get The SDKAppID assigned by LCIC. 
+     * @return SdkAppId The SDKAppID assigned by LCIC.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set The SDKAppID assigned by LCIC.	
-     * @param SdkAppId The SDKAppID assigned by LCIC.	
+     * Set The SDKAppID assigned by LCIC.
+     * @param SdkAppId The SDKAppID assigned by LCIC.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;

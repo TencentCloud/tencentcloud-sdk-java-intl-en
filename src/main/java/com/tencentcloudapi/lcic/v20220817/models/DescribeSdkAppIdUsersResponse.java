@@ -30,8 +30,7 @@ public class DescribeSdkAppIdUsersResponse extends AbstractModel{
     private Long Total;
 
     /**
-    * The information of the users.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The information of the users. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Users")
     @Expose
@@ -61,20 +60,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The information of the users.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Users The information of the users.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The information of the users. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Users The information of the users. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public UserInfo [] getUsers() {
         return this.Users;
     }
 
     /**
-     * Set The information of the users.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Users The information of the users.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The information of the users. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Users The information of the users. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUsers(UserInfo [] Users) {
         this.Users = Users;

@@ -13,28 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.lcic.v20220817.models;
+package com.tencentcloudapi.cls.v20201016.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDocumentsByRoomResponse extends AbstractModel{
+public class DescribeCosRechargesResponse extends AbstractModel{
 
     /**
-    * The information of the documents. Note: This field may return null, indicating that no valid values can be obtained.
+    * See the description of the `CosRechargeInfo` structure.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
-    @SerializedName("Documents")
+    @SerializedName("Data")
     @Expose
-    private DocumentInfo [] Documents;
-
-    /**
-    * The total number of records that meet the conditions.
-    */
-    @SerializedName("Total")
-    @Expose
-    private Long Total;
+    private CosRechargeInfo [] Data;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +38,23 @@ public class DescribeDocumentsByRoomResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The information of the documents. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Documents The information of the documents. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get See the description of the `CosRechargeInfo` structure.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Data See the description of the `CosRechargeInfo` structure.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public DocumentInfo [] getDocuments() {
-        return this.Documents;
+    public CosRechargeInfo [] getData() {
+        return this.Data;
     }
 
     /**
-     * Set The information of the documents. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Documents The information of the documents. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set See the description of the `CosRechargeInfo` structure.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Data See the description of the `CosRechargeInfo` structure.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setDocuments(DocumentInfo [] Documents) {
-        this.Documents = Documents;
-    }
-
-    /**
-     * Get The total number of records that meet the conditions. 
-     * @return Total The total number of records that meet the conditions.
-     */
-    public Long getTotal() {
-        return this.Total;
-    }
-
-    /**
-     * Set The total number of records that meet the conditions.
-     * @param Total The total number of records that meet the conditions.
-     */
-    public void setTotal(Long Total) {
-        this.Total = Total;
+    public void setData(CosRechargeInfo [] Data) {
+        this.Data = Data;
     }
 
     /**
@@ -91,22 +73,19 @@ public class DescribeDocumentsByRoomResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeDocumentsByRoomResponse() {
+    public DescribeCosRechargesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDocumentsByRoomResponse(DescribeDocumentsByRoomResponse source) {
-        if (source.Documents != null) {
-            this.Documents = new DocumentInfo[source.Documents.length];
-            for (int i = 0; i < source.Documents.length; i++) {
-                this.Documents[i] = new DocumentInfo(source.Documents[i]);
+    public DescribeCosRechargesResponse(DescribeCosRechargesResponse source) {
+        if (source.Data != null) {
+            this.Data = new CosRechargeInfo[source.Data.length];
+            for (int i = 0; i < source.Data.length; i++) {
+                this.Data[i] = new CosRechargeInfo(source.Data[i]);
             }
-        }
-        if (source.Total != null) {
-            this.Total = new Long(source.Total);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +97,7 @@ public class DescribeDocumentsByRoomResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Documents.", this.Documents);
-        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

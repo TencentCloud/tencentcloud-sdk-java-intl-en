@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class DeleteRecordRequest extends AbstractModel{
 
     /**
-    * The room ID.	
+    * The room ID.
     */
     @SerializedName("RoomId")
     @Expose
@@ -37,16 +37,16 @@ public class DeleteRecordRequest extends AbstractModel{
     private Long SdkAppId;
 
     /**
-     * Get The room ID.	 
-     * @return RoomId The room ID.	
+     * Get The room ID. 
+     * @return RoomId The room ID.
      */
     public Long getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set The room ID.	
-     * @param RoomId The room ID.	
+     * Set The room ID.
+     * @param RoomId The room ID.
      */
     public void setRoomId(Long RoomId) {
         this.RoomId = RoomId;

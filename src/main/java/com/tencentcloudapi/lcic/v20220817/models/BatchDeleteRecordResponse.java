@@ -23,8 +23,7 @@ import java.util.HashMap;
 public class BatchDeleteRecordResponse extends AbstractModel{
 
     /**
-    * The IDs of the rooms whose recordings are deleted.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The IDs of the rooms whose recordings are deleted. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RoomIds")
     @Expose
@@ -38,20 +37,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get The IDs of the rooms whose recordings are deleted.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RoomIds The IDs of the rooms whose recordings are deleted.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The IDs of the rooms whose recordings are deleted. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RoomIds The IDs of the rooms whose recordings are deleted. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long [] getRoomIds() {
         return this.RoomIds;
     }
 
     /**
-     * Set The IDs of the rooms whose recordings are deleted.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RoomIds The IDs of the rooms whose recordings are deleted.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The IDs of the rooms whose recordings are deleted. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RoomIds The IDs of the rooms whose recordings are deleted. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRoomIds(Long [] RoomIds) {
         this.RoomIds = RoomIds;

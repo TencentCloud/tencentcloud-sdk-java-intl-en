@@ -36,6 +36,7 @@ public class DescribeTaskDetailResponse extends AbstractModel{
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
 <li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
+<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -236,7 +237,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`RemoveWatermarkTask`: Watermark removal</li>
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
 <li>`RebuildMedia`; Remastering audio/video</li>
-<li> `ReviewAudioVideo`: Moderation</li> 
+<li> `ReviewAudioVideo`: Moderation</li>
+<li>`ExtractTraceWatermark`: Digital watermark extraction</li> 
      * @return TaskType The task type. Valid values:
 <li>`Procedure`: Video processing</li>
 <li>`EditMedia`: Video editing</li>
@@ -250,6 +252,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
 <li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
+<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
      */
     public String getTaskType() {
         return this.TaskType;
@@ -269,6 +272,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
 <li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
+<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
      * @param TaskType The task type. Valid values:
 <li>`Procedure`: Video processing</li>
 <li>`EditMedia`: Video editing</li>
@@ -282,6 +286,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
 <li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
+<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;

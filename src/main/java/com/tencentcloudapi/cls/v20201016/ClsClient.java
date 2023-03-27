@@ -179,6 +179,26 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a COS import task.
+     * @param req CreateCosRechargeRequest
+     * @return CreateCosRechargeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCosRechargeResponse CreateCosRecharge(CreateCosRechargeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateCosRechargeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateCosRechargeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateCosRecharge");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to create a download task. To get the returned download address, call `DescribeExports` to view the task list. The `CosPath` parameter is also included for download address. For more information, visit https://intl.cloud.tencent.com/document/product/614/56449.?from_cn_redirect=1
      * @param req CreateExportRequest
      * @return CreateExportResponse
@@ -259,7 +279,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a shipping rule. Note: To use this API, you need to check whether you have configured the role and permission for COS shipping tasks. If not, see **Viewing and Configuring Shipping Authorization** at https://intl.cloud.tencent.com/document/product/614/71623.?from_cn_redirect=1
+     *This API is used to create a task to ship to COS. Note: To use this API, you need to check whether you have configured the role and permission for shipping to COS. If not, see **Viewing and Configuring Shipping Authorization** at https://intl.cloud.tencent.com/document/product/614/71623.?from_cn_redirect=1
      * @param req CreateShipperRequest
      * @return CreateShipperResponse
      * @throws TencentCloudSDKException
@@ -639,6 +659,26 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get COS import configuration.
+     * @param req DescribeCosRechargesRequest
+     * @return DescribeCosRechargesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCosRechargesResponse DescribeCosRecharges(DescribeCosRechargesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeCosRechargesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeCosRechargesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeCosRecharges");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the list of log download tasks.
      * @param req DescribeExportsRequest
      * @return DescribeExportsResponse
@@ -839,7 +879,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the list of shipping rules.
+     *This API is used to get the configuration of the task of shipping to COS.
      * @param req DescribeShippersRequest
      * @return DescribeShippersResponse
      * @throws TencentCloudSDKException
@@ -859,7 +899,7 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     * This API is used to get the list of log topics and supports pagination.
+     *This API is used to get the list of log topics and supports pagination.
      * @param req DescribeTopicsRequest
      * @return DescribeTopicsResponse
      * @throws TencentCloudSDKException
@@ -991,6 +1031,26 @@ public class ClsClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<ModifyConsumerResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "ModifyConsumer");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to modify a COS import task.
+     * @param req ModifyCosRechargeRequest
+     * @return ModifyCosRechargeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCosRechargeResponse ModifyCosRecharge(ModifyCosRechargeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyCosRechargeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyCosRechargeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyCosRecharge");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

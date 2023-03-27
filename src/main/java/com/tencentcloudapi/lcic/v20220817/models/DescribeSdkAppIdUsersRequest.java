@@ -30,14 +30,14 @@ public class DescribeSdkAppIdUsersRequest extends AbstractModel{
     private Long SdkAppId;
 
     /**
-    * The page to return records from. The default value is `1`.
+    * The page to return records from. The default value is 1.
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-    * The maximum number of records to return per page. The default value is `20`.
+    * The maximum number of records to return per page. The default value is 20.
     */
     @SerializedName("Limit")
     @Expose
@@ -60,32 +60,32 @@ public class DescribeSdkAppIdUsersRequest extends AbstractModel{
     }
 
     /**
-     * Get The page to return records from. The default value is `1`. 
-     * @return Page The page to return records from. The default value is `1`.
+     * Get The page to return records from. The default value is 1. 
+     * @return Page The page to return records from. The default value is 1.
      */
     public Long getPage() {
         return this.Page;
     }
 
     /**
-     * Set The page to return records from. The default value is `1`.
-     * @param Page The page to return records from. The default value is `1`.
+     * Set The page to return records from. The default value is 1.
+     * @param Page The page to return records from. The default value is 1.
      */
     public void setPage(Long Page) {
         this.Page = Page;
     }
 
     /**
-     * Get The maximum number of records to return per page. The default value is `20`. 
-     * @return Limit The maximum number of records to return per page. The default value is `20`.
+     * Get The maximum number of records to return per page. The default value is 20. 
+     * @return Limit The maximum number of records to return per page. The default value is 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The maximum number of records to return per page. The default value is `20`.
-     * @param Limit The maximum number of records to return per page. The default value is `20`.
+     * Set The maximum number of records to return per page. The default value is 20.
+     * @param Limit The maximum number of records to return per page. The default value is 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

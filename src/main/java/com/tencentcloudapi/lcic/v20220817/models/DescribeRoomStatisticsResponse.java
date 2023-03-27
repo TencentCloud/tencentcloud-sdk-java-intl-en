@@ -51,30 +51,28 @@ public class DescribeRoomStatisticsResponse extends AbstractModel{
     private MemberRecord [] MemberRecords;
 
     /**
-    * The actual start time of the room, in Unix timestamp, accurate to seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The actual start time of the room, in Unix timestamp, accurate to seconds. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RealStartTime")
     @Expose
     private Long RealStartTime;
 
     /**
-    * The actual end time of the room, in Unix timestamp, accurate to seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The actual end time of the room, in Unix timestamp, accurate to seconds. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RealEndTime")
     @Expose
     private Long RealEndTime;
 
     /**
-    * The total number of room messages.
+    * The total message count of the room.
     */
     @SerializedName("MessageCount")
     @Expose
     private Long MessageCount;
 
     /**
-    * The total number of mics in the room.
+    * The total number of mic-on students in the room.
     */
     @SerializedName("MicCount")
     @Expose
@@ -152,72 +150,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The actual start time of the room, in Unix timestamp, accurate to seconds.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RealStartTime The actual start time of the room, in Unix timestamp, accurate to seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The actual start time of the room, in Unix timestamp, accurate to seconds. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RealStartTime The actual start time of the room, in Unix timestamp, accurate to seconds. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getRealStartTime() {
         return this.RealStartTime;
     }
 
     /**
-     * Set The actual start time of the room, in Unix timestamp, accurate to seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RealStartTime The actual start time of the room, in Unix timestamp, accurate to seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The actual start time of the room, in Unix timestamp, accurate to seconds. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RealStartTime The actual start time of the room, in Unix timestamp, accurate to seconds. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRealStartTime(Long RealStartTime) {
         this.RealStartTime = RealStartTime;
     }
 
     /**
-     * Get The actual end time of the room, in Unix timestamp, accurate to seconds.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RealEndTime The actual end time of the room, in Unix timestamp, accurate to seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The actual end time of the room, in Unix timestamp, accurate to seconds. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RealEndTime The actual end time of the room, in Unix timestamp, accurate to seconds. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getRealEndTime() {
         return this.RealEndTime;
     }
 
     /**
-     * Set The actual end time of the room, in Unix timestamp, accurate to seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RealEndTime The actual end time of the room, in Unix timestamp, accurate to seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The actual end time of the room, in Unix timestamp, accurate to seconds. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RealEndTime The actual end time of the room, in Unix timestamp, accurate to seconds. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRealEndTime(Long RealEndTime) {
         this.RealEndTime = RealEndTime;
     }
 
     /**
-     * Get The total number of room messages. 
-     * @return MessageCount The total number of room messages.
+     * Get The total message count of the room. 
+     * @return MessageCount The total message count of the room.
      */
     public Long getMessageCount() {
         return this.MessageCount;
     }
 
     /**
-     * Set The total number of room messages.
-     * @param MessageCount The total number of room messages.
+     * Set The total message count of the room.
+     * @param MessageCount The total message count of the room.
      */
     public void setMessageCount(Long MessageCount) {
         this.MessageCount = MessageCount;
     }
 
     /**
-     * Get The total number of mics in the room. 
-     * @return MicCount The total number of mics in the room.
+     * Get The total number of mic-on students in the room. 
+     * @return MicCount The total number of mic-on students in the room.
      */
     public Long getMicCount() {
         return this.MicCount;
     }
 
     /**
-     * Set The total number of mics in the room.
-     * @param MicCount The total number of mics in the room.
+     * Set The total number of mic-on students in the room.
+     * @param MicCount The total number of mic-on students in the room.
      */
     public void setMicCount(Long MicCount) {
         this.MicCount = MicCount;

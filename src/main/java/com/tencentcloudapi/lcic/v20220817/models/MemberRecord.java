@@ -114,21 +114,21 @@ public class MemberRecord extends AbstractModel{
     private String Location;
 
     /**
-    * The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program.
+    * The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
     */
     @SerializedName("Device")
     @Expose
     private Long Device;
 
     /**
-    * The number of times each member mics.
+    * The number of times a user turned their mic on.
     */
     @SerializedName("PerMemberMicCount")
     @Expose
     private Long PerMemberMicCount;
 
     /**
-    * The number of messages sent by each member.
+    * The number of messages sent by a user.
     */
     @SerializedName("PerMemberMessageCount")
     @Expose
@@ -343,48 +343,48 @@ public class MemberRecord extends AbstractModel{
     }
 
     /**
-     * Get The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program. 
-     * @return Device The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program.
+     * Get The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program. 
+     * @return Device The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
      */
     public Long getDevice() {
         return this.Device;
     }
 
     /**
-     * Set The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program.
-     * @param Device The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program.
+     * Set The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
+     * @param Device The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
      */
     public void setDevice(Long Device) {
         this.Device = Device;
     }
 
     /**
-     * Get The number of times each member mics. 
-     * @return PerMemberMicCount The number of times each member mics.
+     * Get The number of times a user turned their mic on. 
+     * @return PerMemberMicCount The number of times a user turned their mic on.
      */
     public Long getPerMemberMicCount() {
         return this.PerMemberMicCount;
     }
 
     /**
-     * Set The number of times each member mics.
-     * @param PerMemberMicCount The number of times each member mics.
+     * Set The number of times a user turned their mic on.
+     * @param PerMemberMicCount The number of times a user turned their mic on.
      */
     public void setPerMemberMicCount(Long PerMemberMicCount) {
         this.PerMemberMicCount = PerMemberMicCount;
     }
 
     /**
-     * Get The number of messages sent by each member. 
-     * @return PerMemberMessageCount The number of messages sent by each member.
+     * Get The number of messages sent by a user. 
+     * @return PerMemberMessageCount The number of messages sent by a user.
      */
     public Long getPerMemberMessageCount() {
         return this.PerMemberMessageCount;
     }
 
     /**
-     * Set The number of messages sent by each member.
-     * @param PerMemberMessageCount The number of messages sent by each member.
+     * Set The number of messages sent by a user.
+     * @param PerMemberMessageCount The number of messages sent by a user.
      */
     public void setPerMemberMessageCount(Long PerMemberMessageCount) {
         this.PerMemberMessageCount = PerMemberMessageCount;

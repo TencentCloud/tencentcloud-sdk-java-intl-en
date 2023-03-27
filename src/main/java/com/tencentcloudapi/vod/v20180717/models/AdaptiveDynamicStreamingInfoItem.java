@@ -30,7 +30,9 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
     private Long Definition;
 
     /**
-    * Container format. Valid values: hls, dash.
+    * The packaging format. Valid values:
+<li>`HLS`</li>
+<li>`DASH`</li>
     */
     @SerializedName("Package")
     @Expose
@@ -70,6 +72,13 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
     private String DigitalWatermarkType;
 
     /**
+    * The information of the streams.
+    */
+    @SerializedName("SubStreamSet")
+    @Expose
+    private MediaSubStreamInfoItem [] SubStreamSet;
+
+    /**
      * Get Adaptive bitrate streaming specification. 
      * @return Definition Adaptive bitrate streaming specification.
      */
@@ -86,16 +95,24 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
     }
 
     /**
-     * Get Container format. Valid values: hls, dash. 
-     * @return Package Container format. Valid values: hls, dash.
+     * Get The packaging format. Valid values:
+<li>`HLS`</li>
+<li>`DASH`</li> 
+     * @return Package The packaging format. Valid values:
+<li>`HLS`</li>
+<li>`DASH`</li>
      */
     public String getPackage() {
         return this.Package;
     }
 
     /**
-     * Set Container format. Valid values: hls, dash.
-     * @param Package Container format. Valid values: hls, dash.
+     * Set The packaging format. Valid values:
+<li>`HLS`</li>
+<li>`DASH`</li>
+     * @param Package The packaging format. Valid values:
+<li>`HLS`</li>
+<li>`DASH`</li>
      */
     public void setPackage(String Package) {
         this.Package = Package;
@@ -185,6 +202,22 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
         this.DigitalWatermarkType = DigitalWatermarkType;
     }
 
+    /**
+     * Get The information of the streams. 
+     * @return SubStreamSet The information of the streams.
+     */
+    public MediaSubStreamInfoItem [] getSubStreamSet() {
+        return this.SubStreamSet;
+    }
+
+    /**
+     * Set The information of the streams.
+     * @param SubStreamSet The information of the streams.
+     */
+    public void setSubStreamSet(MediaSubStreamInfoItem [] SubStreamSet) {
+        this.SubStreamSet = SubStreamSet;
+    }
+
     public AdaptiveDynamicStreamingInfoItem() {
     }
 
@@ -211,6 +244,12 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
         if (source.DigitalWatermarkType != null) {
             this.DigitalWatermarkType = new String(source.DigitalWatermarkType);
         }
+        if (source.SubStreamSet != null) {
+            this.SubStreamSet = new MediaSubStreamInfoItem[source.SubStreamSet.length];
+            for (int i = 0; i < source.SubStreamSet.length; i++) {
+                this.SubStreamSet[i] = new MediaSubStreamInfoItem(source.SubStreamSet[i]);
+            }
+        }
     }
 
 
@@ -224,6 +263,7 @@ public class AdaptiveDynamicStreamingInfoItem extends AbstractModel{
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "DigitalWatermarkType", this.DigitalWatermarkType);
+        this.setParamArrayObj(map, prefix + "SubStreamSet.", this.SubStreamSet);
 
     }
 }

@@ -37,7 +37,7 @@ public class DescribeCurrentMemberListRequest extends AbstractModel{
     private Long Page;
 
     /**
-    * The maximum number of records per page. The value of this parameter cannot exceed `1000`.
+    * The maximum number of records per page. The value of this parameter cannot exceed 1000.
     */
     @SerializedName("Limit")
     @Expose
@@ -76,16 +76,16 @@ public class DescribeCurrentMemberListRequest extends AbstractModel{
     }
 
     /**
-     * Get The maximum number of records per page. The value of this parameter cannot exceed `1000`. 
-     * @return Limit The maximum number of records per page. The value of this parameter cannot exceed `1000`.
+     * Get The maximum number of records per page. The value of this parameter cannot exceed 1000. 
+     * @return Limit The maximum number of records per page. The value of this parameter cannot exceed 1000.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The maximum number of records per page. The value of this parameter cannot exceed `1000`.
-     * @param Limit The maximum number of records per page. The value of this parameter cannot exceed `1000`.
+     * Set The maximum number of records per page. The value of this parameter cannot exceed 1000.
+     * @param Limit The maximum number of records per page. The value of this parameter cannot exceed 1000.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

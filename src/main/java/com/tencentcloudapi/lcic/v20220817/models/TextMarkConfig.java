@@ -23,56 +23,46 @@ import java.util.HashMap;
 public class TextMarkConfig extends AbstractModel{
 
     /**
-    * The watermark text.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * The watermark text color.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The watermark text color. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Color")
     @Expose
     private String Color;
 
     /**
-     * Get The watermark text.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Text The watermark text.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The watermark text. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Text The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set The watermark text.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Text The watermark text.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Text The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get The watermark text color.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Color The watermark text color.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The watermark text color. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Color The watermark text color. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getColor() {
         return this.Color;
     }
 
     /**
-     * Set The watermark text color.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Color The watermark text color.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The watermark text color. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Color The watermark text color. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setColor(String Color) {
         this.Color = Color;

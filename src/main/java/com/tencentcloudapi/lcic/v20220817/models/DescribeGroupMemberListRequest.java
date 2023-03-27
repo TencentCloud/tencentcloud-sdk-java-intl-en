@@ -37,14 +37,14 @@ public class DescribeGroupMemberListRequest extends AbstractModel{
     private Long SdkAppId;
 
     /**
-    * The page to return records from. The default value is `1`.
+    * The page to return records from. The default value is 1.
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-    * The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
+    * The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
     */
     @SerializedName("Limit")
     @Expose
@@ -83,32 +83,32 @@ public class DescribeGroupMemberListRequest extends AbstractModel{
     }
 
     /**
-     * Get The page to return records from. The default value is `1`. 
-     * @return Page The page to return records from. The default value is `1`.
+     * Get The page to return records from. The default value is 1. 
+     * @return Page The page to return records from. The default value is 1.
      */
     public Long getPage() {
         return this.Page;
     }
 
     /**
-     * Set The page to return records from. The default value is `1`.
-     * @param Page The page to return records from. The default value is `1`.
+     * Set The page to return records from. The default value is 1.
+     * @param Page The page to return records from. The default value is 1.
      */
     public void setPage(Long Page) {
         this.Page = Page;
     }
 
     /**
-     * Get The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default. 
-     * @return Limit The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
+     * Get The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default. 
+     * @return Limit The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
-     * @param Limit The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
+     * Set The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
+     * @param Limit The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -23,32 +23,28 @@ import java.util.HashMap;
 public class GetWatermarkResponse extends AbstractModel{
 
     /**
-    * The watermark settings for the teacher’s video.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The watermark settings for the teacher’s video. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TeacherLogo")
     @Expose
     private WatermarkConfig TeacherLogo;
 
     /**
-    * The watermark settings for the whiteboard.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The watermark settings for the whiteboard. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BoardLogo")
     @Expose
     private WatermarkConfig BoardLogo;
 
     /**
-    * The background image.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The background image. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BackgroundPicture")
     @Expose
     private BackgroundPictureConfig BackgroundPicture;
 
     /**
-    * The watermark text.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Text")
     @Expose
@@ -62,80 +58,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get The watermark settings for the teacher’s video.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TeacherLogo The watermark settings for the teacher’s video.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The watermark settings for the teacher’s video. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TeacherLogo The watermark settings for the teacher’s video. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public WatermarkConfig getTeacherLogo() {
         return this.TeacherLogo;
     }
 
     /**
-     * Set The watermark settings for the teacher’s video.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TeacherLogo The watermark settings for the teacher’s video.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The watermark settings for the teacher’s video. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TeacherLogo The watermark settings for the teacher’s video. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTeacherLogo(WatermarkConfig TeacherLogo) {
         this.TeacherLogo = TeacherLogo;
     }
 
     /**
-     * Get The watermark settings for the whiteboard.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BoardLogo The watermark settings for the whiteboard.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The watermark settings for the whiteboard. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BoardLogo The watermark settings for the whiteboard. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public WatermarkConfig getBoardLogo() {
         return this.BoardLogo;
     }
 
     /**
-     * Set The watermark settings for the whiteboard.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BoardLogo The watermark settings for the whiteboard.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The watermark settings for the whiteboard. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BoardLogo The watermark settings for the whiteboard. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBoardLogo(WatermarkConfig BoardLogo) {
         this.BoardLogo = BoardLogo;
     }
 
     /**
-     * Get The background image.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BackgroundPicture The background image.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The background image. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BackgroundPicture The background image. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public BackgroundPictureConfig getBackgroundPicture() {
         return this.BackgroundPicture;
     }
 
     /**
-     * Set The background image.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BackgroundPicture The background image.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The background image. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BackgroundPicture The background image. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBackgroundPicture(BackgroundPictureConfig BackgroundPicture) {
         this.BackgroundPicture = BackgroundPicture;
     }
 
     /**
-     * Get The watermark text.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Text The watermark text.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The watermark text. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Text The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public TextMarkConfig getText() {
         return this.Text;
     }
 
     /**
-     * Set The watermark text.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Text The watermark text.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Text The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setText(TextMarkConfig Text) {
         this.Text = Text;

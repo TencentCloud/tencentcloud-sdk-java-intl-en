@@ -51,21 +51,21 @@ public class CreateRoomRequest extends AbstractModel{
     private Long SdkAppId;
 
     /**
-    * Resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD
+    * 	Resolution. Valid values: 1: SD; 2: HD; 3: FHD
     */
     @SerializedName("Resolution")
     @Expose
     private Long Resolution;
 
     /**
-    * Maximum number of mic-on users (excluding teachers). Value range: [0, 16]	
+    * Maximum number of mic-on users (excluding teachers). Value range: [0, 16]
     */
     @SerializedName("MaxMicNumber")
     @Expose
     private Long MaxMicNumber;
 
     /**
-    * The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only. 
+    * The room subtype. Valid values: videodoc: Document + Video; video: Video only.
     */
     @SerializedName("SubType")
     @Expose
@@ -79,21 +79,21 @@ public class CreateRoomRequest extends AbstractModel{
     private String TeacherId;
 
     /**
-    * Whether to automatically turn the mic on when the user enters a room. Valid values: `0`: No (default value); `1`: Yes.
+    * Whether to automatically turn the mic on when the user enters a room. Valid values: 0: No (default value); 1: Yes.
     */
     @SerializedName("AutoMic")
     @Expose
     private Long AutoMic;
 
     /**
-    * Whether to enable the high audio quality mode. Valid values: `0`: No (default value); `1`: Yes.
+    * Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes.
     */
     @SerializedName("AudioQuality")
     @Expose
     private Long AudioQuality;
 
     /**
-    * Whether to disable auto recording. Valid values: `0`: No (default); `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
+    * Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends.
     */
     @SerializedName("DisableRecord")
     @Expose
@@ -185,48 +185,48 @@ public class CreateRoomRequest extends AbstractModel{
     }
 
     /**
-     * Get Resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD 
-     * @return Resolution Resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD
+     * Get 	Resolution. Valid values: 1: SD; 2: HD; 3: FHD 
+     * @return Resolution 	Resolution. Valid values: 1: SD; 2: HD; 3: FHD
      */
     public Long getResolution() {
         return this.Resolution;
     }
 
     /**
-     * Set Resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD
-     * @param Resolution Resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD
+     * Set 	Resolution. Valid values: 1: SD; 2: HD; 3: FHD
+     * @param Resolution 	Resolution. Valid values: 1: SD; 2: HD; 3: FHD
      */
     public void setResolution(Long Resolution) {
         this.Resolution = Resolution;
     }
 
     /**
-     * Get Maximum number of mic-on users (excluding teachers). Value range: [0, 16]	 
-     * @return MaxMicNumber Maximum number of mic-on users (excluding teachers). Value range: [0, 16]	
+     * Get Maximum number of mic-on users (excluding teachers). Value range: [0, 16] 
+     * @return MaxMicNumber Maximum number of mic-on users (excluding teachers). Value range: [0, 16]
      */
     public Long getMaxMicNumber() {
         return this.MaxMicNumber;
     }
 
     /**
-     * Set Maximum number of mic-on users (excluding teachers). Value range: [0, 16]	
-     * @param MaxMicNumber Maximum number of mic-on users (excluding teachers). Value range: [0, 16]	
+     * Set Maximum number of mic-on users (excluding teachers). Value range: [0, 16]
+     * @param MaxMicNumber Maximum number of mic-on users (excluding teachers). Value range: [0, 16]
      */
     public void setMaxMicNumber(Long MaxMicNumber) {
         this.MaxMicNumber = MaxMicNumber;
     }
 
     /**
-     * Get The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only.  
-     * @return SubType The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only. 
+     * Get The room subtype. Valid values: videodoc: Document + Video; video: Video only. 
+     * @return SubType The room subtype. Valid values: videodoc: Document + Video; video: Video only.
      */
     public String getSubType() {
         return this.SubType;
     }
 
     /**
-     * Set The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only. 
-     * @param SubType The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only. 
+     * Set The room subtype. Valid values: videodoc: Document + Video; video: Video only.
+     * @param SubType The room subtype. Valid values: videodoc: Document + Video; video: Video only.
      */
     public void setSubType(String SubType) {
         this.SubType = SubType;
@@ -249,48 +249,48 @@ public class CreateRoomRequest extends AbstractModel{
     }
 
     /**
-     * Get Whether to automatically turn the mic on when the user enters a room. Valid values: `0`: No (default value); `1`: Yes. 
-     * @return AutoMic Whether to automatically turn the mic on when the user enters a room. Valid values: `0`: No (default value); `1`: Yes.
+     * Get Whether to automatically turn the mic on when the user enters a room. Valid values: 0: No (default value); 1: Yes. 
+     * @return AutoMic Whether to automatically turn the mic on when the user enters a room. Valid values: 0: No (default value); 1: Yes.
      */
     public Long getAutoMic() {
         return this.AutoMic;
     }
 
     /**
-     * Set Whether to automatically turn the mic on when the user enters a room. Valid values: `0`: No (default value); `1`: Yes.
-     * @param AutoMic Whether to automatically turn the mic on when the user enters a room. Valid values: `0`: No (default value); `1`: Yes.
+     * Set Whether to automatically turn the mic on when the user enters a room. Valid values: 0: No (default value); 1: Yes.
+     * @param AutoMic Whether to automatically turn the mic on when the user enters a room. Valid values: 0: No (default value); 1: Yes.
      */
     public void setAutoMic(Long AutoMic) {
         this.AutoMic = AutoMic;
     }
 
     /**
-     * Get Whether to enable the high audio quality mode. Valid values: `0`: No (default value); `1`: Yes. 
-     * @return AudioQuality Whether to enable the high audio quality mode. Valid values: `0`: No (default value); `1`: Yes.
+     * Get Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes. 
+     * @return AudioQuality Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes.
      */
     public Long getAudioQuality() {
         return this.AudioQuality;
     }
 
     /**
-     * Set Whether to enable the high audio quality mode. Valid values: `0`: No (default value); `1`: Yes.
-     * @param AudioQuality Whether to enable the high audio quality mode. Valid values: `0`: No (default value); `1`: Yes.
+     * Set Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes.
+     * @param AudioQuality Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes.
      */
     public void setAudioQuality(Long AudioQuality) {
         this.AudioQuality = AudioQuality;
     }
 
     /**
-     * Get Whether to disable auto recording. Valid values: `0`: No (default); `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends. 
-     * @return DisableRecord Whether to disable auto recording. Valid values: `0`: No (default); `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
+     * Get Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends. 
+     * @return DisableRecord Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends.
      */
     public Long getDisableRecord() {
         return this.DisableRecord;
     }
 
     /**
-     * Set Whether to disable auto recording. Valid values: `0`: No (default); `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
-     * @param DisableRecord Whether to disable auto recording. Valid values: `0`: No (default); `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
+     * Set Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends.
+     * @param DisableRecord Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends.
      */
     public void setDisableRecord(Long DisableRecord) {
         this.DisableRecord = DisableRecord;

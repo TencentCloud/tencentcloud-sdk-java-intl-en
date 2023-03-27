@@ -84,6 +84,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private Boolean ExclusiveHSMEnabled;
 
     /**
+    * KMS subscription information.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SubscriptionInfo")
+    @Expose
+    private String SubscriptionInfo;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -239,6 +247,26 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
+     * Get KMS subscription information.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SubscriptionInfo KMS subscription information.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getSubscriptionInfo() {
+        return this.SubscriptionInfo;
+    }
+
+    /**
+     * Set KMS subscription information.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SubscriptionInfo KMS subscription information.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSubscriptionInfo(String SubscriptionInfo) {
+        this.SubscriptionInfo = SubscriptionInfo;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -286,6 +314,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.ExclusiveHSMEnabled != null) {
             this.ExclusiveHSMEnabled = new Boolean(source.ExclusiveHSMEnabled);
         }
+        if (source.SubscriptionInfo != null) {
+            this.SubscriptionInfo = new String(source.SubscriptionInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -304,6 +335,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "ProResourceId", this.ProResourceId);
         this.setParamSimple(map, prefix + "ExclusiveVSMEnabled", this.ExclusiveVSMEnabled);
         this.setParamSimple(map, prefix + "ExclusiveHSMEnabled", this.ExclusiveHSMEnabled);
+        this.setParamSimple(map, prefix + "SubscriptionInfo", this.SubscriptionInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

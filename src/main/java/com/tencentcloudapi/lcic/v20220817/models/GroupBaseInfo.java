@@ -23,56 +23,46 @@ import java.util.HashMap;
 public class GroupBaseInfo extends AbstractModel{
 
     /**
-    * The group names.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The group names. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * The user ID of the teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TeacherId")
     @Expose
     private String TeacherId;
 
     /**
-     * Get The group names.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GroupName The group names.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The group names. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return GroupName The group names. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set The group names.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GroupName The group names.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The group names. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param GroupName The group names. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get The user ID of the teacher.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TeacherId The user ID of the teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TeacherId The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTeacherId() {
         return this.TeacherId;
     }
 
     /**
-     * Set The user ID of the teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TeacherId The user ID of the teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TeacherId The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTeacherId(String TeacherId) {
         this.TeacherId = TeacherId;

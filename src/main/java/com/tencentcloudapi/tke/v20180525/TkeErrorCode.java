@@ -114,7 +114,7 @@ public enum TkeErrorCode {
     // A same task is in progress.
      FAILEDOPERATION_TASKALREADYRUNNING("FailedOperation.TaskAlreadyRunning"),
      
-    // 
+    // This operation is not supported when the task is in the current status.
      FAILEDOPERATION_TASKLIFESTATEERROR("FailedOperation.TaskLifeStateError"),
      
     // Query failed.

@@ -23,150 +23,115 @@ import java.util.HashMap;
 public class GroupInfo extends AbstractModel{
 
     /**
-    * Group ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Group ID Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * The group name.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The group name. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * The user ID of the teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TeacherId")
     @Expose
     private String TeacherId;
 
     /**
-    * The group type. 
-`0`: Ordinary group. 
-`1`: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The group type. 0: Ordinary group. 1: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("GroupType")
     @Expose
     private Long GroupType;
 
     /**
-    * The IDs of the sub-groups.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SubGroupIds")
     @Expose
     private String SubGroupIds;
 
     /**
-     * Get Group ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GroupId Group ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Group ID Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return GroupId Group ID Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Group ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GroupId Group ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Group ID Note: This field may return null, indicating that no valid values can be obtained.
+     * @param GroupId Group ID Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get The group name.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GroupName The group name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The group name. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return GroupName The group name. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set The group name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GroupName The group name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The group name. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param GroupName The group name. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get The user ID of the teacher.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TeacherId The user ID of the teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TeacherId The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTeacherId() {
         return this.TeacherId;
     }
 
     /**
-     * Set The user ID of the teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TeacherId The user ID of the teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TeacherId The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTeacherId(String TeacherId) {
         this.TeacherId = TeacherId;
     }
 
     /**
-     * Get The group type. 
-`0`: Ordinary group. 
-`1`: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GroupType The group type. 
-`0`: Ordinary group. 
-`1`: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The group type. 0: Ordinary group. 1: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return GroupType The group type. 0: Ordinary group. 1: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getGroupType() {
         return this.GroupType;
     }
 
     /**
-     * Set The group type. 
-`0`: Ordinary group. 
-`1`: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GroupType The group type. 
-`0`: Ordinary group. 
-`1`: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The group type. 0: Ordinary group. 1: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param GroupType The group type. 0: Ordinary group. 1: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setGroupType(Long GroupType) {
         this.GroupType = GroupType;
     }
 
     /**
-     * Get The IDs of the sub-groups.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SubGroupIds The IDs of the sub-groups.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SubGroupIds The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSubGroupIds() {
         return this.SubGroupIds;
     }
 
     /**
-     * Set The IDs of the sub-groups.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SubGroupIds The IDs of the sub-groups.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SubGroupIds The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSubGroupIds(String SubGroupIds) {
         this.SubGroupIds = SubGroupIds;

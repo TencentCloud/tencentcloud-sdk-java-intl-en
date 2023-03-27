@@ -23,132 +23,92 @@ import java.util.HashMap;
 public class BatchUserRequest extends AbstractModel{
 
     /**
-    * The SDKAppID assigned by LCIC.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The SDKAppID assigned by LCIC.  Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * The username.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The username.  Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * The user’s ID in your system, which must be unique across the same application.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The user’s ID in your system, which must be unique across the same application.  Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OriginId")
     @Expose
     private String OriginId;
 
     /**
-    * The user’s profile photo.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The user’s profile photo.  Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Avatar")
     @Expose
     private String Avatar;
 
     /**
-     * Get The SDKAppID assigned by LCIC.
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SdkAppId The SDKAppID assigned by LCIC.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The SDKAppID assigned by LCIC.  Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SdkAppId The SDKAppID assigned by LCIC.  Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set The SDKAppID assigned by LCIC.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SdkAppId The SDKAppID assigned by LCIC.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The SDKAppID assigned by LCIC.  Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SdkAppId The SDKAppID assigned by LCIC.  Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get The username.
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Name The username.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The username.  Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Name The username.  Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set The username.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Name The username.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The username.  Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Name The username.  Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get The user’s ID in your system, which must be unique across the same application.
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OriginId The user’s ID in your system, which must be unique across the same application.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The user’s ID in your system, which must be unique across the same application.  Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OriginId The user’s ID in your system, which must be unique across the same application.  Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getOriginId() {
         return this.OriginId;
     }
 
     /**
-     * Set The user’s ID in your system, which must be unique across the same application.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OriginId The user’s ID in your system, which must be unique across the same application.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The user’s ID in your system, which must be unique across the same application.  Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OriginId The user’s ID in your system, which must be unique across the same application.  Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOriginId(String OriginId) {
         this.OriginId = OriginId;
     }
 
     /**
-     * Get The user’s profile photo.
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Avatar The user’s profile photo.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The user’s profile photo.  Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Avatar The user’s profile photo.  Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAvatar() {
         return this.Avatar;
     }
 
     /**
-     * Set The user’s profile photo.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Avatar The user’s profile photo.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The user’s profile photo.  Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Avatar The user’s profile photo.  Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAvatar(String Avatar) {
         this.Avatar = Avatar;

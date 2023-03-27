@@ -20,21 +20,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDocumentsByRoomResponse extends AbstractModel{
+public class GetRoomMessageResponse extends AbstractModel{
 
     /**
-    * The information of the documents. Note: This field may return null, indicating that no valid values can be obtained.
+    * The message list.
     */
-    @SerializedName("Documents")
+    @SerializedName("Messages")
     @Expose
-    private DocumentInfo [] Documents;
-
-    /**
-    * The total number of records that meet the conditions.
-    */
-    @SerializedName("Total")
-    @Expose
-    private Long Total;
+    private MessageList [] Messages;
 
     /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,35 +37,19 @@ public class DescribeDocumentsByRoomResponse extends AbstractModel{
     private String RequestId;
 
     /**
-     * Get The information of the documents. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Documents The information of the documents. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The message list. 
+     * @return Messages The message list.
      */
-    public DocumentInfo [] getDocuments() {
-        return this.Documents;
+    public MessageList [] getMessages() {
+        return this.Messages;
     }
 
     /**
-     * Set The information of the documents. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Documents The information of the documents. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The message list.
+     * @param Messages The message list.
      */
-    public void setDocuments(DocumentInfo [] Documents) {
-        this.Documents = Documents;
-    }
-
-    /**
-     * Get The total number of records that meet the conditions. 
-     * @return Total The total number of records that meet the conditions.
-     */
-    public Long getTotal() {
-        return this.Total;
-    }
-
-    /**
-     * Set The total number of records that meet the conditions.
-     * @param Total The total number of records that meet the conditions.
-     */
-    public void setTotal(Long Total) {
-        this.Total = Total;
+    public void setMessages(MessageList [] Messages) {
+        this.Messages = Messages;
     }
 
     /**
@@ -91,22 +68,19 @@ public class DescribeDocumentsByRoomResponse extends AbstractModel{
         this.RequestId = RequestId;
     }
 
-    public DescribeDocumentsByRoomResponse() {
+    public GetRoomMessageResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDocumentsByRoomResponse(DescribeDocumentsByRoomResponse source) {
-        if (source.Documents != null) {
-            this.Documents = new DocumentInfo[source.Documents.length];
-            for (int i = 0; i < source.Documents.length; i++) {
-                this.Documents[i] = new DocumentInfo(source.Documents[i]);
+    public GetRoomMessageResponse(GetRoomMessageResponse source) {
+        if (source.Messages != null) {
+            this.Messages = new MessageList[source.Messages.length];
+            for (int i = 0; i < source.Messages.length; i++) {
+                this.Messages[i] = new MessageList(source.Messages[i]);
             }
-        }
-        if (source.Total != null) {
-            this.Total = new Long(source.Total);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -118,8 +92,7 @@ public class DescribeDocumentsByRoomResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Documents.", this.Documents);
-        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "Messages.", this.Messages);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

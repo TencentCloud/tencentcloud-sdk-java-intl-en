@@ -116,6 +116,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String RewriteType;
 
     /**
+    * CLB domain name
+Note: This field may return `null`, indicating that no valid value can be obtained.
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
      * Get Environment ID
 Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return EnvironmentId Environment ID
@@ -343,6 +351,26 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.RewriteType = RewriteType;
     }
 
+    /**
+     * Get CLB domain name
+Note: This field may return `null`, indicating that no valid value can be obtained. 
+     * @return Domain CLB domain name
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set CLB domain name
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param Domain CLB domain name
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
     public IngressInfo() {
     }
 
@@ -393,6 +421,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.RewriteType != null) {
             this.RewriteType = new String(source.RewriteType);
         }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
     }
 
 
@@ -412,6 +443,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Mixed", this.Mixed);
         this.setParamSimple(map, prefix + "RewriteType", this.RewriteType);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }

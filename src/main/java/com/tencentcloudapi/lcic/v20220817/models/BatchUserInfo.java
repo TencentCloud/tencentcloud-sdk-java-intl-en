@@ -31,16 +31,14 @@ public class BatchUserInfo extends AbstractModel{
     private Long SdkAppId;
 
     /**
-    * The user ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The user ID. Note: This field may return null, indicating that no valid values can be obtained
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as `UserId`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as UserId. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OriginId")
     @Expose
@@ -67,40 +65,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The user ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UserId The user ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The user ID. Note: This field may return null, indicating that no valid values can be obtained 
+     * @return UserId The user ID. Note: This field may return null, indicating that no valid values can be obtained
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set The user ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UserId The user ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The user ID. Note: This field may return null, indicating that no valid values can be obtained
+     * @param UserId The user ID. Note: This field may return null, indicating that no valid values can be obtained
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as `UserId`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OriginId The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as `UserId`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as UserId. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OriginId The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as UserId. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getOriginId() {
         return this.OriginId;
     }
 
     /**
-     * Set The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as `UserId`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OriginId The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as `UserId`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as UserId. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OriginId The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as UserId. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOriginId(String OriginId) {
         this.OriginId = OriginId;

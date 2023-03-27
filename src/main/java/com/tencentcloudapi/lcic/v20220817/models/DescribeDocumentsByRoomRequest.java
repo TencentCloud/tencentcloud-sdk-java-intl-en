@@ -44,19 +44,14 @@ public class DescribeDocumentsByRoomRequest extends AbstractModel{
     private Long Page;
 
     /**
-    * The maximum number of records to return per page. The maximum value can be `1000`. The default value is `100`.
+    * The maximum number of records to return per page. The maximum value can be 1000. The default value is 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * The document access type.
-[0]: The private documents of the owner.
-[1]: The public documents of the owner.
-[0,1]: The private and public documents of the owner.
-[2]: The private and public documents of all users (including the owner).
-Default value: [2].
+    * The document access type. [0]: The private documents of the owner. [1]: The public documents of the owner. [0,1]: The private and public documents of the owner. [2]: The private and public documents of all users (including the owner). Default value: [2].
     */
     @SerializedName("Permission")
     @Expose
@@ -118,52 +113,32 @@ Default value: [2].
     }
 
     /**
-     * Get The maximum number of records to return per page. The maximum value can be `1000`. The default value is `100`. 
-     * @return Limit The maximum number of records to return per page. The maximum value can be `1000`. The default value is `100`.
+     * Get The maximum number of records to return per page. The maximum value can be 1000. The default value is 100. 
+     * @return Limit The maximum number of records to return per page. The maximum value can be 1000. The default value is 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The maximum number of records to return per page. The maximum value can be `1000`. The default value is `100`.
-     * @param Limit The maximum number of records to return per page. The maximum value can be `1000`. The default value is `100`.
+     * Set The maximum number of records to return per page. The maximum value can be 1000. The default value is 100.
+     * @param Limit The maximum number of records to return per page. The maximum value can be 1000. The default value is 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get The document access type.
-[0]: The private documents of the owner.
-[1]: The public documents of the owner.
-[0,1]: The private and public documents of the owner.
-[2]: The private and public documents of all users (including the owner).
-Default value: [2]. 
-     * @return Permission The document access type.
-[0]: The private documents of the owner.
-[1]: The public documents of the owner.
-[0,1]: The private and public documents of the owner.
-[2]: The private and public documents of all users (including the owner).
-Default value: [2].
+     * Get The document access type. [0]: The private documents of the owner. [1]: The public documents of the owner. [0,1]: The private and public documents of the owner. [2]: The private and public documents of all users (including the owner). Default value: [2]. 
+     * @return Permission The document access type. [0]: The private documents of the owner. [1]: The public documents of the owner. [0,1]: The private and public documents of the owner. [2]: The private and public documents of all users (including the owner). Default value: [2].
      */
     public Long [] getPermission() {
         return this.Permission;
     }
 
     /**
-     * Set The document access type.
-[0]: The private documents of the owner.
-[1]: The public documents of the owner.
-[0,1]: The private and public documents of the owner.
-[2]: The private and public documents of all users (including the owner).
-Default value: [2].
-     * @param Permission The document access type.
-[0]: The private documents of the owner.
-[1]: The public documents of the owner.
-[0,1]: The private and public documents of the owner.
-[2]: The private and public documents of all users (including the owner).
-Default value: [2].
+     * Set The document access type. [0]: The private documents of the owner. [1]: The public documents of the owner. [0,1]: The private and public documents of the owner. [2]: The private and public documents of all users (including the owner). Default value: [2].
+     * @param Permission The document access type. [0]: The private documents of the owner. [1]: The public documents of the owner. [0,1]: The private and public documents of the owner. [2]: The private and public documents of all users (including the owner). Default value: [2].
      */
     public void setPermission(Long [] Permission) {
         this.Permission = Permission;

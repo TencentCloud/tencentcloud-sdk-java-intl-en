@@ -23,112 +23,92 @@ import java.util.HashMap;
 public class UserInfo extends AbstractModel{
 
     /**
-    * The application ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The application ID. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * The user ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The user ID. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * The username.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The username. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * The URL of profile photo.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The URL of profile photo. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Avatar")
     @Expose
     private String Avatar;
 
     /**
-     * Get The application ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SdkAppId The application ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The application ID. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SdkAppId The application ID. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set The application ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SdkAppId The application ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The application ID. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SdkAppId The application ID. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get The user ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UserId The user ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The user ID. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return UserId The user ID. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set The user ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UserId The user ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The user ID. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param UserId The user ID. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get The username.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Name The username.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The username. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Name The username. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set The username.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Name The username.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The username. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Name The username. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get The URL of profile photo.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Avatar The URL of profile photo.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The URL of profile photo. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Avatar The URL of profile photo. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAvatar() {
         return this.Avatar;
     }
 
     /**
-     * Set The URL of profile photo.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Avatar The URL of profile photo.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The URL of profile photo. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Avatar The URL of profile photo. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAvatar(String Avatar) {
         this.Avatar = Avatar;

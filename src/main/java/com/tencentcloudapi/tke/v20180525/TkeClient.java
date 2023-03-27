@@ -1279,7 +1279,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the status of events, audits and logs.
+     *This API is used to query the status of event storage, cluster auditing and logging.
      * @param req DescribeEdgeLogSwitchesRequest
      * @return DescribeEdgeLogSwitchesResponse
      * @throws TencentCloudSDKException

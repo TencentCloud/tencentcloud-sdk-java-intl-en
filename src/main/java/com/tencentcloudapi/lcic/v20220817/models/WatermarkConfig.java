@@ -23,140 +23,115 @@ import java.util.HashMap;
 public class WatermarkConfig extends AbstractModel{
 
     /**
-    * The URL of the watermark image.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The URL of the watermark image. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * The watermark width, which is expressed as a percentage of the video width.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The watermark width, which is expressed as a percentage of the video width. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Width")
     @Expose
     private Float Width;
 
     /**
-    * The watermark height, which is expressed as a percentage of the video height.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The watermark height, which is expressed as a percentage of the video height. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Height")
     @Expose
     private Float Height;
 
     /**
-    * The horizontal offset of the watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.	
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The horizontal offset of the watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LocationX")
     @Expose
     private Float LocationX;
 
     /**
-    * The vertical offset of the watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.	
-Note: This field may return null, indicating that no valid values can be obtained.
+    * The vertical offset of the watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LocationY")
     @Expose
     private Float LocationY;
 
     /**
-     * Get The URL of the watermark image.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Url The URL of the watermark image.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The URL of the watermark image. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Url The URL of the watermark image. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set The URL of the watermark image.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Url The URL of the watermark image.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The URL of the watermark image. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Url The URL of the watermark image. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get The watermark width, which is expressed as a percentage of the video width.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Width The watermark width, which is expressed as a percentage of the video width.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The watermark width, which is expressed as a percentage of the video width. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Width The watermark width, which is expressed as a percentage of the video width. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Float getWidth() {
         return this.Width;
     }
 
     /**
-     * Set The watermark width, which is expressed as a percentage of the video width.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Width The watermark width, which is expressed as a percentage of the video width.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The watermark width, which is expressed as a percentage of the video width. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Width The watermark width, which is expressed as a percentage of the video width. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setWidth(Float Width) {
         this.Width = Width;
     }
 
     /**
-     * Get The watermark height, which is expressed as a percentage of the video height.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Height The watermark height, which is expressed as a percentage of the video height.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The watermark height, which is expressed as a percentage of the video height. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Height The watermark height, which is expressed as a percentage of the video height. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Float getHeight() {
         return this.Height;
     }
 
     /**
-     * Set The watermark height, which is expressed as a percentage of the video height.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Height The watermark height, which is expressed as a percentage of the video height.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The watermark height, which is expressed as a percentage of the video height. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Height The watermark height, which is expressed as a percentage of the video height. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHeight(Float Height) {
         this.Height = Height;
     }
 
     /**
-     * Get The horizontal offset of the watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.	
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LocationX The horizontal offset of the watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The horizontal offset of the watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LocationX The horizontal offset of the watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Float getLocationX() {
         return this.LocationX;
     }
 
     /**
-     * Set The horizontal offset of the watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.	
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LocationX The horizontal offset of the watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The horizontal offset of the watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LocationX The horizontal offset of the watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLocationX(Float LocationX) {
         this.LocationX = LocationX;
     }
 
     /**
-     * Get The vertical offset of the watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.	
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LocationY The vertical offset of the watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get The vertical offset of the watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LocationY The vertical offset of the watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Float getLocationY() {
         return this.LocationY;
     }
 
     /**
-     * Set The vertical offset of the watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.	
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LocationY The vertical offset of the watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.	
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set The vertical offset of the watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LocationY The vertical offset of the watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLocationY(Float LocationY) {
         this.LocationY = LocationY;

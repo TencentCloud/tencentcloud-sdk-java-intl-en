@@ -86,7 +86,7 @@ public class DescribeDocumentResponse extends AbstractModel{
     private Long TranscodeProgress;
 
     /**
-    * The transcoding status. `0`: The file is not transcoded. `1`: The file is being transcoded. `2`: Transcoding failed. `3`: Transcoding is successful.
+    * The transcoding status. 0: The file is not transcoded. 1: The file is being transcoded. 2: Transcoding failed. 3: Transcoding is successful.
     */
     @SerializedName("TranscodeState")
     @Expose
@@ -272,16 +272,16 @@ public class DescribeDocumentResponse extends AbstractModel{
     }
 
     /**
-     * Get The transcoding status. `0`: The file is not transcoded. `1`: The file is being transcoded. `2`: Transcoding failed. `3`: Transcoding is successful. 
-     * @return TranscodeState The transcoding status. `0`: The file is not transcoded. `1`: The file is being transcoded. `2`: Transcoding failed. `3`: Transcoding is successful.
+     * Get The transcoding status. 0: The file is not transcoded. 1: The file is being transcoded. 2: Transcoding failed. 3: Transcoding is successful. 
+     * @return TranscodeState The transcoding status. 0: The file is not transcoded. 1: The file is being transcoded. 2: Transcoding failed. 3: Transcoding is successful.
      */
     public Long getTranscodeState() {
         return this.TranscodeState;
     }
 
     /**
-     * Set The transcoding status. `0`: The file is not transcoded. `1`: The file is being transcoded. `2`: Transcoding failed. `3`: Transcoding is successful.
-     * @param TranscodeState The transcoding status. `0`: The file is not transcoded. `1`: The file is being transcoded. `2`: Transcoding failed. `3`: Transcoding is successful.
+     * Set The transcoding status. 0: The file is not transcoded. 1: The file is being transcoded. 2: Transcoding failed. 3: Transcoding is successful.
+     * @param TranscodeState The transcoding status. 0: The file is not transcoded. 1: The file is being transcoded. 2: Transcoding failed. 3: Transcoding is successful.
      */
     public void setTranscodeState(Long TranscodeState) {
         this.TranscodeState = TranscodeState;
