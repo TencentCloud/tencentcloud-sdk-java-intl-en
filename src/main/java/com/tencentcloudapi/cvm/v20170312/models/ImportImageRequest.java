@@ -96,6 +96,13 @@ Valid values:
     private String LicenseType;
 
     /**
+    * Boot mode
+    */
+    @SerializedName("BootMode")
+    @Expose
+    private String BootMode;
+
+    /**
      * Get OS architecture of the image to be imported, `x86_64` or `i386`. 
      * @return Architecture OS architecture of the image to be imported, `x86_64` or `i386`.
      */
@@ -267,6 +274,22 @@ Valid values:
         this.LicenseType = LicenseType;
     }
 
+    /**
+     * Get Boot mode 
+     * @return BootMode Boot mode
+     */
+    public String getBootMode() {
+        return this.BootMode;
+    }
+
+    /**
+     * Set Boot mode
+     * @param BootMode Boot mode
+     */
+    public void setBootMode(String BootMode) {
+        this.BootMode = BootMode;
+    }
+
     public ImportImageRequest() {
     }
 
@@ -308,6 +331,9 @@ Valid values:
         if (source.LicenseType != null) {
             this.LicenseType = new String(source.LicenseType);
         }
+        if (source.BootMode != null) {
+            this.BootMode = new String(source.BootMode);
+        }
     }
 
 
@@ -325,6 +351,7 @@ Valid values:
         this.setParamSimple(map, prefix + "Force", this.Force);
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
+        this.setParamSimple(map, prefix + "BootMode", this.BootMode);
 
     }
 }

@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class ActionTimer extends AbstractModel{
 
     /**
-    * Additional data
-    */
-    @SerializedName("Externals")
-    @Expose
-    private Externals Externals;
-
-    /**
     * Timer name. Currently `TerminateInstances` is the only supported value.
     */
     @SerializedName("TimerAction")
@@ -37,27 +30,18 @@ public class ActionTimer extends AbstractModel{
     private String TimerAction;
 
     /**
-    * Execution time, which must be at least 5 minutes later than the current time. For example, 2018-5-29 11:26:40.
+    * Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
     */
     @SerializedName("ActionTime")
     @Expose
     private String ActionTime;
 
     /**
-     * Get Additional data 
-     * @return Externals Additional data
-     */
-    public Externals getExternals() {
-        return this.Externals;
-    }
-
-    /**
-     * Set Additional data
-     * @param Externals Additional data
-     */
-    public void setExternals(Externals Externals) {
-        this.Externals = Externals;
-    }
+    * Additional data
+    */
+    @SerializedName("Externals")
+    @Expose
+    private Externals Externals;
 
     /**
      * Get Timer name. Currently `TerminateInstances` is the only supported value. 
@@ -76,19 +60,35 @@ public class ActionTimer extends AbstractModel{
     }
 
     /**
-     * Get Execution time, which must be at least 5 minutes later than the current time. For example, 2018-5-29 11:26:40. 
-     * @return ActionTime Execution time, which must be at least 5 minutes later than the current time. For example, 2018-5-29 11:26:40.
+     * Get Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z. 
+     * @return ActionTime Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
      */
     public String getActionTime() {
         return this.ActionTime;
     }
 
     /**
-     * Set Execution time, which must be at least 5 minutes later than the current time. For example, 2018-5-29 11:26:40.
-     * @param ActionTime Execution time, which must be at least 5 minutes later than the current time. For example, 2018-5-29 11:26:40.
+     * Set Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+     * @param ActionTime Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
      */
     public void setActionTime(String ActionTime) {
         this.ActionTime = ActionTime;
+    }
+
+    /**
+     * Get Additional data 
+     * @return Externals Additional data
+     */
+    public Externals getExternals() {
+        return this.Externals;
+    }
+
+    /**
+     * Set Additional data
+     * @param Externals Additional data
+     */
+    public void setExternals(Externals Externals) {
+        this.Externals = Externals;
     }
 
     public ActionTimer() {
@@ -99,14 +99,14 @@ public class ActionTimer extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ActionTimer(ActionTimer source) {
-        if (source.Externals != null) {
-            this.Externals = new Externals(source.Externals);
-        }
         if (source.TimerAction != null) {
             this.TimerAction = new String(source.TimerAction);
         }
         if (source.ActionTime != null) {
             this.ActionTime = new String(source.ActionTime);
+        }
+        if (source.Externals != null) {
+            this.Externals = new Externals(source.Externals);
         }
     }
 
@@ -115,9 +115,9 @@ public class ActionTimer extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Externals.", this.Externals);
         this.setParamSimple(map, prefix + "TimerAction", this.TimerAction);
         this.setParamSimple(map, prefix + "ActionTime", this.ActionTime);
+        this.setParamObj(map, prefix + "Externals.", this.Externals);
 
     }
 }

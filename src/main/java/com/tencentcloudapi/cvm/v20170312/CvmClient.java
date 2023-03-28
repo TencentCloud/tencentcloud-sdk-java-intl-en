@@ -693,7 +693,7 @@ If you currently use a password to log in, you will no longer be able to do so a
     }
 
     /**
-     *This API is suspended. To query the information of regions, use [DescribeZones](https://intl.cloud.tencent.com/document/product/1596/77929?from_cn_redirect=1).
+     *This API is suspended. To query the information of regions, use [DescribeZones](https://intl.cloud.tencent.com/document/product/1596/77930?from_cn_redirect=1).
      * @param req DescribeRegionsRequest
      * @return DescribeRegionsResponse
      * @throws TencentCloudSDKException

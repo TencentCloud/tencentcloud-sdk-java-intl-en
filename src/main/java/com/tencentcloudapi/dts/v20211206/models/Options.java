@@ -79,6 +79,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private DdlOption [] DdlOptions;
 
     /**
+    * Kafka sync options
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("KafkaOption")
+    @Expose
+    private KafkaOption KafkaOption;
+
+    /**
      * Get Sync initialization option. Valid values: `data` (full data initialization); `Structure` (structure initialization); `Full` (full data and structure initialization); `None` (incremental data only). Default value: `Full`.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return InitType Sync initialization option. Valid values: `data` (full data initialization); `Structure` (structure initialization); `Full` (full data and structure initialization); `None` (incremental data only). Default value: `Full`.
@@ -218,6 +226,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.DdlOptions = DdlOptions;
     }
 
+    /**
+     * Get Kafka sync options
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return KafkaOption Kafka sync options
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public KafkaOption getKafkaOption() {
+        return this.KafkaOption;
+    }
+
+    /**
+     * Set Kafka sync options
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param KafkaOption Kafka sync options
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setKafkaOption(KafkaOption KafkaOption) {
+        this.KafkaOption = KafkaOption;
+    }
+
     public Options() {
     }
 
@@ -253,6 +281,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.DdlOptions[i] = new DdlOption(source.DdlOptions[i]);
             }
         }
+        if (source.KafkaOption != null) {
+            this.KafkaOption = new KafkaOption(source.KafkaOption);
+        }
     }
 
 
@@ -267,6 +298,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArraySimple(map, prefix + "OpTypes.", this.OpTypes);
         this.setParamObj(map, prefix + "ConflictHandleOption.", this.ConflictHandleOption);
         this.setParamArrayObj(map, prefix + "DdlOptions.", this.DdlOptions);
+        this.setParamObj(map, prefix + "KafkaOption.", this.KafkaOption);
 
     }
 }

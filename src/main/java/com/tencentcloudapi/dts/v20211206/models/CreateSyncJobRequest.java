@@ -44,7 +44,7 @@ public class CreateSyncJobRequest extends AbstractModel{
     private String SrcRegion;
 
     /**
-    * Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
+    * Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, `tdsqlmysql`, and `kafka`.
     */
     @SerializedName("DstDatabaseType")
     @Expose
@@ -155,16 +155,16 @@ public class CreateSyncJobRequest extends AbstractModel{
     }
 
     /**
-     * Get Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`. 
-     * @return DstDatabaseType Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
+     * Get Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, `tdsqlmysql`, and `kafka`. 
+     * @return DstDatabaseType Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, `tdsqlmysql`, and `kafka`.
      */
     public String getDstDatabaseType() {
         return this.DstDatabaseType;
     }
 
     /**
-     * Set Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
-     * @param DstDatabaseType Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
+     * Set Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, `tdsqlmysql`, and `kafka`.
+     * @param DstDatabaseType Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, `tdsqlmysql`, and `kafka`.
      */
     public void setDstDatabaseType(String DstDatabaseType) {
         this.DstDatabaseType = DstDatabaseType;

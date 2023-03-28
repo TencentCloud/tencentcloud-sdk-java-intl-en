@@ -86,11 +86,39 @@ public class ConfigureSyncJobRequest extends AbstractModel{
     private Endpoint SrcInfo;
 
     /**
+    * Source database information. This parameter is valid for multi-node databases, and the value of `SrcNodeType` must be `cluster`.
+    */
+    @SerializedName("SrcInfos")
+    @Expose
+    private SyncDBEndpointInfos SrcInfos;
+
+    /**
+    * Enumerated values: `single` (for single-node source database), `cluster` (for multi-node source database).
+    */
+    @SerializedName("SrcNodeType")
+    @Expose
+    private String SrcNodeType;
+
+    /**
     * Target database information. This parameter is used by single-node databases.
     */
     @SerializedName("DstInfo")
     @Expose
     private Endpoint DstInfo;
+
+    /**
+    * Target database information. This parameter is valid for multi-node databases, and the value of `DstNodeType` must be `cluster`.
+    */
+    @SerializedName("DstInfos")
+    @Expose
+    private SyncDBEndpointInfos DstInfos;
+
+    /**
+    * Enumerated values: `single` (for single-node target database), `cluster` (for multi-node target database).
+    */
+    @SerializedName("DstNodeType")
+    @Expose
+    private String DstNodeType;
 
     /**
     * Sync task options
@@ -251,6 +279,38 @@ public class ConfigureSyncJobRequest extends AbstractModel{
     }
 
     /**
+     * Get Source database information. This parameter is valid for multi-node databases, and the value of `SrcNodeType` must be `cluster`. 
+     * @return SrcInfos Source database information. This parameter is valid for multi-node databases, and the value of `SrcNodeType` must be `cluster`.
+     */
+    public SyncDBEndpointInfos getSrcInfos() {
+        return this.SrcInfos;
+    }
+
+    /**
+     * Set Source database information. This parameter is valid for multi-node databases, and the value of `SrcNodeType` must be `cluster`.
+     * @param SrcInfos Source database information. This parameter is valid for multi-node databases, and the value of `SrcNodeType` must be `cluster`.
+     */
+    public void setSrcInfos(SyncDBEndpointInfos SrcInfos) {
+        this.SrcInfos = SrcInfos;
+    }
+
+    /**
+     * Get Enumerated values: `single` (for single-node source database), `cluster` (for multi-node source database). 
+     * @return SrcNodeType Enumerated values: `single` (for single-node source database), `cluster` (for multi-node source database).
+     */
+    public String getSrcNodeType() {
+        return this.SrcNodeType;
+    }
+
+    /**
+     * Set Enumerated values: `single` (for single-node source database), `cluster` (for multi-node source database).
+     * @param SrcNodeType Enumerated values: `single` (for single-node source database), `cluster` (for multi-node source database).
+     */
+    public void setSrcNodeType(String SrcNodeType) {
+        this.SrcNodeType = SrcNodeType;
+    }
+
+    /**
      * Get Target database information. This parameter is used by single-node databases. 
      * @return DstInfo Target database information. This parameter is used by single-node databases.
      */
@@ -264,6 +324,38 @@ public class ConfigureSyncJobRequest extends AbstractModel{
      */
     public void setDstInfo(Endpoint DstInfo) {
         this.DstInfo = DstInfo;
+    }
+
+    /**
+     * Get Target database information. This parameter is valid for multi-node databases, and the value of `DstNodeType` must be `cluster`. 
+     * @return DstInfos Target database information. This parameter is valid for multi-node databases, and the value of `DstNodeType` must be `cluster`.
+     */
+    public SyncDBEndpointInfos getDstInfos() {
+        return this.DstInfos;
+    }
+
+    /**
+     * Set Target database information. This parameter is valid for multi-node databases, and the value of `DstNodeType` must be `cluster`.
+     * @param DstInfos Target database information. This parameter is valid for multi-node databases, and the value of `DstNodeType` must be `cluster`.
+     */
+    public void setDstInfos(SyncDBEndpointInfos DstInfos) {
+        this.DstInfos = DstInfos;
+    }
+
+    /**
+     * Get Enumerated values: `single` (for single-node target database), `cluster` (for multi-node target database). 
+     * @return DstNodeType Enumerated values: `single` (for single-node target database), `cluster` (for multi-node target database).
+     */
+    public String getDstNodeType() {
+        return this.DstNodeType;
+    }
+
+    /**
+     * Set Enumerated values: `single` (for single-node target database), `cluster` (for multi-node target database).
+     * @param DstNodeType Enumerated values: `single` (for single-node target database), `cluster` (for multi-node target database).
+     */
+    public void setDstNodeType(String DstNodeType) {
+        this.DstNodeType = DstNodeType;
     }
 
     /**
@@ -333,8 +425,20 @@ public class ConfigureSyncJobRequest extends AbstractModel{
         if (source.SrcInfo != null) {
             this.SrcInfo = new Endpoint(source.SrcInfo);
         }
+        if (source.SrcInfos != null) {
+            this.SrcInfos = new SyncDBEndpointInfos(source.SrcInfos);
+        }
+        if (source.SrcNodeType != null) {
+            this.SrcNodeType = new String(source.SrcNodeType);
+        }
         if (source.DstInfo != null) {
             this.DstInfo = new Endpoint(source.DstInfo);
+        }
+        if (source.DstInfos != null) {
+            this.DstInfos = new SyncDBEndpointInfos(source.DstInfos);
+        }
+        if (source.DstNodeType != null) {
+            this.DstNodeType = new String(source.DstNodeType);
         }
         if (source.Options != null) {
             this.Options = new Options(source.Options);
@@ -358,7 +462,11 @@ public class ConfigureSyncJobRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "RunMode", this.RunMode);
         this.setParamSimple(map, prefix + "ExpectRunTime", this.ExpectRunTime);
         this.setParamObj(map, prefix + "SrcInfo.", this.SrcInfo);
+        this.setParamObj(map, prefix + "SrcInfos.", this.SrcInfos);
+        this.setParamSimple(map, prefix + "SrcNodeType", this.SrcNodeType);
         this.setParamObj(map, prefix + "DstInfo.", this.DstInfo);
+        this.setParamObj(map, prefix + "DstInfos.", this.DstInfos);
+        this.setParamSimple(map, prefix + "DstNodeType", this.DstNodeType);
         this.setParamObj(map, prefix + "Options.", this.Options);
         this.setParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
 

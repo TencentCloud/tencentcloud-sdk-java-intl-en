@@ -819,26 +819,6 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the information of all instances.
-     * @param req DescribeInstanceAllRequest
-     * @return DescribeInstanceAllResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeInstanceAllResponse DescribeInstanceAll(DescribeInstanceAllRequest req) throws TencentCloudSDKException{
-        JsonResponseModel<DescribeInstanceAllResponse> rsp = null;
-        String rspStr = "";
-        try {
-                Type type = new TypeToken<JsonResponseModel<DescribeInstanceAllResponse>>() {
-                }.getType();
-                rspStr = this.internalRequest(req, "DescribeInstanceAll");
-                rsp  = gson.fromJson(rspStr, type);
-        } catch (JsonSyntaxException e) {
-            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
-        }
-        return rsp.response;
-    }
-
-    /**
      *This API is used to query the list of all namespaces in an instance.
      * @param req DescribeInstanceAllNamespacesRequest
      * @return DescribeInstanceAllNamespacesResponse

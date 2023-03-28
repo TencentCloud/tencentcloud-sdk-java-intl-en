@@ -30,6 +30,13 @@ public class TerminateInstancesRequest extends AbstractModel{
     private String [] InstanceIds;
 
     /**
+    * Release the monthly subscribed data disks attached to the instance
+    */
+    @SerializedName("ReleasePrepaidDataDisks")
+    @Expose
+    private Boolean ReleasePrepaidDataDisks;
+
+    /**
      * Get Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100. 
      * @return InstanceIds Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
      */
@@ -43,6 +50,22 @@ public class TerminateInstancesRequest extends AbstractModel{
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
+    }
+
+    /**
+     * Get Release the monthly subscribed data disks attached to the instance 
+     * @return ReleasePrepaidDataDisks Release the monthly subscribed data disks attached to the instance
+     */
+    public Boolean getReleasePrepaidDataDisks() {
+        return this.ReleasePrepaidDataDisks;
+    }
+
+    /**
+     * Set Release the monthly subscribed data disks attached to the instance
+     * @param ReleasePrepaidDataDisks Release the monthly subscribed data disks attached to the instance
+     */
+    public void setReleasePrepaidDataDisks(Boolean ReleasePrepaidDataDisks) {
+        this.ReleasePrepaidDataDisks = ReleasePrepaidDataDisks;
     }
 
     public TerminateInstancesRequest() {
@@ -59,6 +82,9 @@ public class TerminateInstancesRequest extends AbstractModel{
                 this.InstanceIds[i] = new String(source.InstanceIds[i]);
             }
         }
+        if (source.ReleasePrepaidDataDisks != null) {
+            this.ReleasePrepaidDataDisks = new Boolean(source.ReleasePrepaidDataDisks);
+        }
     }
 
 
@@ -67,6 +93,7 @@ public class TerminateInstancesRequest extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamSimple(map, prefix + "ReleasePrepaidDataDisks", this.ReleasePrepaidDataDisks);
 
     }
 }
