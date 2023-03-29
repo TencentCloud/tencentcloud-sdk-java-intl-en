@@ -62,6 +62,22 @@ Note: this field may return `null`, indicating that no valid value was found.
     private Long DegradeCapacityUsed;
 
     /**
+    * COS DEEP ARCHIVE storage usage, in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DeepArchiveCapacityUsed")
+    @Expose
+    private Long DeepArchiveCapacityUsed;
+
+    /**
+    * COS INTELLIGENT TIERING storage usage, in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IntelligentCapacityUsed")
+    @Expose
+    private Long IntelligentCapacityUsed;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -165,6 +181,46 @@ Note: this field may return `null`, indicating that no valid value was found.
     }
 
     /**
+     * Get COS DEEP ARCHIVE storage usage, in bytes
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DeepArchiveCapacityUsed COS DEEP ARCHIVE storage usage, in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getDeepArchiveCapacityUsed() {
+        return this.DeepArchiveCapacityUsed;
+    }
+
+    /**
+     * Set COS DEEP ARCHIVE storage usage, in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DeepArchiveCapacityUsed COS DEEP ARCHIVE storage usage, in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDeepArchiveCapacityUsed(Long DeepArchiveCapacityUsed) {
+        this.DeepArchiveCapacityUsed = DeepArchiveCapacityUsed;
+    }
+
+    /**
+     * Get COS INTELLIGENT TIERING storage usage, in bytes
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IntelligentCapacityUsed COS INTELLIGENT TIERING storage usage, in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getIntelligentCapacityUsed() {
+        return this.IntelligentCapacityUsed;
+    }
+
+    /**
+     * Set COS INTELLIGENT TIERING storage usage, in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IntelligentCapacityUsed COS INTELLIGENT TIERING storage usage, in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIntelligentCapacityUsed(Long IntelligentCapacityUsed) {
+        this.IntelligentCapacityUsed = IntelligentCapacityUsed;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -203,6 +259,12 @@ Note: this field may return `null`, indicating that no valid value was found.
         if (source.DegradeCapacityUsed != null) {
             this.DegradeCapacityUsed = new Long(source.DegradeCapacityUsed);
         }
+        if (source.DeepArchiveCapacityUsed != null) {
+            this.DeepArchiveCapacityUsed = new Long(source.DeepArchiveCapacityUsed);
+        }
+        if (source.IntelligentCapacityUsed != null) {
+            this.IntelligentCapacityUsed = new Long(source.IntelligentCapacityUsed);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -218,6 +280,8 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "ArchiveCapacityUsed", this.ArchiveCapacityUsed);
         this.setParamSimple(map, prefix + "StandardCapacityUsed", this.StandardCapacityUsed);
         this.setParamSimple(map, prefix + "DegradeCapacityUsed", this.DegradeCapacityUsed);
+        this.setParamSimple(map, prefix + "DeepArchiveCapacityUsed", this.DeepArchiveCapacityUsed);
+        this.setParamSimple(map, prefix + "IntelligentCapacityUsed", this.IntelligentCapacityUsed);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -30,7 +30,7 @@ public class Transition extends AbstractModel{
     private Long Days;
 
     /**
-    * Transition type (`1`: transition to ARCHIVE; `2`: delete; `3`: transition to STANDARD_IA)
+    * Transition type (`1`: ARCHIVE; `2`: Delete; `3`: STANDARD_IA; `4`: DEEP ARCHIVE; `5`: INTELLIGENT TIERING)
     */
     @SerializedName("Type")
     @Expose
@@ -53,16 +53,16 @@ public class Transition extends AbstractModel{
     }
 
     /**
-     * Get Transition type (`1`: transition to ARCHIVE; `2`: delete; `3`: transition to STANDARD_IA) 
-     * @return Type Transition type (`1`: transition to ARCHIVE; `2`: delete; `3`: transition to STANDARD_IA)
+     * Get Transition type (`1`: ARCHIVE; `2`: Delete; `3`: STANDARD_IA; `4`: DEEP ARCHIVE; `5`: INTELLIGENT TIERING) 
+     * @return Type Transition type (`1`: ARCHIVE; `2`: Delete; `3`: STANDARD_IA; `4`: DEEP ARCHIVE; `5`: INTELLIGENT TIERING)
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set Transition type (`1`: transition to ARCHIVE; `2`: delete; `3`: transition to STANDARD_IA)
-     * @param Type Transition type (`1`: transition to ARCHIVE; `2`: delete; `3`: transition to STANDARD_IA)
+     * Set Transition type (`1`: ARCHIVE; `2`: Delete; `3`: STANDARD_IA; `4`: DEEP ARCHIVE; `5`: INTELLIGENT TIERING)
+     * @param Type Transition type (`1`: ARCHIVE; `2`: Delete; `3`: STANDARD_IA; `4`: DEEP ARCHIVE; `5`: INTELLIGENT TIERING)
      */
     public void setType(Long Type) {
         this.Type = Type;

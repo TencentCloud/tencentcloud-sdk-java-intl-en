@@ -65,6 +65,13 @@ public class UploadCertificateRequest extends AbstractModel{
     private String CertificateUse;
 
     /**
+    * Whether a certificate can be repeatedly uploaded.
+    */
+    @SerializedName("Repeatable")
+    @Expose
+    private Boolean Repeatable;
+
+    /**
      * Get Public key of the certificate 
      * @return CertificatePublicKey Public key of the certificate
      */
@@ -160,6 +167,22 @@ public class UploadCertificateRequest extends AbstractModel{
         this.CertificateUse = CertificateUse;
     }
 
+    /**
+     * Get Whether a certificate can be repeatedly uploaded. 
+     * @return Repeatable Whether a certificate can be repeatedly uploaded.
+     */
+    public Boolean getRepeatable() {
+        return this.Repeatable;
+    }
+
+    /**
+     * Set Whether a certificate can be repeatedly uploaded.
+     * @param Repeatable Whether a certificate can be repeatedly uploaded.
+     */
+    public void setRepeatable(Boolean Repeatable) {
+        this.Repeatable = Repeatable;
+    }
+
     public UploadCertificateRequest() {
     }
 
@@ -186,6 +209,9 @@ public class UploadCertificateRequest extends AbstractModel{
         if (source.CertificateUse != null) {
             this.CertificateUse = new String(source.CertificateUse);
         }
+        if (source.Repeatable != null) {
+            this.Repeatable = new Boolean(source.Repeatable);
+        }
     }
 
 
@@ -199,6 +225,7 @@ public class UploadCertificateRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Alias", this.Alias);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "CertificateUse", this.CertificateUse);
+        this.setParamSimple(map, prefix + "Repeatable", this.Repeatable);
 
     }
 }

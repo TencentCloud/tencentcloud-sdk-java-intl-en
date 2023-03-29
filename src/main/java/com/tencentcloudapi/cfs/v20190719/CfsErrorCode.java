@@ -3,7 +3,7 @@ public enum CfsErrorCode {
     // A CAM signature/authentication error occurred.
      AUTHFAILURE("AuthFailure"),
      
-    // 
+    // Failed to get the CFS service role.
      AUTHFAILURE_GETROLEFAILED("AuthFailure.GetRoleFailed"),
      
     // Request unauthorized.
@@ -120,6 +120,12 @@ public enum CfsErrorCode {
     // Invalid network type.
      INVALIDPARAMETERVALUE_INVALIDNETINTERFACE("InvalidParameterValue.InvalidNetInterface"),
      
+    // Invalid value of `DayOfMonth`.
+     INVALIDPARAMETERVALUE_INVALIDPARAMDAYOFMONTH("InvalidParameterValue.InvalidParamDayOfMonth"),
+     
+    // Invalid value of `IntervalDays`.
+     INVALIDPARAMETERVALUE_INVALIDPARAMINTERVALDAYS("InvalidParameterValue.InvalidParamIntervalDays"),
+     
     // The permission group is not under this user.
      INVALIDPARAMETERVALUE_INVALIDPGROUP("InvalidParameterValue.InvalidPgroup"),
      
@@ -201,6 +207,9 @@ public enum CfsErrorCode {
     // The permission group name cannot be empty.
      INVALIDPARAMETERVALUE_MISSINGPGROUPNAME("InvalidParameterValue.MissingPgroupName"),
      
+    // Snapshot policy parameters missing.
+     INVALIDPARAMETERVALUE_MISSINGPOLICYPARAM("InvalidParameterValue.MissingPolicyParam"),
+     
     // No storage pack is bound to.
      INVALIDPARAMETERVALUE_MISSINGSTORAGERESOURCEPKG("InvalidParameterValue.MissingStorageResourcePkg"),
      
@@ -234,6 +243,9 @@ public enum CfsErrorCode {
     // The length of the tag key exceeds the upper limit of 127 bytes.
      INVALIDPARAMETERVALUE_TAGKEYLIMITEXCEEDED("InvalidParameterValue.TagKeyLimitExceeded"),
      
+    // The number of tag values exceeds the maximum (10).
+     INVALIDPARAMETERVALUE_TAGVALUEFILTERLIMITEXCEEDED("InvalidParameterValue.TagValueFilterLimitExceeded"),
+     
     // The length of the tag value exceeds the upper limit of 255 bytes.
      INVALIDPARAMETERVALUE_TAGVALUELIMITEXCEEDED("InvalidParameterValue.TagValueLimitExceeded"),
      
@@ -257,6 +269,9 @@ public enum CfsErrorCode {
      
     // The number of rules exceeds the upper limit.
      RESOURCEINSUFFICIENT_RULELIMITEXCEEDED("ResourceInsufficient.RuleLimitExceeded"),
+     
+    // Snapshots are not supported because the file system is too large.
+     RESOURCEINSUFFICIENT_SNAPSHOTSIZELIMITEXCEEDED("ResourceInsufficient.SnapshotSizeLimitExceeded"),
      
     // There is no IP available in this subnet.
      RESOURCEINSUFFICIENT_SUBNETIPALLOCCUPIED("ResourceInsufficient.SubnetIpAllOccupied"),

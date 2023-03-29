@@ -163,6 +163,21 @@ public class FileSystemInfo extends AbstractModel{
     private TagInfo [] Tags;
 
     /**
+    * The lifecycle management status of a file system.
+    */
+    @SerializedName("TieringState")
+    @Expose
+    private String TieringState;
+
+    /**
+    * The details about tiered storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TieringDetail")
+    @Expose
+    private TieringDetailInfo TieringDetail;
+
+    /**
      * Get Creation time 
      * @return CreationTime Creation time
      */
@@ -482,6 +497,42 @@ public class FileSystemInfo extends AbstractModel{
         this.Tags = Tags;
     }
 
+    /**
+     * Get The lifecycle management status of a file system. 
+     * @return TieringState The lifecycle management status of a file system.
+     */
+    public String getTieringState() {
+        return this.TieringState;
+    }
+
+    /**
+     * Set The lifecycle management status of a file system.
+     * @param TieringState The lifecycle management status of a file system.
+     */
+    public void setTieringState(String TieringState) {
+        this.TieringState = TieringState;
+    }
+
+    /**
+     * Get The details about tiered storage.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TieringDetail The details about tiered storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public TieringDetailInfo getTieringDetail() {
+        return this.TieringDetail;
+    }
+
+    /**
+     * Set The details about tiered storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TieringDetail The details about tiered storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTieringDetail(TieringDetailInfo TieringDetail) {
+        this.TieringDetail = TieringDetail;
+    }
+
     public FileSystemInfo() {
     }
 
@@ -553,6 +604,12 @@ public class FileSystemInfo extends AbstractModel{
                 this.Tags[i] = new TagInfo(source.Tags[i]);
             }
         }
+        if (source.TieringState != null) {
+            this.TieringState = new String(source.TieringState);
+        }
+        if (source.TieringDetail != null) {
+            this.TieringDetail = new TieringDetailInfo(source.TieringDetail);
+        }
     }
 
 
@@ -580,6 +637,8 @@ public class FileSystemInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "BandwidthLimit", this.BandwidthLimit);
         this.setParamSimple(map, prefix + "Capacity", this.Capacity);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "TieringState", this.TieringState);
+        this.setParamObj(map, prefix + "TieringDetail.", this.TieringDetail);
 
     }
 }

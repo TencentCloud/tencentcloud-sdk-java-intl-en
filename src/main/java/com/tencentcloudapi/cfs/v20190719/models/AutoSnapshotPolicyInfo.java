@@ -51,7 +51,7 @@ public class AutoSnapshotPolicyInfo extends AbstractModel{
     private Long FileSystemNums;
 
     /**
-    * The day of the week on which to regularly back up the snapshot
+    * The specific day of the week on which to create a snapshot. This parameter is mutually exclusive with `DayOfMonth` and `IntervalDays`.
     */
     @SerializedName("DayOfWeek")
     @Expose
@@ -112,6 +112,22 @@ public class AutoSnapshotPolicyInfo extends AbstractModel{
     @SerializedName("FileSystems")
     @Expose
     private FileSystemByPolicy [] FileSystems;
+
+    /**
+    * The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek` and `IntervalDays`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DayOfMonth")
+    @Expose
+    private String DayOfMonth;
+
+    /**
+    * The snapshot interval (1 to 365 days). This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("IntervalDays")
+    @Expose
+    private Long IntervalDays;
 
     /**
      * Get Snapshot policy ID 
@@ -178,16 +194,16 @@ public class AutoSnapshotPolicyInfo extends AbstractModel{
     }
 
     /**
-     * Get The day of the week on which to regularly back up the snapshot 
-     * @return DayOfWeek The day of the week on which to regularly back up the snapshot
+     * Get The specific day of the week on which to create a snapshot. This parameter is mutually exclusive with `DayOfMonth` and `IntervalDays`. 
+     * @return DayOfWeek The specific day of the week on which to create a snapshot. This parameter is mutually exclusive with `DayOfMonth` and `IntervalDays`.
      */
     public String getDayOfWeek() {
         return this.DayOfWeek;
     }
 
     /**
-     * Set The day of the week on which to regularly back up the snapshot
-     * @param DayOfWeek The day of the week on which to regularly back up the snapshot
+     * Set The specific day of the week on which to create a snapshot. This parameter is mutually exclusive with `DayOfMonth` and `IntervalDays`.
+     * @param DayOfWeek The specific day of the week on which to create a snapshot. This parameter is mutually exclusive with `DayOfMonth` and `IntervalDays`.
      */
     public void setDayOfWeek(String DayOfWeek) {
         this.DayOfWeek = DayOfWeek;
@@ -321,6 +337,46 @@ public class AutoSnapshotPolicyInfo extends AbstractModel{
         this.FileSystems = FileSystems;
     }
 
+    /**
+     * Get The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek` and `IntervalDays`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DayOfMonth The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek` and `IntervalDays`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDayOfMonth() {
+        return this.DayOfMonth;
+    }
+
+    /**
+     * Set The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek` and `IntervalDays`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DayOfMonth The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek` and `IntervalDays`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDayOfMonth(String DayOfMonth) {
+        this.DayOfMonth = DayOfMonth;
+    }
+
+    /**
+     * Get The snapshot interval (1 to 365 days). This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IntervalDays The snapshot interval (1 to 365 days). This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getIntervalDays() {
+        return this.IntervalDays;
+    }
+
+    /**
+     * Set The snapshot interval (1 to 365 days). This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IntervalDays The snapshot interval (1 to 365 days). This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setIntervalDays(Long IntervalDays) {
+        this.IntervalDays = IntervalDays;
+    }
+
     public AutoSnapshotPolicyInfo() {
     }
 
@@ -371,6 +427,12 @@ public class AutoSnapshotPolicyInfo extends AbstractModel{
                 this.FileSystems[i] = new FileSystemByPolicy(source.FileSystems[i]);
             }
         }
+        if (source.DayOfMonth != null) {
+            this.DayOfMonth = new String(source.DayOfMonth);
+        }
+        if (source.IntervalDays != null) {
+            this.IntervalDays = new Long(source.IntervalDays);
+        }
     }
 
 
@@ -391,6 +453,8 @@ public class AutoSnapshotPolicyInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "AliveDays", this.AliveDays);
         this.setParamSimple(map, prefix + "RegionName", this.RegionName);
         this.setParamArrayObj(map, prefix + "FileSystems.", this.FileSystems);
+        this.setParamSimple(map, prefix + "DayOfMonth", this.DayOfMonth);
+        this.setParamSimple(map, prefix + "IntervalDays", this.IntervalDays);
 
     }
 }

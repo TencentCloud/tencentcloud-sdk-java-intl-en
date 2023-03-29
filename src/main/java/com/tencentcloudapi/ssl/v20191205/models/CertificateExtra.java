@@ -63,6 +63,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RenewOrder;
 
     /**
+    * Whether the certificate is a Chinese SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SMCert")
+    @Expose
+    private Long SMCert;
+
+    /**
      * Get Number of domain names which can be associated with the certificate
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return DomainNumber Number of domain names which can be associated with the certificate
@@ -162,6 +170,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.RenewOrder = RenewOrder;
     }
 
+    /**
+     * Get Whether the certificate is a Chinese SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SMCert Whether the certificate is a Chinese SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getSMCert() {
+        return this.SMCert;
+    }
+
+    /**
+     * Set Whether the certificate is a Chinese SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SMCert Whether the certificate is a Chinese SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSMCert(Long SMCert) {
+        this.SMCert = SMCert;
+    }
+
     public CertificateExtra() {
     }
 
@@ -185,6 +213,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.RenewOrder != null) {
             this.RenewOrder = new String(source.RenewOrder);
         }
+        if (source.SMCert != null) {
+            this.SMCert = new Long(source.SMCert);
+        }
     }
 
 
@@ -197,6 +228,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ReplacedBy", this.ReplacedBy);
         this.setParamSimple(map, prefix + "ReplacedFor", this.ReplacedFor);
         this.setParamSimple(map, prefix + "RenewOrder", this.RenewOrder);
+        this.setParamSimple(map, prefix + "SMCert", this.SMCert);
 
     }
 }

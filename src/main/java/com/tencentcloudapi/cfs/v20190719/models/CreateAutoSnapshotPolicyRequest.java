@@ -23,13 +23,6 @@ import java.util.HashMap;
 public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
 
     /**
-    * The day of the week on which to repeat the snapshot operation
-    */
-    @SerializedName("DayOfWeek")
-    @Expose
-    private String DayOfWeek;
-
-    /**
     * The time point when to repeat the snapshot operation
     */
     @SerializedName("Hour")
@@ -44,6 +37,13 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
     private String PolicyName;
 
     /**
+    * The day of the week on which to repeat the snapshot operation
+    */
+    @SerializedName("DayOfWeek")
+    @Expose
+    private String DayOfWeek;
+
+    /**
     * Snapshot retention period
     */
     @SerializedName("AliveDays")
@@ -51,20 +51,18 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
     private Long AliveDays;
 
     /**
-     * Get The day of the week on which to repeat the snapshot operation 
-     * @return DayOfWeek The day of the week on which to repeat the snapshot operation
-     */
-    public String getDayOfWeek() {
-        return this.DayOfWeek;
-    }
+    * The specific day (day 1 to day 31) of the month on which to create a snapshot.
+    */
+    @SerializedName("DayOfMonth")
+    @Expose
+    private String DayOfMonth;
 
     /**
-     * Set The day of the week on which to repeat the snapshot operation
-     * @param DayOfWeek The day of the week on which to repeat the snapshot operation
-     */
-    public void setDayOfWeek(String DayOfWeek) {
-        this.DayOfWeek = DayOfWeek;
-    }
+    * The snapshot interval, in days.
+    */
+    @SerializedName("IntervalDays")
+    @Expose
+    private Long IntervalDays;
 
     /**
      * Get The time point when to repeat the snapshot operation 
@@ -99,6 +97,22 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
     }
 
     /**
+     * Get The day of the week on which to repeat the snapshot operation 
+     * @return DayOfWeek The day of the week on which to repeat the snapshot operation
+     */
+    public String getDayOfWeek() {
+        return this.DayOfWeek;
+    }
+
+    /**
+     * Set The day of the week on which to repeat the snapshot operation
+     * @param DayOfWeek The day of the week on which to repeat the snapshot operation
+     */
+    public void setDayOfWeek(String DayOfWeek) {
+        this.DayOfWeek = DayOfWeek;
+    }
+
+    /**
      * Get Snapshot retention period 
      * @return AliveDays Snapshot retention period
      */
@@ -114,6 +128,38 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
         this.AliveDays = AliveDays;
     }
 
+    /**
+     * Get The specific day (day 1 to day 31) of the month on which to create a snapshot. 
+     * @return DayOfMonth The specific day (day 1 to day 31) of the month on which to create a snapshot.
+     */
+    public String getDayOfMonth() {
+        return this.DayOfMonth;
+    }
+
+    /**
+     * Set The specific day (day 1 to day 31) of the month on which to create a snapshot.
+     * @param DayOfMonth The specific day (day 1 to day 31) of the month on which to create a snapshot.
+     */
+    public void setDayOfMonth(String DayOfMonth) {
+        this.DayOfMonth = DayOfMonth;
+    }
+
+    /**
+     * Get The snapshot interval, in days. 
+     * @return IntervalDays The snapshot interval, in days.
+     */
+    public Long getIntervalDays() {
+        return this.IntervalDays;
+    }
+
+    /**
+     * Set The snapshot interval, in days.
+     * @param IntervalDays The snapshot interval, in days.
+     */
+    public void setIntervalDays(Long IntervalDays) {
+        this.IntervalDays = IntervalDays;
+    }
+
     public CreateAutoSnapshotPolicyRequest() {
     }
 
@@ -122,17 +168,23 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateAutoSnapshotPolicyRequest(CreateAutoSnapshotPolicyRequest source) {
-        if (source.DayOfWeek != null) {
-            this.DayOfWeek = new String(source.DayOfWeek);
-        }
         if (source.Hour != null) {
             this.Hour = new String(source.Hour);
         }
         if (source.PolicyName != null) {
             this.PolicyName = new String(source.PolicyName);
         }
+        if (source.DayOfWeek != null) {
+            this.DayOfWeek = new String(source.DayOfWeek);
+        }
         if (source.AliveDays != null) {
             this.AliveDays = new Long(source.AliveDays);
+        }
+        if (source.DayOfMonth != null) {
+            this.DayOfMonth = new String(source.DayOfMonth);
+        }
+        if (source.IntervalDays != null) {
+            this.IntervalDays = new Long(source.IntervalDays);
         }
     }
 
@@ -141,10 +193,12 @@ public class CreateAutoSnapshotPolicyRequest extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DayOfWeek", this.DayOfWeek);
         this.setParamSimple(map, prefix + "Hour", this.Hour);
         this.setParamSimple(map, prefix + "PolicyName", this.PolicyName);
+        this.setParamSimple(map, prefix + "DayOfWeek", this.DayOfWeek);
         this.setParamSimple(map, prefix + "AliveDays", this.AliveDays);
+        this.setParamSimple(map, prefix + "DayOfMonth", this.DayOfMonth);
+        this.setParamSimple(map, prefix + "IntervalDays", this.IntervalDays);
 
     }
 }

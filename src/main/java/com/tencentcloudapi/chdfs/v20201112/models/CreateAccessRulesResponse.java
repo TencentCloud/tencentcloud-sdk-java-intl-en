@@ -23,11 +23,39 @@ import java.util.HashMap;
 public class CreateAccessRulesResponse extends AbstractModel{
 
     /**
+    * List of permission rules
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AccessRules")
+    @Expose
+    private AccessRule [] AccessRules;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get List of permission rules
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AccessRules List of permission rules
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public AccessRule [] getAccessRules() {
+        return this.AccessRules;
+    }
+
+    /**
+     * Set List of permission rules
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AccessRules List of permission rules
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAccessRules(AccessRule [] AccessRules) {
+        this.AccessRules = AccessRules;
+    }
 
     /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
@@ -53,6 +81,12 @@ public class CreateAccessRulesResponse extends AbstractModel{
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateAccessRulesResponse(CreateAccessRulesResponse source) {
+        if (source.AccessRules != null) {
+            this.AccessRules = new AccessRule[source.AccessRules.length];
+            for (int i = 0; i < source.AccessRules.length; i++) {
+                this.AccessRules[i] = new AccessRule(source.AccessRules[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -63,6 +97,7 @@ public class CreateAccessRulesResponse extends AbstractModel{
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "AccessRules.", this.AccessRules);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

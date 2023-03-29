@@ -6,6 +6,12 @@ public enum ChdfsErrorCode {
     // The permission group has been bound.
      FAILEDOPERATION_ACCESSGROUPBOUND("FailedOperation.AccessGroupBound"),
      
+    // 
+     FAILEDOPERATION_ACCOUNTINSUFFICIENTBALANCE("FailedOperation.AccountInsufficientBalance"),
+     
+    // 
+     FAILEDOPERATION_ACCOUNTUNAUTHENTICATED("FailedOperation.AccountUnauthenticated"),
+     
     // The file system is not empty.
      FAILEDOPERATION_FILESYSTEMNOTEMPTY("FailedOperation.FileSystemNotEmpty"),
      
@@ -56,9 +62,6 @@ public enum ChdfsErrorCode {
      
     // Missing parameter.
      MISSINGPARAMETER("MissingParameter"),
-     
-    // The operation was denied.
-     OPERATIONDENIED("OperationDenied"),
      
     // The resource is in use.
      RESOURCEINUSE("ResourceInUse"),

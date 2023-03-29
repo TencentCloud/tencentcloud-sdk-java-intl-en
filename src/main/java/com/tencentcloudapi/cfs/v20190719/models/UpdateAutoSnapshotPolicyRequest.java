@@ -65,6 +65,20 @@ public class UpdateAutoSnapshotPolicyRequest extends AbstractModel{
     private Long IsActivated;
 
     /**
+    * The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek`.
+    */
+    @SerializedName("DayOfMonth")
+    @Expose
+    private String DayOfMonth;
+
+    /**
+    * The snapshot interval. This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+    */
+    @SerializedName("IntervalDays")
+    @Expose
+    private Long IntervalDays;
+
+    /**
      * Get Snapshot policy ID 
      * @return AutoSnapshotPolicyId Snapshot policy ID
      */
@@ -160,6 +174,38 @@ public class UpdateAutoSnapshotPolicyRequest extends AbstractModel{
         this.IsActivated = IsActivated;
     }
 
+    /**
+     * Get The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek`. 
+     * @return DayOfMonth The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek`.
+     */
+    public String getDayOfMonth() {
+        return this.DayOfMonth;
+    }
+
+    /**
+     * Set The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek`.
+     * @param DayOfMonth The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek`.
+     */
+    public void setDayOfMonth(String DayOfMonth) {
+        this.DayOfMonth = DayOfMonth;
+    }
+
+    /**
+     * Get The snapshot interval. This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`. 
+     * @return IntervalDays The snapshot interval. This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+     */
+    public Long getIntervalDays() {
+        return this.IntervalDays;
+    }
+
+    /**
+     * Set The snapshot interval. This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+     * @param IntervalDays The snapshot interval. This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+     */
+    public void setIntervalDays(Long IntervalDays) {
+        this.IntervalDays = IntervalDays;
+    }
+
     public UpdateAutoSnapshotPolicyRequest() {
     }
 
@@ -186,6 +232,12 @@ public class UpdateAutoSnapshotPolicyRequest extends AbstractModel{
         if (source.IsActivated != null) {
             this.IsActivated = new Long(source.IsActivated);
         }
+        if (source.DayOfMonth != null) {
+            this.DayOfMonth = new String(source.DayOfMonth);
+        }
+        if (source.IntervalDays != null) {
+            this.IntervalDays = new Long(source.IntervalDays);
+        }
     }
 
 
@@ -199,6 +251,8 @@ public class UpdateAutoSnapshotPolicyRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "Hour", this.Hour);
         this.setParamSimple(map, prefix + "AliveDays", this.AliveDays);
         this.setParamSimple(map, prefix + "IsActivated", this.IsActivated);
+        this.setParamSimple(map, prefix + "DayOfMonth", this.DayOfMonth);
+        this.setParamSimple(map, prefix + "IntervalDays", this.IntervalDays);
 
     }
 }

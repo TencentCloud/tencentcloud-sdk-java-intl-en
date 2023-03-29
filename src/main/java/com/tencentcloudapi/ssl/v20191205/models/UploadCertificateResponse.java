@@ -30,6 +30,14 @@ public class UploadCertificateResponse extends AbstractModel{
     private String CertificateId;
 
     /**
+    * The ID of the repeatedly uploaded certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RepeatCertId")
+    @Expose
+    private String RepeatCertId;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -50,6 +58,26 @@ public class UploadCertificateResponse extends AbstractModel{
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;
+    }
+
+    /**
+     * Get The ID of the repeatedly uploaded certificate.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RepeatCertId The ID of the repeatedly uploaded certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getRepeatCertId() {
+        return this.RepeatCertId;
+    }
+
+    /**
+     * Set The ID of the repeatedly uploaded certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RepeatCertId The ID of the repeatedly uploaded certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRepeatCertId(String RepeatCertId) {
+        this.RepeatCertId = RepeatCertId;
     }
 
     /**
@@ -79,6 +107,9 @@ public class UploadCertificateResponse extends AbstractModel{
         if (source.CertificateId != null) {
             this.CertificateId = new String(source.CertificateId);
         }
+        if (source.RepeatCertId != null) {
+            this.RepeatCertId = new String(source.RepeatCertId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,6 +121,7 @@ public class UploadCertificateResponse extends AbstractModel{
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
+        this.setParamSimple(map, prefix + "RepeatCertId", this.RepeatCertId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
