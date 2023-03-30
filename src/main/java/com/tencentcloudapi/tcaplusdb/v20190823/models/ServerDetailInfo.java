@@ -65,6 +65,14 @@ public class ServerDetailInfo extends AbstractModel{
     private Long WriteNum;
 
     /**
+    * Version
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
+
+    /**
      * Get The unique ID of the storage layer (tcapsvr) 
      * @return ServerUid The unique ID of the storage layer (tcapsvr)
      */
@@ -160,6 +168,26 @@ public class ServerDetailInfo extends AbstractModel{
         this.WriteNum = WriteNum;
     }
 
+    /**
+     * Get Version
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Version Version
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set Version
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Version Version
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
     public ServerDetailInfo() {
     }
 
@@ -186,6 +214,9 @@ public class ServerDetailInfo extends AbstractModel{
         if (source.WriteNum != null) {
             this.WriteNum = new Long(source.WriteNum);
         }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
     }
 
 
@@ -199,6 +230,7 @@ public class ServerDetailInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "DiskRate", this.DiskRate);
         this.setParamSimple(map, prefix + "ReadNum", this.ReadNum);
         this.setParamSimple(map, prefix + "WriteNum", this.WriteNum);
+        this.setParamSimple(map, prefix + "Version", this.Version);
 
     }
 }

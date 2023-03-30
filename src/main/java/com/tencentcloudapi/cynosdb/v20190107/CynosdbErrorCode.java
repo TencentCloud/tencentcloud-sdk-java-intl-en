@@ -93,6 +93,9 @@ public enum CynosdbErrorCode {
     // The account already exists.
      INVALIDPARAMETERVALUE_ACCOUNTEXIST("InvalidParameterValue.AccountExist"),
      
+    // The instance doesn’t have an account.
+     INVALIDPARAMETERVALUE_ACCOUNTNOTEXISTERROR("InvalidParameterValue.AccountNotExistError"),
+     
     // No cluster found.
      INVALIDPARAMETERVALUE_CLUSTERNOTFOUND("InvalidParameterValue.ClusterNotFound"),
      

@@ -130,16 +130,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String ApiAccessIpv6;
 
     /**
-    * Cluster type
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ClusterType")
     @Expose
     private Long ClusterType;
 
     /**
-    * Cluster status
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ClusterStatus")
     @Expose
@@ -239,6 +239,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     @SerializedName("IsReadOnlyUlogBackupExpireDay")
     @Expose
     private Long IsReadOnlyUlogBackupExpireDay;
+
+    /**
+    * restproxy Status
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("RestProxyStatus")
+    @Expose
+    private Long RestProxyStatus;
 
     /**
      * Get Cluster name 
@@ -489,40 +497,40 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Cluster type
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ClusterType Cluster type
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ClusterType Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set Cluster type
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ClusterType Cluster type
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ClusterType Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setClusterType(Long ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get Cluster status
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ClusterStatus Cluster status
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ClusterStatus Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getClusterStatus() {
         return this.ClusterStatus;
     }
 
     /**
-     * Set Cluster status
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ClusterStatus Cluster status
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ClusterStatus Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setClusterStatus(Long ClusterStatus) {
         this.ClusterStatus = ClusterStatus;
@@ -764,6 +772,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.IsReadOnlyUlogBackupExpireDay = IsReadOnlyUlogBackupExpireDay;
     }
 
+    /**
+     * Get restproxy Status
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RestProxyStatus restproxy Status
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getRestProxyStatus() {
+        return this.RestProxyStatus;
+    }
+
+    /**
+     * Set restproxy Status
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RestProxyStatus restproxy Status
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setRestProxyStatus(Long RestProxyStatus) {
+        this.RestProxyStatus = RestProxyStatus;
+    }
+
     public ClusterInfo() {
     }
 
@@ -868,6 +896,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (source.IsReadOnlyUlogBackupExpireDay != null) {
             this.IsReadOnlyUlogBackupExpireDay = new Long(source.IsReadOnlyUlogBackupExpireDay);
         }
+        if (source.RestProxyStatus != null) {
+            this.RestProxyStatus = new Long(source.RestProxyStatus);
+        }
     }
 
 
@@ -904,6 +935,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "TxhBackupExpireDay", this.TxhBackupExpireDay);
         this.setParamSimple(map, prefix + "UlogBackupExpireDay", this.UlogBackupExpireDay);
         this.setParamSimple(map, prefix + "IsReadOnlyUlogBackupExpireDay", this.IsReadOnlyUlogBackupExpireDay);
+        this.setParamSimple(map, prefix + "RestProxyStatus", this.RestProxyStatus);
 
     }
 }

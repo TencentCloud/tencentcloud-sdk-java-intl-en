@@ -58,6 +58,14 @@ public class ProxyDetailInfo extends AbstractModel{
     private Long SlowProcessSpeed;
 
     /**
+    * Version
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
+
+    /**
      * Get The unique ID of the access layer (tcaproxy) 
      * @return ProxyUid The unique ID of the access layer (tcaproxy)
      */
@@ -137,6 +145,26 @@ public class ProxyDetailInfo extends AbstractModel{
         this.SlowProcessSpeed = SlowProcessSpeed;
     }
 
+    /**
+     * Get Version
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Version Version
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set Version
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Version Version
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
     public ProxyDetailInfo() {
     }
 
@@ -160,6 +188,9 @@ public class ProxyDetailInfo extends AbstractModel{
         if (source.SlowProcessSpeed != null) {
             this.SlowProcessSpeed = new Long(source.SlowProcessSpeed);
         }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
     }
 
 
@@ -172,6 +203,7 @@ public class ProxyDetailInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "ProcessSpeed", this.ProcessSpeed);
         this.setParamSimple(map, prefix + "AverageProcessDelay", this.AverageProcessDelay);
         this.setParamSimple(map, prefix + "SlowProcessSpeed", this.SlowProcessSpeed);
+        this.setParamSimple(map, prefix + "Version", this.Version);
 
     }
 }

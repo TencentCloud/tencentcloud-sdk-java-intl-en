@@ -58,6 +58,37 @@ public class TableGroupInfo extends AbstractModel{
     private Long TotalSize;
 
     /**
+    * The number of days before the backup files of the Txh tables expire and are deleted.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TxhBackupExpireDay")
+    @Expose
+    private Long TxhBackupExpireDay;
+
+    /**
+    * Whether MySQL load rebalancing is enabled. Valid values: `0` (Disabled), `1` (Enabling), `2` (Enabled).
+    */
+    @SerializedName("EnableMysql")
+    @Expose
+    private Long EnableMysql;
+
+    /**
+    * MySQL load rebalancing vip
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MysqlConnIp")
+    @Expose
+    private String MysqlConnIp;
+
+    /**
+    * MySQL load rebalancing vport
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("MysqlConnPort")
+    @Expose
+    private Long MysqlConnPort;
+
+    /**
      * Get Table group ID 
      * @return TableGroupId Table group ID
      */
@@ -137,6 +168,82 @@ public class TableGroupInfo extends AbstractModel{
         this.TotalSize = TotalSize;
     }
 
+    /**
+     * Get The number of days before the backup files of the Txh tables expire and are deleted.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TxhBackupExpireDay The number of days before the backup files of the Txh tables expire and are deleted.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getTxhBackupExpireDay() {
+        return this.TxhBackupExpireDay;
+    }
+
+    /**
+     * Set The number of days before the backup files of the Txh tables expire and are deleted.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TxhBackupExpireDay The number of days before the backup files of the Txh tables expire and are deleted.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTxhBackupExpireDay(Long TxhBackupExpireDay) {
+        this.TxhBackupExpireDay = TxhBackupExpireDay;
+    }
+
+    /**
+     * Get Whether MySQL load rebalancing is enabled. Valid values: `0` (Disabled), `1` (Enabling), `2` (Enabled). 
+     * @return EnableMysql Whether MySQL load rebalancing is enabled. Valid values: `0` (Disabled), `1` (Enabling), `2` (Enabled).
+     */
+    public Long getEnableMysql() {
+        return this.EnableMysql;
+    }
+
+    /**
+     * Set Whether MySQL load rebalancing is enabled. Valid values: `0` (Disabled), `1` (Enabling), `2` (Enabled).
+     * @param EnableMysql Whether MySQL load rebalancing is enabled. Valid values: `0` (Disabled), `1` (Enabling), `2` (Enabled).
+     */
+    public void setEnableMysql(Long EnableMysql) {
+        this.EnableMysql = EnableMysql;
+    }
+
+    /**
+     * Get MySQL load rebalancing vip
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MysqlConnIp MySQL load rebalancing vip
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getMysqlConnIp() {
+        return this.MysqlConnIp;
+    }
+
+    /**
+     * Set MySQL load rebalancing vip
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MysqlConnIp MySQL load rebalancing vip
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMysqlConnIp(String MysqlConnIp) {
+        this.MysqlConnIp = MysqlConnIp;
+    }
+
+    /**
+     * Get MySQL load rebalancing vport
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MysqlConnPort MySQL load rebalancing vport
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getMysqlConnPort() {
+        return this.MysqlConnPort;
+    }
+
+    /**
+     * Set MySQL load rebalancing vport
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MysqlConnPort MySQL load rebalancing vport
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setMysqlConnPort(Long MysqlConnPort) {
+        this.MysqlConnPort = MysqlConnPort;
+    }
+
     public TableGroupInfo() {
     }
 
@@ -160,6 +267,18 @@ public class TableGroupInfo extends AbstractModel{
         if (source.TotalSize != null) {
             this.TotalSize = new Long(source.TotalSize);
         }
+        if (source.TxhBackupExpireDay != null) {
+            this.TxhBackupExpireDay = new Long(source.TxhBackupExpireDay);
+        }
+        if (source.EnableMysql != null) {
+            this.EnableMysql = new Long(source.EnableMysql);
+        }
+        if (source.MysqlConnIp != null) {
+            this.MysqlConnIp = new String(source.MysqlConnIp);
+        }
+        if (source.MysqlConnPort != null) {
+            this.MysqlConnPort = new Long(source.MysqlConnPort);
+        }
     }
 
 
@@ -172,6 +291,10 @@ public class TableGroupInfo extends AbstractModel{
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "TableCount", this.TableCount);
         this.setParamSimple(map, prefix + "TotalSize", this.TotalSize);
+        this.setParamSimple(map, prefix + "TxhBackupExpireDay", this.TxhBackupExpireDay);
+        this.setParamSimple(map, prefix + "EnableMysql", this.EnableMysql);
+        this.setParamSimple(map, prefix + "MysqlConnIp", this.MysqlConnIp);
+        this.setParamSimple(map, prefix + "MysqlConnPort", this.MysqlConnPort);
 
     }
 }

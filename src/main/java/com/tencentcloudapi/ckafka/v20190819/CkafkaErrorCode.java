@@ -15,6 +15,9 @@ public enum CkafkaErrorCode {
     // Invalid parameter.
      INVALIDPARAMETER("InvalidParameter"),
      
+    // The topic name is duplicate.
+     INVALIDPARAMETER_TOPICEXIST("InvalidParameter.TopicExist"),
+     
     // Invalid parameter value.
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      

@@ -375,7 +375,8 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String [] SlaveZones;
 
     /**
-    * 
+    * Instance network information
+Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("InstanceNetInfo")
     @Expose
@@ -1202,16 +1203,20 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get  
-     * @return InstanceNetInfo 
+     * Get Instance network information
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return InstanceNetInfo Instance network information
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public InstanceNetInfo [] getInstanceNetInfo() {
         return this.InstanceNetInfo;
     }
 
     /**
-     * Set 
-     * @param InstanceNetInfo 
+     * Set Instance network information
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param InstanceNetInfo Instance network information
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setInstanceNetInfo(InstanceNetInfo [] InstanceNetInfo) {
         this.InstanceNetInfo = InstanceNetInfo;

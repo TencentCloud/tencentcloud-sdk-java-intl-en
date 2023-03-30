@@ -51,21 +51,21 @@ public class AddInstancesRequest extends AbstractModel{
     private Long ReadOnlyCount;
 
     /**
-    * Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
+    * Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
     */
     @SerializedName("InstanceGrpId")
     @Expose
     private String InstanceGrpId;
 
     /**
-    * VPC ID. This parameter has been disused.
+    * VPC ID
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
+    * Subnet ID. If `VpcId` is set, `SubnetId` is required.
     */
     @SerializedName("SubnetId")
     @Expose
@@ -127,6 +127,13 @@ public class AddInstancesRequest extends AbstractModel{
     @SerializedName("InstanceParams")
     @Expose
     private ModifyParamItem [] InstanceParams;
+
+    /**
+    * Security group ID. You can specify an security group when creating a read-only instance.
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
 
     /**
      * Get Cluster ID 
@@ -193,48 +200,48 @@ public class AddInstancesRequest extends AbstractModel{
     }
 
     /**
-     * Get Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version. 
-     * @return InstanceGrpId Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
+     * Get Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused. 
+     * @return InstanceGrpId Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
      */
     public String getInstanceGrpId() {
         return this.InstanceGrpId;
     }
 
     /**
-     * Set Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
-     * @param InstanceGrpId Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
+     * Set Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
+     * @param InstanceGrpId Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
      */
     public void setInstanceGrpId(String InstanceGrpId) {
         this.InstanceGrpId = InstanceGrpId;
     }
 
     /**
-     * Get VPC ID. This parameter has been disused. 
-     * @return VpcId VPC ID. This parameter has been disused.
+     * Get VPC ID 
+     * @return VpcId VPC ID
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID. This parameter has been disused.
-     * @param VpcId VPC ID. This parameter has been disused.
+     * Set VPC ID
+     * @param VpcId VPC ID
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused. 
-     * @return SubnetId Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
+     * Get Subnet ID. If `VpcId` is set, `SubnetId` is required. 
+     * @return SubnetId Subnet ID. If `VpcId` is set, `SubnetId` is required.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
-     * @param SubnetId Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
+     * Set Subnet ID. If `VpcId` is set, `SubnetId` is required.
+     * @param SubnetId Subnet ID. If `VpcId` is set, `SubnetId` is required.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -372,6 +379,22 @@ public class AddInstancesRequest extends AbstractModel{
         this.InstanceParams = InstanceParams;
     }
 
+    /**
+     * Get Security group ID. You can specify an security group when creating a read-only instance. 
+     * @return SecurityGroupIds Security group ID. You can specify an security group when creating a read-only instance.
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set Security group ID. You can specify an security group when creating a read-only instance.
+     * @param SecurityGroupIds Security group ID. You can specify an security group when creating a read-only instance.
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
     public AddInstancesRequest() {
     }
 
@@ -428,6 +451,12 @@ public class AddInstancesRequest extends AbstractModel{
                 this.InstanceParams[i] = new ModifyParamItem(source.InstanceParams[i]);
             }
         }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
     }
 
 
@@ -450,6 +479,7 @@ public class AddInstancesRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "DealMode", this.DealMode);
         this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
         this.setParamArrayObj(map, prefix + "InstanceParams.", this.InstanceParams);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
 
     }
 }
