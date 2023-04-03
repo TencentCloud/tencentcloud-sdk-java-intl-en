@@ -101,6 +101,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long ClickTimeout;
 
     /**
+    * Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+
+    */
+    @SerializedName("ScanPathMode")
+    @Expose
+    private String ScanPathMode;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -288,6 +299,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+ 
+     * @return ScanPathMode Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+
+     */
+    public String getScanPathMode() {
+        return this.ScanPathMode;
+    }
+
+    /**
+     * Set Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+
+     * @param ScanPathMode Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+
+     */
+    public void setScanPathMode(String ScanPathMode) {
+        this.ScanPathMode = ScanPathMode;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -350,6 +393,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ClickTimeout != null) {
             this.ClickTimeout = new Long(source.ClickTimeout);
         }
+        if (source.ScanPathMode != null) {
+            this.ScanPathMode = new String(source.ScanPathMode);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -371,6 +417,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArraySimple(map, prefix + "ScanIds.", this.ScanIds);
         this.setParamArraySimple(map, prefix + "ScanPath.", this.ScanPath);
         this.setParamSimple(map, prefix + "ClickTimeout", this.ClickTimeout);
+        this.setParamSimple(map, prefix + "ScanPathMode", this.ScanPathMode);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

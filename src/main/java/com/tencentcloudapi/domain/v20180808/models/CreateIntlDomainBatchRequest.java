@@ -72,6 +72,13 @@ public class CreateIntlDomainBatchRequest extends AbstractModel{
     private Boolean UpdateProhibition;
 
     /**
+    * The custom DNS servers
+    */
+    @SerializedName("CustomDns")
+    @Expose
+    private String [] CustomDns;
+
+    /**
      * Get The profile ID. 
      * @return TemplateId The profile ID.
      */
@@ -183,6 +190,22 @@ public class CreateIntlDomainBatchRequest extends AbstractModel{
         this.UpdateProhibition = UpdateProhibition;
     }
 
+    /**
+     * Get The custom DNS servers 
+     * @return CustomDns The custom DNS servers
+     */
+    public String [] getCustomDns() {
+        return this.CustomDns;
+    }
+
+    /**
+     * Set The custom DNS servers
+     * @param CustomDns The custom DNS servers
+     */
+    public void setCustomDns(String [] CustomDns) {
+        this.CustomDns = CustomDns;
+    }
+
     public CreateIntlDomainBatchRequest() {
     }
 
@@ -215,6 +238,12 @@ public class CreateIntlDomainBatchRequest extends AbstractModel{
         if (source.UpdateProhibition != null) {
             this.UpdateProhibition = new Boolean(source.UpdateProhibition);
         }
+        if (source.CustomDns != null) {
+            this.CustomDns = new String[source.CustomDns.length];
+            for (int i = 0; i < source.CustomDns.length; i++) {
+                this.CustomDns[i] = new String(source.CustomDns[i]);
+            }
+        }
     }
 
 
@@ -229,6 +258,7 @@ public class CreateIntlDomainBatchRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "TransferProhibition", this.TransferProhibition);
         this.setParamSimple(map, prefix + "UpdateProhibition", this.UpdateProhibition);
+        this.setParamArraySimple(map, prefix + "CustomDns.", this.CustomDns);
 
     }
 }

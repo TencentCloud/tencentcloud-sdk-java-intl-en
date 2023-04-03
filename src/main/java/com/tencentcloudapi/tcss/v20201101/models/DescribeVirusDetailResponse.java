@@ -418,6 +418,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] CheckPlatform;
 
     /**
+    * File accessed time
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("FileAccessTime")
+    @Expose
+    private String FileAccessTime;
+
+    /**
+    * File modified time
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("FileModifyTime")
+    @Expose
+    private String FileModifyTime;
+
+    /**
     * The unique request ID, which is returned for each request. RequestId is required for locating a problem.
     */
     @SerializedName("RequestId")
@@ -1441,6 +1457,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get File accessed time
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return FileAccessTime File accessed time
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getFileAccessTime() {
+        return this.FileAccessTime;
+    }
+
+    /**
+     * Set File accessed time
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param FileAccessTime File accessed time
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setFileAccessTime(String FileAccessTime) {
+        this.FileAccessTime = FileAccessTime;
+    }
+
+    /**
+     * Get File modified time
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return FileModifyTime File modified time
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getFileModifyTime() {
+        return this.FileModifyTime;
+    }
+
+    /**
+     * Set File modified time
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param FileModifyTime File modified time
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setFileModifyTime(String FileModifyTime) {
+        this.FileModifyTime = FileModifyTime;
+    }
+
+    /**
      * Get The unique request ID, which is returned for each request. RequestId is required for locating a problem. 
      * @return RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -1611,6 +1667,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.CheckPlatform[i] = new String(source.CheckPlatform[i]);
             }
         }
+        if (source.FileAccessTime != null) {
+            this.FileAccessTime = new String(source.FileAccessTime);
+        }
+        if (source.FileModifyTime != null) {
+            this.FileModifyTime = new String(source.FileModifyTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1668,6 +1730,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ContainerNetSubStatus", this.ContainerNetSubStatus);
         this.setParamSimple(map, prefix + "ContainerIsolateOperationSrc", this.ContainerIsolateOperationSrc);
         this.setParamArraySimple(map, prefix + "CheckPlatform.", this.CheckPlatform);
+        this.setParamSimple(map, prefix + "FileAccessTime", this.FileAccessTime);
+        this.setParamSimple(map, prefix + "FileModifyTime", this.FileModifyTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

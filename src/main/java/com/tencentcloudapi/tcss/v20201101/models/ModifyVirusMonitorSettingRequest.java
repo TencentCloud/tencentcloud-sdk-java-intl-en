@@ -51,6 +51,17 @@ public class ModifyVirusMonitorSettingRequest extends AbstractModel{
     private String [] ScanPath;
 
     /**
+    * Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+
+    */
+    @SerializedName("ScanPathMode")
+    @Expose
+    private String ScanPathMode;
+
+    /**
      * Get Whether to enable scheduled scan 
      * @return EnableScan Whether to enable scheduled scan
      */
@@ -114,6 +125,38 @@ public class ModifyVirusMonitorSettingRequest extends AbstractModel{
         this.ScanPath = ScanPath;
     }
 
+    /**
+     * Get Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+ 
+     * @return ScanPathMode Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+
+     */
+    public String getScanPathMode() {
+        return this.ScanPathMode;
+    }
+
+    /**
+     * Set Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+
+     * @param ScanPathMode Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+
+     */
+    public void setScanPathMode(String ScanPathMode) {
+        this.ScanPathMode = ScanPathMode;
+    }
+
     public ModifyVirusMonitorSettingRequest() {
     }
 
@@ -137,6 +180,9 @@ public class ModifyVirusMonitorSettingRequest extends AbstractModel{
                 this.ScanPath[i] = new String(source.ScanPath[i]);
             }
         }
+        if (source.ScanPathMode != null) {
+            this.ScanPathMode = new String(source.ScanPathMode);
+        }
     }
 
 
@@ -148,6 +194,7 @@ public class ModifyVirusMonitorSettingRequest extends AbstractModel{
         this.setParamSimple(map, prefix + "ScanPathAll", this.ScanPathAll);
         this.setParamSimple(map, prefix + "ScanPathType", this.ScanPathType);
         this.setParamArraySimple(map, prefix + "ScanPath.", this.ScanPath);
+        this.setParamSimple(map, prefix + "ScanPathMode", this.ScanPathMode);
 
     }
 }
