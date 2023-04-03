@@ -119,6 +119,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a full backup of an instance.
+     * @param req CreateBaseBackupRequest
+     * @return CreateBaseBackupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBaseBackupResponse CreateBaseBackup(CreateBaseBackupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<CreateBaseBackupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<CreateBaseBackupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "CreateBaseBackup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to add a network for an instance.
      * @param req CreateDBInstanceNetworkAccessRequest
      * @return CreateDBInstanceNetworkAccessResponse
@@ -279,6 +299,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete the specified full backup of an instance.
+     * @param req DeleteBaseBackupRequest
+     * @return DeleteBaseBackupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBaseBackupResponse DeleteBaseBackup(DeleteBaseBackupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteBaseBackupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteBaseBackupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteBaseBackup");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to delete a network of an instance.
      * @param req DeleteDBInstanceNetworkAccessRequest
      * @return DeleteDBInstanceNetworkAccessResponse
@@ -291,6 +331,26 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DeleteDBInstanceNetworkAccessResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DeleteDBInstanceNetworkAccess");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to delete the specified log backup of an instance.
+     * @param req DeleteLogBackupRequest
+     * @return DeleteLogBackupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLogBackupResponse DeleteLogBackup(DeleteLogBackupRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DeleteLogBackupResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DeleteLogBackupResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DeleteLogBackup");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -419,6 +479,46 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to get the download URL of a backup.
+     * @param req DescribeBackupDownloadURLRequest
+     * @return DescribeBackupDownloadURLResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupDownloadURLResponse DescribeBackupDownloadURL(DescribeBackupDownloadURLRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupDownloadURLResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupDownloadURLResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupDownloadURL");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the backup overview. It will return the current number and size of backups, free backup space size, and paid backup space size (all size values are in bytes).
+     * @param req DescribeBackupOverviewRequest
+     * @return DescribeBackupOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupOverviewResponse DescribeBackupOverview(DescribeBackupOverviewRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupOverviewResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupOverviewResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupOverview");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query all backup plans of an instance.
      * @param req DescribeBackupPlansRequest
      * @return DescribeBackupPlansResponse
@@ -431,6 +531,66 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeBackupPlansResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeBackupPlans");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the backup statistics of an instance. It will return the number and size (bytes) of backups of the instance.
+     * @param req DescribeBackupSummariesRequest
+     * @return DescribeBackupSummariesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupSummariesResponse DescribeBackupSummaries(DescribeBackupSummariesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBackupSummariesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBackupSummariesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBackupSummaries");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of full backups.
+     * @param req DescribeBaseBackupsRequest
+     * @return DescribeBaseBackupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBaseBackupsResponse DescribeBaseBackups(DescribeBaseBackupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeBaseBackupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeBaseBackupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeBaseBackups");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query purchasable instance specifications.
+     * @param req DescribeClassesRequest
+     * @return DescribeClassesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClassesResponse DescribeClasses(DescribeClassesRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeClassesResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeClassesResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeClasses");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -599,6 +759,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the list of supported database versions.
+     * @param req DescribeDBVersionsRequest
+     * @return DescribeDBVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBVersionsResponse DescribeDBVersions(DescribeDBVersionsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeDBVersionsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeDBVersionsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeDBVersions");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to get the instance Xlog list.
      * @param req DescribeDBXlogsRequest
      * @return DescribeDBXlogsResponse
@@ -671,6 +851,26 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<DescribeEncryptionKeysResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "DescribeEncryptionKeys");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to query the list of log backups.
+     * @param req DescribeLogBackupsRequest
+     * @return DescribeLogBackupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogBackupsResponse DescribeLogBackups(DescribeLogBackupsRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeLogBackupsResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeLogBackupsResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeLogBackups");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
@@ -1079,6 +1279,26 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify the expiration time of the specified full backup of an instance.
+     * @param req ModifyBaseBackupExpireTimeRequest
+     * @return ModifyBaseBackupExpireTimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBaseBackupExpireTimeResponse ModifyBaseBackupExpireTime(ModifyBaseBackupExpireTimeRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<ModifyBaseBackupExpireTimeResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<ModifyBaseBackupExpireTimeResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "ModifyBaseBackupExpireTime");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to modify the AZs where the nodes of a source instance reside.
      * @param req ModifyDBInstanceDeploymentRequest
      * @return ModifyDBInstanceDeploymentResponse
@@ -1451,6 +1671,26 @@ public class PostgresClient extends AbstractClient{
                 Type type = new TypeToken<JsonResponseModel<UpgradeDBInstanceResponse>>() {
                 }.getType();
                 rspStr = this.internalRequest(req, "UpgradeDBInstance");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
+     *This API is used to upgrade the kernel version of an instance.
+     * @param req UpgradeDBInstanceKernelVersionRequest
+     * @return UpgradeDBInstanceKernelVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeDBInstanceKernelVersionResponse UpgradeDBInstanceKernelVersion(UpgradeDBInstanceKernelVersionRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<UpgradeDBInstanceKernelVersionResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<UpgradeDBInstanceKernelVersionResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "UpgradeDBInstanceKernelVersion");
                 rsp  = gson.fromJson(rspStr, type);
         } catch (JsonSyntaxException e) {
             throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());

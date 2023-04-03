@@ -44,7 +44,11 @@ public class ZoneInfo extends AbstractModel{
     private Long ZoneId;
 
     /**
-    * Availability status. Valid values: `UNAVAILABLE`, `AVAILABLE`, `SELLOUT`
+    * Availability status. Valid values:
+`UNAVAILABLE`.
+`AVAILABLE`.
+`SELLOUT`.
+`SUPPORTMODIFYONLY` (supports configuration adjustment).
     */
     @SerializedName("ZoneState")
     @Expose
@@ -114,16 +118,32 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Availability status. Valid values: `UNAVAILABLE`, `AVAILABLE`, `SELLOUT` 
-     * @return ZoneState Availability status. Valid values: `UNAVAILABLE`, `AVAILABLE`, `SELLOUT`
+     * Get Availability status. Valid values:
+`UNAVAILABLE`.
+`AVAILABLE`.
+`SELLOUT`.
+`SUPPORTMODIFYONLY` (supports configuration adjustment). 
+     * @return ZoneState Availability status. Valid values:
+`UNAVAILABLE`.
+`AVAILABLE`.
+`SELLOUT`.
+`SUPPORTMODIFYONLY` (supports configuration adjustment).
      */
     public String getZoneState() {
         return this.ZoneState;
     }
 
     /**
-     * Set Availability status. Valid values: `UNAVAILABLE`, `AVAILABLE`, `SELLOUT`
-     * @param ZoneState Availability status. Valid values: `UNAVAILABLE`, `AVAILABLE`, `SELLOUT`
+     * Set Availability status. Valid values:
+`UNAVAILABLE`.
+`AVAILABLE`.
+`SELLOUT`.
+`SUPPORTMODIFYONLY` (supports configuration adjustment).
+     * @param ZoneState Availability status. Valid values:
+`UNAVAILABLE`.
+`AVAILABLE`.
+`SELLOUT`.
+`SUPPORTMODIFYONLY` (supports configuration adjustment).
      */
     public void setZoneState(String ZoneState) {
         this.ZoneState = ZoneState;

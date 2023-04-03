@@ -112,7 +112,6 @@ If a recording file is being uploaded to VOD, the response parameter `StorageFil
 
     /**
      *This API is used to query your usage of TRTC’s On-Cloud MixTranscoding service.
-Note: This API is not available for applications whose SDKAppID starts with `14`.
 - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
 - The period queried per request cannot be longer than 31 days.
 - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
@@ -138,7 +137,6 @@ Note: This API is not available for applications whose SDKAppID starts with `14`
 
     /**
      *This API is used to query your TRTC recording usage.
-Note: This API is not available for applications whose SDKAppID starts with `14`.
 - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
 - The period queried per request cannot be longer than 31 days.
 - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
@@ -164,7 +162,6 @@ Note: This API is not available for applications whose SDKAppID starts with `14`
 
     /**
      *This API is used to query your usage of TRTC’s relay to CDN service.
-Note: This API is not available for applications whose SDKAppID starts with `14`.
 - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
 - The period queried per request cannot be longer than 31 days.
 - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
@@ -189,8 +186,30 @@ Note: This API is not available for applications whose SDKAppID starts with `14`
     }
 
     /**
+     *This API is used to query usage data grouped by room.
+- The queried period cannot exceed 24 hours. If the period spans two different days, the data returned may not be accurate due to a delay in data collection. You can make multiple calls to query the usage on different days.
+- You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
+- The rate limit of this API is one call every 15 seconds.
+     * @param req DescribeTrtcRoomUsageRequest
+     * @return DescribeTrtcRoomUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTrtcRoomUsageResponse DescribeTrtcRoomUsage(DescribeTrtcRoomUsageRequest req) throws TencentCloudSDKException{
+        JsonResponseModel<DescribeTrtcRoomUsageResponse> rsp = null;
+        String rspStr = "";
+        try {
+                Type type = new TypeToken<JsonResponseModel<DescribeTrtcRoomUsageResponse>>() {
+                }.getType();
+                rspStr = this.internalRequest(req, "DescribeTrtcRoomUsage");
+                rsp  = gson.fromJson(rspStr, type);
+        } catch (JsonSyntaxException e) {
+            throw new TencentCloudSDKException("response message: " + rspStr + ".\n Error message: " + e.getMessage());
+        }
+        return rsp.response;
+    }
+
+    /**
      *This API is used to query your TRTC audio/video duration.
-Note: This API is not available for applications whose SDKAppID starts with `14`.
 - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
 - The period queried per request cannot be longer than 31 days.
 - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
